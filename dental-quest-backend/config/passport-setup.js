@@ -1,57 +1,68 @@
+// DENTAL-QUEST-BACKEND/config/passport-setup.js
+
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/userModel');
 
-passport.use(
-  new GoogleStrategy(
-    {
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: process.env.GOOGLE_CALLBACK_URL,
-    },
-    async (accessToken, refreshToken, profile, done) => {
-      try {
-        const email = profile.emails[0].value;
+// --- ✅ الحل النهائي هنا ---
+// تحديد روابط العودة بناءً على بيئة التشغيل
+const googleCallbackBaseURL = process.env.NODE_ENV === 'production' 
+    ? process.env.API_URL // الرابط المنشور (https://...onrender.com)
+    : 'http://localhost:5000'; // الرابط المحلي
 
-        // 🔥 تحديد الدور حسب البريد
-        const role = email === '0667969129a@gmail.com' ? 'admin' : 'student';
+// --- نهاية الحل ---
 
-        let user = await User.findOne({ googleId: profile.id });
-
-        if (user) {
-          // نحدّث الدور في حال تغيّر
-          if (user.role !== role) {
-            user.role = role;
-            await user.save();
-          }
-          return done(null, user);
-        }
-
-        // إنشاء مستخدم جديد
-        const newUser = await User.create({
-          googleId: profile.id,
-          displayName: profile.displayName,
-          email,
-          image: profile.photos[0].value,
-          role,
-        });
-
-        return done(null, newUser);
-      } catch (err) {
-        console.error('❌ Passport Error:', err);
-        return done(err, null);
-      }
-    }
-  )
-);
-
-passport.serializeUser((user, done) => done(null, user.id));
-
-passport.deserializeUser(async (id, done) => {
-  try {
-    const user = await User.findById(id);
-    done(null, user);
-  } catch (err) {
-    done(err, null);
-  }
+passport.serializeUser((user, done) => {
+    done(null, user.id);
 });
+
+passport.deserializeUser((id, done) => {
+    User.findById(id).then((user) => {
+        done(null, user);
+    });
+});
+
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    // ✅ استخدام الرابط الصحيح بناءً على البيئة
+    callbackURL: `${googleCallbackBaseURL}/auth/google/callback` 
+}, async (accessToken, refreshToken, profile, done) => {
+    try {
+        let user = await User.findOne({ googleId: profile.id });
+        if (user) {
+            done(null, user);
+        } else {
+            user = await User.create({
+                googleId: profile.id,
+                displayName: profile.displayName,
+                email: profile.emails[0].value,
+                image: profile.photos[0].value
+            });
+            done(null, user);
+        }
+    } catch (err) {
+        done(err, null);
+    }
+}));
+
+// --- ✅ استراتيجية منفصلة للمشرف (Admin) ---
+// هذا يضمن أن كل مسار له رابط العودة الخاص به
+passport.use('google-admin', new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    // ✅ استخدام رابط العودة الخاص بالمشرف
+    callbackURL: `${googleCallbackBaseURL}/auth/google/callback/admin`
+}, async (accessToken, refreshToken, profile, done) => {
+    try {
+        let user = await User.findOne({ googleId: profile.id });
+        if (user) {
+            done(null, user);
+        } else {
+            // لا تقم بإنشاء مستخدم جديد من بوابة المشرف إذا لم يكن موجوداً
+            done(null, false, { message: 'User not found' });
+        }
+    } catch (err) {
+        done(err, null);
+    }
+}));
