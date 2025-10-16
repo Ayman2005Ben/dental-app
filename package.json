@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "markmap": "^0.6.1",
+    "markmap-view": "^0.18.12"
+  },
+  "name": "dentascope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pdf-viewer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

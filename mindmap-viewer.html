@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .mindmap-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            flex-shrink: 0;
+            gap: 20px;
+        }
+        .mindmap-header h2 {
+            font-size: 1.5rem;
+            flex-grow: 1;
+        }
+        #markmap-container {
+            flex-grow: 1;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="mindmap-header">
+        <h2 id="mindmap-title">Loading Mind Map...</h2>
+        <button id="download-svg-btn" class="btn primary-btn">
+            <i class="fas fa-download"></i> Export as SVG
+        </button>
+    </div>
+    <svg id="markmap-container"></svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+    
+    <script src="mindmap-viewer.js"></script>
+</body>
+</html>

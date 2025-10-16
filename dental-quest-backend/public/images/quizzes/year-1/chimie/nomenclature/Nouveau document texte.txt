@@ -1,0 +1,52 @@
+Question 1 : Nomenclature (Page 27)
+(Ce QCM est accompagné d'une image de la molécule)
+01) La molécule ci-dessous contient plusieurs fonctions organiques qui sont :
+A. cétone, éther, amine, acide
+B. cétone, alcool, ester, amine
+C. acide, amide, ester, amine
+D. TRF
+Réponse Correcte : C
+Commentaire simplifié :
+Pour identifier les fonctions, on examine les groupes d'atomes présents dans la molécule. On peut y reconnaître :
+Une fonction acide carboxylique (-COOH).
+Une fonction amine (-NH2).
+Une fonction amide (-CONH-).
+Une fonction ester (-COO-).
+La proposition C est donc la seule qui cite correctement ces fonctions.
+Question 2 : Nomenclature (Page 27)
+(Ce QCM est accompagné d'une image de la molécule)
+02) Le nom systématique correspondant à la molécule dessinée est :
+A. 3-amino-5-oxo-hexanol
+B. 4-amino-6-hydroxyhexanal
+C. 3-amino-1-hydroxyhexan-6-al
+D. TRF
+Réponse Correcte : B
+Commentaire simplifié :
+Pour nommer cette molécule, on suit les étapes suivantes :
+Identifier la fonction principale : C'est la fonction aldéhyde (-CHO) qui a la priorité la plus élevée ici. Le nom de la molécule se terminera donc par "-al".
+Trouver la chaîne carbonée la plus longue qui inclut la fonction principale : Elle contient 6 atomes de carbone (c'est un "hexanal").
+Numéroter la chaîne : On commence par le carbone de l'aldéhyde, qui porte le numéro 1.
+Identifier les substituants : On trouve un groupe amino (-NH2) sur le carbone 4 et un groupe hydroxy (-OH) sur le carbone 6.
+Assembler le nom : En classant les substituants par ordre alphabétique, on obtient le nom 4-amino-6-hydroxyhexanal.
+Question 3 : Stéréochimie (Page 30)
+(Ce QCM est accompagné d'une image montrant une projection de Cram et quatre projections de Newman dans les options)
+01) Une des présentations de Newman correspondant à la projection de Cram suivante est :
+Réponse Correcte : B
+Commentaire simplifié :
+Pour passer de la représentation de Cram à celle de Newman, on "regarde" la molécule dans l'axe de la liaison entre les deux carbones centraux (C-C).
+Le carbone de devant (celui qui est plus proche de nous) est représenté par un point, avec ses trois substituants.
+Le carbone de derrière est représenté par un cercle, avec ses trois substituants.
+En plaçant l'œil pour observer la liaison C-C de la molécule en projection de Cram, on voit que le carbone de devant porte les groupes -OH, -H et -H3C, et celui de derrière porte les groupes -NH2, -H et -CH3, disposés comme dans la proposition B.
+Question 4 : Stéréochimie (Page 32)
+(Ce QCM est accompagné d'une image montrant trois molécules T, V et W)
+05) La relation d'isomérie qui lie ces composés est :
+A. T et V sont diastéréoisomères
+B. T et W sont énantiomères
+C. V et W sont identiques
+D. TRF
+Réponse Correcte : B
+Commentaire simplifié :
+Les énantiomères sont des molécules qui sont des images l'une de l'autre dans un miroir mais qui ne sont pas superposables. Les diastéréoisomères sont des stéréoisomères qui ne sont pas des énantiomères.
+En analysant la structure tridimensionnelle des molécules T et W, on constate que W est l'image miroir exacte de T.
+Comme ce sont des molécules chirales (elles ont des centres asymétriques), elles ne peuvent pas être superposées l'une sur l'autre.
+Par définition, T et W sont donc des énantiomères.

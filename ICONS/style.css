@@ -1,0 +1,3667 @@
+/* -------------------- متغيرات CSS للألوان (Light & Dark Mode) -------------------- */
+:root {
+    /* --- الهوية البصرية الجديدة --- */
+    /* Primary: Midnight Blue #1B2A41 */
+    /* Secondary: Teal Green #1ABC9C */
+    /* Neutral: Light Grey #F4F4F4 */
+    /* Accent: Sky Blue #3498DB */
+    
+    /* Light Mode Colors */
+    --bg-color: #F4F4F4; /* Neutral: لون الخلفية الرئيسي */
+    --card-bg: #ffffff; /* أبيض نقي للبطاقات لإعطاء تباين */
+    --text-color: #333333; /* لون نص داكن قياسي للقراءة */
+    --header-bg: #1B2A41; /* Primary: لون الهيدر الرئيسي */
+    --header-text: #ffffff; /* نص أبيض على الهيدر الداكن */
+    --primary-btn-bg: #1ABC9C; /* Secondary: لون الأزرار الأساسية */
+    --primary-btn-text: #ffffff; /* نص أبيض على الأزرار */
+    --secondary-btn-border: #1ABC9C; /* Secondary: إطار الأزرار الثانوية */
+    --secondary-btn-text: #1ABC9C; /* Secondary: نص الأزرار الثانوية */
+    --secondary-btn-hover-bg: rgba(26, 188, 156, 0.1); /* لون تحويم خفيف من لون الزر الثانوي */
+    --social-icon-color: #888;
+    --ai-chat-btn-bg: #1B2A41; /* Primary: لون زر المحادثة العائم */
+    --ai-chat-btn-text: #ffffff;
+    --ai-chat-modal-bg: rgba(0, 0, 0, 0.5);
+    --chat-box-bg: #ffffff;
+    --chat-header-bg: #1B2A41; /* Primary: لون رأس نافذة المحادثة */
+    --chat-text-color: #333;
+    --chat-body-bg: #f0f2f5;
+    --chat-message-bg-ai: #e2eaf0;
+    --chat-message-bg-user: #e8f8f5; /* تم تعديله ليتناسب مع اللون الثانوي */
+    --input-border: #ddd;
+
+    --choose-subject-text: #1B2A41; /* Primary: لون العناوين البارزة */
+    --subject-button-border: #1B2A41; /* Primary: إطار أزرار المواد */
+    --subject-button-text: #1B2A41; /* Primary: نص أزرار المواد */
+    --subject-button-hover-bg: rgba(26, 188, 156, 0.1); /* لون تحويم خفيف */
+    --subject-icon-color: #3498DB; /* Accent: لون الأيقونات داخل الأزرار */
+    --heart-bubble-bg: #ffffff;
+    --heart-bubble-border: #1B2A41;
+    --heart-bubble-icon: #1B2A41;
+    --header-logo-bg: #ffffff;
+
+    /* Google/Activation Colors - يفضل إبقاء لون جوجل الرسمي */
+    --google-login-bg: #fff;
+    --google-login-text: #333;
+    --google-btn-bg: #4285F4;
+    --google-btn-text: #fff;
+    --google-btn-hover-bg: #357ae8;
+    --activation-card-bg: #fff;
+
+    /* Pricing Info */
+    --price-text-color: #333;
+    --price-label-color: #555;
+    --telegram-btn-bg: #3498DB; /* Accent: استخدام اللون التأكيدي لتليجرام */
+    --telegram-btn-text: #fff;
+    
+    /* لون التوهج */
+    --glow-color: #3498DB; /* Accent: اللون التأكيدي للتوهج */
+    --glow-color-transparent: rgba(52, 152, 219, 0.4);
+
+    /* [إضافة جديدة] متغيرات خاصة بصفحة عرض الدروس */
+    --lesson-card-bg: #ffffff;
+    --lesson-card-border: rgba(0, 0, 0, 0.1);
+    --lesson-number-color: #3498DB;
+    --lesson-title-color: #1B2A41;
+    --lesson-icon-color: #1ABC9C;
+    --lesson-card-hover-bg: #f9f9f9;
+
+    /* [إضافة جديدة] متغيرات خاصة بالكويز */
+    --accent-color: #3498DB; /* Sky Blue */
+}
+
+.dark-mode {
+    /* Dark Mode Colors (Based on the new palette) */
+    --bg-color: #121822; /* A very dark blue */
+    --card-bg: #1B2A41; /* Primary */
+    --text-color: #e0e0e0;
+    --header-bg: #0F141E; /* Darker than Primary */
+    --header-text: #f0f0f0;
+    --primary-btn-bg: #1ABC9C; /* Secondary */
+    --primary-btn-text: #ffffff;
+    --secondary-btn-border: #1ABC9C; /* Secondary */
+    --secondary-btn-text: #1ABC9C; /* Secondary */
+    --secondary-btn-hover-bg: rgba(26, 188, 156, 0.15);
+    --social-icon-color: #aaa;
+    --ai-chat-btn-bg: #1ABC9C; /* Secondary */
+    --ai-chat-btn-text: #fff;
+    --ai-chat-modal-bg: rgba(0, 0, 0, 0.7);
+    --chat-box-bg: #1B2A41; /* Primary */
+    --chat-header-bg: #0F141E; /* Darker than Primary */
+    --chat-text-color: #e0e0e0;
+    --chat-body-bg: #121822;
+    --chat-message-bg-ai: #294061;
+    --chat-message-bg-user: #156656; /* Darker Teal */
+    --input-border: #294061;
+
+    --choose-subject-text: #3498DB; /* Accent */
+    --subject-button-border: #3498DB; /* Accent */
+    --subject-button-text: #f0f0f0;
+    --subject-button-hover-bg: rgba(52, 152, 219, 0.1);
+    --subject-icon-color: #1ABC9C; /* Secondary */
+    --heart-bubble-bg: #1B2A41;
+    --heart-bubble-border: #3498DB;
+    --heart-bubble-icon: #3498DB;
+    --header-logo-bg: #1B2A41;
+
+    /* Google/Activation Colors */
+    --google-login-bg: #1B2A41;
+    --google-login-text: #e0e0e0;
+    --google-btn-bg: #3498DB;
+    --google-btn-text: #fff;
+    --google-btn-hover-bg: #4aa1e3;
+    --activation-card-bg: #1B2A41;
+
+    /* Pricing Info */
+    --price-text-color: #e0e0e0;
+    --price-label-color: #aaa;
+    --telegram-btn-bg: #2980b9; /* Darker Accent */
+    --telegram-btn-text: #fff;
+    
+    /* لون التوهج للوضع الداكن */
+    --glow-color: #3498DB; /* Accent */
+    --glow-color-transparent: rgba(52, 152, 219, 0.4);
+
+    /* [إضافة جديدة] متغيرات خاصة بصفحة عرض الدروس في الوضع الداكن */
+    --lesson-card-bg: #1B2A41;
+    --lesson-card-border: rgba(255, 255, 255, 0.1);
+    --lesson-number-color: #3498DB;
+    --lesson-title-color: #e0e0e0;
+    --lesson-icon-color: #1ABC9C;
+    --lesson-card-hover-bg: #294061;
+
+    /* [إضافة جديدة] متغيرات خاصة بالكويز في الوضع الداكن */
+    --accent-color: #3498DB;
+}
+
+/* -------------------- الأنماط الأساسية وإعادة التعيين -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* <-- تم تطبيق الخط الجديد هنا */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* -------------------- Glassmorphism Design Base Class -------------------- */
+.glassmorphism-card {
+    background: rgba(255, 255, 255, var(--glass-bg-alpha, 0.5));
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, var(--glass-border-alpha, 0.2));
+    box-shadow: 0 5px 20px var(--glass-shadow-color, rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease-out;
+}
+
+/* -------------------- الهيدر (الرأس) -------------------- */
+.main-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-left .header-cap-icon {
+    font-size: 2.5rem;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    position: relative;
+    color: var(--header-text);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.main-nav ul li a:hover, .main-nav ul li a.active-link {
+    color: var(--primary-btn-bg);
+    text-shadow: 0 0 8px var(--glow-color);
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-btn-bg);
+    transition: width 0.3s ease-out;
+}
+.main-nav ul li a:hover::after, .main-nav ul li a.active-link::after {
+    width: 100%;
+}
+
+
+.header-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--header-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--primary-btn-bg);
+    transform: scale(1.15) rotate(20deg);
+}
+
+.header-right-logo {
+    background-color: var(--header-logo-bg);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.ai-header-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+/* -------------------- إدارة الأقسام (Pages) -------------------- */
+.page-section {
+    display: none;
+    min-height: calc(100vh - 80px);
+    padding-top: 20px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+#home-page.active {
+    display: block;
+}
+
+#year-selection-page.active,
+#activation-page.active,
+#subjects-page.active,
+#content-display-page.active,
+#lessons-display-page.active { /* [إضافة] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* -------------------- قسم البطل (Hero Section) - جزء من الصفحة الرئيسية -------------------- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+    text-align: left;
+}
+
+/* --- أنماط تأثير الكتابة (Typing Effect) --- */
+.typing-headline-container {
+    margin-bottom: 20px;
+    min-height: 110px; 
+}
+#typing-headline {
+    font-size: 3.8rem;
+    color: var(--choose-subject-text);
+    font-weight: bold;
+    line-height: 1.1;
+    transition: color 0.3s ease;
+    position: relative;
+    white-space: nowrap; 
+}
+
+#typing-headline::after {
+    content: '|';
+    position: absolute;
+    right: -15px; 
+    top: 0;
+    color: var(--choose-subject-text);
+    animation: blink 1s infinite;
+}
+
+#typing-headline.typing-complete::after {
+    display: none;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-content .tagline {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.primary-btn {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+    border-color: var(--primary-btn-bg);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: color-mix(in srgb, var(--primary-btn-bg) 80%, black);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--secondary-btn-text);
+    border-color: var(--secondary-btn-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background-color: var(--secondary-btn-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-media p {
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .instagram-icon { color: #e4405f; }
+.social-icons .youtube-icon { color: #ff0000; }
+.social-icons .fab { color: var(--social-icon-color); transition: color 0.3s ease, transform 0.2s ease; }
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------- قسم البطاقات (Feature Cards) -------------------- */
+.feature-cards-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.feature-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    color: var(--text-color);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 0 15px var(--glow-color-transparent);
+    border-color: var(--glow-color-transparent);
+}
+
+.card .icon-large {
+    font-size: 3.5rem;
+    color: var(--choose-subject-text);
+    margin-bottom: 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* -------------------- مربع تسجيل الدخول بواسطة جوجل -------------------- */
+.google-login-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.google-login-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.google-login-box {
+    background-color: var(--google-login-bg);
+    color: var(--google-login-text);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-login-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--google-login-text);
+}
+
+.google-login-box p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.google-signin-btn {
+    background-color: var(--google-btn-bg);
+    color: var(--google-btn-text);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 20px auto;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.google-signin-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.google-signin-btn:hover {
+    background-color: var(--google-btn-hover-bg);
+    transform: translateY(-2px);
+}
+
+.guest-access-text {
+    font-size: 0.9rem;
+    color: var(--google-login-text);
+}
+
+.guest-access-text a {
+    color: var(--secondary-btn-text);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.guest-access-text a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------- صفحة اختيار السنة الدراسية -------------------- */
+.year-selection-container {
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    color: var(--text-color);
+}
+
+.year-selection-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--choose-subject-text);
+}
+
+.year-selection-container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.year-buttons-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* -------------------- واجهة تفعيل الحساب -------------------- */
+.activation-container {
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.activation-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--choose-subject-text);
+}
+
+.activation-container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.telegram-contact {
+    margin-bottom: 30px;
+}
+
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--telegram-btn-bg);
+    color: var(--telegram-btn-text);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.telegram-btn i {
+    font-size: 1.5rem;
+}
+
+.telegram-btn:hover {
+    background-color: color-mix(in srgb, var(--telegram-btn-bg) 80%, black);
+    transform: translateY(-2px);
+}
+
+.pricing-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(var(--text-color), 0.2);
+}
+
+.pricing-info .price-heading {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--price-text-color);
+}
+
+.pricing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--price-text-color);
+}
+
+.pricing-details p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(var(--text-color), 0.1);
+}
+
+.pricing-details p:last-child {
+    border-bottom: none;
+}
+
+.price-label {
+    font-weight: bold;
+    color: var(--price-label-color);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--primary-btn-bg);
+}
+
+
+#confirm-activation-btn {
+    margin-top: 40px;
+}
+
+.activation-status-message {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    min-height: 20px;
+    color: green;
+}
+
+
+/* -------------------- صفحة اختيار المواد (Subjects Page) -------------------- */
+#subjects-page {
+    padding: 40px 20px;
+}
+
+.subjects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.choose-subject-text {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 4.5rem;
+    color: var(--choose-subject-text);
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.choose-subject-text span:first-child {
+    font-size: 1.2em;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 60px;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.subject-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subject-button {
+    border: 2px solid var(--subject-button-border);
+    border-radius: 40px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--subject-button-text);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+    text-align: left;
+    box-shadow: 0 4px 10px var(--glass-shadow-color);
+}
+
+.subject-button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1), 0 0 12px var(--glow-color-transparent);
+    border-color: var(--glow-color-transparent);
+    background-color: var(--secondary-btn-hover-bg);
+}
+
+.subject-button i {
+    font-size: 1.8rem;
+    color: var(--subject-icon-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.heart-bubble {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--heart-bubble-icon);
+    border: 2px solid var(--heart-bubble-border);
+    position: relative;
+    box-shadow: 0 4px 10px var(--glass-shadow-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.heart-bubble:hover {
+    transform: translateY(-5px);
+}
+
+.heart-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 25px;
+    height: 25px;
+    background-color: var(--heart-bubble-bg);
+    border-right: 2px solid var(--heart-bubble-border);
+    border-bottom: 2px solid var(--heart-bubble-border);
+    border-top-right-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* -------------------- الأنماط الخاصة بالرسوم المتحركة عند التمرير -------------------- */
+.scroll-reveal-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal-element.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* -------------------- زر محادثة AI العائم -------------------- */
+.ai-chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--ai-chat-btn-bg);
+    color: var(--ai-chat-btn-text);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1001;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.ai-chat-btn:hover {
+    background-color: color-mix(in srgb, var(--ai-chat-btn-bg) 80%, white);
+    transform: translateY(-3px);
+}
+
+/* -------------------- نافذة محادثة AI (Modal) -------------------- */
+.ai-chat-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ai-chat-modal-bg);
+    display: flex;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+.ai-chat-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ai-chat-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    height: 80%;
+    max-height: 600px;
+    min-width: 300px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(15px);
+}
+
+.chat-header {
+    background-color: var(--chat-header-bg);
+    color: var(--header-text);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: grab;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.close-chat-btn {
+    background: none;
+    border: none;
+    color: var(--header-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-chat-btn:hover {
+    color: #e0e0e0;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: var(--chat-body-bg);
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-body p {
+    border-radius: 10px;
+    padding: 10px 15px;
+    max-width: 100%;
+    line-height: 1.4;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+}
+
+.chat-body p.ai-message {
+    background-color: var(--chat-message-bg-ai);
+    color: var(--chat-text-color);
+}
+
+.chat-body p.user-message {
+    background-color: var(--chat-message-bg-user);
+    color: var(--chat-text-color);
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--input-border);
+    background-color: var(--card-bg);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    align-items: center;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.chat-input button {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-input button:hover {
+    background-color: color-mix(in srgb, var(--primary-btn-bg) 80%, black);
+}
+
+#tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page-section {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.glowing-text {
+    color: var(--choose-subject-text);
+    text-shadow: 0 0 7px var(--glow-color),
+                 0 0 12px var(--glow-color);
+    animation: glow-animation 2s infinite alternate;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+@keyframes glow-animation {
+    from {
+        text-shadow: 0 0 5px var(--glow-color),
+                     0 0 10px var(--glow-color);
+    }
+    to {
+        text-shadow: 0 0 10px var(--glow-color),
+                     0 0 20px var(--glow-color);
+    }
+}
+
+.dark-mode .glowing-text {
+    color: var(--choose-subject-text);
+    text-shadow: 0 0 7px var(--glow-color),
+                 0 0 15px var(--glow-color);
+}
+
+.content-display-container {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+    text-align: center;
+}
+#content-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+.content-list-container {
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+}
+.content-list-container a.content-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--secondary-btn-hover-bg);
+    color: var(--text-color);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    transition: all 0.3s ease;
+}
+.content-list-container a.content-item:hover {
+    transform: translateY(-3px) scale(1.02);
+    border-color: var(--primary-btn-bg);
+}
+.content-list-container a.content-item .fas {
+    color: var(--primary-btn-bg);
+    font-size: 1.5rem;
+}
+#back-to-subjects-btn, #back-to-home-from-year, #back-to-year-select {
+    margin-top: 20px;
+}
+
+/* -------------------- (مُعدّل) أنماط الشات الاحترافية القابلة للتغيير -------------------- */
+.is-dragging, .is-dragging * {
+    cursor: grabbing !important;
+    user-select: none;
+}
+
+.resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    cursor: se-resize;
+    z-index: 10;
+}
+
+.message-wrapper { 
+    display: flex; 
+    align-items: flex-end; 
+    gap: 8px; 
+    margin-bottom: 10px; 
+    max-width: 85%;
+}
+.ai-message-wrapper { 
+    justify-content: flex-start; 
+    align-self: flex-start;
+}
+.user-message-wrapper { 
+    justify-content: flex-end; 
+    align-self: flex-end;
+}
+
+.copy-btn {
+    background: none; border: none; cursor: pointer;
+    color: var(--social-icon-color); font-size: 0.9rem;
+    padding: 5px; opacity: 0;
+    transition: opacity 0.2s, color 0.2s, transform 0.2s;
+    align-self: center;
+}
+.ai-message-wrapper:hover .copy-btn { opacity: 0.7; }
+.copy-btn:hover { opacity: 1; }
+.copy-btn .fas.fa-check { color: #2ecc71; }
+
+.loading-message {
+    padding: 0 !important;
+    background: none !important;
+}
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--chat-message-bg-ai);
+    border-radius: 10px;
+}
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: var(--price-label-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+.typing-indicator span:nth-of-type(1) { animation-delay: -0.32s; }
+.typing-indicator span:nth-of-type(2) { animation-delay: -0.16s; }
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1.0); }
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 8px;
+}
+.chat-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-btn-bg);
+    border-radius: 10px;
+    border: 2px solid var(--chat-body-bg);
+}
+.chat-body::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--primary-btn-bg) 80%, white);
+}
+
+/* --- (جديد) ستايل الزر المؤقت للمطور --- */
+.temp-dev-btn {
+    background: transparent;
+    border: 1px solid var(--header-text);
+    color: var(--header-text);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.temp-dev-btn:hover {
+    background-color: var(--primary-btn-bg);
+    border-color: var(--primary-btn-bg);
+    transform: scale(1.05);
+}
+
+.temp-dev-btn .fas {
+    margin-right: 5px;
+}
+/* ======================================================= */
+/* === [إضافة جديدة] أنماط قسم استعراض الميزات والنافذة المنبثقة === */
+/* ======================================================= */
+
+/* --- أنماط قسم استعراض الميزات --- */
+#explore-section {
+    padding: 80px 40px;
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+    border-top: 1px solid var(--input-border);
+    border-bottom: 1px solid var(--input-border);
+}
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.explore-feature-card {
+    text-align: center;
+    padding: 20px;
+}
+.explore-feature-card .icon-large {
+    font-size: 3rem;
+    color: var(--primary-btn-bg);
+    margin-bottom: 20px;
+}
+.explore-feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--choose-subject-text);
+}
+.explore-feature-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--choose-subject-text);
+}
+
+/* --- أنماط النافذة المنبثقة (Modal) لبطاقة Articles --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-box {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+.modal-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--choose-subject-text);
+}
+.modal-box p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.modal-box .fas {
+    font-size: 3rem;
+    color: var(--primary-btn-bg);
+    margin-bottom: 20px;
+}
+/* ======================================================= */
+/* === [النسخة الجديدة] أنماط نافذة Explore Content     === */
+/* ======================================================= */
+
+.explore-box {
+    max-width: 650px; /* عرض مناسب للرسالة التحفيزية */
+    text-align: center;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--price-label-color);
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.close-modal-btn:hover {
+    transform: scale(1.2);
+    color: var(--text-color);
+}
+
+.explore-box .fas.fa-rocket {
+    font-size: 3.5rem;
+    color: var(--primary-btn-bg);
+    margin-bottom: 20px;
+}
+
+.explore-box h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--choose-subject-text);
+    margin-bottom: 15px;
+}
+
+.modal-subtitle {
+    font-size: 1.3rem; /* تكبير الخط قليلاً */
+    color: var(--price-label-color);
+    line-height: 1.7; /* زيادة المسافة بين السطور */
+    margin-bottom: 20px;
+}
+/* -------------------- التجاوبية (Responsive Design) -------------------- */
+@media (max-width: 992px) {
+    .main-header { padding: 15px 20px; }
+    .main-nav ul { gap: 20px; }
+    .hero-section { flex-direction: column; text-align: center; padding: 60px 20px; }
+    .hero-content { padding-right: 0; margin-bottom: 50px; text-align: center; }
+    #typing-headline { font-size: 3rem; }
+    .hero-content .tagline { font-size: 1.3rem; }
+    .hero-image { padding-top: 0; }
+    .feature-cards-container { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .choose-subject-text { font-size: 3.5rem; }
+    .subjects-grid { grid-template-columns: 1fr; gap: 20px; }
+    .subject-button { justify-content: center; text-align: center; }
+    .google-login-box { padding: 30px; }
+    .google-login-box h3 { font-size: 1.5rem; }
+    .activation-container, .year-selection-container { padding: 30px; }
+    .activation-container h2, .year-selection-container h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 768px) {
+    .main-header { flex-wrap: wrap; justify-content: center; gap: 15px; padding: 15px 10px; }
+    .main-nav ul { gap: 15px; width: 100%; justify-content: center; }
+    .header-left, .header-right-controls { margin: 0 10px; }
+    #typing-headline { font-size: 2.2rem; }
+    #typing-headline::after { right: -5px; }
+    .typing-headline-container { min-height: 80px; }
+    .hero-content .tagline { font-size: 1.1rem; }
+    .action-buttons { flex-direction: column; gap: 15px; align-items: center; }
+    .btn { width: 100%; max-width: 350px; padding: 12px 20px; }
+    .social-media { flex-direction: column; gap: 10px; align-items: center; }
+    .feature-cards-container { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .card { padding: 20px; min-height: 150px; }
+    .card .icon-large { font-size: 3rem; }
+    .card h3 { font-size: 1.1rem; }
+    .choose-subject-text { font-size: 3rem; }
+    .subject-button { font-size: 1rem; padding: 10px 20px; }
+    .subject-button i { font-size: 1.5rem; }
+    .heart-bubble { width: 70px; height: 70px; font-size: 2.5rem; }
+    .google-login-box { padding: 25px; }
+    .google-signin-btn { font-size: 1rem; padding: 10px 20px; }
+    .activation-container, .year-selection-container { padding: 25px; }
+    .activation-container h2, .year-selection-container h2 { font-size: 1.6rem; }
+    .activation-container p, .year-selection-container p { font-size: 1rem; }
+    .telegram-btn { font-size: 1rem; padding: 10px 20px; }
+    .pricing-info .price-heading { font-size: 1.2rem; }
+    .pricing-details p { font-size: 1rem; }
+
+    .ai-chat-box {
+        max-height: 80vh;
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header { flex-direction: column; padding: 10px 5px; gap: 10px; }
+    .main-nav ul { flex-direction: column; gap: 10px; }
+    .main-nav ul li a { font-size: 1rem; }
+    .header-left .header-cap-icon { font-size: 2rem; }
+    .header-right-logo { width: 40px; height: 40px; }
+    .hero-section { padding: 40px 15px; }
+    #typing-headline { font-size: 1.9rem; } 
+    .typing-headline-container { min-height: 70px; }
+    .hero-content .tagline { font-size: 1rem; }
+    .social-icons .fab { font-size: 2rem; }
+    .feature-cards-section { padding: 30px 15px; }
+    .feature-cards-container { grid-template-columns: 1fr; }
+    .choose-subject-text { font-size: 2.5rem; }
+    .subject-button { font-size: 0.9rem; padding: 8px 15px; }
+    .subject-button i { font-size: 1.3rem; }
+    .heart-bubble { width: 60px; height: 60px; font-size: 2rem; }
+    .ai-chat-btn { width: 45px; height: 45px; font-size: 1.3rem; bottom: 15px; right: 15px; }
+    
+    .ai-chat-box {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        border-radius: 0;
+    }
+    .chat-header { border-radius: 0; }
+    .close-chat-btn { font-size: 1.3rem; }
+    .chat-input input[type="text"] { padding: 8px 12px; font-size: 0.9rem; }
+    .chat-input button { width: 35px; height: 35px; font-size: 1rem; }
+}
+
+/* === [إضافات جديدة] أنماط الميزات الاحترافية === */
+
+/* نظام التنبيهات */
+.notification-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.notification-toast.show {
+    top: 40px;
+    opacity: 1;
+    visibility: visible;
+}
+.notification-toast.success { background-color: #2EB67D; }
+.notification-toast.error { background-color: #E01E5B; }
+.notification-toast.info { background-color: #36C5F0; }
+
+/* أزرار التحكم في رأس الدردشة */
+#chat-controls {
+    display: flex;
+    gap: 10px;
+}
+#chat-controls button {
+    background: none;
+    border: 1px solid var(--header-text);
+    color: var(--header-text);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+#chat-controls button:hover {
+    background-color: var(--primary-btn-bg);
+    border-color: var(--primary-btn-bg);
+}
+
+/* الأزرار بجانب كل رسالة (تلخيص وتثبيت) */
+.message-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-self: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.message-wrapper:hover .message-actions {
+    opacity: 1;
+}
+.message-actions button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    color: var(--social-icon-color);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.message-actions button:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-btn-hover-bg);
+}
+
+/* شريط الرسالة المثبتة */
+#pinned-message-bar {
+    background-color: var(--chat-message-bg-ai);
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--input-border);
+    font-size: 14px;
+    display: none;
+    position: relative;
+    cursor: pointer;
+}
+#pinned-message-bar p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 30px;
+}
+#unpin-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* -------------------- [جديد] تصميم واجهة إحصائيات المستخدم -------------------- */
+.stats-dashboard {
+    width: 100%;
+    max-width: 500px; /* يمكنك تعديل العرض حسب رغبتك */
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.7);
+    color: #1B2A41; /* لون نص داكن للوضوح */
+}
+
+.dark-mode .stats-dashboard {
+    background: rgba(27, 42, 65, 0.7); /* لون --card-bg مع شفافية */
+    border-color: rgba(52, 152, 219, 0.3);
+    color: #f0f0f0;
+}
+
+.stats-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stats-header p {
+    font-size: 1rem;
+    color: var(--price-label-color);
+    margin-bottom: 25px;
+}
+
+.last-lesson-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dark-mode .last-lesson-card {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--price-label-color);
+    margin-bottom: 8px;
+}
+
+.last-lesson-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.last-lesson-card span {
+    font-size: 1rem;
+    color: #555;
+}
+.dark-mode .last-lesson-card span {
+    color: #bbb;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .stat-box {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-main-number {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #1ABC9C; /* لون ثانوي أخضر */
+    line-height: 1.1;
+}
+
+.stat-main-number.incorrect-color {
+    color: #E01E5B; /* لون أحمر للخطأ */
+}
+
+.stat-sub-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 5px;
+    flex-grow: 1; /* لجعل الصناديق بنفس الارتفاع */
+}
+
+.stat-footer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--price-label-color);
+}
+
+.achievement-box {
+    justify-content: center;
+    align-items: center;
+    background-color: #1B2A41; /* لون أساسي */
+    color: #fff;
+    padding: 15px 10px;
+}
+.dark-mode .achievement-box {
+    background-color: #0F141E; /* أغمق */
+}
+
+.achievement-box img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.achievement-box p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* -------------------- [جديد] أنماط احترافية لواجهة الشات والأنيميشن -------------------- */
+
+/* --- 1. أنيميشن احترافي للأيقونات عند الـ Hover --- */
+/* يستهدف جميع الأيقونات داخل الأزرار والروابط القابلة للنقر */
+a i, button i {
+    transition: transform 0.2s ease-in-out, color 0.2s ease;
+}
+
+/* تطبيق تأثير الـ Hover على الأيقونات */
+a:hover i, button:hover i {
+    transform: scale(1.2);
+}
+
+/* استثناءات بسيطة لتجنب تضارب الأنيميشن */
+.theme-toggle-btn:hover i {
+    transform: scale(1.15) rotate(20deg); /* الحفاظ على الدوران الخاص به */
+}
+.chat-plus-btn.rotated i {
+    transform: rotate(45deg) scale(1.2); /* دمج الدوران مع التكبير */
+}
+.main-nav a:hover i, /* to avoid affecting nav links if they had icons */
+.btn:hover i, /* to avoid affecting button icons if they had any */
+.google-signin-btn:hover i {
+    transform: none; /* no transform for these icons */
+}
+.close-chat-btn:hover i {
+    transform: scale(1.2) rotate(90deg); /* Example of a specific animation */
+}
+
+/* --- 2. تصميم واجهة الإدخال الجديدة في الشات --- */
+.chat-input {
+    position: relative; /* مهم جدًا لوضع القائمة المنبثقة */
+    gap: 10px;
+}
+
+.chat-actions-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* تم توحيد هذا الكلاس في الكود الجديد */
+#send-chat-button {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 0; /* تم التعديل */
+}
+
+.chat-plus-btn {
+    background-color: transparent;
+    color: var(--secondary-btn-text);
+    border: 1px solid var(--secondary-btn-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 10px; /* تم التعديل */
+    transition: all 0.3s ease;
+}
+
+.chat-plus-btn:hover {
+    background-color: var(--secondary-btn-hover-bg);
+    transform: scale(1.1);
+}
+
+/* أيقونة الزائد نفسها */
+.chat-plus-btn i {
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* أنيميشن دوران احترافي */
+}
+
+/* حالة الدوران عند فتح القائمة */
+.chat-plus-btn.rotated i {
+    transform: rotate(45deg);
+}
+
+/* القائمة المنبثقة لخيارات الرفع */
+.upload-options {
+    position: absolute;
+    bottom: 120%; /* تظهر فوق زر الزائد */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+
+    /* إخفاء القائمة مبدئيًا مع أنيميشن */
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 10px); /* تبدأ من الأسفل قليلاً */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* حالة الظهور للقائمة */
+.upload-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* الأزرار داخل القائمة المنبثقة */
+.upload-option-btn {
+    background-color: var(--chat-message-bg-user);
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode .upload-option-btn {
+    background-color: var(--chat-message-bg-ai);
+}
+
+.upload-option-btn:hover {
+     background-color: color-mix(in srgb, var(--primary-btn-bg) 80%, black);
+     color: var(--primary-btn-text);
+     transform: translateY(-2px);
+}
+
+/* === [إضافة جديدة] أنماط العرض الاحترافي للمواد (Vertical 3D Carousel) === */
+
+/* 1. إخفاء الشبكة القديمة (للتأكيد) */
+.subjects-grid {
+    display: none !important;
+}
+
+/* 2. مسرح العرض (البيئة ثلاثية الأبعاد) */
+.carousel-scene {
+    position: relative;
+    width: 90vw;
+    max-width: 600px;
+    height: 50vh;
+    max-height: 500px;
+    perspective: 2500px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 30px 20px rgba(0,0,0,0.2));
+    overflow: visible; /* <--- هذا هو السطر الذي يحل المشكلة */
+    transform-style: preserve-3d; /* ✨ ضمان الحفاظ على السياق ثلاثي الأبعاد */
+}
+
+/* 3. حاوية الأسطوانة الدوارة */
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1); /* جعل الحركة أبطأ وأكثر سلاسة */
+}
+
+/* 4. عناصر الكاروسيل (أزرار المواد) */
+.carousel-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    /* الحجم والتنسيق */
+    padding: 18px 35px;
+    font-size: 1.4rem; 
+    width: 90%;
+    height: 90px;
+    margin-left: -45%;
+    margin-top: -45px;
+    
+    /* التصميم */
+    border: 2px solid var(--subject-button-border);
+    border-radius: 50px;
+    background-color: var(--card-bg);
+    color: var(--subject-button-text);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+    /* خصائص أخرى */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    overflow: hidden; /* مهم لإخفاء تأثير اللمعان الزائد */
+    
+    /* الانتقالات */
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), 
+                opacity 0.7s ease,
+                filter 0.7s ease;
+
+    /* [إضافة جديدة] إعدادات أنيميشن الظهور */
+    opacity: 0;
+    transform: translateY(-20px) rotateX(90deg);
+}
+
+/* [إضافة جديدة] كلاس لتفعيل أنيميشن الظهور */
+.carousel-item.visible {
+    opacity: 1;
+    /* سيتم تحديد التحويل النهائي بواسطة JS */
+}
+
+
+/* [إضافة] تأثير اللمعان الضوئي (Sheen Effect) */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; /* يبدأ من خارج العنصر */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 60%);
+    transform: skewX(-25deg);
+    transition: left 0.7s ease-in-out;
+}
+
+/* تفعيل تأثير اللمعان عند تحويم الماوس على العنصر النشط */
+.carousel-item.active:hover::before {
+    left: 150%;
+}
+
+/* [إضافة] تأثير الانعكاس الزجاجي (Reflection) */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: -100%; /* أسفل العنصر مباشرة */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* يرث خلفية الزر */
+    transform: scaleY(-1); /* قلبه رأسيًا */
+    opacity: 0.5; /* شفافية الانعكاس */
+    filter: blur(1px);
+    /* تدرج لوني لجعل الانعكاس يتلاشى */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
+}
+
+.dark-mode .carousel-item::after {
+    opacity: 0.3; /* تقليل شفافية الانعكاس في الوضع الداكن */
+}
+
+
+/* 5. أزرار التحكم بالأسهم */
+.carousel-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.carousel-arrow {
+    background: transparent;
+    border: 2px solid var(--secondary-btn-border);
+    color: var(--secondary-btn-text);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: var(--secondary-btn-hover-bg);
+    transform: scale(1.1);
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* -------------------- [إضافة جديدة] أنماط صفحة عرض الدروس -------------------- */
+
+.lessons-display-container {
+    max-width: 900px;
+    width: 90%;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.lessons-display-container .back-button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.lessons-display-container .back-button i {
+    margin-right: 8px;
+}
+
+.lessons-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#lesson-subject-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+#lesson-subject-title {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.lessons-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lesson-card {
+    background-color: var(--lesson-card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--lesson-card-border);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    
+    /* إعدادات أنيميشن الظهور */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-btn-bg);
+    background-color: var(--lesson-card-hover-bg);
+}
+
+.lesson-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--lesson-number-color);
+    min-width: 40px;
+    text-align: center;
+}
+
+.lesson-title {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--lesson-title-color);
+    margin: 0;
+}
+
+.lesson-action-icon {
+    font-size: 2rem;
+    color: var(--lesson-icon-color);
+    transition: transform 0.2s ease;
+}
+
+.lesson-card:hover .lesson-action-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .lessons-display-container {
+        padding: 25px;
+    }
+    #lesson-subject-title {
+        font-size: 2rem;
+    }
+    .lesson-title {
+        font-size: 1.1rem;
+    }
+    .lesson-card {
+        padding: 15px;
+        gap: 15px;
+    }
+    .lessons-display-container .back-button {
+        position: relative;
+        top: auto;
+        left: auto;
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
+    .lessons-header {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+/* =================================================== */
+/* === [النسخة النهائية] أنماط واجهة الكويز الاحترافية === */
+/* =================================================== */
+#quiz-taking-page.active {
+    display: flex; /* Override display: block to enable flex alignment */
+    align-items: center;
+    justify-content: center;
+}
+.quiz-container-pro {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* ❌ احذف السطر التالي */
+    /* height: calc(100vh - 120px); */ 
+
+    /* ✅ أضف السطر التالي بدلاً منه */
+    max-height: 95vh; /* السماح بالتمرير إذا تجاوز المحتوى ارتفاع الشاشة */
+
+    min-height: 650px;
+    overflow: hidden;
+    border: 1px solid var(--lesson-card-border);
+}
+/* --- Left Panel: Question List --- */
+.quiz-question-list-pro {
+    flex-basis: 220px;
+    flex-shrink: 0;
+    background-color: var(--secondary-btn-hover-bg);
+    padding: 20px;
+    border-right: 1px solid var(--lesson-card-border);
+    overflow-y: auto;
+}
+.quiz-question-list-pro h4 {
+    margin-bottom: 20px;
+    color: var(--choose-subject-text);
+    text-align: center;
+}
+#quiz-question-numbers-pro {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+    gap: 12px;
+}
+.question-number-pro {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--input-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.question-number-pro:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+.question-number-pro.current {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--glow-color-transparent);
+}
+.question-number-pro.answered.correct {
+    background-color: var(--primary-btn-bg);
+    border-color: var(--primary-btn-bg);
+    color: #fff;
+}
+.question-number-pro.answered.incorrect {
+    background-color: #E01E5B;
+    border-color: #E01E5B;
+    color: #fff;
+}
+/* --- Right Panel: Main Area --- */
+.quiz-main-area-pro {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 40px;
+}
+.quiz-header-pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--lesson-card-border);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+#quiz-breadcrumbs-pro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--price-label-color);
+}
+#quiz-breadcrumbs-pro .fa-chevron-right { font-size: 0.8rem; }
+#quiz-breadcrumbs-pro span { font-weight: 600; }
+/* Timer Style */
+.quiz-timer-pro {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--choose-subject-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--secondary-btn-hover-bg);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+.quiz-timer-pro.warning {
+    color: #E01E5B;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.quiz-question-area-pro {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 15px; /* for scrollbar */
+}
+#quiz-progress-pro {
+    color: var(--price-label-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#quiz-question-text-pro {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+#quiz-options-container-pro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.quiz-option-pro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+}
+.quiz-option-pro:not(:disabled):hover {
+    border-color: var(--accent-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+.quiz-option-pro.selected {
+    border-color: var(--accent-color);
+    background-color: rgba(52, 152, 219, 0.2);
+}
+.quiz-option-pro.correct {
+    border-color: var(--primary-btn-bg);
+    background-color: rgba(26, 188, 156, 0.15);
+    color: var(--primary-btn-bg);
+    font-weight: bold;
+}
+.quiz-option-pro.incorrect {
+    border-color: #E01E5B;
+    background-color: rgba(224, 30, 91, 0.15);
+    color: #E01E5B;
+}
+
+/* --- [إضافة جديدة] أنماط أيقونات الاختيار (دوائر ومربعات) --- */
+.quiz-option-pro::before {
+    content: '';
+    display: inline-block;
+    width: 24px;  /* حجم أكبر قليلاً */
+    height: 24px; /* حجم أكبر قليلاً */
+    border: 2px solid var(--input-border);
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+/* نمط الدوائر للأسئلة ذات الإجابة الواحدة */
+#quiz-options-container-pro.single-choice .quiz-option-pro::before {
+    border-radius: 50%;
+}
+/* نمط المربعات للأسئلة ذات الإجابات المتعددة */
+#quiz-options-container-pro.multiple-choice .quiz-option-pro::before {
+    border-radius: 6px;
+}
+/* عند اختيار الخيار (قبل التحقق) */
+.quiz-option-pro.selected::before {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+/* عند التحقق من الإجابة الصحيحة (إضافة علامة صح) */
+.quiz-option-pro.correct::before {
+    background-color: var(--primary-btn-bg);
+    border-color: var(--primary-btn-bg);
+    font-family: "Font Awesome 6 Free"; /* تأكد من استخدام الإصدار الصحيح */
+    content: '\f00c'; /* أيقونة الصح */
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+/* عند التحقق من الإجابة الخاطئة التي اختارها المستخدم (إضافة علامة خطأ) */
+.quiz-option-pro.incorrect.selected::before {
+    background-color: #E01E5B;
+    border-color: #E01E5B;
+    font-family: "Font Awesome 6 Free"; /* تأكد من استخدام الإصدار الصحيح */
+    content: '\f00d'; /* أيقونة الخطأ */
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Explanation Box Style */
+.quiz-explanation-pro {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-btn-hover-bg);
+    border-left: 5px solid var(--accent-color);
+    animation: fadeIn 0.5s ease;
+}
+.quiz-explanation-pro h4 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--choose-subject-text);
+}
+.quiz-explanation-pro p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.quiz-footer-pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--lesson-card-border);
+    margin-top: auto;
+}
+.quiz-stats-pro {
+    display: flex;
+    gap: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--price-label-color);
+}
+.quiz-stats-pro strong {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+.quiz-nav-btn-pro {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--secondary-btn-border);
+    background-color: transparent;
+    color: var(--secondary-btn-text);
+    transition: all 0.3s ease;
+}
+.quiz-nav-btn-pro.primary {
+    background-color: var(--primary-btn-bg);
+    border-color: var(--primary-btn-bg);
+    color: #fff;
+}
+.quiz-nav-btn-pro:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.quiz-nav-btn-pro:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+@media (max-width: 992px) {
+    .quiz-container-pro {
+        flex-direction: column;
+        height: auto;
+        margin: 10px;
+    }
+    .quiz-question-list-pro {
+        flex-basis: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--lesson-card-border);
+    }
+    #quiz-question-numbers-pro {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+/* =================================================== */
+/* === الدرس 1: أنماط الترقيم الأبجدي لخيارات الكويز === */
+/* =================================================== */
+
+/* تعديل الزر الرئيسي لخيارات الكويز ليستخدم Flexbox بشكل أفضل */
+.quiz-option-pro {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* المسافة بين الدائرة/المربع والنص */
+}
+
+/* العنصر ::before سيظل هو الدائرة/المربع كما هو */
+.quiz-option-pro::before {
+    flex-shrink: 0; /* منع الدائرة/المربع من الانكماش */
+}
+
+/* حاوية جديدة تحتوي على الحرف الأبجدي */
+.quiz-option-prefix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-option-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--price-label-color); /* لون رمادي محايد */
+    margin-right: 5px; /* مسافة صغيرة بعد الحرف */
+}
+
+/* نص الخيار */
+.quiz-option-text {
+    flex-grow: 1; /* السماح للنص بأخذ كل المساحة المتبقية */
+    line-height: 1.5;
+}
+/* =================================================== */
+/* === الدرس 2: أنماط صفحة ملخص نتائج الكويز       === */
+/* =================================================== */
+
+#quiz-summary-page.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.quiz-summary-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* مسافات بين الأقسام */
+}
+
+.summary-header {
+    margin-bottom: 10px;
+}
+
+#summary-badge-img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#summary-title {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+#summary-subtitle {
+    font-size: 1.2rem;
+    color: var(--price-label-color);
+    margin-top: 5px;
+}
+
+.summary-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--input-border);
+    border-bottom: 1px solid var(--input-border);
+}
+
+.metric-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--choose-subject-text);
+}
+
+.metric-label {
+    font-size: 1rem;
+    color: var(--price-label-color);
+}
+
+.summary-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.summary-actions .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+.summary-actions .btn i {
+    margin-right: 8px;
+}
+
+.summary-review-section {
+    width: 100%;
+    text-align: left;
+}
+
+.review-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-btn-bg);
+    padding-bottom: 10px;
+}
+
+#incorrect-questions-summary .incorrect-q-summary {
+    background-color: var(--secondary-btn-hover-bg);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #E01E5B; /* لون أحمر للإشارة للخطأ */
+}
+
+#incorrect-questions-summary p {
+    margin: 0 0 8px 0;
+}
+
+#incorrect-questions-summary p strong {
+    color: var(--choose-subject-text);
+}
+
+#incorrect-questions-summary p em {
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* تمييز إجابة المستخدم الخاطئة */
+.dark-mode #incorrect-questions-summary .user-answer { color: #ff8a80; }
+.light-mode #incorrect-questions-summary .user-answer { color: #d32f2f; }
+
+/* تمييز الإجابة الصحيحة */
+.dark-mode #incorrect-questions-summary .correct-answer { color: #a5d6a7; }
+.light-mode #incorrect-questions-summary .correct-answer { color: #388e3c; }
+
+
+@media (max-width: 768px) {
+    .quiz-summary-container {
+        padding: 25px;
+    }
+    #summary-title {
+        font-size: 2.2rem;
+    }
+    .summary-metrics-grid {
+        grid-template-columns: 1fr; /* عرض المقاييس فوق بعضها */
+    }
+    .metric-value {
+        font-size: 1.8rem;
+    }
+    .summary-actions {
+        flex-direction: column;
+    }
+}
+/* --- أنماط ودجت نقاط المستخدم --- */
+.user-profile-widget {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.xp-display {
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+/* --- أنماط نافذة الوسام المنبثقة --- */
+.badge-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 9999;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.badge-overlay.show { opacity: 1; visibility: visible; }
+.badge-popup-content {
+    background-color: var(--card-bg);
+    padding: 40px; border-radius: 15px;
+    text-align: center;
+    transform: scale(0.7);
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.badge-overlay.show .badge-popup-content { transform: scale(1); }
+.badge-popup-content img { width: 120px; margin-bottom: 20px; }
+.badge-popup-content h2 { font-size: 2rem; margin-bottom: 10px; color: var(--choose-subject-text); }
+.badge-popup-content p { font-size: 1.1rem; color: var(--text-color); margin-bottom: 30px; }
+/* =================================================== */
+/* === الدرس 5: أنماط صفحة لوحة الأداء (Dashboard)   === */
+/* =================================================== */
+
+#dashboard-page {
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 25px;
+    margin-top: 40px;
+    grid-template-areas:
+        "xp-card badge-card quiz-card"
+        "chart-card chart-card recent-card"
+        "chart-card chart-card recent-card";
+}
+
+.stat-card, .chart-card, .recent-activity-card {
+    padding: 25px;
+    color: var(--text-color);
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.stat-card:nth-child(1) { grid-area: xp-card; }
+.stat-card:nth-child(2) { grid-area: badge-card; }
+.stat-card:nth-child(3) { grid-area: quiz-card; }
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: var(--primary-btn-bg);
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--price-label-color);
+}
+
+.chart-card {
+    grid-area: chart-card;
+}
+
+.chart-card h3, .recent-activity-card h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* ارتفاع ثابت للرسم البياني */
+}
+
+.recent-activity-card {
+    grid-area: recent-card;
+    text-align: left;
+}
+
+#recent-quizzes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+#recent-quizzes-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--input-border);
+}
+#recent-quizzes-list li:last-child {
+    border-bottom: none;
+}
+
+#recent-quizzes-list .quiz-title {
+    font-weight: 600;
+}
+
+#recent-quizzes-list .quiz-score {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-btn-bg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "xp-card badge-card"
+            "quiz-card quiz-card"
+            "chart-card chart-card"
+            "recent-card recent-card";
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "xp-card"
+            "badge-card"
+            "quiz-card"
+            "chart-card"
+            "recent-card";
+    }
+    .chart-container {
+        height: 300px;
+    }
+}
+/* في ملف style.css */
+
+.welcome-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 192, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.welcome-illustration img {
+    width: 150px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+}
+
+.welcome-content h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #083344; /* Dark Cyan */
+}
+
+.dark-mode .welcome-content h2 {
+    color: #ecfeff; /* Light Cyan for dark mode */
+}
+
+.welcome-content p {
+    margin-top: 0.5rem;
+    color: #334155;
+}
+
+.dark-mode .welcome-content p {
+    color: #cbd5e1;
+}
+
+.start-quiz-btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 16px;
+    background-image: linear-gradient(to right, #06b6d4, #3b82f6);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+}
+
+.start-quiz-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+}
+
+/* Hide the old stats-card by default */
+.stats-card {
+    display: grid; /* Or flex, depending on your original layout */
+    /* ... add your original stats-card styles here ... */
+}
+/* ======================================================= */
+/* === تصميم احترافي جديد للبطاقة الترحيبية (Glassmorphism) === */
+/* ======================================================= */
+
+/* حاوية البطاقة لجعلها تتوسط بشكل صحيح */
+#welcome-card-container {
+    display: none; /* سيتم التحكم به عبر JS */
+    width: 100%;
+    max-width: 550px; /* زيادة العرض قليلاً */
+    padding: 20px;
+}
+
+/* تصميم البطاقة الرئيسي */
+.welcome-card.glassmorphism-card {
+    background: rgba(255, 255, 255, 0.1); /* شفافية زجاجية */
+    backdrop-filter: blur(25px); /* تأثير ضبابي قوي */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px; /* حواف دائرية أكثر */
+    padding: 2.5rem; /* مساحة داخلية أكبر */
+    box-shadow: 0 8px 32px 0 rgba(0, 192, 255, 0.25); /* ظل أزرق متوهج */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.dark-mode .welcome-card.glassmorphism-card {
+    background: rgba(27, 42, 65, 0.2); /* لون أغمق للوضع الليلي */
+    box-shadow: 0 8px 32px 0 rgba(52, 152, 219, 0.3);
+}
+
+/* الصورة ثلاثية الأبعاد */
+.welcome-illustration img {
+    width: 180px; /* حجم مناسب للصورة */
+    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.25)); /* ظل يعطي إحساس بالعمق */
+    transition: transform 0.3s ease;
+}
+
+.welcome-card:hover .welcome-illustration img {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* محتوى البطاقة (النصوص) */
+.welcome-content h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--header-bg); /* لون نص داكن وواضح */
+    margin: 0;
+}
+.dark-mode .welcome-content h2 {
+    color: #ecfeff; /* لون سماوي فاتح */
+}
+
+.welcome-content p {
+    color: #334155;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0 0;
+}
+.dark-mode .welcome-content p {
+    color: #cbd5e1;
+}
+
+/* زر البدء الاحترافي */
+#welcome-start-quiz-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 16px;
+    background-image: linear-gradient(to right, #06b6d4, #3b82f6); /* تدرج لوني جذاب */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4); /* ظل متوهج */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#welcome-start-quiz-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+}
+
+/* إخفاء شريط التقدم القديم لأنه لا يتماشى مع التصميم الجديد */
+.progress-bar-container {
+    display: none;
+}
+/* =================================== */
+/* == Professional Welcome Card CSS == */
+/* =================================== */
+
+.welcome-card-wrapper {
+    width: 100%;
+    max-width: 650px; /* Adjust width as needed */
+    margin: 2rem auto;
+    perspective: 1000px; /* For 3D effects */
+}
+
+.welcome-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 192, 255, 0.15);
+    transform: rotateX(5deg) rotateY(-5deg);
+    transition: transform 0.4s ease-out;
+}
+
+.welcome-card:hover {
+    transform: rotateX(0) rotateY(0);
+}
+
+.welcome-card-glow {
+    position: absolute;
+    pointer-events: none;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(circle, rgba(0, 192, 255, 0.25) 0%, rgba(0, 192, 255, 0) 60%);
+    animation: glow-rotate 15s linear infinite;
+}
+
+@keyframes glow-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.welcome-card-content {
+    position: relative; /* To be above the glow */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.welcome-card-text {
+    flex: 1;
+}
+
+.welcome-card-text h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-color, #1a202c);
+    margin-bottom: 0.5rem;
+}
+
+.welcome-card-text .highlight {
+    color: #007BFF; /* Or your primary brand color */
+}
+
+.welcome-card-text p {
+    font-size: 1rem;
+    color: var(--secondary-text-color, #4a5568);
+    margin-bottom: 1.5rem;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin-bottom: 1.5rem;
+}
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--secondary-text-color, #4a5568);
+    margin-bottom: 0.5rem;
+}
+.progress-bar-background {
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 99px;
+}
+.progress-bar-foreground {
+    width: 0%; /* Starts at 0 */
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #00BFFF, #007BFF);
+}
+
+
+/* Button Styles */
+.welcome-card-button {
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #00BFFF, #007BFF);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 150, 255, 0.3);
+}
+
+.welcome-card-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 150, 255, 0.4);
+}
+
+
+/* Illustration Styles */
+.welcome-card-illustration {
+    flex-shrink: 0;
+}
+
+.welcome-card-illustration img {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .welcome-card-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .welcome-card {
+        padding: 1.5rem;
+        transform: none;
+    }
+}
+/* --- أنماط قائمة الأداء التفاعلية --- */
+.performance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.performance-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "info button"
+        "bar button";
+    gap: 5px 15px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: var(--secondary-btn-hover-bg);
+    border: 1px solid var(--lesson-card-border);
+}
+
+.subject-info {
+    grid-area: info;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.subject-name {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.subject-score {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--price-label-color);
+}
+
+.progress-bar-container {
+    grid-area: bar;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dark-mode .progress-bar-container {
+     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-btn-bg);
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+.review-mistakes-btn {
+    grid-area: button;
+    padding: 10px 18px !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap; /* لمنع الزر من الانقسام إلى سطرين */
+}
+
+.review-mistakes-btn i {
+    margin-right: 8px;
+}
+/* --- أنماط قسم مراجعة نتائج الكويز --- */
+
+.review-q-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--secondary-btn-hover-bg);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--input-border);
+}
+
+.review-q-summary.incorrect-q-summary { 
+    border-left-color: #E01E5B !important;
+}
+
+.review-q-text {
+    flex-grow: 1;
+}
+
+.review-q-actions {
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.action-btn {
+    background: none;
+    border: 1px solid var(--secondary-btn-text);
+    color: var(--secondary-btn-text);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover:not(:disabled) {
+    background-color: var(--secondary-btn-hover-bg);
+    transform: scale(1.1);
+}
+
+.action-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.action-btn .fa-check-square {
+    color: var(--primary-btn-bg);
+}
+/* --- أنماط صفحة بطاقات المراجعة --- */
+#flashcards-page {
+    padding: 40px 20px;
+}
+
+.flashcards-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--price-label-color);
+}
+
+.flashcards-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.collection-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--input-border);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--primary-btn-bg);
+}
+
+.collection-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--choose-subject-text);
+}
+
+.collection-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* --- أنماط عارض البطاقات --- */
+.flashcard-viewer-hidden {
+    display: none !important;
+}
+
+.flashcard-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.flashcard-viewer-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#flashcard-progress {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* --- START: CORRECTED FLASHCARD STYLES --- */
+
+#flashcard-card-container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+/* 'flashcard' is now just a positioning container, no transform styles.
+*/
+.flashcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+/* 'flashcard-inner' is the NEW rotating object. 
+  It holds the 3D space and the transition.
+*/
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* When the parent '.flashcard' gets the 'is-flipped' class, 
+  we rotate the CHILD '.flashcard-inner'. THIS IS THE KEY.
+*/
+.flashcard.is-flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* For Safari compatibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--card-bg);
+    border: 2px solid var(--input-border);
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    white-space: pre-wrap; 
+    font-size: 1.2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+/* --- END: CORRECTED FLASHCARD STYLES --- */
+
+/* style.css */
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* ✅ الخاصية السحرية: تخفي الوجه الخلفي عندما لا يكون مواجهًا لنا */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* لدعم المتصفحات القديمة */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--card-bg);
+    border: 2px solid var(--input-border);
+}
+
+.flashcard-back {
+    /* ✅ هذا السطر يضمن أن الوجه الخلفي مقلوب دائمًا في البداية */
+    transform: rotateY(180deg);
+
+    white-space: pre-wrap; 
+    font-size: 1.2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    white-space: pre-wrap;
+    font-size: 1.2rem;
+    align-items: flex-start;
+    justify-content: flex-start; /* To align text to the top-left */
+    overflow-y: auto; /* Add scroll if content is too long */
+}
+
+
+.flashcard-viewer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+/* ================================== */
+/* === POMODORO TIMER STYLES START === */
+/* ================================== */
+
+/* --- Modal Overlay and Box --- */
+.pomodoro-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ai-chat-modal-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.pomodoro-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pomodoro-box {
+    width: 90%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.pomodoro-header {
+    background-color: var(--chat-header-bg);
+    color: var(--header-text);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pomodoro-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.close-pomodoro-btn {
+    background: none;
+    border: none;
+    color: var(--header-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.close-pomodoro-btn:hover {
+    transform: scale(1.1) rotate(90deg);
+}
+
+.pomodoro-body {
+    padding: 30px;
+    background-color: var(--card-bg);
+}
+
+/* --- Settings View --- */
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group label {
+    font-weight: 500;
+    flex-basis: 60%;
+}
+
+.form-group input {
+    flex-basis: 35%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border);
+    background-color: var(--secondary-btn-hover-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: center;
+}
+
+#start-pomodoro-btn {
+    width: 100%;
+    padding: 12px;
+}
+
+/* --- Timer View --- */
+.timer-active-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.timer-display-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-ring {
+    transform: rotate(-90deg); /* Start from the top */
+}
+
+.progress-ring-bg {
+    stroke: var(--secondary-btn-hover-bg);
+}
+.dark-mode .progress-ring-bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-ring-fg {
+    stroke: var(--primary-btn-bg);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s linear;
+}
+
+.time-display {
+    position: absolute;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--choose-subject-text);
+}
+
+.session-counter {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--price-label-color);
+}
+
+.timer-controls {
+    display: flex;
+    gap: 20px;
+}
+
+.timer-control-btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary-btn-border);
+    color: var(--secondary-btn-text);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-control-btn:hover {
+    background-color: var(--secondary-btn-hover-bg);
+    transform: scale(1.05);
+}
+/* --- زر البومودورو العائم --- */
+.pomodoro-fab-btn {
+    position: fixed;
+    /* * زر الذكاء الاصطناعي: bottom: 30px, height: 60px
+     * الحسبة: 30px (مكان الزر الأول) + 60px (ارتفاعه) + 15px (مسافة فاصلة) = 105px
+    */
+    bottom: 105px; 
+    right: 30px;
+    background-color: var(--ai-chat-btn-bg);
+    color: var(--ai-chat-btn-text);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1001;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.pomodoro-fab-btn:hover {
+    background-color: color-mix(in srgb, var(--ai-chat-btn-bg) 80%, white);
+    transform: translateY(-3px);
+}
+
+/* تعديل للشاشات الصغيرة */
+@media (max-width: 480px) {
+    .pomodoro-fab-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        right: 15px;
+        bottom: 75px; /* 15px (مكان الزر الأول) + 45px (ارتفاعه) + 15px (مسافة) */
+    }
+}
+/* ================================ */
+/* === POMODORO TIMER STYLES END === */
+/* ================================ */
+/* ================================== */
+/* === AI Hub and Processor Modals === */
+/* ================================== */
+
+.ai-hub-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2001;
+    backdrop-filter: blur(8px); /* لإضافة تأثير ضبابي للخلفية */
+}
+
+.ai-hub-modal {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--input-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.close-hub-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-hub-btn:hover {
+    transform: scale(1.2);
+    color: var(--primary-btn-bg);
+}
+
+.ai-hub-modal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--choose-subject-text);
+}
+
+.ai-hub-modal p {
+    color: var(--price-label-color);
+    margin-bottom: 30px;
+}
+
+.ai-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ai-option-card {
+    background-color: var(--secondary-btn-hover-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.ai-option-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-btn-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ai-option-card i {
+    font-size: 2.5rem;
+    color: var(--primary-btn-bg);
+    margin-bottom: 15px;
+}
+
+.ai-option-card h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0 0 5px 0;
+}
+
+.ai-option-card span {
+    font-size: 0.9rem;
+    color: var(--price-label-color);
+}
+
+/* Processor Modal specific styles */
+#aiFileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#aiPdfInput {
+    width: 100%;
+    max-width: 300px;
+    /* You can add more specific styles for the file input if you want */
+}
+
+#aiProcessBtn {
+    width: 100%;
+    max-width: 300px;
+}
+
+#aiLoadingIndicator p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.quiz-translation-controls { display: flex; gap: 8px; }
+.btn-translate { background: none; border: 1px solid var(--input-border); border-radius: 5px; cursor: pointer; padding: 5px 8px; font-size: 1.2rem; }
+.btn-translate:hover { background-color: var(--secondary-btn-hover-bg); }

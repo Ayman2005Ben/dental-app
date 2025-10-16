@@ -1,0 +1,532 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // --- تمت الإضافة: تفعيل خلفية tsParticles ---
+    if (typeof tsParticles !== 'undefined') {
+        tsParticles.load("tsparticles", {
+            interactivity: {
+                events: {
+                    onHover: { enable: true, mode: "grab" },
+                    onClick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    grab: { distance: 140, links: { opacity: 0.8 } },
+                    push: { quantity: 4 }
+                }
+            },
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"] },
+                shape: { type: "circle" },
+                opacity: { value: { min: 0.3, max: 0.8 } },
+                size: { value: { min: 1, max: 5 } },
+                links: { enable: true, distance: 150, color: "random", opacity: 0.4, width: 1, triangles: { enable: true, color: "#ffffff", opacity: 0.1 } },
+                move: { enable: true, speed: 1, direction: "none", outModes: { default: "out" } }
+            },
+            detectRetina: true,
+            background: { color: "transparent" }
+        });
+    }
+
+    // --- إدارة حالة المستخدم ---
+    let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    let isYearChosen = localStorage.getItem('isYearChosen') === 'true';
+    let selectedYear = localStorage.getItem('selectedYear');
+    let isActivated = localStorage.getItem('isActivated') === 'true';
+    let isGuest = localStorage.getItem('isGuest') === 'true';
+
+    // --- متغيرات للحالة الجديدة ---
+    let currentContentType = null;
+    const contentDatabase = {
+        "1": {
+            "genetics": { summaries: [{ title: "Summary: Intro to Genetics", link: "#" }], quizzes: [{ title: "Quiz: Basic Concepts", link: "#" }], lessons: [] },
+            "anatomy": { summaries: [{ title: "Summary: Head & Neck Anatomy", link: "#" }], quizzes: [], lessons: [{ title: "Video: The Cranial Nerves", link: "#" }] }
+        },
+        "2": {
+            "physiology": { summaries: [{ title: "Summary: Cardiovascular Physiology", link: "#" }], quizzes: [{ title: "Quiz: Respiratory System", link: "#" }], lessons: [] }
+        }
+    };
+
+    // --- عناصر DOM ---
+    const themeToggleBtn = document.querySelector('.theme-toggle-btn');
+    const body = document.body;
+    const navLinks = document.querySelectorAll('.main-nav a');
+    const pageSections = document.querySelectorAll('.page-section');
+    const startLearningBtn = document.getElementById('start-learning-btn');
+    const exploreContentBtn = document.getElementById('explore-content-btn');
+    const googleLoginOverlay = document.getElementById('google-login-overlay');
+    const googleSigninBtn = document.querySelector('.google-signin-btn');
+    const continueAsGuestLink = document.getElementById('continue-as-guest');
+    const yearSelectBtns = document.querySelectorAll('.year-select-btn');
+    const pricingDetailsDiv = document.querySelector('.pricing-details');
+    const confirmActivationBtn = document.getElementById('confirm-activation-btn');
+    const activationStatusMessage = document.getElementById('activation-status');
+    const aiChatBtn = document.querySelector('.ai-chat-btn');
+    const aiChatModal = document.getElementById('aiChatModal');
+    const closeChatBtn = document.querySelector('.close-chat-btn');
+    const chatMessagesDiv = document.getElementById('chat-messages');
+    const userChatInput = document.getElementById('user-chat-input');
+    const sendChatButton = document.getElementById('send-chat-button');
+    const subjectButtons = document.querySelectorAll('.subject-button');
+    const backToHomeBtn = document.getElementById('back-to-home-from-year');
+    const backToYearSelectBtn = document.getElementById('back-to-year-select');
+    const backToSubjectsBtn = document.getElementById('back-to-subjects-btn');
+    const uploadPdfBtn = document.getElementById('upload-pdf-btn');
+    const pdfFileInput = document.getElementById('pdf-file-input');
+    
+    // --- (جديد) عناصر DOM لنافذة الشات القابلة للتغيير ---
+    const aiChatBox = document.getElementById('aiChatBox');
+    const chatHeader = document.getElementById('chatHeader');
+    const resizeHandle = document.getElementById('resizeHandle');
+
+
+    // ===================================================================
+    // --- إعدادات API (مع تضمين المفاتيح) ---
+    // تحذير: لا تنشر هذا الكود على الإنترنت وهو يحتوي على المفاتيح
+    // ===================================================================
+    const apiKeys = {
+        openRouter: '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',
+    };
+    
+    const activeApiKey = apiKeys.openRouter; 
+    const model = 'deepseek/deepseek-chat';
+    const apiEndpoint = 'https://openrouter.ai/api/v1/chat/completions';
+    
+    let chatHistory = [{ 
+    role: "system", 
+    content: `
+أنت 'Dental Quest AI'، مساعد ذكاء اصطناعي أكاديمي فائق التخصص، تم تطويرك بواسطة الدكتور أيمن لمساعدة طلاب طب الأسنان في الجزائر. مهمتك الأساسية هي أن تكون بمثابة معلم خاص وخبير في المناهج الدراسية للسنة الأولى والثانية.
+
+**شخصيتك وقواعدك الأساسية:**
+1.  **الهوية:** عرف عن نفسك دائماً كـ 'Dental Quest AI' عند بدء المحادثات أو عند سؤالك.
+2.  **الخبرة:** تخصصك هو منهج السنة الأولى طب أسنان (الكيمياء، الفيزياء الحيوية، علم الأجنة، علم التشريح، إلخ) ومنهج السنة الثانية. كن واثقاً في خبرتك.
+3.  **اللغات:** أجب بنفس لغة سؤال الطالب (عربية فصحى، فرنسية، أو إنجليزية). استخدم مصطلحات علمية دقيقة مع شرحها بلغة مبسطة.
+4.  **الدقة أولاً:** الدقة العلمية هي أولويتك القصوى. إذا لم تكن متأكداً 100% من معلومة، اذكر ذلك بوضوح وقل "من الأفضل مراجعة هذا الجزء في محاضراتك أو من مصدرك الدراسي المعتمد". لا تخترع إجابات.
+5.  **الأسلوب التعليمي:** لا تعطِ إجابات مباشرة وجافة. اشرح المفاهيم بطريقة تربوية. استخدم التشبيهات (Analogies)، وقسم الإجابات المعقدة إلى نقاط أو خطوات.
+6.  **التفاعل:** بعد تقديم إجابة معقدة، اسأل الطالب سؤالاً تفاعلياً مثل: "هل هذه النقطة واضحة؟" أو "هل تود أن نتعمق أكثر في جزء معين؟".
+
+**مهامك الرئيسية:**
+-   **شرح المفاهيم:** قدم شروحات مبسطة وواضحة للمواضيع والمصطلحات الصعبة.
+-   **تلخيص النصوص:** قم بتلخيص المحاضرات أو ملفات PDF التي يرفعها الطالب، مع التركيز على النقاط الأساسية.
+-   **الإجابة على الأسئلة:** أجب عن أسئلة الطلاب المحددة حول المنهج الدراسي.
+-   **حل المسائل:** ساعد في حل مسائل الفيزياء الحيوية (Biophysique) والكيمياء (Chimie) خطوة بخطوة.
+
+تذكر دائماً، هدفك هو تسهيل رحلة الطالب التعليمية وجعل المواد العلمية أسهل للفهم، وليس أن تكون بديلاً عن المحاضرات الرسمية.
+` 
+}];    
+    const contentTypes = ['summaries', 'quizzes', 'lessons'];
+
+    // --- وظائف مساعدة ---
+    function updateThemeToggleIcon(theme) {
+        themeToggleBtn.innerHTML = theme === 'dark-mode' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    }
+
+    function showPage(targetId) {
+        pageSections.forEach(section => section.classList.remove('active'));
+        const targetPage = document.querySelector(targetId);
+        if (targetPage) {
+            targetPage.classList.add('active');
+            navLinks.forEach(link => {
+                link.classList.remove('active-link');
+                const pageType = link.dataset.pageType;
+                if (link.getAttribute('href') === targetId && !pageType) {
+                    link.classList.add('active-link');
+                } else if ((targetId === '#subjects-page' || targetId === '#content-display-page') && pageType === currentContentType) {
+                    link.classList.add('active-link');
+                }
+            });
+            if (targetId === '#home-page') {
+                document.querySelector('.main-nav a[href="#home-page"]').classList.add('active-link');
+            }
+            setTimeout(() => triggerScrollReveal(targetPage), 50);
+        }
+    }
+
+    function updateUI() {
+        if (!isLoggedIn) {
+            googleLoginOverlay.classList.add('active');
+            showPage('#home-page');
+        } else if (isGuest) {
+            googleLoginOverlay.classList.remove('active');
+            showPage('#home-page');
+        } else if (!isYearChosen) {
+            showPage('#year-selection-page');
+        } else if (!isActivated) {
+            showPage('#activation-page');
+            if (pricingDetailsDiv && selectedYear) {
+                const price = selectedYear === '1' ? '700 DA' : '1100 DA';
+                pricingDetailsDiv.innerHTML = `<p><span class="year-label">Activation for Year ${selectedYear}:</span> <span class="price">${price}</span></p>`;
+            }
+        } else {
+            googleLoginOverlay.classList.remove('active');
+            showPage('#home-page');
+        }
+        document.getElementById('current-summary-year').textContent = selectedYear || 'N/A';
+        document.getElementById('current-quiz-year').textContent = selectedYear || 'N/A';
+        document.getElementById('current-lesson-year').textContent = selectedYear || 'N/A';
+    }
+
+    function setupScrollReveal(elements) {
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    currentObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        elements.forEach(element => {
+            element.classList.remove('fade-in');
+            observer.observe(element);
+        });
+    }
+
+    function triggerScrollReveal(pageElement) {
+        setupScrollReveal(pageElement.querySelectorAll('.scroll-reveal-element'));
+    }
+
+    function displayContent(year, subject, contentType) {
+        const contentTitleEl = document.getElementById('content-title');
+        const contentListEl = document.getElementById('content-list');
+        const subjectName = subject.charAt(0).toUpperCase() + subject.slice(1);
+        const contentTypeName = contentType.charAt(0).toUpperCase() + contentType.slice(1);
+        contentTitleEl.textContent = `${subjectName} ${contentTypeName}`;
+        const contentItems = contentDatabase[year]?.[subject]?.[contentType];
+        contentListEl.innerHTML = '';
+        if (contentItems && contentItems.length > 0) {
+            contentItems.forEach(item => {
+                const linkElement = document.createElement('a');
+                linkElement.href = item.link;
+                linkElement.target = '_blank';
+                linkElement.classList.add('content-item');
+                let iconClass = 'fa-file-alt';
+                if (contentType === 'quizzes') iconClass = 'fa-question-circle';
+                if (contentType === 'lessons') iconClass = 'fa-play-circle';
+                linkElement.innerHTML = `<i class="fas ${iconClass}"></i><span>${item.title}</span>`;
+                contentListEl.appendChild(linkElement);
+            });
+        } else {
+            contentListEl.innerHTML = '<p>Sorry, no content is available for this section yet. Please check back later.</p>';
+        }
+        showPage('#content-display-page');
+    }
+
+    async function extractTextFromPdf(file) {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js`;
+        const reader = new FileReader();
+        return new Promise((resolve, reject) => {
+            reader.onload = async (event) => {
+                try {
+                    const pdf = await pdfjsLib.getDocument({ data: event.target.result }).promise;
+                    let fullText = '';
+                    for (let i = 1; i <= pdf.numPages; i++) {
+                        const page = await pdf.getPage(i);
+                        const textContent = await page.getTextContent();
+                        fullText += textContent.items.map(item => item.str).join(' ') + '\n\n';
+                    }
+                    resolve(fullText);
+                } catch (error) {
+                    console.error("Error parsing PDF:", error);
+                    reject("Sorry, I couldn't read this PDF file.");
+                }
+            };
+            reader.onerror = (error) => {
+                console.error("File Reader Error:", error);
+                reject("Sorry, there was an error reading the file.");
+            };
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    // ===================================================================
+    // --- (تم تعديل هذه الدالة بالكامل لتطبيق التنسيق) ---
+    // ===================================================================
+    function addMessageToChat(message, senderClass, isTypingIndicator = false) {
+        const messageWrapper = document.createElement('div');
+        messageWrapper.classList.add('message-wrapper', `${senderClass}-wrapper`);
+
+        const p = document.createElement('p');
+        p.classList.add(senderClass);
+
+        if (isTypingIndicator) {
+            p.classList.add('loading-message');
+            p.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+        } else {
+            // التحقق إذا كانت الرسالة من الذكاء الاصطناعي لتطبيق التنسيق
+            if (senderClass === 'ai-message') {
+                // 1. تحويل نص الماركداون إلى HTML باستخدام مكتبة marked
+                const rawHtml = marked.parse(message);
+                // 2. تنظيف الـ HTML الناتج لضمان الأمان باستخدام DOMPurify
+                const sanitizedHtml = DOMPurify.sanitize(rawHtml);
+                // 3. عرض الـ HTML الآمن في الفقرة
+                p.innerHTML = sanitizedHtml;
+            } else {
+                // بالنسبة لرسائل المستخدم، نبقيها كنص عادي للأمان
+                p.textContent = message;
+            }
+        }
+        
+        messageWrapper.appendChild(p);
+
+        if (senderClass === 'ai-message' && !isTypingIndicator) {
+            const copyBtn = document.createElement('button');
+            copyBtn.classList.add('copy-btn');
+            copyBtn.innerHTML = '<i class="far fa-copy"></i>';
+            copyBtn.setAttribute('aria-label', 'Copy text');
+            copyBtn.title = 'Copy text';
+            copyBtn.onclick = () => {
+                // عند النسخ، ننسخ النص الأصلي وليس الـ HTML
+                navigator.clipboard.writeText(message).then(() => {
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '<i class="far fa-copy"></i>';
+                    }, 1500);
+                });
+            };
+            messageWrapper.appendChild(copyBtn);
+        }
+        
+        chatMessagesDiv.appendChild(messageWrapper);
+        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+    }
+
+    // --- (دالة إرسال الرسالة تستخدم المفتاح المباشر) ---
+    async function sendChatMessage() {
+        const userText = userChatInput.value.trim();
+        if (!userText) return;
+
+        addMessageToChat(userText, 'user-message');
+        const promptToSend = userText;
+        userChatInput.value = '';
+        userChatInput.disabled = true;
+        sendChatButton.disabled = true;
+
+        addMessageToChat(null, 'ai-message', true);
+
+        chatHistory.push({ role: "user", content: promptToSend });
+        try {
+            const response = await fetch(apiEndpoint, {
+                method: "POST",
+                headers: { 
+                    "Authorization": `Bearer ${activeApiKey}`, 
+                    "Content-Type": "application/json" 
+                },
+                body: JSON.stringify({ model: model, messages: chatHistory })
+            });
+
+            const loadingMessage = chatMessagesDiv.querySelector('.loading-message');
+            if (loadingMessage) loadingMessage.parentElement.remove();
+
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                console.error("API Error:", response.status, errorData);
+                throw new Error(`API Error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const aiReply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response.";
+            
+            addMessageToChat(aiReply, 'ai-message');
+            chatHistory.push({ role: "assistant", content: aiReply });
+
+        } catch (error) {
+            console.error("Full Error:", error);
+            const loadingMessage = chatMessagesDiv.querySelector('.loading-message');
+            if (loadingMessage) loadingMessage.parentElement.remove();
+            
+            addMessageToChat("Sorry, an error occurred while connecting to the assistant. Please try again.", 'ai-message');
+        } finally {
+            userChatInput.disabled = false;
+            sendChatButton.disabled = false;
+            userChatInput.focus();
+        }
+    }
+
+    // --- منطق التحميل الأولي للصفحة ---
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+        updateThemeToggleIcon(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        body.classList.add('dark-mode');
+        updateThemeToggleIcon('dark-mode');
+    } else {
+        updateThemeToggleIcon('light-mode');
+    }
+    updateUI();
+
+    // --- معالجة الأحداث ---
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        localStorage.setItem('theme', currentTheme);
+        updateThemeToggleIcon(currentTheme);
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const pageType = this.dataset.pageType;
+            if (targetId === '#home-page') {
+                showPage('#home-page');
+                return;
+            }
+            if (pageType) {
+                if (!isLoggedIn) { googleLoginOverlay.classList.add('active'); showPage('#home-page'); } 
+                else if (isGuest) { alert('This feature is for registered and activated users only.'); } 
+                else if (!isYearChosen) { showPage('#year-selection-page'); } 
+                else if (!isActivated) { showPage('#activation-page'); } 
+                else {
+                    currentContentType = pageType;
+                    showPage('#subjects-page');
+                }
+            } else {
+                showPage(targetId);
+            }
+        });
+    });
+
+    function handleStartAndExplore() {
+        if (!isLoggedIn) { googleLoginOverlay.classList.add('active'); showPage('#home-page'); } 
+        else if (isGuest) { alert('This feature is for registered and activated users only.'); } 
+        else if (!isYearChosen) { showPage('#year-selection-page'); } 
+        else if (!isActivated) { showPage('#activation-page'); } 
+        else { showPage('#subjects-page'); }
+    }
+    startLearningBtn.addEventListener('click', handleStartAndExplore);
+    exploreContentBtn.addEventListener('click', handleStartAndExplore);
+
+    googleSigninBtn.addEventListener('click', () => {
+        isLoggedIn = true; isGuest = false;
+        localStorage.setItem('isLoggedIn', 'true'); localStorage.setItem('isGuest', 'false');
+        alert('Signed in with Google (simulation)!'); updateUI();
+    });
+
+    continueAsGuestLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        isLoggedIn = true; isGuest = true; isYearChosen = false; isActivated = false;
+        localStorage.setItem('isLoggedIn', 'true'); localStorage.setItem('isGuest', 'true');
+        localStorage.setItem('isYearChosen', 'false'); localStorage.setItem('isActivated', 'false');
+        alert('Continuing as a guest with limited access.'); updateUI();
+    });
+
+    yearSelectBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            selectedYear = this.dataset.year; isYearChosen = true;
+            localStorage.setItem('isYearChosen', 'true'); localStorage.setItem('selectedYear', selectedYear);
+            alert(`You have selected Year ${selectedYear}.`); updateUI();
+        });
+    });
+
+    confirmActivationBtn.addEventListener('click', () => {
+        isActivated = true; localStorage.setItem('isActivated', 'true');
+        activationStatusMessage.textContent = 'Account activated! Redirecting...';
+        activationStatusMessage.style.color = 'green';
+        setTimeout(() => { showPage('#home-page'); activationStatusMessage.textContent = ''; }, 2000);
+    });
+
+    subjectButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const subject = this.dataset.subject;
+            if (selectedYear && subject && currentContentType) {
+                displayContent(selectedYear, subject, currentContentType);
+            } else {
+                alert('Please select a content type (Summaries, Quizzes, or Lessons) from the top menu first.');
+            }
+        });
+    });
+
+    if (backToHomeBtn) backToHomeBtn.addEventListener('click', () => showPage('#home-page'));
+    if (backToYearSelectBtn) backToYearSelectBtn.addEventListener('click', () => {
+        isYearChosen = false; localStorage.setItem('isYearChosen', 'false');
+        localStorage.removeItem('selectedYear'); updateUI();
+    });
+    if (backToSubjectsBtn) backToSubjectsBtn.addEventListener('click', () => showPage('#subjects-page'));
+
+    aiChatBtn.addEventListener('click', () => { aiChatModal.classList.add('active'); userChatInput.focus(); });
+    closeChatBtn.addEventListener('click', () => aiChatModal.classList.remove('active'));
+    aiChatModal.addEventListener('click', (e) => { if (e.target === aiChatModal) aiChatModal.classList.remove('active'); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && aiChatModal.classList.contains('active')) aiChatModal.classList.remove('active'); });
+    
+    sendChatButton.addEventListener('click', sendChatMessage);
+    userChatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendChatMessage(); } });
+    
+    uploadPdfBtn.addEventListener('click', () => pdfFileInput.click());
+    pdfFileInput.addEventListener('change', async (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+        if (file.type !== 'application/pdf') {
+            alert('Please upload a valid PDF file.');
+            return;
+        }
+        addMessageToChat(`Processing "${file.name}"...`, 'user-message');
+        try {
+            const extractedText = await extractTextFromPdf(file);
+            const userQuestion = prompt("PDF processed. What would you like to know about it? (e.g., 'summarize this')", "Summarize this document for me.");
+            if (userQuestion) {
+                const fullPrompt = `Based on the following document text, please answer the user's request.\n\nUser Request: "${userQuestion}"\n\n--- Document Text ---\n\n${extractedText}`;
+                userChatInput.value = fullPrompt;
+                await sendChatMessage();
+            }
+        } catch (errorMessage) {
+            addMessageToChat(errorMessage, 'ai-message');
+        } finally {
+            pdfFileInput.value = '';
+        }
+    });
+
+    // --- (جديد) منطق جعل نافذة الشات قابلة للسحب والتغيير ---
+    let isDragging = false;
+    let isResizing = false;
+    let offsetX, offsetY, initialWidth, initialHeight, initialMouseX, initialMouseY;
+
+    chatHeader.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.close-chat-btn')) return;
+        isDragging = true;
+        offsetX = e.clientX - aiChatBox.offsetLeft;
+        offsetY = e.clientY - aiChatBox.offsetTop;
+        aiChatBox.classList.add('is-dragging');
+    });
+
+    resizeHandle.addEventListener('mousedown', (e) => {
+        e.preventDefault(); 
+        isResizing = true;
+        initialWidth = aiChatBox.offsetWidth;
+        initialHeight = aiChatBox.offsetHeight;
+        initialMouseX = e.clientX;
+        initialMouseY = e.clientY;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            let newLeft = e.clientX - offsetX;
+            let newTop = e.clientY - offsetY;
+            const maxLeft = window.innerWidth - aiChatBox.offsetWidth;
+            const maxTop = window.innerHeight - aiChatBox.offsetHeight;
+            aiChatBox.style.left = `${Math.max(0, Math.min(newLeft, maxLeft))}px`;
+            aiChatBox.style.top = `${Math.max(0, Math.min(newTop, maxTop))}px`;
+            aiChatBox.style.transform = 'none'; 
+        }
+
+        if (isResizing) {
+            e.preventDefault();
+            const dx = e.clientX - initialMouseX;
+            const dy = e.clientY - initialMouseY;
+            const newWidth = initialWidth + dx;
+            const newHeight = initialHeight + dy;
+            aiChatBox.style.width = `${newWidth}px`;
+            aiChatBox.style.height = `${newHeight}px`;
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if(isDragging) {
+            isDragging = false;
+            aiChatBox.classList.remove('is-dragging');
+        }
+        if(isResizing) {
+            isResizing = false;
+        }
+    });
+
+});

@@ -1,0 +1,863 @@
+Exercice 01: EMD 2024 (QCM 1-6)
+Données :
+k = 9.10⁹ SI
+Un cercle de rayon r (=a) situé dans le vide.
+Charges ponctuelles : qA=qE=qB=-qF=qH=-qD=q=5.10⁻⁹ C; qC=2q et qG = -q.
+a = 10⁻¹ m.
+1. soit un cercle de rayon r (=a) situé dans le vide. Des charges ponctuelles qA, qB, qC, qD, qE, qF, qG, et qH sont positionnées respectivement aux points A, B, C, D, E, F, G, et H, comme la figure ci-contre l'indique. La norme E, du champ électrique généré par les charges qB, qD, qF, et qH au point O est:
+A. E₁ = 3,18.10⁵ V/m
+B. E₁ = 1,84.10⁴ V/m
+C. E₁ = 6,36.10⁵ V/m
+D. les réponses a, b, et C sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+Pour trouver le champ électrique résultant au point O, on additionne vectoriellement les champs créés par chaque charge. En observant les symétries, on remarque que les champs de certaines paires de charges s'additionnent ou s'annulent de manière simple. Par exemple, les champs créés par qA et qE sont dans le même sens et s'ajoutent. De même, les champs de qC et qG sont aussi dans le même sens. En revanche, les champs de qB et qF sont en sens opposés. En effectuant la somme vectorielle de tous ces champs, on obtient la norme du champ électrique total au centre O.
+2. Suite à la question précédente, l'énergie interne U des trois charges qA, qC, et qG est :
+A. U = 1,67.10⁻³ J
+B. U = 4,3.10⁻³ J
+C. U = 0 J
+D. les réponses a, b, et C sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+L'énergie interne (ou énergie potentielle électrostatique) d'un système de plusieurs charges est la somme des énergies potentielles de chaque paire de charges possible. Ici, nous avons trois paires : (qA, qC), (qA, qG) et (qC, qG). On calcule l'énergie pour chaque paire en utilisant la formule U = k * (q1 * q2) / d, où d est la distance entre les deux charges. La somme de ces trois énergies donne l'énergie interne totale du système.
+3. suite à la question précédente, est placée au point O, une charge q' (q' = 5.10⁻⁹ C). La norme F de la force F qu'exercent les charges qA, qC, et qG sur la charge q' est
+A. F = 2,25.10⁻³ N
+B. F = 6,5.10⁻³ N
+C. F = 2,5.10⁻³ N
+D. les réponses a, b, et C sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La force totale exercée sur la charge q' au point O est la somme vectorielle des forces exercées par qA, qC et qG. Selon l'analyse du corrigé, les forces créées par qC et qG sont de même grandeur mais de sens opposés, elles s'annulent donc mutuellement. Par conséquent, la force résultante sur q' est uniquement la force exercée par la charge qA. On calcule cette force en utilisant la loi de Coulomb : F = k * |qA| * |q'| / a².
+4. suite à la question précédente, toutes les charges sont retirées, hormis les charges qA, qC, et qG. Un dipôle p de moment dipolaire p⃗ et de norme p (p = 5.10⁻¹⁰ C.m), est alors placé au point C. Celui-ci est orienté selon le vecteur GC. L'énergie potentielle EPT de ce dipôle, due aux charges qA et qG, est :
+A. EPT = 9,14.10⁻³ J
+B. EPT = 0 J
+C. EPT = 4,37.10⁻³ J
+D. les réponses a, b, et C sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+L'énergie potentielle d'un dipôle (EPT) dans un champ électrique (E) est donnée par la formule EPT = -p * E * cos(θ), où θ est l'angle entre le vecteur du moment dipolaire p et le vecteur du champ électrique E. Ici, le champ électrique E est celui créé par les charges qA et qG au point C. Le moment dipolaire p est orienté de G vers C. L'analyse graphique montre que le vecteur champ E est perpendiculaire au vecteur moment dipolaire p. L'angle θ est donc de 90°. Puisque cos(90°) = 0, l'énergie potentielle du dipôle est nulle.
+5. suite à la question précédente, le potentiel V, au point A, correspondant à la somme algébrique du potentiel V', généré par les charges qC et qG, et du potentiel V'', généré par le dipôle p, est
+A. V = 1,59.10³
+B. V = 0,87.10³
+C. V = 6,36.10³ V
+D. les réponses a, b, et C sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+Le potentiel total au point A est la somme de deux potentiels : le potentiel V' créé par les charges ponctuelles (qC et qG) et le potentiel V'' créé par le dipôle p.
+Le potentiel V'' d'un dipôle est nul en tout point situé sur sa médiatrice (axe perpendiculaire passant par son centre). Le point A est situé à un angle de 90° par rapport à l'axe du dipôle, donc V'' = 0.
+Le potentiel total V est donc simplement égal à V', qui est la somme des potentiels scalaires de qC et qG au point A : V = V_C + V_G. On le calcule en utilisant la formule V = k * q / d pour chaque charge et en les additionnant.
+6. suite à la question précédente, la norme E du champ électrique au point A, généré par le dipôle p est :
+A. E = 5,625.10¹² SI
+B. E = 0 V/m
+C. E=0
+D. les réponses a, b, et C sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le champ électrique créé par un dipôle en un point peut être décomposé en une composante radiale (Er) et une composante orthoradiale (Eθ). Pour un point situé sur la médiatrice du dipôle (angle θ = 90° par rapport à l'axe du dipôle), la composante radiale Er est nulle. Le champ total est donc égal à la composante Eθ. En appliquant la formule E = Eθ = k * p / r³, où r est la distance entre le centre du dipôle (point C) et le point A, on obtient la norme du champ électrique.
+
+Exercice 02: EMD 2023 (QCM 21-23)
+Données :
+Soit un carré de côté [2a] situé dans le vide.
+Quatre charges ponctuelles qA, qB, qC, et qD sont respectivement positionnées aux points A, B, C, et D (figure 1).
+Le point E est le milieu de [CD].
+qA = qB = -qC = qD = q avec q = 10⁻¹⁰ C et d=10⁻⁶ m. (Note: la donnée d=10⁻⁶ m semble être une erreur typographique dans l'énoncé, et c'est la valeur de a qui est utilisée dans les calculs. Nous suivrons la logique du corrigé qui utilise a=10⁻⁶ m).
+1. La norme E1 du champ électrique E⃗1 au point E, dû aux charges qB, qC, et qD est :
+A. E1 = 1,754.10¹² V/m
+B. E1 = 3,4.10¹² V/m
+C. E1 = 5,656.10¹¹ V/m
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+Le champ électrique E1 au point E est la somme vectorielle des champs créés par les charges qB, qC et qD. Le corrigé calcule en fait le champ total créé par les quatre charges (qA, qB, qC, qD).
+On remarque que les champs créés par qA et qB sont symétriques par rapport à l'axe vertical passant par E. Leurs composantes horizontales s'annulent.
+Les champs créés par qC et qD sont de sens opposés et se trouvent sur le même axe.
+Le champ total E est la somme vectorielle de E_A, E_B, E_C et E_D. En raison des symétries, le calcul se simplifie. Le champ résultant des charges B et A (E_AB) est vertical. Le champ résultant des charges D et C (E_DC) est horizontal. La norme du champ total est donc trouvée en utilisant le théorème de Pythagore sur ces deux composantes.
+2. le potentiel VE au point E, dû aux charges ponctuelles qA, qB, qC, et qD est :
+A. VE = 7,036.10⁶ V
+B. VE = -34,712.10⁻⁶ V
+C. VE = 14,297.10⁻⁶ V
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : D
+Explication simplifiée du commentaire :
+Le potentiel électrique est une grandeur scalaire, donc pour trouver le potentiel total VE au point E, il suffit d'additionner les potentiels créés par chaque charge : VE = VA + VB + VC + VD.
+On calcule la distance entre chaque charge (A, B, C, D) et le point E.
+Pour chaque charge, on calcule son potentiel avec la formule V = k * q / d, où d est la distance correspondante.
+On additionne les quatre potentiels pour obtenir le résultat final. Le calcul montre que le résultat ne correspond à aucune des options A, B ou C.
+3. la valeur UE de l'énergie potentielle EpE de la charge qE vis-à-vis des charges qA, qB, qC, et qD est : (Note: il n'y a pas de charge qE dans l'énoncé, la question fait probablement référence à l'énergie potentielle du système des quatre charges qA, qB, qC, qD).
+A. UE = 7,036 J
+B. UE = 34,712 J
+C. UE = 14,297 J
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+L'énergie potentielle d'un système de quatre charges est la somme des énergies potentielles de toutes les paires de charges possibles. Il y a 6 paires au total : (qA, qB), (qA, qC), (qA, qD), (qB, qC), (qB, qD), et (qC, qD). On calcule l'énergie de chaque paire en utilisant la formule Ep = k * (q1 * q2) / d et on additionne les six résultats pour obtenir l'énergie totale du système.
+4. soit un dipôle p (q = 10⁻¹⁰ C, a = 0,5.10⁻⁹ m). Celui-ci est positionné au point E, et orienté dans le sens de l'axe X, la norme M du moment du couple M que subit ce dipôle est :
+A. M = 1,75.10⁻¹⁰ SI
+B. M = 4,656.10⁻⁶ SI
+C. M = 0 SI
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+Un dipôle placé dans un champ électrique E subit un couple. Le moment M de ce couple est donné par la formule M = p * E * sin(θ), où p est le moment dipolaire (p = q * 2a), E est la norme du champ électrique extérieur, et θ est l'angle entre le vecteur du dipôle et le vecteur du champ électrique.
+On utilise la valeur du champ électrique E au point E, qui a été calculée dans la première question.
+Le dipôle est orienté selon l'axe X, et le champ électrique E a une certaine orientation. On détermine l'angle θ entre ces deux vecteurs.
+On calcule p à partir des données du dipôle.
+On applique la formule pour trouver la norme du moment M.
+
+Exercice 03: EMD 2022 (QCM 7-9)
+Données :
+Deux charges électriques ponctuelles (QA = q) et (QB = +2q) sont placées respectivement aux points A et B, distants de d = 2mm.
+On donne q = 1nC.
+1. Parmi les affirmations suivantes, lesquelles sont correctes ?
+La force (FA) exercée par (QB) sur (QA) est supérieure à la force (FB) exercée par (QA) sur (QB).
+L’énergie potentielle (Ep) de la charge (QB) est égale à celle générée par (QA) au point (B).
+Le potentiel électrique généré par (QA) au point (B) est égal à celui généré par(QB) au point (A).
+L’énergie potentielle (Ep) de la charge (QB) est supérieure à l'énergie potentielle (Ep)de la charge (QA).
+Toutes ces réponses sont fausses.
+Réponse correcte : B (Les affirmations 3 et 4 sont correctes)
+Explication simplifiée du commentaire :
+Le commentaire évalue chaque affirmation en utilisant les lois fondamentales de l'électrostatique. Il compare la force entre les deux charges en se basant sur la loi de Coulomb. Ensuite, il compare les énergies potentielles (EpA et EpB) ainsi que les potentiels électriques créés par chaque charge (V(A) et V(B)) pour déterminer lesquelles des affirmations sont vraies.
+2. Suite à la question précédente, on déplace la charge (QB) à un point (C) tel que le triangle (ABC) soit isocèle en (C) et (AC=BC=d). Parmi les affirmations suivantes, lesquelles sont correctes ? (Données pour cette question : p = 3.2 10⁻¹² C.m, |E|=4.5 10⁵ V/m)
+Le dipôle est soumis à un champ électrique d’intensité |E| égale: e = 4.5 10⁵ V/m.
+L’intensité du champ électrique (E) au point (C) due à (QA) et (QB) est nulle.
+Le moment dipolaire vaut: p = 3.2 10⁻¹² C.m.
+L’intensité du moment du couple est minimale.
+Toutes ces réponses sont justes.
+Réponse correcte : A (Les affirmations 1, 2 et 3 sont correctes)
+Explication simplifiée du commentaire :
+Le commentaire présente les calculs pour vérifier les valeurs numériques proposées dans les affirmations. Il calcule le moment dipolaire p en utilisant la formule p = q*d et le champ électrique E avec la formule E = k*q/d². Ces calculs permettent de confirmer ou d'infirmer les données numériques fournies dans les énoncés 1 et 3.
+3. Suite à la question précédente, on retire la charge (QB), on la remplace par un dipôle électrique (p). On place le dipôle au point (B). Parmi les affirmations suivantes, lesquelles sont correctes ?
+La charge (QA) est soumise à une force F ≠ 0 N.
+L’intensité du champ électrique (EA) généré par le dipôle au point (A) est nulle.
+La charge (QA) est soumise à une force F = 0 N.
+L’intensité du champ électrique (EA) généré par le dipôle au point (B) vaut: EA=0 V/m.
+Le dipôle est dans un état d'équilibre stable.
+Réponse correcte : E (L'affirmation 5 est correcte)
+Explication simplifiée du commentaire :
+Le commentaire analyse le champ électrique E créé par le dipôle (placé en B) au point A. Il est déterminé que ce champ est nul car le point A est positionné à un angle de 90° par rapport à l'axe du dipôle, où le cosinus de l'angle est zéro. Par conséquent, la force F = qA * E exercée sur la charge qA est également nulle. Enfin, le commentaire examine les conditions d'équilibre d'un dipôle (stable pour un angle de 0°, instable pour 180°), concluant que la situation décrite correspond à un cas d'équilibre.
+
+Exercice 03: EMD 2022 (QCM 7-9)
+Données :
+Soient deux charges électriques ponctuelles (QA = q) et (QB = +2 x q) placées respectivement aux points (A) et (B) distants de (d = 2 mm). On donne (q = 1uC).
+1. Parmi les affirmations suivantes, laquelle est correcte ?
+A. La force générée par (QA) sur (QB) est égale à celle générée par (QB) sur (QA).
+B. Le potentiel électrique généré par (QA) au point (B) est égal à celui généré par(QB) au point (A).
+C. L’énergie potentielle (EpA) de la charge (QA) est supérieure à l'énergiepotentielle (EpB)de la charge (QB).
+D. B + C
+E. T.R.F.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La force électrique entre deux charges est une interaction mutuelle. Selon le principe de l'action et de la réaction (troisième loi de Newton), la force que la charge QA exerce sur QB est exactement égale en grandeur et opposée en direction à la force que QB exerce sur QA. Par conséquent, leurs normes sont égales.
+2. Suite à la question précédente, on enlève la charge (QA), on la remplace par un dipôle (+e ; -e), la charge (QB) est déplacée à un point C tel que le triangle (ABC) soit isocèle en (C) et (AC=BC). Le dipôle est orienté perpendiculaire à la droite (AB) et orienté vers le haut. (données : p=3,2 10⁻²⁵ C.m, E=4,5 10⁹ V/m). Parmi les affirmations suivantes, lesquelles sont correctes ?
+Le moment dipolaire vaut : p = 3,2 10⁻²⁵ C.m.
+Le dipôle est soumis à un champ électrique d’intensité (E) égale: E = 4,5 10⁹ V/m
+L’énergie potentielle (Ep) du dipôle vaut: Ep= 0 J.
+L’intensité du moment du couple (M) agissant sur le dipôle est maximale.
+Toutes ces réponses sont juste.
+Options de réponse :
+A. 1+2+3
+B. 3+4
+C. 1+2+4
+D. 2+4
+E. 5
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La réponse correcte indique que les affirmations 1, 2 et 3 sont vraies. L'énergie potentielle (Ep) d'un dipôle dans un champ électrique (E) est donnée par Ep = -p.E.cos(θ). Ici, le champ électrique E créé par la charge QB au point A est dirigé le long de la ligne BA. Le dipôle, lui, est orienté perpendiculairement à la droite AB. L'angle θ entre le moment dipolaire p et le champ E est donc de 90°. Puisque cos(90°) = 0, l'énergie potentielle du dipôle est nulle (affirmation 3). Les affirmations 1 et 2 sont des données numériques qui sont considérées comme correctes dans le contexte de la question.
+3. Suite à la question précédente, on retire la charge (QB), on la remplace par un dipôle électrique (p). On place le dipôle au point (B). Parmi les affirmations suivantes, lesquelles sont correctes ?
+La charge (QA) est soumise à une force F ≠ 0 N.
+L’intensité du champ électrique (EA) généré par le dipôle au point (A) est nulle.
+La charge (QA) est soumise à une force F = 0 N.
+L’intensité du champ électrique (EA) généré par le dipôle au point (B) vaut: EA=0 V/m.
+Le dipôle est dans un état d'équilibre stable.
+Options de réponse :
+A. 1+2
+B. 3+4
+C. 1+5
+D. 3+5
+E. 1+4
+Réponse correcte : A (Les affirmations 1 et 2 sont correctes) (Note: je vais suivre le corrigé fourni dans l'image de la page 10 qui donne la réponse A pour le n°2 et E pour le n°3. Il semble y avoir une confusion dans la numérotation des questions dans les énoncés. Je vais traiter la question ci-dessus comme la question n°3 du QCM, qui a pour réponse E sur le corrigé).
+(Correction basée sur l'analyse de la question 3 de la page 9 et de la ligne de corrigé N°3 de la page 10)
+3. Suite à la question précédente, le dipôle est au point A et la charge QB est en C. Que peut-on dire ?
+A. L'intensité du champ électrique généré par le dipôle au point B est nulle.
+B. La charge (QB) est soumise à une force F=0 N.
+C. Le dipôle est dans un état d'équilibre stable.
+D. A+B+C.
+E. Toutes ces réponses sont fausses.
+Réponse correcte : E
+Explication simplifiée du commentaire :
+Champ électrique en B (Option A) : Le champ électrique créé par un dipôle n'est généralement pas nul, sauf en des points très spécifiques ou à l'infini. Le point B ne remplit pas ces conditions. Le champ E au point B est donc différent de zéro. L'affirmation A est fausse.
+Force sur QB (Option B) : La force sur la charge QB est calculée par F = QB * E, où E est le champ au point où se trouve QB. Comme le champ créé par le dipôle n'est pas nul au point C, la force sur QB n'est pas nulle. L'affirmation B est fausse.
+Équilibre du dipôle (Option C) : Un dipôle est en équilibre stable lorsque son moment dipolaire est aligné avec le champ électrique extérieur. Ici, le champ extérieur est celui créé par QB en A. L'orientation du dipôle n'est pas alignée avec ce champ. De plus, pour qu'il y ait équilibre, le couple (moment de la force) doit être nul (τ=0). Le commentaire indique que le couple est minimal (τ min), ce qui correspond à un équilibre. Cependant, la condition n'est pas remplie pour que cet équilibre soit qualifié de stable. L'affirmation C est donc considérée comme fausse.
+Puisque les affirmations A, B et C sont toutes fausses, la bonne réponse est E.
+
+Exercice 04: EMD 2020 (QCM 4-7)
+Données :
+soit une charge ponctuelle q (q=10⁻⁹ C) placée au milieu d'un segment [AB] de dimension a (a=4 mm).
+Aux points A et B, sont positionnées, respectivement, deux charges qA et qB (qA=-qB=1,6.10⁻¹⁰ C).
+1. La norme F de la force F qui s'exerce sur la charge q due aux charges qA et qB est:
+A. F=7,2.10⁻⁵ N
+B. F=1,8.10⁻⁵ N
+C. F=13,8.10⁻⁵ N
+D. toutes ces réponses sont fausses
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La force totale F qui agit sur la charge q (placée au milieu) est la somme vectorielle de la force FA exercée par qA et de la force FB exercée par qB.
+La charge qA est positive (1,6.10⁻¹⁰ C) et q est positive, donc FA est une force de répulsion.
+La charge qB est négative (-1,6.10⁻¹⁰ C) et q est positive, donc FB est une force d'attraction.
+Les deux forces FA et FB sont donc orientées dans le même sens. De plus, comme |qA| = |qB| et que la distance est la même, les normes des deux forces sont égales. La force résultante est donc simplement F = FA + FB = 2 * FA.
+2. suite à la question précédente et après avoir retiré la charge q, sont ajoutées d'autres charges de telle sorte que l'on ait: qA=-qC et qB=-qD. Le centre O du carré de côté a est le milieu de [AB] et [CD]. La norme E du champ électrique au point O est:
+A. E=0 V/m
+B. E=6,3.10⁻³ V/m
+C. E=3,1.10⁻³ V/m
+D. toutes ces réponses sont fausses
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le commentaire explique comment calculer le champ électrique total E au centre O en additionnant les champs créés par les quatre charges (E = EA + EB + EC + ED).
+Il regroupe les champs par paires. Le champ EA (créé par qA) et le champ EC (créé par qC=-qA) sont dans le même sens. Leur somme est Eac = 2 * EA.
+De même, le champ EB (créé par qB) et le champ ED (créé par qD=-qB) sont aussi dans le même sens. Leur somme est Ebd = 2 * EB.
+Le champ total E est la somme vectorielle de Eac et Ebd. Le commentaire procède en calculant la norme de ce champ résultant en utilisant le théorème de Pythagore, ce qui suppose que les vecteurs Eac et Ebd sont perpendiculaires
+.
+Exercice 05: EMD Jan 2019 (QCM 1-4)
+Données :
+Soient quatre charges qA, qB, qO et qD positionnées dans le vide, respectivement aux points A, B, O, D. (Note: basé sur le corrigé et les questions, les charges sont en A, B, C, D).
+qA = qB = qC = qD = 3 . 10⁻⁹ C
+[OA] = 10⁻² m
+qE = 10⁻⁹ C
+Le vecteur OC s'écrit: OC = 0.25 OD, où OD = 4.10⁻² m.
+Les points A, C, B sont perpendiculaires.
+1. la norme Ec est le champ électrique résultant au point C, dû aux charges qA, qB, et qD est:
+A. Ec=4,5.10⁴ V/m
+B. Ec=2,8.10⁵ V/m
+C. Ec=6,6.10⁵ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Pour trouver le champ électrique Ec au point C, on doit additionner les vecteurs des champs électriques créés par les charges qA, qB et qD (Ec = EA + EB + ED).
+Les champs EA (créé par qA) et EB (créé par qB) sont perpendiculaires entre eux. On peut donc calculer la norme de leur somme (Eab) en utilisant le théorème de Pythagore.
+Le vecteur résultant Eab et le vecteur ED (créé par qD) se trouvent sur le même axe mais sont de sens opposés.
+La norme du champ total Ec est donc la différence entre la norme de Eab et celle de ED.
+2. suite à la question précédente, le potentiel Vc résultant au point C, dû aux charges qA, qB, qO, et qD, est:
+A. Vc=4,462.10³ V
+B. Vc=5,978.10³ V
+C. Vc=7,05.10³ V
+D. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+Le potentiel électrique est une grandeur scalaire, ce qui signifie qu'on n'a pas besoin de s'occuper des directions. Pour trouver le potentiel total Vc au point C, on calcule le potentiel créé par chaque charge (qA, qB, qD) en ce point et on les additionne simplement. La formule pour chaque potentiel est V = k * q / r, où r est la distance entre la charge et le point C.
+3. suite aux questions précédentes, l'énergie interne Ui des charges qA, qB, et qD est:
+A. Ui=1,21.10⁻³ J
+B. Ui=3,15.10⁻³ J
+C. Ui=4,461.10⁻³ J
+D. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+L'énergie interne Ui d'un système de plusieurs charges est la somme des énergies potentielles de toutes les paires de charges possibles. Pour les charges qA, qB, et qD, nous avons trois paires : (qA, qB), (qA, qD), et (qB, qD). On calcule l'énergie de chaque paire en utilisant la formule U_paire = k * (q1 * q2) / r, où r est la distance entre les deux charges. L'énergie interne totale est la somme des énergies de ces trois paires.
+4. suite aux questions précédentes, et si la charge qe positionnée au point C vaut qe: 10⁻⁹ C, l'énergie potentielle EpC d'interaction electrostatique de la charge C du fait de la présence des autres charges qA, qB, et qD est:
+A. EpC=1,21.10⁻⁵ J
+B. EpC=7,05.10⁻⁵ J
+C. EpC=5,978.10⁻⁵ J
+D. EpC=1,823.10⁻⁴ J
+E. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+L'énergie potentielle EpC d'une charge qe placée en un point C où il existe un potentiel électrique Vc est donnée par la simple multiplication : EpC = qe * Vc. Le potentiel Vc utilisé ici est celui créé par les autres charges (qA, qB, qD), qui a été calculé dans la question 2. On multiplie donc la valeur de la charge qe par la valeur du potentiel Vc pour obtenir l'énergie potentielle.
+
+Exercice 06: EMD Déc 2019 (QCM 1-5)
+Données générales :
+Quatre charges qA, qB, qC, et qD sont positionnées aux points A, B, C, et D.
+(Note : Les questions 1 à 4 se concentrent sur un système simplifié avec seulement qB et qC, et un point M.)
+1. Le potentiel V M dû par le système des deux charges qB et qC en un point M (tel que [OM] = 2 m) où O est milieu de [BC], et où l'angle (OM, BC) vaut θ=60° est: (données: a=10⁻¹ m; qB=qC=10⁻⁹ C).
+A. VM = 1.125. 10⁻⁹ V
+B. VM = 9. 10⁹ V
+C. VM = 3.375. 10⁻⁹ V
+D. toutes ces réponses sont fausses.
+Réponse correcte : D
+Explication simplifiée du commentaire :
+Le commentaire aborde ce problème en supposant que le couple de charges (qB, qC) peut être modélisé comme un dipôle électrique. Il calcule d'abord le moment dipolaire p = q * a. Ensuite, il utilise la formule du potentiel créé par un dipôle en un point lointain, qui est V = k * p * cos(θ) / r². Le résultat de ce calcul correspond à la valeur de l'option C. Cependant, la réponse finale correcte est D, ce qui signifie qu'aucune des propositions n'est la bonne valeur.
+2. l'énergie potentielle Ep d'une charge q'=10⁻¹⁰C placée en M (nous supposerons dans cette question aucune influence des charges qA et qD) vaut:
+A. Ep = 1.125. 10⁻³ J
+B. Ep = 4.463. 10⁻³ J
+C. Ep = 3.375. 10⁻¹⁹ J
+D. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+L'énergie potentielle Ep d'une charge q' placée en un point M est le produit de cette charge par le potentiel électrique V à ce même point (Ep = q' * V). Le calcul utilise la valeur du potentiel V trouvée dans le développement de la question 1 (même si la réponse finale était D) et la multiplie par la valeur de la charge q' pour obtenir l'énergie potentielle.
+3. La norme Eθ du champ électrique E⃗ selon la direction (θ) dû au dipôle « qB, qC » que « vout » au point M:
+A. Eθ = 2.92.10⁻⁹ V/m
+B. Eθ = 5.25.10⁻¹¹ V/m
+C. Eθ = 0.2.10⁻¹¹ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Cette question demande de calculer la composante orthoradiale (Eθ) du champ électrique créé par le dipôle. La formule pour cette composante est Eθ = k * p * sin(θ) / r³. En utilisant le moment dipolaire p calculé précédemment et les autres données (k, θ, r), on obtient la valeur numérique qui correspond à l'option A.
+4. suite aux questions précédentes, la norme E du champ électrique E⃗ dû à ce système de charges vaut:
+A. E = 4.1.10⁻⁹ V/m
+B. E = 3.4.10⁻⁹ V/m
+C. E = 3.375.10⁻⁹ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La norme du champ électrique total E d'un dipôle est la résultante de ses deux composantes : la composante radiale Er et la composante orthoradiale Eθ. On la calcule avec le théorème de Pythagore : E = √(Er² + Eθ²). Le commentaire calcule d'abord la composante radiale avec la formule Er = 2 * k * p * cos(θ) / r³. Ensuite, il combine ce résultat avec la valeur de Eθ de la question précédente pour trouver la norme du champ total E.
+5. la norme M du moment M qui s'applique sur ce système des deux charges qB et qC, dû à la charge qA, vaut: (données du corrigé : qA=-10⁻⁹ C)
+A. M = 0.72.10⁻¹² N.m
+B. M = 2.85.10⁻¹² N.m
+C. M = 2.85.10⁻¹⁰ N.m
+D. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+Le moment M d'un couple qui s'exerce sur un dipôle dans un champ électrique extérieur Ea est donné par M = p * Ea * sin(θ'), où p est le moment dipolaire, Ea est le champ extérieur, and θ' est l'angle entre le dipôle et le champ.
+Le champ extérieur est ici celui créé par la charge qA. On calcule donc la norme de ce champ Ea au point O (centre du dipôle).
+Le commentaire indique que l'angle θ' entre le champ Ea et l'axe du dipôle (BC) est de 90°.
+On applique la formule en multipliant le moment dipolaire p par le champ Ea et par sin(90°), ce qui donne la norme du moment M.
+
+Exercice 07: EMD 2017 (QCM 1-4)
+Données :
+Soit le triangle équilatéral ABC de la figure ci-contre, situé dans le vide.
+Les charges qA, qB, qC sont positionnées sur chacun de ses sommets, respectivement.
+La charge qO est positionnée au point O, centre de ce triangle.
+qA = qB = qC = qO = -q = -10⁻¹⁰ C
+|AB| = |AC| = |BC| = a = 10⁻³ m
+K = 9.10⁹ SI
+1. Selon la loi de Coulomb, la norme F de la force F que les charges qB et qC exercent sur la charge qA s'écrit:
+A. F = 9.k.q²/a²
+B. F = 3.k.q²/a²
+C. F = (3k.q²/a²) (√3)
+D. toutes ces réponses sont fausses.
+E. F = 0 N
+Réponse correcte : D (Le corrigé indique la réponse C pour la question 3, qui correspond en réalité à cette question 1).
+Explication simplifiée du commentaire :
+La force totale exercée sur la charge qA est la somme vectorielle de la force exercée par qB et de la force exercée par qC. Comme les charges sont identiques et les distances sont les mêmes (côtés du triangle), les deux forces ont la même magnitude. L'angle entre ces deux forces est de 60°. En utilisant la loi des cosinus pour additionner les vecteurs, on trouve que la norme de la force résultante est égale à √3 fois la magnitude de l'une des forces individuelles.
+2. la norme E du champ électrique E généré par les charges qB et qC au point O s'écrit:
+A. E = 9.k.q/a²
+B. E = 3.k.q/a²
+C. E = (k.q/a²) √3
+D. toutes ces réponses sont fausses.
+E. toutes ces réponses sont fausses. (doublon dans l'énoncé)
+Réponse correcte : A (Le corrigé fournit ce qui semble être le commentaire pour la question 3 ci-dessous).
+Explication simplifiée du commentaire associé :
+L'énergie interne U du système des trois charges (qA, qB, qC) est la somme des énergies potentielles de chaque paire de charges. Puisque les trois charges sont identiques et que les distances entre elles sont les mêmes (côté 'a' du triangle), il suffit de calculer l'énergie d'une seule paire (par exemple, qA et qB) et de multiplier le résultat par trois.
+3. l'énergie interne U du système des trois charges qA, qB et qC s'écrit:
+A. U = 9.k.q²/a
+B. U = -3.k.q²/a
+C. U = 3.k.q²/a
+D. U = -2.k.q²/a
+E. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+La force totale exercée sur la charge qO placée au centre est la somme vectorielle des forces exercées par qA, qB et qC. En raison de la symétrie parfaite de la configuration (triangle équilatéral et charges identiques aux sommets), les trois forces s'annulent mutuellement. La force résultante sur la charge qO est donc nulle.
+4. la norme F de la force F, qu'exerce la charge qO sur les charges qA, qB et qC vaut:
+A. F = 3.10⁻⁴ N
+B. F = 0 N
+C. F= 5,4.10⁻¹⁰ N
+D. toutes ces réponses sont fausses.
+E. F = 10 N
+Réponse correcte : C
+Explication simplifiée du commentaire :
+Pour calculer la force totale sur la charge qO, on additionne les forces de qA, qB et qC. Le commentaire montre comment on peut d'abord additionner les forces de qB et qC. Ensuite, on ajoute la force de qA à ce résultat. Le calcul vectoriel final, en prenant en compte les angles et les distances, donne la norme de la force totale.
+
+Exercice 07: EMD 2017 (QCM 1-4)
+Données :
+Soit le triangle équilatéral ABC de la figure ci-contre, situé dans le vide.
+Les charges qA, qB, qC sont positionnées sur chacun de ses sommets, respectivement.
+La charge qO est positionnée au point O, centre de ce triangle.
+qA = qB = qC = qO = -q = -10⁻¹⁰ C
+|AB| = |AC| = |BC| = a = 10⁻³ m
+K = 9.10⁹ SI
+1. Selon la loi de Coulomb, la norme F de la force F que les charges qB et qC exercent sur la charge qA s'écrit:
+A. F = 9.k.q²/a²
+B. F = 3.k.q²/a²
+C. F = (3k.q²/a²) (√3)
+D. toutes ces réponses sont fausses.
+E. F = 0 N
+Réponse correcte : D (Le corrigé indique la réponse C pour la question 3, qui correspond en réalité à cette question 1).
+Explication simplifiée du commentaire :
+La force totale exercée sur la charge qA est la somme vectorielle de la force exercée par qB et de la force exercée par qC. Comme les charges sont identiques et les distances sont les mêmes (côtés du triangle), les deux forces ont la même magnitude. L'angle entre ces deux forces est de 60°. En utilisant la loi des cosinus pour additionner les vecteurs, on trouve que la norme de la force résultante est égale à √3 fois la magnitude de l'une des forces individuelles.
+2. la norme E du champ électrique E généré par les charges qB et qC au point O s'écrit:
+A. E = 9.k.q/a²
+B. E = 3.k.q/a²
+C. E = (k.q/a²) √3
+D. toutes ces réponses sont fausses.
+E. toutes ces réponses sont fausses. (doublon dans l'énoncé)
+Réponse correcte : A (Le corrigé fournit ce qui semble être le commentaire pour la question 3 ci-dessous).
+Explication simplifiée du commentaire associé :
+L'énergie interne U du système des trois charges (qA, qB, qC) est la somme des énergies potentielles de chaque paire de charges. Puisque les trois charges sont identiques et que les distances entre elles sont les mêmes (côté 'a' du triangle), il suffit de calculer l'énergie d'une seule paire (par exemple, qA et qB) et de multiplier le résultat par trois.
+3. l'énergie interne U du système des trois charges qA, qB et qC s'écrit:
+A. U = 9.k.q²/a
+B. U = -3.k.q²/a
+C. U = 3.k.q²/a
+D. U = -2.k.q²/a
+E. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+La force totale exercée sur la charge qO placée au centre est la somme vectorielle des forces exercées par qA, qB et qC. En raison de la symétrie parfaite de la configuration (triangle équilatéral et charges identiques aux sommets), les trois forces s'annulent mutuellement. La force résultante sur la charge qO est donc nulle.
+4. la norme F de la force F, qu'exerce la charge qO sur les charges qA, qB et qC vaut:
+A. F = 3.10⁻⁴ N
+B. F = 0 N
+C. F= 5,4.10⁻¹⁰ N
+D. toutes ces réponses sont fausses.
+E. F = 10 N
+Réponse correcte : C
+Explication simplifiée du commentaire :
+Pour calculer la force totale sur la charge qO, on additionne les forces de qA, qB et qC. Le commentaire montre comment on peut d'abord additionner les forces de qB et qC. Ensuite, on ajoute la force de qA à ce résultat. Le calcul vectoriel final, en prenant en compte les angles et les distances, donne la norme de la force totale.
+Exercice 08: EMD 2014 (QCM 1-5)
+Données :
+k = 9.10⁹ SI
+e = 1,6.10⁻¹⁹ C
+ε₀ = 8.8.10⁻¹² SI
+Indice de réfraction de l'air nair ≈ 1
+Les charges qA, qB, qC sont disposées respectivement aux sommets d'un triangle équilatéral de côté a.
+qA=qB=-qC = qd = 10⁻⁸ C
+Le point D est le milieu de [BC].
+a = 10⁻³ m
+1. Le potentiel VD généré par les charges qA, qB, et qC au point D vaut :
+A. VD = 15,59.10³ V
+B. VD = 34,52.10⁻³ V
+C. VD = 0 V
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le potentiel électrique est une grandeur scalaire, donc pour trouver le potentiel VD au point D, on additionne simplement les potentiels créés par chaque charge : VD = VA + VB + VC.
+On calcule les distances entre chaque charge (A, B, C) et le point D. La distance de B à D et de C à D est a/2. La distance de A à D peut être calculée avec le théorème de Pythagore.
+Pour chaque charge, on calcule son potentiel avec la formule V = k * q / r, où r est la distance correspondante.
+On additionne algébriquement les trois potentiels pour obtenir le résultat final.
+2. l'énergie potentielle d'interaction électrostatique de la charge qD, due aux charges qA, qB et qC vaut:
+A. Ep = 34,52.10⁻³ J
+B. Ep = 15,59.10⁻³ J
+C. toutes ces réponses sont fausses
+D. U=0 J
+Réponse correcte : B
+Explication simplifiée du commentaire :
+L'énergie potentielle Ep d'une charge qD placée en un point D est le produit de cette charge par le potentiel électrique VD à ce même point, créé par les autres charges (Ep = qD * VD). On utilise simplement la valeur du potentiel VD calculée dans la question 1 et on la multiplie par la valeur de la charge qD pour trouver l'énergie.
+3. l'énergie interne U du système formé des trois charges qA, qB et qC vaut:
+A. U = -9.10⁻³ J
+B. U=0 J
+C. toutes ces réponses sont fausses
+D. Ep=34,52 J
+Réponse correcte : A
+Explication simplifiée du commentaire :
+L'énergie interne U du système est la somme des énergies potentielles de toutes les paires de charges possibles. Pour les charges qA, qB, et qC, nous avons trois paires : (qA, qB), (qA, qC), et (qB, qC). On calcule l'énergie de chaque paire en utilisant la formule U_paire = k * (q1 * q2) / r, où r est la distance entre les deux charges (ici, toujours 'a'). L'énergie interne totale est la somme de ces trois énergies.
+4. le champ généré par les charges qA, qB et qC au point D, a pour norme E, avec:
+A. E = 15,59.10³ V/m
+B. E = 54.10⁹ V/m
+C. E = 34,52.10⁻³ V/m
+D. toutes ces réponses sont fausses
+Réponse correcte : B
+Explication simplifiée du commentaire :
+Le champ électrique total E au point D est la somme vectorielle des champs créés par qA, qB et qC (E = EA + EB + EC).
+En raison de la symétrie (qB = -qC et D est au milieu de [BC]), les champs EB et EC sont dans le même sens et s'ajoutent.
+Le champ EA est dirigé le long de la droite AD.
+Le champ total est la somme vectorielle de EA et du champ combiné (EB + EC). Comme tous ces vecteurs sont colinéaires (sur l'axe AD), il suffit d'additionner leurs normes.
+5. la force F générée par les charges qA, qB et qC, et que subit la charge qD, a pour norme F, avec:
+A. F = 54.10⁻³ N
+B. F = 31,2.10⁻³ N
+C. toutes ces réponses sont fausses
+D. F=0N
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La force F exercée sur une charge qD placée en un point D est simplement le produit de cette charge par le champ électrique E à ce même point (F = qD * E). On utilise la norme du champ électrique E calculée à la question 4 et on la multiplie par la valeur de la charge qD pour obtenir la norme de la force.
+
+Exercice 09: EMD 2014 (QCM 6-8)
+Données :
+q = 10⁻⁹ C
+a = [AB] = 10⁻⁸ m
+θ = 85°
+r = 4,7 m
+1. dans le vide, un dipôle p de moment dipolaire |p| est caractérisé par la charge q (q=10⁻⁹ C) et la distance a=[AB] (a=10⁻⁸ m). Le point M (qui est situé à une distance r=4,7m) est très éloigné du dipôle et fait un angle θ=85° (lire schéma représentatif ci-contre qui n'est pas à l'échelle). Le potentiel VM généré par le dipôle au point M vaut:
+A. VM = 3,54.10⁻⁹ V
+B. toutes ces réponses sont fausses.
+C. VM = 0 V
+Réponse correcte : B (Le corrigé donne le calcul pour l'option A, mais indique B comme réponse correcte, ce qui signifie que le résultat du calcul, bien que proche de A, n'est pas exactement celui-ci ou qu'il y a une autre raison pour laquelle A est fausse).
+Explication simplifiée du commentaire :
+Le potentiel électrique V créé par un dipôle en un point M éloigné est calculé avec la formule V = k * p * cos(θ) / r².
+On calcule d'abord le moment dipolaire p, qui est le produit de la charge q par la distance a (p = q * a).
+On insère ensuite la valeur de p, ainsi que les valeurs de k, θ (l'angle) et r (la distance) dans la formule pour trouver le potentiel V au point M.
+2. l'expression du champ E⃗r, suivant la direction r a pour norme Er, tel que:
+A. Er = (2.k.q.a.cosθ)/r³
+B. Er = (2.k.q.a.cosθ)/r²
+C. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le champ électrique d'un dipôle peut être décomposé en deux composantes. La première est la composante radiale Er, qui est alignée avec la direction du point M (le long du rayon r). La formule standard pour la norme de cette composante est Er = 2 * k * p * cos(θ) / r³. En remplaçant p par q * a, on obtient l'expression donnée dans l'option A.
+3. l'expression du champ E⃗θ, suivant la direction θ a pour norme Eθ, tel que:
+A. Eθ = (k.q.a.sinθ)/r²
+B. Eθ = (k.q.a.sinθ)/r³
+C. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+La seconde composante du champ électrique d'un dipôle est la composante orthoradiale (ou tangentielle) Eθ, qui est perpendiculaire à la direction radiale r. La formule standard pour la norme de cette composante est Eθ = k * p * sin(θ) / r³. En remplaçant p par q * a, on obtient l'expression donnée dans l'option B.
+Exercice 10: EMD Fév 2014 (QCM 9-12)
+Données :
+Soit un dipôle p en équilibre électrostatique instable, placé dans un espace où règne un champ électrique E de norme E = 5.10⁵ N/C.
+Celui-ci est formé par deux charges q = 6,2.10⁻¹² C et (-q) distantes de a = 0,35 μm.
+1. Le moment de couple M tel que M=p^E (le produit scalaire) s'écrit:
+A. M=p.E
+B. M=0
+C. toutes ces réponses sont fausses
+Réponse correcte : A (Le corrigé indique M=E^P, ce qui est le produit vectoriel, pas scalaire. La réponse A est donc M=p.E, le produit scalaire. Cependant, le moment du couple est un vecteur défini par le produit vectoriel. Il semble y avoir une confusion dans la notation de l'énoncé).
+Explication simplifiée du commentaire :
+Le moment du couple M exercé sur un dipôle p par un champ électrique E est défini par le produit vectoriel M = p x E. La norme de ce moment est |M| = |p| * |E| * sin(θ). L'énoncé demande M = p ^ E qui est la notation pour le produit vectoriel. Le commentaire indique que le produit scalaire est p.E. La question est ambiguë. Cependant, dans une situation d'équilibre instable, l'angle θ est de 180°, et le sinus de 180° est 0. Le moment du couple est donc nul. Si l'on interprète l'énoncé comme demandant l'expression générale du produit scalaire, alors A serait correcte.
+2. suite à la question précédente, le vecteur M du Moment M lui étant appliqué vaut:
+A. M=0
+B. M=10⁻¹² SI
+C. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le dipôle est en position d'équilibre instable. Une position d'équilibre (stable ou instable) signifie que le moment du couple exercé sur le dipôle est nul. Cela se produit lorsque le moment dipolaire p est parallèle au champ électrique E, c'est-à-dire quand l'angle θ entre eux est de 0° (stable) ou 180° (instable). Dans les deux cas, sin(θ) = 0, et donc le moment du couple M est nul.
+3. enjouant aux questions précédentes, l'énergie potentielle Ep que subit ce dipôle s'écrit:
+A. Ep = -p.E
+B. Ep=0
+C. toutes ces réponses sont fausses
+Réponse correcte : C (Le corrigé indique que la réponse correcte est B, mais le commentaire justifie A. Ep = -pEcos(θ). Pour l'équilibre instable θ=180°, cos(180°)=-1, donc Ep=+pE. Aucune des options A ou B n'est correcte. Donc C est la bonne réponse).
+Explication simplifiée du commentaire :
+L'énergie potentielle Ep d'un dipôle dans un champ électrique E est donnée par Ep = -p . E (produit scalaire), ce qui équivaut à Ep = -p * E * cos(θ). Le commentaire indique qu'en équilibre instable, l'énergie potentielle est Ep = p * E. Comme l'angle θ est de 180° pour l'équilibre instable, cos(180°) = -1, et donc Ep = -p * E * (-1) = p * E. L'option A est -p.E, ce qui correspondrait à l'équilibre stable (θ=0°). L'option B est 0, ce qui correspondrait à θ=90°. Aucune des options n'est correcte pour l'équilibre instable.
+4. l'énergie potentielle du dipôle de la question précédente vaut:
+A. Ep=1.085.10⁻¹² J
+B. Ep = 5,473.⁻¹⁹ J
+C. toutes ces réponses sont fausses
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Pour trouver la valeur numérique de l'énergie potentielle Ep, on utilise la formule Ep = p * E.
+On calcule d'abord la norme du moment dipolaire p en multipliant la charge q par la distance a (p = q * a).
+Ensuite, on multiplie la valeur de p par la norme du champ électrique E donnée dans l'énoncé. Le résultat de ce calcul correspond à la valeur de l'option A.
+
+Exercice 11: EMD Fév 2014 (QCM 1-6)
+Données :
+K=1/4πε₀ = 9.10⁹ SI
+e=1,6.10⁻¹⁹ C
+Soient deux charges (-q) et (q>0) positionnées respectivement aux points A et B distants de a.
+L'angle entre (OM) et (AB) est θ. Le potentiel créé par ces deux charges en un point M très éloigné de O (OM>>a) est donné par l'expression: V = (K.q.a.cosθ)/r²
+a = 10⁻³ m
+OM = r = 2 m
+q = 10⁻⁹ C
+θ = 60°
+1. le potentiel créé par ces deux charges en un point M vaut:
+A. V = (K.q.a)/r
+B. V = 1.07 V
+C. V = 0
+D. V = (K.q.cosθ)/r
+Réponse correcte : B (Le corrigé indique que la bonne réponse est C, mais le commentaire calcule la valeur qui ne correspond à aucune des options, suggérant qu'il y a une erreur quelque part. La question est probablement mal posée car B est la seule option avec une valeur numérique qui pourrait être le résultat d'un calcul).
+Explication simplifiée du commentaire :
+La question demande de calculer la valeur du potentiel V au point M. L'énoncé fournit directement la formule à utiliser : V = (K.q.a.cosθ)/r². Le commentaire applique cette formule en remplaçant chaque variable par sa valeur numérique donnée (K, q, a, cos(60°) et r) pour calculer le résultat final.
+2. la norme Eθ du champ électriqueE⃗ selon la direction (θ) dû à ce système de charges, vaut au point M:
+A. Eθ = 1.49 10⁻¹⁰ V/m
+B. Eθ = 0.97 10⁻¹ V/m
+C. Eθ = 1.125 10⁻¹⁰ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+La norme de la composante orthoradiale Eθ du champ électrique d'un dipôle est donnée par la formule Eθ = K * p * sin(θ) / r³, où p est le moment dipolaire q*a. Le commentaire applique cette formule en utilisant les valeurs numériques fournies dans les données pour K, q, a, sin(60°) et r pour trouver la valeur de Eθ.
+3. la norme Er du champ électriqueE⃗ selon la direction (r) dû à ce système de charges, vaut au point M:
+A. Er = 1.49. 10⁻¹⁰ V/m
+B. Er = 0.97. 10⁻¹ V/m
+C. Er = 1.125. 10⁻¹⁰ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+La norme de la composante radiale Er du champ électrique d'un dipôle est donnée par la formule Er = 2 * K * p * cos(θ) / r³, où p est le moment dipolaire q*a. Le commentaire applique cette formule en utilisant les valeurs numériques fournies dans les données pour K, q, a, cos(60°) et r pour calculer la valeur de Er.
+4. suite aux questions 2 et 3, nous en déduisons la norme E, du champ électrique E⃗ dû à ce système de charges, et qui vaut:
+A. E = 1.49. 10⁻¹⁰ V/m
+B. E = 0.97 10⁻¹ V/m
+C. E = 1.125. 10⁻¹⁰ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La norme totale du champ électrique E est la résultante de ses composantes radiale (Er) et orthoradiale (Eθ). On la trouve en utilisant le théorème de Pythagore : E = √(Er² + Eθ²). Le commentaire utilise les valeurs calculées dans les questions 2 et 3, les met au carré, les additionne, puis prend la racine carrée du résultat pour trouver la norme totale E.
+5. La norme F de la force F qui s'exerce sur une charge q'' (q''=10⁻¹⁰ C) placée en M vaut:
+A. F = 1.49. 10⁻¹⁰ N
+B. F = 0.97. 10⁻¹ N
+C. F = 0.6. 10⁻¹⁰ N
+D. F = 1.125. 10⁻¹⁰ N
+E. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La force F exercée sur une charge q'' placée en un point M est le produit de cette charge par la norme du champ électrique E à ce même point (F = q'' * E). Le commentaire utilise la valeur de la norme du champ E calculée à la question 4 et la multiplie par la valeur de la charge q'' pour obtenir la norme de la force F.
+6. l'énergie potentielle Ep de la charge q'' placée en M vaut:
+A. Ep = 0.6. 10⁻¹⁰ J
+B. Ep = 2.25. 10⁻¹⁰ J
+C. Ep = 1.125. 10⁻¹⁰ J
+D. Ep=0 J
+E. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+L'énergie potentielle Ep d'une charge q'' placée en un point M est le produit de cette charge par le potentiel électrique V à ce même point (Ep = q'' * V). Le commentaire utilise la valeur du potentiel V calculée à la question 1 et la multiplie par la valeur de la charge q'' pour trouver l'énergie potentielle Ep.
+Exercice 12: Rattrapage 2024 (QCM 1-4)
+Données :
+Soient quatre charges ponctuelles (qA=qB=qC=qD) disposées dans le vide, respectivement aux points A, B, C et D (figure ci-contre).
+Ces points sont situés sur un cercle de même centre O mais de rayon a.
+La norme Eo du champ électrique généré par les charges qA, qB, qC, qD est nulle.
+q = 3.10⁻⁹ C
+a = 3.10⁻² m
+1. on retire la charge qC, la norme Ec du champ électrique Ec, généré par les charges qA, qB, qD au point O, vaut (on donne: q=3.10⁻⁹ C ; a=3.10⁻² m):
+A. Ec = 3.10⁴ V/m
+B. Ec = 6.10⁴ V/m
+C. Ec = 15,7.10⁴ V/m
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : D
+Explication simplifiée du commentaire :
+Initialement, avec les quatre charges, le champ au centre O est nul car les champs créés par les charges opposées s'annulent deux à deux (le champ de qA annule celui de qC, et celui de qB annule celui de qD). Si on retire la charge qC, le champ qui annulait celui de qA disparaît. Le champ résultant Ec au centre O est donc simplement égal au champ créé par la charge qA seule. On le calcule avec la formule E = k * q / a². Le résultat de ce calcul ne correspond à aucune des options proposées.
+2. Au point O, est positionnée la charge Q (Q=9.10⁻⁹ C). Le potentiel Vc au point C, dû aux charges qA, qB, qD, qO, vaut:
+A. Vc = 3,176.10⁴ V
+B. Vc = 1,342.10² V
+C. Vc = 0 V
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le potentiel électrique est scalaire, donc pour trouver le potentiel Vc au point C, on additionne les potentiels créés par chaque charge (qA, qB, qD et Q au point O) : Vc = VA + VB + VD + VO. Pour chaque charge, on calcule son potentiel avec V = k * charge / distance, où la distance est celle qui sépare la charge du point C. On additionne ensuite ces quatre valeurs pour obtenir le potentiel total.
+3. Suite à la question précédente, l'énergie potentielle Ep, générée par les charges qA, qB, qD, qC, vis-à-vis de la charge Q, est:
+A. Ep = 3,51.10⁻³ J
+B. Ep = 0 J
+C. Ep = 9,5.10⁻³ J
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+L'énergie potentielle Ep de la charge Q est égale à la valeur de cette charge multipliée par le potentiel électrique créé à son emplacement (le point O) par toutes les autres charges (qA, qB, qC, qD). Le potentiel au point O, Vo, est la somme des potentiels de ces quatre charges. Puisque les charges sont identiques et à la même distance a du centre, Vo = 4 * (k * q / a). L'énergie est donc Ep = Q * Vo.
+4. la charge Q est retirée et remplacée par un dipôle P de moment dipolaire P (de norme p=2,1.10⁻¹⁰ C.m) disposé au point O (il sera orienté ici, que les distances AC et BD sont exactement opposées d'après la symétrie du dessin considéré), et orienté selon l'axe vecteur DC. Le moment M qui est appliqué sur le dipôle P du fait des charges (qA, qB, qD, qC), a pour norme M est telle que:
+A. M = 0
+B. M = 7,391.10⁻³ SI
+C. M = 1,23.10⁻³ SI
+D. Les réponses a, b, et c sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le moment M d'un couple qui s'exerce sur un dipôle est donné par M = p * E * sin(θ), où E est le champ électrique extérieur à l'endroit du dipôle. Ici, le champ extérieur est celui créé par les quatre charges (qA, qB, qC, qD) au point O. Comme il a été établi au début de l'exercice, la symétrie de la configuration fait que le champ électrique total au centre O est nul (E = 0). Par conséquent, le moment appliqué sur le dipôle est également nul.
+
+Exercice 13: Rattrapage 2023 (QCM 1-8)
+Données :
+Soient quatre charges ponctuelles qA, qB, qC, et qD disposées dans le vide, respectivement aux points A, B, C et D comme le montre la figure ci-contre.
+qA = qB = -qC = -qD = q
+q = 9. 10⁻⁹ C
+a = 5mm
+1. la norme E du champ électrique E⃗ généré par les charges qA, qB, et qD est: (Note: la question fait probablement référence au point C, comme dans des exercices similaires)
+A. E = 5,12.10⁸ V/m
+B. E = 3,48.10⁸ V/m
+C. E = 18,37.10⁸ V/m
+D. les réponses a, b, et c sont fausses
+Réponse correcte : B
+Explication simplifiée du commentaire :
+Le champ électrique au centre O du carré est la somme vectorielle des champs créés par chaque charge (E = EA + EB + EC + ED).
+On observe que les champs créés par les paires de charges opposées (EA et EC, EB et ED) sont dirigés dans le même sens. Le champ de qA et de qC s'additionnent, de même que le champ de qB et de qD.
+Le champ résultant des charges A et C est perpendiculaire au champ résultant des charges B et D.
+Pour trouver la norme du champ total, on utilise le théorème de Pythagore sur les deux champs résultants.
+2. Le potentiel Vt au point C, généré par les trois charges qA, qB, et qD est:
+A. Vt = 5,76.10⁴V
+B. Vt = 0
+C. les réponses a, b, et c sont fausses
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le potentiel Vt au point C est la somme scalaire des potentiels créés par les charges qA, qB et qD en ce point. On calcule chaque potentiel individuellement avec la formule V = k * q / r, où r est la distance entre la charge et le point C. On additionne ensuite ces trois valeurs pour obtenir le potentiel total Vt.
+3. les charges qA et qB sont retirées, et un dipôle de moment dipolaire P⃗ (de norme p=1,6.10⁻²⁰ C) est positionné au point A. Ce dipôle est orienté dans le sens C vers B (il sera également supposé que ce dipôle est suffisamment éloigné de la charge qD). L'énergie potentielle Ep de ce dipôle est:
+A. Ep = 0
+B. Ep = 3.10⁻²² J
+C. Ep = 5.10⁻²² J
+D. les réponses a, b, et c sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+L'énergie potentielle d'un dipôle est donnée par Ep = -p * E * cos(θ), où E est le champ électrique extérieur et θ est l'angle entre le dipôle et ce champ. Ici, le champ extérieur est celui créé par les charges qD et qC au point A. Le dipôle est orienté de C vers B. L'analyse géométrique montre que le champ électrique résultant est perpendiculaire à l'axe du dipôle. L'angle θ est donc de 90°. Puisque cos(90°) = 0, l'énergie potentielle Ep du dipôle est nulle.
+Exercice 14: Rattrapage 2022 (QCM 1-3)
+Données :
+Trois charges ponctuelles, (qA=qB=1 nC) et (qC=2nC) sont placées respectivement sur les sommets d'un triangle équilatéral (ABC) de côté [a = 3mm].
+K = 9.10⁹ S.I.
+1. Parmi les affirmations suivantes, laquelle est correcte ?
+L'intensité du champ au point A est nulle.
+Le sens de la force que subit la charge (qC) vaut (Fc = 3,46 10⁻³N).
+L'intensité du champ au point (A) et la même que celle au point (B).
+La direction de la force (Fc) est le même que celui du champ (Ea).
+L'intensité du champ au point (C) vaut: = 1,73 10⁶ V/m.
+L'intensité du champ au point (C) vaut: = 1,0 10⁶ V/m.
+La direction du champ électrique résultant au point (C) est perpendiculaire à la droite(AB).
+La charge (qC) est en équilibre.
+Options de réponse :
+A. 1+2+3
+B. 1+2+5
+C. 2+4+5
+D. 2+3+5
+E. 1+4+5
+Réponse correcte : D
+Explication simplifiée du commentaire :
+La réponse D indique que les affirmations 2, 3 et 5 sont correctes.
+(Affirmation 5): Le champ électrique au point C est la somme vectorielle des champs créés par qA et qB. Le calcul de la norme de ce champ résultant donne bien 1,73.10⁶ V/m.
+(Affirmation 2): La force sur la charge qC est Fc = qC * Ec. En multipliant la valeur de qC par le champ Ec calculé, on obtient bien 3,46.10⁻³ N.
+(Affirmation 3): En raison de la symétrie de la configuration (qA=qB et triangle équilatéral), l'intensité du champ créé au point A (par qB et qC) est la même que celle créée au point B (par qA et qC).
+2. Suite à la question précédente: on enlève la charge (qC) et on la remplace par un dipôle électrique (p) formé de deux charges (+q; -q) séparées par une distance (d=1 um). Le dipôle est placé au point (C) parallèlement à la droite (AB), on donne (q=1,0 10⁻⁹C).
+Le moment dipolaire (p) vaut (p = 1,0 10⁻¹⁵C.m).
+L'angle formé entre le dipôle et le champ extérieur vaut (0°).
+L'énergie potentielle de ce dipôle est nulle.
+Le dipôle est dans un état d'équilibre stable.
+L'intensité du moment du couple appliqué sur ce dipôle est maximale.
+Options de réponse :
+A. 2+4
+B. 1+3+4
+C. 1+3+5
+D. 2+4+5
+E. 2+3+5
+Réponse correcte : C (Note: Le corrigé indique E, mais le détail du commentaire justifie que les affirmations 1, 3 et 5 sont correctes, ce qui correspond à l'option C).
+Explication simplifiée du commentaire :
+(Affirmation 1): Le moment dipolaire p est calculé par p = q * d. En utilisant les valeurs données, on trouve p = 10⁻⁹ * 10⁻⁶ = 10⁻¹⁵ C.m. L'affirmation est donc correcte.
+(Affirmation 3): Le champ électrique extérieur au point C (créé par qA et qB) est perpendiculaire à la droite AB. Le dipôle est placé parallèlement à la droite AB. L'angle θ entre le dipôle et le champ est donc de 90°. L'énergie potentielle Ep = -p.E.cos(θ) est donc nulle car cos(90°) = 0. L'affirmation est correcte.
+(Affirmation 5): Le moment du couple est M = p.E.sin(θ). Puisque l'angle est de 90°, sin(90°) = 1, ce qui est la valeur maximale possible pour le sinus. Le moment du couple est donc maximal. L'affirmation est correcte.
+
+Exercice 15: Rattrapage 2021 (QCM 5-7)
+Données :
+Soient quatre charges ponctuelles qA, qB, qC, et qD disposées aux points A, B, C et D, respectivement, comme le montre la figure.
+qA = qB = 1 nC = 10⁻⁹ C
+qC = -2 nC = -2.10⁻⁹ C
+qD = q
+a = 5 mm
+Le dipôle p (q=1,6.10⁻¹⁹ C, d=1um=10⁻⁶ m)
+1. La norme E du champ électrique |E| généré par les charges qA, qB, et qD au point C vaut:
+A. E = (k/a²) Kq
+B. E = (k/a²) (√2/2 - 1) Kq
+C. toutes ces réponses sont fausses.
+Réponse correcte : C (Note: La question contient une erreur de frappe. Les réponses sont exprimées en "Kq", ce qui n'est pas une unité de champ électrique. En ignorant cela, nous analysons la logique).
+Explication simplifiée du commentaire :
+Le champ électrique au point C est la somme vectorielle des champs créés par qA, qB et qD. Le commentaire explique que les champs créés par qA et qB sont symétriques et que leur résultante est dirigée le long de la diagonale. En additionnant vectoriellement ce champ résultant avec celui créé par qD, on peut trouver le champ total au point C. Le calcul montre que le résultat ne correspond à aucune des formes proposées.
+2. La charge qD est maintenant multipliée par 4. La norme F de la force F qu'exercent les charges qA, qB et qD sur la charge qC vaut:
+A. F = k( (2√2+1)/2 ) Kq²/a²
+B. F = ( (2√2 - 1) /2 ) Kq²/a²
+...
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La force F exercée sur qC est le produit de la charge qC par le champ électrique E créé au point C par les autres charges (F = qC * E). Le champ E est la somme vectorielle des champs EA, EB et ED. Le commentaire détaille comment additionner ces vecteurs en utilisant leurs composantes. Le calcul aboutit à l'expression donnée dans l'option A.
+3. Le potentiel Vt au point C, généré par les trois charges qA,qB,qD, vaut :
+A. Vt = (√2/2-1) Kq
+B. Vt = ( (2√2-1)/2 ) Kq
+C. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+Le potentiel Vt au point C est la somme scalaire des potentiels créés par qA, qB et qD. On utilise la formule V = k * q / r pour chaque charge, en utilisant les distances appropriées entre chaque charge et le point C. On additionne ensuite ces trois valeurs pour obtenir le potentiel total.
+Exercice 16: Rattrapage 2020 (QCM 1-2)
+Données :
+Soit le carré ABCD de côté a, et considéré dans le vide. Sont ajoutées des charges de telle sorte que celles-ci se relèvent dans la configuration illustrée par le schéma ci-contre: à savoir : au point A, la charge qA ; au point B, la charge qB; au point C, la charge qC; au point D, la charge qD; avec qA = -qB = -qC = qD.
+qA = 1,6.10⁻¹⁰ C
+a = 4 mm
+Le dipôle (q=10⁻¹⁰ C ; d=10⁻¹⁰ m)
+1. la norme E du champ électrique E⃗ au point O, du fait des charges qA, qB, qC et qD est:
+A. E = 5,1.10³ V/m
+B. E = 0 V/m
+C. E = 15.10³ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le champ électrique total E au centre O est la somme vectorielle des champs EA, EB, EC et ED.
+On remarque que EB (créé par qB) et ED (créé par qD) sont de même sens et s'additionnent.
+De même, EA (créé par qA) et EC (créé par qC) sont de même sens et s'additionnent.
+Les deux champs résultants (Ebd et Eac) sont perpendiculaires. La norme du champ total est donc trouvée en utilisant le théorème de Pythagore sur ces deux vecteurs, E = √(|Eac|² + |Ebd|²).
+2. suite à la question précédente, l'énergie potentielle Ep d'un dipôle (q = 10⁻¹⁰ C; d = 10⁻¹⁰] placé horizontalement au point O, centre du carré et de moment dipolaire p⃗ de même direction et de même sens que le vecteur DC, est:
+A. Ep = 0J
+B. Ep = 9,6.10⁻¹⁵ J
+C. Ep = 3,7.10⁻¹⁵ J
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+L'énergie potentielle d'un dipôle est Ep = -p * E * cos(θ).
+Le dipôle p est orienté horizontalement, dans le même sens que le vecteur DC.
+Le champ électrique E au point O, comme calculé précédemment, est la somme de deux composantes perpendiculaires. Le commentaire montre que le champ E est orienté le long de la diagonale AC.
+L'angle θ entre le dipôle (horizontal) et le champ E (diagonal) est de 90°.
+Puisque cos(90°) = 0, l'énergie potentielle Ep est nulle.
+
+Exercice 17: Rattrapage 2019 (QCM 10-12)
+Données :
+Soit la figure ci-contre qui représente trois charges qA, qB et qC aux sommets d'un triangle rectangle.
+La norme F de la force d'interaction F qu'exercent les deux charges qA et qB sur la charge qC vaut:
+qA = 20 µC
+qB = -50 µC
+qC = 40 µC
+AB = 50 cm
+BC = 40 cm
+AC = 30 cm
+10. La norme F de la force F:
+A. F = 241 N
+B. F=0 N
+C. F = 94,5 N
+D. toutes ces réponses sont fausses.
+Réponse correcte : D (Le corrigé calcule une valeur de 138 N, qui n'est pas dans les options).
+Explication simplifiée du commentaire :
+La force totale F sur la charge qC est la somme vectorielle de la force FA (exercée par qA) et de la force FB (exercée par qB).
+On calcule la norme de FA et FB en utilisant la loi de Coulomb : F = k * |q1*q2| / r².
+Comme le triangle est rectangle en C, les vecteurs forces FA et FB sont perpendiculaires.
+On trouve la norme de la force résultante F en utilisant le théorème de Pythagore : F = √(FA² + FB²).
+11. le potentiel Vc (généré par les charges qA et qB) au point C vaut:
+A. Vc = 241 V
+B. Vc = 823 V
+C. Vc = 0 V
+D. toutes ces réponses sont fausses.
+Réponse correcte : D
+Explication simplifiée du commentaire :
+Le potentiel Vc au point C est la somme scalaire des potentiels créés par qA et qB. On calcule VA (potentiel de qA en C) et VB (potentiel de qB en C) avec la formule V = k * q / r. Le potentiel total est Vc = VA + VB.
+12. L'énergie interne U du système des trois charges qA, qB et qC,vaut:
+A. U = -39 J
+B. U = -67 J
+C. U = 67 J
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+L'énergie interne U du système est la somme des énergies potentielles de chaque paire de charges : (qA, qB), (qA, qC) et (qB, qC). On calcule l'énergie pour chaque paire avec la formule U_paire = k * q1 * q2 / r, puis on additionne les trois résultats pour obtenir l'énergie totale du système.
+Exercice 18: Synthèse 2017 (QCM 2-4)
+Données :
+Soient, dans le vide, deux charges ponctuelles q (q > 0) et (-q) positionnées respectivement aux points A et B distants d'une distance a.
+Soit un point M, situé à une distance r, considérable, du centre O (O est très éloigné de ces deux charges).
+q = 10⁻⁹ C
+a = 10⁻⁹ m
+θ = 60°
+OM = 5 m
+OH = 3 m
+2. La norme E du champ électrique résultant E⃗ en ce point M peut s'écrire:
+A. E = (k.p/r³)√(4cos²θ + sin²θ)
+... (formules alternatives)
+Réponse correcte : A
+Explication simplifiée du commentaire :
+La norme du champ électrique total E d'un dipôle est la résultante de ses composantes radiale (Er) et orthoradiale (Eθ), calculée avec E = √(Er² + Eθ²). En remplaçant Er et Eθ par leurs expressions (Er = 2kp.cosθ/r³ et Eθ = kp.sinθ/r³), puis en simplifiant l'équation, on obtient la formule générale de la norme du champ E proposée dans l'option A.
+3. suite à la question précédente, la norme E du champ E⃗ en ce point M, vaut :
+A. E=3,17.10⁻¹¹ V/m
+B. E=7,2.10⁻¹¹ V/m
+C. E=9,5.10⁻¹¹ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+Pour trouver la valeur numérique de E, on utilise la formule de l'option A de la question précédente. On y insère les valeurs numériques données pour k, p (calculé comme q*a), r, et θ. Le calcul donne le résultat correspondant à l'option C.
+4. suite aux questions précédentes, la norme E' du champ E'⃗ au point H vaut:
+A. E'=3,33.10⁻¹⁰ V/m
+B. E'=1,69.10⁻¹⁰ V/m
+C. E'=8,17.10⁻¹⁰ V/m
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+Le point H est situé sur la médiatrice du dipôle. Pour un point sur la médiatrice, l'angle θ est de 90°. Le champ électrique E' est alors dirigé parallèlement à l'axe du dipôle et sa norme est donnée par E' = k * p / r³, où r est ici la distance OH. En utilisant cette formule simplifiée avec les valeurs données, on obtient le résultat de l'option A.
+Exercice 19: Synthèse 2017 (QCM 5-7)
+Données :
+Soient trois charges qA, qB et qC, placées, dans le vide, en chaque sommet A, B, et C d'un triangle comme précisé sur la figure ci-contre.
+La norme F de la force F, qu'exercent les trois charges en un point o situé au milieu du segment [BC], sur une charge q:
+qC = qA = qB = -10⁻⁹ C
+q = 10⁻⁸ C
+a = 10 m
+Â = 30°
+5. La norme F de la force F:
+A. F=28,1.10⁻⁹ N
+B. F=2,7. 10⁻⁹ N
+C. F=7,26.10⁹ N
+D. toutes ces réponses sont fausses.
+Réponse correcte : B
+Explication simplifiée du commentaire :
+La force F sur la charge q au point o est la somme vectorielle des forces FA, FB et FC.
+Les charges qB et qC sont égales et à égale distance du point o. Les forces qu'elles exercent sont donc égales en norme mais de sens opposés, elles s'annulent : FB + FC = 0.
+La force totale F est donc simplement égale à la force FA exercée par la charge qA. On la calcule avec la loi de Coulomb F = k * |qA*q| / r², où r est la distance AO.
+6. l'énergie potentielle Ep de cette charge q, vis-à-vis des trois autres charges qA, qB et qC, est:
+A. Ep=9,32.10⁻¹⁰ J
+B. Ep= -28,10 J
+C. Ep=0 J
+D. toutes ces réponses sont fausses.
+Réponse correcte : A
+Explication simplifiée du commentaire :
+L'énergie potentielle Ep de la charge q est Ep = q * Vo, où Vo est le potentiel au point o créé par les autres charges. Vo est la somme scalaire des potentiels VA, VB et VC. On calcule chaque potentiel avec V = k * charge / distance, puis on les additionne pour trouver Vo. Enfin, on multiplie Vo par q pour obtenir Ep.
+7. cette charge q est retirée et remplacée par un dipôle p⃗ orienté dans le sens OB. Ce dipôle est:
+A. à l'équilibre stable
+B. à l'équilibre instable
+C. à une position intermédiaire
+D. toutes ces affirmations sont fausses.
+Réponse correcte : C
+Explication simplifiée du commentaire :
+L'équilibre d'un dipôle dépend de l'angle θ entre le dipôle p et le champ électrique extérieur E.
+L'équilibre est stable si θ=0° et instable si θ=180°.
+Ici, le dipôle est orienté de O vers B. Le champ électrique E au point o est celui créé par qA, qB et qC. Ce champ est dirigé de o vers A.
+L'angle entre le dipôle (OB) et le champ (OA) n'est ni 0° ni 180°.
+Par conséquent, le dipôle n'est pas en position d'équilibre (ni stable, ni instable) et se trouve dans une position intermédiaire.
+

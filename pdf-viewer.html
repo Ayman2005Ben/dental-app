@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #f0f2f5; }
+        #viewer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        #viewer-toolbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; /* للسماح بانتقال العناصر لسطر جديد */
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 20; /* ليبقى فوق كل شيء */
+        }
+        #viewer-toolbar button, #viewer-toolbar input, #viewer-toolbar label {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        #viewer-toolbar button.active {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        #viewer-toolbar input[type="color"] { padding: 2px; }
+        #pdf-canvas-container {
+            flex-grow: 1;
+            overflow: auto;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* مهم جداً لوضع الطبقات فوق بعضها */
+        }
+        /* --- ✅ تعديل مهم لوضع طبقات الـ PDF والرسم والنص فوق بعضها --- */
+        #pdf-canvas, #drawing-canvas, .textLayer {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #drawing-canvas { z-index: 10; cursor: crosshair; }
+        .textLayer { z-index: 5; }
+        #pdf-canvas { z-index: 1; }
+
+        #selection-popup {
+            position: absolute; display: none; background-color: #2c3e50; color: white; border-radius: 6px; padding: 5px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; display: flex; gap: 5px;
+        }
+        #selection-popup button {
+            background-color: #34495e; color: white; border: none; padding: 8px 12px; border-radius: 4px;
+            cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 5px;
+        }
+        #selection-popup button:hover { background-color: #4a6885; }
+
+        .textLayer {
+            overflow: hidden; opacity: 0.2; line-height: 1.0; color: transparent;
+        }
+        .textLayer ::selection { background: rgba(0, 0, 255, 0.3); }
+        .textLayer.drawing-active { user-select: none; } /* لمنع تحديد النص أثناء الرسم */
+
+    </style>
+</head>
+<body>
+
+    <div id="viewer-container">
+        <div id="viewer-toolbar">
+            <button id="prev-page"><i class="fas fa-arrow-left"></i> Prev</button>
+            <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+            <button id="next-page">Next <i class="fas fa-arrow-right"></i></button>
+            
+            <span style="border-left: 2px solid white; height: 30px;"></span>
+
+            <button id="draw-mode-btn" title="Toggle Draw/Highlight Mode"><i class="fas fa-pencil-alt"></i> Draw</button>
+            <label for="color-picker">Color:</label>
+            <input type="color" id="color-picker" value="#FFFF00">
+            <label for="brush-size">Size:</label>
+            <input type="range" id="brush-size" min="2" max="50" value="20">
+            <label for="brush-opacity">Opacity:</label>
+            <input type="range" id="brush-opacity" min="0.1" max="1" step="0.1" value="0.4">
+            <button id="clear-drawings-btn" title="Clear drawings on this page"><i class="fas fa-trash"></i> Clear</button>
+            </div>
+        <div id="pdf-canvas-container">
+            <canvas id="pdf-canvas"></canvas>
+            <canvas id="drawing-canvas"></canvas>
+            <div id="text-layer" class="textLayer"></div>
+        </div>
+    </div>
+    
+    <div id="selection-popup">
+        <button id="ask-ai-btn"><i class="fas fa-robot"></i> Ask AI</button>
+        <button id="translate-btn"><i class="fas fa-language"></i> Translate</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="pdf-viewer.js"></script>
+
+</body>
+</html>

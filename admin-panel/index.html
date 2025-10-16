@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-user-shield"></i> Admin</h3>
+            </div>
+            <ul>
+                <li><a href="#dashboard" class="nav-link active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#users" class="nav-link"><i class="fas fa-users"></i> User Management</a></li>
+                <li><a href="#reports" class="nav-link"><i class="fas fa-flag"></i> Report Center</a></li>
+                <li><a href="#ai-logs" class="nav-link"><i class="fas fa-robot"></i> AI Observatory</a></li>
+                <li><a href="#content" class="nav-link"><i class="fas fa-book"></i> Content Factory</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- 📊 Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <h1>Dashboard Overview</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Total Users</h4>
+                        <p id="stat-total-users">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Active Users</h4>
+                        <p id="stat-active-users">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>New Users (7 Days)</h4>
+                        <p id="stat-new-users">0</p>
+                    </div>
+                    <div class="stat-card urgent">
+                        <h4>New Reports</h4>
+                        <p id="stat-new-reports">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 👥 Users Section -->
+            <section id="users" class="content-section">
+                <h1>User Management</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Study Year</th>
+                                <th>Status</th>
+                                <th>AI Access</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 🚩 Reports Section -->
+            <section id="reports" class="content-section">
+                <h1>Report Center</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Question</th>
+                                <th>Reason</th>
+                                <th>Reported By</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reports-table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 🤖 AI Observatory -->
+            <section id="ai-logs" class="content-section">
+                <h1>AI Observatory</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Task</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ailogs-table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 🧠 Content Factory -->
+            <section id="content" class="content-section">
+                <h1 class="soon">Content Factory (Coming Soon)</h1>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

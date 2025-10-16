@@ -1,0 +1,323 @@
+Collection QCM (Questions 1 à 11)
+1. Quel est parmi les couples de molécules suivants celui qui ne possède pas de liaison hydrogène intermoléculaire ?
+A. (NH₃, H₂O)
+B. (NH₃, CH₄)
+C. (NH₃, HF)
+D. (NH₃, CCl₄)
+Réponse : B
+Commentaire Simplifié : Pour former une liaison hydrogène, une molécule doit posséder un atome d'hydrogène (H) lié à un atome très électronégatif (O, N, ou F). La molécule de méthane (CH₄) ne remplit pas cette condition, car ses hydrogènes sont liés au carbone (C). Elle ne peut donc pas former de liaison hydrogène avec l'ammoniac (NH₃).
+2. Le moment dipolaire du composé ci-contre vaut 4,3D; le moment dipolaire de la liaison C-NO₂ (µC-NO₂) vaut : #figure_Q2.png
+A. 4,3 D
+B. 2,15 D
+C. 8,6 D
+Réponse : A
+Commentaire Simplifié : Le moment dipolaire total (µT) est la somme vectorielle des moments de chaque liaison polaire. Le commentaire du livre suggère que les vecteurs des liaisons C-Br s'annulent mutuellement, ce qui laisserait le vecteur de la liaison C-NO₂ comme principal contributeur au moment dipolaire total. Ainsi, le moment dipolaire de la liaison C-NO₂ serait approximativement égal au moment dipolaire total de la molécule, soit 4,3 D.
+3. Dans la classification périodique des éléments, l'azote N et le phosphore P se situent dans le groupe VIA et dans les périodes respectives n=2 et n=3, les angles de liaisons de la molécule d'ammoniac NH₃ et de la phosphine PH₃ sont :
+A. 109,47° ; 109,47°
+B. 113° ; 119°
+C. 113° ; 111°
+D. 107° ; 93°
+Réponse : D
+Commentaire Simplifié : NH₃ et PH₃ sont toutes les deux de type AX₃E₁ (géométrie pyramidale, hybridation sp³).
+Pour NH₃, le doublet non liant (E) repousse les liaisons N-H, réduisant l'angle de 109,5° (tétraèdre parfait) à 107°.
+Pour PH₃, le phosphore (P) est moins électronégatif que l'azote (N). Son doublet non liant occupe donc plus d'espace et exerce une répulsion encore plus forte, ce qui compresse l'angle H-P-H à seulement 93°.
+4. Le nombre d'atomes coplanaires dans le composé ci-dessous est : #figure_Q4.png
+A. 16
+B. 12
+C. 10
+Réponse : B
+Commentaire Simplifié : Sont coplanaires (dans le même plan) les atomes hybridés sp² et les atomes qui leur sont directement liés. En regardant le schéma explicatif, on compte 10 atomes de carbone hybridés sp² et 2 atomes d'hydrogène directement liés à ces carbones, ce qui donne un total de 12 atomes dans le même plan.
+5. Les températures d'ébullition des composés (I), (II) et (III) sont telles que : #figure_Q5.png
+(I) : Crésol (phénol avec un groupe -CH₃)
+(II) : Benzène-1,2-diol (catéchol)
+(III) : Phénol
+Réponse : A dans le livre, mais l'ordre logique est (I) < (III) < (II)
+Commentaire Simplifié : La température d'ébullition augmente avec le nombre et la force des liaisons hydrogène.
+(II) Benzène-1,2-diol : Possède deux groupes -OH, il peut donc former le plus de liaisons hydrogène intermoléculaires. Il a la température d'ébullition la plus élevée.
+(III) Phénol : Possède un groupe -OH et peut former des liaisons hydrogène.
+(I) Crésol : Possède un groupe -OH, mais sa masse molaire est légèrement plus grande que celle du phénol, ce qui devrait légèrement augmenter sa température d'ébullition par rapport au phénol. Cependant, la capacité à former des liaisons H est le facteur dominant.
+L'ordre correct est donc : (I) < (III) < (II).
+6. Classer les angles de valence α₁, α₂, α₃, et α₄ par ordre croissant. #figure_Q6.png
+α₁ : Angle dans H₂O
+α₂ : Angle dans CH₄
+α₃ : Angle dans une molécule plane triangulaire (comme AlCl₃)
+α₄ : Angle dans une molécule avec un atome central sp³
+Réponse : B dans le livre, soit α₁ < α₄ < α₂ < α₃
+Commentaire Simplifié :
+α₁ (H₂O) : Type AX₂E₂. La forte répulsion des deux doublets non liants réduit l'angle à ~104,5°. C'est le plus petit.
+α₂ (CH₄) : Type AX₄. Tétraèdre parfait. L'angle est de 109,5°.
+α₃ (Trigonal Plan) : Type AX₃. L'angle est de 120°.
+α₄ (Atome central électronégatif) : Le livre place cet angle entre α₁ et α₂. Un atome central électronégatif attire les électrons, ce qui rapproche les liaisons et diminue l'angle par rapport à 109,5°.
+L'ordre logique est donc α₁ < α₄ < α₂ < α₃.
+7. Les températures d'ébullition des composés A, B et C sont telles que : #figure_Q7.png
+A : Phénol
+B : Acide benzoïque
+C : Alcool benzylique
+Réponse : A dans le livre, mais l'ordre logique est (A) < (C) < (B)
+Commentaire Simplifié :
+(B) Acide benzoïque : Le plus élevé. Les acides carboxyliques forment des "dimères" (deux molécules liées par deux liaisons hydrogène très fortes), ce qui augmente massivement la température d'ébullition.
+(C) Alcool benzylique : Peut former des liaisons hydrogène fortes.
+(A) Phénol : Peut former des liaisons hydrogène, mais elles sont légèrement plus faibles que celles de l'alcool benzylique.
+L'ordre de température d'ébullition croissant est donc (A) < (C) < (B).
+8. La chlorpromazine [...] Les états d'hybridation des atomes 16S, 17Cl, 7N(1) et N(2) sont : #figure_Q8.png
+A. N1(sp³), N2(sp³), S(sp³), Cl(sp³)
+B. N1(sp²), N2(sp³), S(sp²), Cl(sp³)
+C. N1(sp³), N2(sp³), S(sp²), Cl(sp³)
+D. TRF
+Réponse : D dans le livre (TRF), mais l'analyse donne :
+Commentaire Simplifié :
+N(1) (dans le cycle) : Lié à 3 atomes (2C, 1S) et a un doublet non liant. Géométrie pyramidale. Hybridation sp³.
+N(2) (chaîne latérale) : Lié à 3 atomes de carbone et a un doublet non liant. Géométrie pyramidale. Hybridation sp³.
+S (dans le cycle) : Lié à 2 atomes de carbone et a deux doublets non liants. Géométrie angulaire. Hybridation sp³.
+Cl : Lié à 1 atome de carbone et a trois doublets non liants. Hybridation sp³.
+La réponse correcte devrait donc être (A). Le fait que la réponse soit TRF suggère une complexité non évidente (comme la participation du doublet de N(1) à la résonance, le rendant sp²).
+9. Les températures d'ébullition des composés A et B sont telles que : #figure_Q9.png
+A : Acide salicylique (o-hydroxybenzoïque)
+B : Acide p-hydroxybenzoïque
+Réponse : D dans le livre, ce qui correspond à Teb(B) > Teb(A)
+Commentaire Simplifié :
+Composé A (ortho) : Peut former une liaison hydrogène intramoléculaire (à l'intérieur de la même molécule). Cela réduit le nombre de liaisons possibles avec les autres molécules.
+Composé B (para) : Ne peut former que des liaisons hydrogène intermoléculaires (entre molécules différentes). Cela crée un réseau de liaisons fortes qui demande beaucoup d'énergie à briser.
+Conclusion : Teb(B) > Teb(A).
+10. La comparaison de la solubilité des deux acides aminés dans l'eau montre que : #figure_Q10.png
+C : Sérine
+D : Valine
+Réponse : B
+Commentaire Simplifié : La solubilité dans l'eau dépend de la polarité. L'eau est polaire.
+Composé C (Sérine) : Possède un groupe -OH polaire supplémentaire, ce qui le rend très polaire et capable de former plus de liaisons hydrogène avec l'eau.
+Composé D (Valine) : Possède une chaîne latérale non polaire (-CH(CH₃)₂).
+Conclusion : La Sérine (C) est plus soluble dans l'eau que la Valine (D).
+11. Dans la molécule suivante, le nombre d'atomes qui sont dans le même plan est égale à : #figure_Q11.png
+A. 14
+B. 16
+C. 12
+Réponse : B (16 atomes dans l'image)
+Commentaire Simplifié : Sont dans le même plan (coplanaires) les atomes hybridés sp² et ceux qui y sont directement liés. Dans cette molécule (un aldéhyde aromatique), on compte :
+Les 6 carbones du cycle benzénique (sp²).
+Les 4 hydrogènes liés au cycle.
+Le carbone et l'oxygène du groupe aldéhyde (-CHO).
+L'oxygène et l'hydrogène du groupe phénol (-OH).
+Cela fait un total de 6 + 4 + 2 + 2 = 14 atomes. (Note : le livre indique 16, ce qui est une erreur commune de comptage. Le plan est défini par les atomes sp²).
+Exercice 01 (Questions 12 à 14)
+12. La structure de Lewis de NOCl est :
+A. O=N-Cl
+B. N=Cl-O
+C. O-N=Cl
+Réponse : A
+Commentaire Simplifié : L'azote (N) est l'atome central. Pour satisfaire la règle de l'octet pour tous les atomes, N doit former une double liaison avec O et une simple liaison avec Cl. N aura aussi un doublet non liant.
+13. Selon la théorie VSEPR, SO₃ est du type :
+A. AX₃E
+B. AX₃
+C. AX₂E₂
+Réponse : B
+Commentaire Simplifié : L'atome central est le soufre (S). Il est lié à 3 atomes d'oxygène (X=3) et n'a pas de doublet non liant (E=0) car il utilise ses 6 électrons de valence dans les liaisons. La molécule est donc de type AX₃.
+14. Pour la molécule COCl₂, le carbone est hybridé sp²
+A. le carbone est hybridé sp²
+B. le carbone est hybridé sp³
+C. le carbone est hybridé sp
+D. la molécule est linéaire
+Réponse : A
+Commentaire Simplifié : Le carbone central est lié à 3 atomes (1 Oxygène, 2 Chlores) et n'a pas de doublet non liant. Il est de type AX₃. Cela correspond à une géométrie trigonale plane et une hybridation sp².
+Exercice 02 (Questions 15 à 16)
+15. Soient les molécules suivantes [...] les moments dipolaires des trois molécules se classent selon l'ordre : #figure_Q15.png
+µ₁ (ortho-dichlorobenzène), µ₂ (méta-dichlorobenzène), µ₃ (para-dichlorobenzène)
+Réponse : A dans le livre (µ₃ < µ₂ < µ₁)
+Commentaire Simplifié :
+µ₃ (para) : Les deux vecteurs C-Cl sont opposés (angle de 180°), ils s'annulent parfaitement. µ₃ = 0.
+µ₂ (méta) : L'angle est de 120°. La somme vectorielle est non nulle.
+µ₁ (ortho) : L'angle est de 60°. C'est là que la somme vectorielle est la plus grande.
+L'ordre croissant est donc µ₃ < µ₂ < µ₁.
+16. Les expressions des trois moments dipolaires sont : #figure_Q16.png
+Réponse : C dans le livre
+Commentaire Simplifié : La formule pour la somme de deux vecteurs de même magnitude est µ_total = 2 * µ_liaison * cos(θ/2), où θ est l'angle entre les vecteurs.
+µ₃ (para, θ=180°) : cos(90°) = 0. Donc µ₃ = 0.
+µ₂ (méta, θ=120°) : 2 * µ_C-Cl * cos(60°).
+µ₁ (ortho, θ=60°) : 2 * µ_C-Cl * cos(30°) = √3 * µ_C-Cl.
+Exercice 03 (Questions 17 à 19)
+17. Les molécules COCl₂ et SOCl₂ :
+A. Possèdent la même géométrie.
+B. COCl₂ est plan et SOCl₂ est pyramidale.
+C. COCl₂ est triangulaire et SOCl₂ est tétraédrique.
+Réponse : B
+Commentaire Simplifié :
+COCl₂ : Atome central C. Type VSEPR AX₃. Géométrie Trigonale Plane.
+SOCl₂ : Atome central S. Type VSEPR AX₃E₁. Géométrie Pyramidale à base trigonale.
+18. Dans la molécule SOCl₂, les orbitales qui se recouvrent pour former la liaison π entre O et S :
+A. sp²(S) et pz(O)
+B. sp³(S) et pz(O)
+C. p(S) et p(O)
+Réponse : C
+Commentaire Simplifié : Une liaison Pi (π) se forme toujours par le recouvrement latéral d'orbitales p pures (non hybridées). L'atome de Soufre et l'atome d'Oxygène utilisent chacun une orbitale p pour former cette liaison π.
+19. Selon la théorie de Gillespie, dans la molécule COCl₂, l'atome d'oxygène est de type :
+A. AXE₂
+B. AXE
+C. AX₂E₁
+Réponse : A
+Commentaire Simplifié : Si on considère l'oxygène comme "atome central" de son environnement, il est lié à un seul "groupe" (l'atome de carbone, X=1) et possède deux doublets non liants (E=2). Il est donc de type AXE₂.
+Exercice 04 (Questions 20 à 22)
+20. La solubilité dans l'eau des trois composés ci-dessus est telle que : #figure_Q20.png
+(1) : catéchol (deux -OH)
+(2) : toluène (un -CH₃)
+(3) : acide p-hydroxybenzoïque (un -OH et un -COOH)
+Réponse : C dans le livre, soit (2) < (1) < (3)
+Commentaire Simplifié :
+(2) Toluène : Molécule presque totalement non polaire. Très peu soluble dans l'eau. C'est le moins soluble.
+(1) Catéchol : Possède deux groupes -OH polaires. Très soluble.
+(3) Acide p-hydroxybenzoïque : Possède un groupe -OH et un groupe -COOH, qui est encore plus polaire. C'est le plus soluble.
+L'ordre de solubilité croissant est (2) < (1) < (3).
+21. Les températures de fusion des trois composés ci-dessus sont telles que : #figure_Q21.png
+Réponse : C dans le livre, soit (2) < (1) < (3)
+Commentaire Simplifié : La température de fusion dépend de la force des interactions intermoléculaires dans le cristal.
+(3) Acide p-hydroxybenzoïque : Forme des dimères via des liaisons H très fortes et peut s'organiser en un réseau cristallin très stable. Point de fusion le plus élevé.
+(1) Catéchol : Forme des liaisons H, mais moins organisées que le (3).
+(2) Toluène : N'a que des forces de Van der Waals faibles. Point de fusion le plus bas.
+L'ordre est (2) < (1) < (3).
+22. Le nombre d'atomes se trouvant dans un même plan, dans le composé (1) de la question (20) est : #figure_Q22.png
+A. 16
+B. 12
+C. 14
+Réponse : A dans le livre, ce qui est une erreur. La réponse correcte est 10.
+Commentaire Simplifié : Le composé (1) est le catéchol.
+Les 6 atomes de carbone du cycle benzénique sont coplanaires.
+Les 4 atomes d'hydrogène directement liés au cycle sont aussi dans ce plan.
+Total = 6 + 4 = 10 atomes. Les deux groupes -OH peuvent tourner et leurs hydrogènes ne sont pas forcément dans le plan du cycle. La réponse 12 (si on inclut les oxygènes) est plus plausible que 16.
+1. Quelle est la géométrie moléculaire et l'hybridation de l'atome central dans la molécule de pentachlorure de phosphore (PCl₅) ?
+A. Tétraédrique, sp³
+B. Bipyramidale à base trigonale, sp³d
+C. Octaédrique, sp³d²
+D. Plane carrée, sp³d²
+Réponse : B
+Commentaire Simplifié : L'atome central est le phosphore (P), qui est dans le groupe V (5 électrons de valence). Il forme 5 liaisons simples avec 5 atomes de chlore. Il n'a donc pas de doublet non liant. La molécule est de type VSEPR AX₅. Cette géométrie correspond à une bipyramide à base trigonale, et l'hybridation requise pour former 5 liaisons est sp³d.
+2. Combien de structures de résonance significatives peut-on dessiner pour l'ion nitrate (NO₃⁻) ?
+A. 1
+B. 2
+C. 3
+D. 4
+Réponse : C
+Commentaire Simplifié : Dans l'ion nitrate, l'atome d'azote central est lié à trois atomes d'oxygène. Une des liaisons est une double liaison, et les deux autres sont des simples liaisons (avec une charge négative délocalisée sur les oxygènes). La double liaison peut être positionnée sur n'importe lequel des trois atomes d'oxygène, donnant ainsi trois structures de résonance équivalentes.
+3. Parmi les forces intermoléculaires suivantes, laquelle est présente dans TOUTES les substances, qu'elles soient polaires ou non polaires ?
+A. Liaisons hydrogène
+B. Interactions dipôle-dipôle
+C. Forces de dispersion de London
+D. Liaisons ioniques
+Réponse : C
+Commentaire Simplifié : Les forces de dispersion de London sont créées par des fluctuations temporaires dans les nuages électroniques des molécules, créant des dipôles instantanés. Ce phénomène se produit dans toutes les molécules, sans exception. Les autres forces nécessitent des conditions spécifiques (polarité permanente pour le dipôle-dipôle, H lié à O/N/F pour la liaison H).
+4. Comment la longueur et l'énergie de la liaison carbone-carbone évoluent-elles en passant d'une liaison simple (C-C) à une liaison double (C=C), puis à une liaison triple (C≡C) ?
+A. La longueur augmente, l'énergie augmente.
+B. La longueur diminue, l'énergie diminue.
+C. La longueur diminue, l'énergie augmente.
+D. La longueur augmente, l'énergie diminue.
+Réponse : C
+Commentaire Simplifié : Plus le nombre de liaisons (l'ordre de liaison) entre deux atomes est élevé, plus les atomes sont tirés l'un vers l'autre et plus il faut d'énergie pour les séparer. Par conséquent, la longueur de la liaison diminue et l'énergie de la liaison augmente.
+5. Dans la molécule d'éthène (C₂H₄), la double liaison C=C est constituée de :
+A. Deux liaisons sigma (σ)
+B. Deux liaisons pi (π)
+C. Une liaison sigma (σ) et une liaison pi (π)
+D. Une liaison sigma (σ) et deux liaisons pi (π)
+Réponse : C
+Commentaire Simplifié : Toute liaison simple est une liaison sigma (σ). Toute liaison multiple est constituée d'une liaison sigma et d'une ou plusieurs liaisons pi (π). Une double liaison est donc toujours 1 σ + 1 π. Une triple liaison est 1 σ + 2 π.
+6. Quelle est la géométrie moléculaire du trifluorure de chlore (ClF₃) ?
+A. Pyramidale à base trigonale
+B. Plane trigonale
+C. En forme de T
+D. Linéaire
+Réponse : C
+Commentaire Simplifié : L'atome central est le chlore (Cl), qui a 7 électrons de valence. Il forme 3 liaisons simples avec 3 atomes de fluor, et il lui reste 4 électrons, soit 2 doublets non liants. La molécule est de type VSEPR AX₃E₂. La géométrie électronique est bipyramidale trigonale, mais la géométrie moléculaire (la forme des atomes) est en forme de T.
+7. Laquelle de ces molécules est non polaire, bien qu'elle contienne des liaisons polaires ?
+A. H₂O (Eau)
+B. NH₃ (Ammoniac)
+C. CCl₄ (Tétrachlorure de carbone)
+D. HCl (Acide chlorhydrique)
+Réponse : C
+Commentaire Simplifié : Dans CCl₄, les quatre liaisons C-Cl sont polaires. Cependant, la molécule a une géométrie tétraédrique parfaitement symétrique. Cette symétrie fait que les moments dipolaires de chaque liaison s'annulent mutuellement. Le moment dipolaire total de la molécule est donc nul (µ = 0), la rendant non polaire.
+8. Selon la théorie des orbitales moléculaires, quel est l'ordre de liaison de l'ion diatomique N₂⁺ ?
+A. 2
+B. 2,5
+C. 3
+D. 1,5
+Réponse : B
+Commentaire Simplifié : La molécule N₂ a 14 électrons et un ordre de liaison de 3. L'ion N₂⁺ a 13 électrons. L'électron est retiré de la dernière orbitale moléculaire liante (π2p). L'ordre de liaison se calcule par : (Nb électrons liants - Nb électrons antiliants) / 2. Pour N₂⁺, cela donne (9 - 4) / 2 = 5 / 2 = 2,5.
+9. Dans la molécule d'acide acétique (CH₃COOH), quelle est l'hybridation du carbone du groupe carboxyle (-COOH) ?
+A. sp
+B. sp²
+C. sp³
+D. Non hybridé
+Réponse : B
+Commentaire Simplifié : Le carbone du groupe carboxyle est lié à trois autres atomes : un carbone (liaison simple), un oxygène (liaison simple) et un autre oxygène (liaison double). Comme il forme une double liaison, il est de type AX₃, ce qui correspond à une hybridation sp².
+10. Qu'est-ce que la règle de l'octet ?
+A. Les atomes cherchent à avoir 8 protons dans leur noyau.
+B. Les atomes forment des liaisons pour avoir 8 couches électroniques.
+C. Les atomes tendent à former des liaisons de manière à être entourés de 8 électrons de valence.
+D. Une molécule ne peut pas avoir plus de 8 atomes.
+Réponse : C
+Commentaire Simplifié : La règle de l'octet est un principe fondamental qui stipule que les atomes des éléments principaux tendent à se lier de telle sorte que chacun ait huit électrons dans sa couche de valence, ce qui leur donne la même configuration électronique qu'un gaz noble et donc une grande stabilité.
+1. Quelle est la géométrie moléculaire et l'hybridation de l'atome central dans la molécule de pentachlorure de phosphore (PCl₅) ?
+A. Tétraédrique, sp³
+B. Bipyramidale à base trigonale, sp³d
+C. Octaédrique, sp³d²
+D. Plane carrée, sp³d²
+Réponse : B
+Commentaire Simplifié : L'atome central est le phosphore (P), qui est dans le groupe V (5 électrons de valence). Il forme 5 liaisons simples avec 5 atomes de chlore. Il n'a donc pas de doublet non liant. La molécule est de type VSEPR AX₅. Cette géométrie correspond à une bipyramide à base trigonale, et l'hybridation requise pour former 5 liaisons est sp³d.
+2. Combien de structures de résonance significatives peut-on dessiner pour l'ion nitrate (NO₃⁻) ?
+A. 1
+B. 2
+C. 3
+D. 4
+Réponse : C
+Commentaire Simplifié : Dans l'ion nitrate, l'atome d'azote central est lié à trois atomes d'oxygène. Une des liaisons est une double liaison, et les deux autres sont des simples liaisons (avec une charge négative délocalisée sur les oxygènes). La double liaison peut être positionnée sur n'importe lequel des trois atomes d'oxygène, donnant ainsi trois structures de résonance équivalentes.
+3. Parmi les forces intermoléculaires suivantes, laquelle est présente dans TOUTES les substances, qu'elles soient polaires ou non polaires ?
+A. Liaisons hydrogène
+B. Interactions dipôle-dipôle
+C. Forces de dispersion de London
+D. Liaisons ioniques
+Réponse : C
+Commentaire Simplifié : Les forces de dispersion de London sont créées par des fluctuations temporaires dans les nuages électroniques des molécules, créant des dipôles instantanés. Ce phénomène se produit dans toutes les molécules, sans exception. Les autres forces nécessitent des conditions spécifiques (polarité permanente pour le dipôle-dipôle, H lié à O/N/F pour la liaison H).
+4. Comment la longueur et l'énergie de la liaison carbone-carbone évoluent-elles en passant d'une liaison simple (C-C) à une liaison double (C=C), puis à une liaison triple (C≡C) ?
+A. La longueur augmente, l'énergie augmente.
+B. La longueur diminue, l'énergie diminue.
+C. La longueur diminue, l'énergie augmente.
+D. La longueur augmente, l'énergie diminue.
+Réponse : C
+Commentaire Simplifié : Plus le nombre de liaisons (l'ordre de liaison) entre deux atomes est élevé, plus les atomes sont tirés l'un vers l'autre et plus il faut d'énergie pour les séparer. Par conséquent, la longueur de la liaison diminue et l'énergie de la liaison augmente.
+5. Dans la molécule d'éthène (C₂H₄), la double liaison C=C est constituée de :
+A. Deux liaisons sigma (σ)
+B. Deux liaisons pi (π)
+C. Une liaison sigma (σ) et une liaison pi (π)
+D. Une liaison sigma (σ) et deux liaisons pi (π)
+Réponse : C
+Commentaire Simplifié : Toute liaison simple est une liaison sigma (σ). Toute liaison multiple est constituée d'une liaison sigma et d'une ou plusieurs liaisons pi (π). Une double liaison est donc toujours 1 σ + 1 π. Une triple liaison est 1 σ + 2 π.
+6. Quelle est la géométrie moléculaire du trifluorure de chlore (ClF₃) ?
+A. Pyramidale à base trigonale
+B. Plane trigonale
+C. En forme de T
+D. Linéaire
+Réponse : C
+Commentaire Simplifié : L'atome central est le chlore (Cl), qui a 7 électrons de valence. Il forme 3 liaisons simples avec 3 atomes de fluor, et il lui reste 4 électrons, soit 2 doublets non liants. La molécule est de type VSEPR AX₃E₂. La géométrie électronique est bipyramidale trigonale, mais la géométrie moléculaire (la forme des atomes) est en forme de T.
+7. Laquelle de ces molécules est non polaire, bien qu'elle contienne des liaisons polaires ?
+A. H₂O (Eau)
+B. NH₃ (Ammoniac)
+C. CCl₄ (Tétrachlorure de carbone)
+D. HCl (Acide chlorhydrique)
+Réponse : C
+Commentaire Simplifié : Dans CCl₄, les quatre liaisons C-Cl sont polaires. Cependant, la molécule a une géométrie tétraédrique parfaitement symétrique. Cette symétrie fait que les moments dipolaires de chaque liaison s'annulent mutuellement. Le moment dipolaire total de la molécule est donc nul (µ = 0), la rendant non polaire.
+8. Selon la théorie des orbitales moléculaires, quel est l'ordre de liaison de l'ion diatomique N₂⁺ ?
+A. 2
+B. 2,5
+C. 3
+D. 1,5
+Réponse : B
+Commentaire Simplifié : La molécule N₂ a 14 électrons et un ordre de liaison de 3. L'ion N₂⁺ a 13 électrons. L'électron est retiré de la dernière orbitale moléculaire liante (π2p). L'ordre de liaison se calcule par : (Nb électrons liants - Nb électrons antiliants) / 2. Pour N₂⁺, cela donne (9 - 4) / 2 = 5 / 2 = 2,5.
+9. Dans la molécule d'acide acétique (CH₃COOH), quelle est l'hybridation du carbone du groupe carboxyle (-COOH) ?
+A. sp
+B. sp²
+C. sp³
+D. Non hybridé
+Réponse : B
+Commentaire Simplifié : Le carbone du groupe carboxyle est lié à trois autres atomes : un carbone (liaison simple), un oxygène (liaison simple) et un autre oxygène (liaison double). Comme il forme une double liaison, il est de type AX₃, ce qui correspond à une hybridation sp².
+10. Qu'est-ce que la règle de l'octet ?
+A. Les atomes cherchent à avoir 8 protons dans leur noyau.
+B. Les atomes forment des liaisons pour avoir 8 couches électroniques.
+C. Les atomes tendent à former des liaisons de manière à être entourés de 8 électrons de valence.
+D. Une molécule ne peut pas avoir plus de 8 atomes.
+Réponse : C
+Commentaire Simplifié : La règle de l'octet est un principe fondamental qui stipule que les atomes des éléments principaux tendent à se lier de telle sorte que chacun ait huit électrons dans sa couche de valence, ce qui leur donne la même configuration électronique qu'un gaz noble et donc une grande stabilité.
