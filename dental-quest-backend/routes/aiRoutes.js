@@ -1,24 +1,37 @@
-// DENTAL-QUEST-BACKEND/routes/authRoutes.js
-
+// routes/aiRoutes.js
 const express = require('express');
-const passport = require('passport');
 const router = express.Router();
-const authController = require('../controllers/authController');
+const multer = require('multer');
+const { protect } = require('../middleware/authMiddleware');
+const { askAI } = require('../controllers/aiController');
 
-// --- مسار الطلاب ---
-router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+// استيراد كل الدوال المطلوبة من geminiController
+const { 
+    handleImageQuery, 
+    handleAudioQuery,
+    generateQuiz,
+    generateFlashcards,
+    generateSummary,
+    translateContent,
+    generateMindMap
+} = require('../controllers/geminiController');
 
-router.get('/google/callback',
-    passport.authenticate('google', { failureRedirect: process.env.CLIENT_URL + '/login.html?error=failed' }),
-    authController.googleStudentCallback
-);
+// --- إعداد Multer ---
+const storage = multer.memoryStorage();
+const upload = multer({ 
+    storage: storage, 
+    limits: { fileSize: 25 * 1024 * 1024 }
+});
 
-// --- مسار المشرف ---
-router.get('/google/admin', passport.authenticate('google-admin', { scope: ['profile', 'email'] }));
+// --- المسارات ---
+router.post('/ask', protect, askAI);
+router.post('/image', protect, upload.single('image'), handleImageQuery);
+router.post('/audio', protect, upload.single('audio'), handleAudioQuery);
+router.post('/generate-quiz', protect, upload.single('pdfFile'), generateQuiz);
+router.post('/generate-flashcards', protect, upload.single('pdfFile'), generateFlashcards);
+router.post('/generate-summary', protect, upload.single('pdfFile'), generateSummary);
+router.post('/translate', protect, translateContent);
+router.post('/generate-mindmap', protect, upload.single('pdfFile'), generateMindMap);
 
-router.get('/google/callback/admin',
-    passport.authenticate('google-admin', { failureRedirect: process.env.CLIENT_URL + '/admin-panel/login.html?error=failed' }),
-    authController.googleAdminCallback
-);
 
 module.exports = router;
