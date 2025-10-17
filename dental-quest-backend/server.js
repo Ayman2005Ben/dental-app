@@ -91,6 +91,7 @@ app.use('/lessons', (req, res) => {
 const apiLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 100,
+  trustProxy: 1,
 });
 app.use('/api/', apiLimiter);
 
