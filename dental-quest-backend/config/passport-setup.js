@@ -18,7 +18,7 @@ passport.deserializeUser((id, done) => {
     });
 });
 
-// --- استراتيجية الطلاب (تحتوي على الكود الخاص بك) ---
+// --- استراتيجية الطلاب (تقرأ من قاعدة البيانات) ---
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -27,30 +27,22 @@ passport.use(new GoogleStrategy({
     try {
         let user = await User.findOne({ googleId: profile.id });
         if (user) {
-            // --- ✅ ✅ ✅ الكود الخاص بك (الإجبار) ---
-            // هنا نجبر الخادم على التعرف عليك كمدير
-            if (user.email === '0667969129a@gmail.com') {
-                user.role = 'admin';
-            }
-            // --- نهاية الكود الخاص بك ---
-            done(null, user); // أرسل المستخدم (سواء كان طالباً أو مديراً)
+            done(null, user); // وجد المستخدم، سيعتمد على الـ role الموجود في قاعدة البيانات
         } else {
             user = await User.create({
                 googleId: profile.id,
                 displayName: profile.displayName,
                 email: profile.emails[0].value,
                 image: profile.photos[0].value
-                // سيتم تعيين 'role' كـ 'student' افتراضياً
             });
-            done(null, user);
-_G_A_T_E_S_C_T_X_S_E_P_
+            done(null, user); // أنشأ مستخدماً جديداً (سيكون student افتراضياً)
         }
     } catch (err) {
         done(err, null);
     }
 }));
 
-// --- استراتيجية المشرف (تحتوي على الكود الخاص بك) ---
+// --- استراتيجية المشرف (تقرأ من قاعدة البيانات) ---
 passport.use('google-admin', new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -59,15 +51,7 @@ passport.use('google-admin', new GoogleStrategy({
     try {
         let user = await User.findOne({ googleId: profile.id });
         if (user) {
-            // --- ✅ ✅ ✅ الكود الخاص بك (الإجبار) ---
-            // هنا نتأكد من أنك المدير الوحيد المسموح له بالدخول
-            if (user.email === '0667969129a@gmail.com') {
-                user.role = 'admin';
-                done(null, user); // اسمح للمدير بالدخول
-            } else {
-                done(null, false, { message: 'Not an admin' }); // ارفض أي مستخدم آخر
-            }
-            // --- نهاية الكود الخاص بك ---
+            done(null, user); // وجد المستخدم، سيعتمد على الـ role الموجود في قاعدة البيانات
         } else {
             done(null, false, { message: 'User not found' });
         }
