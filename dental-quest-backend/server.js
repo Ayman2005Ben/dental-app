@@ -21,6 +21,7 @@ connectDB();
 
 // 4️⃣ إنشاء تطبيق Express
 const app = express();
+app.enable('trust proxy');
 
 
 // --- Middleware (الترتيب مهم) ---
