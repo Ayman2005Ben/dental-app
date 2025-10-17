@@ -47,7 +47,6 @@ app.use(helmet({
     crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
 
-
 // 3. تمكين JSON body parser
 app.use(express.json());
 app.use('/api/reports', reportRoutes);
@@ -61,32 +60,24 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 // ✅ --- بداية الجزء الذي تم إعادته وتصحيحه ---
-// 5. استخدام الطريقة الصحيحة والمستقرة لعرض المجلدات العامة
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/Summaries', express.static(path.join(__dirname, 'Summaries')));
 
-// الكود المخصص لعرض ملفات PDF من مجلد Lessons مع إصلاح مشكلة انهيار الخادم
 app.use('/lessons', (req, res) => {
-  // فك تشفير الرابط القادم من المتصفح (يصلح مشكلة الأحرف الخاصة والمسافات)
   const decodedPath = decodeURIComponent(req.path);
   const filePath = path.join(__dirname, 'Lessons', decodedPath);
 
-  // إرسال الملف. Express سيتعامل مع الـ headers تلقائيًا
-  // res.sendFile قوي بما فيه الكفاية لإرسال الملفات بشكل صحيح
   res.sendFile(filePath, (err) => {
     if (err) {
-      // إذا لم يتم العثور على الملف، أرسل خطأ 404 بأمان
       console.error(`❌ PDF not found at path: ${filePath}`);
-      if (!res.headersSent) { // نتأكد من أننا لم نرسل أي استجابة بعد
+      if (!res.headersSent) {
         res.status(404).send('PDF not found.');
       }
     }
   });
 });
 // ✅ --- نهاية الجزء الذي تم إعادته وتصحيحه ---
-
 
 // 6. تحديد معدل الطلبات
 const apiLimiter = rateLimit({
@@ -97,25 +88,41 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter);
 
 // --- بداية الإضافة ---
-const authController = require('./controllers/authController'); // <-- ✅ تم استيراد الـ controller
+const authController = require('./controllers/authController');
 
-// --- ✅ إضافة جديدة وتصحيح: مسارات المصادقة الخاصة بالمشرف ---
-// هذا المسار يبدأ عملية تسجيل دخول المشرف
 app.get('/auth/google/admin', passport.authenticate('google', {
     scope: ['profile', 'email'],
-    callbackURL: '/auth/google/callback/admin' // <-- ✅ تم إضافة السطر المطلوب
+    callbackURL: '/auth/google/callback/admin'
 }));
 
-// هذا المسار يستقبل المشرف بعد عودته من جوجل
 app.get('/auth/google/callback/admin',
     passport.authenticate('google', {
         failureRedirect: process.env.CLIENT_URL + '/admin-panel/login.html?error=failed',
-        callbackURL: '/auth/google/callback/admin' // <-- ✅ وتم إضافة السطر المطلوب هنا أيضًا
+        callbackURL: '/auth/google/callback/admin'
     }),
     authController.googleAdminCallback
 );
-// --- نهاية الإضافة والتصحيح ---
 
+// ✅ --- إضافة ذكية لتحديث الكويزات من السيرفر مباشرة ---
+const { exec } = require('child_process');
+
+app.get('/run-seeder', (req, res) => {
+  const key = req.query.key;
+  if (key !== process.env.SEEDER_KEY) {
+    return res.status(403).json({ error: 'Unauthorized' });
+  }
+
+  res.send('Seeder started... check logs!');
+  exec('node utils/seeder.js', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`❌ Seeder error: ${error.message}`);
+      return;
+    }
+    if (stderr) console.error(`⚠️ Seeder stderr: ${stderr}`);
+    console.log(`✅ Seeder output:\n${stdout}`);
+  });
+});
+// --- نهاية الإضافة ---
 
 // 7. المسارات (Routes)
 app.get('/', (req, res) => res.send('Dental Quest API is running!'));
@@ -151,3 +158,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+// server.js — النسخة النهائية والمضمونة 🚀
