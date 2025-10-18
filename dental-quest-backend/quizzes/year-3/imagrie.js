@@ -218,7 +218,7 @@ const imagrieQuizzes = [
           "Plus les grains de bromure d’argent sont gros moins le film est sensible",
           "Les films ISO E et F sont les plus utilisés de nos jours."
         ],
-        correctOptionIndexes: [2, 0, 1],
+        correctOptionIndexes: [2, 3],
         explanation: "Des grains plus fins donnent une meilleure définition (A, B). Des grains plus gros rendent le film plus sensible (plus rapide), donc C est faux. Les films E et F sont rapides et donc très utilisés pour la réduction de dose (D)."
       },
       {
