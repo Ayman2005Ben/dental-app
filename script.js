@@ -1813,7 +1813,7 @@ function renderCurrentQuestion() {
         // --- ✨ منطق عرض الإحصائيات الجديد ---
         let statsHtml = '';
         // نعرض الإحصائيات فقط إذا تمت الإجابة على السؤال وكان هناك بيانات إحصائية
-        if (isAnswered && question.stats && question.stats.totalAnswers > 0) {
+        if (isAnswered && question.stats && question.stats.totalAnswers > 0 && question.stats.optionSelectionCounts) {
             const count = question.stats.optionSelectionCounts[index] || 0;
             const total = question.stats.totalAnswers;
             const percentage = Math.round((count / total) * 100);
