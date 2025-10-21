@@ -10,8 +10,10 @@ const {
     getAllUsers,
     toggleUserActivation,
     getAllReports,
-    getAiLogs,        // ⬅️ جديد
-    toggleAiAccess    // ⬅️ جديد
+    getAiLogs,
+    toggleAiAccess,
+    updateUserStudyYear,  // ⬅️ جديد
+    updateUserExperience  // ⬅️ جديد
 } = require('../controllers/adminController');
 
 // --- 📊 Dashboard ---
@@ -22,12 +24,16 @@ router.get('/users', protectAdmin, getAllUsers);
 router.put('/users/:id/activate', protectAdmin, toggleUserActivation);
 
 // --- 🤖 التحكم في وصول المستخدمين للـ AI ---
-router.put('/users/:id/toggle-ai', protectAdmin, toggleAiAccess); // ✅ جديد
-
-// --- 🧠 AI Logs ---
-router.get('/ailogs', protectAdmin, getAiLogs); // ✅ جديد
+router.put('/users/:id/toggle-ai', protectAdmin, toggleAiAccess);
 
 // --- 🚨 Report Management ---
 router.get('/reports', protectAdmin, getAllReports);
+
+// --- 🧠 AI Logs ---
+router.get('/ailogs', protectAdmin, getAiLogs);
+
+// --- ✅ [إضافة جديدة] تعديل بيانات المستخدم (السنة والخبرة) ---
+router.put('/users/:id/year', protectAdmin, updateUserStudyYear);
+router.put('/users/:id/xp', protectAdmin, updateUserExperience);
 
 module.exports = router;

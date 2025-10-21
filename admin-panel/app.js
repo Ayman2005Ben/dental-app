@@ -1,4 +1,4 @@
-// admin-panel/app.js (النسخة النهائية مع الإصلاح المنطقي)
+// admin-panel/app.js (النسخة النهائية مع ميزات تعديل السنة والخبرة)
 
 document.addEventListener("DOMContentLoaded", () => {
     const page = window.location.pathname.split("/").pop();
@@ -18,10 +18,11 @@ function handleLoginPage() {
     const statusEl = document.getElementById("login-status");
 
     // زر تسجيل الدخول عبر Google
-    loginBtn.addEventListener("click", () => {
-        // استخدام المسار الصحيح لبدء تسجيل دخول المشرف
-        window.location.href = "https://dental-app-he1p.onrender.com/auth/google/admin";
-    });
+    if (loginBtn) {
+        loginBtn.addEventListener("click", () => {
+            window.location.href = "https://dental-app-he1p.onrender.com/auth/google/admin";
+        });
+    }
 
     // قراءة التوكن أو الأخطاء من الرابط
     const urlParams = new URLSearchParams(window.location.search);
@@ -34,17 +35,12 @@ function handleLoginPage() {
         statusEl.textContent = "Login failed. Please try again.";
     }
 
-    // ✅ حفظ التوكن والتحقق منه
     if (token) {
         localStorage.setItem("adminToken", token);
-        // ✨ ✨ ✨ الإصلاح هنا: إعادة التوجيه الفوري ✨ ✨ ✨
-        // بما أن الخادم قام بالتحقق وأرسل التوكن، نثق به وننتقل مباشرة
         console.log("✅ Token received from server. Redirecting to dashboard...");
-        window.location.href = "index.html"; // <--- الانتقال المباشر للوحة التحكم
+        window.location.href = "index.html"; 
     }
 }
-
-// --- (لم نعد بحاجة للدالة verifyAdminTokenHardcoded هنا) ---
 
 
 // ========================
@@ -54,36 +50,33 @@ function handleDashboardPage() {
     // --- ✅ ✅ ✅ التحقق الأمني الأساسي ---
     const token = localStorage.getItem("adminToken");
     if (!token) {
-        // إذا لم يكن هناك توكن، أعده فوراً لصفحة الدخول
         console.log("🚫 No admin token found. Redirecting to login.");
         window.location.href = "login.html";
-        return; // أوقف تنفيذ بقية الكود
+        return; 
     }
     // --- نهاية التحقق الأمني ---
 
 
-    // (بقية الكود الخاص بلوحة التحكم يبقى كما هو)
     const navLinks = document.querySelectorAll(".nav-link");
     const contentSections = document.querySelectorAll(".content-section");
 
-    // دالة المساعدة لاستدعاء API (تستخدم الرابط الصحيح)
+    // دالة المساعدة لاستدعاء API
     const fetchAdminApi = async (endpoint, options = {}) => {
-        try { // <-- إضافة try/catch هنا
+        try { 
             const res = await fetch(`https://dental-app-he1p.onrender.com/api/admin${endpoint}`, {
                 ...options,
                 headers: {
                     ...options.headers,
-                    Authorization: `Bearer ${token}`, // استخدام التوكن المحفوظ
+                    Authorization: `Bearer ${token}`,
                     'Content-Type': options.body ? 'application/json' : undefined
                 },
             });
 
-            // إذا فشل التحقق من التوكن (401 أو 403)، أعده لصفحة الدخول
             if (res.status === 401 || res.status === 403) {
                  console.warn("🚫 Unauthorized API request. Redirecting to login.");
                 localStorage.removeItem("adminToken");
                 window.location.href = "login.html";
-                throw new Error("Unauthorized"); // أوقف التنفيذ
+                throw new Error("Unauthorized");
             }
 
             if (!res.ok) {
@@ -100,13 +93,12 @@ function handleDashboardPage() {
             }
         } catch (error) {
              console.error(`General Error in fetchAdminApi for ${endpoint}:`, error);
-             // إذا حدث خطأ (مثل مشكلة في الشبكة أو خطأ غير متوقع)، أعده لصفحة الدخول كإجراء احترازي
-             if (error.message !== "Unauthorized") { // تجنب إعادة التوجيه مرتين
+             if (error.message !== "Unauthorized") {
                  alert(`An error occurred: ${error.message}. Redirecting to login.`);
                  localStorage.removeItem("adminToken");
                  window.location.href = "login.html";
              }
-             throw error; // أعد إرسال الخطأ لإيقاف العمليات الأخرى
+             throw error;
         }
     };
 
@@ -131,9 +123,6 @@ function handleDashboardPage() {
         });
     });
 
-    // ... (بقية الدوال: loadDashboardStats, loadUsers, loadReports, loadAiLogs, معالج الأزرار, logoutBtn)
-    // ... تبقى كما هي بدون تغيير ...
-
     // ========================
     // 📊 تحميل الإحصائيات العامة
     // ========================
@@ -144,6 +133,18 @@ function handleDashboardPage() {
             document.getElementById("stat-active-users").textContent = stats.activeUsers || 0;
             document.getElementById("stat-new-users").textContent = stats.newUsers || 0;
             document.getElementById("stat-new-reports").textContent = stats.newReports || 0;
+
+            // --- ✅ [إضافة جديدة] تحميل إحصائيات السنوات ---
+            if (stats.statsByYear) {
+                document.getElementById("stat-year-1").textContent = stats.statsByYear.year1 || 0;
+                document.getElementById("stat-year-2").textContent = stats.statsByYear.year2 || 0;
+                document.getElementById("stat-year-3").textContent = stats.statsByYear.year3 || 0;
+                document.getElementById("stat-year-4").textContent = stats.statsByYear.year4 || 0;
+                document.getElementById("stat-year-5").textContent = stats.statsByYear.year5 || 0;
+                document.getElementById("stat-year-other").textContent = stats.statsByYear.yearOther || 0;
+            }
+            // --- نهاية الإضافة ---
+
         } catch (error) {
             console.error("Failed to load dashboard stats:", error);
         }
@@ -154,7 +155,7 @@ function handleDashboardPage() {
     // ========================
     async function loadUsers() {
         const tableBody = document.getElementById("users-table-body");
-        tableBody.innerHTML = '<tr><td colspan="6">Loading...</td></tr>';
+        tableBody.innerHTML = '<tr><td colspan="8">Loading...</td></tr>'; // ✅ زيادة العدد إلى 8
         try {
             const users = await fetchAdminApi("/users");
             tableBody.innerHTML = "";
@@ -164,19 +165,34 @@ function handleDashboardPage() {
                 const aiBadge = user.canUseAI === false ? '<span class="status-badge status-inactive">Disabled</span>' : '<span class="status-badge status-active">Enabled</span>';
                 const activationBtn = user.isActivated ? `<button class="action-btn btn-deactivate" data-user-id="${user._id}" data-action="toggle-activation">Deactivate</button>` : `<button class="action-btn btn-activate" data-user-id="${user._id}" data-action="toggle-activation">Activate</button>`;
                 const aiBtn = user.canUseAI === false ? `<button class="action-btn btn-activate" data-user-id="${user._id}" data-action="toggle-ai">Enable AI</button>` : `<button class="action-btn btn-deactivate" data-user-id="${user._id}" data-action="toggle-ai">Disable AI</button>`;
+                
+                // ✅ [إضافة جديدة] حقول تعديل السنة والخبرة
+                const updateSection = `
+                  <td class="actions-cell-update">
+                    <div class="update-group">
+                      <input type="text" class="admin-input admin-input-year" data-user-id="${user._id}" placeholder="e.g., 1" value="${user.studyYear || ''}">
+                      <button class="action-btn btn-update" data-user-id="${user._id}" data-action="update-year">Set Year</button>
+                    </div>
+                    <div class="update-group">
+                      <input type="number" class="admin-input admin-input-xp" data-user-id="${user._id}" placeholder="e.g., 500" value="${user.experiencePoints || 0}">
+                      <button class="action-btn btn-update" data-user-id="${user._id}" data-action="update-xp">Set XP</button>
+                    </div>
+                  </td>
+                `;
+
                 row.innerHTML = `
                   <td>${user.displayName || "N/A"}</td>
                   <td>${user.email || "N/A"}</td>
                   <td>${user.studyYear || "N/A"}</td>
-                  <td>${statusBadge}</td>
+                  <td>${user.experiencePoints || 0}</td> <td>${statusBadge}</td>
                   <td>${aiBadge}</td>
                   <td class="actions-cell">${activationBtn} ${aiBtn}</td>
-                `;
+                  ${updateSection} `;
                 tableBody.appendChild(row);
             });
         } catch (error) {
              console.error("Failed to load users:", error);
-            tableBody.innerHTML = '<tr><td colspan="6">Failed to load users. Please try again.</td></tr>';
+            tableBody.innerHTML = '<tr><td colspan="8">Failed to load users. Please try again.</td></tr>'; // ✅ زيادة العدد إلى 8
         }
     }
 
@@ -184,6 +200,7 @@ function handleDashboardPage() {
     // 🧾 تحميل التقارير
     // ========================
     async function loadReports() {
+        // (تبقى هذه الدالة كما هي)
         const tableBody = document.getElementById("reports-table-body");
         tableBody.innerHTML = '<tr><td colspan="5">Loading...</td></tr>';
         try {
@@ -210,6 +227,7 @@ function handleDashboardPage() {
     // 🤖 تحميل سجلات الـ AI Observatory
     // ========================
     async function loadAiLogs() {
+        // (تبقى هذه الدالة كما هي)
         const tableBody = document.getElementById("ailogs-table-body");
         tableBody.innerHTML = '<tr><td colspan="4">Loading...</td></tr>';
         try {
@@ -233,7 +251,7 @@ function handleDashboardPage() {
     }
 
     // ========================
-    // ⚙️ الأزرار (تفعيل / تعطيل المستخدم أو الـ AI)
+    // ⚙️ الأزرار (معالجة جميع الأزرار)
     // ========================
     document.body.addEventListener("click", async (e) => {
         const userId = e.target.dataset.userId;
@@ -241,19 +259,54 @@ function handleDashboardPage() {
         if (!userId || !action) return;
 
         let endpoint = "";
-        if (action === "toggle-activation") { endpoint = `/users/${userId}/activate`; }
-        else if (action === "toggle-ai") { endpoint = `/users/${userId}/toggle-ai`; }
-        else { return; }
-
+        let options = { method: "PUT" };
+        let payload = {};
+        
+        // تعطيل الزر مؤقتاً
         e.target.disabled = true;
-        e.target.textContent = 'Processing...';
+        e.target.textContent = '...';
 
         try {
-            await fetchAdminApi(endpoint, { method: "PUT" });
-            loadUsers();
+            if (action === "toggle-activation") {
+                endpoint = `/users/${userId}/activate`;
+            } else if (action === "toggle-ai") {
+                endpoint = `/users/${userId}/toggle-ai`;
+            } 
+            // --- ✅ [إضافة جديدة] معالجة تعديل السنة ---
+            else if (action === "update-year") {
+                const input = document.querySelector(`.admin-input-year[data-user-id="${userId}"]`);
+                if (!input || !input.value) { throw new Error("Please enter a year."); }
+                
+                endpoint = `/users/${userId}/year`;
+                payload = { year: input.value };
+                options.body = JSON.stringify(payload);
+            } 
+            // --- ✅ [إضافة جديدة] معالجة تعديل الخبرة ---
+            else if (action === "update-xp") {
+                const input = document.querySelector(`.admin-input-xp[data-user-id="${userId}"]`);
+                if (!input || input.value === '') { throw new Error("Please enter an XP value."); }
+
+                const xp = parseInt(input.value, 10);
+                if (isNaN(xp)) { throw new Error("Invalid XP value."); }
+
+                endpoint = `/users/${userId}/xp`;
+                payload = { experiencePoints: xp };
+                options.body = JSON.stringify(payload);
+            } 
+            // --- نهاية الإضافة ---
+            else {
+                e.target.disabled = false; // أعد تفعيل الزر إذا لم يكن هناك إجراء
+                e.target.textContent = e.target.dataset.action.includes('update') ? 'Set' : '...'; // أعد النص
+                return; 
+            }
+
+            await fetchAdminApi(endpoint, options);
+            loadUsers(); // أعد تحميل جدول المستخدمين بالكامل لإظهار التغييرات
+        
         } catch (error) {
             console.error(`Failed to ${action} for user ${userId}:`, error);
-            alert(`Failed to update user status: ${error.message}`);
+            alert(`Failed to update user: ${error.message}`);
+            // أعد تحميل المستخدمين حتى لو حدث خطأ (لإعادة ضبط الأزرار إلى حالتها الأصلية)
             loadUsers();
         }
     });

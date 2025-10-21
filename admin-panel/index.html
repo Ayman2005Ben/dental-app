@@ -26,7 +26,6 @@
         </nav>
 
         <main class="main-content">
-            <!-- 📊 Dashboard Section -->
             <section id="dashboard" class="content-section active">
                 <h1>Dashboard Overview</h1>
                 <div class="stats-grid">
@@ -47,9 +46,36 @@
                         <p id="stat-new-reports">0</p>
                     </div>
                 </div>
-            </section>
 
-            <!-- 👥 Users Section -->
+                <h2>Users by Study Year</h2>
+                <div class="stats-grid stats-grid-years">
+                    <div class="stat-card year-card">
+                        <h4>Year 1</h4>
+                        <p id="stat-year-1">0</p>
+                    </div>
+                    <div class="stat-card year-card">
+                        <h4>Year 2</h4>
+                        <p id="stat-year-2">0</p>
+                    </div>
+                    <div class="stat-card year-card">
+                        <h4>Year 3</h4>
+                        <p id="stat-year-3">0</p>
+                    </div>
+                    <div class="stat-card year-card">
+                        <h4>Year 4</h4>
+                        <p id="stat-year-4">0</p>
+                    </div>
+                    <div class="stat-card year-card">
+                        <h4>Year 5</h4>
+                        <p id="stat-year-5">0</p>
+                    </div>
+                    <div class="stat-card year-card">
+                        <h4>Not Set</h4>
+                        <p id="stat-year-other">0</p>
+                    </div>
+                </div>
+                </section>
+
             <section id="users" class="content-section">
                 <h1>User Management</h1>
                 <div class="table-container">
@@ -59,17 +85,15 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Study Year</th>
-                                <th>Status</th>
+                                <th>XP</th> <th>Status</th>
                                 <th>AI Access</th>
-                                <th>Actions</th>
-                            </tr>
+                                <th>Status Actions</th> <th>Update Data</th> </tr>
                         </thead>
                         <tbody id="users-table-body"></tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- 🚩 Reports Section -->
             <section id="reports" class="content-section">
                 <h1>Report Center</h1>
                 <div class="table-container">
@@ -88,7 +112,6 @@
                 </div>
             </section>
 
-            <!-- 🤖 AI Observatory -->
             <section id="ai-logs" class="content-section">
                 <h1>AI Observatory</h1>
                 <div class="table-container">
@@ -106,7 +129,6 @@
                 </div>
             </section>
 
-            <!-- 🧠 Content Factory -->
             <section id="content" class="content-section">
                 <h1 class="soon">Content Factory (Coming Soon)</h1>
             </section>
