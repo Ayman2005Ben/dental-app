@@ -14,7 +14,7 @@ const anatomoPathologieQuizzes = [
           "(2, 3)",
           "(4, 5)"
         ],
-        correctOptionIndexes: [1], // Correspond à (1, 3) - RF signifie Réponse Fausse
+        correctOptionIndexes: [1], // Correspond à (1, 3) - RF signifie Réponse Fausse نرجع نشوفها منب بعد
         explanation: "1 : Réalisé pendant l'intervention chirurgicale. 3 : Est effectué sur un prélèvement frais ou congelé, pas fixé au formol."
       },
       {

@@ -2304,7 +2304,7 @@ const prothesey3Quizzes = [
             "C. Les 2 propositions A et B sont vraies.", //
             "D. Les 2 propositions A et B sont fausses." //
           ],
-          correctOptionIndexes: [3], // QCS - D
+          correctOptionIndexes: [3], // QCS - D  ركز مليح ممكن غالط هنا 
           explanation: "La pâte OZE est un matériau rigide après prise, elle est donc contre-indiquée en cas de contre-dépouilles importantes. Les palais profonds ne sont pas une contre-indication spécifique."
         },
         {
