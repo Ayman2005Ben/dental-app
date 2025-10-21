@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 
     <link rel="stylesheet" href="style.css">
-    <!-- ❌ تم حذف رابط MindElixir CSS من هنا -->
     <style>
         /* --- [إضافة جديدة] أنماط قسم استعراض الميزات --- */
         #explore-section {
@@ -143,6 +142,82 @@
         justify-content: flex-end;
         gap: 10px;
     }
+
+    /* ✅ --- (إضافة جديدة) تنسيق لأزرار التحكم في الهيدر وأزرار الكويز --- ✅ */
+    .quiz-utility-btn {
+        background: none;
+        border: 1px solid var(--input-border);
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 6px 10px;
+        font-size: 1rem;
+        color: var(--text-color);
+        transition: background-color 0.2s;
+    }
+    .quiz-utility-btn:hover {
+        background-color: var(--secondary-btn-hover-bg);
+    }
+    
+    /* ✅ --- (إضافة جديدة) تنسيقات القائمة المنسدلة للمستخدم --- ✅ */
+    .user-menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    #user-menu-toggle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: none;
+        border: none;
+        border-radius: 25px;
+        padding: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    #user-menu-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .user-dropdown-menu {
+        display: none; /* مخفية افتراضياً */
+        position: absolute;
+        top: 120%; /* أسفل الزر */
+        right: 0;
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        border: 1px solid var(--input-border);
+        width: 180px;
+        z-index: 1002;
+        overflow: hidden;
+    }
+    .user-dropdown-menu.active {
+        display: block; /* تظهر عند الضغط */
+    }
+
+    #logout-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        padding: 12px 15px;
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    #logout-btn:hover {
+        background-color: var(--secondary-btn-hover-bg);
+    }
+    #logout-btn i {
+        color: var(--primary-btn-bg);
+    }
+    
     </style>
 </head>
 
@@ -171,10 +246,19 @@
             <button class="theme-toggle-btn" aria-label="Toggle dark/light mode">
                 <i class="fas fa-sun"></i>
             </button>
-            <div class="user-profile-widget">
-                <span id="user-xp-display" class="xp-display">0 XP</span>
-                <div class="header-right-logo">
-                    <img src="images/ai-logo-circle.png" alt="AI Chat Logo" class="ai-header-logo">
+            
+            <div class="user-menu">
+                <button class="user-profile-widget" id="user-menu-toggle" aria-label="User Menu">
+                    <span id="user-xp-display" class="xp-display">0 XP</span>
+                    <div class="header-right-logo">
+                        <img src="images/ai-logo-circle.png" alt="AI Chat Logo" class="ai-header-logo">
+                    </div>
+                </button>
+                <div class="user-dropdown-menu" id="user-dropdown">
+                    <button id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
                 </div>
             </div>
             </div>
@@ -481,14 +565,14 @@
                         </div>
                         
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <button id="report-question-btn" class="btn-translate" title="Report an issue with this question">
+                            <button id="report-question-btn" class="quiz-utility-btn" title="Report an issue with this question">
                                 <i class="fas fa-flag"></i>
                             </button>
                             <div class="quiz-timer-pro">
                                 <i class="fas fa-clock"></i>
                                 <span id="quiz-timer-display-pro">01:30</span>
                             </div>
-                            <button id="toggle-quiz-timer-btn" class="btn-translate" title="Toggle Question Timer" style="font-size: 1rem; padding: 6px 10px;">
+                            <button id="toggle-quiz-timer-btn" class="quiz-utility-btn" title="Toggle Question Timer" style="font-size: 1rem; padding: 6px 10px;">
                                 <i class="fas fa-power-off"></i>
                             </button>
                         </div>
@@ -516,10 +600,15 @@
                         </div>
 
                         <div style="display: flex; gap: 10px;">
+                            <button class="quiz-nav-btn-pro" id="quiz-skip-btn-pro" title="Skip Question" style="display: none;">
+                                <i class="fas fa-fast-forward"></i>
+                            </button>
                             <button class="quiz-nav-btn-pro primary" id="quiz-action-btn-pro">Check Answer</button>
-                            <button class="quiz-nav-btn-pro" id="quiz-next-btn-pro" style="display: none;" title="Next Question"><i class="fas fa-arrow-right"></i></button>
+                            <button class="quiz-nav-btn-pro" id="quiz-next-btn-pro" style="display: none;" title="Next Question">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
-                    </footer>
+                        </footer>
 
                 </main>
             </div>
@@ -874,7 +963,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    <!-- كل السكريبتات الأخرى مثل jspdf, chart.js, etc. -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.1/dist/purify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
@@ -884,8 +972,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- ✅ --- التحميل الصحيح والنهائي لـ Markmap --- ✅ -->
-    <!-- هذه السكريبتات يجب أن تكون قبل ملف script.js الخاص بك -->
     <div class="modal-overlay" id="report-modal">
     <div class="modal-box">
         <h3>Report Question</h3>
@@ -900,7 +986,6 @@
     </div>
 </div>
 
-<!-- ملفك الرئيسي سيقوم بتحميل Markmap عند الحاجة -->
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
