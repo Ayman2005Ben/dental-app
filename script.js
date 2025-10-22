@@ -7,13 +7,18 @@
  */
 async function fetchApi(endpoint, options = {}) {
     const token = localStorage.getItem('userToken');
+    // === الصق هذا الكود الصحيح مكانه ===
     const headers = {
-        'Content-Type': 'application/json',
-        ...options.headers,
+        ...options.headers, // ابدأ بالهيدرز الممررة (إن وجدت)
     };
+
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
     }
+    
+    // (هذا هو السطر الأهم)
+    // لا تقم بإضافة 'Content-Type' إذا كان الجسم عبارة عن FormData
+    // المتصفح سيقوم بإضافته تلقائياً (multipart/form-data)
     if (!(options.body instanceof FormData)) {
         headers['Content-Type'] = 'application/json';
     }
