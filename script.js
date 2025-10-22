@@ -19,10 +19,11 @@ async function fetchApi(endpoint, options = {}) {
     }
 
     try {
-        const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, { // رابط onrender.com
-        ...options,
-        headers, // الهيدرز الآن صحيحة
-    });
+        const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${token}` },
+    body: formData 
+});
 
         const contentType = response.headers.get("content-type");
         let responseData;
