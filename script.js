@@ -365,15 +365,41 @@ function displayGeneratedFlashcards(flashcardData) {
     }
     
     // --- دالة رئيسية لتهيئة التطبيق ---
+    // --- (مُعدل) دالة رئيسية لتهيئة التطبيق ---
     async function initializeApp() {
-        const userProfile = await fetchUserProfile();
+        let userProfile = null; // Initialize to null
+        let fetchErrorOccurred = false; // Flag to track if fetch failed
+
+        try {
+             // Try fetching the profile using the potentially error-throwing fetchApi
+             userProfile = await fetchUserProfile(); 
+
+        } catch (fetchError) {
+             console.error("Error during fetchUserProfile:", fetchError);
+             fetchErrorOccurred = true; // Mark that an error happened
+
+             // IMPORTANT: fetchApi already handles 401 by calling logoutUser(),
+             // so we only need to handle *other* errors here.
+             if (!fetchError.message.includes('status 401')) { // Check if it wasn't a 401
+                 showNotification("Could not load user data. Check connection or try again later.", "error");
+                 // We won't log out here. We have a token, just couldn't get profile details.
+                 // Allow the app to proceed, potentially showing limited functionality.
+             } else {
+                  // If it WAS a 401, logoutUser was already called by fetchApi, so just exit.
+                  return; 
+             }
+        }
+
+        // --- Logic based on whether profile fetch succeeded ---
+
         if (userProfile) {
-            isLoggedIn = true;
+            // ----- Profile fetched successfully -----
+            isLoggedIn = true; // Set loggedIn state
             selectedYear = userProfile.studyYear;
-            isYearChosen = !!userProfile.studyYear; // True if studyYear exists and is not null/empty
+            isYearChosen = !!userProfile.studyYear; 
             isActivated = userProfile.isActivated;
 
-            // Update localStorage based on fetched profile
+            // Update localStorage (only if successful)
             localStorage.setItem('isLoggedIn', 'true');
             if (isYearChosen) {
                  localStorage.setItem('isYearChosen', 'true');
@@ -387,52 +413,73 @@ function displayGeneratedFlashcards(flashcardData) {
             } else {
                  localStorage.removeItem('isActivated');
             }
-            
-            updateHeaderWithUserData(userProfile);
-            
-            // ✅ --- استعادة حالة الكويز أو الصفحة ---
+
+            updateHeaderWithUserData(userProfile); // Update header UI
+
+            // Check and restore quiz state (only if profile fetch succeeded)
             const savedQuizState = localStorage.getItem('quizState');
-            if (savedQuizState) {
-                console.log("Restoring quiz state...");
-                try {
-                    const { savedProQuiz, savedProQuestionIndex, savedProUserAnswers, savedQuizStartTime } = JSON.parse(savedQuizState);
-                    // Restore quiz variables
-                    proQuiz = savedProQuiz;
-                    proQuestionIndex = savedProQuestionIndex;
-                    proUserAnswers = savedProUserAnswers;
-                    quizStartTime = savedQuizStartTime; // Restore start time
+             if (savedQuizState) {
+                 console.log("Restoring quiz state...");
+                 try {
+                     // ... (Your existing quiz restore logic - keep as is) ...
+                        const { savedProQuiz, savedProQuestionIndex, savedProUserAnswers, savedQuizStartTime } = JSON.parse(savedQuizState);
+                        proQuiz = savedProQuiz;
+                        proQuestionIndex = savedProQuestionIndex;
+                        proUserAnswers = savedProUserAnswers;
+                        quizStartTime = savedQuizStartTime; 
 
-                    // Check if restored data is valid
-                    if (proQuiz && proQuiz.questions && proQuiz.questions.length > proQuestionIndex) {
-                        quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
-                        quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Restore subject name too
+                        if (proQuiz && proQuiz.questions && proQuiz.questions.length > proQuestionIndex) {
+                            quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
+                            quizSubjectNameEl.textContent = proQuiz.subjectName || ''; 
+                            renderQuestionList(); 
+                            renderCurrentQuestion(); 
+                            updateStats(); 
+                            showPage('#quiz-taking-page'); 
+                            console.log("Quiz state restored successfully.");
+                            return; 
+                        } else {
+                             console.error("Invalid quiz state data found. Clearing.");
+                             localStorage.removeItem('quizState'); 
+                        }
+                 } catch (e) {
+                     console.error("Error parsing quiz state:", e);
+                     localStorage.removeItem('quizState'); 
+                 }
+             }
 
-                        renderQuestionList(); // Render the list based on restored answers
-                        renderCurrentQuestion(); // Render the specific question index
-                        updateStats(); // Update stats display
+            // If no quiz state, proceed with normal UI update
+            updateUI(); // updateUI shows the correct page based on isYearChosen etc.
 
-                        showPage('#quiz-taking-page'); // Show the quiz page directly
-                        console.log("Quiz state restored successfully.");
-                        return; // Stop further UI updates if quiz is restored
-                    } else {
-                         console.error("Invalid quiz state data found. Clearing.");
-                         localStorage.removeItem('quizState'); // Clear invalid state
-                    }
-                } catch (e) {
-                    console.error("Error parsing quiz state:", e);
-                    localStorage.removeItem('quizState'); // Clear corrupted state
-                }
-            }
-            
-            // If no quiz state, proceed with normal UI update (which restores last page or shows home)
-            updateUI();
+        } else if (localStorage.getItem('userToken')) {
+            // ----- Profile fetch FAILED, BUT a token EXISTS -----
+            // This means login was likely successful initially, but fetching details failed.
+            // Keep the user tentatively logged in, but maybe with limited functionality.
+            isLoggedIn = true; // Assume logged in because token exists
+            localStorage.setItem('isLoggedIn', 'true'); // Keep this perhaps? Or maybe remove? Let's keep it for now.
+
+            console.warn("Token exists, but profile fetch failed. Proceeding with limited state.");
+
+            // We don't have userProfile, so use defaults/localStorage for year/activation
+            selectedYear = localStorage.getItem('selectedYear');
+            isYearChosen = localStorage.getItem('isYearChosen') === 'true';
+            isActivated = localStorage.getItem('isActivated') === 'true';
+
+            // Try to update header with placeholder/basic info if possible
+            // updateHeaderWithUserData(null); // Or pass a default object?
+
+            // IMPORTANT: Call updateUI() to decide which page to show based on isYearChosen.
+            // updateUI should NOT redirect to login just because profile failed, only if isLoggedIn is false.
+            updateUI(); 
 
         } else {
-            // If fetchUserProfile fails (e.g., token invalid), logout
-            logoutUser();
+            // ----- No profile AND no token -----
+            // This means the user is definitely not logged in.
+            console.log("No token available after profile fetch attempt. Logging out.");
+             if (!fetchErrorOccurred) { // Avoid double logout if fetchApi already did it
+                 logoutUser();
+             }
         }
     }
-
     // --- (مُعدل) دالة التحقق من التوكن ---
     async function checkForAuthToken() {
         const urlParams = new URLSearchParams(window.location.search);
