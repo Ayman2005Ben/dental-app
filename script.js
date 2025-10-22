@@ -14,49 +14,21 @@ async function fetchApi(endpoint, options = {}) {
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
     }
-    if (!(options.body instanceof FormData)) {
-        headers['Content-Type'] = 'application/json';
+
+    const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, {
+        ...options,
+        headers,
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `Request failed with status ${response.status}`);
     }
-
-    try {
-        const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, {
-    method: 'POST',
-    headers: { 'Authorization': `Bearer ${token}` },
-    body: formData 
-});
-
-        const contentType = response.headers.get("content-type");
-        let responseData;
-
-        if (contentType && contentType.indexOf("application/json") !== -1) {
-            responseData = await response.json();
-        } else {
-            // Handle non-JSON responses if necessary, e.g., for DELETE which might return no content
-             if (response.status === 204) { // No Content
-                 return; // Or return a specific success indicator
-             }
-             // Handle other content types or text responses if needed
-             responseData = await response.text(); // Example for text response
-        }
-
-
-        if (!response.ok) {
-            // Use message from JSON if available, otherwise use status text or default message
-            const errorMessage = responseData?.message || response.statusText || `Request failed with status ${response.status}`;
-             // Special handling for 401 Unauthorized
-            if (response.status === 401) {
-                 showNotification('Your session has expired. Please log in again.', 'error');
-                 logoutUser(); // Log out the user automatically
-            }
-            throw new Error(errorMessage);
-        }
-
-        return responseData; // Return JSON data or text data
-
-    } catch (error) {
-        console.error('API Fetch Error:', error);
-        // Rethrow the error to be caught by the calling function, which can show a notification
-        throw error; 
+    
+    // بعض الطلبات قد لا ترجع بيانات (مثل DELETE)، لذلك نتحقق أولاً
+    const contentType = response.headers.get("content-type");
+    if (contentType && contentType.indexOf("application/json") !== -1) {
+        return response.json();
     }
 }
 
@@ -66,29 +38,38 @@ function buildPdfViewerUrl(filePath) {
     try {
         const base = 'pdf-viewer.html';
         const src = encodeURIComponent(filePath);
-        // Use viewer only if explicitly enabled (useful for debugging or specific environments)
-        const useViewer = (typeof window !== 'undefined' && window.USE_PDF_VIEWER === true); 
+        const useViewer = (window && window.USE_PDF_VIEWER === true);
         return useViewer ? `${base}?src=${src}` : filePath;
     } catch (e) {
-        // Fallback in case of errors (e.g., encodeURIComponent fails)
-        console.error("Error building PDF viewer URL:", e);
         return filePath;
     }
 }
 
 async function fetchSubjectsByYear(year) {
-    // Using fetchApi helper
-    return fetchApi(`/api/content/subjects/${year}`);
+    const token = localStorage.getItem('userToken');
+    const res = await fetch(`https://dental-app-he1p.onrender.com/api/content/subjects/${year}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+    });
+    if (!res.ok) throw new Error('Failed to load subjects');
+    return res.json();
 }
 
 async function fetchLessonsBySubject(subjectId) {
-     // Using fetchApi helper
-    return fetchApi(`/api/content/lessons/${subjectId}`);
+    const token = localStorage.getItem('userToken');
+    const res = await fetch(`https://dental-app-he1p.onrender.com/api/content/lessons/${subjectId}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+    });
+    if (!res.ok) throw new Error('Failed to load lessons');
+    return res.json();
 }
 
 async function fetchSummariesBySubject(subjectId) {
-    // Using fetchApi helper
-    return fetchApi(`/api/content/summaries/${subjectId}`);
+    const token = localStorage.getItem('userToken');
+    const res = await fetch(`https://dental-app-he1p.onrender.com/api/content/summaries/${subjectId}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+    });
+    if (!res.ok) throw new Error('Failed to load summaries');
+    return res.json();
 }
 // === end Content API helpers ===
 
@@ -148,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // --- 1. تعريف متغيرات الحالة العامة للتطبيق ---
     let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    let isGuest = false; // Note: Guest mode seems unused, consider removing if not implemented
-    let isYearChosen = localStorage.getItem('isYearChosen') === 'true';
-    let selectedYear = localStorage.getItem('selectedYear');
-    let isActivated = localStorage.getItem('isActivated') === 'true';
-    let currentContentType = localStorage.getItem('currentContentType'); // ✅ حفظ نوع المحتوى
+    let isGuest = false;
+    let isYearChosen = false;
+    let selectedYear = null;
+    let isActivated = false;
+    let currentContentType = null;
 // ✅ إضافة جديدة: أضف هذا المتغير لتخزين سياق الإنشاء
     let currentAiGenerationContext = { subjectId: null, subjectName: null };
     let particlesInstance = null;
@@ -162,125 +143,123 @@ document.addEventListener('DOMContentLoaded', function () {
     // ✨ --- دالة جديدة لتشغيل الكويزات المولدة بالذكاء الاصطناعي --- ✨
     function startAIGeneratedQuiz(quizData) {
         // 1. تجهيز بيانات الكويز لتتوافق مع نظام الكويز الاحترافي
-        const generatedQuiz = { // Use a local variable to avoid potential conflicts
+        proQuiz = {
             _id: 'ai-generated-' + Date.now(), // نعطي الكويز معرفًا فريدًا
             title: 'AI Generated Quiz',
-            subject: currentAiGenerationContext.subjectId, // Use context
-            subjectName: currentAiGenerationContext.subjectName, // Use context
+            subject: null, // لا يوجد موضوع محدد للكويزات المولدة
             questions: quizData // هنا نضع الأسئلة التي جاءت من Groq
         };
 
         // التأكد من أن الكويز يحتوي على أسئلة
-        if (!generatedQuiz.questions || generatedQuiz.questions.length === 0) {
+        if (!proQuiz.questions || proQuiz.questions.length === 0) {
             showNotification('The generated quiz has no questions.', 'error');
             return;
         }
 
-        // 2. إعادة تعيين كل متغيرات حالة الكويز واستدعاء دالة البدء
-        initializeAndStartQuiz(generatedQuiz);
-    }
+        // 2. إعادة تعيين كل متغيرات حالة الكويز (نفس ما تفعله دالة startQuiz)
+        proQuestionIndex = 0;
+        proUserAnswers = new Array(proQuiz.questions.length).fill(null);
+        quizStartTime = Date.now();
+        
+        // إعداد واجهة الكويز
+        quizLessonNameEl.textContent = proQuiz.title;
+        quizSubjectNameEl.textContent = "AI Hub"; // يمكن تغييره حسب الرغبة
 
+        // 3. استدعاء الدوال الحالية لديك لبناء واجهة الكويز
+        renderQuestionList();
+        renderCurrentQuestion();
+        updateStats();
+        
+        // 4. عرض صفحة الكويز
+        showPage('#quiz-taking-page');
+    }
     // --- نظام تنبيهات يجب تعريفه مبكراً ---
     function showNotification(message, type = 'info') {
         const toast = document.createElement('div');
         toast.className = `notification-toast ${type}`;
         toast.textContent = message;
         document.body.appendChild(toast);
-        // Delay showing to allow CSS transition
-        setTimeout(() => { toast.classList.add('show'); }, 10); 
-        // Auto-remove after duration
+        setTimeout(() => { toast.classList.add('show'); }, 100);
         setTimeout(() => {
             toast.classList.remove('show');
-            // Remove from DOM after transition finishes
             setTimeout(() => {
                 if (document.body.contains(toast)) {
                     document.body.removeChild(toast);
                 }
-            }, 500); // Should match CSS transition duration
+            }, 300);
         }, 3000);
     }
     
     // --- دالة لتسجيل الخروج الآمن ---
     function logoutUser() {
         console.log("Logging out user...");
-        // Clear all relevant user data from localStorage
         localStorage.removeItem('userToken');
         localStorage.removeItem('isLoggedIn');
         localStorage.removeItem('isYearChosen');
         localStorage.removeItem('selectedYear');
         localStorage.removeItem('isActivated');
-        localStorage.removeItem('currentPageId'); // ✅ مسح الصفحة الحالية
-        localStorage.removeItem('quizState'); // ✅ مسح حالة الكويز
-        localStorage.removeItem('currentContentType'); // ✅ مسح نوع المحتوى
-        // Redirect to login page
         window.location.href = 'login.html';
     }
     
     // --- دالة لجلب بيانات المستخدم من الباك-اند ---
     async function fetchUserProfile() {
+        const token = localStorage.getItem('userToken');
+        if (!token) {
+            console.log("No token found, can't fetch profile.");
+            return null;
+        }
         try {
-            // Use fetchApi which handles token and errors including 401
-            const userProfile = await fetchApi('/api/user/profile'); 
-            if (userProfile) {
+            const response = await fetch('https://dental-app-he1p.onrender.com/api/user/profile', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            if (response.ok) {
+                const userProfile = await response.json();
                 console.log("User profile fetched successfully:", userProfile);
                 return userProfile;
+            } else {
+                if (response.status === 401) {
+                    showNotification('Your session has expired. Please log in again.', 'error');
+                    logoutUser();
+                }
+                return null;
             }
-            return null; // Should not happen if fetchApi works correctly, but good practice
         } catch (error) {
-             // fetchApi already logs detailed errors and handles 401
-            // You might want to show a generic error here if fetchApi didn't handle it
-            if (error.message.includes('Failed to fetch')) { // Network error example
-                 showNotification('Could not connect to the server. Please check your connection.', 'error');
-            }
-            // No need to show 'session expired' here, fetchApi handles it
+            console.error('Network error while fetching profile:', error);
+            showNotification('Could not connect to the server.', 'error');
             return null;
         }
     }
     
     // --- دالة تحديث واجهة المستخدم الرئيسية (نسخة معدلة بدون تفعيل إجباري) ---
     function updateUI() {
-        // No user profile means not logged in
-        if (!isLoggedIn) { 
-            // Redirect immediately if not logged in
-            window.location.href = 'login.html'; 
-            return; // Stop further execution
+        if (!isLoggedIn) {
+            // إذا لم يكن المستخدم مسجلاً دخوله، انقله لصفحة التسجيل
+            window.location.href = 'login.html';
+            return;
         }
 
-        // Check if year is chosen
         if (!isYearChosen) {
+            // إذا كان مسجلاً ولكن لم يختر السنة، اذهب لصفحة اختيار السنة
             showPage('#year-selection-page');
-            return; // Stop if year selection is needed
-        } 
-        
-        // If logged in and year chosen, handle activation (if applicable)
-        // This part seems complex and might depend on activation logic.
-        // Assuming activation is checked elsewhere or handled by page content
-        
-        // Restore last page or show home page
-        const lastPageId = localStorage.getItem('currentPageId');
-        // Ensure the last page is valid and not a restricted page if state changed
-        const validPages = ['#home-page', '#dashboard-page', '#subjects-page', '#content-display-page', '#lessons-display-page', '#flashcards-page', '#pdfs-display-page'];
-        
-        if (lastPageId && validPages.includes(lastPageId) && lastPageId !== '#year-selection-page' && lastPageId !== '#activation-page') {
-             // Don't restore if it tries to go back to year/activation
-            console.log("Restoring last page:", lastPageId);
-            showPage(lastPageId);
         } else {
-             // Default to home page if no valid last page or if it was year/activation
-             console.log("Showing default home page.");
-             showPage('#home-page');
+            // إذا كان كل شيء على ما يرام، اذهب للصفحة الرئيسية
+            // هذا الشرط يمنع إعادة تحميل الصفحة الرئيسية إذا كان المستخدم يتنقل في مكان آخر
+            const isInitialLoad = !document.querySelector('.page-section.active') || document.querySelector('#year-selection-page.active');
+            if (isInitialLoad) {
+                showPage('#home-page');
+            }
         }
 
-
-        // Update year display elements if they exist
+        // هذا الجزء يبقى كما هو لتحديث النصوص في الصفحات الأخرى إن وجدت
         const currentSummaryYear = document.getElementById('current-summary-year');
-        if (currentSummaryYear) { // Check if the element exists
-             currentSummaryYear.textContent = selectedYear || 'N/A';
-             // Assuming these IDs exist as well
-             const currentQuizYear = document.getElementById('current-quiz-year');
-             const currentLessonYear = document.getElementById('current-lesson-year');
-             if(currentQuizYear) currentQuizYear.textContent = selectedYear || 'N/A';
-             if(currentLessonYear) currentLessonYear.textContent = selectedYear || 'N/A';
+        if(currentSummaryYear) {
+            currentSummaryYear.textContent = selectedYear || 'N/A';
+            document.getElementById('current-quiz-year').textContent = selectedYear || 'N/A';
+            document.getElementById('current-lesson-year').textContent = selectedYear || 'N/A';
         }
     }
 
@@ -309,7 +288,6 @@ function displayMindMap(mindmapData) {
     const left = (window.screen.width / 2) - (width / 2);
     const top = (window.screen.height / 2) - (height / 2);
     
-    // Use a relative path assuming mindmap-viewer.html is in the same directory
     window.open(
         'mindmap-viewer.html', 
         'MindMapViewer', 
@@ -319,14 +297,7 @@ function displayMindMap(mindmapData) {
     
     // ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
 function displayGeneratedFlashcards(flashcardData) {
-    // Ensure data is an array
-    if (!Array.isArray(flashcardData)) {
-         showNotification("Invalid flashcard data received from AI.", "error");
-         console.error("Expected flashcardData to be an array, but received:", flashcardData);
-         return;
-    }
-    
-    currentCollection = flashcardData; // Expecting an array of cards directly
+    currentCollection = flashcardData;
     currentCardIndex = 0;
 
     if (!currentCollection || currentCollection.length === 0) {
@@ -338,188 +309,74 @@ function displayGeneratedFlashcards(flashcardData) {
     const ratingControls = document.getElementById('ai-flashcard-rating-controls');
     const viewerControls = document.getElementById('flashcard-viewer-controls');
 
-    if (ratingControls) ratingControls.style.display = 'flex'; // Show AI rating controls
-    if (viewerControls) viewerControls.style.display = 'none'; // Hide normal viewer controls
+    if (ratingControls) ratingControls.style.display = 'flex';
+    if (viewerControls) viewerControls.style.display = 'none';
     // --- نهاية التحسين ---
 
-    document.getElementById('flashcards-content').style.display = 'none'; // Hide collection grid
-    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden'); // Show viewer
+    document.getElementById('flashcards-content').style.display = 'none';
+    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden');
     document.getElementById('flashcard-viewer-title').textContent = "AI Generated Flashcards (Review & Save)";
 
-    displayCurrentFlashcard(); // Display the first card
-    showPage('#flashcards-page'); // Navigate to the flashcards page
+    displayCurrentFlashcard();
+    showPage('#flashcards-page');
 }
 
     // --- دالة لتحديث الهيدر بصورة المستخدم ---
     function updateHeaderWithUserData(user) {
         const headerLogoImg = document.querySelector('.ai-header-logo');
-        if (headerLogoImg && user && user.image) { // Added check for user object
+        if (headerLogoImg && user.image) {
             headerLogoImg.src = user.image;
-            headerLogoImg.alt = `${user.displayName || 'User'}'s profile picture`;
-        }
-        // Update XP display if the element exists
-        const xpDisplay = document.getElementById('user-xp-display');
-        if(xpDisplay && user) {
-            xpDisplay.textContent = `${user.experiencePoints || 0} XP`;
+            headerLogoImg.alt = `${user.displayName}'s profile picture`;
         }
     }
     
     // --- دالة رئيسية لتهيئة التطبيق ---
-    // --- (مُعدل) دالة رئيسية لتهيئة التطبيق ---
     async function initializeApp() {
-        let userProfile = null; // Initialize to null
-        let fetchErrorOccurred = false; // Flag to track if fetch failed
-
-        try {
-             // Try fetching the profile using the potentially error-throwing fetchApi
-             userProfile = await fetchUserProfile(); 
-
-        } catch (fetchError) {
-             console.error("Error during fetchUserProfile:", fetchError);
-             fetchErrorOccurred = true; // Mark that an error happened
-
-             // IMPORTANT: fetchApi already handles 401 by calling logoutUser(),
-             // so we only need to handle *other* errors here.
-             if (!fetchError.message.includes('status 401')) { // Check if it wasn't a 401
-                 showNotification("Could not load user data. Check connection or try again later.", "error");
-                 // We won't log out here. We have a token, just couldn't get profile details.
-                 // Allow the app to proceed, potentially showing limited functionality.
-             } else {
-                  // If it WAS a 401, logoutUser was already called by fetchApi, so just exit.
-                  return; 
-             }
-        }
-
-        // --- Logic based on whether profile fetch succeeded ---
-
+        const userProfile = await fetchUserProfile();
         if (userProfile) {
-            // ----- Profile fetched successfully -----
-            isLoggedIn = true; // Set loggedIn state
+            isLoggedIn = true;
             selectedYear = userProfile.studyYear;
-            isYearChosen = !!userProfile.studyYear; 
+            isYearChosen = !!userProfile.studyYear;
             isActivated = userProfile.isActivated;
 
-            // Update localStorage (only if successful)
             localStorage.setItem('isLoggedIn', 'true');
-            if (isYearChosen) {
-                 localStorage.setItem('isYearChosen', 'true');
-                 localStorage.setItem('selectedYear', selectedYear);
-            } else {
-                 localStorage.removeItem('isYearChosen');
-                 localStorage.removeItem('selectedYear');
-            }
-             if (isActivated) {
-                 localStorage.setItem('isActivated', 'true');
-            } else {
-                 localStorage.removeItem('isActivated');
-            }
+            if(isYearChosen) localStorage.setItem('isYearChosen', 'true');
+            if(selectedYear) localStorage.setItem('selectedYear', selectedYear);
+            if(isActivated) localStorage.setItem('isActivated', 'true');
+            
+            updateHeaderWithUserData(userProfile);
+            document.getElementById('user-xp-display').textContent = `${userProfile.experiencePoints || 0} XP`; 
 
-            updateHeaderWithUserData(userProfile); // Update header UI
-
-            // Check and restore quiz state (only if profile fetch succeeded)
-            const savedQuizState = localStorage.getItem('quizState');
-             if (savedQuizState) {
-                 console.log("Restoring quiz state...");
-                 try {
-                     // ... (Your existing quiz restore logic - keep as is) ...
-                        const { savedProQuiz, savedProQuestionIndex, savedProUserAnswers, savedQuizStartTime } = JSON.parse(savedQuizState);
-                        proQuiz = savedProQuiz;
-                        proQuestionIndex = savedProQuestionIndex;
-                        proUserAnswers = savedProUserAnswers;
-                        quizStartTime = savedQuizStartTime; 
-
-                        if (proQuiz && proQuiz.questions && proQuiz.questions.length > proQuestionIndex) {
-                            quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
-                            quizSubjectNameEl.textContent = proQuiz.subjectName || ''; 
-                            renderQuestionList(); 
-                            renderCurrentQuestion(); 
-                            updateStats(); 
-                            showPage('#quiz-taking-page'); 
-                            console.log("Quiz state restored successfully.");
-                            return; 
-                        } else {
-                             console.error("Invalid quiz state data found. Clearing.");
-                             localStorage.removeItem('quizState'); 
-                        }
-                 } catch (e) {
-                     console.error("Error parsing quiz state:", e);
-                     localStorage.removeItem('quizState'); 
-                 }
-             }
-
-            // If no quiz state, proceed with normal UI update
-            updateUI(); // updateUI shows the correct page based on isYearChosen etc.
-
-        } else if (localStorage.getItem('userToken')) {
-            // ----- Profile fetch FAILED, BUT a token EXISTS -----
-            // This means login was likely successful initially, but fetching details failed.
-            // Keep the user tentatively logged in, but maybe with limited functionality.
-            isLoggedIn = true; // Assume logged in because token exists
-            localStorage.setItem('isLoggedIn', 'true'); // Keep this perhaps? Or maybe remove? Let's keep it for now.
-
-            console.warn("Token exists, but profile fetch failed. Proceeding with limited state.");
-
-            // We don't have userProfile, so use defaults/localStorage for year/activation
-            selectedYear = localStorage.getItem('selectedYear');
-            isYearChosen = localStorage.getItem('isYearChosen') === 'true';
-            isActivated = localStorage.getItem('isActivated') === 'true';
-
-            // Try to update header with placeholder/basic info if possible
-            // updateHeaderWithUserData(null); // Or pass a default object?
-
-            // IMPORTANT: Call updateUI() to decide which page to show based on isYearChosen.
-            // updateUI should NOT redirect to login just because profile failed, only if isLoggedIn is false.
-            updateUI(); 
-
-        } else {
-            // ----- No profile AND no token -----
-            // This means the user is definitely not logged in.
-            console.log("No token available after profile fetch attempt. Logging out.");
-             if (!fetchErrorOccurred) { // Avoid double logout if fetchApi already did it
-                 logoutUser();
-             }
+            updateUI();
         }
     }
-    // --- (مُعدل) دالة التحقق من التوكن ---
+
+    // --- دالة التحقق من التوكن ---
     async function checkForAuthToken() {
         const urlParams = new URLSearchParams(window.location.search);
-        const tokenFromUrl = urlParams.get('token'); // ابحث عن 'token' في الـ URL
+        const token = urlParams.get('token');
 
-        if (tokenFromUrl) {
+        if (token) {
             console.log("Token found in URL, setting up new session...");
-            // 1. خزن التوكن الجديد في localStorage
-            localStorage.setItem('userToken', tokenFromUrl);
-            
-            // 2. امسح أي حالة قديمة قد تسبب مشاكل
+            localStorage.setItem('userToken', token);
             localStorage.removeItem('isYearChosen');
             localStorage.removeItem('selectedYear');
             localStorage.removeItem('isActivated');
-            localStorage.removeItem('currentPageId'); 
-            localStorage.removeItem('quizState'); 
-            localStorage.removeItem('currentContentType'); 
-            
-            // 3. أزل التوكن من شريط عنوان المتصفح (للحماية ولتجربة أفضل)
-            window.history.replaceState({}, document.title, window.location.pathname); 
-            
+            window.history.replaceState({}, document.title, window.location.pathname);
             showNotification('Successfully signed in!', 'success');
-            
-            // 4. الآن قم بتهيئة التطبيق بالتوكن الجديد
-            await initializeApp(); // initializeApp ستقرأ التوكن من localStorage
-
-        } else if (localStorage.getItem('userToken')) { // إذا لم يوجد توكن بالـ URL، تحقق من localStorage كالمعتاد
+            await initializeApp();
+        } else if (localStorage.getItem('userToken')) {
             console.log("Token found in localStorage. Restoring session.");
             await initializeApp();
         } else {
             console.log("No token found. Redirecting to login page.");
-            // لا حاجة لـ window.location.href هنا، لأن initializeApp ستفشل وتستدعي logoutUser()
-             logoutUser(); // يمكنك استدعاؤها مباشرة للأمان
+            window.location.href = 'login.html';
         }
     }
     
     // --- تفعيل خلفية tsParticles ---
     if (typeof tsParticles !== 'undefined') {
         tsParticles.load("tsparticles", {
-            // Your particles config here...
             particles: {
                 number: { value: 50, density: { enable: true, value_area: 800 } },
                 move: { enable: true, speed: 0.8, direction: "none", outModes: { default: "out" } },
@@ -537,32 +394,142 @@ function displayGeneratedFlashcards(flashcardData) {
             background: { color: "transparent" }
         }).then(container => {
             particlesInstance = container;
-             // Pause initially if quiz page is loaded directly
-             const activePage = document.querySelector('.page-section.active');
-             if (activePage && (activePage.id === 'quiz-taking-page' || activePage.id === 'quiz-summary-page')) {
-                  particlesInstance.pause();
-             }
-        }).catch(error => {
-             console.error("tsParticles load error:", error);
         });
 
-        // Handle visibility change
         document.addEventListener("visibilitychange", () => {
             if (!particlesInstance) return;
             if (document.hidden) {
                 particlesInstance.pause();
             } else {
-                 // Only play if not on quiz pages
-                 const activePage = document.querySelector('.page-section.active');
-                 if (!activePage || (activePage.id !== 'quiz-taking-page' && activePage.id !== 'quiz-summary-page')) {
-                     particlesInstance.play();
-                 }
+                particlesInstance.play();
             }
         });
     }
 
-
-    // --- [كامل] قاعدة بيانات المواد مع الأيقونات (Keep as is) ---
+    // --- [كامل] قاعدة بيانات المحتوى (بدون تغيير) ---
+    const contentDatabase = {
+        "1": {
+            "biochemistry": {
+                summaries: ["Glucides", "Lipides", "Acides aminés, peptides et protéines", "Enzymologie", "Métabolisme des glucides", "Métabolisme des lipides", "Métabolisme des acides aminés", "Bioénergétique"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Glucides", "Lipides", "Acides aminés, peptides et protéines", "Enzymologie", "Métabolisme des glucides", "Métabolisme des lipides", "Métabolisme des acides aminés", "Bioénergétique"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Glucides", "Lipides", "Acides aminés, peptides et protéines", "Enzymologie", "Métabolisme des glucides", "Métabolisme des lipides", "Métabolisme des acides aminés", "Bioénergétique"]
+            },
+            "anatomy-y1": {
+                summaries: ["Introduction à l'anatomie", "Généralités sur l'ostéologie", "Le système articulaire", "Le système musculaire", "Système nerveux", "Anatomie de l’appareil respiratoire", "Appareil cardio-vasculaire", "Le système digestif", "Système reproducteur", "Système urinaire", "Organes des sens", "Système glandulaire endocrinien", "Système tégumentaire (peau et ses annexes)", "Structure du crâne", "Mandibule", "Articulation temporo-mandibulaire (ATM)", "Anatomie topographique de la tête et du cou"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Introduction à l'anatomie", "Généralités sur l'ostéologie", "Le système articulaire", "Le système musculaire", "Système nerveux", "Anatomie de l’appareil respiratoire", "Appareil cardio-vasculaire", "Le système digestif", "Système reproducteur", "Système urinaire", "Organes des sens", "Système glandulaire endocrinien", "Système tégumentaire (peau et ses annexes)", "Structure du crâne", "Mandibule", "Articulation temporo-mandibulaire (ATM)", "Anatomie topographique de la tête et du cou"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Introduction à l'anatomie", "Généralités sur l'ostéologie", "Le système articulaire", "Le système musculaire", "Système nerveux", "Anatomie de l’appareil respiratoire", "Appareil cardio-vasculaire", "Le système digestif", "Système reproducteur", "Système urinaire", "Organes des sens", "Système glandulaire endocrinien", "Système tégumentaire (peau et ses annexes)", "Structure du crâne", "Mandibule", "Articulation temporo-mandibulaire (ATM)", "Anatomie topographique de la tête et du cou"]
+            },
+            "embryology": {
+                summaries: ["Introduction à l'embryologie / Les divisions cellulaires (mitose, méiose)", "La gamétogenèse : Spermatogenèse", "Ovogenèse, folliculogenèse et ovulation", "La première semaine du développement embryonnaire", "La deuxième semaine du développement embryonnaire", "La troisième semaine du développement embryonnaire", "Le développement embryonnaire (4ème semaine)", "L'appareil branchial", "Les malformations congénitales", "Les annexes embryonnaires"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Introduction à l'embryologie / Les divisions cellulaires (mitose, méiose)", "La gamétogenèse : Spermatogenèse", "Ovogenèse, folliculogenèse et ovulation", "La première semaine du développement embryonnaire", "La deuxième semaine du développement embryonnaire", "La troisième semaine du développement embryonnaire", "Le développement embryonnaire (4ème semaine)", "L'appareil branchial", "Les malformations congénitales", "Les annexes embryonnaires"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Introduction à l'embryologie / Les divisions cellulaires (mitose, méiose)", "La gamétogenèse : Spermatogenèse", "Ovogenèse, folliculogenèse et ovulation", "La première semaine du développement embryonnaire", "La deuxième semaine du développement embryonnaire", "La troisième semaine du développement embryonnaire", "Le développement embryonnaire (4ème semaine)", "L'appareil branchial", "Les malformations congénitales", "Les annexes embryonnaires"]
+            },
+            "histology-y1": {
+                summaries: ["Introduction à l'histologie et techniques d'étude", "Tissus épithéliaux", "Tissu conjonctif", "Tissu osseux", "Tissus musculaires", "Tissu sanguin", "Tissu nerveux"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Introduction à l'histologie et techniques d'étude", "Tissus épithéliaux", "Tissu conjonctif", "Tissu osseux", "Tissus musculaires", "Tissu sanguin", "Tissu nerveux"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Introduction à l'histologie et techniques d'étude", "Tissus épithéliaux", "Tissu conjonctif", "Tissu osseux", "Tissus musculaires", "Tissu sanguin", "Tissu nerveux"]
+            },
+            "genetics": {
+                summaries: ["Introduction à la génétique", "Monohybridisme", "Dihybridisme", "Modes de transmission héréditaires", "Hérédité monogénique", "Caryotype et anomalies chromosomiques", "Acides ribonucléiques (ARN)", "Réplication de l'ADN", "Transcription", "Traduction", "Mutations de l'ADN", "Régulation de l'expression génique", "Gènes des globines", "Outils de la biologie moléculaire", "Structure et organisation du génome humain", "Transfert des gènes chez les bactéries"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Introduction à la génétique", "Monohybridisme", "Dihybridisme", "Modes de transmission héréditaires", "Hérédité monogénique", "Caryotype et anomalies chromosomiques", "Acides ribonucléiques (ARN)", "Réplication de l'ADN", "Transcription", "Traduction", "Mutations de l'ADN", "Régulation de l'expression génique", "Gènes des globines", "Outils de la biologie moléculaire", "Structure et organisation du génome humain", "Transfert des gènes chez les bactéries"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Introduction à la génétique", "Monohybridisme", "Dihybridisme", "Modes de transmission héréditaires", "Hérédité monogénique", "Caryotype et anomalies chromosomiques", "Acides ribonucléiques (ARN)", "Réplication de l'ADN", "Transcription", "Traduction", "Mutations de l'ADN", "Régulation de l'expression génique", "Gènes des globines", "Outils de la biologie moléculaire", "Structure et organisation du génome humain", "Transfert des gènes chez les bactéries"]
+            },
+            "chemistry1": {
+                summaries: ["Structure de la matière et des atomes", "Structure électronique et tableau périodique", "Liaisons chimiques", "Chimie organique", "Cinétique chimique", "Thermochimie", "Équilibres chimiques", "Acides et bases", "La solubilité"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Structure de la matière et des atomes", "Structure électronique et tableau périodique", "Liaisons chimiques", "Chimie organique", "Cinétique chimique", "Thermochimie", "Équilibres chimiques", "Acides et bases", "La solubilité"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Structure de la matière et des atomes", "Structure électronique et tableau périodique", "Liaisons chimiques", "Chimie organique", "Cinétique chimique", "Thermochimie", "Équilibres chimiques", "Acides et bases", "La solubilité"]
+            },
+            "physics": {
+                summaries: ["Électrostatique", "Électrocinétique", "Électrophysiologie cellulaire", "Optique géométrique"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Électrostatique", "Électrocinétique", "Électrophysiologie cellulaire", "Optique géométrique"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Électrostatique", "Électrocinétique", "Électrophysiologie cellulaire", "Optique géométrique"]
+            },
+            "physiology": {
+                summaries: ["Vue globale sur la physiologie cardiaque", "Généralités sur la physiologie digestive", "Généralités physio-digestive", "Cours physio-respiratoire", "SNC partie", "Physiologie rénale", "Groupes sanguins", "Physiologie musculaire", "Milieu intérieur", "Physiologie du sang"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Vue globale sur la physiologie cardiaque", "Généralités sur la physiologie digestive", "Généralités physio-digestive", "Cours physio-respiratoire", "SNC partie", "Physiologie rénale", "Groupes sanguins", "Physiologie musculaire", "Milieu intérieur", "Physiologie du sang"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Vue globale sur la physiologie cardiaque", "Généralités sur la physiologie digestive", "Généralités physio-digestive", "Cours physio-respiratoire", "SNC partie", "Physiologie rénale", "Groupes sanguins", "Physiologie musculaire", "Milieu intérieur", "Physiologie du sang"]
+            },
+            "biophysique": {
+                summaries: ["Biophysique des solutions", "Biomécanique des fluides", "Biophysique des rayonnements", "Ondes sonores et ultrasonores"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Biophysique des solutions", "Biomécanique des fluides", "Biophysique des rayonnements", "Ondes sonores et ultrasonores"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Biophysique des solutions", "Biomécanique des fluides", "Biophysique des rayonnements", "Ondes sonores et ultrasonores"]
+            },
+            "ssh": {
+                summaries: ["Santé et société", "Facteurs influençant la santé et la biodiversité", "Relation soignant-soigné et concepts humains"].map(title => ({ title: `Summary: ${title}`, link: '#' })),
+                quizzes: ["Santé et société", "Facteurs influençant la santé et la biodiversité", "Relation soignant-soigné et concepts humains"].map(title => ({ title: `Quiz: ${title}`, link: '#' })),
+                lessons: ["Santé et société", "Facteurs influençant la santé et la biodiversité", "Relation soignant-soigné et concepts humains"]
+            },
+            "cytology": {
+                summaries: [],
+                quizzes: [],
+                lessons: [
+                    "Organisation générale de la cellule",
+                    "Méthodes d'étude de la cellule",
+                    "La membrane plasmique : Structure et composition",
+                    "La membrane plasmique : Aspect ultrastructural",
+                    "Les jonctions intercellulaires",
+                    "L'adhésivité cellulaire",
+                    "La perméabilité membranaire et transport",
+                    "La communication intercellulaire",
+                    "Le cytosquelette",
+                    "Le système endomembranaire",
+                    "Le noyau interphasique"
+                ]
+            },
+            "biomathematiques": { summaries: [], quizzes: [], lessons: [] }
+        },
+        "2": {
+            "odf-y2": { summaries: [], quizzes: [], lessons: [] },
+            "prothese-y2": { summaries: [], quizzes: [], lessons: [] },
+            "oce": { summaries: [], quizzes: [], lessons: [] },
+            "paro-y2": { summaries: [], quizzes: [], lessons: [] },
+            "patho": { summaries: [], quizzes: [], lessons: [] },
+            "biomateriau": { summaries: [], quizzes: [], lessons: [] },
+            "immunologie": { summaries: [], quizzes: [], lessons: [] },
+            "histology-y2": { summaries: [], quizzes: [], lessons: [] },
+            "hygiene": { summaries: [], quizzes: [], lessons: [] },
+            "microbiologie": { summaries: [], quizzes: [], lessons: [] },
+            "anatomie-humaine": { summaries: [], quizzes: [], lessons: [] },
+            "informatique": { summaries: [], quizzes: [], lessons: [] }
+        },
+        "3": [
+            { name: "ANATOMO-PATHOLOGIE", key: "anatomo-pathologie", icon: "ANATOMO-PATHOLOGIE.png" },
+            { name: "ANESTHÉSIOLOGIE", key: "anesthesiologie", icon: "Anesthésiologie.png" },
+            { name: "IMAGERIE", key: "imagrie", icon: "IMAGERIE .png" },
+            { name: "OC", key: "oc", icon: "OCE.png" },
+            { name: "OCCLUSIO", key: "occlusio", icon: "OCCLUSIO.png" },
+            { name: "ODF", key: "odf-y3", icon: "ODF.png" },
+            { name: "OXYOLOGIE", key: "oxyologie", icon: "OXYOLOGIE.png" },
+            { name: "PARO", key: "paro-y3", icon: "PARODONTOLOGY.png" },
+            { name: "PATHOLOGIE", key: "pathologie-y3", icon: "PATHO.png" },
+            { name: "PHARMACOLOGIE", key: "pharmacologie", icon: "PHARMACOLOGIE.png" },
+            { name: "PROTHÈSE", key: "prothese-y3", icon: "PROSTHESIS.png" }
+        ],
+        "4": [
+            { name: "DÉONTOLOGIE", key: "deontologie", icon: "DEONTOLOGIE.png" },
+            { name: "IMPLANTO", key: "implanto", icon: "IMPLANTO.png" },
+            { name: "OCE", key: "oce-y4", icon: "OCE.png" },
+            { name: "ODF", key: "odf-y4", icon: "ODF.png" },
+            { name: "OG", key: "og", icon: "OG.png" },
+            { name: "OP", key: "op", icon: "OP.png" },
+            { name: "PARO", key: "paro-y4", icon: "PARODONTOLOGY.png" },
+            { name: "PATHO MÉDICALE", key: "patho-medical", icon: "PATHO MÉDICALE .png" },
+            { name: "PATHOLOGIE BUCCO-DENTAIRE", key: "patho-bucco-dentaire", icon: "PATHOLOGIE BUCCO-DENTAIRE.png" },
+            { name: "PROTHÈSE", key: "prothese-y4", icon: "PROSTHESIS.png" }
+        ],
+        "5": [
+            { name: "ÉPIDÉMIO", key: "epidemio-y5", icon: "EPIDEMIO.png" },
+            { name: "ERGONOMIE", key: "ergonomie-y5", icon: "ERGONOMIE.png" },
+            { name: "IMPLANTO", key: "implanto-y5", icon: "IMPLANTO.png" },
+            { name: "OCE", key: "oce-y5", icon: "OCE.png" },
+            { name: "ODF", key: "odf-y5", icon: "ODF.png" },
+            { name: "OP", key: "op-y5", icon: "OP.png" },
+            { name: "PARO", key: "paro-y5", icon: "PARODONTOLOGY.png" },
+            { name: "PATHO", key: "patho-y5", icon: "PATHO.png" },
+            { name: "PROTHÈSE", key: "prothese-y5", icon: "PROSTHESIS.png" }
+        ]
+    };
+    // --- [كامل] قاعدة بيانات المواد مع الأيقونات ---
     const subjectsDatabase = {
         "1": [
             { name: "GENETICS", key: "genetics", icon: "GENETICS.png" },
@@ -635,7 +602,7 @@ function displayGeneratedFlashcards(flashcardData) {
     const themeToggleBtn = document.querySelector('.theme-toggle-btn');
     // --- ✅ إضافة جديدة: عناصر القائمة المتجاوبة ---
     const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-    // const mainNav = document.querySelector('.main-nav'); // Already defined earlier
+    const mainNav = document.querySelector('.main-nav');
 // --- نهاية الإضافة ---
     // --- ✨ [إضافة جديدة] تعريف عناصر الواجهة الجديدة ✨ ---
     const exploreContentBtnNew = document.getElementById('explore-content-btn');
@@ -682,11 +649,6 @@ function displayGeneratedFlashcards(flashcardData) {
     const unpinBtn = document.getElementById('unpin-btn');
     const chatPlusBtn = document.getElementById('chat-plus-btn');
     const uploadOptions = document.getElementById('upload-options');
-    // ✅ --- عناصر القائمة المنسدلة للمستخدم ---
-    const userMenuToggle = document.getElementById('user-menu-toggle');
-    const userDropdown = document.getElementById('user-dropdown');
-    const logoutBtn = document.getElementById('logout-btn');
-
 
     // --- عناصر ومتغيرات الكاروسيل ---
     const carousel = document.getElementById('subjects-carousel');
@@ -731,7 +693,7 @@ function displayGeneratedFlashcards(flashcardData) {
     const sessionCounterEl = document.getElementById('session-counter');
     const pauseResumeBtn = document.getElementById('pause-resume-btn');
     const resetBtn = document.getElementById('reset-btn');
-    const skipPomodoroBtn = document.getElementById('skip-btn'); // Renamed to avoid confusion
+    const skipBtn = document.getElementById('skip-btn');
     const alarmSound = document.getElementById('alarm-sound');
 
     // متغيرات حالة البومودورو
@@ -746,9 +708,9 @@ function displayGeneratedFlashcards(flashcardData) {
 
     // عناصر SVG للدائرة
     const progressRingFg = document.querySelector('.progress-ring-fg');
-    const radius = progressRingFg ? progressRingFg.r.baseVal.value : 0; // Added check
+    const radius = progressRingFg.r.baseVal.value;
     const circumference = 2 * Math.PI * radius;
-    if(progressRingFg) progressRingFg.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressRingFg.style.strokeDasharray = `${circumference} ${circumference}`;
 
     // ===================================================================
     // --- إعدادات واجهات برمجة التطبيقات (APIs) ---
@@ -785,7 +747,6 @@ function displayGeneratedFlashcards(flashcardData) {
     function handleStartFirstQuiz() {
         // 1. تعيين نوع المحتوى إلى "كويزات"
         currentContentType = 'quizzes';
-        localStorage.setItem('currentContentType', currentContentType); // ✅ حفظ النوع
 
         // 2. تفعيل رابط "Quizzes" في شريط التنقل
         navLinks.forEach(l => l.classList.remove('active-link'));
@@ -814,61 +775,50 @@ function displayGeneratedFlashcards(flashcardData) {
         statsContainer.style.display = 'none';
 
         try {
-            // Using fetchApi helper
-            const data = await fetchApi('/api/user/widget-data');
+            const res = await fetch('https://dental-app-he1p.onrender.com/api/user/widget-data', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+
+            if (!res.ok) {
+                throw new Error('Could not load widget data');
+            }
+            
+            const data = await res.json();
 
             if (data.hasActivity) {
                 // ✅  الحالة 1: المستخدم لديه نشاط - عرض لوحة الإحصائيات
-                statsContainer.style.display = 'grid'; // Use grid for stats
+                statsContainer.style.display = 'grid';
 
                 const { lastQuiz } = data;
 
-                // ملء البيانات الديناميكية من الباك اند (with checks for element existence)
-                const lastLessonTitleEl = document.getElementById('stats-last-lesson-title');
-                const lastLessonModuleEl = document.getElementById('stats-last-lesson-module');
-                const quizzesCorrectEl = document.getElementById('stats-quizzes-correct');
-                const quizzesIncorrectEl = document.getElementById('stats-quizzes-incorrect');
-                const quizzesTimeEl = document.getElementById('stats-quizzes-time');
+                // ملء البيانات الديناميكية من الباك اند
+                document.getElementById('stats-last-lesson-title').textContent = lastQuiz.quizTitle;
+                document.getElementById('stats-last-lesson-module').textContent = lastQuiz.subjectName;
+                document.getElementById('stats-quizzes-correct').textContent = lastQuiz.correctAnswers;
+                document.getElementById('stats-quizzes-incorrect').textContent = lastQuiz.incorrectAnswers;
+
+                const minutes = Math.floor(lastQuiz.timeTaken / 60);
+                const seconds = lastQuiz.timeTaken % 60;
+                document.getElementById('stats-quizzes-time').textContent = `${minutes}m ${seconds}s`;
+
                 const badgeImg = document.getElementById('achievement-badge-img');
                 const badgeText = document.getElementById('achievement-badge-text');
-
-                if(lastLessonTitleEl) lastLessonTitleEl.textContent = lastQuiz.quizTitle || 'N/A';
-                if(lastLessonModuleEl) lastLessonModuleEl.textContent = lastQuiz.subjectName || 'N/A';
-                if(quizzesCorrectEl) quizzesCorrectEl.textContent = lastQuiz.correctAnswers ?? '0';
-                if(quizzesIncorrectEl) quizzesIncorrectEl.textContent = lastQuiz.incorrectAnswers ?? '0';
-
-                if (quizzesTimeEl && lastQuiz.timeTaken != null) {
-                    const minutes = Math.floor(lastQuiz.timeTaken / 60);
-                    const seconds = lastQuiz.timeTaken % 60;
-                    quizzesTimeEl.textContent = `${minutes}m ${seconds}s`;
-                } else if(quizzesTimeEl) {
-                     quizzesTimeEl.textContent = 'N/A';
+                if (badgeImg) {
+                    badgeImg.src = lastQuiz.badge.imageUrl;
+                    badgeImg.alt = lastQuiz.badge.name;
                 }
-
-                if (lastQuiz.badge) { // Check if badge exists
-                    if (badgeImg) {
-                        badgeImg.src = lastQuiz.badge.imageUrl || 'images/badge-default.png'; // Default image
-                        badgeImg.alt = lastQuiz.badge.name || 'Badge';
-                    }
-                    if (badgeText) {
-                        const badgeName = lastQuiz.badge.name || "";
-                        if (badgeName.includes('Gold')) badgeText.textContent = "Excellent!";
-                        else if (badgeName.includes('Silver')) badgeText.textContent = "Well Done!";
-                        else badgeText.textContent = "Good Effort!";
-                    }
-                } else {
-                     // Handle case where no badge is returned
-                     if (badgeImg) badgeImg.style.display = 'none'; // Hide image area
-                     if (badgeText) badgeText.textContent = "Keep Going!";
+                if (badgeText) {
+                    if (lastQuiz.badge.name.includes('Gold')) badgeText.textContent = "Excellent!";
+                    else if (lastQuiz.badge.name.includes('Silver')) badgeText.textContent = "Well Done!";
+                    else badgeText.textContent = "Good Effort!";
                 }
                 
             } else {
                 // ❌  الحالة 2: المستخدم جديد - عرض البطاقة الترحيبية
-                welcomeContainer.style.display = 'block'; // Show welcome card
+                welcomeContainer.style.display = 'block'; 
                 
                 const welcomeButton = document.getElementById('welcome-start-quiz-btn');
                 if (welcomeButton) {
-                    // Ensure listener is attached only once
                     if (!welcomeButton.dataset.listenerAttached) {
                         welcomeButton.addEventListener('click', handleStartFirstQuiz);
                         welcomeButton.dataset.listenerAttached = 'true';
@@ -877,9 +827,7 @@ function displayGeneratedFlashcards(flashcardData) {
             }
         } catch (error) {
             console.error("Error rendering home page widget:", error);
-            showNotification('Could not load home page data.', 'error');
-            // Fallback: show welcome card if API fails
-            statsContainer.style.display = 'none'; 
+            // في حالة فشل الاتصال، عرض البطاقة الترحيبية كخيار آمن
             welcomeContainer.style.display = 'block';
             const welcomeButton = document.getElementById('welcome-start-quiz-btn');
             if (welcomeButton && !welcomeButton.dataset.listenerAttached) {
@@ -890,29 +838,17 @@ function displayGeneratedFlashcards(flashcardData) {
     }
     // ✨ =================== NEW/UPDATED FUNCTIONS END ==================== ✨
     
-    // ✅ --- (تعديل) دالة عرض الصفحات مع حفظ الحالة ---
     function showPage(targetId) {
-        // Hide all page sections first
         pageSections.forEach(section => section.classList.remove('active'));
-        
         const targetPage = document.querySelector(targetId);
         
         if (targetPage) {
             targetPage.classList.add('active');
-            localStorage.setItem('currentPageId', targetId); // ✅ حفظ الصفحة الحالية
             
-             // Specific actions for certain pages
             if (targetId === '#home-page') {
                 renderHomePageWidget(); 
-            } else if (targetId === '#subjects-page' && selectedYear) { // Ensure year is selected
-                animateCarouselAssembly(selectedYear);
-            } else if (targetId === '#dashboard-page') {
-                fetchAndDisplayDashboardData(); // Fetch data when dashboard is shown
-            } else if (targetId === '#flashcards-page') {
-                 fetchAndDisplayCollections(); // Fetch collections when flashcards page is shown
             }
 
-            // Pause/Play particles based on the page
             if (particlesInstance) {
                 if (targetId === '#quiz-taking-page' || targetId === '#quiz-summary-page') {
                     particlesInstance.pause();
@@ -920,19 +856,24 @@ function displayGeneratedFlashcards(flashcardData) {
                     particlesInstance.play();
                 }
             }
+
+            if (targetId === '#subjects-page') {
+                animateCarouselAssembly(selectedYear);
+            }
             
-            // Update active link in navigation
+            if (targetId === '#dashboard-page') {
+                fetchAndDisplayDashboardData();
+            }
+
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
                 const linkPageType = link.dataset.pageType;
                 let isActive = false;
-
-                if (linkPageType) { // For content type links (Summaries, Quizzes, Lessons)
-                    // Activate if the target is subjects, content list, lessons list, or pdf list AND content type matches
-                    if ((targetId === '#subjects-page' || targetId === '#content-display-page' || targetId === '#lessons-display-page' || targetId === '#pdfs-display-page') && linkPageType === currentContentType) {
+                if (linkPageType) {
+                    if ((targetId === '#subjects-page' || targetId === '#content-display-page' || targetId === '#lessons-display-page') && linkPageType === currentContentType) {
                         isActive = true;
                     }
-                } else { // For direct page links (Home, Dashboard, Flashcards)
+                } else {
                     if (linkHref === targetId) {
                         isActive = true;
                     }
@@ -940,18 +881,7 @@ function displayGeneratedFlashcards(flashcardData) {
                 link.classList.toggle('active-link', isActive);
             });
             
-            // Trigger scroll reveal animations for the newly displayed page
-            setTimeout(() => triggerScrollReveal(targetPage), 50); // Small delay
-
-        } else {
-            console.error(`Page with ID ${targetId} not found.`);
-             // Fallback: If target page doesn't exist, show home page
-             const homePage = document.querySelector('#home-page');
-             if(homePage) {
-                 homePage.classList.add('active');
-                 localStorage.setItem('currentPageId', '#home-page');
-                 renderHomePageWidget();
-             }
+            setTimeout(() => triggerScrollReveal(targetPage), 50);
         }
     }
 
@@ -961,398 +891,300 @@ function displayGeneratedFlashcards(flashcardData) {
         const text = element.dataset.text;
         if (!text) return;
         let i = 0;
-        element.innerHTML = ""; // Clear content before typing
-        const speed = 100; // Typing speed in ms
-        
-        function typeWriter() {
+        element.innerHTML = "";
+        const speed = 100;
+        const typingInterval = setInterval(() => {
             if (i < text.length) {
                 element.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, speed);
             } else {
-                 element.classList.add('typing-complete'); // Add class when done
+                clearInterval(typingInterval);
+                element.classList.add('typing-complete');
             }
-        }
-        typeWriter(); // Start the typing
+        }, speed);
     }
 
     function setupScrollReveal(elements) {
-        // Ensure IntersectionObserver is supported
-        if (!('IntersectionObserver' in window)) {
-             console.warn("IntersectionObserver not supported, animations disabled.");
-             // Optionally, make elements visible immediately
-             elements.forEach(element => element.classList.add('fade-in'));
-             return;
-        }
-
         const observer = new IntersectionObserver((entries, currentObserver) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('fade-in');
-                    // Special handling for typing animation
                     if (entry.target.contains(typingHeadline)) {
-                        // Delay typing start slightly after fade-in
                         setTimeout(() => startTypingAnimation(typingHeadline), 300);
                     }
-                    currentObserver.unobserve(entry.target); // Stop observing once visible
+                    currentObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 }); // Trigger when 10% is visible
-
+        }, { threshold: 0.1 });
         elements.forEach(element => {
-            element.classList.remove('fade-in'); // Ensure it starts hidden
+            element.classList.remove('fade-in');
             observer.observe(element);
         });
     }
     
     function triggerScrollReveal(pageElement) {
         if (pageElement) {
-            // Find all elements within the page that need revealing
             setupScrollReveal(pageElement.querySelectorAll('.scroll-reveal-element'));
         }
     }
     
-    // --- الشات والـ AI (Keep largely as is, ensure fetchApi is used where appropriate) ---
     function addMessageToChat(message, senderClass, rawMessageContent) {
         const messageWrapper = document.createElement('div');
         messageWrapper.classList.add('message-wrapper', `${senderClass}-wrapper`);
-        // Store raw message for actions like copy, summarize
-        messageWrapper.dataset.rawMessage = rawMessageContent !== undefined ? rawMessageContent : message;
+        messageWrapper.dataset.rawMessage = rawMessageContent || message;
 
         const p = document.createElement('p');
         p.classList.add(senderClass);
         
-        // Sanitize AI messages rendered as HTML
-        if (senderClass === 'ai-message') {
-            if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                 // Ensure message is a string before parsing
-                 const messageString = String(message || '');
-                 p.innerHTML = DOMPurify.sanitize(marked.parse(messageString));
-            } else {
-                 p.textContent = message; // Fallback to text content
-            }
+        if (senderClass === 'user-message') {
+            p.textContent = message;
         } else {
-             p.textContent = message; // User messages as plain text
+            if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+                 p.innerHTML = DOMPurify.sanitize(marked.parse(message));
+            } else {
+                 p.textContent = message;
+            }
         }
         messageWrapper.appendChild(p);
 
-        // --- Message Actions (Copy, Summarize, Pin) ---
         const messageActions = document.createElement('div');
         messageActions.className = 'message-actions';
 
-        // Copy Button (for all messages)
         const copyBtn = document.createElement('button');
         copyBtn.title = 'Copy Text';
         copyBtn.innerHTML = '<i class="far fa-copy"></i>';
         copyBtn.onclick = () => {
-             // Use raw message from dataset for accurate copying
-            navigator.clipboard.writeText(messageWrapper.dataset.rawMessage)
-                .then(() => showNotification('Copied!', 'success'))
-                .catch(err => {
-                     console.error('Failed to copy text: ', err);
-                     showNotification('Copy failed!', 'error');
-                 });
+            navigator.clipboard.writeText(messageWrapper.dataset.rawMessage).then(() => showNotification('Copied!', 'success'));
         };
         messageActions.appendChild(copyBtn);
 
-        // Actions specific to AI messages
         if (senderClass === 'ai-message') {
             const summarizeBtn = document.createElement('button');
             summarizeBtn.title = 'Summarize this';
-            summarizeBtn.innerHTML = '<i class="fas fa-stream"></i>'; // Icon for summarize
+            summarizeBtn.innerHTML = '<i class="fas fa-stream"></i>';
             summarizeBtn.onclick = () => summarizeMessage(messageWrapper.dataset.rawMessage);
             messageActions.appendChild(summarizeBtn);
 
             const pinBtn = document.createElement('button');
             pinBtn.title = 'Pin this message';
-            pinBtn.innerHTML = '<i class="fas fa-thumbtack"></i>'; // Icon for pin
+            pinBtn.innerHTML = '<i class="fas fa-thumbtack"></i>';
             pinBtn.onclick = () => pinMessage(messageWrapper.dataset.rawMessage);
             messageActions.appendChild(pinBtn);
         }
         
-        // Position actions differently for user vs AI messages
         if (senderClass === 'user-message') {
-             messageWrapper.insertBefore(messageActions, p); // Actions before user message
+            messageWrapper.insertBefore(messageActions, p);
         } else {
-             messageWrapper.appendChild(messageActions); // Actions after AI message
+            messageWrapper.appendChild(messageActions);
         }
 
         chatMessagesDiv.appendChild(messageWrapper);
-        // Scroll to the bottom to show the new message
         chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
         
-        // Render MathJax/KaTeX if applicable for AI messages
         if (senderClass === 'ai-message' && typeof renderMathInElement === 'function') {
-            renderMathInElement(p, { 
-                delimiters: [
-                    {left: '$$', right: '$$', display: true}, 
-                    {left: '$', right: '$', display: false}
-                ] 
-            });
+            renderMathInElement(p, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}] });
         }
-        return p; // Return the paragraph element for potential further manipulation (like typing indicator)
+        return p;
     }
     
     async function summarizeMessage(textToSummarize) {
-        if (!textToSummarize || textToSummarize.trim() === '') {
-            showNotification('Nothing to summarize.', 'info');
-            return;
-        }
         showNotification('Summarizing...', 'info');
-        // Construct the prompt clearly asking for summarization in bullet points
         const summaryPrompt = `Please summarize the following text into concise bullet points for a student, in the same language as the text:\n\n--- TEXT ---\n${textToSummarize}`;
-        
-        // Create a temporary history for this specific request
-        // Don't modify the main chatHistory directly for utility functions
         const tempChatHistory = [...chatHistory, {role: 'user', content: summaryPrompt}];
-        
-        // Call sendApiRequest with isMainConversation set to false
-        sendApiRequest(tempChatHistory, false); 
+        sendApiRequest(tempChatHistory, false);
     }
 
     function pinMessage(textToPin) {
-        if (pinnedMessageText && pinnedMessageBar) {
-             pinnedMessageText.textContent = textToPin;
-             pinnedMessageBar.style.display = 'block'; // Show the bar
-             showNotification('Message pinned!', 'success');
-        } else {
-             console.error("Pin message elements not found.");
-        }
+        if(pinnedMessageText) pinnedMessageText.textContent = textToPin;
+        if(pinnedMessageBar) pinnedMessageBar.style.display = 'block';
+        showNotification('Message pinned!', 'success');
     }
 
     async function sendChatMessage() {
         const userText = userChatInput.value.trim();
-        if (!userText) return; // Don't send empty messages
-
-        // Add user message to UI immediately
+        if (!userText) return;
         addMessageToChat(userText, 'user-message');
-        // Add user message to the conversation history
         chatHistory.push({ role: "user", content: userText });
-        
-        userChatInput.value = ''; // Clear the input field
-        
-        // Send the updated history to the API
-        sendApiRequest(chatHistory, true); // true indicates it's part of the main conversation
+        userChatInput.value = '';
+        sendApiRequest(chatHistory, true);
     }
 
-    async function sendApiRequest(historyToSend, isMainConversation) {
-        // Disable input while waiting for response
+    async function sendApiRequest(history, isMainConversation) {
         userChatInput.disabled = true;
         sendChatButton.disabled = true;
 
-        // Add a temporary AI message with typing indicator
-        const aiMessageContainer = addMessageToChat("", 'ai-message', ""); // Start with empty content
+        const aiMessageContainer = addMessageToChat("", 'ai-message', "");
         aiMessageContainer.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
-        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Ensure indicator is visible
 
-        // Extract the last user question (or the utility prompt)
-        const userQuestion = historyToSend[historyToSend.length - 1].content;
-        
+        const userQuestion = history[history.length - 1].content;
+        const token = localStorage.getItem('userToken');
+
         try {
-            // Use fetchApi helper for the request
-            const data = await fetchApi('/api/ai/ask', {
-                 method: 'POST',
-                 body: JSON.stringify({ question: userQuestion }) 
+            const response = await fetch('https://dental-app-he1p.onrender.com/api/ai/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ question: userQuestion }) 
             });
 
-            const fullReply = data.answer; // Assuming the backend returns { answer: "..." }
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to get response from server');
+            }
 
-            // Update the temporary message container with the actual AI reply
-             if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                 aiMessageContainer.innerHTML = DOMPurify.sanitize(marked.parse(fullReply || ""));
-             } else {
-                 aiMessageContainer.textContent = fullReply || ""; // Fallback
-             }
-            // Store the raw reply in the dataset for actions
-            aiMessageContainer.parentElement.dataset.rawMessage = fullReply; 
+            const data = await response.json();
+            const fullReply = data.answer;
 
-            // Add the AI response to the main chat history ONLY if it's part of the main conversation
+            aiMessageContainer.innerHTML = DOMPurify.sanitize(marked.parse(fullReply));
+            aiMessageContainer.parentElement.dataset.rawMessage = fullReply;
             if (isMainConversation) {
                 chatHistory.push({ role: "assistant", content: fullReply });
             }
-
-            // Render math if necessary
             if (typeof renderMathInElement === 'function') {
-                renderMathInElement(aiMessageContainer, { 
-                     delimiters: [
-                         { left: '$$', right: '$$', display: true }, 
-                         { left: '$', right: '$', display: false }
-                     ] 
-                 });
+                renderMathInElement(aiMessageContainer, { delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }] });
             }
 
         } catch (error) {
             console.error("AI Request Error:", error);
-            // Display error message in the chat
-            aiMessageContainer.textContent = `Sorry, an error occurred: ${error.message}`;
-            // If it was a main conversation message that failed, remove the user's last message from history 
-            // to allow them to retry potentially. (Optional, depends on desired UX)
-            // if (isMainConversation) {
-            //     chatHistory.pop(); 
-            // }
+            aiMessageContainer.innerHTML = `Sorry, an error occurred: ${error.message}`;
+            if (isMainConversation) {
+                chatHistory.pop(); 
+            }
         } finally {
-            // Re-enable input fields regardless of success or failure
             userChatInput.disabled = false;
             sendChatButton.disabled = false;
-            userChatInput.focus(); // Set focus back to input
-             chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Ensure final message/error is visible
+            userChatInput.focus();
         }
     }
     
     async function extractTextFromPdf(file) {
-        // Check if pdfjsLib is loaded
         if (typeof pdfjsLib === 'undefined') {
-            showNotification("PDF library not loaded. Cannot process PDF.", "error");
             throw new Error("PDF processing library is not loaded.");
         }
-        // Ensure workerSrc is set (adjust path if needed)
         pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js`;
 
         const reader = new FileReader();
-        
         return new Promise((resolve, reject) => {
             reader.onload = async (event) => {
                 try {
                     const pdfData = new Uint8Array(event.target.result);
                     const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
                     let fullText = '';
-                    
-                    // Iterate through all pages
                     for (let i = 1; i <= pdf.numPages; i++) {
                         const page = await pdf.getPage(i);
                         const textContent = await page.getTextContent();
-                        // Join text items, handling potential undefined items gracefully
-                        fullText += textContent.items.map(item => item?.str || '').join(' ') + '\n\n'; 
+                        fullText += textContent.items.map(item => item.str).join(' ') + '\n\n';
                     }
-                    resolve(fullText.trim()); // Trim whitespace from the final result
+                    resolve(fullText);
                 } catch (error) {
-                    console.error("PDF Parsing Error:", error);
-                    reject("Failed to parse the PDF file.");
+                    reject("Failed to parse the PDF.");
                 }
             };
-            reader.onerror = (error) => {
-                 console.error("File Reading Error:", error);
-                 reject("Error reading the PDF file.");
-            };
-            // Read the file as ArrayBuffer
+            reader.onerror = () => reject("Error reading the file.");
             reader.readAsArrayBuffer(file);
         });
     }
 
-    // --- Gemini API Calls (Image & Audio) ---
-    async function sendDataAndPromptToGemini(endpoint, prompt, file, fileType = 'image') {
-        // Add user message indicating the action
-        addMessageToChat(`Analyzing ${fileType}: "${prompt}"`, 'user-message');
-        
-        // Add AI typing indicator
+    async function sendImageAndPromptToGemini(prompt, imageFile) {
+        addMessageToChat(`Analyzing image: "${prompt}"`, 'user-message');
         const aiMsg = addMessageToChat("", 'ai-message');
         aiMsg.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
-        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
 
         const formData = new FormData();
         formData.append('prompt', prompt);
-        formData.append(fileType, file); // Use dynamic key 'image' or 'audio'
+        formData.append('image', imageFile);
+
+        const token = localStorage.getItem('userToken');
 
         try {
-            // Use fetchApi helper for the request
-            const data = await fetchApi(endpoint, {
+            const response = await fetch('https://dental-app-he1p.onrender.com/api/gemini/image', {
                 method: 'POST',
-                // Content-Type is set automatically for FormData by the browser
-                headers: {}, // Remove Content-Type header
+                headers: { 'Authorization': `Bearer ${token}` },
                 body: formData
             });
 
-            const aiReply = data.answer; // Assuming backend returns { answer: "..." }
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Server failed to process the image.');
+            }
+
+            const data = await response.json();
+            const aiReply = data.answer;
             
-             // Update UI with the AI response
-             if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                 aiMsg.innerHTML = DOMPurify.sanitize(marked.parse(aiReply || ""));
-             } else {
-                 aiMsg.textContent = aiReply || ""; // Fallback
-             }
-             aiMsg.parentElement.dataset.rawMessage = aiReply; // Store raw message
-             
-             // Render math if needed
-             if (typeof renderMathInElement === 'function') {
-                 renderMathInElement(aiMsg, { 
-                     delimiters: [
-                         { left: '$$', right: '$$', display: true },
-                         { left: '$', right: '$', display: false }
-                     ] 
-                 });
-             }
+            aiMsg.innerHTML = DOMPurify.sanitize(marked.parse(aiReply));
+            aiMsg.parentElement.dataset.rawMessage = aiReply;
 
         } catch (error) {
-            console.error(`${fileType.charAt(0).toUpperCase() + fileType.slice(1)} Analysis Error:`, error);
-            aiMsg.textContent = `Error analyzing ${fileType}: ${error.message}`;
-        } finally {
-            chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Scroll to final message/error
+            console.error("Image Analysis Error:", error);
+            aiMsg.textContent = `Error analyzing image: ${error.message}`;
         }
     }
 
-    // Wrapper functions for specific file types
-    async function sendImageAndPromptToGemini(prompt, imageFile) {
-        await sendDataAndPromptToGemini('/api/gemini/image', prompt, imageFile, 'image');
-    }
-
     async function sendAudioAndPromptToGemini(prompt, audioFile) {
-        await sendDataAndPromptToGemini('/api/gemini/audio', prompt, audioFile, 'audio');
+        addMessageToChat(`Analyzing audio: "${audioFile.name}"...`, 'user-message');
+        const aiMsg = addMessageToChat("", 'ai-message');
+        aiMsg.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+
+        const formData = new FormData();
+        formData.append('prompt', prompt);
+        formData.append('audio', audioFile);
+
+        const token = localStorage.getItem('userToken');
+
+        try {
+            const response = await fetch('https://dental-app-he1p.onrender.com/api/gemini/audio', {
+                method: 'POST',
+                headers: { 'Authorization': `Bearer ${token}` },
+                body: formData
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Server failed to process the audio.');
+            }
+
+            const data = await response.json();
+            const aiReply = data.answer;
+            
+            aiMsg.innerHTML = DOMPurify.sanitize(marked.parse(aiReply));
+            aiMsg.parentElement.dataset.rawMessage = aiReply;
+
+        } catch (error) {
+            console.error("Audio Analysis Error:", error);
+            aiMsg.textContent = `Error analyzing audio: ${error.message}`;
+        }
     }
     
-// --- Carousel Logic ---
 function rotateCarousel() {
     if (!carousel) return;
-    if (numItems === 0) return; // Prevent division by zero
-
-    // Calculate the angle per item
-    angle = 360 / numItems;
-    // Calculate the offset to center the selected item visually
-    const offsetAngle = angle / 2; 
     
-    // Calculate the final rotation, including the offset
+    // ✨ [تطبيق حل الأستاذ] حساب زاوية الإزاحة (نصف خطوة)
+    const offsetAngle = (360 / numItems) / 2;
     const rotation = (-currentIndex * angle) + offsetAngle;
     
-    // Apply the rotation and translation to the container
     carousel.style.transform = `translateZ(${-tz}px) rotateX(${rotation}deg)`;
 
-    // Update the 'active' class on carousel items
     carouselItems.forEach((item, i) => {
         item.classList.toggle('active', i === currentIndex);
     });
 }
-
 function animateCarouselAssembly(year) {
-    if (!carousel || !carouselScene) return; // Ensure elements exist
-    carousel.innerHTML = ''; // Clear previous items
+    if (!carousel) return;
+    carousel.innerHTML = '';
     
     const subjects = subjectsDatabase[year] || [];
     numItems = subjects.length;
-    if (numItems === 0) {
-        carouselScene.style.display = 'none'; // Hide carousel if no subjects
-        // Optionally show a message
-        const messageEl = document.createElement('p');
-        messageEl.textContent = 'No subjects available for this year yet.';
-        messageEl.style.textAlign = 'center';
-        messageEl.style.marginTop = '30px';
-        carouselScene.after(messageEl); // Add message after the scene
-        return;
-    } else {
-         carouselScene.style.display = 'block'; // Ensure carousel is visible
-         // Remove any previously added 'no subjects' message
-         const existingMessage = carouselScene.nextElementSibling;
-         if (existingMessage && existingMessage.tagName === 'P') {
-             existingMessage.remove();
-         }
-    }
+    if (numItems === 0) return;
 
     angle = 360 / numItems;
-    // Estimate item height dynamically or use a fixed value
-    const itemHeight = 90; // Adjust if your item height changes
+    const itemHeight = 80;
     
-    // Calculate translation Z (depth) based on item height and number of items
+    // المعادلة الأصلية لحساب العمق (tz)
     tz = Math.round((itemHeight / 2) / Math.tan(Math.PI / numItems));
 
-    // Calculate the offset angle for centering
+    // ✨ [تطبيق حل الأستاذ] حساب زاوية الإزاحة (نصف خطوة)
     const offsetAngle = angle / 2;
 
     subjects.forEach((subject, i) => {
@@ -1360,134 +1192,110 @@ function animateCarouselAssembly(year) {
         item.className = 'subject-button carousel-item';
         item.dataset.subjectKey = subject.key;
         item.dataset.subjectName = subject.name;
-        // Use default icon if specific icon is missing
-        item.dataset.subjectIcon = subject.icon || "default-icon.png"; 
+        item.dataset.subjectIcon = subject.icon || "default-icon.png";
 
-        // Generate icon HTML, handling potential missing icons
-        let iconHtml = subject.icon 
-            ? `<img src="ICONS/${subject.icon}" alt="${subject.name} Icon" class="custom-icon">` 
-            : `<i class="fas fa-book default-icon"></i>`; // Default FontAwesome icon
+        let iconHtml = subject.icon ? `<img src="ICONS/${subject.icon}" alt="${subject.name} Icon" class="custom-icon">` : `<i class="fas fa-book"></i>`;
         item.innerHTML = `${iconHtml} <span>${subject.name}</span>`;
         
-        // Calculate the rotation angle for this specific item, including the offset
+        // ✨ [تطبيق حل الأستاذ] إضافة الإزاحة لزاوية دوران كل عنصر
         const rotationAngle = (i * angle) + offsetAngle;
 
-        // Initial state for animation (slightly offset and faded)
-        const initialTransform = `rotateX(${rotationAngle}deg) translateZ(${tz}px) translateY(50px) scale(0.9)`;
+        const initialTransform = `rotateX(${rotationAngle}deg) translateZ(${tz}px) translateY(50px) scale(0.8)`;
         item.style.transform = initialTransform;
-        item.style.opacity = '0'; // Start invisible
 
-        // Event listener for clicking on a subject
         item.addEventListener('click', () => {
             if (i !== currentIndex) {
-                 // If clicking a non-active item, rotate to it
                 currentIndex = i;
                 rotateCarousel();
             } else {
-                 // If clicking the active item, proceed to content
-                if (currentContentType) { // Check if a content type is selected
-                     if (currentContentType === 'lessons') {
-                         showLessonListForSubject(item.dataset.subjectKey); 
-                     } else if (currentContentType === 'summaries' || currentContentType === 'quizzes') {
-                         showContentListForSubject(item.dataset.subjectKey, currentContentType);
-                     }
-                } else {
-                     // Prompt user to select a content type if none is active
-                     showNotification('Please select Summaries, Quizzes, or Lessons from the top menu first.', 'info');
+                if (currentContentType === 'lessons') {
+                    showLessonListForSubject(item.dataset.subjectKey); 
+                } else if (currentContentType === 'summaries' || currentContentType === 'quizzes') {
+                    showContentListForSubject(item.dataset.subjectKey, currentContentType);
+                } 
+                else {
+                    showNotification('Please select a content type (Summaries, Quizzes, or Lessons) from the top menu first.', 'error');
                 }
             }
         });
         
-        carousel.appendChild(item); // Add the item to the DOM
+        carousel.appendChild(item);
     });
 
-    // Update the list of carousel items
     carouselItems = document.querySelectorAll('.carousel-item');
-    currentIndex = 0; // Start at the first item
-    
-    // Initial rotation without animation to set the stage
-     rotateCarousel(); 
-    
-    // Animate items into their final positions with a delay
+    currentIndex = 0;
+    rotateCarousel();
+
     carouselItems.forEach((item, i) => {
         setTimeout(() => {
+            // ✨ [تطبيق حل الأستاذ] تطبيق نفس الإزاحة عند الظهور النهائي
             const finalRotationAngle = (i * angle) + offsetAngle;
             const finalTransform = `rotateX(${finalRotationAngle}deg) translateZ(${tz}px)`;
-            item.style.opacity = '1'; // Fade in
-            item.style.transform = finalTransform; // Move to final position
-        }, 100 + (i * 80)); // Staggered animation delay
+            item.style.opacity = '1';
+            item.style.transform = finalTransform;
+        }, 100 + (i * 80));
     });
 }
     
-    // --- عرض قائمة المحتوى (ملخصات وكويزات) ---
     async function showContentListForSubject(subjectKey, contentType) {
         const subjectData = (subjectsDatabase[selectedYear] || []).find(s => s.key === subjectKey);
-        if (!subjectData) {
-            console.error(`Subject data not found for key: ${subjectKey}`);
-            return;
-        }
+        if (!subjectData) return;
 
         const contentTitle = document.getElementById('content-title');
         const contentListContainer = document.getElementById('content-list');
 
-        // Set title and show loading state
         contentTitle.textContent = `${subjectData.name} ${contentType.charAt(0).toUpperCase() + contentType.slice(1)}`;
         contentListContainer.innerHTML = '<p>Loading content...</p>';
-        showPage('#content-display-page'); // Navigate to the content list page
+        showPage('#content-display-page');
 
         let contentItems = [];
         try {
-            // Fetch subjects for the year to get the subject ID
+            const token = localStorage.getItem('userToken');
             const subjectsInYear = await fetchSubjectsByYear(selectedYear);
             const currentSubject = subjectsInYear.find(s => s.key === subjectKey);
 
-            if (currentSubject && currentSubject._id) { // Ensure subject and its ID exist
+            if (currentSubject) {
                 if (contentType === 'summaries') {
-                    // Fetch summaries using the API helper
+                    // استدعاء الواجهة الخلفية لجلب الملخصات
                     contentItems = await fetchSummariesBySubject(currentSubject._id);
                 } else if (contentType === 'quizzes') {
-                    // Fetch quizzes using the API helper
-                     contentItems = await fetchApi(`/api/content/quizzes/subject/${currentSubject._id}`);
+                    // استدعاء الواجهة الخلفية لجلب الكويزات
+                    const res = await fetch(`https://dental-app-he1p.onrender.com/api/content/quizzes/subject/${currentSubject._id}`, { 
+                        headers: { 'Authorization': `Bearer ${token}` } 
+                    });
+                    if (!res.ok) throw new Error('Could not load quizzes.');
+                    contentItems = await res.json();
                 }
-                 // Add more content types here if needed (e.g., 'videos')
-            } else {
-                 throw new Error(`Subject ID not found for key: ${subjectKey}`);
             }
         } catch (error) {
             console.error(`Failed to fetch ${contentType}:`, error);
-            showNotification(`Could not load ${contentType}. ${error.message}`, 'error');
+            showNotification(`Could not load ${contentType}.`, 'error');
             contentListContainer.innerHTML = `<p>Error loading content. Please try again later.</p>`;
-            return; // Stop execution if fetching fails
+            return;
         }
 
-        // Render the fetched content items
-        contentListContainer.innerHTML = ''; // Clear loading message
-        if (contentItems && contentItems.length > 0) {
+        contentListContainer.innerHTML = '';
+        if (contentItems.length > 0) {
             contentItems.forEach(item => {
                 const link = document.createElement('a');
                 link.className = 'content-item';
 
-                if (contentType === 'summaries' && item.filePath) {
-                    // Build the correct URL for the PDF viewer or direct link
+                if (contentType === 'summaries') {
+                    // الدالة المعدلة ستنشئ الرابط الصحيح تلقائيًا
                     link.href = buildPdfViewerUrl(item.filePath);
-                    link.target = "_blank"; // Open summaries in a new tab
-                    link.innerHTML = `<i class="fas fa-book-open"></i><span>${item.title || 'Summary'}</span>`;
-                } else if (contentType === 'quizzes' && item._id) {
-                    link.innerHTML = `<i class="fas fa-question-circle"></i><span>${item.title || 'Quiz'}</span>`;
-                    link.href = '#'; // Prevent default link behavior
+                    link.target = "_blank"; // <-- إضافة مهمة لفتح العارض في تبويب جديد
+                    link.innerHTML = `<i class="fas fa-book-open"></i><span>${item.title}</span>`;
+                } else if (contentType === 'quizzes') {
+                    link.innerHTML = `<i class="fas fa-question-circle"></i><span>${item.title}</span>`;
+                    link.href = '#'; 
                     link.addEventListener('click', (e) => {
-                        e.preventDefault(); // Prevent page jump
-                        startQuiz(item._id); // Start the quiz using its ID
+                        e.preventDefault();
+                        startQuiz(item._id);
                     });
-                } else {
-                     // Handle items with missing data or unknown types
-                     console.warn("Skipping item with missing data:", item);
-                     return; // Skip this item
                 }
                 contentListContainer.appendChild(link);
             });
         } else {
-            // Display message if no content is available
             contentListContainer.innerHTML = `<p>No ${contentType} available for this subject yet.</p>`;
         }
     }
@@ -1498,51 +1306,39 @@ function animateCarouselAssembly(year) {
 // 1. الدالة الجديدة لعرض قائمة الدروس
 async function showLessonListForSubject(subjectKey) {
     const subjectData = (subjectsDatabase[selectedYear] || []).find(s => s.key === subjectKey);
-    if (!subjectData) {
-         console.error(`Subject data not found for key: ${subjectKey}`);
-         return;
-    }
+    if (!subjectData) return;
 
     const contentTitle = document.getElementById('content-title');
     const contentListContainer = document.getElementById('content-list');
 
-    // Update title and show loading state on the generic content page first
     contentTitle.textContent = `${subjectData.name} Lessons`;
     contentListContainer.innerHTML = '<p>Loading lessons...</p>';
     showPage('#content-display-page'); 
 
     let lessons = [];
     try {
-        // Fetch subjects to get the ID
         const subjectsFromDB = await fetchSubjectsByYear(selectedYear);
         const subjectFromDB = subjectsFromDB.find(s => s.key === subjectKey);
-        
-        if (subjectFromDB && subjectFromDB._id) {
-            // Fetch lessons for the specific subject ID
+        if (subjectFromDB) {
             lessons = await fetchLessonsBySubject(subjectFromDB._id);
-        } else {
-             throw new Error(`Subject ID not found for key: ${subjectKey}`);
         }
     } catch (e) {
-        console.error("Error loading lessons:", e);
-        showNotification(`Could not load lessons. ${e.message}`, 'error');
-        contentListContainer.innerHTML = `<p>Error loading lessons.</p>`;
-        return; // Stop if loading fails
+        showNotification('Could not load lessons.', 'error');
+        contentListContainer.innerHTML = `<p>Error loading content.</p>`;
+        return;
     }
 
-    // Render the list of lessons
-    contentListContainer.innerHTML = ''; // Clear loading message
-    if (lessons && lessons.length > 0) {
+    contentListContainer.innerHTML = '';
+    if (lessons.length > 0) {
         lessons.forEach(lesson => {
             const link = document.createElement('a');
-            link.className = 'content-item'; // Use the same styling as other content items
-            link.href = '#'; // Prevent default navigation
-            link.innerHTML = `<i class="fas fa-folder-open"></i><span>${lesson.title || 'Lesson'}</span>`;
+            link.className = 'content-item';
+            link.href = '#';
+            link.innerHTML = `<i class="fas fa-folder-open"></i><span>${lesson.title}</span>`;
             
-            // Add click listener to show PDFs for this lesson
             link.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent page jump
-                showPdfsForLesson(lesson, subjectKey); // Pass subjectKey for back navigation
+                e.preventDefault();
+                showPdfsForLesson(lesson);
             });
 
             contentListContainer.appendChild(link);
@@ -1552,34 +1348,25 @@ async function showLessonListForSubject(subjectKey) {
     }
 }
 
-// 2. الدالة الجديدة لعرض ملفات PDF لدرس معين
-function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
+// 2. الدالة الجديدة لعرض ملفات PDF
+function showPdfsForLesson(lesson) {
     const pdfsTitle = document.getElementById('pdfs-lesson-title');
     const pdfsListContainer = document.getElementById('pdfs-list');
     
-    if(!pdfsTitle || !pdfsListContainer) {
-        console.error("PDF display elements not found.");
-        return;
-    }
-
-    pdfsTitle.textContent = lesson.title || 'Lesson PDFs'; // Set the title for the PDF list page
-    pdfsListContainer.innerHTML = ''; // Clear previous PDFs
+    pdfsTitle.textContent = lesson.title;
+    pdfsListContainer.innerHTML = '';
 
     if (lesson.filePaths && lesson.filePaths.length > 0) {
         lesson.filePaths.forEach(filePath => {
-            if (!filePath) return; // Skip empty file paths
-
             const link = document.createElement('a');
-            link.className = 'content-item'; // Use consistent styling
+            link.className = 'content-item';
             
-            // Generate the URL for the PDF viewer page
             const viewerUrl = `pdf-viewer.html?src=${encodeURIComponent(filePath)}`;
             link.href = viewerUrl;
-            link.target = "_blank"; // Open PDF viewer in a new tab
+            link.target = "_blank";
 
-            // Extract filename for display, remove .pdf extension
-            const fileName = filePath.split('/').pop().replace(/\.pdf$/i, ''); 
-            link.innerHTML = `<i class="fas fa-file-pdf"></i><span>${fileName || 'PDF Document'}</span>`;
+            const fileName = filePath.split('/').pop().replace('.pdf', '');
+            link.innerHTML = `<i class="fas fa-file-pdf"></i><span>${fileName}</span>`;
             
             pdfsListContainer.appendChild(link);
         });
@@ -1587,25 +1374,18 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
         pdfsListContainer.innerHTML = '<p>No PDF files found for this lesson.</p>';
     }
 
-    // Setup the back button to return to the lesson list (content-display-page)
-    const backToLessonsBtn = document.getElementById('back-to-lessons-btn');
-    if (backToLessonsBtn) {
-         // Re-attach listener to ensure it goes back to the correct lesson list
-         backToLessonsBtn.onclick = () => showLessonListForSubject(subjectKey); 
-    }
+    document.getElementById('back-to-lessons-btn').onclick = () => showPage('#content-display-page');
 
-    showPage('#pdfs-display-page'); // Navigate to the PDF list page
+    showPage('#pdfs-display-page');
 }
   // ===================================================================
     // === [النسخة النهائية] منطق الكويز الاحترافي ---
     // ===================================================================
-    let proQuiz = null; // Holds the current quiz data
-    let proQuestionIndex = 0; // Index of the currently displayed question
-    let proUserAnswers = []; // Array to store user answers { selectedIndexes: [], isCorrect: bool }
-    let quizTimerInterval = null; // Interval ID for the question timer
-    let quizStartTime = 0; // Timestamp when the quiz started
-    
-    // DOM Elements for Quiz UI
+    let proQuiz = null;
+    let proQuestionIndex = 0;
+    let proUserAnswers = [];
+    let quizTimerInterval = null;
+    let quizStartTime = 0;
     const quizQuestionNumbersContainer = document.getElementById('quiz-question-numbers-pro');
     const quizSubjectNameEl = document.getElementById('quiz-subject-name-pro');
     const quizLessonNameEl = document.getElementById('quiz-lesson-name-pro');
@@ -1613,18 +1393,14 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
     const quizTimerContainer = document.querySelector('.quiz-timer-pro');
     const quizProgressEl_pro = document.getElementById('quiz-progress-pro');
     const quizQuestionTextEl_pro = document.getElementById('quiz-question-text-pro');
-    const quizOptionsContainer_pro = document.getElementById('quiz-options-container-pro');    
-    const quizExplanationContainer = document.getElementById('quiz-explanation-container-pro');
+    const quizOptionsContainer_pro = document.getElementById('quiz-options-container-pro');    const quizExplanationContainer = document.getElementById('quiz-explanation-container-pro');
     const quizExplanationText = document.getElementById('quiz-explanation-text-pro');
     const quizPrevBtn = document.getElementById('quiz-prev-btn-pro');
-    const quizActionBtn = document.getElementById('quiz-action-btn-pro'); // Check Answer button
-    const quizNextBtn_pro = document.getElementById('quiz-next-btn-pro'); // Next/Finish button
-    const quizSkipBtn = document.getElementById('quiz-skip-btn-pro'); // ✅ Skip button
+    const quizActionBtn = document.getElementById('quiz-action-btn-pro');
+    const quizNextBtn_pro = document.getElementById('quiz-next-btn-pro');
     const quizCorrectCountEl = document.getElementById('quiz-correct-count-pro');
     const quizIncorrectCountEl = document.getElementById('quiz-incorrect-count-pro');
     const quizScoreEl = document.getElementById('quiz-score-pro');
-    const toggleQuizTimerBtn = document.getElementById('toggle-quiz-timer-btn'); // Timer toggle
-
 
     // =======================================================
     // START: MODIFIED submitQuizResults FUNCTION
@@ -1632,126 +1408,80 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
     // في ملف script.js
     // ✅ استبدل هذه الدالة بالكامل
     async function submitQuizResults() {
-        clearInterval(quizTimerInterval); // Stop the timer if running
-        quizTimerInterval = null;
-        const timeTakenInSeconds = Math.round((Date.now() - quizStartTime) / 1000);
+    clearInterval(quizTimerInterval);
+    const timeTakenInSeconds = Math.round((Date.now() - quizStartTime) / 1000);
 
-        // Filter out only the incorrectly answered questions for the payload
-        const incorrectQuestionsPayload = proUserAnswers.map((answer, index) => {
-            // Check if answer exists and is incorrect
-            if (answer && answer.isCorrect === false) { 
-                const questionData = proQuiz.questions[index];
-                // Ensure questionData exists before accessing properties
-                if (!questionData) return null; 
-                return {
-                    questionText: questionData.questionText || questionData.question,
-                    options: questionData.options || [],
-                    correctOptionIndexes: questionData.correctOptionIndexes || [],
-                    explanation: questionData.explanation || '',
-                    userSelectedIndexes: answer.selectedIndexes || [] // Use stored selected indexes
-                };
-            }
-            return null; // Return null for correct or unanswered questions
-        }).filter(q => q !== null); // Remove null entries
-
-        // Calculate correct count and score
-        const totalQuestions = proQuiz.questions.length;
-        // Count answers that are explicitly marked as correct
-        const correctCount = proUserAnswers.filter(a => a && a.isCorrect === true).length; 
-        const score = totalQuestions > 0 ? (correctCount / totalQuestions) * 20 : 0;
-
-        // Prepare payload for all user answers (answered questions only)
-        const allUserAnswersPayload = proUserAnswers.map((answer, index) => {
-            if (answer) { // Only include questions that have an answer object
-                return {
-                    questionIndex: index,
-                    selectedIndexes: answer.selectedIndexes || [] // Include selected indexes
-                };
-            }
-            return null;
-        }).filter(a => a !== null); // Filter out unanswered questions
-
-        // Construct the final result payload to send to the backend
-        const resultPayload = {
-            // Use quiz ID, handle different types (normal, AI, mistakes)
-            quizId: proQuiz._id || 'unknown-quiz', 
-            score: parseFloat(score.toFixed(2)),
-            timeTaken: timeTakenInSeconds,
-            correctAnswers: correctCount,
-            totalQuestions: totalQuestions,
-            incorrectQuestions: incorrectQuestionsPayload,
-             // Ensure subject ID exists before sending
-            subjectId: proQuiz.subject || null,
-            allUserAnswers: allUserAnswersPayload 
-        };
-
-        // Display the summary page immediately
-        showQuizSummaryPage(resultPayload, proQuiz.subject);
-        localStorage.removeItem('quizState'); // ✅ Clear saved quiz state after finishing
-
-        // Attempt to save results to backend if it's a standard quiz with a subject ID
-        if (proQuiz.subject && !proQuiz._id.startsWith('ai-generated-') && !proQuiz._id.startsWith('mistakes_')) {
-            try {
-                const savedResultWithXP = await fetchApi('/api/results', {
-                    method: 'POST',
-                    body: JSON.stringify(resultPayload)
-                });
-                
-                // Update XP display and show notifications based on response
-                if (savedResultWithXP && savedResultWithXP.totalXP != null) {
-                    document.getElementById('user-xp-display').textContent = `${savedResultWithXP.totalXP} XP`;
-                    showNotification(`+${savedResultWithXP.earnedXP || 0} XP earned!`, 'success');
-                     if (savedResultWithXP.newBadge) {
-                         showNewBadgePopup(savedResultWithXP.newBadge);
-                     }
-                }
-            } catch (error) {
-                 // Notify user about failure to save progress
-                showNotification(`Failed to save progress: ${error.message}`, 'error');
-                console.error("Error saving quiz results:", error);
-            }
-        } else {
-             // Notify if results weren't saved (AI quiz, mistakes quiz, or missing subject)
-             let reason = !proQuiz.subject ? 'quiz subject is missing' : 'it\'s an AI or mistakes review quiz';
-             showNotification(`Result displayed, but not saved (${reason}).`, 'info');
+    const incorrectQuestionsPayload = proUserAnswers.map((answer, index) => {
+        if (answer && !answer.isCorrect) {
+            const questionData = proQuiz.questions[index];
+            return {
+                questionText: questionData.questionText || questionData.question,
+                options: questionData.options,
+                correctOptionIndexes: questionData.correctOptionIndexes,
+                explanation: questionData.explanation,
+                userSelectedIndexes: answer.selectedIndexes
+            };
         }
+        return null;
+    }).filter(q => q !== null);
+
+    const correctCount = proQuiz.questions.length - incorrectQuestionsPayload.length;
+    const score = proQuiz.questions.length > 0 ? (correctCount / proQuiz.questions.length) * 20 : 0;
+
+    // ✨ إضافة جديدة: تجهيز جميع إجابات المستخدم لإرسالها
+    const allUserAnswersPayload = proUserAnswers.map((answer, index) => {
+        if (answer) {
+            return {
+                questionIndex: index,
+                selectedIndexes: answer.selectedIndexes
+            };
+        }
+        return null;
+    }).filter(a => a !== null);
+
+    const resultPayload = {
+        quizId: proQuiz._id,
+        score: parseFloat(score.toFixed(2)),
+        timeTaken: timeTakenInSeconds,
+        correctAnswers: correctCount,
+        totalQuestions: proQuiz.questions.length,
+        incorrectQuestions: incorrectQuestionsPayload,
+        subjectId: proQuiz.subject,
+        allUserAnswers: allUserAnswersPayload // <-- ✨ إرسال جميع الإجابات هنا
+    };
+
+    showQuizSummaryPage(resultPayload, proQuiz.subject);
+
+    if (!proQuiz.subject) {
+        showNotification('Result displayed, but could not be saved without a subject.', 'info');
+        return;
     }
 
+    try {
+        const savedResultWithXP = await fetchApi('/api/results', {
+            method: 'POST',
+            body: JSON.stringify(resultPayload)
+        });
+        document.getElementById('user-xp-display').textContent = `${savedResultWithXP.totalXP} XP`;
+        showNotification(`+${savedResultWithXP.earnedXP} XP earned!`, 'success');
+        if (savedResultWithXP.newBadge) showNewBadgePopup(savedResultWithXP.newBadge);
+    } catch (error) {
+        showNotification(`Failed to save progress: ${error.message}`, 'error');
+    }
+}
 
     // =======================================================
     // END: MODIFIED submitQuizResults FUNCTION
     // =======================================================
     
-    // --- دالة إظهار نافذة الوسام الجديد ---
     function showNewBadgePopup(badge) {
-        // Find elements and ensure they exist
-        const nameEl = document.getElementById('badge-popup-name');
-        const descEl = document.getElementById('badge-popup-desc');
-        const imgEl = document.getElementById('badge-popup-img'); // Get the image element too
+        document.getElementById('badge-popup-name').textContent = badge.name;
+        document.getElementById('badge-popup-desc').textContent = badge.description;
         const overlay = document.getElementById('badge-popup-overlay');
-        const closeBtn = document.getElementById('badge-popup-close');
-
-        if (!nameEl || !descEl || !imgEl || !overlay || !closeBtn || !badge) {
-            console.error("Badge popup elements or badge data missing.");
-            return;
-        }
-
-        // Populate popup content
-        nameEl.textContent = badge.name || 'New Badge!';
-        descEl.textContent = badge.description || 'You unlocked a new achievement!';
-        imgEl.src = badge.imageUrl || 'images/badge-default.png'; // Set image source
-        imgEl.alt = badge.name || 'Achievement Badge';
-
-        // Display the overlay
         overlay.classList.add('show');
-
-        // Add event listener to the close button (ensure it's added only once)
-        if (!closeBtn.dataset.listenerAttached) {
-             closeBtn.onclick = () => {
-                 overlay.classList.remove('show');
-             };
-             closeBtn.dataset.listenerAttached = 'true'; // Mark as attached
-        }
+        document.getElementById('badge-popup-close').onclick = () => {
+            overlay.classList.remove('show');
+        };
     }
     
     // =======================================================
@@ -1759,111 +1489,55 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
     // =======================================================
     // ✅ FIX 3.3: تعديل الدالة لاستقبال معرّف المادة
     function showQuizSummaryPage(resultData, subjectId) {
-        // Get summary elements
         const summaryScoreEl = document.getElementById('summary-score');
         const summaryCorrectAnswersEl = document.getElementById('summary-correct-answers');
         const summaryTimeTakenEl = document.getElementById('summary-time-taken');
-        const summaryBadgeImg = document.getElementById('summary-badge-img'); // Get badge image element
         
-        // Populate summary metrics
         if (summaryScoreEl) summaryScoreEl.textContent = `${(resultData.score || 0).toFixed(2)} / 20`;
         if (summaryCorrectAnswersEl) summaryCorrectAnswersEl.textContent = `${resultData.correctAnswers} / ${resultData.totalQuestions}`;
-        
-        // Format time taken
         const minutes = Math.floor(resultData.timeTaken / 60);
         const seconds = resultData.timeTaken % 60;
         if(summaryTimeTakenEl) summaryTimeTakenEl.textContent = `${minutes}m ${seconds}s`;
-
-        // Update badge based on score (example logic, adjust as needed)
-        if (summaryBadgeImg) {
-             let badgeSrc = 'images/badge-bronze.png'; // Default badge
-             if (resultData.score >= 18) badgeSrc = 'images/badge-gold.png';
-             else if (resultData.score >= 14) badgeSrc = 'images/badge-silver.png';
-             summaryBadgeImg.src = badgeSrc;
-             summaryBadgeImg.alt = badgeSrc.includes('gold') ? 'Gold Badge' : (badgeSrc.includes('silver') ? 'Silver Badge' : 'Bronze Badge');
-        }
     
-        // Display incorrect questions review section
         const incorrectQuestionsContainer = document.getElementById('incorrect-questions-summary');
         // ✅ FIX 3.4: تمرير معرّف المادة لعرض الأسئلة
-        if (incorrectQuestionsContainer) { // Check if container exists
-             displayReviewQuestions(incorrectQuestionsContainer, resultData.incorrectQuestions, subjectId);
-        }
+        displayReviewQuestions(incorrectQuestionsContainer, resultData.incorrectQuestions, subjectId);
         
-        // Display correct questions review section
         const correctQuestionsContainer = document.getElementById('correct-questions-summary');
-        if (correctQuestionsContainer && proQuiz && proQuiz.questions) { // Check if container and quiz data exist
-            // Filter questions that were answered correctly
+        if (correctQuestionsContainer) {
             const correctQuestions = proQuiz.questions.filter((q, index) => {
                 const answer = proUserAnswers[index];
-                return answer && answer.isCorrect === true; // Check for explicit true
-            }).map((q, index) => { 
-                 // Map to include user's answer (which is the correct one)
-                 const originalIndex = proQuiz.questions.findIndex(origQ => origQ === q); // Find original index if needed
-                 const answer = proUserAnswers[originalIndex];
-                 return { ...q, userSelectedIndexes: answer ? answer.selectedIndexes : [] }; 
-             });
+                return answer && answer.isCorrect;
+            });
             // ✅ FIX 3.4: تمرير معرّف المادة لعرض الأسئلة
-            displayReviewQuestions(correctQuestionsContainer, correctQuestions, subjectId, true); // Pass true for correct questions
+            displayReviewQuestions(correctQuestionsContainer, correctQuestions, subjectId);
         }
     
-        // Setup action buttons on the summary page
-        const backBtn = document.getElementById('back-to-subjects-from-summary-btn');
-        const retryBtn = document.getElementById('retry-quiz-btn');
+        document.getElementById('back-to-subjects-from-summary-btn').onclick = () => showPage('#subjects-page');
+        document.getElementById('retry-quiz-btn').onclick = () => {
+            if (proQuiz._id.startsWith('ai-generated-')) {
+                showNotification("Cannot retry an AI-generated quiz directly. Please generate a new one.", "info");
+            } else {
+                startQuiz(proQuiz._id);
+            }
+        };
+
         const exportBtn = document.getElementById('export-summary-pdf-btn');
-        const saveQuizBtnSummary = document.getElementById('save-quiz-btn'); // Save button on summary
-
-        if (backBtn) backBtn.onclick = () => showPage('#subjects-page');
-        if (retryBtn) {
-            retryBtn.onclick = () => {
-                if (proQuiz && proQuiz._id && !proQuiz._id.startsWith('ai-generated-') && !proQuiz._id.startsWith('mistakes_')) {
-                    startQuiz(proQuiz._id); // Allow retry only for standard quizzes
-                } else {
-                    showNotification("Cannot retry this type of quiz directly. Please generate a new one or review mistakes again.", "info");
-                }
-            };
-            // Disable retry for AI/Mistakes quizzes
-            retryBtn.disabled = !proQuiz || proQuiz._id.startsWith('ai-generated-') || proQuiz._id.startsWith('mistakes_');
-        }
-
         if (exportBtn) {
-             // Ensure listener is attached only once
-             if (!exportBtn.dataset.listenerAttached) {
-                 exportBtn.onclick = () => {
-                     showNotification('Generating PDF, please wait...', 'info');
-                     // Use setTimeout to allow UI update before potentially blocking PDF generation
-                     setTimeout(() => {
-                         try {
-                             if (proQuiz) {
-                                  generateQuizSummaryPDF(resultData, proQuiz.title || 'Quiz Summary');
-                             } else {
-                                  showNotification('Cannot generate PDF. Quiz data is missing.', 'error');
-                             }
-                         } catch (error) {
-                             console.error("PDF Generation Error:", error);
-                             showNotification('An error occurred while creating the PDF.', 'error');
-                         }
-                     }, 50); // Short delay
-                 };
-                 exportBtn.dataset.listenerAttached = 'true';
-             }
-        }
-
-        // Show/Hide Save Quiz button based on quiz type
-        if (saveQuizBtnSummary) {
-             if (proQuiz && proQuiz._id.startsWith('ai-generated-')) {
-                  saveQuizBtnSummary.style.display = 'block'; // Show for AI quizzes
-                  // Ensure listener is attached
-                  if (!saveQuizBtnSummary.dataset.listenerAttached) {
-                      attachSaveQuizListener(saveQuizBtnSummary);
-                      saveQuizBtnSummary.dataset.listenerAttached = 'true';
-                  }
-             } else {
-                  saveQuizBtnSummary.style.display = 'none'; // Hide for non-AI quizzes
-             }
+            exportBtn.onclick = () => {
+                showNotification('Generating PDF, please wait...', 'info');
+                setTimeout(() => {
+                    try {
+                        generateQuizSummaryPDF(resultData, proQuiz.title);
+                    } catch (error) {
+                        console.error("PDF Generation Error:", error);
+                        showNotification('An error occurred while creating the PDF.', 'error');
+                    }
+                }, 50);
+            };
         }
         
-        showPage('#quiz-summary-page'); // Navigate to the summary page
+        showPage('#quiz-summary-page');
     }
     // =======================================================
     // END: MODIFIED showQuizSummaryPage FUNCTION
@@ -1874,691 +1548,421 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
     // =======================================================
     // في ملف script.js
     // ✅ استبدل هذه الدالة بالكامل
-    function displayReviewQuestions(container, questions, subjectId, isCorrectSection = false) {
-        if (!container) return; // Exit if container doesn't exist
-        container.innerHTML = ''; // Clear previous content
-        
+    function displayReviewQuestions(container, questions, subjectId) {
+        container.innerHTML = '';
         if (!questions || questions.length === 0) {
-            const message = isCorrectSection ? 'You answered all questions incorrectly.' : 'No mistakes here. Well done!';
-            container.innerHTML = `<p>${message}</p>`;
+            container.innerHTML = '<p>No questions to display in this section.</p>';
             return;
         }
 
-        questions.forEach((q, index) => {
-            // Basic validation for question object
-            if (!q || !q.options || !q.correctOptionIndexes) {
-                console.warn(`Skipping invalid question object at index ${index}:`, q);
-                return; 
-            }
-
+        questions.forEach(q => {
             const questionDiv = document.createElement('div');
-            questionDiv.className = `review-q-summary ${isCorrectSection ? 'correct-q-summary' : 'incorrect-q-summary'}`;
+            questionDiv.className = 'review-q-summary incorrect-q-summary';
 
-            // Ensure options and indexes are valid before mapping
-            const correctAnswersText = Array.isArray(q.correctOptionIndexes) 
-                ? q.correctOptionIndexes.map(i => q.options[i] || `[Option ${i+1}]`).join(', ') 
-                : `[Invalid Correct Index: ${q.correctOptionIndexes}]`;
-                
-            const userAnswersText = (q.userSelectedIndexes && Array.isArray(q.userSelectedIndexes) && q.userSelectedIndexes.length > 0)
-                ? q.userSelectedIndexes.map(i => q.options[i] || `[Option ${i+1}]`).join(', ')
-                : (isCorrectSection ? correctAnswersText : "No answer / Skipped"); // Show correct if in correct section
+            // --- ✨ الإصلاح هنا ---
+            // 1. عرض نص الإجابة الكامل بدلاً من الحرف فقط
+            const correctAnswersText = q.correctOptionIndexes.map(i => q.options[i]).join(', ');
+            const userAnswersText = (q.userSelectedIndexes && q.userSelectedIndexes.length > 0)
+                ? q.userSelectedIndexes.map(i => q.options[i]).join(', ')
+                : "No answer";
 
-            // Build HTML for question details
-            let detailsHtml = '';
-            if (!isCorrectSection) { // Only show User Answer vs Correct Answer in the mistakes section
-                 detailsHtml = `<p><em>Your Answer:</em> <span class="user-answer">${userAnswersText}</span></p>
-                                <p><em>Correct Answer:</em> <span class="correct-answer">${correctAnswersText}</span></p>`;
-            } else { // In the correct section, just show the answer
-                 detailsHtml = `<p><em>Answer:</em> <span class="correct-answer">${correctAnswersText}</span></p>`;
-            }
+            let detailsHtml = `<p><em>Your Answer:</em> <span class="user-answer">${userAnswersText}</span></p>
+                            <p><em>Correct Answer:</em> <span class="correct-answer">${correctAnswersText}</span></p>`;
+            // --- نهاية الإصلاح ---
 
-            const questionText = q.questionText || q.question || `Question ${index + 1}`; // Fallback text
-
-            // Construct the inner HTML for the question review item
-            questionDiv.innerHTML = `
-                <div class="review-q-text">
-                    <p><strong>Q:</strong> ${questionText}</p>
-                    ${detailsHtml}
-                </div>
-                <div class="review-q-actions">
-                    <button class="action-btn save-flashcard-btn" title="Save as Flashcard">
-                        <i class="fas fa-plus-square"></i>
-                    </button>
-                </div>`;
+            const questionText = q.questionText || q.question;
+            questionDiv.innerHTML = `<div class="review-q-text">
+                                        <p><strong>Q:</strong> ${questionText}</p>
+                                        ${detailsHtml}
+                                    </div>
+                                    <div class="review-q-actions">
+                                        <button class="action-btn save-flashcard-btn" title="Save as Flashcard">
+                                            <i class="fas fa-plus-square"></i>
+                                        </button>
+                                    </div>`;
             container.appendChild(questionDiv);
 
-            // --- Flashcard Saving Logic ---
             const saveBtn = questionDiv.querySelector('.save-flashcard-btn');
-            if (saveBtn) {
-                 // Prepare content for the back of the flashcard
-                 const backContent = `Correct Answer(s): ${correctAnswersText}\n\nExplanation: ${q.explanation || 'No explanation provided.'}`;
-                
-                 saveBtn.onclick = async () => { // Make onclick async
-                    if (!subjectId) {
-                        showNotification('Cannot save flashcard without a subject context.', 'error');
-                        return;
-                    }
-                    saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>'; // Show loading state
-                    saveBtn.disabled = true;
+            const backContent = `Correct Answer(s): ${correctAnswersText}\n\nExplanation: ${q.explanation || 'No explanation provided.'}`;
+            
+            saveBtn.onclick = () => {
+                if (!subjectId) {
+                    showNotification('Cannot save flashcard without a subject context.', 'error');
+                    return;
+                }
+                saveBtn.innerHTML = '<i class="fas fa-check-square"></i>';
+                saveBtn.disabled = true;
 
-                    try {
-                         // Call API to create flashcard
-                         await createFlashcardAPI({
-                             subjectId,
-                             questionText: questionText,   // Use the displayed question text
-                             backContent: backContent,     // Use the prepared back content
-                         });
-                         // Update button state on success
-                         saveBtn.innerHTML = '<i class="fas fa-check-square"></i>'; // Show success
-                         showNotification('Flashcard saved!', 'success');
-                         // Keep button disabled after successful save to prevent duplicates
-                    } catch (error) {
-                         // Re-enable button on failure to allow retry
-                         saveBtn.innerHTML = '<i class="fas fa-plus-square"></i>'; 
-                         saveBtn.disabled = false;
-                         console.error("Error saving flashcard:", error);
-                         // Show error notification (createFlashcardAPI already shows one)
-                    }
-                };
-            }
+                // --- ✨ الإصلاح هنا ---
+                // 2. استخدام أسماء الحقول الصحيحة التي يتوقعها الخادم
+                createFlashcardAPI({
+                    subjectId,
+                    questionText: questionText,   // <-- FIX: use questionText
+                    backContent: backContent,     // <-- FIX: use backContent
+                });
+                // --- نهاية الإصلاح ---
+            };
         });
     }
     // =======================================================
     // END: MODIFIED displayReviewQuestions FUNCTION
     // =======================================================
 
-    // --- دالة إنشاء بطاقة مراجعة عبر API ---
     async function createFlashcardAPI(flashcardData) {
         try {
-            // Use fetchApi helper which handles errors and notifications
+            // استخدام الدالة المساعدة لإجراء الطلب
             const data = await fetchApi('/api/flashcards', {
                 method: 'POST',
                 body: JSON.stringify(flashcardData)
             });
-            // No need for success notification here, handled by the caller (displayReviewQuestions)
-            return data; // Return data if needed by caller
+            showNotification('Flashcard saved!', 'success');
         } catch (error) {
-            // fetchApi should have shown a notification for API errors (like 400, 500)
-            // If fetchApi itself failed (network error), show a notification
-            if (error.message.includes('Failed to fetch')) {
-                 showNotification('Network error: Could not save flashcard.', 'error');
-            } else {
-                 // For errors thrown by fetchApi (like bad request), let the caller know
-                 showNotification(`Error: ${error.message}`, 'error');
-            }
-            throw error; // Re-throw error so the caller knows it failed
+            showNotification(error.message, 'error');
         }
     }
     
-    // --- دالة إنشاء ملخص PDF للكويز ---
     function generateQuizSummaryPDF(resultData, quizTitle) {
-        // Check if jsPDF library is loaded
-        if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
-            showNotification('PDF library (jsPDF) not loaded. Cannot generate PDF.', 'error');
-            console.error("jsPDF library is missing.");
+        if (typeof window.jspdf === 'undefined') {
+            showNotification('PDF library not loaded. Please try again.', 'error');
             return;
         }
 
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
-        
-        // --- Document Setup ---
         const pageHeight = doc.internal.pageSize.height;
         const pageWidth = doc.internal.pageSize.width;
         const margin = 15;
-        let y = margin; // Current Y position on the page
-        const lineHeight = 7; // Approximate height for a line of text
-        const titleFontSize = 20;
-        const headingFontSize = 16;
-        const textFontSize = 12;
-        const smallFontSize = 10;
+        let y = margin;
 
-        // Helper function to add new page if needed
         const addPageIfNeeded = (requiredHeight) => {
             if (y + requiredHeight > pageHeight - margin) {
                 doc.addPage();
-                y = margin; // Reset Y position for the new page
+                y = margin;
             }
         };
 
-        // --- Header ---
-        addPageIfNeeded(titleFontSize + 8 + 10 + 15); // Title + Subtitle + Line + Spacing
-        doc.setFontSize(titleFontSize);
+        doc.setFontSize(20);
         doc.setFont("helvetica", "bold");
         doc.text("Dentist - Quiz Summary", pageWidth / 2, y, { align: "center" });
         y += 8;
-        doc.setFontSize(headingFontSize - 2); // Slightly smaller for subtitle
+        doc.setFontSize(14);
         doc.setFont("helvetica", "normal");
-        doc.text(quizTitle || 'Quiz Results', pageWidth / 2, y, { align: "center" });
+        doc.text(quizTitle, pageWidth / 2, y, { align: "center" });
         y += 10;
         doc.setLineWidth(0.5);
-        doc.line(margin, y, pageWidth - margin, y); // Separator line
+        doc.line(margin, y, pageWidth - margin, y);
         y += 15;
 
-        // --- Summary Metrics ---
-        addPageIfNeeded((lineHeight * 2) + 10 + 15); // Metrics + Line + Spacing
-        doc.setFontSize(textFontSize);
-        doc.setFont("helvetica", "normal");
-        doc.text(`Final Score: ${(resultData.score || 0).toFixed(2)} / 20`, margin, y);
-        // Format time
+        doc.setFontSize(12);
+        doc.text(`Final Score: ${resultData.score.toFixed(2)} / 20`, margin, y);
         const minutes = Math.floor(resultData.timeTaken / 60);
         const seconds = resultData.timeTaken % 60;
         doc.text(`Time Taken: ${minutes}m ${seconds}s`, pageWidth - margin, y, { align: "right" });
-        y += lineHeight;
+        y += 8;
         doc.text(`Correct Answers: ${resultData.correctAnswers} / ${resultData.totalQuestions}`, margin, y);
         y += 10;
-        doc.line(margin, y, pageWidth - margin, y); // Separator line
+        doc.line(margin, y, pageWidth - margin, y);
         y += 15;
 
-        // --- Mistake Review Section ---
-        addPageIfNeeded(headingFontSize + 10); // Heading + Spacing
-        doc.setFontSize(headingFontSize);
+        doc.setFontSize(16);
         doc.setFont("helvetica", "bold");
         doc.text("Mistake Review Section", margin, y);
         y += 10;
 
-        doc.setFontSize(textFontSize);
-        doc.setFont("helvetica", "normal");
-
-        if (!resultData.incorrectQuestions || resultData.incorrectQuestions.length === 0) {
-            addPageIfNeeded(lineHeight);
-            doc.text("Excellent work! You made no mistakes in this quiz.", margin, y);
-            y += lineHeight; // Add some space even if no mistakes
+        if (resultData.incorrectQuestions.length === 0) {
+            doc.setFontSize(12);
+            doc.setFont("helvetica", "normal");
+            doc.text("Excellent work! You made no mistakes.", margin, y);
         } else {
             resultData.incorrectQuestions.forEach((q, index) => {
-                 // Basic validation
-                 if (!q || !q.options || !q.correctOptionIndexes) return;
-
-                const questionText = q.questionText || `Question ${index + 1}`;
-                const userAnswersText = (q.userSelectedIndexes && q.userSelectedIndexes.length > 0)
-                    ? q.userSelectedIndexes.map(i => q.options[i] || `Opt ${i+1}`).join(', ') 
-                    : "No answer / Skipped";
-                const correctAnswersText = q.correctOptionIndexes.map(i => q.options[i] || `Opt ${i+1}`).join(', ');
-                const explanation = q.explanation || 'No explanation provided.';
-
-                // Estimate required height
-                const questionLines = doc.splitTextToSize(`Q${index + 1}: ${questionText}`, pageWidth - (margin * 2));
-                const explanationLines = doc.splitTextToSize(`Explanation: ${explanation}`, pageWidth - (margin * 2) - 5); // Indented slightly
-                const requiredHeight = (questionLines.length * lineHeight * 0.8) + (lineHeight * 2) + (explanationLines.length * lineHeight * 0.8) + 15; // Estimate height
-
+                // ✅ FIX 2: استخدام 'questionText' بدلاً من 'question' هنا أيضاً
+                const questionLines = doc.splitTextToSize(`Q${index + 1}: ${q.questionText}`, pageWidth - (margin * 2));
+                const requiredHeight = (questionLines.length * 5) + 35;
                 addPageIfNeeded(requiredHeight);
 
-                // Print Question
+                doc.setFontSize(12);
                 doc.setFont("helvetica", "bold");
                 doc.text(questionLines, margin, y);
-                y += questionLines.length * lineHeight * 0.8 + 5; // Adjust spacing
+                y += questionLines.length * 5 + 5;
 
-                // Print User Answer (Red)
                 doc.setFont("helvetica", "normal");
-                doc.setTextColor(200, 0, 0); // Red color
-                doc.text(`- Your Answer: ${userAnswersText}`, margin + 5, y);
-                y += lineHeight;
-
-                // Print Correct Answer (Green)
-                doc.setTextColor(34, 139, 34); // ForestGreen color
-                doc.text(`- Correct Answer: ${correctAnswersText}`, margin + 5, y);
-                y += lineHeight;
                 
-                // Print Explanation (Black, Italic)
-                doc.setTextColor(0, 0, 0); // Reset to black
-                doc.setFont("helvetica", "italic");
-                doc.setFontSize(smallFontSize); // Smaller font for explanation
-                doc.text(explanationLines, margin + 5, y);
-                y += explanationLines.length * lineHeight * 0.8 + 5; // Adjust spacing
-                doc.setFontSize(textFontSize); // Reset font size
-                doc.setFont("helvetica", "normal"); // Reset font style
+                doc.setTextColor(200, 0, 0); // Red
+                const userAnswersText = q.userSelectedIndexes.map(i => q.options[i]).join(', ') || "No answer";
+                doc.text(`- Your Answer: ${userAnswersText}`, margin + 5, y);
+                y += 7;
 
-                y += 5; // Extra space between questions
+                doc.setTextColor(34, 139, 34); // ForestGreen
+                const correctAnswersText = q.correctOptionIndexes.map(i => q.options[i]).join(', ');
+                doc.text(`- Correct Answer: ${correctAnswersText}`, margin + 5, y);
+                y += 7;
+                
+                doc.setTextColor(0, 0, 0); // Black
+                if (q.explanation) {
+                    doc.setFont("helvetica", "italic");
+                    const explanationLines = doc.splitTextToSize(`Explanation: ${q.explanation}`, pageWidth - (margin * 2) - 5);
+                    doc.text(explanationLines, margin + 5, y);
+                    y += explanationLines.length * 5 + 5;
+                }
+                y += 5;
             });
         }
 
-        // --- Save the PDF ---
-        try {
-            const date = new Date().toISOString().slice(0, 10);
-            // Sanitize title for filename
-            const safeTitle = (quizTitle || 'Quiz').replace(/[^a-z0-9]/gi, '_').toLowerCase(); 
-            doc.save(`Dentist-${safeTitle}-${date}.pdf`);
-            showNotification('PDF summary has been downloaded!', 'success');
-        } catch (error) {
-             console.error("Error saving PDF:", error);
-             showNotification('Failed to save the PDF summary.', 'error');
-        }
+        const date = new Date().toISOString().slice(0, 10);
+        doc.save(`Dentist-${quizTitle.replace(/\s/g, '-')}-${date}.pdf`);
+        showNotification('PDF summary has been downloaded!', 'success');
     }
-    
-    // --- دالة بدء كويز جديد ---
+
     async function startQuiz(quizId) {
-        // Clear any previous quiz state first
-        localStorage.removeItem('quizState'); 
-        proQuiz = null;
-        proQuestionIndex = 0;
-        proUserAnswers = [];
-        quizStartTime = 0;
-        clearInterval(quizTimerInterval);
-        quizTimerInterval = null;
-
-        showNotification('Loading quiz...', 'info'); // Loading indicator
-
         try {
-            // Use fetchApi to get quiz data
-            const quizData = await fetchApi(`/api/content/quiz/${quizId}`);
+            const token = localStorage.getItem('userToken');
+            const res = await fetch(`https://dental-app-he1p.onrender.com/api/content/quiz/${quizId}`, { headers: { 'Authorization': `Bearer ${token}` } });
+            if (!res.ok) throw new Error('Failed to load quiz data.');
             
-            if (!quizData || !quizData.questions || quizData.questions.length === 0) {
-                showNotification('This quiz has no questions or failed to load.', 'error');
-                return; // Stop if quiz data is invalid
+            proQuiz = await res.json();
+            if (!proQuiz || !proQuiz.questions || proQuiz.questions.length === 0) {
+                showNotification('This quiz has no questions yet.', 'error');
+                return;
             }
 
-             // Initialize and start the quiz with the fetched data
-             initializeAndStartQuiz(quizData);
+            proQuestionIndex = 0;
+            proUserAnswers = new Array(proQuiz.questions.length).fill(null);
+            quizStartTime = Date.now();
+            quizLessonNameEl.textContent = proQuiz.title;
 
+            renderQuestionList();
+            renderCurrentQuestion();
+            updateStats();
+            
+            showPage('#quiz-taking-page');
         } catch (error) {
-            showNotification(`Error loading quiz: ${error.message}`, 'error');
-            console.error('Failed to start quiz:', error);
-            // Optionally, navigate back or show an error message on the page
-             showPage('#subjects-page'); // Example: Go back to subjects on error
+            showNotification(error.message, 'error');
         }
     }
 
-    // ✅ --- دالة جديدة لتهيئة وبدء الكويز (لتجنب التكرار) ---
-    function initializeAndStartQuiz(quizData) {
-        proQuiz = quizData; // Store the quiz data
-        proQuestionIndex = 0; // Start at the first question
-        proUserAnswers = new Array(proQuiz.questions.length).fill(null); // Reset answers array
-        quizStartTime = Date.now(); // Record start time
-
-        // Update UI elements with quiz title and subject name
-        if(quizLessonNameEl) quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
-        if(quizSubjectNameEl) quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Use subjectName if available
-
-        // Render the UI components for the quiz
-        renderQuestionList(); // Build the question number navigation
-        renderCurrentQuestion(); // Display the first question
-        updateStats(); // Initialize the stats display (0 correct, 0 incorrect)
-        
-        // Save initial state immediately (in case of immediate refresh)
-        saveQuizState(); 
-        
-        showPage('#quiz-taking-page'); // Navigate to the quiz taking page
-    }
-
-    // ✅ --- دالة جديدة لحفظ حالة الكويز في localStorage ---
-    function saveQuizState() {
-        if (proQuiz && proUserAnswers) { // Only save if a quiz is active
-            const stateToSave = {
-                savedProQuiz: proQuiz,
-                savedProQuestionIndex: proQuestionIndex,
-                savedProUserAnswers: proUserAnswers,
-                savedQuizStartTime: quizStartTime // Save start time too
-            };
-            localStorage.setItem('quizState', JSON.stringify(stateToSave));
-            // console.log("Quiz state saved at index:", proQuestionIndex); // For debugging
-        }
-    }
-
-    // --- دالة عرض قائمة أرقام الأسئلة ---
     function renderQuestionList() {
-        if (!quizQuestionNumbersContainer || !proQuiz || !proQuiz.questions) return; // Safety check
-
-        quizQuestionNumbersContainer.innerHTML = ''; // Clear previous numbers
-        
+        quizQuestionNumbersContainer.innerHTML = '';
         proQuiz.questions.forEach((_, index) => {
             const numEl = document.createElement('div');
             numEl.className = 'question-number-pro';
             numEl.textContent = index + 1;
-            numEl.dataset.index = index; // Store index for navigation
-
-            // Highlight the current question
-            if (index === proQuestionIndex) {
-                 numEl.classList.add('current');
-            }
+            numEl.dataset.index = index;
+            if (index === proQuestionIndex) numEl.classList.add('current');
             
-            // Style based on answer status
             const answer = proUserAnswers[index];
-            if (answer !== null) { // Check if answered (could be correct or incorrect)
-                 numEl.classList.add('answered');
-                 if (answer.isCorrect === true) {
-                     numEl.classList.add('correct');
-                 } else if (answer.isCorrect === false) {
-                     numEl.classList.add('incorrect');
-                 }
-                 // Add a style for skipped/unanswered if needed
+            if (answer !== null) {
+                numEl.classList.add('answered', answer.isCorrect ? 'correct' : 'incorrect');
             }
 
-            // Add click listener to navigate to the question
             numEl.addEventListener('click', () => {
-                proQuestionIndex = index; // Update current index
-                renderCurrentQuestion(); // Re-render the clicked question
-                // No need to save state here, renderCurrentQuestion handles controls which might trigger save
+                proQuestionIndex = index;
+                renderCurrentQuestion();
             });
             quizQuestionNumbersContainer.appendChild(numEl);
         });
     }
 
-// --- دالة عرض السؤال الحالي ---
 function renderCurrentQuestion() {
-    // Stop any existing timer for the previous question
     clearInterval(quizTimerInterval);
-    quizTimerInterval = null; 
+    const question = proQuiz.questions[proQuestionIndex];
 
-    // Ensure quiz data and current question exist
-    if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) {
-        console.error("Quiz data or current question is missing. Index:", proQuestionIndex);
-        if (quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = "Error: Could not load question data.";
-        if (quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
-        updateQuizControls(); // Update controls to reflect error state if possible
+    if (!question) {
+        console.error("Could not find question at index:", proQuestionIndex);
+        quizQuestionTextEl_pro.textContent = "Error: Could not load question.";
         return;
     }
 
-    const question = proQuiz.questions[proQuestionIndex];
-
-    // --- Safely extract question data with fallbacks ---
-    const questionText = question.questionText || question.question || `Question ${proQuestionIndex + 1}`;
-    // Handle various ways correct answers might be stored
+    const questionText = question.questionText || question.question;
     const correctIndexesRaw = question.correctOptionIndexes ?? question.correctIndex ?? question.answer ?? question.answerIndex;
-    let correctIndexes = [];
-    if (correctIndexesRaw !== undefined && correctIndexesRaw !== null) {
-         correctIndexes = Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw];
-    } else {
-         console.warn("Correct answer index missing for question:", proQuestionIndex, question);
-         // Decide how to handle missing answers (e.g., skip, mark as unanswerable)
-    }
-    const options = question.options || [];
-    const explanation = question.explanation || question.Explanation || ''; // Handle both possible keys
+    const correctIndexes = Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw];
 
-    // Basic check for essential data
-    if (options.length === 0 || correctIndexesRaw === undefined) {
-        console.error("Incomplete question data (options or correct index missing):", proQuestionIndex, question);
-        if(quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = "Error: Question data is incomplete. Please skip or report.";
-        if(quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
+    if (!question.options || !questionText || correctIndexesRaw === undefined) {
+        console.error("Malformed or incomplete question object at index:", proQuestionIndex, question);
+        quizQuestionTextEl_pro.textContent = "Error: Question data is incomplete. Please skip.";
+        if (quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
         updateQuizControls();
         return;
     }
 
-    // --- Update UI Elements ---
     const isAnswered = proUserAnswers[proQuestionIndex] !== null;
-    const optionLabels = ['A', 'B', 'C', 'D', 'E', 'F']; // Labels for options
+    const optionLabels = ['A', 'B', 'C', 'D', 'E', 'F'];
     const isMultipleChoice = correctIndexes.length > 1;
 
-    // Update progress text
-    if (quizProgressEl_pro) quizProgressEl_pro.textContent = `Question ${proQuestionIndex + 1} of ${proQuiz.questions.length}`;
-    // Update question text
-    if (quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = questionText;
-    
-    // Clear previous options and explanation
-    if (quizOptionsContainer_pro) {
-         quizOptionsContainer_pro.innerHTML = '';
-         // Set class for single/multiple choice styling
-         quizOptionsContainer_pro.className = 'quiz-options-container-pro ' + (isMultipleChoice ? 'multiple-choice' : 'single-choice');
-    }
-    if (quizExplanationContainer) quizExplanationContainer.style.display = 'none'; // Hide explanation initially
+    quizOptionsContainer_pro.className = 'quiz-options-container-pro ' + (isMultipleChoice ? 'multiple-choice' : 'single-choice');
+    quizProgressEl_pro.textContent = `Question ${proQuestionIndex + 1} of ${proQuiz.questions.length}`;
+    quizQuestionTextEl_pro.textContent = questionText;
+    quizOptionsContainer_pro.innerHTML = '';
+    quizExplanationContainer.style.display = 'none';
 
-    // Remove any previous image
-     if (quizQuestionTextEl_pro) {
-         const parentArea = quizQuestionTextEl_pro.parentElement;
-         const oldImageContainer = parentArea?.querySelector('.quiz-image-display');
-         if (oldImageContainer) { oldImageContainer.remove(); }
-     }
+    const parentArea = quizQuestionTextEl_pro.parentElement;
+    const oldImageContainer = parentArea.querySelector('.quiz-image-display');
+    if (oldImageContainer) { oldImageContainer.remove(); }
 
-    // Display image if available
-    if (question.imageUrl && quizQuestionTextEl_pro) {
+    if (question.imageUrl) {
         const imgContainer = document.createElement('div');
         imgContainer.className = 'quiz-image-display';
-        const serverUrl = 'https://dental-app-he1p.onrender.com'; // Define server URL if needed
-        // Ensure the URL is absolute if filePath doesn't include the domain
-        const imageUrl = question.imageUrl.startsWith('http') ? question.imageUrl : `${serverUrl}${question.imageUrl}`;
-        imgContainer.innerHTML = `<img src="${imageUrl}" alt="Question Illustration">`;
-        // Insert image after the question text
-        quizQuestionTextEl_pro.after(imgContainer); 
+        const serverUrl = 'https://dental-app-he1p.onrender.com';
+        imgContainer.innerHTML = `<img src="${serverUrl}${question.imageUrl}" alt="Question Illustration">`;
+        quizQuestionTextEl_pro.after(imgContainer);
     }
 
-    // --- Render Options ---
-    options.forEach((optionText, index) => {
-        if (!quizOptionsContainer_pro) return; // Exit if container removed unexpectedly
-
+    question.options.forEach((optionText, index) => {
         const optionEl = document.createElement('button');
         optionEl.className = 'quiz-option-pro';
-        optionEl.dataset.index = index; // Store option index
-        optionEl.disabled = isAnswered; // Disable if already answered
 
-        // --- Option Stats Display Logic ---
+        // --- ✨ منطق عرض الإحصائيات الجديد ---
         let statsHtml = '';
-        // Show stats only if answered AND stats data exists
+        // نعرض الإحصائيات فقط إذا تمت الإجابة على السؤال وكان هناك بيانات إحصائية
         if (isAnswered && question.stats && question.stats.totalAnswers > 0 && question.stats.optionSelectionCounts) {
             const count = question.stats.optionSelectionCounts[index] || 0;
             const total = question.stats.totalAnswers;
             const percentage = Math.round((count / total) * 100);
             
-            // Background bar for percentage
+            // شريط التقدم الذي يمثل النسبة
             statsHtml = `
                 <div class="option-stats-bar" style="width: ${percentage}%;"></div>
                 <span class="option-stats-text">${percentage}%</span>
             `;
         }
 
-        // Option Structure (Prefix, Text, Stats)
         optionEl.innerHTML = `
             <div class="quiz-option-prefix"><span class="quiz-option-label">${optionLabels[index] || ''}</span></div>
-            <div class="quiz-option-text">${optionText || `Option ${index + 1}`}</div>
+            <div class="quiz-option-text">${optionText}</div>
             ${statsHtml} 
-        `;
+        `; // <-- إضافة وسم الإحصائيات هنا
 
-        // Add event listeners only if the question is NOT answered
+        optionEl.dataset.index = index;
+        optionEl.disabled = isAnswered;
+
         if (!isAnswered) {
             if (isMultipleChoice) {
-                // Toggle selection for multiple choice
-                optionEl.addEventListener('click', () => toggleOption(index)); 
+                optionEl.addEventListener('click', () => toggleOption(index));
             } else {
-                // Select single option for single choice
-                optionEl.addEventListener('click', () => selectOption(index)); 
+                optionEl.addEventListener('click', () => selectOption(index));
             }
-        } 
-        // Apply styling if the question IS answered
-        else {
+        } else {
             const answerData = proUserAnswers[proQuestionIndex];
-            const selectedIndexes = answerData?.selectedIndexes || [];
-
-            // Mark correct options
-            if (correctIndexes.includes(index)) {
-                 optionEl.classList.add('correct');
-            }
-            // Mark selected options
-            if (selectedIndexes.includes(index)) {
+            if (correctIndexes.includes(index)) optionEl.classList.add('correct');
+            if (answerData.selectedIndexes.includes(index)) {
                 optionEl.classList.add('selected');
-                // Mark incorrect if selected but not correct
-                if (!correctIndexes.includes(index)) {
-                     optionEl.classList.add('incorrect');
-                }
+                if (!correctIndexes.includes(index)) optionEl.classList.add('incorrect');
             }
         }
         quizOptionsContainer_pro.appendChild(optionEl);
     });
 
-    // Display explanation if answered and explanation exists
-    if (isAnswered && explanation && quizExplanationContainer && quizExplanationText) {
-        quizExplanationText.textContent = explanation;
+    if (isAnswered && (question.explanation || question.Explanation)) {
+        quizExplanationText.textContent = question.explanation || question.Explanation;
         quizExplanationContainer.style.display = 'block';
     }
 
-    // --- Timer Handling ---
     if (!isAnswered) {
-        // Start timer only if not answered
-        startQuizTimer(question.timer || 90); // Use question timer or default 90s
+        // ✅ [تعديل] استدعاء startTimer سيحترم حالة isQuizTimerActive
+        startTimer(question.timer || 90);
     } else {
-         // If answered, show "Done!" or similar, disable timer visuals
-         if(quizTimerDisplay) quizTimerDisplay.textContent = "Answered";
-         if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
-         if(quizTimerDisplay) quizTimerDisplay.style.opacity = '0.7'; // Dim the timer display
+        quizTimerDisplay.textContent = "Done!";
+        quizTimerContainer.classList.remove('warning');
+        quizTimerDisplay.style.opacity = '1';
     }
     
-    // Update navigation buttons (Prev, Next, Skip, Check)
     updateQuizControls();
-    // Update the question number list highlighting
-    renderQuestionList(); 
+    renderQuestionList();
 }
 
-    
-    // ✅ --- [إصلاح] دالة بدء عداد الكويز (اسم جديد) ---
-    let isQuizTimerActive = true; // Global flag to control timer activation
-    function startQuizTimer(duration) {
-        clearInterval(quizTimerInterval); // Clear any existing interval first
-        quizTimerInterval = null;
-
-        // Exit if timer is globally disabled
+    // ✅ --- [تعديل] دالة بدء العداد ---
+    let isQuizTimerActive = true; // متغير لتتبع حالة العداد
+    function startTimer(duration) {
+        // ✅ --- [تعديل] التأكد من أن العداد مطلوب تشغيله ---
         if (!isQuizTimerActive) {
-            if (quizTimerDisplay) quizTimerDisplay.textContent = "Off";
-            if (quizTimerDisplay) quizTimerDisplay.style.opacity = '0.6';
-            if (quizTimerContainer) quizTimerContainer.classList.remove('warning');
-            return; 
+            quizTimerDisplay.textContent = "Off";
+            quizTimerDisplay.style.opacity = '0.6';
+            quizTimerContainer.classList.remove('warning');
+            return; // لا تبدأ العداد إذا كان مغلقاً
         }
-        
-        // Ensure duration is a positive number
-        let timeLeft = parseInt(duration);
-        if (isNaN(timeLeft) || timeLeft <= 0) {
-             timeLeft = 90; // Default to 90 seconds if duration is invalid
-        }
+        // --- نهاية التعديل ---
 
-        // Reset visual state
-        if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
-        if(quizTimerDisplay) quizTimerDisplay.style.opacity = '1'; // Make sure it's visible
+        let timeLeft = duration;
+        quizTimerContainer.classList.remove('warning');
+        quizTimerDisplay.style.opacity = '1'; // التأكد من ظهوره
 
         function updateDisplay() {
-            if (!quizTimerDisplay) return; // Exit if element removed
             const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
             const seconds = (timeLeft % 60).toString().padStart(2, '0');
             quizTimerDisplay.textContent = `${minutes}:${seconds}`;
-            // Add warning class for last 10 seconds
-            if(quizTimerContainer) quizTimerContainer.classList.toggle('warning', timeLeft <= 10);
+            if (timeLeft <= 10) quizTimerContainer.classList.add('warning');
         }
-        
-        updateDisplay(); // Initial display
-
-        // Start the interval
+        updateDisplay();
         quizTimerInterval = setInterval(() => {
             timeLeft--;
             updateDisplay();
-            // When timer reaches zero
             if (timeLeft <= 0) {
                 clearInterval(quizTimerInterval);
-                quizTimerInterval = null;
-                timeUp(); // Call the timeUp function
+                timeUp();
             }
         }, 1000);
     }
 
-    // --- دالة انتهاء وقت السؤال ---
     function timeUp() {
-        showNotification("Time's up for this question!", 'error');
-        // Mark the question as incorrect with no selected answer
-        proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false }; 
-        saveQuizState(); // ✅ حفظ الحالة بعد انتهاء الوقت
-        renderCurrentQuestion(); // Re-render to show feedback and disable options
-        updateStats(); // Update overall stats
+        showNotification("Time's up!", 'error');
+        proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false };
+        renderCurrentQuestion();
+        updateStats();
     }
 
-    // --- دالة اختيار خيار (إجابة واحدة) ---
     function selectOption(selectedIndex) {
-        if (!quizOptionsContainer_pro) return;
-        // Deselect any previously selected option
-        document.querySelectorAll('.quiz-option-pro.selected').forEach(btn => btn.classList.remove('selected'));
-        // Select the clicked option
+        document.querySelectorAll('.quiz-option-pro').forEach(btn => btn.classList.remove('selected'));
         const selectedBtn = quizOptionsContainer_pro.querySelector(`[data-index="${selectedIndex}"]`);
-        if (selectedBtn) {
-            selectedBtn.classList.add('selected');
-        }
-        // Enable the Check Answer button
-        if(quizActionBtn) quizActionBtn.disabled = false;
-        if(quizSkipBtn) quizSkipBtn.disabled = true; // Disable skip if an answer is selected
+        selectedBtn.classList.add('selected');
+        quizActionBtn.disabled = false;
     }
 
-    // --- دالة تبديل اختيار خيار (إجابات متعددة) ---
     function toggleOption(selectedIndex) {
-        if (!quizOptionsContainer_pro) return;
         const selectedBtn = quizOptionsContainer_pro.querySelector(`[data-index="${selectedIndex}"]`);
         if (selectedBtn) {
-            selectedBtn.classList.toggle('selected'); // Toggle the 'selected' class
+            selectedBtn.classList.toggle('selected');
         }
-        // Enable Check Answer button only if at least one option is selected
         const anySelected = quizOptionsContainer_pro.querySelector('.selected');
-        if(quizActionBtn) quizActionBtn.disabled = !anySelected;
-        if(quizSkipBtn) quizSkipBtn.disabled = !!anySelected; // Disable skip if any answer is selected
+        quizActionBtn.disabled = !anySelected;
     }
 
-    // --- دالة التحقق من الإجابة ---
     function checkAnswer() {
-        clearInterval(quizTimerInterval); // Stop the timer for this question
-        quizTimerInterval = null; 
-
-        if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) return; // Safety check
-
+        clearInterval(quizTimerInterval);
+        quizTimerInterval = null; // ✅ [إضافة] إيقاف تام للعداد عند الإجابة
         const question = proQuiz.questions[proQuestionIndex];
-        const selectedElements = quizOptionsContainer_pro?.querySelectorAll('.selected');
-        
-        // Determine correct indexes safely
+        const selectedElements = quizOptionsContainer_pro.querySelectorAll('.selected');
         const correctIndexesRaw = question.correctOptionIndexes ?? question.correctIndex ?? question.answer ?? question.answerIndex;
         const correctIndexes = (Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw]).sort((a, b) => a - b);
+        const selectedIndexes = Array.from(selectedElements).map(el => parseInt(el.dataset.index)).sort((a, b) => a - b);
         
-        // Get selected indexes safely
-        const selectedIndexes = selectedElements ? Array.from(selectedElements).map(el => parseInt(el.dataset.index)).sort((a, b) => a - b) : [];
-        
-        // Determine correctness
         let isCorrect = false;
-        if (selectedIndexes.length > 0) { // Only check if something was selected
-             // Correct if lengths match and all elements are the same
+        if (selectedElements.length > 0) {
             isCorrect = selectedIndexes.length === correctIndexes.length && selectedIndexes.every((val, i) => val === correctIndexes[i]);
         }
         
-        // Store the result
         proUserAnswers[proQuestionIndex] = { selectedIndexes: selectedIndexes, isCorrect: isCorrect };
-        saveQuizState(); // ✅ حفظ الحالة بعد الإجابة
         
-        renderCurrentQuestion(); // Re-render the question to show feedback
-        updateStats(); // Update the overall quiz stats
+        renderCurrentQuestion();
+        updateStats();
     }
 
-    // --- دالة تحديث إحصائيات الكويز (صحيح/خطأ/درجة) ---
     function updateStats() {
-        if (!proQuiz || !proUserAnswers || !quizCorrectCountEl || !quizIncorrectCountEl || !quizScoreEl) return; // Safety check
-
-        // Count correct answers (explicitly true)
-        const correctCount = proUserAnswers.filter(a => a && a.isCorrect === true).length;
-        // Count incorrect answers (explicitly false)
+        const correctCount = proUserAnswers.filter(a => a && a.isCorrect).length;
         const incorrectCount = proUserAnswers.filter(a => a && a.isCorrect === false).length;
-        // Calculate score out of 20
-        const totalQuestions = proQuiz.questions.length;
-        const score = totalQuestions > 0 ? (correctCount / totalQuestions) * 20 : 0;
-
-        // Update DOM elements
+        const totalAnswered = correctCount + incorrectCount;
+        const score = totalAnswered > 0 ? (correctCount / proQuiz.questions.length) * 20 : 0;
         quizCorrectCountEl.textContent = correctCount;
         quizIncorrectCountEl.textContent = incorrectCount;
         quizScoreEl.textContent = `${score.toFixed(2)} / 20`;
     }
 
-    // ✅ --- (تعديل) دالة تحديث أزرار التحكم بالكويز (مع زر التخطي) ---
     function updateQuizControls() {
-         // Safety checks for elements
-         if (!quizPrevBtn || !quizActionBtn || !quizNextBtn_pro || !quizSkipBtn || !proQuiz || !proQuiz.questions) return;
-        
         const isAnswered = proUserAnswers[proQuestionIndex] !== null;
-        const isFirstQuestion = proQuestionIndex === 0;
-        const isLastQuestion = proQuestionIndex === proQuiz.questions.length - 1;
-
-        // Previous Button: Enabled unless it's the first question
-        quizPrevBtn.disabled = isFirstQuestion;
-
-        // Check Answer Button: Visible only if NOT answered
+        quizPrevBtn.disabled = proQuestionIndex === 0;
         quizActionBtn.style.display = isAnswered ? 'none' : 'block';
-        // Disabled initially, enabled when an option is selected (handled in selectOption/toggleOption)
-        quizActionBtn.disabled = true; 
-
-        // Skip Button: Visible only if NOT answered
-        quizSkipBtn.style.display = isAnswered ? 'none' : 'block';
-         // Enabled initially, disabled if an option is selected
-        quizSkipBtn.disabled = false;
-
-        // Next/Finish Button: Visible only if answered
+        quizActionBtn.disabled = true;
         quizNextBtn_pro.style.display = isAnswered ? 'block' : 'none';
-        // Change text to 'Finish' on the last question
-        quizNextBtn_pro.innerHTML = isLastQuestion ? 'Finish <i class="fas fa-check-circle"></i>' : '<i class="fas fa-arrow-right"></i>';
-        quizNextBtn_pro.title = isLastQuestion ? 'Finish Quiz' : 'Next Question';
+        const isLastQuestion = proQuestionIndex === proQuiz.questions.length - 1;
+        quizNextBtn_pro.textContent = isLastQuestion ? 'Finish' : 'Next';
     }
     
     // ===================================================================
@@ -2568,136 +1972,93 @@ function renderCurrentQuestion() {
     // في ملف script.js
     // ✅ استبدل هذه الدالة بالكامل
     async function fetchAndDisplayDashboardData() {
-        // Ensure necessary elements exist before proceeding
-        const dashboardTotalXpEl = document.getElementById('dashboard-total-xp');
-        const dashboardBadgeCountEl = document.getElementById('dashboard-badge-count');
-        const dashboardQuizCountEl = document.getElementById('dashboard-quiz-count');
-        const recentList = document.getElementById('recent-quizzes-list');
-        const chartCard = document.querySelector('.chart-card');
-        const savedListContainer = document.getElementById('saved-quizzes-list');
-
-        if (!dashboardTotalXpEl || !dashboardBadgeCountEl || !dashboardQuizCountEl || !recentList || !chartCard || !savedListContainer) {
-            console.error("One or more dashboard elements are missing.");
-            showNotification("Could not load dashboard components.", "error");
-            return;
-        }
-
-        // Show loading state (optional)
-        recentList.innerHTML = '<li>Loading recent activities...</li>';
-        chartCard.innerHTML = `<h3>Performance by Subject</h3><p>Loading performance data...</p>`;
-        savedListContainer.innerHTML = '<p>Loading your saved quizzes...</p>';
-
         try {
-            // Fetch dashboard data and user profile concurrently
-            const [data, userProfile, savedQuizzes] = await Promise.all([
-                fetchApi('/api/results/dashboard'),
-                fetchUserProfile(), // Re-fetch profile for latest XP/badges
-                fetchApi('/api/saved-quizzes')
-            ]);
+            const data = await fetchApi('/api/results/dashboard');
+            const userProfile = await fetchUserProfile();
 
-            // --- Update General Stats ---
-            if (userProfile) {
-                dashboardTotalXpEl.textContent = userProfile.experiencePoints || 0;
-                dashboardBadgeCountEl.textContent = (userProfile.badges && userProfile.badges.length) || 0;
+            // تحديث الإحصائيات العامة
+            document.getElementById('dashboard-total-xp').textContent = userProfile.experiencePoints || 0;
+            document.getElementById('dashboard-badge-count').textContent = (userProfile.badges && userProfile.badges.length) || 0;
+            document.getElementById('dashboard-quiz-count').textContent = data.totalQuizzesTaken || 0;
+
+            // --- ✨ الإصلاح هنا ---
+            const recentList = document.getElementById('recent-quizzes-list');
+            recentList.innerHTML = '';
+            if (data.recentQuizzes.length === 0) {
+                recentList.innerHTML = '<li>No quizzes completed yet. Start a quiz!</li>';
             } else {
-                 // Handle case where profile fetch might fail after initial load
-                 dashboardTotalXpEl.textContent = '-';
-                 dashboardBadgeCountEl.textContent = '-';
-            }
-            dashboardQuizCountEl.textContent = data?.totalQuizzesTaken || 0;
-
-            // --- Update Recent Quizzes List ---
-            recentList.innerHTML = ''; // Clear loading message
-            if (data?.recentQuizzes && data.recentQuizzes.length > 0) {
                 data.recentQuizzes.forEach(result => {
-                    if (!result) return; // Skip null/undefined results
-
-                    let quizTitle = 'Quiz'; // Default title
-                    // Smartly determine quiz title based on structure or ID prefix
+                    let quizTitle = 'Quiz'; // قيمة افتراضية
+                    // التحقق الذكي من نوع الكويز
                     if (result.quiz && typeof result.quiz === 'object' && result.quiz.title) {
-                        quizTitle = result.quiz.title; // Normal quiz with title object
+                        quizTitle = result.quiz.title; // كويز عادي له اسم
                     } else if (typeof result.quiz === 'string' && result.quiz.startsWith('mistakes_')) {
-                        quizTitle = 'Mistakes Review'; // Mistakes quiz by ID prefix
+                        quizTitle = 'Mistakes Review'; // كويز مراجعة الأخطاء
                     } else if (typeof result.quiz === 'string' && result.quiz.startsWith('ai-generated-')) {
-                        quizTitle = 'AI Generated Quiz'; // AI quiz by ID prefix
-                    } else if (result.quizTitle) { // Fallback to quizTitle if present directly
-                        quizTitle = result.quizTitle;
+                        quizTitle = 'AI Generated Quiz'; // كويز مولّد بالذكاء الاصطناعي
                     }
 
                     const li = document.createElement('li');
                     li.innerHTML = `
                         <span class="quiz-title">${quizTitle}</span>
-                        <span class="quiz-score">${(result.score ?? 0).toFixed(2)} / 20</span>
+                        <span class="quiz-score">${result.score.toFixed(2)} / 20</span>
                     `;
                     recentList.appendChild(li);
                 });
-            } else {
-                recentList.innerHTML = '<li>No quizzes completed yet. Start a quiz!</li>';
             }
+            // --- نهاية الإصلاح ---
             
-            // --- Display Performance by Subject ---
-            chartCard.innerHTML = `<h3>Performance by Subject</h3>`; // Clear loading message
-            if (data?.performanceBySubject && data.performanceBySubject.length > 0) {
+            // عرض بيانات الأداء حسب المادة (Performance by Subject)
+            const chartCard = document.querySelector('.chart-card');
+            chartCard.innerHTML = `<h3>Performance by Subject</h3>`; 
+            if (data.performanceBySubject.length === 0) {
+                chartCard.innerHTML += `<p>No performance data yet. Complete quizzes to see stats!</p>`;
+            } else {
                 const subjectList = document.createElement('ul');
                 subjectList.className = 'performance-list';
                 data.performanceBySubject.forEach(subject => {
-                    // Ensure subject data is valid
-                    if (!subject || !subject.subjectId || !subject.subjectName) return; 
-                    
+                    if (!subject.subjectId) return;
                     const listItem = document.createElement('li');
-                    const averageScore = subject.averageScore ?? 0;
-                    const percentage = averageScore > 0 ? (averageScore / 20) * 100 : 0; // Calculate percentage safely
-                    const mistakeCount = subject.mistakeCount || 0;
-
+                    const percentage = subject.averageScore ? (subject.averageScore / 20) * 100 : 0;
                     listItem.innerHTML = `
                         <div class="subject-info">
                             <span class="subject-name">${subject.subjectName}</span>
-                            <span class="subject-score">${averageScore.toFixed(1)}/20</span>
+                            <span class="subject-score">${(subject.averageScore || 0).toFixed(1)}/20</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: ${percentage.toFixed(1)}%;"></div>
+                            <div class="progress-bar" style="width: ${percentage}%;"></div>
                         </div>
-                        <button class="btn secondary-btn review-mistakes-btn" 
-                                data-subject-id="${subject.subjectId}" 
-                                data-subject-name="${subject.subjectName}"
-                                ${mistakeCount === 0 ? 'disabled' : ''} /* Disable if no mistakes */
-                                title="${mistakeCount === 0 ? 'No mistakes to review' : 'Review Mistakes'}">
-                            <i class="fas fa-search"></i> Review Mistakes (${mistakeCount})
+                        <button class="btn secondary-btn review-mistakes-btn" data-subject-id="${subject.subjectId}" data-subject-name="${subject.subjectName}">
+                            <i class="fas fa-search"></i> Review Mistakes (${subject.mistakeCount || 0})
                         </button>
                     `;
                     subjectList.appendChild(listItem);
                 });
                 chartCard.appendChild(subjectList);
-                
-                // Add event listener for mistake review buttons (using event delegation)
-                // Ensure listener is added only once
-                if (!chartCard.dataset.listenerAttached) {
-                     chartCard.addEventListener('click', (event) => {
-                         const reviewButton = event.target.closest('.review-mistakes-btn:not(:disabled)'); // Target only enabled buttons
-                         if (reviewButton) {
-                             startMistakesQuiz(reviewButton.dataset.subjectId, reviewButton.dataset.subjectName);
-                         }
-                     });
-                     chartCard.dataset.listenerAttached = 'true';
-                }
-
-            } else {
-                chartCard.innerHTML += `<p>No performance data yet. Complete quizzes to see stats!</p>`;
+                chartCard.addEventListener('click', (event) => {
+                    const reviewButton = event.target.closest('.review-mistakes-btn');
+                    if (reviewButton) {
+                        startMistakesQuiz(reviewButton.dataset.subjectId, reviewButton.dataset.subjectName);
+                    }
+                });
             }
 
-            // --- Display Saved Quizzes ---
-            savedListContainer.innerHTML = ''; // Clear loading message
-            if (savedQuizzes && savedQuizzes.length > 0) {
+            // عرض الكويزات المحفوظة (Saved Quizzes)
+            const savedQuizzes = await fetchApi('/api/saved-quizzes');
+            const savedListContainer = document.getElementById('saved-quizzes-list');
+            savedListContainer.innerHTML = '';
+            if (savedQuizzes.length === 0) {
+                savedListContainer.innerHTML = '<p>You have not saved any AI-generated quizzes yet.</p>';
+            } else {
                 savedQuizzes.forEach(quiz => {
-                     if (!quiz || !quiz._id) return; // Skip invalid saved quizzes
-
                     const quizCard = document.createElement('div');
                     quizCard.className = 'saved-quiz-item';
                     quizCard.innerHTML = `
                         <div class="saved-quiz-info">
-                            <i class="fas fa-robot"></i> <div class="saved-quiz-details">
-                                <span class="saved-quiz-title">${quiz.title || 'Saved Quiz'}</span>
-                                <span class="saved-quiz-meta">${quiz.questions?.length || 0} Questions | ${quiz.subjectName || 'N/A'}</span>
+                            <i class="fas fa-robot"></i>
+                            <div class="saved-quiz-details">
+                                <span class="saved-quiz-title">${quiz.title}</span>
+                                <span class="saved-quiz-meta">${quiz.questions.length} Questions | ${quiz.subjectName}</span>
                             </div>
                         </div>
                         <div class="saved-quiz-actions">
@@ -2706,286 +2067,200 @@ function renderCurrentQuestion() {
                         </div>
                     `;
                     savedListContainer.appendChild(quizCard);
-                    
-                    // Add listeners for start and delete buttons
-                    const startBtn = quizCard.querySelector('.btn-start-saved-quiz');
-                    const deleteBtn = quizCard.querySelector('.btn-delete-saved-quiz');
-                    if(startBtn) startBtn.addEventListener('click', () => startSavedQuiz(quiz));
-                    if(deleteBtn) deleteBtn.addEventListener('click', () => handleDeleteSavedQuiz(quiz._id, quizCard));
+                    quizCard.querySelector('.btn-start-saved-quiz').addEventListener('click', () => startSavedQuiz(quiz));
+                    quizCard.querySelector('.btn-delete-saved-quiz').addEventListener('click', () => handleDeleteSavedQuiz(quiz._id, quizCard));
                 });
-            } else {
-                savedListContainer.innerHTML = '<p>You have not saved any AI-generated quizzes yet.</p>';
             }
 
         } catch (error) {
             console.error('Error rendering dashboard:', error);
-            showNotification(`Failed to load dashboard: ${error.message}`, 'error');
-            // Display error messages in relevant sections
-            recentList.innerHTML = '<li>Could not load recent activities.</li>';
-            chartCard.innerHTML = `<h3>Performance by Subject</h3><p>Error loading performance data.</p>`;
-            savedListContainer.innerHTML = '<p>Error loading saved quizzes.</p>';
+            document.getElementById('recent-quizzes-list').innerHTML = '<li>Could not load recent activities.</li>';
+            document.getElementById('saved-quizzes-list').innerHTML = '<p>Error loading saved quizzes.</p>';
         }
     }
 
 
-    // --- دالة بدء كويز مراجعة الأخطاء ---
     async function startMistakesQuiz(subjectId, subjectName) {
-        if (!subjectId || !subjectName) {
-            console.error("Missing subjectId or subjectName for mistakes quiz.");
-            return;
-        }
-        
         showNotification(`Building your personalized review for ${subjectName}...`, 'info');
-        localStorage.removeItem('quizState'); // Clear any previous state
+        const token = localStorage.getItem('userToken');
 
         try {
-            // Use fetchApi to get mistake questions
-            const mistakesQuizData = await fetchApi(`/api/results/mistakes/${subjectId}`);
+            const response = await fetch(`https://dental-app-he1p.onrender.com/api/results/mistakes/${subjectId}`, {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
 
-            // Ensure data received is valid
-            if (!mistakesQuizData || !mistakesQuizData.questions || mistakesQuizData.questions.length === 0) {
-                 showNotification(`No mistakes found to review for ${subjectName}.`, 'info');
-                 return; // Nothing to review
+            if (!response.ok) {
+                const err = await response.json();
+                throw new Error(err.message);
             }
-            
-            // Add necessary properties for the quiz system
-            mistakesQuizData._id = `mistakes_${subjectId}_${Date.now()}`; // Unique ID for this session
-            mistakesQuizData.title = "Mistakes Review";
-            mistakesQuizData.subject = subjectId; // Store the original subject ID
-            mistakesQuizData.subjectName = subjectName;
 
-            // Initialize and start the quiz
-            initializeAndStartQuiz(mistakesQuizData);
+            const mistakesQuizData = await response.json();
+            
+            proQuiz = mistakesQuizData;
+            
+            proQuestionIndex = 0;
+            proUserAnswers = new Array(proQuiz.questions.length).fill(null);
+            quizStartTime = Date.now();
+            
+            quizSubjectNameEl.textContent = subjectName;
+            quizLessonNameEl.textContent = "Mistakes Review";
+
+            renderQuestionList();
+            renderCurrentQuestion();
+            updateStats();
+            
+            showPage('#quiz-taking-page');
 
         } catch (error) {
             console.error('Error starting mistakes quiz:', error);
-            // Show specific error from backend if available, otherwise generic
-            showNotification(error.message || 'Could not load mistake review quiz.', 'error');
+            showNotification(error.message, 'error');
         }
     }
     // ===============================================
 // === [تعديل] دوال منطق مؤقت البومودورو   ===
 // ===============================================
 
-// --- إيقاف وإعادة تعيين دورة البومودورو ---
 function stopAndResetPomodoroCycle() {
-    clearInterval(pomodoroInterval); // Stop timer
-    pomodoroInterval = null;
-    isPomodoroActive = false; // Mark as inactive
-    isPaused = true; // Set to paused state
-    sessionsCompleted = 0; // Reset session count
-    document.title = originalDocTitle; // Restore original page title
-    switchPomodoroView('settings'); // Show settings view
-    // Reset timer display visuals immediately
-    if (progressRingFg) progressRingFg.style.strokeDashoffset = circumference; 
-    if (timeDisplayEl) timeDisplayEl.textContent = "00:00"; 
-    if (sessionTitleEl) sessionTitleEl.textContent = 'Pomodoro';
+    clearInterval(pomodoroInterval);
+    isPomodoroActive = false;
+    isPaused = true;
+    sessionsCompleted = 0;
+    document.title = originalDocTitle;
+    switchView('settings');
 }
 
-// --- تحديث عرض المؤقت (الوقت والدائرة) ---
 function updateTimerDisplay() {
-    if (!timeDisplayEl || !progressRingFg) return; // Safety check
-
     const minutes = Math.floor(secondsLeft / 60);
     const seconds = secondsLeft % 60;
-    // Format time as MM:SS
     timeDisplayEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     
-    // Calculate progress for the ring (0 to 1)
-    const progress = totalSeconds > 0 ? (totalSeconds - secondsLeft) / totalSeconds : 0;
-    // Calculate stroke offset for the circle
+    const progress = (totalSeconds - secondsLeft) / totalSeconds;
     const offset = circumference - progress * circumference;
-    progressRingFg.style.strokeDashoffset = Math.max(0, offset); // Ensure offset doesn't go negative
+    progressRingFg.style.strokeDashoffset = offset;
 
-    // Update page title to show current time and session
-    document.title = `${timeDisplayEl.textContent} - ${sessionTitleEl?.textContent || 'Pomodoro'}`;
+    document.title = `${timeDisplayEl.textContent} - ${sessionTitleEl.textContent}`;
 }
 
-// --- تبديل العرض بين الإعدادات والمؤقت ---
-function switchPomodoroView(view) {
-    if (!pomodoroSettingsView || !pomodoroTimerView) return; // Safety check
-
+function switchView(view) {
     if (view === 'timer') {
         pomodoroSettingsView.style.display = 'none';
         pomodoroTimerView.style.display = 'block';
-    } else { // 'settings' or any other value
+    } else {
         pomodoroTimerView.style.display = 'none';
         pomodoroSettingsView.style.display = 'block';
     }
 }
 
-// --- الانتقال للدورة التالية (تركيز/استراحة) ---
-function switchPomodoroSession() {
-    clearInterval(pomodoroInterval); // Stop current timer
-    pomodoroInterval = null;
-    isPaused = true; // Start next session paused
-    if(pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
-    
-    // Play alarm sound if available
-    if(alarmSound) {
-        alarmSound.play().catch(e => console.warn("Audio play failed:", e)); // Play sound, catch errors
-    }
+function switchSession() {
+    clearInterval(pomodoroInterval);
+    isPaused = true;
+    pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>';
+    alarmSound.play();
 
-    let nextSessionTitle = '';
-    // Determine next session type
     if (currentSession === 'focus') {
         sessionsCompleted++;
-        // Check if it's time for a long break
-        if (sessionsCompleted > 0 && sessionsCompleted % settings.sessionsBeforeLongBreak === 0) {
+        if (sessionsCompleted % settings.sessionsBeforeLongBreak === 0) {
             currentSession = 'longBreak';
-            nextSessionTitle = 'Long Break';
+            sessionTitleEl.textContent = 'Long Break';
             totalSeconds = settings.longBreakDuration * 60;
         } else {
             currentSession = 'shortBreak';
-            nextSessionTitle = 'Short Break';
+            sessionTitleEl.textContent = 'Short Break';
             totalSeconds = settings.shortBreakDuration * 60;
         }
-    } else { // If currently in a break (short or long)
+    } else {
         currentSession = 'focus';
-        nextSessionTitle = 'Focus';
+        sessionTitleEl.textContent = 'Focus';
         totalSeconds = settings.focusDuration * 60;
     }
     
-    secondsLeft = totalSeconds; // Reset time left for the new session
-    
-    // Update UI elements
-    if (sessionTitleEl) sessionTitleEl.textContent = nextSessionTitle;
-    if (sessionCounterEl) {
-         // Display session count correctly (e.g., Session 1 of 4, Session 5 of 4 for overflow)
-         const currentSessionNum = currentSession === 'focus' ? sessionsCompleted + 1 : sessionsCompleted;
-         sessionCounterEl.textContent = `Session ${currentSessionNum} / ${settings.sessionsBeforeLongBreak}`;
-    }
-    updateTimerDisplay(); // Update time and ring display
-    showNotification(`${nextSessionTitle} session started!`, 'info'); // Notify user
+    secondsLeft = totalSeconds;
+    sessionCounterEl.textContent = `Session ${sessionsCompleted + 1} of ${settings.sessionsBeforeLongBreak}`;
+    updateTimerDisplay();
+    showNotification(`${sessionTitleEl.textContent} session has started!`, 'info');
 }
 
-// ✅ --- [إصلاح] دالة بدء عداد البومودورو (اسم جديد) ---
-function startPomodoroTimer() {
-    if (secondsLeft <= 0 || !isPomodoroActive) return; // Don't start if time is up or not active
+function startTimer() {
+    if (secondsLeft <= 0) return;
     isPaused = false;
-    if(pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-pause"></i>'; // Show pause icon
-
-    // Clear any existing interval before starting a new one
-    clearInterval(pomodoroInterval);
-    pomodoroInterval = null;
+    pauseResumeBtn.innerHTML = '<i class="fas fa-pause"></i>';
 
     pomodoroInterval = setInterval(() => {
-        if (isPaused) return; // Don't decrease time if paused
-
         secondsLeft--;
         updateTimerDisplay();
-        
-        // Switch session when time runs out
         if (secondsLeft <= 0) {
-            switchPomodoroSession();
+            switchSession();
         }
-    }, 1000); // Run every second
+    }, 1000);
 }
 
-// --- إيقاف مؤقت للبومودورو ---
-function pausePomodoroTimer() {
+function pauseTimer() {
     isPaused = true;
-    clearInterval(pomodoroInterval); // Stop the interval
-    pomodoroInterval = null;
-    if(pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
+    clearInterval(pomodoroInterval);
+    pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>';
 }
 
-// --- إعادة تعيين المؤقت الحالي (ليس الدورة بأكملها) ---
-function resetCurrentPomodoroTimer() {
-    pausePomodoroTimer(); // Pause first
-    secondsLeft = totalSeconds; // Reset time to the start of the current session
-    updateTimerDisplay(); // Update display
+function resetTimer() {
+    pauseTimer();
+    secondsLeft = totalSeconds;
+    updateTimerDisplay();
 }
 
 // ===================================================================
 // --- [إضافة جديدة] دوال قسم بطاقات المراجعة       ===
 // ===================================================================
 async function fetchAndDisplayCollections() {
-    const contentDiv = document.getElementById('flashcards-content');
-    const viewerDiv = document.getElementById('flashcard-viewer');
-
-    if (!contentDiv || !viewerDiv) {
-        console.error("Flashcard elements not found.");
-        return;
-    }
-
-    contentDiv.innerHTML = '<p>Loading your flashcard collections...</p>'; // Show loading
-    contentDiv.style.display = 'grid'; // Ensure grid layout is active
-    viewerDiv.classList.add('flashcard-viewer-hidden'); // Hide viewer
-
     try {
-        // Use fetchApi helper
+        // استخدام الدالة المساعدة
         allFlashcardCollections = await fetchApi('/api/flashcards');
         
-        contentDiv.innerHTML = ''; // Clear loading message
+        const contentDiv = document.getElementById('flashcards-content');
+        const viewerDiv = document.getElementById('flashcard-viewer');
 
-        if (!allFlashcardCollections || allFlashcardCollections.length === 0) {
-            contentDiv.innerHTML = '<p>You haven\'t saved any flashcards yet. Start by saving questions from your quiz results!</p>';
+        contentDiv.style.display = 'grid';
+        viewerDiv.classList.add('flashcard-viewer-hidden');
+        contentDiv.innerHTML = '';
+
+        if (allFlashcardCollections.length === 0) {
+            contentDiv.innerHTML = '<p>You haven\'t saved any flashcards yet. Start by saving important questions from your quiz results!</p>';
             return;
         }
 
-        // Sort collections alphabetically by subject name (optional)
-        allFlashcardCollections.sort((a, b) => (a.subjectName || '').localeCompare(b.subjectName || ''));
-
         allFlashcardCollections.forEach(collection => {
-             // Basic validation for collection data
-             if (!collection || !collection.subjectName || !collection.cards) return;
-
             const card = document.createElement('div');
             card.className = 'collection-card';
             card.innerHTML = `
                 <h3>${collection.subjectName}</h3>
-                <p>${collection.cards.length} card${collection.cards.length !== 1 ? 's' : ''}</p> 
+                <p>${collection.cards.length} cards</p>
             `;
-            // Add click listener to show the viewer for this collection
             card.onclick = () => showFlashcardViewer(collection);
             contentDiv.appendChild(card);
         });
 
     } catch (error) {
-        console.error("Error fetching flashcards:", error);
-        contentDiv.innerHTML = `<p>Error loading flashcards: ${error.message}. Please try again later.</p>`;
-         showNotification(`Could not load flashcards: ${error.message}`, 'error');
+        const contentDiv = document.getElementById('flashcards-content');
+        contentDiv.innerHTML = `<p>Error: ${error.message}</p>`;
     }
 }
 
 // ✅ استبدل دالة showFlashcardViewer القديمة بهذه النسخة
 function showFlashcardViewer(collection) {
-    // Basic validation
-    if (!collection || !Array.isArray(collection.cards)) {
-         console.error("Invalid collection data passed to showFlashcardViewer:", collection);
-         showNotification("Could not load this flashcard collection.", "error");
-         return;
-    }
-    
-    currentCollection = collection.cards; // Store the cards array
-    currentCardIndex = 0; // Start at the first card
+    currentCollection = collection.cards;
+    currentCardIndex = 0;
 
-    // Get UI elements
+    // --- التحسين الأمني ---
     const ratingControls = document.getElementById('ai-flashcard-rating-controls');
     const viewerControls = document.getElementById('flashcard-viewer-controls');
-    const contentDiv = document.getElementById('flashcards-content');
-    const viewerDiv = document.getElementById('flashcard-viewer');
-    const viewerTitle = document.getElementById('flashcard-viewer-title');
 
-    if (!ratingControls || !viewerControls || !contentDiv || !viewerDiv || !viewerTitle) {
-         console.error("Flashcard viewer UI elements missing.");
-         return;
-    }
+    if (ratingControls) ratingControls.style.display = 'none';
+    if (viewerControls) viewerControls.style.display = 'flex';
+    // --- نهاية التحسين ---
 
-    // --- Control Visibility ---
-    ratingControls.style.display = 'none'; // Hide AI rating controls for normal viewing
-    viewerControls.style.display = 'flex'; // Show standard navigation controls
-    // --- End Control Visibility ---
+    document.getElementById('flashcards-content').style.display = 'none';
+    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden');
+    document.getElementById('flashcard-viewer-title').textContent = collection.subjectName;
 
-    contentDiv.style.display = 'none'; // Hide the collection grid
-    viewerDiv.classList.remove('flashcard-viewer-hidden'); // Show the viewer section
-    viewerTitle.textContent = collection.subjectName || 'Flashcards'; // Set the title
-
-    // Display the first card
     displayCurrentFlashcard();
-    // Ensure the flashcards page is the active page
-    showPage('#flashcards-page'); 
 }
 // ✅ استبدل دالة displayCurrentFlashcard القديمة بهذه النسخة
 
@@ -2995,21 +2270,7 @@ function showFlashcardViewer(collection) {
  * @description تعرض البطاقة الحالية في العارض (النسخة النهائية والذكية)
  */
 function displayCurrentFlashcard() {
-    // Ensure collection and index are valid
-    if (!currentCollection || currentCollection.length === 0 || currentCardIndex < 0 || currentCardIndex >= currentCollection.length) {
-        console.warn("Cannot display flashcard. Invalid collection or index.");
-        // Optionally display a message in the viewer
-        const questionElement = document.getElementById('flashcard-question');
-        if(questionElement) questionElement.textContent = "No card to display.";
-        const answerElement = document.getElementById('flashcard-answer');
-        if(answerElement) answerElement.textContent = "";
-        // Disable navigation buttons
-        const prevBtn = document.getElementById('prev-flashcard-btn');
-        const nextBtn = document.getElementById('next-flashcard-btn');
-        if(prevBtn) prevBtn.disabled = true;
-        if(nextBtn) nextBtn.disabled = true;
-        return;
-    }
+    if (!currentCollection || currentCollection.length === 0) return;
 
     const card = currentCollection[currentCardIndex];
     if (!card) {
@@ -3017,707 +2278,630 @@ function displayCurrentFlashcard() {
         return; 
     }
 
-    // --- ✅ Handle potential variations in property names ---
-    const frontText = card.front || card.questionText || "No front content."; // Fallback text
-    const backText = card.back || card.backContent || "No back content.";   // Fallback text
+    // --- ✅ الحل النهائي هنا ---
+    // الدالة الآن تبحث عن كلا الاسمين المحتملين للوجه الأمامي والخلفي
+    const frontText = card.front || card.questionText;
+    const backText = card.back || card.backContent;
 
-    // Get elements for front and back content
     const questionElement = document.getElementById('flashcard-question');
     const answerElement = document.getElementById('flashcard-answer');
 
-    // Update content safely
+    // التأكد من وجود العناصر قبل تعديلها
     if (questionElement) {
-        questionElement.textContent = frontText; 
+        // نستخدم "" كقيمة احتياطية في حال كانت البيانات فارغة تماماً
+        questionElement.textContent = frontText || "No content for front side."; 
     }
     if (answerElement) {
-        // Use innerHTML for the back if it might contain Markdown/HTML, otherwise textContent
-        // Assuming back content is plain text for now based on createFlashcardAPI
-        answerElement.textContent = backText;
-        // If back content could be Markdown:
-        // if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-        //     answerElement.innerHTML = DOMPurify.sanitize(marked.parse(backText));
-        // } else {
-        //     answerElement.textContent = backText; // Fallback
-        // }
+        answerElement.textContent = backText || "No content for back side.";
     }
-    // --- End Handling Variations ---
+    // --- نهاية الحل ---
 
-    // Update progress display
-    const progressElement = document.getElementById('flashcard-progress');
-    if (progressElement) {
-         progressElement.textContent = `${currentCardIndex + 1} / ${currentCollection.length}`;
-    }
+    // بقية الدالة تبقى كما هي بدون تغيير
+    document.getElementById('flashcard-progress').textContent = `${currentCardIndex + 1} / ${currentCollection.length}`;
     
-    // Ensure card is flipped back to the front side initially
-    const flashcardElement = document.querySelector('.flashcard');
-    if (flashcardElement) {
-        flashcardElement.classList.remove('is-flipped');
+    const flashcard = document.querySelector('.flashcard');
+    if (flashcard) {
+        flashcard.classList.remove('is-flipped');
     }
 
-    // Enable/disable navigation buttons based on current index
-    const prevBtn = document.getElementById('prev-flashcard-btn');
-    const nextBtn = document.getElementById('next-flashcard-btn');
-    if(prevBtn) prevBtn.disabled = currentCardIndex === 0;
-    if(nextBtn) nextBtn.disabled = currentCardIndex === currentCollection.length - 1;
+    document.getElementById('prev-flashcard-btn').disabled = currentCardIndex === 0;
+    document.getElementById('next-flashcard-btn').disabled = currentCardIndex === currentCollection.length - 1;
 }
 // ===================================================================
 // --- معالجات الأحداث (Event Handlers) ---
 // ===================================================================
 
-// --- زر تبديل الثيم ---
-if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => { 
-        body.classList.toggle('dark-mode'); 
-        // Determine current theme and save to localStorage
-        const currentTheme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode'; 
-        localStorage.setItem('theme', currentTheme); 
-        // Update the icon (Sun/Moon)
-        updateThemeToggleIcon(currentTheme); 
+// =======================================================
+// START: MODIFIED saveQuizBtn Event Listener
+// =======================================================
+const saveQuizBtn = document.getElementById('save-quiz-btn');
+if (saveQuizBtn) {
+    saveQuizBtn.addEventListener('click', async () => {
+        if (!proQuiz || !proQuiz.questions) {
+            showNotification('No quiz data to save.', 'error');
+            return;
+        }
+
+        saveQuizBtn.disabled = true;
+        saveQuizBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+        const token = localStorage.getItem('userToken');
+
+        try {
+            // توحيد بيانات الأسئلة قبل إرسالها
+            const formattedQuestions = proQuiz.questions.map(q => ({
+                question: q.question, // التأكد من استخدام الاسم الصحيح
+                options: q.options,
+                correctOptionIndexes: Array.isArray(q.correctOptionIndexes) ? q.correctOptionIndexes : [q.correctOptionIndexes],
+                explanation: q.explanation,
+            }));
+
+            const response = await fetch('https://dental-app-he1p.onrender.com/api/saved-quizzes', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                 },
+                body: JSON.stringify({
+                    title: proQuiz.title || 'AI Generated Quiz',
+                    subjectName: document.getElementById('quiz-subject-name-pro').textContent || 'AI Generated',
+                    questions: formattedQuestions
+                })
+            });
+
+             if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to save quiz.');
+            }
+
+            showNotification('Quiz saved successfully!', 'success');
+        } catch (error) {
+            showNotification(error.message, 'error');
+        } finally {
+            saveQuizBtn.disabled = false;
+            saveQuizBtn.innerHTML = '<i class="fas fa-save"></i> Save this Quiz';
+        }
     });
 }
+// =======================================================
+// END: MODIFIED saveQuizBtn Event Listener
+// =======================================================
 
-// --- روابط شريط التنقل ---
+    const quizMainArea = document.querySelector('.quiz-main-area-pro');
+    if (quizMainArea) {
+        quizMainArea.addEventListener('click', async (e) => {
+            const translateBtn = e.target.closest('.btn-translate');
+            if (!translateBtn) return;
+
+            const targetLanguage = translateBtn.dataset.lang;
+            if (!proQuiz || !proQuiz.questions) {
+                showNotification('No quiz to translate.', 'error');
+                return;
+            }
+
+            showNotification(`Translating to ${targetLanguage}...`, 'info');
+            const token = localStorage.getItem('userToken');
+
+            try {
+                const response = await fetch('https://dental-app-he1p.onrender.com/api/ai/translate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        content: proQuiz.questions,
+                        targetLanguage: targetLanguage
+                    })
+                });
+
+                if (!response.ok) {
+                    const err = await response.json();
+                    throw new Error(err.message || 'Translation failed.');
+                }
+
+                const translatedQuestions = await response.json();
+                
+                proQuiz.questions = translatedQuestions;
+                renderCurrentQuestion();
+                showNotification('Translation successful!', 'success');
+
+            } catch (error) {
+                showNotification(error.message, 'error');
+            }
+        });
+    }
+
+    const flashcard = document.querySelector('.flashcard');
+    if (flashcard) {
+        flashcard.addEventListener('click', () => {
+            flashcard.classList.toggle('is-flipped');
+        });
+    }
+    const backToCollectionsBtn = document.getElementById('back-to-collections-btn');
+    if (backToCollectionsBtn) {
+        backToCollectionsBtn.addEventListener('click', () => {
+            document.getElementById('flashcards-content').style.display = 'grid';
+            document.getElementById('flashcard-viewer').classList.add('flashcard-viewer-hidden');
+        });
+    }
+    const nextFlashcardBtn = document.getElementById('next-flashcard-btn');
+    if (nextFlashcardBtn) {
+        nextFlashcardBtn.addEventListener('click', () => {
+            if (currentCardIndex < currentCollection.length - 1) {
+                currentCardIndex++;
+                displayCurrentFlashcard();
+            }
+        });
+    }
+    const prevFlashcardBtn = document.getElementById('prev-flashcard-btn');
+    if (prevFlashcardBtn) {
+        prevFlashcardBtn.addEventListener('click', () => {
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+                displayCurrentFlashcard();
+            }
+        });
+    }
+
+    if(themeToggleBtn) themeToggleBtn.addEventListener('click', () => { 
+        body.classList.toggle('dark-mode'); 
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode'; 
+        localStorage.setItem('theme', currentTheme); 
+        updateThemeToggleIcon(currentTheme); 
+    });
+    
 navLinks.forEach(link => { 
     link.addEventListener('click', function(e) { 
-        e.preventDefault(); // Prevent default link navigation
-        
-        const targetId = this.getAttribute('href'); // e.g., "#home-page"
-        const pageType = this.dataset.pageType; // e.g., "quizzes"
+        e.preventDefault(); 
+        const targetId = this.getAttribute('href');
+        const pageType = this.dataset.pageType;
 
-        // 1. Handle content type selection (Summaries, Quizzes, Lessons)
+        // 1. التعامل مع أنواع المحتوى (Summaries, Quizzes, etc.)
         if (pageType) {
             currentContentType = pageType;
-            localStorage.setItem('currentContentType', currentContentType); // ✅ حفظ النوع
-            // Visually activate the clicked link and deactivate others
             navLinks.forEach(l => l.classList.remove('active-link'));
             this.classList.add('active-link');
         }
 
-        // 2. Check Authentication & Setup before showing protected pages
-        const protectedTargets = ['#dashboard-page', '#flashcards-page', '#subjects-page', '#content-display-page', '#lessons-display-page', '#pdfs-display-page'];
-        const targetIsProtected = protectedTargets.includes(targetId) || !!pageType; // Any content type page is protected
-
-        if (targetIsProtected) {
+        // 2. التحقق من صلاحية المستخدم قبل عرض الصفحات المحمية
+        const protectedPages = ['#dashboard-page', '#flashcards-page', '#subjects-page'];
+        if (protectedPages.includes(targetId) || pageType) {
             if (!isLoggedIn) { 
-                logoutUser(); // Redirect to login if not logged in
-                return; // Stop execution
+                window.location.href = 'login.html'; 
+                return; // إيقاف التنفيذ
             } else if (!isYearChosen) { 
-                showPage('#year-selection-page'); // Show year selection if needed
-                return; // Stop execution
+                showPage('#year-selection-page'); 
+                return; // إيقاف التنفيذ
             }
-             // Add activation check if necessary
-             // else if (!isActivated) {
-             //     showPage('#activation-page');
-             //     return;
-             // }
         }
         
-        // 3. Determine which page to show
-        let pageToShow = targetId;
-        if (pageType) {
-             pageToShow = '#subjects-page'; // Content types always lead to subject selection first
+        // ✅ --- المنطق السحري هنا: جلب البيانات أولاً، ثم عرض الصفحة --- ✅
+        if (targetId === '#dashboard-page') {
+            fetchAndDisplayDashboardData(); // <-- أولاً: جلب بيانات لوحة الأداء
+        } else if (targetId === '#flashcards-page') {
+            fetchAndDisplayCollections(); // <-- أولاً: جلب مجموعات البطاقات المحفوظة
         }
 
-        // 4. Show the target page (showPage handles data loading like dashboard/flashcards)
-        showPage(pageToShow); 
+        // 4. أخيراً: عرض الصفحة الصحيحة
+        if (pageType) {
+            showPage('#subjects-page');
+        } else {
+            showPage(targetId);
+        }
     }); 
 });
-
-// --- أزرار البدء والاستكشاف في الصفحة الرئيسية ---
-function handleStartAndExplore() { 
-    if (!isLoggedIn) { 
-        window.location.href = 'login.html'; // Go to login if not logged in
-    } else if (!isYearChosen) { 
-        showPage('#year-selection-page'); // Show year select if needed
-    } 
-    // Add activation check if required by your logic
-    // else if (!isActivated) { 
-    //     showPage('#activation-page'); 
-    // } 
-    else { 
-        // If year chosen (and activated, if needed)
-        // Default to 'lessons' if no content type is selected yet
-        if (!currentContentType) {
-            currentContentType = 'lessons'; 
-            localStorage.setItem('currentContentType', currentContentType); // Save default
-            const lessonsLink = document.querySelector('a[data-page-type="lessons"]');
-            if (lessonsLink) {
-                 navLinks.forEach(l => l.classList.remove('active-link')); // Deactivate others
-                 lessonsLink.classList.add('active-link'); // Activate lessons link
+    
+    function handleStartAndExplore() { 
+        if (!isLoggedIn) { 
+            window.location.href = 'login.html'; 
+        } else if (isGuest) { 
+            showNotification('This feature is for registered and activated users only.', 'error'); 
+        } else if (!isYearChosen) { 
+            showPage('#year-selection-page'); 
+        } else if (!isActivated) { 
+            showPage('#activation-page'); 
+        } else { 
+            if (!currentContentType) {
+                currentContentType = 'lessons'; 
+                const lessonsLink = document.querySelector('a[data-page-type="lessons"]');
+                if (lessonsLink) lessonsLink.classList.add('active-link');
             }
+            showPage('#subjects-page');
         }
-        showPage('#subjects-page'); // Go to subject selection
     }
-}
-// Attach handler to both buttons
-if(startLearningBtn) startLearningBtn.addEventListener('click', handleStartAndExplore);
-if(exploreContentBtn) exploreContentBtn.addEventListener('click', handleStartAndExplore);
-
-
-// --- أزرار اختيار السنة ---
-if (yearSelectBtns) {
-     yearSelectBtns.forEach(btn => {
+    
+    if(startLearningBtn) startLearningBtn.addEventListener('click', handleStartAndExplore);
+    if(exploreContentBtn) exploreContentBtn.addEventListener('click', handleStartAndExplore);
+    
+    if (yearSelectBtns) yearSelectBtns.forEach(btn => {
         btn.addEventListener('click', async function() {
             const year = this.dataset.year;
-            
-            showNotification(`Saving year ${year}...`, 'info'); // Show feedback
-            btn.disabled = true; // Disable button temporarily
-
+            const token = localStorage.getItem('userToken');
+            if (!token) {
+                showNotification('Authentication error. Please log in again.', 'error');
+                logoutUser();
+                return;
+            }
             try {
-                // Use fetchApi to update the user's year
-                const data = await fetchApi('/api/user/year', {
+                const response = await fetch('https://dental-app-he1p.onrender.com/api/user/year', {
                     method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
                     body: JSON.stringify({ year: year })
                 });
-
-                // Update local state and localStorage on success
-                selectedYear = data.user.studyYear;
-                isYearChosen = true;
-                localStorage.setItem('isYearChosen', 'true');
-                localStorage.setItem('selectedYear', selectedYear);
-                
-                showNotification(`Year ${selectedYear} has been saved!`, 'success');
-                updateUI(); // Refresh UI to show the appropriate page (e.g., home)
-
+                if (response.ok) {
+                    const data = await response.json();
+                    selectedYear = data.user.studyYear;
+                    isYearChosen = true;
+                    localStorage.setItem('isYearChosen', 'true');
+                    localStorage.setItem('selectedYear', selectedYear);
+                    showNotification(`Year ${selectedYear} has been saved!`, 'success');
+                    updateUI();
+                } else {
+                    const errorData = await response.json();
+                    showNotification(errorData.message || 'Failed to save selection.', 'error');
+                }
             } catch (error) {
                 console.error('Error updating year:', error);
-                showNotification(error.message || 'Could not save your selection.', 'error');
-            } finally {
-                btn.disabled = false; // Re-enable button
+                showNotification('Connection error. Could not save your selection.', 'error');
             }
         });
     });
-}
     
-// --- زر تأكيد التفعيل ---
-if (confirmActivationBtn) {
-    confirmActivationBtn.addEventListener('click', async () => {
-        
-        confirmActivationBtn.disabled = true;
-        confirmActivationBtn.textContent = 'Activating...';
-        if (activationStatusMessage) {
-             activationStatusMessage.textContent = 'Processing activation...';
-             activationStatusMessage.style.color = 'orange';
-        }
-
-        try {
-            // Use fetchApi to send activation request
-            const data = await fetchApi('/api/user/activate', { method: 'POST' });
-
-            // Update state on success
-            isActivated = true;
-            localStorage.setItem('isActivated', 'true');
-            showNotification(data.message || 'Account activated successfully!', 'success');
-            
-            if (activationStatusMessage) {
-                activationStatusMessage.textContent = 'Activation successful! Redirecting...';
-                activationStatusMessage.style.color = 'green';
+    if (confirmActivationBtn) {
+        confirmActivationBtn.addEventListener('click', async () => {
+            const token = localStorage.getItem('userToken');
+            if (!token) {
+                showNotification('Authentication error. Please log in again.', 'error');
+                logoutUser();
+                return;
             }
-            // Redirect after a short delay
-            setTimeout(() => {
-                updateUI(); // Update UI to show the main content
-                if (activationStatusMessage) activationStatusMessage.textContent = ''; // Clear message
-            }, 1500);
-
-        } catch (error) {
-            console.error('Error during activation:', error);
-            showNotification(error.message || 'Activation failed.', 'error');
-            if (activationStatusMessage) {
-                activationStatusMessage.textContent = `Activation failed: ${error.message}. Please try again or contact support.`;
-                activationStatusMessage.style.color = 'red';
+            confirmActivationBtn.disabled = true;
+            confirmActivationBtn.textContent = 'Activating...';
+            try {
+                const response = await fetch('https://dental-app-he1p.onrender.com/api/user/activate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    isActivated = true;
+                    localStorage.setItem('isActivated', 'true');
+                    showNotification(data.message, 'success');
+                    if (activationStatusMessage) {
+                        activationStatusMessage.textContent = 'Redirecting to your dashboard...';
+                        activationStatusMessage.style.color = 'green';
+                    }
+                    setTimeout(() => {
+                        updateUI();
+                        if (activationStatusMessage) activationStatusMessage.textContent = '';
+                    }, 1500);
+                } else {
+                    const errorData = await response.json();
+                    showNotification(errorData.message || 'Activation failed.', 'error');
+                    if (activationStatusMessage) {
+                        activationStatusMessage.textContent = 'Activation failed. Please try again.';
+                        activationStatusMessage.style.color = 'red';
+                    }
+                }
+            } catch (error) {
+                console.error('Error during activation:', error);
+                showNotification('Connection error during activation.', 'error');
+            } finally {
+                confirmActivationBtn.disabled = false;
+                confirmActivationBtn.textContent = 'Confirm Activation (Simulated)';
             }
-        } finally {
-            confirmActivationBtn.disabled = false;
-            confirmActivationBtn.textContent = 'Confirm Activation (Simulated)'; // Reset button text
-        }
-    });
-}
+        });
+    }
     
-// --- أزرار الرجوع المختلفة ---
-if (backToHomeBtn) backToHomeBtn.addEventListener('click', () => showPage('#home-page'));
-
-if (backToYearSelectBtn) {
-    backToYearSelectBtn.addEventListener('click', () => { 
-        // Clear year selection state
+    if (backToHomeBtn) backToHomeBtn.addEventListener('click', () => showPage('#home-page'));
+    if (backToYearSelectBtn) backToYearSelectBtn.addEventListener('click', () => { 
         isYearChosen = false; 
-        selectedYear = null;
         localStorage.removeItem('isYearChosen'); 
         localStorage.removeItem('selectedYear'); 
-        // Go back to year selection page
         updateUI(); 
     });
-}
+    if (backToSubjectsBtn) backToSubjectsBtn.addEventListener('click', () => showPage('#subjects-page'));
+    if (backToSubjectsFromLessonsBtn) backToSubjectsFromLessonsBtn.addEventListener('click', () => showPage('#subjects-page'));
 
-if (backToSubjectsBtn) backToSubjectsBtn.addEventListener('click', () => showPage('#subjects-page'));
-// Note: Back button from PDF list is handled in showPdfsForLesson function
-
-// --- Carousel Controls ---
-if(prevButton) {
-    prevButton.addEventListener('click', () => {
-        if (numItems > 0) {
-            // Decrement index, wrapping around using modulo
-            currentIndex = (currentIndex - 1 + numItems) % numItems; 
-            rotateCarousel();
-        }
-    });
-}
-
-if(nextButton) {
-    nextButton.addEventListener('click', () => {
-        if (numItems > 0) {
-            // Increment index, wrapping around using modulo
-            currentIndex = (currentIndex + 1) % numItems;
-            rotateCarousel();
-        }
-    });
-}
-
-// Optional: Carousel rotation with mouse wheel
-if(carouselScene) {
-    carouselScene.addEventListener('wheel', (e) => {
-        // Prevent default page scrolling
-        e.preventDefault(); 
-        if (numItems > 0) {
-            // Rotate up or down based on wheel direction
-            if (e.deltaY > 0) { // Scrolling down
-                currentIndex = (currentIndex + 1) % numItems;
-            } else { // Scrolling up
+    if(prevButton) {
+        prevButton.addEventListener('click', () => {
+            if (numItems > 0) {
                 currentIndex = (currentIndex - 1 + numItems) % numItems;
+                rotateCarousel();
             }
-            rotateCarousel();
-        }
-    }, { passive: false }); // Need passive: false to preventDefault scroll
-}
-    
-// Optional: Carousel rotation with arrow keys when subjects page is active
-document.addEventListener('keydown', (e) => {
-    // Check if the subjects page is currently active
-    const subjectsPageActive = document.querySelector('#subjects-page.active');
-    if (subjectsPageActive && numItems > 0) {
-        if (e.key === 'ArrowDown') {
-            e.preventDefault(); // Prevent page scrolling
-            currentIndex = (currentIndex + 1) % numItems;
-            rotateCarousel();
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault(); // Prevent page scrolling
-            currentIndex = (currentIndex - 1 + numItems) % numItems;
-            rotateCarousel();
-        }
-        // Optional: Handle Enter key to select the current subject
-        // else if (e.key === 'Enter') {
-        //     const activeItem = carouselItems[currentIndex];
-        //     if (activeItem) activeItem.click(); // Simulate click on Enter
-        // }
+        });
     }
-});
 
-// --- AI Chat Modal Controls ---
-if(aiChatBtn) aiChatBtn.addEventListener('click', () => { 
-    if (aiChatModal) aiChatModal.classList.add('active'); 
-    if (userChatInput) userChatInput.focus(); // Focus input when opened
-});
+    if(nextButton) {
+        nextButton.addEventListener('click', () => {
+            if (numItems > 0) {
+                currentIndex = (currentIndex + 1) % numItems;
+                rotateCarousel();
+            }
+        });
+    }
 
-if(closeChatBtn) closeChatBtn.addEventListener('click', () => { 
-    if (aiChatModal) aiChatModal.classList.remove('active'); 
-});
-
-// Close modal if clicking outside the chat box
-if(aiChatModal) {
-    aiChatModal.addEventListener('click', (e) => { 
-        if (e.target === aiChatModal) { // Check if the click is on the overlay itself
-            aiChatModal.classList.remove('active'); 
+    if(carouselScene) {
+        carouselScene.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            if (numItems > 0) {
+                if (e.deltaY > 0) currentIndex = (currentIndex + 1) % numItems;
+                else currentIndex = (currentIndex - 1 + numItems) % numItems;
+                rotateCarousel();
+            }
+        });
+    }
+    
+    document.addEventListener('keydown', (e) => {
+        if (document.querySelector('#subjects-page.active')) {
+             if (numItems > 0) {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    currentIndex = (currentIndex + 1) % numItems;
+                    rotateCarousel();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    currentIndex = (currentIndex - 1 + numItems) % numItems;
+                    rotateCarousel();
+                }
+             }
         }
     });
-}
 
-// Close modal on Escape key press
-document.addEventListener('keydown', (e) => { 
-    if (e.key === 'Escape' && aiChatModal && aiChatModal.classList.contains('active')) {
-        aiChatModal.classList.remove('active'); 
-    }
-});
+    if(aiChatBtn) aiChatBtn.addEventListener('click', () => { if (aiChatModal) aiChatModal.classList.add('active'); if (userChatInput) userChatInput.focus(); });
+    if(closeChatBtn) closeChatBtn.addEventListener('click', () => { if (aiChatModal) aiChatModal.classList.remove('active'); });
+    if(aiChatModal) aiChatModal.addEventListener('click', (e) => { if (e.target === aiChatModal) aiChatModal.classList.remove('active'); });
+    if(document) document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && aiChatModal.classList.contains('active')) aiChatModal.classList.remove('active'); });
     
-// --- Sending Chat Messages ---
-if(sendChatButton) sendChatButton.addEventListener('click', sendChatMessage);
-if(userChatInput) {
-    userChatInput.addEventListener('keypress', (e) => { 
-        // Send message on Enter key press, prevent default line break
-        if (e.key === 'Enter' && !e.shiftKey) { // Allow Shift+Enter for new lines if needed later
-            e.preventDefault(); 
-            sendChatMessage(); 
-        } 
-    });
-}
+    if(sendChatButton) sendChatButton.addEventListener('click', sendChatMessage);
+    if(userChatInput) userChatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendChatMessage(); } });
     
-// --- File Upload Buttons ---
-if(uploadPdfBtn) uploadPdfBtn.addEventListener('click', () => pdfFileInput?.click()); // Use optional chaining
-if(pdfFileInput) {
-    pdfFileInput.addEventListener('change', async (event) => { 
-        const file = event.target.files?.[0]; // Use optional chaining
+    if(uploadPdfBtn) uploadPdfBtn.addEventListener('click', () => pdfFileInput.click());
+    if(pdfFileInput) pdfFileInput.addEventListener('change', async (event) => { 
+        const file = event.target.files[0]; 
         if (!file) return;
-
-        addMessageToChat(`Processing PDF: "${file.name}"...`, 'user-message'); // Show processing message
-        
+        addMessageToChat(`Processing "${file.name}"...`, 'user-message'); 
         try { 
             const extractedText = await extractTextFromPdf(file);
             showNotification('PDF processed successfully!', 'success');
-            
-            // Handle image-based PDFs or empty text
-            if (!extractedText || extractedText.trim().length === 0) {
-                showNotification('Could not extract text from this PDF. It might be image-based or empty.', 'warning');
+            if (extractedText.trim().length === 0) {
+                showNotification('PDF seems to be image-based. No text could be extracted.', 'error');
                 return;
             }
-
-            // Prompt user for their question about the PDF content
-            const userQuestion = prompt("PDF text extracted. What is your question about its content?", "Summarize this document");
-            
-            if (userQuestion) { // If user provided a question (didn't cancel prompt)
-                const userFriendlyQuestion = `(Regarding PDF: ${file.name}) ${userQuestion}`;
-                addMessageToChat(userFriendlyQuestion, 'user-message'); // Show the question in chat
-
-                // Prepare prompt for the API, including extracted text (limit length if necessary)
-                const maxTextLength = 15000; // Limit text length to avoid overly long API requests
-                const truncatedText = extractedText.substring(0, maxTextLength);
-                if (extractedText.length > maxTextLength) {
-                     showNotification('PDF text truncated due to length limits.', 'info');
-                }
-
-                const fullPromptForApi = `Based on the following document text, please answer the user's request.\n\nUser Request: "${userQuestion}"\n\n--- Document Text ---\n\n${truncatedText}`;
-                
-                // Send request using a temporary history
+            const userQuestion = prompt("PDF processed. What's your question about it?", "Summarize this document");
+            if (userQuestion) { 
+                const userFriendlyQuestion = `(About PDF: ${file.name}) ${userQuestion}`;
+                addMessageToChat(userFriendlyQuestion, 'user-message');
+                const fullPromptForApi = `Based on the following document text, please answer the user's request.\n\nUser Request: "${userQuestion}"\n\n--- Document Text ---\n\n${extractedText.substring(0, 15000)}`;
                 const apiHistory = [...chatHistory, { role: "user", content: fullPromptForApi }];
-                sendApiRequest(apiHistory, true); // Send as part of main conversation
+                sendApiRequest(apiHistory, true); 
             }
         } catch (err) { 
-            // Handle errors from extractTextFromPdf or sendApiRequest
             showNotification(err.toString(), 'error'); 
-            console.error("Error processing PDF:", err);
         } finally { 
-            pdfFileInput.value = ''; // Reset file input
+            pdfFileInput.value = ''; 
         } 
     });
-}
 
-if(uploadImageBtn) uploadImageBtn.addEventListener('click', () => imageFileInput?.click());
-if(imageFileInput) {
-    imageFileInput.addEventListener('change', async (event) => { 
-        const file = event.target.files?.[0]; 
+    if(uploadImageBtn) uploadImageBtn.addEventListener('click', () => imageFileInput.click());
+    if(imageFileInput) imageFileInput.addEventListener('change', async (event) => { 
+        const file = event.target.files[0]; 
         if (!file) return; 
-        
-        // Prompt for context/question about the image
-        const q = prompt("Image selected. What should I analyze or describe? (e.g., 'Describe this dental image', 'What condition is shown?')", "Describe this image in detail."); 
-        
-        if (q) { // Proceed if user provided a prompt
-            await sendImageAndPromptToGemini(q, file); 
-        } 
-        imageFileInput.value = ''; // Reset file input
+        const q = prompt("Image selected. What should I do with it? (e.g., 'Describe this image')", "Describe this image in detail."); 
+        if (q) { await sendImageAndPromptToGemini(q, file); } 
+        imageFileInput.value = ''; 
     });
-}
     
-if(uploadAudioBtn) uploadAudioBtn.addEventListener('click', () => audioFileInput?.click());
-if(audioFileInput) {
-    audioFileInput.addEventListener('change', async (event) => { 
-        const file = event.target.files?.[0]; 
+    if(uploadAudioBtn) uploadAudioBtn.addEventListener('click', () => audioFileInput.click());
+    if(audioFileInput) audioFileInput.addEventListener('change', async (event) => { 
+        const file = event.target.files[0]; 
         if (!file) return; 
-        
-        // Prompt for action on the audio file
-        const q = prompt("Audio file selected. What should I do? (e.g., 'Transcribe this lecture', 'Summarize the key points')", "Transcribe this audio."); 
-        
-        if (q) { // Proceed if user provided a prompt
-            await sendAudioAndPromptToGemini(q, file); 
-        } 
-        audioFileInput.value = ''; // Reset file input
+        const q = prompt("Audio file selected. What should I do with it? (e.g., 'Transcribe this audio', 'Summarize this lecture')", "Transcribe this audio for me."); 
+        if (q) { await sendAudioAndPromptToGemini(q, file); } 
+        audioFileInput.value = ''; 
     });
-}
 
-// --- Chat Attachment (+) Button and Options ---
-if (chatPlusBtn && uploadOptions) {
-    // Toggle options visibility on button click
-    chatPlusBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent click from bubbling up to document
-        uploadOptions.classList.toggle('show');
-        chatPlusBtn.classList.toggle('rotated'); // Rotate the '+' icon
-    });
-    
-    // Close options if clicking anywhere else on the document
-    document.addEventListener('click', (e) => {
-        // Check if the click was outside the options menu and the plus button
-        if (!uploadOptions.contains(e.target) && !chatPlusBtn.contains(e.target) && uploadOptions.classList.contains('show')) {
-            uploadOptions.classList.remove('show');
-            chatPlusBtn.classList.remove('rotated'); // Rotate back
-        }
-    });
-    
-    // Prevent closing when clicking inside the options menu itself
-    uploadOptions.addEventListener('click', (e) => e.stopPropagation()); 
-}
+    if (chatPlusBtn && uploadOptions) {
+        chatPlusBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            uploadOptions.classList.toggle('show');
+            chatPlusBtn.classList.toggle('rotated');
+        });
+        document.addEventListener('click', () => {
+            if (uploadOptions.classList.contains('show')) {
+                uploadOptions.classList.remove('show');
+                chatPlusBtn.classList.toggle('rotated');
+            }
+        });
+        uploadOptions.addEventListener('click', (e) => e.stopPropagation());
+    }
 
-    // --- Chat Box Dragging and Resizing Logic ---
     let isDragging = false, isResizing = false;
     let offsetX, offsetY, initialWidth, initialHeight, initialMouseX, initialMouseY;
 
-    // Dragging functionality (using the header)
     if (chatHeader) {
         chatHeader.addEventListener('mousedown', (e) => {
-            // Ignore drag if clicking on buttons within the header
             if (e.target.closest('.close-chat-btn') || e.target.closest('#chat-controls button')) return;
-            
             isDragging = true;
-            // Calculate offset from top-left corner of the chat box
             offsetX = e.clientX - aiChatBox.offsetLeft;
             offsetY = e.clientY - aiChatBox.offsetTop;
-            aiChatBox.classList.add('is-dragging'); // Add class for visual feedback (optional)
-            chatHeader.style.cursor = 'grabbing'; // Change cursor while dragging
+            aiChatBox.classList.add('is-dragging');
         });
     }
 
-    // Resizing functionality (using the resize handle)
     if (resizeHandle) {
         resizeHandle.addEventListener('mousedown', (e) => {
-            e.preventDefault(); // Prevent text selection during resize
+            e.preventDefault(); 
             isResizing = true;
-            // Record initial dimensions and mouse position
             initialWidth = aiChatBox.offsetWidth;
             initialHeight = aiChatBox.offsetHeight;
             initialMouseX = e.clientX;
             initialMouseY = e.clientY;
-            // Change cursor for resize handle itself (can also be done in CSS)
-            // resizeHandle.style.cursor = 'se-resize'; 
         });
     }
 
-    // Handle mouse movement for dragging and resizing
     document.addEventListener('mousemove', (e) => {
         if (isDragging) {
-            e.preventDefault(); // Prevent text selection
+            e.preventDefault();
             let newLeft = e.clientX - offsetX;
             let newTop = e.clientY - offsetY;
-            
-            // Constrain dragging within viewport boundaries
             const maxLeft = window.innerWidth - aiChatBox.offsetWidth;
             const maxTop = window.innerHeight - aiChatBox.offsetHeight;
             aiChatBox.style.left = `${Math.max(0, Math.min(newLeft, maxLeft))}px`;
             aiChatBox.style.top = `${Math.max(0, Math.min(newTop, maxTop))}px`;
-            // Reset transform if previously centered using translate(-50%, -50%)
             aiChatBox.style.transform = 'none'; 
         }
         if (isResizing) {
-            e.preventDefault(); // Prevent text selection
-            const dx = e.clientX - initialMouseX; // Change in X
-            const dy = e.clientY - initialMouseY; // Change in Y
-            
-            // Calculate new dimensions, apply minimum constraints
-            const newWidth = Math.max(300, initialWidth + dx); // Min width 300px
-            const newHeight = Math.max(400, initialHeight + dy); // Min height 400px
-
-            aiChatBox.style.width = `${newWidth}px`;
-            aiChatBox.style.height = `${newHeight}px`;
+            e.preventDefault();
+            const dx = e.clientX - initialMouseX;
+            const dy = e.clientY - initialMouseY;
+            aiChatBox.style.width = `${initialWidth + dx}px`;
+            aiChatBox.style.height = `${initialHeight + dy}px`;
         }
     });
 
-    // Handle mouse up to stop dragging or resizing
     document.addEventListener('mouseup', () => {
-        if (isDragging) {
+        if(isDragging) {
             isDragging = false;
             aiChatBox.classList.remove('is-dragging');
-            if(chatHeader) chatHeader.style.cursor = 'grab'; // Reset cursor
         }
-        if (isResizing) {
+        if(isResizing) {
             isResizing = false;
-            // Reset resize handle cursor if needed
-            // if(resizeHandle) resizeHandle.style.cursor = 'se-resize';
         }
     });
 
-    // --- Pomodoro Timer Event Handlers ---
     if (pomodoroToggleBtn) {
         pomodoroToggleBtn.addEventListener('click', () => {
-            if (!pomodoroModal) return;
-            // Show timer view if active, otherwise show settings
-            switchPomodoroView(isPomodoroActive ? 'timer' : 'settings');
-            pomodoroModal.classList.add('active'); // Show the modal
+            if (isPomodoroActive) {
+                switchView('timer');
+            } else {
+                switchView('settings');
+            }
+            pomodoroModal.classList.add('active');
         });
     }
 
-    // Close Pomodoro modal if clicking outside the box
     if (pomodoroModal) {
         pomodoroModal.addEventListener('click', (e) => {
-            if (e.target === pomodoroModal) { // Click on overlay
+            if (e.target === pomodoroModal) {
                 pomodoroModal.classList.remove('active');
-                // Restore original page title if timer wasn't running or was paused
-                if(isPaused || !isPomodoroActive) document.title = originalDocTitle; 
+                document.title = originalDocTitle;
             }
         });
     }
 
-    // Close Pomodoro modal using close buttons
     closePomodoroBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            if(pomodoroModal) pomodoroModal.classList.remove('active');
-            if(isPaused || !isPomodoroActive) document.title = originalDocTitle;
+            pomodoroModal.classList.remove('active');
+            document.title = originalDocTitle;
         });
     });
 
-    // Start Pomodoro button (from settings)
     if (startPomodoroBtn) {
         startPomodoroBtn.addEventListener('click', () => {
-             // Read settings from input fields, with validation/defaults
             settings = {
-                focusDuration: parseInt(focusDurationInput?.value) || 25,
-                shortBreakDuration: parseInt(shortBreakDurationInput?.value) || 5,
-                longBreakDuration: parseInt(longBreakDurationInput?.value) || 30,
-                sessionsBeforeLongBreak: parseInt(sessionsInput?.value) || 4
+                focusDuration: parseInt(focusDurationInput.value),
+                shortBreakDuration: parseInt(shortBreakDurationInput.value),
+                longBreakDuration: parseInt(longBreakDurationInput.value),
+                sessionsBeforeLongBreak: parseInt(sessionsInput.value)
             };
-            // Ensure values are positive
-            settings.focusDuration = Math.max(1, settings.focusDuration);
-            settings.shortBreakDuration = Math.max(1, settings.shortBreakDuration);
-            settings.longBreakDuration = Math.max(1, settings.longBreakDuration);
-            settings.sessionsBeforeLongBreak = Math.max(1, settings.sessionsBeforeLongBreak);
-
-            isPomodoroActive = true; // Mark Pomodoro as active
-            currentSession = 'focus'; // Start with a focus session
-            sessionsCompleted = 0; // Reset session count
-            totalSeconds = settings.focusDuration * 60; // Set initial time
+            isPomodoroActive = true; 
+            
+            currentSession = 'focus';
+            sessionsCompleted = 0;
+            totalSeconds = settings.focusDuration * 60;
             secondsLeft = totalSeconds;
             
-            // Update UI for the timer view
-            if(sessionTitleEl) sessionTitleEl.textContent = 'Focus';
-            if(sessionCounterEl) sessionCounterEl.textContent = `Session 1 / ${settings.sessionsBeforeLongBreak}`;
-            updateTimerDisplay(); // Initial time display
-            switchPomodoroView('timer'); // Switch to timer view
-            startPomodoroTimer(); // Start the timer countdown
+            sessionTitleEl.textContent = 'Focus';
+            sessionCounterEl.textContent = `Session 1 of ${settings.sessionsBeforeLongBreak}`;
+            updateTimerDisplay();
+            switchView('timer');
         });
     }
 
-    // Pause/Resume button (in timer view)
     if (pauseResumeBtn) {
         pauseResumeBtn.addEventListener('click', () => {
             if (isPaused) {
-                startPomodoroTimer(); // Resume if paused
+                startTimer();
             } else {
-                pausePomodoroTimer(); // Pause if running
+                pauseTimer();
             }
         });
     }
     
-    // Reset button (stops the whole cycle)
     if (resetBtn) {
         resetBtn.addEventListener('click', () => {
-            // Confirm before resetting
             if (confirm('Are you sure you want to stop and reset the entire Pomodoro cycle?')) {
-                stopAndResetPomodoroCycle(); // Stop and go back to settings
+                stopAndResetPomodoroCycle();
             }
         });
     }
     
-    // Skip button (skips to the next session - focus/break)
-    if (skipPomodoroBtn) {
-        skipPomodoroBtn.addEventListener('click', () => {
+    if (skipBtn) {
+        skipBtn.addEventListener('click', () => {
             if (confirm('Are you sure you want to skip to the next session?')) {
-                switchPomodoroSession(); // Move to the next session immediately
+                switchSession();
             }
         });
     }
     
-    // --- ✅ [إصلاح] زر تفعيل/إيقاف مؤقت الكويز ---
+    // ✅ --- [إضافة جديدة] إصلاح مشكلة زر إيقاف/تشغيل العداد ---
+    const toggleQuizTimerBtn = document.getElementById('toggle-quiz-timer-btn');
     if (toggleQuizTimerBtn) {
-        // Set initial icon based on isQuizTimerActive state
-        toggleQuizTimerBtn.innerHTML = isQuizTimerActive ? '<i class="fas fa-power-off"></i>' : '<i class="fas fa-play"></i>';
-
         toggleQuizTimerBtn.addEventListener('click', () => {
-            isQuizTimerActive = !isQuizTimerActive; // Toggle the state
-
+            isQuizTimerActive = !isQuizTimerActive; // عكس الحالة
+            
             if (isQuizTimerActive) {
-                // --- Logic to RESUME or RESTART timer ---
-                toggleQuizTimerBtn.innerHTML = '<i class="fas fa-power-off"></i>'; // Show power-off icon
-                showNotification('Question timer ON', 'info');
-                
-                // Resume only if a quiz is running and the current question is NOT answered
-                if (quizTimerInterval === null && proQuiz && proUserAnswers[proQuestionIndex] === null) {
-                     // Try to get remaining time from display (less accurate but fallback)
-                     let remainingTime = 0;
-                     if(quizTimerDisplay?.textContent && quizTimerDisplay.textContent.includes(':')) {
-                         const parts = quizTimerDisplay.textContent.split(':');
-                         remainingTime = (parseInt(parts[0]) * 60) + parseInt(parts[1]);
-                     }
-
-                    // If time ran out previously (remaining is 0 or NaN) OR display was 'Off'/'Answered', restart with full duration
-                    if (remainingTime <= 0 || isNaN(remainingTime) || ["Off", "Answered"].includes(quizTimerDisplay?.textContent)) {
-                        const currentQuestion = proQuiz.questions[proQuestionIndex];
-                        startQuizTimer(currentQuestion?.timer || 90); // Restart with question's timer or default
-                    } else {
-                        startQuizTimer(remainingTime); // Resume from remaining time
+                // إذا أعدنا تشغيله، وكان العداد متوقفاً، نعيد تشغيله
+                if (quizTimerInterval === null && proUserAnswers[proQuestionIndex] === null) {
+                    const remainingTime = parseInt(quizTimerDisplay.textContent.split(':')[0]) * 60 + parseInt(quizTimerDisplay.textContent.split(':')[1]);
+                    if (remainingTime > 0) {
+                        startTimer(remainingTime); // استئناف من الوقت المتبقي
+                    } else if (proQuiz && proQuiz.questions[proQuestionIndex]) {
+                        startTimer(proQuiz.questions[proQuestionIndex].timer || 90); // بدء عداد جديد
                     }
                 }
+                toggleQuizTimerBtn.innerHTML = '<i class="fas fa-power-off"></i>';
+                showNotification('Question timer ON', 'info');
             } else {
-                // --- Logic to PAUSE timer ---
+                // إيقاف العداد
                 clearInterval(quizTimerInterval);
-                quizTimerInterval = null; // Mark as stopped
-                toggleQuizTimerBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
-                if(quizTimerDisplay) quizTimerDisplay.textContent = 'Off';
-                if(quizTimerDisplay) quizTimerDisplay.style.opacity = '0.6';
-                if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
+                quizTimerInterval = null; // نضع null للإشارة أنه متوقف
+                toggleQuizTimerBtn.innerHTML = '<i class="fas fa-play"></i>'; // تغيير الأيقونة
+                quizTimerDisplay.textContent = 'Off';
+                quizTimerDisplay.style.opacity = '0.6';
+                quizTimerContainer.classList.remove('warning');
                 showNotification('Question timer OFF', 'info');
             }
         });
     }
-    // --- نهاية إصلاح مؤقت الكويز ---
+    // --- نهاية الإضافة ---
 
-    // --- Quiz Navigation Buttons ---
-    if (quizActionBtn) quizActionBtn.addEventListener('click', checkAnswer); 
-
-    if (quizPrevBtn) {
-        quizPrevBtn.addEventListener('click', () => {
-            if (proQuestionIndex > 0) {
-                proQuestionIndex--;
-                renderCurrentQuestion();
-                saveQuizState(); // ✅ حفظ الحالة عند الرجوع
-            }
-        });
-    }
-
-    if (quizNextBtn_pro) {
-        quizNextBtn_pro.addEventListener('click', () => {
-            // Ensure current question is answered before proceeding (should be, as button is hidden otherwise)
-            if (proUserAnswers[proQuestionIndex] === null) {
-                // This case should ideally not happen if controls are updated correctly
-                showNotification('Please answer the current question or skip it.', 'info');
-                return;
-            }
-            
-            // Check if it's the last question
-            if (proQuestionIndex === proQuiz.questions.length - 1) {
-                submitQuizResults(); // Finish the quiz
-            } else {
-                proQuestionIndex++; // Move to the next question
-                renderCurrentQuestion(); // Display the next question
-                saveQuizState(); // ✅ حفظ الحالة عند التقدم
-            }
-        });
-    }
-
-    // ✅ --- زر التخطي (Skip Button) ---
-    if (quizSkipBtn) {
-        quizSkipBtn.addEventListener('click', () => {
-             // Mark as unanswered or explicitly skipped (using null is simpler for now)
-             // We don't mark as incorrect immediately, user might come back
-            // proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false }; // Option: Mark as incorrect immediately
-            
-            // Just move to the next question without saving an answer for the current one
-            if (proQuestionIndex < proQuiz.questions.length - 1) {
-                 proQuestionIndex++;
-                 renderCurrentQuestion();
-                 saveQuizState(); // ✅ حفظ الحالة بعد التخطي
-            } else {
-                 // If skipping the last question, consider it finished
-                 submitQuizResults();
-            }
-        });
-    }
-
+    quizActionBtn.addEventListener('click', checkAnswer);
+    quizPrevBtn.addEventListener('click', () => {
+        if (proQuestionIndex > 0) {
+            proQuestionIndex--;
+            renderCurrentQuestion();
+        }
+    });
+    quizNextBtn_pro.addEventListener('click', () => {
+        if (proUserAnswers[proQuestionIndex] === null) {
+            showNotification('Please select an answer before proceeding.', 'info');
+            return;
+        }
+        if (proQuestionIndex === proQuiz.questions.length - 1) {
+            submitQuizResults();
+        } else {
+            proQuestionIndex++;
+            renderCurrentQuestion();
+        }
+    });
 
     // --- AI HUB IMPLEMENTATION ---
-    const aiHubBtn = document.querySelector('.ai-chat-btn'); // Assuming this opens the AI Hub now
+    const aiHubBtn = document.querySelector('.ai-chat-btn');
     const aiHubOverlay = document.getElementById('aiHubModalOverlay');
     const closeHubBtn = document.getElementById('closeHubBtn');
     const aiOptionCards = document.querySelectorAll('.ai-option-card');
@@ -3729,234 +2913,187 @@ if (chatPlusBtn && uploadOptions) {
     const aiLoadingIndicator = document.getElementById('aiLoadingIndicator');
     const aiProcessBtn = document.getElementById('aiProcessBtn');
 
-    let currentAiTask = ''; // Stores the task selected ('quiz', 'flashcards', etc.)
+    let currentAiTask = '';
 
-    // Open AI Hub modal
-    if (aiHubBtn && aiHubOverlay) {
-        aiHubBtn.addEventListener('click', () => {
-            aiHubOverlay.style.display = 'flex';
-        });
-    }
-
-    // Close AI Hub modal
-    if (closeHubBtn && aiHubOverlay) {
-        closeHubBtn.addEventListener('click', () => {
-            aiHubOverlay.style.display = 'none';
-        });
-    }
-     // Close AI Hub modal on overlay click
-     if (aiHubOverlay) {
-         aiHubOverlay.addEventListener('click', (e) => {
-             if (e.target === aiHubOverlay) aiHubOverlay.style.display = 'none';
-         });
-     }
-
-    // Close AI Processor modal
-    if (closeProcessorBtn && aiProcessorOverlay) {
-        closeProcessorBtn.addEventListener('click', () => {
-            aiProcessorOverlay.style.display = 'none';
-        });
-    }
-    // Close AI Processor modal on overlay click
-    if (aiProcessorOverlay) {
-        aiProcessorOverlay.addEventListener('click', (e) => {
-            if (e.target === aiProcessorOverlay) aiProcessorOverlay.style.display = 'none';
-        });
-    }
-
-
-// --- Handling clicks on AI option cards (Quiz, Flashcards, Summary, Chat) ---
-const quizOptionsGenContainer = document.getElementById('quiz-options-container'); // Renamed ID
-const flashcardOptionsGenContainer = document.getElementById('flashcard-options-container'); // Renamed ID
-
-if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorTitle && aiFileForm && aiLoadingIndicator && aiProcessBtn && quizOptionsGenContainer && flashcardOptionsGenContainer) {
-    aiOptionCards.forEach(card => {
-        card.addEventListener('click', () => {
-            currentAiTask = card.dataset.task; // Get task type (chat, quiz, flashcards, summary)
-            if(!currentAiTask) return;
-
-            aiHubOverlay.style.display = 'none'; // Close the Hub selection modal
-
-            if (currentAiTask === 'chat') {
-                 // Directly open the chat modal if 'chat' is selected
-                 if (aiChatModal) aiChatModal.classList.add('active');
-                 if (userChatInput) userChatInput.focus();
-            } else {
-                 // For other tasks (quiz, flashcards, summary), open the file processor modal
-
-                // --- Remember Subject Context ---
-                const activeCarouselItem = document.querySelector('.carousel-item.active');
-                if (!activeCarouselItem || !activeCarouselItem.dataset.subjectKey || !selectedYear) {
-                    showNotification("Please select a subject from the list before generating content.", "error");
-                    return; // Stop if no subject selected
-                }
-                // Store context immediately before showing the processor
-                 try {
-                     // Find subject data based on key and year
-                     const subjectData = subjectsDatabase[selectedYear]?.find(s => s.key === activeCarouselItem.dataset.subjectKey);
-                     if (!subjectData) throw new Error("Could not find subject data.");
-                     
-                     // Store ID and Name (fetch ID if needed, or assume backend handles key)
-                     // For now, let's assume we need the name primarily, and backend can find ID by key/year
-                     currentAiGenerationContext = {
-                         subjectId: subjectData.key, // Using key for now, backend might need to resolve ID
-                         subjectName: subjectData.name
-                     };
-                     console.log("AI Generation Context Set:", currentAiGenerationContext);
-
-                 } catch (error) {
-                     showNotification(`Error setting subject context: ${error.message}`, 'error');
-                     return; // Stop if context cannot be set
-                 }
-                // --- End Remember Subject Context ---
-
-
-                 // Prepare the processor modal UI
-                 processorTitle.textContent = `Generate ${currentAiTask.charAt(0).toUpperCase() + currentAiTask.slice(1)} from PDF`;
-                 aiFileForm.style.display = 'flex'; // Show the form
-                 aiLoadingIndicator.style.display = 'none'; // Hide loading indicator
-                 aiProcessBtn.disabled = false; // Enable submit button
-                 aiFileForm.reset(); // Clear any previous file selection
-                
-                 // Show/hide specific options based on the task
-                 quizOptionsGenContainer.style.display = (currentAiTask === 'quiz') ? 'block' : 'none';
-                 flashcardOptionsGenContainer.style.display = (currentAiTask === 'flashcards') ? 'block' : 'none';
-
-                 aiProcessorOverlay.style.display = 'flex'; // Show the processor modal
-            }
-        });
+    aiHubBtn.addEventListener('click', () => {
+        aiHubOverlay.style.display = 'flex';
     });
-} else {
-     console.warn("One or more AI Hub/Processor elements are missing. AI generation features might not work.");
-}
 
-// --- Handling the AI File Form Submission ---
-if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcessorOverlay) {
-    aiFileForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Prevent standard form submission
-        
-        const file = aiPdfInput.files?.[0];
-        if (!file) {
-            showNotification('Please select a PDF file.', 'error');
-            return;
-        }
-        
-        // Double-check subject context (should be set when modal opened)
-        if (!currentAiGenerationContext.subjectId || !currentAiGenerationContext.subjectName) {
-            showNotification('Error: Subject context is missing. Please select a subject first.', 'error');
-            return;
-        }
+    closeHubBtn.addEventListener('click', () => {
+        aiHubOverlay.style.display = 'none';
+    });
 
-        // Show loading state, hide form
-        aiFileForm.style.display = 'none';
-        aiLoadingIndicator.style.display = 'block';
-        aiProcessBtn.disabled = true;
+    closeProcessorBtn.addEventListener('click', () => {
+        aiProcessorOverlay.style.display = 'none';
+    });
 
-        const formData = new FormData();
-        formData.append('pdfFile', file);
-        // Append subject context to formData
-        formData.append('subjectId', currentAiGenerationContext.subjectId); // Or send key if backend handles it
-        formData.append('subjectName', currentAiGenerationContext.subjectName);
+    // في ملف script.js
 
-        let endpoint = '';
-        
-        // Determine endpoint and add task-specific options
-        switch (currentAiTask) {
-            case 'quiz':
-                endpoint = '/api/gemini/generateQuiz'; 
-                formData.append('count', document.getElementById('ai-quiz-count')?.value || '10'); // Add question count
-                break;
-            case 'flashcards':
-                endpoint = '/api/gemini/generateFlashcards'; 
-                formData.append('count', document.getElementById('ai-flashcard-count')?.value || '10'); // Add card count
-                formData.append('language', document.getElementById('ai-generation-language')?.value || 'the same language as the document'); // Add language
-                break;
-            case 'summary': // Assuming 'summary' task generates a mind map
-                endpoint = '/api/gemini/generateMindMap'; 
-                // Add any specific options for mind map generation if needed
-                break;
-            default:
-                showNotification('Unknown AI task selected.', 'error');
-                // Reset UI
-                aiFileForm.style.display = 'flex';
-                aiLoadingIndicator.style.display = 'none';
-                aiProcessBtn.disabled = false;
-                return; // Stop processing
-        }
+// ✅ 1. استبدل دالة aiOptionCards.forEach بالكامل
+const quizOptionsContainer = document.getElementById('quiz-options-container');
+const flashcardOptionsContainer = document.getElementById('flashcard-options-container');
 
-        try {
-            // Use fetchApi for the generation request
-            const data = await fetchApi(endpoint, {
-                method: 'POST',
-                headers: {}, // Let browser set Content-Type for FormData
-                body: formData 
-            });
+aiOptionCards.forEach(card => {
+    card.addEventListener('click', () => {
+        currentAiTask = card.dataset.task;
+        aiHubOverlay.style.display = 'none'; // أغلق نافذة الخيارات
 
-            // Close processor modal on success
-            aiProcessorOverlay.style.display = 'none';
-            showNotification(`${currentAiTask.charAt(0).toUpperCase() + currentAiTask.slice(1)} generated successfully!`, 'success');
+        if (currentAiTask === 'chat') {
+            aiChatModal.classList.add('active'); // افتح الشات
+        } else {
+            // جهز واجهة الرفع
+            processorTitle.textContent = `Generate ${currentAiTask}`;
+            aiFileForm.style.display = 'flex';
+            aiLoadingIndicator.style.display = 'none';
+            aiProcessBtn.disabled = false;
+            aiFileForm.reset();
+            
+            // ✨ إظهار/إخفاء حاويات الخيارات بذكاء
+            quizOptionsContainer.style.display = (currentAiTask === 'quiz') ? 'block' : 'none';
+            flashcardOptionsContainer.style.display = (currentAiTask === 'flashcards') ? 'block' : 'none';
 
-            // Handle the response based on the task
-            if (currentAiTask === 'summary') { 
-                 displayMindMap(data); 
-            } else if (currentAiTask === 'quiz') { 
-                 startAIGeneratedQuiz(data); // Pass the generated questions array
-            } else if (currentAiTask === 'flashcards') { 
-                 displayGeneratedFlashcards(data); // Pass the generated cards array
-            }
-
-        } catch (error) {
-            console.error(`Error generating ${currentAiTask}:`, error);
-            showNotification(`Failed to generate ${currentAiTask}: ${error.message}`, "error");
-            // Keep the processor modal open on error to allow retry or file change
-        } finally {
-            // Reset UI elements in the processor modal for the next use (even on error)
-            aiFileForm.style.display = 'flex'; // Show form again
-            aiLoadingIndicator.style.display = 'none'; // Hide loading
-            aiProcessBtn.disabled = false; // Re-enable button
-            // Don't reset the form here automatically on error, user might want to retry with same file/options
-            // aiFileForm.reset(); 
+            aiProcessorOverlay.style.display = 'flex'; // افتح واجهة الرفع
         }
     });
-} else {
-     console.warn("AI file form elements missing. PDF processing might not work.");
-}
+});
+
+// في ملف script.js، احذف كل المقاطع التي تبدأ بـ aiFileForm.addEventListener
+// ثم الصق هذا الكود بدلاً منها.
+// في ملف script.js
+
+// ✅ استبدل هذه الدالة بالكامل بالكود الصحيح
+aiFileForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const file = aiPdfInput.files[0];
+    if (!file) {
+        showNotification('Please select a PDF file.', 'error');
+        return;
+    }
     
-    // Back button on the (now unused?) mindmap page
-    // const mindmapBackBtn = document.getElementById('mindmap-back-btn');
-    // if (mindmapBackBtn) {
-    //     mindmapBackBtn.addEventListener('click', () => {
-    //         showPage('#home-page'); // Or perhaps back to subjects?
-    //     });
-    // }
+    // ... (منطق "تذكر المادة" يبقى كما هو)
+    const activeCarouselItem = document.querySelector('.carousel-item.active');
+    if (!activeCarouselItem) {
+        showNotification("Error: No active subject selected. Please select a subject first.", "error");
+        return;
+    }
+    try {
+        const subjectsInYear = await fetchApi(`/api/content/subjects/${selectedYear}`);
+        const currentSubject = subjectsInYear.find(s => s.key === activeCarouselItem.dataset.subjectKey);
+        if (!currentSubject) {
+            showNotification('Could not verify the selected subject.', 'error');
+            return;
+        }
+        currentAiGenerationContext = {
+            subjectId: currentSubject._id,
+            subjectName: currentSubject.name
+        };
+    } catch (error) {
+        showNotification('Error fetching subject data before generation.', 'error');
+        return;
+    }
+    // ... (نهاية منطق "تذكر المادة")
 
-    // --- Initial Theme Setup ---
+    aiFileForm.style.display = 'none';
+    aiLoadingIndicator.style.display = 'block';
+    aiProcessBtn.disabled = true;
+
+    const formData = new FormData();
+    formData.append('pdfFile', file);
+    const token = localStorage.getItem('userToken');
+    let endpoint = '';
+    
+    // --- ✨✨✨ الإصلاح هنا ✨✨✨ ---
+    switch (currentAiTask) {
+        case 'quiz':
+            // ❌ الخطأ كان هنا: '/api/ai/generateQuiz'
+            endpoint = '/api/gemini/generateQuiz'; // ✅ المسار الصحيح
+            formData.append('count', document.getElementById('ai-quiz-count').value);
+            break;
+        case 'flashcards':
+            // ❌ الخطأ كان هنا: '/api/ai/generateFlashcards'
+            endpoint = '/api/gemini/generateFlashcards'; // ✅ المسار الصحيح
+            formData.append('count', document.getElementById('ai-flashcard-count').value);
+            formData.append('language', document.getElementById('ai-generation-language').value);
+            break;
+        case 'summary':
+            endpoint = '/api/gemini/generateMindMap';
+            break;
+        default:
+            showNotification('Unknown task.', 'error');
+            aiFileForm.style.display = 'flex';
+            aiLoadingIndicator.style.display = 'none';
+            aiProcessBtn.disabled = false;
+            return;
+    }
+    // --- نهاية الإصلاح ---
+
+    try {
+        const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${token}` },
+            body: formData 
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to process the request.');
+        }
+        aiProcessorOverlay.style.display = 'none';
+        const data = await response.json();
+        
+        if (currentAiTask === 'summary') { displayMindMap(data); } 
+        else if (currentAiTask === 'quiz') { startAIGeneratedQuiz(data); }
+        else if (currentAiTask === 'flashcards') { displayGeneratedFlashcards(data); }
+
+    } catch (error) {
+        // سيتم التقاط خطأ "Unexpected token" هنا الآن
+        if (error instanceof SyntaxError) {
+            showNotification("The AI returned an invalid response. Please try again.", "error");
+        } else {
+            showNotification(error.message, "error");
+        }
+    } finally {
+        aiFileForm.style.display = 'flex';
+        aiLoadingIndicator.style.display = 'none';
+        aiProcessBtn.disabled = false;
+        aiFileForm.reset();
+        if (aiProcessorOverlay.style.display !== 'none') {
+             aiProcessorOverlay.style.display = 'none';
+        }
+    }
+});
+    
+    const mindmapBackBtn = document.getElementById('mindmap-back-btn');
+    if (mindmapBackBtn) {
+        mindmapBackBtn.addEventListener('click', () => {
+            showPage('#home-page');
+        });
+    }
+
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) { 
         body.classList.add(savedTheme); 
         updateThemeToggleIcon(savedTheme); 
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { 
-        // Default to dark mode if system prefers it and no theme saved
         body.classList.add('dark-mode'); 
         updateThemeToggleIcon('dark-mode'); 
     } else { 
-        // Default to light mode otherwise
         updateThemeToggleIcon('light-mode'); 
     }
 
-    // --- Explore Content Modal Handlers ---
-    if (exploreContentBtnNew && exploreModal) {
+    if (exploreContentBtnNew) {
         exploreContentBtnNew.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default anchor behavior if it's a link
-            exploreModal.classList.add('active');
+            e.preventDefault();
+            if (exploreModal) {
+                exploreModal.classList.add('active');
+            }
         });
     }
-    if (closeExploreModalBtn && exploreModal) {
+    if (closeExploreModalBtn) {
         closeExploreModalBtn.addEventListener('click', () => {
-            exploreModal.classList.remove('active');
+            if (exploreModal) exploreModal.classList.remove('active');
         });
     }
-    // Close explore modal on overlay click
+
     if (exploreModal) {
         exploreModal.addEventListener('click', (e) => {
             if (e.target === exploreModal) {
@@ -3965,11 +3102,9 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
         });
     }
 
-    // --- Feature Card Click Handlers (Video, Summaries, Quizzes, Articles) ---
     if (videoLessonsCard) {
         videoLessonsCard.addEventListener('click', () => {
-            showNotification('Video lessons are coming soon!', 'info');
-            // Optionally, disable the card visually or remove the listener after first click
+            showNotification('Coming Soon! Video explanations will be added very soon.', 'info');
         });
     }
 
@@ -3977,8 +3112,8 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
         summariesCard.addEventListener('click', () => {
             const summariesLink = document.querySelector('a[data-page-type="summaries"]');
             if (summariesLink) {
-                summariesLink.click(); // Simulate click on the nav link
-                // showNotification('Showing all summaries.', 'info'); // Notification might be redundant as page changes
+                summariesLink.click();
+                showNotification('Showing all summaries.', 'info');
             }
         });
     }
@@ -3987,22 +3122,24 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
         quizzesCard.addEventListener('click', () => {
             const quizzesLink = document.querySelector('a[data-page-type="quizzes"]');
             if (quizzesLink) {
-                quizzesLink.click(); // Simulate click on the nav link
+                quizzesLink.click();
+                showNotification('Showing all quizzes.', 'info');
             }
         });
     }
 
-    if (articlesCard && articlesModal) {
+    if (articlesCard) {
         articlesCard.addEventListener('click', () => {
-            articlesModal.classList.add('active');
+            if (articlesModal) articlesModal.classList.add('active');
         });
     }
-    if (closeArticlesModalBtn && articlesModal) {
+
+    if (closeArticlesModalBtn) {
         closeArticlesModalBtn.addEventListener('click', () => {
-            articlesModal.classList.remove('active');
+            if (articlesModal) articlesModal.classList.remove('active');
         });
     }
-     // Close articles modal on overlay click
+
     if (articlesModal) {
         articlesModal.addEventListener('click', (e) => {
             if (e.target === articlesModal) {
@@ -4010,345 +3147,183 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
             }
         });
     }
-
-    // --- Initial App Load ---
-    checkForAuthToken(); // Check for token and initialize the app
+    checkForAuthToken();
     
-    // Initial scroll reveal for the default active page (usually home)
     triggerScrollReveal(document.querySelector('.page-section.active'));
 
-    // --- Markmap Dynamic Loading (ensureMarkmap not called here, called on demand) ---
+    // --- ❌ تم حذف كود زر البرغر المكرر من هنا ---
+
     function loadScript(src) {
       return new Promise((resolve, reject) => {
-        // Check if script already exists
         if (document.querySelector(`script[src="${src}"]`)) {
-            console.log(`Script already loaded: ${src}`);
             return resolve();
         }
         const s = document.createElement('script');
         s.src = src;
-        s.async = false; // Load sequentially if needed, though defer might be better
-        s.onload = () => {
-            console.log(`Script loaded successfully: ${src}`);
-            resolve();
-        };
-        s.onerror = (e) => {
-             console.error(`Failed to load script: ${src}`, e);
-             reject(new Error('Failed to load script: ' + src));
-        };
+        s.async = false;
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error('Failed to load script: ' + src));
         document.head.appendChild(s);
       });
     }
 
     async function ensureMarkmap() {
-      // Check if necessary Markmap objects exist
-      if (window.markmap && window.markmap.Markmap && window.markmap.Transformer) { // Check for Transformer
-        console.log("Markmap libraries already available.");
-        return; // Already loaded
+      if (window.markmap && window.markmap.Markmap && window.markmap.transformer) {
+        return;
       }
 
       try {
         console.log("Markmap not found. Loading libraries dynamically...");
-        // Load dependencies first (D3)
-        await loadScript('https://cdn.jsdelivr.net/npm/d3@7'); // Load D3 library
-        // Load Markmap core and view components
-        await loadScript('https://cdn.jsdelivr.net/npm/markmap-lib'); 
-        await loadScript('https://cdn.jsdelivr.net/npm/markmap-view');
-        
-         // Verify loading
-         if (window.markmap && window.markmap.Markmap && window.markmap.Transformer) {
-              console.log("Markmap libraries loaded successfully via dynamic import.");
-         } else {
-              throw new Error("Markmap objects not found after loading scripts.");
-         }
+        await loadScript('https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js');
+        await loadScript('https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.js');
+        await loadScript('https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js');
+        console.log("Markmap libraries loaded successfully.");
       } catch (error) {
-        console.error("Error loading Markmap libraries:", error);
-        showNotification('Failed to load mind map viewer components.', 'error');
-        // Re-throw the error if you want calling functions to handle it
-        throw error; 
+        console.error(error);
+        throw new Error('Failed to load one or more Markmap libraries.');
       }
     }
     
     // ✅ أضف هذه الدالة الجديدة في أي مكان مع دوال الفلاش كارد
     // في ملف script.js
     // ✅ استبدل هذه الدالة بالكامل
-    async function handleFlashcardRating(rating, interval) {
-        if (!currentCollection || !currentCollection[currentCardIndex]) {
-             console.error("Cannot rate flashcard: collection or card missing.");
-             return;
-        }
+async function handleFlashcardRating(rating, interval) {
+    const card = currentCollection[currentCardIndex];
+    if (!card) return;
 
-        const card = currentCollection[currentCardIndex];
+    if (rating === 'hard' || rating === 'medium') {
         
-        // Only save if rated 'hard' or 'medium'
-        if (rating === 'hard' || rating === 'medium') {
-            
-            // --- Ensure subject context is available ---
-            if (!currentAiGenerationContext || !currentAiGenerationContext.subjectId) {
-                showNotification('Error: Could not determine the subject to save this card under.', 'error');
-                console.error("Missing subject context for saving AI flashcard:", currentAiGenerationContext);
-                return; // Stop if context is missing
-            }
-            // --- End context check ---
-                
-            try {
-                // Prepare data for saving
-                 const flashcardData = {
-                    subjectId: currentAiGenerationContext.subjectId, // Use the stored context
-                    questionText: card.front || card.questionText || 'Front', // Use available front content
-                    backContent: card.back || card.backContent || 'Back',   // Use available back content
-                    // Optionally add interval if your backend supports it
-                    // interval: interval ? parseInt(interval) : undefined 
-                 };
-
-                 // Disable rating buttons temporarily
-                 document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = true);
-
-                await createFlashcardAPI(flashcardData); // Call API to save
-                
-                // Show success message based on rating
-                const reviewMessage = interval ? `Will be reviewed in ${interval} day(s).` : '';
-                showNotification(`Card saved! ${reviewMessage}`, 'success');
-
-            } catch (e) {
-                 // Error handled by createFlashcardAPI, but re-enable buttons
-                 document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
-                 // Don't proceed to next card on error
-                 return; 
-            } finally {
-                 // Re-enable buttons if needed (though on success we move on)
-                 // document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
-            }
-        } else {
-             // If rated 'easy', just show a confirmation (optional)
-             // showNotification('Card marked as easy.', 'info');
+        // --- ✨ الإصلاح هنا: نستخدم المتغير العام بدلاً من البحث ---
+        if (!currentAiGenerationContext.subjectId) {
+            // رسالة الخطأ الآن منطقية أكثر
+            showNotification('Error: Could not find the original subject to save this card.', 'error');
+            return;
         }
-
-        // Move to the next card automatically (if not the last one)
-        if (currentCardIndex < currentCollection.length - 1) {
-            currentCardIndex++;
-            displayCurrentFlashcard();
-            // Re-enable buttons for the new card
-            document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
-        } else {
-            // Last card reviewed
-            showNotification('All generated cards have been reviewed!', 'success');
-            // Go back to the collections view
-            const backBtn = document.getElementById('back-to-collections-btn');
-            if (backBtn) backBtn.click();
+        // --- نهاية الإصلاح ---
+            
+        try {
+            await createFlashcardAPI({
+                subjectId: currentAiGenerationContext.subjectId, // <-- استخدام القيمة المحفوظة
+                questionText: card.front,
+                backContent: card.back,
+                interval: interval
+            });
+            showNotification(`Card saved! Will be reviewed in ${interval} day(s).`, 'success');
+        } catch (e) {
+            showNotification(`Error saving card: ${e.message}`, 'error');
         }
     }
+
+    // الانتقال للبطاقة التالية تلقائياً
+    if (currentCardIndex < currentCollection.length - 1) {
+        currentCardIndex++;
+        displayCurrentFlashcard();
+    } else {
+        showNotification('All generated cards have been reviewed!', 'success');
+        document.getElementById('back-to-collections-btn').click();
+    }
+}
 
 
     // ✅ أضف هذا الكود في قسم معالجات الأحداث (Event Handlers) في الأسفل
-    // Ensure rating buttons exist before adding listeners
-    const ratingButtons = document.querySelectorAll('.rating-btn');
-    if (ratingButtons.length > 0) {
-        ratingButtons.forEach(btn => {
-            // Prevent adding multiple listeners if script runs multiple times
-             if (!btn.dataset.listenerAttached) { 
-                 btn.addEventListener('click', function() {
-                     const rating = this.dataset.rating;
-                     const interval = this.dataset.interval; // Can be undefined for 'easy'
-                     handleFlashcardRating(rating, interval);
-                 });
-                 btn.dataset.listenerAttached = 'true'; // Mark listener as attached
-             }
+    document.querySelectorAll('.rating-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const rating = this.dataset.rating;
+            const interval = this.dataset.interval; // قد يكون 'undefined' للزر السهل
+            handleFlashcardRating(rating, interval);
         });
-    } else {
-         console.warn("AI Flashcard rating buttons not found.");
-    }
+    });
 
     // ✅ أضف هذه الدالة الجديدة في أي مكان مناسب
     function startSavedQuiz(quizData) {
-        // Validate saved quiz data
-        if (!quizData || !quizData._id || !Array.isArray(quizData.questions)) {
-             console.error("Invalid saved quiz data:", quizData);
-             showNotification("Could not load this saved quiz.", "error");
-             return;
-        }
-
-        localStorage.removeItem('quizState'); // Clear any ongoing quiz state
-
-        // Adapt saved quiz structure to the 'proQuiz' format
-        const adaptedQuiz = {
-            _id: quizData._id, // Use the actual ID from the database
-            title: quizData.title || 'Saved Quiz',
-            subject: null, // Saved quizzes might not have a direct subject link in the same way
-            subjectName: quizData.subjectName || "Saved Quiz", // Use saved subject name
+        // هذه الدالة تحول الكويز المحفوظ ليتوافق مع نظام الكويز الاحترافي
+        proQuiz = {
+            _id: quizData._id, // نستخدم المعرف الحقيقي من قاعدة البيانات
+            title: quizData.title,
+            subject: null, // لا يوجد موضوع مرتبط مباشرةً
             questions: quizData.questions.map(q => ({
-                // Map fields carefully, providing defaults
-                questionText: q.question || q.questionText || '', 
-                options: q.options || [],
-                // Ensure correctOptionIndexes is always an array
-                correctOptionIndexes: Array.isArray(q.correctOptionIndexes) ? q.correctOptionIndexes : [q.correctOptionIndexes].filter(i => i != null), 
-                explanation: q.explanation || '',
-                // Add imageUrl and timer if they exist in saved data (optional)
-                imageUrl: q.imageUrl, 
-                timer: q.timer 
+                // نقوم بتوحيد أسماء الحقول
+                questionText: q.question, 
+                options: q.options,
+                correctOptionIndexes: q.correctOptionIndexes,
+                explanation: q.explanation,
             }))
         };
 
-        // Check if adaptation resulted in valid questions
-        if (!adaptedQuiz.questions || adaptedQuiz.questions.length === 0) {
-            showNotification('This saved quiz appears to have no valid questions.', 'error');
+        if (!proQuiz.questions || proQuiz.questions.length === 0) {
+            showNotification('This quiz has no questions.', 'error');
             return;
         }
 
-        // Initialize and start the quiz using the adapted data
-        initializeAndStartQuiz(adaptedQuiz);
+        proQuestionIndex = 0;
+        proUserAnswers = new Array(proQuiz.questions.length).fill(null);
+        quizStartTime = Date.now();
+        
+        quizLessonNameEl.textContent = proQuiz.title;
+        quizSubjectNameEl.textContent = quizData.subjectName || "Saved Quiz";
+
+        renderQuestionList();
+        renderCurrentQuestion();
+        updateStats();
+        
+        showPage('#quiz-taking-page');
     }
 
     // ✅ أضف هذه الدالة الجديدة أيضاً
     async function handleDeleteSavedQuiz(quizId, quizElement) {
-        if (!quizId || !quizElement) return; // Need ID and element to remove
-
-        // Confirmation dialog
-        if (!confirm('Are you sure you want to delete this saved quiz permanently?')) {
-            return; // Abort if user cancels
-        }
-
-        // Show loading/disabling state (optional)
-        const deleteButton = quizElement.querySelector('.btn-delete-saved-quiz');
-        if (deleteButton) {
-             deleteButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-             deleteButton.disabled = true;
+        if (!confirm('Are you sure you want to delete this saved quiz?')) {
+            return;
         }
 
         try {
-            // Use fetchApi to send DELETE request
             await fetchApi(`/api/saved-quizzes/${quizId}`, { method: 'DELETE' });
-            
             showNotification('Quiz deleted successfully!', 'success');
-            // Remove the quiz element from the UI smoothly
-            quizElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            quizElement.style.opacity = '0';
-            quizElement.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                 quizElement.remove(); 
-                 // Check if the list is now empty
-                 const savedListContainer = document.getElementById('saved-quizzes-list');
-                 if (savedListContainer && !savedListContainer.querySelector('.saved-quiz-item')) {
-                     savedListContainer.innerHTML = '<p>You have no saved quizzes.</p>';
-                 }
-            }, 300); // Wait for animation
-
+            quizElement.remove(); // إزالة العنصر من الواجهة فوراً
         } catch (error) {
-            console.error('Failed to delete saved quiz:', error);
             showNotification(`Failed to delete quiz: ${error.message}`, 'error');
-            // Restore button state on error
-            if (deleteButton) {
-                 deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
-                 deleteButton.disabled = false;
-            }
         }
     }
-    
-// --- Report Question Modal Logic ---
-const reportBtn = document.getElementById('report-question-btn');
+    const reportBtn = document.getElementById('report-question-btn');
 const reportModal = document.getElementById('report-modal');
 const reportForm = document.getElementById('report-form');
 const cancelReportBtn = document.getElementById('cancel-report-btn');
-const reportReasonInput = document.getElementById('report-reason'); // Get textarea
-
-// Show modal on button click
-if (reportBtn && reportModal && reportReasonInput) {
+if (reportBtn) {
     reportBtn.addEventListener('click', () => {
-        // Ensure a quiz and question are active
-        if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) {
-            showNotification('Cannot report. No active question found.', 'error');
+        if (!proQuiz || !proQuiz.questions[proQuestionIndex]) {
+            showNotification('Cannot report this question.', 'error');
             return;
         }
-        reportModal.classList.add('active'); // Show modal
-        reportReasonInput.focus(); // Focus the reason input
+        reportModal.classList.add('active');
+        document.getElementById('report-reason').focus();
     });
-} else {
-     console.warn("Report question elements missing.");
 }
-
-// Hide modal on cancel button click
-if (cancelReportBtn && reportModal && reportForm) {
+if (cancelReportBtn) {
     cancelReportBtn.addEventListener('click', () => {
-        reportModal.classList.remove('active'); // Hide modal
-        reportForm.reset(); // Clear the form
+        reportModal.classList.remove('active');
+        reportForm.reset();
     });
 }
-
-// Handle form submission
-if (reportForm && reportModal && reportReasonInput) {
+if (reportForm) {
     reportForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Prevent default form submission
-        
-        const reason = reportReasonInput.value.trim();
-        if (!reason) {
-            showNotification('Please provide a reason for the report.', 'warning');
-            return;
-        }
-
-        // Get current question data safely
-        const currentQuestion = proQuiz?.questions?.[proQuestionIndex];
-        if (!currentQuestion) {
-             showNotification('Could not identify the question to report.', 'error');
-             return;
-        }
-
-        const reportPayload = {
-            quizId: proQuiz._id || 'unknown', // Include quiz ID
-            // Use questionText or fallback
-            questionText: currentQuestion.questionText || currentQuestion.question || `Question Index ${proQuestionIndex}`, 
-            reason: reason
-        };
-
-        // Disable form while submitting (optional)
-        const submitButton = reportForm.querySelector('button[type="submit"]');
-        if (submitButton) submitButton.disabled = true;
+        e.preventDefault();
+        const reason = document.getElementById('report-reason').value;
+        const currentQuestion = proQuiz.questions[proQuestionIndex];
 
         try {
-            // Use fetchApi to send the report
             const response = await fetchApi('/api/reports', {
                 method: 'POST',
-                body: JSON.stringify(reportPayload)
+                body: JSON.stringify({
+                    quizId: proQuiz._id,
+                    questionText: currentQuestion.questionText || currentQuestion.question,
+                    reason: reason
+                })
             });
-            showNotification(response?.message || 'Report submitted successfully!', 'success');
+            showNotification(response.message, 'success');
         } catch (error) {
-            console.error("Error submitting report:", error);
-            showNotification(`Failed to submit report: ${error.message}`, 'error');
+            showNotification(error.message, 'error');
         } finally {
-            // Always re-enable button, close modal, and reset form
-            if (submitButton) submitButton.disabled = false;
             reportModal.classList.remove('active');
             reportForm.reset();
         }
     });
-}
-
-// Close report modal on overlay click
-if (reportModal) {
-    reportModal.addEventListener('click', (e) => {
-        if (e.target === reportModal) {
-             reportModal.classList.remove('active');
-             if(reportForm) reportForm.reset();
-        }
-    });
-}
-// ✅ --- (إضافة) تفعيل القائمة المنسدلة للمستخدم ---
-if (userMenuToggle && userDropdown && logoutBtn) {
-    userMenuToggle.addEventListener('click', (e) => {
-        e.stopPropagation(); // منع الانتشار لإغلاق القوائم الأخرى
-        userDropdown.classList.toggle('active'); // تبديل حالة الظهور
-    });
-
-    logoutBtn.addEventListener('click', () => {
-        userDropdown.classList.remove('active'); // أغلق القائمة
-        logoutUser(); // نفذ تسجيل الخروج
-    });
-
-    // إغلاق القائمة عند النقر في أي مكان آخر
-    document.addEventListener('click', (e) => {
-        if (!userMenuToggle.contains(e.target) && !userDropdown.contains(e.target) && userDropdown.classList.contains('active')) {
-            userDropdown.classList.remove('active');
-        }
-    });
-} else {
-     console.warn("User menu dropdown elements not found.");
 }
