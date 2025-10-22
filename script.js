@@ -14,12 +14,15 @@ async function fetchApi(endpoint, options = {}) {
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
     }
+    if (!(options.body instanceof FormData)) {
+        headers['Content-Type'] = 'application/json';
+    }
 
     try {
-        const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, {
-            ...options,
-            headers,
-        });
+        const response = await fetch(`https://dental-app-he1p.onrender.com${endpoint}`, { // رابط onrender.com
+        ...options,
+        headers, // الهيدرز الآن صحيحة
+    });
 
         const contentType = response.headers.get("content-type");
         let responseData;

@@ -19,16 +19,17 @@
             padding: 10px;
             width: 100%;
             display: flex;
-            flex-wrap: wrap; /* للسماح بانتقال العناصر لسطر جديد */
+            flex-wrap: wrap; /* للسماح بانتقال العناصر لسطر جديد على الموبايل */
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 10px; /* تقليل المسافة قليلاً */
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 20; /* ليبقى فوق كل شيء */
+            z-index: 20; 
         }
-        #viewer-toolbar button, #viewer-toolbar input, #viewer-toolbar label {
+        /* ✅ تصميم موحد للأزرار */
+        #viewer-toolbar button, #viewer-toolbar .tool-btn {
             background: none;
-            border: 1px solid white;
+            border: 1px solid #777;
             color: white;
             padding: 8px 12px;
             border-radius: 4px;
@@ -36,32 +37,57 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            font-size: 14px;
         }
-        #viewer-toolbar button.active {
+        #viewer-toolbar button:hover, #viewer-toolbar .tool-btn:hover {
+            background-color: #555;
+        }
+        /* ✅ تصميم الزر "النشط" (عند اختيار أداة) */
+        #viewer-toolbar .tool-btn.active {
             background-color: #007bff;
             border-color: #007bff;
         }
-        #viewer-toolbar input[type="color"] { padding: 2px; }
+
+        #viewer-toolbar input[type="color"] { padding: 2px; height: 32px; }
+        #viewer-toolbar input[type="range"] { vertical-align: middle; }
+        .toolbar-separator { border-left: 2px solid #555; height: 30px; }
+
         #pdf-canvas-container {
             flex-grow: 1;
-            overflow: auto;
+            overflow: auto; /* للسماح بالتمرير عمودياً وأفقياً (للزوم) */
             width: 100%;
             text-align: center;
-            padding: 20px 0;
-            position: relative; /* مهم جداً لوضع الطبقات فوق بعضها */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative; 
         }
-        /* --- ✅ تعديل مهم لوضع طبقات الـ PDF والرسم والنص فوق بعضها --- */
+        
+        /* ✅ --- التعديل الأهم للتجاوب --- */
+        /* هذه الحاوية الداخلية ستأخذ حجم الـ PDF وتتوسط */
+        #pdf-layers-wrapper {
+            position: relative;
+            margin: 0 auto; /* للتوسيط */
+            /* العرض والارتفاع سيتم تحديدهما بواسطة JS */
+        }
         #pdf-canvas, #drawing-canvas, .textLayer {
             position: absolute;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0; 
+            /* ❌ أزلنا transform و left: 50% */
+            width: 100%; /* ستأخذ 100% من الحاوية الأم (wrapper) */
+            height: 100%;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        #drawing-canvas { z-index: 10; cursor: crosshair; }
+        /* ✅ --- نهاية تعديل التجاوب --- */
+
+        #drawing-canvas { 
+            z-index: 10; 
+            /* سيتم تغيير المؤشر بواسطة JS حسب الأداة */
+        } 
         .textLayer { z-index: 5; }
         #pdf-canvas { z-index: 1; }
 
+        /* القائمة المنبثقة لتحديد النص */
         #selection-popup {
             position: absolute; display: none; background-color: #2c3e50; color: white; border-radius: 6px; padding: 5px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; display: flex; gap: 5px;
@@ -76,8 +102,8 @@
             overflow: hidden; opacity: 0.2; line-height: 1.0; color: transparent;
         }
         .textLayer ::selection { background: rgba(0, 0, 255, 0.3); }
-        .textLayer.drawing-active { user-select: none; } /* لمنع تحديد النص أثناء الرسم */
-
+        /* ✅ لمنع تحديد النص أثناء استخدام أي أداة رسم */
+        .textLayer.drawing-active { user-select: none; -webkit-user-select: none; } 
     </style>
 </head>
 <body>
@@ -88,27 +114,41 @@
             <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
             <button id="next-page">Next <i class="fas fa-arrow-right"></i></button>
             
-            <span style="border-left: 2px solid white; height: 30px;"></span>
+            <span class="toolbar-separator"></span>
 
-            <button id="draw-mode-btn" title="Toggle Draw/Highlight Mode"><i class="fas fa-pencil-alt"></i> Draw</button>
-            <label for="color-picker">Color:</label>
+            <button class="tool-btn active" id="select-btn" title="Select Tool"><i class="fas fa-mouse-pointer"></i></button>
+            <button class="tool-btn" id="highlight-btn" title="Highlighter"><i class="fas fa-highlighter"></i></button>
+            <button class="tool-btn" id="pen-btn" title="Pen"><i class="fas fa-pencil-alt"></i></button>
+            <button class="tool-btn" id="conceal-btn" title="Conceal Tool (Click to reveal)"><i class="fas fa-eye-slash"></i></button>
+            <button class="tool-btn" id="erase-btn" title="Eraser"><i class="fas fa-eraser"></i></button>
+
+            <span class="toolbar-separator"></span>
+
+            <label for="color-picker" style="font-size: 14px;">Color:</label>
             <input type="color" id="color-picker" value="#FFFF00">
-            <label for="brush-size">Size:</label>
+            <label for="brush-size" style="font-size: 14px;">Size:</label>
             <input type="range" id="brush-size" min="2" max="50" value="20">
-            <label for="brush-opacity">Opacity:</label>
+            <label for="brush-opacity" style="font-size: 14px;">Opacity:</label>
             <input type="range" id="brush-opacity" min="0.1" max="1" step="0.1" value="0.4">
+            
+            <span class="toolbar-separator"></span>
+
             <button id="clear-drawings-btn" title="Clear drawings on this page"><i class="fas fa-trash"></i> Clear</button>
-            </div>
+        </div>
+        
         <div id="pdf-canvas-container">
-            <canvas id="pdf-canvas"></canvas>
-            <canvas id="drawing-canvas"></canvas>
-            <div id="text-layer" class="textLayer"></div>
+            <div id="pdf-layers-wrapper">
+                <canvas id="pdf-canvas"></canvas>
+                <canvas id="drawing-canvas"></canvas>
+                <div id="text-layer" class="textLayer"></div>
+            </div>
         </div>
     </div>
     
     <div id="selection-popup">
         <button id="ask-ai-btn"><i class="fas fa-robot"></i> Ask AI</button>
         <button id="translate-btn"><i class="fas fa-language"></i> Translate</button>
+        <button id="create-flashcard-btn"><i class="fas fa-plus-square"></i> New Flashcard</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
