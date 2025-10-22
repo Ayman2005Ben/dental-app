@@ -433,35 +433,39 @@ function displayGeneratedFlashcards(flashcardData) {
         }
     }
 
-    // --- دالة التحقق من التوكن ---
+    // --- (مُعدل) دالة التحقق من التوكن ---
     async function checkForAuthToken() {
         const urlParams = new URLSearchParams(window.location.search);
-        const token = urlParams.get('token');
+        const tokenFromUrl = urlParams.get('token'); // ابحث عن 'token' في الـ URL
 
-        if (token) {
+        if (tokenFromUrl) {
             console.log("Token found in URL, setting up new session...");
-            // Store the new token
-            localStorage.setItem('userToken', token);
-            // Clear potentially outdated state from previous sessions
+            // 1. خزن التوكن الجديد في localStorage
+            localStorage.setItem('userToken', tokenFromUrl);
+            
+            // 2. امسح أي حالة قديمة قد تسبب مشاكل
             localStorage.removeItem('isYearChosen');
             localStorage.removeItem('selectedYear');
             localStorage.removeItem('isActivated');
-            localStorage.removeItem('currentPageId'); // Clear last page
-            localStorage.removeItem('quizState'); // Clear any old quiz state
-            localStorage.removeItem('currentContentType'); // Clear content type
-            // Remove token from URL for security
-            window.history.replaceState({}, document.title, window.location.pathname);
+            localStorage.removeItem('currentPageId'); 
+            localStorage.removeItem('quizState'); 
+            localStorage.removeItem('currentContentType'); 
+            
+            // 3. أزل التوكن من شريط عنوان المتصفح (للحماية ولتجربة أفضل)
+            window.history.replaceState({}, document.title, window.location.pathname); 
+            
             showNotification('Successfully signed in!', 'success');
-            // Initialize app with the new token
-            await initializeApp(); 
-        } else if (localStorage.getItem('userToken')) {
+            
+            // 4. الآن قم بتهيئة التطبيق بالتوكن الجديد
+            await initializeApp(); // initializeApp ستقرأ التوكن من localStorage
+
+        } else if (localStorage.getItem('userToken')) { // إذا لم يوجد توكن بالـ URL، تحقق من localStorage كالمعتاد
             console.log("Token found in localStorage. Restoring session.");
-             // Initialize app using existing token
             await initializeApp();
         } else {
             console.log("No token found. Redirecting to login page.");
-             // Redirect to login if no token anywhere
-            window.location.href = 'login.html';
+            // لا حاجة لـ window.location.href هنا، لأن initializeApp ستفشل وتستدعي logoutUser()
+             logoutUser(); // يمكنك استدعاؤها مباشرة للأمان
         }
     }
     
