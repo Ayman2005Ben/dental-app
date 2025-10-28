@@ -3068,7 +3068,33 @@ function displayCurrentFlashcard() {
     } else {
         console.warn("Flashcard element (.flashcard) not found.");
     }
+    // --- ✅ [إضافة جديدة] معالج أزرار "التالي" و "السابق" للبطاقات ---
+    const prevFlashcardBtn = document.getElementById('prev-flashcard-btn');
+    const nextFlashcardBtn = document.getElementById('next-flashcard-btn');
 
+    if (prevFlashcardBtn) {
+        prevFlashcardBtn.addEventListener('click', () => {
+            // تأكد أننا لسنا عند البطاقة الأولى
+            if (currentCardIndex > 0) {
+                currentCardIndex--; // ارجع خطوة
+                displayCurrentFlashcard(); // اعرض البطاقة الجديدة
+            }
+        });
+    } else {
+        console.warn("Previous flashcard button (#prev-flashcard-btn) not found.");
+    }
+
+    if (nextFlashcardBtn) {
+        nextFlashcardBtn.addEventListener('click', () => {
+            // تأكد أننا لسنا عند البطاقة الأخيرة
+            if (currentCollection && currentCardIndex < currentCollection.length - 1) {
+                currentCardIndex++; // تقدم خطوة
+                displayCurrentFlashcard(); // اعرض البطاقة الجديدة
+            }
+        });
+    } else {
+        console.warn("Next flashcard button (#next-flashcard-btn) not found.");
+    }
     // Enable/disable navigation buttons based on current index
     const prevBtn = document.getElementById('prev-flashcard-btn');
     const nextBtn = document.getElementById('next-flashcard-btn');
@@ -3786,7 +3812,7 @@ const flashcardOptionsGenContainer = document.getElementById('flashcard-options-
 
 if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorTitle && aiFileForm && aiLoadingIndicator && aiProcessBtn && quizOptionsGenContainer && flashcardOptionsGenContainer) {
     aiOptionCards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', async () => {
             currentAiTask = card.dataset.task; // Get task type (chat, quiz, flashcards, summary)
             if(!currentAiTask) return;
 
@@ -3806,20 +3832,30 @@ if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorT
                     return; // Stop if no subject selected
                 }
                 // Store context immediately before showing the processor
-                 try {
-                     // Find subject data based on key and year
-                     const subjectData = subjectsDatabase[selectedYear]?.find(s => s.key === activeCarouselItem.dataset.subjectKey);
-                     if (!subjectData) throw new Error("Could not find subject data.");
-                     
-                     // Store ID and Name (fetch ID if needed, or assume backend handles key)
-                     // For now, let's assume we need the name primarily, and backend can find ID by key/year
-                     currentAiGenerationContext = {
-                         subjectId: currentSubject._id, // Using key for now, backend might need to resolve ID
-                         subjectName: currentSubject.name
-                     };
-                     console.log("AI Generation Context Set:", currentAiGenerationContext);
+                 // ✅ الكود الصحيح
+ try {
+     // --- هذا هو المنطق الجديد والصحيح ---
 
-                 } catch (error) {
+     // 1. (جديد) اجلب كل المواد للسنة الحالية من الخادم
+     const subjectsInYear = await fetchSubjectsByYear(selectedYear); 
+
+     // 2. (جديد) ابحث عن المادة التي اختارها المستخدم (باستخدام الكود)
+     const currentSubject = subjectsInYear.find(s => s.key === activeCarouselItem.dataset.subjectKey);
+
+     // 3. (جديد) تأكد أننا وجدنا المادة وأنها تحتوي على _id
+     if (!currentSubject || !currentSubject._id) {
+         throw new Error(`Could not find subject data or ID for key: ${activeCarouselItem.dataset.subjectKey}`);
+     }
+
+     // 4. (هذا الكود سليم) قم بتعيين السياق باستخدام المتغير الصحيح
+     currentAiGenerationContext = {
+         subjectId: currentSubject._id,   // <-- هذا الآن صحيح
+         subjectName: currentSubject.name // <-- وهذا أيضاً صحيح
+     };
+     console.log("AI Generation Context Set:", currentAiGenerationContext);
+     // --- نهاية الكود الجديد ---
+
+ } catch (error) {
                      showNotification(`Error setting subject context: ${error.message}`, 'error');
                      return; // Stop if context cannot be set
                  }
