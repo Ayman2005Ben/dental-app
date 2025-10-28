@@ -3059,9 +3059,14 @@ function displayCurrentFlashcard() {
     }
     
     // Ensure card is flipped back to the front side initially
+    // --- ✅ [إضافة جديدة] معالج النقر لقلب البطاقة ---
     const flashcardElement = document.querySelector('.flashcard');
     if (flashcardElement) {
-        flashcardElement.classList.remove('is-flipped');
+        flashcardElement.addEventListener('click', () => {
+            flashcardElement.classList.toggle('is-flipped');
+        });
+    } else {
+        console.warn("Flashcard element (.flashcard) not found.");
     }
 
     // Enable/disable navigation buttons based on current index
