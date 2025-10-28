@@ -3095,42 +3095,13 @@ function displayCurrentFlashcard() {
     
     // Ensure card is flipped back to the front side initially
     // --- ✅ [إضافة جديدة] معالج النقر لقلب البطاقة ---
+   // 1. [إصلاح] إعادة البطاقة إلى الوجه الأمامي (حتى لا تبقى مقلوبة عند التنقل)
     const flashcardElement = document.querySelector('.flashcard');
     if (flashcardElement) {
-        flashcardElement.addEventListener('click', () => {
-            flashcardElement.classList.toggle('is-flipped');
-        });
-    } else {
-        console.warn("Flashcard element (.flashcard) not found.");
-    }
-    // --- ✅ [إضافة جديدة] معالج أزرار "التالي" و "السابق" للبطاقات ---
-    const prevFlashcardBtn = document.getElementById('prev-flashcard-btn');
-    const nextFlashcardBtn = document.getElementById('next-flashcard-btn');
-
-    if (prevFlashcardBtn) {
-        prevFlashcardBtn.addEventListener('click', () => {
-            // تأكد أننا لسنا عند البطاقة الأولى
-            if (currentCardIndex > 0) {
-                currentCardIndex--; // ارجع خطوة
-                displayCurrentFlashcard(); // اعرض البطاقة الجديدة
-            }
-        });
-    } else {
-        console.warn("Previous flashcard button (#prev-flashcard-btn) not found.");
+        flashcardElement.classList.remove('is-flipped');
     }
 
-    if (nextFlashcardBtn) {
-        nextFlashcardBtn.addEventListener('click', () => {
-            // تأكد أننا لسنا عند البطاقة الأخيرة
-            if (currentCollection && currentCardIndex < currentCollection.length - 1) {
-                currentCardIndex++; // تقدم خطوة
-                displayCurrentFlashcard(); // اعرض البطاقة الجديدة
-            }
-        });
-    } else {
-        console.warn("Next flashcard button (#next-flashcard-btn) not found.");
-    }
-    // Enable/disable navigation buttons based on current index
+    // 2. [سليم] تفعيل/تعطيل الأزرار بناءً على البطاقة الحالية
     const prevBtn = document.getElementById('prev-flashcard-btn');
     const nextBtn = document.getElementById('next-flashcard-btn');
     if(prevBtn) prevBtn.disabled = currentCardIndex === 0;
@@ -3139,7 +3110,48 @@ function displayCurrentFlashcard() {
 // ===================================================================
 // --- معالجات الأحداث (Event Handlers) ---
 // ===================================================================
+// --- ✅ [إضافة جديدة] معالجات أحداث عارض البطاقات (تُضاف مرة واحدة) ---
 
+    // 1. معالج "قلب البطاقة"
+    const cardContainer = document.getElementById('flashcard-card-container');
+    if (cardContainer) {
+        cardContainer.addEventListener('click', (event) => {
+            // ابحث عن البطاقة التي تم النقر عليها
+            const flashcard = event.target.closest('.flashcard');
+            if (flashcard) {
+                flashcard.classList.toggle('is-flipped');
+            }
+        });
+    } else {
+        console.warn("Flashcard container (#flashcard-card-container) not found.");
+    }
+
+    // 2. معالج زر "السابق"
+    const prevFlashcardBtn = document.getElementById('prev-flashcard-btn');
+    if (prevFlashcardBtn) {
+        prevFlashcardBtn.addEventListener('click', () => {
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+                displayCurrentFlashcard(); // فقط استدعاء العرض
+            }
+        });
+    } else {
+        console.warn("Previous flashcard button (#prev-flashcard-btn) not found.");
+    }
+
+    // 3. معالج زر "التالي"
+    const nextFlashcardBtn = document.getElementById('next-flashcard-btn');
+    if (nextFlashcardBtn) {
+        nextFlashcardBtn.addEventListener('click', () => {
+            if (currentCollection && currentCardIndex < currentCollection.length - 1) {
+                currentCardIndex++;
+                displayCurrentFlashcard(); // فقط استدعاء العرض
+            }
+        });
+    } else {
+        console.warn("Next flashcard button (#next-flashcard-btn) not found.");
+    }
+    // --- نهاية الإضافة ---
 // --- زر تبديل الثيم ---
 if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => { 
