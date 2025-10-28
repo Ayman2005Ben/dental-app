@@ -350,8 +350,7 @@ function displayGeneratedFlashcards(flashcardData) {
     document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden'); // Show viewer
     document.getElementById('flashcard-viewer-title').textContent = "AI Generated Flashcards (Review & Save)";
 
-    displayCurrentFlashcard(); // Display the first card
-    showPage('#flashcards-page'); // Navigate to the flashcards page
+    displayCurrentFlashcard(); // Display the first card // Navigate to the flashcards page
 }
 
     // --- دالة لتحديث الهيدر بصورة المستخدم ---
