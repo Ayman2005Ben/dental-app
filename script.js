@@ -324,15 +324,17 @@ function displayMindMap(mindmapData) {
     // ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
 // [السطر 340]
 // ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
+// ✅ [استبدل الدالة القديمة بهذه]
+// [السطر 360]
 function displayGeneratedFlashcards(flashcardData) {
-    // Ensure data is an array
+    // 1. التحقق من البيانات
     if (!Array.isArray(flashcardData)) {
          showNotification("Invalid flashcard data received from AI.", "error");
          console.error("Expected flashcardData to be an array, but received:", flashcardData);
          return;
     }
     
-    currentCollection = flashcardData; // Expecting an array of cards directly
+    currentCollection = flashcardData;
     currentCardIndex = 0;
 
     if (!currentCollection || currentCollection.length === 0) {
@@ -340,29 +342,50 @@ function displayGeneratedFlashcards(flashcardData) {
         return;
     }
     
-    // --- ✅ [الخطوة 1: الانتقال إلى الصفحة الصحيحة أولاً] ---
-    // هذا السطر سينتقل إلى صفحة الفلاش كارد ويشغل fetchAndDisplayCollections
-    // الذي سيقوم (بشكل صحيح) بإخفاء العارض وإظهار المجموعات
-    showPage('#flashcards-page'); 
-    // --- نهاية الخطوة 1 ---
+    // --- ✅ [الخطوة 1: الانتقال "يدوياً" إلى صفحة الفلاش كارد] ---
+    // (هذا هو البديل الصحيح لـ `showPage('#flashcards-page')` المسبب للمشكلة)
+    
+    // أ. إخفاء جميع الصفحات الأخرى
+    pageSections.forEach(section => section.classList.remove('active'));
+    
+    // ب. إظهار صفحة الفلاش كارد
+    const targetPage = document.querySelector('#flashcards-page');
+    if (targetPage) {
+        targetPage.classList.add('active');
+        localStorage.setItem('currentPageId', '#flashcards-page'); // حفظ الصفحة الحالية
+    
+        // ج. تحديث الرابط النشط في شريط التنقل
+        navLinks.forEach(link => {
+            const linkHref = link.getAttribute('href');
+            link.classList.remove('active-link'); // إلغاء تنشيط الكل
+            if (linkHref === '#flashcards-page') {
+                link.classList.add('active-link'); // تنشيط رابط الفلاش كارد
+            }
+        });
+    } else {
+        console.error("Could not find #flashcards-page to display.");
+        return; // لا يمكن المتابعة
+    }
+    // --- [نهاية الخطوة 1] ---
 
+    
+    // --- [الخطوة 2: إعداد واجهة العارض (هذا الكود سليم)] ---
     const ratingControls = document.getElementById('ai-flashcard-rating-controls');
     const viewerControls = document.getElementById('flashcard-viewer-controls');
 
-    if (ratingControls) ratingControls.style.display = 'flex'; // Show AI rating controls
-    if (viewerControls) viewerControls.style.display = 'none'; // Hide normal viewer controls
+    if (ratingControls) ratingControls.style.display = 'flex'; // إظهار أزرار التقييم
+    if (viewerControls) viewerControls.style.display = 'none'; // إخفاء أزرار التالي/السابق
 
-    // --- ✅ [الخطوة 2: الآن نقوم بـ "تجاوز" الإعدادات الافتراضية] ---
-    // نحن الآن على صفحة الفلاش كارد، نقوم بإخفاء المجموعات
+    // إخفاء شبكة المجموعات
     document.getElementById('flashcards-content').style.display = 'none'; 
-    // ونقوم بإظهار العارض (الذي تم إخفاؤه في الخطوة 1)
+    // إظهار العارض
     document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden'); 
     document.getElementById('flashcard-viewer-title').textContent = "AI Generated Flashcards (Review & Save)";
 
-    displayCurrentFlashcard(); // Display the first card
-    
-    // (تم حذف السطر showPage من هنا لأنه أصبح في الأعلى)
+    displayCurrentFlashcard(); // عرض البطاقة الأولى
 }
+// [السطر 371 في الكود الأصلي]
+// --- دالة لتحديث الهيدر بصورة المستخدم ---
 // [السطر 371]
 // --- دالة لتحديث الهيدر بصورة المستخدم ---
 
