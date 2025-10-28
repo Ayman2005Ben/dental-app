@@ -2513,7 +2513,65 @@ function renderCurrentQuestion() {
         quizNextBtn_pro.innerHTML = isLastQuestion ? 'Finish <i class="fas fa-check-circle"></i>' : '<i class="fas fa-arrow-right"></i>';
         quizNextBtn_pro.title = isLastQuestion ? 'Finish Quiz' : 'Next Question';
     }
-    
+    // ===================================================================
+// --- [إضافة جديدة] دالة لإضافة مستمع حفظ الكويز ---
+// ===================================================================
+
+/**
+ * @description يضيف مستمع حدث إلى زر حفظ الكويز (الذي يتم استدعاؤه من صفحة ملخص الكويز)
+ * @param {HTMLButtonElement} buttonElement - الزر الذي سيتم إضافة المستمع إليه
+ */
+function attachSaveQuizListener(buttonElement) {
+    if (!buttonElement) return;
+
+    buttonElement.addEventListener('click', async () => {
+        // 1. التحقق من وجود بيانات كويز AI
+        if (!proQuiz || !proQuiz._id.startsWith('ai-generated-')) {
+            showNotification('No AI quiz data found to save.', 'error');
+            return;
+        }
+
+        // 2. إظهار حالة التحميل
+        buttonElement.disabled = true;
+        buttonElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+
+        try {
+            // 3. تجهيز البيانات للإرسال
+            // (ملاحظة: subjectId هو في الواقع 'subjectKey' من السياق)
+            const payload = {
+                title: proQuiz.title || 'AI Generated Quiz',
+                subjectName: proQuiz.subjectName || 'Uncategorized', // من currentAiGenerationContext
+                questions: proQuiz.questions, // إرسال مصفوفة الأسئلة
+                subjectId: proQuiz.subject // هذا هو 'subjectKey' من السياق
+            };
+
+            // 4. استدعاء الـ API باستخدام الدالة المساعدة
+            await fetchApi('/api/saved-quizzes', {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            });
+
+            // 5. عند النجاح
+            showNotification('AI Quiz saved successfully!', 'success');
+            buttonElement.innerHTML = '<i class="fas fa-check"></i> Saved!';
+            // (يبقى الزر معطلاً لمنع الحفظ المزدوج)
+
+        } catch (error) {
+            // 6. عند الفشل
+            console.error('Error saving AI quiz:', error);
+            showNotification(`Failed to save quiz: ${error.message}`, 'error');
+            buttonElement.disabled = false; // إعادة تفعيل الزر للسماح بإعادة المحاولة
+            buttonElement.innerHTML = '<i class="fas fa-save"></i> Save Quiz'; // إرجاع النص الأصلي
+        }
+    });
+}
+
+
+// ===================================================================
+// --- [إضافة جديدة ومحصّنة] منطق لوحة الأداء (Dashboard) ---
+// ===================================================================
+
+    // ... باقي الكود الخاص بك يستمر هنا ...
     // ===================================================================
     // --- [إضافة جديدة ومحصّنة] منطق لوحة الأداء (Dashboard) ---
     // ===================================================================
