@@ -3810,8 +3810,8 @@ if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorT
                      // Store ID and Name (fetch ID if needed, or assume backend handles key)
                      // For now, let's assume we need the name primarily, and backend can find ID by key/year
                      currentAiGenerationContext = {
-                         subjectId: subjectData.key, // Using key for now, backend might need to resolve ID
-                         subjectName: subjectData.name
+                         subjectId: currentSubject._id, // Using key for now, backend might need to resolve ID
+                         subjectName: currentSubject.name
                      };
                      console.log("AI Generation Context Set:", currentAiGenerationContext);
 
