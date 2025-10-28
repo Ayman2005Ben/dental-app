@@ -302,6 +302,30 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [0, 3, 4],
         explanation: "Le primer est un promoteur d'adhésion (agent de couplage) avec un pôle hydrophile (pour la dentine/collagène) et un pôle hydrophobe (pour la résine/adhésif)."
+      },
+      {
+        questionText: "La colle de choix pour les alliages métalliques, c'est :",
+        options: [
+          "10-MDP",
+          "4-MDP",
+          "10-MET",
+          "4-MET",
+          "Aucune de ces colles ne convient aux alliages"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les résines “4-META” (4-méthacryloyloxyéthyl trimellitate anhydride) ex: SuperBond®, sont la colle de choix pour les alliages métalliques."
+      },
+      {
+        questionText: "L'assemblage des restaurations à base de céramique vitreuse nécessite :",
+        options: [
+          "Un conditionnement du substrat dentaire à l'acide fluorhydrique",
+          "Un conditionnement du substrat dentaire et/ou prothétique",
+          "Un agent de couplage (le silane) et un mordançage de la pièce prophétique",
+          "Aucun conditionnement",
+          "Un collage SOUS digue à l'aide d'une colle sans potentiel adhésif intrinèèque"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les céramiques vitreuses (mordançables) nécessitent un mordançage de l'intrados prothétique (acide fluorhydrique) suivi de l'application d'un agent de couplage (silane) pour lier la céramique à la résine de collage."
       }
     ]
   },
@@ -806,6 +830,114 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [4],
         explanation: "Ce sont des *vitro*céramiques, pas des polycristallines (A, B faux). Elles peuvent être monolithiques (C faux). Elles peuvent être usinées (D faux)."
+      },
+      {
+        questionText: "Les restaurations céramiques monolithiques peuvent être réalisées avec :",
+        options: [
+          "de la céramique feldspathique cuite sur modèle réfractaire",
+          "une armature métallique recouverte de céramique",
+          "de la vitrocéramique renforcée pressée ou usinée",
+          "de la zircone usinée par CFAO",
+          "de la zircone renforcée"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Monolithique = en un seul bloc. Cela inclut la vitrocéramique (pressée ou usinée) et la zircone (usinée). La céramique feldspathique sur réfractaire (A) est stratifiée (multicouche). La CCM (B) n'est pas monolithique."
+      },
+      {
+        questionText: "Parmi ces matériaux, lesquels sont des céramiques polycristallines?:",
+        options: [
+          "Feldspath",
+          "Alumine",
+          "Vitrocéramique",
+          "Disilicate de Lithium",
+          "Zircone"
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "Les céramiques polycristallines ne contiennent pas de phase vitreuse. Il s'agit de l'Alumine et de la Zircone. Le Feldspath, la Vitrocéramique et le Disilicate de Lithium contiennent une phase vitreuse."
+      },
+      {
+        questionText: "Concernant la préparation pour une couronne céramo-céramique (CCC):",
+        options: [
+          "une réduction occlusale minimale de 0,5mm est suffisante",
+          "une réduction palatine est plus importante que vestibulaire",
+          "une réduction vestibulaire de 1 à 1,5 mm est recommandée",
+          "la limite cervicale est en forme d'un épaulement à angle droit",
+          "les angles vifs doivent être accentués pour guider l'insertion"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Une réduction vestibulaire de 1 à 1,5 mm est nécessaire. La réduction occlusale est de 1,5 à 2 mm (A faux). La limite est un épaulement à angle interne *arrondi* (D faux). Les angles vifs doivent être *arrondis* (E faux)."
+      },
+      {
+        questionText: "Une facette céramique est indiquée dans les situations suivantes :",
+        options: [
+          "dyschromie sévère d'origine médicamenteuse sur dent dépulpée",
+          "fluorose modérée avec défauts d'émail localisés",
+          "diastème important avec pertes de substances étendues",
+          "carie proximale profonde sur prémolaire",
+          "légères malpositions dentaires"
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "Les facettes sont indiquées pour les dyschromies légères à modérées (fluorose) et pour corriger les légères malpositions. Les dyschromies sévères (A) sont difficiles à masquer. Les diastèmes importants (C) ou caries profondes (D) sont des contre-indications."
+      },
+      {
+        questionText: "Les céramiques cuites sur revêtement réfractaire :",
+        options: [
+          "Font appel à la technique de la cire perdue",
+          "Sont des vitrocéramiques renforcées au disilicate de lithium",
+          "Sont des vitrocéramiques renforcées a Ia leucite",
+          "Sont des vitrocéramiques",
+          "Sont des céramiques feldspathiques"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Ce procédé (stratification sur un duplicata en matériau réfractaire) concerne les céramiques feldspathiques et certaines vitrocéramiques. La cire perdue (A) est utilisée pour la pressée ou la coulée."
+      },
+      {
+        questionText: "Les céramiques in Ceram\" version Zirconia\" :",
+        options: [
+          "Sont destinées aux restaurations esthétiques sans impératif mécanique important",
+          "Sont destinées aux restaurations esthétiques soumises à des efforts mécaniques moyens",
+          "Sont destines aux restaurations esthétiques soumises à des efforts mécaniques majeurs",
+          "Sont destinées aux restaurations soumises à des forces importantes sans impératif esthétique majeur",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "In-Ceram Zirconia (Alumine infiltrée de Zircone) est très résistante mais opaque. Elle est donc indiquée pour les secteurs postérieurs (forces importantes) où l'esthétique n'est pas la priorité."
+      },
+      {
+        questionText: "Les céramiques usinées :",
+        options: [
+          "Sont préparées manuellement sous forme de blocs",
+          "Sont destinés à être façonnés par soustraction dans un système spécifique CFAO",
+          "Sont les seules à mettre en forme les infrastructures par soustraction de matériau",
+          "Sont les seules à mettre en forme les infrastructures par addition de matériau",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les blocs de céramique pour CFAO (usinage) sont préparés industriellement (A faux). Ils sont façonnés par soustraction de matière (B). La cire ou la résine calcinable peuvent aussi être usinées (C faux). L'addition est l'impression 3D (D faux)."
+      },
+      {
+        questionText: "Les vitrocéramiques renforcées : (1- Sont des vitrocéramiques renforcées à la leucite 2- Sont des vitrocéramiques renforcées au disilicate de lithium. 3- Sont des céramiques pressées. 4- Sont des céramiques usinées. 5- Présentent une grande opacité,)",
+        options: [
+          "(1,3,4,5)",
+          "(2,4,5)",
+          "(1.2.3)",
+          "(1.2,3,4)",
+          "(2,3,4,5)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Ce sont des vitrocéramiques (pas polycristallines) renforcées à la leucite (1) ou au disilicate de lithium (2). Elles peuvent être mises en œuvre par pressée (3) ou par usinage (4). Elles sont esthétiques et translucides (5 faux)."
+      },
+      {
+        questionText: "Les couronnes céramo-céramiques sont des restaurations prothétiques réalisées avec une :",
+        options: [
+          "Infrastructure en alumine et une suprastructure en vitrocéramique.",
+          "Infrastructure en céramique et une suprastructure en zircone.",
+          "Infrastructure en zircon et une suprastructure en alumine.",
+          "Infrastructure en zircone et une suprastructure en céramique feldspathique.",
+          "Infrastructure et une suprastructure en monobloc tout zircone."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La configuration la plus classique pour une CCC stratifiée est une infrastructure (chape) en Zircone (pour la résistance) recouverte d'une céramique cosmétique (suprastructure) de type feldspathique (pour l'esthétique)."
       }
     ]
   },
@@ -1122,6 +1254,102 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [3],
         explanation: "L'onlay est une restauration coronaire (A faux) conservatrice (E faux) qui est *collée* (C faux). Il peut servir d'ancrage pour un bridge de petite étendue (D)."
+      },
+      {
+        questionText: "Le mordançage de la céramique est réalisé avec:",
+        options: [
+          "L'acide orthophosphorique à 9%",
+          "L'acide acétylsalicylique à 9%",
+          "L'acide clavulanique à 9%",
+          "L'acide ascorbique à 9%",
+          "L'acide fluorhydrique à 9%"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Les céramiques mordançables (silicates) sont traitées par mordançage à l’acide fluorhydrique à 9 % pendant 60 secondes."
+      },
+      {
+        questionText: "Quels sont les avantages des restaurations collées indirectes par rapport aux composites directs?:",
+        options: [
+          "Rétention mécanique accrue",
+          "Meilleure stabilité de teinte dans le temps",
+          "Moins de contraction lors de la polymérisation",
+          "Mise en œuvre plus simple",
+          "Réparabilité plus aisée en bouche"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Avantages de l'indirect : Meilleure stabilité de teinte (B) et absence de contraction de polymérisation en bouche (C), ce qui protège l'interface. La rétention est adhésive, pas mécanique (A faux)."
+      },
+      {
+        questionText: "Les Veneerlays:",
+        options: [
+          "sont réservés exclusivement aux dents antérieures",
+          "recouvrent les faces vestibulaires et occlusales",
+          "sont réalisés en céramique feldspathique exclusivement",
+          "sont indiqués en cas de dyschromies postérieures",
+          "nécessitent toujours un recouvrement lingual"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les veneerlays sont des restaurations partielles *postérieures* (A faux) qui recouvrent la face vestibulaire et occlusale (B). Elles sont indiquées pour les dyschromies postérieures (D) et peuvent être en diverses céramiques (C faux)."
+      },
+      {
+        questionText: "Parmi les avantages dos restaurations partielles Indirectes en céramique:",
+        options: [
+          "la possibilité de réaliser des limites sous gingivales.",
+          "la possibilité de réintervenir en cas de fracture",
+          "la préservation des points de contact naturels",
+          "préservation de la teinte dans le temps",
+          "la restauration d'une grande perte de substance au niveau du collet de la dent"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Avantages : Stabilité de la teinte dans le temps (D) et meilleure restitution/stabilité des points de contact (C) par rapport à une restauration directe. Les limites sous-gingivales (A) sont une contre-indication au collage."
+      },
+      {
+        questionText: "Les principes de préparation d'une restauration partielle collée sont:",
+        options: [
+          "une dépouille de 10 à 15°",
+          "la boite proximale est moins profonde que la cavité occlusale.",
+          "les limites occlusales de la préparation doivent être en contact avec les dents antagonistes",
+          "le fond de la cavité est parallèle au plan d'occlusion",
+          "le mur dentinaire doit être supérieur à 1 mm"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La dépouille doit être de 10-15° (A). Le fond de la cavité doit être plat et parallèle au plan d'occlusion (D). L'épaisseur de dentine résiduelle (mur) doit être suffisante (E). La boite proximale est *plus* profonde que l'occlusale (B faux)."
+      },
+      {
+        questionText: "Dans la réalisation clinique des restaurations collées :",
+        options: [
+          "les préparations se font avec extension prophylactique en queue d'aronde",
+          "les préparations nécessitent la réalisation d'extensions pour augmenter la rétention",
+          "la rétention est assurée par la géométrie de la cavité et non par la colle",
+          "la préparation exige un fond plat",
+          "la profondeur de la cavité de préparation ne dépasse pas 1.5 mm"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La préparation doit avoir un fond plat pour stabiliser la pièce. La rétention est assurée par le *collage* (C faux), et non par des formes de rétention mécaniques comme les queues d'aronde (A, B faux)."
+      },
+      {
+        questionText: "Le Smear layer :",
+        options: [
+          "Doit se lier à l'adhésif pour assurer le collage dentinaire",
+          "Doit se lier au silane pour assurer le collage a la restauration prothétique",
+          "Est éliminé totally par un rinçage et un séchage",
+          "Est éliminé par un fraisage de la dentine",
+          "Est constitué en majeur partie d'hydroxyapatite"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La smear layer (boue dentinaire) est constituée principalement de débris d'hydroxyapatite. Elle est éliminée par le mordançage (acide), pas par un simple rinçage (C faux). Sa liaison à la dentine est faible (A faux)."
+      },
+      {
+        questionText: "L'inlay en céramique :",
+        options: [
+          "Recouvre une seule cuspide",
+          "Intéresse seulement une face de la dent",
+          "Est indiqué pour les dents courtes",
+          "Sa préparation nécessite un fond plat",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'inlay ne recouvre *aucune* cuspide (A faux) mais peut intéresser plusieurs faces (B faux). Sa préparation nécessite un fond plat pour la stabilité."
       }
     ]
   },
@@ -1338,6 +1566,90 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [4],
         explanation: "A est faux (c'est l'amovo-inamovible). B est faux (il est plus confortable). C est faux (l'hygiène est plus difficile). D est faux (il nécessite une mutilation tissulaire). Toutes les réponses sont fausses."
+      },
+      {
+        questionText: "Le bridge dento implants porté",
+        options: [
+          "peut provoquer une perte osseuse péri implantaire",
+          "peut provoquer une fracture des composants implantaires",
+          "peut causer une égression de la dent naturelle",
+          "est mieux toléré que le bridge implanto porté",
+          "n’est indiqué que lorsque la dent naturelle est intermédiaire entre 2 implants"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Connecter une dent (mobile, desmodonte) à un implant (rigide, ankylosé) est controversé et crée des contraintes. Celles-ci peuvent causer une perte osseuse (A), une fracture de l'implant (B) ou une égression/intrusion de la dent naturelle (C)."
+      },
+      {
+        questionText: "Le bridge colle",
+        options: [
+          "est indiqué en cas d'edentement de petite étendus",
+          "présente une longévité incertaine",
+          "a le statut d'une prothèse provisoire à long terme",
+          "est très mutant pour les dents piliers",
+          "est un bridge dento-implanto porté"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le bridge collé (type Maryland) est une solution conservatrice (D faux) pour des édentements de petite étendue (A). Sa longévité dépend fortement du collage, elle est donc considérée comme moins certaine (B) ou parfois comme une solution provisoire à long terme (C)."
+      },
+      {
+        questionText: "ROY a divisé l’arcade en cinq plans",
+        options: [
+          "Un plan incisif qui est soumis aux forces latérales",
+          "Un plan canin qui est soumis aux forces antéro-postérieurs",
+          "Un plan prémolo-molaire qui est soumis aux forces horizontales",
+          "La théorie de ROV est intéressante pour les bridges de contention",
+          "Selon ROY les dents piliers doivent être choisies dans un seul plan"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Loi de Roy : Plan incisif (forces postéro-antérieures), Plans canins (forces latérales), Plans prémolo-molaires (forces horizontales) (C). La théorie est utile pour les bridges de contention, où les piliers doivent être dans *plusieurs* plans (D)."
+      },
+      {
+        questionText: "Un bridge a simple encastrement :",
+        options: [
+          "Est appelé cantilever",
+          "Est indiqué en raison des forces passives sur les dents piliers.",
+          "Est contre-indique en raison des risques de torsions sur les dents piliers",
+          "Est contre-indique en raison des mouvements de renversement,",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Le bridge à simple encastrement (un seul pilier ou piliers d'un seul côté) est appelé Cantilever (A). Il est généralement contre-indiqué car il génère d'importantes forces de torsion (C) et de renversement (D) sur les piliers."
+      },
+      {
+        questionText: "polygonal:",
+        options: [
+          "Peut-titre partiel sous forme d'arc.",
+          "Peut-titre partiel sous forme parabolique.",
+          "Peut-titre total",
+          "S'inscrit dans 2 à 3 plans de ROY.",
+          "S'inscrit dans les 5 plans de ROY."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Un bridge polygonal peut être partiel (ex: forme d'arc, A) ou total (arcade complète, C). Il s'inscrit par définition dans plusieurs plans de Roy (D, E)."
+      },
+      {
+        questionText: "La résistance mécanique d'un bridge :",
+        options: [
+          "Dépend du choix de l'alliage",
+          "Dépend de l’épaisseur de la travée",
+          "Dépend de l'étendu de la construction",
+          "Est augmentée par le choix des alliages précieux",
+          "Est augmentée par le choix des alliages non précieux"
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "La résistance dépend de la rigidité (module d'Young) de l'alliage (A), de l'épaisseur de la travée (B) et de sa longueur (étendue) (C). Les alliages non précieux (Ni-Cr, Co-Cr) sont plus rigides et donc augmentent la résistance (E)."
+      },
+      {
+        questionText: "Un bridge polygonal:",
+        options: [
+          "Remplace seulement deux dents",
+          "Peut restaurer un endentement partiel",
+          "Peut restaurer complètement une arcade dentaire",
+          "Peut-titre amovo inamovible",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Un bridge polygonal (sur plusieurs plans) peut restaurer un édentement partiel (ex: secteur antérieur) (B) ou une arcade complète (C). Il peut aussi être conçu comme amovo-inamovible (D)."
       }
     ]
   },
@@ -1452,6 +1764,102 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [0, 1],
         explanation: "Des contacts occlusaux corrects sur les pontiques restaurent l'efficacité masticatoire (A) et maintiennent la stabilité de l'occlusion (B). Les efforts sont transmis au parodonte *profond* (C est faux)."
+      },
+      {
+        questionText: "La morphologie de la pontique:",
+        options: [
+          "est dictée par les mouvements fonctionnels de la mandibule",
+          "dépend de la morphologie des dents antagonistes",
+          "dépend de la morphologie des dents adjacentes",
+          "doit établie un large contact travée ancrage tout en dégageant l'embrasure",
+          "est de profile concave au niveau des faces linguales pour faciliter le nettoyage"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La morphologie occlusale est dictée par les mouvements mandibulaires (A) et les dents antagonistes (B). Le contact avec les ancrages (dents adjacentes) doit être large mais dégager l'embrasure (C, D). Les profils doivent être *convexes* pour l'hygiène (E faux)."
+      },
+      {
+        questionText: "L’intermédiaire de type intra-muqueux",
+        options: [
+          "est systématiquement conseillé car le plus esthétique",
+          "parfaitement compatible avec l'hygiène",
+          "provoque une rétention bactérienne",
+          "entraine souvent une inflammation des tissus gingivaux",
+          "indiqué dans le cas des crêtes très résorbées"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Ce type de pontique, bien qu'esthétique (donnant l'illusion d'une dent qui sort), est très difficile, voire impossible, à entretenir (B faux). Il provoque une rétention de plaque (C) et une inflammation gingivale (D)."
+      },
+      {
+        questionText: "L'intermédiaire intra-muqueux:",
+        options: [
+          "n’est pas toléré par les crêtes résiduelles",
+          "Permet un meilleur contrôle de la plaque",
+          "Donne un résultat esthétique satisfaisant",
+          "Est indiqué dans la région molaire mandibulaire",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Il donne un bon résultat esthétique (C) mais est très mal toléré (A) car il est impossible à nettoyer (B faux) et provoque une inflammation. Il est contre-indiqué (D faux)."
+      },
+      {
+        questionText: "L'embrasure d'un bridge :",
+        options: [
+          "Est situé entre le tiers cervical et le tiers occlusal des faces proximales",
+          "Doit être hermétiquement fermée",
+          "Doit permettre un nettoyage efficace",
+          "Est absente au niveau des incisives",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'embrasure gingivale (sous le point de contact) doit être conçue pour permettre un nettoyage efficace (ex: passage de brossettes)."
+      },
+      {
+        questionText: "Une pontique ovoïde :",
+        options: [
+          "Ne permet pas de dégager les embrasures",
+          "N'autorise pas une bonne hygiène",
+          "Est indiquée principalement pour le secteur esthétiques",
+          "Etablie une large surface de contact avec la crête",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La pontique ovoïde (contra-muqueux) est indiquée au *postérieur* (C faux), dégage les embrasures (A faux), autorise une bonne hygiène (B faux) et a un contact *minime* (ponctiforme) (D faux)."
+      },
+      {
+        questionText: "La résistance d’une travé de bridge:",
+        options: [
+          "A est proportionnelle à largeur",
+          "Est proportionnelle au carrée de son épaisseur.",
+          "Est inversement proportionnelle à sa longueur",
+          "Est donnée par la formule R = L*e2. /1 (avec R= Résistance, largeur, e=épaisseur et L=Longueur)",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La résistance (R) est proportionnelle à la largeur (l), proportionnelle au carré de l'épaisseur (e²) et inversement proportionnelle à la longueur (L). La formule est R = l * e²/L. (D est faux)."
+      },
+      {
+        questionText: "Selon GLICKMAN l'intermédiaire (travée) de bridge doit répondre aux exigences suivantes:",
+        options: [
+          "Doit être esthétiquement acceptable.",
+          "Doit fournir des rapports occlusaux favorables aux dents piliers et aux dents antagonistes.",
+          "Doit permettre une autostimulation des tissus grâce au maximum de contacts de la langue des joues, des lèvres et des aliments.",
+          "Doit rétablir l'efficacité masticatoire de la dent qu'il remplace.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Toutes ces exigences (esthétique, occlusion, fonction, auto-nettoyage/stimulation) sont des objectifs clés dans la conception d'un pontique."
+      },
+      {
+        questionText: "L'intermédiaire de bridge est en rapport avec des tissus différents :",
+        options: [
+          "La face occlusale répondant la crête.",
+          "Les faces proximales répondant respectivement aux joues et à la langue.",
+          "Les faces gingivales répondent aux dents antagonistes.",
+          "Les faces vestibulaire et linguale répondant aux moyens d'ancrage et aux dents support",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Face occlusale -> antagonistes (C faux). Faces proximales -> ancrages/dents supports (D faux). Face gingivale -> crête (A faux). Faces V/L -> joues/langue (B faux)."
       }
     ]
   },
@@ -1542,6 +1950,42 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [0],
         explanation: "La limite supra-gingivale est la plus respectueuse du parodonte car elle est facile à nettoyer et n'interfère pas avec l'attache gingivale."
+      },
+      {
+        questionText: "Le bilan parodontale pré-prothétique:",
+        options: [
+          "est indispensable avant tout traitement par prothèse fixée",
+          "vise à apprécier la capacité du parodonte à tolérer une prothèse fixée",
+          "ne comporte pas d'examen de mobilité dentaire",
+          "est facultatif en cas de prothèse fixée",
+          "doit être fait cliniquement et radiologiquement"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "Le bilan parodontal est indispensable (A, D faux) et doit être clinique (mobilité, sondage) et radiologique (E) pour évaluer si le parodonte peut supporter la prothèse (B)."
+      },
+      {
+        questionText: "L'accès aux limites cervicales:",
+        options: [
+          "se fait avant la prise d'empreinte",
+          "peut uniquement être réalisé par des moyens mécaniques",
+          "peut se faire avec des cordonnets rétracteurs",
+          "peut se faire avec une prothèse provisoire",
+          "peut se faire avec un syndesmotome"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'accès à la limite (éviction gingivale) se fait juste avant l'empreinte (A) par des moyens mécaniques (cordonnets, provisoire) (C, D) ou chimio-mécaniques (pâtes) ou chirurgicaux (B faux)."
+      },
+      {
+        questionText: "La prise d'empreinte avec un minimum de risques pour l'attache épithéliale est assurée par :",
+        options: [
+          "Les techniques chimio-mécanique",
+          "Les techniques d'éviction gingivale",
+          "Les techniques de déflexion en utilisant des cordonnets",
+          "L'utilisation d'une pâte de consistance épaisse comme l'Expasyl",
+          "Toutes les réponses sont Justes"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les méthodes les moins invasives sont la déflexion mécanique (cordonnets) (C) ou les techniques chimio-mécaniques (A) comme les pâtes (Expasyl) (D), particulièrement indiquées si le parodonte est fin."
       }
     ]
   },
@@ -1716,6 +2160,42 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [4],
         explanation: "L'objectif est d'intégrer la prothèse dans la PIM, en rétablissant la fonction canine du côté travaillant (côté droit) et en respectant le guidage antérieur."
+      },
+      {
+        questionText: "La réussite d'une restauration prothétique fixée dépend :",
+        options: [
+          "essentiellement de ses rapports en occlusion en relation centrée",
+          "de ses rapports en occlusion d'intercuspidation existante",
+          "principalement de l'harmonie des rapports occlusaux inter arcades en statique et dynamique",
+          "particulièrement de la dysharmonie des rapports occlusaux inter arcades non corrigée",
+          "de la participation de cette restauration fixe à l'articulé du patient"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La réussite d'une restauration prothétique conjointe dépend du maintien de l'harmonie des rapports occlusaux en statique et dynamique."
+      },
+      {
+        questionText: "Les points supports de l'occlusion du premier groupe :",
+        options: [
+          "sont les plus importantes pour assurer la stabilité de l'occlusion en occlusion en relation centrée",
+          "sont les plus importantes pour assurer la stabilité de l'occlusion en occlusion uniquement en intercuspidation maximale",
+          "parmi elles on ne compte pas la cuspide et la fosse des molaires dites clef de l'occlusion",
+          "s'articulent partiellement avec les crêtes marginales mandibulaires et maxillaires",
+          "s'articulent principalement avec les crêtes marginales mandibulaires et maxillaires"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Les points supports du premier groupe (cuspides V mandibulaires) sont les plus importants pour la stabilité de la PIM (B est faux) et s'articulent *principalement* avec les crêtes marginales maxillaires (E)."
+      },
+      {
+        questionText: "La table occlusale rebasée est :",
+        options: [
+          "indiquée pour l'enregistrement d'une intercuspidation maximale",
+          "indiquée pour l'enregistrement de l'articulé en latéralité",
+          "une cire d'occlusion sectorielle",
+          "une maquette d'occlusion",
+          "une table incisive de guidance"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "C'est une technique d'enregistrement de l'OIM (PIM) (A est faux) qui est sectorielle (C) et utilise un matériau rigide comme la cire ou la résine (D)."
       }
     ]
   },
@@ -1878,6 +2358,30 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [1, 2, 4],
         explanation: "Le descellement (dépose) peut se faire par ultrasons (B). Il est indiqué en cas de surocclusion (C) ou d'échec esthétique (E). Il est *indiqué* en cas de complications parodontales (D est faux)."
+      },
+      {
+        questionText: "Les ciments de scellement provisoires ou temporaires sont :",
+        options: [
+          "ciments oxyde de zinc eugénol sans agressivité pulpaire.",
+          "Les ciments oxyde de zinc amélioré ayant une meilleur résistance à la compression et à la traction",
+          "Les ciments polycarboxylate qui ont un effet calmant sur la pulpe, si ils contiennent de l'oxyde de zinc eugenol.",
+          "Les ciments polycarboxylate présentent une légère acidité, ils sont irritant pour la pulpe.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "L'OZE a un pH neutre (7) et n'est pas agressif (A). Les polycarboxylates peuvent avoir un effet calmant s'ils contiennent de l'OZE (C). Les OZE améliorés (B) sont des ciments permanents. Les polycarboxylates sont peu irritants (D faux)."
+      },
+      {
+        questionText: "Les ciments de scellement définitifs sont :",
+        options: [
+          "Les ciments phosphate de zinc avec pouvoir adhésif.",
+          "Les ciments verre ionomère assurant une adhésion physico chimique comparable à celle des agents de collage.",
+          "Les ciments verre ionomère CVI très irritant pour la pulpe.",
+          "Les ciments verre ionomère hybrides, assurant une adhésion chimique et micro mécanique.",
+          "Les CVIMAR ayant une propriété mécanique inférieure à celle des CVI conventionnels."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les CVIMAR (hybrides) offrent une adhésion chimique (verre ionomère) et micromécanique (résine) (D). Le phosphate de zinc n'est pas adhésif (A faux). L'adhésion des CVI est faible (B faux) et ils sont peu irritants (C faux). Les CVIMAR sont *plus* résistants (E faux)."
       }
     ]
   },
@@ -2100,6 +2604,186 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [0, 3],
         explanation: "L'enregistrement de ces limites nécessite une éviction/déflexion. La technique à deux cordonnets (A) est très efficace. Les pâtes (Expasyl) (D) sont aussi une option, surtout si le parodonte est fin et fragile."
+      },
+      {
+        questionText: "Parmi Les élastomères de synthèse nous avons :",
+        options: [
+          "Les polyéthers, disponibles en plusieurs viscosités, avec excellente stabilité dimensionnelle.",
+          "Les polysulfures utilisés uniquement pour les préparations unitaires ou corono-radiculaires",
+          "Les silicones réticulant par condensation avec une très bonne stabilité dimensionnelle",
+          "Les silicones réticulant par addition ayant une polymérisation ne générant aucun produit de réaction",
+          "Les silicones réticulant par addition ayant une polymérisation avec élimination de petites molécules d'eau"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Polyéthers : une seule viscosité (A faux). Silicones C (condensation) : mauvaise stabilité (C faux). Silicones A (addition) : pas de produit de réaction (D vrai, E faux). [Note: La réponse C est sélectionnée malgré l'explication, reflétant une incohérence dans la source]."
+      },
+      {
+        questionText: "La technique d'empreinte par double mélange est une technique:",
+        options: [
+          "compressive indiquée pour les préparations Intrasulculaires",
+          "qui peut être indiquée pour préparations périphériques et/ou radiculaires.",
+          "effectuée en un seul temps avec 2 matériaux de même nature mais de viscosité rapprochée.",
+          "effectuée en 2 temps avec 2 matériaux de même nature et de même consistance",
+          "effectuer en 1 temps avec 2 matériaux de même nature et de même consistance"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Technique du double mélange (1 temps) utilise 2 viscosités rapprochées (C). Elle est peu compressive (A faux) et indiquée pour les préparations périphériques et radiculaires (B)."
+      },
+      {
+        questionText: "L'empreinte du logement canalaire peut être effectuée par utilisation de :",
+        options: [
+          "la méthode en double mélange de silicones à l'aide de tenons normalisés ou non",
+          "de la résine calcinable sans tuteur support de matériau",
+          "de la technique indirecte nécessitant Futilisation de tuteur métallique de surcoulée sous dimensionné.",
+          "de la technique indirecte avec tenon calcinable de faible dimension enrobé de matériau à empreinte.",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Technique indirecte : Utilise une empreinte globale (ex: double mélange) avec des tuteurs (normalisés ou non) (A). Technique directe : Utilise une résine calcinable avec un tuteur (B faux)."
+      },
+      {
+        questionText: "Parmi ces matériaux, lequel est compatible avec une désinfection par Immersion dans du glutaraldehyde à 2% ? :",
+        options: [
+          "Hydrocolloides",
+          "Silicones de type A",
+          "Polyéthers",
+          "Silicones de type C",
+          "Alginate"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les matériaux hydrophobes (Silicones A et C) supportent l'immersion. Les matériaux hydrophiles (Hydrocolloïdes, Polyéthers, Alginate) ne doivent être que pulvérisés."
+      },
+      {
+        questionText: "résine époxy présente :",
+        options: [
+          "une faible précision des détails",
+          "une incompatibilité avec les polysulfures",
+          "un temps de prise court (<1 heure)",
+          "une excellente résistance à l'abrasion",
+          "une compatibilité avec les élastomères de synthèse."
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Résine époxy : Très bonne précision (A faux), compatible avec les élastomères (B faux, E vrai), temps de prise long (3-4h) (C faux), et excellente résistance à l'abrasion (D)."
+      },
+      {
+        questionText: "L'enregistrement des limites intra-sulculaires exige :",
+        options: [
+          "Une éviction gingivale par la technique des deux cordonnets",
+          "Une déflexion gingivale par élimination de la collerette gingivale",
+          "Une éviction gingivale par la technique d'un seul cordonnet",
+          "L'utilisation d'une pate Expasyl face a un parodonte fin",
+          "Une éviction par curetage rotatif"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'éviction par curetage rotatif (gingivectomie) est une technique chirurgicale d'accès à la limite. Les autres (A, C, D) sont des techniques de déflexion temporaire."
+      },
+      {
+        questionText: "En prothèse fixe, la technique d'empreinte dite des coffrages métallo-résineux est une technique : (1- Sans guidage unitaire. 2- Avec guidage unitaire. 3- En un temps opératoire. 4- Qui nécessite l'utilisation d'un seul matériau à empreinte. 5- En deux temps opératoires.)",
+        options: [
+          "(1-3)",
+          "(2-4)",
+          "(2-5)",
+          "(1-5)",
+          "(3)"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Cette technique utilise un guidage unitaire (2) et se déroule en deux temps (5) : d'abord la création des coffrages, puis l'empreinte globale."
+      },
+      {
+        questionText: "En prothèse fixe, la technique dite des coffrages métallo-résineux est une technique d'empreinte : (1- Numérique. 2- Sans guidage unitaire. 3- Des coiffes en résine. 4- En trois temps. 5- Toutes les réponses sont fausses.)",
+        options: [
+          "(1-2)",
+          "(3-5)",
+          "(2-4)",
+          "(1-3)",
+          "(5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "C'est une technique physique (1 faux), avec guidage unitaire (2 faux), qui utilise des coiffes (3 vrai) et se fait en deux temps (4 faux). Puisque la (3) est vraie, la (5) 'Toutes fausses' est techniquement incorrecte, mais plébiscitée (96%)."
+      },
+      {
+        questionText: "En prothèse conjointe, la technique du double mélange : (1- Nécessite l'utilisation de bagues ajustées en résine. 2- Nécessite l'utilisation de bagues en cuivre. 3- Est une technique d'empreinte avec guidage unitaire. 4- Est une technique d'empreinte en deux temps. 5- Toutes les réponses sont fausses.)",
+        options: [
+          "(1-2)",
+          "(2-4)",
+          "(1-3)",
+          "(2-3)",
+          "(5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Le double mélange n'utilise pas de bagues (1, 2 faux), est sans guidage unitaire (3 faux) et se fait en *un temps* (4 faux). Donc, toutes les réponses sont fausses (5)."
+      },
+      {
+        questionText: "Les techniques d'accès aux limites cervicales peuvent être :",
+        options: [
+          "Médiate à l'aide d'un isomoulage.",
+          "Immédiate à l'aide d'une pate déflectrice, astringente et hémostatique.",
+          "Médiate à l'aide du double cordonnet déflecteur.",
+          "Médiate a l'aide d'un simple cordonnet.",
+          "La rétraction gingivale est irréversible."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les pâtes (Expasyl) sont une technique immédiate (B). Les cordonnets (C, D) sont aussi immédiats. La déflexion est réversible (E faux)."
+      },
+      {
+        questionText: "Parmi ces produits lesquels sont utilisés pour la désinfection des empreintes:",
+        options: [
+          "L'alcool",
+          "L’hypochlorite",
+          "L’hydroxyde de calcium",
+          "Le glutar-aldehyde",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les désinfectants standards pour les empreintes sont l'hypochlorite de sodium et le glutaraldéhyde."
+      },
+      {
+        questionText: "Parmi les techniques d'accès aux limites cervicales par déflexion on retrouve :",
+        options: [
+          "Les solutions chimiques",
+          "L'électro chirurgie",
+          "Le curetage rotatif",
+          "La couronne provisoire",
+          "Le cordonnet"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La *déflexion* (écartement temporaire) inclut les cordonnets (E), la provisoire (D) et les solutions chimiques (astringents) (A). L'électrochirurgie (B) et le curetage (C) sont des techniques d'éviction (chirurgicales)."
+      },
+      {
+        questionText: "La wash technique:",
+        options: [
+          "Correspond à une prise d'empreinte en 2 temps et avec 2 matériaux de viscosité",
+          "Utilise un élastomère de haute viscosité ; une fois durci; rebase par un élastomère de faible viscosité",
+          "Utilise en même temps 2 élastomères de haute et de basse viscosité",
+          "Ne nécessite pas une déflexion gingivale",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La Wash Technique est une technique en 2 temps (A) : une première empreinte au matériau haute viscosité (Putty), qui est ensuite rebasée avec un matériau faible viscosité (Light) (B). (C) décrit le double mélange."
+      },
+      {
+        questionText: "La pâte appelée EXPASYL :",
+        options: [
+          "C'est matériau hémostatique",
+          "Est un matériau astringent",
+          "Possède une action mécanique",
+          "Possède une action chimique",
+          "Entraine l'éviction gingivale pour l'ouverture du sulcus"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Expasyl est mécano-chimique : Kaolin (mécanique) (C) + Chlorure d'aluminium (chimique) (D). Le chlorure d'aluminium est astringent (B) et hémostatique (A)."
+      },
+      {
+        questionText: "Le système d'emboitage démontable appelé DI-LOK :",
+        options: [
+          "Réalise des MPU avant la coulée de I ‘empreinte",
+          "Obtient d'abord un modèle monobloc meule de façon ce qu'il puisse être introduit dans le moule",
+          "Réalise les MPU en fracturant le socle du modèle",
+          "Permet de reconstituer l'ensemble des MPU dans le moule prise grâce aux dentelures gravées sur sa face interne",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le système Di-Lok (monobloc) consiste à couler un modèle monobloc (B), puis à le fracturer (C) pour séparer les MPU. Le moule en plastique avec ses dentelures permet de repositionner précisément les MPU (D)."
       }
     ]
   },
@@ -2166,6 +2850,18 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [4],
         explanation: "L'ordre de montage de la céramique (ici pour une Jacket) est : 1. Opaque (masque le fond), 2. Dentine (corps de la couleur), 3. Email (translucidité/effets), 4. Glaçage (vernis final)."
+      },
+      {
+        questionText: "Quels sont les rôles de l'opaque dans une couronne céramo-métallique ? :",
+        options: [
+          "Renforcer la liaison métal-porcelaine",
+          "Remplacer la couche de dentine",
+          "Représenter la couleur finale de la dent",
+          "Éviter le retrait de la céramique lors de la cuisson",
+          "Masquer la couleur du métal"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "L'opaque a 3 rôles : Masquer le métal (E), initier la couleur de base (C), et participer à la liaison chimique métal-céramique (A)."
       }
     ]
   },
@@ -2316,6 +3012,18 @@ const prothesey4Quizzes = [
         ],
         correctOptionIndexes: [0, 1, 3],
         explanation: "Les techniques soustractives (usinage/fraisage) (C est faux, c'est l'additif) permettent d'usiner divers matériaux (zircone, résine calcinable) (A, B). Ce processus engendre des pertes de matière (copeaux) (D)."
+      },
+      {
+        questionText: "Le fonctionnement de la CFAO repose sur :",
+        options: [
+          "Deux éléments uniquement, un système CAO et un système FAO.",
+          "Trois éléments, système CAO, système FAO et un système de mesure.",
+          "La numérisation de la dent ou de l'arcade par des sources lumineuses.",
+          "L'utilisation de logiciels adaptés aux différents types de prothèse à concevoir.",
+          "La fabrication par soustraction uniquement."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La chaîne CFAO repose sur 3 éléments : Numérisation (mesure 3D) (B), CAO (logiciel de conception) (D), et FAO (fabrication soustractive ou additive) (E faux)."
       }
     ]
   }
