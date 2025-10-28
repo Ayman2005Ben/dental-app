@@ -2996,7 +2996,6 @@ function showFlashcardViewer(collection) {
     // Display the first card
     displayCurrentFlashcard();
     // Ensure the flashcards page is the active page
-    showPage('#flashcards-page'); 
 }
 // ✅ استبدل دالة displayCurrentFlashcard القديمة بهذه النسخة
 
