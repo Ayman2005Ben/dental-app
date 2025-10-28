@@ -322,6 +322,8 @@ function displayMindMap(mindmapData) {
 }
     
     // ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
+// [السطر 340]
+// ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
 function displayGeneratedFlashcards(flashcardData) {
     // Ensure data is an array
     if (!Array.isArray(flashcardData)) {
@@ -338,20 +340,31 @@ function displayGeneratedFlashcards(flashcardData) {
         return;
     }
     
-    // --- التحسين الأمني ---
+    // --- ✅ [الخطوة 1: الانتقال إلى الصفحة الصحيحة أولاً] ---
+    // هذا السطر سينتقل إلى صفحة الفلاش كارد ويشغل fetchAndDisplayCollections
+    // الذي سيقوم (بشكل صحيح) بإخفاء العارض وإظهار المجموعات
+    showPage('#flashcards-page'); 
+    // --- نهاية الخطوة 1 ---
+
     const ratingControls = document.getElementById('ai-flashcard-rating-controls');
     const viewerControls = document.getElementById('flashcard-viewer-controls');
 
     if (ratingControls) ratingControls.style.display = 'flex'; // Show AI rating controls
     if (viewerControls) viewerControls.style.display = 'none'; // Hide normal viewer controls
-    // --- نهاية التحسين ---
 
-    document.getElementById('flashcards-content').style.display = 'none'; // Hide collection grid
-    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden'); // Show viewer
+    // --- ✅ [الخطوة 2: الآن نقوم بـ "تجاوز" الإعدادات الافتراضية] ---
+    // نحن الآن على صفحة الفلاش كارد، نقوم بإخفاء المجموعات
+    document.getElementById('flashcards-content').style.display = 'none'; 
+    // ونقوم بإظهار العارض (الذي تم إخفاؤه في الخطوة 1)
+    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden'); 
     document.getElementById('flashcard-viewer-title').textContent = "AI Generated Flashcards (Review & Save)";
 
-    displayCurrentFlashcard(); // Display the first card // Navigate to the flashcards page
+    displayCurrentFlashcard(); // Display the first card
+    
+    // (تم حذف السطر showPage من هنا لأنه أصبح في الأعلى)
 }
+// [السطر 371]
+// --- دالة لتحديث الهيدر بصورة المستخدم ---
 
     // --- دالة لتحديث الهيدر بصورة المستخدم ---
     function updateHeaderWithUserData(user) {
