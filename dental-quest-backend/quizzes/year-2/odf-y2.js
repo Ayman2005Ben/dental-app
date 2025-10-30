@@ -4495,6 +4495,565 @@ const odfQuizzesY2 = [
             citations: []
         }
     ]
+  },
+  {
+    title: "RATT ODF 2024",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Le stade I de la classification de FRANKL et Call, du comportement de l'enfant au cabinet dentaire, correspond à:",
+        options: [
+          "A. Attitude extrêmement positive: l'enfant s'intéresse au traitement, plaisante.",
+          "B. Attitude positive: enfant accepte le traitement mais reste méfiant.",
+          "C. L'enfant est négatif : éprouve de la répugnance à accepter le traitement, peu coopératif.",
+          "D. L'enfant est définitivement négatif : refuse le traitement, pleure et tremble de peur."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La classification de Frankl décrit le comportement de l'enfant. Le Stade I correspond à un comportement 'définitivement négatif'. Le stade II est 'négatif', le III est 'positif', et le IV est 'extrêmement positif'."
+      },
+      {
+        questionText: "Le cartilage principal responsable de la croissance post-natale de la mandibule est:",
+        options: [
+          "A. Le cartilage angulaire",
+          "B. Le cartilage de Meckel",
+          "C. Le cartilage condylien",
+          "D. Le cartilage coronoidien"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le cartilage condylien est le principal centre de croissance de la mandibule après la naissance. Le cartilage de Meckel sert de tuteur pendant l'embryogenèse mais disparaît ensuite."
+      },
+      {
+        questionText: "La rotation postérieure mandibulaire est :",
+        options: [
+          "A. Une rotation vers le haut et vers l'avant.",
+          "B. Souvent associée à une croissance faciale courte (brachyfaciale).",
+          "C. Caractérisée par une augmentation de la hauteur de l'étage inférieur de la face.",
+          "D. Souvent associée à une ventilation nasale parfaite."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La rotation postérieure (sens horaire) se traduit par une croissance plus verticale que sagittale, entraînant une augmentation de la hauteur de l'étage inférieur de la face. Elle est souvent associée à une ventilation buccale."
+      },
+      {
+        questionText: "La téléradiographie de profil permet d'évaluer :",
+        options: [
+          "A. La symétrie faciale.",
+          "B. Le rapport sagittal des mâchoires entre elles et par rapport à la base du crâne.",
+          "C. La position et l'inclinaison des incisives.",
+          "D. La largeur des arcades dentaires."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La téléradiographie de profil est essentielle pour l'analyse céphalométrique. Elle permet d'évaluer le type de croissance, les rapports sagittaux et verticaux des bases osseuses (B), et l'inclinaison des incisives (C). La symétrie (A) et les largeurs (D) sont évaluées sur une téléradiographie de face."
+      },
+      {
+        questionText: "Une malocclusion de classe III squelettique est souvent associée à :",
+        options: [
+          "A. Une hyperflexion de la base du crâne (angle sphénoïdal fermé).",
+          "B. Une hypoflexion de la base du crâne (angle sphénoïdal ouvert).",
+          "C. Une position très antérieure de la cavité glénoïde.",
+          "D. Une croissance mandibulaire de type rotation antérieure."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Une base du crâne en hyperflexion (angle N-S-Ba fermé) positionne la mandibule plus en avant. Une position antérieure de la cavité glénoïde a le même effet, favorisant un profil de Classe III."
+      },
+      {
+        questionText: "L'éruption dentaire :",
+        options: [
+          "A. Est un processus qui s'arrête une fois le contact occlusal établi.",
+          "B. Nécessite une édification radiculaire complète avant de commencer.",
+          "C. Est un processus programmé dans le temps et continu tout au long de la vie.",
+          "D. Concerne uniquement le déplacement vertical de la dent."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'éruption est un processus continu qui compense l'usure occlusale même à l'âge adulte (éruption passive). Elle débute lorsque la racine est édifiée aux 2/3 environ. C'est un processus complexe avec des déplacements dans les 3 sens de l'espace."
+      }
+    ]
+  },
+  {
+    title: "EMD 1 ODF 2025",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Dans le squelette de la tête on retrouve :",
+        options: [
+          "A. Une base crânienne composée de deux étages : supérieur et inférieur.",
+          "B. Uniquement une base et une voûte crânienne.",
+          "C. Une calvaria (voûte) reliée à la face par le biais d'une base crânienne.",
+          "D. Une face osseuse située entre la ligne bipupillaire et sous-nasale."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le squelette de la tête est composé du neurocrâne (base + voûte) et du viscérocrâne (face). La base du crâne fait la jonction entre la voûte et la face (C). La base a 3 étages (A est faux). La face s'étend de la ligne capillaire au menton (D est faux)."
+      },
+      {
+        questionText: "Les muscles abaisseurs de la mandibule sont :",
+        options: [
+          "A. Le génio-hyoïdien et le mylo-hyoïdien.",
+          "B. Le ptérygoïdien médial.",
+          "C. Le digastrique.",
+          "D. Le masséter."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les muscles abaisseurs principaux sont les muscles sus-hyoïdiens, notamment le digastrique, le génio-hyoïdien et le mylo-hyoïdien. Le masséter et le ptérygoïdien médial sont de puissants élévateurs."
+      },
+      {
+        questionText: "Selon Pyle et Greulich, l'âge osseux est déterminé sur :",
+        options: [
+          "A. La radiographie des poignets.",
+          "B. La radiographie de la main et du poignet droit.",
+          "C. La radiographie de la main et du poignet gauches.",
+          "D. La radiographie du genou gauche et de la face."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La méthode de Greulich et Pyle utilise un atlas de radiographies de référence de la main et du poignet gauches pour déterminer l'âge osseux par comparaison."
+      },
+      {
+        questionText: "Le stade 'S' ou l'apparition de l'os sésamoïde :",
+        options: [
+          "A. Coïncide avec le sommet du pic de croissance pubertaire.",
+          "B. Apparaît en moyenne 12 mois avant le pic de croissance.",
+          "C. Apparaît après le pic de croissance.",
+          "D. Est un signe de fin de croissance."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'ossification de l'os sésamoïde du pouce est un indicateur de maturation précoce, apparaissant en moyenne un an avant le pic de croissance staturale, signalant ainsi le début de l'accélération pubertaire."
+      },
+      {
+        questionText: "La croissance du nez :",
+        options: [
+          "A. S'arrête à la puberté.",
+          "B. Est sous l'influence des structures osseuses et cartilagineuses sous-jacentes.",
+          "C. Est fortement influencée par le traitement orthodontique.",
+          "D. Est tardive, surtout chez les garçons."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La croissance du nez est dépendante du développement du septum et des os propres (B). Elle a la particularité d'être tardive et de se poursuivre après la fin de la croissance générale, surtout chez les garçons (D). Le traitement ODF a peu ou pas d'influence sur sa forme (C est faux)."
+      },
+      {
+        questionText: "Le chondrocrâne est :",
+        options: [
+          "A. Une ébauche membraneuse.",
+          "B. À l'origine des os de la voûte du crâne.",
+          "C. Une maquette cartilagineuse pour les os de la base du crâne.",
+          "D. Formé à partir des cellules de la crête neurale uniquement."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le chondrocrâne est l'ébauche cartilagineuse (A est faux) qui sert de modèle à l'ossification enchondrale des os de la base du crâne (C est vrai, B est faux). Il a une double origine : crête neurale et mésoderme."
+      },
+      {
+        questionText: "Les cellules de la crête neurale migrent pour former :",
+        options: [
+          "A. La totalité du crâne.",
+          "B. Le mésenchyme des arcs branchiaux.",
+          "C. La plupart des os de la face.",
+          "D. Les odontoblastes."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les cellules de la crête neurale ont un rôle crucial et donnent naissance à une grande partie du squelette facial (C), au mésenchyme des arcs branchiaux (B) et aux odontoblastes (D), entre autres. Elles ne forment pas la partie postérieure du crâne (A est faux)."
+      },
+      {
+        questionText: "La croissance suturale du maxillaire dans le sens transversal est principalement due à l'activité de la :",
+        options: [
+          "A. Suture fronto-maxillaire.",
+          "B. Suture zygomatico-maxillaire.",
+          "C. Suture médio-palatine.",
+          "D. Suture ptérygo-palatine."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La croissance en largeur du maxillaire est assurée majoritairement par l'activité de la suture médio-palatine, qui sépare les deux hémi-maxillaires."
+      },
+      {
+        questionText: "La mandibule croit en longueur principalement par :",
+        options: [
+          "A. Apposition osseuse au niveau de la symphyse mentonnière.",
+          "B. Croissance suturale.",
+          "C. Un phénomène de remodelage avec apposition sur le bord postérieur du ramus et résorption sur son bord antérieur.",
+          "D. Croissance du cartilage de Meckel."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'allongement de la mandibule se fait par un déplacement vers l'arrière de la branche montante (ramus) grâce à un remodelage de surface : apposition à l'arrière et résorption à l'avant. La synchondrose symphysaire se soude tôt (A est faux) et le cartilage de Meckel disparaît (D est faux)."
+      }
+    ]
+  },
+  {
+    title: "EMD 2 ODF 2024",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Dans la classification proposée par Démogé, la 'denture mixte stable' correspond à la formule :",
+        options: [
+          "A. 1, 2, III, IV, V, 6",
+          "B. 1, 2, 3, IV, V, 6",
+          "C. 1, 2, 3, 4, 5, 6",
+          "D. 1, 2, 3, 4, 5, 6, 7"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La denture mixte stable est une phase où les premières molaires permanentes et les incisives permanentes ont fait leur éruption, mais les canines et molaires temporaires sont encore en place. La formule est donc 1, 2, III, IV, V, 6."
+      },
+      {
+        questionText: "L'éruption dentaire :",
+        options: [
+          "A. Débute lorsque la racine commence à se former.",
+          "B. Est achevée lorsque la couronne émerge dans la cavité buccale.",
+          "C. Se poursuit même après la mise en place fonctionnelle de la dent.",
+          "D. Est un mécanisme totalement élucidé."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'éruption est un processus continu qui se poursuit après le contact occlusal pour compenser l'usure (éruption fonctionnelle active). Le mécanisme exact reste encore débattu."
+      },
+      {
+        questionText: "Les fils en alliage NiTi (Nickel-Titane) sont principalement utilisés pour :",
+        options: [
+          "A. La phase de nivellement et d'alignement initial.",
+          "B. La phase de finition et de détails.",
+          "C. La confection de boucles et de pliages complexes.",
+          "D. Leur grande rigidité."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Grâce à leur grande élasticité et leur mémoire de forme, les arcs NiTi sont idéaux pour la phase initiale de traitement (nivellement) car ils délivrent des forces légères et continues sur une grande plage d'activation, même en cas de malpositions sévères."
+      },
+      {
+        questionText: "Le Mésiodens est :",
+        options: [
+          "A. Une agénésie de l'incisive centrale.",
+          "B. Une dent surnuméraire de forme conoïde située entre les incisives centrales maxillaires.",
+          "C. Une fusion entre une incisive centrale et une latérale.",
+          "D. Une dent temporaire qui persiste sur l'arcade."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le mésiodens est la dent surnuméraire la plus fréquente. Il est typiquement de forme conique et se situe sur la ligne médiane entre les deux incisives centrales supérieures."
+      },
+      {
+        questionText: "Une déglutition dysfonctionnelle (atypique) chez un enfant de 10 ans est caractérisée par :",
+        options: [
+          "A. Un contact des arcades dentaires.",
+          "B. Une absence de contraction des muscles des lèvres.",
+          "C. Une interposition de la langue entre les arcades.",
+          "D. La pointe de la langue en appui sur la papille rétro-incisive."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La persistance d'une déglutition de type infantile (atypique) se caractérise par une interposition linguale antérieure ou latérale entre les arcades, l'absence de contact dentaire et des contractions des muscles péri-oraux pour assurer l'étanchéité."
+      },
+      {
+        questionText: "Un faciès de 'respirateur buccal' est souvent associé à :",
+        options: [
+          "A. Un visage court et large.",
+          "B. Une posture basse de la langue.",
+          "C. Une rotation mandibulaire antérieure.",
+          "D. Des narines larges et bien développées."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La respiration buccale chronique entraîne une posture basse de la langue pour permettre le passage de l'air. Ceci est souvent associé à une rotation mandibulaire postérieure, un visage long et étroit (dolichofacial), et des narines pincées (atrésiques)."
+      },
+      {
+        questionText: "Le Cône Beam (CBCT) est particulièrement indiqué pour :",
+        options: [
+          "A. Le dépistage initial de routine pour tous les patients.",
+          "B. La localisation précise d'une canine incluse dans les 3 dimensions.",
+          "C. L'étude des tissus mous de l'articulation temporo-mandibulaire.",
+          "D. La détection des caries interproximales."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le Cône Beam est un examen 3D. Son indication principale en ODF est la localisation précise d'éléments inclus (canines), l'évaluation des structures osseuses avant chirurgie ou pose d'implants. Il est moins performant pour les tissus mous (IRM) ou les caries (clichés rétro-coronaires)."
+      },
+      {
+        questionText: "Une marche mésiale prononcée en denture temporaire est un facteur de risque pour le développement d'une :",
+        options: [
+          "A. Malocclusion de Classe I.",
+          "B. Malocclusion de Classe II.",
+          "C. Malocclusion de Classe III.",
+          "D. Béance antérieure."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Une marche distale prédispose à une Classe II. Un plan terminal droit conduit le plus souvent à une Classe I. Une marche mésiale, surtout si elle est prononcée, guide la première molaire permanente mandibulaire dans une position trop mésiale, favorisant une Classe III."
+      },
+      {
+        questionText: "La flexion basicrânienne est un phénomène qui :",
+        options: [
+          "A. Se termine à la naissance.",
+          "B. Est lié à la croissance du cerveau et à la bipédie.",
+          "C. Correspond à une ouverture de l'angle sphénoïdal (N-S-Ba).",
+          "D. N'a pas d'influence sur la position des mâchoires."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La flexion de la base du crâne est un processus post-natal qui se poursuit jusqu'à 6-7 ans, en lien avec la croissance cérébrale et l'acquisition de la posture bipède. Elle correspond à une fermeture de l'angle sphénoïdal et influence directement la position sagittale du maxillaire et de la mandibule."
+      }
+    ]
+  },
+  {
+    title: "EMD 2 ODF 2025",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "La respiration buccale peut avoir pour conséquences :",
+        options: [
+          "A. Un hypodéveloppement transversal du maxillaire supérieur.",
+          "B. Une augmentation de l'étage inférieur de la face.",
+          "C. Une linguoversion des incisives supérieures.",
+          "D. Une croissance mandibulaire de type rotation antérieure."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La posture basse de la langue chez le respirateur buccal supprime son rôle de conformation du palais, menant à une endognathie (A). L'ouverture buccale permanente favorise une rotation mandibulaire postérieure et une augmentation de l'étage inférieur (B)."
+      },
+      {
+        questionText: "La déglutition infantile est considérée comme atypique :",
+        options: [
+          "A. Chez le nourrisson.",
+          "B. Chez un enfant de 11 ans.",
+          "C. Quand elle se fait arcades serrées.",
+          "D. Quand la langue ne s'interpose pas entre les arcades."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La déglutition de type infantile est normale chez le nourrisson et le jeune enfant. Elle devient atypique ou dysfonctionnelle si elle persiste après l'éruption des incisives permanentes et la maturation neuro-musculaire, par exemple à 11 ans."
+      },
+      {
+        questionText: "Le syndrome de Down (Trisomie 21) est souvent associé à :",
+        options: [
+          "A. Une microglossie (langue petite).",
+          "B. Une malocclusion de Classe III squelettique.",
+          "C. Une hyperdontie (dents surnuméraires).",
+          "D. Un maxillaire large et bien développé."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les patients atteints du syndrome de Down présentent fréquemment une macroglossie relative, un hypodéveloppement de l'étage moyen de la face (maxillaire) et une tendance à la Classe III squelettique. L'hypodontie (agénésies) est plus fréquente que l'hyperdontie."
+      },
+      {
+        questionText: "Les fentes labio-palatines sont dues à :",
+        options: [
+          "A. Une croissance excessive des bourgeons faciaux.",
+          "B. Un défaut de fusion des bourgeons faciaux durant l'embryogenèse.",
+          "C. Une étiologie purement environnementale (ex: prise de médicaments).",
+          "D. Une transmission génétique simple (monogénique)."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les fentes résultent d'un échec de la fusion des différents bourgeons (maxillaires, nasaux) au cours de la formation de la face. L'étiologie est complexe et multifactorielle, impliquant une combinaison de prédispositions génétiques et de facteurs environnementaux."
+      },
+      {
+        questionText: "Les alliages de Nickel-Titane (NiTi) en orthodontie sont réputés pour :",
+        options: [
+          "A. Leur grande rigidité, idéale pour la phase de finition.",
+          "B. Leur mémoire de forme et leur superélasticité.",
+          "C. L'absence totale de friction avec les brackets.",
+          "D. Le fait qu'ils peuvent être facilement pliés en cabinet."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les alliages NiTi sont caractérisés par leur capacité à revenir à leur forme initiale après une grande déformation (mémoire de forme) et à délivrer des forces légères et constantes sur une longue distance (superélasticité), ce qui les rend parfaits pour la phase initiale d'alignement."
+      },
+      {
+        questionText: "Le 'Lee Way Space' (espace de dérive de Nance) est :",
+        options: [
+          "A. L'espace créé par la perte prématurée des canines temporaires.",
+          "B. La différence entre le diamètre mésio-distal des incisives temporaires et permanentes.",
+          "C. La différence entre le diamètre mésio-distal du groupe (canine et molaires temporaires) et celui de leurs successeurs permanents.",
+          "D. L'espace qui apparaît entre les incisives (diastèmes de Bogue)."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le Lee Way Space est l'espace gagné lors du remplacement des molaires et de la canine temporaires, car la somme de leurs diamètres mésio-distaux est supérieure à celle de la canine et des prémolaires permanentes qui les remplacent. Cet espace est crucial pour la mise en place d'une occlusion de Classe I molaire."
+      },
+      {
+        questionText: "Le plan terminal droit en denture temporaire évolue le plus souvent vers :",
+        options: [
+          "A. Une Classe I molaire permanente.",
+          "B. Une Classe II molaire permanente.",
+          "C. Une Classe III molaire permanente.",
+          "D. Un articulé croisé postérieur."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Un plan terminal droit signifie que les faces distales des deuxièmes molaires temporaires sont alignées. Cette configuration évolue le plus souvent vers une relation de Classe I molaire permanente grâce à la dérive mésiale de la molaire mandibulaire qui utilise le 'Lee Way Space'."
+      }
+    ]
+  },
+  {
+    title: "RATT ODF 2025",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Les os de la face et de la voûte du crâne ont une ossification de type :",
+        options: [
+          "A. Exclusivement enchondrale.",
+          "B. Exclusivement membraneuse.",
+          "C. Mixte, à la fois membraneuse et enchondrale.",
+          "D. Principalement membraneuse."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La plupart des os de la face et tous les os de la voûte crânienne se forment par ossification directe à partir du mésenchyme (ossification membraneuse). L'ossification enchondrale (à partir d'une maquette cartilagineuse) concerne la base du crâne."
+      },
+      {
+        questionText: "Le palais primaire est formé par la fusion de :",
+        options: [
+          "A. Des deux processus palatins.",
+          "B. Des bourgeons maxillaires avec les bourgeons nasaux internes.",
+          "C. Des bourgeons mandibulaires sur la ligne médiane.",
+          "D. Du septum nasal avec les processus palatins."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le palais primaire (ou processus intermaxillaire) résulte de la fusion des deux bourgeons nasaux internes, qui fusionnent ensuite avec les bourgeons maxillaires. Les processus palatins (A) forment le palais secondaire."
+      },
+      {
+        questionText: "Lequel de ces signes n'est PAS un signe de rotation postérieure de la mandibule selon Bjork ?",
+        options: [
+          "A. Un angle goniaque ouvert.",
+          "B. Un canal dentaire à trajet courbe.",
+          "C. Une échancrure pré-goniaque marquée.",
+          "D. Un condyle incliné vers l'arrière."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Un canal dentaire à trajet courbe est un signe de rotation ANTERIEURE. Les signes de rotation postérieure incluent un angle goniaque ouvert, une échancrure pré-goniaque marquée et un condyle incliné en arrière."
+      },
+      {
+        questionText: "En denture temporaire, l'arcade dentaire a typiquement une forme :",
+        options: [
+          "A. Elliptique.",
+          "B. En V ou triangulaire.",
+          "C. Semi-circulaire.",
+          "D. Carrée."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les arcades en denture temporaire saine sont larges et ont une forme de demi-cercle. La forme devient plus parabolique ou elliptique avec l'éruption des dents permanentes."
+      },
+      {
+        questionText: "Dans un profil facial harmonieux, la ligne E de Ricketts (pointe du nez - pogonion cutané) se situe comment par rapport aux lèvres ?",
+        options: [
+          "A. La lèvre supérieure et inférieure sont en contact avec la ligne.",
+          "B. La lèvre supérieure est en avant de la ligne, l'inférieure en arrière.",
+          "C. La lèvre supérieure est à 4 mm en arrière de la ligne, l'inférieure à 2 mm.",
+          "D. Les deux lèvres sont largement en avant de la ligne."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Selon les normes de Ricketts pour un profil équilibré, la lèvre inférieure doit être à environ 2 mm en retrait de la ligne E, et la lèvre supérieure à environ 4 mm en retrait."
+      },
+      {
+        questionText: "Le Cône Beam est un examen de choix pour :",
+        options: [
+          "A. L'étude de la maturation des vertèbres cervicales.",
+          "B. Le dépistage des caries interproximales.",
+          "C. L'évaluation de la position d'une canine incluse et ses rapports avec les racines voisines.",
+          "D. L'analyse des tissus mous du profil."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le grand avantage du Cône Beam est de fournir une image 3D précise des structures osseuses et dentaires, ce qui est idéal pour évaluer la position exacte d'une dent incluse et planifier son traitement sans endommager les dents adjacentes."
+      }
+    ]
+  },
+  {
+    title: "Examen Blanc ODF EMD 1",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Le muscle principal responsable de la propulsion mandibulaire est :",
+        options: [
+          "A. Le muscle masséter.",
+          "B. Le faisceau postérieur du muscle temporal.",
+          "C. Le muscle ptérygoïdien latéral.",
+          "D. Le muscle mylo-hyoïdien."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La contraction bilatérale des muscles ptérygoïdiens latéraux tire les condyles en avant et en bas le long de la pente articulaire, ce qui produit le mouvement de propulsion de la mandibule."
+      },
+      {
+        questionText: "La synchondrose sphéno-occipitale est un centre de croissance majeur pour :",
+        options: [
+          "A. La croissance en largeur de la voûte du crâne.",
+          "B. La croissance antéro-postérieure de la base du crâne.",
+          "C. La croissance en hauteur du ramus mandibulaire.",
+          "D. La croissance suturale du maxillaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La synchondrose sphéno-occipitale est le dernier centre de croissance cartilagineux de la base du crâne à se fermer. Son activité de croissance enchondrale contribue de manière significative à l'allongement de la base du crâne, influençant directement la position de la face par rapport au crâne."
+      },
+      {
+        questionText: "La croissance remodelante du maxillaire, qui contribue à son déplacement en bas et en avant, se manifeste par :",
+        options: [
+          "A. Une apposition osseuse sur la face nasale du palais et une résorption sur la face buccale.",
+          "B. Une résorption sur le bord antérieur de la tubérosité.",
+          "C. Une résorption sur la face nasale du palais et une apposition sur la face buccale.",
+          "D. Une croissance symétrique au niveau de la suture médio-palatine."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le maxillaire 'descend' grâce à un remodelage de surface : il y a résorption sur le plancher des fosses nasales (face supérieure du palais) et apposition sur le palais buccal (face inférieure). Ce phénomène, combiné à la croissance suturale, déplace le complexe vers le bas et l'avant."
+      },
+      {
+        questionText: "Quel bourgeon embryonnaire est à l'origine du philtrum (partie médiane de la lèvre supérieure) et du palais primaire ?",
+        options: [
+          "A. Le bourgeon frontal",
+          "B. Le bourgeon maxillaire",
+          "C. Le bourgeon nasal interne",
+          "D. Le bourgeon mandibulaire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les deux bourgeons nasaux internes fusionnent sur la ligne médiane pour former le segment intermaxillaire, qui donnera naissance au philtrum de la lèvre supérieure, à la région des quatre incisives supérieures, et au palais primaire (triangulaire)."
+      },
+      {
+        questionText: "Une rotation mandibulaire de type 'antérieure' (sens anti-horaire) est cliniquement associée à :",
+        options: [
+          "A. Un angle goniaque ouvert.",
+          "B. Une augmentation de la hauteur de l'étage inférieur de la face.",
+          "C. Une tendance à la supraclusion incisive (occlusion profonde).",
+          "D. Un menton fuyant et un profil convexe."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La rotation antérieure se caractérise par une croissance plus horizontale que verticale. Le menton se projette vers l'avant, l'étage inférieur de la face a tendance à diminuer, et les incisives inférieures sont souvent en supraclusion (recouvertes excessivement par les supérieures)."
+      }
+    ]
+  },
+  {
+    title: "Examen Blanc ODF EMD 2",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Quelle est la conséquence la plus fréquente d'une succion du pouce persistante après 5 ans ?",
+        options: [
+          "A. Une occlusion de Classe III avec prognathie mandibulaire.",
+          "B. Une béance antérieure et une endognathie maxillaire.",
+          "C. Une supraclusion incisive sévère.",
+          "D. Une accélération de l'éruption des dents permanentes."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La pression du pouce sur le palais et les incisives supérieures provoque une déformation de l'arcade maxillaire qui devient étroite (endognathie), tandis que l'interposition du doigt empêche les incisives de se rejoindre, créant une béance antérieure."
+      },
+      {
+        questionText: "Laquelle de ces affirmations concernant le 'Lee Way Space' est correcte ?",
+        options: [
+          "A. Il est plus important à l'arcade maxillaire qu'à l'arcade mandibulaire.",
+          "B. Il correspond à la différence de taille entre les incisives temporaires et permanentes.",
+          "C. Son utilisation par la dérive mésiale de la 1ère molaire permanente permet le passage d'un plan terminal droit à une Classe I.",
+          "D. Il est toujours suffisant pour corriger tout manque de place."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le Lee Way Space est plus important à la mandibule. La dérive mésiale de la molaire mandibulaire dans cet espace est un mécanisme clé qui permet de transformer une relation molaire de bout-à-bout (plan terminal droit) en une Classe I d'Angle."
+      },
+      {
+        questionText: "Le syndrome de Crouzon (dysostose cranio-faciale) se caractérise typiquement par :",
+        options: [
+          "A. Une fusion tardive des sutures crâniennes.",
+          "B. Une hypoplasie de l'étage moyen de la face (maxillaire).",
+          "C. Une malocclusion de Classe II squelettique.",
+          "D. Une agénésie de la clavicule."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le syndrome de Crouzon est une craniosynostose, c'est-à-dire une fusion prématurée des sutures du crâne. Cela entrave la croissance normale, particulièrement celle du maxillaire, qui apparaît en retrait (hypoplasie), créant une malocclusion de Classe III et une exophtalmie."
+      },
+      {
+        questionText: "Quelle est la principale raison pour laquelle les arcs en acier inoxydable sont utilisés dans les phases de finition d'un traitement orthodontique ?",
+        options: [
+          "A. Leur grande élasticité.",
+          "B. Leur mémoire de forme.",
+          "C. Leur faible coût.",
+          "D. Leur grande rigidité et leur aptitude à être pliés."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "En fin de traitement, des mouvements de précision (torques, angulations) sont nécessaires. Les arcs en acier, par leur grande rigidité, permettent une expression complète de la prescription du bracket et peuvent être pliés avec précision par l'orthodontiste pour apporter les finitions finales, contrairement aux arcs NiTi."
+      },
+      {
+        questionText: "Laquelle de ces affirmations décrit le mieux une déglutition mature (fonctionnelle) ?",
+        options: [
+          "A. Les arcades dentaires sont séparées.",
+          "B. Il y a une forte contraction des muscles des lèvres et du menton.",
+          "C. La pointe de la langue prend appui sur le palais, en arrière des incisives.",
+          "D. La mandibule est propulsée vers l'avant."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La déglutition mature se fait arcades en contact (A est faux), sans contraction des muscles péri-oraux (B est faux). La langue est contenue à l'intérieur des arcades et sa pointe vient s'appuyer sur la papille rétro-incisive pour initier l'onde de déglutition."
+      }
+    ]
   }
 ];
 
