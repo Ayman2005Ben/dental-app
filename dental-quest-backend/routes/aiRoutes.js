@@ -6,6 +6,7 @@ const { protect } = require('../middleware/authMiddleware');
 const { askAI } = require('../controllers/aiController');
 
 // استيراد كل الدوال المطلوبة من geminiController
+// ▼▼▼ هذا هو الكود الصحيح (الكامل) ▼▼▼
 const { 
     handleImageQuery, 
     handleAudioQuery,
@@ -13,7 +14,8 @@ const {
     generateFlashcards,
     generateSummary,
     translateContent,
-    generateMindMap
+    generateMindMap,
+    handleSculptureEvaluation // <-- قم بإضافة هذا السطر
 } = require('../controllers/geminiController');
 
 // --- إعداد Multer ---
