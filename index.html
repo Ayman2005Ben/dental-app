@@ -1065,9 +1065,114 @@
                 </div>
             </div>
             <div id="y2-s2" class="tab-content">
+                <div class="module-card">
+                    <h3>Parodontologie (S2)</h3>
+                    <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-s2-Parodontologie-th" placeholder="0-20"></div>
+                    <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s2-Parodontologie-tp" placeholder="0-20"></div>
+                    <button data-calc="y2_s2_Parodontologie">Calculer</button>
+                    <p class="result-text" id="result-y2_s2_Parodontologie"></p>
                 </div>
+                <div class="module-card">
+                    <h3>Immunologie (S2)</h3>
+                    <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s2-Immunologie-th" placeholder="0-20"></div>
+                    <button data-calc="y2_s2_Immunologie">Calculer</button>
+                    <p class="result-text" id="result-y2_s2_Immunologie"></p>
+                </div>
+                <div class="module-card">
+                    <h3>Physiologie (S2)</h3>
+                    <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s2-Physiologie-th" placeholder="0-20"></div>
+                    <button data-calc="y2_s2_Physiologie">Calculer</button>
+                    <p class="result-text" id="result-y2_s2_Physiologie"></p>
+                </div>
+                 <div class="module-card">
+                    <h3>Pathologie Bucco-Dentaire (S2)</h3>
+                    <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-s2-Pathologie-th" placeholder="0-20"></div>
+                    <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s2-Pathologie-tp" placeholder="0-20"></div>
+                    <button data-calc="y2_s2_Pathologie">Calculer</button>
+                    <p class="result-text" id="result-y2_s2_Pathologie"></p>
+                </div>
+
+                <div class="module-card general-average-card">
+                    <h3>Moyenne Générale S2 (Année 2)</h3>
+                    <div class="input-group"><label>Parodontologie (coeff 3):</label><input type="number" id="avg-y2-s2-Parodontologie"></div>
+                    <div class="input-group"><label>Immunologie (coeff 1):</label><input type="number" id="avg-y2-s2-Immunologie"></div>
+                    <div class="input-group"><label>Physiologie (coeff 1):</label><input type="number" id="avg-y2-s2-Physiologie"></div>
+                    <div class="input-group"><label>Pathologie (coeff 3):</label><input type="number" id="avg-y2-s2-Pathologie"></div>
+                    <button data-calc="avg_y2_s2">Calculer Moyenne Générale S2</button>
+                    <p class="result-text" id="result-avg-y2-s2"></p>
+                </div>
+            </div>
+            
             <div id="y2-annuel" class="tab-content">
+                <div class="annual-card">
+                    <h3>Calcul de la Moyenne Annuelle (Année 2)</h3>
+                    
+                    <div class="module-card">
+                        <h3>Odontologie C/E (Annuel)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-OCE-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-OCE-tp" placeholder="0-20"></div>
+                        <button data-calc="y2_a_OCE">Calculer</button>
+                        <p class="result-text" id="result-y2_a_OCE"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Prothèse (Annuel)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-Prothèse-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-Prothèse-tp" placeholder="0-20"></div>
+                        <button data-calc="y2_a_Prothèse">Calculer</button>
+                        <p class="result-text" id="result-y2_a_Prothèse"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Anatomie Humaine (Annuel)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-AnatomieHumaine-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-AnatomieHumaine-tp" placeholder="0-20"></div>
+                        <button data-calc="y2_a_AnatomieHumaine">Calculer</button>
+                        <p class="result-text" id="result-y2_a_AnatomieHumaine"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Orthopédie Dento-Faciale (Annuel)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-ODF-th" placeholder="0-20"></div>
+                        <button data-calc="y2_a_ODF">Calculer</button>
+                        <p class="result-text" id="result-y2_a_ODF"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Biomatériaux (Annuel)</h3>
+                        <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-a-Biomatériaux-th" placeholder="0-20"></div>
+                        <button data-calc="y2_a_Biomatériaux">Calculer</button>
+                        <p class="result-text" id="result-y2_a_Biomatériaux"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Microbiologie (Annuel)</h3>
+                        <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-a-Microbiologie-th" placeholder="0-20"></div>
+                        <button data-calc="y2_a_Microbiologie">Calculer</button>
+                        <p class="result-text" id="result-y2_a_Microbiologie"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Informatique (Annuel)</h3>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-Informatique-tp" placeholder="0-20"></div>
+                        <button data-calc="y2_a_Informatique">Calculer</button>
+                        <p class="result-text" id="result-y2_a_Informatique"></p>
+                    </div>
+
+                    <div class="module-card general-average-card">
+                        <h3>Moyenne Annuelle (Année 2)</h3>
+                        <p>Saisissez le <strong>Moyenne S1</strong> et <strong>Moyenne S2</strong> et les notes des matières annuelles.</p>
+                        
+                        <div class="input-group"><label>Moyenne S1 (Coeff 7):</label><input type="number" id="avg-y2-a-S1"></div>
+                        <div class="input-group"><label>Moyenne S2 (Coeff 8):</label><input type="number" id="avg-y2-a-S2"></div>
+                        <hr>
+                        <div class="input-group"><label>Odontologie C/E (Coeff 5):</label><input type="number" id="avg-y2-a-OCE"></div>
+                        <div class="input-group"><label>Prothèse (Coeff 5):</label><input type="number" id="avg-y2-a-Prothèse"></div>
+                        <div class="input-group"><label>Anatomie Humaine (Coeff 4):</label><input type="number" id="avg-y2-a-AnatomieHumaine"></div>
+                        <div class="input-group"><label>ODF (Coeff 3):</label><input type="number" id="avg-y2-a-ODF"></div>
+                        <div class="input-group"><label>Biomatériaux (Coeff 2):</label><input type="number" id="avg-y2-a-Biomatériaux"></div>
+                        <div class="input-group"><label>Microbiologie (Coeff 2):</label><input type="number" id="avg-y2-a-Microbiologie"></div>
+                        <div class="input-group"><label>Informatique (Coeff 1):</label><input type="number" id="avg-y2-a-Informatique"></div>
+                        
+                        <button data-calc="avg_y2_annuel">Calculer Moyenne Annuelle</button>
+                        <div class="result-text" id="result-avg-y2-annuel"></div>
+                    </div>
                 </div>
+            </div>
         </div>
 
         <div id="grade-calc-y3" class="calculator-year-container" style="display: none;">
