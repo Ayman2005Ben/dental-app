@@ -14,7 +14,7 @@ const aiLogSchema = new mongoose.Schema({
   task: {
     type: String,
     required: true,
-    enum: ['quiz', 'flashcards', 'chat', 'summary', 'mindmap', 'image'], // لضبط القيم المقبولة
+    enum: ['quiz', 'flashcards', 'chat', 'summary', 'mindmap', 'image', 'sculpture'], // لضبط القيم المقبولة
   },
 
   // 🔹 نص الطلب المرسل للذكاء الاصطناعي
