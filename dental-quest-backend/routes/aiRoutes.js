@@ -33,5 +33,15 @@ router.post('/generate-summary', protect, upload.single('pdfFile'), generateSumm
 router.post('/translate', protect, translateContent);
 router.post('/generate-mindmap', protect, upload.single('pdfFile'), generateMindMap);
 
+// ▼▼▼ [إضافة جديدة] مسار تقييم النحت ▼▼▼
+// نستخدم upload.array('images', 3) لاستقبال 3 صور كحد أقصى
+router.post(
+    '/evaluate', 
+    protect, 
+    upload.array('images', 3), 
+    handleSculptureEvaluation
+);
+// ▲▲▲ نهاية الإضافة ▲▲▲
+
 
 module.exports = router;

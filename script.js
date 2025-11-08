@@ -3816,15 +3816,38 @@ if (chatPlusBtn && uploadOptions) {
     const processorTitle = document.getElementById('processorTitle');
     const aiLoadingIndicator = document.getElementById('aiLoadingIndicator');
     const aiProcessBtn = document.getElementById('aiProcessBtn');
-
+    // ▼▼▼ [إضافة جديدة] تعريف عناصر نافذة النحت ▼▼▼
+    const sculptureEvalModalOverlay = document.getElementById('sculptureEvalModalOverlay');
+    const closeSculptureEvalBtn = document.getElementById('closeSculptureEvalBtn');
+    const sculptureEvalForm = document.getElementById('sculptureEvalForm');
+    const evalImagesInput = document.getElementById('evalImages');
+    const startEvalBtn = document.getElementById('startEvalBtn');
+    const evalLoadingIndicator = document.getElementById('evalLoadingIndicator');
+    const evalOutput = document.getElementById('evalOutput');
+// ▲▲▲ نهاية الإضافة ▲▲▲
     let currentAiTask = ''; // Stores the task selected ('quiz', 'flashcards', etc.)
 
     // Open AI Hub modal
+    // ▼▼▼ [تعديل] إظهار/إخفاء بطاقة النحت بناءً على السنة ▼▼▼
     if (aiHubBtn && aiHubOverlay) {
         aiHubBtn.addEventListener('click', () => {
+            
+            // --- (الجديد) التحقق من سنة الطالب ---
+            const sculptureCard = document.getElementById('sculpture-eval-card');
+            if (sculptureCard) {
+                // selectedYear هو المتغير العام الذي يحمل سنة الطالب
+                if (selectedYear === '2') {
+                    sculptureCard.style.display = 'block'; // إظهار البطاقة
+                } else {
+                    sculptureCard.style.display = 'none'; // إخفاء البطاقة
+                }
+            }
+            // --- نهاية التحقق ---
+            
             aiHubOverlay.style.display = 'flex';
         });
     }
+// ▲▲▲ نهاية التعديل ▲▲▲
 
     // Close AI Hub modal
     if (closeHubBtn && aiHubOverlay) {
@@ -3865,13 +3888,38 @@ if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorT
 
             aiHubOverlay.style.display = 'none'; // Close the Hub selection modal
 
-            if (currentAiTask === 'chat') {
-                 // Directly open the chat modal if 'chat' is selected
-                 if (aiChatModal) aiChatModal.classList.add('active');
-                 if (userChatInput) userChatInput.focus();
-            } else {
-                 // For other tasks (quiz, flashcards, summary), open the file processor modal
+           if (currentAiTask === 'chat') {
+    // Directly open the chat modal if 'chat' is selected
+    if (aiChatModal) aiChatModal.classList.add('active');
+    if (userChatInput) userChatInput.focus();
+} else if (currentAiTask === 'sculpture') {
+    // ▼▼▼ [إضافة جديدة] معالجة بطاقة النحت ▼▼▼
+    
+    // (التحقق مرة أخرى للأمان)
+    if (selectedYear !== '2') {
+        showNotification("This feature is exclusively for 2nd year students.", "warning");
+        return;
+    }
+    
+    // تنظيف النافذة قبل إظهارها
+    sculptureEvalForm.reset();
+    sculptureEvalForm.style.display = 'block';
+    evalLoadingIndicator.style.display = 'none';
+    evalOutput.style.display = 'none';
+    evalOutput.querySelector('#evaluation-text-output').textContent = ''; // مسح النص
+    evalOutput.querySelector('#image-annotation-container').style.display = 'none'; // إخفاء حاوية الصورة
+    evalOutput.querySelectorAll('.annotation-dot').forEach(dot => dot.remove()); // مسح النقاط
+    
+    // إظهار نافذة النحت
+    sculptureEvalModalOverlay.style.display = 'flex';
 
+    // ▲▲▲ نهاية الإضافة ▲▲▲
+} else {
+    // For other tasks (quiz, flashcards, summary), open the file processor modal
+    // ... rest of your existing code
+                
+                 // For other tasks (quiz, flashcards, summary), open the file processor modal
+                
                 // --- Remember Subject Context ---
                 const activeCarouselItem = document.querySelector('.carousel-item.active');
                 if (!activeCarouselItem || !activeCarouselItem.dataset.subjectKey || !selectedYear) {
@@ -4027,7 +4075,402 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
     //         showPage('#home-page'); // Or perhaps back to subjects?
     //     });
     // }
+    // ▼▼▼ [إضافة جديدة] معالج نافذة تقييم النحت بالكامل ▼▼▼
 
+// --- إغلاق نافذة النحت ---
+if (closeSculptureEvalBtn && sculptureEvalModalOverlay) {
+    closeSculptureEvalBtn.addEventListener('click', () => {
+        sculptureEvalModalOverlay.style.display = 'none';
+    });
+}
+if (sculptureEvalModalOverlay) {
+    sculptureEvalModalOverlay.addEventListener('click', (e) => {
+        if (e.target === sculptureEvalModalOverlay) {
+            sculptureEvalModalOverlay.style.display = 'none';
+        }
+    });
+}
+
+// --- معالجة إرسال الفورم (الرفع والنتائج) ---
+if (sculptureEvalForm) {
+    sculptureEvalForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const files = evalImagesInput.files;
+        if (!files || files.length === 0) {
+            showNotification("Please select at least one image.", "error");
+            return;
+        }
+        if (files.length > 3) {
+            showNotification("You can upload a maximum of 3 images.", "error");
+            return;
+        }
+
+        // إظهار التحميل وإخفاء الفورم
+        sculptureEvalForm.style.display = 'none';
+        evalLoadingIndicator.style.display = 'block';
+        evalOutput.style.display = 'none';
+
+        const formData = new FormData();
+        // إضافة الملفات (الباك اند سيتعامل معها كـ 'images')
+        for (let i = 0; i < files.length; i++) {
+            formData.append('images', files[i]);
+        }
+        
+        try {
+            // استخدام دالة fetchApi الذكية
+            // (هي تتعامل مع FormData والتوكن تلقائياً)
+            const data = await fetchApi('/api/ai/evaluate', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (data.success) {
+                const aiResult = data.result; // { evaluationText, grade, errorCoordinates }
+
+                // --- هذا هو كود "الرسام" ---
+
+                // 1. عرض النص والدرجة
+                const textOutput = document.getElementById('evaluation-text-output');
+                textOutput.textContent = `--- Evaluation --- \n${aiResult.evaluationText}\n\n--- Grade --- \n${aiResult.grade} / 20`;
+
+                // 2. إعداد حاوية الصورة
+                const annotationContainer = document.getElementById('image-annotation-container');
+                const imageBase = document.getElementById('annotated-image-base');
+                
+                // إزالة النقاط القديمة
+                annotationContainer.querySelectorAll('.annotation-dot').forEach(dot => dot.remove());
+
+                // 3. عرض الصورة الأصلية التي رفعها المستخدم (الأولى)
+                const originalImageFile = files[0];
+                if (originalImageFile) {
+                    imageBase.src = URL.createObjectURL(originalImageFile);
+                    annotationContainer.style.display = 'block';
+                }
+
+                // 4. رسم النقاط (الأهم)
+                if (aiResult.errorCoordinates && aiResult.errorCoordinates.length > 0) {
+                    aiResult.errorCoordinates.forEach(error => {
+                        const dot = document.createElement('div');
+                        dot.className = 'annotation-dot'; // (سنحتاج لإضافة هذا الـ class في style.css)
+                        dot.style.position = 'absolute';
+                        dot.style.left = `${error.x}%`;
+                        dot.style.top = `${error.y}%`;
+                        dot.style.width = '15px';
+                        dot.style.height = '15px';
+                        dot.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+                        dot.style.border = '2px solid white';
+                        dot.style.borderRadius = '50%';
+                        dot.style.transform = 'translate(-50%, -50%)';
+                        dot.style.cursor = 'pointer';
+                        dot.title = error.comment; // إظهار التعليق عند التمرير
+
+                        dot.onclick = () => {
+                            showNotification(`AI: "${error.comment}"`, 'info');
+                        };
+                        
+                        annotationContainer.appendChild(dot);
+                    });
+                }
+                
+                evalOutput.style.display = 'block'; // إظهار حاوية النتائج
+                showNotification('Evaluation complete!', 'success');
+            } else {
+                // data.success === false
+                throw new Error(data.error || 'The server reported an error.');
+            }
+
+        } catch (err) {
+            // إظهار الخطأ في حاوية النص
+            const textOutput = document.getElementById('evaluation-text-output');
+            textOutput.textContent = 'A critical error occurred: ' + err.message;
+            evalOutput.style.display = 'block'; // إظهار حاوية الخطأ
+            showNotification(err.message || 'Evaluation failed.', 'error');
+        } finally {
+            // إخفاء التحميل وإظهار الفورم مجدداً (للسماح بإعادة المحاولة)
+            evalLoadingIndicator.style.display = 'none';
+            sculptureEvalForm.style.display = 'block'; 
+        }
+    });
+}
+// ▼▼▼ [إضافة جديدة] منطق حاسبة المعدل بالكامل ▼▼▼
+
+// --- 1. قاعدة بيانات الحاسبة (Data Store) ---
+// هنا نضع كل المعاملات والقوانين
+const gradeDataStore = {
+    "1": { // بيانات السنة الأولى (من ملفاتك)
+        s1_coeffs: { "Anatomie": 4, "Histo-Cyto-Embryo": 4, "Biophysique": 3, "Biochimie": 3, "Biomaths": 3, "Chimie": 3, "Physique": 2, "Génétique": 2, "Anglais": 1, "Français": 1 },
+        s2_coeffs: { "Anatomie": 4, "Histo-Cyto-Embryo": 4, "Biophysique": 3, "Biochimie": 3, "Biomaths": 3, "Chimie": 3, "Physiologie": 2, "SSH": 1, "Anglais": 1, "Français": 1 },
+        // (سنقوم بإنشاء الـ HTML لهذه المواد ديناميكياً)
+        formulas: {
+            "y1_s1_Histo": (values) => (Math.max(values.td, values.cyto1) + values.histo) / 2,
+            "y1_s1_Biochimie": (values) => (values.td * 0.3) + (values.emd * 0.7),
+            // (يمكن إضافة باقي القوانين الخاصة هنا)
+        }
+    },
+    "2": { // بيانات السنة الثانية (من الصورة والقانون)
+        s1_coeffs: { "AnatomieDentaire": 3, "Histologie": 2, "Anglais": 1, "Hygiène": 1 },
+        s2_coeffs: { "Parodontologie": 3, "Immunologie": 1, "Physiologie": 1, "Pathologie": 3 },
+        annual_coeffs: { "OCE": 5, "Prothèse": 5, "AnatomieHumaine": 4, "ODF": 3, "Biomatériaux": 2, "Microbiologie": 2, "Informatique": 1 },
+        // القوانين العامة للسنة الثانية
+        formulas: {
+            "y2_standard_tp": (values) => (values.th * 0.33) + (values.tp * 0.67), // 33% نظري, 67% عملي
+            "y2_simple_th": (values) => values.th, // نظري فقط
+            "y2_simple_tp": (values) => values.tp, // عملي فقط
+        }
+    },
+    "3": { // بيانات السنة الثالثة (من البايثون والمعاملات)
+        annual_coeffs: { 
+            "Pathologie": 5, "ODF": 5, "Prothèse": 5, "Parodontologie": 5, "Occlusodontie": 5, 
+            "Imagerie": 3, 
+            "Occlusion": 1, "Anesthésie": 1, "Anapath": 1, "Pharmacologie": 1 
+        },
+        formulas: {
+            "y3_standard": (values) => {
+                let emds = [];
+                if (values.emd1) emds.push(values.emd1);
+                if (values.emd2) emds.push(values.emd2);
+                if (values.emd3) emds.push(values.emd3);
+                if (emds.length === 0) return (values.cc / 2); // احتياطي
+                const avgEmd = emds.reduce((a, b) => a + b, 0) / emds.length;
+                return (avgEmd + values.cc) / 2;
+            },
+            "y3_Prothèse": (values) => {
+                const emds = [values.emd1, values.emd2, values.emd3];
+                const avgEmd = emds.reduce((a, b) => a + b, 0) / 3;
+                const part1 = (avgEmd + values.cc) / 2;
+                return (part1 + (values.tp * 2)) / 3;
+            }
+        }
+    }
+};
+
+// --- 2. تعريف عناصر DOM ---
+const gradeCalcBtn = document.getElementById('grade-calc-btn');
+const gradeCalcModalOverlay = document.getElementById('gradeCalcModalOverlay');
+const closeGradeCalcModalBtn = document.getElementById('closeGradeCalcModalBtn');
+const gradeCalcModalBox = gradeCalcModalOverlay.querySelector('.grade-calc-modal');
+
+// --- 3. الدالة الرئيسية لفتح الحاسبة ---
+function openGradeCalculator() {
+    // selectedYear هو المتغير العام الذي يحمل سنة الطالب
+    const year = selectedYear; 
+    
+    // إخفاء جميع الحاويات أولاً
+    document.getElementById('grade-calc-y1').style.display = 'none';
+    document.getElementById('grade-calc-y2').style.display = 'none';
+    document.getElementById('grade-calc-y3').style.display = 'none';
+    document.getElementById('grade-calc-unsupported').style.display = 'none';
+
+    let targetContainer;
+    
+    if (year === '1') {
+        targetContainer = document.getElementById('grade-calc-y1');
+        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (1ère Année)";
+        // (يفضل استدعاء دالة لإنشاء HTML السنة الأولى هنا إذا لم يكن موجوداً)
+    } else if (year === '2') {
+        targetContainer = document.getElementById('grade-calc-y2');
+        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (2ème Année)";
+    } else if (year === '3') {
+        targetContainer = document.getElementById('grade-calc-y3');
+         document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (3ème Année)";
+    } else {
+        // للسنوات 4, 5 والزوار
+        targetContainer = document.getElementById('grade-calc-unsupported');
+        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne";
+    }
+
+    targetContainer.style.display = 'block';
+    gradeCalcModalOverlay.classList.add('active'); // إظهار النافذة
+}
+
+// --- 4. ربط الأحداث ---
+
+// فتح النافذة
+if (gradeCalcBtn) {
+    gradeCalcBtn.addEventListener('click', openGradeCalculator);
+}
+
+// إغلاق النافذة
+if (closeGradeCalcModalBtn) {
+    closeGradeCalcModalBtn.addEventListener('click', () => {
+        gradeCalcModalOverlay.classList.remove('active');
+    });
+}
+if (gradeCalcModalOverlay) {
+    gradeCalcModalOverlay.addEventListener('click', (e) => {
+        if (e.target === gradeCalcModalOverlay) {
+            gradeCalcModalOverlay.classList.remove('active');
+        }
+    });
+}
+
+// --- 5. منطق الحاسبة (باستخدام تفويض الأحداث) ---
+
+// دالة مساعدة للحصول على القيمة
+function getCalcValue(id) {
+    const el = document.getElementById(id);
+    if (!el) {
+        console.error(`Element not found: ${id}`);
+        return 0; // إرجاع صفر إذا كان الحقل غير موجود (مثل EMD 3 في مادة بها 2 فقط)
+    }
+    const value = parseFloat(el.value);
+    return isNaN(value) ? 0 : value; // إرجاع صفر إذا كان فارغاً
+}
+
+// دالة مساعدة لإظهار النتيجة
+function showCalcResult(resultId, moyenne) {
+    const el = document.getElementById(resultId);
+    if (!el) return;
+
+    el.innerHTML = `Moyenne: <strong>${moyenne.toFixed(2)} / 20</strong>`;
+    
+    // تحديد التقدير
+    let appreciation = '';
+    let msgClass = 'success';
+    if (moyenne >= 16) appreciation = "Excellent";
+    else if (moyenne >= 14) appreciation = "Très Bien";
+    else if (moyenne >= 12) appreciation = "Bien";
+    else if (moyenne >= 10) appreciation = "Moyen";
+    else {
+        appreciation = "Faible (Rattrapage)";
+        msgClass = 'danger';
+    }
+    
+    el.innerHTML += `<br><small>Appréciation: ${appreciation}</small>`;
+    el.className = `result-text ${msgClass}`; // تطبيق التنسيق
+    el.style.display = 'block';
+    return moyenne;
+}
+
+// دالة مساعدة للملء التلقائي
+function autoFill(fieldId, value) {
+    const el = document.getElementById(fieldId);
+    if (el) {
+        el.value = value.toFixed(2);
+    }
+}
+
+// دالة حساب المعدل العام (موزون)
+function calculateWeightedAverage(coeffs, prefix) {
+    let sommeNotes = 0;
+    let sommeCoeffs = 0;
+    
+    for (const matiere in coeffs) {
+        const note = getCalcValue(`${prefix}-${matiere}`);
+        const coeff = coeffs[matiere];
+        
+        sommeNotes += note * coeff;
+        sommeCoeffs += coeff;
+    }
+    
+    if (sommeCoeffs === 0) return 0;
+    return sommeNotes / sommeCoeffs;
+}
+
+// ربط كل أزرار "Calculer" داخل النافذة
+gradeCalcModalBox.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON' && e.target.dataset.calc) {
+        const calcKey = e.target.dataset.calc;
+        const resultId = `result-${calcKey}`;
+        let moyenne = 0;
+        let values = {};
+
+        try {
+            // --- منطق السنة الأولى (من ملفك) ---
+            if (calcKey === 'y1_s1_Histo') {
+                values = { td: getCalcValue('y1-s1-histo-td'), cyto1: getCalcValue('y1-s1-histo-cyto1'), histo: getCalcValue('y1-s1-histo-histo') };
+                moyenne = gradeDataStore["1"].formulas.y1_s1_Histo(values);
+                autoFill('avg-y1-s1-Histo-Cyto-Embryo', moyenne);
+                autoFill('avg-y1-annuel-Histo-Cyto-Embryo-s1', moyenne);
+            }
+            else if (calcKey === 'y1_s1_Biochimie') {
+                values = { td: getCalcValue('y1-s1-biochimie-td'), emd: getCalcValue('y1-s1-biochimie-emd') };
+                moyenne = gradeDataStore["1"].formulas.y1_s1_Biochimie(values);
+                autoFill('avg-y1-s1-Biochimie', moyenne);
+                autoFill('avg-y1-annuel-Biochimie-s1', moyenne);
+            }
+            else if (calcKey === 'avg_y1_s1') {
+                moyenne = calculateWeightedAverage(gradeDataStore["1"].s1_coeffs, 'avg-y1-s1');
+            }
+            // (أضف باقي حسابات السنة الأولى هنا...)
+
+            // --- منطق السنة الثانية ---
+            else if (calcKey === 'y2_s1_AnatomieDentaire') {
+                values = { th: getCalcValue('y2-s1-AnatomieDentaire-th'), tp: getCalcValue('y2-s1-AnatomieDentaire-tp') };
+                moyenne = gradeDataStore["2"].formulas.y2_standard_tp(values);
+                autoFill('avg-y2-s1-AnatomieDentaire', moyenne);
+            }
+            else if (calcKey === 'y2_s1_Histologie') {
+                values = { th: getCalcValue('y2-s1-Histologie-th'), tp: getCalcValue('y2-s1-Histologie-tp') };
+                moyenne = gradeDataStore["2"].formulas.y2_standard_tp(values);
+                autoFill('avg-y2-s1-Histologie', moyenne);
+            }
+            else if (calcKey === 'y2_s1_Anglais') {
+                values = { th: getCalcValue('y2-s1-Anglais-th') };
+                moyenne = gradeDataStore["2"].formulas.y2_simple_th(values);
+                autoFill('avg-y2-s1-Anglais', moyenne);
+            }
+            // (أضف باقي حسابات السنة الثانية هنا...)
+            else if (calcKey === 'avg_y2_s1') {
+                moyenne = calculateWeightedAverage(gradeDataStore["2"].s1_coeffs, 'avg-y2-s1');
+            }
+             else if (calcKey === 'avg_y2_annuel') {
+                const s1Moy = getCalcValue('avg-y2-a-S1');
+                const s2Moy = getCalcValue('avg-y2-a-S2');
+                const s1Coeff = Object.values(gradeDataStore["2"].s1_coeffs).reduce((a, b) => a + b, 0); // 7
+                const s2Coeff = Object.values(gradeDataStore["2"].s2_coeffs).reduce((a, b) => a + b, 0); // 8
+                
+                let notesAnnuel = (s1Moy * s1Coeff) + (s2Moy * s2Coeff);
+                let coeffsAnnuel = s1Coeff + s2Coeff;
+
+                for (const matiere in gradeDataStore["2"].annual_coeffs) {
+                    const note = getCalcValue(`avg-y2-a-${matiere}`);
+                    const coeff = gradeDataStore["2"].annual_coeffs[matiere];
+                    notesAnnuel += note * coeff;
+                    coeffsAnnuel += coeff; // المجموع الكلي يجب أن يكون 37
+                }
+                moyenne = notesAnnuel / coeffsAnnuel;
+            }
+
+            // --- منطق السنة الثالثة ---
+            else if (calcKey === 'y3_Prothèse') {
+                values = { 
+                    emd1: getCalcValue('y3-Prothèse-emd1'), 
+                    emd2: getCalcValue('y3-Prothèse-emd2'), 
+                    emd3: getCalcValue('y3-Prothèse-emd3'), 
+                    cc: getCalcValue('y3-Prothèse-cc'), 
+                    tp: getCalcValue('y3-Prothèse-tp') 
+                };
+                moyenne = gradeDataStore["3"].formulas.y3_Prothèse(values);
+                autoFill('avg-y3-a-Prothèse', moyenne);
+            }
+            else if (calcKey === 'y3_Pathologie' || calcKey === 'y3_ODF' || calcKey === 'y3_Parodontologie' /*... الخ */) {
+                const matiere = calcKey.split('_')[1]; // (Pathologie, ODF...)
+                values = { 
+                    emd1: getCalcValue(`y3-${matiere}-emd1`), 
+                    emd2: getCalcValue(`y3-${matiere}-emd2`), 
+                    emd3: getCalcValue(`y3-${matiere}-emd3`), 
+                    cc: getCalcValue(`y3-${matiere}-cc`)
+                };
+                moyenne = gradeDataStore["3"].formulas.y3_standard(values);
+                autoFill(`avg-y3-a-${matiere}`, moyenne);
+            }
+            else if (calcKey === 'avg_y3_annuel') {
+                 moyenne = calculateWeightedAverage(gradeDataStore["3"].annual_coeffs, 'avg-y3-a');
+            }
+
+            // عرض النتيجة النهائية
+            showCalcResult(resultId, moyenne);
+
+        } catch (err) {
+            console.error("Erreur de calcul:", err);
+            showNotification(`Erreur: ${err.message}`, 'error');
+        }
+    }
+});
+// ▲▲▲ نهاية الإضافة ▲▲▲
+// ▲▲▲ نهاية الإضافة ▲▲▲
     // --- Initial Theme Setup ---
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) { 

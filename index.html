@@ -770,6 +770,10 @@
                     <h4>Summarize PDF</h4>
                     <span>Get key points</span>
                 </div>
+                <div class="ai-option-card" data-task="sculpture" id="sculpture-eval-card" style="display: none;"> <i class="fas fa-tooth"></i>
+                    <h4>Sculpture Eval</h4>
+                    <span>(2nd Year Only)</span>
+                </div>
             </div>
         </div>
     </div>
@@ -822,6 +826,9 @@
     </button>
     <button id="pomodoro-toggle-btn" class="pomodoro-fab-btn" aria-label="Open Pomodoro Timer">
         <i class="fas fa-clock"></i>
+    </button>
+    <button id="grade-calc-btn" class="grade-calc-fab-btn" aria-label="Open Grade Calculator">
+    <i class="fas fa-calculator"></i>
     </button>
 
     <div class="ai-chat-modal" id="aiChatModal">
@@ -972,7 +979,75 @@
         </form>
     </div>
 </div>
+<div class="modal-overlay" id="gradeCalcModalOverlay">
+    <div class="modal-box grade-calc-modal">
+        <button class="close-modal-btn" id="closeGradeCalcModalBtn" aria-label="Close">&times;</button>
+        <h3 id="grade-calc-title">Calculateur de Moyenne</h3>
 
+        <div id="grade-calc-y1" class="calculator-year-container" style="display: none;">
+            <nav class="tabs-nav" data-year="y1">
+                <button class="tab-link active" data-tab="y1-s1">Semestre 1</button>
+                <button class="tab-link" data-tab="y1-s2">Semestre 2</button>
+                <button class="tab-link" data-tab="y1-annuel">Moyenne Annuelle</button>
+            </nav>
+            <div id="y1-s1" class="tab-content active"></div>
+            <div id="y1-s2" class="tab-content"></div>
+            <div id="y1-annuel" class="tab-content"></div>
+        </div>
+
+        <div id="grade-calc-y2" class="calculator-year-container" style="display: none;">
+            <nav class="tabs-nav" data-year="y2">
+                <button class="tab-link active" data-tab="y2-s1">Semestre 1</button>
+                <button class="tab-link" data-tab="y2-s2">Semestre 2</button>
+                <button class="tab-link" data-tab="y2-annuel">Moyenne Annuelle</button>
+            </nav>
+            <div id="y2-s1" class="tab-content active"></div>
+            <div id="y2-s2" class="tab-content"></div>
+            <div id="y2-annuel" class="tab-content"></div>
+        </div>
+
+        <div id="grade-calc-y3" class="calculator-year-container" style="display: none;">
+            <div id="y3-annuel" class="tab-content active">
+                </div>
+        </div>
+        
+        <div id="grade-calc-unsupported" class="calculator-year-container" style="display: none;">
+             <i class="fas fa-tools" style="font-size: 3rem; color: var(--primary-btn-bg); margin-bottom: 20px;"></i>
+            <h3>En Construction</h3>
+            <p>Le calculateur de moyenne pour votre année d'étude (4ème/5ème année) est en cours de développement.</p>
+        </div>
+
+    </div>
+</div>
+<div class="ai-hub-modal-overlay" id="sculptureEvalModalOverlay" style="display: none;">
+    <div class="ai-hub-modal">
+        <button class="close-hub-btn" id="closeSculptureEvalBtn">&times;</button>
+        <h3><i class="fas fa-tooth" style="margin-right: 10px;"></i> AI Sculpture Evaluation</h3>
+        
+        <form id="sculptureEvalForm">
+            <p>Upload up to 3 images of your sculpture. (Required)</p>
+            <input type="file" id="evalImages" accept="image/*" required multiple>
+            
+            <button type="submit" class="btn primary-btn" id="startEvalBtn" style="margin-top: 25px;">
+                Start Evaluation
+            </button>
+        </form>
+
+        <div id="evalLoadingIndicator" style="display: none;">
+            <p>AI is analyzing your sculpture... This may take up to a minute.</p>
+            </div>
+
+        <div id="evalOutput" style="margin-top: 20px; text-align: left; max-height: 450px; overflow-y: auto; display: none;">
+            
+            <div id="image-annotation-container" style="position: relative; margin-bottom: 20px; display: none; max-width: 400px; margin-left: auto; margin-right: auto;">
+                <img id="annotated-image-base" src="" alt="Your Sculpture" style="width: 100%; height: auto; border-radius: 10px;">
+                </div>
+
+            <pre id="evaluation-text-output" style="white-space: pre-wrap; font-family: 'Poppins', sans-serif;"></pre>
+        
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

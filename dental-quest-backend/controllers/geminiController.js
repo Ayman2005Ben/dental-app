@@ -5,7 +5,8 @@ const pdf = require('pdf-parse');
 const { groqChat } = require('../utils/aiClient.js');
 const fetch = require('node-fetch');
 const AiLog = require('../models/aiLogModel');
-
+const fs = require('fs');
+const path = require('path');
 const geminiKeys = parseKeys('GEMINI_API_KEYS');
 const geminiPool = makePool(geminiKeys);
 
@@ -301,3 +302,177 @@ exports.generateSummary = async (req, res) => {
     }
   }
 };
+// ▼▼▼ [إضافة جديدة] دالة تقييم النحت الكاملة ▼▼▼
+
+exports.handleSculptureEvaluation = async (req, res) => {
+  // --- 👮‍♂️ الخطوة 1: الأمان (التحقق من السنة الثانية) ---
+  // هذا هو "الحارس" الذي اتفقنا عليه
+  if (req.user?.studyYear !== '2') {
+    return res.status(403).json({ 
+      success: false, 
+      error: 'This feature is exclusively available for 2nd year students.' 
+    });
+  }
+
+  // --- التحقق من المدخلات ---
+  if (!checkAiAccess(req, res)) return; // التحقق من صلاحيات AI العامة
+  if (!req.files || req.files.length === 0) {
+    return res.status(400).json({ success: false, error: 'No images uploaded.' });
+  }
+
+  const pickedKey = geminiPool.getNext();
+  if (!pickedKey) {
+    return res.status(500).json({ success: false, error: 'No Gemini API keys available.' });
+  }
+
+  let builtPrompt = '';
+  let startTime = Date.now();
+
+  try {
+    console.log('🦷 Sending Sculpture Evaluation request to Gemini (using AIza... )');
+
+    // --- الخطوة 2: تحميل ملف PDF المرجعي (من الخادم) ---
+    let referenceText = '';
+    try {
+      const pdfPath = path.join(__dirname, '..', 'public', 'pdf', 'Les planches des dents.pdf');
+      const pdfBuffer = fs.readFileSync(pdfPath);
+      const pdfData = await pdf(pdfBuffer);
+      referenceText = pdfData.text;
+      if (!referenceText) throw new Error('PDF text is empty');
+    } catch (pdfErr) {
+      console.error("CRITICAL PDF LOAD ERROR:", pdfErr);
+      throw new Error('Could not load the reference PDF document "Les planches des dents.pdf" from server.');
+    }
+
+    // --- الخطوة 3: تحضير صور النحت (من الرفع) ---
+    const imageParts = req.files.map(file => ({
+      inline_data: {
+        mime_type: file.mimetype,
+        data: file.buffer.toString('base64')
+      }
+    }));
+
+    // --- الخطوة 4: بناء البرومبت (النهائي) ---
+    builtPrompt = `
+You are a strict examiner in dental anatomy. Your *only* source of truth is the provided reference text ("Les planches des dents").
+I am sending you ${req.files.length} images of a single soap-carved tooth.
+You must also use this reference text to evaluate them:
+--- REFERENCE TEXT START ---
+${referenceText.substring(0, 30000)}
+--- REFERENCE TEXT END ---
+
+--- ANALYSIS TASKS ---
+1. Analyze all images for a complete understanding.
+2. Provide a detailed evaluation (in French) covering all anatomical errors compared to the REFERENCE TEXT.
+3. Give a final numeric grade out of 20.
+4. **CRITICAL TASK:** Identify 3-5 specific anatomical errors on the **first image**. For each error, provide its (x, y) coordinate and a brief comment. The (x, y) coordinates should be percentages (from 0.0 to 100.0) relative to the image dimensions. (x: 0, y: 0) is top-left, (x: 100, y: 100) is bottom-right.
+
+--- CRITICAL OUTPUT FORMAT ---
+You MUST respond with a single, valid JSON object. Do not add any text before or after the JSON.
+The JSON object must contain these exact keys:
+{
+  "evaluationText": "Your full text evaluation in French...",
+  "grade": <numeric_grade_out_of_20>,
+  "errorCoordinates": [
+    { "x": 50.5, "y": 30.2, "comment": "Cuspide trop pointue" },
+    { "x": 75.0, "y": 60.8, "comment": "Sillon mal défini" }
+  ]
+}
+If you cannot find any errors, return an empty array: "errorCoordinates": []
+    `;
+
+    // --- الخطوة 5: بناء جسم الطلب ---
+    const requestParts = [{ text: builtPrompt }, ...imageParts];
+    const requestBody = {
+      contents: [{ parts: requestParts }],
+      generationConfig: {
+        "maxOutputTokens": 8192 // ضروري للسماح بردود طويلة
+      }
+    };
+
+    // --- الخطوة 6: إرسال الطلب إلى Gemini ---
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      }
+    );
+    
+    const data = await response.json();
+    if (!response.ok) {
+        throw new Error(data.error?.message || `Gemini API error (Status: ${response.status})`);
+    }
+
+    const aiResponseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!aiResponseText) {
+      throw new Error('Gemini returned an empty response.');
+    }
+
+    // --- الخطوة 7: "المحلل الذكي" (Safe Regex Parser) ---
+    let resultJson = {
+      evaluationText: null,
+      grade: null,
+      errorCoordinates: []
+    };
+
+    try {
+      // استخراج evaluationText
+      const evalMatch = aiResponseText.match(/"evaluationText"\s*:\s*"([\s\S]*?)"\s*,\s*"grade"/);
+      if (evalMatch && evalMatch[1]) {
+        resultJson.evaluationText = evalMatch[1];
+      }
+
+      // استخراج grade
+      const gradeMatch = aiResponseText.match(/"grade"\s*:\s*(\d+(\.\d+)?)/);
+      if (gradeMatch && gradeMatch[1]) {
+        resultJson.grade = parseFloat(gradeMatch[1]);
+      }
+
+      // استخراج errorCoordinates
+      const coordsMatch = aiResponseText.match(/"errorCoordinates"\s*:\s*(\[[\s\S]*?\])/);
+      if (coordsMatch && coordsMatch[1]) {
+        resultJson.errorCoordinates = JSON.parse(coordsMatch[1]); 
+      }
+    
+    } catch (parseError) {
+      console.error("Regex/JSON parsing failed:", parseError);
+      throw new Error("AI returned a response, but it was in an unreadable format.");
+    }
+    
+    // التحقق من صحة النتائج
+    if (!resultJson.evaluationText || resultJson.grade === null) {
+      console.error("Failed to parse AI response with Regex. Raw response:", aiResponseText);
+      throw new Error("AI returned a response, but key information was missing (text or grade).");
+    }
+
+    // --- الخطوة 8: إرسال الرد الناجح ---
+    const durationMs = Date.now() - startTime;
+    await logAiRequest(req, 'sculpture', builtPrompt, 'success', JSON.stringify(resultJson), 0, durationMs);
+    res.status(200).json({ success: true, result: resultJson });
+
+  } catch (error) {
+    // --- معالجة الأخطاء ---
+    console.log("\n\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    console.log("!!!!!!!!!!   ERROR CAUGHT   !!!!!!!!!!!!");
+    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\n");
+    console.error('[Gemini Sculpture Error]:', error);
+    
+    const durationMs = Date.now() - startTime;
+    logAiRequest(
+      req, 
+      'sculpture', 
+      builtPrompt, 
+      'error', 
+      error.message,
+      0,
+      durationMs
+    ).catch(logErr => console.error("CRITICAL: Failed to even log the error:", logErr));
+
+    if (!res.headersSent) {
+      res.status(500).json({ success: false, error: 'Server error processing evaluation', details: error.message });
+    }
+  }
+};
+// ▲▲▲ نهاية الإضافة ▲▲▲

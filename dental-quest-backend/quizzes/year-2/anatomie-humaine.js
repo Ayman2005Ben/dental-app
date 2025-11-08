@@ -2965,7 +2965,7 @@ const anatomyQuizzesY2 = [
           "On retrouve parfois au niveau palatin une petite saillie au 1/3 inferieur du lobe M appelé Tubercule de Carabeli.",
           "Il y a Quatre cuspides sur sa face occlusale."
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [2, 3],
         explanation: "Le tubercule de Carabelli est une saillie inconstante qui, lorsqu'elle est présente, se situe sur la face palatine de la cuspide mésio-palatine de la première molaire supérieure."
       },
       {
@@ -3009,7 +3009,7 @@ const anatomyQuizzesY2 = [
           "Sépare la cuspide mésio-vestibulaire de la cuspide disto-palatine.",
           "Est situé au niveau du sillon intercuspidien vestibulaire."
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0, 2],
         explanation: "Le pont d'émail (ou crête oblique) est une structure caractéristique de la première molaire maxillaire qui relie la cuspide mésio-palatine à la cuspide disto-vestibulaire."
       }
     ]

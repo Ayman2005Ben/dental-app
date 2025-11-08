@@ -3926,3 +3926,176 @@ a:hover i, button:hover i {
 /*
  * --- ❌ تم حذف الأقواس الثلاثة الزائدة من هنا ---
  */
+ /* ▼▼▼ [إضافة جديدة] تصميم حاسبة المعدل ▼▼▼ */
+
+/* --- 1. تصميم الأيقونة (FAB) --- */
+.grade-calc-fab-btn {
+    position: fixed;
+    bottom: 160px; /* فوق زر Pomodoro */
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+    z-index: 4000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grade-calc-fab-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* --- 2. تصميم النافذة (Modal) --- */
+/* (نستخدم نفس تنسيق النافذة الموجود لديك) */
+#gradeCalcModalOverlay {
+    z-index: 5001; /* فوق كل شيء آخر */
+}
+.grade-calc-modal {
+    max-width: 800px; /* أعرض من النوافذ الأخرى */
+    width: 95%;
+    max-height: 90vh; /* تحديد أقصى ارتفاع */
+    overflow-y: auto; /* السماح بالتمرير داخل النافذة */
+    text-align: left;
+    padding: 25px;
+}
+.grade-calc-modal h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--choose-subject-text);
+}
+.calculator-year-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* --- 3. تصميم التبويبات (Tabs) (مقتبس من ملفك) --- */
+.grade-calc-modal .tabs-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 5px;
+}
+.grade-calc-modal .tab-link {
+    flex: 1;
+    padding: 12px 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.grade-calc-modal .tab-link:hover {
+    color: var(--primary-btn-bg);
+}
+.grade-calc-modal .tab-link.active {
+    color: var(--primary-btn-bg);
+    border-bottom-color: var(--primary-btn-bg);
+}
+.grade-calc-modal .tab-content { display: none; }
+.grade-calc-modal .tab-content.active { display: block; }
+
+
+/* --- 4. تصميم بطاقات الإدخال (Modules) (مقتبس من ملفك) --- */
+.grade-calc-modal .module-card, 
+.grade-calc-modal .annual-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-btn-bg);
+}
+.grade-calc-modal .general-average-card {
+    border-left-color: var(--success-color); /* (تأكد من تعريف --success-color) */
+}
+.grade-calc-modal .general-average-card h3 {
+    color: var(--success-color) !important;
+}
+
+.grade-calc-modal .module-card h3, 
+.grade-calc-modal .annual-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-btn-bg);
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--input-border);
+    padding-bottom: 10px;
+}
+
+.grade-calc-modal .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.grade-calc-modal .input-group label {
+    flex-basis: 250px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.grade-calc-modal .input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.grade-calc-modal .module-card button, 
+.grade-calc-modal .annual-card button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: var(--primary-btn-bg);
+    color: var(--light-text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.grade-calc-modal .general-average-card button {
+    background-color: var(--success-color);
+}
+
+.grade-calc-modal .result-text {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* مخفي افتراضياً */
+}
+.grade-calc-modal .result-text.success { color: #28a745; background: #e9ffef; }
+.grade-calc-modal .result-text.warning { color: #ffc107; background: #fff8e1; }
+.grade-calc-modal .result-text.danger { color: #dc3545; background: #fbebee; }
+
+.grade-calc-modal hr {
+    border: none;
+    border-top: 1px solid var(--input-border);
+    margin: 20px 0;
+}
+/* ▲▲▲ نهاية الإضافة ▲▲▲ */
