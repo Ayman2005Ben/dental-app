@@ -150,7 +150,7 @@ exports.generateQuiz = async (req, res) => {
     prompt = `
 You are an expert quiz designer known for creating brutally difficult exams that push the limits of even the most prepared students. Your task is to create a final exam for advanced dentistry students based on the provided text. The goal is maximum difficulty.
 
-Generate exactly ${questionCount} multiple-choice questions in ${language}.
+Generate exactly ${questionCount} multiple-choice questions in **French**.
 
 **NON-NEGOTIABLE RULES FOR EVERY QUESTION:**
 1.  **Extreme Difficulty:** Every single question must be exceptionally hard. They must target the most obscure, easy-to-miss details: specific percentages, uncommon classifications, exceptions to rules, subtle differences between similar concepts, and data points hidden in dense text. Avoid general knowledge questions entirely.
