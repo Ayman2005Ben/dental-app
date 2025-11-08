@@ -4285,7 +4285,35 @@ function openGradeCalculator() {
 }
 
 // --- 4. ربط الأحداث ---
+// ▼▼▼ [إضافة جديدة] منطق تبديل التبويبات (Tabs) داخل النافذة ▼▼▼
+gradeCalcModalBox.addEventListener('click', (e) => {
+    // التأكد أننا نضغط على زر تبويب (tab-link)
+    if (e.target.classList.contains('tab-link')) {
+        const link = e.target;
+        const tabId = link.dataset.tab; // (مثال: "y1-s1" أو "y2-s2")
+        
+        // 1. العثور على حاوية الأزرار (tabs-nav)
+        const tabsNav = link.closest('.tabs-nav');
+        // 2. العثور على حاوية المحتوى الرئيسية (calculator-year-container)
+        const yearContainer = link.closest('.calculator-year-container');
 
+        if (!tabsNav || !yearContainer) return;
+
+        // 3. إزالة 'active' من كل الأزرار والمحتويات داخل هذه السنة فقط
+        tabsNav.querySelectorAll('.tab-link').forEach(item => item.classList.remove('active'));
+        yearContainer.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
+
+        // 4. تفعيل الزر والمحتوى الذي تم النقر عليه
+        link.classList.add('active');
+        const contentToShow = document.getElementById(tabId);
+        if (contentToShow) {
+            contentToShow.classList.add('active');
+        } else {
+            console.error(`Tab content with ID "${tabId}" not found!`);
+        }
+    }
+});
+// ▲▲▲ نهاية الإضافة ▲▲▲
 // فتح النافذة
 if (gradeCalcBtn) {
     gradeCalcBtn.addEventListener('click', openGradeCalculator);
