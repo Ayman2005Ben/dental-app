@@ -3929,9 +3929,10 @@ a:hover i, button:hover i {
  /* ▼▼▼ [إضافة جديدة] تصميم حاسبة المعدل ▼▼▼ */
 
 /* --- 1. تصميم الأيقونة (FAB) --- */
+/* --- 1. تصميم الأيقونة (FAB) --- */
 .grade-calc-fab-btn {
     position: fixed;
-    bottom: 160px; /* فوق زر Pomodoro */
+    bottom: 230px; /* <-- تم تعديل هذه القيمة لرفعه فوق الأزرار الأخرى */
     right: 20px;
     width: 60px;
     height: 60px;
