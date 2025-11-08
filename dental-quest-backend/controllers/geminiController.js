@@ -181,7 +181,14 @@ ${data.text.substring(0, 30000)}
     if (!responseData.candidates?.[0]?.content?.parts?.[0]?.text) throw new Error("Gemini returned an empty or invalid response.");
 
     const quizText = responseData.candidates[0].content.parts[0].text;
-    const cleanedText = quizText.replace(/```json|```/g, '').trim();
+    
+    // 1. التنظيف الأولي لإزالة ```json
+    let cleanedText = quizText.replace(/```json|```/g, '').trim();
+    
+    // 2. [إضافة جديدة] تنظيف أحرف التحكم غير الصالحة
+    // (هذا السطر يزيل الأحرف مثل \n \t غير المهربة داخل السلاسل النصية)
+    cleanedText = cleanedText.replace(/[\x00-\x1F\x7F-\x9F]/g, "");
+
     const quizJson = JSON.parse(cleanedText);
     
     res.status(200).json(quizJson);
@@ -419,19 +426,19 @@ If you cannot find any errors, return an empty array: "errorCoordinates": []
 
     try {
       // استخراج evaluationText
-      const evalMatch = aiResponseText.match(/"evaluationText"\s*:\s*"([\s\S]*?)"\s*,\s*"grade"/);
+      const evalMatch = aiResponseText.match(/"?evaluationText"?\s*:\s*"([\s\S]*?)"\s*,\s*"?grade"?/);
       if (evalMatch && evalMatch[1]) {
         resultJson.evaluationText = evalMatch[1];
       }
 
-      // استخراج grade
-      const gradeMatch = aiResponseText.match(/"grade"\s*:\s*(\d+(\.\d+)?)/);
+      // 2. استخراج grade
+      const gradeMatch = aiResponseText.match(/"?grade"?\s*:\s*(\d+(\.\d+)?)/);
       if (gradeMatch && gradeMatch[1]) {
         resultJson.grade = parseFloat(gradeMatch[1]);
       }
 
-      // استخراج errorCoordinates
-      const coordsMatch = aiResponseText.match(/"errorCoordinates"\s*:\s*(\[[\s\S]*?\])/);
+      // 3. استخراج errorCoordinates
+      const coordsMatch = aiResponseText.match(/"?errorCoordinates"?\s*:\s*(\[[\s\S]*?\])/);
       if (coordsMatch && coordsMatch[1]) {
         resultJson.errorCoordinates = JSON.parse(coordsMatch[1]); 
       }
