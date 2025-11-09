@@ -150,7 +150,7 @@ exports.generateQuiz = async (req, res) => {
     prompt = `
 You are an expert quiz designer known for creating brutally difficult exams that push the limits of even the most prepared students. Your task is to create a final exam for advanced dentistry students based on the provided text. The goal is maximum difficulty.
 
-Generate exactly ${questionCount} multiple-choice questions in **French**.
+Generate exactly ${questionCount} multiple-choice questions in ${language}.
 
 **NON-NEGOTIABLE RULES FOR EVERY QUESTION:**
 1.  **Extreme Difficulty:** Every single question must be exceptionally hard. They must target the most obscure, easy-to-miss details: specific percentages, uncommon classifications, exceptions to rules, subtle differences between similar concepts, and data points hidden in dense text. Avoid general knowledge questions entirely.
@@ -181,14 +181,7 @@ ${data.text.substring(0, 30000)}
     if (!responseData.candidates?.[0]?.content?.parts?.[0]?.text) throw new Error("Gemini returned an empty or invalid response.");
 
     const quizText = responseData.candidates[0].content.parts[0].text;
-    
-    // 1. التنظيف الأولي لإزالة ```json
-    let cleanedText = quizText.replace(/```json|```/g, '').trim();
-    
-    // 2. [إضافة جديدة] تنظيف أحرف التحكم غير الصالحة
-    // (هذا السطر يزيل الأحرف مثل \n \t غير المهربة داخل السلاسل النصية)
-    cleanedText = cleanedText.replace(/[\x00-\x1F\x7F-\x9F]/g, "");
-
+    const cleanedText = quizText.replace(/```json|```/g, '').trim();
     const quizJson = JSON.parse(cleanedText);
     
     res.status(200).json(quizJson);
@@ -426,19 +419,19 @@ If you cannot find any errors, return an empty array: "errorCoordinates": []
 
     try {
       // استخراج evaluationText
-      const evalMatch = aiResponseText.match(/"?evaluationText"?\s*:\s*"([\s\S]*?)"\s*,\s*"?grade"?/);
+      const evalMatch = aiResponseText.match(/"evaluationText"\s*:\s*"([\s\S]*?)"\s*,\s*"grade"/);
       if (evalMatch && evalMatch[1]) {
         resultJson.evaluationText = evalMatch[1];
       }
 
-      // 2. استخراج grade
-      const gradeMatch = aiResponseText.match(/"?grade"?\s*:\s*(\d+(\.\d+)?)/);
+      // استخراج grade
+      const gradeMatch = aiResponseText.match(/"grade"\s*:\s*(\d+(\.\d+)?)/);
       if (gradeMatch && gradeMatch[1]) {
         resultJson.grade = parseFloat(gradeMatch[1]);
       }
 
-      // 3. استخراج errorCoordinates
-      const coordsMatch = aiResponseText.match(/"?errorCoordinates"?\s*:\s*(\[[\s\S]*?\])/);
+      // استخراج errorCoordinates
+      const coordsMatch = aiResponseText.match(/"errorCoordinates"\s*:\s*(\[[\s\S]*?\])/);
       if (coordsMatch && coordsMatch[1]) {
         resultJson.errorCoordinates = JSON.parse(coordsMatch[1]); 
       }
