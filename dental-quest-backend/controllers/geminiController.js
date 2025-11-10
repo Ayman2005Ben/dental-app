@@ -226,11 +226,17 @@ You are an AI assistant tasked with creating extremely difficult flashcards for 
 
 From the text below, extract exactly ${cardCount} flashcards in ${language}.
 
-**MANDATORY RULES FOR ALL FLASHCARDS:**
-1.  **Focus on Minute Details:** Every single flashcard must target information that a student is likely to overlook, forget, or misinterpret. Prioritize specific numbers, percentages, obscure names, classifications, exceptions to common rules, and subtle distinctions that require careful reading.
-2.  **Avoid General Concepts:** Do not create flashcards for broad topics or simple definitions that are easy to remember. The purpose is to test the limits of a student's attention to detail.
-3.  **Precision is Key:** The "back" of the card (the answer) must be precise and concise, directly corresponding to the "front" (the term or question).
 
+**MANDATORY RULES FOR ALL FLASHCARDS:**
+
+1.  **[NEW] Expert Difficulty & Complexity (الأهم):** Your goal is to create expert-level, exam-style "trap questions" ("questions pièges"). Do not create cards for simple facts.
+2.  **[NEW] Focus on Synthesis, Not Recall:** The 'front' of the card MUST force the student to think, not just remember. Ask for:
+    * **Comparisons:** (e.g., "Compare the primary differences between X and Y based on the text.").
+    * **Exceptions:** (e.g., "What is the main exception to the Z rule mentioned in the document?").
+    * **Relationships:** (e.g., "According to the text, how does process A specifically influence outcome B?").
+    * **Multi-Step Info:** (e.g., "List the 3 specific percentages related to topic C.").
+3.  **[NEW] Detailed Answers :** The 'back' of the card must contain the detailed, comprehensive answer to the complex question on the 'front'. It should list all the compared points, the full exception, or all 3 percentages.
+4.  **[EXISTING] Ignore Metadata:** You MUST ignore any text that is not part of the core academic content (professor names, university names, page numbers, etc.). Focus ONLY on the scientific and academic body of the text.
 **CRITICAL OUTPUT FORMAT:**
 -   The final output MUST be a valid JSON array of objects and nothing else.
 -   Do not include any text, explanations, or markdown formatting outside of the main JSON array.
