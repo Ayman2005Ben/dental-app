@@ -60,7 +60,7 @@ async function groqChatOnce({ messages, model }) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: model || process.env.DQ_AI_MODEL_GROQ || 'qwen/qwen3-32b',
+      model: model || process.env.DQ_AI_MODEL_GROQ || 'openai/gpt-oss-120b',
       messages,
       temperature: 0.2,
       stream: false
