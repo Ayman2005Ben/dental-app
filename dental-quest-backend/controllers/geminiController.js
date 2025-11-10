@@ -143,6 +143,12 @@ exports.generateQuiz = async (req, res) => {
     const { count = 10, language = 'the same language as the document' } = req.body;
     const questionCount = Math.min(parseInt(count, 10), 20);
     if (!req.file) return res.status(400).json({ message: 'No PDF file uploaded.' });
+    
+    // ▼▼▼ [الإصلاح 1: التحقق من الملف الفارغ] ▼▼▼
+    if (!req.file.buffer || req.file.buffer.length === 0) {
+      return res.status(400).json({ message: 'The uploaded PDF file is empty.' });
+    }
+
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
     if (!pickedKey) return res.status(500).json({ message: 'No Gemini API keys available.' });
@@ -181,7 +187,14 @@ ${data.text.substring(0, 30000)}
     if (!responseData.candidates?.[0]?.content?.parts?.[0]?.text) throw new Error("Gemini returned an empty or invalid response.");
 
     const quizText = responseData.candidates[0].content.parts[0].text;
-    const cleanedText = quizText.replace(/```json|```/g, '').trim();
+    
+    // 1. التنظيف الأولي
+    let cleanedText = quizText.replace(/```json|```/g, '').trim();
+    
+    // ▼▼▼ [الإصلاح 2: تنظيف الأحرف الضارة] ▼▼▼
+    // (هذا السطر يزيل الأحرف غير الصالحة قبل التحليل)
+    cleanedText = cleanedText.replace(/[\x00-\x1F\x7F-\x9F]/g, "");
+
     const quizJson = JSON.parse(cleanedText);
     
     res.status(200).json(quizJson);
@@ -405,9 +418,23 @@ If you cannot find any errors, return an empty array: "errorCoordinates": []
         throw new Error(data.error?.message || `Gemini API error (Status: ${response.status})`);
     }
 
-    const aiResponseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    // ▼▼▼ [الإصلاح 3: التحقق من فلاتر الأمان] ▼▼▼
+    if (!data.candidates || data.candidates.length === 0) {
+        if (data.promptFeedback && data.promptFeedback.blockReason) {
+            console.error('Gemini Safety Block:', data.promptFeedback);
+            // سنرمي خطأ واضح يظهر في الفرونت-اند
+            throw new Error(`Request blocked by Gemini. Reason: ${data.promptFeedback.blockReason}`);
+        } else {
+            console.error('Gemini Empty Response Data:', data); // اطبع الرد الغريب
+            throw new Error('Gemini returned an empty response (no candidates) for an unknown reason.');
+        }
+    }
+    // --- [نهاية الإصلاح 3] ---
+
+    const aiResponseText = data.candidates[0]?.content?.parts?.[0]?.text;
     if (!aiResponseText) {
-      throw new Error('Gemini returned an empty response.');
+      // هذا الخطأ سيحدث الآن فقط إذا كان data.candidates موجوداً ولكن text فارغ
+      throw new Error('Gemini returned a candidate but the text part was empty.');
     }
 
     // --- الخطوة 7: "المحلل الذكي" (Safe Regex Parser) ---
@@ -418,23 +445,27 @@ If you cannot find any errors, return an empty array: "errorCoordinates": []
     };
 
     try {
-      // استخراج evaluationText
-      const evalMatch = aiResponseText.match(/"evaluationText"\s*:\s*"([\s\S]*?)"\s*,\s*"grade"/);
+      // ▼▼▼ [الإصلاح 4: جعل المحلل مرناً (يقبل الاقتباسات أو لا يقبلها)] ▼▼▼
+      // (لاحظ إضافة "? بعد كل " لجعلها اختيارية)
+      
+      // 1. استخراج evaluationText
+      const evalMatch = aiResponseText.match(/"?evaluationText"?\s*:\s*"([\s\S]*?)"\s*,\s*"?grade"?/);
       if (evalMatch && evalMatch[1]) {
         resultJson.evaluationText = evalMatch[1];
       }
 
-      // استخراج grade
-      const gradeMatch = aiResponseText.match(/"grade"\s*:\s*(\d+(\.\d+)?)/);
+      // 2. استخراج grade
+      const gradeMatch = aiResponseText.match(/"?grade"?\s*:\s*(\d+(\.\d+)?)/);
       if (gradeMatch && gradeMatch[1]) {
         resultJson.grade = parseFloat(gradeMatch[1]);
       }
 
-      // استخراج errorCoordinates
-      const coordsMatch = aiResponseText.match(/"errorCoordinates"\s*:\s*(\[[\s\S]*?\])/);
+      // 3. استخراج errorCoordinates
+      const coordsMatch = aiResponseText.match(/"?errorCoordinates"?\s*:\s*(\[[\s\S]*?\])/);
       if (coordsMatch && coordsMatch[1]) {
         resultJson.errorCoordinates = JSON.parse(coordsMatch[1]); 
       }
+      // --- [نهاية الإصلاح 4] ---
     
     } catch (parseError) {
       console.error("Regex/JSON parsing failed:", parseError);
