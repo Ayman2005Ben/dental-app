@@ -200,7 +200,7 @@ const occlusioQuizzes = [
           "Les prématurités sont des obstacles lors de l’occlusion statique en RC",
           "Les prématurités sont des obstacles lors des mouvements de latéralité de la mandibule"
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [1],
         explanation: "Les prématurités sont les premiers contacts dentaires qui apparaissent lors de la fermeture de la mandibule en relation centrée, avant d'atteindre l'intercuspidation maximale."
       },
       {
@@ -279,7 +279,7 @@ const occlusioQuizzes = [
           "Peut être traité par une injection de toxine botulique",
           "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [1],
+        correctOptionIndexes: [1, 2],
         explanation: "Le bruxisme est une parafonction (cause ou facteur aggravant, et non conséquence) de mise en contact des dents. Dans les cas sévères, l'injection de toxine botulique est une option thérapeutique."
       },
       {
@@ -373,6 +373,339 @@ const occlusioQuizzes = [
         ],
         correctOptionIndexes: [0, 1, 3],
         explanation: "Les gouttières ne corrigent pas les interférences de manière permanente (c'est le rôle de l'équilibration ou de l'orthodontie), mais elles permettent de mettre au repos le système neuromusculaire, de soulager les muscles et de guider la mandibule dans une position stable."
+      }
+    ]
+  },
+  {
+    title: "OCCLUSODONTIE 2015/2016",
+    subject: "occlusio",
+    questions: [
+      {
+        questionText: "La Position de repos est :",
+        options: [
+          "position qu'occupe la mandibule lorsque les muscles élévateurs et les abaisseurs sont en état d'équilibre et de tonicité minimale",
+          "la position qu'occupe la mandibule lorsque les muscles élévateurs et les abaisseurs sont en état d'équilibre et de tonicité maximale",
+          "position qu'occupe la mandibule lorsque les muscles élévateurs et les abaisseurs sont en état d'équilibre et de tonicité égale à zéro."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La position de repos mandibulaire est une position posturale maintenue par le tonus musculaire de base (activité minimale) des muscles manducateurs, créant l'espace libre d'inoclusion."
+      },
+      {
+        questionText: "Interférences :",
+        options: [
+          "sont des obstacles aux mouvements fonctionnels de la mandibule",
+          "Sont des obstacles lors des contacts statiques du maxillaire et la mandibule",
+          "sont des obstacles aux mouvements de latéralité de la mandibule.",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Une interférence occlusale est tout contact dentaire qui empêche les autres dents de se toucher de manière stable et harmonieuse, que ce soit en statique ou en dynamique."
+      },
+      {
+        questionText: "Les premiers contacts de prématurité en relation centrée se font sur les versants mésiaux des PM et M maxillaires et les versants distaux des PM et M mandibulaires.",
+        options: [
+          "VRAI",
+          "FAUX"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "C'est la description classique d'un contact prématuré en RC. Lors de la fermeture en rotation pure, le premier contact se fait souvent sur ces versants spécifiques."
+      },
+      {
+        questionText: "Lors des mouvements de diduction, on parle de guidage latéral qui se fait soit :",
+        options: [
+          "par la face palatine de la canine : c'est la fonction canine",
+          "par un groupe comprenant la face palatine de la canine et les versants internes des cuspides vestibulaires des prémolaires et molaires supérieures : c'est la fonction de groupe",
+          "doit entrainer la désocclusion immédiate des dents non-concernées par le guidage latéral du côté travaillant et de toutes les dents du côté non-travaillant.",
+          "le guiage latéral est indépendant des dents i concerne les condyles dans leurs déplacements"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le guidage latéral peut être assuré par la canine seule (fonction canine) ou par un groupe de dents (fonction de groupe). Dans les deux cas, il doit provoquer une désocclusion immédiate du côté non-travaillant."
+      },
+      {
+        questionText: "Lors des examens radiologiques :",
+        options: [
+          "Le cône-Beam est préféré au denta-scan car l'irradiation est moins importante",
+          "Le denta-scan permet de visualiser les parties molles",
+          "Les deux examens donnent les mêmes résultats",
+          "Aucune réponse n'est juste."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le Cone Beam (CBCT) offre une excellente résolution pour les tissus durs avec une dose d'irradiation significativement plus faible que le scanner médical (Denta-scan)."
+      },
+      {
+        questionText: "Les manifestations articulaires des DAM sont :",
+        options: [
+          "les douleurs, les bruits avec une limitation de l'ouverture buccale",
+          "les douleurs, les bruits",
+          "les douleurs et crispations musculaires",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les manifestations articulaires des DAM (Désordres de l'Appareil Manducateur) incluent les bruits (claquements, crépitements) et les douleurs localisées à l'ATM, souvent accompagnées d'une limitation ou déviation de l'ouverture."
+      },
+      {
+        questionText: "Le diagnostic différentiel entre les atteintes musculaires et articulaires se fait par :",
+        options: [
+          "Test de COSTEN",
+          "Test de KROGH-POULSEN",
+          "Test de BENNET"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les tests de palpation musculaire (comme ceux décrits par Krogh-Poulsen) et les tests de provocation articulaire sont utilisés pour différencier une douleur d'origine musculaire d'une douleur d'origine articulaire."
+      },
+      {
+        questionText: "lors des mouvements de propulsion mandibulaire :",
+        options: [
+          "Les condyles mandibulaires glissent le long des condyles temporaux",
+          "On a une désocclusion postérieure",
+          "Les contacts dento-dentaires sont répartis sur toute l'arcade",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Lors de la propulsion, les condyles se déplacent vers l'avant et le bas le long de la pente condylienne. Ce mouvement, guidé par les dents antérieures, doit normalement entraîner une désocclusion de toutes les dents postérieures."
+      },
+      {
+        questionText: "parmi les muscles élévateurs :",
+        options: [
+          "le muscle mylo-hyoïdien",
+          "le muscle masséter",
+          "le muscle ptérygoïdien médial",
+          "le muscle digastrique",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les principaux muscles élévateurs de la mandibule sont le masséter, le temporal et le ptérygoïdien médial."
+      },
+      {
+        questionText: "un articulateur se compose de:",
+        options: [
+          "une tige incisive",
+          "un arc facial",
+          "une branche supérieure",
+          "un pointeau sous orbitaire",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les composants de base d'un articulateur sont : une branche supérieure, une branche inférieure, un système de condyles, et une tige incisive. L'arc facial est un accessoire de transfert."
+      },
+      {
+        questionText: "l'arc facial de l'articulateur quick master de FAG se compose de :",
+        options: [
+          "un appui nasal",
+          "une fourchette occlusale",
+          "des embouts auriculaires",
+          "un axe support",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "C'est la description des composants d'un arc facial de type FAG Quick Master, utilisé pour enregistrer la position du maxillaire par rapport à l'axe charnière du patient."
+      },
+      {
+        questionText: "l'angle de Bennett est :",
+        options: [
+          "matérialisé par une aile de Bennett",
+          "matérialisé par un insert angulé préfabriqué",
+          "permet la programmation de l'angulation non travaillante",
+          "est déterminé par rapport au plan sagittal médian"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "L'angle de Bennett représente le déplacement latéral et vers l'avant du condyle non-travaillant, mesuré dans le plan horizontal par rapport au plan sagittal médian. Sur les articulateurs, il est réglé à l'aide d'inserts angulés."
+      },
+      {
+        questionText: "parmi les mesures de prévention des DAM :",
+        options: [
+          "réalisation d'équilibration occlusale post orthodontique",
+          "interception des para fonctions",
+          "le curetage parodontal",
+          "équilibration systématique des prothèses",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La prévention des DAM passe par la création et le maintien d'une occlusion équilibrée (après orthodontie, sur les prothèses) et la gestion des parafonctions. Le curetage parodontal n'est pas une mesure de prévention occlusale."
+      },
+      {
+        questionText: "Parmi les moyens d'union de l'articulation temporo-mandibulaire :",
+        options: [
+          "La cavité glénoïde",
+          "La capsule articulaire",
+          "Le condyle mandibulaire",
+          "La membrane synoviale"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les moyens d'union de l'ATM sont la capsule articulaire et les ligaments qui maintiennent les surfaces osseuses en contact."
+      },
+      {
+        questionText: "La gouttière occlusale permet :",
+        options: [
+          "Le relâchement musculaire",
+          "Le repositionnement du condyle dans la cavité glénoïde",
+          "Diminue l'hyper-pression intra-articulaire douloureuse",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La gouttière occlusale a plusieurs objectifs : elle désengrène les dents pour permettre un relâchement musculaire, aide à repositionner les condyles dans une position thérapeutique, et diminue la pression sur les structures articulaires."
+      },
+      {
+        questionText: "La butée antérieure :",
+        options: [
+          "utilisé un articulateur semi-adaptable",
+          "Repère les interférences du chemin de fermeture uniquement",
+          "Sert à rétablir les cycles masticatoires",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Aucune proposition ne décrit correctement la butée antérieure (jig de Lucia), qui est un dispositif utilisé pour déprogrammer les muscles élévateurs et trouver la relation centrée."
+      },
+      {
+        questionText: "Les surfaces occlusales d'appuis sont :",
+        options: [
+          "Cuspides vestibulaires des PM et M mandibulaires",
+          "Bords libres des incisifs mandibulaires et cuspide de la canine mandibulaire",
+          "Cuspides palatines des DM et M maxillaires",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les surfaces d'appui (ou cuspides de soutien) qui maintiennent la DVO sont les cuspides vestibulaires mandibulaires et les cuspides palatines/linguales maxillaires."
+      }
+    ]
+  },
+  {
+    title: "2018/2019",
+    subject: "occlusio",
+    questions: [
+      {
+        questionText: "Parmi les muscles élévateurs de la mandibule on retrouve :",
+        options: [
+          "le muscle mylo-hyoïdien",
+          "le muscle temporal .",
+          "le muscle masséter",
+          "le muscle ptérygoïdien latéral",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les principaux muscles élévateurs sont le temporal, le masséter et le ptérygoïdien médial. Le ptérygoïdien latéral est principalement un propulseur."
+      },
+      {
+        questionText: "réponse(s) juste(s) :",
+        options: [
+          "Les dysfonctionnements de l'appareil manducateur se présentent uniquement sous forme de manifestations musculaires douloureuses",
+          "Les dysfonctionnements de l'appareil manducateur se présentent sous forme de manifestations articulaires, douleurs et bruit",
+          "Les dysfonctionnements de l'appareil manducateur se présentent sous forme de manifestations de la triade BAD (Bruit, Algie, Dyskinesie)",
+          "Le stress est la seule cause des dysfonctionnements",
+          "Les traitements orthodontiques sont la cause unique des dysfonctionnements"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les DAM (ou DCM) sont un ensemble de pathologies affectant les muscles et/ou l'articulation. La triade symptomatique classique est Bruit-Algie(douleur)-Dyskinésie(trouble du mouvement). L'étiologie est multifactorielle."
+      },
+      {
+        questionText: "Les interférences apparaissent :",
+        options: [
+          "Lors des mouvements fonctionnels de la mandibule",
+          "Lors de l'occlusion statique en ICM.",
+          "Lors des mouvements de latéralité de la mandibule.",
+          "Lors de l'occlusion statique en RC."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les interférences peuvent être des contacts prématurés en RC ou des contacts perturbant les mouvements de latéralité ou de propulsion."
+      },
+      {
+        questionText: "La prévention du dysfonctionnement de l'appareil manducateur nécessite :",
+        options: [
+          "Un Traitement des troubles de l'occlusion",
+          "Un traitement prothétique",
+          "Un traitement orthodontique",
+          "Un traitement chirurgical"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La prévention passe par la mise en place et le maintien d'une occlusion fonctionnelle et équilibrée, que ce soit par traitement orthodontique, prothétique, ou par simple équilibration occlusale."
+      },
+      {
+        questionText: "La butée occlusale antérieure permet :",
+        options: [
+          "La décontraction neuromusculaire du patient",
+          "Un contrôle des cycles de mastication",
+          "Une prévention des dysfonctionnements de l'appareil manducateur",
+          "Un traitement d'urgence des dysfonctionnements de l'appareil manducateur"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La butée antérieure (jig) est un outil de diagnostic et de traitement d'urgence. Elle déprogramme les muscles en supprimant les interférences postérieures, ce qui permet un relâchement musculaire."
+      },
+      {
+        questionText: "cochez :",
+        options: [
+          "Les prématurités sont des contacts qui se font sur une ou plusieurs dents, situées le plus souvent sur les versants mésiaux des PM et M maxillaires et les versants distaux des PM et M Mandibulaires",
+          "Les prématurités apparaissent lors du mouvement de latéralité droit",
+          "Les prématurités sont des obstacles lors de l'occlusion statique en RC",
+          "Les prématurités sont des obstacles lors des mouvements de latéralité de la mandibule"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La prématurité est par définition un contact précoce qui se produit lors de la fermeture en Relation Centrée (RC). Sa localisation est classiquement celle décrite en (A)."
+      },
+      {
+        questionText: "Lors de l'examen radiologique de l'ATM :",
+        options: [
+          "la Rx panoramique est le premier examen demande",
+          "le denta scan est préféré au cône- Beam car l'irradiation est moins importante.",
+          "Le denta-scan est indiqué pour l'examen des parties molles",
+          "denta-scan donne une très grande qualité informative sur l'état osseux de"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Le panoramique est souvent le premier examen d'orientation. Le scanner (Dentascan) donne une excellente image des structures osseuses, mais le CBCT est maintenant préféré car moins irradiant. L'IRM est nécessaire pour les parties molles."
+      },
+      {
+        questionText: "L'articulé :",
+        options: [
+          "est tout état statique",
+          "Le passage d'une position occlusale à une autre avec perte de contact dentaire",
+          "Le passage d'une position occlusale à une autre sans perte de contact dentaire",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'articulé dentaire décrit une position statique de contact entre les dents. L'occlusion englobe à la fois les aspects statiques (articulé) et dynamiques (mouvements)."
+      },
+      {
+        questionText: "Le guidage antérieur :",
+        options: [
+          "Dépend de la DVO",
+          "Dépend de la pente condylienne",
+          "N'assure que la fonction de protrusion",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le guidage antérieur est déterminé par le surplomb (overjet) et le recouvrement (overbite) des dents antérieures, qui sont directement liés à la Dimension Verticale d'Occlusion (DVO)."
+      },
+      {
+        questionText: "Les gouttières occlusales permettent de :",
+        options: [
+          "Mettre la mandibule au repos",
+          "Stabiliser les mouvements mandibulaires",
+          "Corriger les interférences",
+          "soulager les muscles masticateurs"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La gouttière occlusale est un outil thérapeutique qui permet de relaxer les muscles, de stabiliser l'occlusion dans une position thérapeutique, et de neutraliser les interférences dentaires."
+      },
+      {
+        questionText: "Les déterminants postérieurs de l'occlusion sont :",
+        options: [
+          "La pente canine",
+          "La pente condylienne",
+          "La pente incisive",
+          "L'angle de BENNET"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les déterminants postérieurs de l'occlusion sont anatomiques et liés à l'ATM : la pente condylienne et le mouvement de Bennett."
+      },
+      {
+        questionText: "Le traitement symptomatique myorelaxants est indiqué :",
+        options: [
+          "Pour les douleurs type musculaire",
+          "Pour les douleurs type articulaire",
+          "Pour les douleurs type musculo articulaire",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les myorelaxants (relaxants musculaires) sont indiqués spécifiquement pour soulager les douleurs d'origine musculaire (contractures, spasmes)."
       }
     ]
   }

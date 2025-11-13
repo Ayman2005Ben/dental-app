@@ -2400,7 +2400,353 @@ const anatomoPathologieQuizzes = [
         explanation: "Le lymphome est une tumeur maligne, pas une pseudotumeur."
       }
     ]
-  }
+  },
+{
+    title: "1er Semestre 2019/2020",
+    subject: "anatomo-pathologie",
+    questions: [
+      {
+        questionText: "L'histologie désigne l'étude des : (RJ)",
+        options: [
+          "Etalements cellulaires",
+          "Liquides d'aspiration",
+          "Anomalies ultra structurales",
+          "Lésions tissulaires constatées à l'œil nu",
+          "Lésions tissulaires constatées à l'aide d'un microscope"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'histologie est par définition l'étude de la structure microscopique des tissus biologiques."
+      },
+      {
+        questionText: "L'étape de fixation pour un examen pathologique de routine : (RF)",
+        options: [
+          "Permet de conserver la morphologie cellulaire",
+          "Doit être immédiate",
+          "Est indispensable pour un examen extemporané",
+          "Se fait au formol tamponné à 10%"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La question demande de cocher la réponse fausse (RF). La fixation est indispensable pour la technique de routine (paraffine), mais l'examen extemporané se fait par définition sur du tissu frais, non fixé, qui est congelé."
+      },
+      {
+        questionText: "Les lésions cellulaires observées au microscope optiquesont : (RF)",
+        options: [
+          "Apoptose",
+          "Anomalies de la membrane cytoplasmique",
+          "Inclusion nucléaire",
+          "Anomalies des organites",
+          "Caryorrhexis"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La question demande de cocher la réponse fausse (RF). Les anomalies des organites (mitochondries, réticulum endoplasmique...) sont des lésions ultra-structurales qui ne sont visibles qu'en microscopie électronique, et non en microscopie optique."
+      },
+      {
+        questionText: "L'examen extemporané permet : (RF)",
+        options: [
+          "Une orientation diagnostique rapide",
+          "Une vérification des limites d'exérèse",
+          "Le contrôle de la nature du prélèvement",
+          "De guider l'intervention chirurgical",
+          "Une grande fiabilité diagnostique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La question demande de cocher la réponse fausse (RF). L'examen extemporané fournit une orientation rapide mais n'a pas la même fiabilité que l'analyse histologique standard sur paraffine. Le diagnostic est provisoire et doit toujours être confirmé."
+      },
+      {
+        questionText: "La fibrose : (RF)",
+        options: [
+          "Correspond à une augmentation quantitative et qualitative de fibres conjonctives dans un tissu",
+          "Se traduit par dépôts de fibres collagènes",
+          "Est constituée de fibroblastes le plus souvent",
+          "D'origine cicatricielle, succède à la réaction inflammatoire",
+          "Peut entrainer une atrophie de l'organe"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Bien que la fibrose soit une augmentation de fibres, la proposition (A) est considérée fausse dans le corrigé, probablement à cause du terme \"qualitative\" qui est ambigu. La fibrose est avant tout une augmentation quantitative de collagène."
+      },
+      {
+        questionText: "La biopsie exérèse consiste à : (RJ)",
+        options: [
+          "Enlever une partie de la lésion",
+          "Faire une microscopie à visée diagnostique",
+          "Faire une réaction à visée thérapeutique",
+          "Faire une ponction-biopsie",
+          "Enlever la lésion dans sa totalité à visée diagnostique et thérapeutique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Une biopsie-exérèse (ou exérèse-biopsie) consiste à enlever la totalité de la lésion. Cet acte a un double but : thérapeutique (retirer la lésion) et diagnostique (l'analyser)."
+      },
+      {
+        questionText: "Les fibroses peuvent être d'origine : (RJ)",
+        options: [
+          "Cicatricielle",
+          "Dystrophique",
+          "Métabolique",
+          "Post inflammatoire",
+          "Toutes ces réponses sont justes"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La fibrose est un processus de réparation ou de réaction qui peut être déclenché par de multiples causes : inflammation, cicatrisation, troubles métaboliques, etc."
+      },
+      {
+        questionText: "Un examen cytologique est réalisé sur tout le prélèvement suivantsauf un lequel : (RF)",
+        options: [
+          "Un frottis",
+          "Un culot de centrifugation",
+          "Un étalement",
+          "Un centrage biopsique",
+          "Une apposition"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les frottis, culots, étalements et appositions sont des techniques de cytologie (étude des cellules isolées). Le centrage biopsique fait référence à une biopsie tissulaire (histologie)."
+      }
+    ]
+  },
+  {
+    title: "1er Semestre 2017/2018",
+    subject: "anatomo-pathologie",
+    questions: [
+      {
+        questionText: "La métaplasie :(RF)",
+        options: [
+          "Est une forme d'adaptation cellulaire",
+          "Est une anomalie congénitale",
+          "Est la transformation d'un tissu normal par sa structure en un autre tissu anormal par sa localisation",
+          "Est un changement dans la différenciation cellulaire en réponse à une agression pour aboutir à un tissu mieux adapté à l'agression d'origine",
+          "Peut être réversible"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La métaplasie est un processus d'adaptation acquis en réponse à une irritation chronique, ce n'est pas une anomalie congénitale."
+      },
+      {
+        questionText: "Les principales réponses adaptatives d'une cellule et d'un tissu sont :(RF)",
+        options: [
+          "L'atrophie (ou hypotrophie)",
+          "L'hypertrophie",
+          "L'hyperplasie",
+          "La métaplasie",
+          "La nécrose"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La nécrose est une mort cellulaire pathologique, ce n'est pas un mécanisme d'adaptation. Les mécanismes d'adaptation sont l'atrophie, l'hypertrophie, l'hyperplasie et la métaplasie."
+      },
+      {
+        questionText: "La nécrose cellulaire : (RJ)",
+        options: [
+          "Désigne les modifications morphologiques irréversibles coïncidant avec la mortcellulaire",
+          "...",
+          "Est une mort cellulaire programmée",
+          "Est un signe de bonne adaptation cellulaire",
+          "Ne provoque pas de reponse inflammatoire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La nécrose est l'ensemble des altérations morphologiques qui suivent la mort d'une cellule au sein d'un tissu vivant, résultant d'une agression. Elle induit toujours une réaction inflammatoire."
+      },
+      {
+        questionText: "L'apoptose : (RF)",
+        options: [
+          "Est une mort cellulaire programmée",
+          "Concerne des cellules isolées c est le plus souvent un mécanisme physiologique de « suicide » cellulaire essentiel au développement, à la maturation, et au renouvellement normal des tissus.",
+          "Est un processus actif",
+          "Induit une réponse inflammatoire importante"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La question demande la réponse fausse. L'apoptose est un processus actif de mort cellulaire programmée qui, contrairement à la nécrose, ne déclenche PAS de réaction inflammatoire. La proposition \"induit une réponse inflammatoire importante\" est donc fausse."
+      },
+      {
+        questionText: "Parmi ces lésions cellulaires laquelle est réversible : (RJ)",
+        options: [
+          "Dégénérescence hydropique",
+          "Pycnose",
+          "Caryolyse",
+          "Caryorrhexis",
+          "Densifications matricielles mitochondriales"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La dégénérescence hydropique (gonflement cellulaire par entrée d'eau) est le premier stade de l'altération cellulaire et est réversible si l'agression cesse. Les autres (Pycnose, Caryolyse, Caryorrhexis) sont des signes de mort cellulaire irréversible."
+      },
+      {
+        questionText: "Quelle est la coloration de base en technique histopathologique pour mettre en évidence les fibres conjonctives ? (RJ)",
+        options: [
+          "Hématoxyline de Harris",
+          "Trichrome de Masson",
+          "Acide Périodique Schiff (PAS)",
+          "Hémateine eosine (HE)",
+          "Coloration de Grocott"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le Trichrome de Masson est la coloration de choix pour visualiser le collagène (fibres conjonctives), qu'il colore typiquement en bleu ou en vert."
+      },
+      {
+        questionText: "La réaction inflammatoire est une suite d'évènements qui s'enchainent ? (RF)",
+        options: [
+          "Caractérisée par des réactions de nature cellulaire et humorale",
+          "Elle débute par une première phase vasculo-exsudative",
+          "Une deuxième phase cellulaire",
+          "Une angiogenèse avec prolifération de nouveaux capillaires",
+          "Toujours d'origine infectieuse"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La question demande la réponse fausse. L'inflammation est une réponse à une agression, qui peut être infectieuse, mais aussi physique (brûlure, trauma), chimique (toxines) ou immunologique. Elle n'est donc pas toujours d'origine infectieuse."
+      },
+      {
+        questionText: "La diapédèse leucocytaire ? (RF)",
+        options: [
+          "Se produit lors de la phase vasculo-exsudative de l'inflammation",
+          "Est caractérisée par la marginalisation des leucocytes à l'endothélium vasculaire",
+          "...",
+          "Se traduit par l'émission de pseudopodes par les leucocytes",
+          "c'est l'infiltration des leucocytes entre les cellules endothéliales"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La diapédèse est le processus actif de traversée de la paroi vasculaire par les leucocytes. La marginalisation (B) précède la diapédèse."
+      },
+      {
+        questionText: "L'examen extemporané : (RF)",
+        options: [
+          "Permet de déterminer la nature exacte de la lésion",
+          "Permet un diagnostic histopathologique de présomption",
+          "Est réalisé en pré opératoire",
+          "Est pratiqué dans le but d'orienter l'acte chirurgical",
+          "Est effectué sur un prélèvement congelé"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C'est un examen per-opératoire (pendant l'opération), non pré-opératoire."
+      },
+      {
+        questionText: "Lors de la mort cellulaire une condensation de la chromatine en un bloc correspond à une : (RF)",
+        options: [
+          "Caryolyse",
+          "Cytolyse",
+          "Apoptose",
+          "Caryorrhexis",
+          "Pycnose"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La condensation de la chromatine en un bloc dense et rétracté est la définition de la pycnose (E). La caryorrhexis est la fragmentation de ce noyau pycnotique."
+      },
+      {
+        questionText: "L'épulis : (RF)",
+        options: [
+          "Est une pseudotumeur hyperplasique",
+          "Siège habituellement sur le versant vestibulaire gingival de la canine",
+          "D'origine autoimmune",
+          "Est d'origine vasculaire",
+          "Succède souvent à une ulcération provoquée par l'appareil de prothèse dentaire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'épulis est une hyperplasie réactionnelle du tissu conjonctif gingival, le plus souvent en réponse à une irritation locale chronique (tartre, prothèse mal adaptée). Ce n'est pas une maladie auto-immune."
+      }
+    ]
+  },
+  {
+    title: "2016/2017",
+    subject: "anatomo-pathologie",
+    questions: [
+      {
+        questionText: "Les fibres de collagènes : (RJs)",
+        options: [
+          "Sont élaborées par les macrophages",
+          "Leur renouvellement est inconstant",
+          "Sont dégradées par l'amylase",
+          "Sont mises en évidence à l'histologie par la coloration de trichrome de Masson",
+          "Sont responsable de la rigidité des tissus et la cohésion des cellules"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Le collagène est synthétisé par les fibroblastes (pas les macrophages) et mis en évidence par le Trichrome de Masson. Il assure la rigidité et la cohésion des tissus."
+      }
+    ]
+  },
+  {
+    title: "1er Semestre 2015/2016",
+    subject: "anatomo-pathologie",
+    questions: [
+      {
+        questionText: "Les lésions cellulaires observées au microscope optique sont : (RF)",
+        options: [
+          "Vacuoles cytoplasmique",
+          "Anomalies des mithocondries",
+          "Inclusion nucléaire",
+          "Pycnose",
+          "Caryolyse"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La question demande la réponse fausse. Les anomalies des mitochondries sont des altérations ultrastructurales visibles uniquement en microscopie électronique."
+      },
+      {
+        questionText: "Quelle est la coloration de base en technique histopathologique : (RJ)",
+        options: [
+          "Hématoxyline de Harris",
+          "Hématine",
+          "Hémateine éosine",
+          "Eosine",
+          "Trichrome de Masson"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La coloration standard et universelle en histopathologie est l'Hématéine-Éosine (HE), qui colore les noyaux en bleu/violet et les cytoplasmes en rose/rouge."
+      },
+      {
+        questionText: "Parmi ces associations laquelle ne correspond pas à la mort cellulaire (RJ)",
+        options: [
+          "Caryorexis",
+          "Dégénérescence hydropique",
+          "Pycnose",
+          "Pseudo- vacuoles intanucléaires",
+          "Dégénérescence cireuse éosinophile"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La question demande ce qui NE correspond PAS à la mort cellulaire. La dégénérescence hydropique est une lésion réversible. Tous les autres sont des signes de lésions irréversibles ou de mort cellulaire."
+      },
+      {
+        questionText: "Parmi ces propositions lesquelles correspondent à la technique usuelle d'une pièce opératoire ? (RJ)",
+        options: [
+          "Fixation au formol 10%",
+          "Inclusion en paraffine",
+          "Fixation par congélation",
+          "Coloration à l'hémateine éosine",
+          "Imprégnation argentique",
+          "Déshydratation"
+        ],
+        correctOptionIndexes: [0, 1, 3, 5],
+        explanation: "La technique standard en histologie est : Fixation au formol (1), Déshydratation (6), Inclusion en paraffine (2), Coupe, et Coloration HE (4). La congélation est pour l'extemporané et l'imprégnation argentique est une coloration spéciale."
+      },
+      {
+        questionText: "Au cour de la phase de la réaction inflammatoire un des éléments lésionnels suivants est observé lequel ? (RJ)",
+        options: [
+          "Congestion vasculaire",
+          "Œdème interstitiel",
+          "La diapédèse leucocytaire",
+          "Une néogenèse vasculaire",
+          "La fibrose"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La phase vasculo-exsudative de l'inflammation aiguë comprend la congestion (vasodilatation), l'œdème (augmentation de la perméabilité) et la diapédèse (sortie des leucocytes). La néogenèse et la fibrose appartiennent à la phase de réparation."
+      },
+      {
+        questionText: "Faite les correspondances suivantes :\na- Métaplasie, b- Nécrose, c- Atrophie, d- Agénésie, e- Hyperplasie\n1. diminution de la taille d'une cellule ou d'un organe\n2. multiplication des cellules dans un organe donné\n3. défaut de développement d'un organe par absence d'Ebauche\n4. mort cellulaire ou tissulaire\n5. Transformation d'un tissu en un autre tissu normal par la fonction et anormal par sa topographie",
+        options: [
+          "a-5, b-4, c-1, d-3, e-2",
+          "a-1, b-2, c-3, d-4, e-5",
+          "a-2, b-3, c-4, d-5, e-1",
+          "a-4, b-5, c-2, d-1, e-3"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Correspondance des définitions de base en pathologie générale: Métaplasie (a-5), Nécrose (b-4), Atrophie (c-1), Agénésie (d-3), Hyperplasie (e-2)."
+      },
+      {
+        questionText: "L'examen extemporané : (RF)",
+        options: [
+          "Est réalisé en pré opératoire",
+          "Permet de déterminer la nature de la lésion",
+          "Est effectué sur un prélèvement frais",
+          "Est pratiqué dans le but d'orienter l'acte chirurgical",
+          "Permet de donner un diagnostic de présomption"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La question demande la réponse fausse. L'examen extemporané est per-opératoire (pendant l'opération), pas pré-opératoire."
+      }
+    ]
+  },
 ];
 
 module.exports = anatomoPathologieQuizzes;

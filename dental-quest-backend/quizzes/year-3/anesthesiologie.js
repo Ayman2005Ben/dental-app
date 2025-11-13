@@ -1251,6 +1251,318 @@ const anesthesiologieY3Quizzes = [
         explanation: "La préparation préopératoire (C) est une étape essentielle de l'acte anesthésique."
       }
     ]
+  },
+{
+    title: "Anesthesio 2020",
+    subject: "anesthesiologie",
+    questions: [
+      {
+        questionText: "l'anesthésie générale est obtenue : (RF)",
+        options: [
+          "Par inhalation de drogues",
+          "Par voie veineuse",
+          "Induit un coma artificiel stade 2",
+          "Uniquement par un hypnotique",
+          "Un analgésique, hypnotique et curare"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La question demande la réponse fausse. L'anesthésie générale 'balancée' moderne repose sur l'association de plusieurs classes de médicaments (hypnotiques, analgésiques, curares). Elle n'est jamais obtenue par un hypnotique seul."
+      },
+      {
+        questionText: "le midazolam : (RF)",
+        options: [
+          "Induit une narcose",
+          "Entretient une anesthésie",
+          "Est un hypnotique",
+          "Est un curare",
+          "Est sédatif"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le midazolam (Hypnovel®) est une benzodiazépine. C'est un hypnotique et un sédatif, mais il n'a aucune propriété curarisante (myorelaxante périphérique)."
+      },
+      {
+        questionText: "un anesthésique local est un agent qui : (RF)",
+        options: [
+          "Bloque la conduction nerveuse",
+          "Est soit un amino-ester ou amino amide",
+          "Sa résorption dépend du site d'injection",
+          "L'acidose diminue sa diffusion",
+          "L'addition d'un vasoconstricteur diminue sa durée d'action"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'ajout d'un vasoconstricteur (comme l'adrénaline) ralentit la résorption de l'anesthésique local, ce qui AUGMENTE sa durée d'action."
+      },
+      {
+        questionText: "la résorption d'un anesthésique local dépend : (RF)",
+        options: [
+          "Site d'injection",
+          "L'intervention du site",
+          "De la dose",
+          "La nature du produit",
+          "L'adjonction d'un vasoconstricteur"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La résorption dépend du site, de la dose, des propriétés du produit, et de la présence d'un vasoconstricteur. Le 'type d'intervention' n'influence pas directement la résorption."
+      },
+      {
+        questionText: "l'activité des anesthésique locaux est modifiée par : (RF)",
+        options: [
+          "L'hyperthermie",
+          "L'insuffisance hépatique",
+          "L'insuffisance rénale",
+          "L'hypothermie",
+          "L'insuffisance cardiaque"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'hypothermie provoque une vasoconstriction qui ralentit le métabolisme et la redistribution des anesthésiques, pouvant prolonger leur effet, mais elle n'est pas classiquement décrite comme modifiant leur activité de manière significative, contrairement aux autres conditions."
+      },
+      {
+        questionText: "les anesthésique locaux : (RF)",
+        options: [
+          "Traversent la barrière hémato méningée",
+          "Ont une action anti-convulsivante",
+          "Diminuent la transmission neuromusculaire",
+          "Entrainent un coma à forte dose",
+          "Sont hyperglycémiants à forte dose"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Les anesthésiques locaux n'ont pas d'effet direct connu sur la glycémie."
+      },
+      {
+        questionText: "la toxicité des anesthésiques locaux augmentée par : (RF)",
+        options: [
+          "Insuffisance cardiaque",
+          "Etat de choc",
+          "Béta-bloqueurs",
+          "Déficit en pseudo cholinestérase.",
+          "Excès en pseudo cholinestérase."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Un déficit en pseudocholinestérase augmente la toxicité des esters. Un excès de cette enzyme accélérerait au contraire leur dégradation, diminuant le risque de toxicité."
+      },
+      {
+        questionText: "les anesthésiques locaux agissent : (RF)",
+        options: [
+          "Sous forme ionisée",
+          "A l'intérieure de l'axone",
+          "En freinant l'entrée du sodium",
+          "Par obstruction du canal sodique",
+          "Ils augmentent l'amplitude de potentiel d'action"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Les anesthésiques locaux bloquent les canaux sodiques, ce qui empêche la dépolarisation. Ils diminuent donc ou suppriment l'amplitude du potentiel d'action."
+      },
+      {
+        questionText: "parmi les accidents locaux de l'anesthésierégionale : (RF)",
+        options: [
+          "Fracture d'aiguilles",
+          "Injection douloureuse",
+          "Hémorragie",
+          "Paralysie faciale",
+          "Bronchospasme"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Le bronchospasme est un accident général (respiratoire), le plus souvent d'origine allergique, et non un accident local lié au site d'injection."
+      },
+      {
+        questionText: "parmi les accidents généraux de l'anesthésie locorégionale : (RF)",
+        options: [
+          "Crise convulsive",
+          "Crise d'asthme",
+          "Accidents allergique.",
+          "Alvéolite",
+          "Hypertension artérielle"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'alvéolite est une complication post-extractionnelle, ce n'est pas un accident général de l'anesthésie."
+      },
+      {
+        questionText: "la consultation pré anesthésique recherche : (RF)",
+        options: [
+          "Antécédents médico-chirurgicaux",
+          "Transfusions antérieures",
+          "Traitements en cours",
+          "Classification ASA",
+          "A lieu une ½ heure avant l'acte anesthésique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La consultation pré-anesthésique doit légalement avoir lieu plusieurs jours avant l'intervention (sauf urgence)."
+      },
+      {
+        questionText: "les objectifs de la prémédication sont : (RF)",
+        options: [
+          "Prévention de la douleur",
+          "Prévention des réaction allergique",
+          "Un bon éveil du patient",
+          "Prophylaxie des vomissements post opératoires",
+          "Réduction de l'anxiété"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La prémédication vise à calmer le patient (anxiolyse), mais elle peut entraîner une somnolence qui retarde le réveil. Un 'bon éveil' n'est pas un de ses objectifs."
+      },
+      {
+        questionText: "l'anesthésie intra-ligamentaire : (RF)",
+        options: [
+          "Infiltrer la solution analgésique dans le desmodonte",
+          "Analgésie la pulpe et l'alvéole",
+          "L'injection se fait par poussées successives",
+          "Elle produit une bactériémie",
+          "Toutes ces réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Les propositions A, B, C et D sont toutes considérées comme justes concernant l'anesthésie intra-ligamentaire. Par conséquent, l'affirmation 'Toutes ces réponses sont fausses' est elle-même fausse."
+      },
+      {
+        questionText: "l'anesthésie du nerf lingual permet : (RF)",
+        options: [
+          "L'insensibilité de la muqueuse linguale",
+          "L'insensibilité 2/3 antérieure de la face",
+          "L'insensibilité de la muqueuse du plancher buccal",
+          "L'insensibilité de la muqueuse gingival de la face ligual",
+          "Toutes ces réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le nerf lingual innerve la langue et le plancher buccal, pas la peau de la face. La proposition B est donc clairement fausse."
+      },
+      {
+        questionText: "le choix de l'aiguille selon la longueur pour : (RF)",
+        options: [
+          "L'anesthésie para-apical=16 mm",
+          "L'anesthésie tronculaire = 35 mm",
+          "L'anesthésie intra septale = 8 mm",
+          "L'anesthésie intra ligamentaire = 8 mm",
+          "Toutes ces réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Les longueurs d'aiguilles proposées en A, B, C et D sont les standards pour ces techniques. Par conséquent, l'affirmation 'Toutes ces réponses sont fausses' est elle-même fausse."
+      },
+      {
+        questionText: "Analgésie du nerf nasopalatin consiste à : (RF)",
+        options: [
+          "Injecter l'anlgésique dans le foramen incisif",
+          "Injecter la solution en avant des incisives centrales supérieures",
+          "Indiquée chirurgie portant sur le tiers antérieure du palais",
+          "Analgésier bloc incisivocanin supérieur",
+          "Une anesthésie régionale"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'anesthésie du nerf naso-palatin se fait en injectant au niveau de la papille incisive, qui se situe en arrière (côté palatin) des incisives centrales."
+      },
+      {
+        questionText: "l'infiltration para-apical : (RF)",
+        options: [
+          "Est faite au plus proche de site concerné",
+          "L'analgésique est déposé qu voisinage des apex dentaires",
+          "Anesthésie la gencive, l'alvéole d'une ou plusieurs dents",
+          "Permet l'extraxtion dentaire",
+          "Permet d'anesthésier une seule dent"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Une infiltration para-apicale peut diffuser et anesthésier la dent cible ainsi que partiellement les dents adjacentes. Elle n'est donc pas strictement limitée à une seule dent."
+      },
+      {
+        questionText: "l'anesthésie de contact est indiquée : (RF)",
+        options: [
+          "Détartrage",
+          "Chez le patient anxieux",
+          "Incision d'abcès",
+          "Extraction de dents temporaires",
+          "Toutes ces réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'anesthésie de contact a des indications valides (ex: avant une piqûre, pour une dent temporaire très mobile). Affirmer que toutes ces indications sont fausses est incorrect."
+      },
+      {
+        questionText: "l'anesthésie par infiltration comporte : (RF)",
+        options: [
+          "L'anesthésie para-apicale",
+          "L'anesthésie intra ligamentaire",
+          "L'anesthésie intra septale",
+          "L'anesthésie inta-pulpaire",
+          "L'anesthésie par réfrigération"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'anesthésie par réfrigération est une anesthésie de contact (physique) et non une technique d'infiltration."
+      }
+    ]
+  },
+  {
+    title: "Anesthesio 2019",
+    subject: "anesthesiologie",
+    questions: [
+      {
+        questionText: "Parmi les complications de l'anesthésie générale :",
+        options: [
+          "Hypotonie des muscles oropharyngé",
+          "Hypoxie",
+          "Bronchospasme",
+          "Hypotension",
+          "Aucune réponse juste"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'hypotonie des muscles, l'hypoxie, le bronchospasme et l'hypotension sont toutes des complications possibles et classiques de l'anesthésie générale."
+      },
+      {
+        questionText: "le midazolam est :",
+        options: [
+          "Sédatif",
+          "Barbiturique",
+          "Un morphinique",
+          "Un analgésique",
+          "Un anesthésique local"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le midazolam est une benzodiazépine qui a des propriétés sédatives, anxiolytiques et hypnotiques."
+      },
+      {
+        questionText: "l'anesthésie générale associe",
+        options: [
+          "Un hypnotonique + curare",
+          "Un curare+ analgésique",
+          "Un analgésique + hypnotonique",
+          "Un hypnotonique+ curare + analgésique .",
+          "Un hypnotonique seul"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'anesthésie générale 'balancée' est l'association synergique d'un hypnotique (pour le sommeil), d'un analgésique (morphinique, pour la douleur) et d'un curare (pour le relâchement musculaire)."
+      },
+      {
+        questionText: "la consultation pré anesthésique",
+        options: [
+          "A lieu plusieurs jours avant l'intervention",
+          "Recherche les antécédents médicochirurgicaux",
+          "Recherche les traitements en cours",
+          "Demande un bilan préopératoire",
+          "Aucune réponse juste"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Toutes ces propositions sont des éléments vrais et essentiels de la consultation pré-anesthésique."
+      },
+      {
+        questionText: "le ganglion trigéminal est :",
+        options: [
+          "Appelé aussi ganglion de gasser",
+          "Le ganglion nerveux du nerf trijumeau",
+          "Se situe à la base du crane",
+          "Composé des nerfs : ophtalmique+maxillaire+madibulaire",
+          "Aucune réponse juste"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Toutes les propositions sont correctes. C'est le ganglion sensitif du nerf trijumeau (V), situé à la base du crâne, d'où partent ses trois branches (V1, V2, V3)."
+      },
+      {
+        questionText: "la lidocaïne ou Xylocaïne est :",
+        options: [
+          "La plus employé en stomatologie",
+          "En gel à 2% est utilisé en infiltration",
+          "Existe en forme adrénalinée",
+          "Sa durée d'actionpeur aller jusqu'à 6 heures",
+          "Toutes ces réponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La lidocaïne est l'anesthésique local de référence en dentisterie (A) et est très souvent associée à un vasoconstricteur (adrénaline) (C). Sa durée d'action est d'environ 1h30-2h. Le gel est pour un usage topique."
+      }
+    ]
   }
 ];
 

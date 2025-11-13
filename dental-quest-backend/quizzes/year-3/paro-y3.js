@@ -2223,6 +2223,331 @@ const paroy3Quizzes = [
         explanation: "La maintenance ne change pas la résistance de l'hôte. Elle se définit comme un ensemble de moyens permettant un contrôle efficace du biofilm bactérien pour prévenir les récidives."
       }
     ]
+  },
+  {
+    title: "Test 1: 1er EMD Paro 2016/2017",
+    subject: "paro-y3",
+    questions: [
+      {
+        questionText: "Parmi les problèmes gingivaux suivants lequel/lesquels peut-on s'attendre retrouver chez un patient souffrant d'une dyscrasie sanguine :",
+        options: [
+          "Un gonflement",
+          "Un saignement",
+          "Une ulcération",
+          "Une atrophie",
+          "Très peu d'atteinte carieuse"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les dyscrasies sanguines (ex: leucémies, anémies sévères) altèrent les défenses immunitaires et l'hémostase. Elles peuvent se manifester au niveau gingival par un gonflement (hyperplasie leucémique), des saignements spontanés (thrombopénie) et des ulcérations."
+      },
+      {
+        questionText: "Avec le développement de la gingivite, la flore microbienne de la poche parodontale devient composée de :",
+        options: [
+          "Bactéries gram positif et gram négatif",
+          "Bactéries gram positif exclusivement",
+          "Bactéries gram négatif exclusivement",
+          "Spirochètes",
+          "Levures"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Lors du passage de la santé (dominée par Gram+) à la gingivite, il y a une augmentation de la proportion des bactéries à Gram négatif et l'apparition de bactéries mobiles comme les spirochètes, marquant un tournant dysbiotique."
+      },
+      {
+        questionText: "Quelles cellules migrent en plus grand nombre vers le sillon gingivo-dentaire en réponse à une accumulation de plaque bactérienne :",
+        options: [
+          "Les plasmocytes et les monocytes",
+          "Les leucocytes polynucléaires",
+          "Les macrophages",
+          "Les lymphocytes",
+          "Les mastocytes"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les leucocytes polynucléaires neutrophiles (PMN) sont les cellules de la première ligne de défense de l'immunité innée. Ils migrent massivement depuis les vaisseaux du chorion vers le sillon gingival pour phagocyter les bactéries de la plaque."
+      },
+      {
+        questionText: "Parmi les maladies systémiques suivantes, laquelle/lesquelles ne prédisposent pas à la parodontite:",
+        options: [
+          "Neutropénie cyclique",
+          "Syndrome de l'immunodéficience acquise",
+          "Syndrome de Chediak-Higashi",
+          "Albinisme",
+          "Les cardiopathies"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Les maladies affectant la fonction des neutrophiles (Neutropénie, Chédiak-Higashi) ou l'immunité en général (SIDA) sont des facteurs de risque majeurs de parodontites agressives. L'albinisme et les cardiopathies (hors endocardite) n'ont pas de lien direct prouvé comme facteur prédisposant."
+      },
+      {
+        questionText: "Lorsqu'on utilise une sonde parodontale pour évaluer la profondeur d'une poche parodontale, on mesure la distance entre",
+        options: [
+          "la base de la poche parodontale et la jonction amélo-cémentaire",
+          "le bord de la gencive libre et la jonction amélo-cémentaire",
+          "la base de la poche parodontale et le sommet de la gencive libre",
+          "la base de la poche parodontale et la crête osseuse",
+          "Le bord de la gencive libre et la crête osseuse."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La profondeur de poche au sondage (PPS) est la distance mesurée entre le sommet du rebord gingival libre et la pointe de la sonde qui bute au fond de la poche (base de la poche)."
+      },
+      {
+        questionText: "Dans une poche intra-osseuse, l'attache épithéliale est située",
+        options: [
+          "A l'intérieur même de l'os basal",
+          "Exposition coronaire par rapport à la crête alvéolaire",
+          "En position apicale par rapport à la crête alvéolaire",
+          "En juxtaposition avec la crête alvéolaire",
+          "Aucune réponse n'est correcte"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Une poche est dite \"infra-osseuse\" ou \"intra-osseuse\" lorsque le fond de la poche (et donc l'attache épithéliale) est situé plus apicalement que la crête de l'os alvéolaire adjacent."
+      },
+      {
+        questionText: "Lorsqu'on utilise une sonde parodontale pour évaluer la perte d'attache parodontale on mesure la distance entre :",
+        options: [
+          "la base de la poche parodontale et la jonction amélo-cémentaire",
+          "le bord de la gencive libre et la jonction amélo-cémentaire",
+          "la base de la poche parodontale et le sommet de la gencive libre",
+          "la base de la poche parodontale et la crête osseuse",
+          "Le bord de la gencive libre et la crête osseuse."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le niveau d'attache clinique (perte d'attache) est la mesure la plus importante. C'est la distance entre la jonction amélo-cémentaire (JAC), qui est un repère fixe, et le fond de la poche."
+      },
+      {
+        questionText: "Suite à une agression infectieuse, le mécanisme pathogène des lésions parodontales",
+        options: [
+          "inflammatoire mais pas fonctionnel",
+          "inflammatoire et fonctionnel",
+          "dégénératif et parfois néoplasique",
+          "uniquement dégénératif",
+          "néoplasique."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La destruction parodontale est le résultat d'une réponse inflammatoire de l'hôte aux bactéries de la plaque. Cette inflammation, bien que défensive, est responsable de la destruction des tissus."
+      },
+      {
+        questionText: "Le syndrome de Kostmann se caractérise par :",
+        options: [
+          "un nombre de polynucléaires neutrophiles qui se situe entre 5000 et 10000/mm",
+          "un nombre de polynucléaires neutrophiles inférieur à 1000/mm",
+          "un nombre de polynucléaires neutrophiles inférieur à 10000/mm",
+          "un nombre de polynucléaires neutrophiles inférieur à 100000/mm",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le syndrome de Kostmann est une agranulocytose congénitale sévère, une maladie génétique rare caractérisée par une neutropénie chronique avec un nombre de polynucléaires neutrophiles très bas (souvent < 500/mm³)."
+      }
+    ]
+  },
+  {
+    title: "Test 2: 1er EMD PARO 2018 2019",
+    subject: "paro-y3",
+    questions: [
+      {
+        questionText: "En 1998, Socranskyet coll. ont encodé les complexes bactériens par différentes couleurs. Aggregatibacter actinomycetemcomitans fait parti du complex :",
+        options: [
+          "Rouge",
+          "Vert",
+          "Jaune"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Dans la classification originale de Socransky, A. actinomycetemcomitans était placé dans un groupe à part (le groupe \"a\"). Il n'appartenait à aucun des complexes colorés principaux. Cependant, il est considéré comme aussi pathogène que le complexe rouge."
+      },
+      {
+        questionText: "Le Principe de cet encodage par différentes couleurs est basé:",
+        options: [
+          "Sur notion d'organisation qualitative",
+          "Sur notion d'organisation quantitative.",
+          "Sur notion d'organisation spatiale.",
+          "Le concept d'organisation de la plaque dentaire en biofilm."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La classification de Socransky est basée sur une analyse qualitative (quels germes sont présents ensemble) et leur association avec la sévérité de la maladie parodontale (les complexes rouge et orange étant les plus pathogènes)."
+      },
+      {
+        questionText: "Les Fimbriaes :",
+        options: [
+          "sont insérés dans la membrane cytoplasmique des bactéries.",
+          "sont retrouvées lors de la phase réversible d'adhésion.",
+          "colonisent les tissus mous.",
+          "permettent l'adhésion des bactéries par une force hydrodynamique."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les fimbriae (ou pili) sont des appendices filamenteux protéiques ancrés dans la membrane des bactéries qui jouent un rôle crucial dans l'adhésion spécifiques (phase irréversible) aux surfaces dentaires et à d'autres bactéries."
+      },
+      {
+        questionText: "Dans le biofilm bactérien, les endotoxines :",
+        options: [
+          "provoquent la destruction du collagène.",
+          "provoquent la dégradation des protéines.",
+          "permettent aux bactéries d'adhérer aux surfaces tissulaires.",
+          "activent la phagocytose."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les endotoxines (principalement le LPS des bactéries Gram-) sont de puissants activateurs de la réponse inflammatoire de l'hôte (libération de cytokines, activation des ostéoclastes), menant indirectement à la destruction tissulaire. Elles n'activent pas la phagocytose directement."
+      },
+      {
+        questionText: "Les bactéries du biofilm bactérien adhèrent aux tissus de l'hôte:",
+        options: [
+          "Par la production des collagénases.",
+          "Par la production des endotoxines.",
+          "En utilisant des adhésines.",
+          "En utilisant des protéases.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'adhésion bactérienne est un phénomène spécifique médié par des protéines de surface appelées adhésines, qui se lient à des récepteurs complémentaires sur les cellules de l'hôte ou sur la pellicule exogène acquise."
+      },
+      {
+        questionText: "La classification des maladies parodontales selon l'Académie Américaine de Parodontologie (AAP) de 1999 d'ARMITAGE a bien développé :",
+        options: [
+          "Les caractéristiques des parodontites associées à des maladies systémiques.",
+          "la parodontite réfractaire.",
+          "les lésions endoparodontales.",
+          "les conditions déformables innées ou acquises."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La classification de 1999 était très détaillée et a notamment bien défini les parodontites associées à des maladies systémiques, les parodontites agressives, et les parodontites nécrosantes, entre autres."
+      },
+      {
+        questionText: "La bactérie qui est capable de synthétiser des protéases contre le système de complément est :",
+        options: [
+          "Fusobacterium nucleatum.",
+          "Spirochètes.",
+          "Prevotella intermedia.",
+          "Porphyromonas gingivalis.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Porphyromonas gingivalis (P.g.), une bactérie clé du complexe rouge, produit des protéases appelées gingipaïnes qui peuvent dégrader les composants du système du complément, lui permettant ainsi d'échapper à la réponse immunitaire de l'hôte."
+      },
+      {
+        questionText: "Les caractéristiques anatomo-pathologiques de la maladie parodontale lors de la lésion établie sont:",
+        options: [
+          "Migration des neutrophiles.",
+          "Prédominance de plasmocytes et de lymphocytes.",
+          "Caractérise le stade chronique.",
+          "Résorption de l'os alvéolaire."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La lésion établie (stade de la gingivite chronique) est caractérisée histologiquement par un infiltrat dense où prédominent les lymphocytes et surtout les plasmocytes. La résorption osseuse ne survient qu'au stade de la lésion avancée (parodontite)."
+      },
+      {
+        questionText: "Parmi ces maladies générales associées à une maladie parodontale ; lesquelles ne sont pas d'origine génétique?:",
+        options: [
+          "Modification hormonales",
+          "Histyocytose",
+          "Neutropénie",
+          "Leucémie"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les modifications hormonales (puberté, grossesse) et les leucémies (cancers hématologiques) sont des conditions acquises qui peuvent affecter le parodonte. Certaines neutropénies et les histiocytoses (comme la maladie de Langerhans) peuvent avoir une origine génétique."
+      },
+      {
+        questionText: "Dans la gingivite associée aux facteurs hormonaux :",
+        options: [
+          "La plaque est considérée comme le facteur initial déclenchant.",
+          "Les perturbations hormonales sont considérées comme le facteur initial déclenchant.",
+          "Les hormones affectent la réaction immunitaire.",
+          "Les hormones sont utilisées par les bactéries comme facteurs de croissance."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La plaque bactérienne reste le facteur étiologique primaire (1). Cependant, les hormones (ex: progestérone) exacerbent la réponse inflammatoire (3) et peuvent servir de nutriments pour certaines bactéries comme Prevotella intermedia (4), amplifiant la gingivite."
+      }
+    ]
+  },
+  {
+    title: "Test 3: 1er EMD PARO 2019 2020",
+    subject: "paro-y3",
+    questions: [
+      {
+        questionText: "L'indicateur le plus objectif de l'inflammation gingivale est :",
+        options: [
+          "l'érythème",
+          "douleur",
+          "Saignement",
+          "œdème"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le saignement au sondage (\"Bleeding On Probing\" - BOP) est considéré comme le signe clinique le plus objectif et le plus précoce de l'inflammation gingivale. L'érythème et l'œdème sont plus subjectifs à évaluer."
+      },
+      {
+        questionText: "Le tartre adhère aux surfaces dentaires:",
+        options: [
+          "par l'intermédiaire de la matrice extracellulaire",
+          "grâce aux éléments inorganiques",
+          "par l'intermédiaire de Fimbriae",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le tartre est de la plaque bactérienne minéralisée. Son adhérence à la dent se fait via la même interface que la plaque, c'est-à-dire la matrice organique du biofilm et la pellicule exogène acquise."
+      },
+      {
+        questionText: "Dans les atteintes cutanéo-muqueuses, l'érythème multiforme se caractérise par",
+        options: [
+          "Croutes sur les lèvres.",
+          "Papules violacées .",
+          "Lésions kératosiques.",
+          "Erosions et ulcérations."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "L'érythème polymorphe est une maladie muco-cutanée aiguë qui se manifeste typiquement par des lésions en \"cocardes\" sur la peau et, en bouche, par des érosions et ulcérations hémorragiques, avec des croûtes caractéristiques sur les lèvres."
+      },
+      {
+        questionText: "Parmi ces complexes bactériens, lesquels sont compatibles avec la sante parodontale ?",
+        options: [
+          "complexe rouge",
+          "complexe bleu",
+          "complexe violet",
+          "complexe orange",
+          "complexe jaune"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "Dans le modèle de Socransky, les complexes jaune, vert, violet et bleu sont des colonisateurs précoces, considérés comme compatibles avec la santé parodontale ou associés à la gingivite. Les complexes orange et rouge sont les pathogènes tardifs, associés à la parodontite."
+      },
+      {
+        questionText: "La migration extra-vasculaire des cellules de défense vers le foyer inflammatoire, se déroule comme suit :",
+        options: [
+          "-diapédèse – chimiotactisme - margination - phagocytose",
+          "-margination – chimiotactisme - diapédèse - phagocytose",
+          "-margination – diapédèse – chimiotactisme - phagocytose",
+          "-diapédèse – margination – phagocytose - chimiotactisme"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C'est la séquence chronologique : 1. Margination (les leucocytes roulent et adhèrent à la paroi du vaisseau), 2. Diapédèse (ils traversent la paroi), 3. Chimiotactisme (ils migrent vers le site de l'infection en suivant un gradient chimique), 4. Phagocytose (ils ingèrent les bactéries)."
+      },
+      {
+        questionText: "La croissance bactérienne dans le biofilm dentaire, débute :",
+        options: [
+          "pendant la phase irréversible",
+          "pendant la phase de colonisation",
+          "pendant la phase réversible"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Après l'adhésion irréversible, les bactéries pionnières commencent à se multiplier et à former des micro-colonies, c'est le début de la phase de colonisation et de maturation du biofilm."
+      },
+      {
+        questionText: "Les maladies parodontales constituent une famille de maladies qui diffèrent:",
+        options: [
+          "selon leurs étiologies",
+          "selon leurs enchaînements d'événements",
+          "selon leur réponse au traitement",
+          "selon leur progression"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le terme \"maladies parodontales\" regroupe un ensemble hétérogène de pathologies (gingivites, parodontites, etc.) qui diffèrent par leurs causes (types de bactéries), leur histoire naturelle, leur progression et leur réponse aux traitements."
+      },
+      {
+        questionText: "La fissure de STILLMAN est :",
+        options: [
+          "Un épaississement gingival sous forme de bourrelet autour des collets des dents.",
+          "Un type de récession gingivale spécifique.",
+          "Caractérisée par des fentes étroites partant de la gencive marginale en direction apicale.",
+          "Caractérisée par des fentes larges partant de la gencive marginale en direction apicale."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C'est la définition morphologique de la fente de Stillman : une récession gingivale très étroite et verticale."
+      }
+    ]
   }
 ];
 

@@ -1,3814 +1,5125 @@
 // quizzes/year-3/prothese-y3.js
 
 const prothesey3Quizzes = [
+
   {
-    title: "Les empreintes préliminaires en Prothèse Totale Adjointe",
-    subject: "prothese-y3",
-    questions: [
+    "title": "Ostéologie, myologie et Physiologie de L’édenté total",
+    "subject": "prothese-y3",
+    "questions": [
       {
-        questionText: "Parmi les propositions suivantes quelles sont celles qui sont justes:",
-        options: [
-          "Le matériau à empreinte ne joue aucun rôle dans la reproductibilité intime de l'empreinte.", // A
-          "L'empreinte primaire a pour but d'enregistrer les surfaces d'appuis.", // B
-          "L'empreinte primaire est réalisée avec un porte-empreinte de série (PES).", // C
-          "L'empreinte à l'alginate Préfigure fidèlement les limites de la future prothèse" // D
+        "questionText": "Le substratum osseux sur lequel s'appuie la prothèse supérieure correspond au niveau de los maxillaire à:",
+        "options": [
+          "Son sommet",
+          "À l'une de ses faces",
+          "À sa base",
+          "Toutes les réponses sont fausses"
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Le matériau joue un rôle clé dans la précision. L'empreinte primaire enregistre les surfaces d'appui et utilise un PES. Elle ne préfigure pas fidèlement les limites finales, c'est le rôle de l'empreinte secondaire."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le maxillaire est un os pair. Sa base constitue la surface d'appui de la prothèse supérieure, appelée substratum osseux, et forme le squelette de la voûte palatine."
       },
       {
-        questionText: "les empreintes préliminaires en prothèse totale :",
-        options: [
-          "Sont des empreintes anatomo fonctionnelles", // A
-          "Peuvent se faire avec du plâtre ou d’alginate", // B
-          "Permettent d'obtenir le modèle d'étude", // C
-          "Toutes les réponses sont justes" // D
+        "questionText": "Les muscles abaisseurs de la mandibule sont:",
+        "options": [
+          "Le mylohyoidien",
+          "Le ptérygoïdien médial ou interne",
+          "Le géniohyoïdien",
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Les empreintes préliminaires sont statiques (non anatomo-fonctionnelles). Elles peuvent utiliser plâtre ou alginate, et servent à réaliser le modèle d'étude pour la confection du PEI."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le muscle digastrique est également un abaisseur. Le ptérygoïdien médial, quant à lui, est un muscle élévateur."
       },
       {
-        questionText: "lors de la prise d'empreinte préliminaire en prothèse totale adjointe le porte empreint de série doit :",
-        options: [
-          "Etre ajusté et en contact intime avec les surfaces d’appui", // A
-          "Être distant de la ligne de réflexion muqueuse", // B
-          "Refouler les organes para prothétiques", // C
-          "Recouvrir tous les éléments anatomiques positifs" // D
+        "questionText": "Les muscles qui stabilisent la Les prothèse totale adjointe sont",
+        "options": [
+          "Masséter",
+          "Mylo-hyoïdien",
+          "Buccinateur",
+          "Orbiculaire des lèvres"
         ],
-        correctOptionIndexes: [1, 3], // B, D
-        explanation: "Le PES doit être légèrement plus grand que l'arcade, distant de la ligne de réflexion muqueuse (pour laisser de la place au matériau), ne doit pas refouler les organes périphériques, et doit recouvrir toutes les surfaces d'appui."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les muscles périphériques comme l’orbiculaire et le buccinateur participent à la stabilisation des prothèses par la tension de leurs fibres parallèles au plan d’occlusion."
       },
       {
-        questionText: "L'empreinte primaire a pour objectif",
-        options: [
-          "D'apprécier le degré de résorption osseuse", // A
-          "D’analyser les limites idéales de la future prothèse", // B
-          "De réaliser fidèlement la prothèse définitive", // C
-          "D'apprécier l'état de la fibromuqueuse" // D
+        "questionText": "Le muscle masséter est:",
+        "options": [
+          "Un muscle élévateur de la mandibule",
+          "Un muscle court, épais et quadrilatère",
+          "Formé de deux faisceaux, superficiel et profond",
+          "Un muscle à exploiter lors de la réalisation de la prothèse adjointe totale"
         ],
-        correctOptionIndexes: [0, 1], // A, B - based on higher percentages (D is lower and comment contradicts)
-        explanation: "L'empreinte primaire permet d'obtenir un modèle d'étude pour analyser la résorption, et les limites approximatives. Elle ne sert pas à réaliser directement la prothèse définitive. L'état de la fibromuqueuse est apprécié cliniquement."
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Le muscle masséter est un puissant élévateur de la mandibule et est composé de deux faisceaux, un superficiel et un profond."
       },
       {
-        questionText: "Lors du traitement de l'empreinte primaire à l'alginate",
-        options: [
-          "La coulée du modèle dans l'empreinte avec du plâtre ordinaire doit être faite immédiatement après la prise de l'empreinte", // A
-          "Pulvériser l'empreinte avec de la poudre de plâtre pour réduire l'acidité supérieure de l'alginate sur la surface de l’empreinte", // B
-          "L'empreinte à l'alginate est lavée puis conservée dans un endroit frais à l'abri de l'humidité.", // C
-          "Toutes les réponses sont justes" // D
+        "questionText": "Le muscle mylohyoidien",
+        "options": [
+          "Est un muscle élévateur de la mandibule",
+          "Forme le plancher de la cavité buccale",
+          "S'insère au niveau de la ligne oblique interne et de l'os hyoïde .",
+          "permet de stabiliser la prothèse inférieure"
         ],
-        correctOptionIndexes: [0], // QCS - A has highest percentage
-        explanation: "La coulée doit être immédiate mais avec du plâtre dur. L'empreinte doit être lavée et conservée dans une atmosphère saturée d'humidité. La pulvérisation de poudre de plâtre n'est pas standard. Malgré l'inexactitude ('ordinaire' vs 'dur'), A a le plus haut pourcentage et est probablement la réponse attendue."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le mylohyoïdien est un muscle abaisseur de la mandibule. Il est en contact avec le bord lingual de la prothèse."
       },
       {
-        questionText: "l’empreinte au plâtre est contre Indiquée",
-        options: [
-          "En présence de contre dépouille", // A
-          "Patient présentant un réflexe nauséeux", // B
-          "Patient présentant un état de sénilité avancé, ou une pathologie spécifique rendant difficile toute coopération", // C
-          "Asialie, sécheresse buccale." // D
+        "questionText": "Les muscles élévateurs de la mandibule sont:",
+        "options": [
+          "Le ptérygoïdien externe",
+          "Le temporal",
+          "Le masseter",
+          "Le digastrique"
         ],
-        correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D
-        explanation: "Toutes ces situations sont des indications pour l'alginate, et donc des contre-indications pour le plâtre."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les principaux muscles élévateurs de la mandibule sont le masséter, le temporal et le ptérygoïdien médial (ou interne)."
       },
       {
-        questionText: "L'alginate",
-        options: [
-          "Est un hydro colloïde réversible.", // A
-          "Est un matériau stable dans le temps.", // B
-          "Est de manipulation facile.", // C
-          "Sa consistance doit être fluide lors de la prise d'empreinte" // D
+        "questionText": "La ligne oblique interne:",
+        "options": [
+          "Sert de surface d'insertion au muscle mylohyoidien",
+          "Constitue une poutre de résistance interne",
+          "Détermine avec la branche montante le triangle rétromolaire",
+          "Se dirige horizontalement puis obliquement en haut et en arrière"
         ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "L'alginate est un hydrocolloïde irréversible, instable dimensionnellement, facile à manipuler, et doit avoir une consistance crémeuse."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La ligne oblique interne sert effectivement de surface d'insertion au muscle mylohyoïdien."
       },
       {
-        questionText: "L'empreinte préliminaire en prothèse adjointe totale:",
-        options: [
-          "Permet d'apprécier le degré de résorption osseuse", // A
-          "Se fait exclusivement avec de l'alginate", // B
-          "Permet de réaliser un porte empreinte individuel", // C
-          "Toutes les réponses sont justes" // D
+        "questionText": "Le muscle masseter :",
+        "options": [
+          "Posséde deux faisceaux",
+          "Est un muscle abaisseur",
+          "Présente un rapport favorable à la rétention des prothèses mandibulaires",
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Elle permet d'apprécier la résorption et est utilisée pour confectionner le PEI. Elle peut se faire avec de l'alginate ou du plâtre."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le masséter possède un faisceau superficiel et un faisceau profond. C'est un muscle élévateur, non abaisseur."
       },
       {
-        questionText: "Lors de la prise d'empreinte préliminaire au maxillaire supérieure:",
-        options: [
-          "Le porte empreinte doit être en contact intime avec toute la surface d'appui", // A
-          "Le fauteuil dentaire est incliné vers l'arrière", // B
-          "La coulée peut être différée quand le plâtre est utilisé", // C
-          "Toutes les réponses sont fausses" // D
+        "questionText": "orbiculaire des lèvres :",
+        "options": [
+          "intervient dans le modelage de l’extrados prothétique",
+          "Est un muscle masticateur",
+          "Fait partie de la sangle labio jugale",
+          "Intervient dans la phonation"
         ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "Le PE doit ménager un espacement. Le patient est en position droite (orthostatique). La coulée de l'alginate doit être immédiate, mais celle du plâtre peut être différée."
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "L'orbiculaire des lèvres est un muscle de l'expression, non un muscle masticateur. Il joue un rôle dans le modelage de l'extrados prothétique et dans la phonation."
       },
       {
-        questionText: "En prothèse amovible complété l'empreinte à l’alginate fluide est une empreinte :",
-        options: [
-          "Anatomo-fonctionnelle", // A
-          "Statique.", // B
-          "Muco-statique", // C
-          "Muco-dynamique.", // D
-          "Dynamique." // E
+        "questionText": "Le maxillaire est :",
+        "options": [
+          "Un os impair",
+          "Presente 4 faces une base et un sommet",
+          "sa base constitue le substratum osseux de la prothèse supérieure",
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "L'empreinte à l'alginate, surtout fluide, est généralement considérée comme mucostatique, car elle enregistre les tissus au repos sans compression importante."
-      },
-       {
-        questionText: "La limite postérieure du porte-empreinte individuel maxillaire doit se terminer :",
-        options: [
-          "En avant de la ligne de flexion du voile.", // A
-          "En avant des fossettes palatines.", // B
-          "Les 2 propositions A et B sont vraies", // C
-          "Les 2 propositions A et B sont fausses." // D
+        "correctOptionIndexes": [
+          2
         ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Le bord postérieur du PEI doit dépasser la ligne de flexion du voile de 2mm et les fossettes palatines de 4mm."
+        "explanation": "Le maxillaire est un os pair. Il présente trois faces, une base et un sommet."
       },
       {
-        questionText: "L'empreinte non compressive au plâtre est indiquée",
-        options: [
-          "De crêtes peu résorbées de classe 1 et II.", // A
-          "D'une corticale osseuse lisse et régulière.", // B
-          "D'une fibro-muqueuse saine et adhérente.", // C
-          "Les 3 propositions A, B, C sont fausses" // D
+        "questionText": "La ligne oblique interne :",
+        "options": [
+          "S’élève obliquement en haut et en arrière",
+          "Est la zone d'insertion du muscle mylohyoidien",
+          "Est une poutre de résistance interne",
+          "Toutes les réponses sont juste"
         ],
-        correctOptionIndexes: [0, 1, 2], // A, B, C
-        explanation: "L'empreinte au plâtre non compressive est indiquée pour les crêtes peu résorbées, régulières, avec une fibromuqueuse saine et adhérente."
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La ligne oblique interne se dirige d'abord horizontalement puis obliquement."
       },
       {
-        questionText: "L'empreinte préliminaire anatomo-fonctionnelle compressive avec un matériau thermoplastique est indiquée :",
-        options: [
-          "En présence d'une surface d'appui osseuse irrégulière.", // A
-          "Lorsque la fibro-muqueuse est d'une épaisseur variant d'un point à un autre.", // B
-          "En présence d'une crête flottante", // C
-          "Lorsque la crête est très résorbée" // D
+        "questionText": "Le muscle temporal :",
+        "options": [
+          "Participe à l'élévation de la mandibule",
+          "Participe à la rétro pulsion",
+          "Est en relation avec la partie vestibulaire du bord postérieur de la prothèse supérieure",
+          "Est en relation avec la partie postérieure de la prothèse inferieure",
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [0, 1], // A, B - based on table in source 613 ('fibromuqueuse dépressible')
-        explanation: "L'empreinte compressive avec matériau thermoplastique est indiquée pour les surfaces osseuses irrégulières ou une fibromuqueuse dépressible (épaisseur variable). La crête flottante nécessite une technique non compressive ou sélective."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le muscle temporal participe au recul de la mandibule par ses fibres postérieures. Il est en relation avec la prothèse, surtout via ses insertions sur le processus coronoïde. Son action principale est l'élévation."
       },
       {
-        questionText: "A la mandibule le porte empreint de série doit :",
-        options: [
-          "Recouvrir les ligaments pterygo-maxillaire,", // A
-          "Recouvrir les tubérosités.", // B
-          "Etre distant de la frange sublinguale", // C
-          "Recouvrir les lignes obliques internes", // D
-          "Toutes les réponses sont fausses." // E
+        "questionText": "Les muscles masticateurs sont :",
+        "options": [
+          "Les muscles élévateurs",
+          "Les muscles abaisseurs.",
+          "Les muscles de la mimique.",
+          "Les muscles de la déglutition."
         ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Le PES mandibulaire ne doit pas interférer avec le ligament ptérygo-maxillaire, les tubérosités sont maxillaires, le bord doit être en contact avec la frange sublinguale. Il doit recouvrir les structures d'appui comme les lignes obliques internes."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les muscles masticateurs incluent à la fois les muscles élévateurs et abaisseurs de la mandibule."
       },
       {
-        questionText: "Le choix du porte empreinte de série se fera selon :",
-        options: [
-          "Le matériau à empreinte", // A
-          "La dimension de la crête édentée.", // B
-          "La forme de la crête édentée.", // C
-          "Toutes les réponses sont justes" // D
+        "questionText": "Le muscle buccinateur:",
+        "options": [
+          "Est situé dans l'épaisseur des joues.",
+          "Forme la poche de FISH",
+          "Est un muscle propulseur.",
+          "Est un muscle élévateur"
         ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Le choix du PES dépend du matériau utilisé (perforé pour alginate, lisse pour plâtre), ainsi que de la dimension et de la forme de l'arcade pour assurer un espacement adéquat."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le buccinateur est un muscle de l'expression, et non un muscle propulseur ou élévateur. Il est bien situé dans l'épaisseur des joues."
       },
       {
-        questionText: "Les empreintes primaires au plâtre :",
-        options: [
-          "Exigent une coulée rapide.", // A
-          "Exigent des portes empreintes lisses.", // B
-          "Exigent l'absence de contre dépouilles.", // C
-          "Sont compressives.", // D
-          "Toutes les réponses sont fausses." // E
+        "questionText": "Le masséter:",
+        "options": [
+          "Est un muscle élévater rétropulseur",
+          "Présente deux faisceaux qui sont en relation avec la prothèse.",
+          "Favorise la stabilité des prothèses.",
+          "Est un muscle de l'expression",
+          "Toutes les réponses sont fausses"
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Les empreintes au plâtre permettent une coulée différée, nécessitent des PE lisses, sont contre-indiquées en présence de contre-dépouilles importantes, et sont considérées comme non compressives."
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le masséter est un muscle élévateur et légèrement propulseur, non rétropulseur. Il a deux faisceaux et est un muscle masticateur, pas de l'expression. Son rôle dans la stabilité n'est pas direct. Ainsi, toutes les propositions sont fausses."
       },
       {
-        questionText: "Les objectifs de l'empreinte primaire sont :",
-        options: [
-          "Moulage précis des surfaces d'appuis.", // A
-          "Obtention de l'espace neutre d'équilibre.", // B
-          "Obtention du modèle d'étude.", // C
-          "Réalisation d'un porte empreinte individuel.", // D
-          "Obtention du modèle secondaire." // E
+        "questionText": "L'os maxillaire présente :",
+        "options": [
+          "Une face supérieure orbitaire.",
+          "Une face antérieure orbitaire.",
+          "Une face antérieure génienne.",
+          "Une face postérieure génienne.",
+          "Une face postérieure orbitaire"
         ],
-        correctOptionIndexes: [2, 3], // C, D (A is secondary objective maybe)
-        explanation: "L'empreinte primaire vise principalement à obtenir le modèle d'étude sur lequel sera réalisé le PEI. Le moulage précis est l'objectif de l'empreinte secondaire. L'espace neutre et le modèle secondaire relèvent de l'empreinte secondaire."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'os maxillaire possède une face supérieure (orbitaire), une face antérieure (génienne), et une face postérieure (ptérygo-maxillaire)."
       },
       {
-        questionText: "Dans le plan frontal, un porte empreinte de série doit :",
-        options: [
-          "Dépasser de 2mm la limite du palais", // A
-          "Correspondre à la forme de l'arcade.", // B
-          "Etre elliptique.", // C
-          "Avoir les bords distants de la ligne réflexion muqueuse.", // D
-          "Ménager un espace suffisant entre la crête et lui-même" // E
+        "questionText": "L'apophyse montante du maxillaire supérieur est formé par le de :",
+        "options": [
+          "La face supérieure et la face antérieure.",
+          "La face postérieure et la face antérieure",
+          "La face postérieure et la face supérieure.",
+          "La face orbitaire et la face génienne",
+          "La face génienne et la face ptérygotubérositaire."
         ],
-        correctOptionIndexes: [1, 3, 4], // B, D, E
-        explanation: "Dans le plan frontal, le PES doit correspondre à la forme de l'arcade, être distant de la ligne de réflexion et ménager un espace pour le matériau. Le dépassement du palais concerne le plan sagittal. La forme elliptique concerne le plan horizontal."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'apophyse montante (ou processus frontal) du maxillaire se forme à la jonction de la face supérieure (orbitaire) et de la face antérieure (génienne)."
+      },
+      {
+        "questionText": "Le masséter est un muscle:",
+        "options": [
+          "Masticateur.",
+          "Rétropulseur.",
+          "Déducteur.",
+          "Propulseur",
+          "Elévateur."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le masséter est un muscle masticateur dont la fonction principale est l'élévation de la mandibule. Il a aussi une légère action de propulsion."
+      },
+      {
+        "questionText": "le ptérygoïdien latéral est un muscle :",
+        "options": [
+          "Propulseur.",
+          "Déducteur.",
+          "Rétropulseur.",
+          "Elévateur.",
+          "Masticateur."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le ptérygoïdien latéral est un muscle masticateur essentiel pour les mouvements de propulsion et de diduction (mouvement latéral)."
+      },
+      {
+        "questionText": "La langue est constituée de :",
+        "options": [
+          "8 muscles impairs et un muscle pair",
+          "8 muscles pairs et un muscle impair.",
+          "4 muscles impairs et 4 muscles pairs.",
+          "6 muscles pairs et un muscle impair.",
+          "6 muscles impairs et un muscle pair."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La langue est un organe complexe composé de 17 muscles au total : 8 paires de muscles et un seul muscle impair."
+      },
+      {
+        "questionText": "La déglutition chez l'édenté total se fait en :",
+        "options": [
+          "1 seul temps.",
+          "2 temps.",
+          "3 temps.",
+          "4 temps.",
+          "5 temps"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La perte des dents ramène l'édenté total à un comportement neuromusculaire de nourrisson. La langue stabilise la mandibule en s'appuyant contre le palais. La déglutition se décompose classiquement en 4 temps : préparation buccale, passage bucco-pharyngien, traversée pharyngienne, et temps œsophagien."
+      },
+      {
+        "questionText": "Chez l'édenté total, les voyelles sont modifiées par :",
+        "options": [
+          "L'hypertonie des orbiculaires des lèvres.",
+          "l'hypotonie des orbiculaires des lèvres.",
+          "L'hypertonie, des muscles masticateurs",
+          "L'hypotonie des muscles masticateurs.",
+          "L'hypotonie des muscles hyoïdiens."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les voyelles 'I' et 'E' sont modifiées par l'hypotonie (diminution du tonus) des muscles orbiculaires des lèvres suite à la perte du soutien dentaire."
       }
     ]
   },
   {
-    title: "Ostéologie, myologie et Physiologie de L’édenté total",
+    "title": "L'examen clinique en prothèse adjointe totale",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Les poches de Fish",
+        "options": [
+          "Constituent région du volet lingual",
+          "Sont délimitées antérieurement par le frein vestibulaire latéro-inférieur",
+          "Limitent l'extension de la prothèse dans la région latérale",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les poches de Fish sont délimitées mésialement par la région du frein vestibulaire latéro-inférieur et distalement par le bord antérieur du masséter. L'extension de la prothèse y trouve des conditions favorables."
+      },
+      {
+        "questionText": "Le torus palatin est:",
+        "options": [
+          "Une proéminence osseuse qui se forme toujours au dépend de la suture intermaxillaire.",
+          "De type 3 de LANDA quand il est allongé, peu saillant au niveau des 2/3 postérieurs",
+          "De type 4 de LANDA quand il est étroit, au niveau du 1/3 antérieur",
+          "Un indice négatif qui entraine un mouvement de bascule de la prothèse"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le torus palatin est une proéminence osseuse qui peut se former sur la suture intermaxillaire ou transverse. C'est un élément anatomique à respecter qui, s'il est volumineux, peut créer un point de pivot et déstabiliser la prothèse."
+      },
+      {
+        "questionText": "La salive:",
+        "options": [
+          "Est un élément clé de la rétention des prothèses adjointes totales",
+          "Doit être évaluer quantitativement et qualitativement",
+          "Est de meilleure qualité quand elle est visqueuse",
+          "Est de meilleure qualité quand elle est très peu visqueuse"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La quantité et la qualité de la salive doivent être évaluées. L'étirement de la salive entre deux doigts permet d'évaluer sa teneur en mucines, donc sa qualité. Le volume peut être estimé en plaçant un morceau de sucre sous la langue, qui devrait fondre en 2-3 minutes."
+      },
+      {
+        "questionText": "Les éléments anatomophysiologiques à exploiter à la mandibule sont:",
+        "options": [
+          "La frange sublinguale",
+          "Les poches d'Eisenring",
+          "Les tubercules retro molaires",
+          "La ligne oblique interne"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les poches d'Eisenring sont situées au maxillaire. À la mandibule, les tubercules rétromolaires sont des éléments clés à exploiter."
+      },
+      {
+        "questionText": "Les poches de FISH:",
+        "options": [
+          "Sont délimitées antérieurement par le frein latéral et postérieurement par l'insertion antérieure du masséter",
+          "Joue un rôle stabilisateur de la prothèse totale inférieure -",
+          "Joue un rôle dans la rétention de la prothèse totale inférieure",
+          "peut-être un indice négatif"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les poches de Fish, situées dans la région vestibulaire postéro-latérale mandibulaire, sont des zones clés pour la stabilisation et la rétention de la prothèse inférieure."
+      },
+      {
+        "questionText": "Les apophyses géni sont:",
+        "options": [
+          "Le point de départ des lignes obliques internes",
+          "Le point d'insertion du muscle génio-glosse",
+          "Toujours dégagées lors de la réalisation de la prothèse totale inférieure",
+          "déchargées quand elles sont saillantes ou douloureuses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Situées sur la face postérieure de la mandibule, les apophyses géni doivent être recouvertes par la prothèse mais déchargées (et non dégagées) si elles sont saillantes ou douloureuses pour éviter les blessures."
+      },
+      {
+        "questionText": "La niche rétro molaire :",
+        "options": [
+          "Est un hiatus entre le mylohyoïdien et le lingual du constricteur supérieur du pharynx",
+          "Permet une extension distale si la ligne oblique interne le permet.",
+          "Participe à la sustentation de la prothèse totale mandibulaire",
+          "Participe à la rétention de la prothèse totale mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les niches rétromolaires sont des zones à exploiter au maximum, car elles autorisent une extension distale de la prothèse (volet lingual) qui contribue à la rétention."
+      },
+      {
+        "questionText": "Lors de l'observation clinique en prothèse totale",
+        "options": [
+          "ll est primordial de cerner le profil psychologique de notre patient",
+          "Le praticien n'accorde aucune importance aux anciennes prothèses du patient",
+          "La profession du patient peut déterminer certaines exigences prothétiques",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Il est crucial de comprendre le profil psychologique du patient et ses attentes. Sa profession peut également influencer les exigences esthétiques ou fonctionnelles de la prothèse."
+      },
+      {
+        "questionText": "Lors de l'examen clinique exobuccal",
+        "options": [
+          "La palpation des muscles de la face est nécessaire",
+          "La forme du visage n'a aucune importance dans le choix des dents prothétiques",
+          "Des pathologies articulaires sont détectées par palpation",
+          "Nous permet d'évaluer la hauteur des 2 étages de la face"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'examen exobuccal inclut la palpation des muscles et des articulations temporo-mandibulaires (ATM) pour détecter d'éventuelles pathologies, ainsi que l'évaluation des étages de la face."
+      },
+      {
+        "questionText": "Les indices négatifs en prothèse totale",
+        "options": [
+          "Sont tous à décharger",
+          "améliorent la stabilité des futures prothèses, en les évitant",
+          "Nécessitent systématiquement une chirurgie préprothétique",
+          "Lorsqu'une décharge est nécessaire, elle se fait avec une épaisseur importante de cire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le terme 'indice biologique négatif' désigne les éléments anatomiques ou physiologiques défavorables qu’il est préférable d'éviter (dégager ou rejeter) pour améliorer la stabilité. Une décharge consiste à réduire la pression, tandis que dégager signifie créer de l'espace."
+      },
+      {
+        "questionText": "Parmi les indices négatifs au maxillaire nous avons",
+        "options": [
+          "Le ligament ptérygomaxillaire",
+          "Le sillon ptérygo maxillaire",
+          "Le torus palatin",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le sillon ptérygo-maxillaire est un indice positif car il constitue la limite à atteindre pour une rétention maximale. Le ligament ptérygo-maxillaire et le torus palatin sont des indices négatifs à gérer."
+      },
+      {
+        "questionText": "les tubérosités :",
+        "options": [
+          "Se situent à la jonction ptérygo maxilaire",
+          "Doivent être déchargées par la prothèse",
+          "Doivent être de dépouille",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Idéalement, les tubérosités maxillaires doivent être 'de dépouille', c'est-à-dire non rétentives, pour permettre une insertion et une désinsertion correctes de la prothèse tout en participant à la rétention."
+      },
+      {
+        "questionText": "Les apophyses génies:",
+        "options": [
+          "Assurent l'insertion du géniohyoidien",
+          "Sont dégagées en cas de douleur",
+          "se situent sur la face interne du corp mandibulaire",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Les apophyses géni, situées sur la face interne de la mandibule, doivent être déchargées (et non dégagées) en cas de douleur pour éviter les blessures."
+      },
+      {
+        "questionText": "En prothèse amovible complète, connaitre la personnalité du patient est:",
+        "options": [
+          "indispensable.",
+          "Souhaitable.",
+          "Sans intérêts.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Il est indispensable de comprendre la personnalité du patient pour adapter le discours, gérer ses attentes et assurer le succès du traitement."
+      },
+      {
+        "questionText": "La réussite d'une prothèse amovible complète dépend:",
+        "options": [
+          "De la coopération du patient.",
+          "D'un examen minutieux.",
+          "D'une analyse préprothétique approfondie.",
+          "Du sexe du patient"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La réussite dépend de nombreux facteurs, incluant un examen et une analyse rigoureux, ainsi que de la coopération et de l'adaptation du patient."
+      },
+      {
+        "questionText": "Les poches d'Elsenring sont :",
+        "options": [
+          "Situées au niveau maxillaire.",
+          "Situées au niveau mandibulaire.",
+          "Situées postérieurement au niveau maxillaire.",
+          "Situées antérieurement au niveau mandibulaire."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les poches d'Eisenring (ou para-tubérositaires) sont des zones anatomiques situées au maxillaire, créées par la résorption centripète de l'os."
+      },
+      {
+        "questionText": "En prothèse amovible complète, la panoramique dentaire nous renseigne sur :",
+        "options": [
+          "La densité osseuse.",
+          "Le degré de résorption osseuse",
+          "La présence de dents incluses.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "La radiographie panoramique est essentielle pour évaluer le degré de résorption osseuse et rechercher la présence d'éléments intra-osseux comme des dents incluses ou des racines résiduelles."
+      },
+      {
+        "questionText": "Connaitre la personnalité des patients est:",
+        "options": [
+          "Sans importance pour le déroulement du traitement prothétique.",
+          "Impératif pour adapter le discours et la prise en charge à chacun d'entre eux.",
+          "Essentiel pour établir un plan de traitement adéquat.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Comprendre la personnalité du patient est essentiel pour établir un plan de traitement réaliste et adapté, et pour ajuster la communication et la prise en charge."
+      },
+      {
+        "questionText": "En prothèse amovible complète, l'examen radiologique panoramique nous informe sur :",
+        "options": [
+          "Le degré de résorption.",
+          "les éléments intra osseux",
+          "Le système articulaire.",
+          "Le choix des thérapeutiques amovibles."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Le panoramique dentaire permet d'évaluer le degré de résorption osseuse, de détecter des éléments intra-osseux (racines, dents incluses, pathologies) et de visualiser globalement le système articulaire."
+      },
+      {
+        "questionText": "Les fossettes palatines:",
+        "options": [
+          "Constituent un repère pour la limite postérieure de la prothèse",
+          "Doivent être toujours visible.",
+          "Se trouvent de part et d'autre de la suture intermaxillaire.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les fossettes palatines sont situées de part et d'autre de la suture intermaxillaire et doivent être recouvertes par la prothèse, servant de repère pour sa limite postérieure."
+      },
+      {
+        "questionText": "Le ligament ptérygo-maxillaire :",
+        "options": [
+          "Se tend à l'ouverture buccale.",
+          "Ne doit pas être recouvert par la prothèse maxillaire.",
+          "Constitue la limite postérieure de la prothèse inférieure.",
+          "Les deux propositions A et B sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Lors de l'ouverture buccale, le ligament ptérygo-maxillaire est sollicité et peut interférer avec la zone postérieure de la prothèse maxillaire, constituant un indice négatif. Il doit donc ne pas être recouvert."
+      },
+      {
+        "questionText": "Les condyles de l'édenté total :",
+        "options": [
+          "Effectuent un mouvement de rotation autour d'un point.",
+          "Effectuent un mouvement en charnière.",
+          "Effectuent un mouvement de translation.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le mouvement de l'articulation temporo-mandibulaire (ATM) se décompose en un mouvement de rotation (au niveau de l'articulation menisco-condylienne, dit 'en charnière') et un mouvement de glissement (translation) au niveau de l'articulation temporo-méniscale."
+      },
+      {
+        "questionText": "La fibromuqueuse recouvrant les crêtes résiduelles sera palpée pour évaluer :",
+        "options": [
+          "Son adhérence.",
+          "Son étendu.",
+          "Sa couleur.",
+          "Son épaisseur."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La palpation de la fibromuqueuse permet d'évaluer son adhérence à l'os sous-jacent ainsi que son épaisseur (résilience)."
+      },
+      {
+        "questionText": "Le torus palatin:",
+        "options": [
+          "Se développe sur la suture palato-maxillaire.",
+          "A été classé par Atwood en 5 types.",
+          "Est le plus souvent de forme ovalaire.",
+          "Est douloureux à la palpation.",
+          "Est remodelé selon la technique de CHAPPA lorsqu'il est réellement."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le torus palatin se développe sur la suture intermaxillaire. Sa forme est variable : ovalaire, arrondie ou en chapelet. Il peut entraîner un déséquilibre de la prothèse."
+      },
+      {
+        "questionText": "Dans l'étude de la personnalité de l'édenté total, le suspicieux est :",
+        "options": [
+          "Apathique, non concerné par le traitement.",
+          "Non coopérant.",
+          "Demande du temps et patience.",
+          "Très craintif.",
+          "Impatient, difficile à satisfaire."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le patient suspicieux est exigeant, demande des détails et pose beaucoup de questions. Il faut être prêt à y répondre, surtout au stade pré-prothétique. L'apathique est 'indifférent', le non-coopérant 'agressif', et le craintif 'anxieux'."
+      },
+      {
+        "questionText": "A l'examen clinque, si le patient présente un diabète, il faut :",
+        "options": [
+          "Eviter les blessures.",
+          "Maintenir l'hygiène.",
+          "Réduire la durée de port de la prothèse.",
+          "Préconiser un port nocturne de la prothèse",
+          "Eviter d'appareiller le patient."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Chez un patient diabétique, il faut éviter les blessures et maintenir une hygiène rigoureuse. La réduction de la durée de port est plutôt conseillée pour les patients ayant subi une radiothérapie."
+      },
+      {
+        "questionText": "Les tubérosités sont favorables à la sustentation et à la stabilisation si elles:",
+        "options": [
+          "Sont arrondies, bien marquées.",
+          "Sont arrondies, peu marquées.",
+          "Partie la plus basse se situe à 2 mm au-dessus du plan occlusal.",
+          "Partie la plus basse se situe à 2 mm au-dessous du plan occlusal.",
+          "Sont recouvertes par un tissu ferme et adhérent."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Des tubérosités bien marquées, non rétentives, et recouvertes d'une fibromuqueuse ferme et adhérente offrent une excellente surface pour la sustentation et la stabilisation de la prothèse."
+      }
+    ]
+  },
+  {
+    "title": "La mise en condition en prothèse totale",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "La mise en condition tissulaire est indiquée:",
+        "options": [
+          "En présence de tissus blessés ou hyperémiés",
+          "En présence de reflexes erronés de l'occlusion",
+          "Après toute chirurgie préprothétique",
+          "Toutes les réponses sont juste"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les principales indications incluent : la présence de tissus hyperémiés, sensibles ou blessés par une prothèse mal conçue; une prothèse actuelle trop petite; les stomatites prothétiques; après une chirurgie préprothétique; et en cas de résorption alvéolaire excessive."
+      },
+      {
+        "questionText": "Un conditionneur tissulaire :",
+        "options": [
+          "Est appliqué de façon permanente au niveau de l'intrados prothétique",
+          "Doit disposer d'un faible fluage initial",
+          "Absorbe une partie des contraintes occlusales",
+          "Doit adhérer aux bases prothétiques"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Un conditionneur tissulaire est un matériau plastique ou élastique appliqué temporairement. Il doit avoir un haut fluage initial pour mouler les tissus en douceur et doit bien adhérer aux bases en résine acrylique."
+      },
+      {
+        "questionText": "La technique de mise en condition tissulaire :",
+        "options": [
+          "Se fait en plusieurs séances",
+          "Nécessite l'utilisation de nouvelles prothèses",
+          "Est jugée satisfaisante quand le patient n'exprime plus de doléances",
+          "Est suivie d'un rebasage ou d'un nouveau traitement prothétique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La mise en condition tissulaire se fait en plusieurs séances et peut être réalisée à l'aide d'une prothèse transitoire, qui peut être soit une ancienne prothèse, soit une prothèse provisoire faite pour cette étape."
+      },
+      {
+        "questionText": "La mise en condition tissulaire :",
+        "options": [
+          "Permet de redonner à une muqueuse irritée un comportement histologique et physiologique le plus favorable à leur fonction prothétique",
+          "Est réservée à la population âgée qui ne peut pas subir une chirurgie pré prothétique",
+          "Permet d'élargir au maximum les surfaces d'appuis primaires et secondaires",
+          "Participe à l'intégration organique extéroceptive des prothèses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'objectif principal de la mise en condition tissulaire est de restaurer la santé d'une muqueuse irritée pour la préparer à recevoir la future prothèse dans des conditions optimales."
+      },
+      {
+        "questionText": "Parmi les caractéristiques des matériaux de mise en condition tissulaire:",
+        "options": [
+          "Gélification relativement rapide",
+          "Un haut fluage initial",
+          "Absorber toutes les contraintes occlusales",
+          "Continuer à fluer pour s'adapter aux modifications de forme des tissus."
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "Ces matériaux doivent avoir une gélification relativement lente, un fluage initial élevé, et n'absorber qu'une partie des contraintes occlusales tout en continuant de s'adapter aux tissus."
+      },
+      {
+        "questionText": "La mise en condition neuro musculo articulaire :",
+        "options": [
+          "Est indiquée en cas de problèmes musculaires ou articulaires causés par un enregistrement erroné de la relation centré",
+          "Est réalisable qu'avec l'ancienne prothèse du patient",
+          "Permet d'oublier une position mandibulaire acquise erronée.",
+          "Peut succéder à une mise en condition tissulaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Elle est indiquée pour corriger des problèmes musculaires ou articulaires dus à une mauvaise occlusion. Pour les patients non appareillés, elle peut être réalisée avec une prothèse provisoire."
+      },
+      {
+        "questionText": "La résine à prise retardée Cochez la ou les réponses juste",
+        "options": [
+          "Est composée d'une poudre de méthacrylate de formol",
+          "Sa réaction de prise passe par 6 phases successives",
+          "Lors de la phase de dessiccation le patient doit continuer à porter la prothèse",
+          "Peut être renouvelée autant de fois que nécessaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La poudre est composée de polyéthyl méthacrylate. Sa réaction de prise passe par 5 phases. Lors de la phase de dessiccation, la résine devient rugueuse et agressive, le port doit être interrompu."
+      },
+      {
+        "questionText": "Lors de la phase plastique de la résine à prise retardée",
+        "options": [
+          "Le matériau est placé à l'intérieur de la prothèse",
+          "La prothèse garnie du matériau est placé en bouche",
+          "La durée de cette phase est très courte",
+          "Le matériau se modèle sous l'effet des différentes pressions"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le matériau est placé dans la prothèse pendant la phase de gel. La durée de la phase plastique varie selon les marques de résine. C'est pendant cette phase que le matériau se modèle."
+      },
+      {
+        "questionText": "Les résines acryliques à prise retardées",
+        "options": [
+          "Sont introduites en bouche à l'état plastique",
+          "Sont stables dans le temps",
+          "Créaient un coussin amortisseur contre la surface d'appui altérée",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Ces résines sont appliquées de façon temporaire et ne sont donc pas stables dans le temps. Elles sont introduites en phase plastique pour servir de coussin amortisseur."
+      },
+      {
+        "questionText": "la mise en condition neuromusculaire est dépendante :",
+        "options": [
+          "De l’orientation du POP",
+          "De la dimension verticale d’occlusion",
+          "De la relation centrée",
+          "Du montage des dents prothétiques"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La mise en condition neuromusculaire vise à rétablir un équilibre qui dépend de tous les paramètres occlusaux, avec un accent particulier sur une relation centrée correcte."
+      },
+      {
+        "questionText": "Lors de la réaction de prise de la résine retardé:",
+        "options": [
+          "La phase élastique fait suite à la phase plastique",
+          "la phase granuleuse de dessiccation est une phase ou le matériau devient poreux",
+          "La phase élastique correspond à la phase d'insertion en bouche",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Après son insertion en bouche (phase plastique), le matériau devient élastique. La phase de dessiccation le rend dur, rugueux et potentiellement poreux."
+      },
+      {
+        "questionText": "Le but de la mise en condition tissulaire est :",
+        "options": [
+          "De créer un coussin amortisseur entre l'intrados prothétique et la muqueuse.",
+          "D'augmenter l'espace bio-fonctionnel qui sera occupé par la prothèse",
+          "D'assurer un montage esthétique",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le but principal est d'augmenter l'espace bio-fonctionnel et de préparer les tissus, ce qui indirectement crée un effet amortisseur. L'esthétique n'est pas l'objectif direct."
+      },
+      {
+        "questionText": "La réaction de prise de la résine à prise retardé se déroule en quatre phases successives:",
+        "options": [
+          "Phase de gel, phase plastique active, phase plastique passive, phase de Dessiccation",
+          "Phase de gel, phase élastique, phase plastique active, phase de dessiccation.",
+          "Phase élastique, phase plastique active phase plastique passive, phase physique (gel).",
+          "Phase physique (gel), phase plastique active phase élastique, phase de dessiccation"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La séquence correcte est : phase physique (mélange, ou gel), phase plastique active (modelage), phase élastique, et enfin phase de dessiccation (durcissement)."
+      },
+      {
+        "questionText": "La mise en condition tissulaire :",
+        "options": [
+          "Est toujours réalisée avec une prothèse transitoire.",
+          "Est précédée d'un traitement étiologique.",
+          "Nécessite plusieurs séances",
+          "Permet de guider la cicatrisation après une chirurgie pré-prothétique.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La prothèse transitoire peut être obtenue à partir de l'empreinte primaire ou d'un duplicata de l'ancienne prothèse. La mise en condition nécessite plusieurs renouvellements."
+      },
+      {
+        "questionText": "Le matériau de mise en condition tissulaire est :",
+        "options": [
+          "Une résine à prise retardée qui présente une plasticité secondaire.",
+          "Formé d'une poudre polymère de méthacrylate d'éthylène.",
+          "Versé immédiatement après spatulation sur l'intrados de la prothèse.",
+          "Appliqué d'une façon temporaire uniquement au niveau de l'intrados de la prothèse.",
+          "Caractérisée par son action agressive et compressive sur les muqueuses."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Le matériau est une résine à prise retardée, composée d'une poudre de poly(méthacrylate d'éthyle) et de poly(méthacrylate de méthyle), offrant une biocompatibilité et une plasticité adaptées."
+      },
+      {
+        "questionText": "La mise en condition tissulaire (MCT):",
+        "options": [
+          "Réduit les erreurs d'occlusion",
+          "Dans le cas de dimension verticale sous-évaluée une couche de matériau MCT peut être ajoutée.",
+          "Augmente l'espace bio fonctionnel et la surface d'appuie prothétique.",
+          "Le matériau MCT dégarni sur la prothèse signe des zones de compression.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'objectif principal de la MCT est d'améliorer l'état des tissus de soutien et d'optimiser l'étendue de la surface d'appui, augmentant ainsi l'espace bio-fonctionnel."
+      },
+      {
+        "questionText": "La mise en condition tissulaire :",
+        "options": [
+          "Est réalisée avec une prothèse provisoire.",
+          "Est précédée d'un traitement étiologique.",
+          "Permet le moulage des tissus dans une position voisine de leur position anatomique.",
+          "Nécessite plusieurs séances.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Elle peut être réalisée avec une prothèse provisoire ou l'ancienne. Elle permet un moulage fonctionnel et requiert des renouvellements réguliers pour suivre la guérison tissulaire."
+      },
+      {
+        "questionText": "Le matériau de mise en condition tissulaire :",
+        "options": [
+          "Est une résine à prise retardée qui présente une plasticité secondaire.",
+          "Est formé d'une poudre polymère de méthacrylate d'éthylène.",
+          "Est versé immédiatement après spatulation sur la prothèse.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Correct, c'est une résine à prise retardée qui reste plastique un certain temps pour s'adapter aux tissus. Il faut attendre la fin de la phase filante avant de l'appliquer."
+      },
+      {
+        "questionText": "La mise en condition tissulaire permet",
+        "options": [
+          "D'élargir et d'exploiter les surfaces d'appui le maximum possible.",
+          "D'augmenter l'espace bio fonctionnel.",
+          "D'optimiser la répartition des charges occlusales.",
+          "De redonner à tous les tissus muqueux un comportement histologique et physiologique le plus favorable.",
+          "De réduire l'espace bio fonctionnel."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "La MCT vise à optimiser l'étendue de la surface d'appui et à enregistrer l'espace bio-fonctionnel pour améliorer l'adaptation et la fonction de la future prothèse."
+      },
+      {
+        "questionText": "Le matériau de mise en condition idéal doit présenter les qualités suivantes :",
+        "options": [
+          "Présenter un fluage initial élevé.",
+          "Présenter un fluage initial réduit.",
+          "Absorber les pressions fonctionnelles et les répartir sur la surface d'appui",
+          "Se déformer pour s'adapter aux modifications des tissus.",
+          "Ne pas se déformer pour s'adapter aux modifications des tissus."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Le matériau doit avoir un fluage initial élevé pour s'adapter en douceur, mais conserver une stabilité dimensionnelle suffisante pour résister aux déformations lors des manipulations."
+      },
+      {
+        "questionText": "Après la première séance de mise en condition, le praticien demande au patient :",
+        "options": [
+          "D'utiliser les produits de nettoyage de la prothèse.",
+          "De brosser sa prothèse.",
+          "De nettoyer la prothèse sous l'eau.",
+          "De ne pas manger les aliments qui collent.",
+          "De ne pas manger avec sa prothèse"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le brossage et les produits nettoyants peuvent endommager la résine molle. Il est conseillé de rincer simplement à l'eau et d'éviter les aliments collants qui pourraient arracher le matériau."
+      }
+    ]
+  },
+  {
+    "title": "Chirurgie Pré-prothétique en Prothèse Totale Adjointe",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Lorsqu'une chirurgie pré-prothétique est indiquée:",
+        "options": [
+          "La mise en condition tissulaire n'est pas indiquée",
+          "On doit éliminer toutes les irrégularités",
+          "Les points de sutures devraient être bien serrés pour favoriser la cicatrisation",
+          "On doit être économe"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Loi 2 : Elle doit être complétée par une mise en condition tissulaire. Loi 6 : Toutes les irrégularités non-douloureuses seront conservées. Loi 8 : Les points de sutures ne devraient jamais être serrés. La chirurgie doit toujours être aussi conservatrice que possible."
+      },
+      {
+        "questionText": "La désinsertion du Mylohyoïdien :",
+        "options": [
+          "Est une intervention très lourde pour le patient",
+          "Vise à désinsérer le muscle Mylohyoïdien dans sa totalité",
+          "Permet l'approfondissement de la région linguale",
+          "Permet l'approfondissement de la région vestibulaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La désinsertion du muscle mylo-hyoïdien vise l'approfondissement de la région linguale. Elle ne concerne que les fibres musculaires superficielles."
+      },
+      {
+        "questionText": "La chirurgie pré-prothétique :",
+        "options": [
+          "Est systématique dans les cas de réhabilitation prothétique difficile",
+          "Concerne l'aménagement des tissus muqueux destinés à recevoir une prothèse adjointe",
+          "Concerne l'aménagement musculaire destiné à recevoir une prothèse adjointe",
+          "A pour objectif d'éliminer les altérations ostéomuqueuses réversibles"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'indication est posée lorsque des anomalies compromettent la réalisation d'une prothèse correcte. Elle vise à éliminer les altérations ostéo-muqueuses irréversibles."
+      },
+      {
+        "questionText": "En présence de deux tubérosités de contre-dépouilles:",
+        "options": [
+          "La chirurgie pré-prothétique n'est pas indiquée, celles-ci sont des moyens de rétention.",
+          "La chirurgie pré-prothétique sera pratiquée sur une seule tubérosité.",
+          "La chirurgie pré-prothétique sera pratiquée sur les deux tubérosités.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Quand les deux tubérosités sont en contre-dépouille, l'intervention chirurgicale ne concernera que l'une d'elles. La seconde sera utilisée comme élément de rétention supplémentaire avec un axe d'insertion oblique."
+      },
+      {
+        "questionText": "une hyperplasie tissulaire est:",
+        "options": [
+          "une augmentation du nombre de cellules",
+          "une diminution du nombre de cellules",
+          "une augmentation du volume cellulaire",
+          "toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'hyperplasie est une augmentation du nombre de cellules dans un tissu, conduisant à une augmentation de sa taille. L'augmentation du volume cellulaire est l'hypertrophie."
+      },
+      {
+        "questionText": "En présence d'un torus maxillaire",
+        "options": [
+          "Une chirurgie pré-prothétique de régularisation est toujours indiquée",
+          "une décharge ou une chirurgie pré-prothétique sera indiquée en fonction de son volume",
+          "aucune précaution n'est à prendre à son niveau",
+          "toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "S'il est responsable d'une instabilité prothétique et ne peut être neutralisé par une décharge, son exérèse chirurgicale sera indiquée."
+      },
+      {
+        "questionText": "La régularisation des crêtes alvéolaires :",
+        "options": [
+          "Fait partie de la chirurgie osseuse additive",
+          "Son but est d'obtenir un relief osseux régulier pour une bonne stabilité de la prothèse",
+          "Quand elle est indiquée elle doit être pratiquée de manière économe",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La régularisation des crêtes est une chirurgie osseuse soustractive. Elle vise à obtenir un relief régulier pour la stabilité, tout en étant aussi conservatrice que possible."
+      },
+      {
+        "questionText": "La chirurgie pré-prothétique doit être :",
+        "options": [
+          "Pratiquée systématiquement dans le cadre d'un traitement pré-prothétique",
+          "Justifiée et économe",
+          "Faite avec des points de sutures extrêmement serrés pour bien protéger le site opératoire",
+          "Complétée par une mise en condition tissulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Elle n'est indiquée que si nécessaire. Les points de sutures ne doivent pas créer de tension entre les lambeaux muqueux. Elle est souvent suivie d'une mise en condition."
+      },
+      {
+        "questionText": "La vestibuloplastie et l'intervention de Trauner :",
+        "options": [
+          "Sont toujours d'actualité et leurs résultats sont perceptibles",
+          "Font parties de la chirurgie muqueuse additive.",
+          "Abandonnées au profit des techniques implantaires",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Ces techniques visent à augmenter la hauteur de crête disponible. Bien que moins fréquentes aujourd'hui au profit des implants, elles sont classées comme chirurgie muqueuse 'additive' en termes de résultat (gain de surface)."
+      },
+      {
+        "questionText": "Le remodelage tubérositaire est indiqué :",
+        "options": [
+          "En présence de contre dépouille",
+          "Afin d'établir un plan d'occlusion physiologique",
+          "Dans le cadre de la chirurgie osseuse soustractive",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le remodelage est indiqué en présence de contre-dépouilles bilatérales ou si le volume de la tubérosité interfère avec l'espace prothétique ou le plan d'occlusion."
+      },
+      {
+        "questionText": "La chirurgie préprothétique doit:",
+        "options": [
+          "Assurer la suppression de toute irrégularité au niveau des crêtes",
+          "Etre complétée par une mise en condition tissulaire",
+          "Etre jusetifié et économe",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Elle doit être justifiée et conservatrice. On ne supprime que les irrégularités douloureuses ou gênantes pour la stabilité."
+      },
+      {
+        "questionText": "Si l'examen clinique d'un édenté total révèle 2 tubérosités de contre dépouille",
+        "options": [
+          "La chirurgie pré-prothétique est toujours osseuse.",
+          "La chirurgie pré-prothétique peut être muqueuse.",
+          "L'intervention concerne généralement une seule tubérosité.",
+          "L'intervention concerne les 2 tubérosités."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "En cas de contre-dépouille bilatérale, on n'intervient généralement que sur un côté pour préserver la rétention de l'autre côté, en utilisant un axe d'insertion oblique."
+      },
+      {
+        "questionText": "La chirurgie pré-prothétique :",
+        "options": [
+          "Est une mise en condition chirurgicale qui consiste à l'aménagement des tissus gingivaux et muqueux seulement",
+          "Est une mise en condition tissulaire qui consiste à améliorer l'état des tissus en se servant des conditionneurs.",
+          "Elle est systématiquement suivie de la mise en condition tissulaire.",
+          "Toutes les irrégularités sont éliminées.",
+          "Fréquemment indiquée chez les sujets assez âgés"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est une chirurgie correctrice de l'os et de la muqueuse. Une mise en condition tissulaire post-opératoire est fortement recommandée. On ne supprime que les irrégularités gênantes. L'âge avancé peut être une contre-indication."
+      },
+      {
+        "questionText": "Parmi les indications actuelles de la chirurgie pré-prothétique :",
+        "options": [
+          "L'approfondissement du vestibule",
+          "Un tonus de 08mm au niveau du 1/3 moyen du palais.",
+          "Le remodelage des apophyses génies.",
+          "La régularisation des crêtes osseuses",
+          "Hypertrophie tubérositaire dans le sens vertical (hauteur importante)."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La régularisation des crêtes osseuses pour éliminer les zones de blessure ou d'instabilité reste une indication courante de la chirurgie pré-prothétique."
+      },
+      {
+        "questionText": "L'altération de la fibro-muqueuse buccale:",
+        "options": [
+          "Ne doit être corrigée que par une chirurgie pré-prothétique.",
+          "Peut être source d'erreur lors de l'enregistrement de la dimension verticale et de l'occlusion.",
+          "Peut être associée à une perte osseuse.",
+          "Peut être due à une mauvaise conception prothétique.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'altération de la muqueuse est souvent causée par une prothèse mal conçue ou mal adaptée. Elle peut fausser les enregistrements et être liée à la résorption osseuse."
+      },
+      {
+        "questionText": "L'altération de la muqueuse buccale:",
+        "options": [
+          "Peut être due à une erreur d'occlusion.",
+          "Peut être due à une mauvaise conception prothétique.",
+          "Doit être corrigée par une chirurgie pré-prothétique",
+          "Peut être associée d'une perte osseuse.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Une muqueuse altérée peut résulter d'erreurs occlusales ou d'une mauvaise conception. Sa correction passe d'abord par la mise en condition tissulaire et l'élimination de la cause; la chirurgie n'est pas systématique."
+      }
+    ]
+  },
+  {
+    "title": "Les empreintes préliminaires en Prothèse Totale Adjointe",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "L'empreinte préliminaire en prothèse totale adjointe :",
+        "options": [
+          "Est la reproduction en négatif des structures ostéo-muqueuses à l'état de fonction",
+          "Contribue à l'étude clinique, au diagnostic et au plan de traitement prothétique.",
+          "Produit le modèle de travail sur lequel sera élaboré le PEI",
+          "Les erreurs à ce stade sont acceptables puisqu'une empreinte secondaire est prévue"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'empreinte primaire est un moulage des structures au repos (statique). Elle permet de construire le porte-empreinte individuel (PEI) et doit être suffisamment fidèle pour cela."
+      },
+      {
+        "questionText": "Les critères de validation de l'empreinte primaire :",
+        "options": [
+          "Absence de bulles d'air et de déformation.",
+          "Disposer de tous les éléments anatomiques positifs et négatifs",
+          "Le métal du porte empreinte ne doit pas être visible",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Une empreinte primaire valide doit enregistrer tous les éléments anatomiques positifs, le métal du porte-empreinte ne doit pas être visible, elle doit être sans bulles ni déformations, et sans parties non soutenues (pour l'alginate)."
+      },
+      {
+        "questionText": "Parmi les propositions suivantes quelles sont celles qui sont justes:",
+        "options": [
+          "Le matériau à empreinte ne joue aucun rôle dans la reproductibilité intime de l'empreinte.",
+          "L'empreinte primaire a pour but d'enregistrer les surfaces d'appuis.",
+          "L'empreinte primaire est réalisée avec un porte-empreinte de série (PES).",
+          "L'empreinte à l'alginate Préfigure fidèlement les limites de la future prothèse"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'empreinte primaire a pour but d'obtenir un modèle d'étude pour la confection du porte-empreinte individuel (PEI), et elle utilise pour cela un porte-empreinte de série (PES)."
+      },
+      {
+        "questionText": "les empreintes préliminaires en prothèse totale :",
+        "options": [
+          "Sont des empreintes anatomo fonctionnelles",
+          "Peuvent se faire avec du plâtre ou d’alginate",
+          "Permettent d'obtenir le modèle d'étude",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les empreintes préliminaires sont statiques. L'empreinte secondaire est anatomo-fonctionnelle. Elles permettent d'obtenir le modèle d'étude et peuvent utiliser du plâtre ou de l'alginate."
+      },
+      {
+        "questionText": "lors de la prise d'empreinte préliminaire en prothèse totale adjointe le porte empreint de série doit :",
+        "options": [
+          "Etre ajusté et en contact intime avec les surfaces d’appui",
+          "Être distant de la ligne de réflexion muqueuse",
+          "Refouler les organes para prothétiques",
+          "Recouvrir tous les éléments anatomiques positifs"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le porte-empreinte de série doit être légèrement plus grand que l'arcade, distant des versants vestibulaires et ne doit pas distendre les organes périphériques, tout en recouvrant toutes les surfaces d'appui."
+      },
+      {
+        "questionText": "L'empreinte préliminaire en prothèse adjointe totale:",
+        "options": [
+          "Permet d'apprécier le degré de résorption osseuse",
+          "Se fait exclusivement avec de l'alginate",
+          "Permet de réaliser un porte empreinte individuel",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'empreinte préliminaire peut se faire avec de l'alginate ou du plâtre. Son objectif principal est de permettre la réalisation du porte-empreinte individuel (PEI)."
+      },
+      {
+        "questionText": "Lors de la prise d'empreinte préliminaire au maxillaire supérieure:",
+        "options": [
+          "Le porte empreinte doit être en contact intime avec toute la surface d'appui",
+          "Le fauteuil dentaire est incliné vers l'arrière",
+          "La coulée peut être différée quand le plâtre est utilisé",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le porte-empreinte doit ménager un espacement régulier. Au maxillaire, le patient est en position droite (orthostatique). La coulée de l'alginate doit être immédiate, mais celle du plâtre peut être différée."
+      },
+      {
+        "questionText": "L'empreinte primaire a pour objectif",
+        "options": [
+          "D'apprécier le degré de résorption osseuse",
+          "D’analyser les limites idéales de la future prothèse",
+          "De réaliser fidèlement la prothèse définitive",
+          "D'apprécier l'état de la fibromuqueuse"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'empreinte primaire permet d'obtenir un modèle d'étude pour analyser la résorption et les limites approximatives. La prothèse définitive est réalisée après l'empreinte secondaire. L'état de la fibromuqueuse est apprécié cliniquement."
+      },
+      {
+        "questionText": "Lors du traitement de l'empreinte primaire à l'alginate",
+        "options": [
+          "La coulée du modèle dans l'empreinte avec du plâtre ordinaire doit être faite immédiatement après la prise de l'empreinte",
+          "Pulvériser l'empreinte avec de la poudre de plâtre pour réduire l'acidité supérieure de l'alginate sur la surface de l’empreinte",
+          "L'empreinte à l'alginate est lavée puis conservée dans un endroit frais à l'abri de l'humidité.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La coulée doit être immédiate pour éviter les variations dimensionnelles de l'alginate, et elle doit se faire avec du plâtre dur, pas ordinaire."
+      },
+      {
+        "questionText": "l’empreinte au plâtre est contre Indiquée",
+        "options": [
+          "En présence de contre dépouille",
+          "Patient présentant un réflexe nauséeux",
+          "Patient présentant un état de sénilité avancé, ou une pathologie spécifique rendant difficile toute coopération",
+          "Asialie, sécheresse buccale."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Toutes ces situations (contre-dépouille, réflexe nauséeux, manque de coopération, sécheresse buccale) sont des indications pour l'empreinte à l'alginate, qui est plus souple et plus rapide."
+      },
+      {
+        "questionText": "L'alginate",
+        "options": [
+          "Est un hydro colloïde réversible.",
+          "Est un matériau stable dans le temps.",
+          "Est de manipulation facile.",
+          "Sa consistance doit être fluide lors de la prise d'empreinte"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'alginate est un hydrocolloïde irréversible, instable dimensionnellement. Sa consistance doit être crémeuse. Son principal avantage est sa facilité de manipulation."
+      },
+      {
+        "questionText": "En prothèse amovible complété l'empreinte à l’alginate fluide est une empreinte :",
+        "options": [
+          "Anatomo-fonctionnelle",
+          "Statique.",
+          "Muco-statique",
+          "Muco-dynamique.",
+          "Dynamique."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'empreinte à l'alginate est considérée comme mucostatique, car elle enregistre les tissus au repos sans exercer de compression importante."
+      },
+      {
+        "questionText": "La limite postérieure du porte-empreinte individuel maxillaire doit se terminer :",
+        "options": [
+          "En avant de la ligne de flexion du voile.",
+          "En avant des fossettes palatines.",
+          "Les 2 propositions A et B sont vraies",
+          "Les 2 propositions A et B sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le bord postérieur du porte-empreinte individuel (PEI) doit dépasser la ligne de flexion du voile de 2mm et les fossettes palatines de 4mm pour un enregistrement correct du joint postérieur."
+      },
+      {
+        "questionText": "L'empreinte non compressive au plâtre est indiquée",
+        "options": [
+          "De crêtes peu résorbées de classe 1 et II.",
+          "D'une corticale osseuse lisse et régulière.",
+          "D'une fibro-muqueuse saine et adhérente.",
+          "Les 3 propositions A, B, C sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'empreinte au plâtre, non compressive, est indiquée pour les crêtes peu résorbées, régulières, avec une fibromuqueuse saine et adhérente."
+      },
+      {
+        "questionText": "L'empreinte préliminaire anatomo-fonctionnelle compressive avec un matériau thermoplastique est indiquée :",
+        "options": [
+          "En présence d'une surface d'appui osseuse irrégulière.",
+          "Lorsque la fibro-muqueuse est d'une épaisseur variant d'un point à un autre.",
+          "En présence d'une crête flottante",
+          "Lorsque la crête est très résorbée"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'empreinte compressive avec matériau thermoplastique est indiquée pour les surfaces osseuses irrégulières ou une fibromuqueuse dépressible. La crête flottante nécessite une technique non compressive."
+      },
+      {
+        "questionText": "A la mandibule le porte empreint de série doit :",
+        "options": [
+          "Recouvrir les ligaments pterygo-maxillaire,",
+          "Recouvrir les tubérosités.",
+          "Etre distant de la frange sublinguale",
+          "Recouvrir les lignes obliques internes",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "À la mandibule, il ne doit y avoir aucune interférence avec le ligament ptérygo-maxillaire. Les tubérosités sont maxillaires. Le bord antérieur et interne doit être en contact intime avec la frange sublinguale. Il doit recouvrir les lignes obliques internes."
+      },
+      {
+        "questionText": "Le choix du porte empreinte de série se fera selon :",
+        "options": [
+          "Le matériau à empreinte",
+          "La dimension de la crête édentée.",
+          "La forme de la crête édentée.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le choix du porte-empreinte de série dépend du matériau utilisé, ainsi que de la dimension et de la forme de l'arcade pour assurer un espacement adéquat."
+      },
+      {
+        "questionText": "Les empreintes primaires au plâtre :",
+        "options": [
+          "Exigent une coulée rapide.",
+          "Exigent des portes empreintes lisses.",
+          "Exigent l'absence de contre dépouilles.",
+          "Sont compressives.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les empreintes au plâtre permettent une coulée différée. Elles nécessitent des porte-empreintes lisses et sont contre-indiquées en présence de contre-dépouilles. Elles sont considérées comme non compressives."
+      },
+      {
+        "questionText": "Les objectifs de l'empreinte primaire sont :",
+        "options": [
+          "Moulage précis des surfaces d'appuis.",
+          "Obtention de l'espace neutre d'équilibre.",
+          "Obtention du modèle d'étude.",
+          "Réalisation d'un porte empreinte individuel.",
+          "Obtention du modèle secondaire."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'empreinte primaire vise principalement à obtenir le modèle d'étude sur lequel sera réalisé le porte-empreinte individuel (PEI)."
+      },
+      {
+        "questionText": "L'empreinte primaire au plâtre :",
+        "options": [
+          "Est une empreinte anatomo-fonctionnelle.",
+          "Est une empreinte muccostatique.",
+          "Est une empreinte compressive.",
+          "Indiquée lorsque la crête est de dépouille",
+          "Indiquée lorsque la crête est de contre dépouille"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'empreinte au plâtre est mucostatique et non compressive. Elle est indiquée lorsque la crête est 'de dépouille', c'est-à-dire non rétentive, car le matériau est rigide."
+      },
+      {
+        "questionText": "Dans le plan frontal, un porte empreinte de série doit :",
+        "options": [
+          "Dépasser de 2mm la limite du palais",
+          "Correspondre à la forme de l'arcade.",
+          "Etre elliptique.",
+          "Avoir les bords distants de la ligne réflexion muqueuse.",
+          "Ménager un espace suffisant entre la crête et lui-même"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le dépassement de la limite du palais se voit dans le plan sagittal. La forme elliptique se voit dans le plan horizontal. Dans le plan frontal, le porte-empreinte doit correspondre à la forme de l'arcade, être distant de la ligne de réflexion muqueuse, et ménager un espace pour le matériau."
+      }
+    ]
+  },
+  {
+    "title": "Les empreintes secondaires en Prothèse Totale Adjointe",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Le joint périphérique au maxillaire supérieur :",
+        "options": [
+          "Est sectoriel.",
+          "Se fait par apport de pate de kerr au niveau de l'intrados du PEI dans la région latérale moyenne.",
+          "Se fait par apport de pate de kerr au niveau de l'intrados du PEI dans la région palatine postérieure",
+          "La région latérale moyenne est sollicitée en demandant au patient de creuser les joues"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Ce joint améliore la rétention. Il est réalisé par segments. Pour la région latérale moyenne, on demande au patient de creuser la joue (succion). Pour la région latérale postérieure, on demande d'ouvrir grand et de balancer la mandibule."
+      },
+      {
+        "questionText": "Le joint périphérique au maxillaire inférieur :",
+        "options": [
+          "Assure la rétention de la future prothèse inférieure",
+          "Est enregistré dans la région sublinguale en demandant au patient de passer la pointe de la langue à droite et à gauche.",
+          "Le retrait du PEI avec un bruit de succion est le signe d'un remarginage satisfaisant.",
+          "Lors de son enregistrement, les masséters sont libérés par ouverture maximale de la bouche."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Pour enregistrer la région sublinguale, on demande au patient de lever la langue puis de déglutir. Le joint périphérique est essentiel pour la rétention."
+      },
+      {
+        "questionText": "Lors de la réalisation du PEI:",
+        "options": [
+          "Les limites du PEI doivent être en retrait de 4mm de la ligne de réflexion muqueuse",
+          "Le PEI supérieur doit englober les sillons ptérygo-maxillaires et les fossettes palatines.",
+          "La décharges des modèles d'étude est nécessaire dans le cas de la présence de contre-dépouille.",
+          "La rigidité est assurée par l'emploi de la résine auto polymérisable sur une épaisseur de 2 à 3mm."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les limites du PEI doivent être en retrait de 2mm de la ligne de réflexion muqueuse. Il est nécessaire de prévoir des décharges sur le modèle d'étude en présence de contre-dépouilles pour permettre l'insertion du PEI."
+      },
+      {
+        "questionText": "Après la réalisation du joint périphérique supérieur, les contrôles sont validés:",
+        "options": [
+          "Dans la zone palatine, en réalisant une traction externe sur le manche du PEI",
+          "Dans la zone para-tubérositaire, l'enregistrement est marqué d'une concavité externe lisse et mate",
+          "Par l'absence de pate de Kerr dans l'intrados du PEI pour la zone antérieure et moyenne",
+          "Par un enregistrement lisse, mate et arrondi"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le joint périphérique terminé, la rétention et la stabilité du PEI doivent être assurées. Les bords doivent être lisses, réguliers, arrondis, assurant étanchéité et herméticité. Des tests fonctionnels (phonèmes, ouverture) sont aussi réalisés."
+      },
+      {
+        "questionText": "Le joint vélo-palatin au maxillaire",
+        "options": [
+          "S'arrête à la partie osseuse du palais maxillaire",
+          "Se fait en mettant la pâte de Kerr uniquement sur le bord postérieur du PEI",
+          "Joue un grand rôle dans la rétention des prothèses maxillaires",
+          "S'enregistre en demandant au patient de prononcer le «A» grave, d'ouvrir grand la bouche et de déglutir"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le joint postérieur est crucial pour la rétention. La pâte de Kerr est placée dans l'intrados du PEI. On demande au patient d'ouvrir grand la bouche puis de prononcer le 'A' grave."
+      },
+      {
+        "questionText": "Le porte empreinte individuel supérieur (PEI) :",
+        "options": [
+          "Doit être stable et rétentif",
+          "Dépasse postérieurement de 2 à 4mm les fossettes palatines",
+          "Recouvre les tubérosités et les sillons ptérygomaxillaires",
+          "Est ajusté par un contrôle visuel au niveau des poches paratubérositaires"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le PEI doit être rigide, indéformable, et facile à manipuler. Il doit dépasser les fossettes palatines et recouvrir les structures clés comme les tubérosités. Le contrôle se fait principalement au doigt."
+      },
+      {
+        "questionText": "Le joint périphérique en prothèse totale:",
+        "options": [
+          "Est l'enregistrement statique et dynamique du jeu musculaire tout au long des bords de la prothèse",
+          "Sa réalisation est sectorielle",
+          "Les mouvements extrêmes sont recommandés pour explorer au maximum la rétention de la prothèse",
+          "Est enregistré au niveau de la région du buccinateur en demandant au patient de creuser les joues"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'enregistrement du joint périphérique se fait par segments (sectoriel). Il enregistre le jeu musculaire fonctionnel, donc les mouvements extrêmes sont à éviter."
+      },
+      {
+        "questionText": "Parmi les impératifs des empreintes secondaires :",
+        "options": [
+          "La rétention, la stabilisation et la sustentation des futures prothèses",
+          "Le respect de l'intégrité des tissus à court terme",
+          "Combler la résorption osseuse provoquée par la perte des dents",
+          "Confort du patient lors des différentes étapes de la réalisation des prothèses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les objectifs principaux sont d'assurer la rétention, la stabilisation et la sustentation, tout en respectant l'intégrité des tissus à long terme et en garantissant le confort du patient."
+      },
+      {
+        "questionText": "Le joint périphérique en prothèse totale :",
+        "options": [
+          "Permet d'améliorer la stabilisation des futures prothèses",
+          "Permet d'améliorer la rétention des futures prothèses",
+          "Permet d'obtenir la rétention des futures prothèses",
+          "Est réalisé à l'aide d'une pâte thermo élastique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le joint périphérique a pour but principal d'obtenir et d'améliorer la rétention de la prothèse. Il est réalisé avec une pâte thermoplastique comme la pâte de Kerr."
+      },
+      {
+        "questionText": "le joint vélo-palatin :",
+        "options": [
+          "S'arrête à la partie osseuse du palais",
+          "Se fait en mettant la pâte de kerr sur le bord postérieur du PEI",
+          "S’enregistre en demandant au patient de prononcer le « A » grave",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le joint se situe sur le voile du palais (mobile). La pâte de Kerr est placée uniquement dans l'intrados du PEI. L'enregistrement se fait en demandant au patient de prononcer le 'A' grave."
+      },
+      {
+        "questionText": "le coffrage:",
+        "options": [
+          "Permet de conserver les informations apportées par l'empreinte secondaire",
+          "Est une étape facultative qui peut être éliminée",
+          "Se fait après la coulée des modèles",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le coffrage est une étape nécessaire avant la coulée. Il permet de conserver l'intégrité du volume et du profil des bords de l'empreinte, qui sont très importants en prothèse totale."
+      },
+      {
+        "questionText": "Le porte empreinte individuel PEI :",
+        "options": [
+          "Est confectionné à partir du modèle d'étude",
+          "Sera ajusté au laboratoire et en bouche",
+          "Sa limite doit être au niveau de la ligne de réflexion muqueuse",
+          "le contrôle du PEI est visuel et digital dans la région para-tubérositaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le PEI est fait sur le modèle d'étude. Il ne doit pas y avoir de contact entre la ligne de réflexion muqueuse et le bord du PEI. Le contrôle est principalement digital (au doigt)."
+      },
+      {
+        "questionText": "Le coffrage de l'empreinte secondaire",
+        "options": [
+          "Est une étape clinique",
+          "Permet de conserver l'intégrité de la surface d'appui.",
+          "Permet de conserver l'intégrité des bords de l'empreinte.",
+          "Permet une coulée plus danse du plâtre"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le coffrage est une étape de laboratoire qui préserve l'intégrité du volume des bords et permet d'obtenir un modèle avec des bords épais et résistants."
+      },
+      {
+        "questionText": "En prothèse totale, le PEI au maxillaire supérieur doit englober: 1- Les lignes obliques internes 2- Les trigones rétromolaires 3- Les ligaments pterygomaxillaires 4- Les tori mandibulaires 5- Toutes les réponses sont fausses",
+        "options": [
+          "(1,2)",
+          "(1,3)",
+          "(4,5)",
+          "(1,4)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le PEI maxillaire ne concerne pas les structures mandibulaires (lignes obliques internes, trigones, tori). Les ligaments ptérygo-maxillaires doivent être dégagés. Donc, toutes les propositions sont fausses."
+      },
+      {
+        "questionText": "Le porte empreinte individuel doit:",
+        "options": [
+          "Etre réalisé avec un matériau indéformable.",
+          "Avoir une insertion et une désinsertion aisée.",
+          "Etre distant des fossettes palatines.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le PEI doit être rigide (indéformable) et facile à manipuler. Ses bords doivent être lisses, arrondis et distants de la ligne de réflexion muqueuse de 1-2mm."
+      },
+      {
+        "questionText": "Le coffrage de l'empreinte définitive :",
+        "options": [
+          "Permet de préserver la reproduction et l'intégrité du volume des bords",
+          "Est réalisé avec une bande de cire mollo placée au niveau du bord de l'empreinte sur toute la partie vestibulaire.",
+          "Facilite le retrait de porte empreinte individuel une fois le modéle coulé.",
+          "Est obtenu en collant une bande de cire perpendiculairement suit le bord de l'empreinte du côté vestibulaire.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'objectif principal du coffrage est de préserver le volume et la forme des bords enregistrés. La bande de cire est collée à distance du bord pour atteindre cet objectif."
+      },
+      {
+        "questionText": "Le rôle du joint périphérique est de:",
+        "options": [
+          "Retarder la résorption osseuse.",
+          "Assurer la rétention et la stabilité de la prothèse.",
+          "Améliorer la sustentation de la prothèse.",
+          "Assurer l'empreinte des parties statiques.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le rôle principal du joint périphérique est d'assurer la rétention de la prothèse, puis sa stabilité. La sustentation, qui peut retarder la résorption, est liée à la surface d'appui."
+      },
+      {
+        "questionText": "La réalisation du joint périphérique en PTA :",
+        "options": [
+          "Est sectorielle.",
+          "Se fait avec un porte-empreinte individuel issu d'une empreinte secondaire.",
+          "Se fait avec la pâte de Kerr",
+          "Se fait avec la pâte à Oxyde de Zinc Eugénol"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le joint périphérique est réalisé par segments (sectorielle) avec un matériau thermoplastique comme la pâte de Kerr, sur un PEI issu de l'empreinte primaire."
+      },
+      {
+        "questionText": "Les empreintes à la pâte d'oxyde de zinc-eugenol sont recommandées:",
+        "options": [
+          "Dans les cas de palais trop profonds.",
+          "En présence de fortes contre-dépouilles.",
+          "Les 2 propositions A et B sont vraies.",
+          "Les 2 propositions A et B sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La pâte OZE est un matériau rigide après prise. Elle est donc contre-indiquée en présence de contre-dépouilles importantes pour éviter la fracture de l'empreinte ou du modèle."
+      },
+      {
+        "questionText": "Le rôle du joint périphérique est de :",
+        "options": [
+          "Retarder la résorption osseuse.",
+          "Assurer la rétention et la stabilité de la prothèse.",
+          "Améliorer la sustentation de la prothèse.",
+          "Assurer l'empreinte des parties statiques.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le joint périphérique est essentiel pour la rétention et la stabilité. L'empreinte des parties statiques est le rôle de l'empreinte primaire."
+      },
+      {
+        "questionText": "L'empreinte secondaire :",
+        "options": [
+          "Est une empreinte muccostatique.",
+          "Est réalisée avec de l'alginate.",
+          "Sera coffrée avant d'être coulée.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'empreinte secondaire est anatomo-fonctionnelle. Elle est réalisée avec des élastomères de synthèse ou de la pâte OZE, et doit être coffrée avant la coulée pour préserver les bords."
+      },
+      {
+        "questionText": "Pour l'enregistrement de la région latérale postérieure supérieure à la pâte de Kerr, le patient doit :",
+        "options": [
+          "Projeter sa lèvre vers l'avant.",
+          "Projeter sa lèvre vers le bas.",
+          "Ouvrir au maximum sa bouche.",
+          "Rétracter les commissures"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'ouverture maximale de la bouche tend le ligament ptérygo-mandibulaire, ce qui permet d'enregistrer correctement la limite de l'empreinte dans la région du sillon ptérygo-maxillaire (hamulaire)."
+      },
+      {
+        "questionText": "Pour l'enregistrement des poches de FISH à la pâte de Kerr, le patient doit :",
+        "options": [
+          "Déglutir plusieurs fois",
+          "Porter la pointe de sa langue au palais",
+          "Rétracter ses commissures.",
+          "Ouvrir grand sa bouche.",
+          "Projeter sa langue vers l'avant"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Pour enregistrer l'extension dans les poches de Fish, on garnit le PEI de pâte de Kerr et on demande au patient d'ouvrir grand la bouche, ce qui met en tension le muscle buccinateur."
+      },
+      {
+        "questionText": "Les matériaux utilisés pour l'enregistrement de l'empreinte secondaire sont :",
+        "options": [
+          "Silicone basse viscosité",
+          "Silicone haute viscosité.",
+          "Silicone moyenne viscosité",
+          "Oxyde de zinc eugénol",
+          "Alginate fluide."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les matériaux de choix pour l'empreinte secondaire sont les élastomères de basse viscosité (silicones, polyéthers) et la pâte à l'oxyde de zinc-eugénol."
+      },
+      {
+        "questionText": "Dans le cas de présence de double contours de l'empreinte secondaire, il conviendra de :",
+        "options": [
+          "Ajouter une quantité de pate appropriée et remise en bouche.",
+          "Garder l'empreinte.",
+          "Décharger le contour par meulage.",
+          "Reprendre l'empreinte.",
+          "Eliminer l'excédent du matériau"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Un double contour indique un mouvement du porte-empreinte pendant la prise du matériau ou une prise en deux temps incorrecte. L'empreinte n'est pas fidèle et doit être entièrement reprise."
+      }
+    ]
+  },
+  {
+    "title": "Occlusion et DV",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Une dimension verticale d'occlusion sous-évaluée se manifeste par :",
+        "options": [
+          "Une fibro-muqueuse flottante et une résorption osseuse accélérée généralisée.",
+          "Des acouphènes.",
+          "Des douleurs musculaires conduisant le patient à retirer la prothèse mandibulaire.",
+          "Des douleurs au niveau de la nuque."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Une DVO surévaluée cause des douleurs musculaires. Une DVO sous-évaluée peut entraîner des troubles esthétiques (aspect vieilli), des blessures antérieures, des troubles musculaires comme des douleurs à la nuque, et des troubles fonctionnels."
+      },
+      {
+        "questionText": "Dans le réglage du segment antérieur du bourrelet supérieur en prothèse totale adjointe :",
+        "options": [
+          "La hauteur du bourrelet doit dépasser de 2 mm le versant muqueux de la lèvre supérieure.",
+          "La situation du bord libre du bourrelet est vérifiée par les bilabiales.",
+          "Le parallélisme avec le plan bi-pupillaire est vérifié par la partie extrabuccale de la plaque de Fox.",
+          "Le critère phonétique prime sur le critère esthétique."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La phonation (labiodentales 'FE', 'VE') permet de confirmer ou corriger la position du bord libre. Le parallélisme est vérifié avec la règle de Fox. L'esthétique guide initialement, puis la phonétique valide."
+      },
+      {
+        "questionText": "La préparation du bourrelet d'occlusion inférieur au laboratoire implique :",
+        "options": [
+          "Une hauteur antérieure de 18 mm calculée à partir du frein médian.",
+          "Une hauteur postérieure de 18 mm.",
+          "Une largeur postérieure déterminée par la largeur des trigones retro-molaire.",
+          "Un segment antérieur inscrit dans l'air d'Ackerman."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le bourrelet inférieur a une hauteur d'environ 18mm antérieurement depuis le fond du vestibule, et ne doit pas dépasser les 2/3 supérieurs des trigones postérieurement. Son segment antérieur s'inscrit dans l'aire de sustentation d'Ackermann."
+      },
+      {
+        "questionText": "Dans la dimension verticale d'occlusion:",
+        "options": [
+          "Le réglage de la hauteur désirée se fait sur les deux bourrelets.",
+          "Sur-évaluée, la prononciation du a je i se manifeste par une fuite d'air.",
+          "Bien évaluée, l'aspect esthétique se manifeste par une décontraction musculaire péri-prothétique.",
+          "Le free way space est estimé à 3 mm."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Une DVO surévaluée provoque un claquement lors de l'émission du 'S'. Une DVO correcte se traduit par des lèvres se joignant sans effort et une décontraction des muscles du menton."
+      },
+      {
+        "questionText": "Le plan d'occlusion prothétique :",
+        "options": [
+          "Est le plan idéal selon lequel les deux arcades artificielles doivent se rencontrer",
+          "Joue un rôle important dans la stabilisation de la prothèse",
+          "Forme une surface curviligne dans les trois plans de l'espace",
+          "Est parallèle antérieurement à la ligne bi pupillaire et postérieurement au plan axio-orbitaire"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "C'est le plan de rencontre idéal, crucial pour la stabilité. Postérieurement, il est parallèle au plan de Camper, pas au plan axio-orbitaire (plan de Francfort)."
+      },
+      {
+        "questionText": "De par son orientation, le plan d'occlusion:",
+        "options": [
+          "Participe à la cinématique du bol alimentaire.",
+          "Réduit la puissance masticatoire du patient",
+          "Améliore la puissance masticatoire du patient",
+          "Perturbe l'émission correcte des phonèmes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Par son niveau et son orientation, il participe à la cinématique du bol alimentaire et, s'il est correct, améliore la puissance masticatoire et la phonation."
+      },
+      {
+        "questionText": "Lors du réglage de la maquette d'occlusion inferieure",
+        "options": [
+          "Il faut avoir un parallélisme entre le bord occlusal du bourrelet et la ligne bi-pupillaire",
+          "La phonation permet de confirmer ou de corriger la position du bourrelet antérieurement",
+          "la hauteur du bourrelet est de 18 mm dans la région postérieure",
+          "la situation du bourrelet ne doit pas entraver le jeu de la musculature lingual"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le bourrelet doit respecter l'espace lingual. Sa hauteur est d'environ 18mm antérieurement et ne doit pas dépasser le niveau des tubercules rétromolaires postérieurement."
+      },
+      {
+        "questionText": "Quand la DVO est sur évaluée :",
+        "options": [
+          "Présence de claquement entre les prothèses",
+          "Les sillons sont effacés .",
+          "L'écart entre DVR et DVO est important",
+          "Perturbation de la prononciation des dent dentales (CHE et JE) ."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'écart entre la dimension verticale de repos (DVR) et la DVO est insuffisant (l'espace libre d'inocclusion est diminué ou nul). Cela se traduit par un visage tendu, des sillons effacés et des claquements dentaires."
+      },
+      {
+        "questionText": "L'espace libre d'inocclusion:",
+        "options": [
+          "Appelé aussi espace de Thompson",
+          "Est la distance séparant les surfaces occlusales des dents antagonistes lorsque la mandibule est en position d’intercuspidation maximale",
+          "Stable chez tous les individus",
+          "Est indispensable à l'équilibre neuro musculaire du patient"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "C'est la distance entre les arcades lorsque la mandibule est en position de repos physiologique. Il varie d'un individu à l'autre et est crucial pour le repos musculaire."
+      },
+      {
+        "questionText": "En prothèse adjointe totale le plan d'occlusion permet:",
+        "options": [
+          "De rétablir l'esthétique et la phonation",
+          "D'assurer la rétention des prothèses",
+          "Une bonne efficacité masticatoire",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Un plan d'occlusion correct permet une bonne efficacité masticatoire, une bonne stabilité (pas rétention), et contribue à l'esthétique et la phonation."
+      },
+      {
+        "questionText": "Concernant la maquette d'occlusion supérieure:",
+        "options": [
+          "Le segment antérieur doit s'inscrire dans l'aire de sustentation d'Ackermann",
+          "Au repos le segment antérieur dépasse la lèvre supérieure de 2mm",
+          "Les segments postérieurs sont réglés parallèlement au plan de Camper",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'aire de sustentation d'Ackermann concerne la maquette inférieure. Le bourrelet supérieur dépasse la lèvre au repos (environ 2mm) et ses segments postérieurs sont bien parallèles au plan de Camper."
+      },
+      {
+        "questionText": "La dimension verticale d'occlusion détermine:",
+        "options": [
+          "La position de la mandibule dans le plan horizontal",
+          "La position de la mandibule dans le plan sagittal.",
+          "La position de la mandibule dans le plan frontal.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La DVO est la hauteur de l'étage inférieur de la face lorsque les dents sont en occlusion maximale. C'est une mesure verticale, observée dans le plan frontal."
+      },
+      {
+        "questionText": "L'espace de Thompson est:",
+        "options": [
+          "La distance séparant les surfaces occlusales des dents antagonistes lorsque la mandibule est en RC",
+          "Elevé chez la femme.",
+          "Diminué dans la classe III squelettique.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'espace de Thompson (ou espace libre d'inocclusion) est la distance entre les arcades en position de repos physiologique. Il varie selon l'âge, le sexe et la classe squelettique."
+      },
+      {
+        "questionText": "L'évaluation de la dimension verticale de repos:",
+        "options": [
+          "Est toujours précédée d'une mise en condition tissulaire.",
+          "Nécessite la présence de la maquette d'occlusion supérieure en bouche.",
+          "Nécessite la présence de la maquette d'occlusion inférieure en bouche.",
+          "Nécessite la présence des deux maquettes d'occlusion."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La DVR est évaluée avec le patient au repos. La présence de la maquette d'occlusion supérieure est nécessaire pour rétablir le soutien de la lèvre supérieure, ce qui influence la position de repos."
+      },
+      {
+        "questionText": "La règle de Fox :",
+        "options": [
+          "Est composée de deux fourchettes",
+          "Son segment antérieur doit être parallèle au plan bipupillaire",
+          "Son segment postérieur doit être parallèle au plan de Francfort",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La règle de Fox comporte une fourchette intra-buccale et une extra-buccale. Ses segments postérieurs sont réglés parallèlement au plan de Camper (Tragus - Aile du nez)."
+      },
+      {
+        "questionText": "L'orientation correcte du plan d'occlusion dans le secteur postérieur permet:",
+        "options": [
+          "L ‘amélioration de la puissance masticatoire",
+          "Une participation optimale à la cinématique du bol alimentaire",
+          "Le rétablissement d'une phonation correcte",
+          "La stabilité prothétique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Un plan d'occlusion postérieur correct optimise la puissance masticatoire, la gestion du bol alimentaire et est crucial pour la stabilité prothétique."
+      },
+      {
+        "questionText": "Le plan d'occlusion prothétique:",
+        "options": [
+          "Doit être parallèle à la surface d'appui maxillaire et mandibulaire",
+          "Sera incliné de +5° par rapport au plan de Camper afin d'augmenter la puissance masticatoire",
+          "Sera parallèle au plan bipupillaire antérieurement",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Une modification de l'inclinaison de plus ou moins 5° par rapport au plan de Camper s'accompagne d'une diminution de l'intensité des forces appliquées. Le plan doit être parallèle aux crêtes et, antérieurement, à la ligne bipupillaire."
+      },
+      {
+        "questionText": "L'aire de sustentation définit par Ackermann est:",
+        "options": [
+          "L'espace situé entre la langue d'une part et la sangle labio-jugale d'autre part.",
+          "La surface comprise entre le sommet de la crête postéro-inférieure et le fond du vestibule.",
+          "La surface comprise entre le sommet de la crête antero-inférieure et le fond du vestibule.",
+          "La surface comprise entre le sommet de la crête antero-supérieure et le fond du vestibule."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'aire de sustentation d'Ackermann correspond à la zone vestibulaire antérieure mandibulaire, entre le sommet de la crête et le fond du vestibule."
+      },
+      {
+        "questionText": "Le réglage du segment antérieur du POP se fait :",
+        "options": [
+          "Parallèlement au plan de Camper",
+          "Parallèlement à la ligne bi-pupillaire.",
+          "Au dépend de la maquette d'occlusion inférieure.",
+          "Par l'intermédiaire de la plaque de Fox."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le segment antérieur du plan d'occlusion prothétique (POP) est réglé pour être parallèle à la ligne bi-pupillaire. La plaque de Fox est l'outil utilisé pour vérifier ce parallélisme."
+      },
+      {
+        "questionText": "Lors de l'évaluation de la DVR, nous utilisons:",
+        "options": [
+          "Exclusivement la maquette d'occlusion supérieure.",
+          "Exclusivement la maquette d'occlusion inférieure.",
+          "Les deux maquettes d'occlusion supérieure et inférieure",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Pour évaluer la dimension verticale de repos (DVR), on utilise uniquement la maquette supérieure pour rétablir le soutien de la lèvre et l'esthétique, ce qui influence la position de repos."
+      },
+      {
+        "questionText": "Lors de la détermination de la DVO, lorsque celle est sur évaluée, la correction se fait :",
+        "options": [
+          "Au dépend des deux bourrelets supérieurs et inférieurs.",
+          "Au dépend du bourrelet supérieur.",
+          "Au dépend du bourrelet inférieur.",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Par convention, le plan d'occlusion est réglé sur le bourrelet supérieur. Toute correction de la DVO se fait donc en ajustant la hauteur du bourrelet inférieur."
+      },
+      {
+        "questionText": "En prothèse totale, une dimension verticale d'occlusion sous-évaluée est caractérisée par : 1- L'existence d'un stomion 2- Par un contact des dents antéro-supérieures et antéro inferieures lors de la prononciation du \"S\" 3- Par une accentuation des sillons naso-géniens 4- Par un affrontement exagéré des lèvres 5- Toutes les réponses sont fausses",
+        "options": [
+          "(1,4)",
+          "(2,3)",
+          "(2,4)",
+          "(3,4)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Une DVO sous-évaluée donne un aspect vieilli avec une accentuation des rides et sillons (3) et des commissures tombantes favorisant la perlèche, ainsi qu'un affrontement des lèvres (4). Un contact lors de la prononciation du 'S' est plutôt signe d'une DVO surévaluée."
+      },
+      {
+        "questionText": "Lors de la réalisation du bourrelet supérieur :",
+        "options": [
+          "La forme doit respecter le contour de l'arcade.",
+          "Son épaisseur sera de 4mm dans la région antérieure elle atteint 6 à 10 mm au niveau des premières molaires.",
+          "Son épaisseur sera de 8mm dans la région antérieure elle atteint 10 à 12 mm au niveau des premières molaires.",
+          "Son épaisseur dans la région antérieure sera égale à celle au niveau des premières molaires."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La forme du bourrelet doit suivre le contour de l'arcade. Son épaisseur varie : environ 4-5mm antérieurement, et elle augmente à 6-10mm au niveau des premières molaires."
+      },
+      {
+        "questionText": "Les segments postérieurs du bourrelet supérieur sont réglés:",
+        "options": [
+          "Parallèlement au plan de référence défini par Camper",
+          "Perpendiculairement au plan de référence défini par Camper.",
+          "Parallèlement au plan de référence défini par Francfort.",
+          "Parallèlement au plan de référence bi-pupillaire."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Correct, les segments postérieurs du bourrelet d'occlusion supérieur sont réglés pour être parallèles au plan de Camper (ligne tragus - aile du nez)."
+      },
+      {
+        "questionText": "Le calcul de la DV par la technique de Wills se fait avec un compas pour :",
+        "options": [
+          "Rechercher une égalité entre la distance fente labiale/angle externe de l'œil et la distance point sous nasal/gnathion",
+          "Rechercher une égalité entre la distance tragus gnathion et la distance ligne bi-pupillaire/fente labiale",
+          "Rechercher une égalité entre la distance fente labiale/point sous nasal et la distance angle externe de l'œil gnathion",
+          "Aucune réponse n'est juste"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La méthode de Willis utilise un compas pour rechercher l'égalité entre deux distances faciales : la distance entre la pupille (ou l'angle externe de l'œil) et la fente labiale, et la distance entre le point sous-nasal et le gnathion (point le plus bas du menton)."
+      },
+      {
+        "questionText": "La position physiologique de repos est:",
+        "options": [
+          "La position d'équilibre tonique du complexe musculaire avec un espace libre d'inocclusion égal en moyenne à 2mm.",
+          "La position d'équilibre tonique du complexe musculaire avec une occlusion équilibrée d'intercuspidation maximale.",
+          "Est la somme de l'espace libre d'inocclusion égal en moyenne à 2mm et l'occlusion d'intercuspidation ruaximale",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La position de repos est une position d'équilibre postural des muscles, où les arcades sont séparées par l'espace libre d'inocclusion (ELI), qui est en moyenne de 2-3mm. La formule est : DVR = DVO + ELI."
+      },
+      {
+        "questionText": "Le rôle du POP est:",
+        "options": [
+          "D'assurer une phonation et mastication correcte.",
+          "D'assurer la permanence de la stabilité des prothèses sur les surfaces d'appui aussi bien en occlusion centrée et en excentrée.",
+          "De respecter l'intégrité des surfaces d'appui",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le Plan d'Occlusion Prothétique (POP) est crucial pour la fonction (phonation, mastication), la stabilité lors des différents mouvements, et la préservation des tissus de soutien par une bonne répartition des forces."
+      },
+      {
+        "questionText": "Lors du réglage du POP, on prend comme référence :",
+        "options": [
+          "L'esthétique du patient.",
+          "Le plan de camper",
+          "Le plan de Francfort.",
+          "Le plan de Wilson.",
+          "Le plan bi-pupillaire."
+        ],
+        "correctOptionIndexes": [
+          1,
+          4
+        ],
+        "explanation": "Le réglage du POP utilise des références extra-orales : la ligne bipupillaire pour la partie antérieure et le plan de Camper pour la partie postérieure. L'esthétique est un guide important mais pas un plan de référence direct."
+      },
+      {
+        "questionText": "La dimension verticale (DV) :",
+        "options": [
+          "Une DVO surévaluée",
+          "Une DVO sous-évaluée",
+          "Une prothèse supérieure instable.",
+          "Une DVR diminuée.",
+          "Aucune réponse n'est juste."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Une DVO sous-évaluée se caractérise par un visage vieilli, des commissures tombantes et une efficacité masticatoire réduite. Une DVO surévaluée entraîne des douleurs et des claquements."
+      },
+      {
+        "questionText": "Pour déterminer la DVO, l'évaluation de choix est la technique:",
+        "options": [
+          "Indirecte.",
+          "Phonétique.",
+          "Willis.",
+          "Céphalométrique.",
+          "Esthétique."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Bien que plusieurs techniques (métriques, phonétiques) soient utilisées, l'évaluation esthétique (harmonie du visage, soutien des lèvres) reste un guide valable et un critère de choix final pour la DVO."
+      },
+      {
+        "questionText": "Lors du réglage du segment postérieur (POP):",
+        "options": [
+          "Le bourrelet est réglé parallèlement au plan de Francfort.",
+          "La fourchette sera plaquée sur la face occlusale du bourrelet inférieur.",
+          "Ce réglage est obtenu grâce à la plaque de WILSON",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le segment postérieur est réglé parallèlement au plan de Camper. La fourchette de la règle de Fox est appliquée sur le bourrelet supérieur. La plaque de Wilson n'est pas utilisée pour ce réglage."
+      }
+    ]
+  },
+  {
+    "title": "Résorption et montage / Dents artificielles",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Concernant les molaires supérieures dans le montage conventionnel de Gysi:",
+        "options": [
+          "On utilise des dents anatomiques cuspidées à 33°",
+          "Les contacts s'établissent selon des rapports cuspides/ embrassures",
+          "Sont montées de façon que leurs cuspides palatines se projettent sur le sommet de la crête inférieure",
+          "Leur inclinaison vestibulaire dans le sens frontal permet de concrétiser la courbe de Spee"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le montage de Gysi utilise des dents anatomiques à 33°. Les contacts se font en rapports cuspides/embrasures pour les prémolaires et cuspides/fosses pour les molaires. Une légère inclinaison frontale et un surplomb vestibulo-lingual aident à éviter la morsure de la joue."
+      },
+      {
+        "questionText": "Lors du montage des dents antérieures supérieures:",
+        "options": [
+          "Le collet de l'incisive latérale est mésialé de 10° dans le sens frontal",
+          "La canine est située à 7mm en avant de la papille rétro-incisive",
+          "L'incisive centrale est vestibulée de 5° dans le plan sagittal",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Selon Gysi, le collet de l'incisive latérale supérieure est distalé de 8-10°. L'incisive centrale supérieure est située à 7mm en avant de la papille rétro-incisive. L'incisive centrale est bien vestibulée d'environ 5°."
+      },
+      {
+        "questionText": "Afin de limiter la résorption osseuse, il est recommandé de :",
+        "options": [
+          "Porter la prothèse de façon continu",
+          "Recourir à des empreintes compressives pour une meilleure précision",
+          "Recourir à une équilibration occlusale si nécessaire",
+          "Le respect des recommandations d'hygiène est obligatoire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Pour limiter la résorption, il faut s'abstenir de porter la prothèse la nuit, éviter les empreintes compressives, et assurer une équilibration occlusale adéquate pour bien répartir les forces."
+      },
+      {
+        "questionText": "les dents prothétiques en résine:",
+        "options": [
+          "Ont une dureté importante et une bonne résistance à l'abrasion",
+          "Sont facile à meuler et à polir",
+          "Sont indiquées pour les patients jeunes soucieux de l'esthétique",
+          "Présentent une liaison mécanique avec la base en résine"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les dents en résine sont moins dures et moins résistantes à l'abrasion que la porcelaine, mais elles sont faciles à ajuster. La porcelaine est souvent préférée pour les jeunes patients exigeants. La liaison de la résine à la base est chimique."
+      },
+      {
+        "questionText": "Montage des dents antérieures artificielles : 1- Leur choix s'effectue uniquement en fonction de la forme et de la teinte 2- Les faces vestibulaires des dents antérieures artificielles doivent être en harmonie avec celles des dents naturelles. 3- Les incisives centrales sont placées de part et d'autre de la ligne médiane 4- Les bords libres des latérales sont placés au contact du plan d'occlusion prothétique. 5- Toutes les réponses sont justes.",
+        "options": [
+          "(1)",
+          "(1,2)",
+          "(3,2)",
+          "(4,5)",
+          "(1,2,4)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le choix des dents inclut le matériau, la dimension, la forme et la teinte. Les faces vestibulaires doivent être harmonieuses. Les centrales sont bien de part et d'autre de la ligne médiane. Le bord libre des incisives latérales supérieures est placé environ 1-2mm au-dessus du plan d'occlusion."
+      },
+      {
+        "questionText": "Chez un édenté total présentant des crêtes résorbées et une muqueuse hyperhémiée, les dents prothétiques utilisées doivent: 1- Être en céramique 2- Avoir une surface occlusale large 3- Être en résine 4- Avoir une surface occlusale réduite 5- Toutes les réponses sont fausses",
+        "options": [
+          "(1,4)",
+          "(2,3)",
+          "(3,4)",
+          "(1,5)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Sur des crêtes résorbées, les dents en céramique sont déconseillées car elles transmettent plus de forces. On préfère des dents en résine. Une grande surface occlusale augmente les forces, il faut donc la réduire pour préserver la crête."
+      },
+      {
+        "questionText": "Chez un édenté total présentant une fibro-muqueuse hyperhemiée et hyperplasée, il faut impérativement utiliser des dents : 1- Prothétiques en céramique. 2- Prothétiques en résine. 3- Prothétiques avec une anatomie cuspidienne prononcée. 4- Anatomiques avec une anatomie très peu prononcée. 5- Anatomiques avec une largeur étroite.",
+        "options": [
+          "(1-3)",
+          "(2-3)",
+          "(2-4-5)",
+          "(3-5)",
+          "(1-4)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Face à une muqueuse fragile, on privilégie des dents en résine (2). Pour minimiser les contraintes, on choisit des dents avec une anatomie cuspidienne peu prononcée (4) et une largeur vestibulo-linguale réduite (étroite) (5)."
+      },
+      {
+        "questionText": "Le remaniement osseux:",
+        "options": [
+          "S'effectue de façon permanente tout au long de la vie",
+          "Est un processus altérant les propriétés du tissu osseux",
+          "se déroule sans chronologie précise",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le remaniement osseux est un processus physiologique continu qui préserve les propriétés biomécaniques de l'os et se déroule selon une chronologie bien précise d'activation, résorption et formation."
+      },
+      {
+        "questionText": "L'air de sustentation d'Ackermann correspond:",
+        "options": [
+          "A la région antérieure du maxillaire.",
+          "A la région latérale du maxillaire.",
+          "A la zone comprise entre le sommet de la crête antérieure et le fond du vestibule mandibulaire.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'aire d'Ackermann, ou aire de tolérance antérieure, est la zone vestibulaire mandibulaire située entre le sommet de la crête antérieure et le fond du vestibule."
+      },
+      {
+        "questionText": "Le choix des dents artificielles en prothèse complète :",
+        "options": [
+          "Est individualise",
+          "Et sous la responsabilité du prothésiste",
+          "N'a aucune interférence sur les forces transmettent aux tissus sous-jacents",
+          "Se porte sur des dents en résines en cas de crêtes flottantes"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le choix des dents est de la responsabilité du chirurgien-dentiste. Il est individualisé et doit viser à préserver les surfaces d'appui. Les dents en résine sont indiquées sur des crêtes flottantes pour leur effet amortisseur."
+      },
+      {
+        "questionText": "La résorption osseuse:",
+        "options": [
+          "Est centripète au maxillaire",
+          "Est trois fois plus importante au maxillaire qu'à la mandibule",
+          "Peut atteindre une moyenne de 0.5mm par an au maxillaire",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La résorption est bien centripète au maxillaire. Elle est cependant plus importante à la mandibule qu'au maxillaire (environ 4 fois plus). La moyenne annuelle est de 0.1mm au maxillaire et 0.4mm à la mandibule."
+      },
+      {
+        "questionText": "L'aire d'Ackermann",
+        "options": [
+          "Est déterminée par un tracé devant apparaitre sur le modèle supérieur",
+          "Préfigure la zone de postérieure de sustentation",
+          "Correspond à la région antérieure du maxillaire",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'aire d'Ackermann est tracée sur le modèle inférieur. Elle correspond à la zone de sustentation antérieure de la mandibule, entre le sommet de la crête et le fond du vestibule."
+      },
+      {
+        "questionText": "Selon ATWOOD, la résorption osseuse est:",
+        "options": [
+          "Centripète au maxillaire.",
+          "Progressive, irréversible et cumulative,",
+          "Plus importante au maxillaire qu'a la mandibule.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Atwood a décrit la résorption comme un processus chronique, progressif, irréversible et cumulatif. Elle est typiquement centripète au maxillaire et centrifuge à la mandibule, et plus importante à la mandibule."
+      },
+      {
+        "questionText": "Le montage des dents en prothèse totale doit se faire obligatoirement :",
+        "options": [
+          "Sur articulateur semi-adaptable.",
+          "Sur occluseur.",
+          "Les deux réponses sont justes",
+          "Les deux réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le montage sur articulateur semi-adaptable est fortement recommandé pour reproduire les mouvements mandibulaires et obtenir une occlusion équilibrée, même si ce n'est pas une obligation légale."
+      },
+      {
+        "questionText": "Le choix de la forme des dents doit s'harmoniser avec :",
+        "options": [
+          "Le sexe.",
+          "l ’âge",
+          "La morphologie du visage.",
+          "Le profil"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le choix de la forme des dents antérieures prend en compte le sexe (formes rondes pour le féminin, carrées pour le masculin), l'âge (dents plus trapues et abrasées pour les plus âgés), et surtout la morphologie générale du visage (carré, triangulaire, ovoïde)."
+      },
+      {
+        "questionText": "Pour Carlsson la résorption osseuse sur une période de 25 ans est:",
+        "options": [
+          "Plus importante à la mandibule qu'au maxillaire",
+          "Plus importante au maxillaire qu'a la mandibule",
+          "La même au maxillaire et à la mandibule",
+          "Deux fois plus importante au maxillaire qu'au la mandibule"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les études de Carlson et Tallgren montrent que sur 25 ans, la perte de hauteur de crête est bien plus importante à la mandibule (jusqu'à 10mm) qu'au maxillaire (environ 3mm)."
+      },
+      {
+        "questionText": "Selon Atwood, la résorption osseuse est:",
+        "options": [
+          "Centrifuge au maxillaire et centripète à la mandibule.",
+          "Chronique, progressive, irréversible et cumulative.",
+          "Très importante au maxillaire qu'a la mandibule.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La définition principale d'Atwood est que la résorption est un processus chronique, progressif, irréversible et cumulatif. Sa direction est centripète au maxillaire et centrifuge à la mandibule."
+      },
+      {
+        "questionText": "Les dents en céramique sont indiquées lorsqu'on est en:",
+        "options": [
+          "Présence des dents antagonistes naturelles fortement abrasées",
+          "Présence des dents antagonistes naturelles atteintes d'une parodontopathie",
+          "Présence des crêtes flottantes",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les situations mentionnées sont des indications pour les dents en résine. Les dents en céramique sont indiquées face à des dents naturelles non abrasées, une musculature puissante, une atrophie de crête prononcée ou pour des patients jeunes très soucieux de l'esthétique."
+      },
+      {
+        "questionText": "L'air de sustentation d'Ackermann correspond:",
+        "options": [
+          "A la région antérieure du maxillaire.",
+          "A la région antérieure de la mandibule.",
+          "A la zone comprise entre le sommet de la crête antérieure et le fond du vestibule maxillaire.",
+          "A la zone comprise entre le sommet de la crête antérieure et le fond du vestibule mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'aire d'Ackermann correspond précisément à la zone vestibulaire de la mandibule, entre le sommet de la crête antérieure et le fond du vestibule."
+      },
+      {
+        "questionText": "L'harmonie du visage, et le rétablissement du sourire dépendront:",
+        "options": [
+          "De la hauteur de l'étage inférieur.",
+          "De l'orientation et la position des dents artificielles",
+          "Du choix des dents prothétiques.",
+          "DU caractère de la fausse gencive"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'harmonie esthétique globale dépend de nombreux facteurs, mais le choix judicieux de la forme, de la taille et de la teinte des dents prothétiques est un élément central pour un sourire naturel."
+      },
+      {
+        "questionText": "On trace sur le modèle supérieur:",
+        "options": [
+          "Le plan sagittal médian.",
+          "La ligne de la crête faitière.",
+          "La zone antérieure de sustentation comprise entre le sommet de la crête antérieure et le fond du vestibule (aire d' ACKERMANN).",
+          "La position de la pointe des canines."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Sur le modèle supérieur, on trace des repères clés comme le plan sagittal médian, la ligne de crête et la position des canines. L'aire d'Ackermann est tracée sur le modèle inférieur."
+      },
+      {
+        "questionText": "Les dents en résines sont indiquées dans les cas suivants:",
+        "options": [
+          "Présence des dents antagonistes naturelles fortement abrasées.",
+          "Cas où les dents antagonistes naturelles ne sont pas abrasées",
+          "Présence des dents antagonistes naturelles atteintes d'une parodontopathie.",
+          "Présence des crêtes flottantes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les dents en résine sont indiquées face à des dents naturelles abrasées, des dents atteintes de parodontopathie, ou en présence de crêtes flottantes, car elles sont moins traumatisantes pour les structures antagonistes et de soutien."
+      },
+      {
+        "questionText": "La résorption osseuse est:",
+        "options": [
+          "Plus importante au maxillaire qu'à la mandibule.",
+          "Centripète au maxillaire et centrifuge à la mandibule.",
+          "Réversible et peut être stoppée.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La résorption osseuse est un processus irréversible. Sa direction est centripète (vers le centre) au maxillaire et centrifuge (vers l'extérieur) à la mandibule, et elle est plus marquée à la mandibule."
+      },
+      {
+        "questionText": "L’aire de sustentation d’Ackermann correspond :",
+        "options": [
+          "A la région antérieure et latérale du maxillaire.",
+          "A la région sublinguale.",
+          "A la zone comprise entre le sommet de la crête antérieure et le fond du vestibule mandibulaire.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'aire d'Ackermann est spécifiquement la zone vestibulaire antérieure de la mandibule, entre le sommet de la crête et le fond du vestibule."
+      },
+      {
+        "questionText": "En prothèse totale, les dents en céramique sont indiquées :",
+        "options": [
+          "Patient jeune soucieux de son esthétique",
+          "Patient exigeant des dents antérieures en porcelaine.",
+          "Patient très âgé",
+          "Crête flottante."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les dents en céramique sont souvent indiquées chez les patients jeunes pour leur excellente esthétique et résistance à l'usure. Les crêtes flottantes sont une contre-indication."
+      },
+      {
+        "questionText": "Le choix de la forme des dents doit s'harmoniser avec :",
+        "options": [
+          "Le sexe.",
+          "l ’âge",
+          "La morphologie du visage.",
+          "Le profil"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Selon la théorie de Williams, la forme de l'incisive centrale supérieure inversée doit correspondre à la forme du visage (carré, triangulaire, ovoïde)."
+      },
+      {
+        "questionText": "Le montage des dents en prothèse totale doit se faire obligatoirement :",
+        "options": [
+          "Sur articulateur semi-adaptable.",
+          "Sur occluseur",
+          "Les deux réponses sont justes.",
+          "Les deux réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Bien que pas légalement obligatoire, l'utilisation d'un articulateur semi-adaptable est la méthode de choix pour réaliser une occlusion équilibrée et fonctionnelle en prothèse totale."
+      }
+    ]
+  },
+  {
+    "title": "Essai fonctionnel",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Lors de L'essai fonctionnel, si on observe:",
+        "options": [
+          "Un déplacement en haut et en arrière de la maquette inférieure au repos cela implique que le bord vestibulaire est trop long",
+          "Une descente postérieure de la maquette supérieure au repos cela implique que les dents sont lingualées",
+          "Une bascule antérieure de la maquette inférieure après une pression sur les incisives cela implique que les dents sont trop vestibulées",
+          "Une bascule antérieure de la maquette inférieure après une pression sur les incisives cela implique que le joint sublingual est absent"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "Si au repos la prothèse supérieure descend, c'est que le bord antérieur est trop long ou les freins ne sont pas assez libérés. Il faut alors ajuster ces zones. Les autres propositions décrivent aussi des causes possibles d'instabilité."
+      },
+      {
+        "questionText": "le contrôle de l'occlusion, lors de l'essai fonctionnel s'effectue comme suit:",
+        "options": [
+          "Respect du schéma occlusal, DVO, DVR, et plan d'occlusion",
+          "Respect du schéma occlusal, DVO, DVR, espace libre et plan d'occlusion",
+          "DVO, DVR, espace libre, respect du schéma occlusal",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'essayage des deux maquettes ensemble implique de contrôler la relation centrée, la DVO, la coïncidence des milieux interincisifs, l'engrènement, et la recherche de contacts prématurés. Toute erreur impose un nouvel enregistrement."
+      },
+      {
+        "questionText": "Lors du contrôle de la phonation :",
+        "options": [
+          "DV peut être évaluée par l'émission des bilabiales « BE » et « PE »",
+          "Un sifflement se fait entendre si le surplomb est trop important",
+          "Une DV surévaluée entraine un claquement des dents",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "L'émission des bilabiales (BE, PE) permet de vérifier la DV ; un claquement indique une DV augmentée. Un sifflement lors de l'émission du 'S' indique un surplomb insuffisant ou un espace libre trop faible."
+      },
+      {
+        "questionText": "Lors de l'essai fonctionnel des maquettes:",
+        "options": [
+          "L'occlusion n'est pas contrôlée en absence du patient",
+          "Les erreurs dans la relation interarcade n'imposent pas un nouvel enregistrement",
+          "En propulsion le praticien vérifie la présence de contacts antérieurs uniquement",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les contrôles se font d'abord sur articulateur (sans le patient). Toute erreur dans la relation interarcade impose un nouvel enregistrement. En propulsion, pour une occlusion équilibrée, on doit avoir des contacts antérieurs ET postérieurs."
+      },
+      {
+        "questionText": "Le décollement de la prothèse inférieure suite à une pression digitale sur les incisives est du soit à:",
+        "options": [
+          "Une position trop vestibulée des incisives.",
+          "Un joint périphérique insuffisant dans la région sublinguale.",
+          "Un joint périphérique insuffisant dans la région vestibulaire antérieure.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Si une pression sur les incisives inférieures déplace la maquette, il s'agit soit d'un montage incorrect (dents trop en avant), soit d'un joint périphérique insuffisant au niveau de la région sublinguale ou des niches rétro-molaires."
+      },
+      {
+        "questionText": "En prothèse amovible totale, une prématurité occlusale peut conduire à",
+        "options": [
+          "Une instabilité des prothèses",
+          "Des blessures de la gencive",
+          "Un problème phonétique",
+          "Toutes les propositions sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Un contact prématuré crée une surcharge localisée, ce qui peut entraîner une instabilité de la prothèse, des blessures de la muqueuse sous-jacente, et perturber la fonction."
+      },
+      {
+        "questionText": "Lors de l'essai fonctionnel en PTA, on commence toujours par:",
+        "options": [
+          "La vérification de la relation inter-arcade",
+          "L'essai esthétique.",
+          "L'essai mécanique.",
+          "L'essai phonétique."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La séquence de contrôle classique est : 1. Contrôle de la valeur mécanique (adaptation, rétention, stabilité de chaque maquette séparément). 2. Contrôle de la relation inter-arcade (DVO, RC). 3. Contrôle esthétique. 4. Contrôle phonétique."
+      },
+      {
+        "questionText": "Une erreur d'enregistrement de la relation centrée corrigée lors de l'essai fonctionnel par:",
+        "options": [
+          "Une correction du montage des dents antérieures.",
+          "Un nouvel enregistrement de la relation inter arcade.",
+          "Une correction du plan d'occlusion prothétique.",
+          "Une reprise de l'empreinte secondaire."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Si la relation centrée est incorrecte, il est impératif de réaliser un nouvel enregistrement intermaxillaire pour remonter le modèle mandibulaire sur l'articulateur et corriger le montage."
+      },
+      {
+        "questionText": "Au cours de l'essai fonctionnel, une pression digitale sur le bord libre des incisives supérieures si elle provoque un basculement de la maquette, cela veut dire que:",
+        "options": [
+          "La situation des groupes prémolo-molaires est trop vestibulée.",
+          "Le plan d'occlusion prothétique est erroné.",
+          "Le joint postérieur est Insuffisant ou mal situé.",
+          "La dimension verticale est incorrecte"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Un basculement antérieur de la maquette supérieure peut être dû à des incisives montées trop en avant ou à un joint postérieur (vélo-palatin) insuffisant ou mal situé, ce qui compromet l'étanchéité."
+      },
+      {
+        "questionText": "Lors du contrôle des maquettes du montage, la position des bords libres des incisives supérieures est mise à l'épreuve phonétique lors des émissions est :",
+        "options": [
+          "Des labio-dentales.",
+          "Des dento-dentales."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les sons labio-dentaux (F, V) testent la position verticale et antéro-postérieure des incisives supérieures par leur contact avec la lèvre inférieure. Les sons dento-dentaux (S, CH) testent la relation entre les dents antérieures supérieures et inférieures. Le son 'K' teste la limite postérieure de la prothèse."
+      }
+    ]
+  },
+  {
+    "title": "Polymérisation",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "lors de la polymérisation des prothèses totales, concernant la mise en moufle:",
+        "options": [
+          "L'isolation avant le bourrage est largement suffisante pour prévenir les porosités",
+          "L'isolant prévient toute réaction chimique entre le plâtre et le monomère",
+          "La vapeur d'eau emmagasinée dans le plâtre favorise la polymérisation à chaud de la résine",
+          "La récupération du modèle avec la prothèse est facile même si le socle n'a pas été verni"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'isolant a plusieurs rôles : faciliter le démoulage, prévenir les réactions chimiques, et interdire l'union physique entre résine et plâtre. Il empêche aussi la vapeur d'eau du plâtre de causer des porosités dans la résine. L'isolation seule ne prévient pas toutes les porosités."
+      },
+      {
+        "questionText": "Lors de la polymérisation des prothèses totales, Le bourrage de la résine se fait :",
+        "options": [
+          "Au stade élastique, où la résine atteint la saturation et le mélange devient lisse",
+          "Toujours en excès, ce dernier va être évacué lors du pressage lent et progressif",
+          "Au stade plastique, c'est trop tard, le matériau perd son élasticité et commence à durcir",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le bourrage se fait au stade plastique. Le matériau devient inutilisable au stade élastique. On insère la résine en excès, puis on presse lentement et progressivement pour permettre à l'excédent de s'évacuer."
+      },
+      {
+        "questionText": "Après ébouillantage on applique un isolant sur le plâtre :",
+        "options": [
+          "Pour empêcher toute réaction chimique entre la résine et le plâtre",
+          "Pour empêcher la pénétration de l'eau dans le plâtre",
+          "Pour retirer facilement la prothèse de son modèle",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'isolant appliqué après l'élimination de la cire a pour buts principaux d'empêcher l'adhésion chimique et physique entre la résine et le plâtre, et ainsi de faciliter le démoulage de la prothèse."
+      },
+      {
+        "questionText": "Les causes principales des porosités sont :",
+        "options": [
+          "Une élévation trop rapide ou trop brutale de la température pendant la polymérisation.",
+          "Une épaisseur trop fine de la base en résine",
+          "Un déséquilibre occlusal.",
+          "Des lésions des muqueuses recouvrant les surfaces d'appui."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La cause majeure des porosités internes est l'ébullition du monomère due à une montée en température trop rapide lors de la polymérisation, surtout dans les zones épaisses de résine."
+      },
+      {
+        "questionText": "Lors de la polymérisation des prothèses totale adjointe :",
+        "options": [
+          "L'essentiel de la finition est fait après la mise en moufle par un grattage puis un polissage soigneux",
+          "On commence par une cuisson puis un bourrage et enfin un ébouillantage",
+          "La technicité de la personne en charge est de rigueur",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La qualité du résultat final dépend grandement de la rigueur et de la technicité du prothésiste à chaque étape. La séquence est : mise en moufle, ébouillantage (décerage), isolation, bourrage, cuisson (polymérisation), puis finition."
+      },
+      {
+        "questionText": "Avant le bourrage, il faut isoler le plâtre de la résine acrylique mise en contact avec lui, pour:",
+        "options": [
+          "Préserver la forme et le volume exacte de la prothèse",
+          "Rendre plus facile la séparation de la prothèse de son modèle",
+          "Rendre la prothèse plus lisse",
+          "Éviter tout risque de porosités"
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "L'isolant facilite le démoulage, permet la récupération du modèle, prévient les réactions chimiques, et empêche la pénétration de monomère dans le plâtre ou de vapeur d'eau dans la résine, ce qui évite les porosités."
+      },
+      {
+        "questionText": "Les causes principales des porosités sont:",
+        "options": [
+          "LA fermeture non hermétique des moufles",
+          "L'utilisation des moufles non vaselinés",
+          "Le refroidissement accéléré des moufles",
+          "L'utilisation d'un isolant de mauvaise qualité"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Outre la montée en température, les porosités peuvent être causées par la présence d'humidité (moufles non hermétiques, isolant de mauvaise qualité), un mélange peu homogène, ou une contamination."
+      },
+      {
+        "questionText": "Lors du bourrage:",
+        "options": [
+          "Il faut vaseliner le socle du modèle",
+          "L'insertion de résine s'effectuera à l'état élastique",
+          "L'insertion de résine s'effectuera à l'état plastique",
+          "Il est indispensable de faire des rétentions au niveau des talons des dents"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le bourrage de la résine se fait impérativement au stade plastique. Des rétentions sont aussi nécessaires sur les dents en résine pour assurer leur liaison mécanique avec la base."
+      },
+      {
+        "questionText": "En prévision de la polymérisation, la cire:",
+        "options": [
+          "Doit avoir une épaisseur de 2,5mm au centre de la voute palatine",
+          "Assure la solidarisation des maquettes sur leurs modèles",
+          "Permet de protéger les émergences vasculo-nerveuses palatines",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La maquette en cire solidarise les dents et préfigure la future base. Son épaisseur est d'environ 1.5 mm au centre et 2.5 mm en périphérie. La protection des émergences se fait par des décharges sur le modèle."
+      },
+      {
+        "questionText": "L'ébouillantage:",
+        "options": [
+          "Doit être maintenu à 65° pendant 90 mn",
+          "Doit commencer dans une eau froide",
+          "Permet la fonte de la cire",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'ébouillantage, ou décerage, consiste à plonger le moufle dans de l'eau bouillante pendant environ 9-10 minutes pour faire fondre et éliminer complètement la cire de la maquette."
+      },
+      {
+        "questionText": "Lors de la préparation de la résine en vue d'une mise en moufle, la phase de gel plastique correspond",
+        "options": [
+          "A un mélange collant.",
+          "A une masse non adhérente au récipient ni aux doigts",
+          "A la résine du bourrage.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les phases sont : 1. Physique (solution liquide), 2. Chimique (collante), 3. Gel plastique (lisse, non adhérente, idéale pour le bourrage), 4. Élastique (perte de plasticité)."
+      },
+      {
+        "questionText": "Lors de la mise en moufle, les isolants:",
+        "options": [
+          "Doivent être solubles dans l'eau.",
+          "Facilitent le démouflage.",
+          "N'ont aucun lien avec le risque de porosités",
+          "Doivent faciliter l'infiltration du monomère dans le plâtre"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les isolants forment un film imperméable qui facilite le démoulage, empêche les échanges chimiques et hydriques (qui causent des porosités) et empêche l'infiltration du monomère dans le plâtre."
+      },
+      {
+        "questionText": "Au cours de la mise en moufle:",
+        "options": [
+          "Une fois sous presse, le moufle doit être pressé rapidement.",
+          "La résine est modelée et déposée sur le sommet de la crête.",
+          "La polymérisation débute dans de l'eau froide.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La pression doit être lente et progressive. La résine est insérée en masse dans la contrepartie. Le cycle de polymérisation standard commence par immerger le moufle dans de l'eau froide."
+      },
+      {
+        "questionText": "Le bourrage est:",
+        "options": [
+          "L'insertion de la résine à l'état élastique dans la contrepartie du moufle recouvrant ainsi les dents.",
+          "L'insertion de la résine à l'état plastique dans la contrepartie du moufle recouvrant ainsi les dents.",
+          "La séparation des deux parties du moufle.",
+          "L'application de l'isolant au niveau du plâtre."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le bourrage est l'étape où la résine, au stade plastique, est insérée et pressée dans le moufle pour remplir l'espace laissé par la cire. La séparation est le démoulage."
+      },
+      {
+        "questionText": "Lors de la mise en moufle il faut :",
+        "options": [
+          "Laisser un espace à peu près 6 mm entre le bord antérieur du modèle et les parois du moufle.",
+          "Laisser un espace de 2mm entre le bord antérieur du modèle et les parois du moufle.",
+          "Ne pas laisser d'espace entre le bord antérieur du modèle et les parfois du moufle.",
+          "Cet espace n'a pas d'importance"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Lors de l'inclusion du modèle, il est important de laisser un espace suffisant d'environ 6 mm entre les dents antérieures et la paroi du moufle pour assurer une épaisseur de plâtre adéquate."
+      },
+      {
+        "questionText": "Lors de la mise en moufle la résine bourrée",
+        "options": [
+          "A la phase élastique.",
+          "A la phase plastique.",
+          "A la phase liquide.",
+          "A la phase filamenteuse"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le bourrage de la résine dans le moufle doit impérativement se faire pendant la phase plastique pour assurer un remplissage correct et homogène."
+      },
+      {
+        "questionText": "La polymérisation est réalisée:",
+        "options": [
+          "Directement dans de l'eau bouillante pendant 90 min.",
+          "Dans de l'eau bouillante pendant 1 nuit complète",
+          "Dans de l'eau froide pendant 1 heure et demie.",
+          "Dans de l'eau bouillante pendant 10 min à un quart d'heure"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Un cycle de polymérisation standard (long) consiste à placer le moufle dans l'eau froide, monter la température à 65°C et maintenir pendant 90 minutes. L'option D décrit plutôt l'ébouillantage (décerage)."
+      }
+    ]
+  },
+  {
+    "title": "Insertion en bouche",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Lors de l'insertion en bouche de la prothèse mandibulaire :",
+        "options": [
+          "Si elle remonte parallèlement à elle-même cela traduit un bord long dans la région mylohyoidiène",
+          "Si la prothèse remonte au niveau postérieur y'a une sur-extension dans la région rétro-molaire",
+          "Un déplacement lors de l'ouverture maximale traduit une surextension dans la région masséterine",
+          "Un déplacement d'arrière en avant traduit un bord vestibulaire trop long"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Si la prothèse remonte parallèlement, c'est une sur-extension du bord vestibulaire. Si elle remonte postérieurement, c'est une sur-extension dans la région mylohyoïdienne. Un déplacement d'arrière en avant traduit une sur-extension rétro-molaire."
+      },
+      {
+        "questionText": "Lors de l'insertion en bouche de la prothèse maxillaire :",
+        "options": [
+          "Si la prothèse descend parallèlement à elle-même, c'est que les insertions musculaires ne sont pas libérées",
+          "Si un déplacement s'observe à la pression digitale sur les PM et M cela veut dire que le joint est insuffisant du côté opposé à la pression",
+          "Si un déplacement s'observe à l'ouverture maximale cela veut dire que le bord vestibulaire est trop long",
+          "La traction verticale de haut en bas teste de la bonne stabilité et rétention"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Si la prothèse descend lentement, le bord vestibulaire est trop long ou un frein n'est pas dégagé. L'ouverture maximale contrôle le jeu des ligaments ptérygo-mandibulaires. La traction verticale teste la rétention. Un basculement à la pression latérale indique un défaut de joint du côté opposé."
+      },
+      {
+        "questionText": "Lors du contrôle phonétique des prothèses définitives:",
+        "options": [
+          "Si les prothèses se choquent à la prononciation des dentodentales c'est que la DV est sur-évaluée",
+          "Si les prothèses se choquent à la prononciation des bilabiales cela se traduit par une DV sous-évaluée",
+          "Le sifflement lors du «S» correspond à une surépaisseur de résine dans la région rétro-incisive",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Un claquement des prothèses lors de l'émission des dentodentales ('che-je') ou bilabiales ('pe-be') est souvent dû à une DVO surévaluée. Un sifflement indique un vide trop important entre la langue et la région rétro-incisive, nécessitant un ajout de résine."
+      },
+      {
+        "questionText": "Lors de l'insertion des prothèses, en relation centrée, les contacts occlusaux doivent être :",
+        "options": [
+          "Généralisé à droite et à gauche au niveau des PM et M supérieures et inférieures",
+          "Simultané à droite et à gauche au niveau des PM et M supérieures et inférieures",
+          "Simultané et non généralisé à droite et à gauche au niveau des PM et M supérieures et inférieures",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Un contact occlusal idéal en relation centrée doit être d'emblée généralisé (multiple) et simultané à droite et à gauche sur les prémolaires et molaires."
+      },
+      {
+        "questionText": "Lors de l'insertion des prothèses totales adjointes, on commencera de préférence par insérer:",
+        "options": [
+          "La prothèse maxillaire",
+          "La prothèse mandibulaire",
+          "Les deux prothèses en même temps",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "On insère la prothèse mandibulaire en premier car son faible volume et l'absence d'interférences avec le palais procurent immédiatement une impression plus favorable au patient."
+      },
+      {
+        "questionText": "Devant le reflexe nauséeux d'origine mécanique le praticien doit:",
+        "options": [
+          "Inviter le patient à basculer sa tête en avant.",
+          "Prescrire une prémédication.",
+          "Appliquer un anesthésique au niveau du voile du palais.",
+          "Corriger la situation du bord postérieur de la prothèse supérieure"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les nausées peuvent être psychiques (traitées par anesthésique de contact ou prémédication) ou mécaniques (mauvaise localisation ou épaisseur excessive du joint postérieur), auquel cas il faut corriger la prothèse."
+      },
+      {
+        "questionText": "Avec sa prothèse amovible totale nouvellement insérée le patient doit:",
+        "options": [
+          "Croquer l'alimentation dure pour faciliter l'adaptation.",
+          "Apprendre à manger avec sa prothèse dès le premier jour de l'insertion",
+          "Porter sa prothèse continuellement jour et nuit",
+          "Porter sa prothèse 8 heures par jour"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les premiers jours, le patient ne doit pas manger avec ses prothèses neuves. Il doit s'habituer à parler, boire, etc. et s'abstenir de croquer des aliments durs jusqu'à adaptation totale. Le port nocturne est déconseillé."
+      },
+      {
+        "questionText": "Les zones de compression au niveau de la prothèse peuvent être détectées:",
+        "options": [
+          "En faisant passer la pulpe de l'index sur les bords et l'intrados de la prothèse",
+          "Par un matériau révélateur.",
+          "Par un alginate fluide.",
+          "Par un bruit d'échappement d'air significatif suite à une pression exercée."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les zones de surpression, comme sur la ligne oblique interne ou des insertions musculaires, peuvent être détectées précisément à l'aide de matériaux révélateurs de pression."
+      },
+      {
+        "questionText": "Lors d'une surocclusion:",
+        "options": [
+          "Mineure équilibration occlusale",
+          "Trop importante refaire la prothèse",
+          "Mineure refaire la prothèse",
+          "Trop importante équilibration occlusale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Une surocclusion mineure (interférences) peut être corrigée par un meulage sélectif (équilibration). Si elle est trop importante, elle peut nécessiter de refaire le montage des dents, voire la prothèse complète."
+      },
+      {
+        "questionText": "Le décollement postérieur de la prothèse maxillaire lors d'une pression digitale sur tes incisives est dû à:",
+        "options": [
+          "Un montage incorrect des Incisives.",
+          "Un joint postérieur insuffisant.",
+          "Un joint postérieur mal situé.",
+          "Un joint para-tubérositaire erroné."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Si la maquette se décolle postérieurement lors d'une pression antérieure, il peut s'agir d'un joint postérieur insuffisant (manque d'herméticité), mal situé, ou de dents antérieures trop vestibulées."
+      },
+      {
+        "questionText": "Le soulèvement postérieur de la maquette mandibulaire au repos est dû:",
+        "options": [
+          "Une extension linguale rétro-molaire trop importante.",
+          "Un bord lingual sous mylo-hyoïdien trop long",
+          "Un ligament ptérygo-mandibulaire non libéré",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Un soulèvement postérieur de la prothèse inférieure signifie que le bord dans la région du muscle mylo-hyoïdien est trop long et interfère avec le plancher buccal."
+      },
+      {
+        "questionText": "Après insertion des prothèses totales en bouche, il est conseillé au patient de:",
+        "options": [
+          "S'habituer à manger avec ses prothèses neuves les premiers jours.",
+          "Retirer ses prothèses le soir et les mettre dans un verre d'eau.",
+          "Croquer des aliments durs faciliter l'adaptation.",
+          "De nettoyer ses prothèses après chaque repas avec une brosse dure et de l'eau savonneuse.."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le patient doit retirer chaque soir ses prothèses et les conserver dans une boîte de rangement sèche après les avoir nettoyées avec une brosse et du savon."
+      },
+      {
+        "questionText": "La bonne adaptation d'une prothèse totale :",
+        "options": [
+          "Dépend de la précision des matériaux à empreinte.",
+          "Dépend de la qualité d'empreinte.",
+          "Est vérifiée par une pression axiale qui ne doit dégager aucun bruit d'échappement d'air",
+          "Dépend des phases techniques de l'élaboration prothétique.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La bonne adaptation de la prothèse à sa surface d'appui dépend de la qualité de toutes les étapes : précision du matériau et de la technique d'empreinte, et rigueur des étapes de laboratoire. L'absence de bruit à la pression est un test clinique de cette adaptation."
+      },
+      {
+        "questionText": "La valeur mécanique des prothèses- totales dépend:",
+        "options": [
+          "De la bonne adaptation.",
+          "De la rétention.",
+          "De la stabilité statique uniquement.",
+          "De la stabilité dynamique"
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "La performance globale de la prothèse dépend de sa bonne adaptation à la surface d'appui, de sa stabilité (statique et dynamique) et de sa rétention."
+      },
+      {
+        "questionText": "La morsure des joues ct corrigée par:",
+        "options": [
+          "Épaississement du versant vestibulaire de la prothèse Inférieure.",
+          "Épaississement du versant vestibulaire de la prothèse supérieure.",
+          "Adoucissement de la cuspide vestibulaire de la molaire supérieure.",
+          "Rétrécissement du diamètre mésio-distal de la molaire inférieure",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La morsure de joue est due à l'absence de surplomb horizontal. On la corrige par adoucissement des cuspides vestibulaires supérieures, diminution du diamètre vestibulo-lingual des molaires inférieures, ou en ajoutant de la résine sur le versant vestibulaire supérieur."
+      },
+      {
+        "questionText": "Les réactions douloureuses en occlusion centrée sont dues à",
+        "options": [
+          "La morsure des joues.",
+          "Une surcharge occlusale.",
+          "Une ligne oblique interne saillante.",
+          "Des insertions musculaires insuffisamment libérées.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Des douleurs en occlusion centrée peuvent être causées par une surcharge occlusale (prématurité), mais aussi par des interférences de la base prothétique avec des reliefs anatomiques (ligne oblique interne, insertions musculaires) ou des traumatismes comme la morsure de joue."
+      },
+      {
+        "questionText": "Après insertion des prothèses totales en bouche, il est conseillé au patient de:",
+        "options": [
+          "S'habituer à manger avec ses prothèses neuves les premiers jours",
+          "Porter ses prothèses 24h/24h.",
+          "Retirer ses prothèses le soir et les mettre dans un verre d'eau.",
+          "Croquer des aliments durs pour faciliter l'adaptation.",
+          "De nettoyer ses prothèses après chaque repas avec une brosse dure et de l'eau savonneuse."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Conseils principaux : hygiène rigoureuse après chaque repas avec brosse et savon, retrait nocturne (conservation à sec), adaptation alimentaire progressive. La conservation dans l'eau n'est plus recommandée."
+      },
+      {
+        "questionText": "La prothèse doit être conservée dans un milieu humide avant son insertion:",
+        "options": [
+          "Pour éviter toute distorsion secondaire par déshydratation",
+          "Éviter déformation de la résine.",
+          "Assurer une saturation hydrique de la résine.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La résine acrylique peut subir de légères variations dimensionnelles (retrait) si elle se déshydrate après polymérisation. La conserver dans l'eau avant l'insertion permet de maintenir sa stabilité dimensionnelle et sa saturation hydrique."
+      },
+      {
+        "questionText": "Lors de l'insertion de la prothèse supérieure, la pression initiale au niveau du palais a pour effet majeur :",
+        "options": [
+          "De comprimer la ligne de flexion du voile et les terminaisons nerveuses sous-jacentes afin de réduire et supprimer les nausées.",
+          "Contrôler l'absence de fuite d'air au niveau du joint postérieur.",
+          "D'assurer l'herméticité du joint postérieur.",
+          "Limiter l'extension de la prothèse"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La pression initiale permet de vérifier la bonne adaptation et l'étanchéité du joint périphérique, notamment le joint postérieur, ce qui est essentiel pour la rétention (absence de fuite d'air)."
+      },
+      {
+        "questionText": "Cochez-la ou les réponses justes :",
+        "options": [
+          "Pendant les premiers jours (03 premiers jours), en aucun cas le patient ne devra manger avec ses prothèses neuves.",
+          "Pendant les premiers jours (03 premiers jours), en aucun cas le patient ne devra dormir avec ses prothèses neuves.",
+          "Pendant les premiers jours (03 premiers jours), en aucun cas le patient ne devra parler avec ses prothèses neuves.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Il est conseillé au patient de ne pas manger avec ses nouvelles prothèses les tout premiers jours. Le port nocturne est déconseillé. Parler, en revanche, est encouragé dès le début pour s'habituer."
+      }
+    ]
+  },
+  {
+    "title": "Occlusion bilatérale / Équilibration occlusale",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "L'équilibration occlusale permet:",
+        "options": [
+          "Une meilleure répartition de la charge occlusale",
+          "D'assurer des contacts antérieurs et postérieurs en relation centrée",
+          "De prévenir tout déséquilibre prothétique",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "L'équilibration occlusale par meulage vise à assurer une répartition harmonieuse des forces masticatoires pour garantir l'adaptation fonctionnelle et la stabilité des prothèses."
+      },
+      {
+        "questionText": "L'équilibration immédiate se fait:",
+        "options": [
+          "l'occlusion bilatéralement équilibrée.",
+          "l'occlusion balancée.",
+          "l'occlusion unilatéralement équilibrée.",
+          "l'occlusion non équilibrée avec protection canine"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "En prothèse totale, le concept occlusal de choix est l'occlusion bilatéralement équilibrée (ou balancée) pour assurer la stabilité des prothèses lors des mouvements."
+      },
+      {
+        "questionText": "L'équilibration immédiate se fait:",
+        "options": [
+          "En relation centrée en propulsion",
+          "Le jour de l'insertion",
+          "En latéralité",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'équilibration immédiate est réalisée au fauteuil, le jour de l'insertion de la prothèse, après avoir vérifié et corrigé l'adaptation de l'intrados."
+      },
+      {
+        "questionText": "L'équilibration en relation centrée",
+        "options": [
+          "Se fait selon la règle MSDI (mésiaux supérieur-distaux inférieur)",
+          "Permet d'éviter tout contact antérieur",
+          "Assure deux paires de contacts à droite et à gauche (4.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'équilibration en RC vise à obtenir des contacts postérieurs multiples et simultanés, sans aucun contact au niveau du groupe incisivo-canin. La règle de meulage est 'MUDL' (Mésial Upper, Distal Lower) ou 'BULL' (Buccal Upper, Lingual Lower)."
+      },
+      {
+        "questionText": "L'équilibration en propulsion :",
+        "options": [
+          "Doit assurer une désocclusion postérieure",
+          "Se fait jusqu'au bout à bout incisif",
+          "Assure un glissement entre les versants :distaux supérieur et mésiaux inférieur",
+          "Touts les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'équilibration en propulsion vise à obtenir des contacts antérieurs et postérieurs simultanés depuis la RC jusqu'à la position de bout à bout incisif. Le meulage suit la règle DS/MI (Distaux Supérieurs / Mésiaux Inférieurs)."
+      },
+      {
+        "questionText": "Les cuspides dites de surplomb : 1- Sont les cuspides secondaires 2- Sont des cuspides vestibulaires au maxillaire 3- S'engrènent directement au fond d'une fosse triturante 4- Ont un effet basculant sur la prothèse 5- Sont des cuspides vestibulaires à la mandibule",
+        "options": [
+          "(3, 4)",
+          "(1,2,4)",
+          "(4,5)",
+          "(2,3)",
+          "(3, 5)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les cuspides secondaires (guides, de surplomb, basculantes) correspondent aux cuspides vestibulaires maxillaires et linguales mandibulaires. Elles guident les mouvements et peuvent avoir un effet basculant si non équilibrées. Les cuspides primaires (d'appui) s'engrènent dans les fosses."
+      },
+      {
+        "questionText": "Les cuspides primaires : 1- Sont des cuspides vestibulaires au maxillaire 2- Sont des cuspides linguales à la mandibule 3- Entrent en contact avec la fosse centrale antagoniste ou la fossette proximale antagoniste 4- Déterminent la dimension verticale d'occlusion (DVO) de l'étage inférieur de la face 5- Interviennent dans l'écrasement du bol alimentaire au cours de la mastication",
+        "options": [
+          "(1,2)",
+          "(1,3)",
+          "(3,4,5)",
+          "(2,4)",
+          "(1,5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les cuspides primaires (d'appui, de support) sont les cuspides palatines maxillaires et vestibulaires mandibulaires. Elles calent la DVO en contactant les fosses antagonistes (3, 4) et assurent l'écrasement du bol alimentaire (5)."
+      },
+      {
+        "questionText": "L'équilibration des prothèses totales en relation centrée se fait : 1- Au dépend des cuspides secondaires 2- Au dépend des cuspides primaires 3- Au dépend des cuspides guides 4- Au dépend des versants cuspidiens mésiaux supérieurs et distaux inférieurs 5- En supprimant tout contact entre les dents antérieures",
+        "options": [
+          "(1.3)",
+          "(2,5)",
+          "(1,4)",
+          "(3,5)",
+          "(4,5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "En RC, on cherche à obtenir des contacts postérieurs multiples sans contacts antérieurs (5). Le meulage se fait selon la règle MSDI (Mésiaux Supérieurs - Distaux Inférieurs) (4) pour ne pas altérer les cuspides d'appui."
+      },
+      {
+        "questionText": "L'équilibration occlusale en relation centrée se fait:",
+        "options": [
+          "En préservant toujours les cuspides d'appuis.",
+          "En créant le maximum de points de contacts simultanés postérieurs et antérieurs",
+          "Selon la loi MS-Di en cas de dérapage antérieur.",
+          "En réduisant la cuspide d'appui s'il y a gêne du contact bicuspidien en latéralité"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le meulage en RC vise à éliminer les prématurités pour obtenir des contacts postérieurs simultanés, sans contacts antérieurs. Il se fait sur les versants cuspidiens selon la règle MS/DI (Mésiaux Supérieurs / Distaux Inférieurs)."
+      },
+      {
+        "questionText": "L'équilibration secondaire:",
+        "options": [
+          "Vise à éliminer uniquement les erreurs en excentré",
+          "Se fait 48 heures avant l'insertion des prothèses.",
+          "Se fait obligatoirement sur un articulateur semi-adaptable.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'équilibration secondaire se fait après l'insertion (plusieurs jours ou semaines après) pour corriger les adaptations occlusales en bouche. Elle peut se faire directement en bouche ou après remontage sur articulateur."
+      },
+      {
+        "questionText": "L'articulé de TENCH est un procédé qui permet de :",
+        "options": [
+          "Transférer la prothèse maxillaire sur articulateur.",
+          "Transférer la prothèse mandibulaire sur articulateur.",
+          "Transférer la relation intermaxillaire sur articulateur.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'articulé de Tench est une technique de remontage sur articulateur utilisée pour l'équilibration secondaire. Elle consiste à réaliser un nouvel enregistrement de la RC en bouche sur les prothèses finies pour remonter le modèle mandibulaire."
+      },
+      {
+        "questionText": "Les cuspides d'appui sont:",
+        "options": [
+          "Des cuspides primaires.",
+          "Des cuspides secondaires.",
+          "Hors occlusion en relation centrée.",
+          "Celles qui maintiennent la relation centrée"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les cuspides primaires ou cuspides d’appui sont les cuspides vestibulaires des dents inférieures et les cuspides palatines des dents supérieures. Leur rôle est de fixer la dimension verticale d’occlusion."
+      },
+      {
+        "questionText": "En prothése totale, l'équilibration a pour but de : 1-Répartir les charges occlusales de façon harmonieuse 2-Assurer le maximum de stabilité 3-Eliminer les interférences occlusales uniquement en RC 4- Obtenir une occlusion bilatérale équilibrée 5-Assurer des contacts dentaires en RC, en propulsion et en latéralité",
+        "options": [
+          "A(1.3)",
+          "B(1.5)",
+          "C(3.4)",
+          "D(2.5)",
+          "E(4.5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "L'équilibration vise à obtenir une occlusion bilatéralement équilibrée (4), ce qui implique d'avoir des contacts dentaires stables en RC, en propulsion et en latéralité (5) pour répartir les charges et assurer la stabilité."
+      },
+      {
+        "questionText": "L'équilibration occlusale en prothèse totale est destinée à:",
+        "options": [
+          "Corriger les imprécisions d'enregistrement intermaxillaire.",
+          "Majorer la stabilisation de la prothèse",
+          "Faciliter l'intégration de la prothèse",
+          "Répartir harmonieusement les forces occlusales.",
+          "Retarder la résorption osseuse"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'objectif principal est de répartir harmonieusement les forces pour supprimer les contacts déstabilisants et, par conséquent, diminuer la résorption osseuse."
+      },
+      {
+        "questionText": "L'équilibration en relation centrée permet:",
+        "options": [
+          "D'éliminer les contacts antérieurs aux dépend des faces palatines des antéro-supérieures.",
+          "D'aboutir à des contacts simultanés à droite et à gauche.",
+          "D'orienter les forces masticatoires dans le sens favorable à l'os sous-jacent.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "En RC, l'équilibration vise à obtenir des contacts postérieurs bilatéraux, simultanés et stables pour bien répartir les forces, tout en s'assurant de l'absence de contacts antérieurs."
+      },
+      {
+        "questionText": "Lors d'une équilibration en propulsion, afin d'obtenir une occlusion bilatérale équilibrée:",
+        "options": [
+          "Il doit s'établir un contact antérieur et une désocclusion totale et immédiate postérieure.",
+          "L'angle de Bennet est orienté à 15°",
+          "Le meulage se fait selon la formule MS-DI.",
+          "Le meulage se fait aux dépend des versants cuspidiens distaux supérieurs et mésiaux inférieurs."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "En propulsion, il faut au moins un contact incisif et un contact molaire. L'angle de Bennett est à 0°. Le meulage se fait selon la règle DS/MI (Distaux Supérieurs / Mésiaux Inférieurs)."
+      },
+      {
+        "questionText": "L'équilibration en latéralité:",
+        "options": [
+          "S'effectue aux dépend des cuspides secondaires du côté travaillant.",
+          "Intéresse les versants mésiaux internes des cuspides palatines et versants distaux internes des cuspides vestibulaires inférieures.",
+          "Le meulage se fait diagonalement du côté travaillant.",
+          "le meulage s'effectue diagonalement du côté non travaillant"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Côté travaillant, le meulage se fait transversalement (règle 'BULL'). Côté non travaillant, il se fait diagonalement et concerne les versants externes des cuspides palatines maxillaires et les versants internes des cuspides vestibulaires mandibulaires."
+      },
+      {
+        "questionText": "L'équilibration secondaire:",
+        "options": [
+          "Est réalisée le jour de l'insertion des prothèses.",
+          "Permet de corriger les erreurs d'occlusion en position de relation centrée",
+          "Permet de corriger les erreurs d'occlusion en propulsion et en latéralité.",
+          "Est réalisée lors des visites régulières de contrôle qui suivent l'insertion des prothèses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'équilibration secondaire est effectuée quelques jours ou semaines après l'insertion pour ajuster l'occlusion après que la prothèse se soit 'tassée' sur les tissus. Elle corrige les prématurités en RC et en excentré."
+      },
+      {
+        "questionText": "En prothèse totale, le concept occlusal utilisé est :",
+        "options": [
+          "La fonction canine.",
+          "La fonction groupe.",
+          "La fonction unilatérale équilibrée.",
+          "La fonction de diduction latérale.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le concept occlusal de choix en prothèse totale complète est la fonction bilatérale équilibrée (ou occlusion balancée)."
+      },
+      {
+        "questionText": "Parmi les objectifs de l'équilibration en prothèse adjointe totale:",
+        "options": [
+          "Répartir les charges occlusales de façon harmonieuse.",
+          "Augmenter l'efficacité masticatoire.",
+          "Assurer le maximum de stabilité.",
+          "Préserver les tissus de support et leur Infrastructure.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'équilibration vise principalement à répartir harmonieusement les charges occlusales pour assurer la stabilité, préserver les tissus et améliorer l'efficacité fonctionnelle."
+      },
+      {
+        "questionText": "Le matériel utilisé en équilibration des PAT est:",
+        "options": [
+          "Pointes diamantées.",
+          "Pointes vertes.",
+          "Meulettes en caoutchouc.",
+          "Papier à articulé de 20 micron.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "L'équilibration nécessite du papier à articuler pour marquer les contacts, et des instruments de meulage (fraises, pointes vertes) et de polissage (meulettes en caoutchouc) pour ajuster les dents."
+      },
+      {
+        "questionText": "En prothèse totale, le but de l'équilibration occlusale est de : 1- Assurer l'adaptation fonctionnelle des prothèses 2- Assurer la stabilité et le confort 3- Supprimer les contacts déstabilisants uniquement en RC 4- Répartir les charges occlusales 5- Préserver les tissus de support",
+        "options": [
+          "(1-3)",
+          "(1-5)",
+          "(3-4)",
+          "(2-5)",
+          "(4.5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "L'équilibration vise à répartir harmonieusement les forces (4) pour préserver les tissus de support (5). Elle supprime les interférences en RC mais aussi dans les mouvements excentrés."
+      },
+      {
+        "questionText": "L'équilibration des prothèses totales en relation centrée se fait : 1- Au dépend des cuspides secondaires 2- Au dépend des cuspides primaires 3- Au dépend des cuspides guides 4- Au dépend des versants cuspidiens mésiaux supérieurs et distaux inférieurs 5- En supprimant tout contact entre les dents antérieures",
+        "options": [
+          "(1-3)",
+          "(2-5)",
+          "(1-4)",
+          "(3-5)",
+          "(4-5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le meulage se fait au dépend des versants cuspidiens selon la règle MSDI (Mésiaux Supérieurs - Distaux Inférieurs) (4) pour préserver les sommets des cuspides d'appui, et on supprime tout contact antérieur (5)."
+      },
+      {
+        "questionText": "Le concept occlusal consiste à avoir:",
+        "options": [
+          "Des contacts simultanément entre les versants cuspidiens des prémolaires et molaires et entre les bords libres des incisives.",
+          "Des contacts simultanément entre les versants cuspidiens des prémolaires et molaires et entre les pointes des canines.",
+          "Des contacts entre les bords libres des incisives et canines sans contact postérieur.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "En propulsion, les contacts doivent s'établir simultanément entre les versants cuspidiens des prémolaires et molaires, ainsi qu'entre les bords libres des incisives et des canines des deux arcades."
+      },
+      {
+        "questionText": "En occlusion de relation centrée ORC, on a :",
+        "options": [
+          "Absence de contact entre les dents antérieures.",
+          "Présence de contact entre les dents antérieures.",
+          "Au niveau des dents postérieures : les contacts s'établissent entre les cuspides d'appui secondaires inférieures et palatines supérieures.",
+          "Au niveau des dents postérieures : les contacts s'établissent entre les cuspides d'appui vestibulaires inférieures et palatines supérieures."
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "En ORC, il y a absence de contact antérieur. Postérieurement, les contacts s'établissent entre les cuspides d'appui (vestibulaires inférieures et palatines supérieures) et les fosses centrales antagonistes."
+      },
+      {
+        "questionText": "En prothèse complète amovible, l'occlusion balancée:",
+        "options": [
+          "Permet de maintenir l'équilibre des prothèses pendant la mastication",
+          "Permet d'assurer la pérennité de la surface d'appui ostéo-muqueuse",
+          "Entraine une résorption accélérée",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "L'occlusion balancée (bilatéralement équilibrée) préserve les tissus de soutien en répartissant les forces et stabilise les prothèses pendant les fonctions."
+      },
+      {
+        "questionText": "L'occlusion bilatéralement équilibrée se caractérise par:",
+        "options": [
+          "La présence des contacts entre les dents antérieures supérieures et inférieures en RC",
+          "Des contacts simultanés entre les dents antérieures et postérieures en propulsion",
+          "Des contacts entre les prémolaires et molaires du côté travaillant",
+          "Des contacts entre les prémolaires et molaires du côté non travaillant"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Elle se caractérise par une absence de contact antérieur en RC, des contacts simultanés antérieurs et postérieurs en propulsion, et des contacts des deux côtés (travaillant et non travaillant) en latéralité."
+      },
+      {
+        "questionText": "Le phénomène de Christensen se caractérise par:",
+        "options": [
+          "Une désocclusion molaire en latéralité droite",
+          "Une désocclusion incisive en latéralité.",
+          "Une désocclusion molaire en bout à bout",
+          "Une désocclusion incisive en propulsion,"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le phénomène de Christensen est l'espace qui apparaît entre les molaires antagonistes lors de la propulsion mandibulaire (occlusion en bout à bout incisif), dû à la pente de la trajectoire condylienne."
+      },
+      {
+        "questionText": "L'équilibration occlusale:",
+        "options": [
+          "Constitue une phase terminale",
+          "Il s'agit de rechercher et de supprimer les interférences occlusales au cours de tous les mouvements centrés et excentrés",
+          "La suppression des interférences occlusales uniquement au cours des mouvements de latéralité",
+          "La suppression des interférences occlusales uniquement pendant le mouvement de propulsion"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'équilibration est une étape finale cruciale qui consiste à ajuster les contacts dentaires pour éliminer les interférences en occlusion centrée et lors de tous les mouvements excentrés (propulsion, latéralité)."
+      },
+      {
+        "questionText": "Le concept occlusal utilisé en prothèse totale adjointe est:",
+        "options": [
+          "La protection canine",
+          "La fonction groupe",
+          "L'occlusion bilatéralement équilibrée",
+          "L'occlusion bilatéralement équilibrée en propulsion"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "En prothèse totale adjointe, le concept le plus utilisé est l’occlusion bilatérale équilibrée, appelée souvent 'occlusion balancée', pour assurer la stabilité."
+      },
+      {
+        "questionText": "Lors de l'occlusion bilatéralement équilibrée, on aura",
+        "options": [
+          "Absence de contact les dents antérieures en occlusion centrée",
+          "En latéralité, un ou deux points de contact du côté non travaillant sont suffisants pour assurer la stabilité des prothèses",
+          "En protrusion des contacts entre les dents postérieures et antérieures",
+          "Des contacts antérieurs et postérieurs on occlusion centrée"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'occlusion bilatéralement équilibrée comprend une absence de contact entre les dents antérieures en RC, des contacts des deux côtés en latéralité, et des contacts simultanés antérieurs et postérieurs en propulsion."
+      },
+      {
+        "questionText": "Les objectifs d'une occlusion en prothèse totale sont:",
+        "options": [
+          "Restaurer uniquement la fonction de mastication.",
+          "Préserver les tissus de soutien.",
+          "Assurer la stabilité des prothèses",
+          "Rétablir des rapports d'intercuspidation maximale."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Les objectifs sont multiples : restaurer les fonctions (mastication, phonation, déglutition), préserver les tissus de soutien, assurer la stabilité et rétablir des rapports d'occlusion stables."
+      },
+      {
+        "questionText": "L'occlusion bilatéralement équilibrée engrenée généralisée est retrouvée dans :",
+        "options": [
+          "Le montage de Hanau.",
+          "Le montage de d'AC KERMAN",
+          "Le montage de GYSI",
+          "Le montage de Sears"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le montage selon Gysi vise une occlusion équilibrée avec engrènement cuspidien maximal, correspondant à une occlusion bilatéralement équilibrée et engrenée."
+      },
+      {
+        "questionText": "En prothèse totale à la fin de l'équilibration en latéralité, nous devons obtenir : 1- Des contacts dentaires uniquement du côté non travaillant. 2- Un maximum de contacts du côté travaillant 3- Un maximum de contacts du côté travaillant et all moins I ou 2 contacts du côté non travaillant. 4- Une protection des contacts obtenus en relation centrée 5- Toutes les réponses sont fausses",
+        "options": [
+          "(5)",
+          "(1)",
+          "(3,4)",
+          "(1,4)",
+          "(2,4)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'objectif est d'obtenir des contacts multiples côté travaillant et au moins un ou deux contacts équilibrants côté non travaillant (3), tout en préservant les contacts stables obtenus en relation centrée (4)."
+      },
+      {
+        "questionText": "Lors de l'occlusion bilatéralement équilibrée. on aura :",
+        "options": [
+          "Absence de contact entre les dents antérieures en occlusion centrée",
+          "En latéralité. 1 ou 2 points de contact du côté non travaillant sont suffisants pour assurer la stabilité des prothèses.",
+          "Des contacts entre les dents postérieures impliquant le minimum de pointde contact.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "En occlusion centrée, il y a absence de contact antérieur. En latéralité, il faut des contacts côté travaillant et au moins 1 ou 2 contacts équilibrants côté non travaillant. En propulsion, il faut des contacts antérieurs et postérieurs."
+      }
+    ]
+  },
+  {
+    "title": "Adhésion rétention et sustentation",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "La rétention:",
+        "options": [
+          "S'oppose aux forces qui tendent à mobiliser la prothèse parallèlement à sa surface d'appui",
+          "Est proportionnelle à l’étendue de la surface d'appui.",
+          "Dépend de la cohésion entre les molécules salivaires et la surface d'appui",
+          "Dépend du matériau à empreinte utilisé."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La rétention est la résistance aux forces verticales qui éloignent la prothèse. Elle est directement proportionnelle à l'étendue de la surface d'appui. La cohésion concerne les molécules salivaires entre elles."
+      },
+      {
+        "questionText": "Les facteurs mécaniques de la rétention sont:",
+        "options": [
+          "La réalisation d'une occlusion balancée.",
+          "L'enregistrement précis de la surface d'appui.",
+          "Le réglage du plan d'occlusion prothétique.",
+          "Le respect des aires de tolérance."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les facteurs mécaniques incluent le réglage du plan d'occlusion, le modelé de l'extrados prothétique, et l'exploitation des contre-dépouilles, qui contribuent tous à la stabilité et indirectement à la rétention."
+      },
+      {
+        "questionText": "La mouillabilité",
+        "options": [
+          "C'est la résistance à l'écoulement d'un liquide",
+          "Favorise l'adhérence",
+          "Contribue à la rétention des prothèses complètes",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La mouillabilité est la capacité d'un liquide (salive) à s'étaler sur une surface (prothèse/muqueuse). Un bon mouillage est essentiel pour l'adhésion et la capillarité, qui contribuent à la rétention."
+      },
+      {
+        "questionText": "Les facteurs physiques sont:",
+        "options": [
+          "L'adhésion",
+          "Les indices biologiques",
+          "La pression atmosphérique",
+          "La viscosité"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "Les facteurs physiques de la rétention incluent l'adhésion, la cohésion, la tension superficielle (capillarité), la mouillabilité, la viscosité salivaire et la pression atmosphérique (effet ventouse)."
+      },
+      {
+        "questionText": "La mouillabilité:",
+        "options": [
+          "Est intedépendante de l'adhésion",
+          "Est évaluée lorsque le liquide entre en mouvement",
+          "Joue un rôle dans la rétention des prothèses",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est la capacité d'un liquide à s'étaler sur un solide. Si un solide ressort sec après avoir été trempé, il n'est pas mouillable. Un bon mouillage est crucial pour les forces de capillarité qui participent à la rétention."
+      },
+      {
+        "questionText": "Lorsque l'angle de mouillage est supérieur à 90°, ceci est en faveur:",
+        "options": [
+          "D'un bon mouillage.",
+          "D'une bonne adhérence.",
+          "D'Une forte attraction intermoléculaire entre solide et liquide.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Un angle de mouillage supérieur à 90° indique un mauvais mouillage (le liquide forme des gouttes), une faible adhérence, et des forces de cohésion internes au liquide plus fortes que les forces d'adhésion avec le solide."
+      },
+      {
+        "questionText": "La viscosité de la salive:",
+        "options": [
+          "Dépend de la concentration en mucine.",
+          "Doit être moyenne.",
+          "Intervient dans la stabilité de la prothèse",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Par sa viscosité, qui dépend de sa concentration en mucine, la salive ralentit la désinsertion de la prothèse. Une viscosité moyenne est idéale pour la rétention."
+      },
+      {
+        "questionText": "L'adhésion en prothèse totale est : 1- L'attraction moléculaire entre deux corps différents. 2- L'attraction des molécules de la salive entre elles. 3- Obtenue grâce à une salive riche en mucine. 4- Proportionnelle à la surface de contact entre l'intrados et la muqueuse d'appui. 5- Toutes les réponses sont fausses",
+        "options": [
+          "(1,2)",
+          "(2)",
+          "(1,3,4)",
+          "(4)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'adhésion est l'attraction entre corps différents (1). L'attraction entre molécules salivaires est la cohésion (2 faux). Une salive riche en mucines favorise l'adhésion indirecte (3). L'adhésion augmente avec la surface de contact intime (4)."
+      },
+      {
+        "questionText": "L'adhésion:",
+        "options": [
+          "Est assurée par l'interposition d'un film salivaire entre la surface d'appui et l'intrados de la prothèse.",
+          "Est Inversement proportionnelle à l'étendue des surfaces de contact.",
+          "Est proportionnelle à l'épaisseur du film salivaire.",
+          "Est dépendante de la rétention.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "En PTA, l'adhésion est indirecte, via le film salivaire. Elle devient optimale lorsque le film salivaire est très mince, ce qui nécessite une excellente adaptation de l'intrados."
+      },
+      {
+        "questionText": "La rétention:",
+        "options": [
+          "Est une réaction défavorable qui s'oppose aux forces verticales exercées sur la prothèse pour l'éloigner de la surface d'appui",
+          "Permet de préserver l'intégrité tissulaire.",
+          "Est rendue meilleure en réalisant des perforations au niveau du PEI",
+          "Contribue à la crédibilité esthétique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La rétention est une réaction favorable qui s'oppose à la désinsertion verticale. Son rôle initial est d'éviter la désinsertion, mais elle intervient aussi pour préserver l'intégrité tissulaire, permettre une efficacité fonctionnelle et favoriser l'intégration psychique."
+      },
+      {
+        "questionText": "La sustentation:",
+        "options": [
+          "Est une réaction favorable qui s'oppose aux forces (transversales ou antéropostérieurs) exercées sur la prothèse parallèlement à la surface d'appui",
+          "Est meilleure en présence d'un équilibre musculaire et occlusal.",
+          "Dépend du respect du jeu des organes para-prothétiques.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La sustentation est la résistance de la surface d'appui aux forces axiales tendant à enfoncer la prothèse. Les autres options décrivent des facteurs liés à la stabilité."
+      }
+    ]
+  },
+  {
+    "title": "Les prothèses piézographiques",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Dans la piézographie par la technique phonétique:",
+        "options": [
+          "Le duplicata de l'enregistrement piézographique est en cire",
+          "Le duplicata de l'enregistrement piézographique est en résine",
+          "Le plan d'occlusion est réglé sur le duplicata de la péizographie lors de l'enregistrement",
+          "L'empreinte secondaire est réalisée avec un PE doté d'artifices de rétention"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les résines à prise retardée (ex: Fitt de Kerr) sont réservées à la technique par phonation. L'empreinte secondaire est réalisée en rebasant la maquette en résine avec un silicone fluide."
+      },
+      {
+        "questionText": "La piézographie analytique:",
+        "options": [
+          "Est indiquée avant la pose d'implant",
+          "Utilise la déglutition et la phonation comme fonctions modelantes",
+          "Permet de corriger les défauts de la prothèse implanto-portée",
+          "Permet de corriger un certain point une prothèse mal placée dans l'espace prothétique"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "La piézographie analytique permet de vérifier si une prothèse existante s'inscrit correctement dans l'espace neutre et s'il est possible de l'améliorer. Elle repose uniquement sur la phonation."
+      },
+      {
+        "questionText": "La semi-piézographie maxillaire:",
+        "options": [
+          "implique un enregistrement antérieur dynamique",
+          "implique un enregistrement postérieur statique.",
+          "Est indiquée uniquement en cas de résorption maxillaire antérieure.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Le modelage maxillaire est dit semi-piézographique car seule la région antérieure est concernée par le modelage dynamique (piézographique) pour assurer son rôle esthétique et phonétique."
+      },
+      {
+        "questionText": "La piézographie prothétique est indiquée:",
+        "options": [
+          "En cas d'invagination de la sangle buccinato-labiale.",
+          "En cas d'envahissement de l'espace prothétique par les structures périphériques.",
+          "En cas d'édentement non compensé.",
+          "Pour améliorer la rétention des prothèses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Indications : crêtes mandibulaires très résorbées, langue volumineuse ou puissante, certains cas d'édentement partiel, stabilisation de la prothèse maxillaire, prothèse sur implants, et chez des patients avec des atteintes neurologiques."
+      },
+      {
+        "questionText": "La plézographie prothétique est indiquée :",
+        "options": [
+          "chez les patients édentés non apparélilés de longue date.",
+          "En présence d'une langue puissante.",
+          "En présence d'une langue large.",
+          "En cas d'une prothèse mandibulaire instable."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La piézographie est indiquée pour les crêtes très résorbées, les langues volumineuses (souvent chez l'édenté ancien) ou puissantes, et pour améliorer la stabilité d'une prothèse mandibulaire instable."
+      },
+      {
+        "questionText": "Les caractéristiques requises des matériaux plézologiques sont :",
+        "options": [
+          "L' altérabilité en bouche.",
+          "La fidélité de reproduction.",
+          "La plasticité suffisante pendant un temps suffisamment court.",
+          "La présence d'une faible toxicité."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le matériau piézographique idéal doit être fidèle, avoir une plasticité prolongée, être non toxique, et stable dimensionnellement après enregistrement."
+      },
+      {
+        "questionText": "La phonation est utilisée pour l'enregistrement plézographique parceque :",
+        "options": [
+          "Le matériau utilisé est facile à manipuler.mp",
+          "C'est la fonction buccale la plus-affectée par la perte des dents.",
+          "C'est la fonction buccale la plus génératrice de forces horizontales déséquilibrantes.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La phonation est choisie car elle mobilise largement la langue et les muscles périphériques sans contact occlusal, générant des forces horizontales importantes qui sculptent le matériau dans l'espace neutre. Elle est moins affectée par l'édentement que la mastication."
+      },
+      {
+        "questionText": "La piézographie : 1- Est indiquée lorsque la crête est haute 2- Elle permet d'enregistrer l'espace prothétique 3- Est réalisée avec un hydrocolloïde irréversible 4- Est réalisée à l'arcade maxillaire 5- Peut être réalisée par phonation",
+        "options": [
+          "(1,3)",
+          "(2,3)",
+          "(2,5)",
+          "(5)",
+          "(1,4)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La piézographie enregistre l'espace prothétique (2). Elle est indiquée sur crêtes très résorbées (1 faux), principalement à la mandibule (4 faux). Elle utilise des résines retard ou des silicones (3 faux) et peut être réalisée par phonation ou déglutition (5)."
+      },
+      {
+        "questionText": "La péizographie analytique:",
+        "options": [
+          "Est indiquée en cas d'instabilité d'une prothèse totale inférieure",
+          "Se fait secteur par secteur avec prothèse supérieure en bouche",
+          "Permet d'objectiver l'espace prothétique en implantologie",
+          "Est indiquée après réalisation de la prothèse"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La piézographie analytique permet de vérifier si une prothèse existante s'inscrit dans l'espace neutre et est indiquée en cas d'instabilité. L'analyse se fait secteur par secteur, sans la prothèse maxillaire."
+      },
+      {
+        "questionText": "Le POP en péizographie est:",
+        "options": [
+          "A référence linguale",
+          "A référence linguo-mandibulaire",
+          "Déterminé sur la maquette supérieure",
+          "Déterminé après l'émission du S"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "En piézographie, le plan de référence est lingo-mandibulaire, et non le plan de Camper, pour déterminer le plan d'occlusion."
+      },
+      {
+        "questionText": "La technique piézographique permet de:",
+        "options": [
+          "Déterminer le volume de l'espace prothétique.",
+          "Assurer une rétention maximale des prothèses.",
+          "Déterminer le modelé des prothèses.",
+          "Ménager l'espace nécessaire à la langue, les lèvres et les joues"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La piézographie enregistre le volume de l'espace neutre (espace prothétique) pour déterminer le modelé externe optimal de la prothèse, en respectant l'espace fonctionnel des organes périphériques."
+      },
+      {
+        "questionText": "En piézographie, le POP est:",
+        "options": [
+          "A référence labiale.",
+          "A référence linguo-mandibulaire",
+          "Déterminé sur la maquette supérieure.",
+          "Déterminé après l'émission du ( S)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le plan d'occlusion piézographique est déterminé à la mandibule avec des repères linguo-mandibulaires. L'émission du 'S' est un test phonétique aidant à positionner le bord des incisives inférieures."
+      },
+      {
+        "questionText": "La piézographie analytique:",
+        "options": [
+          "Est indiquée en cas d'instabilité d'une prothèse totale inférieure.",
+          "Se fait secteur par secteur avec prothèses supérieures en bouche",
+          "Permet d'objectiver l'espace prothétique en implantologie.",
+          "Est indiquée après pose d'implants"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Elle analyse une prothèse existante, et est donc indiquée en cas d'instabilité de celle-ci, ou après la pose d'implants pour vérifier/corriger la prothèse. Elle se fait sans la prothèse antagoniste."
+      },
+      {
+        "questionText": "La localisation du plan d'occlusion prothétique est généralement maxillaire, sauf pour la technique :",
+        "options": [
+          "Céphalométrique.",
+          "De Paterson.",
+          "Piézographique.",
+          "Toutes les réponses sont fausses.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Classiquement, le POP est déterminé sur la maquette maxillaire. La technique piézographique est une exception notable où le plan de référence est lingo-mandibulaire et le POP est déterminé à la mandibule."
+      },
+      {
+        "questionText": "La prothèse piézographique est indiquée dans le cas de:",
+        "options": [
+          "Crêtes de niveaux III et IV (Pr KLEIN)",
+          "Volume très important de la langue",
+          "En prothèse adjointe partielle pour les classe I. II ou IV de Kennedy.",
+          "Atteinte de paralysie faciale ou d'asymétrie bucco-faciale.",
+          "Perte de la dimension verticale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les indications incluent les crêtes très résorbées, une langue volumineuse ou puissante, certains cas de prothèse partielle, et des situations neuromusculaires particulières comme la paralysie faciale."
+      },
+      {
+        "questionText": "La technique d'enregistrement de l'espace prothétique est:",
+        "options": [
+          "La phonation.",
+          "La déglutition",
+          "La mastication.",
+          "La phonation et la déglutition.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'espace prothétique, ou piézogramme, peut être enregistré en utilisant soit la fonction de phonation, soit celle de déglutition pour modeler le matériau d'enregistrement."
+      },
+      {
+        "questionText": "Le matériau d'enregistrement est:",
+        "options": [
+          "Un hydrocolloïde réversible.",
+          "Un hydrcolloide irréversible.",
+          "Un matériau siloxane.",
+          "Une résine à prise retardée.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les matériaux utilisés sont principalement les résines à prise retardée (ex: Fitt de Kerr) pour la technique par phonation, et les silicones à haute viscosité pour la technique par déglutition."
+      },
+      {
+        "questionText": "En prothèse totale, l'enregistrement piézographique consiste à enregistrer : 1- L'espace libre d'inocclusion. 2- La ligne de flexion du voile du palais. 3- Le bord antérieur du ligament ptérygo-maxillaire. 4- Les muscles du plancher buccal. 5- L'espace existant entre les muscles de la sangle buccinato- labiale et les muscles de la langue.",
+        "options": [
+          "(1-3)",
+          "(2-5)",
+          "(1-4)",
+          "(4-5)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La piézographie est la reproduction en trois dimensions de l'espace prothétique mandibulaire, qui est l'espace d'équilibre entre la musculature linguale d'un côté et la sangle labio-jugale de l'autre."
+      }
+    ]
+  },
+  {
+    "title": "Réfection",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Le rebasage des bases prothétiques:",
+        "options": [
+          "Est systématiquement indiqué pour toute prothèse ayant plus de 5 ans.",
+          "Est recommandé en cas de perte de la dimension verticale d'occlusion.",
+          "Peut être proposé à un patient âgé jugé inapte à un nouvel appareillage.",
+          "Est contre-indiqué en cas de troubles métaboliques comme le diabète."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le rebasage est indiqué pour rétablir une DVO sous-évaluée. Il peut être une solution pour un patient très âgé ou infirme. Le diabète peut être une indication, pas une contre-indication. La durée de vie d'une prothèse est de 5 à 7 ans, mais le rebasage n'est pas systématique."
+      },
+      {
+        "questionText": "Dans le rebasage indirect par réfection totale:",
+        "options": [
+          "L'empreinte de réadaptation est toujours réalisée bouche ouverte.",
+          "Après cristallisation du plâtre, les dents sont récupérées et replacées dans la contre-partie.",
+          "Le bourrage est réalisé avec une résine autopolymérisable à froid.",
+          "L'élimination totale de l'ancienne base prothétique est nécessaire."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'empreinte se fait bouche fermée. Après mise en moufle et élimination de l'ancienne base, les dents sont récupérées et replacées dans leur logement dans la contrepartie. Le bourrage se fait avec une résine thermopolymérisable."
+      },
+      {
+        "questionText": "Le rebasage direct:",
+        "options": [
+          "Expose les muqueuses à un risque de brûlure chimique du à la polymérisation.",
+          "Est considéré comme plus durable que le rebasage indirect.",
+          "Est contre-indiqué chez les patients allergiques au monomère résiduel.",
+          "Ne nécessite pas d'avivage de l'intrados de la prothèse."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le rebasage direct utilise des résines autopolymérisables qui peuvent irriter les tissus (chimiquement et thermiquement). Il est moins durable que le rebasage indirect et peut être problématique pour les patients allergiques. L'intrados doit être préparé (avivé)."
+      },
+      {
+        "questionText": "Concernant l'indication du rebasage des prothèses totales adjointes:",
+        "options": [
+          "L'indication majeur est l'amélioration de la stabilité et la rétention",
+          "dimension verticale d'occlusion est surévaluée le rebasage figure parmi les solutions envisagées",
+          "perte des qualités mécaniques, esthétiques et fonctionnelles des anciennes prothèses",
+          "Contre-indiqué s'il y a un défaut de relation centrée"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'indication principale est de restaurer la stabilité et la rétention perdues. Il peut corriger une DVO sous-évaluée, mais pas sur-évaluée. Un défaut de RC est une contre-indication."
+      },
+      {
+        "questionText": "La réfection totale des bases prothétiques :",
+        "options": [
+          "Est plus fréquente au niveau du maxillaire",
+          "La prise de l'empreinte doit toujours se faire sous occlusion",
+          "Interesse toute la résine de la base prothétique, seuls les bords seront conservés",
+          "si le rebasage est indiqué pour les prothèses maxillaires et mandibulaires, il se fera en même temps"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La réfection est plus fréquente à la mandibule. La prise d'empreinte peut se faire bouche ouverte ou fermée (sous occlusion). Seules les dents sont conservées, toute la base en résine est refaite. On traite les arcades séparément."
+      },
+      {
+        "questionText": "Le rebasage direct des prothèses totales adjointes :",
+        "options": [
+          "Se fait en utilisant une résine auto polymérisable fantenle",
+          "C'est un rebasage facilement exécutable au laboratoire et qui permet au patient de garder sa prothèse",
+          "ce type de rebasage constitue une source d'irritation pour les tissus sous-jacents",
+          "Présente un risque accru de porosités et de dégradation à moyen terme"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Le rebasage direct se fait au fauteuil (pas au laboratoire) avec une résine autopolymérisable. Il peut irriter la muqueuse et le matériau est moins durable et plus poreux que celui utilisé en technique indirecte."
+      },
+      {
+        "questionText": "Les indications du rebasage sont:",
+        "options": [
+          "Perte de la rétention prothétique",
+          "Rétablissement d'une relation centrée correcte",
+          "Résine poreuse",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'indication principale est la perte de rétention/stabilité due à la résorption. Une RC incorrecte est une contre-indication. Une résine poreuse nécessite une réfection complète de la prothèse."
+      },
+      {
+        "questionText": "/ Les préalables indispensables du rebasage sont:",
+        "options": [
+          "La correction des zones de compression",
+          "Un choix des dents en harmonie avec la typologie du patient",
+          "Une équilibration occlusale",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Avant de rebaser, il faut vérifier la stabilité de la prothèse, les rapports intermaxillaires, les contacts dentaires, et supprimer toute aspérité ou zone de surpression sur la base."
+      },
+      {
+        "questionText": "Parmi les indications de la réfection des bases prothétiques:",
+        "options": [
+          "Le manque de stabilité prothétique.",
+          "La correction d'une dimension verticale surévaluée.",
+          "Une erreur d'enregistrement de la surface d'appui.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La réfection (rebasage/regarnissage) est indiquée pour améliorer la stabilité et le confort, corriger une DVO sous-évaluée, ou corriger l'adaptation à la surface d'appui."
+      },
+      {
+        "questionText": "La méthode directe de la réfection des bases prothétiques:",
+        "options": [
+          "Est préférable à la méthode indirecte.",
+          "Nécessite une prise d'empreinte.",
+          "Est réalisée avec de la résine auto polymérisable.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La méthode directe, réservée aux cas d'urgence, se fait au fauteuil avec une résine autopolymérisable. Elle est moins précise que la méthode indirecte (laboratoire) qui nécessite une prise d'empreinte."
+      },
+      {
+        "questionText": "Parmi les contre-indications du rebasage:",
+        "options": [
+          "Allure peu esthétique de la prothèse.",
+          "Instabilité simultanée des 2 prothèses.",
+          "Erreur importante d'occlusion.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Contre-indications : prothèse inesthétique, dents usées, montage incorrect, DVO surévaluée, décalage de la relation interarcade, plan d'occlusion mal orienté."
+      }
+    ]
+  },
+  {
+    "title": "Les prothèses immédiates",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "Parmi les éléments suivants, lequel constitue un avantage spécifique de la prothèse immédiate:",
+        "options": [
+          "Elle évite la période d'édentement transitoire post-extractionelle.",
+          "Elle réduit le temps de cicatrisation des tissus mous",
+          "Elle permet une empreinte fonctionnelle différée.",
+          "Elle dispense d'un suivi post-prothétique."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'objectif principal est de remplacer immédiatement les dents extraites, préservant ainsi l'esthétique, la DVO, la phonation, et agissant comme un guide de cicatrisation."
+      },
+      {
+        "questionText": "Dans les objectifs de la prothèse immédiate:",
+        "options": [
+          "remplacements sans transition des dents supprimés lorsque celles-ci ne peuvent être conservée",
+          "Préserver l'esthétique du patient et conserver la dimension verticale primitive",
+          "N'améliore pas le processus de cicatrisation et d'ostéogenèse",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La prothèse immédiate vise à remplacer immédiatement les dents, préservant l'esthétique, la fonction, et améliorant le processus de cicatrisation."
+      },
+      {
+        "questionText": "La prothèse immédiate est une prothèse",
+        "options": [
+          "conçue avant l'extraction des dents restantes et insérée instantanément après leur avulsion",
+          "conçue avant l'extraction des dents restantes et insérée instantanément avant leur avulsion",
+          "conçue après l'extraction des dents restantes et insérée instantanément avant leur avulsion",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Par définition, la prothèse immédiate est préparée avant les extractions finales et mise en place juste après celles-ci."
+      },
+      {
+        "questionText": "Dans les étapes de la confection de la prothèse immédiate:",
+        "options": [
+          "Il n'est pas indispensable de noter et de conserver la situation du plan d'occlusion",
+          "Les dents postérieures sont extraites les premières pour assurer un temps de cicatrisation plus important.",
+          "au laboratoire les dernières dents restantes (en plâtre) seront supprimées et remplacées par les dents artificielles",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La technique classique implique une phase d'extraction des dents postérieures pour la cicatrisation, puis la préparation de la prothèse au laboratoire où les dents restantes sur le modèle sont supprimées pour monter les dents artificielles."
+      },
+      {
+        "questionText": "La totale immédiate : 1- Est réalisée un mois après la cicatrisation des dernières extractions 2- Est réalisée une semaine après la cicatrisation des dernières extractions 3- Accélère la résorption osseuse post-extractionnelle 4- Diminue la résorption osseuse post-extractionnelle 5- Est réalisée avant les extractions des dents",
+        "options": [
+          "(1,2)",
+          "(2,5)",
+          "(1,4)",
+          "(2,3)",
+          "(4,5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La prothèse immédiate est préparée avant les extractions (5) et insérée juste après. Elle agit comme un conformateur, protège le site et peut aider à guider la cicatrisation, limitant potentiellement la résorption initiale (4)."
+      },
+      {
+        "questionText": "La prothèse immédiate:",
+        "options": [
+          "Est une prothèse définitive",
+          "Devra être rebasé",
+          "Sert de pansement chirurgical",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La prothèse immédiate est une prothèse transitoire qui sert de pansement après extraction. Elle nécessite des ajustements et rebasages fréquents pour suivre la cicatrisation."
+      },
+      {
+        "questionText": "Lors de la réalisation d'une prothèse immédiate le PEI sera réalisé:",
+        "options": [
+          "Après l'extraction des dents antérieures",
+          "Après l'extraction des dents postérieures",
+          "Après l'extraction de toutes les dents",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Dans la technique classique en deux temps, le PEI est réalisé après l'extraction et la cicatrisation des secteurs postérieurs, en conservant les dents antérieures."
+      },
+      {
+        "questionText": "La prothèse immédiate permet:",
+        "options": [
+          "D'accélérer la cicatrisation",
+          "De protéger le caillot sanguin",
+          "D'atténuer les douleurs post opératoires",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Elle a pour objectifs de préserver l'esthétique, la DVO, d'améliorer la cicatrisation et de protéger les sites d'extraction."
+      },
+      {
+        "questionText": "La prothèse immédiate permet:",
+        "options": [
+          "D'agir favorablement sur le psychisme du patient.",
+          "D'agir défavorablement sur le capital osseux.",
+          "D'agir en tant que pansement chirurgical.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le pansement chirurgical favorise l'organisation du caillot sanguin, permettant une cicatrisation moins douloureuse, plus rapide et de meilleure qualité."
+      },
+      {
+        "questionText": "La prothèse immédiate:",
+        "options": [
+          "Ne nécessite pas la confection d'un porte empreinte individuel.",
+          "Nécessite des rebasages",
+          "Est une prothèse définitive.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Elle ne doit pas être considérée comme définitive et nécessite toujours des rebasages fréquents pour compenser la résorption post-extractionnelle."
+      },
+      {
+        "questionText": "Parmi les inconvénients de la prothèse immédiate, nous avons :",
+        "options": [
+          "Le rebasage de ces prothèses souvent nécessaire.",
+          "Les horaires plus élevés.",
+          "Les patients qui restent sans restauration prothétique pendant la période de cicatrisation.",
+          "Les dents antérieures devant être extraites en premier."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les inconvénients incluent l'impossibilité d'essayage esthétique antérieur, un coût potentiellement plus élevé, des soins post-opératoires complexes et la nécessité de rebasages fréquents."
+      },
+      {
+        "questionText": "Lors de la réalisation du porte empreinte Individuel dans le cadre d'une prothèse immédiate:",
+        "options": [
+          "Les dents antérieures seront supprimées une à une sur le modèle en plâtre",
+          "Les dents antérieures seront déchargées l'on aurait pu être",
+          "La base du PEI ne doit pas atteindre la ligne de du voile.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Les dents restantes sur le modèle sont recouvertes d'une cire d'espacement (décharge). La base du PEI doit déborder de 2-3mm sur la ligne de flexion du voile."
+      },
+      {
+        "questionText": "La prothèse totale immédiate : 1- Accentue la résorption osseuse. 2- Diminue la résorption osseuse. 3- Est réalisée une semaine après les dernières extractions. 4- Est réalisée avant les dernières extractions. 5- Est une prothèse totale définitive.",
+        "options": [
+          "(1-3)",
+          "(2-3)",
+          "(1-4)",
+          "(2-4)",
+          "(1-5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Elle est réalisée avant les extractions (4) et insérée immédiatement après. En guidant la cicatrisation (pansement chirurgical), elle peut limiter la résorption initiale (2). Elle n'est pas définitive (5 faux)."
+      },
+      {
+        "questionText": "La prothèse immédiate permet:",
+        "options": [
+          "D'accélérer la cicatrisation.",
+          "De protéger le caillot sanguin.",
+          "D'atténuer les douleurs postopératoires.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Elle sert de pansement, protège le caillot et les sites d'extraction, favorisant une cicatrisation plus rapide et de meilleure qualité."
+      },
+      {
+        "questionText": "Lors de lg réalisation d'une prothèse immédiate",
+        "options": [
+          "Les dents antérieures doivent être extraites en premier pour maintenir une DV correcte.",
+          "L'intrados sera garni d'hydrocast.",
+          "Des duplicatas des prothèses est souhaitable.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les dents postérieures sont extraites en premier. L'utilisation d'un guide chirurgical (duplicata de l'intrados) est recommandée pour guider l'alvéoloplastie lors des extractions."
+      },
+      {
+        "questionText": "Les recommandations données au patient porteur d'une prothèse immédiate sont:",
+        "options": [
+          "Le rinçage régulier de la prothèse les premières 24h",
+          "Une alimentation liquide",
+          "L'absorption d'antalgiques en cas de douleurs.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Le patient ne doit pas retirer la prothèse pendant les premières 24-48h. Une alimentation liquide ou molle est recommandée initialement. Des antalgiques sont prescrits pour gérer la douleur post-extraction."
+      },
+      {
+        "questionText": "La prothèse totale immédiate : 1- Est réalisée un mois après la cicatrisation des dernières extractions. 2- Est réalisée une semaine après la cicatrisation des dernières extractions. 3- Elle accélère la résorption osseuse post-extractionnelle. 4- Elle diminue la résorption osseuse post-extractionnelle. 5- Elle est réalisée avant les extractions des dents.",
+        "options": [
+          "(1-2)",
+          "(2-5)",
+          "(1-4)",
+          "(2-3)",
+          "(4-5)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Réalisée avant les extractions (5), elle est insérée immédiatement après. Elle peut guider la cicatrisation et limiter la résorption initiale (4)."
+      }
+    ]
+  },
+  {
+    "title": "Prothèse supra-implantaire",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "La PACSI Mandibulaire nécessite :",
+        "options": [
+          "Deux implants en arrière des formans mentonniers.",
+          "Deux implants entre les foramens mentonniers.",
+          "Six Implants entre les foramens mentonniers.",
+          "Deux implants à la mandibule et 4 au Maxillaire."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le site symphysaire entre les foramens mentonniers est favorable car il n'y a pas d'obstacles anatomiques. On utilise 2 à 4 implants à la mandibule. Certains auteurs recommandent 4 à 6 implants au maxillaire."
+      },
+      {
+        "questionText": "Le choix d'un système d'attache est influencé par :",
+        "options": [
+          "Les propriétés techniques du système.",
+          "Sa maniabilité clinique lors de l'insertion.",
+          "Des possibilités de réparation et d'adaptation"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "Le choix d'un système d'attache est un compromis qui doit prendre en compte de nombreux facteurs : les conditions cliniques, les propriétés techniques du système (rétention, usure, encombrement), sa facilité de manipulation, ses possibilités de maintenance et d'adaptation, ainsi que le coût."
+      }
+    ]
+  }
+  ,{
+    title: "Test 1: 1ère EMD 2019/2020",
     subject: "prothese-y3",
     questions: [
       {
-        questionText: "Les muscles qui stabilisent la Les prothèse totale adjointe sont",
+        questionText: "Connaître la personnalité des patients est :",
         options: [
-          "Masséter", // A
-          "Mylo-hyoïdien", // B
-          "Buccinateur", // C
-          "Orbiculaire des lèvres" // D
+          "Sans importance pour le déroulement du traitement prothétique.",
+          "Impératif pour adapter le discours et la prise en charge à chacun d'entre eux.",
+          "Essentiel pour établir un plan de traitement adéquat.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [2, 3], // C, D
-        explanation: "Les muscles périphériques comme l’orbiculaire et le buccinateur participent à la stabilisation des prothèses par la tension de leurs fibres parallèles au plan d’occlusion."
+        correctOptionIndexes: [1, 2],
+        explanation: "La psychologie du patient édenté est un facteur clé de succès. Comprendre sa personnalité permet d'adapter la communication (B) et d'établir un plan de traitement réaliste et accepté par le patient (C), ce qui influence directement le pronostic."
       },
       {
-        questionText: "Le muscle masséter est:",
+        questionText: "En prothèse amovible complète, l'examen radiologique panoramique nous informe sur :",
         options: [
-          "Un muscle élévateur de la mandibule", // A
-          "Un muscle court, épais et quadrilatère", // B
-          "Formé de deux faisceaux, superficiel et profond", // C
-          "Un muscle à exploiter lors de la réalisation de la prothèse adjointe totale" // D
+          "Le degré de résorption.",
+          "Les éléments intra osseux.",
+          "Le système articulaire.",
+          "Le choix des thérapeutiques amovibles."
         ],
-        correctOptionIndexes: [0, 1, 2], // A, B, C
-        explanation: "Le masséter est un puissant élévateur, court, épais et quadrilatère, avec deux faisceaux. Son action puissante peut déstabiliser la prothèse s'il n'est pas respecté, il n'est pas 'exploité' pour la stabilisation."
+        correctOptionIndexes: [0, 1],
+        explanation: "Le panoramique est essentiel pour évaluer la hauteur de l'os alvéolaire résiduel (degré de résorption) et pour détecter toute pathologie intra-osseuse (racines résiduelles, kystes, dents incluses) avant de concevoir la prothèse."
       },
       {
-        questionText: "Le muscle mylohyoidien",
+        questionText: "Si l'examen clinique d'un édenté total révèle 2 tubérosités de contre dépouille :",
         options: [
-          "Est un muscle élévateur de la mandibule", // A
-          "Forme le plancher de la cavité buccale", // B
-          "S'insère au niveau de la ligne oblique interne et de l'os hyoïde .", // C
-          "permet de stabiliser la prothèse inférieure" // D
+          "La chirurgie pré-prothétique est toujours osseuse.",
+          "La chirurgie pré-prothétique peut être muqueuse.",
+          "L'intervention concerne généralement une seule tubérosité.",
+          "L'intervention concerne les 2 tubérosités."
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Le mylohyoïdien forme le plancher buccal, s'insère sur la ligne mylohyoïdienne (ligne oblique interne) et l'os hyoïde. C'est un muscle abaisseur de la mandibule et son action peut déstabiliser la prothèse inférieure si le bord lingual est surétendu."
-      },
-      {
-        questionText: "Les muscles élévateurs de la mandibule sont:",
-        options: [
-          "Le ptérygoïdien externe", // A
-          "Le temporal", // B
-          "Le masseter", // C
-          "Le digastrique" // D
-        ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Les principaux muscles élévateurs sont le temporal, le masséter et le ptérygoïdien médial. Le ptérygoïdien latéral (externe) est principalement propulseur et abaisseur accessoire. Le digastrique est un abaisseur."
-      },
-      {
-        questionText: "La ligne oblique interne:",
-        options: [
-          "Sert de surface d'insertion au muscle mylohyoidien", // A
-          "Constitue une poutre de résistance interne", // B
-          "Détermine avec la branche montante le triangle rétromolaire", // C
-          "Se dirige horizontalement puis obliquement en haut et en arrière" // D
-        ],
-        correctOptionIndexes: [0, 1, 3], // A, B, D
-        explanation: "La ligne oblique interne (ou ligne mylo-hyoïdienne) sert d'insertion au mylohyoïdien, est une zone de renfort osseux, et a un trajet d'abord horizontal puis oblique en haut et en arrière. Le triangle rétromolaire est délimité par les lignes obliques interne et externe."
-      },
-       {
-        questionText: "Le muscle masseter :",
-        options: [
-          "Posséde deux faisceaux", // A
-          "Est un muscle abaisseur", // B
-          "Présente un rapport favorable à la rétention des prothèses mandibulaires", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Le masséter a deux faisceaux (superficiel et profond). C'est un muscle élévateur. Son insertion postérieure peut interagir avec le bord de la prothèse mandibulaire, influençant la rétention/stabilité."
-      },
-      {
-        questionText: "orbiculaire des lèvres :",
-        options: [
-          "intervient dans le modelage de l’extrados prothétique", // A
-          "Est un muscle masticateur", // B
-          "Fait partie de la sangle labio jugale", // C
-          "Intervient dans la phonation" // D
-        ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "L'orbiculaire des lèvres intervient dans le modelage de l'extrados pour le soutien labial, fait partie des muscles peauciers de la sangle labio-jugale, et joue un rôle essentiel dans la phonation. Ce n'est pas un muscle masticateur mais un muscle de l'expression."
-      },
-      {
-        questionText: "Le maxillaire est :",
-        options: [
-          "Un os impair", // A
-          "Presente 4 faces une base et un sommet", // B
-          "sa base constitue le substratum osseux de la prothèse supérieure", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "Le maxillaire est un os pair. Il présente classiquement 4 faces (ou 3 faces, base, sommet selon description). Sa partie alvéolaire et palatine forme la surface d'appui de la prothèse supérieure."
-      },
-       {
-        questionText: "La ligne oblique interne :",
-        options: [
-          "S’élève obliquement en haut et en arrière", // A
-          "Est la zone d'insertion du muscle mylohyoidien", // B
-          "Est une poutre de résistance interne", // C
-          "Toutes les réponses sont juste" // D
-        ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "La ligne oblique interne sert d'insertion au mylohyoïdien et est une zone de renfort osseux. Elle se dirige d'abord horizontalement puis obliquement."
-      },
-      {
-        questionText: "Le muscle temporal :",
-        options: [
-          "Participe à l'élévation de la mandibule", // A
-          "Participe à la rétro pulsion", // B
-          "Est en relation avec la partie vestibulaire du bord postérieur de la prothèse supérieure", // C
-          "Est en relation avec la partie postérieure de la prothèse inferieure", // D
-          "Toutes les réponses sont justes" // E
-        ],
-        correctOptionIndexes: [0], // QCS - A has highest percentage, E has low %
-        explanation: "Le temporal est un muscle élévateur. Ses fibres postérieures participent à la rétropulsion. Son insertion sur l'apophyse coronoïde peut être en relation avec le bord distal de la prothèse mandibulaire."
+        correctOptionIndexes: [1, 3],
+        explanation: "Des tubérosités en contre-dépouille bilatérales empêchent l'insertion de la prothèse. Une chirurgie est donc nécessaire sur les deux côtés (D). Cette chirurgie peut être une simple plastie muqueuse si la contre-dépouille est tissulaire, ou osseuse si elle est squelettique (B)."
       },
       {
         questionText: "Les muscles masticateurs sont :",
         options: [
-          "Les muscles élévateurs", // A
-          "Les muscles abaisseurs.", // B
-          "Les muscles de la mimique.", // C
-          "Les muscles de la déglutition." // D
+          "Les muscles élévateurs.",
+          "Les muscles abaisseurs.",
+          "Les muscles de la mimique.",
+          "Les muscles de la déglutition."
         ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "L'ensemble des muscles masticateurs comprend les élévateurs (masséter, temporal, ptérygoïdien médial), les abaisseurs (digastrique, mylo-hyoïdien, génio-hyoïdien), et ceux permettant les mouvements de propulsion/rétropulsion/diduction (ptérygoïdiens latéraux, temporal)."
+        correctOptionIndexes: [0, 1],
+        explanation: "Les muscles masticateurs sont un groupe fonctionnel comprenant les muscles élévateurs (masséter, temporal, ptérygoïdien médial) et les muscles abaisseurs (principalement le ventre antérieur du digastrique et le mylo-hyoïdien)."
+      },
+      {
+        questionText: "Les fossettes palatines :",
+        options: [
+          "Constituent un repère pour la limite postérieure de la prothèse.",
+          "Doivent être toujours visible.",
+          "Se trouvent de part et d'autre de la suture intermaxillaire.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les fossettes palatines (de Gysi) sont deux dépressions situées de part et d'autre du raphé médian, près de la jonction entre le palais dur et le palais mou. Elles servent de repère clinique antérieur pour tracer la limite postérieure de la prothèse maxillaire."
       },
       {
         questionText: "Le muscle buccinateur:",
         options: [
-          "Est situé dans l'épaisseur des joues.", // A
-          "Forme la poche de FISH", // B
-          "Est un muscle propulseur.", // C
-          "Est un muscle élévateur" // D
+          "Est situé dans l'épaisseur des joues.",
+          "Forme la poche de FISH.",
+          "Est un muscle propulseur.",
+          "Est un muscle élévateur."
         ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "Le buccinateur est le muscle principal de la joue. Il délimite latéralement la poche de Fish. Ce n'est pas un muscle masticateur (ni propulseur ni élévateur) mais un muscle de l'expression."
-      },
-      {
-        questionText: "Le masséter:",
-        options: [
-          "Est un muscle élévater rétropulseur", // A
-          "Présente deux faisceaux qui sont en relation avec la prothèse.", // B
-          "Favorise la stabilité des prothèses.", // C
-          "Est un muscle de l'expression", // D
-          "Toutes les réponses sont fausses" // E
-        ],
-        correctOptionIndexes: [4], // E
-        explanation: "Le masséter est élévateur et légèrement propulseur. Il a deux faisceaux. Il ne favorise pas particulièrement la stabilité et est un muscle masticateur, pas de l'expression. Donc toutes les propositions semblent fausses."
-      },
-      {
-        questionText: "L'os maxillaire présente :",
-        options: [
-          "Une face supérieure orbitaire.", // A
-          "Une face antérieure orbitaire.", // B
-          "Une face antérieure génienne.", // C
-          "Une face postérieure génienne.", // D
-          "Une face postérieure orbitaire" // E
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Le maxillaire présente une face supérieure (ou orbitaire), une face antérieure (ou génienne), une face postérieure (ou ptérygo-maxillaire), et une face médiale (ou nasale)."
-      },
-      {
-        questionText: "L'apophyse montante du maxillaire supérieur est formé par le de :", // Assuming 'le de' is a typo for 'la jonction de'
-        options: [
-          "La face supérieure et la face antérieure.", // A
-          "La face postérieure et la face antérieure", // B
-          "La face postérieure et la face supérieure.", // C
-          "La face orbitaire et la face génienne", // D
-          "La face génienne et la face ptérygotubérositaire." // E
-        ],
-        correctOptionIndexes: [0, 3], // QCS - A and D are synonyms, A has higher %
-        explanation: "L'apophyse montante (ou processus frontal) du maxillaire se situe à la jonction des faces supérieure (orbitaire) et antérieure (génienne)." // A and D describe the same junction.
-      },
-      {
-        questionText: "Le masséter est un muscle:",
-        options: [
-          "Masticateur.", // A
-          "Rétropulseur.", // B
-          "Déducteur.", // C
-          "Propulseur", // D
-          "Elévateur." // E
-        ],
-        correctOptionIndexes: [0, 4], // A, E
-        explanation: "Le masséter est un muscle masticateur dont la fonction principale est l'élévation de la mandibule. Il a aussi une légère action de propulsion."
-      },
-      {
-        questionText: "le ptérygoïdien latéral est un muscle :",
-        options: [
-          "Propulseur.", // A
-          "Déducteur.", // B
-          "Rétropulseur.", // C
-          "Elévateur.", // D
-          "Masticateur." // E
-        ],
-        correctOptionIndexes: [0, 1, 4], // A, B, E
-        explanation: "Le ptérygoïdien latéral (ou externe) est un muscle masticateur. Sa contraction bilatérale assure la propulsion. Sa contraction unilatérale assure la diduction (déduction) du côté opposé. Il participe aussi à l'abaissement."
-      },
-      {
-        questionText: "La langue est constituée de :",
-        options: [
-          "8 muscles impairs et un muscle pair", // A
-          "8 muscles pairs et un muscle impair.", // B
-          "4 muscles impairs et 4 muscles pairs.", // C
-          "6 muscles pairs et un muscle impair.", // D
-          "6 muscles impairs et un muscle pair." // E
-        ],
-        correctOptionIndexes: [1], // QCS - B
-        explanation: "La langue est composée de 17 muscles : 8 pairs (extrinsèques et intrinsèques) et 1 impair (le longitudinal supérieur)."
-      },
-      {
-        questionText: "La déglutition chez l'édenté total se fait en :",
-        options: [
-          "1 seul temps.", // A
-          "2 temps.", // B
-          "3 temps.", // C
-          "4 temps.", // D
-          "5 temps" // E
-        ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Chez l'édenté total, la déglutition revient à un schéma infantile avec interposition linguale. Classiquement décrite en 3 temps (buccal, pharyngien, œsophagien), le commentaire la décompose en 4 temps: préparation buccale, passage bucco-pharyngien, traversée pharyngienne, temps œsophagien."
-      },
-      {
-        questionText: "Chez l'édenté total, les voyelles sont modifiées par :",
-        options: [
-          "L'hypertonie des orbiculaires des lèvres.", // A
-          "l'hypotonie des orbiculaires des lèvres.", // B
-          "L'hypertonie, des muscles masticateurs", // C
-          "L'hypotonie des muscles masticateurs.", // D
-          "L'hypotonie des muscles hyoïdiens." // E
-        ],
-        correctOptionIndexes: [1], // QCS - B
-        explanation: "L'édentement total entraîne une perte de soutien des lèvres et une hypotonie de l'orbiculaire, modifiant la prononciation des voyelles comme I et E."
-      }
-    ]
-  },
-  {
-    title: "La mise en condition en prothèse totale",
-    subject: "prothese-y3",
-    questions: [
-      {
-        questionText: "La mise en condition tissulaire :",
-        options: [
-          "Permet de redonner à une muqueuse irritée un comportement histologique et physiologique le plus favorable à leur fonction prothétique", // A
-          "Est réservée à la population âgée qui ne peut pas subir une chirurgie pré prothétique", // B
-          "Permet d'élargir au maximum les surfaces d'appuis primaires et secondaires", // C
-          "Participe à l'intégration organique extéroceptive des prothèses" // D
-        ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "La mise en condition tissulaire vise à améliorer l'état de la muqueuse, optimiser l'étendue des surfaces d'appui par un enregistrement fonctionnel, et favoriser l'adaptation neurosensorielle. Elle n'est pas réservée aux personnes âgées."
-      },
-       {
-        questionText: "Parmi les caractéristiques des matériaux de mise en condition tissulaire:",
-        options: [
-          "Gélification relativement rapide", // A
-          "Un haut fluage initial", // B
-          "Absorber toutes les contraintes occlusales", // C
-          "Continuer à fluer pour s'adapter aux modifications de forme des tissus." // D
-        ],
-        correctOptionIndexes: [1, 3], // B, D
-        explanation: "Ces matériaux (résines à prise retardée) doivent avoir un fluage initial élevé pour s'adapter, continuer à fluer lentement pour suivre la guérison, mais gélifier lentement et absorber seulement une partie des contraintes."
-      },
-      {
-        questionText: "La mise en condition neuro musculo articulaire :",
-        options: [
-          "Est indiquée en cas de problèmes musculaires ou articulaires causés par un enregistrement erroné de la relation centré", // A
-          "Est réalisable qu'avec l'ancienne prothèse du patient", // B
-          "Permet d'oublier une position mandibulaire acquise erronée.", // C
-          "Peut succéder à une mise en condition tissulaire" // D
-        ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "Elle vise à corriger les problèmes neuro-musculo-articulaires dus à une mauvaise occlusion ou DVO, permettant une déprogrammation neuromusculaire. Elle peut suivre une mise en condition tissulaire et peut nécessiter une prothèse provisoire si le patient n'est pas appareillé."
-      },
-       {
-        questionText: "La résine à prise retardée Cochez la ou les réponses juste", // Assuming QCM despite QCS label
-        options: [
-          "Est composée d'une poudre de méthacrylate de formol", // A
-          "Sa réaction de prise passe par 6 phases successives", // B
-          "Lors de la phase de dessiccation le patient doit continuer à porter la prothèse", // C
-          "Peut être renouvelée autant de fois que nécessaire" // D
-        ],
-        correctOptionIndexes: [3], // QCS - D has highest %
-        explanation: "La poudre est un poly(méthacrylate d'éthyle). La prise passe par plusieurs phases (typiquement 5). Le port doit cesser lors de la dessiccation car le matériau devient rugueux. Elle est renouvelée régulièrement."
-      },
-       {
-        questionText: "Lors de la phase plastique de la résine à prise retardée",
-        options: [
-          "Le matériau est placé à l'intérieur de la prothèse", // A
-          "La prothèse garnie du matériau est placé en bouche", // B
-          "La durée de cette phase est très courte", // C
-          "Le matériau se modèle sous l'effet des différentes pressions" // D
-        ],
-        correctOptionIndexes: [1, 3], // B, D
-        explanation: "Le matériau est placé dans l'intrados et la prothèse est insérée en bouche pendant la phase plastique, permettant son modelage par les pressions fonctionnelles. La durée de cette phase varie selon les produits."
-      },
-      {
-        questionText: "Les résines acryliques à prise retardées",
-        options: [
-          "Sont introduites en bouche à l'état plastique", // A
-          "Sont stables dans le temps", // B
-          "Créaient un coussin amortisseur contre la surface d'appui altérée", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Elles sont insérées en phase plastique pour servir de coussin amortisseur. Elles ne sont pas stables dans le temps et doivent être renouvelées."
-      },
-      {
-        questionText: "la mise en condition neuromusculaire est dépendante :",
-        options: [
-          "De l’orientation du POP", // A
-          "De la dimension verticale d’occlusion", // B
-          "De la relation centrée", // C
-          "Du montage des dents prothétiques" // D
-        ],
-        correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D - All factors influence neuromuscular adaptation.
-        explanation: "La mise en condition neuromusculaire vise à rétablir un équilibre qui dépend de tous les paramètres occlusaux : l'orientation correcte du plan d'occlusion (POP), une dimension verticale d'occlusion (DVO) physiologique, une relation centrée (RC) correcte, et un montage dentaire adéquat."
-      },
-      {
-        questionText: "Lors de la réaction de prise de la résine retardé:",
-        options: [
-          "La phase élastique fait suite à la phase plastique", // A
-          "la phase granuleuse de dessiccation est une phase ou le matériau devient poreux", // B
-          "La phase élastique correspond à la phase d'insertion en bouche", // C
-          "Toutes les réponses sont fausses" // D
-        ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "Les phases se succèdent : sableuse -> filante -> plastique -> élastique -> dure (dessiccation). Donc A est juste. La phase de dessiccation rend le matériau dur, rugueux et potentiellement poreux. L'insertion se fait en phase plastique, pas élastique."
+        correctOptionIndexes: [0],
+        explanation: "Le buccinateur est le muscle principal de la joue. Il joue un rôle essentiel dans le maintien du bol alimentaire sur les faces occlusales et dans la stabilisation de la prothèse. La poche de Fish est liée au masséter."
       },
       {
         questionText: "Le but de la mise en condition tissulaire est :",
         options: [
-          "De créer un coussin amortisseur entre l'intrados prothétique et la muqueuse.", // A
-          "D'augmenter l'espace bio-fonctionnel qui sera occupé par la prothèse", // B
-          "D'assurer un montage esthétique", // C
-          "Toutes les réponses sont justes." // D
+          "De créer un coussin amortisseur entre l'intrados prothétique et la muqueuse.",
+          "D'augmenter l'espace bio-fonctionnel qui sera occupé par la prothèse.",
+          "D'assurer un montage esthétique.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "La mise en condition tissulaire utilise une résine molle qui agit comme un coussin amortisseur et permet un enregistrement fonctionnel qui optimise l'espace occupé par la prothèse (espace bio-fonctionnel)."
+        correctOptionIndexes: [0],
+        explanation: "La mise en condition avec une résine molle a pour but de permettre à une muqueuse inflammée et traumatisée de cicatriser et de retrouver une forme saine. Le matériau agit comme un coussin qui répartit mieux les forces et soulage les tissus."
       },
       {
-        questionText: "La mise en condition tissulaire :",
+        questionText: "La piézographie est :",
         options: [
-          "Est toujours réalisée avec une prothèse transitoire.", // A
-          "Est précédée d'un traitement étiologique.", // B
-          "Nécessite plusieurs séances", // C
-          "Permet de guider la cicatrisation après une chirurgie pré-prothétique.", // D
-          "Toutes les réponses sont justes." // E
+          "Une technique de mise en condition neuro articulaire.",
+          "Une technique de mise en condition articulaire.",
+          "Une technique de mise en condition musculaire.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1, 2, 3], // B, C, D
-        explanation: "Elle peut être faite avec l'ancienne prothèse ou une prothèse transitoire. Elle doit suivre le traitement des causes de l'inflammation, nécessite des renouvellements réguliers, et est utile après chirurgie pour guider la cicatrisation."
-      },
-       {
-        questionText: "Le matériau de mise en condition tissulaire est :",
-        options: [
-          "Une résine à prise retardée qui présente une plasticité secondaire.", // A
-          "Formé d'une poudre polymère de méthacrylate d'éthylène.", // B
-          "Versé immédiatement après spatulation sur l'intrados de la prothèse.", // C
-          "Appliqué d'une façon temporaire uniquement au niveau de l'intrados de la prothèse.", // D
-          "Caractérisée par son action agressive et compressive sur les muqueuses." // E
-        ],
-        correctOptionIndexes: [0, 1, 3], // A, B, D
-        explanation: "C'est une résine à prise retardée qui reste plastique un certain temps. La poudre contient du poly(méthacrylate d'éthyle) et de méthyle. Il faut attendre la fin de la phase filante avant de l'appliquer. C'est une application temporaire sur l'intrados. Son action est douce."
+        correctOptionIndexes: [3],
+        explanation: "La piézographie est une technique d'empreinte fonctionnelle qui enregistre le volume de l'espace neutre (couloir prothétique) modelé par la musculature para-prothétique (langue, lèvres, joues)."
       },
       {
-        questionText: "La mise en condition tissulaire (MCT):",
-        options: [
-          "Réduit les erreurs d'occlusion", // A
-          "Dans le cas de dimension verticale sous-évaluée une couche de matériau MCT peut être ajoutée.", // B
-          "Augmente l'espace bio fonctionnel et la surface d'appuie prothétique.", // C
-          "Le matériau MCT dégarni sur la prothèse signe des zones de compression.", // D
-          "Toutes les réponses sont justes." // E
-        ],
-        correctOptionIndexes: [2, 3], // C, D have high percentages
-        explanation: "La MCT améliore la surface d'appui et enregistre l'espace bio-fonctionnel. Une zone dégarnie indique une compression excessive. Elle peut aider à ajuster légèrement la DVO mais ne corrige pas directement les erreurs d'occlusion." // Marked as QCS, C has highest %, but D also plausible.
-      },
-      {
-        questionText: "La mise en condition tissulaire :",
-        options: [
-          "Est réalisée avec une prothèse provisoire.", // A
-          "Est précédée d'un traitement étiologique.", // B
-          "Permet le moulage des tissus dans une position voisine de leur position anatomique.", // C
-          "Nécessite plusieurs séances.", // D
-          "Toutes les réponses sont justes." // E
-        ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "Elle peut être faite avec une prothèse provisoire ou l'ancienne. Elle permet un moulage fonctionnel proche de l'anatomie saine et requiert des renouvellements. Le traitement étiologique est souvent nécessaire mais pas toujours un prérequis absolu."
-      },
-      {
-        questionText: "La mise en condition tissulaire permet",
-        options: [
-          "D'élargir et d'exploiter les surfaces d'appui le maximum possible.", // A
-          "D'augmenter l'espace bio fonctionnel.", // B
-          "D'optimiser la répartition des charges occlusales.", // C
-          "De redonner à tous les tissus muqueux un comportement histologique et physiologique le plus favorable.", // D
-          "De réduire l'espace bio fonctionnel." // E
-        ],
-        correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D
-        explanation: "La MCT vise à optimiser l'étendue de la surface d'appui, enregistrer l'espace bio-fonctionnel, améliorer la répartition des charges grâce à une meilleure adaptation, et favoriser la guérison de la muqueuse."
-      },
-       {
-        questionText: "Le matériau de mise en condition idéal doit présenter les qualités suivantes :",
-        options: [
-          "Présenter un fluage initial élevé.", // A
-          "Présenter un fluage initial réduit.", // B
-          "Absorber les pressions fonctionnelles et les répartir sur la surface d'appui", // C
-          "Se déformer pour s'adapter aux modifications des tissus.", // D
-          "Ne pas se déformer pour s'adapter aux modifications des tissus." // E
-        ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "Il doit avoir un fluage initial élevé, continuer à fluer lentement pour s'adapter, et absorber/répartir les pressions, tout en conservant une certaine stabilité dimensionnelle."
-      },
-       {
-        questionText: "Après la première séance de mise en condition, le praticien demande au patient :",
-        options: [
-          "D'utiliser les produits de nettoyage de la prothèse.", // A
-          "De brosser sa prothèse.", // B
-          "De nettoyer la prothèse sous l'eau.", // C
-          "De ne pas manger les aliments qui collent.", // D
-          "De ne pas manger avec sa prothèse" // E
-        ],
-        correctOptionIndexes: [3], // QCS - D has highest %
-        explanation: "Le brossage et les produits nettoyants peuvent endommager la résine molle. Il est conseillé de rincer simplement à l'eau et d'éviter les aliments collants qui pourraient arracher le matériau." // Marked QCS, D slightly higher than C.
-      }
-    ]
-  },
-   {
-    title: "Occlusion et DV", // From 852.docx / 52.docx / Question n° 12 .docx
-    subject: "prothese-y3",
-    questions: [
-      {
-        questionText: "Le plan d'occlusion prothétique :",
-        options: [
-          "Est le plan idéal selon lequel les deux arcades artificielles doivent se rencontrer", // A
-          "Joue un rôle important dans la stabilisation de la prothèse", // B
-          "Forme une surface curviligne dans les trois plans de l'espace", // C
-          "Est parallèle antérieurement à la ligne bi pupillaire et postérieurement au plan axio-orbitaire" // D
-        ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "Le POP est le plan de rencontre idéal, crucial pour la stabilisation. Il est généralement plat ou légèrement courbe. Postérieurement, il est parallèle au plan de Camper."
-      },
-      {
-        questionText: "De par son orientation, le plan d'occlusion:",
-        options: [
-          "Participe à la cinématique du bol alimentaire.", // A
-          "Réduit la puissance masticatoire du patient", // B
-          "Améliore la puissance masticatoire du patient", // C
-          "Perturbe l'émission correcte des phonèmes." // D
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Son orientation et son niveau influencent la cinématique du bol alimentaire et une orientation correcte maximise la puissance masticatoire. Il participe aussi à une phonation correcte."
-      },
-      {
-        questionText: "Lors du réglage de la maquette d'occlusion inferieure",
-        options: [
-          "Il faut avoir un parallélisme entre le bord occlusal du bourrelet et la ligne bi-pupillaire", // A
-          "La phonation permet de confirmer ou de corriger la position du bourrelet antérieurement", // B
-          "la hauteur du bourrelet est de 18 mm dans la région postérieure", // C
-          "la situation du bourrelet ne doit pas entraver le jeu de la musculature lingual" // D
-        ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Le bourrelet inférieur doit respecter l'espace lingual. Le parallélisme avec la ligne bipupillaire concerne le bourrelet supérieur. La phonation aide. La hauteur est d'environ 18mm antérieurement et ne doit pas dépasser les tubercules rétromolaires postérieurement."
-      },
-       {
-        questionText: "Quand la DVO est sur évaluée :",
-        options: [
-          "Présence de claquement entre les prothèses", // A
-          "Les sillons sont effacés .", // B
-          "L'écart entre DVR et DVO est important", // C
-          "Perturbation de la prononciation des dent dentales (CHE et JE) ." // D // Assuming typo 'dent dentales' means 'sifflantes/chuintantes'
-        ],
-        correctOptionIndexes: [0, 1, 3], // A, B, D
-        explanation: "Une DVO surévaluée entraîne claquements dentaires, visage tendu avec sillons effacés, espace libre d'inocclusion (ELI = DVR-DVO) insuffisant ou nul, et perturbation phonétique (sifflantes/chuintantes)."
-      },
-      {
-        questionText: "L'espace libre d'inocclusion:",
-        options: [
-          "Appelé aussi espace de Thompson", // A
-          "Est la distance séparant les surfaces occlusales des dents antagonistes lorsque la mandibule est en position d’intercuspidation maximale", // B
-          "Stable chez tous les individus", // C
-          "Est indispensable à l'équilibre neuro musculaire du patient" // D
-        ],
-        correctOptionIndexes: [0, 3], // A, D
-        explanation: "L'ELI (ou espace de Donders, souvent associé à Thompson) est la distance entre les arcades au repos physiologique. Il varie entre individus et est crucial pour l'équilibre neuromusculaire."
-      },
-      {
-        questionText: "En prothèse adjointe totale le plan d'occlusion permet:",
-        options: [
-          "De rétablir l'esthétique et la phonation", // A
-          "D'assurer la rétention des prothèses", // B
-          "Une bonne efficacité masticatoire", // C
-          "Toutes les réponses sont fausses" // D
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Un POP correct contribue à l'esthétique et à la phonation, ainsi qu'à l'efficacité masticatoire. Il joue un rôle majeur dans la stabilité."
-      },
-       {
-        questionText: "Concernant la maquette d'occlusion supérieure:",
-        options: [
-          "Le segment antérieur doit s'inscrire dans l'aire de sustentation d'Ackermann", // A
-          "Au repos le segment antérieur dépasse la lèvre supérieure de 2mm", // B
-          "Les segments postérieurs sont réglés parallèlement au plan de Camper", // C
-          "Toutes les réponses sont fausses" // D
-        ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Le bourrelet supérieur dépasse la lèvre au repos (environ 2mm). Postérieurement, il est parallèle au plan de Camper. L'aire d'Ackermann concerne la mandibule."
-      },
-      {
-        questionText: "La dimension verticale d'occlusion détermine:",
-        options: [
-          "La position de la mandibule dans le plan horizontal", // A
-          "La position de la mandibule dans le plan sagittal.", // B
-          "La position de la mandibule dans le plan frontal.", // C
-          "Toutes les réponses sont justes." // D
-        ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "La DVO correspond à la hauteur de l'étage inférieur de la face lorsque les dents sont en intercuspidation maximale. C'est une mesure verticale, donc dans le plan frontal."
-      },
-      {
-        questionText: "L'espace de Thompson est:",
-        options: [
-          "La distance séparant les surfaces occlusales des dents antagonistes lorsque la mandibule est en RC", // A
-          "Elevé chez la femme.", // B
-          "Diminué dans la classe III squelettique.", // C
-          "Toutes les réponses sont fausses" // D
-        ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "L'espace de Thompson (ELI) est mesuré en position de repos physiologique. Il varie selon l'âge, le sexe et la classe squelettique. Il est généralement diminué en Classe III."
-      },
-      {
-        questionText: "L'évaluation de la dimension verticale de repos:",
-        options: [
-          "Est toujours précédée d'une mise en condition tissulaire.", // A
-          "Nécessite la présence de la maquette d'occlusion supérieure en bouche.", // B
-          "Nécessite la présence de la maquette d'occlusion inférieure en bouche.", // C
-          "Nécessite la présence des deux maquettes d'occlusion." // D
-        ],
-        correctOptionIndexes: [1], // QCS - B
-        explanation: "La DVR est évaluée avec le patient au repos. La maquette supérieure est nécessaire pour rétablir le soutien de la lèvre supérieure et l'esthétique, qui influencent la position de repos."
-      },
-      {
-        questionText: "La règle de Fox :",
-        options: [
-          "Est composée de deux fourchettes", // A
-          "Son segment antérieur doit être parallèle au plan bipupillaire", // B
-          "Son segment postérieur doit être parallèle au plan de Francfort", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "La règle de Fox comporte une fourchette intra-buccale et une extra-buccale. Elle permet de vérifier le parallélisme antérieur du POP avec la ligne bipupillaire et le parallélisme postérieur avec le plan de Camper."
-      },
-      {
-        questionText: "L'orientation correcte du plan d'occlusion dans le secteur postérieur permet:",
-        options: [
-          "L ‘amélioration de la puissance masticatoire", // A
-          "Une participation optimale à la cinématique du bol alimentaire", // B
-          "Le rétablissement d'une phonation correcte", // C
-          "La stabilité prothétique" // D
-        ],
-        correctOptionIndexes: [0, 1, 3], // A, B, D
-        explanation: "Un POP postérieur correct optimise la puissance masticatoire, la gestion du bol alimentaire et est crucial pour la stabilité prothétique."
-      },
-      {
-        questionText: "Le plan d'occlusion prothétique:",
-        options: [
-          "Doit être parallèle à la surface d'appui maxillaire et mandibulaire", // A
-          "Sera incliné de +5° par rapport au plan de Camper afin d'augmenter la puissance masticatoire", // B
-          "Sera parallèle au plan bipupillaire antérieurement", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Idéalement, le POP doit être parallèle aux crêtes pour une bonne répartition des forces. Antérieurement, il est parallèle à la ligne bipupillaire. Une inclinaison par rapport au plan de Camper diminue la puissance masticatoire."
-      },
-      {
-        questionText: "L'aire de sustentation définit par Ackermann est:",
-        options: [
-          "L'espace situé entre la langue d'une part et la sangle labio-jugale d'autre part.", // A
-          "La surface comprise entre le sommet de la crête postéro-inférieure et le fond du vestibule.", // B
-          "La surface comprise entre le sommet de la crête antero-inférieure et le fond du vestibule.", // C
-          "La surface comprise entre le sommet de la crête antero-supérieure et le fond du vestibule." // D
-        ],
-        correctOptionIndexes: [2], // QCS - C
-        explanation: "L'aire de sustentation d'Ackermann correspond à la zone vestibulaire antérieure mandibulaire, entre le sommet de la crête et le fond du vestibule."
-      },
-      {
-        questionText: "En prothèse totale, une dimension verticale d'occlusion sous-évaluée est caractérisée par : 1- L'existence d'un stomion 2- Par un contact des dents antéro-supérieures et antéro inferieures lors de la prononciation du \"S\" 3- Par une accentuation des sillons naso-géniens 4- Par un affrontement exagéré des lèvres 5- Toutes les réponses sont fausses",
-        options: [
-          "A. (1,4)", //
-          "B. (2,3)", //
-          "C. (2,4)", //
-          "D. (3,4)", //
-          "E. (5)" //
-        ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Une DVO sous-évaluée entraîne un aspect vieilli avec accentuation des rides et sillons (3) et un affrontement/pincement des lèvres (4). Un stomion (espace interlabial) important est plutôt signe de DVO augmentée. Le contact en prononçant 'S' est aussi signe de DVO augmentée (espace de parole insuffisant)."
-      },
-       {
         questionText: "Lors de la réalisation du bourrelet supérieur :",
         options: [
-          "La forme doit respecter le contour de l'arcade.", // A
-          "Son épaisseur sera de 4mm dans la région antérieure elle atteint 6 à 10 mm au niveau des premières molaires.", // B
-          "Son épaisseur sera de 8mm dans la région antérieure elle atteint 10 à 12 mm au niveau des premières molaires.", // C
-          "Son épaisseur dans la région antérieure sera égale à celle au niveau des premières molaires." // D
+          "La forme doit respecter le contour de l'arcade.",
+          "Son épaisseur sera de 4mm dans la région antérieure elle atteint 6 à 10 mm au niveau des premières molaires.",
+          "Son épaisseur sera de 8mm dans la région antérieure elle atteint 10 à 12 mm au niveau des premières molaires.",
+          "Son épaisseur sera égale dans la région antérieure à celle au niveau des premières molaires."
         ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "La forme du bourrelet doit suivre le contour de l'arcade. L'épaisseur varie : environ 4-5mm antérieurement et augmente postérieurement (6-10mm) pour remplir l'espace et respecter les couloirs prothétiques."
+        correctOptionIndexes: [0],
+        explanation: "La forme du bourrelet doit suivre la forme de la crête et de l'arcade édentée. Les dimensions mentionnées dans les autres propositions ne sont pas standardisées ; elles dépendent du degré de résorption."
       },
       {
-        questionText: "Les segments postérieurs du bourrelet supérieur sont réglés:",
+        questionText: "Les segments postérieurs du bourrelet supérieur sont réglés :",
         options: [
-          "Parallèlement au plan de référence défini par Camper", // A
-          "Perpendiculairement au plan de référence défini par Camper.", // B
-          "Parallèlement au plan de référence défini par Francfort.", // C
-          "Parallèlement au plan de référence bi-pupillaire." // D
+          "Parallèlement au plan de référence défini par Camper.",
+          "Perpendiculairement au plan de référence défini par Camper.",
+          "Parallèlement au plan de référence défini par Francfort.",
+          "Parallèlement au plan de référence bi-pupillaire."
         ],
-        correctOptionIndexes: [0], // QCS - A
-        explanation: "Les segments postérieurs du bourrelet supérieur (et donc du POP) sont réglés parallèlement au plan de Camper (Tragus - Aile du nez)."
+        correctOptionIndexes: [0],
+        explanation: "Le plan de Camper (Tragus-Aile du nez) est le plan de référence utilisé pour orienter le plan d'occlusion prothétique. Les segments postérieurs du bourrelet supérieur doivent être parallèles à ce plan."
+      },
+      {
+        questionText: "Le ligament ptérygo-maxillaire :",
+        options: [
+          "Se tend à l'ouverture buccale.",
+          "Ne doit pas être recouvert par la prothèse maxillaire.",
+          "Constitue la limite postérieure de la prothèse inférieure.",
+          "Les deux propositions A et B sont fausses."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Ce ligament (ou raphé ptérygo-mandibulaire) se tend lors de l'ouverture buccale. La prothèse maxillaire doit s'arrêter en avant de lui pour ne pas être désinsérée, et la prothèse mandibulaire doit le contourner."
+      },
+      {
+        questionText: "La limite postérieure du porte-empreinte individuel maxillaire doit se terminer :",
+        options: [
+          "En avant de la ligne de flexion du voile.",
+          "En avant des fossettes palatines.",
+          "Les 2 propositions A et B sont vraies.",
+          "Les 2 propositions A et B sont fausses."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La limite postérieure (joint postérieur) de la prothèse se situe au niveau de la ligne de flexion du voile du palais (ligne de \"Ah\"). Le porte-empreinte individuel doit s'arrêter légèrement en avant pour permettre l'enregistrement correct de cette zone (joint de Schroeder)."
+      },
+      {
+        questionText: "La réalisation du joint périphérique en PTA :",
+        options: [
+          "Est sectorielle.",
+          "Se fait avec un porte-empreinte individuel issu d'une empreinte secondaire.",
+          "Se fait avec la pâte de Kerr.",
+          "Se fait avec la pâte à Oxyde de Zinc Eugénol."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le réglage du joint périphérique se fait secteur par secteur (A) en utilisant un matériau thermoplastique comme la pâte de Kerr (C), qui est ajoutée sur les bords du porte-empreinte individuel et modelée par les mouvements fonctionnels du patient."
       },
       {
         questionText: "Le calcul de la DV par la technique de Wills se fait avec un compas pour :",
         options: [
-          "Rechercher une égalité entre la distance fente labiale/angle externe de l'œil et la distance point sous nasal/gnathion", // A
-          "Rechercher une égalité entre la distance tragus gnathion et la distance ligne bi-pupillaire/fente labiale", // B
-          "Rechercher une égalité entre la distance fente labiale/point sous nasal et la distance angle externe de l'œil gnathion", // C
-          "Aucune réponse n'est juste" // D
+          "Rechercher une égalité entre la distance fente labiale/angle externe de l'œil et la distance point sous nasal/gnathion.",
+          "Rechercher une égalité entre la distance tragus/gnathion et la distance ligne bi-pupillaire/fente labiale.",
+          "Rechercher une égalité entre la distance fente labiale/point sous nasal et la distance angle externe de l'œil/gnathion.",
+          "Aucune réponse n'est juste."
         ],
-        correctOptionIndexes: [0], // QCS - A
-        explanation: "La méthode de Willis utilise un compas pour rechercher l'égalité entre deux distances faciales : (Pupille ou angle externe de l'œil - Fente labiale) et (Point sous-nasal - Gnathion)."
-      },
-       {
-        questionText: "La position physiologique de repos est:",
-        options: [
-          "La position d'équilibre tonique du complexe musculaire avec un espace libre d'inocclusion égal en moyenne à 2mm.", // A
-          "La position d'équilibre tonique du complexe musculaire avec une occlusion équilibrée d'intercuspidation maximale.", // B
-          "Est la somme de l'espace libre d'inocclusion égal en moyenne à 2mm et l'occlusion d'intercuspidation ruaximale", // C // 'ruaximale' typo for 'maximale'
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0], // QCS - A
-        explanation: "La position de repos est une position d'équilibre postural des muscles manducateurs, où les arcades sont séparées par l'espace libre d'inocclusion (ELI), en moyenne 2-3mm." // DVR = DVO + ELI.
+        correctOptionIndexes: [0],
+        explanation: "La méthode de Willis est une technique de mesure faciale qui postule que, à une dimension verticale d'occlusion (DVO) correcte, la distance entre la pupille et la fente labiale est égale à la distance entre le point sous-nasal et le gnathion (menton)."
       },
       {
-        questionText: "Le rôle du POP est:",
+        questionText: "Le traitement implantaire à la mandibule doit tenir compte de :",
         options: [
-          "D'assurer une phonation et mastication correcte.", // A
-          "D'assurer la permanence de la stabilité des prothèses sur les surfaces d'appui aussi bien en occlusion centrée et en excentrée.", // B
-          "De respecter l'intégrité des surfaces d'appui", // C
-          "Toutes les réponses sont justes." // D
+          "L'âge du patient.",
+          "L'échec des thérapeutiques amovibles.",
+          "L'intérêt du patient pour ce type de traitement.",
+          "La situation sociale du patient."
         ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Le Plan d'Occlusion Prothétique (POP) est crucial pour la fonction (phonation, mastication), la stabilité lors des différents mouvements, et la préservation des tissus de soutien par une bonne répartition des forces."
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le choix d'un traitement implantaire est une décision multifactorielle qui inclut des considérations médicales (âge, état de santé), dentaires (échec des prothèses conventionnelles), psychologiques (motivation du patient) et socio-économiques."
       },
       {
-        questionText: "Lors du réglage du POP, on prend comme référence :",
+        questionText: "La réaction de prise de la résine à prise retardé se déroule en quatre phases successives :",
         options: [
-          "L'esthétique du patient.", // A
-          "Le plan de camper", // B
-          "Le plan de Francfort.", // C
-          "Le plan de Wilson.", // D
-          "Le plan bi-pupillaire." // E
+          "Phase de gel, phase plastique active, phase plastique passive, phase de dessiccation.",
+          "Phase de gel, phase élastique, phase plastique active, phase de dessiccation.",
+          "Phase élastique, phase plastique, phase plastique passive, phase physique (gel).",
+          "Phase physique (gel), phase plastique active, phase élastique, phase de dessiccation."
         ],
-        correctOptionIndexes: [1, 4], // B, E
-        explanation: "Le réglage du POP utilise des références extra-orales : la ligne bipupillaire pour la partie antérieure et le plan de Camper pour la partie postérieure. L'esthétique est un guide important mais pas un plan de référence direct."
+        correctOptionIndexes: [1],
+        explanation: "Les résines à prise retardée (utilisées en mise en condition) passent par plusieurs phases : gel, élastique (où elles absorbent les contraintes), puis plastique (où elles se stabilisent)."
       },
       {
-        questionText: "Pour déterminer la DVO, l'évaluation de choix est la technique:",
+        questionText: "La position physiologique de repos est :",
         options: [
-          "Indirecte.", // A // (e.g., pre-extraction records)
-          "Phonétique.", // B
-          "Willis.", // C
-          "Céphalométrique.", // D
-          "Esthétique." // E
+          "La position d'équilibre tonique du complexe musculaire avec un espace libre d'inoclusion égal en moyenne à 2mm.",
+          "La position d'équilibre tonique du complexe musculaire avec une occlusion équilibrée d'intercuspidation maximale.",
+          "Est la somme de l'espace libre d'inoclusion égal en moyenne à 2mm et l'occlusion d'intercuspidation maximale.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [4], // QCS - E
-        explanation: "Bien que plusieurs techniques (métriques, phonétiques, déglutition) soient utilisées et combinées, l'évaluation esthétique (harmonie du visage, soutien des lèvres) reste un critère prépondérant et un guide de choix final pour la DVO."
+        correctOptionIndexes: [0],
+        explanation: "La position de repos est une position posturale de la mandibule, déterminée par l'équilibre tonique des muscles élévateurs et abaisseurs. Elle crée un espace entre les arcades appelé espace libre d'inoclusion (ou \"freeway space\")."
       },
       {
-        questionText: "Lors du réglage du segment postérieur (POP):",
+        questionText: "L'empreinte non compressive au plâtre est indiquée en cas :",
         options: [
-          "Le bourrelet est réglé parallèlement au plan de Francfort.", // A
-          "La fourchette sera plaquée sur la face occlusale du bourrelet inférieur.", // B
-          "Ce réglage est obtenu grâce à la plaque de WILSON", // C
-          "Toutes les réponses sont fausses." // D
+          "De crêtes peu résorbées de classe I et II.",
+          "D'une corticale osseuse lisse et régulière.",
+          "D'une fibro-muqueuse saine et adhérente.",
+          "Les 3 propositions A, B, C sont fausses."
         ],
-        correctOptionIndexes: [3], // QCS - D
-        explanation: "Le segment postérieur est réglé parallèlement au plan de Camper. La fourchette de la règle de Fox est appliquée sur le bourrelet supérieur. La plaque de Wilson n'est pas utilisée pour ce réglage."
+        correctOptionIndexes: [3],
+        explanation: "L'empreinte mucostatique (non compressive) au plâtre est spécifiquement indiquée pour les crêtes \"flottantes\" ou fibromuqueuses très dépressibles, afin de ne pas les déformer lors de l'empreinte."
+      },
+      {
+        questionText: "L'empreinte préliminaire anatomo-fonctionnelle compressive avec un matériau thermoplastique est indiquée:",
+        options: [
+          "En présence d'une surface d'appui osseuse irrégulière.",
+          "Lorsque la fibro-muqueuse est d'une épaisseur variant d'un point à un autre.",
+          "En présence d'une crête flottante.",
+          "Lorsque la crête est très résorbée."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'empreinte compressive est indiquée sur les crêtes très résorbées, plates et larges, pour chercher à augmenter la surface d'appui et la sustentation en comprimant légèrement les tissus."
+      },
+      {
+        questionText: "Les empreintes à la pâte d'oxyde de zinc-eugénol sont recommandées :",
+        options: [
+          "Dans les cas de palais trop profonds.",
+          "En présence de fortes contre-dépouilles.",
+          "Les 2 propositions A et B sont vraies.",
+          "Les 2 propositions A et B sont fausses."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les pâtes ZOE sont des matériaux rigides après la prise. Elles sont donc contre-indiquées en présence de contre-dépouilles importantes qu'elles ne pourraient pas franchir sans casser."
       }
     ]
   },
   {
-    title: "L'examen clinique en prothèse adjointe totale", // From Question n° 4 .docx
+    title: "Test 2: 2ème EMD, 2019/2020",
     subject: "prothese-y3",
     questions: [
-       {
-        questionText: "Les éléments anatomophysiologiques à exploiter à la mandibule sont:",
+      {
+        questionText: "Le décollement postérieur de la prothèse maxillaire lors d'une pression digitale sur les incisives est dû à :",
         options: [
-          "La frange sublinguale", // A
-          "Les poches d'Eisenring", // B
-          "Les tubercules retro molaires", // C
-          "La ligne oblique interne" // D
+          "Un montage incorrect des incisives.",
+          "Un joint postérieur insuffisant.",
+          "Un joint postérieur mal situé.",
+          "Un joint para-tubérositaire erroné."
         ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "À la mandibule, on exploite la frange sublinguale, les tubercules rétromolaires (trigones), et on doit tenir compte de la ligne oblique interne. Les poches d'Eisenring sont au maxillaire."
+        correctOptionIndexes: [1, 2],
+        explanation: "Cet effet de bascule (rocking chair) est le signe typique d'un joint postérieur (joint de Schroeder) mal conçu : soit il est insuffisant (pas assez compressif), soit il est mal situé (trop en avant ou trop en arrière)."
       },
       {
-        questionText: "Les poches de FISH:",
+        questionText: "Lors de la préparation de la résine en vue d'une mise en moufle, la phase de gel plastique correspond :",
         options: [
-          "Sont délimitées antérieurement par le frein latéral et postérieurement par l'insertion antérieure du masséter", // A
-          "Joue un rôle stabilisateur de la prothèse totale inférieure -", // B // Typo assumed, should be '+'
-          "Joue un rôle dans la rétention de la prothèse totale inférieure", // C
-          "peut-être un indice négatif" // D
+          "A un mélange collant.",
+          "A une masse non adhérente au récipient ni aux doigts.",
+          "A la résine du bourrage.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [0, 1, 2], // A, B, C
-        explanation: "Les poches de Fish, situées dans la région vestibulaire postéro-latérale mandibulaire, sont des zones clés pour la stabilisation et la rétention de la prothèse inférieure. Leurs limites anatomiques sont décrites en A."
+        correctOptionIndexes: [1, 2],
+        explanation: "C'est la phase idéale pour la manipulation et le bourrage de la résine dans le moufle. La pâte a atteint une consistance plastique qui ne colle plus, permettant de la tasser correctement."
       },
       {
-        questionText: "Les apophyses géni sont:",
+        questionText: "Lors de la mise en moufle, les isolants :",
         options: [
-          "Le point de départ des lignes obliques internes", // A
-          "Le point d'insertion du muscle génio-glosse", // B
-          "Toujours dégagées lors de la réalisation de la prothèse totale inférieure", // C
-          "déchargées quand elles sont saillantes ou douloureuses" // D
+          "Doivent être solubles dans l'eau.",
+          "Facilitent le démoulage.",
+          "N'ont aucun lien avec le risque de porosités.",
+          "Doivent faciliter l'infiltration du monomère dans le plâtre."
         ],
-        correctOptionIndexes: [1, 3], // B, D
-        explanation: "Situées sur la face postérieure de la mandibule, les apophyses géni donnent insertion au muscle génio-glosse. Elles doivent être recouvertes par la prothèse mais déchargées si elles sont saillantes ou douloureuses."
+        correctOptionIndexes: [1],
+        explanation: "L'isolant (ex: alginate de sodium) est appliqué sur le plâtre pour créer une barrière imperméable. Cela empêche la résine d'adhérer au plâtre (facilitant le démoulage) et prévient la diffusion de l'eau du plâtre vers la résine pendant la polymérisation (ce qui pourrait causer des porosités)."
       },
       {
-        questionText: "La niche rétro molaire :",
+        questionText: "Au cours de la mise en moufle:",
         options: [
-          "Est un hiatus entre le mylohyoïdien et le lingual du constricteur supérieur du pharynx", // A
-          "Permet une extension distale si la ligne oblique interne le permet.", // B
-          "Participe à la sustentation de la prothèse totale mandibulaire", // C
-          "Participe à la rétention de la prothèse totale mandibulaire" // D
+          "Une fois sous presse, le moufle doit être pressé rapidement.",
+          "La résine est modelée et déposée sur le sommet de la crête.",
+          "La polymérisation débute dans de l'eau froide.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [1, 3], // B, D
-        explanation: "La niche rétromolaire autorise une extension distale (volet lingual) si l'anatomie le permet. Son exploitation contribue à la rétention." // A description seems incorrect. C is less direct role than rétention/stabilisation.
-      },
-       {
-        questionText: "Lors de l'observation clinique en prothèse totale",
-        options: [
-          "ll est primordial de cerner le profil psychologique de notre patient", // A
-          "Le praticien n'accorde aucune importance aux anciennes prothèses du patient", // B
-          "La profession du patient peut déterminer certaines exigences prothétiques", // C
-          "toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Comprendre le profil psychologique du patient est essentiel. La profession peut influencer les attentes esthétiques ou fonctionnelles. L'analyse des anciennes prothèses est très importante."
+        correctOptionIndexes: [2],
+        explanation: "Pour les résines thermopolymérisables, le cycle de polymérisation commence par une montée en température lente et progressive. On immerge donc le moufle dans un bain d'eau initialement froide pour éviter une ébullition du monomère qui créerait des porosités."
       },
       {
-        questionText: "Lors de l'examen clinique exobuccal",
+        questionText: "L'harmonie du visage, et le rétablissement du sourire dépendront :",
         options: [
-          "La palpation des muscles de la face est nécessaire", // A
-          "La forme du visage n'a aucune importance dans le choix des dents prothétiques", // B
-          "Des pathologies articulaires sont détectées par palpation", // C
-          "Nous permet d'évaluer la hauteur des 2 étages de la face" // D
+          "De la hauteur de l'étage inférieur.",
+          "De l'orientation et la position des dents artificielles.",
+          "Du choix des dents prothétiques.",
+          "Du caractère de la fausse gencive."
         ],
-        correctOptionIndexes: [0, 2, 3], // A, C, D
-        explanation: "L'examen exobuccal inclut la palpation des muscles et des articulations temporo-mandibulaires (ATM) pour détecter d'éventuelles pathologies, ainsi que l'évaluation des étages de la face. La forme du visage est un critère important pour le choix des dents."
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'esthétique en prothèse complète est multifactorielle et dépend du rétablissement de la dimension verticale (A), du bon positionnement des dents (B), du choix de dents adaptées (forme, teinte, taille) (C) et de la sculpture de la fausse gencive (D)."
       },
       {
-        questionText: "Les indices négatifs en prothèse totale",
+        questionText: "La détermination de la relation centrée impose de respecter les préalables suivants :",
         options: [
-          "Sont tous à décharger", // A
-          "améliorent la stabilité des futures prothèses, en les évitant", // B
-          "Nécessitent systématiquement une chirurgie préprothétique", // C
-          "Lorsqu'une décharge est nécessaire, elle se fait avec une épaisseur importante de cire" // D
+          "Le patient est confortablement installé.",
+          "Les maquettes d'occlusion doivent être stables, rigides et rétentives.",
+          "La dimension verticale d'occlusion est déterminée.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1], // QCS - B has highest %
-        explanation: "Les indices négatifs sont des éléments anatomiques ou physiologiques défavorables qu'il faut éviter (dégager ou rejeter) pour améliorer la stabilité. Ils ne sont pas tous à décharger (certains sont à dégager). La chirurgie n'est pas systématique. La décharge se fait avec une épaisseur fine de matériau."
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Pour enregistrer une relation centrée fiable, il faut que le patient soit détendu (A), que les bases des maquettes soient parfaitement stables (B) et que la dimension verticale d'occlusion ait été préalablement réglée et validée (C)."
       },
       {
-        questionText: "Parmi les indices négatifs au maxillaire nous avons",
+        questionText: "Le soulèvement postérieur de la maquette mandibulaire au repos est dû à :",
         options: [
-          "Le ligament ptérygomaxillaire", // A
-          "Le sillon ptérygo maxillaire", // B
-          "Le torus palatin", // C
-          "Toutes les réponses sont justes" // D
+          "Une extension linguale rétro-molaire trop importante.",
+          "Un bord lingual sous mylo-hyoïdien trop long.",
+          "Un ligament ptérygo-mandibulaire non libéré.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Le ligament ptérygo-maxillaire (ou raphé), lorsqu'il est tendu, peut déstabiliser la prothèse. Le torus palatin, s'il est volumineux, peut créer un point de pivot. Le sillon ptérygo-maxillaire (hamulaire) est un indice positif car il délimite la zone du joint postérieur."
+        correctOptionIndexes: [1],
+        explanation: "Si le bord lingual de la maquette (future prothèse) est trop long et s'étend sous la ligne mylo-hyoïdienne, le muscle mylo-hyoïdien (plancher buccal) le soulèvera dès qu'il se contractera, même au repos."
       },
       {
-        questionText: "les tubérosités :",
+        questionText: "Après insertion des prothèses totales en bouche, il est conseillé au patient de :",
         options: [
-          "Se situent à la jonction ptérygo maxilaire", // A
-          "Doivent être déchargées par la prothèse", // B
-          "Doivent être de dépouille", // C
-          "Toutes les réponses sont fausses" // D
+          "S'habituer à manger avec ses prothèses neuves les premiers jours.",
+          "Retirer ses prothèses le soir et les mettre dans un verre d'eau.",
+          "Croquer des aliments durs pour faciliter l'adaptation.",
+          "De nettoyer ses prothèses après chaque repas avec une brosse dure et de l'eau savonneuse."
         ],
-        correctOptionIndexes: [2], // QCS - C has highest percentage. A is plausible location descriptor.
-        explanation: "Les tubérosités maxillaires sont des reliefs osseux postérieurs importants pour la rétention et la stabilité. Idéalement, elles doivent être 'de dépouille' (parallèles ou légèrement convergentes occlusalement) pour permettre une bonne insertion et rétention. Elles se situent en arrière, vers la jonction ptérygo-maxillaire."
-      },
-       {
-        questionText: "Les apophyses génies:",
-        options: [
-          "Assurent l'insertion du géniohyoidien", // A
-          "Sont dégagées en cas de douleur", // B
-          "se situent sur la face interne du corp mandibulaire", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [0, 2], // QCS marked, but A&C are correct. D has 30% suggesting multiple answers might be expected. Let's mark A & C.
-        explanation: "Les apophyses géni donnent insertion au génio-glosse et au génio-hyoïdien. Elles se situent sur la face interne (postérieure) de la symphyse mandibulaire. Elles sont à décharger (et non dégager) en cas de douleur." // Marked as QCS, but A and C are correct statements. B is incorrect based on comment. D might be intended if A & C are correct.
+        correctOptionIndexes: [0, 1],
+        explanation: "Les conseils post-insertion incluent une alimentation molle au début (A) et le retrait nocturne des prothèses pour permettre le repos des muqueuses (B). L'hygiène se fait avec une brosse à prothèse souple ou médium, jamais dure (D)."
       },
       {
-        questionText: "En prothèse amovible complète, connaitre la personnalité du patient est:",
+        questionText: "Lors de l'occlusion bilatéralement équilibrée, on aura :",
         options: [
-          "indispensable.", // A
-          "Souhaitable.", // B
-          "Sans intérêts.", // C
-          "Toutes les réponses sont fausses." // D
+          "Absence de contact entre les dents antérieures en occlusion centrée.",
+          "En latéralité, un ou deux points de contact du coté non travaillant sont suffisants pour assurer la stabilité des prothèses.",
+          "En protrusion des contacts entre les dents postérieures et antérieures.",
+          "Des contacts antérieurs en occlusion centrée."
         ],
-        correctOptionIndexes: [0], // QCS - A
-        explanation: "Comprendre la personnalité et les attentes psychologiques du patient édenté total est indispensable pour adapter la communication, gérer les attentes et assurer le succès du traitement."
-      },
-       {
-        questionText: "La réussite d'une prothèse amovible complète dépend:",
-        options: [
-          "De la coopération du patient.", // A
-          "D'un examen minutieux.", // B
-          "D'une analyse préprothétique approfondie.", // C
-          "Du sexe du patient" // D
-        ],
-        correctOptionIndexes: [0, 1, 2], // A, B, C
-        explanation: "La réussite dépend de multiples facteurs, incluant un examen et une analyse rigoureux, ainsi que de la coopération et de l'adaptation du patient."
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le concept de Gysi d'occlusion bilatéralement équilibrée vise à stabiliser les prothèses lors des mouvements : il n'y a pas de contact antérieur en relation centrée (A), des contacts sur le côté non-travaillant lors des mouvements de latéralité (B), et des contacts postérieurs simultanés aux contacts antérieurs en protrusion (C)."
       },
       {
-        questionText: "Les poches d'Elsenring sont :", // Typo for Eisenring
+        questionText: "Les objectifs d'une occlusion en prothèse totale sont :",
         options: [
-          "Situées au niveau maxillaire.", // A
-          "Situées au niveau mandibulaire.", // B
-          "Situées postérieurement au niveau maxillaire.", // C
-          "Situées antérieurement au niveau mandibulaire." // D
+          "Restaurer uniquement la fonction de mastication.",
+          "Préserver les tissus de soutien.",
+          "Assurer la stabilité des prothèses.",
+          "Rétablir les rapports d'intercuspidation maximale."
         ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Les poches d'Eisenring (ou poches para-tubérositaires) sont situées au maxillaire, dans la région postéro-latérale, entre la tubérosité et la joue."
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "L'occlusion doit non seulement être fonctionnelle (mastication, phonation), mais surtout assurer la pérennité du traitement en préservant les tissus de soutien (B) et en stabilisant les bases prothétiques lors des fonctions (C)."
       },
       {
-        questionText: "En prothèse amovible complète, la panoramique dentaire nous renseigne sur :",
+        questionText: "La spécificité des articulateurs semi-adaptables type Non Arcon, réside dans :",
         options: [
-          "La densité osseuse.", // A
-          "Le degré de résorption osseuse", // B
-          "La présence de dents incluses.", // C
-          "Toutes les réponses sont justes." // D
+          "Des boules condylaires supportées par la branche supérieure.",
+          "L'impossibilité de désolidariser les branches supérieures des branches inférieures.",
+          "Des boules condylaires supportées par la branche inférieure.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1, 2], // B, C (A requires CBCT/Dentascan, D is low %)
-        explanation: "La radiographie panoramique permet d'évaluer le degré de résorption osseuse, et de rechercher d'éventuels obstacles intra-osseux comme des dents incluses, des racines résiduelles ou des pathologies. Elle donne une idée qualitative de la densité, mais pas une mesure précise."
+        correctOptionIndexes: [0],
+        explanation: "Par définition, un articulateur Non-Arcon (acronyme pour ARticulator-CONdyle) a les boîtiers condyliens (la fosse articulaire) sur la branche inférieure et les sphères condyliennes sur la branche supérieure, à l'inverse de l'anatomie humaine."
       },
       {
-        questionText: "Connaitre la personnalité des patients est:",
+        questionText: "Lors du transfert sur articulateur semi-adaptable, le modèle maxillaire doit être situé :",
         options: [
-          "Sans importance pour le déroulement du traitement prothétique.", // A
-          "Impératif pour adapter le discours et la prise en charge à chacun d'entre eux.", // B
-          "Essentiel pour établir un plan de traitement adéquat.", // C
-          "Toutes les réponses sont fausses." // D
+          "Par rapport au plan de référence axio-orbitaire.",
+          "Par rapport au plan de référence de Camper.",
+          "Par rapport au plan tangent au rebord basilaire.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Comprendre la personnalité du patient est crucial pour adapter la communication et la prise en charge et pour définir un plan de traitement réaliste et adapté à ses attentes et capacités."
-      },
-       {
-        questionText: "En prothèse amovible complète, l'examen radiologique panoramique nous informe sur :",
-        options: [
-          "Le degré de résorption.", // A
-          "les éléments intra osseux", // B
-          "Le système articulaire.", // C
-          "Le choix des thérapeutiques amovibles." // D
-        ],
-        correctOptionIndexes: [0, 1, 2], // A, B, C
-        explanation: "Le panoramique montre le degré de résorption osseuse, la présence d'éléments intra-osseux (racines, dents incluses, pathologies), et donne une vue globale des condyles et des ATM."
+        correctOptionIndexes: [0],
+        explanation: "Le transfert du modèle maxillaire sur articulateur se fait à l'aide d'un arc facial, qui enregistre la position du maxillaire par rapport à l'axe charnière du patient et un troisième point de référence antérieur (souvent le point infra-orbitaire), définissant le plan axio-orbitaire."
       },
       {
-        questionText: "Les fossettes palatines:",
+        questionText: "L'occlusion bilatéralement équilibrée engrènée généralisée est retrouvée dans :",
         options: [
-          "Constituent un repère pour la limite postérieure de la prothèse", // A
-          "Doivent être toujours visible.", // B
-          "Se trouvent de part et d'autre de la suture intermaxillaire.", // C
-          "Toutes les réponses sont justes" // D
+          "Le montage de Hanau.",
+          "Le montage d'ACKERMAN.",
+          "Le montage de GYSI.",
+          "Le montage de Sears."
         ],
-        correctOptionIndexes: [0, 2], // A, C
-        explanation: "Les fossettes palatines, situées de part et d'autre de la ligne médiane près de la jonction palais dur/palais mou, servent de repère antérieur pour déterminer la limite postérieure de la prothèse (qui doit les recouvrir)."
-      },
-       {
-        questionText: "Le ligament ptérygo-maxillaire :",
-        options: [
-          "Se tend à l'ouverture buccale.", // A
-          "Ne doit pas être recouvert par la prothèse maxillaire.", // B
-          "Constitue la limite postérieure de la prothèse inférieure.", // C
-          "Les deux propositions A et B sont fausses" // D
-        ],
-        correctOptionIndexes: [0, 1], // QCS - B has higher %, but A is also true. Assuming B is intended answer.
-        explanation: "Le ligament (ou raphé) ptérygo-mandibulaire se tend à l'ouverture. Il constitue un indice négatif pour la prothèse maxillaire et ne doit pas être comprimé ou recouvert par son bord postérieur pour éviter sa désinsertion." // Marked QCS, B has highest percentage.
+        correctOptionIndexes: [2],
+        explanation: "Gysi est le père du concept d'occlusion bilatéralement équilibrée avec des dents anatomiques (engrénée) pour stabiliser les prothèses complètes."
       },
       {
-        questionText: "Les condyles de l'édenté total :",
+        questionText: "L'articulateur semi-adaptable permet le réglage de :",
         options: [
-          "Effectuent un mouvement de rotation autour d'un point.", // A
-          "Effectuent un mouvement en charnière.", // B
-          "Effectuent un mouvement de translation.", // C
-          "Toutes les réponses sont fausses" // D
+          "L'angle de Bennett lors du mouvement de protrusion.",
+          "L'angle de Bennett lors du mouvement de latéralité.",
+          "La pente condylienne lors du mouvement de protrusion.",
+          "La pente condylienne lors du mouvement de latéralité."
         ],
-        correctOptionIndexes: [1], // QCS - B has highest %
-        explanation: "Les mouvements de l'ATM combinent rotation (dans le compartiment inférieur, mouvement en charnière) et translation (dans le compartiment supérieur, glissement). Le mouvement initial d'ouverture est une rotation pure (charnière)."
-      },
-      {
-        questionText: "La fibromuqueuse recouvrant les crêtes résiduelles sera palpée pour évaluer :",
-        options: [
-          "Son adhérence.", // A
-          "Son étendu.", // B
-          "Sa couleur.", // C
-          "Son épaisseur." // D
-        ],
-        correctOptionIndexes: [0, 3], // A, D
-        explanation: "La palpation de la fibromuqueuse permet d'évaluer son épaisseur (résilience, dépressibilité) et son adhérence à l'os sous-jacent."
-      },
-      {
-        questionText: "Le torus palatin:",
-        options: [
-          "Se développe sur la suture palato-maxillaire.", // A
-          "A été classé par Atwood en 5 types.", // B
-          "Est le plus souvent de forme ovalaire.", // C
-          "Est douloureux à la palpation.", // D
-          "Est remodelé selon la technique de CHAPPA lorsqu'il est réellement." // E // 'réellement' likely typo for 'volumineux'/'gênant'
-        ],
-        correctOptionIndexes: [2], // QCS - C has highest %
-        explanation: "Le torus palatin est une exostose sur la suture intermaxillaire (médiane). Sa forme est variable (ovalaire, arrondie, en chapelet...). La classification d'Atwood concerne la résorption des crêtes. Il n'est généralement pas douloureux sauf si la muqueuse est fine ou ulcérée. La chirurgie n'est pas systématique."
-      },
-       {
-        questionText: "Dans l'étude de la personnalité de l'édenté total, le suspicieux est :",
-        options: [
-          "Apathique, non concerné par le traitement.", // A
-          "Non coopérant.", // B
-          "Demande du temps et patience.", // C
-          "Très craintif.", // D
-          "Impatient, difficile à satisfaire." // E
-        ],
-        correctOptionIndexes: [2], // QCS - C has highest %
-        explanation: "Le patient suspicieux est exigeant, pose beaucoup de questions et demande des détails. Il nécessite du temps et de la patience de la part du praticien, notamment en phase pré-prothétique. A=Indifférent, B/E=Agressif, D=Anxieux."
-      },
-      {
-        questionText: "A l'examen clinque, si le patient présente un diabète, il faut :",
-        options: [
-          "Eviter les blessures.", // A
-          "Maintenir l'hygiène.", // B
-          "Réduire la durée de port de la prothèse.", // C
-          "Préconiser un port nocturne de la prothèse", // D
-          "Eviter d'appareiller le patient." // E
-        ],
-        correctOptionIndexes: [0, 1], // A, B
-        explanation: "Chez un patient diabétique, la cicatrisation peut être altérée et le risque d'infection augmenté. Il est donc crucial d'éviter toute blessure par la prothèse et de maintenir une hygiène rigoureuse. La réduction du temps de port est plutôt pour les patients irradiés."
-      },
-      {
-        questionText: "Les tubérosités sont favorables à la sustentation et à la stabilisation si elles:",
-        options: [
-          "Sont arrondies, bien marquées.", // A
-          "Sont arrondies, peu marquées.", // B
-          "Partie la plus basse se situe à 2 mm au-dessus du plan occlusal.", // C
-          "Partie la plus basse se situe à 2 mm au-dessous du plan occlusal.", // D
-          "Sont recouvertes par un tissu ferme et adhérent." // E
-        ],
-        correctOptionIndexes: [0, 4], // A, E
-        explanation: "Des tubérosités bien marquées, non rétentives, recouvertes d'une fibromuqueuse ferme et adhérente offrent une bonne surface de sustentation et contribuent à la stabilité." // C & D relate to space for teeth/material, not inherent quality of tuberosity itself.
+        correctOptionIndexes: [1, 2],
+        explanation: "Sur un articulateur semi-adaptable, on règle la pente condylienne (enregistrée en protrusion) et l'angle de Bennett (enregistré en latéralité)."
       }
     ]
   },
   {
-    title: "Chirurgie Pré-prothétique en Prothèse Totale Adjointe", // From Question n° 15 .docx
+    title: "Test 3: 3ème EMD, 2019/2020",
     subject: "prothese-y3",
     questions: [
-       {
-        questionText: "La chirurgie pré-prothétique :",
+      {
+        questionText: "L'équilibration occlusale en relation centrée se fait :",
         options: [
-          "Est systématique dans les cas de réhabilitation prothétique difficile", // A
-          "Concerne l'aménagement des tissus muqueux destinés à recevoir une prothèse adjointe", // B
-          "Concerne l'aménagement musculaire destiné à recevoir une prothèse adjointe", // C
-          "A pour objectif d'éliminer les altérations ostéomuqueuses réversibles" // D
+          "En préservant toujours les cuspides d'appuis.",
+          "En créant le maximum de points de contacts simultanés postérieurs et antérieurs.",
+          "Selon la loi MS-DI en cas de dérapage antérieur.",
+          "En réduisant la cuspide d'appui s'il y a gène du contact bicuspidien en latéralité."
         ],
-        correctOptionIndexes: [1], // QCS - B
-        explanation: "Elle n'est pas systématique mais indiquée lorsque des anomalies compromettent la prothèse. Elle concerne l'aménagement des tissus durs (os) et mous (muqueuse), parfois musculaires. Elle vise à éliminer les altérations irréversibles."
+        correctOptionIndexes: [0, 2],
+        explanation: "En relation centrée, l'équilibration vise à obtenir des contacts postérieurs simultanés et stables en préservant les cuspides d'appui (A). S'il y a un dérapage, on applique la règle MUDL (Mésial-Upper, Distal-Lower) ou son équivalent MS-DI (Mésio-Supérieur, Disto-Inférieur) en meulant les versants et non les sommets cuspidiens."
       },
       {
-        questionText: "En présence de deux tubérosités de contre-dépouilles:",
+        questionText: "L'équilibration secondaire :",
         options: [
-          "La chirurgie pré-prothétique n'est pas indiquée, celles-ci sont des moyens de rétention.", // A
-          "La chirurgie pré-prothétique sera pratiquée sur une seule tubérosité.", // B
-          "La chirurgie pré-prothétique sera pratiquée sur les deux tubérosités.", // C
-          "Toutes les réponses sont fausses." // D
+          "Vise à éliminer uniquement les erreurs occlusales en excentré.",
+          "Se fait 48 heures avant l'insertion des prothèses.",
+          "Se fait obligatoirement sur un articulateur semi-adaptable.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1], // QCS - B
-        explanation: "Lorsque les deux tubérosités sont en contre-dépouille, on intervient chirurgicalement sur une seule pour permettre l'insertion, tout en conservant l'autre pour la rétention via un axe d'insertion oblique."
+        correctOptionIndexes: [3],
+        explanation: "L'équilibration secondaire (ou remontage) se fait après la polymérisation des prothèses pour corriger les variations dimensionnelles de la résine, à la fois en centré et en excentré. Elle se fait avant l'insertion."
       },
       {
-        questionText: "une hyperplasie tissulaire est:",
+        questionText: "L'articulé de TENCH est un procédé qui permet de :",
         options: [
-          "une augmentation du nombre de cellules", // A
-          "une diminution du nombre de cellules", // B
-          "une augmentation du volume cellulaire", // C
-          "toutes les réponses sont fausses" // D
+          "Transférer la prothèse maxillaire sur articulateur.",
+          "Transférer la prothèse mandibulaire sur articulateur.",
+          "Transférer la relation intermaxillaire sur articulateur.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [0], // QCS - A
-        explanation: "L'hyperplasie est une augmentation du nombre de cellules dans un tissu, conduisant à une augmentation de sa taille. L'augmentation du volume cellulaire est l'hypertrophie."
-      },
-       {
-        questionText: "En présence d'un torus maxillaire",
-        options: [
-          "Une chirurgie pré-prothétique de régularisation est toujours indiquée", // A
-          "une décharge ou une chirurgie pré-prothétique sera indiquée en fonction de son volume", // B
-          "aucune précaution n'est à prendre à son niveau", // C
-          "toutes les réponses sont fausses" // D
-        ],
-        correctOptionIndexes: [1], // QCS - B
-        explanation: "L'exérèse chirurgicale d'un torus n'est pas systématique. Une décharge dans l'intrados de la prothèse peut suffire s'il est petit. La chirurgie est indiquée s'il est volumineux et gêne la stabilité."
-      },
-       {
-        questionText: "La régularisation des crêtes alvéolaires :",
-        options: [
-          "Fait partie de la chirurgie osseuse additive", // A
-          "Son but est d'obtenir un relief osseux régulier pour une bonne stabilité de la prothèse", // B
-          "Quand elle est indiquée elle doit être pratiquée de manière économe", // C
-          "Toutes les réponses sont justes" // D
-        ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "La régularisation des crêtes (alvéoloplastie) est une chirurgie soustractive. Elle vise à obtenir un relief régulier favorisant la stabilité et doit être réalisée de manière conservatrice pour préserver l'os."
+        correctOptionIndexes: [2],
+        explanation: "C'est une technique d'enregistrement de l'occlusion en bouche à l'aide de cire (\"wax bite\"), qui permet de transférer la relation intermaxillaire (la façon dont la mandibule se positionne par rapport au maxillaire) sur l'articulateur."
       },
       {
-        questionText: "La chirurgie pré-prothétique doit être :",
+        questionText: "Les cuspides d'appui sont :",
         options: [
-          "Pratiquée systématiquement dans le cadre d'un traitement pré-prothétique", // A
-          "Justifiée et économe", // B
-          "Faite avec des points de sutures extrêmement serrés pour bien protéger le site opératoire", // C
-          "Complétée par une mise en condition tissulaire" // D
+          "Des cuspides primaires.",
+          "Des cuspides secondaires.",
+          "Hors occlusion en relation centrée.",
+          "Celles qui maintiennent la relation centrée."
         ],
-        correctOptionIndexes: [1, 3], // B, D
-        explanation: "La chirurgie pré-prothétique n'est indiquée que si nécessaire (justifiée) et doit préserver au maximum les tissus (économe). Les sutures ne doivent pas être sous tension. Une mise en condition tissulaire post-opératoire est souvent bénéfique pour guider la cicatrisation."
+        correctOptionIndexes: [0, 3],
+        explanation: "Les cuspides d'appui (ou cuspides de soutien) sont les cuspides vestibulaires mandibulaires et palatines/linguales maxillaires. Elles sont primordiales car elles maintiennent la dimension verticale d'occlusion et la relation centrée."
       },
       {
-        questionText: "La vestibuloplastie et l'intervention de Trauner :",
+        questionText: "Lorsque l'angle de mouillage est supérieur à 90°, ceci est en faveur :",
         options: [
-          "Sont toujours d'actualité et leurs résultats sont perceptibles", // A
-          "Font parties de la chirurgie muqueuse additive.", // B // Additive in effect (deepening sulcus), subtractive in technique (dissection)
-          "Abandonnées au profit des techniques implantaires", // C
-          "Toutes les réponses sont justes" // D
+          "D'un bon mouillage.",
+          "D'une bonne adhérence.",
+          "D'une forte attraction intermoléculaire entre solide et liquide.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "La vestibuloplastie (approfondissement du vestibule) et l'abaissement du plancher de Trauner sont des techniques de chirurgie muqueuse visant à augmenter la hauteur de crête disponible. Elles sont moins utilisées aujourd'hui au profit des solutions implantaires, bien qu'elles puissent encore avoir des indications."
+        correctOptionIndexes: [3],
+        explanation: "Un angle de mouillage supérieur à 90° indique un mauvais mouillage (le liquide perle sur la surface). Un bon mouillage, essentiel pour la rétention par capillarité de la prothèse, est indiqué par un angle très faible (< 90°)."
       },
       {
-        questionText: "Le remodelage tubérositaire est indiqué :",
+        questionText: "La viscosité de la salive :",
         options: [
-          "En présence de contre dépouille", // A
-          "Afin d'établir un plan d'occlusion physiologique", // B
-          "Dans le cadre de la chirurgie osseuse soustractive", // C
-          "Toutes les réponses sont justes" // D
+          "Dépend de la concentration en mucine.",
+          "Doit être moyenne.",
+          "Intervient dans la stabilité de la prothèse.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [0, 1, 2], // A, B, C. D has low %.
-        explanation: "Le remodelage tubérositaire (chirurgie osseuse soustractive) est indiqué en cas de contre-dépouille gênant l'insertion, ou lorsque la tubérosité est trop volumineuse et interfère avec l'espace prothétique ou le plan d'occlusion."
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La mucine donne sa viscosité à la salive. Une salive trop fluide ou trop épaisse est néfaste pour la rétention. Une viscosité moyenne est idéale pour assurer à la fois la capillarité et la stabilité."
       },
       {
-        questionText: "La chirurgie préprothétique doit:",
+        questionText: "Les zones de Schröder :",
         options: [
-          "Assurer la suppression de toute irrégularité au niveau des crêtes", // A
-          "Etre complétée par une mise en condition tissulaire", // B
-          "Etre jusetifié et économe", // C
-          "Toutes les réponses sont justes" // D
+          "Sont des exostoses osseuses devant être déchargées.",
+          "Doivent être englobées par la prothèse.",
+          "Peuvent faire l'objet d'une chirurgie pré-prothétique.",
+          "Toutes les réponses sont fausses."
         ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "Elle doit être justifiée et conservatrice. Une mise en condition post-opératoire est souvent recommandée. Seules les irrégularités douloureuses ou gênantes doivent être supprimées."
-      },
-       {
-        questionText: "Si l'examen clinique d'un édenté total révèle 2 tubérosités de contre dépouille",
-        options: [
-          "La chirurgie pré-prothétique est toujours osseuse.", // A
-          "La chirurgie pré-prothétique peut être muqueuse.", // B
-          "L'intervention concerne généralement une seule tubérosité.", // C
-          "L'intervention concerne les 2 tubérosités." // D
-        ],
-        correctOptionIndexes: [1, 2], // B, C
-        explanation: "La contre-dépouille peut être osseuse ou muqueuse (hyperplasie). L'intervention peut donc concerner l'os ou la muqueuse. En cas de contre-dépouille bilatérale, on n'intervient généralement que sur un côté."
+        correctOptionIndexes: [3],
+        explanation: "Les zones de Schröder sont des zones de tissu glandulaire compressible au niveau du palais postérieur. Elles sont idéales pour réaliser le joint postérieur compressif (verrouillage postérieur de la prothèse). Elles ne doivent donc pas être déchargées."
       },
       {
-        questionText: "La chirurgie pré-prothétique :",
+        questionText: "Parmi les indications de la réfection des bases prothétiques :",
         options: [
-          "Est une mise en condition chirurgicale qui consiste à l'aménagement des tissus gingivaux et muqueux seulement", // A
-          "Est une mise en condition tissulaire qui consiste à améliorer l'état des tissus en se servant des conditionneurs.", // B
-          "Elle est systématiquement suivie de la mise en condition tissulaire.", // C
-          "Toutes les irrégularités sont éliminées.", // D
-          "Fréquemment indiquée chez les sujets assez âgés" // E
+          "Le manque de stabilité prothétique.",
+          "La correction d'une dimension verticale surévaluée.",
+          "Une erreur d'enregistrement de la surface d'appui.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [2], // C
-        explanation: "C'est une chirurgie correctrice, pas une mise en condition tissulaire. Elle concerne l'os et la muqueuse. Une mise en condition tissulaire post-opératoire est fortement recommandée, quasi systématique. On ne supprime que les irrégularités gênantes. L'âge avancé peut être une contre-indication relative."
+        correctOptionIndexes: [0, 2],
+        explanation: "La réfection de base (rebasage) est indiquée lorsque la base prothétique n'est plus adaptée à la surface d'appui (causant une instabilité), souvent suite à la résorption osseuse. Elle ne peut pas corriger une DVO incorrecte."
       },
       {
-        questionText: "L'altération de la fibro-muqueuse buccale:",
+        questionText: "La méthode directe de la réfection des bases prothétiques :",
         options: [
-          "Ne doit être corrigée que par une chirurgie pré-prothétique.", // A
-          "Peut être source d'erreur lors de l'enregistrement de la dimension verticale et de l'occlusion.", // B
-          "Peut être associée à une perte osseuse.", // C
-          "Peut être due à une mauvaise conception prothétique.", // D
-          "Toutes les réponses sont justes" // E
+          "Est préférable à la méthode indirecte.",
+          "Nécessite une prise d'empreinte.",
+          "Est réalisée avec de la résine auto polymérisable.",
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [1, 2, 3], // B, C, D (E has low %)
-        explanation: "Une muqueuse altérée peut être corrigée par mise en condition tissulaire, pas seulement chirurgie. Elle peut fausser les enregistrements, être liée à la résorption osseuse, et est souvent causée par une prothèse mal conçue ou mal adaptée." // E has low %, A is false.
+        correctOptionIndexes: [2],
+        explanation: "La méthode directe se fait en bouche, en utilisant la prothèse existante comme porte-empreinte et une résine auto-polymérisable pour combler l'espace. Elle est moins précise que la méthode indirecte."
       },
       {
-        questionText: "L'altération de la muqueuse buccale:",
+        questionText: "Le plan de traitement pré-prothétique en PTA uni-maxillaire comporte :",
         options: [
-          "Peut être due à une erreur d'occlusion.", // A
-          "Peut être due à une mauvaise conception prothétique.", // B
-          "Doit être corrigée par une chirurgie pré-prothétique", // C
-          "Peut être associée d'une perte osseuse.", // D
-          "Toutes les réponses sont fausses." // E
+          "La restauration des dents délabrées.",
+          "Une compensation des édentements.",
+          "L'extraction des dents égressées.",
+          "Une correction du plan d'occlusion."
         ],
-        correctOptionIndexes: [0, 1, 3], // A, B, D
-        explanation: "L'altération muqueuse peut résulter d'erreurs occlusales, d'une mauvaise conception, ou être liée à la résorption osseuse. Sa correction passe d'abord par la mise en condition tissulaire et l'élimination de la cause, la chirurgie n'étant pas systématique."
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Avant de réaliser une prothèse amovible, il est impératif d'assainir la cavité buccale et de préparer les arcades : soigner les dents restantes, remplacer les dents absentes par des prothèses fixées si possible, et corriger le plan d'occlusion antagoniste."
+      },
+      {
+        questionText: "La prothèse immédiate permet :",
+        options: [
+          "D'agir favorablement sur le psychisme du patient.",
+          "D'agir défavorablement sur le capital osseux.",
+          "D'agir en tant que pansement chirurgical.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La prothèse immédiate, insérée juste après les extractions, a un rôle psychologique majeur (le patient n'est jamais édenté) et agit comme un pansement qui protège le site chirurgical et guide la cicatrisation."
+      },
+      {
+        questionText: "La prothèse immédiate :",
+        options: [
+          "Ne nécessite pas la confection d'un porte empreinte individuel.",
+          "Nécessite des rebasages.",
+          "Est une prothèse définitive.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La prothèse immédiate est une prothèse transitoire. La cicatrisation et la résorption post-extractionnelles rapides la rendent inadaptée. Des rebasages fréquents sont nécessaires pour la stabiliser en attendant la prothèse d'usage."
+      },
+      {
+        questionText: "Le manque de parallélisme implantaire peut :",
+        options: [
+          "Entrainer une usure précoce des implants.",
+          "Entrainer des forces parasites avec perte de l'ostéointégration.",
+          "Etre compensé par une barre de conjonction.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Un défaut de parallélisme entre implants crée des contraintes néfastes qui peuvent compromettre l'ostéointégration (B). L'utilisation d'une barre de conjonction permet de solidariser les implants et de compenser ces défauts d'axe (C)."
+      },
+      {
+        questionText: "Les barres de conjonction :",
+        options: [
+          "Assurent une contention des piliers.",
+          "Peuvent être de section ronde ou ovoïde.",
+          "Indiquées lorsque l'espace intercrête est réduit.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les barres de conjonction solidarisent les implants (contention) et peuvent avoir différentes formes de section (ronde, ovoïde, en U). Elles nécessitent un espace prothétique suffisant, elles sont donc contre-indiquées si l'espace intercrête est réduit."
+      },
+      {
+        questionText: "La technique piézographique permet de :",
+        options: [
+          "Déterminer le volume de l'espace prothétique.",
+          "Assurer une rétention maximale des prothèses.",
+          "Déterminer le modelé des prothèses.",
+          "Ménager l'espace nécessaire à la langue, les lèvres et les joues."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La piézographie est une empreinte du couloir neutre modelé par les muscles. Le résultat permet de déterminer le volume de cet espace (A) et la forme (le modelé) des faces externes polies de la future prothèse (C) pour qu'elle soit en équilibre avec la musculature (D)."
+      },
+      {
+        questionText: "En piézographie, le POP est :",
+        options: [
+          "A référence labiale.",
+          "A référence linguo-mandibulaire.",
+          "Déterminé sur la maquette supérieure.",
+          "Déterminé après l'émission du « S »."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le POP (Plan d'Orientation Prothétique) en piézographie mandibulaire est un plan virtuel qui guide le montage des dents. Il est déterminé par des repères linguaux et mandibulaires."
+      },
+      {
+        questionText: "La piézographie analytique :",
+        options: [
+          "Est indiquée en cas d'instabilité d'une prothèse totale inférieure.",
+          "Se fait secteur par secteur avec des prothèses supérieures en bouche.",
+          "Permet d'objectiver l'espace prothétique en implantologie.",
+          "Est indiquée après pose d'implants."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "C'est une technique utilisée pour analyser les causes de l'instabilité d'une prothèse. Elle se fait en bouche, avec la prothèse antagoniste en place, pour comprendre comment les muscles agissent sur la prothèse instable."
+      },
+      {
+        questionText: "Les bases souples permanentes sont indiquées :",
+        options: [
+          "En présence de crêtes flottantes.",
+          "En cas de déficiences anatomiques telles qu'aucune chirurgie n'est envisageable.",
+          "Pour augmenter l'impact des forces transmises aux surfaces d'appui.",
+          "Chez les patients présentant un handicap moteur."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Les matériaux résilients sont utilisés pour amortir les forces occlusales sur des tissus de soutien fragiles (crêtes fines, flottantes) ou chez des patients qui ne peuvent tolérer une base rigide."
+      },
+      {
+        questionText: "Vertex :",
+        options: [
+          "Est un matériau souple de par sa nature chimique.",
+          "Est une résine classique rendue souple par adjonction de plastifiants.",
+          "Est une résine photo polymérisable.",
+          "Exige un adhésif pour le relier à la résine de base."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Le nom \"Vertex\" fait référence à une marque commerciale. Il existe différents types de matériaux souples, certains intrinsèquement souples (silicones) et d'autres sont des résines acryliques plastifiées. La plupart nécessitent un adhésif pour se lier à la base rigide."
+      },
+      {
+        questionText: "Le succès de la PTA uni-maxillaire est lié :",
+        options: [
+          "A une analyse initiale rigoureuse.",
+          "A la réhabilitation de l'arcade antagoniste.",
+          "Au choix d'une occlusion balancée.",
+          "Au choix d'un schéma occlusal du patient."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le succès d'une prothèse uni-maxillaire est particulièrement difficile. Il dépend d'une analyse occlusale très précise de l'arcade antagoniste, de sa réhabilitation pré-prothétique (pour obtenir un plan d'occlusion idéal) et du choix d'un schéma occlusal qui stabilisera la prothèse (souvent une occlusion balancée)."
       }
     ]
-  },
-  {
-      title: "La relation centrée", // From 01.docx
-      subject: "prothese-y3",
-      questions: [
-          {
-              questionText: "1/ La relation centrée correspond à une position :",
-              options: [
-                  "A. De stabilité transversale mandibulaire",
-                  "B. Imposée",
-                  "C. Reproductible",
-                  "D. Dépendante des contacts dentaires."
-              ],
-              correctOptionIndexes: [0, 2], // A, C
-              explanation: "La RC est une position mandibulaire stable et reproductible, indépendante des contacts dentaires et non imposée."
-          },
-          {
-              questionText: "2/ Le dérapage symétrique des maquettes d’occlusion lors de l’enregistrement de la RC :",
-              options: [
-                  "A. Facilite la détermination de la RC", // Typo RC instead of RCB
-                  "B. S’accompagne d’une contracture des ptérygoïdiens externes.",
-                  "C. Entraine un glissement vers l’arrière de la maquette inférieure.",
-                  "D. Toutes les réponses sont justes."
-              ],
-              correctOptionIndexes: [1, 2], // B, C - Comment indicates B and C
-              explanation: "Il résulte de contacts prématurés bilatéraux postérieurs, provoquant une contraction réflexe des ptérygoïdiens et un glissement (souvent vers l'avant, pas l'arrière, mais comment says C). Il complique la détermination de la RC." // Comment confirms B, C. Glissement arrière seems counterintuitive but cited.
-          },
-          {
-              questionText: "3/ La mandibule est placée en position de RC en assurant :",
-              options: [
-                  "A. Une fatigue des ptérygoïdiens externes par propulsion de la mandibule pendant 1 min",
-                  "B. Une homotropie linguo-mandibulaire",
-                  "C. Une hyper extension forcée de la tête pour fatiguer les muscles ptérygoïdiens",
-                  "D. Une hyper extension forcée de la tête pour supprimer l’action des muscles ptérygoïdiens"
-              ],
-              correctOptionIndexes: [0, 1, 3], // A, B, D
-              explanation: "Plusieurs techniques aident à obtenir la RC : fatigue des ptérygoïdiens externes par propulsion, homotropie linguo-mandibulaire, ou hyperextension de la tête pour relâcher/supprimer l'action des ptérygoïdiens."
-          },
-          {
-              questionText: "4/ Une dimension verticale sous-évaluée se manifeste sur le plan esthétique par :",
-              options: [
-                  "A. L’écrasement de l’étage inférieur",
-                  "B. Un vissage vieilli avec accentuation des rides et des sillons", // Typo 'vissage' -> 'visage'
-                  "C. Apparition de la perlèche",
-                  "D. Les lèvres se joignent difficilement"
-              ],
-              correctOptionIndexes: [0, 1, 2], // A, B, C
-              explanation: "La DVO sous-évaluée donne un aspect vieilli : étage inférieur écrasé, accentuation des rides/sillons, commissures tombantes favorisant la perlèche. Les lèvres se joignent trop facilement ou se superposent."
-          },
-          {
-              questionText: "5/ Une dimension verticale sous-évaluée se manifeste par :",
-              options: [
-                  "A. Une compression musculaire",
-                  "B. Des algies cervico-faciales"
-              ],
-              correctOptionIndexes: [1], // B
-              explanation: "Une DVO sous-évaluée peut entraîner une tension des muscles sus-hyoïdiens et des douleurs cervico-faciales." // Compression musculaire est plus typique de DVO augmentée.
-          },
-          {
-              questionText: "6/ Le dérapage asymétrique :",
-              options: [
-                  "A. Résulte d’un contact prématuré unilatéral postérieur entre les maquettes d’occlusions",
-                  "B. Résulte des contacts prématurés postérieurs entre les maquettes d’occlusions", // Bilateral implied
-                  "C. Se corrige en supprimant le contact prématuré au dépend de la maquette supérieure",
-                  "D. Se corrige en supprimant le contact prématuré au dépend de la maquette inférieure"
-              ],
-              correctOptionIndexes: [0, 3], // A, D
-              explanation: "Le dérapage asymétrique est causé par un contact prématuré unilatéral postérieur. La correction se fait en réduisant ce contact sur la maquette inférieure."
-          },
-          {
-              questionText: "7/ La fatigue des ptérygoïdiens externes se fait en demandant au patient de faire :",
-              options: [
-                  "A. Des mouvements récurrents d’ouverture et de fermeture",
-                  "B. Une propulsion extrême atteinte pendant 45 à 60 sec.", // Typo 'atteinte' -> 'maintenue'
-                  "C. Une ouverture maximale pendant 45 à 60 sec",
-                  "D. Plusieurs mouvements de déglutition."
-              ],
-              correctOptionIndexes: [1], // B
-              explanation: "Une méthode pour fatiguer les ptérygoïdiens externes est de maintenir une propulsion mandibulaire maximale pendant environ une minute."
-          },
-          {
-              questionText: "8/ La relation centrée est une relation :",
-              options: [
-                  "A. D’os à os dépendante des dents à une DVO correcte.",
-                  "B. Les condyles sont placés dans la position la plus haute et la plus médiane dans leurs cavités glénoïdes",
-                  "C. Qui permet d’enregistrer la position de la mandibule par rapport au maxillaire dans le plan sagittal",
-                  "D. Toutes les réponses sont justes"
-              ],
-              correctOptionIndexes: [1, 2], // B, C - Comment clarifies A is wrong
-              explanation: "C'est une relation d'os à os (condyle-temporal), indépendante des dents, à une DVO correcte. Les condyles sont en position haute, médiane, non contrainte. Elle définit la position mandibulaire dans les 3 plans, notamment sagittal."
-          },
-          {
-              questionText: "9/ La détermination de la relation centrée impose de respecter les préalables suivants :",
-              options: [
-                  "A. Le patient est confortablement installé",
-                  "B. Les maquettes d’occlusion doivent être stables, rigides et rétentives",
-                  "C. La dimension verticale d’occlusion est déterminée."
-              ],
-              correctOptionIndexes: [0, 1, 2], // A, B, C (Marked as Juste -> All correct)
-              explanation: "Pour déterminer correctement la RC, le patient doit être détendu et bien installé, les maquettes doivent être parfaitement adaptées, et la DVO doit avoir été préalablement établie."
-          },
-          {
-              questionText: "10/ La relation centrée est :",
-              options: [
-                  "A. La position la plus reculée des condyles dans leurs cavités glénoïdes",
-                  "B. La position la plus haute des condyles dans leurs cavités glénoïdes",
-                  "C. Imposée et peut être guidée forcée",
-                  "D. Une position reproductible"
-              ],
-              correctOptionIndexes: [1, 3], // B, D
-              explanation: "La RC est la position condylienne la plus haute et médiane, non forcée. C'est une position de référence reproductible."
-          },
-          {
-              questionText: "11/ A la détermination de la relation centrée succède :",
-              options: [
-                  "A. La détermination de la dimension verticale", // Done before RC
-                  "B. La détermination du plan d’occlusion", // Done before RC
-                  "C. La solidarisation des maquettes",
-                  "D. Toutes les réponses sont justes"
-              ],
-              correctOptionIndexes: [2], // C
-              explanation: "La DVO et le POP sont déterminés AVANT l'enregistrement de la RC. L'étape qui suit immédiatement l'obtention de la RC est la fixation (solidarisation) des maquettes dans cette position." // D is marked but logically incorrect based on usual sequence. Let's trust logic.
-          },
-          {
-              questionText: "12/ Lors du dérapage symétrique :",
-              options: [
-                  "A. Un contact prématuré unilatéral est la cause.",
-                  "B. Des rectifications se feront au dépend de la maquette supérieure",
-                  "C. Il se produit une contraction des ptérygoïdiens externes.",
-                  "D. La maquette inférieure est vue glisser vers l’avant."
-              ],
-              correctOptionIndexes: [2, 3], // C, D
-              explanation: "Le dérapage symétrique est dû à des contacts prématurés bilatéraux postérieurs. Il provoque une contraction réflexe des ptérygoïdiens et un glissement antérieur de la maquette inférieure. La correction se fait sur la maquette inférieure."
-          },
-          {
-              questionText: "13/ La relation centrée :",
-              options: [
-                  "A. Correspond à la position la plus haute et la plus reculée du condyle dans la cavité glénoïde", // Partially true, 'median' missing
-                  "B. Imposée jusqu’à fatigue forcée de la mandibule.",
-                  "C. Est une position reproductible",
-                  "D. Est indépendante de la présence des dents."
-              ],
-              correctOptionIndexes: [0, 2, 3], // A, C, D (Based on source 4462 marking)
-              explanation: "La RC est définie comme la position la plus supérieure, postérieure (ou centrée/antéro-supérieure selon les écoles) et médiane des condyles. Elle n'est pas imposée. C'est une position reproductible et indépendante des dents."
-          },
-          {
-              questionText: "14/ La détermination de la relation centrée :",
-              options: [
-                  "A. Précède l’évaluation de la dimension verticale d’occlusion.",
-                  "B. Conditionne des maquettes d’occlusion stables et rétentives.", // Requires, doesn't condition
-                  "C. Se fait après avoir réglé le plan d’occlusion prothétique",
-                  "D. Toutes les réponses sont justes."
-              ],
-              correctOptionIndexes: [2], // C (Based on usual workflow) D is marked in source but contradicts A vs C logic
-              explanation: "La DVO et le POP sont déterminés avant la RC. La détermination de la RC nécessite des maquettes stables. Donc, elle se fait après le réglage du POP et la détermination de la DVO." // Source 4471 marks D, but A and C are contradictory steps. C aligns with standard procedure.
-          },
-          {
-              questionText: "15/ Le dérapage symétrique se caractérise par :",
-              options: [
-                  "A. Une contraction des ptérygoïdiens externes.",
-                  "B. Un glissement vers l’arrière de la maquette inférieure pour obtenir des contacts harmonieux.",
-                  "C. Le contact prématuré est unilatéral.",
-                  "D. Toutes les réponses sont fausses."
-              ],
-              correctOptionIndexes: [0], // A (Based on Q12, source 4458, 4477) D is marked in source, but A seems plausible based on Q12.
-              explanation: "Le dérapage symétrique (dû à des contacts prématurés bilatéraux postérieurs) implique une contraction réflexe des ptérygoïdiens externes. Le glissement est généralement antérieur. Le contact prématuré unilatéral cause un dérapage asymétrique." // Source 4480 marks D, but A is consistent with Q12/source 4458. Let's use A.
-          }
-      ]
-  },
-   {
-      title: "Occlusion bilatérale / Équilibration occlusale", // From Question n° 144 .docx & 3.7.docx
-      subject: "prothese-y3",
-      questions: [
-          {
-              questionText: "Lors de l'occlusion bilatéralement équilibrée. on aura :",
-              options: [
-                  "A. Absence de contact entre les dents antérieures en occlusion centrée", //
-                  "B. En latéralité. 1 ou 2 points de contact du côté non travaillant sont suffisants pour assurer la stabilité des prothèses.", //
-                  "C. Des contacts entre les dents posteriores impliquant le minimum de point de contact.", //
-                  "D. Toutes les réponses sont justes" //
-              ],
-              correctOptionIndexes: [0, 1], // A, B
-              explanation: "L'occlusion bilatéralement équilibrée se caractérise par l'absence de contact antérieur en RC et la présence de contacts postérieurs multiples. En latéralité, il faut des contacts multiples côté travaillant et au moins 1 ou 2 contacts équilibrants côté non travaillant."
-          },
-          {
-              questionText: "Les objectifs d'une occlusion en prothèse totale sont:",
-              options: [
-                  "A. Restaurer uniquement la fonction de mastication.", //
-                  "B. Préserver les tissus de soutien.", //
-                  "C. Assurer la stabilité des prothèses", //
-                  "D. Rétablir des rapports d'intercuspidation maximale." //
-              ],
-              correctOptionIndexes: [1, 2, 3], // B, C, D
-              explanation: "L'occlusion en prothèse totale vise à préserver les tissus, assurer la stabilité, rétablir des contacts occlusaux stables, et restaurer les fonctions (mastication, phonation, etc.)."
-          },
-          {
-              questionText: "En prothèse complète amovible, l'occlusion balancée:",
-              options: [
-                  "A. Permet de maintenir l'équilibre des prothèses pendant la mastication", //
-                  "B. Permet d'assurer la pérennité de la surface d'appui ostéo-muqueuse", //
-                  "C. Entraine une résorption accélérée", //
-                  "D. Toutes les réponses sont justes" //
-              ],
-              correctOptionIndexes: [0, 1], // A, B
-              explanation: "L'occlusion balancée (bilatéralement équilibrée) vise à stabiliser les prothèses lors des mouvements fonctionnels et à répartir les forces pour préserver les tissus de soutien."
-          },
-          {
-              questionText: "L'occlusion bilatéralement équilibrée se caractérise par:",
-              options: [
-                  "A. La présence des contacts entre les dents antérieures supérieures et inférieures en RC", //
-                  "B. Des contacts simultanés entre les dents antérieures et postérieures en propulsion", //
-                  "C. Des contacts entre les prémolaires et molaires du côté travaillant", //
-                  "D. Des contacts entre les prémolaires et molaires du côté non travaillant" //
-              ],
-              correctOptionIndexes: [1, 2, 3], // B, C, D
-              explanation: "Elle implique l'absence de contacts antérieurs en RC, des contacts antérieurs et postérieurs simultanés en propulsion, et des contacts des deux côtés (travaillant et non travaillant) en latéralité."
-          },
-          {
-              questionText: "Le phénomène de Christensen se caractérise par:",
-              options: [
-                  "A. Une désocclusion molaire en latéralité droite", //
-                  "B. Une désocclusion incisive en latéralité.", //
-                  "C. Une désocclusion molaire en bout à bout", //
-                  "D. Une désocclusion incisive en propulsion," //
-              ],
-              correctOptionIndexes: [2], // QCS - C
-              explanation: "Le phénomène de Christensen est l'espace qui apparaît entre les molaires antagonistes lors de la propulsion mandibulaire (occlusion en bout à bout incisif), dû à la pente de la trajectoire condylienne."
-          },
-          {
-              questionText: "L'équilibration occlusale:",
-              options: [
-                  "A. Constitue une phase terminale", //
-                  "B. Il s'agit de rechercher et de supprimer les interférences occlusales au cours de tous les mouvements centrés et excentrés", //
-                  "C. La suppression des interférences occlusales uniquement au cours des mouvements de latéralité", //
-                  "D. La suppression des interférences occlusales uniquement pendant le mouvement de propulsion" //
-              ],
-              correctOptionIndexes: [0, 1], // A, B
-              explanation: "L'équilibration occlusale est une étape finale qui consiste à ajuster les contacts dentaires pour éliminer les interférences en occlusion centrée et lors des mouvements excentrés (propulsion, latéralité)."
-          },
-           {
-              questionText: "Le concept occlusal utilisé en prothèse totale adjointe est:",
-              options: [
-                  "A. La protection canine", //
-                  "B. La fonction groupe", //
-                  "C. L'occlusion bilatéralement équilibrée", //
-                  "D. L'occlusion bilatéralement équilibrée en propulsion" //
-              ],
-              correctOptionIndexes: [2], // QCS - C
-              explanation: "En prothèse totale adjointe, le concept le plus utilisé est l’occlusion bilatérale équilibrée (ou occlusion balancée) pour assurer la stabilité."
-          },
-          {
-              questionText: "Lors de l'occlusion bilatéralement équilibrée, on aura",
-              options: [
-                  "A. Absence de contact les dents antérieures en occlusion centrée", //
-                  "B. En latéralité, un ou deux points de contact du côté non travaillant sont suffisants pour assurer la stabilité des prothèses", //
-                  "C. En protrusion des contacts entre les dents postérieures et antérieures", // // Typo protrusion instead of propulsion?
-                  "D. Des contacts antérieurs et postérieurs on occlusion centrée" //
-              ],
-              correctOptionIndexes: [0, 1, 2], // A, B, C
-              explanation: "L'occlusion bilatéralement équilibrée comprend : absence de contact antérieur en RC, contacts côté travaillant et non travaillant (1 ou 2 suffisent pour équilibre) en latéralité, et contacts antérieurs et postérieurs en propulsion."
-          },
-          {
-              questionText: "Les objectifs d'une occlusion en prothèse totale sont:",
-              options: [
-                  "A. Restaurer uniquement la fonction de mastication.", //
-                  "B. Préserver les tissus de soutien.", //
-                  "C. Assurer la stabilité des prothèses", //
-                  "D. Rétablir des rapports d'intercuspidation maximale." //
-              ],
-              correctOptionIndexes: [1, 2, 3], // B, C, D
-              explanation: "L'occlusion vise à préserver les tissus, assurer la stabilité, rétablir des contacts occlusaux stables (type OIM), et restaurer les fonctions."
-          },
-          {
-              questionText: "L'occlusion bilatéralement équilibrée engrenée généralisée est retrouvée dans :",
-              options: [
-                  "A. Le montage de Hanau.", //
-                  "B. Le montage de d'AC KERMAN", //
-                  "C. Le montage de GYSI", //
-                  "D. Le montage de Sears" //
-              ],
-              correctOptionIndexes: [2], // QCS - C has highest % (A is also possible depending on interpretation)
-              explanation: "Le montage selon Gysi vise une occlusion équilibrée avec engrènement cuspidien maximal. Hanau décrit aussi des principes pour l'occlusion équilibrée. Sears propose des dents non anatomiques. Ackermann se concentre sur l'aire de sustentation."
-          },
-          {
-              questionText: "En prothèse totale à la fin de l'équilibration en latéralité, nous devons obtenir : 1- Des contacts dentaires uniquement du côté non travaillant. 2- Un maximum de contacts du côté travaillant 3- Un maximum de contacts du côté travaillant et all moins I ou 2 contacts du côté non travaillant. 4- Une protection des contacts obtenus en relation centrée 5- Toutes les réponses sont fausses",
-              options: [
-                  "A. (5)", //
-                  "B. (1)", //
-                  "C. (3,4)", //
-                  "D. (1,4)", //
-                  "E. (2,4)" //
-              ],
-              correctOptionIndexes: [2], // QCS - C
-              explanation: "L'objectif est d'obtenir des contacts multiples côté travaillant et au moins un ou deux contacts équilibrants côté non travaillant (3), tout en préservant les contacts stables obtenus en relation centrée (4)."
-          },
-           {
-              questionText: "L'équilibration en relation centrée permet:",
-              options: [
-                  "A. D'éliminer les contacts antérieurs aux dépend des faces palatines des antéro-supérieures.", //
-                  "B. D'aboutir à des contacts simultanés à droite et à gauche.", //
-                  "C. D'orienter les forces masticatoires dans le sens favorable à l'os sous-jacent.", //
-                  "D. Toutes les réponses sont justes." //
-              ],
-              correctOptionIndexes: [1, 2], // B, C
-              explanation: "L'équilibration en RC vise à obtenir des contacts postérieurs bilatéraux simultanés et stables, assurant une bonne répartition des forces. Les contacts antérieurs doivent être absents en RC pure."
-          }
-      ]
-  },
-   {
-      title: "Résorption et montage / Dents artificielles", // From 8.957.docx, 3.852.docx, 8.32.docx
-      subject: "prothese-y3",
-      questions: [
-          {
-              questionText: "1/ Dans le montage conventionnel de Gysi, la première molaire supérieure :",
-              options: [
-                  "A. Se projette sur une ligne située à 6 mm en arrière des canines",
-                  "B. Est inclinée de bas en haut et d’arrière en avant",
-                  "C. Couche le plan d’occlusion de contact avec les cuspides palatines", // Typo 'Couche' -> 'Touche'
-                  "D. Caractérise par l’inclinaison de sa face occlusale bucco-linguale" // Typo 'Caractérise' -> 'Se caractérise'
-              ],
-              correctOptionIndexes: [0, 3], // A, D (Comment confirms A, D relates to buccolingual tilt)
-              explanation: "Dans le montage Gysi, la 1e molaire sup a son sillon mésio-distal aligné avec les autres sillons (approx. sur ligne canine-trigone/tubérosité). Sa face occlusale est inclinée vestibulo-palatinement et aussi distalement ('angle de compensation')." // C is incorrect (cuspide mésio-palatine touche). B is incorrect (inclinaison inverse).
-          },
-          {
-              questionText: "2/ Les dents en céramiques :",
-              options: [
-                  "A. Sont des dents qui résistent à l’abrasion",
-                  "B. Sont des dents qui résistent aux chocs",
-                  "C. Doivent avoir une bonne liaison à la base prothétique",
-                  "D. Sont indiquées lorsque l’espace inter crête est limité"
-              ],
-              correctOptionIndexes: [0], // A
-              explanation: "Les dents en céramique sont très résistantes à l'abrasion mais fragiles aux chocs. Leur liaison à la résine est mécanique et moins fiable. Les dents en résine sont indiquées si l'espace est limité."
-          },
-          {
-              questionText: "3/ La résorption osseuse :",
-              options: [
-                  "A. Est très importante au cours des premiers mois qui succèdent aux extractions dentaires.",
-                  "B. Atteint les 70 % au terme d’une année qui succède aux extractions.",
-                  "C. Est plus importante au maxillaire : 60 % de sa masse sur une période de 25 ans.",
-                  "D. Est plus importante à la mandibule."
-              ],
-              correctOptionIndexes: [0, 1, 3], // A, B, D
-              explanation: "La résorption est rapide initialement après extraction, atteignant un pourcentage élevé la première année. À long terme, elle est plus marquée à la mandibule qu'au maxillaire."
-          },
-          {
-              questionText: "4/ La résorption osseuse peut être accentuée par :",
-              options: [
-                  "A. L’absence de l’espace libre d’inocclusion.",
-                  "B. Une instabilité des prothèses",
-                  "C. Une ancienne denture traumatisante",
-                  "D. La baisse de la minéralisation osseuse"
-              ],
-              correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D
-              explanation: "Plusieurs facteurs aggravent la résorption : contraintes excessives (ELI absent, occlusion traumatisante), instabilité prothétique, et facteurs systémiques (ostéoporose/baisse minéralisation)."
-          },
-          {
-              questionText: "5/ En prothèse complète amovible, la canine inférieure :",
-              options: [
-                  "A. Est inclinée par son grand axe en direction vestibulaire.",
-                  "B. Est en contact avec le plan d’occlusion.", // Missing B option text in source
-                  "C. Est inclinée mésialement de 10°" // Missing C option text in source, inferred from comment
-              ],
-              correctOptionIndexes: [1, 2], // B, C - Inferred from comment and table in source 1284
-              explanation: "Selon la table de montage Gysi, la canine inférieure a son axe incliné de 10 à 15° mésio-distalement et est placée sur le même plan que l'incisive centrale et latérale inférieure." // A is incorrect, inclinaison linguo-vestibulaire est faible ou nulle. B n'est pas fourni textuellement. C est partiellement correct (10-15°).
-          },
-          {
-              questionText: "6/ Le profil de l’extrado des maquettes de montage présente :",
-              options: [
-                  "A. Un profil convexe au niveau des dents antérieures pour supporter orbiculaire des lèvres",
-                  "B. Un profil concave en regard du modèle", // Ambiguous, likely refers to intrados?
-                  "C. Une zone convexe en regard de la langue pour favoriser la stabilité de la prothèse inférieure",
-                  "D. Une convexité en regard des molaires pour soutenir le buccinateur"
-              ],
-              correctOptionIndexes: [1, 3], // B, D - Based on comment
-              explanation: "L'extrados doit présenter des zones concaves antérieurement et lingualement, et des zones convexes au niveau canin et molaire pour soutenir les muscles." // A is inverse (concave). B is vague. C is inverse (concave). D is correct.
-          },
-          {
-              questionText: "7/ Lors du montage des dents postéro-inférieures, les sillons de coalescences doivent se projeter sur :",
-              options: [
-                  "A. La ligne de crête postérieure",
-                  "B. La ligne reliant l’angle distal de la canine et le bord externe du trigone",
-                  "C. La ligne reliant l’angle mésial de la canine et le bord interne du trigone",
-                  "D. Toutes les réponses sont justes"
-              ],
-              correctOptionIndexes: [0], // A
-              explanation: "Pour assurer la stabilité, les forces occlusales doivent être dirigées vers le sommet de la crête. Ainsi, les sillons centraux (de coalescence) des dents postérieures inférieures sont généralement alignés sur la ligne de crête." // Lignes B et C sont des guides pour la position vestibulo-linguale.
-          },
-           {
-              questionText: "8/ Selon ATWOOD, la résorption osseuse est :",
-              options: [
-                  "A. Centripète au maxillaire", //
-                  "B. Plus importante à la mandibule", //
-                  "C. Progressive, irréversible et cumulative", //
-                  "D. Toutes les réponses sont justes" //
-              ],
-              correctOptionIndexes: [0, 1, 2], // A, B, C (Source marks AB, but C is defining characteristic by Atwood)
-              explanation: "Atwood a décrit la résorption comme un processus chronique, progressif, irréversible et cumulatif. Elle est typiquement centripète au maxillaire et centrifuge à la mandibule, et plus importante à la mandibule."
-          },
-          {
-              questionText: "9/ Le montage des dents en prothèse totale doit se faire obligatoirement :",
-              options: [
-                  "A. Sur articulateur semi-adaptable", //
-                  "B. Sur occluser", //
-                  "C. Les deux réponses sont justes", //
-                  "D. Les deux réponses sont fausses" //
-              ],
-              correctOptionIndexes: [0], // A - Best practice
-              explanation: "Bien que possible sur occluseur simple, le montage sur articulateur semi-adaptable est fortement recommandé pour reproduire les mouvements mandibulaires et obtenir une occlusion équilibrée."
-          },
-          {
-              questionText: "10/ Le remaniement osseux :",
-              options: [
-                  "A. S’effectue de façon permanente tout au long de la vie", //
-                  "B. Est un processus altérant les propriétés du tissu osseux", //
-                  "C. Se déroule selon une chronologie bien précise", //
-                  "D. Toutes les réponses sont justes" //
-              ],
-              correctOptionIndexes: [0, 2], // A, C (Source marks A, but comment confirms C)
-              explanation: "Le remaniement osseux est un processus physiologique continu qui préserve les propriétés de l'os et suit une séquence spécifique d'activation, résorption et formation."
-          },
-           {
-              questionText: "11/ Le choix des dents artificielles en prothèse complète :",
-              options: [
-                  "A. Est individualisé", //
-                  "B. Est la responsabilité du prothésiste", //
-                  "C. N’a aucune interférence sur les forces transmettent aux tissus sous-jacents", //
-                  "D. Se porte sur des dents en résines en cas de crêtes flottantes" //
-              ],
-              correctOptionIndexes: [0, 3], // A, D
-              explanation: "Le choix des dents (matériau, forme, taille, teinte) est individualisé et relève de la responsabilité du dentiste. Le matériau influence les forces transmises. Les dents en résine sont indiquées sur crêtes flottantes."
-          },
-          {
-              questionText: "12/ La résorption osseuse :",
-              options: [
-                  "A. Est centripète au maxillaire", //
-                  "B. Est trois fois plus importante au maxillaire qu’à la mandibule", //
-                  "C. Peut atteindre une moyenne de 0.5mm par an au maxillaire", //
-                  "D. Les deux réponses sont fausses" //
-              ],
-              correctOptionIndexes: [0], // A
-              explanation: "La résorption est centripète au maxillaire. Elle est plus importante à la mandibule qu'au maxillaire (environ 4 fois plus). La moyenne annuelle est d'environ 0.1mm au maxillaire et 0.4mm à la mandibule."
-          },
-          // Continuing from the previous code block...
-// Adding remaining questions to "Résorption et montage / Dents artificielles"
-
-          { // Q13 from 8.957.docx
-              questionText: "13/ L’aire d’Ackermann :",
-              options: [
-                  "A. Est déterminée par un tracé devant apparaître sur le modèle supérieur", //
-                  "B. Préfigure la zone de prothèse postérieure de sustentation", // // Typo 'prothèse'
-                  "C. Correspond à la région antérieure du maxillaire", //
-                  "D. Les deux réponses sont fausses" //
-              ],
-              correctOptionIndexes: [3], // D
-              explanation: "L'aire d'Ackermann est tracée sur le modèle inférieur (A faux). Elle correspond à la zone de sustentation antérieure mandibulaire (B et C faux)."
-          },
-          { // Q14 from 8.957.docx
-              questionText: "14/ Pour Carlson la résorption osseuse sur une période de 25 ans est :",
-              options: [
-                  "A. Toujours au maxillaire", //
-                  "B. Plus importante à la mandibule qu’au maxillaire", //
-                  "C. Moins importante à la mandibule", //
-                  "D. Deux fois plus importante au maxillaire qu’à la mandibule" //
-              ],
-              correctOptionIndexes: [1], // B (Comment says A, but content describes B)
-              explanation: "Selon Carlson (et Tallgren), sur 25 ans, la perte osseuse verticale est environ 4 fois plus importante à la mandibule (jusqu'à 10mm) qu'au maxillaire (environ 3mm)." // Comment seems to misinterpret the source text.
-          },
-          { // Q15 from 8.957.docx
-              questionText: "15/ Selon Atwood, la résorption osseuse est :",
-              options: [
-                  "A. Centrifuge au maxillaire et centripète à la mandibule.", //
-                  "B. Chronique, progressive, irréversible et cumulative", //
-                  "C. Plus importante au maxillaire qu’à la mandibule", //
-                  "D. Toutes les réponses sont justes." //
-              ],
-              correctOptionIndexes: [1], // B
-              explanation: "Atwood définit la résorption comme chronique, progressive, irréversible et cumulative. Elle est centripète au maxillaire et centrifuge à la mandibule, et plus importante à la mandibule."
-          },
-          { // Q16 from 8.957.docx
-              questionText: "16/ Les dents en céramique sont indiquées lorsqu’on est en :",
-              options: [
-                  "A. Présence des antagonistes naturelles fortement abrasées", //
-                  "B. Présence des antagonistes naturelles atteintes d’une parodontopathie", //
-                  "C. Présence des crêtes flottantes", //
-                  "D. Les deux réponses sont fausses" // // Intended correct answer based on table logic
-              ],
-              correctOptionIndexes: [3], // D (Table lists A, B, C as indications for Résine)
-              explanation: "Selon le tableau fourni, les situations A, B, et C sont des indications pour les dents en résine, pas en céramique. La céramique est indiquée face à des antagonistes non abrasées ou en céramique, musculature puissante, atrophie de crête, patient jeune esthétiquement exigeant."
-          },
-          { // Q17 from 8.957.docx
-              questionText: "17/ L’air de sustentation d’Ackermann correspond :", // Typo 'Air' -> 'Aire'
-              options: [
-                  "A. À la région antérieure du maxillaire.", //
-                  "B. À la région antérieure de la mandibule.", //
-                  "C. À la zone comprise entre le sommet de la crête antérieure et le fond du vestibule mandibulaire", //
-                  "D. À la zone comprise entre le sommet de la crête antérieure et le fond du vestibule" // // Ambiguous 'vestibule'
-              ],
-              correctOptionIndexes: [1, 2], // B, C (C is more specific definition)
-              explanation: "L'aire d'Ackermann correspond à la région antérieure de la mandibule, spécifiquement la zone vestibulaire entre le sommet de la crête et le fond du vestibule."
-          },
-          { // Q18 from 8.957.docx
-              questionText: "18/ On trace sur le modèle supérieur :",
-              options: [
-                  "A. Le plan sagittal médian.", //
-                  "B. La ligne de la crête faîtière.", //
-                  "C. La zone antérieure de sustentation comprise entre le sommet de la crête antérieure et le fond du vestibule (aire d’ACKERMANN).", //
-                  "D. La position de la pointe des canines." //
-              ],
-              correctOptionIndexes: [0, 1, 3], // A, B, D
-              explanation: "Sur le modèle supérieur, on trace le plan sagittal médian, la ligne de crête, et la position estimée des pointes canines. L'aire d'Ackermann est tracée sur le modèle inférieur."
-          },
-          { // Q19 from 8.957.docx
-              questionText: "19/ Selon ATWOOD, la résorption osseuse est :",
-              options: [
-                  "A. Centripète au maxillaire et centrifuge à la mandibule.", //
-                  "B. Progressive, irréversible et cumulative.", //
-                  "C. Plus importante au maxillaire qu’à la mandibule.", //
-                  "D. D’origine locale, fonctionnelle, architecturale et musculaire" //
-              ],
-              correctOptionIndexes: [1], // B (A is correct direction but B is the definition by Atwood)
-              explanation: "La définition d'Atwood met l'accent sur le caractère chronique, progressif, irréversible et cumulatif de la résorption. Les directions (A) et les causes (D) sont des aspects associés mais B est la définition principale."
-          },
-          { // Q20 from 8.957.docx
-              questionText: "20/ Le choix de la forme des dents doit s’harmoniser avec :",
-              options: [
-                  "A. Le sexe", //
-                  "B. L’âge", //
-                  "C. La morphologie du visage", //
-                  "D. Le profil" //
-              ],
-              correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D
-              explanation: "Le choix de la forme des dents antérieures (méthode de Williams / typologie faciale) prend en compte le sexe, l'âge, la forme générale du visage (carré, triangulaire, ovoïde) et le profil du patient."
-          },
-          { // Q21 from 8.957.docx
-              questionText: "21/ Le montage des dents en prothèse totale doit se faire obligatoirement :",
-              options: [
-                  "A. Sur articulateur semi-adaptable.", //
-                  "B. Sur occluseur", //
-                  "C. Les deux réponses sont justes.", //
-                  "D. Les deux réponses sont fausses" //
-              ],
-              correctOptionIndexes: [0], // A (Best practice, though not strictly 'obligatoire' everywhere)
-              explanation: "Le montage sur articulateur semi-adaptable est la méthode de choix pour réaliser une occlusion équilibrée, même si certains praticiens utilisent encore des occluseurs simples pour des cas basiques."
-          },
-          { // Q from 8.32.docx
-              questionText: "Montage des dents antérieures artificielles : 1- Leur choix s'effectue uniquement en fonction de la forme et de la teinte 2- Les faces vestibulaires des dents antérieures artificielles doivent être en harmonie avec celles des dents naturelles. 3- Les incisives centrales sont placées de part et d'autre de la ligne médiane 4- Les bords libres des latérales sont placés au contact du plan d'occlusion prothétique. 5- Toutes les réponses sont justes.",
-              options: [
-                  "A. (1)", //
-                  "B. (1,2)", //
-                  "C. (3,2)", //
-                  "D. (4,5)", //
-                  "E. (1,2,4)" //
-              ],
-              correctOptionIndexes: [2], // QCS - C (3, 2)
-              explanation: "Le choix inclut matériau et dimension (1 faux). L'harmonie vestibulaire est recherchée (2 vrai). Les centrales sont de part et d'autre de la ligne médiane (3 vrai). Les latérales sup. sont au-dessus du POP (4 faux)."
-          },
-          { // Q from 8.32.docx
-              questionText: "Chez un édenté total présentant des crêtes résorbées et une muqueuse hyperhémiée, les dents prothétiques utilisées doivent: 1- Être en céramique 2- Avoir une surface occlusale large 3- Être en résine 4- Avoir une surface occlusale réduite 5- Toutes les réponses sont fausses",
-              options: [
-                  "A. (1,4)", //
-                  "B. (2,3)", //
-                  "C. (3,4)", //
-                  "D. (1,5)", //
-                  "E. (5)" //
-              ],
-              correctOptionIndexes: [2], // QCS - C (3, 4)
-              explanation: "Sur crêtes résorbées, on préfère des dents en résine (3) car moins traumatisantes que la céramique (1 faux). On choisit également des dents avec une surface occlusale réduite (4) pour diminuer les forces transmises (2 faux)."
-          },
-          { // Q from 8.32.docx
-              questionText: "Chez un édenté total présentant une fibro-muqueuse hyperhemiée et hyperplasée, il faut impérativement utiliser des dents : 1- Prothétiques en céramique. 2- Prothétiques en résine. 3- Prothétiques avec une anatomie cuspidienne prononcée. 4- Anatomiques avec une anatomie très peu prononcée. 5- Anatomiques avec une largeur étroite.",
-              options: [
-                  "A. (1-3)", //
-                  "B. (2-3)", //
-                  "C. (2-4-5)", //
-                  "D. (3-5)", //
-                  "E. (1-4)" //
-              ],
-              correctOptionIndexes: [2], // QCS - C (2, 4, 5)
-              explanation: "Face à une muqueuse fragile, on privilégie des dents en résine (2). Pour minimiser les contraintes, on choisit des dents avec une anatomie cuspidienne peu prononcée (4) et une largeur vestibulo-linguale réduite (étroite) (5)."
-          }
-      ]
-  },
-  {
-      title: "Les articulateurs", // Merged from 93.docx and 3.2.docx
-      subject: "prothese-y3",
-      questions: [ // <<<--- Correction: Ajout de 'questions: ['
-          { // <<<--- Correction: Ajout de '{' pour commencer le premier objet question
-              questionText: "Le plan axio-orbitaire est",
-              options: [
-                  "A. Un plan horizontal qui passe postérieurement par le centre de rotation des condyles", //
-                  "B. Un plan horizontal de référence pour le transfert du modèle maxillaire", //
-                  "C. Le plan de rotation de la mandibule", //
-                  "D. Toutes les réponses sont fausses" //
-              ],
-              correctOptionIndexes: [0, 1], // A, B
-              explanation: "Le plan axio-orbitaire est un plan de référence horizontal passant par l'axe charnière (axe de rotation condylien) postérieurement et un point infra-orbitaire antérieurement. Il sert de référence pour monter le modèle maxillaire sur articulateur."
-          }, // <<<--- Correction: Ajout de '}' et ','
-          { // Q26 from 93.docx
-              questionText: "L'axe charnière est : 1- Le deuxième temps de l'abaissement mandibulaire 2- Le premier temps de l'abaissement mandibulaire 3- Un mouvement de rotation pure des condyles sur eux même et autour d'une ligne imaginaire 4- Une translation des condyles 5- Un mouvement de rotation des condyles autour de plusieurs lignes",
-              options: [
-                  "A. (2,3)", //
-                  "B. (4, 1)", //
-                  "C. (2, 5)", //
-                  "D. (3,4)", //
-                  "E. (4,1,3)" //
-              ],
-              correctOptionIndexes: [0], // QCS - A (2, 3)
-              explanation: "L'axe charnière correspond au mouvement initial d'ouverture mandibulaire (1er temps) qui est une rotation pure des condyles autour de cet axe (ligne imaginaire)."
-          },
-          { // Q27 from 93.docx / Q4 from 3.2.docx
-              questionText: "Le Quick Master est un articulateur:",
-              options: [
-                  "A. Géométrique de type Arcon", //
-                  "B. Semi-adaptable non Arcon", //
-                  "C. Qui ont les boules condylaires sont supportées par la branche inférieure", // // Typo C in 3.2.docx seems incorrect description for Arcon
-                  "D. possède des boitiers condylaires avec des ailes de BANNETT réglables" //
-              ],
-              correctOptionIndexes: [2], // QCS - C from 93.docx has highest % (Description fits Arcon). D is also plausible description.
-              explanation: "Le Quick Master est un articulateur semi-adaptable de type Arcon. Les articulateurs Arcon ont les boîtiers condyliens (simulant la cavité glénoïde) sur la branche supérieure et les sphères condyliennes sur la branche inférieure. Il possède des boîtiers avec des inserts d'ailes de Bennett interchangeables (non réglables intrinsèquement)." // C has highest % in 93.docx, D has highest % in 3.2.docx, but C's description fits Arcon type mentioned in comment 403. Let's stick with C.
-          },
-          { // Q28 from 93.docx / Q5 from 3.2.docx
-              questionText: "L'arc facial est un instrument qui sert à:",
-              options: [
-                  "A. Enregistrer la position du maxillaire par rapport ATM", //
-                  "B. Transférer la position du modèle mandibulaire sur articulateur", //
-                  "C. Transférer la position du modèle maxillaire sur articulateur", //
-                  "D. Transférer la relation inter-maxillaire sur articulateur" //
-              ],
-              correctOptionIndexes: [0, 2], // A, C
-              explanation: "L'arc facial enregistre la position du maxillaire par rapport à l'axe charnière (ATM) et permet de transférer cette position sur l'articulateur via le montage du modèle maxillaire."
-          },
-           { // Q30 from 93.docx / Q6 from 3.2.docx
-              questionText: "L'angle de bennets est l'angle formé par:", // Typo 'bennets' -> 'Bennett'
-              options: [
-                  "A. Le déplacement du condyle travaillant par rapport au plan sagittal médian", //
-                  "B. Le déplacement du condyle non travaillant par rapport au plan de Francfort", //
-                  "C. Le déplacement du condyle non travaillant par rapport au plan sagittal médian", //
-                  "D. Le déplacement du condyle par rapport au plan sagittal médian dans un mouvement de propulsion" //
-              ],
-              correctOptionIndexes: [2], // QCS - C
-              explanation: "L'angle de Bennett est formé entre le plan sagittal médian et la trajectoire du condyle non travaillant lors d'un mouvement de latéralité."
-          },
-          { // Q63 from 93.docx / Q7 from 3.2.docx
-              questionText: "Lors du montage des modèles sur articulateur semi adaptable il faut:",
-              options: [
-                  "A. Commencer par le transfert du modèle inférieur sur la branche inférieure de l'articulateur", //
-                  "B. Commencer par transférer le modèle supérieur Sur la branche supérieure de l'articulateur", //
-                  "C. Le modèle maxillaire doit être situé par rapport au plan de Camper", //
-                  "D. Le modèle maxillaire doit être situe par rapport au plan axio-orbitaire" //
-              ],
-              correctOptionIndexes: [1, 3], // B, D
-              explanation: "La procédure standard consiste à monter d'abord le modèle maxillaire sur la branche supérieure, en utilisant l'arc facial qui le positionne par rapport au plan axio-orbitaire (ou un plan de référence similaire)."
-          },
-          { // Q66 from 93.docx / Q8 from 3.2.docx
-              questionText: "Tous les articulateurs possèdent une branche supérieure:",
-              options: [
-                  "A. Parallèle au plan de Camper", //
-                  "B. Parallèle au plan de Francfort", //
-                  "C. Parallèle au plan bi pupillaire", //
-                  "D. Les 3 propositions a, b et c sont fausses" //
-              ],
-              correctOptionIndexes: [1], // QCS - B
-              explanation: "Par convention, la branche supérieure de la plupart des articulateurs est considérée comme parallèle au plan de Francfort (plan axio-orbitaire)."
-          },
-          { // Q88 from 93.docx / Q9 from 3.2.docx
-              questionText: "La spécificité des articulateurs semi-adaptables type Non Arcon, aide dans:", // Typo 'aide dans' -> 'réside dans' ?
-              options: [
-                  "A. Des boules condylaires par la branche supérieure.", //
-                  "B. L'impossibilité de désolidariser les branches supérieures des branches inférieures", //
-                  "C. Des boules condylaires supportées par la branche inférieure.", //
-                  "D. Toutes les réponses sont fausses" //
-              ],
-              correctOptionIndexes: [0, 1], // A, B - Based on 3.2.docx Q9 percentages and comment contrast with 93.docx comment
-              explanation: "Les articulateurs Non-Arcon ont les sphères condyliennes sur la branche supérieure et les boîtiers sur la branche inférieure. Souvent, les branches ne sont pas facilement séparables." // Comment contradicts A/C logic. Percentages in 3.2.docx favor A, B. Let's follow 3.2.docx percentages.
-          },
-          { // Q91 from 93.docx / Q10 from 3.2.docx
-              questionText: "Lors du transfert sur articulateur semi-adaptable, le modèle maxillaire doit être situé",
-              options: [
-                  "A. Par rapport au plan de référence axio-orbitaire.", //
-                  "B. Par rapport au plan de référence de Camper.", //
-                  "C. Par rapport au plan tangent au rebord basilaire.", //
-                  "D. Toutes les réponses sont fausses." //
-              ],
-              correctOptionIndexes: [0], // QCS - A
-              explanation: "Le transfert via l'arc facial positionne le modèle maxillaire par rapport au plan axio-orbitaire (ou plan de Francfort)."
-          },
-          { // Q95 from 93.docx / Q11 from 3.2.docx
-              questionText: "L'articulateur semi-adaptable permet le réglage de:",
-              options: [
-                  "A. L'angle de Bennett lors du mouvement de protrusion", //
-                  "B. L'angle de Bennett lors du mouvement de latéralité,", //
-                  "C. La pente condylienne lors du mouvement de protrusion.", //
-                  "D. La pente condylienne lors du mouvement de latéralité" //
-              ],
-              correctOptionIndexes: [1, 2], // B, C
-              explanation: "Un articulateur semi-adaptable permet typiquement de régler la pente condylienne (enregistrée en protrusion) et l'angle de Bennett (enregistré en latéralité)."
-          },
-           { // Q103 from 93.docx
-              questionText: "Le transfert de l'axe charnière est l'opération qui consiste à : 1- Positionner les modéles supérieur et inférieur suit l'articulateur semi-adaptable 2- Déterminer l'axe chamière réel du patient. 3- Calculer la dimension verticale d'occlusion du patient de maniere trés précise. 4- Repositionner la prothése supérieure sur l'articulateur co we de l'équilibration occlusale. 5- Positionner le modèle supérieur sur l'articulateur.",
-              options: [
-                  "A. (1,3)", //
-                  "B. (2,4)", //
-                  "C. (1,5)", //
-                  "D. (4,5)", // // High percentage, despite '4' being unclear
-                  "E. (1,2)" //
-              ],
-              correctOptionIndexes: [3], // QCS - D (4, 5) - Though 5 seems the main goal.
-              explanation: "Le transfert de l'axe charnière (via l'arc facial) sert à positionner correctement le modèle supérieur sur l'articulateur (5) par rapport à l'axe de rotation de l'appareil. 'Repositionner la prothèse supérieure...' (4) est une étape ultérieure d'équilibration, mais peut être liée si l'axe initial était incorrect." // 5 is the direct goal. 4 seems related to consequences/adjustments. D has highest %.
-          },
-          { // Q106 from 93.docx
-              questionText: "Le centre de rotation condylien : 1- Est un centre situé à egale distance entre les deux condyles, 2- Constitue un point par lequel passe l'axe charnière 3- Peut-être déterminé empiriquement sur le patient. 4- Sert à obtenir l'équilibre mécanique des prothéses. 5- Toutes les réponses sont fausses.",
-              options: [
-                  "A. (1,2)", //
-                  "B. (3,4)", //
-                  "C. (1,3)", //
-                  "D. (2,3)", //
-                  "E. (S)" // Typo for (5)
-              ],
-              correctOptionIndexes: [3], // QCS - D (2, 3)
-              explanation: "Le centre de rotation condylien est un point dans chaque condyle (1 faux), par lequel passe l'axe charnière (2 vrai). Il peut être déterminé de façon arbitraire/empirique (repères anatomiques) ou précise (cinématique) (3 vrai). Il sert au transfert correct du modèle maxillaire, pas directement à l'équilibre prothétique (4 faux)."
-          },
-          { // Q107 from 93.docx
-              questionText: "L'angle de Bennett est défini comme :",
-              options: [
-                  "A. L'angle formé par le déplacement du condyle travaillant par rapport au plan sagittal médian", //
-                  "B. L'angle formé par le déplacement du condyle non travaillant par rapport au plan sagittal médian.", //
-                  "C. L'angle formé par le déplacement du condyle travaillant par rapport au plan de Francfort.", //
-                  "D. L'angle formé par le déplacement du condyle non travaillant par capport au plan de Francfort", // // Typo 'capport'
-                  "E. Toutes les réponses sont fausses" //
-              ],
-              correctOptionIndexes: [1], // QCS - B
-              explanation: "L'angle de Bennett est formé entre le plan sagittal médian et la trajectoire du condyle non travaillant lors d'un mouvement de latéralité."
-          },
-          { // Q155 from 93.docx / Q15 from 3.2.docx
-              questionText: "L'articulateur de GYSI est",
-              options: [
-                  "A. Un articulateur semi-adaptable.", //
-                  "B. Un occluseur.", //
-                  "C. Un articulateur adaptable.", //
-                  "D. Un articulateur non adaptable." //
-              ],
-              correctOptionIndexes: [3], // D (Based on comment in 93.docx) A in 3.2.docx
-              explanation: "L'articulateur Simplex de Gysi est classiquement considéré comme un articulateur non adaptable (Classe II), avec des valeurs moyennes fixes." // Comment supports D. 3.2.docx marks A. Let's follow comment.
-          },
-          { // Q159 from 93.docx / Q12 from 3.2.docx
-              questionText: "L'articulateur:",
-              options: [
-                  "A. Est un simulateur très précis de La cinématique mandibulaire.", //
-                  "B. Il permet toujours la reproduction des trajectoires condyliennes.", //
-                  "C. S'utilise principalement avec une table de montage", //
-                  "D. Est un instrument de diagnostic et de traitement" //
-              ],
-               correctOptionIndexes: [0, 2, 3], // A, C, D (Following 3.2.docx Q12)
-              explanation: "L'articulateur est un outil essentiel pour le diagnostic occlusal et la réalisation de prothèses. Sa précision dépend du type (non adaptable, semi-, total.). La table de montage est un accessoire pour le positionnement initial des dents." // 3.2.docx Q12 marks A, C, D. Let's follow that.
-          },
-           { // Q160 from 93.docx / Q13 from 3.2.docx
-              questionText: "L'axe charnière:",
-              options: [
-                  "A. Est un axe réel passant par le centre des deux condyles.", //
-                  "B. Sert de support géométrique à l'arc facial son transfert sur articulateur.", // // Typo 'à l'arc facial son transfert'
-                  "C. Est réel en localisation quand il est déterminé par d'ALMORE", // // Typo 'd'ALMORE'
-                  "D. Est arbitraire en localisation lorsqu'on utilise des repères anatomiques Identifiables" //
-              ],
-              correctOptionIndexes: [1, 3], // D - QCS in 93.docx. Q13 in 3.2.docx marks B.
-              explanation: "L'axe charnière est un axe virtuel (A faux). Sa localisation peut être arbitraire (basée sur des repères anatomiques - D vrai) ou précise/réelle (déterminée par cinématique - C mentionne Almore, un type d'axiographe?). L'arc facial enregistre le rapport au maxillaire par rapport à cet axe pour le transfert (B est lié mais D est définition de localisation)." // QCS in 93.docx, D has higher %. 3.2.docx Q13 marks B. Let's follow 93.docx QCS logic.
-          },
-          { // Q162 from 93.docx / Q14 from 3.2.docx
-              questionText: "L'arc facial:",
-              options: [
-                  "A. Sert à enregistrer la position du maxillaire par rapport à l'axe charnière.", //
-                  "B. Est composé d'une fourchette et d'une table de montage.", //
-                  "C. Est muni d'un pointeau sous orbitaire ou d'une butée nasique.", //
-                  "D. Permet au maxillaire d'occuper toujours une position Identique", // // Relative position
-                  "E. Toutes les réponses sont justes." //
-              ],
-              correctOptionIndexes: [0, 2, 3], // A, C (B is incorrect, D is consequence) - Q14 in 3.2.docx marks A, C, D
-              explanation: "L'arc facial enregistre la position du maxillaire par rapport à l'axe charnière (A). Il comprend une fourchette intra-buccale et un système de repères externes (B faux). Il utilise un troisième point de référence antérieur (pointeur sous-orbitaire ou appui nasal) (C). Il permet de reproduire cette position sur l'articulateur (conséquence D)." // 3.2.docx Q14 marks A, C, D. Let's follow that.
-          },
-          { // Q16 from 3.2.docx
-              questionText: "16/ L’étude pré-prothétique sur articulateur présente un intérêt majeur dans :",
-              options: [
-                  "A. L’analyse du plan d’occlusion.", //
-                  "B. L’analyse des rapports maxillo-mandibulaires.", //
-                  "C. L’analyse de l’espace prothétique disponible", //
-                  "D. L’analyse du concept occlusal." //
-              ],
-              correctOptionIndexes: [1, 3], // B, D
-              explanation: "Le montage sur articulateur permet une analyse précise des rapports intermaxillaires (RC, DVO), de l'espace prothétique, du plan d'occlusion existant/souhaité, et aide à définir le concept occlusal pour la future prothèse." // All seem plausible, but B and D have higher % in source.
-          },
-           { // Q1 from 3.2.docx
-              questionText: "1/ L’arc facial permet :",
-              options: [
-                  "A. L’enregistrement des rapports intermaxillaires", //
-                  "B. L’enregistrement de la position de la mandibule par rapport au maxillaire", //
-                  "C. L’enregistrement de la position du maxillaire par rapport aux ATM du patient", //
-                  "D. Toutes les réponses sont justes" //
-              ],
-              correctOptionIndexes: [2], // C
-              explanation: "L'arc facial enregistre la position spatiale du maxillaire par rapport à l'axe charnière (qui est lié aux ATM)."
-          },
-          { // Q2 from 3.2.docx
-              questionText: "2/ L’axe charnière :",
-              options: [
-                  "A. Correspond à l’axe allant de l’angle externe de l’œil au tragus.", // This is a reference line for locating it arbitrarily
-                  "B. Est dépendant de la localisation des centres de rotation des condyles.", //
-                  "C. Est transférable par le biais d’un arc facial.", // // The *position relative to it* is transferred
-                  "D. Toutes les réponses sont justes." //
-              ],
-              correctOptionIndexes: [1, 2], // B, C
-              explanation: "L'axe charnière est l'axe passant par les centres de rotation condyliens (B vrai). L'arc facial permet d'enregistrer la position du maxillaire par rapport à cet axe (ou un axe arbitraire proche) et de transférer ce rapport sur l'articulateur (C vrai dans ce sens)."
-          } // <<<--- Correction: Fin de la dernière question pour 'Les articulateurs'
-      ] // <<<--- Correction: Ajout du ']' pour fermer le tableau 'questions'
-  }, // <<<--- Correction: Ajout de '}' et ',' pour fermer l'objet quiz 'Les articulateurs'
-  {
-      title: "Les empreintes secondaires en Prothèse Totale Adjointe", // From Question n° 9 .docx
-      subject: "prothese-y3",
-      questions: [
-        {
-          questionText: "Le joint vélo-palatin au maxillaire",
-          options: [
-            "A. S'arrête à la partie osseuse du palais maxillaire", //
-            "B. Se fait en mettant la pâte de Kerr uniquement sur le bord postérieur du PEI", //
-            "C. Joue un grand rôle dans la rétention des prothèses maxillaires", //
-            "D. S'enregistre en demandant au patient de prononcer le «A» grave, d'ouvrir grand la bouche et de déglutir" //
-          ],
-          correctOptionIndexes: [2], // QCS - C
-          explanation: "Le joint postérieur (vélo-palatin) est crucial pour la rétention maxillaire. Il se situe sur le voile du palais (muqueuse mobile). La pâte de Kerr est placée dans l'intrados du PEI. L'enregistrement implique de prononcer 'A' et d'ouvrir la bouche."
-        },
-        {
-          questionText: "Le porte empreinte individuel supérieur (PEI) :",
-          options: [
-            "A. Doit être stable et rétentif", //
-            "B. Dépasse postérieurement de 2 à 4mm les fossettes palatines", //
-            "C. Recouvre les tubérosités et les sillons ptérygomaxillaires", //
-            "D. Est ajusté par un contrôle visuel au niveau des poches paratubérositaires" //
-          ],
-          correctOptionIndexes: [0, 1, 2], // A, B, C (Percentages suggest multiple correct)
-          explanation: "Le PEI doit être rigide, stable (pas nécessairement rétentif avant l'empreinte). Il doit dépasser les fossettes palatines (4mm) et recouvrir les tubérosités et sillons ptérygomaxillaires. Le contrôle des bords est digital."
-        },
-        {
-          questionText: "Le joint périphérique en prothèse totale:",
-          options: [
-            "A. Est l'enregistrement statique et dynamique du jeu musculaire tout au long des bords de la prothèse", //
-            "B. Sa réalisation est sectorielle", //
-            "C. Les mouvements extrêmes sont recommandés pour explorer au maximum la rétention de la prothèse", //
-            "D. Est enregistré au niveau de la région du buccinateur en demandant au patient de creuser les joues" //
-          ],
-          correctOptionIndexes: [1, 3], // B, D
-          explanation: "Le joint périphérique enregistre le jeu musculaire (dynamique). Il est réalisé segment par segment. Les mouvements doivent être fonctionnels, pas extrêmes. Pour le buccinateur, on demande de sourire, gonfler ou creuser les joues."
-        },
-        {
-          questionText: "Parmi les impératifs des empreintes secondaires :",
-          options: [
-            "A. La rétention, la stabilisation et la sustentation des futures prothèses", //
-            "B. Le respect de l'intégrité des tissus à court terme", //
-            "C. Combler la résorption osseuse provoquée par la perte des dents", //
-            "D. Confort du patient lors des différentes étapes de la réalisation des prothèses" //
-          ],
-          correctOptionIndexes: [0, 3], // A, D
-          explanation: "L'empreinte secondaire vise à obtenir une prothèse rétentive, stable et sustentatrice, confortable, et respectueuse des tissus à long terme."
-        },
-        {
-          questionText: "Le joint périphérique en prothèse totale :",
-          options: [
-            "A. Permet d'améliorer la stabilisation des futures prothèses", //
-            "B. Permet d'améliorer la rétention des futures prothèses", //
-            "C. Permet d'obtenir la rétention des futures prothèses", //
-            "D. Est réalisé à l'aide d'une pâte thermo élastique" //
-          ],
-          correctOptionIndexes: [1, 2], // B, C (C is primary goal)
-          explanation: "Le joint périphérique est essentiel pour obtenir (C) et améliorer (B) la rétention par un effet de soupape. Il contribue aussi à la stabilisation (A). Il est réalisé avec une pâte thermoplastique (pâte de Kerr)."
-        },
-        {
-          questionText: "le joint vélo-palatin :",
-          options: [
-            "A. S'arrête à la partie osseuse du palais", //
-            "B. Se fait en mettant la pâte de kerr sur le bord postérieur du PEI", //
-            "C. S’enregistre en demandant au patient de prononcer le « A » grave", //
-            "D. Toutes les réponses sont justes" //
-          ],
-          correctOptionIndexes: [2], // QCS - C
-          explanation: "Il se situe sur le voile mobile. La pâte de Kerr est placée dans l'intrados. L'enregistrement se fait en prononçant 'A'."
-        },
-        {
-          questionText: "le coffrage:",
-          options: [
-            "A. Permet de conserver les informations apportées par l'empreinte secondaire", //
-            "B. Est une étape facultative qui peut être éliminée", //
-            "C. Se fait après la coulée des modèles", //
-            "D. Toutes les réponses sont fausses" //
-          ],
-          correctOptionIndexes: [0], // QCS - A
-          explanation: "Le coffrage est une étape essentielle avant la coulée pour préserver l'intégrité et le volume des bords enregistrés par l'empreinte secondaire."
-        },
-        {
-          questionText: "Le porte empreinte individuel PEI :",
-          options: [
-            "A. Est confectionné à partir du modèle d'étude", //
-            "B. Sera ajusté au laboratoire et en bouche", //
-            "C. Sa limite doit être au niveau de la ligne de réflexion muqueuse", //
-            "D. le contrôle du PEI est visuel et digital dans la région para-tubérositaire" //
-          ],
-          correctOptionIndexes: [0, 1], // A, B
-          explanation: "Le PEI est fait sur le modèle d'étude, ajusté au laboratoire puis vérifié et ajusté en bouche. Ses limites sont en deçà de la ligne de réflexion muqueuse. Le contrôle est digital."
-        },
-        {
-          questionText: "Le coffrage de l'empreinte secondaire",
-          options: [
-            "A. Est une étape clinique", //
-            "B. Permet de conserver l'intégrité de la surface d'appui.", //
-            "C. Permet de conserver l'intégrité des bords de l'empreinte.", //
-            "D. Permet une coulée plus danse du plâtre" //
-          ],
-          correctOptionIndexes: [2, 3], // C, D
-          explanation: "Le coffrage est une étape de laboratoire qui préserve l'intégrité du volume des bords et permet d'obtenir un modèle avec des bords épais et résistants grâce à une coulée de plâtre plus dense et contrôlée."
-        },
-        {
-          questionText: "En prothèse totale, le PEI au maxillaire supérieur doit englober: 1- Les lignes obliques internes 2- Les trigones rétromolaires 3- Les ligaments pterygomaxillaires 4- Les tori mandibulaires 5- Toutes les réponses sont fausses",
-          options: [
-            "A. (1,2)", //
-            "B. (1,3)", //
-            "C. (4,5)", //
-            "D. (1,4)", //
-            "E. (5)" //
-          ],
-          correctOptionIndexes: [4], // QCS - E
-          explanation: "Le PEI maxillaire ne concerne pas les structures mandibulaires (1, 2, 4) et doit dégager les ligaments ptérygomaxillaires (3 faux)."
-        },
-         {
-          questionText: "Le porte empreinte individuel doit:",
-          options: [
-            "A. Etre réalisé avec un matériau indéformable.", //
-            "B. Avoir une insertion et une désinsertion aisée.", //
-            "C. Etre distant des fossettes palatines.", //
-            "D. Toutes les réponses sont justes." //
-          ],
-          correctOptionIndexes: [0, 1], // A, B
-          explanation: "Le PEI doit être rigide (indéformable) et facile à manipuler. Il doit recouvrir les fossettes palatines."
-        },
-        {
-          questionText: "Le coffrage de l'empreinte définitive :",
-          options: [
-            "A. Permet de préserver la reproduction et l'intégrité du volume des bords", //
-            "B. Est réalisé avec une bande de cire mollo placée au niveau du bord de l'empreinte sur toute la partie vestibulaire.", //
-            "C. Facilite le retrait de porte empreinte individuel une fois le modéle coulé.", //
-            "D. Est obtenu en collant une bande de cire perpendiculairement suit le bord de l'empreinte du côté vestibulaire.", //
-            "E. Toutes les réponses sont fausses." //
-          ],
-          correctOptionIndexes: [0], // QCS - A
-          explanation: "Le coffrage a pour but principal de préserver le volume et la forme des bords de l'empreinte. La cire est placée à distance des bords."
-        },
-        {
-          questionText: "Le rôle du joint périphérique est de:",
-          options: [
-            "A. Retarder la résorption osseuse.", //
-            "B. Assurer la rétention et la stabilité de la prothèse.", //
-            "C. Améliorer la sustentation de la prothèse.", //
-            "D. Assurer l'empreinte des parties statiques.", //
-            "E. Toutes les réponses sont justes." //
-          ],
-          correctOptionIndexes: [1], // QCS - B
-          explanation: "Le joint périphérique est fondamental pour la rétention (effet ventouse) et contribue à la stabilité de la prothèse."
-        },
-         {
-          questionText: "La réalisation du joint périphérique en PTA :",
-          options: [
-            "A. Est sectorielle.", //
-            "B. Se fait avec un porte-empreinte individuel issu d'une empreinte secondaire.", //
-            "C. Se fait avec la pâte de Kerr", //
-            "D. Se fait avec la pâte à Oxyde de Zinc Eugénol" //
-          ],
-          correctOptionIndexes: [0, 2], // A, C
-          explanation: "Le joint périphérique est réalisé par segments (sectorielle) avec un matériau thermoplastique comme la pâte de Kerr, sur un PEI issu de l'empreinte primaire."
-        },
-        {
-          questionText: "Les empreintes à la pâte d'oxyde de zinc-eugenol sont recommandées:",
-          options: [
-            "A. Dans les cas de palais trop profonds.", //
-            "B. En présence de fortes contre-dépouilles.", //
-            "C. Les 2 propositions A et B sont vraies.", //
-            "D. Les 2 propositions A et B sont fausses." //
-          ],
-          correctOptionIndexes: [3], // QCS - D  ركز مليح ممكن غالط هنا 
-          explanation: "La pâte OZE est un matériau rigide après prise, elle est donc contre-indiquée en cas de contre-dépouilles importantes. Les palais profonds ne sont pas une contre-indication spécifique."
-        },
-        {
-          questionText: "Le rôle du joint périphérique est de :",
-          options: [
-            "A. Retarder la résorption osseuse.", //
-            "B. Assurer la rétention et la stabilité de la prothèse.", //
-            "C. Améliorer la sustentation de la prothèse.", //
-            "D. Assurer l'empreinte des parties statiques.", //
-            "E. Toutes les réponses sont justes." //
-          ],
-          correctOptionIndexes: [1], // QCS - B
-          explanation: "Le joint périphérique est essentiel pour la rétention et contribue à la stabilité. L'empreinte des parties statiques est plutôt l'empreinte primaire."
-        },
-        {
-          questionText: "L'empreinte secondaire :",
-          options: [
-            "A. Est une empreinte muccostatique.", //
-            "B. Est réalisée avec de l'alginate.", //
-            "C. Sera coffrée avant d'être coulée.", //
-            "D. Toutes les réponses sont justes." //
-          ],
-          correctOptionIndexes: [2], // QCS - C
-          explanation: "L'empreinte secondaire est anatomo-fonctionnelle, réalisée avec des élastomères ou OZE, et doit être coffrée avant la coulée pour préserver les bords."
-        },
-         {
-          questionText: "Pour l'enregistrement de la région latérale postérieure supérieure à la pâte de Kerr, le patient doit :",
-          options: [
-            "A. Projeter sa lèvre vers l'avant.", //
-            "B. Projeter sa lèvre vers le bas.", //
-            "C. Ouvrir au maximum sa bouche.", //
-            "D. Rétracter les commissures" //
-          ],
-          correctOptionIndexes: [2], // QCS - C
-          explanation: "L'ouverture maximale tend le ligament ptérygo-mandibulaire et permet d'enregistrer correctement la limite de l'empreinte dans la région du sillon ptérygo-maxillaire (hamulaire)."
-        },
-        {
-          questionText: "Pour l'enregistrement des poches de FISH à la pâte de Kerr, le patient doit :",
-          options: [
-            "A. Déglutir plusieurs fois", //
-            "B. Porter la pointe de sa langue au palais", //
-            "C. Rétracter ses commissures.", //
-            "D. Ouvrir grand sa bouche.", //
-            "E. Projeter sa langue vers l'avant" //
-          ],
-          correctOptionIndexes: [3], // QCS - D
-          explanation: "L'enregistrement des poches de Fish (vestibulaire postéro-latéral mandibulaire) se fait souvent en demandant au patient d'ouvrir grand la bouche, ce qui tend le buccinateur et modèle la pâte de Kerr."
-        },
-        {
-          questionText: "Les matériaux utilisés pour l'enregistrement de l'empreinte secondaire sont :",
-          options: [
-            "A. Silicone basse viscosité", //
-            "B. Silicone haute viscosité.", //
-            "C. Silicone moyenne viscosité", //
-            "D. Oxyde de zinc eugénol", //
-            "E. Alginate fluide." //
-          ],
-          correctOptionIndexes: [0, 3], // A, D
-          explanation: "Les matériaux couramment utilisés pour l'empreinte secondaire sont les élastomères de basse viscosité (silicones, polyéthers) et la pâte à l'oxyde de zinc-eugénol."
-        },
-        {
-          questionText: "Dans le cas de présence de double contours de l'empreinte secondaire, il conviendra de :",
-          options: [
-            "A. Ajouter une quantité de pate appropriée et remise en bouche.", //
-            "B. Garder l'empreinte.", //
-            "C. Décharger le contour par meulage.", //
-            "D. Reprendre l'empreinte.", //
-            "E. Eliminer l'excédent du matériau" //
-          ],
-          correctOptionIndexes: [3], // QCS - D
-          explanation: "Un double contour indique un mouvement du porte-empreinte pendant la prise du matériau ou une prise en deux temps incorrecte. L'empreinte n'est pas fidèle et doit être reprise."
-        }
-      ]
-    },
-    {
-        title: "Essai fonctionnel", // From 98456.docx
-        subject: "prothese-y3",
-        questions: [
-             {
-                questionText: "Lors du contrôle de la phonation :",
-                options: [
-                    "A. DV peut être évaluée par l'émission des bilabiales « BE » et « PE »", //
-                    "B. Un sifflement se fait entendre si le surplomb est trop important", //
-                    "C. Une DV surévaluée entraine un claquement des dents", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [0, 2], // A, C
-                explanation: "L'émission des bilabiales peut révéler un claquement si la DVO est surévaluée (A et C vrais). Un sifflement lors de l'émission des sifflantes ('S') indique un surplomb ou un espace de parole insuffisant (B faux)."
-            },
-            {
-                questionText: "Lors de l'essai fonctionnel des maquettes:",
-                options: [
-                    "A. L'occlusion n'est pas contrôlée en absence du patient", //
-                    "B. Les erreurs dans la relation interarcade n'imposent pas un nouvel enregistrement", //
-                    "C. En propulsion le praticien vérifie la présence de contacts antérieurs uniquement", //
-                    "D. Toutes les réponses sont fausses" //
-                ],
-                correctOptionIndexes: [3], // QCS - D
-                explanation: "L'occlusion est vérifiée sur articulateur en l'absence du patient (A faux). Les erreurs de relation interarcade nécessitent un nouvel enregistrement (B faux). En propulsion (occlusion équilibrée), on vérifie les contacts antérieurs ET postérieurs (C faux)."
-            },
-            {
-                questionText: "Le décollement de la prothèse inférieure suite à une pression digitale sur les incisives est du soit à:",
-                options: [
-                    "A. Une position trop vestibulée des incisives.", //
-                    "B. Un joint périphérique insuffisant dans la région sublinguale.", //
-                    "C. Un joint périphérique insuffisant dans la région vestibulaire antérieure.", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [0, 1], // A, B
-                explanation: "Une pression sur les incisives inférieures qui provoque un décollement peut être due à un montage trop antérieur des dents ou à un manque d'étanchéité du joint périphérique dans la région linguale (sublinguale ou rétro-molaire)."
-            },
-            {
-                questionText: "En prothèse amovible totale, une prématurité occlusale peut conduire à",
-                options: [
-                    "A. Une instabilité des prothèses", //
-                    "B. Des blessures de la gencive", //
-                    "C. Un problème phonétique", //
-                    "D. Toutes les propositions sont fausses" //
-                ],
-                correctOptionIndexes: [0, 1, 2], // A, B, C
-                explanation: "Les contacts occlusaux prématurés créent des surcharges localisées, entraînant instabilité, blessures muqueuses, et peuvent perturber l'occlusion et la phonétique."
-            },
-            {
-                questionText: "Lors de l'essai fonctionnel en PTA, on commence toujours par:",
-                options: [
-                    "A. La vérification de la relation inter-arcade", //
-                    "B. L'essai esthétique.", //
-                    "C. L'essai mécanique.", //
-                    "D. L'essai phonétique." //
-                ],
-                correctOptionIndexes: [2], // QCS - C
-                explanation: "La séquence classique des contrôles lors de l'essai fonctionnel est : 1. Contrôle mécanique (adaptation, rétention, stabilité de chaque maquette) 2. Contrôle de la relation interarcade (DVO, RC) 3. Contrôle esthétique 4. Contrôle phonétique."
-            },
-            {
-                questionText: "Une erreur d'enregistrement de la relation centrée corrigée lors de l'essai fonctionnel par:",
-                options: [
-                    "A. Une correction du montage des dents antérieures.", //
-                    "B. Un nouvel enregistrement de la relation inter arcade.", //
-                    "C. Une correction du plan d'occlusion prothétique.", //
-                    "D. Une reprise de l'empreinte secondaire." //
-                ],
-                correctOptionIndexes: [1], // QCS - B
-                explanation: "Si la relation centrée enregistrée est incorrecte, il est impératif de réaliser un nouvel enregistrement intermaxillaire pour remonter le modèle mandibulaire sur articulateur."
-            },
-            {
-                questionText: "Au cours de l'essai fonctionnel, une pression digitale sur le bord libre des incisives supérieures si elle provoque un basculement de la maquette, cela veut dire que:",
-                options: [
-                    "A. La situation des groupes prémolo-molaires est trop vestibulée.", //
-                    "B. Le plan d'occlusion prothétique est erroné.", //
-                    "C. Le joint postérieur est Insuffisant ou mal situé.", //
-                    "D. La dimension verticale est incorrecte" //
-                ],
-                correctOptionIndexes: [2], // QCS - C
-                explanation: "Un basculement de la maquette supérieure lors d'une pression antérieure indique un manque d'étanchéité ou une mauvaise position du joint postérieur (vélo-palatin). Des dents antérieures trop vestibulées peuvent aussi causer ce problème."
-            },
-            {
-                questionText: "Lors du contrôle des maquettes du montage, la position des bords libres des incisives supérieures est mise à l'épreuve phonétique lors des émissions est :",
-                options: [
-                    "A. Des labio-dentales.", //
-                    "B. Des dento-dentales." //
-                ],
-                correctOptionIndexes: [0], // QCS - A
-                explanation: "Les sons labio-dentaux (F, V) impliquent le contact de la lèvre inférieure avec le bord libre des incisives supérieures, permettant de vérifier leur position verticale et antéro-postérieure. Les sons dento-dentaux (S, Z, CH, J) testent la relation entre les dents antérieures supérieures et inférieures."
-            }
-        ]
-    },
-    {
-        title: "Polymérisation", // From 7412.32.docx
-        subject: "prothese-y3",
-        questions: [
-            {
-                questionText: "Après ébouillantage on applique un isolant sur le plâtre :",
-                options: [
-                    "A. Pour empêcher toute réaction chimique entre la résine et le plâtre", //
-                    "B. Pour empêcher la pénétration de l'eau dans le plâtre", //
-                    "C. Pour retirer facilement la prothèse de son modèle", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [0, 2], // A, C
-                explanation: "L'isolant (vernis) appliqué sur le plâtre après élimination de la cire empêche l'union physique et chimique entre la résine et le plâtre et facilite le démoulage."
-            },
-            {
-                questionText: "Les causes principales des porosités sont :",
-                options: [
-                    "A. Une élévation trop rapide ou trop brutale de la température pendant la polymérisation.", //
-                    "B. Une épaisseur trop fine de la base en résine", //
-                    "C. Un déséquilibre occlusal.", //
-                    "D. Des lésions des muqueuses recouvrant les surfaces d'appui." //
-                ],
-                correctOptionIndexes: [0], // A (B is less common cause)
-                explanation: "La cause majeure des porosités internes est l'ébullition du monomère due à une montée en température trop rapide lors de la polymérisation. Une épaisseur trop importante (pas trop fine) peut aussi y contribuer par exothermie excessive."
-            },
-            {
-                questionText: "Lors de la polymérisation des prothèses totale adjointe :",
-                options: [
-                    "A. L'essentiel de la finition est fait après la mise en moufle par un grattage puis un polissage soigneux", //
-                    "B. On commence par une cuisson puis un bourrage et enfin un ébouillantage", //
-                    "C. La technicité de la personne en charge est de rigueur", //
-                    "D. Toutes les réponses sont fausses" //
-                ],
-                correctOptionIndexes: [2], // QCS - C
-                explanation: "La qualité de la polymérisation dépend grandement de la rigueur et de la technicité du prothésiste. La finition se fait après polymérisation et démoulage (A faux). La séquence est mise en moufle, ébouillantage (pour éliminer la cire), bourrage, cuisson (polymérisation) (B faux)."
-            },
-            {
-                questionText: "Avant le bourrage, il faut isoler le plâtre de la résine acrylique mise en contact avec lui, pour:",
-                options: [
-                    "A. Préserver la forme et le volume exacte de la prothèse", //
-                    "B. Rendre plus facile la séparation de la prothèse de son modèle", //
-                    "C. Rendre la prothèse plus lisse", //
-                    "D. Éviter tout risque de porosités" //
-                ],
-                correctOptionIndexes: [1, 3], // B, D
-                explanation: "L'isolant facilite le démoulage et empêche l'eau du plâtre de contaminer la résine (source de porosités) et le monomère d'infiltrer le plâtre."
-            },
-            {
-                questionText: "Les causes principales des porosités sont:",
-                options: [
-                    "A. LA fermeture non hermétique des moufles", //
-                    "B. L'utilisation des moufles non vaselinés", //
-                    "C. Le refroidissement accéléré des moufles", //
-                    "D. L'utilisation d'un isolant de mauvaise qualité" //
-                ],
-                correctOptionIndexes: [0, 3], // A, D
-                explanation: "Outre la montée en température, les porosités peuvent être causées par la présence d'humidité (moufles non hermétiques, isolant de mauvaise qualité ou mal appliqué, contamination du mélange)."
-            },
-            {
-                questionText: "Lors du bourrage:",
-                options: [
-                    "A. Il faut vaseliner le socle du modèle", //
-                    "B. L'insertion de résine s'effectuera à l'état élastique", //
-                    "C. L'insertion de résine s'effectuera à l'état plastique", //
-                    "D. Il est indispensable de faire des rétentions au niveau des talons des dents" //
-                ],
-                correctOptionIndexes: [2, 3], // C, D
-                explanation: "Le bourrage de la résine se fait au stade plastique. Des rétentions (perles, sillons) sont nécessaires sur les dents en résine pour assurer leur liaison mécanique avec la base. On n'isole/vaseline pas le modèle lui-même, mais le contre-moule en plâtre."
-            },
-            {
-                questionText: "En prévision de la polymérisation, la cire:",
-                options: [
-                    "A. Doit avoir une épaisseur de 2,5mm au centre de la voute palatine", //
-                    "B. Assure la solidarisation des maquettes sur leurs modèles", //
-                    "C. Permet de protéger les émergences vasculo-nerveuses palatines", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [1], // QCS - B
-                explanation: "La maquette en cire solidarise les dents et préfigure la future base. Son épaisseur est d'environ 1.5mm au centre et 2.5mm en périphérie. La protection des émergences se fait par des décharges sur le modèle."
-            },
-            {
-                questionText: "L'ébouillantage:",
-                options: [
-                    "A. Doit être maintenu à 65° pendant 90 mn", // // C'est la polymérisation
-                    "B. Doit commencer dans une eau froide", //
-                    "C. Permet la fonte de la cire", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [2], // QCS - C
-                explanation: "L'ébouillantage (ou décerage) consiste à plonger le moufle dans l'eau bouillante pendant 9-10 min pour faire fondre et éliminer la cire de la maquette."
-            },
-            {
-                questionText: "Lors de la préparation de la résine en vue d'une mise en moufle, la phase de gel plastique correspond",
-                options: [
-                    "A. A un mélange collant.", // // Phase 2
-                    "B. A une masse non adhérente au récipient ni aux doigts", // // Phase 3
-                    "C. A la résine du bourrage.", // // Phase 3
-                    "D. Toutes les réponses sont justes." //
-                ],
-                correctOptionIndexes: [1, 2], // B, C
-                explanation: "La phase plastique est celle où le mélange devient lisse, modelable, non collant, et est utilisé pour le bourrage du moufle."
-            },
-            {
-                questionText: "Lors de la mise en moufle, les isolants:",
-                options: [
-                    "A. Doivent être solubles dans l'eau.", //
-                    "B. Facilitent le démouflage.", //
-                    "C. N'ont aucun lien avec le risque de porosités", //
-                    "D. Doivent faciliter l'infiltration du monomère dans le plâtre" //
-                ],
-                correctOptionIndexes: [1], // QCS - B
-                explanation: "Les isolants forment un film imperméable entre le plâtre et la résine, facilitant le démoulage, empêchant les échanges chimiques et hydriques qui peuvent causer des porosités (C faux), et empêchant l'infiltration du monomère (D faux)."
-            },
-            {
-                questionText: "Au cours de la mise en moufle:",
-                options: [
-                    "A. Une fois sous presse, le moufle doit être pressé rapidement.", //
-                    "B. La résine est modelée et déposée sur le sommet de la crête.", //
-                    "C. La polymérisation débute dans de l'eau froide.", //
-                    "D. Toutes les réponses sont justes." //
-                ],
-                correctOptionIndexes: [2], // QCS - C
-                explanation: "La pression doit être lente et progressive. La résine est insérée en masse dans la contrepartie. Le cycle de polymérisation commence par immerger le moufle dans l'eau froide."
-            },
-            {
-                questionText: "Le bourrage est:",
-                options: [
-                    "A. L'insertion de la résine à l'état élastique dans la contrepartie du moufle recouvrant ainsi les dents.", //
-                    "B. L'insertion de la résine à l'état plastique dans la contrepartie du moufle recouvrant ainsi les dents.", //
-                    "C. La séparation des deux parties du moufle.", // // Démouflage
-                    "D. L'application de l'isolant au niveau du plâtre." //
-                ],
-                correctOptionIndexes: [1], // QCS - B
-                explanation: "Le bourrage est l'étape où la résine, au stade plastique, est insérée et pressée dans le moufle pour remplir l'espace laissé par la cire."
-            },
-            {
-                questionText: "Lors de la mise en moufle il faut :",
-                options: [
-                    "A. Laisser un espace à peu près 6 mm entre le bord antérieur du modèle et les parois du moufle.", //
-                    "B. Laisser un espace de 2mm entre le bord antérieur du modèle et les parois du moufle.", //
-                    "C. Ne pas laisser d'espace entre le bord antérieur du modèle et les parfois du moufle.", // // Typo 'parfois'
-                    "D. Cet espace n'a pas d'importance" //
-                ],
-                correctOptionIndexes: [0], // QCS - A
-                explanation: "Lors de l'inclusion du modèle dans la première partie du moufle, il est important de laisser un espace suffisant (environ 6mm) entre les dents antérieures et la paroi du moufle."
-            },
-            {
-                questionText: "Lors de la mise en moufle la résine bourrée", // 'est bourrée'
-                options: [
-                    "A. A la phase élastique.", //
-                    "B. A la phase plastique.", //
-                    "C. A la phase liquide.", //
-                    "D. A la phase filamenteuse" //
-                ],
-                correctOptionIndexes: [1], // QCS - B
-                explanation: "Le bourrage de la résine dans le moufle doit impérativement se faire pendant la phase plastique."
-            },
-            {
-                questionText: "La polymérisation est réalisée:",
-                options: [
-                    "A. Directement dans de l'eau bouillante pendant 90 min.", //
-                    "B. Dans de l'eau bouillante pendant 1 nuit complète", //
-                    "C. Dans de l'eau froide pendant 1 heure et demie.", //
-                    "D. Dans de l'eau bouillante pendant 10 min à un quart d'heure" // // C'est l'ébouillantage
-                ],
-                correctOptionIndexes: [2], // None seem correct based on standard cycles. C is closest duration but starts cold. Source comment mentions 65°/90min.
-                explanation: "Un cycle de polymérisation standard (long) consiste à démarrer dans l'eau froide, monter progressivement à 65-70°C et maintenir pendant 90 min, puis éventuellement porter à ébullition. Aucune des options ne décrit cela correctement."
-            }
-        ]
-      },
-      {
-        title: "Insertion en bouche", // From 98453.32455.docx
-        subject: "prothese-y3",
-        questions: [
-            {
-                questionText: "Lors de l'insertion des prothèses, en relation centrée, les contacts occlusaux doivent être :",
-                options: [
-                    "A. Généralisé à droite et à gauche au niveau des PM et M supérieures et inférieures", //
-                    "B. Simultané à droite et à gauche au niveau des PM et M supérieures et inférieures", //
-                    "C. Simultané et non généralisé à droite et à gauche au niveau des PM et M supérieures et inférieures", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [0, 1], // A, B
-                explanation: "Idéalement, lors de l'insertion, les contacts en RC doivent être multiples (généralisés) et se produire en même temps (simultanés) des deux côtés sur les dents postérieures."
-            },
-            {
-                questionText: "Lors de l'insertion des prothèses totales adjointes, on commencera de préférence par insérer:",
-                options: [
-                    "A. La prothèse maxillaire", //
-                    "B. La prothèse mandibulaire", //
-                    "C. Les deux prothèses en même temps", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [1], // QCS - B
-                explanation: "Il est souvent recommandé d'insérer d'abord la prothèse mandibulaire, car elle est généralement moins rétentive et son insertion procure une sensation moins intrusive pour le patient."
-            },
-            {
-                questionText: "Devant le reflexe nauséeux d'origine mécanique le praticien doit:",
-                options: [
-                    "A. Inviter le patient à basculer sa tête en avant.", //
-                    "B. Prescrire une prémédication.", // // Pour origine psychique
-                    "C. Appliquer un anesthésique au niveau du voile du palais.", // // Pour origine psychique
-                    "D. Corriger la situation du bord postérieur de la prothèse supérieure" //
-                ],
-                correctOptionIndexes: [3], // QCS - D
-                explanation: "Si le réflexe nauséeux est d'origine mécanique (prothèse trop longue ou trop épaisse postérieurement), il faut ajuster le bord postérieur de la prothèse supérieure."
-            },
-            {
-                questionText: "Avec sa prothèse amovible totale nouvellement insérée le patient doit:",
-                options: [
-                    "A. Croquer l'alimentation dure pour faciliter l'adaptation.", //
-                    "B. Apprendre à manger avec sa prothèse dès le premier jour de l'insertion", //
-                    "C. Porter sa prothèse continuellement jour et nuit", //
-                    "D. Porter sa prothèse 8 heures par jour" //
-                ],
-                correctOptionIndexes: [3], // QCS - D seems most plausible general advice, though comments suggest gradual adaptation for eating.
-                explanation: "Le patient doit s'habituer progressivement : commencer par parler, boire, puis manger des aliments mous. Le port nocturne est généralement déconseillé sauf indications spécifiques. Un port diurne (environ 8h ou plus, avec pauses) est habituel." // Comment contradicts B. C is generally false. D is plausible advice for initial period.
-            },
-            {
-                questionText: "Les zones de compression au niveau de la prothèse peuvent être détectées:",
-                options: [
-                    "A. En faisant passer la pulpe de l'index sur les bords et l'intrados de la prothèse", //
-                    "B. Par un matériau révélateur.", //
-                    "C. Par un alginate fluide.", //
-                    "D. Par un bruit d'échappement d'air significatif suite à une pression exercée." // // Teste l'adaptation/rétention
-                ],
-                correctOptionIndexes: [0, 1], // A, B
-                explanation: "Les zones de surpression ou d'inadaptation peuvent être suspectées par palpation de l'intrados et confirmées précisément à l'aide de matériaux révélateurs (pâtes, silicones fluides)."
-            },
-             {
-                questionText: "Lors d'une surocclusion:",
-                options: [
-                    "A. Mineure équilibration occlusale", //
-                    "B. Trop importante refaire la prothèse", //
-                    "C. Mineure refaire la prothèse", //
-                    "D. Trop importante équilibration occlusale" //
-                ],
-                correctOptionIndexes: [0, 1], // A, B
-                explanation: "Une surocclusion (interférences, prématurités) mineure peut être corrigée par équilibration occlusale (meulage sélectif). Si elle est trop importante, elle peut nécessiter de refaire le montage voire la prothèse."
-            },
-            {
-                questionText: "Le décollement postérieur de la prothèse maxillaire lors d'une pression digitale sur tes incisives est dû à:", // Typo 'tes' -> 'les'
-                options: [
-                    "A. Un montage incorrect des Incisives.", //
-                    "B. Un joint postérieur insuffisant.", //
-                    "C. Un joint postérieur mal situé.", //
-                    "D. Un joint para-tubérositaire erroné." //
-                ],
-                correctOptionIndexes: [0, 1, 2], // A, B, C
-                explanation: "Ce décollement (test de bascule antéro-postérieure) peut être causé par un joint postérieur inefficace (insuffisant ou mal positionné) ou par des dents antérieures montées trop en avant (vestibulées)."
-            },
-            {
-                questionText: "Le soulèvement postérieur de la maquette mandibulaire au repos est dû:",
-                options: [
-                    "A. Une extension linguale rétro-molaire trop importante.", //
-                    "B. Un bord lingual sous mylo-hyoïdien trop long", //
-                    "C. Un ligament ptérygo-mandibulaire non libéré", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [1], // QCS - B has highest %. D also high %. Comment specifically links posterior lift to mylohyoid border.
-                explanation: "Un soulèvement postérieur de la prothèse inférieure au repos ou lors des mouvements linguaux est souvent dû à une sur-extension du bord lingual dans la région du muscle mylo-hyoïdien." // D has high %, but comment specifically points to B.
-            },
-            {
-                questionText: "Après insertion des prothèses totales en bouche, il est conseillé au patient de:",
-                options: [
-                    "A. S'habituer à manger avec ses prothèses neuves les premiers jours.", //
-                    "B. Retirer ses prothèses le soir et les mettre dans un verre d'eau.", //
-                    "C. Croquer des aliments durs faciliter l'adaptation.", //
-                    "D. De nettoyer ses prothèses après chaque repas avec une brosse dure et de l'eau savonneuse.." //
-                ],
-                correctOptionIndexes: [3], // QCS - D has highest %
-                explanation: "L'hygiène est primordiale : brossage après chaque repas avec brosse adaptée (pas trop dure) et savon. Le retrait nocturne est conseillé, mais la conservation se fait à sec dans une boîte après nettoyage. L'adaptation alimentaire est progressive."
-            },
-            {
-                questionText: "La bonne adaptation d'une prothèse totale :",
-                options: [
-                    "A. Dépend de la précision des matériaux à empreinte.", //
-                    "B. Dépend de la qualité d'empreinte.", //
-                    "C. Est vérifiée par une pression axiale qui ne doit dégager aucun bruit d'échappement d'air", //
-                    "D. Dépend des phases techniques de l'élaboration prothétique.", //
-                    "E. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [4], // E has high %
-                explanation: "La bonne adaptation de la prothèse à sa surface d'appui dépend de la qualité de toutes les étapes : précision du matériau et de la technique d'empreinte, et rigueur des étapes de laboratoire. L'absence de bruit à la pression est un test clinique de cette adaptation."
-            },
-            {
-                questionText: "La valeur mécanique des prothèses- totales dépend:",
-                options: [
-                    "A. De la bonne adaptation.", //
-                    "B. De la rétention.", //
-                    "C. De la stabilité statique uniquement.", //
-                    "D. De la stabilité dynamique" //
-                ],
-                correctOptionIndexes: [0, 1, 3], // A, B, D (C is false)
-                explanation: "La 'valeur mécanique' (terme peu usuel, probablement référant à la performance globale) dépend de la bonne adaptation à la surface d'appui, de la rétention (résistance au décollement vertical) et de la stabilité (résistance aux mouvements horizontaux et de bascule) tant statique que dynamique."
-            },
-             {
-                questionText: "La morsure des joues est corrigée par:", // Typo 'ct' -> 'est'
-                options: [
-                    "A. Épaississement du versant vestibulaire de la prothèse Inférieure.", //
-                    "B. Épaississement du versant vestibulaire de la prothèse supérieure.", //
-                    "C. Adoucissement de la cuspide vestibulaire de la molaire supérieure.", //
-                    "D. Rétrécissement du diamètre mésio-distal de la molaire inférieure", //
-                    "E. Toutes les réponses sont fausses." //
-                ],
-                correctOptionIndexes: [1, 2], // B, C (Source comment mentions C, D(vestibulo-lingual not MD), and resin addition ~ B)
-                explanation: "La morsure de joue est souvent due à un surplomb horizontal insuffisant (overjet) dans la région postérieure. Elle peut être corrigée en adoucissant les cuspides vestibulaires supérieures, en réduisant le diamètre vestibulo-lingual (pas mésio-distal) des molaires inférieures, ou en ajoutant de la résine sur le versant vestibulaire supérieur pour écarter la joue."
-            },
-            {
-                questionText: "Les réactions douloureuses en occlusion centrée sont dues à",
-                options: [
-                    "A. La morsure des joues.", //
-                    "B. Une surcharge occlusale.", //
-                    "C. Une ligne oblique interne saillante.", //
-                    "D. Des insertions musculaires insuffisamment libérées.", //
-                    "E. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [4], // E has high %
-                explanation: "Des douleurs en occlusion centrée peuvent être causées par une surcharge occlusale (prématurité), mais aussi par des interférences de la base prothétique avec des reliefs anatomiques (ligne oblique interne, insertions musculaires) ou des traumatismes comme la morsure de joue."
-            },
-            {
-                questionText: "Après insertion des prothèses totales en bouche, il est conseillé au patient de:",
-                options: [
-                    "A. S'habituer à manger avec ses prothèses neuves les premiers jours", //
-                    "B. Porter ses prothèses 24h/24h.", //
-                    "C. Retirer ses prothèses le soir et les mettre dans un verre d'eau.", //
-                    "D. Croquer des aliments durs pour faciliter l'adaptation.", //
-                    "E. De nettoyer ses prothèses après chaque repas avec une brosse dure et de l'eau savonneuse." //
-                ],
-                correctOptionIndexes: [4], // QCS - E has highest %
-                explanation: "Conseils principaux : hygiène rigoureuse après chaque repas avec brosse et savon, retrait nocturne (conservation à sec), adaptation alimentaire progressive (A et D faux). Conservation dans l'eau n'est plus recommandée."
-            },
-            {
-                questionText: "La prothèse doit être conservée dans un milieu humide avant son insertion:",
-                options: [
-                    "A. Pour éviter toute distorsion secondaire par déshydratation", //
-                    "B. Éviter déformation de la résine.", //
-                    "C. Assurer une saturation hydrique de la résine.", //
-                    "D. Toutes les réponses sont justes" //
-                ],
-                correctOptionIndexes: [3], // D has high %
-                explanation: "La résine acrylique peut subir de légères variations dimensionnelles (retrait) si elle se déshydrate après polymérisation. La conserver dans l'eau avant l'insertion permet de maintenir sa stabilité dimensionnelle et sa saturation hydrique."
-            },
-            {
-                questionText: "Lors de l'insertion de la prothèse supérieure, la pression initiale au niveau du palais a pour effet majeur :",
-                options: [
-                    "A. De comprimer la ligne de flexion du voile et les terminaisons nerveuses sous-jacentes afin de réduire et supprimer les nausées.", //
-                    "B. Contrôler l'absence de fuite d'air au niveau du joint postérieur.", //
-                    "C. D'assurer l'herméticité du joint postérieur.", //
-                    "D. Limiter l'extension de la prothèse" //
-                ],
-                correctOptionIndexes: [1, 2], // B, C
-                explanation: "La pression initiale permet de vérifier la bonne adaptation et l'étanchéité du joint périphérique, notamment le joint postérieur, ce qui est essentiel pour la rétention (absence de fuite d'air)."
-            },
-            {
-                questionText: "Cochez-la ou les réponses justes :",
-                options: [
-                    "A. Pendant les premiers jours (03 premiers jours), en aucun cas le patient ne devra manger avec ses prothèses neuves.", //
-                    "B. Pendant les premiers jours (03 premiers jours), en aucun cas le patient ne devra dormir avec ses prothèses neuves.", //
-                    "C. Pendant les premiers jours (03 premiers jours), en aucun cas le patient ne devra parler avec ses prothèses neuves.", //
-                    "D. Toutes les réponses sont fausses" //
-                ],
-                correctOptionIndexes: [0], // A (Based on comment)
-                explanation: "Il est conseillé au patient de s'habituer progressivement et de ne pas manger avec ses nouvelles prothèses les tout premiers jours. Le port nocturne est déconseillé (B vrai, mais A est plus spécifique aux 'premiers jours'). Parler est encouragé dès le début (C faux)."
-            }
-        ] // Fin de 'Insertion en bouche'
-      }, // Virgule ajoutée
-          {
-          title: "Réfection", // From 74415.docx
-          subject: "prothese-y3",
-          questions: [
-                  {
-                  questionText: "Concernant l'indication du rebasage des prothèses totales adjointes:",
-                  options: [
-                      "A. L'indication majeur est l'amélioration de la stabilité et la rétention", //
-                      "B. dimension verticale d'occlusion est surévaluée le rebasage figure parmi les solutions envisagées", //
-                      "C. perte des qualités mécaniques, esthétiques et fonctionnelles des anciennes prothèses", // // Indication de refaire la prothèse, pas rebasage seul
-                      "D. Contre-indiqué s'il y a un défaut de relation centrée" // // Erreur occlusale majeure -> Contre-indication
-                  ],
-                  correctOptionIndexes: [0, 3], // A, D
-                  explanation: "L'indication principale du rebasage est la perte d'adaptation (entraînant perte de stabilité/rétention) due à la résorption. Il peut corriger une DVO sous-évaluée, mais pas surévaluée (B faux). Une erreur occlusale majeure (RC) est une contre-indication."
-              },
-              {
-                  questionText: "La réfection totale des bases prothétiques :",
-                  options: [
-                      "A. Est plus fréquente au niveau du maxillaire", // // Mandibule résorbe plus vite
-                      "B. La prise de l'empreinte doit toujours se faire sous occlusion", // // Méthode bouche fermée
-                      "C. Interesse toute la résine de la base prothétique, seuls les bords seront conservés", // // Seules les dents sont conservées
-                      "D. si le rebasage est indiqué pour les prothèses maxillaires et mandibulaires, il se fera en même temps" // // Généralement l'une après l'autre
-                  ],
-                  correctOptionIndexes: [1], // QCS - B (Méthode bouche fermée est courante)
-                  explanation: "La réfection (rebasage ou regarnissage) est plus fréquente à la mandibule (A faux). Elle remplace toute la résine de la base, conservant les dents (C faux). La prise d'empreinte peut se faire bouche ouverte ou fermée (sous occlusion). Si les deux arcades nécessitent un rebasage, on les traite séparément (D faux)."
-              },
-              {
-                  questionText: "Le rebasage direct des prothèses totales adjointes :",
-                  options: [
-                      "A. Se fait en utilisant une résine auto polymérisable fantenle", // // Typo 'fantenle' -> 'lente'?
-                      "B. C'est un rebasage facilement exécutable au laboratoire et qui permet au patient de garder sa prothèse", // // Direct = au fauteuil
-                      "C. ce type de rebasage constitue une source d'irritation pour les tissus sous-jacents", //
-                      "D. Présente un risque accru de porosités et de dégradation à moyen terme" //
-                  ],
-                  correctOptionIndexes: [0, 2, 3], // A, C, D
-                  explanation: "Le rebasage direct se fait au fauteuil avec une résine autopolymérisable (A). Il est rapide mais moins précis, peut irriter la muqueuse (monomère résiduel, exothermie) et le matériau est moins durable et plus poreux que la résine thermopolymérisable utilisée en indirect (laboratoire) (C, D)."
-              },
-              {
-                  questionText: "Les indications du rebasage sont:",
-                  options: [
-                      "A. Perte de la rétention prothétique", //
-                      "B. Rétablissement d'une relation centrée correcte", // // Contre-indication si RC erronée
-                      "C. Résine poreuse", // // Indication de refaire la prothèse
-                      "D. Toutes les réponses sont justes" //
-                  ],
-                  correctOptionIndexes: [0], // A
-                  explanation: "L'indication principale est la perte de rétention/stabilité due à la désadaptation par résorption. Une RC incorrecte est une contre-indication. Une résine poreuse nécessite une réfection complète."
-              },
-              {
-                  questionText: "/ Les préalables indispensables du rebasage sont:", // Typo '/'
-                  options: [
-                      "A. La correction des zones de compression", //
-                      "B. Un choix des dents en harmonie avec la typologie du patient", // // Concerne la prothèse initiale
-                      "C. Une équilibration occlusale", //
-                      "D. Toutes les réponses sont justes" //
-                  ],
-                  correctOptionIndexes: [0, 2], // A, C
-                  explanation: "Avant de rebaser, il faut s'assurer que l'occlusion est correcte (ou la corriger) et que la base existante ne présente pas de zones de surpression ou de blessure."
-              },
-              {
-                  questionText: "Parmi les indications de la réfection des bases prothétiques:",
-                  options: [
-                      "A. Le manque de stabilité prothétique.", //
-                      "B. La correction d'une dimension verticale surévaluée.", // // Contre-indication
-                      "C. Une erreur d'enregistrement de la surface d'appui.", // // = perte d'adaptation
-                      "D. Toutes les réponses sont justes" //
-                  ],
-                  correctOptionIndexes: [0, 2], // A, C
-                  explanation: "La réfection (rebasage/regarnissage) est indiquée en cas de manque de stabilité/rétention dû à une mauvaise adaptation à la surface d'appui (causée par résorption ou erreur initiale). Une DVO surévaluée est une contre-indication."
-              },
-              {
-                  questionText: "La méthode directe de la réfection des bases prothétiques:",
-                  options: [
-                      "A. Est préférable à la méthode indirecte.", //
-                      "B. Nécessite une prise d'empreinte.", // // Le matériau est l'empreinte
-                      "C. Est réalisée avec de la résine auto polymérisable.", //
-                      "D. Toutes les réponses sont justes." //
-                  ],
-                  correctOptionIndexes: [2], // QCS - C
-                  explanation: "La méthode directe se fait au fauteuil avec une résine autopolymérisable. Elle est rapide mais moins précise et durable que la méthode indirecte (laboratoire). La résine elle-même enregistre la nouvelle surface d'appui."
-              },
-              {
-                  questionText: "Parmi les contre-indications du rebasage:",
-                  options: [
-                      "A. Allure peu esthétique de la prothèse.", //
-                      "B. Instabilité simultanée des 2 prothèses.", // // Pas forcément une CI, mais complexe
-                      "C. Erreur importante d'occlusion.", //
-                      "D. Toutes les réponses sont fausses" //
-                  ],
-                  correctOptionIndexes: [0, 2], // A, C
-                  explanation: "Le rebasage ne corrige pas l'esthétique des dents ou de la base, ni une erreur occlusale majeure (DVO surévaluée, RC incorrecte). Dans ces cas, une nouvelle prothèse est indiquée."
-              } // Fin de la dernière question de 'Réfection'
-          ] // Fin du tableau 'questions' de 'Réfection'
-        }, // Virgule ajoutée
-              {
-              title: "Les prothèses immédiates", // From uestion n° 16 .docx
-              subject: "prothese-y3",
-              questions: [
-                      {
-                      questionText: "Dans les objectifs de la prothèse immédiate:",
-                      options: [
-                          "A. remplacements sans transition des dents supprimés lorsque celles-ci ne peuvent être conservée", // // Typo 'supprimés' -> 'supprimées'
-                          "B. Préserver l'esthétique du patient et conserver la dimension verticale primitive", //
-                          "C. N'améliore pas le processus de cicatrisation et d'ostéogenèse", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B
-                      explanation: "La prothèse immédiate vise à remplacer les dents extraites immédiatement, préservant ainsi l'esthétique, la fonction (DVO, phonation). Elle agit comme un guide de cicatrisation et peut améliorer l'ostéogenèse (C faux)."
-                  },
-                  {
-                      questionText: "La prothèse immédiate est une prothèse",
-                      options: [
-                          "A. conçue avant l'extraction des dents restantes et insérée instantanément après leur avulsion", //
-                          "B. conçue avant l'extraction des dents restantes et insérée instantanément avant leur avulsion", //
-                          "C. conçue après l'extraction des dents restantes et insérée instantanément avant leur avulsion", //
-                          "D. toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0], // QCS - A
-                      explanation: "Par définition, la prothèse immédiate est préparée avant les extractions finales et mise en place juste après celles-ci."
-                  },
-                  {
-                      questionText: "Dans les étapes de la confection de la prothèse immédiate:",
-                      options: [
-                          "A. Il n'est pas indispensable de noter et de conserver la situation du plan d'occlusion", //
-                          "B. Les dents postérieures sont extraites les premières pour assurer un temps de cicatrisation plus important.", //
-                          "C. au laboratoire les dernières dents restantes (en plâtre) seront supprimées et remplacées par les dents artificielles", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [1, 2], // B, C
-                      explanation: "La technique classique implique une phase d'extraction des dents posteriores et cicatrisation (B), puis empreinte, enregistrements (il est crucial de conserver les repères occlusaux et la DVO - A faux), et enfin préparation de la prothèse au laboratoire avec suppression des dents restantes sur le modèle (C)."
-                  },
-                  {
-                      questionText: "La totale immédiate : 1- Est réalisée un mois après la cicatrisation des dernières extractions 2- Est réalisée une semaine après la cicatrisation des dernières extractions 3- Accélère la résorption osseuse post-extractionnelle 4- Diminue la résorption osseuse post-extractionnelle 5- Est réalisée avant les extractions des dents",
-                      options: [
-                          "A. (1,2)", //
-                          "B. (2,5)", //
-                          "C. (1,4)", //
-                          "D. (2,3)", //
-                          "E. (4,5)" //
-                      ],
-                      correctOptionIndexes: [4], // QCS - E (4, 5)
-                      explanation: "La prothèse immédiate est préparée avant les extractions (5) et insérée juste après. Elle agit comme un conformateur et peut aider à guider la cicatrisation et potentiellement ralentir la résorption initiale par rapport à une édentation non appareillée (4). Elle n'est pas réalisée après cicatrisation (1, 2 faux) ni n'accélère la résorption (3 faux)."
-                  },
-                  {
-                      questionText: "La prothèse immédiate:",
-                      options: [
-                          "A. Est une prothèse définitive", //
-                          "B. Devra être rebasé", //
-                          "C. Sert de pansement chirurgical", //
-                          "D. toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [1, 2], // B, C
-                      explanation: "La prothèse immédiate est une prothèse transitoire (A faux) qui sert de pansement après extraction (C). Elle nécessite des ajustements et rebasages fréquents pour suivre la cicatrisation et la résorption osseuse (B)."
-                  },
-                  {
-                      questionText: "Lors de la réalisation d'une prothèse immédiate le PEI sera réalisé:",
-                      options: [
-                          "A. Après l'extraction des dents antérieures", //
-                          "B. Après l'extraction des dents postérieures", //
-                          "C. Après l'extraction de toutes les dents", //
-                          "D. Toutes les réponses sont fausses." //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B
-                      explanation: "Dans la technique classique en deux temps, le PEI est réalisé après l'extraction des dents postérieures et la cicatrisation de ces secteurs, en présence des dents antérieures restantes."
-                  },
-                  {
-                      questionText: "La prothèse immédiate permet:",
-                      options: [
-                          "A. D'accélérer la cicatrisation", //
-                          "B. De protéger le caillot sanguin", //
-                          "C. D'atténuer les douleurs post opératoires", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B (C is subjective, D low %)
-                      explanation: "En agissant comme un pansement, elle protège le caillot sanguin et les sites d'extraction, favorisant une cicatrisation plus rapide et de meilleure qualité. L'effet sur la douleur est variable."
-                  },
-                  {
-                      questionText: "La prothèse immédiate permet:",
-                      options: [
-                          "A. D'agir favorablement sur le psychisme du patient.", //
-                          "B. D'agir défavorablement sur le capital osseux.", //
-                          "C. D'agir en tant que pansement chirurgical.", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 2], // A, C
-                      explanation: "Elle a un impact psychologique positif en évitant une période d'édentation visible. Elle sert de pansement chirurgical. Correctement gérée, elle n'agit pas défavorablement sur l'os (B faux)."
-                  },
-                  {
-                      questionText: "La prothèse immédiate:",
-                      options: [
-                          "A. Ne nécessite pas la confection d'un porte empreinte individuel.", //
-                          "B. Nécessite des rebasages", //
-                          "C. Est une prothèse définitive.", //
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B
-                      explanation: "Elle nécessite généralement un PEI pour une empreinte précise (A faux). Elle est transitoire (C faux) et demande des rebasages réguliers pour compenser la résorption post-extractionnelle (B vrai)."
-                  },
-                  {
-                      questionText: "Parmi les inconvénients de la prothèse immédiate, nous avons :",
-                      options: [
-                          "A. Le rebasage de ces prothèses souvent nécessaire.", //
-                          "B. Les horaires plus élevés.", // Typo 'horaires' -> 'honoraires'?
-                          "C. Les patients qui restent sans restauration prothétique pendant la période de cicatrisation.", // // C'est l'inverse !
-                          "D. Les dents antérieures devant être extraites en premier." // // Les postérieures sont extraites en premier
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B
-                      explanation: "Les inconvénients incluent la nécessité de rebasages fréquents (A), un coût potentiellement plus élevé (B, si typo = honoraires), et l'impossibilité d'essayage esthétique antérieur. C et D sont faux."
-                  },
-                  {
-                      questionText: "Lors de la réalisation du porte empreinte Individuel dans le cadre d'une prothèse immédiate:",
-                      options: [
-                          "A. Les dents antérieures seront supprimées une à une sur le modèle en plâtre", // // Fait pour la prothèse finale, pas le PEI
-                          "B. Les dents antérieures seront déchargées l'on aurait pu être", // Typo? // Doivent être espacées
-                          "C. La base du PEI ne doit pas atteindre la ligne de du voile.", // Typo 'de du'
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [3], // D (B is close but unclear)
-                      explanation: "Pour réaliser le PEI, les dents restantes sur le modèle sont recouvertes d'une cire d'espacement (B est proche mais mal formulé). Le PEI doit dépasser la ligne de flexion du voile (C faux). A concerne la fabrication de la prothèse."
-                  },
-                  {
-                      questionText: "La prothèse totale immédiate : 1- Accentue la résorption osseuse. 2- Diminue la résorption osseuse. 3- Est réalisée une semaine après les dernières extractions. 4- Est réalisée avant les dernières extractions. 5- Est une prothèse totale définitive.",
-                      options: [
-                          "A. (1-3)", //
-                          "B. (2-3)", //
-                          "C. (1-4)", //
-                          "D. (2-4)", //
-                          "E. (1-5)" //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D (2, 4)
-                      explanation: "Elle est réalisée avant les extractions (4) et insérée immédiatement après. En guidant la cicatrisation, elle peut limiter la résorption initiale par rapport à une absence d'appareillage (2). Elle n'est pas définitive (5 faux)."
-                  },
-                  {
-                      questionText: "La prothèse immédiate permet:",
-                      options: [
-                          "A. D'accélérer la cicatrisation.", //
-                          "B. De protéger le caillot sanguin.", //
-                          "C. D'atténuer les douleurs postopératoires.", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B
-                      explanation: "Elle sert de pansement, protège le caillot et les sites d'extraction, favorisant une cicatrisation plus rapide et de meilleure qualité."
-                  },
-                  {
-                      questionText: "Lors de lg réalisation d'une prothèse immédiate", // Typo 'lg'
-                      options: [
-                          "A. Les dents antérieures doivent être extraites en premier pour maintenir une DV correcte.", //
-                          "B. L'intrados sera garni d'hydrocast.", // // Matériau de rebasage temporaire
-                          "C. Des duplicatas des prothèses est souhaitable.", // // Guide chirurgical est un duplicata
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C (Guide chirurgical)
-                      explanation: "Les dents postérieures sont extraites en premier (A faux). L'utilisation d'un guide chirurgical (duplicata de l'intrados) est recommandée pour l'alvéoloplastie (C vrai). L'Hydrocast est utilisé pour les rebasages temporaires (B possible mais pas systématique à la réalisation)."
-                  },
-                  {
-                      questionText: "Les recommandations données au patient porteur d'une prothèse immédiate sont:",
-                      options: [
-                          "A. Le rinçage régulier de la prothèse les premières 24h", // // Ne pas retirer la prothèse
-                          "B. Une alimentation liquide", //
-                          "C. L'absorption d'antalgiques en cas de douleurs.", //
-                          "D. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [1, 2], // B, C
-                      explanation: "Le patient ne doit pas retirer la prothèse pendant les premières 24-48h (A faux). Une alimentation liquide ou molle est recommandée initialement (B). Des antalgiques sont prescrits pour gérer la douleur post-extraction (C)."
-                  },
-                  {
-                      questionText: "La prothèse totale immédiate : 1- Est réalisée un mois après la cicatrisation des dernières extractions. 2- Est réalisée une semaine après la cicatrisation des dernières extractions. 3- Elle accélère la résorption osseuse post-extractionnelle. 4- Elle diminue la résorption osseuse post-extractionnelle. 5- Elle est réalisée avant les extractions des dents.",
-                      options: [
-                          "A. (1-2)", //
-                          "B. (2-5)", //
-                          "C. (1-4)", //
-                          "D. (2-3)", //
-                          "E. (4-5)" //
-                      ],
-                      correctOptionIndexes: [4], // QCS - E (4, 5)
-                      explanation: "Réalisée avant les extractions (5), elle est insérée immédiatement après. Elle peut guider la cicatrisation et limiter la résorption initiale (4)."
-                  } // Fin dernière question 'Les prothèses immédiates'
-              ] // Fin tableau 'questions' de 'Les prothèses immédiates'
-            }, // Virgule ajoutée
-                {
-              title: "prothese-y3 supra implantaire", // From 78532.docx
-              subject: "prothese-y3",
-              questions: [
-                  {
-                      questionText: "La Prothèse amovible complète stabilisée sur implant:",
-                      options: [
-                          "A. Est une prothèse totale associée à des implants via des systèmes d'attaches", //
-                          "B. Rajoute un complément de rétention aux prothèses totales adjointes", //
-                          "C. Parmi ses avantages par rapport aux prothèses implantaire fixée, une meilleure gestion de l'esthétique", //
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [0, 1, 2], // A, B, C
-                      explanation: "La PACSI (Prothèse Amovible Complète Stabilisée sur Implants) utilise des attachements pour connecter la prothèse aux implants, offrant une rétention supplémentaire. Elle permet souvent une meilleure gestion esthétique des tissus mous par rapport à une prothèse fixée."
-                  },
-                  {
-                      questionText: "Les barres de conjonction:",
-                      options: [
-                          "A. Assurent une contention des piliers", //
-                          "B. Peuvent être indiquées lorsqu'il y a un manque de parallélisme entre les implants", //
-                          "C. Sont indiquées lorsque l'espace intercrete est réduit", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B
-                      explanation: "Les barres relient les implants entre eux, assurant leur contention mutuelle. Elles peuvent compenser un certain manque de parallélisme implantaire. Les attachements axiaux (boutons-pression) sont préférés si l'espace inter-crêtes est réduit."
-                  },
-                  {
-                      questionText: "Dans le cas d'une PACSI:",
-                      options: [
-                          "A. Les implants sont posés dans la région symphysaire dans la partie la plus épaisse", //
-                          "B. Les implants sont autant espacés que possible", //
-                          "C. Un espace prothétique limité évalué à l'aide de clés ou de guides de positionnement indique le choix d'attachements axiaux de taille réduite", //
-                          "D. L'espace prothétique minimum nécessaire au niveau du site implantaire envisagé est pour la plupart des systèmes d'attachements préconisés de 7 mm de hauteur et de 5 mm de largueur" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D (B is generally true but less specific)
-                      explanation: "Pour une PACSI mandibulaire, les implants sont souvent placés dans la région symphysaire, zone osseuse dense. L'espacement maximal est recherché (B). Le choix du type d'attachement dépend de l'espace prothétique disponible, avec des minimums requis (typiquement autour de 7mm de hauteur et 5mm de largeur)."
-                  },
-                  {
-                      questionText: "Le manque de parallélisme implantaire peut",
-                      options: [
-                          "A. Entrainer une usure précoce des implants.", //
-                          "B. Entrainer des forces parasites avec perte de l'ostéointégration.", //
-                          "C. Être compensé par une barre de conjonction.", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [1, 2], // B, C (A is wear of attachments, not implants)
-                      explanation: "Un manque de parallélisme important peut créer des contraintes excessives sur les attachements (usure précoce) et les implants, risquant la perte d'ostéointégration. Les barres de conjonction peuvent compenser ce défaut."
-                  },
-                  {
-                      questionText: "Les barres de conjonction:",
-                      options: [
-                          "A. Assurent une contention des piliers.", //
-                          "B. Peuvent être de section ronde ou ovoïde", //
-                          "C. Indiquées lorsque l'espace est réduit", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B
-                      explanation: "Les barres relient et solidarisent les implants (contention). Elles peuvent avoir différentes sections (ronde type Ackermann, ovoïde type Dolder). Elles nécessitent un espace prothétique suffisant (C faux)."
-                  },
-                  {
-                      questionText: "La prothèse stabilisée sur implants :",
-                      options: [
-                          "A. Une prothèse gingivo-implanto-portée.", //
-                          "B. Est une prothèse mucco-implanto-portée.", //
-                          "C. Est une prothèse mucco-gingivo-portée", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B
-                      explanation: "La PACSI prend appui à la fois sur la muqueuse (et l'os sous-jacent) et sur les implants. On parle donc d'appui mixte muco-implantaire."
-                  },
-                  {
-                      questionText: "La prothèse stabilisée:",
-                      options: [
-                          "A. Les implants permettent d'assurer la stabilité de la prothèse.", //
-                          "B. Les implants permettent d'assurer la stabilité et la rétention de la prothèse.", //
-                          "C. Les Implants sont des compléments de rétention de la prothèse.", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "Dans le concept de PACSI, la sustentation et la stabilité sont principalement assurées par la surface d'appui muco-osseuse, tandis que les implants servent essentiellement à améliorer la rétention."
-                  },
-                  {
-                      questionText: "En prothèse stabilisée, la position des implants se fait:",
-                      options: [
-                          "A. Selon le type de trajet du canal mandibulaire dans sa portion terminale.", //
-                          "B. Dans la région symphysaire.", //
-                          "C. Dans la région goniaque.", //
-                          "D. Dans toute l'étendue de la mandibule" //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B
-                      explanation: "Les implants pour PACSI mandibulaire sont classiquement positionnés dans la région inter-foraminale (symphysaire), zone offrant généralement le plus grand volume osseux et évitant le nerf alvéolaire inférieur."
-                  },
-                  {
-                      questionText: "Dans le cas d'apparallélisme des implants, la prothèse est réalisée:", // Typo 'apparallélisme'
-                      options: [
-                          "A. Sur une barre de conjonction.", //
-                          "B. Sur des boutons pression", //
-                          "C. Sur des systèmes axiaux à rattrapage d'angulation.", //
-                          "D. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [0, 2], // A, C
-                      explanation: "Un manque de parallélisme peut être compensé par l'utilisation d'une barre de conjonction ou par des attachements axiaux spécifiques conçus pour rattraper l'angulation."
-                  },
-                  {
-                      questionText: "Les attachements axiaux à pression:",
-                      options: [
-                          "A. La partie male est située dans l'intrados de la prothèse", //
-                          "B. La partie male est vissée sur la racine ou sur l'implant", //
-                          "C. Nécessite un espace inter-crête important.", //
-                          "D. Sont essentiellement utilisés à la mandibule.", //
-                          "E. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [1, 3], // B, D (C is incorrect based on comment)
-                      explanation: "Dans les systèmes type bouton-pression, la partie mâle est solidaire du pilier implantaire (ou radiculaire), et la partie femelle est dans la prothèse. Ils sont avantageux en cas d'espace inter-crête réduit (C faux) et très utilisés à la mandibule."
-                  } // Fin dernière question 'prothese-y3 supra implantaire'
-              ] // Fin tableau 'questions' de 'prothese-y3 supra implantaire'
-            }, // Virgule ajoutée
-          {
-              title: "Bases souples", // From uestion n° 12 .docx
-              subject: "prothese-y3",
-              questions: [
-                  {
-                      questionText: "Les bases souples permanentes:",
-                      options: [
-                          "A. sont réalisées a base de résines a prisoraterdée", // Typo 'prisoraterdée'
-                          "B. sont réalisées de polyméthyl méthacrylates classiques rendus souples par adjonction d'un plastifiant", //
-                          "C. tapissent l'intrados, les bords et l'extrados de la prothèse", //
-                          "D. peuvent être utilisés pour la mise en condition tissulaire" //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B
-                      explanation: "Les bases souples permanentes en acrylique sont des PMMA classiques modifiés par ajout de plastifiant. Elles tapissent l'intrados et les bords, pas l'extrados. Les résines à prise retardée sont temporaires."
-                  },
-                  {
-                      questionText: "Les bases prothétiques souples permanentes sont indiquées :",
-                      options: [
-                          "A. en présence de crêtes irrégulières et exostoses", //
-                          "B. chez les patients traités par radiothérapie", //
-                          "C. en présence de crêtes flottantes", //
-                          "D. quelque soit le degré d'hygiène du patient" //
-                      ],
-                      correctOptionIndexes: [0, 1], // A, B
-                      explanation: "Elles sont indiquées sur crêtes fines, douloureuses, irrégulières, ou chez des patients fragiles (post-radiothérapie, chirurgies contre-indiquées). Une bonne hygiène est requise (D faux). Les crêtes flottantes sont une contre-indication relative."
-                  },
-                  {
-                      questionText: "les bases prothétiques souples permanentes:",
-                      options: [
-                          "A. Ont une durée de vie de trois semaines en bouche", // // Temporaires
-                          "B. Peuvent être sujettes à des déchirures et à des changements de teinte", //
-                          "C. Peuvent être utilisées en prothèse amovible partielle aussi", //
-                          "D. Ont une durée de vie de plus de 30jours en bouche" //
-                      ],
-                      correctOptionIndexes: [1, 2, 3], // B, C, D (A is false for permanents)
-                      explanation: "Les bases souples permanentes ont une durée de vie limitée (quelques années, > 30 jours) et peuvent se dégrader (déchirure, coloration, colonisation microbienne). Elles peuvent être utilisées en PAP dans certains cas."
-                  },
-                  {
-                      questionText: "La base molle permanente est un matériau:",
-                      options: [
-                          "A. Qui tapisse l'intrados de la prothèse provisoire en résine", //
-                          "B. Qu'on utilise pour la mise en condition tissulaire", //
-                          "C. Qui recouvre l'intrados et les bords de la prothèse d'usage", //
-                          "D. Optimal pour les crêtes flottantes" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "C'est un matériau souple qui recouvre l'intrados et les bords de la prothèse d'usage (définitive). Les matériaux temporaires sont pour la mise en condition. Ils ne sont pas optimaux sur crêtes flottantes."
-                  },
-                   {
-                      questionText: "Sur le plan local, la base souple permanente est indiquée dans les cas de:",
-                      options: [
-                          "A. Crêtes fines, fragiles et atrophiées supportant mal les pressions transmisses à travers la résine dure", //
-                          "B. Forte résorption à la mandibule avec émergence du nerf mentonnier conduisant souvent l'édenté à ne pas supporter les pressions dans ces régions", //
-                          "C. Crêtes irrégulières et exostoses quand la chirurgie est contre indiquée", //
-                          "D. Support osseux réduit face à une denture naturelle" //
-                      ],
-                      correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D
-                      explanation: "Toutes ces situations locales où la muqueuse est fine, fragile, ou recouvre des reliefs osseux saillants/sensibles, et où la chirurgie est contre-indiquée, constituent des indications pour les bases souples permanentes."
-                  },
-                  {
-                      questionText: "Les résines acryliques souples permanentes",
-                      options: [
-                          "A. Sont des poly méthyle méthacrylates « classiques » rendus souples par adjonction de plastifiants", //
-                          "B. Ont une mauvaise liaison à base prothétique", //
-                          "C. Ont une mise en œuvre au laboratoire aisée", //
-                          "D. Sont des résines à prise retardée" //
-                      ],
-                      correctOptionIndexes: [0, 2], // A, C
-                      explanation: "Ce sont des PMMA modifiés par plastifiants. Leur liaison chimique à la base (même nature) est bonne. Leur mise en œuvre est relativement simple. Les résines à prise retardée sont temporaires."
-                  },
-                  {
-                      questionText: "Le principe de réalisation de la base souple permanente repose toujours:",
-                      options: [
-                          "A. Sur des techniques indirectes au laboratoire", //
-                          "B. Sur des techniques directes en clinique", //
-                          "C. Sur des techniques directes et indirectes", //
-                          "D. Sur la motivation du patient" //
-                      ],
-                      correctOptionIndexes: [0], // QCS - A
-                      explanation: "La réalisation des bases souples permanentes de qualité se fait obligatoirement par des techniques indirectes au laboratoire pour garantir précision et bonnes propriétés du matériau."
-                  },
-                  {
-                      questionText: "Les bases molles permanentes permettent:",
-                      options: [
-                          "A. Un meilleur confort pour le patient", //
-                          "B. Une efficacité masticatoire faible", //
-                          "C. Une insertion plus facile d'une prothèse avec de grosses contre-dépouilles", //
-                          "D. D'éviter le phénomène d'ostéoradionécrose chez les patients irradiés devant être appareillés" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D
-                      explanation: "Elles améliorent le confort, facilitent l'insertion sur contre-dépouilles, et réduisent le risque de blessure et d'ostéoradionécrose chez les patients irradiés. L'efficacité masticatoire est généralement améliorée."
-                  },
-                  {
-                      questionText: "Les bases souples permanentes sont indiquées:",
-                      options: [
-                          "A. En présence de crêtes flottantes", //
-                          "B. En cas de déficiences anatomiques telles qu'aucune chirurgie n'est envisageable.", //
-                          "C. Pour augmenter l'impact des forces transmises aux surfaces d'appui.", //
-                          "D. Chez les patients présentant un handicap moteur" //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B
-                      explanation: "L'indication principale est une anatomie défavorable (crêtes fines, douloureuses, irrégulières) lorsque la chirurgie est contre-indiquée. Les crêtes flottantes et une mauvaise hygiène (souvent liée au handicap moteur) sont des contre-indications."
-                  },
-                   {
-                      questionText: "Un patient atteint d'une cardiopathie à haut risque infectieux présentant une crête irrégulière et une exostose douloureuse pour se faire appareiller, le traitement de choix serait:",
-                      options: [
-                          "A. Une chirurgie pré-prothétique avant la conception prothétique sous antibiothérapie.", //
-                          "B. La mise en condition tissulaire avant la réalisation prothétique", //
-                          "C. Une décharge de toute la crête concernée", //
-                          "D. Une prothèse à base souple permanente.", //
-                          "E. Toutes les réponses sont fausses." //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D
-                      explanation: "Une cardiopathie à haut risque est une contre-indication à la chirurgie. Face à une crête irrégulière et douloureuse dans ce contexte, la prothèse à base souple est le traitement de choix."
-                  },
-                  {
-                      questionText: "En prothèse complète amovible, la base molle permanente:",
-                      options: [
-                          "A. Est un matériau qui tapisse uniquement l’intrados d'une prothèse.", //
-                          "B. Permet d'absorber toute la pression exercée sur la surface d'appui", //
-                          "C. Permet d'offrir un confort au patient lors de la phonation.", //
-                          "D. Permet de préserver le support ostéo-muqueux.", //
-                          "E. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D
-                      explanation: "Elle tapisse l'intrados et les bords. Elle absorbe une partie (pas toute) de la pression, améliorant le confort (surtout mastication) et préservant les tissus."
-                  },
-                  {
-                      questionText: "Les silicones utilisés pour les bases molles:",
-                      options: [
-                          "A. Sont des matériaux durs rendus souples par adjonction de plastifiants.", // // Acryliques
-                          "B. Ont une bonne liaison avec la base prothétique.", //
-                          "C. Exigent une interface métallique coule pour les relier à la résine de base.", //
-                          "D. Contiennent des substances fongicides et bactériostatiques.", // // EVA
-                          "E. Sont des matériaux souples de par leur nature chimique" //
-                      ],
-                      correctOptionIndexes: [2, 4], // C, E
-                      explanation: "Les silicones sont intrinsèquement souples (E). Leur liaison à la résine acrylique est faible et nécessite un adhésif spécifique, voire une interface métallique (C). A est faux (acryliques). B est faux. D concerne plutôt les EVA."
-                  },
-                  {
-                      questionText: "Les bases souples permanentes :",
-                      options: [
-                          "A. Sont indiquées en cas de crêtes flottantes.", //
-                          "B. Doivent être changées tous les 2 ou 3 ans.", // // Variable, mais durée limitée
-                          "C. Se transforment avec le temps en une surface propice aux bactéries et débris alimentaires", //
-                          "D. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "Les crêtes flottantes sont une contre-indication. Leur durée de vie est limitée (B plausible mais variable). Elles sont poreuses et difficiles à nettoyer, favorisant la colonisation microbienne."
-                  },
-                   {
-                      questionText: "Les bases souples permanentes sont indiquées:",
-                      options: [
-                          "A. Après une chirurgie préprothétique.", //
-                          "B. En cas de crêtes irrégulières.", //
-                          "C. Dans certains cas de prothèse partielle adjointe.", //
-                          "D. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [1, 2], // QCS marked, B has higher %, C has high %. D low %. Let's take B, C.
-                      explanation: "Elles sont indiquées sur crêtes irrégulières ou douloureuses (si chirurgie CI) et peuvent être utilisées en PAP (édentements distaux, appuis muqueux fragiles)." // Marked QCS, B has higher %, C significant %.
-                  },
-                  {
-                      questionText: "Le matériau souple permanent utilisé peut être:",
-                      options: [
-                          "A. Du silicone", //
-                          "B. De l'éthylène acétate de vinyl.", // // EVA
-                          "C. De la résine acrylique à prise retardée.", // // Temporaire
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1], // QCS marked, A, B high %. D low %. Let's take A, B.
-                      explanation: "Les matériaux permanents incluent les acryliques plastifiées, les silicones vulcanisables à chaud ou à froid, et les copolymères type EVA." // Marked QCS, but A & B are correct types.
-                  },
-                  {
-                      questionText: "Les bases souples permanentes sont recommandées en cas:",
-                      options: [
-                          "A. De crêtes flottantes.", //
-                          "B. De prolifération de candidoses", //
-                          "C. De fortes résorptions à la mandibule.", //
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "Elles sont indiquées sur crêtes fines, résorbées, douloureuses (souvent le cas en forte résorption mandibulaire). Les crêtes flottantes et la candidose (favorisée par la porosité du matériau) sont des contre-indications."
-                  } // Fin dernière question 'Bases souples'
-              ] // Fin tableau 'questions' de 'Bases souples'
-          }, // Virgule ajoutée
-          {
-              title: "Edentement total uni maxillaire", // From Question n° 10 .docx
-              subject: "prothese-y3",
-              questions: [
-                  {
-                      questionText: "Dans le traitement prothétique de l'édentation totale unimaxillaire:",
-                      options: [
-                          "A. Le concept adopté est l'occlusion bilatéralement équilibrée.", //
-                          "B. L'empreinte secondaire de l'arcade édentée est réalisée en occlusion de convenance.", //
-                          "C. Tout contact prématuré incisivo-canin doit être éliminé.", //
-                          "D. Il est Préférable de créer des stops en amalgame, ou en composite au niveau des dents en" // // Phrase incomplete
-                      ],
-                      correctOptionIndexes: [0, 2], // A, C
-                      explanation: "Face à une arcade antagoniste dentée, l'occlusion bilatéralement équilibrée est souvent recherchée pour stabiliser la prothèse complète. Les contacts antérieurs prématurés ou excessifs doivent être évités pour ne pas traumatiser la crête antérieure." // D relates to using metal stops against resin teeth to maintain DVO.
-                  },
-                  {
-                      questionText: "L'édentation totale unimaxillaire peut:",
-                      options: [
-                          "A. Entrainer un déséquilibre somesthésique et donc une accélération du phénomène de résorption.", //
-                          "B. Se traiter d'une façon classique sans particularités.", //
-                          "C. Se rencontre le plus fréquemment à la mandibule qu'au maxillaire.", //
-                          "D. Provoquer une altération des tissus mous en regard des dents restantes" //
-                      ],
-                      correctOptionIndexes: [0, 3], // A, D
-                      explanation: "Elle pose des défis spécifiques (B faux). Le déséquilibre d'appui et de proprioception peut affecter la résorption (A). Elle est plus fréquente au maxillaire (C faux). Les forces occlusales importantes peuvent causer des altérations des tissus mous sous la prothèse (D)."
-                  },
-                  {
-                      questionText: "En prothèse complète uni maxillaire, la priorité est:",
-                      options: [
-                          "A. A l'arcade dentée", //
-                          "B. A l'arcade édentée", //
-                          "C. A la prothèse la plus stable", //
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D (Following comment)
-                      explanation: "Le choix du concept occlusal et la conception prothétique doivent donner la priorité à la prothèse la moins stable, c'est-à-dire la prothèse complète amovible (arcade édentée)."
-                  },
-                   {
-                      questionText: "Le succès de la prothèse complète uni maxillaire repose sur",
-                      options: [
-                          "A. L'état général du patient", //
-                          "B. La forme de l'arcade dentée", //
-                          "C. L'hygiène et la motivation du patient", //
-                          "D. Un seul et unique concept occlusal" //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D has highest %. Logic suggests multiple factors are key (A, B, C also play roles).
-                      explanation: "Le succès dépend de nombreux facteurs : analyse initiale rigoureuse, préparation de l'arcade antagoniste, choix judicieux du concept occlusal (qui n'est pas unique, mais adapté), état des tissus, hygiène, etc." // D seems incorrect logically, but has highest percentage.
-                  },
-                  {
-                      questionText: "Les conséquences d'une prothèse totale uni maxillaire mal adaptée sont:",
-                      options: [
-                          "A. Usures des dents", // // Dents antagonistes ou prothétiques
-                          "B. Douleurs dentaires", //
-                          "C. Apparition de crêtes flottants", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D (D has low %, but A & C are plausible consequences)
-                      explanation: "Une prothèse unimaxillaire mal adaptée peut causer : usure accélérée des dents prothétiques ou antagonistes, douleurs dentaires/muqueuses/articulaires, instabilité, résorption osseuse accélérée, apparition de crêtes flottantes (hyperplasie fibreuse)." // D low %, A and C high %. Let's take A & C.
-                  },
-                  {
-                      questionText: "Le plan de traitement pré-prothétique en PTA uni-maxillaire comporte:",
-                      options: [
-                          "A. La restauration des dents délabrées", //
-                          "B. Une compensation des édentements", //
-                          "C. L'extraction des dents égressées.", //
-                          "D. Une correction du plan d'occlusion" //
-                      ],
-                      correctOptionIndexes: [0, 1, 3], // A, B, D (C might be needed but extraction not always mandatory)
-                      explanation: "La préparation de l'arcade antagoniste dentée est cruciale : restaurer les dents, compenser les édentements partiels, et corriger le plan d'occlusion (par meulage, ajout, orthodontie, ou extraction si nécessaire)."
-                  },
-                  {
-                      questionText: "Le succès de la PTA uni-maxillaire est lié:",
-                      options: [
-                          "A. A une analyse initiale rigoureuse.", //
-                          "B. A la réhabilitation de l'arcade antagoniste.", //
-                          "C. Au choix d'une occlusion balancée.", //
-                          "D. Au choix d'une occlusion qui s'inscrit dans le schéma occlusal du patient" //
-                      ],
-                      correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D (All seem relevant)
-                      explanation: "Le succès dépend d'une analyse minutieuse, de la préparation de l'arcade dentée antagoniste, et du choix d'un concept occlusal adapté (souvent occlusion balancée, mais en harmonie avec le schéma existant)."
-                  },
-                  {
-                      questionText: "Le concept occlusal en prothèse complète uni maxillaires face à denture naturelle est:",
-                      options: [
-                          "A. L'occlusion de convenance", //
-                          "B. L'occlusion d'intercuspidation maximale", //
-                          "C. L'occlusion bilatéralement équilibrée", //
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "Pour stabiliser la prothèse complète face à une arcade naturelle, le concept d'occlusion bilatéralement équilibrée est généralement préconisé."
-                  },
-                   {
-                      questionText: "En prothèse complète uni maxillaire, la priorité est:",
-                      options: [
-                          "A. À l'arcade dentée", //
-                          "B. À l'arcade édentée", //
-                          "C. A la prothèse la plus stable", //
-                          "D. A la prothèse la moins stable" //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D
-                      explanation: "La conception doit prioriser la stabilité de la prothèse la moins stable, c'est-à-dire la prothèse complète amovible."
-                  },
-                  {
-                      questionText: "Une surcharge occlusale antérieure post-prothétique peut engendrer:",
-                      options: [
-                          "A. L'apparition de crêtes flottantes", //
-                          "B. Des phénomènes de résorption osseuse", //
-                          "C. Une fracture des bases prothétiques", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0, 1, 3], // A, B, D (D has low %, A & B high %)
-                      explanation: "Une surcharge antérieure due à des contacts prématurés ou excessifs peut provoquer une résorption osseuse, l'apparition d'hyperplasie fibreuse (crête flottante), et potentiellement des fractures de la base prothétique."
-                  } // Fin dernière question 'Edentement total uni maxillaire'
-              ] // Fin tableau 'questions' de 'Edentement total uni maxillaire'
-          }, // Virgule ajoutée
-          {
-              title: "Adhésion rétention et sustentation", // From uestion n° 5 .docx
-              subject: "prothese-y3",
-              questions: [
-                  {
-                      questionText: "La mouillabilité",
-                      options: [
-                          "A. C'est la résistance à l'écoulement d'un liquide", // // Viscosité
-                          "B. Favorise l'adhérence", //
-                          "C. Contribue à la rétention des prothèses complètes", //
-                          "D. toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [1, 2], // B, C
-                      explanation: "La mouillabilité est la capacité d'un liquide (salive) à s'étaler sur un solide (prothèse/muqueuse). Un bon mouillage est nécessaire à l'adhésion et contribue aux forces de capillarité qui participent à la rétention."
-                  },
-                  {
-                      questionText: "Les facteurs physiques sont:", // Implied: "facteurs physiques de la rétention"
-                      options: [
-                          "A. L'adhésion", //
-                          "B. Les indices biologiques", //
-                          "C. La pression atmosphérique", //
-                          "D. La viscosité" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D (Comment also mentions Cohésion, Mouillabilité)
-                      explanation: "Les facteurs physiques contribuant à la rétention incluent l'adhésion (salive-prothèse, salive-muqueuse), la cohésion (molécules salivaires), la tension superficielle (capillarité), la viscosité salivaire, et la pression atmosphérique (effet ventouse lié au joint périphérique)."
-                  },
-                  {
-                      questionText: "La mouillabilité:",
-                      options: [
-                          "A. Est intedépendante de l'adhésion", // Typo 'intedépendante' -> 'interdépendante' or 'indépendante'?
-                          "B. Est évaluée lorsque le liquide entre en mouvement", //
-                          "C. Joue un rôle dans la rétention des prothèses", //
-                          "D. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [2], // C (A is ambiguous, B is false)
-                      explanation: "La mouillabilité est la capacité d'étalement d'un liquide sur un solide au repos. Elle est liée à l'adhésion (forces interfaciales) et contribue à la rétention par capillarité."
-                  },
-                   {
-                      questionText: "Lorsque l'angle de mouillage est supérieur à 90°, ceci est en faveur:",
-                      options: [
-                          "A. D'un bon mouillage.", //
-                          "B. D'une bonne adhérence.", //
-                          "C. D'Une forte attraction intermoléculaire entre solide et liquide.", //
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [3], // D
-                      explanation: "Un angle de mouillage supérieur à 90° indique un mauvais mouillage (le liquide perle), une faible adhérence, et des forces de cohésion internes au liquide plus fortes que les forces d'adhésion solide-liquide."
-                  },
-                  {
-                      questionText: "La viscosité de la salive:",
-                      options: [
-                          "A. Dépend de la concentration en mucine.", //
-                          "B. Doit être moyenne.", //
-                          "C. Intervient dans la stabilité de la prothèse", //
-                          "D. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [0, 1, 3], // A, B, D (C is indirect, mainly rétention)
-                      explanation: "La viscosité salivaire dépend de sa teneur en mucines. Une viscosité moyenne est idéale pour la rétention. Une salive trop épaisse nuit à l'adhésion, trop fluide diminue la cohésion et la résistance à la désinsertion. Elle joue un rôle dans la rétention, moins directement dans la stabilité."
-                  },
-                   {
-                      questionText: "L'adhésion en prothèse totale est : 1- L'attraction moléculaire entre deux corps différents. 2- L'attraction des molécules de la salive entre elles. 3- Obtenue grâce à une salive riche en mucine. 4- Proportionnelle à la surface de contact entre l'intrados et la muqueuse d'appui. 5- Toutes les réponses sont fausses",
-                      options: [
-                          "A. (1,2)", //
-                          "B. (2)", //
-                          "C. (1,3,4)", //
-                          "D. (4)", //
-                          "E. (5)" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C (1, 3, 4)
-                      explanation: "L'adhésion est l'attraction entre corps différents (1 vrai). L'attraction entre molécules salivaires est la cohésion (2 faux). Une salive riche en mucines (viscosité adaptée) favorise les forces d'adhésion indirectes (3 vrai). L'adhésion augmente avec la surface de contact intime (4 vrai)."
-                  },
-                  {
-                      questionText: "L'adhésion:",
-                      options: [
-                          "A. Est assurée par l'interposition d'un film salivaire entre la surface d'appui et l'intrados de la prothèse.", //
-                          "B. Est Inversement proportionnelle à l'étendue des surfaces de contact.", //
-                          "C. Est proportionnelle à l'épaisseur du film salivaire.", //
-                          "D. Est dépendante de la rétention.", //
-                          "E. Toutes les réponses sont justes" //
-                      ],
-                      correctOptionIndexes: [0], // A (Adhesion forces act *through* the film)
-                      explanation: "En PTA, l'adhésion est indirecte, via le film salivaire. Elle est proportionnelle à la surface de contact (B faux) et optimale pour un film salivaire mince (C faux). L'adhésion contribue à la rétention (D inverse)."
-                  },
-                  {
-                      questionText: "La rétention:",
-                      options: [
-                          "A. Est une réaction défavorable qui s'oppose aux forces verticales exercées sur la prothèse pour l'éloigner de la surface d'appui", //
-                          "B. Permet de préserver l'intégrité tissulaire.", //
-                          "C. Est rendue meilleure en réalisant des perforations au niveau du PEI", //
-                          "D. Contribue à la crédibilité esthétique" //
-                      ],
-                      correctOptionIndexes: [1], // QCS - B has highest %
-                      explanation: "La rétention est la résistance à la désinsertion verticale (A faux). Une bonne rétention limite les micro-mouvements, préservant ainsi les tissus (B vrai). Elle améliore l'efficacité fonctionnelle et l'intégration psychique." // D is plausible consequence.
-                  },
-                  {
-                      questionText: "La sustentation:",
-                      options: [
-                          "A. Est une réaction favorable qui s'oppose aux forces (transversales ou antéropostérieurs) exercées sur la prothèse parallèlement à la surface d'appui", // // Stabilité
-                          "B. Est meilleure en présence d'un équilibre musculaire et occlusal.", // // Stabilité
-                          "C. Dépend du respect du jeu des organes para-prothétiques.", // // Stabilité
-                          "D. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [3], // D
-                      explanation: "La sustentation est la résistance de la surface d'appui aux forces axiales tendant à enfoncer la prothèse. Les options A, B, C décrivent plutôt les facteurs de stabilité."
-                  } // Fin dernière question 'Adhésion rétention et sustentation'
-              ] // Fin tableau 'questions' de 'Adhésion rétention et sustentation'
-          }, // Virgule ajoutée
-          {
-              title: "Les prothèses piézographiques", // From 852366.docx
-              subject: "prothese-y3",
-              questions: [
-                  {
-                      questionText: "La plézographie prothétique est indiquée :", // Typo 'plézographie' -> 'piézographie'
-                      options: [
-                          "A. chez les patients édentés non apparélilés de longue date.", // Typo 'apparélilés'
-                          "B. En présence d'une langue puissante.", //
-                          "C. En présence d'une langue large.", //
-                          "D. En cas d'une prothèse mandibulaire instable." //
-                      ],
-                      correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D (All listed as indications)
-                      explanation: "La piézographie est indiquée pour les crêtes très résorbées, les langues volumineuses (édenté ancien) ou puissantes, et pour améliorer la stabilité d'une prothèse mandibulaire instable."
-                  },
-                   {
-                      questionText: "Les caractéristiques requises des matériaux plézologiques sont :", // Typo 'plézologiques'
-                      options: [
-                          "A. L' altérabilité en bouche.", // // Inaltérabilité souhaitée
-                          "B. La fidélité de reproduction.", //
-                          "C. La plasticité suffisante pendant un temps suffisamment court.", // // Temps long
-                          "D. La présence d'une faible toxicité." // // Absence de toxicité
-                      ],
-                      correctOptionIndexes: [1], // B (Others are incorrect or poorly phrased)
-                      explanation: "Le matériau piézographique idéal doit être fidèle, avoir une plasticité prolongée (pas courte), être non toxique, et stable dimensionnellement après enregistrement."
-                  },
-                  {
-                      questionText: "La phonation est utilisée pour l'enregistrement plézographique parceque :", // Typo 'plézographique'
-                      options: [
-                          "A. Le matériau utilisé est facile à manipuler.mp", // Typo 'mp'
-                          "B. C'est la fonction buccale la plus-affectée par la perte des dents.", //
-                          "C. C'est la fonction buccale la plus génératrice de forces horizontales déséquilibrantes.", //
-                          "D. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "La phonation est choisie car elle mobilise largement la langue et les muscles périphériques sans contact occlusal, générant des forces horizontales importantes qui sculptent le matériau dans l'espace neutre. Elle est moins affectée par l'édentement que la mastication."
-                  },
-                  {
-                      questionText: "La piézographie : 1- Est indiquée lorsque la crête est haute 2- Elle permet d'enregistrer l'espace prothétique 3- Est réalisée avec un hydrocolloïde irréversible 4- Est réalisée à l'arcade maxillaire 5- Peut être réalisée par phonation",
-                      options: [
-                          "A. (1,3)", //
-                          "B. (2,3)", //
-                          "C. (2,5)", //
-                          "D. (5)", //
-                          "E. (1,4)" //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C (2, 5)
-                      explanation: "La piézographie enregistre l'espace prothétique (2). Elle est indiquée sur crêtes résorbées (1 faux), principalement à la mandibule (4 faux). Elle utilise des résines retard ou silicones (3 faux) et peut être réalisée par phonation ou déglutition (5)."
-                  },
-                  {
-                      questionText: "La péizographie analytique:", // Typo 'péizographie'
-                      options: [
-                          "A. Est indiquée en cas d'instabilité d'une prothèse totale inférieure", //
-                          "B. Se fait secteur par secteur avec prothèse supérieure en bouche", //
-                          "C. Permet d'objectiver l'espace prothétique en implantologie", //
-                          "D. Est indiquée après réalisation de la prothèse" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D
-                      explanation: "La piézographie analytique est réalisée sur une prothèse existante (D) pour analyser son adaptation à l'espace neutre, notamment en cas d'instabilité (A). Elle peut aussi évaluer l'espace disponible pour une prothèse sur implants (C). Elle se fait sans la prothèse antagoniste (B faux)."
-                  },
-                  {
-                      questionText: "Le POP en péizographie est:", // Typo 'péizographie'
-                      options: [
-                          "A. A référence linguale", //
-                          "B. A référence linguo-mandibulaire", //
-                          "C. Déterminé sur la maquette supérieure", //
-                          "D. Déterminé après l'émission du S" //
-                      ],
-                      correctOptionIndexes: [1, 3], // B, D
-                      explanation: "En piézographie, le plan d'occlusion est déterminé à la mandibule, avec des références linguo-mandibulaires (bord de la langue au repos, sillon du buccinateur). L'émission du 'S' aide à positionner les bords incisifs inférieurs."
-                  },
-                   {
-                      questionText: "La technique piézographique permet de:",
-                      options: [
-                          "A. Déterminer le volume de l'espace prothétique.", //
-                          "B. Assurer une rétention maximale des prothèses.", //
-                          "C. Déterminer le modelé des prothèses.", //
-                          "D. Ménager l'espace nécessaire à la langue, les lèvres et les joues" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D (B is a goal, not a direct outcome of the technique itself)
-                      explanation: "La piézographie enregistre le volume de l'espace neutre (espace prothétique) pour déterminer le modelé externe optimal (extrados) de la prothèse, en respectant l'espace fonctionnel des organes périphériques (langue, lèvres, joues)."
-                  },
-                  {
-                      questionText: "En piézographie, le POP est:",
-                      options: [
-                          "A. A référence labiale.", //
-                          "B. A référence linguo-mandibulaire", //
-                          "C. Déterminé sur la maquette supérieure.", //
-                          "D. Déterminé après l'émission du ( S)" //
-                      ],
-                      correctOptionIndexes: [1, 3], // B, D
-                      explanation: "Le POP piézographique est déterminé à la mandibule avec des repères linguo-mandibulaires. L'émission du 'S' est un test phonétique aidant à positionner le bord des incisives inférieures."
-                  },
-                  {
-                      questionText: "La piézographie analytique:",
-                      options: [
-                          "A. Est indiquée en cas d'instabilité d'une prothèse totale inférieure.", //
-                          "B. Se fait secteur par secteur avec prothèses supérieures en bouche", //
-                          "C. Permet d'objectiver l'espace prothétique en implantologie.", //
-                          "D. Est indiquée après pose d'implants" //
-                      ],
-                      correctOptionIndexes: [0, 2, 3], // A, C, D
-                      explanation: "Elle analyse une prothèse existante, indiquée en cas d'instabilité, ou après pose d'implants pour vérifier/corriger la prothèse. Elle se fait sans prothèse antagoniste (B faux)."
-                  },
-                  {
-                      questionText: "La localisation du plan d'occlusion prothétique est généralement maxillaire, sauf pour la technique :",
-                      options: [
-                          "A. Céphalométrique.", //
-                          "B. De Paterson.", //
-                          "C. Piézographique.", //
-                          "D. Toutes les réponses sont fausses.", //
-                          "E. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [2], // QCS - C
-                      explanation: "Classiquement, le POP est déterminé sur la maquette maxillaire. La technique piézographique est une exception où le POP est déterminé à la mandibule."
-                  },
-                  {
-                      questionText: "La prothèse piézographique est indiquée dans le cas de:",
-                      options: [
-                          "A. Crêtes de niveaux III et IV (Pr KLEIN)", //
-                          "B. Volume très important de la langue", //
-                          "C. En prothèse adjointe partielle pour les classe I. II ou IV de Kennedy.", //
-                          "D. Atteinte de paralysie faciale ou d'asymétrie bucco-faciale.", //
-                          "E. Perte de la dimension verticale" //
-                      ],
-                      correctOptionIndexes: [0, 1, 2, 3], // A, B, C, D
-                      explanation: "Indications : crêtes très résorbées, langue volumineuse/puissante, certains cas de PAP, et situations neuro-musculaires particulières (paralysie...)."
-                  },
-                  {
-                      questionText: "La technique d'enregistrement de l'espace prothétique est:",
-                      options: [
-                          "A. La phonation.", //
-                          "B. La déglutition", //
-                          "C. La mastication.", //
-                          "D. La phonation et la déglutition.", //
-                          "E. Toutes les réponses sont justes." //
-                      ],
-                      correctOptionIndexes: [3], // D
-                      explanation: "L'espace prothétique (piézogramme) peut être enregistré en utilisant soit la phonation, soit la déglutition pour modeler le matériau."
-                  },
-                  {
-                      questionText: "Le matériau d'enregistrement est:",
-                      options: [
-                          "A. Un hydrocolloïde réversible.", //
-                          "B. Un hydrcolloide irréversible.", //
-                          "C. Un matériau siloxane.", //
-                          "D. Une résine à prise retardée.", //
-                          "E. Toutes les réponses sont fausses" //
-                      ],
-                      correctOptionIndexes: [3], // QCS - D (Silicones also used)
-                      explanation: "Les matériaux utilisés sont principalement les résines à prise retardée (pour phonation) et les silicones haute viscosité (pour déglutition)." // Marked QCS, D has highest %.
-                  },
-                  {
-                      questionText: "En prothèse totale, l'enregistrement piézographique consiste à enregistrer : 1- L'espace libre d'inocclusion. 2- La ligne de flexion du voile du palais. 3- Le bord antérieur du ligament ptérygo-maxillaire. 4- Les muscles du plancher buccal. 5- L'espace existant entre les muscles de la sangle buccinato- labiale et les muscles de la langue.",
-                      options: [
-                          "A. (1-3)", //
-                          "B. (2-5)", //
-                          "C. (1-4)", //
-                          "D. (4-5)", //
-                          "E. (5)" //
-                      ],
-                      correctOptionIndexes: [4], // QCS - E (5)
-                      explanation: "La piézographie enregistre l'espace neutre ou couloir prothétique, qui est l'espace d'équilibre entre la musculature linguale d'un côté et la sangle labio-jugale de l'autre (5)."
-                  } // Fin dernière question 'Les prothèses piézographiques'
-              ] // Fin tableau 'questions' de 'Les prothèses piézographiques'
-          } // Fin dernier objet quiz
-]; // Fin du tableau principal prothesey3Quizzes
-
+  }
+];
 module.exports = prothesey3Quizzes; // Final export

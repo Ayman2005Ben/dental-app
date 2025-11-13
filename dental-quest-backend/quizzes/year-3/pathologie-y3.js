@@ -5024,7 +5024,7 @@ const pathologyY3Quizzes = [
                 "Implique un blocage maxillo-mandibulaire d’une durée de 45 jrs"
             ],
             correctOptionIndexes: [1],
-            explanation: ""
+            explanation: "Traitement fonctionnel par Kiné : fracture articulaire et sous condylienne haute... rétablir l’occlusion, par traction élastique... associée à une rééducation active de 15 jours avec voire plus."
         },
         {
             questionText: "Le traitement des fractures sous condylienne haute",
@@ -5068,7 +5068,7 @@ const pathologyY3Quizzes = [
                 "Doit être rapidement suivi par une rééducation active"
             ],
             correctOptionIndexes: [2, 3],
-            explanation: ""
+            explanation: " Traitement fonctionnel par Kiné : fracture articulaire et sous condylienne haute... rétablir l’occlusion, par traction élastique... associée à une rééducation active de 15 jours avec voire plus."
         },
         {
             questionText: "Un enfant âgé de 09 ans présentant une fracture sous condylienne basse doit bénéficier",
@@ -5092,6 +5092,455 @@ const pathologyY3Quizzes = [
             correctOptionIndexes: [0, 3],
             explanation: "Est indiqué en cas (fractures non déplacées ou avec déplacement minime...). L’alimentation doit être strictement liquide durant 1 semaine, puis pâteuse ou mixée..."
         }
+    ]
+  },
+{
+    title: "1er Trimestre 2016/2017",
+    subject: "pathologie-y3",
+    questions: [
+      {
+        questionText: "La thrombophlébite de la veine faciale :",
+        options: [
+          "fait généralement suite à une mortification dentaire des molaires",
+          "engage le pronostic vital du patient",
+          "se manifeste par un œdème palpébral supérieur",
+          "est caractérisée par un œdème du pli naso génien qui gagne très vite la fosse canine et l'angle interne de l'œil"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "C'est une complication grave d'une infection de la face (souvent staphylococcique, issue d'un furoncle de l'aile du nez). Elle se manifeste par un cordon veineux induré et douloureux le long de la veine faciale (D). Elle engage le pronostic vital par son risque de propagation vers le sinus caverneux."
+      },
+      {
+        questionText: "Sur le plan clinique, la cellulite circonscrite :",
+        options: [
+          "est plus fréquente",
+          "se caractérise par une extension de l'inflammation au tissu cellulaire de l'espace anatomique qui jouxte la dent causale",
+          "non traitée, elle peut évoluer vers la diffusion",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La cellulite séreuse circonscrite est le stade initial et le plus fréquent des cellulites faciales. C'est une inflammation localisée à un espace anatomique précis. Sans traitement, elle peut évoluer vers la suppuration ou la diffusion."
+      },
+      {
+        questionText: "Un pathogène stricte correspond à :",
+        options: [
+          "une bactérie qui peut faire partie de la flore normale",
+          "une bactérie qui fait pas partie de la flore normale",
+          "un germe agressif qui peut devenir à l'occasion d'une immunodépression",
+          "un germe dont la présence dans l'organisme signe obligatoirement une infection"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Un germe pathogène strict est un micro-organisme qui n'appartient pas à la flore commensale de l'hôte et dont la simple présence est synonyme de maladie infectieuse."
+      },
+      {
+        questionText: "La formation de l'œdème inflammatoire a pour aboutissements :",
+        options: [
+          "la diffusion des produits toxiques",
+          "la diffusion des immunoglobulines et de certaines substances favorisant la phagocytose",
+          "la précipitation de fibrine créant ainsi une barrière entre territoire sain et lésé",
+          "la diminution après une augmentation provisoire de la perméabilité cellulaire"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "L'œdème inflammatoire (exsudat) a un double rôle : il dilue et draine les toxines (A), mais il apporte aussi sur le site les acteurs de la défense immunitaire (immunoglobulines, complément) (B) et la fibrine qui aide à circonscrire l'infection (C)."
+      },
+      {
+        questionText: "La confirmation de la nécrose osseuse induite par le traitement aux bisphosphonates est :",
+        options: [
+          "basée sur une rétraction muqueuse mettant à nu l'os nécrosé, et persistante depuis plus de 8 semaines",
+          "basée sur l'absence d'antécédents de radiothérapie dans la région maxillaire",
+          "basée sur l'absence de localisation métastasique au niveau de la zone d'ostéonécrose des maxillaires",
+          "une forme d'ostéite infectieuse"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La définition de l'ostéonécrose des mâchoires associée aux bisphosphonates (ONM) repose sur 3 critères : 1. présence d'os exposé depuis plus de 8 semaines (A), 2. antécédents de traitement par bisphosphonates, et 3. absence d'antécédents de radiothérapie sur la région cranio-faciale (B)."
+      },
+      {
+        questionText: "La moindre fréquence des ostéites du maxillaire est en rapport :",
+        options: [
+          "la structure compacte de l'os",
+          "la richesse vasculaire et meilleure anastomose",
+          "la position des racines dentaires",
+          "aucune réponse n'est juste"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le maxillaire supérieur est un os spongieux très vascularisé, ce qui lui confère une meilleure défense contre les infections et une meilleure capacité de cicatrisation par rapport à la mandibule, dont l'os est plus cortical et moins irrigué."
+      },
+      {
+        questionText: "Le mode d'action des AIS se fait par :",
+        options: [
+          "la diminution de l'œdème par réduction de la vasodilatation et de l'hyperperméabilité vasculaire",
+          "la diminution de l'activité phagocytaire (action immunosuppressive) en diminuant le chimiotactisme l'afflux des leucocytes vers la lésion inflammatoire",
+          "l'inhibition de la cyclo-oxygénase (cox) en bloquant son action",
+          "la réduction des quantités de prostaglandines avec une baisse des thromboxanes produites"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les anti-inflammatoires stéroïdiens (AIS) sont de puissants anti-inflammatoires qui agissent en réduisant la perméabilité vasculaire (action anti-œdémateuse) et en inhibant le chimiotactisme des cellules immunitaires. L'inhibition de la COX est le mécanisme des AINS (non stéroïdiens)."
+      },
+      {
+        questionText: "Les prostaglandines :",
+        options: [
+          "participent à la genèse et au maintien des réactions inflammatoires",
+          "ont une action proche de celle de l'histamine",
+          "...",
+          "sont des dérivés de l'acide arachidonique"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les prostaglandines sont des médiateurs chimiques majeurs de l'inflammation, synthétisés à partir de l'acide arachidonique via la voie des cyclo-oxygénases (COX). Elles sont responsables de la vasodilatation, de la douleur et de la fièvre."
+      },
+      {
+        questionText: "L'antibiothérapie de première intention est :",
+        options: [
+          "souvent orientée par l'antibiogramme",
+          "dictée par une approche probabiliste",
+          "orientée par l'évolution clinique du patient",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "En première intention, le germe n'est pas encore identifié. L'antibiothérapie est donc probabiliste (ou empirique), choisie pour être active sur les bactéries les plus fréquemment responsables de ce type d'infection."
+      },
+      {
+        questionText: "La cellulite suppurée :",
+        options: [
+          "se manifeste par une tuméfaction mal limitée recouverte par une peau normale",
+          "la palpation de la tuméfaction retrouve une fluctuation",
+          "la tuméfaction garde le godet lors de la palpation",
+          "l'examen endo-buccal retrouve un cordon fibreux qui relie la dent causale à la tuméfaction"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le stade suppuré (abcès collecté) est caractérisé par une tuméfaction bien limitée, fluctuante à la palpation (\"signe de la vague liquide\"). La peau est rouge et chaude, et la pression du doigt laisse une dépression (signe du godet)."
+      },
+      {
+        questionText: "Le traitement de la cellulite chronique est principalement basé sur :",
+        options: [
+          "la prescription des ATB",
+          "la prescription des anti-inflammatoires",
+          "l'éradication du foyer infectieux",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Une cellulite chronique signe la persistance d'un foyer infectieux dentaire qui entretient l'inflammation. Le traitement essentiel est donc d'éliminer cette cause (traitement endodontique, extraction)."
+      },
+      {
+        questionText: "La sinusite maxillaire se caractérise par :",
+        options: [
+          "une rhinorrhée claire bilatérale",
+          "une rhinorrhée purulente bilatérale",
+          "une rhinorrhée purulente unilatérale",
+          "aucune réponse n'est juste"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Lorsqu'une sinusite maxillaire est d'origine dentaire, elle est typiquement unilatérale (du côté de la dent causale). Elle se manifeste par une rhinorrhée (écoulement nasal) purulente et unilatérale."
+      },
+      {
+        questionText: "L'étiologie la plus fréquente des cellulites d'origine dentaire est :",
+        options: [
+          "l'infection parodontale",
+          "iatrogènes et /ou thérapeutiques",
+          "la mortification pulpaire",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La grande majorité des cellulites d'origine dentaire sont des complications de la nécrose pulpaire (mortification), où l'infection se propage au-delà de l'apex dans les tissus environnants."
+      },
+      {
+        questionText: "Le tableau clinique de l'ostéite aigue des maxillaires se résume essentiellement par les signes suivants :",
+        options: [
+          "le trismus en cas d'atteinte osseuse antérieure",
+          "la mobilité d'une ou d'un groupe dentaire",
+          "une dénudation osseuse",
+          "des signes d'abcédassions : hyperthermie oscillante au-delà de 39°C",
+          "fluctuation au niveau de la gencive ou signe de godet cutané"
+        ],
+        correctOptionIndexes: [1, 2, 3, 4],
+        explanation: "L'ostéite aiguë est une infection osseuse grave associant des signes généraux (fièvre), locaux (douleur, mobilité dentaire), et des signes d'abcès sous-périosté (fluctuation, godet). L'exposition de l'os (dénudation) est aussi un signe possible."
+      },
+      {
+        questionText: "Le déclenchement d'une manifestation secondaire à distance d'un foyer infectieux primaire bucco-dentaire dépend :",
+        options: [
+          "de la résistance de l'individu",
+          "de la virulence des germes",
+          "de l'hygiène bucco-dentaire",
+          "de l'état général du patient"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Le passage d'une infection locale à une manifestation à distance (infection focale) dépend de l'équilibre hôte-parasite : la virulence des bactéries (B) et l'état des défenses de l'hôte, qui dépendent de son état général et de sa résistance immunitaire (A, D)."
+      }
+    ]
+  },
+  {
+    title: "2017/2018 : SUJET(A)",
+    subject: "pathologie-y3",
+    questions: [
+      {
+        questionText: "Dans la théorie infectieuse :",
+        options: [
+          "la bactériémie est toujours la cause de la dissémination des agents infectieux",
+          "la notion d'épine irritative est retrouvée",
+          "la propagation de l'infection peut se faire par pyophagie",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La théorie de l'infection focale postule qu'un foyer infectieux primaire chronique et peu symptomatique (\"épine irritative\") peut, à l'occasion d'une baisse de l'immunité, libérer des germes ou des toxines dans la circulation et causer une maladie à distance."
+      },
+      {
+        questionText: "Dans l'inflammation aigue :",
+        options: [
+          "les phénomènes vasculaires et cellulaires coexistent tout au long de son évolution",
+          "les lymphocytes et les plasmocytes sont fréquemment présents",
+          "le tissu conjonctif est détruit localement, remplace par un tissu fibro-inflammatoire riche en collagène",
+          "les polynucléaires jouent un rôle essentiel"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "L'inflammation aiguë est une réponse immédiate caractérisée par des phénomènes vasculaires (vasodilatation, œdème) et l'afflux massif de cellules, principalement des leucocytes polynucléaires neutrophiles (D), qui sont les acteurs essentiels de cette phase."
+      },
+      {
+        questionText: "En pathologie inflammatoire chronique, une étude histologique nous permet de :",
+        options: [
+          "faire un diagnostic différentiel entre une anomalie de réparation et une prolifération tumorale vraie",
+          "poser un diagnostic de vascularite qui est à la base des pathologies auto immunes",
+          "différencier une inflammation aigue d'une inflammation chronique",
+          "préciser le type des cellules qui interviennent dans les mécanismes inflammatoires."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'histologie est l'examen clé pour analyser un tissu inflammatoire chronique. Elle permet de caractériser le type d'infiltrat cellulaire (chronique vs aigu), de rechercher des signes spécifiques (vascularite) et surtout d'éliminer une pathologie tumorale."
+      },
+      {
+        questionText: "Les sidérophores sont :",
+        options: [
+          "des structures qui reconnaissent spécifiquement les récepteurs des cellules eucaryotes pour s'y accrocher",
+          "des flagelles permettant la mobilité de certains germes pour traverser le mucus afin d'aller au contact des cellules épithéliales",
+          "des enzymes capables de détruire le tissue environnant des cellules pour que les germes progressent et se multiplient",
+          "des molécules qui permettent au germe de capturer le fer et l'arrachant à la transferrine ou à la ferritine"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les sidérophores sont des molécules produites par certaines bactéries pour chélater (capturer) le fer, un élément essentiel à leur métabolisme, dans l'environnement de l'hôte. C'est un facteur de virulence important."
+      },
+      {
+        questionText: "La substance P est une substance :",
+        options: [
+          "libérée par les nocicepteurs dans la fente synaptique pour exciter le neuronne post synaptique",
+          "libérée par la lésion tissulaire pour provoquer l'acidose locale et favoriser la sollicitation des nocicepteurs",
+          "résultant de la perméabilité capillaire, ayant une action pro inflammatoire",
+          "issue de la dégranulation mastocytaire pour active les récepteurs"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La substance P est un neuropeptide libéré par les terminaisons des fibres nerveuses sensitives (nocicepteurs) et qui agit comme un neurotransmetteur de la douleur dans la corne postérieure de la moelle épinière."
+      },
+      {
+        questionText: "Parmi les signes locaux de gravité des cellulites on cite :",
+        options: [
+          "un érythème qui, tend à s'étendre vers la partie basse du cou ou déjà vers les creux sus- claviculaires et la fourchette sternale",
+          "une douleur oropharyngée très vive, qui gène la déglutition salivaire, s'accompagnant d'un trismus serré",
+          "une tuméfaction jugale qui ferme l'œil du patient",
+          "fluctuation de la tuméfaction"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les signes de gravité d'une cellulite sont les signes d'extension et de diffusion : extension vers le cou (médiastinite), trismus serré et dysphagie (atteinte des espaces profonds), et œdème majeur fermant l'œil (risque de thrombophlébite)."
+      },
+      {
+        questionText: "La relation entre sinus et dent peut expliquer certaines douleurs dentaires en relation avec un barotraumatisme sinusien qui résulte :",
+        options: [
+          "d'un défaut d'équilibration de pression entre le sinus et le milieu extérieur",
+          "une surpression est incriminée dans la stimulation du nerf alvéolaire supérieur",
+          "surviennent fréquemment lors de changement brutal de la pression",
+          "surviennent en cas de modification de l'anatomophysiologie de la muqueuse sinusienne"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le barotraumatisme est un accident lié à une variation brutale de pression (plongée, avion). Si l'ostium du sinus maxillaire est bouché, la variation de pression dans la cavité sinusale peut stimuler les nerfs alvéolaires supérieurs qui passent à proximité, provoquant des douleurs dentaires."
+      },
+      {
+        questionText: "L'endocardite infectieuse est :",
+        options: [
+          "une manifestation ischémique",
+          "appelée maladie Sixou et coll",
+          "la conséquence d'une fixation et multiplication d'un agent infectieux au niveau du myocarde",
+          "dans 50% de sa forme subaigue due au streptocoque typique de la cavité buccale"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'endocardite infectieuse est une greffe bactérienne sur les valvules cardiaques. Les formes subaiguës (maladie d'Osler) sont souvent causées par des streptocoques du groupe viridans, germes commensaux de la cavité buccale, qui passent dans le sang lors d'un geste dentaire (bactériémie)."
+      },
+      {
+        questionText: "Les conséquences de la radiothérapie à forte dose > 50 gry sont :",
+        options: [
+          "la mucite, dysgueusie et altérations vasculaires",
+          "les fibroses, trismus et douleur",
+          "l'hyper-sialorrhée et sialorrhée",
+          "l'ostéo chimio nécrose des maxillaires"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La radiothérapie de la sphère ORL a des conséquences aiguës (mucite) et chroniques (xérostomie et non hypersialorrhée, fibrose musculaire provoquant un trismus, altérations vasculaires menant à l'ostéoradionécrose)."
+      },
+      {
+        questionText: "Diagnostic de l'ostéonécrose des machoires dus aux bisphosphonates :",
+        options: [
+          "la mandibule est pratiquement le seul-os concerné par l'ONM",
+          "est posé souvent devant un retard de cicatrisation de plus de 8 semaines après un acte chirurgical",
+          "le plus souvent est la région mandibulaire postérieure",
+          "une image ostéolytique bien limitée"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'ONM est définie par un os exposé qui ne cicatrise pas après 8 semaines (B), souvent après un acte chirurgical. Elle touche majoritairement la mandibule (plus que le maxillaire), et en particulier la région postérieure (C)."
+      },
+      {
+        questionText: "La thrombophlébite du sinus caverneux :",
+        options: [
+          "complique une phlébite faciale ou ophtalmique non traitée",
+          "évolue dans un contexte infectieux très alarmant",
+          "évolue dans un contexte irritatif ou reflexe.",
+          "a un bon pronostic"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "C'est une complication redoutable et potentiellement mortelle (pronostic très réservé) d'une infection de la face (thrombophlébite faciale) qui se propage par voie veineuse jusqu'au sinus caverneux, à l'intérieur du crâne."
+      }
+    ]
+  },
+  {
+    title: "2018/2019",
+    subject: "pathologie-y3",
+    questions: [
+      {
+        questionText: "Cochez la ou les réponses justes :",
+        options: [
+          "Les eicosanoïdes font partie des lipo-oxygénases qui induisent la formation des leucotriènes",
+          "Les COX2 sont actives lorsque les phagocytes sont exposés à un processus inflammatoire",
+          "L'histamine est une glycoprotéine soluble agissant comme médiateur intercellulaire",
+          "Une cytokine participe aux phénomènes de vasodilatation, d'augmentation de la perméabilité capillaire, d'œdème et de prurit"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'enzyme COX-2 (cyclooxygénase 2) est une enzyme \"inductible\", c'est-à-dire qu'elle est synthétisée par les cellules immunitaires (comme les phagocytes) spécifiquement en réponse à un stimulus inflammatoire pour produire des prostaglandines."
+      },
+      {
+        questionText: "Dans l'inflammation aigue:",
+        options: [
+          "les phénomènes vasculaires et cellulaires coexistent tout au long de son évolution",
+          "les lymphocytes et les plasmocytes sont fréquemment présents",
+          "le tissu conjonctif est détruit localement, remplacé par un tissu fibro-inflammatoire riche en collagène",
+          "les polynucléaires jouent un rôle essentiel."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Répétition. L'inflammation aiguë est caractérisée par la coexistence de phénomènes vasculaires et cellulaires, avec un rôle prédominant des polynucléaires neutrophiles."
+      },
+      {
+        questionText: "En pathologie inflammatoire chronique, une étude histologique nous permet de :",
+        options: [
+          "faire un diagnostic différentiel entre une anomalie de réparation et une prolifération tumorale vraie",
+          "poser le diagnostic d'une vascularite qui est à la base des pathologies auto immunes",
+          "différencier une inflammation aigue d'une inflammation chronique",
+          "préciser le type des cellules qui interviennent dans les mécanismes inflammatoires."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Répétition. L'histologie est l'examen clé pour l'analyse des lésions inflammatoires chroniques."
+      },
+      {
+        questionText: "Au cours d'une réaction inflammatoire, les fibroblastes :",
+        options: [
+          "sont capables de libérer plusieurs médiateurs importants (histamine, sérotonine, leucotriène)",
+          "produisent des enzymes de destruction de la matrice",
+          "participent aux phénomènes de cicatrisation par la production de nouveaux constituants de la matrice",
+          "sont activés dès qu'ils passent dans des vaisseaux situés au sein du foyer inflammatoire et qu'ils produisent des médiateurs à leur tour",
+          "participent par leur production d'interleukines"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "Les fibroblastes sont les cellules clés de la phase de réparation/cicatrisation en produisant du collagène (C). Ils peuvent aussi produire des enzymes (collagénases) pour le remodelage de la matrice (B) et des cytokines comme les interleukines (E)."
+      },
+      {
+        questionText: "Parmi les types de germes pathogènes, le pathogène strict est :",
+        options: [
+          "un germe pathogène uniquement chez des individus à défenses altérées de façon profonde et durable",
+          "un germe dont la présence signe obligatoirement une infection car n'a jamais de relation de commensalisme avec l'organisme humain",
+          "un germe de portage transitoire ou de la flore commensale, qui provoque une infection, en raison d'un facteur favorisant",
+          "un germe qui provoque une simple fièvre alors qu'il y a un inoculum extrêmement important."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Répétition. Un pathogène strict est un microbe qui cause systématiquement une maladie chez un hôte sain et qui ne fait pas partie de la flore normale."
+      },
+      {
+        questionText: "Parmi les signes locaux de gravité des cellulites, sont :",
+        options: [
+          "douleur intense irradiante",
+          "fluctuation de la tuméfaction",
+          "un érythème qui à partir de la tuméfaction tend s'étendre vers la partie basse du cou",
+          "une douleur oropharyngée très vive, qui gène la déglutition salivaire, s'accompagnant d'un trismus serré"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Répétition. Les signes de gravité sont les signes d'extension de l'infection : extension vers le bas (C) ou vers les espaces profonds de la face (trismus, dysphagie) (D)."
+      },
+      {
+        questionText: "L'abcès de Chompret-L'Hironde :",
+        options: [
+          "est classique un abcès migrateur en rapport avec une péri-coronarite de la DDS inferieure",
+          "comporte le risque de diffusion de la collection vers les espaces infra-temporaux et vers la face interne de la mandibule via l'espace sigmoïde",
+          "se développe dans des zones ou la muqueuse buccale adhère au périoste sans couche de tissu cellulaire intermédiaire",
+          "la pression de la collection externe fait sourdre du pus dans la région de la DDS inférieure"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "C'est un abcès \"en bissac\" ou migrateur, typique des péricoronarites de dent de sagesse. La collection suppurée se forme sous le muscle buccinateur puis le traverse pour se collecter dans la joue. La pression sur la joue fait ressortir le pus au niveau de la dent de sagesse."
+      },
+      {
+        questionText: "Les relations entre sinus et dents peuvent expliquer certaines douleurs en relation avec un barotraumatisme sinusien qui résulte :",
+        options: [
+          "d'un défaut d'équilibration des pressions entre le sinus et le nasopharynx.",
+          "d'une pathologie ostiale empêcherait l'air de s'enfuir entrainant une relative surpression dans le sinus",
+          "une surpression est incriminée dans la stimulation du nerf alvéolaire supérieur",
+          "surviennent en cas de modification dans l'anatomophysiologie de la muqueuse sinusienne"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Répétition. Le mécanisme est un blocage de l'ostium sinusien qui empêche l'équilibration des pressions, causant une surpression ou dépression qui irrite les nerfs dentaires."
+      },
+      {
+        questionText: "Thrombophlébite de la veine faciale :",
+        options: [
+          "Fait généralement suite à une mortification dentaire des molaires",
+          "Le pronostic vital est en jeu.",
+          "se manifeste par un œdème palpébral supérieur",
+          "est caractérisée par un œdème du pli naso-génien qui gagne très vite à la fosse canine et l'angle interne de l'œil"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Répétition. C'est une infection grave de la face qui se manifeste par un œdème et un cordon induré le long de la veine faciale, avec un risque majeur de propagation au sinus caverneux."
+      },
+      {
+        questionText: "La thrombophlébite du sinus caverneux :",
+        options: [
+          "Complique une phlébite faciale ou ophtalmique non traitée",
+          "Evolue dans un contexte infectieux très alarmant",
+          "Evolue dans un contexte irritatif ou reflexe",
+          "A un bon pronostic"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Répétition. C'est une complication redoutable et de très mauvais pronostic d'une infection de la face."
+      },
+      {
+        questionText: "Le traitement chirurgical de l'ostéite vise au niveau de l'infection à :",
+        options: [
+          "Vider et drainer d'infection (curetage,...).",
+          "détruire les destructions.",
+          "Décortication et ostéotomie",
+          "Une mobilisation des fragments osseux ."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le traitement chirurgical de l'ostéite consiste à éliminer l'os nécrosé (séquestrectomie), à cureter les tissus de granulation et à assurer un drainage efficace. La décortication peut être réalisée pour favoriser la revascularisation."
+      },
+      {
+        questionText: "Le mode d'action des biphosphonates :",
+        options: [
+          "Inhibe la résorption osseuse en inhibant l'activité des ostéoblastes",
+          "Inhibe la résorption osseuse en inhibant l'activité des ostéoclastes",
+          "engendre une diminution de la calcémie et à l'augmentation de la calcémie",
+          "engendre une augmentation de la densité minérale de l'os et à la diminution de la calcémie"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les bisphosphonates sont des médicaments anti-résorption osseuse. Leur mécanisme principal est d'inhiber l'activité des ostéoclastes, les cellules responsables de la destruction de l'os."
+      },
+      {
+        questionText: "Les bisphosphonates sont indiqués pour traiter :",
+        options: [
+          "les ostéoporoses",
+          "la maladie de Paget",
+          "la dysplasie fibreuse",
+          "les cancers de la cavité buccale"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Ils sont indiqués dans toutes les pathologies où il y a une hyper-résorption osseuse : ostéoporose, maladie de Paget, et pour prévenir les métastases osseuses de certains cancers."
+      }
     ]
   }
 ];
