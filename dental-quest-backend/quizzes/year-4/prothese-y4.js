@@ -385,7 +385,7 @@ const prothesey4Quizzes = [
           "Contient un groupe fonctionnel hydrophile [cite: 3045]"
         ],
         correctOptionIndexes: [0, 3, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Le collage a Ia céramique :",
@@ -409,7 +409,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses [cite: 3071]"
         ],
         correctOptionIndexes: [0, 1, 2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "L'adhésif :",
@@ -421,7 +421,7 @@ const prothesey4Quizzes = [
           "Pénètre a la surface de la restauration prothétique pour former la couche hybride [cite: 3083]"
         ],
         correctOptionIndexes: [0, 1, 2, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Le collage en prothèse fixé peut se faire avec :",
@@ -433,7 +433,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses [cite: 3094]"
         ],
         correctOptionIndexes: [1, 2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "L'assemblage des restaurations à base de céramique vitreuse nécessite :",
@@ -997,7 +997,7 @@ const prothesey4Quizzes = [
           "légères malpositions dentaires [cite: 2566]"
         ],
         correctOptionIndexes: [1, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Le procédé d'usinage:",
@@ -1009,7 +1009,7 @@ const prothesey4Quizzes = [
           "permet la conception de restaurations monolithiques [cite: 2578]"
         ],
         correctOptionIndexes: [0, 1, 2, 3, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La restauration céramo céramique :",
@@ -1141,7 +1141,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses [cite: 2742]"
         ],
         correctOptionIndexes: [3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Les céramiques usinées :",
@@ -1226,7 +1226,7 @@ const prothesey4Quizzes = [
           "légères malpositions dentaires [cite: 2265]"
         ],
         correctOptionIndexes: [1, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Le procédé d'usinage:",
@@ -1238,7 +1238,7 @@ const prothesey4Quizzes = [
           "permet la conception de restaurations monolithiques [cite: 2277]"
         ],
         correctOptionIndexes: [0, 1, 2, 3, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La restauration céramo céramique :",
@@ -1370,7 +1370,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses [cite: 2441]"
         ],
         correctOptionIndexes: [3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Les céramiques usinées :",
@@ -1891,7 +1891,7 @@ const prothesey4Quizzes = [
           "la profondeur de la cavité de préparation ne dépasse pas 1.5 mm"
         ],
         correctOptionIndexes: [3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Le Smear layer :",
@@ -1951,7 +1951,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [0],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Les restaurations collées indirectes:",
@@ -1963,7 +1963,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont justes"
         ],
         correctOptionIndexes: [0, 2, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Les restaurations collies Indirectes sont contre-indiquées :",
@@ -2143,7 +2143,7 @@ const prothesey4Quizzes = [
           "n’est indiqué que lorsque la dent naturelle est intermédiaire entre 2 implants ……."
         ],
         correctOptionIndexes: [0, 1, 2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Le bridge colle",
@@ -2155,7 +2155,7 @@ const prothesey4Quizzes = [
           "est un bridge dento-implanto porté"
         ],
         correctOptionIndexes: [0, 1, 2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "ROY a divisé l’arcade en cinq plans",
@@ -2299,7 +2299,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont justesToutes les réponses sont fausses"
         ],
         correctOptionIndexes: [2, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Un bridge a simple encastrement :",
@@ -2325,7 +2325,7 @@ const prothesey4Quizzes = [
           "S'inscrit dans les 5 plans de ROY."
         ],
         correctOptionIndexes: [0, 1, 2, 3, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La résistance mécanique d'un bridge :",
@@ -2489,7 +2489,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont justes."
         ],
         correctOptionIndexes: [4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La résistance d’une travé de bridge:",
@@ -2513,7 +2513,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La résistance d’une travé de bridge:",
@@ -2663,7 +2663,7 @@ const prothesey4Quizzes = [
           "ne doit pas exploiter la partie coronaire du sulcus"
         ],
         correctOptionIndexes: [0, 1, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La prise d'empreinte avec un minimum de risques pour l'attache épithéliale est assurée par :",
@@ -2711,7 +2711,7 @@ const prothesey4Quizzes = [
           "Stimuler le parodonte profond"
         ],
         correctOptionIndexes: [2, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Vis a vis du parodonte, Ia prothèse provisoire fixé va assurer plusieurs rôles :",
@@ -2723,7 +2723,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [0, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "L'espace biologique :",
@@ -2933,7 +2933,7 @@ const prothesey4Quizzes = [
           "de la non-participation de cette restauration fixe à l'articulé du patient"
         ],
         correctOptionIndexes: [2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Les points supports de l'occlusion du premier groupe :",
@@ -2945,7 +2945,7 @@ const prothesey4Quizzes = [
           "S’articulent principalement avec les crêtes marginales mandibulaires et maxillaires"
         ],
         correctOptionIndexes: [1, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La table occlusale rebasée est :",
@@ -2957,7 +2957,7 @@ const prothesey4Quizzes = [
           "indiquée pour l'enregistrement d'une intercuspidation maximale en relation centrée"
         ],
         correctOptionIndexes: [1, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La relation centrée est :",
@@ -2981,7 +2981,7 @@ const prothesey4Quizzes = [
           "Une réhabilitation en PIM avec une fonction latérale respectée du cote droit de l'arcade et une guidage antérieure respectée"
         ],
         correctOptionIndexes: [4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "L'occlusion :",
@@ -3005,7 +3005,7 @@ const prothesey4Quizzes = [
           "Sont des cuspides de guidage et de soutien"
         ],
         correctOptionIndexes: [3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La relation centrée est :",
@@ -3017,7 +3017,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La restauration par une prothèse fixée d'une canine droite chez un patient dont la DVO est conservée exige :",
@@ -3029,7 +3029,7 @@ const prothesey4Quizzes = [
           "Une réhabilitation en PIM avec une fonction canine en latéralité du cote droit de l'arcade et une guidance antérieure respectée"
         ],
         correctOptionIndexes: [4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La position d'intercuspidie maximale (PIM) :",
@@ -3053,7 +3053,7 @@ const prothesey4Quizzes = [
           "Est une position pendant laquelle les dents sont en contact"
         ],
         correctOptionIndexes: [0, 2, 3],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "La relation centrée est une position de référencé mandibulo-cranienne qui se définie par :",
@@ -3065,7 +3065,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [0, 2],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "On appelle table occlusale la surface occlusale des dents pluri cuspidées formé par:",
@@ -3077,7 +3077,7 @@ const prothesey4Quizzes = [
           "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [0, 1],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       },
       {
         questionText: "Les cuspides d'appui :",
@@ -3089,10 +3089,2059 @@ const prothesey4Quizzes = [
           "Maintiennent la dimension verticale d'occlusion DVO"
         ],
         correctOptionIndexes: [0, 2, 4],
-        explanation: ""
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+
+
+  {
+    title: "Introduction à la prothèse conjointe",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "Quel est le principal facteur de rétention d'une endocouronne ?:",
+        options: [
+          "La forme anatomique de la couronne de la dent",
+          "Les parois de la chambre pulpaire",
+          "La fixation par tenon radiculaire",
+          "L'utilisation de ciment de scellement -",
+          "La forme anatomique des racines de la dent."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La prothèse va prendre appui sur la chambre pulpaire pour recouvrir l’ensemble des faces axiales de manière plus ou moins totale. Seules les molaires peuvent bénéficier de ce type de restauration.\nC : ce n’est pas une endocouronne, mais une couronne de substitution avec inlay-core ou tenon.\nD : Contribue à la rétention, mais c’est secondaire → la principale rétention est mécanique, assurée par les parois pulpaire."
+      },
+      {
+        questionText: "Parmi les couronnes de recouvrement partiel on retrouve :",
+        options: [
+          "La facette.",
+          "L'onlay.",
+          "L'overlay.",
+          "L'inlay-core",
+          "L'inlay."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'inlay-core une couronne de substitution ( corono-radiculaire)"
+      },
+      {
+        questionText: "Parmi les couronnes de recouvrement partiel on retrouve :",
+        options: [
+          "La facette",
+          "L'onlay.",
+          "L'overlay.",
+          "L'inlay-core.",
+          "L'inlay"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Une couronne de substitution est :",
+        options: [
+          "Une couronne qui remplace partiellement la couronne naturelle",
+          "Une couronne qui prend appui sur la racine restante",
+          "Une couronne qui comporte uniquement un tenon radiculaire métallique",
+          "Une couronne qui remplace la dent absente",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle est ainsi appelée; parce qu'elle remplace entièrement la couronne naturelle par une autre couronne artificielle. \nun tenon radiculaire métallique ou récemment apparue les tenons en fibre de verre"
+      },
+      {
+        questionText: "L'ancrage en prothèse conjointe est représentés par :",
+        options: [
+          "La partie de la prothèse conjointe qui recouvre l'espace édente",
+          "La partie de la prothèse conjointe qui recouvre le moignon",
+          "La partie de la prothèse conjointe qui assure la liaison entre deux dents piliers",
+          "La partie de la prothèse conjointe qui remplace la dent absente",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est la partie de la prothèse conjointe qui recouvre la dent support ou pilier \nC : c’est travée ou intermédiaire  \nD : c’est Le pontic ou la pontique"
+      },
+      {
+        questionText: "L'inlay-core est :",
+        options: [
+          "Un ancrage à recouvrement total",
+          "Un ancrage à recouvrement partiel",
+          "Une couronne de substitution corono-radiculaire.",
+          "Unc couronne proviácite à recouvtential partiel",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Un ancrage à recouvrement total : Correcte.\nUn ancrage à recouvrement partiel : Totale et non partiel.\nUne couronne de substitution corono-radiculaire : C'est la couronne Richmond et pas l'inlay-core.\nUnc couronne proviácite à recouvtential partiel : Totale et non partiel."
+      }
+    ]
+  },
+  {
+    title: "Examen Clinique",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "En prothèse conjointe, un ancrage:",
+        options: [
+          "représente la partie du pont qui est scellée sur une dent support",
+          "représente la partie du pont préparée pour recevoir l'élément prothétique",
+          "peut-être une couronne céramo-métallique",
+          "a comme rôle d'unir l'intermédiaire du bridge aux dents piliers",
+          "doit restaurer uniquement la fonction"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "A : L’ancrage : c’est la partie de la prothèse conjointe qui recouvre la dent support ou pilier, cette construction ancrée sur la préparation dentaire permet la fixation de la restauration unitaire ou bien utilisée comme moyen d’ancrage d’un bridge.\nB : À la fin de la décortication (taille) d’une dent, la dent pilier taillée est appelée moignon ou préparation\nE : En prothèse conjointe, il ne s’agit pas uniquement de remplacer les dents perdues, mais de créer un environnement buccal favorable […] qui reflète son succès et qui assure sa pérennité"
+      },
+      {
+        questionText: "Lors de l'examen clinique :",
+        options: [
+          "la hauteur de la dent n'intervient pas dans la rétention de la prothèse fixée",
+          "la largeur de la dent n'intervient pas dans la rétention de la prothèse fixée",
+          "une mauvaise hygiène contre indique la réalisation prothétique",
+          "l'ancrage est choisi en fonction de la dent support",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "A : La valeur du pilier dépend aussi du rapport corono-radiculaire…\nB : La valeur du pilier est fonction de la forme de la racine, une racine large dans le sens vestibulo-lingual… est plus favorable qu’une racine à section circulaire\nC : La prothèse fixée ne peut être réalisée qu’après avoir assuré une« Motivation à l’hygiène : informer le patient des méthodes et des règles d’hygiène bucco-dentaire, faire un détartrage. »\nD : L’ancrage est choisi en fonction de la dent support qui peut être pulpée (onlays) ou dépulpée (inlay, couronne, Richmond)"
+      },
+      {
+        questionText: "Lors de la réalisation d'une prothèse fixée:",
+        options: [
+          "la dévitalisation des dents pillers est recommandée",
+          "L’examen radiologique est facultatif",
+          "L’analyse occlusale se fait après réalisation de la prothèse",
+          "le choix de la couleur se fait après la taille de la dent",
+          "l’examen de la profondeur du sulcus est primordial"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "A : la dévitalisation n’est pas systématique  \nB : L'examen radiologique est indispensable pour évaluer la santé des dents piliers, la structure osseuse et pour planifier le traitement de manière adéquate. \nC : l'analyse occlusale doit être faite avant et pendant la réalisation de la prothèse \nD : elle est réalisé avant la préparation dentaire ; pour déterminer la couleur d’une dent naturelle"
+      },
+      {
+        questionText: "L'indication ou la contre-indication de l'ancrage dépend de :",
+        options: [
+          "La rétention exigée par le bridge.",
+          "La vitalité pulpaire.",
+          "L'importance du secteur édente.",
+          "La situation de la dent sur l'arcade au niveau antérieure ou postérieur"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "L'ancrage est choisi en fonction de la dent support qui peut être pulpée (onlays) ou dépulpée. Pour les dents pulpées. ancrage à recouvrement partiel onlays.  \nPour les dents délabrées: ancrage intra-radiculaire. type inlay, couronne ou Richmond."
+      },
+      {
+        questionText: "La loi de DUCHANGE est utilisée pour :",
+        options: [
+          "Choisie les dents supports",
+          "Choisie le type d'ancrage",
+          "Choisie les dents pulpées",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "D'après la loi de Duchange: \"la somme des coefficient masticatoires des dents piliers doit être supérieur ou égale à la somme des coefficient masticatoire des dents absentes\"."
+      },
+      {
+        questionText: "Lors de l’examen clinique :",
+        options: [
+          "La hauteur de la dent intervient dans la rétention de la prothèse fixée",
+          "L'examen radiologique est complémentaire",
+          "Une mauvaise hygiène contre indique la réalisation de la prothèse fixée",
+          "L'équilibration occlusale pré prothétique est systématique",
+          "L'ancrage est choisi en fonction de la dent support"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "D : dans le cas de perturbation occlusale  \nToute restauration prothetique, doit s’integrer  a l’équilibre bio  fonctionnel de l’appareil manducateur de patient"
+      },
+      {
+        questionText: "Lors de l’examen clinique :",
+        options: [
+          "La hauteur de la dent n'intervient pas dans la rétention de la prothèse fixée",
+          "L'examen radiologique est facultatif",
+          "Une mauvaise hygiène ne contre indiquée pas la réalisation prothétique",
+          "L'ancrage est choisi en fonction de la dent support"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La valeur du pilier dépend aussi du rapport corono radiculaire. Il concerne la longueur coronaire extra osseuse d’une part et la longueur radiculaire intra-osseuse d'autre part \nL'examen radiologique est complémentaire pour détecter du volume. La forme ; la longueur et l'orientation des racines ; du volume et l’emplacement de la chambre pulpaire ; d'élargissement de l'espace desmodontale et l'appréciation des tissus de soutien profonds. \nOn ne construit jamais sur des mauvaises fondations ( mauvaise hygiène on proscrit la prothèse fixée momentanément ; ce n’est pas une contre indication absolue )"
+      },
+      {
+        questionText: "La valeur d'une dent support est fonction : (1- De sa position sur l'arcade. 2- De la largeur de sa racine. 3- De la longueur de sa racine. 4- De son état parodontal. 5- Toutes les réponses sont justes.)",
+        options: [
+          "(1-3)",
+          "(1-5)",
+          "(3-4)",
+          "(5)",
+          "(2-4)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "1-Pour déterminer le nombre des dents piliers selon la loi de ROY\n3-On doit évaluer le volume, la forme, la longueur et l’orientation des racines\n4-Un Bilan Parodontal: L’examen parodontal permet d’évaluer : l’état des tissus de soutien des dents, l’inflammation gingivale, les pertes d’attache, l’importance de l’alvéolyse et la profondeur  ́ du sulcus. La prothèse fixe ne peut etre réalisée qu’aprés  avoir assure un traitement de toutes parodontopathie."
+      }
+    ]
+  },
+  {
+    title: "Principes Généraux de Préparation",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "L'axe d'insertion dans le cas d'une prothèse unitaires",
+        options: [
+          "se fait par un mouvement de rotation vertical",
+          "il faut faire apparaître une légère divergence des parois axiales",
+          "l'angle de convergence des parois axiales doit être légèrement supérieur à 16\"",
+          "se fait par un mouvement de translation vertical",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "A : La mise en place de la couronne unitaire se fait selon un mouvement vertical de translation le long d’un axe dit axe d’insertion »\nB : Lors de la réalisation ; il faut faire apparaître une légère convergence des parois sans laquelle l’insertion serait impossible\nC : Le degré de convergence ou dépouille vers la face occlusale varie de 0 à 10°, l’idéal étant de 6°"
+      },
+      {
+        questionText: "La mise de dépouille lors de la préparation en prothèse conjointe est obtenue par :",
+        options: [
+          "la convergence des parois externes opposées vers la face occlusale",
+          "La divergence des parois internes opposées vers la face occlusale",
+          "la divergence des parois externes opposées vers la face occlusale",
+          "la convergence des parois internes opposées vers la face occlusale",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "A : les parois des diverses parties de la préparation convergent légèrement dans le sens de la désinsertion, la préparation est alors dite de dépouille"
+      },
+      {
+        questionText: "L'absence du chanfrein du versant externe des cuspides d'appui :",
+        options: [
+          "facilite le choix de la teinte",
+          "est nécessaire pour la pérennité de l'ensemble dento-prothétique",
+          "augmente la résistance de l'élément prothétique",
+          "renforce l'élément prothétique",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "lorsqu'il s'agit de plusieurs piliers dépulpés:",
+        options: [
+          "c'est la préparation du pilier le plus faible qui détermine l'axe d'insertion",
+          "c'est la préparation du pilier le plus résistant qui détermine l'axe d'insertion",
+          "c'est la préparation du pilier le plus fort qui détermine l'axe d'insertion",
+          "c'est la préparation du pilier le plus robuste qui détermine l'axe d'insertion",
+          "toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le bridge sur plusieurs dents dépulpées : si le bridge comporte des couronnes à tenons radiculaires ; c’est l’axe longitudinal de la racine la plus faible qui constituera l’axe d’insertion."
+      },
+      {
+        questionText: "Lors du contrôle de la préparation dentaire destinée à recevoir une couronne on doit s'assurer que :",
+        options: [
+          "la préparation est suffisante pour répondre aux exigences esthétique et mécanique",
+          "le moignon doit être de contre dépouille et parallèle au grand axe de la dent",
+          "la limite cervicale doit toujours être située dans le sulcus",
+          "en occlusion, un espace de 0.5mm doit exister entre le moignon et la dent antagoniste",
+          "tous les angles de raccordement doivent être adoucis"
+        ],
+        correctOptionIndexes: [0, 4],
+        explanation: "B : Afin qu’une couronne puisse être insérée sur une dent préparée, il faut que les faces axiales soient de dépouille. \nC : La limite cervicale ne doit pas toujours être située dans le sulcus; elle peut être supragingivale pour faciliter le contrôle de plaque et l'évaluation clinique. \nD : En occlusion, un espace de 1.5 à 2 mm doit généralement exister entre le moignon et la dent antagoniste pour assurer une épaisseur suffisante du matériau de couronne"
+      },
+      {
+        questionText: "Quelle est l'importance de la stabilité marginal dans la prothèse conjointe?:",
+        options: [
+          "Elle assure une bonne adaptation de la restauration et prévient les infiltrations bactériennes.",
+          "Elle influe sur la couleur de la restauration.",
+          "Elle détermine la force de mastication du patient.",
+          "Elle est principalement esthétique.",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La stabilité marginale a des implications principalement fonctionnelles et de durabilité, pas seulement esthétiques."
+      },
+      {
+        questionText: "La rétention d'une couronne de recouvrement total dépend :",
+        options: [
+          "De la surface de recouvrement : plus elle est grande meilleure est la rétention",
+          "De l'angle de divergence des parois : l'angle variera entre 5° et 10°",
+          "De Ia hauteur du moignon",
+          "De la forme de Ia limite cervicale."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La rétention est essentiellement conditionnée par la morphologie générale des préparations : la hauteur de la préparation ; un moignon large et haut à une grand rétention ; l’étendu des surfaces en contact ; la faible convergence des parois axiales"
+      },
+      {
+        questionText: "La rétention d'une couronne sur une dent courte est améliorée : (1- En diminuant les reliefs cuspidiens 2- En diminuant le parallélisme des parois 3- En réalisant des surfaces occlusales planes 4- En augmentant le parallélisme des parois 5- En utilisant pour le scellement, des colles résines)",
+        options: [
+          "(1,2)",
+          "(3,4)",
+          "(1,5)",
+          "(2,5)",
+          "(4,5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "4. En augmentant le parallélisme des parois : Correct, Cela réduit la dépouille, ce qui rend la désinsertion de la pièce prothétique plus difficile.\n5- En utilisant pour le scellement, des colles résines : Le collage assuré par les colles résines garantit un assemblage chimique, qui est plus solide que l'assemblage réalisé par les ciments de scellement, lequel repose sur une rétention mécanique."
+      },
+      {
+        questionText: "l'axe d'insertion dans le cas d'une prothèse unitaire :",
+        options: [
+          "Se fait par un mouvement de rotation vertical",
+          "II faut faire apparaitre une légère divergence des parois axiale",
+          "L'angle de convergence des parois axiales doit être légèrement supérieur à 16°",
+          "Se fait par un mouvement de translation vertical",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Le mouvement de renversement responsable du descellement d'un bridge est du :",
+        options: [
+          "Aux forces qui s'appliquent verticalement sur les versants cuspidiens",
+          "Aux forces qui s'appliquent horizontalement sur les versants cuspidiens",
+          "Aux forces qui s'appliquent obliquement sur les versants cuspidiens",
+          "Aux forces qui s'appliquent verticalement et latéralement sur les versants cuspidiens"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Pour toute restauration prothétique postérieure, il convient de respecter le gradient thérapeutique en mettant en œuvre :",
+        options: [
+          "La solution la moins conservatrice pour le tissu dentaire en fonction du cas clinique",
+          "La solution la plus conservatrice pour le tissu dentaire en fonction du cas clinique",
+          "La solution la plus esthétique en fonction du cas clinique",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Le mouvement de renversement responsable du descellement d'un bridge est du :",
+        options: [
+          "Aux forces qui s'appliquent verticalement sur les versants cuspidiens.",
+          "Aux forces qui s'appliquent horizontalement sur les versants cuspidiens",
+          "Aux forces qui s'appliquent obliquement sur les versants cuspidiens",
+          "Aux forces qui s'appliquent verticalement et latéralement sur les versants cuspidiens"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Le choix de la forme de Ia limite cervicale dépend :",
+        options: [
+          "De la situation prothétique",
+          "Du cas clinique",
+          "Des exigences de notre patient",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausse"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le choix de la forme de la limite cervicale dépend :  \n1 –De la situation clinique : chasue cas clinique a sa limite cervicale ( il n y’a pas de limite cervicale universel ) \n2-Le type de restauration prothétique"
+      },
+      {
+        questionText: "Pour augmenter la rétention d'une couronne céramo-metallique. il faut : (1- Accentuer la convergence des parois du moignon. 2- Accentuer l'anatomie cuspidienne. 3- Réduire la hauteur du moignon 4- Augmenter le parallélisme des parois... 5- Toutes les réponses sont fausses)",
+        options: [
+          "(1:3)",
+          "(1,4)",
+          "(3,4)",
+          "(5)",
+          "(2.4)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "1- Accentuer la convergence des parois du moignon. : Faux , Plus les parois convergent vers l’occlusal, moins la force nécessaire pour désinsérer la prothèse est importante. \n2- Accentuer l'anatomie cuspidienne : Vrai, les reliefs des cuspides augmente la rétention de la pièce prothétique.\n3- Réduire la hauteur du moignon : Faux , Plus la hauteur est faible, plus la surface de contact entre la pièce prothétique et le moignon diminue, ce qui réduit la rétention.\n4- Augmenter le parallélisme des parois : Vrai , le contraire de la 1ère réponse."
+      },
+      {
+        questionText: "La rétention d'une couronne sur une dent courte est améliorée en : (1- En diminuant les reliefs cuspidiens 2- En diminuant le parallélisme des parois 3- En réalisant des surfaces occlusales planes 4- En augmentant le parallélisme des parois 5- En utilisant pour le scellement, des colles résines)",
+        options: [
+          "(1-2)",
+          "(3-4)",
+          "(1-5)",
+          "(2-5)",
+          "(4-5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La rétention est essentiellement conditionnée par :\n La hauteur de la préparation, un moignon large et haut a une grande rétention \n L’étendue des surfaces en contact.\n La faible convergence des parois axiales.\n Le ciment de scellement ne contribue a la rétention que par une très faible mesure."
+      }
+    ]
+  },
+  {
+    title: "Limites Cervicales",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "l’espace biologique est composé de :",
+        options: [
+          "l'attache conjonctive et la crête osseuse alvéolaire",
+          "le sulcus gingival et l'attache épithéliale",
+          "l'attache épithéliale et l'attache conjonctive",
+          "la gencive marginale et le ligament parodontal",
+          "le fluide gingival et la jonction dento-prothétique"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C’est l’espace compris entre le fond du sulcus et le sommet de la crête osseuse alvéolaire, sa valeur moyenne est de 2,04mm\nIl comprend :\nUne attache épithéliale + une attache conjonctive\nIl constitue la zone rouge qu’il faut respecter sans jamais la franchir"
+      },
+      {
+        questionText: "Dans la restauration prothétique, quel est l'impact principal d'un profil d'émergence trop plat au niveau de la limite cervicale?:",
+        options: [
+          "Problème esthétique et risque de bourrage alimentaire",
+          "Accumulation de plaque et inflammation gingivale",
+          "Détérioration de l'espace biologique par intrusion mécanique",
+          "Réduction de la résistance de la prothèse au niveau cervical",
+          "Erosion accrue des tissus dentaires adjacents"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Si le profil d’émergence est trop plat, on a un risque de sous-contour et d’absence de bombé → problème esthétique. On aura aussi de grandes embrasures (= partie qui se trouve sous le point de contact), il y a alors un grand risque de bourrage alimentaire.\nB : Si le profil d’émergence est trop important"
+      },
+      {
+        questionText: "La limite cervicale sous forme d'épaulement droit à angle Interne arrondi est souvent préférée en prothèse fixée. Pourquoi? :",
+        options: [
+          "Elle permet une conservation maximale des tissus dentaires",
+          "Elle offre une lisibilité optimale au laboratoire pour une meilleure adaptation",
+          "Elle minimise les risques d'inflammation gingivale en réduisant le surplomb",
+          "Elle facilite l'élimination complète du ciment résiduel",
+          "Elle est la seule forme compatible avec les restaurations métalliques"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "« L’épaulement est un large méplat formant une limite nette, ménage suffisamment de place pour le matériau prothétique"
+      },
+      {
+        questionText: "Quels sont les intérêts de l'épaulement en prothèse conjointe?:",
+        options: [
+          "Il assure une rétention mécanique de la restauration.",
+          "Il fournit une zone de transition entre la surface de la dent et la prothèse.",
+          "Il est particulièrement utile pour les restaurations en ceramo-ceramique.",
+          "Il facilite l'adaptation de la couronne sur la dent préparée."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Utilisé comme limite cervicale pour couronne céramo-céramique ; couronne à incrustation vestibulaire en céramique, couronne métallo-céramique"
+      },
+      {
+        questionText: "En prothèse fixée, les préparations intra-sulculaires: (1- Sont les plus délicates à réaliser 2- Facilitent la prise d'empreinte et le scellement de la couronne prothétique 3- Augmentent la rétention des préparations périphériques 4- Sont des préparations inesthétiques 5- Sont des préparations biologiques)",
+        options: [
+          "(1,2,3)",
+          "(2,3,4)",
+          "(1,3)",
+          "(3,4)",
+          "(2,4)"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "2: Faux. Cette préparation présente des difficultés liées à la visibilité de la limite et au polissage du joint de collage.\n4: Faux. au contraire elles sont indiquées pour des raisons esthétiques, notamment en zone antérieure.\n5 : Ils présentent un risque de compromettre l’attache gingivale."
+      },
+      {
+        questionText: "En prothèse fixe, une préparation cervicale périphérique de type épaulement :",
+        options: [
+          "Est plus conservatrice qu'une préparation cervicale type chanfrein",
+          "Impose en complément la réalisation d'un angle interne arrondi",
+          "Est indiquée pour les couronnes céramo-céramiques",
+          "Est indiquée pour les couronnes métalliques"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "ménage Suffisamment de place pour le matériau prothétique  cependant très mutilante  \nUtilisé comme limite cervicale pour couronne céramo-céramique ; couronne à incrustation vestibulaire en céramique, couronne métallo-céramique \nL’épaulement possède trois  variantes :  \nEpaulement à angle obtus : 135º ;Epaulement à angle droit : 90º ;Epaulement à angle interne arrondie"
+      },
+      {
+        questionText: "En prothèse fixée, les préparations intra-sulculaire :",
+        options: [
+          "Sont les plus délicates à réaliser",
+          "Facilitent la prise d'empreinte et le scellement de la couronne prothétique",
+          "Augmentent la rétention des préparations périphériques",
+          "Sont des préparations inesthétiques"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Avantages: esthétique \nInconvénients: Réalisation délicate ;Risque de lésion de l’attache ;Difficulté de polissage du joint de collage"
+      },
+      {
+        questionText: "La limite cervicale est :",
+        options: [
+          "Une limite entre le parodonte profond et superficiel",
+          "Une limite entre le parodonte profond et Ia dent préparé",
+          "Une limite entre la partie préparée et la partie non préparée de la gencive",
+          "Une limite entre La partie préparé et la partie non préparée du moignon Dentaire",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "C’est l’endroit où doit s’arrête la préparation"
+      },
+      {
+        questionText: "l'inconvénient de la limite cervicale supra gingivale est :",
+        options: [
+          "Un contrôle difficile lors de la taille du moignon,",
+          "Un contrôle difficile lors de l'empreinte du moignon",
+          "Un contrôle difficile de cette limite par le prothésiste au laboratoire",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Contrôle aisé de la jonction dento-prothétique \nInconvénients:  Inesthétique"
+      },
+      {
+        questionText: "La limite cervicale détermine :",
+        options: [
+          "La qualité du joint dento-prothétique.",
+          "La pérennité de la restauration conjointe.",
+          "L'intégration physiologique, esthétique et biologique de la dent restaurée.",
+          "Toutes les réponses sont justes.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La limite cervicale d’une dent est déterminante pour le succès en prothèse fixée.\nC’est le lieu de l’intégration biologique, physiologique et esthétique d’une dent restaurée prophétiquement. \nC’est également elle qui caractérise la qualité du joint dento-prothétique déterminant à son tour l’ajustage et la pérennité de la restauration"
+      },
+      {
+        questionText: "La limite supra gingivale :",
+        options: [
+          "Est distante de Ia gencive attachée de 1 à 4 mm",
+          "Permet une protection de l'émail cervical",
+          "Est très esthétique",
+          "Est utilisée chez un sujet résistant à la carie",
+          "Lors de la prise d'empreinte éviction gingivale est obligatoire"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Inesthétique \nElle ne donne aucune protection à l’émail cervical et elle est donc assez cariogène"
+      },
+      {
+        questionText: "La limite intra sulculaire :",
+        options: [
+          "Est situé dans le sillon gingivo-dentaire en contact de l’attache épithéliale",
+          "Est réalisée sur toutes les faces d’une dent destinée à recevoir une couronne",
+          "Autorise des restaurations inesthétiques",
+          "Nécessite une déflexion gingivale lors de son enregistrement",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Elle doit être au minimum de 0.4 mm de l’attache  \nautorise des restaurations esthétique"
+      },
+      {
+        questionText: "Le congé en 1/4 de rond :",
+        options: [
+          "Est très mutilant pour la dent",
+          "A une forme courbe convexe",
+          "Peut-Être biseaute ou adjoint à un épaulement",
+          "Est réalisée à l'aide d’une fraise à bout plat",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+  {
+    title: "La Couronne Coulée",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "Los de la pose d'une couronne métallique coulée, quelle méthode est utilisée pour vérifier le bon contact proximal?:",
+        options: [
+          "L'observation visuelle directe",
+          "L'utilisation d'un papier à articule",
+          "L'utilisation d'un fil dentaire",
+          "Le test de percussion",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Vérification des points de contact grâce au fil"
+      },
+      {
+        questionText: "quel type de métal est utilisé dans l'élaboration des couronnes coulées pour sa résistance et sa biocompatibilité :",
+        options: [
+          "Or pur",
+          "Argent",
+          "Acier inoxydable",
+          "Cobalt-chrome",
+          "Nickel-titane"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "« On distingue généralement 2 catégories d’alliages dentaires : précieux et non précieux.\n•\tLes alliages non précieux\n– Les alliages cobalt-chrome : très utilisés pour réaliser les châssis de prothèse partielle amovible et en prothèse fixée.\n– Les alliages à base de titane : allient biocompatibilité à de bonnes propriétés physiques et mécaniques. »"
+      },
+      {
+        questionText: "Quel est l'impact d'une mauvaise préparation de la dent (réduction insuffisante ou inégale) sur la couronne coulée ? :",
+        options: [
+          "Elle entraîne une couronne mal ajustée qui peut provoquer des douleurs et des complications",
+          "Elle améliore la stabilité de la couronne, car plus de dent naturelle reste intacte",
+          "Elle augmente la résistance de la couronne aux fractures",
+          "Elle facilite l'adaptation de la couronne sans nécessiter de retouches supplémentaires",
+          "Elle permet de réduire la durée de la procédure de fabrication de la couronne"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "« La réduction dentaire a deux objectifs majeurs :\n– ménager un espace suffisant à la couronne prothétique afin d’éviter tout sur-contour ou surocclusion.\n– obtenir une morphologie et des formes de contour présentant un angle de dépouille.\n - La préparation doit être régulière, homothétique et respecter l'orientation des parois axiales, la situation des sillons et l'inclinaison des pans cuspidiens.\nLes deux notions essentielles […] sont la quantité de tissu dentaire à soustraire et la dépouille à respecter. »"
+      },
+      {
+        questionText: "Quels sont les principes de taille des dents à considérer lors de la préparation pour une couronne coulée ?:",
+        options: [
+          "Minimiser la réduction de la structure dentaire saine.",
+          "Éviter les parois trop minces qui pourraient fragiliser les piliers.",
+          "Réaliser une préparation à congé",
+          "Maintenir une hauteur de préparation suffisante pour garantir la rétention de la couronne.",
+          "Ignorer la considération des parois dentaires car la couronne renforce la dent."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La préparation doit être régulière, homothétique et respecter l'orientation des parois axiales."
+      },
+      {
+        questionText: "Pourquoi est-il crucial de vérifier l'occlusion lors de la pose clinique d'une couronne coulée en métal?:",
+        options: [
+          "Pour éviter les contraintes excessives sur la dent préparée et sur les structures environnantes.",
+          "Pour minimiser le risque d'inconfort pour le patient pendant la mastication.",
+          "Pour maximiser la stabilité marginale de la couronne.",
+          "Pour garantir une adhérence maximale entre la couronne et la dent préparée.",
+          "L'occlusion n'a pas d'impact sur le succès clinique de la couronne."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'adhérence entre la couronne et la dent préparée dépend surtout de la technique de cimentation et de la précision de l'adaptation. Une occlusion incorrecte peut entraîner des problèmes fonctionnels, des douleurs, des dommages aux dents et aux tissus environnants, et une réduction de la longévité de la couronne."
+      },
+      {
+        questionText: "Quels sont les avantages de l'utilisation d'une couronne à incrustation vestibulaire par rapport à une couronne complète en métal?:",
+        options: [
+          "Conservation de la structure dentaire saine.",
+          "Renforcement significatif de la dent préparée.",
+          "Minimisation du risque de sensibilité post-opératoire",
+          "Meilleure esthétique due à la présence d'un matériau cosmétique sur la face vestibulaire de la couronne.",
+          "Coût moindre pour le patient."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Elle possède la solidité d’une couronne à recouvrement métallique.  Elle permet le rétablissement de l’esthétique."
+      },
+      {
+        questionText: "La couronne coulée peut être utilisée comme ancrage :",
+        options: [
+          "De bridge de grand porté",
+          "De bridge de moyenne porté intéressant le bloc incisivo-canin supérieur",
+          "Unitaire de la première prémolaire supérieure",
+          "Sur une molaire ayant une réaction péri apicale au niveau de la racine distale non traitée",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Indications : En l’absence d’exigences esthétiques ; délabrement carieux de la dent concerne toutes les faces axiales ; fonction de pilier prothétique ; Les dents cuspidées pulpées, présentant des pertes de substances ou des reconstitutions coronaires de grande étendue \nContre-indications : Lésions apicales ou péri-apicales difficiles à traiter et à stabiliser ; Lésions intra-radiculaires ; Lyse osseuse diminuant le rapport couronne clinique-racine ; Parodontolyse non stabilisée ; Une hauteur coronaire faible au sein d'une occlusion serrée."
+      },
+      {
+        questionText: "La réduction de la face occlusale d'une dent afin d'être restaurée par une couronne coulée CC:",
+        options: [
+          "Se fait par une mise à plat de toute la face occlusale",
+          "Se fait par une mise à plat de la cuspide guide uniquement",
+          "Est plus importante sur la cuspide d'appui que sur cuspide guide",
+          "Est plus importante sur la cuspide guide que sur cuspide d'appui",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "L'intégration biologique de la couronne coulée :",
+        options: [
+          "permet de respecter le parodonte marginal",
+          "Permet de respecter le parodonte profond",
+          "Ne permet pas de respecter le profil d'émergence",
+          "Toutes les réponses sont justes.",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La limite cervicale d'un moignon court destine à recevoir un ancrage type couronne coulée est :",
+        options: [
+          "Située en supra-gingivale",
+          "Située en juxta-gingivale",
+          "Située en intra-sulculaire",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La limite cervicale peut se situer à distance du parodonte marginal ou, au contraire, au contact de celui-ci.Cette situation supra-gingivale, juxta-gingivale ou intra-sulculaire est dictée par le besoin de rétention et par le volume pulpaire."
+      },
+      {
+        questionText: "Lors de la taille de la face occlusale d'un moignon destine à recevoir un ancrage type couronne coulée :",
+        options: [
+          "On réalise un chanfrein de la cuspide guide",
+          "On réalise un chanfrein de la cuspide d'appui",
+          "On aplatit toute la face occlusale",
+          "On taille beaucoup plus la cuspide guide par apport a la cuspide d'appui",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La réduction de la face occlusale est de 1 à 1,5mm (légèrement plus importante sur les cuspides d’appui que sur les cuspides guides) \nOn réalise un chanfrein sur le versant externe des cuspides d’appui"
+      },
+      {
+        questionText: "L’empreinte d'un moignon recevant une couronne coulée se fait : (1- Avec l'hydrocolloïde irréversible (alginate) 2- Avec l'hydrocolloïde réversible 3- Par la technique rebasée 4- Par la technique de double mélange 5- Toutes les réponses sont fausses)",
+        options: [
+          "(5)",
+          "(3.4)",
+          "(2,4)",
+          "(1,4)",
+          "(2,3)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "1/2  : L’alginate n’est pas adapté aux empreintes de couronnes coulées. \n« L’alginate est un matériau à empreinte peu précis, instable dans le temps, qui nécessite une coulée immédiate. »\n3: « Une empreinte rebasée consiste à corriger une première empreinte par ajout d’un matériau plus précis, comme un silicone. »La technique rebasée peut être utilisée pour améliorer une empreinte initiale, en ajoutant un matériau plus précis sur une empreinte existante.\n4: La technique de double mélange (utilisant généralement des silicones de viscosités différentes) est la méthode recommandée pour l’empreinte d’un moignon en vue d’une couronne coulée. Elle permet l’enregistrement fidèle des limites cervicales grâce à l’utilisation de deux viscosités de silicone. »"
+      },
+      {
+        questionText: "La limite cervicale d'une couronne coulée :",
+        options: [
+          "Est sous forme de congé à un niveau juxta gingival du cote vestibulaire du coté lingual et au niveau des faces proximales",
+          "Le congé sera périphérique d’une largeur comprise entre 0.4 et 0.6 mm",
+          "Est sous forme d'épaulement à un niveau juxta gingival du cote vestibulaire, du coté lingual et au niveau des faces proximales",
+          "L'épaulement sera périphérique d'une largeur comprise entre 0.4 et 0.6mm",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La réduction des faces vestibulaires et linguale lors de la préparation pour une couronne coulée :",
+        options: [
+          "A pour but de supprimer les bombes vestibulaire et linguale",
+          "La convergence de ces deux faces vers la face occlusale est de 5° a 10°",
+          "La divergence de ces deux faces vers la face occlusale est de 5° A 20°",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La réduction des faces proximales lors de la préparation pour une couronne coulée :",
+        options: [
+          "La qualité d'un moignon réside surtout dans la préparation de ses faces (rétention)",
+          "La taille consiste à supprimer les points de contact avec les dents voisines que les bombes anatomiques de ces faces",
+          "Le degré de convergence vers la face occlusale dépouille est fixée de 3° à 20° en fonction de la hauteur coronaire",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le degré de convergence vers la face occlusale dépouille est fixée de 3° à 10°"
+      }
+    ]
+  },
+  {
+    title: "La Couronne à Incrustation Vestibulaire",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "La préparation d'une dent afin d'être restaurée par une couronne à incrustation vestibulaire:",
+        options: [
+          "Se fait de la même manière sur la face vestibulaire que sur la face palatine",
+          "Se fait uniquement sur la face vestibulaire",
+          "La limite cervicale en vestibulaire est un épaulement",
+          "la limite cervicale en palatin est un congé",
+          "L'élimination tissulaire est plus importante que pour une couronne céramo-métallique"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "C : face vestibulaire\nLa limite cervicale est de type épaulement. » Elle est tracée au fur et à mesure de la réduction de la face vestibulaire\n D : Face palatine :\n« … la limite cervicale qui est un congé, ce congé s’étend sur la face proximale jusqu’à rencontrer l’épaulement vestibulaire. »"
+      },
+      {
+        questionText: "réalisation de la couronne à incrustation vestibulaire au laboratoire.",
+        options: [
+          "La conception de l'armature se fait par technique classique (technique de cire perdue)",
+          "La conception de l'armature se fait par CFAO",
+          "La stratification de la céramique se fait sans traitement de la surface du métal",
+          "La stratification de la céramique se fait après traitement chimique et mécanique de la surface du métal",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "\tTechnique classique (cire perdue)\n•\tSculpture de la chape en cire sur le modèle issu de l’empreinte.\n•\tTransformation de la cire en métal par la technique de la cire perdue.\n\tTechnique numérique (CAD/CAM / CFAO)\n•\tRéalisation à partir d’une empreinte numérique ou d’un modèle scanné.\n•\tConfection de la chape numériquement et fabrication par CFAO.\nStratification de la céramique :\n•\tPréparation de la surface métallique\no\tTraitement chimique → oxydation.\no\tTraitement mécanique → sablage, rainures de rétention.\n•\tMontage de la céramique (par couches successives)\no\tCouche opaque.\no\tCouche dentine.\no\tCouche incisal.\n•\tÉtapes finales\no\tEssayage en bouche de la couronne ou du bridge.\no\tGlaçage de la céramique pour la finition esthétique et fonctionnelle."
+      },
+      {
+        questionText: "Quelles sont les caractéristiques d'une couronne à incrustation vestibulaire bien adaptée ?",
+        options: [
+          "Absence de surplombs excessifs.",
+          "Une bonne adaptation marginale.",
+          "Un ajustement précis au niveau de la partie vestibulaire de la dent.",
+          "Une occlusion appropriée sans interférences.",
+          "Une couleur partiellement assortie à celle des dents adjacentes."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "la couleur de la couronne doit être bien assortie à celle des dents adjacentes"
+      },
+      {
+        questionText: "Le joint dento-prothétique d'une restauration prothétique céramo-métallique peut être : (1- En céramique sur la face vestibulaire de la dent et métallique sur la face palatine 2- En céramique sur la face vestibulaire et palatine de la dent 3- Métallique sur la face vestibulaire de la dent et céramique sur la face palatine 4- Métallique sur la face vestibulaire et palatine de la dent 5- Toutes les réponses sont fausses)",
+        options: [
+          "(1,2,3)",
+          "(1,3,4)",
+          "(2,3,4)",
+          "(5)",
+          "(1,2,4)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Pour les dents antérieures\nL'infrastructure métallique recouvre tout le moignon. La largeur du bandeau métallique palatin est déterminé par l'impact des dents antagonistes et qui devra se situer sur le métal soit sur la céramique, mais toujours loin de la jonction metal-céramique. de métal dans un but esthétique.\nPour les dents cuspidées\nLes contacts occlusaux doivent s'établir en général sur des surfaces métalliques.Pour les dents postéro-supérieures (prémolaires et premières molaires supérieures) la céramique pour recouvrir toutes la faces laissant un bandeau métallique cervico-palatin\n(dents découverte par le sourire).Pour les dents postéro-inférieures (prémolaireset premières molaires inférieures) la céramique\npourra recouvrir seulement la face vestibulaire et la face occlusale."
+      },
+      {
+        questionText: "La couronne a incrustation vestibulaire est indiquée pour :",
+        options: [
+          "Une dent fortement délabrée",
+          "Une dent présentant une mobilité dentaire importante",
+          "La région visible de l’arcade",
+          "Les dents antérieures uniquement",
+          "Restauration unitaire et plurale"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Indications d’une couronne à incrustation vestibulaire : pour la région visible de l’arcade ; Indiquée pour restauration  unitaire ou plurale comme ancrage de bridge ;Indiquée sur dent pulpée ou dépulpée délabrée ;Indiquée pour dent en malposition ; Indiquée lorsque l’occlusion est serrée"
+      },
+      {
+        questionText: "La couronne a incrustation vestibulaire en résine est une couronne qui :",
+        options: [
+          "Ne possède pas la solidité d’une couronne a recouvreront métallique",
+          "Possède une meilleure solidité qu'une couronne a recouvrement métallique",
+          "Ne subit pas une décoloration par infiltration de l’élément cosmétique",
+          "Présente un risque de descellement de l'élément cosmétique",
+          "Permet le rétablissement de l'esthétique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Elle possède  la solidité d’une couronne à recouvrement métallique.  \nInconvénients de la couronne à incrustation vestibulaires en résine : Absence d’adhésion du matériau cosmétique d’où le risque de descellement ; Décoloration de la résine par infiltration ; Usure de la résine sous l’influence du brossage et le crochet d’une prothèse partielle adjointe"
+      },
+      {
+        questionText: "Couronne a incrustation vestibulaire est contre indiquée :",
+        options: [
+          "Lorsque l'occlusion est serre",
+          "Pour des dents en malposition",
+          "Sur une dent dépulpée délabrée",
+          "En présence d’une lésion apicale non traitée",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Contre indication d’une couronne à incrustation vestibulaire :Dent fortement délabrée ; Mobilité dentaire importante ; Lésion apicale non traitée"
+      },
+      {
+        questionText: "La couronne a incrustation vestibulaire :",
+        options: [
+          "Est une couronne à recouvrement partiel",
+          "Fait partie des couronnes céramo-métalique",
+          "Est une couronne à recouvrement total.",
+          "Porte sur l'ensemble de ses faces un élément cosmétique"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "portant sur sa face vestibulaire un élément cosmétique : résine acrylique ou céramique d’où le nom : couronne à incrustation vestibulaire"
+      },
+      {
+        questionText: "La couronne à incrustation vestibulaire est indiquée :",
+        options: [
+          "Pour la région visible de l'arcade",
+          "Lorsque l'occlusion est serrée",
+          "Pour restauration unitaire uniquement",
+          "Toutes les réponses sont fausses",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Lors de la préparation de l'ancrage pour réaliser une CIV :",
+        options: [
+          "La face vestibulaire est taillée selon deux plans incisifs et cervicaux",
+          "La face vestibulaire est taillée selon un plan incisif",
+          "La mise de dépouille des faces proximales et obtenue avec une fraise boule diamantée",
+          "La limite cervicale au niveau de la face palatine est un épaulement",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La mise de dépouille des faces proximales est obtenue d'abord avec la fraise diamantée conique à bout plat la limite cervicale au niveau de la face palatine  est un congé"
+      },
+      {
+        questionText: "Le descellement du matériau cosmétique est du :",
+        options: [
+          "L'absence d'adhésion du matériau cosmétique",
+          "A l'absence de cohésion du matériau cosmétique",
+          "A une réduction insuffisante de la face vestibulaire.",
+          "Toutes les réponses sont fausses",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Comme dans le cas de la couronne à incrustation vestibulaires en résine"
+      },
+      {
+        questionText: "La préparation de la face vestibulaire d'une incisive centrale supérieure destinée à recevoir une CIV",
+        options: [
+          "Se fait selon deux plans un cervical, un incisif",
+          "Se fait selon un seul plan cervical",
+          "Doit éviter toute lésion pulpaire",
+          "Doit se faire de manière à avoir une épaisseur égale du matériau prothétique sur cette face",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Cette réduction se fait selon deux plans : cervical et occlusal \nLa préparation est caractérisée par une réduction importante de la face vestibulaire  (1 à 1,2mm pour la CIV en résine et elle est de 1,2mmà 1,4mm pour la CIV en céramique )"
+      },
+      {
+        questionText: "La préparation de la face palatine d'une CIV :",
+        options: [
+          "Se fait avec une fraise diamantée à bout arrondi, le chanfrein est taille d'emblée à son niveau définitif",
+          "Se fait avec une fraise diamantée à bout plat, l'épaulement est taille d'emblée à son niveau définitif",
+          "Le 1/3 cervical du moignon forme un anneau cylindrique qui constitue la principale zone de rétention de la CIV au niveau des incisives et canines",
+          "Toutes les réponses sont fausses",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+  {
+    title: "La Couronne Céramo-Métallique",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "La couronne céramo-métallique:",
+        options: [
+          "est une coiffe de recouvrement total constituée d'une chape métallique en alliage précieux uniquement",
+          "est recouverte entièrement ou en partie d'une couche cosmétique en céramique ou en ré",
+          "fait partie des couronnes dites esthétiques.",
+          "n'est jamais utilisée comme ancrage de bridge",
+          "est utilisée comme ancrage coronaire partiel"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "A : alliage précieux ou non précieux \nB : en céramique seulement ce qui justifie son nom « céramo-métallique ».\nD : elle peut être utilisée comme restauration unitaire ou comme ancrage de bridge"
+      },
+      {
+        questionText: "En prothèse fixée, la perception de la couleur est :",
+        options: [
+          "Physique: selon la qualité de perception et d'interprétation de l'œil et du cerveau.",
+          "Physique: dépendant directement de l'interaction lumière/objet observé.",
+          "Physiologique : en relation avec l'affect, l'émotion, l'interprétation culturelle et l'environnement immédiat de la couleur observée.",
+          "Physiologique: selon la qualité de perception et d'interprétation de l'oeil et du cerveau",
+          "Psychologique : en relation avec l'affect, l'émotion, l'interprétation culturelle et l'environnement immédiat de la couleur observée"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Les impératifs qui dictent la préparation d'une dent antérieure pour une couronne céramo céramique",
+        options: [
+          "La longueur de moignon compatible avec le couple rétention résistance.",
+          "La largeur de moignon compatible avec le couple rétention-résistance.",
+          "L'épaisseur suffisante du métal assurant un bon rendu esthétique.",
+          "L'épaisseur suffisante de céramique assurant un bon rendu esthétique.",
+          "L'espace palatin ou lingual nécessaire à la fonction occlusale et au guidage antérieur"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La couronne céramo-métallique :",
+        options: [
+          "Est une coiffe de recouvrement total constituée d'une chape métallique en alliage précieux uniquement",
+          "Est recouverte entièrement ou en partie d'une couche cosmétique ou en céramique ou en résine",
+          "Fait partie des couronnes dites esthétiques",
+          "Combine la dureté et la précision de la céramique ave l'esthétique du métal coulé",
+          "Est utilisée comme ancrage coronaire partiel"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Selon MUNSELL, n'importe quelle couleur se positionne dans un espace cylindrique dans lequel :",
+        options: [
+          "L'axe vertical définit la teinte (T)",
+          "Le rayon définit la luminosité (L)",
+          "Sur le pourtour se situe la saturation (S)",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'axe vertical définit la luminosité (L) \nLe rayon définit Ia saturation (S).  \nSur le pourtour se situe la teinte ( T )"
+      },
+      {
+        questionText: "La luminosité :",
+        options: [
+          "Est due essentiellement à la qualité et à la translucidité de la dentine",
+          "Est due essentiellement à la qualité et à la translucidité de l'email",
+          "Correspond à la quantité de blanc contenue dans une couleur",
+          "Correspond à la quantité de noir contenue dans une couleur"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Selon MUNSELL n'importe quelle couleur se positionne dans un espace dans lequel :",
+        options: [
+          "L'axe vertical définit la teinte (T)",
+          "Le rayon définit Ia luminosité (I.)",
+          "Sur le pourtour se situe la saturation (S).",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "A : sa face médiale est divisée en deux parties par une crête verticale  \nD : l’épiphyse proximale comprend une tête et un col \nE : la crête longitudinale dans la face médiale donne insertion au septum interosseux"
+      },
+      {
+        questionText: "La luminosité :",
+        options: [
+          "Est due essentiellement à Ia qualité et à la translucidité de la dentine.",
+          "Est due essentiellement à la qualité et la translucidité de l'email",
+          "Correspond à la quantité de blanc contenue dans une couleur",
+          "Correspond à Ia quantité de noir contenue dans une couleur"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La saturation :",
+        options: [
+          "Est liée à la quantité de pigment pur content dans une couleur",
+          "Définit l'intensité ou la concentration de la teinte.",
+          "Est due à la dentine",
+          "Dépend de la translucidité et de l'épaisseur de la couche l'email",
+          "Correspond à l'éclaircissement d'une couleur par adjonction de blanc ou à son ternissement par adjonction de noir"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La teinte :",
+        options: [
+          "Est la tonalité chromatique d'une couleur,",
+          "Est prise avec un teintier standard",
+          "Est prise avec un spectrophotomètre Shade Vision de lame X-Rite",
+          "Est prise avec un colorimètre Easyshade de Ia firme VITA",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "C/D : instruments de mesure de la couleur directement en bouche ( la teinte est une composante de la couleur )"
+      },
+      {
+        questionText: "La couronne céramo-métallique peut être : (1- à recouvrement partiel 2- à recouvrement total 3- utilisée comme restauration unitaire 4- utilisée comme ancrage de pont 5- utilisée pour corriger le plan d'occlusion)",
+        options: [
+          "(2,3,4)",
+          "(3,4,5)",
+          "(1,4)",
+          "(1,3)",
+          "(1,2,3)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La couronne céramo-métallique est toujours destiné à un recouvrement total.\n3- Utilisée comme restauration unitaire: Correcte.\n4- Utilisée comme ancrage de pont : Correcte. \n5- Utilisée pour corriger le plan d'occlusion : Correcte."
+      },
+      {
+        questionText: "La luminosité :",
+        options: [
+          "Correspond à Ia quantité de blanc contenue dans une couleur",
+          "Correspond à la quantité du de noir contenue dans une couleur",
+          "C'est la quantité de la lumière réfléchie",
+          "C'est la quantité de lumière absorbée",
+          "Est due essentiellement la qualité et la translucidité de l'email"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Pour une couronne céramo-métalique sur une incisive centrale supérieure Ia limite cervicale est :",
+        options: [
+          "Un épaulement périphérique",
+          "Un conge périphérique",
+          "Un épaulement vestibulaire relaye par un conge lingual",
+          "Un épaulement vestibulaire relaye par un congé palatin",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Un épaulement d’une largeur de 1.2 à 1.5 mm sue la face vestibulaire et franchissant les angles proximo vestibulaire jusqu’à la moitié des faces proximales puis relayé par un congé de 0.4 à 0.6mm de largeur jusqu’à la face palatine"
+      },
+      {
+        questionText: "La couronne céramo-métalique est composée :",
+        options: [
+          "D’une infrastructure en céramique renforcée a I ‘alumine et une supra-structure en céramique stratifie",
+          "D'une infrastructure métallique une supra-structure en céramique",
+          "D'une infrastructure céramique et une supra-structure en métal",
+          "D'une supra-structure en céramique collée à une infrastructure métallique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Infrastructure = la chape métallique \nsuprastructure =  la couche céramique"
+      }
+    ]
+  },
+  {
+    title: "La Couronne Jacket",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "L'élaboration de la couronne jacket en résine nécessite :",
+        options: [
+          "la sculpture d'une maquette en cire sur une matrice en platine",
+          "une cuisson dans l'eau en augmentant la température progressivement",
+          "une cuisson dans une cocotte, sans pression de vapeur",
+          "une poudre de résine choisie en fonction de la teinte de a dent",
+          "une résine bourrée dans un moufle puis pressée"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Au laboratoire, la matrice en platine de la couronne Jacket:",
+        options: [
+          "est destinée à supporter la porcelaine au cours de la cuisson.",
+          "doit être laminée en feuilles minces de 2/100 mm.",
+          "ne doit pas s'oxyder pendant la cuisson",
+          "ne doit pas contracter de liaison avec la céramique.",
+          "doit voir un point de fusion inférieur à celui de la céramique."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "B :Réalisée avec un métal laminé en feuille  minces de 2/10 mm \nE : doit voir un point de fusion inférieur à celui de la céramique"
+      },
+      {
+        questionText: "La couronne Jacket est indiquée :",
+        options: [
+          "Lorsque les impératifs esthétiques ne priment pas",
+          "Sur dents fracturées sans mise à nu de la pulpe.",
+          "Sur dents fracturées avec mise à nu de la pulpe.",
+          "Chez les patients âgés, dans le cas de couronne Jacket en porcelaine.",
+          "Chez les patients jeunes, dans le cas de couronne Jacket en résine."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Indications : \n• Dents inesthétiques antérieures, pulpées ou dépulpées, en particulier les incisives supérieures lorsqu'elles sont atteintes de carie de collet ou carie proximale apparente.  \n• Dents atteintes de dystrophie, mylolyse, dysplasie, fracture d'angle, fracture coronaire sans mise à nu de la pulpe.  \n• Dents en malposition. Dents atteintes d'anomalie de teinte après mortification pulpaire.  \n• Dents atteintes d'anomalie de forme ou du volume."
+      },
+      {
+        questionText: "La matrice de platine destinée à supporter la porcelaine au cours de Ia cuisson d'une couronne Jacket :",
+        options: [
+          "Est réaliser avec un métal (amine en feuilles minces de 20/10mm",
+          "Ne doit pas s'oxyder pendant la cuisson",
+          "Doit contracter de liaison avec la céramique",
+          "Doit être suffisamment rigide",
+          "Doit avoir un point de fusion supérieur a celui de la céramique"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La couronne Jacket:",
+        options: [
+          "Résine ou en céramique",
+          "Sa limite cervicale est un épaulement vestibulaire relié d'un congé palatin ou lingual",
+          "Peut être utilisée comme ancrage partiel de bridge",
+          "Peut être élaborée au laboratoire par la technique de mise en moufle quand elle est réalisée en céramique",
+          "Peut-être usinée par CFAO"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La couronne jacket est une couronne de re- couvrement total de la partie couronaire\nd'une dent, réalisée en céramique ou en résine et donnant à la dent défectueuse un aspect naturel. C'est une restauration unitaire qui intéresse souvent les dents antérieures et se pratique aussi bien sur dents pulpées et dépulpées, elle est appelée aussi \"Jacket Crown\".\nA: La couronne jacket peut être en:\n• En résine.\n. En thermo-résine.\n• En céramique feldspathique stratifiée.\n• En céramique pressée.\n• En céramique usinée.\nB :Création de l'épaulement palatin\nCet épaulement, large de 0.8 à 1mm est étendu autour des angles linguo-proximaux l'unissant\navec les autres épaulements ainsi le 1/3 cervical de la préparation forme un anneau cylindrique et constitue la principale zone de rétention de la future couronne jacket.\nC: INDICATIONS ET CONTRE-INDICATIONS\n1. IndicationsDents inesthétiques antérieures, pulpées ou dépulpées, en particulier les incisivessupérieures lorsqu'elles sont atteintes de carie de collet ou carie proximale apparente.Dents atteintes de dystrophie, mylolyse, dysplasie, fracture d'angle, fracture coronaire sans mise à nu de la pulpe.Dents en malposition.Dents atteintes d'anomalie de teinte après mortification pulpaire.Dents atteintes d'anomalie de forme ou du volume.\n2. Contre-indicationsCouronne clinique courte.Dents trop minces dans le sens vestibulo-lingual.Articulé inversé.Articulé en bout à bout.Occlusion serrée. La couronne jacket ne peut servir, en aucun cas, de pilier de bridge.\nD: Peut être élaborée au laboratoire par la technique de mise en moufle quand elle est réalisée en résine"
+      },
+      {
+        questionText: "Couronne Jacket :",
+        options: [
+          "Est une coiffe de recouvrement total constituée d’une matrice et d'une supra structure en résine ou en céramique",
+          "Sa limite cervicale est un épaulement vestibulaire relie d'un conge palatin ou lingual",
+          "Peut être utilisé comme ancrage partiel de bridge",
+          "Peut être élaboré au laboratoire par la technique de mise en moufle quand elle est réalisée en céramique",
+          "Peut-être usinée par CFAO"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Est une coiffe de recouvrement total réalisée en céramique ou en résine  \nEpaulement bien situé et continu \nc : c’est une contre indication de la couronne jacket \nPeut être élaboré au laboratoire par la technique de mise en moufle quand elle est réalisée en résine"
+      },
+      {
+        questionText: "La construction d'une couronne jacket au laboratoire nécessite :",
+        options: [
+          "La confection d’une matrice métallique pour supporter la porcelaine",
+          "La confection d'une chape métallique pour supporter la porcelaine",
+          "La confection d’une chape céramique pour supporter la porcelaine",
+          "La confection d'une matrice résineuse pour supporter la porcelaine",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Pour une couronne jacket sur une incisive centrale supérieure Ia limite cervicale est :",
+        options: [
+          "Un épaulement périphérique",
+          "Un conge périphérique",
+          "Un épaulement vestibulaire relaye par un conge lingual",
+          "Un épaulement vestibulaire relaye par un conge palatin",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La couronne jacket :",
+        options: [
+          "Est une couronne de recouvrement total",
+          "Est une couronne de recouvrement partiel",
+          "Peut-être realise en céramique",
+          "Peut-être realise en résine",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+  {
+    title: "Les Ancrages Corono-Radiculaires",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "La fragilisation de la résistance mécanique d'une dent est causée par :",
+        options: [
+          "une préparation canalaire en vue de recevoir un tenon radiculaire.",
+          "une préparation dentaire en vue de la dévitaliser",
+          "une atteinte carieuse importante.",
+          "une occlusion serrée.",
+          "l'absence de guidage antérieur."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "A : La préparation canalaire affaiblit la structure dentaire en retirant de la dentine pour insérer un tenon . \nB : La dévitalisation entraîne la perte de la vitalité et de la résistance naturelle de la dent, augmentant ainsi sa fragilité \nC : Les caries importantes détruisent une grande partie de la structure dentaire, compromettant ainsi sa résistance"
+      },
+      {
+        questionText: "La Richmond:",
+        options: [
+          "est une construction prothétique entièrement coulée qui recevra un élément à recouvrement total.",
+          "présente la difficulté de la prise d'empreinte pour enregistrer l'anatomie canalaire et la limite cervicale de la préparation.",
+          "indiquée pour des dents anatomiquement courtes ou abrasées.",
+          "indiquée en cas de mobilité importante.",
+          "Indiquée en cas de fracture radiculaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "A : La couronne Richmond est décrite comme une restauration à un seul étage, intégrant à la fois la partie coronaire et radiculaire dans une seule pièce . \nD /E : La mobilité importante est une contre-indication pour la couronne Richmond ."
+      },
+      {
+        questionText: "L'instrumentation nécessaire pour Ia préparation canalaire d'un ancrage radiculaire type inlay core contient :",
+        options: [
+          "Des forets de Gates et/ou Largo",
+          "Une fraise boule long col",
+          "Une fraise fissure tres longue",
+          "Des inserts endodontiques"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "l’utilisation d’inserts ultra sonores et d’aides visuelles (loupes, microscope) se révèle précieuse"
+      },
+      {
+        questionText: "Les reconstitutions corono-radiculaires coulées en alliages presentent un module d'elasticite :",
+        options: [
+          "Qui differe selon l'alliage utilise",
+          "Plus eleve que celui de la dentine",
+          "Plus faible que celui de la dentine",
+          "Identique a celui de l'email.",
+          "Plus eleve que ceiui de l'email"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Excellente résistance à la flexion, cisaillement et à la compression, même sur des épaisseurs faibles, mais module d’élasticité élevé (absorbent peu les contraintes, sollicitent les racines,risques de fracture). \nSi on met une force sur la portion de métal ça se déforme moins que la dent."
+      },
+      {
+        questionText: "Comme ancrage corono-radiculaire d'un bridge :",
+        options: [
+          "II est préférable d'utiliser un inlay-core avec une couronne de recouvrement total",
+          "Est préférable d'utiliser un inlay-core avec une couronne de recouvrement partiel",
+          "II n’est pas préférable d'utiliser une couronne Richmond",
+          "II est préférable d'utiliser une couronne Richmond",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "On préfèrera la plupart du temps des restaurations corono-radiculaires en deux pièces (inlay- core+couronne) aux restaurations corono-radiculaires enune pièce. \nSauf quand l’espace occlusal est trop réduit, ne permettant pas la réalisation d’un faux-moignon trop petit et donc n’offrant pas suffisamment de surface de collage pour la couronne"
+      },
+      {
+        questionText: "Une couronne Richmond :",
+        options: [
+          "Peut-être aussi dénommée « couronne a tenon »",
+          "Est une reconstitution corono-radiculaire",
+          "Est indiquée en d'occlusion serrée",
+          "Est une restauration à deux étages"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "\nC’est une couronne dont laquelle la reconstitution corono radiculaire et la restauration prothétique sous jacente ne font qu’un = restauration à un étage."
+      },
+      {
+        questionText: "Un inlay core ne peut être réalise et scène que sur une dent traité et stabilisée endodontiquement car :",
+        options: [
+          "La résection apicale ne peut pas être pratiquée chez tous les malades",
+          "Son descellement est toujours accompagne de fracture radiculaire",
+          "Son descellement est extrêmement difficile et fortement déconseille",
+          "La reprise de traitement endodontique est contre-indiquée"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La résine calcinable utilisée dans Ia technique d'empreinte directe d'une préparation canalaire pour un Inlay core :",
+        options: [
+          "Peut-être sujette a des variations dimensionnelles",
+          "Se présente sous forme de deux pates, base et catalyseur",
+          "Nécessite l'utilisation d'un tuteur calcinable",
+          "Nécessite la coulée du modèle de travail au laboratoire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "reconstitution corono-radiculaire ainsi obtenue en matériau calcinable est prête à être coulée au laboratoire. Il est préférable de la conserver en milieu humide jusque là, pour éviter toute variation dimensionnelle. \nNécessite l'utilisation d'un tenon calnicable"
+      },
+      {
+        questionText: "L'indication de L'Inlay core se pose :",
+        options: [
+          "Quand les parois résiduelles de la dent sont insuffisantes pour envisager une restauration foulée",
+          "Quand les parois résiduelles de la dent sont suffisantes pour envisager une restauration foulée",
+          "Quand le nombre des parois présentes de la dent est insuffisant pour envisager une restauration foulé",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Indications : \n- Restauration d’une dent dont le délabrement est étendu, ayant une limite juxta ou légèrement sous gingivale et/ou dont les parois résiduelles sont insuffisantes pour envisager une restauration foulée. \n- Restauration d’une dent dont l’anatomie canalaire est incompatible avec un tenon préfabriqué. \n- Restauration d’une dent dont le volume est réduit."
+      },
+      {
+        questionText: "Le rôle du cone de raccordement entre le tenon et Ia supra structure coronaire de l'inlay core est :",
+        options: [
+          "De résister aux forces de rotation",
+          "De renforcer la résistance mécanique",
+          "De minimiser les frottements",
+          "De renforcer la stabilisation"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "En créant le cône de raccordement entre tenon et suprastructure coronaire, ceci dans un double but : renforcer la résistance mécanique de cette jonction soumise aux forces de cisaillement et augmenter la résistance aux forces rotationnelles"
+      },
+      {
+        questionText: "La forme de Ia préparation canalaire pour L'inlay core :",
+        options: [
+          "Doit être cylindrique",
+          "Doit être conique",
+          "Doit être tronconique",
+          "Toutes les réponses sont fausses",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Forme cylindro-conique"
+      },
+      {
+        questionText: "Les reconstitutions corono-radiculaires avec un tenon en fibre de verre sont indiquées quand la dent pilier.",
+        options: [
+          "Présente au minimum une paroi.",
+          "Présente au minimum deux parois.",
+          "Présente au maximum trois parois.",
+          "Ne présente aucune paroi.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "-Persistance de 3 parois résiduelles. \n-Épaisseur minimum 1 mm."
+      },
+      {
+        questionText: "Ancrage coron radiculaire d'un bridge :",
+        options: [
+          "II est préférable d'utiliser un inlay-core avec une couronne de recouvrement total.",
+          "II est préférable d'utiliser un inlay-core avec une couronne de recouvrement partiel.",
+          "II n’est pas préférable d'utiliser une couronne Richmond.",
+          "Il est préférable d'utiliser une couronne Richmond",
+          "Toute les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+  {
+    title: "Les Ancrages Partiels",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "Quelle situation contre-indique absolument un inlay/onlay en alliage?",
+        options: [
+          "Parafonction",
+          "Volume pulpaire important",
+          "Hygiène buccale satisfaisante.",
+          "Restauration d une classe i sur molaire vivante",
+          "Utilisation comme ancrage pour un bridge de courte portée"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Contre-indications\n•Tendance marquée à la poly-carie\n•Hygiène défectueuse\n•Volume pulpaire important\n•Faible hauteur coronaire\n•Exigence esthétique du patient"
+      },
+      {
+        questionText: "Les caractéristiques d'une préparation pour un onlay MOD sont:",
+        options: [
+          "Un mur de recouvrement qui renforce la cuspide d'appui",
+          "La limite cervicale de l'épaulement est à mi-hauteur du plancher",
+          "Le biseau proximal est concave.",
+          "La cavité principale doit être plus large que le tiers occlusal",
+          "Le chanfrein conserve une épaisseur métallique constante"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "•Cavité principale et isthme :\n-La topographie de la cavité à ce niveau est comparable à celle d’un inlay. → La largeur de la cavité dans le sens vestibulo- linguale ne doit pas dépasser le tiers de la largeur de la face occlusale"
+      },
+      {
+        questionText: "Quelle caractéristique est essentielle pour la préparation d'un inlay de classe :",
+        options: [
+          "Parois vestibulaires et linguales convergentes vers le plancher.",
+          "Angles arrondis pour éviter les fractures",
+          "Plancher cervical plat et perpendiculaire à l'axe d'insertion.",
+          "Recouvrement systématique des cuspides",
+          "Permet de renforcer la couronne d'une dent délabrée."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "B : -Angles vifs et nets de façon à assurer la rétention et la stabilisation de la pièce coulée.\nD : La largeur de la cavité dans le sens vestibulo- linguale ne doit pas dépasser le tiers de la largeur de la face occlusale sinon le recouvrement cuspidien s’impose\nE : L’inlay métallique permet simplement le remplacement de la substance dentaire\nperdue.\nIl n’apporte pas de renforcement à la dent"
+      },
+      {
+        questionText: "L'overlay peut être utilisé en prothèse conjointe comme un ancrage:",
+        options: [
+          "coronaire périphérique",
+          "corono-radiculaire partiel.",
+          "corono-radiculaire périphérique.",
+          "coronaire partiel.",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Couronnes à recouvrement partiel\nCeux sont des onlays ou des overlays qui ont au moins une limite cervicale proche de la gencive marginale, pour des raisons fonctionnelles ou esthétiques"
+      },
+      {
+        questionText: "En prothèse conjointe, l'overlay peut être utilisé comme ancrage en cas de :",
+        options: [
+          "Bridge de faible étendue.",
+          "Bridge de grande étendue.",
+          "Volume pulpaire compatible avec les préparations.",
+          "Patient à polycaries"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "• les ancrages partiels peuvent être utilisé comme :\n-Ancrage de bridge de courte portée (1 dent)\n-Attelle pour les bridges de contention\n-Reconstitution occlusale globale\nD : Contre-indications"
+      },
+      {
+        questionText: "Un onlay MOD:",
+        options: [
+          "reconstitue les parois proximales et occlusales sans recouvrir les cuspides",
+          "reconstitue les parois proximales et occlusales avec recouvrement cuspidien",
+          "permet de remplacer les tissus dentaires",
+          "permet de renforcer la structure dentaire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Onlay MOD : C’est l’extension d’in inlay mésio-occluso distal avec un recouvrement cuspidie pour renforcer les cuspides fragilisées par une cavité trop profonde ou trop large."
+      },
+      {
+        questionText: "La couronne 3/4 sur dent maxillaire :",
+        options: [
+          "permet la conservation de la face proximale des incisives",
+          "permet la conservation de la face vestibulaire des prémolaires",
+          "ne doit jamais couvrir la cuspide vestibulaire",
+          "permet la conservation de la face occlusale d'une molaire",
+          "toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "la préparation pour cette couronne intéresse les 3⁄4 de la dent concernée et seulement le 1⁄4 vestibulaire qui reste intact."
+      },
+      {
+        questionText: "Un onlay en alliage :",
+        options: [
+          "Reconstitue exclusivement la face occlusale des molaires",
+          "Reconstitue la face occlusale sans recouvrement cuspidien",
+          "Peut recouvrir toutes les cuspides dune molaire maxillaire",
+          "Recouvre au moins une cuspide",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Lorsque la pièce reconstitue une pointe cuspidienne, on parle d’onlay."
+      },
+      {
+        questionText: "Les ancrages partiels en alliage :",
+        options: [
+          "Sont des restaurations coronaires directes",
+          "Sont des restaurations corono-radiculaires indirectes",
+          "Sont fabriques à partir d'un module en platre",
+          "Peuvent reconstituer la face occlusale",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "sont des restaurations coronaires indirecte,(fabriqués au laboratoire à partir d’un modèle en plâtre puis scellé en bouche) reconstituant partiellement la partie coronaire d'une dent \nd : oui c’est l’Onlay"
+      },
+      {
+        questionText: "La préparation d'une dent pour recevoir un Inlay métallique de classe I se caractérise par :",
+        options: [
+          "Des parois vestibulaires et linguales légèrement convergentes 6° à 8° vers Ia face occlusale",
+          "Des parois vestibulaires et linguales légèrement divergentes 6° à 8° vers le fond de la cavité",
+          "Des parois proximales non parallèles entre elles",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Paroi vestibulaire et linguale légèrement divergentes (6° à 8°) vers la face occlusale de façon à assurer la dépouille."
+      },
+      {
+        questionText: "L'overlay est :",
+        options: [
+          "Une couronne 7/8",
+          "Une couronne 3/4",
+          "Une endocouronne",
+          "Toutes les réponses sont Justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L’overlay est une couronne de recouvrement partielle il peut etre :  \n•La couronne 3⁄4 : la préparation pour cette couronne intéresse les 3⁄4 de la dent \n•La couronne 3⁄4 inversée \n•La couronne 7/8"
+      },
+      {
+        questionText: "Apres élimination du tissu carieux, on se retrouve avec une cavité MOD sur la 46, les éventualités thérapeutiques sont :",
+        options: [
+          "Une couronne coulée",
+          "Un inlay Métallique",
+          "Un inlay core + une couronne coulée",
+          "Un onlay métallique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "C’est l’extension d’in inlay mésio-occluso distal avec un recouvrement cuspidien pour renforcer les cuspides fragilisées par une cavité trop profonde ou trop large"
+      },
+      {
+        questionText: "L'onlay type hémi couronne proximale est :",
+        options: [
+          "Une préparation qui intéresse les ¾ de la dent et dont la face distale qui reste intacte",
+          "Une préparation qui intéresse les ¾ de la dent et dont la face distale qui reste préparée",
+          "Une préparation qui intéresse les ¾ de la dent et dont la face distale est absente",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L’hémi-couronne proximale : C’est une variante de la couronne 3⁄4 qui aurait effectué une rotation de 90°. Mais c’est la face distale et non les faces vestibulaires et linguales qui restant intact."
+      },
+      {
+        questionText: "L'onlay type couronne 7/8 est une préparation :",
+        options: [
+          "Qui intéresse les ¾ de la dent et dont toute la face vestibulaire est intacte",
+          "Qui intéresse les ¾ de la dent et dont la face Linguale est intacte",
+          "Est intéresse les ¾ de la dent et dont le bord disto-vestibulaire ne s'étend pas jusqu'au milieu de la face vestibulaire",
+          "Toutes les réponses sont justes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "•La couronne 7/8 : c’est une couronne 3⁄4 dont le bord disto-vestibulaire s’étend jusqu'à la ligne mésiale au milieu de la face vestibulaire."
+      },
+      {
+        questionText: "Les onlays :",
+        options: [
+          "Sont indiqués en cas de fracture fermée d'une",
+          "Sont indiqués comme attachements en prothèse partielle",
+          "Sont contre indiques en cas de mauvaise hygiène",
+          "Sont contre indiques chez bruxomane"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Contres indications : \nHygiène buccale insuffisante. -Les habitudes para fonctionnelles (bruxisme) et l’usure excessive de la denture- Espace occlusale insuffisant. -Fragilité des parois résiduelles. -Cario susceptibilité élevée"
+      },
+      {
+        questionText: "Les onlays :",
+        options: [
+          "Sont indiqués en cas de hauteur coronaire courte",
+          "Sont utilisés comme pilier de bridge de longue porté",
+          "Sont indiqués en cas d'hygiène insuffisante",
+          "Sont des constructions a très grande résistances",
+          "Toute les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L’onlay peut être utilisé comme pilier de bridge de courte portée. \nMoins rétentifs par rapport aux ancrages périphériques."
+      },
+      {
+        questionText: "L'onlay d'ancrage :",
+        options: [
+          "Est utilisé en cas de bridge avec appui coronaire partiel",
+          "Est utilisé comme ancrage total d'un bridge",
+          "Est un ancrage pour bridge de courte portée",
+          "Est utilisé en cas de faible surcharge occlusale",
+          "Toute les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+  {
+    title: "Choix et Indications des Ancrages",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "Les facteurs intervenants dans le choix des ancrages sont:",
+        options: [
+          "L'esthétique",
+          "L'état de la dent pilier.",
+          "L'économie tissulaire.",
+          "Le parallélisme des dents piliers et la rétention.",
+          "L'occlusion."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Esthétique :\n•\tSi la dent pilier présente une perte de substance → ancrage coronaire périphérique.\n•\tSi le pilier est indemne → ancrage coronaire partiel (ailette collée sur la face palatine).\n  État de la dent pilier :\n•\tDent pilier fragile ou présentant une perte de substance importante → ancrage coronaire périphérique.\nÉconomie tissulaire :\n•\tAncrage coronaire partiel préférable pour ne pas fragiliser la dent pilier.\n•\tL’économie tissulaire ne doit pas empêcher le choix d’un ancrage coronaire périphérique si l’indication est bien posée.\nParallélisme et rétention :\n•\tEn absence de parallélisme entre les dents piliers → ancrage coronaire partiel non choisi.\n•\tAncrage coronaire périphérique nécessite la dévitalisation des piliers pour obtenir l’axe d’insertion commun et une rétention satisfaisante."
+      },
+      {
+        questionText: "L'ancrage d'un bridge de longue portée sur dents pulpées peut être :",
+        options: [
+          "une couronne coulée (CC).",
+          "une couronne à incrustation vestibulaire (CIV).",
+          "une couronne céramo-céramique (CCM).",
+          "une couronne Jacket (CJ)",
+          "un inlay"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "E : la travée de bridge est très courte"
+      },
+      {
+        questionText: "L'ancrage:",
+        options: [
+          "représente la partie du pont qui est scellée sur une dent pilier",
+          "représente la partie de la dent préparée pour recevoir un élément prothétique.",
+          "a comme premier rôle d'unir le corps du bridge aux éléments intermédiaires.",
+          "a comme premier rôle d'unir le corps du bridge aux piliers.",
+          "doit restaurer la forme, la fonction, et l'esthétique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L’ancrage: C’est la partie de la prothèse conjointe qui recouvre la dent support ou pilier, cette construction ancrée sur la préparation  dentaire permet la fixation de la restauration unitaire ou bien utilise comme moyen d’ancrage D’un Bridge."
+      },
+      {
+        questionText: "En prothèse conjointe, un ancrage :",
+        options: [
+          "Représente to partie du pont qui est scellée sur une dent adjacente",
+          "Doit restaurer uniquement la forme",
+          "Doit restaurer uniquement la fonction",
+          "Doit restaurer uniquement l’esthétique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Représente la partie du pont qui est scellée sur une dent support \nIl doit restaurer la forme, la fonction, et l’esthétique."
+      },
+      {
+        questionText: "En cas de faible hauteur coronaire sur une molaire I'ancrage le mieux indique est :",
+        options: [
+          "Une couronne céramo-ceramique monobloc",
+          "Une couronne céramo-ceramique stratifiee",
+          "Une couronne métallique coulée",
+          "Une couronne céramo-metallique.",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La taille pour la mise en place d'un ancrage :",
+        options: [
+          "Doit être suffisante pour assurer à la structure métallique une épaisseur garantissant sa résistance",
+          "Doit être économe pour éviter de fragiliser la dent piller",
+          "Doit protéger la dent contre les chocs thermiques",
+          "Doit protéger la dent contre la carie",
+          "Doit protéger la dent contre la fracture"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L’ancrage idéal est celui qui nécessite le moins de mutilation dentaire. Il doit protéger la dent contre les chocs thermiques, la carie et la fracture."
+      },
+      {
+        questionText: "Sur dents pulpées :",
+        options: [
+          "Si la travée de bridge est longue il conviendra d'utiliser les ancrages recouvrement partiel : couronne coulée, CIV ou CCM.",
+          "Si la travée de bridge n’est pas trop longue et que les dents supports sont assez volumineuses, il conviendra d’utiliser des inlays.",
+          "Si to travée de bridge est très courte et que les dents piliers sont très volumineuses il conviendra d'utiliser un onlay.",
+          "Toutes les réponses sont justes.",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Si la travée de bridge est longue les ancrages à recouvrement total: Couronne coulée, CIV ou CCM.  \nSi la travée de bridge n’est pas trop longue il conviendra d’utiliser des onlays. \nSi la travée de bridge est très courte on utilisera un inlay qui est un ancrage intra- coronaire."
+      },
+      {
+        questionText: "En prothèse conjointe, un ancrage :",
+        options: [
+          "Représente la partie du pont qui est scellée sur une dent adjacente",
+          "Doit restaurer uniquement la forme.",
+          "Doit restaurer uniquement la fonction.",
+          "Doit restaurer uniquement l'esthétiques",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      }
+    ]
+  },
+  {
+    title: "Classifications des ponts",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "Le bridge dento implants porté",
+        options: [
+          "peut provoquer une perte osseuse péri implantaire",
+          "peut provoquer une fracture des composants implantaires",
+          "peut causer une égression de la dent naturelle",
+          "est mieux toléré que le bridge implanto porté",
+          "n’est indiqué que lorsque la dent naturelle est intermédiaire entre 2 implants ……."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Le bridge colle",
+        options: [
+          "est indiqué en cas d'edentement de petite étendus",
+          "présente une longévité incertaine",
+          "a le statut d'une prothèse provisoire à long terme",
+          "est très mutant pour les dents piliers",
+          "est un bridge dento-implanto porté"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "ROY a divisé l’arcade en cinq plans",
+        options: [
+          "Un plan incisif qui est soumis aux forces latérales",
+          "Un plan canin qui est soumis aux forces antéro-postérieurs",
+          "Un plan prémolo-molaire qui est soumis aux forces horizontales",
+          "La théorie de ROV est intéressante pour les bridges de contention",
+          "Selon ROY les dents piliers doivent être choisies dans un seul plan"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Loi de ROY\nIl a divisé l’arcade dentaire en 5 plans :\n1. Un plan incisif qui est soumis aux forces post-antérieures.\n2. Un plan pour chaque canine. Ce plan est soumis aux forces latérales.\n3. Un plan pour prémolo-molaire. Qui est soumis aux forces horizontales.\nLa théorie de ROY est intéressante pour les bridges de contention ; les dents piliers doivent être choisies dans plusieurs plans pour assurer l’immobilisation de bridge.\n- Si les 2 dents à remplacer sont situées dans deux plans différents de ROY, il est nécessaire de prendre 4 piliers à raison de 2 pour chaque côté de l’édentement."
+      },
+      {
+        questionText: "Les bridges inamovibles:",
+        options: [
+          "sont articules et démontables en partie par le praticien.",
+          "utilisent la force de friction entre les ancrages scellés et la travée.",
+          "Sont composés d'éléments scellés sur les dents et supportent des travées qui reproduisent les dents absentes.",
+          "présente la nécessité de l'enlever périodiquement pour vérifier la muqueuse sous-jacente.",
+          "nécessitent une mutilation tissulaire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "A/D : Bridge amovo-inamovible  \nB : Bridge amovible"
+      },
+      {
+        questionText: "Le bridge de courte portée à double encastrement:",
+        options: [
+          "ne remplace qu'une dent sur l'arcade.",
+          "comporte deux piliers supports avec ancrage sur dent pulpée uniquement.",
+          "peut remplacer jusqu'à deux dents.",
+          "ne peut être que rectiligne.",
+          "ne peut être curviligne."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "B :sur dent pulpée ou dépulpée  \nD/E : il peut être  rectiligne ou curviligne \nBCP à double encastrement rectiligne"
+      },
+      {
+        questionText: "Le bridge de courte porté:",
+        options: [
+          "A besoin de deux ancrages",
+          "A besoin d'un seul ancrage",
+          "Est indiqué exclusivement à la région antérieure",
+          "Peut avoir un onlay comme moyen d'ancrage"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "l'inconvénient réside dans la mutilation de deux dents pour remplacer une seule dent. \nBcp à double encastrement rectiligne (secteurs latéraux de l'arcade dentaire) \nBCP à double encastrement curviligne (secteur antérieur)"
+      },
+      {
+        questionText: "Le bridge de moyenne porte :",
+        options: [
+          "Est indiqué pour remplacer deux dents adjacentes",
+          "Est indiqué pour remplacer deux dents non adjacentes",
+          "Est réalisable uniquement sur des piliers alignes",
+          "A besoin d'un seul ancrage",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "remplacement de deux dents absentes contigües ou non. \nencastrement rectiligne ou curviligne"
+      },
+      {
+        questionText: "Le bridge inamovible :",
+        options: [
+          "Est démontable périodiquement par le praticien pour nettoyage",
+          "Est moins confortable qu'un bridge amovible",
+          "Son hygiène est facilitée",
+          "C'est une prothèse qui assure un maximum d'économie tissulaire",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "A :  Bridge amovo-inamovible \nIls présentent comme avantages leur sensation de confort, de sécurité et de stabilité \nne sont pas totalement prophylactiques. \npar contre, ils nécessitent une mutilation tissulaire"
+      },
+      {
+        questionText: "Le bridge de moyenne porté :",
+        options: [
+          "Remplace les dents antérieures avec une seule dent pilier",
+          "Peut-être de forme rectiligne ou curviligne",
+          "Doit comporter un seul Intermédiaire",
+          "Peut comporter deux intermédiaires",
+          "Son Infrastructure doit être en métal"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "\nBridge de moyenne étendue avec deux intermédiaires"
+      },
+      {
+        questionText: "La flexion que subit Ia travé d'un pont :",
+        options: [
+          "Dépend de sa longueur et non de son épaisseur",
+          "Est inversement proportionnel à sa longueur",
+          "Est proportionnelle à son épaisseur",
+          "Dépend du module de YOUNG de l'alliage utilise",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La flexion de la travée de bridge est 8 fois plusimportante si la longueur est double . \nLa flexion (X) d'une travée de bridge d'épaisseur (t) est huit fois moindre que celle d'une travée deux fois moins épaisse ."
+      },
+      {
+        questionText: "L'équilibre biomécanique d'un pont dépend :",
+        options: [
+          "Du nombre des dents à remplacer et non de leur situation",
+          "De la nature de L'alliage utilise et de l'élément cosmétique",
+          "De la forme de l'intermédiaire et non des faces axiales des ancrages",
+          "De la morphologie occlusale de la restauration prothétique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Morphologie des ancrages / Morphologie des éléments intermédiaires et \nMorphologie axiale / Morphologie des surfaces occlusales et équilibration occlusale / Choix des dents supports"
+      },
+      {
+        questionText: "Pour augmenter Ia résistance du bridge aux mouvements qui le descellent :",
+        options: [
+          "On augmente le nombre des dents piliers non alignées",
+          "On utilise des appuis supplémentaires lorsque le bridge est en forme d'une courbure prononcée",
+          "Les dents piliers doivent être dans le même plan de ROY",
+          "La somme des coefficients de mastication des dents absentes doit être supérieure a la somme des coefficients des der piliers",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Loi de BELIARD : L’augmentation du nombre des dents piliers non alignées améliore les conditions d’équilibre en limitant le nombre des axes de rotation  \nLoi de SADRIN : Une courbure prononcée détermine un mouvement de renversement qui doit être équilibré par l’utilisation d’appuis supplémentaires \nLoi de ROY : Il a divisé l’arcade dentaire en 5 plans \nLoi de DUCHANGE : la somme des coefficients des dents piliers (force de résistance) doit être supérieure ou égale à la somme des coefficients des dents absentes (force de travaille)"
+      },
+      {
+        questionText: "Comme ancrage d'un bridge de courte portée, on peut utiliser :",
+        options: [
+          "Un onlay type couronne 4/5 sur une canine",
+          "Un onlay type couronne 3/5 sur une molaire",
+          "Une couronne coulée sur la première prémolaire",
+          "Une couronne jacket",
+          "Une couronne céramo métallique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Exemple remplacement de la première PM (taille de la 2eme pm plus un onlay sur la canine)"
+      },
+      {
+        questionText: "Un bridge de moyenne portée :",
+        options: [
+          "Remplace une dent absente",
+          "Est généralement un",
+          "Remplace des dents non contiguës",
+          "Remplace deux dents contiguës",
+          "Toutes les réponses sont justesToutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Un bridge a simple encastrement :",
+        options: [
+          "Est appelé cantilever",
+          "Est indiqué en raison des forces passives sur les dents piliers.",
+          "Est contre-indique en raison des risques de torsions sur les dents piliers",
+          "Est contre-indique en raison des mouvements de renversement,",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Indications plus orientées vers le remplacement desincisives latérales ou prémolaires, lorsque l’alternative implantaire est impossible"
+      },
+      {
+        questionText: "polygonal:",
+        options: [
+          "Peut-titre partiel sous forme d'arc.",
+          "Peut-titre partiel sous forme parabolique.",
+          "Peut-titre total",
+          "S'inscrit dans 2 à 3 plans de ROY.",
+          "S'inscrit dans les 5 plans de ROY."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La résistance mécanique d'un bridge :",
+        options: [
+          "Dépend du choix de l'alliage",
+          "Dépend de l’épaisseur de la travée",
+          "Dépend de l'étendu de la construction",
+          "Est augmentée par le choix des alliages précieux",
+          "Est augmentée par le choix des alliages non précieux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Pour des constructions très étendues qui comportent des travées de longues amplitudes on choisira les alliages non précieux à base de NI- Cr qui garantissent une rigidité accrue."
+      },
+      {
+        questionText: "Un bridge polygonal:",
+        options: [
+          "Remplace seulement deux dents",
+          "Peut restaurer un endentement partiel",
+          "Peut restaurer complètement une arcade dentaire",
+          "Peut-titre amovo inamovible"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "2 possibilités : Restaurer la partie antérieure de l’arcade de PM à PM ; Restaurer la partie latérale et rectiligne de l’arcade \nBridge complet céramométallique"
+      }
+    ]
+  },
+  {
+    title: "Les Intermédiaires de Bridges (Pontiques)",
+    subject: "prothese-y4",
+    questions: [
+      {
+        questionText: "La morphologie de la pontique:",
+        options: [
+          "est dictée par les mouvements fonctionnels de la mandibule",
+          "dépend de la morphologie des dents antagonistes",
+          "dépend de la morphologie des dents adjacentes",
+          "doit établie un large contact travée ancrage tout en dégageant l'embrasure",
+          "est de profile concave au niveau des faces linguales pour faciliter le nettoyage"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "A : « Cette morphologie des surfaces occlusales doit être conditionnée :\n• D’une part par les mouvements fonctionnels de la mandibule. »\nB : … D’autre part par la morphologie des dents antagonistes. »\nC : « La surface de contact avec l’élément voisin aux ancrages ne doit pas dépasser la zone de 1/3 occlusal et 1/3 moyen pour permettre l’accès au nettoyage. »\nD : « Établir un large contact travée-ancrage tout en dégageant l’embrasure pour la rendre plus accessible au nettoyage. »\nE : « Les faces vestibulaire et linguale doivent avoir un profil convexe, et reconstituer le bombé cervical. »"
+      },
+      {
+        questionText: "L’intermédiaire de type intra-muqueux",
+        options: [
+          "est systématiquement conseillé car le plus esthétique",
+          "parfaitement compatible avec l'hygiène",
+          "provoque une rétention bactérienne",
+          "entraine souvent une inflammation des tissus gingivaux",
+          "indiqué dans le cas des crêtes très résorbées"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "A&nbsp;: « Ce type donne l’illusion\nd’une dent sortant de l’alvéole ; il est séduisant au niveau esthétique, mais le plus souvent impossible à entretenir… »\n&nbsp;\nB&nbsp;: « … impossible à entretenir et conduisant à une rétention bactérienne source d’inflammation gingivale… »"
+      },
+      {
+        questionText: "L'embrasure gingivale d'un bridge :",
+        options: [
+          "Est situé entre le point de contact et la muqueuse gingivale",
+          "Doit être hermétiquement fermée",
+          "Doit être suffisamment dégagée",
+          "Doit permettre un nettoyage efficace"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La morphologie de l’intermédiaire doit permettre le nettoyage par des embrasures qui ne doivent pas être trop dégagées (bourrage alimentaire latéral) ou trop serrées (nettoyage difficile)."
+      },
+      {
+        questionText: "L'intermédiaire intra-muqueux:",
+        options: [
+          "n’est pas toléré par les crêtes résiduelles",
+          "Permet un meilleur contrôle de la plaque",
+          "Donne un résultat esthétique satisfaisant",
+          "Est indiqué dans la région molaire mandibulaire",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "il est séduisant au niveau esthétique,MAIS le plus souvent impossible à entretenir et conduisant à une rétention bactérienne source d’inflammation gingivale"
+      },
+      {
+        questionText: "Une pontique ovoïde :",
+        options: [
+          "N'autorise pas un bon dégagement des embrasures",
+          "Autorise une bonne hygiène",
+          "Est indiqué principalement pour le secteur postérieur",
+          "Etablie un contact minime avec la crête"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Cette forme est facile à nettoyer à cause des embrasures dégagées"
+      },
+      {
+        questionText: "Plus la travée d'un bridge est courte : (1- Plus les forces de flexion qui agissent sur elle sont grandes 2- Plus les forces de flexion sont faibles 3- Plus les dents piliers subissent des pressions 4- Moins les dents piliers subissent des pressions 5- Toutes les réponses sont fausses)",
+        options: [
+          "(1,3)",
+          "(2,4)",
+          "(5)",
+          "(2,3)",
+          "(1,4)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La flexion d’un pont est proportionnelle au cube de la longueur de la travée. Donc, si on double la longueur de la travée, la flexion augmente par 8, et si on la triple, elle augmente par 27.\" \"Fundamentals of Fixed Prosthodontics\", 4th Edition, Quintessence Publishing, 2012."
+      },
+      {
+        questionText: "l’intermédiaire de bridge doit :",
+        options: [
+          "être en sous occlusion",
+          "Restaurer uniquement l'esthétique",
+          "Etre toujours en contact avec la crête édentée",
+          "Remplacer les dents absentes",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Fournir des rapports occlusaux favorables aux dents piliers et aux dents antagonistes ainsi qu’au reste de la denture.\nIl peut etre contra/supra ou intra muqueux"
+      },
+      {
+        questionText: "La morphologie des pontiques :",
+        options: [
+          "Doit avoir une surface vestibulaire surdimensionnée",
+          "Doit avoir une table occlusale sous dimensionnée",
+          "Assure une bombé vestibulaire très marque",
+          "Assure l’absence de contacte occlusale avec la dent antagoniste",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les faces vestibulaire et linguale doivent avoir un profil convexe, et reconstituer le bombé cervical\nLe rétablissement des rapports occlusaux avec les dents antagonistes permet de restituer l’efficacité masticatoire et de maintenir la stabilité de l’occlusion."
+      },
+      {
+        questionText: "L'embrasure d'un bridge :",
+        options: [
+          "Est situé entre le tiers cervical et le tiers occlusal des faces proximales",
+          "Doit être hermétiquement fermée",
+          "Doit permettre un nettoyage efficace",
+          "Est absente au niveau des incisives",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "l’intermediaire Intra-muqueux:",
+        options: [
+          "Ne permet pas de restaurer l'esthétique",
+          "Est toléré par les crêtes résiduelles",
+          "Est contre-indique dans le secteur incisif",
+          "Est indiqué dans la région molaire mandibulaire",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Une pontique ovoïde :",
+        options: [
+          "Ne permet pas de dégager les embrasures",
+          "N'autorise pas une bonne hygiène",
+          "Est indiquée principalement pour le secteur esthétiques",
+          "Etablie une large surface de contact avec la crête",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "Les intermédiaires de bridges sont les dents artificielles d’une prothèse fixée :",
+        options: [
+          "Qui remplacent les dents naturelles délabrées",
+          "Qui restaurent les fonctions des dents naturelles délabrées",
+          "Qui restaurent l'esthétiques des dents naturelles délabrées",
+          "Qui doivent s'intégrer parfaitement sur le plan biologique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Est l’élément prothétique artificiel du bridge qui remplace la dent absente\nLes pontiques occupent l’espace édenté formants ainsi la travée du bridge"
+      },
+      {
+        questionText: "Le rétablissement des rapports occlusaux des pontiques avec les dents antagonistes permet :",
+        options: [
+          "De restituer l'efficacité masticatoire",
+          "De maintenir la stabilité de L'occlusion",
+          "De repartir les efforts sur les tissus du parodonte superficiel des dents piliers",
+          "Toutes les réponses sont fausses",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "diriger et répartir les efforts sur les tissus du parodonte profond des dents piliers."
+      },
+      {
+        questionText: "La résistance d'une travée est : (1- proportionnelle à sa largeur 2- inversement proportionnelle à sa largeur 3- proportionnelle au carré de son épaisseur 4- inversement proportionnelle à sa longueur 5- proportionnelle à sa longueur)",
+        options: [
+          "A(1,2,3)",
+          "B(2,3,4)",
+          "C (1.3.4)",
+          "D(3,4,5)",
+          "E(1.4.5)"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "La résistance d’une travé de bridge:",
+        options: [
+          "A est proportionnelle à largeur",
+          "Est proportionnelle au carrée de son épaisseur.",
+          "Est inversement proportionnelle à sa longueur",
+          "Est donnée par la formule R = L*e2. /1 (avec R= Résistance, largeur, e=épaisseur et L=Longueur)",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La résistance d’une travée est proportionnelle à sa largeur, au carré de son épaisseur et inversement proportionnelle à sa longueur R = l ∗ e2/L"
+      },
+      {
+        questionText: "Selon GLICKMAN l'intermédiaire (travée) de bridge doit répondre aux exigences suivantes:",
+        options: [
+          "Doit être esthétiquement acceptable.",
+          "Doit fournir des rapports occlusaux favorables aux dents piliers et aux dents antagonistes.",
+          "Doit permettre une autostimulation des tissus grâce au maximum de contacts de la langue des joues, des lèvres et des aliments.",
+          "Doit rétablir l'efficacité masticatoire de la dent qu'il remplace.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
+      },
+      {
+        questionText: "L'intermédiaire de bridge est en rapport avec des tissus différents :",
+        options: [
+          "La face occlusale répondant la crête.",
+          "Les faces proximales répondant respectivement aux joues et à la langue.",
+          "Les faces gingivales répondent aux dents antagonistes.",
+          "Les faces vestibulaire et linguale répondant aux moyens d'ancrage et aux dents support",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Essayez de le vérifier vous-même en attendant que je fournisse une explication satisfaisante."
       }
     ]
   }
 ];
+
 
 module.exports = prothesey4Quizzes;
