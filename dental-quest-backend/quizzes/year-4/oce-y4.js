@@ -3,7 +3,7 @@
 const oceQuizzes = [
   {
     title: "Cicatrisation Dentino-Pulpaire",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "La dentine :",
@@ -353,7 +353,7 @@ const oceQuizzes = [
   },
   {
     title: "Principes et Indications du Traitement Endodontique",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "On appelle LAM :",
@@ -503,7 +503,7 @@ const oceQuizzes = [
   },
   {
     title: "Reconstitutions Corono-Radiculaires",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "L'objectif du coffrage lors d'une reconstitution complexe sur dent vivante est de :",
@@ -845,7 +845,7 @@ const oceQuizzes = [
   },
   {
     title: "Dentisterie Préventive et ICDAS",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "Selon le concept médical préventif :",
@@ -1267,7 +1267,7 @@ const oceQuizzes = [
   },
   {
     title: "Lésions Iatrogènes et Perforations",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "Parmi les lésions suivantes, laquelle n'est pas d'origine iatrogène ?",
@@ -1369,7 +1369,7 @@ const oceQuizzes = [
   },
   {
     title: "Adhésion et Techniques Sandwich",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "L'effet du mordançage au niveau dentinaire est :",
@@ -1578,7 +1578,7 @@ const oceQuizzes = [
   },
   {
     title: "Urgences Endodontiques",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "Parmi les objectifs du traitement d'urgence en OCE :",
@@ -1644,7 +1644,7 @@ const oceQuizzes = [
   },
   {
     title: "Urgences Endodontiques (2)",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "Traitement d'urgence sur une monoradiculée présentant une pulpite aiguë :",
@@ -1902,7 +1902,7 @@ const oceQuizzes = [
   },
   {
     title: "Traumatologie Dentaire",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "Dans le cas d'une fracture radiculaire située dans le tiers apical de la racine, quel est le principal défi clinique pour le diagnostic ?",
@@ -2172,7 +2172,7 @@ const oceQuizzes = [
   },
   {
     title: "Lésions Apicales (Parodontites)",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "La symptomatologie lors d'une parodontite apicale chronique est caractérisée par :",
@@ -2671,7 +2671,7 @@ const oceQuizzes = [
   },
   {
     title: "Accidents et Complications en Endodontie",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "La chaleur émise par les instruments rotatifs peut entraîner :",
@@ -2929,7 +2929,7 @@ const oceQuizzes = [
   },
   {
     title: "Cicatrisation Apicale",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "Concernant la cicatrisation apicale, laquelle des affirmations est correcte :",
@@ -3183,7 +3183,7 @@ const oceQuizzes = [
   },
   {
     title: "Éclaircissement et Esthétique",
-    subject: "oce",
+    subject: "oce-y4",
     questions: [
       {
         questionText: "L'éclaircissement dentaire :",
