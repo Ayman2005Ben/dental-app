@@ -2950,6 +2950,249 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 3],
         explanation: "Selon les standards, la hauteur coronaire de la première prémolaire supérieure est d'environ 8,5 mm et son diamètre vestibulo-lingual est de 9 mm. La hauteur radiculaire est généralement plus proche de 13,7 mm."
+      },
+      // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2023, etc.) ---
+      {
+        questionText: "La face occlusale de la deuxième prémolaire supérieure :",
+        options: [
+          "Présente une section pentagonale",
+          "Présente un sillon mésio-distal au milieu de la face occlusale",
+          "Est divisée en deux moitiés inégales",
+          "Présente des fossettes plus profondes que la première prémolaire supérieure"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La 2ème PM a une forme ovale (pas pentagonale) et symétrique. Son sillon est court et centré. Ses fossettes sont moins profondes que sur la 1ère PM."
+      },
+      {
+        questionText: "La première prémolaire supérieure présente :",
+        options: [
+          "Une configuration canalaire unique",
+          "Généralement deux racines, chaque racine comportant un canal",
+          "Une configuration canalaire de type II, III ou IV",
+          "Un canal volumineux, très large dans le sens vestibulo-lingual"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est la prémolaire la plus souvent biradiculée (une racine vestibulaire, une palatine) avec un canal dans chaque racine."
+      },
+      {
+        questionText: "Le point de contact distal de la (15) se situe au 1/4 occlusal de la hauteur de la couronne.",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Faux. Sur la deuxième prémolaire supérieure (15), les points de contact mésial et distal sont situés sensiblement à la même hauteur (jonction tiers moyen/occlusal)."
+      },
+      {
+        questionText: "La face occlusale de la première prémolaire supérieure gauche :",
+        options: [
+          "A une forme pentagonale",
+          "A des fossettes marginales peu profondes",
+          "Contient deux cuspides d'égale valeur",
+          "Est limitée par les arêtes transversales vestibulaire et palatine"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La silhouette occlusale de la 1ère PM s'inscrit typiquement dans un pentagone (forme de 'bouclier'). La cuspide vestibulaire est plus grande que la palatine."
+      },
+      {
+        questionText: "La face occlusale de la (24) :",
+        options: [
+          "S'inscrit dans un pentagone à cotés égaux",
+          "Présente 2 cuspides moins saillantes que la (25)",
+          "Présente un diamètre mésio-distal de 7 mm",
+          "Présente une ligne brisée à concavité distale formée par les 2 arêtes axiales"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le diamètre mésio-distal moyen est d'environ 7 mm. Ses cuspides sont plus saillantes que celles de la 2ème PM (25)."
+      },
+      {
+        questionText: "La face mésiale de la (24) présente :",
+        options: [
+          "Une forme cubique",
+          "Un diamètre occlusal vestibulo-lingual plus petit que celui du collet",
+          "Un contour vestibulaire bombé au 1/4 cervical",
+          "Un diamètre vestibulo-lingual maximum au 1/3 cervical"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "En raison de la convergence des faces vestibulaire et palatine vers l'occlusal, la table occlusale est plus étroite que le collet."
+      },
+      {
+        questionText: "Pour la face vestibulaire de la (24) :",
+        options: [
+          "Le contour distal est concave du collet jusqu'au point de contact distal",
+          "Le « V » formé par le bord libre est plus ouvert par rapport à la canine",
+          "Le point de contact avec la (25) est situé au niveau du 1/3 de la hauteur coronaire",
+          "Elle est séparée en 2 versants par une arête transversale vestibulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La pointe cuspidienne étant moins aiguë que celle de la canine, le 'V' du bord libre est plus ouvert (plus plat)."
+      },
+      {
+        questionText: "La face occlusale de la (15) :",
+        options: [
+          "A une forme pentagonale",
+          "A un bord palatin en forme d'un arc à concavité vestibulaire",
+          "Comporte deux cuspides d'égale valeur",
+          "Est limitée par les arêtes transversales vestibulaire et palatine"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La 2ème PM sup (15) a une forme ovale, et ses deux cuspides (V et P) sont de hauteur et de volume presque identiques."
+      },
+      {
+        questionText: "Les prémolaires supérieures :",
+        options: [
+          "Sont en série ascendante",
+          "Présentent une face V plus oblique que leur face L",
+          "Ont un sillon intercuspidien rectiligne",
+          "Sont toujours mono-radiculées"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le sillon principal est souvent rectiligne, surtout sur la 1ère. Elles sont en série descendante (1ère plus grosse que la 2ème)."
+      },
+      {
+        questionText: "Pour la face vestibulaire de la 1ère PM supérieure :",
+        options: [
+          "Le contour mésial est concave du collet jusqu'au point de contact",
+          "Le contour distal de la couronne est moins convexe que le contour mésial",
+          "Le point de contact distal se situe au 1/3 occlusal de la hauteur de la couronne",
+          "Le lobe mésio-vestibulaire est le plus volumineux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La concavité mésiale est un trait caractéristique de la 1ère PM supérieure, souvent prolongée sur la racine."
+      },
+      {
+        questionText: "La 2e PM supérieure a :",
+        options: [
+          "Deux cuspides d'égale valeur en diamètre",
+          "Deux cuspides d'égale valeur en saillie",
+          "Une cuspide L d'un diamètre VL plus petit que celui de sa cuspide V",
+          "La cuspide V est plus saillante"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Sur la 2ème PM, la symétrie est marquée : les cuspides sont équivalentes."
+      },
+      {
+        questionText: "Pour la face vestibulaire de la 1ere PM supérieure :",
+        options: [
+          "le contour mésial de la couronne du collet jusqu'a au point de contact qui est situé au 1/3 occlusal de la hauteur coronaire",
+          "le contour distal de la couronne est plus arrondi que le contour mésial",
+          "le point de contact distal est plus occlusal et se situe dans le 1/3 occlusal de la hauteur coronaire",
+          "l'arête distale est la plus longue ce qui a pour effet de décaler le sommet cuspidien du coté distal"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le contour distal est convexe et arrondi, tandis que le mésial est souvent droit ou concave."
+      },
+
+      // --- 10 أسئلة إضافية (من إعدادي لتعزيز الفهم) ---
+      {
+        questionText: "La dépression mésiale (concavité) caractéristique de la première prémolaire supérieure se situe :",
+        options: [
+          "Uniquement sur la couronne",
+          "Sur la couronne et se prolonge sur la racine",
+          "Uniquement sur la racine",
+          "Sur la face distale"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est un trait distinctif majeur : la concavité de la couronne mésiale se continue profondément sur la racine (Canine Fossa)."
+      },
+      {
+        questionText: "La différence de hauteur entre la cuspide vestibulaire et la cuspide palatine est la plus marquée sur :",
+        options: [
+          "La 1ère prémolaire supérieure",
+          "La 2ème prémolaire supérieure",
+          "Elles sont identiques",
+          "La 2ème prémolaire inférieure"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Sur la 1ère PM sup, la cuspide V est nettement plus haute (environ 1 mm) que la P. Sur la 2ème PM sup, elles sont de hauteur quasi égale."
+      },
+      {
+        questionText: "En vue occlusale, la 1ère prémolaire supérieure a une forme :",
+        options: [
+          "Ovale",
+          "Hexagonale ou Pentagonale",
+          "Ronde",
+          "Triangulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle est décrite comme hexagonale allongée ou pentagonale, avec des angles marqués, contrairement à la 2ème qui est ovale."
+      },
+      {
+        questionText: "Le sillon marginal mésial (qui traverse la crête marginale) est typique de :",
+        options: [
+          "La 1ère prémolaire supérieure",
+          "La 2ème prémolaire supérieure",
+          "La 1ère prémolaire inférieure",
+          "La molaire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le sillon marginal mésial traverse la crête marginale mésiale pour aller sur la face mésiale, c'est un signe distinctif de la 1ère PM sup."
+      },
+      {
+        questionText: "Les racines de la 1ère prémolaire supérieure sont généralement disposées :",
+        options: [
+          "Une mésiale et une distale",
+          "Une vestibulaire et une palatine",
+          "Fusionnées",
+          "Trois racines"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Disposition vestibulo-palatine des racines (une coté joue, une coté palais)."
+      },
+      {
+        questionText: "La distance inter-cuspidienne est plus grande sur :",
+        options: [
+          "La 1ère PM supérieure",
+          "La 2ème PM supérieure",
+          "C'est égal",
+          "La canine"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La table occlusale est plus large vestibulo-lingualement sur la 1ère PM sup que sur la 2ème."
+      },
+      {
+        questionText: "La pente mésiale de la cuspide vestibulaire de la 1ère PM supérieure est :",
+        options: [
+          "Plus courte que la distale",
+          "Plus longue que la distale",
+          "Égale à la distale",
+          "Convexe"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est une exception anatomique ! Contrairement aux canines et 2ème PM, sur la 1ère PM sup, l'arête mésiale est plus longue que la distale."
+      },
+      {
+        questionText: "La chambre pulpaire de la 1ère PM supérieure possède un plancher situé :",
+        options: [
+          "Au niveau apical",
+          "Au niveau cervical",
+          "Elle n'a pas de plancher",
+          "Au tiers moyen radiculaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Comme c'est une dent pluriradiculée, elle possède un plancher pulpaire situé bas dans la chambre, au niveau cervical (furcation)."
+      },
+      {
+        questionText: "La 2ème prémolaire supérieure a le plus souvent :",
+        options: [
+          "1 racine",
+          "2 racines",
+          "3 racines",
+          "Pas de racine"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Elle est monoradiculée dans la majorité des cas, contrairement à la 1ère."
+      },
+      {
+        questionText: "Sur la face occlusale de la 2ème PM supérieure, le relief est :",
+        options: [
+          "Tourmenté avec beaucoup de sillons secondaires",
+          "Très lisse sans sillons",
+          "Identique à la canine",
+          "Composé de 5 cuspides"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Elle présente souvent de nombreux sillons secondaires qui donnent un aspect 'ridé' à la face occlusale."
       }
     ]
   },
@@ -2965,7 +3208,7 @@ const anatomyQuizzesY2 = [
           "On retrouve parfois au niveau palatin une petite saillie au 1/3 inferieur du lobe M appelé Tubercule de Carabeli.",
           "Il y a Quatre cuspides sur sa face occlusale."
         ],
-        correctOptionIndexes: [2, 3],
+        correctOptionIndexes: [2],
         explanation: "Le tubercule de Carabelli est une saillie inconstante qui, lorsqu'elle est présente, se situe sur la face palatine de la cuspide mésio-palatine de la première molaire supérieure."
       },
       {
@@ -3009,8 +3252,196 @@ const anatomyQuizzesY2 = [
           "Sépare la cuspide mésio-vestibulaire de la cuspide disto-palatine.",
           "Est situé au niveau du sillon intercuspidien vestibulaire."
         ],
-        correctOptionIndexes: [0, 2],
+        correctOptionIndexes: [0],
         explanation: "Le pont d'émail (ou crête oblique) est une structure caractéristique de la première molaire maxillaire qui relie la cuspide mésio-palatine à la cuspide disto-vestibulaire."
+      },
+      // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2023, etc.) ---
+      {
+        questionText: "Parmi les éminences coronaires retrouvées au niveau des faces vestibulaires de la 1ère molaire supérieure :",
+        options: [
+          "Les crêtes marginales",
+          "Le tubercule de Bolk",
+          "Le tubercule de Carabelli",
+          "Les sillons intercuspidiens"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le tubercule de Bolk (ou paracône) est une éminence inconstante située sur la face vestibulaire (souvent mésio-vestibulaire). Le Carabelli est palatin."
+      },
+      {
+        questionText: "Le sillon intercuspidien mésial central :",
+        options: [
+          "Sépare la cuspide mésio-vestibulaire de la cuspide mésio-palatine",
+          "Forme un angle d'environ 95° avec le sillon intercuspidien vestibulaire central",
+          "Se termine dans la fossette marginale distale",
+          "Est absent lorsque la dent ne présente pas de tubercule de Carabelli"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Il sépare les deux cuspides mésiales et forme un angle quasi droit avec le sillon vestibulaire. Il se termine dans la fossette marginale Mésiale (pas distale)."
+      },
+      {
+        questionText: "La face occlusale de la 16 et 26 comporte :",
+        options: [
+          "Trois (03) cuspides",
+          "Trois (03) sillons",
+          "Trois (03) Fossettes",
+          "Deux (02) crêtes marginales"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les dents 16 et 26 (1ères molaires sup) ont 4 cuspides, mais possèdent 3 sillons principaux, 3 fossettes (centrale, mésiale, distale) et 2 crêtes marginales."
+      },
+      {
+        questionText: "La deuxième molaire maxillaire :",
+        options: [
+          "Présente une couronne plus petite dans toutes ses mensurations que la première molaire",
+          "Présente des axes radiculaires moins divergents",
+          "Présente un tubercule de Carabelli",
+          "Ne présente jamais de tubercule de Carabelli"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Elle est plus petite que la dent de 6 ans, ses racines sont plus serrées (moins divergentes) et elle n'a pas de tubercule de Carabelli."
+      },
+      {
+        questionText: "Le sillon intercuspidien DP de la 1ere molaire supérieure :",
+        options: [
+          "Sépare la cuspide DP de la cuspide DV",
+          "Débute dans la fossette marginale distale",
+          "Sépare la cuspide DP du pont d'émail",
+          "Il s'épanouit près du collet sur la face P avec fossette"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Ce sillon isole la cuspide Disto-Palatine. Il part de la fossette distale et coupe la crête oblique (pont d'émail)."
+      },
+      {
+        questionText: "La 16 est plus volumineuse que la 17 :",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Vrai. Les molaires supérieures sont en série descendante de taille (M1 > M2 > M3)."
+      },
+      {
+        questionText: "La cavité pulpaire de la 1ere molaire supérieure est constituée de :",
+        options: [
+          "3 cornes pulpaires",
+          "2 canaux radiculaires",
+          "Une chambre pulpaire très étroite",
+          "3 canaux radiculaires (voire 4)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Elle possède une vaste chambre pulpaire avec 4 cornes, et généralement 3 racines avec 3 ou 4 canaux (MB2 fréquent)."
+      },
+
+      // --- 10 أسئلة إضافية (من إعدادي لتعزيز الفهم) ---
+      {
+        questionText: "Le Pont d'Émail (Crête Oblique) de la 1ère molaire supérieure relie :",
+        options: [
+          "La cuspide mésio-vestibulaire à la disto-palatine",
+          "La cuspide mésio-palatine à la disto-vestibulaire",
+          "Les deux cuspides mésiales",
+          "Les deux cuspides palatines"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est une crête oblique caractéristique qui traverse la face occlusale en diagonale (MP vers DV)."
+      },
+      {
+        questionText: "La forme géométrique de la face occlusale de la 1ère molaire supérieure est :",
+        options: [
+          "Carrée",
+          "Rhomboïde (Losange)",
+          "Triangulaire",
+          "Ronde"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle a la forme d'un losange avec deux angles aigus (MV et DP) et deux angles obtus (MP et DV)."
+      },
+      {
+        questionText: "Laquelle des racines de la 1ère molaire supérieure possède souvent 2 canaux (MB1, MB2) ?",
+        options: [
+          "La racine Palatine",
+          "La racine Mésio-Vestibulaire",
+          "La racine Disto-Vestibulaire",
+          "Aucune"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le canal 'MB2' est très fréquent dans la racine mésio-vestibulaire, ce qui complique le traitement endodontique."
+      },
+      {
+        questionText: "Le tubercule de Carabelli, quand il existe, est situé sur :",
+        options: [
+          "La cuspide Mésio-Vestibulaire",
+          "La cuspide Mésio-Palatine",
+          "La cuspide Disto-Palatine",
+          "La face occlusale pure"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Il se situe sur la face palatine de la cuspide la plus volumineuse (Mésio-Palatine)."
+      },
+      {
+        questionText: "La 2ème molaire supérieure diffère de la 1ère par :",
+        options: [
+          "L'absence fréquente de la cuspide Disto-Palatine (forme tricuspidée)",
+          "Une taille plus grande",
+          "4 racines",
+          "Un tubercule de Carabelli plus gros"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La cuspide Disto-Palatine a tendance à s'atrophier ou disparaître sur la 2ème molaire, lui donnant parfois une forme de cœur."
+      },
+      {
+        questionText: "Les racines de la 1ère molaire supérieure sont :",
+        options: [
+          "2 vestibulaires, 1 palatine",
+          "2 palatines, 1 vestibulaire",
+          "2 mésiales, 1 distale",
+          "Fusionnées"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Tripode radiculaire : racine Mésio-Vestibulaire, Disto-Vestibulaire, et Palatine (la plus grosse)."
+      },
+      {
+        questionText: "La plus petite des 4 cuspides principales de la 1ère molaire supérieure est :",
+        options: [
+          "Mésio-Palatine",
+          "Disto-Palatine",
+          "Mésio-Vestibulaire",
+          "Disto-Vestibulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La Disto-Palatine est la plus réduite et est séparée du reste de la face occlusale par le pont d'émail."
+      },
+      {
+        questionText: "La molaire 'de 6 ans' correspond à :",
+        options: [
+          "La 1ère molaire permanente",
+          "La 2ème molaire permanente",
+          "La 2ème molaire temporaire",
+          "La dent de sagesse"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La 16/26 sort vers 6 ans, souvent avant la perte des dents de lait."
+      },
+      {
+        questionText: "L'axe de la racine palatine de la 1ère molaire supérieure est souvent courbé en forme de :",
+        options: [
+          "Banane (vers le vestibulaire)",
+          "Crochet vers le mésial",
+          "Droit",
+          "Sinueux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La racine palatine est large et courbée en 'banane', avec la concavité regardant vers le vestibulaire."
+      },
+      {
+        questionText: "L'angle Mésio-Vestibulaire de la couronne de la 1ère molaire supérieure est :",
+        options: [
+          "Aigu",
+          "Obtus",
+          "Droit",
+          "Arrondi"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "C'est l'un des deux angles aigus du losange occlusal (l'autre étant le Disto-Palatin)."
       }
     ]
   },
@@ -3083,6 +3514,375 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [2],
         explanation: "Le trou borgne est une caractéristique beaucoup plus fréquente et marquée sur l'incisive latérale que sur la centrale. Le modelé distal et le lobe distal sont plus marqués (galbés) sur la latérale, et ses faces proximales sont plus petites que celles de la centrale."
+      },
+            // --- الأسئلة الناقصة من ملف PDF (سنوات 2024, 2023, 2022) ---
+      {
+        questionText: "Le modelé des faces linguales des incisives inférieures :",
+        options: [
+          "Est semblable à celui des incisives supérieures",
+          "Est sans relief",
+          "Est différent de celui des incisives supérieures",
+          "A des crêtes marginales et un cingulum bien délimités"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les faces linguales des incisives inférieures sont lisses (sans relief) et concaves, contrairement aux supérieures qui présentent des crêtes marginales et un cingulum marqués."
+      },
+      {
+        questionText: "La différence de hauteur entre le bord mésial et le bord distal de la latérale supérieure est encore plus marquée que sur la centrale supérieure.",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Vrai. La latérale supérieure a une forme plus arrondie et asymétrique, rendant la différence de hauteur cervicale entre les bords mésial et distal plus visible."
+      },
+      {
+        questionText: "L'angle mésial de la latérale supérieure est plus aigu que celui de la centrale supérieure.",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Vrai. Comparatrivement, l'angle mésial de la latérale est décrit comme plus marqué ou aigu (bien que l'angle distal soit très arrondi)."
+      },
+      {
+        questionText: "La cavité pulpaire des incisives inférieures est constituée de :",
+        options: [
+          "Un canal radiculaire et une chambre pulpaire",
+          "Une chambre pulpaire avec trois cornes",
+          "Une chambre pulpaire et 3 canaux radiculaires",
+          "Un canal au niveau coronaire et une chambre pulpaire au niveau radiculaire"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Comme toute incisive, elle possède une chambre pulpaire (avec 3 cornes pulpaires correspondant aux lobes) se prolongeant par un canal radiculaire unique."
+      },
+      {
+        questionText: "Le modelé de la face vestibulaire de l'incisive centrale supérieure est constitué de :",
+        options: [
+          "Une bosse cervicale",
+          "2 sillons verticaux",
+          "2 lobes",
+          "2 crêtes marginales"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La face vestibulaire présente une convexité cervicale et est divisée en 3 lobes par 2 sillons verticaux. Les crêtes marginales sont sur la face palatine."
+      },
+      {
+        questionText: "Quelle est la comparaison incorrecte ?",
+        options: [
+          "La 11 est plus volumineuse que 12",
+          "La 11 est moins volumineuse que la 12",
+          "La 41 est plus volumineuse que la 42",
+          "La 41 est moins volumineuse que la 31"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La 11 est plus grande que la 12 (B faux). La 41 est plus petite que la 42 (C faux). La 41 et 31 sont identiques (D faux)."
+      },
+
+      // --- 10 أسئلة إضافية (من إعدادي لتعزيز الفهم) ---
+      {
+        questionText: "La forme de la racine de l'incisive centrale supérieure en coupe transversale est :",
+        options: [
+          "Circulaire parfaite",
+          "Triangulaire à base vestibulaire",
+          "Triangulaire à base linguale",
+          "Ovale aplatie"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La racine de la 11/21 a une coupe triangulaire arrondie avec la base du triangle tournée vers la face vestibulaire."
+      },
+      {
+        questionText: "Sur l'incisive centrale supérieure, le point de contact distal est situé :",
+        options: [
+          "Au même niveau que le mésial",
+          "Plus cervicalement (plus haut) que le mésial",
+          "Plus incisalement (plus bas) que le mésial",
+          "Au niveau du collet"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le point de contact distal est toujours plus cervical (plus haut vers la gencive) que le point de contact mésial qui est proche du bord libre."
+      },
+      {
+        questionText: "L'incisive latérale inférieure (42/32) par rapport à la centrale inférieure (41/31) :",
+        options: [
+          "Est plus petite",
+          "Est plus grande",
+          "A un bord libre incliné distalement",
+          "Est parfaitement symétrique"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Contrairement aux supérieures, l'incisive latérale inférieure est plus grande que la centrale. Son bord libre s'incline vers le distal pour suivre la courbe de l'arcade."
+      },
+      {
+        questionText: "Le cingulum de l'incisive centrale supérieure est :",
+        options: [
+          "Centré",
+          "Déporté distalement",
+          "Absent",
+          "Déporté mésialement"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le cingulum de l'incisive centrale supérieure est légèrement déporté vers le côté distal de la face palatine."
+      },
+      {
+        questionText: "Les crêtes marginales des incisives supérieures se trouvent sur :",
+        options: [
+          "La face vestibulaire",
+          "Les faces proximales",
+          "La face palatine",
+          "Le bord libre"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les crêtes marginales mésiale et distale sont des bourrelets d'émail qui bordent la face palatine (ou linguale)."
+      },
+      {
+        questionText: "Laquelle de ces dents présente le plus souvent une anomalie de forme dite 'riziforme' ?",
+        options: [
+          "Incisive centrale supérieure",
+          "Incisive latérale supérieure",
+          "Incisive centrale inférieure",
+          "Canine supérieure"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'incisive latérale supérieure est la dent la plus sujette aux variations de forme (dents en grain de riz) et aux agénésies après les dents de sagesse."
+      },
+      {
+        questionText: "La face vestibulaire des incisives présente combien de lobes de développement ?",
+        options: [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La face vestibulaire est formée par la fusion de 3 lobes de développement (mésial, central, distal), séparés par deux sillons verticaux."
+      },
+      {
+        questionText: "L'angle disto-incisif de l'incisive centrale supérieure est :",
+        options: [
+          "Aigu",
+          "Droit",
+          "Arrondi",
+          "Obtus"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'angle mésio-incisif est vif (presque droit), tandis que l'angle disto-incisif est nettement plus arrondi."
+      },
+      {
+        questionText: "La racine de l'incisive inférieure est caractérisée par :",
+        options: [
+          "Une section ronde",
+          "Un aplatissement marqué dans le sens mésio-distal",
+          "Deux canaux dans 100% des cas",
+          "Une courbure vestibulaire constante"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les racines des incisives inférieures sont très étroites et aplaties dans le sens mésio-distal (sur les côtés)."
+      },
+      {
+        questionText: "L'éruption de l'incisive centrale supérieure permanente a lieu vers :",
+        options: [
+          "6 ans",
+          "7-8 ans",
+          "10 ans",
+          "12 ans"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'éruption de la 11/21 se fait généralement entre 7 et 8 ans, après la sortie des premières molaires et des incisives centrales inférieures."
+      }
+    ]
+  },
+  {
+    title: "Les canines maxillaires et mandibulaires",
+    subject: "anatomy-y2",
+    questions: [
+      // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2022, 2021) ---
+      {
+        questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure ? (Question classée ici dans le PDF)",
+        options: [
+          "La racine disto-vestibulaire est toujours courbée mésialement",
+          "La racine palatine est toujours droite",
+          "Les trois racines contiennent systématiquement un seul canal",
+          "La racine palatine est la plus massive et présente une courbure dans 56 % des cas"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La racine palatine est la plus volumineuse et peut présenter une courbure. Les racines vestibulaires sont souvent courbées distalement."
+      },
+      {
+        questionText: "La dent la plus longue est la :",
+        options: [
+          "13",
+          "23",
+          "33",
+          "43"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les canines supérieures (13 et 23) possèdent la longueur totale (racine + couronne) la plus importante de la denture humaine."
+      },
+      {
+        questionText: "La face mésiale de la 33 s'inscrit dans un :",
+        options: [
+          "Rectangle",
+          "Losange",
+          "Trapèze",
+          "Triangle"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La vue proximale de la canine inférieure (comme les autres dents antérieures) est triangulaire à base cervicale."
+      },
+      {
+        questionText: "La canine supérieure :",
+        options: [
+          "Fait son éruption à 13 ans",
+          "Est la plus longue de toutes les dents",
+          "Est plus aplatie dans le sens MD que la canine inférieure",
+          "Présente une arête transversale sur la face vestibulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est sa caractéristique principale. Elle fait son éruption vers 11 ans. La canine inférieure est plus étroite (aplatie) que la supérieure."
+      },
+      {
+        questionText: "La canine inférieure est la plus longue de toutes les dents, elle a la forme d'un fer de lance et fait son éruption vers 10/11 ans.",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Faux. C'est la canine SUPÉRIEURE qui est la plus longue. La canine inférieure sort plus tôt (vers 9 ans)."
+      },
+      {
+        questionText: "Quelle(s) dent(s) présente(nt) un bord libre en forme de V, une arête axiale sur la face vestibulaire ?",
+        options: [
+          "La canine supérieure",
+          "La canine inférieure",
+          "L'incisive latérale supérieure",
+          "L'incisive centrale inférieure"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La présence d'une pointe (cuspide) divise le bord libre en deux versants (forme de V) et s'accompagne d'une arête médiane sur la face externe, typique des canines."
+      },
+      {
+        questionText: "La face vestibulaire de la canine supérieure diffère de celle de la centrale supérieure par :",
+        options: [
+          "Un bord libre en V",
+          "Une bosse cervicale plus accentuée",
+          "Présence d'une arête axiale",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Ces trois caractéristiques (bord en V, bosse cervicale forte, arête axiale médiane) distinguent la canine de l'incisive centrale."
+      },
+
+      // --- 10 أسئلة إضافية (من إعدادي لتعزيز الفهم) ---
+      {
+        questionText: "Le sommet de la cuspide de la canine supérieure est aligné avec :",
+        options: [
+          "Le centre de la racine (axe radiculaire)",
+          "Le bord mésial",
+          "Le bord distal",
+          "La face palatine"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La pointe canine est généralement centrée sur l'axe long de la dent."
+      },
+      {
+        questionText: "Concernant les versants du bord libre de la canine supérieure :",
+        options: [
+          "Le versant mésial est plus long que le distal",
+          "Le versant distal est plus long que le mésial",
+          "Ils sont de longueur égale",
+          "Le versant mésial est concave"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le versant distal s'étire pour atteindre le point de contact distal qui est situé plus cervicalement (plus haut), il est donc plus long."
+      },
+      {
+        questionText: "La 'bosse canine' (éminence canine) est :",
+        options: [
+          "Une saillie osseuse vestibulaire au niveau de la racine",
+          "Une anomalie de l'émail",
+          "Située sur la face linguale",
+          "Un tubercule accessoire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "C'est le relief osseux palpable sur la gencive, créé par la racine massive et longue de la canine supérieure."
+      },
+      {
+        questionText: "La face linguale de la canine supérieure présente :",
+        options: [
+          "Un cingulum volumineux et une crête médiane",
+          "Une surface lisse sans relief",
+          "Une fosse unique profonde",
+          "Deux racines"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le relief lingual est très marqué avec un gros cingulum et une crête qui sépare la face en deux fosses, contrairement à la canine inférieure qui est plus lisse."
+      },
+      {
+        questionText: "Quelle canine présente le plus souvent une racine bifide (deux canaux, deux racines) ?",
+        options: [
+          "Canine supérieure",
+          "Canine inférieure",
+          "Les deux à fréquence égale",
+          "Jamais"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La canine mandibulaire peut avoir deux racines (une vestibulaire, une linguale) dans environ 6% des cas, ce qui est très rare pour la supérieure."
+      },
+      {
+        questionText: "La forme de la couronne de la canine, vue vestibulaire, est pentagonale mais on la compare souvent à :",
+        options: [
+          "Un fer de lance",
+          "Un rectangle",
+          "Une pelle",
+          "Un cylindre"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'aspect pointu, massif et les versants du bord libre rappellent la forme d'un fer de lance."
+      },
+      {
+        questionText: "Le rôle fonctionnel principal de la canine est :",
+        options: [
+          "L'écrasement des aliments",
+          "La dilacération (déchirer) et le guidage latéral",
+          "La phonation uniquement",
+          "L'esthétique pure"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle déchire les aliments et assure la protection canine (guidage) lors des mouvements de latéralité de la mandibule."
+      },
+      {
+        questionText: "La racine de la canine supérieure en coupe transversale est :",
+        options: [
+          "Ovale triangulaire à base vestibulaire",
+          "Parfaitement ronde",
+          "En forme de 8",
+          "Carrée"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Elle est ovoïde, plus large au vestibule qu'en palatin, avec des flancs aplatis."
+      },
+      {
+        questionText: "Sur la canine inférieure, par rapport à la racine, la couronne semble :",
+        options: [
+          "Inclinée vers le vestibulaire",
+          "Inclinée vers le lingual",
+          "Parfaitement verticale",
+          "Déjetée vers le distal"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est une caractéristique des dents mandibulaires postérieures et de la canine : l'axe coronaire penche vers la langue par rapport à l'axe radiculaire."
+      },
+      {
+        questionText: "Le point de contact mésial de la canine supérieure se situe :",
+        options: [
+          "Au tiers cervical",
+          "À la jonction tiers incisif / tiers moyen",
+          "Au sommet de la cuspide",
+          "Au milieu de la racine"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Il est plus haut (plus incisif) que le point de contact distal qui est situé au milieu du tiers moyen."
       }
     ]
   },
@@ -3145,6 +3945,164 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [1],
         explanation: "La deuxième molaire inférieure est plus compacte et moins allongée dans le sens mésio-distal que la première molaire. Le terme 'palatin' ne s'applique pas aux dents inférieures."
       },
+      // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2023) ---
+      {
+        questionText: "Le bord cervical de la face vestibulaire des premières molaires inférieures :",
+        options: [
+          "Plus long que le bord occlusal",
+          "Parfaitement rectiligne",
+          "Présente 2 petites convexités à pôle inférieur",
+          "Présente 2 petites convexités à pôle supérieur"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Une pointe d'émail descend entre les racines (vers le bas), créant deux lignes courbes convexes vers le haut (vers la couronne/pôle supérieur)."
+      },
+      {
+        questionText: "La deuxième molaire inférieure :",
+        options: [
+          "Est plus volumineuse que la 1ère molaire inférieure",
+          "Présente aussi 5 cuspides",
+          "Présente une forme plus allongée dans le sens MD",
+          "Les racines sont plus fines avec une tendance à se fusionner"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La 2ème molaire est plus petite que la 1ère, a généralement 4 cuspides, et ses racines sont moins divergentes (plus rapprochées/fusionnées)."
+      },
+      {
+        questionText: "La deuxième molaire mandibulaire droite :",
+        options: [
+          "Présente 4 cuspides",
+          "3 cuspides vestibulaires",
+          "2 cuspides linguales",
+          "La cuspide mésio-vestibulaire est la plus grande"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Elle a 4 cuspides (2 vestibulaires, 2 linguales). C'est la 1ère molaire qui a 3 cuspides vestibulaires."
+      },
+      {
+        questionText: "La face occlusale de la deuxième molaire inférieure (Question 2025) :",
+        options: [
+          "S'inscrit dans un trapèze à grande base palatine",
+          "Moins allongée dans le sens MD que la première",
+          "Le bord lingual est plus long que le bord vestibulaire",
+          "Le bord vestibulaire est plus court et convexe par rapport au bord lingual"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle est plus compacte, rectangulaire ou carrée, et moins allongée que la 1ère molaire."
+      },
+
+      // --- 10 أسئلة إضافية (من إعدادي لتعزيز الفهم) ---
+      {
+        questionText: "La première molaire inférieure (36/46) présente typiquement :",
+        options: [
+          "4 cuspides",
+          "5 cuspides",
+          "3 cuspides",
+          "6 cuspides"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle possède 5 cuspides : 3 vestibulaires (MV, V, DV) et 2 linguales (ML, DL)."
+      },
+      {
+        questionText: "La disposition des sillons sur la face occlusale de la 2ème molaire inférieure forme :",
+        options: [
+          "Une croix (+)",
+          "Un Y",
+          "Une étoile",
+          "Un H"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les 4 cuspides sont symétriques et séparées par un sillon cruciforme (+), c'est le stade 'Hot Cross Bun'."
+      },
+      {
+        questionText: "Les racines de la 1ère molaire inférieure sont au nombre de :",
+        options: [
+          "2 (une mésiale, une distale)",
+          "3 (2 vestibulaires, 1 linguale)",
+          "1 seule",
+          "4"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Elle a deux racines : une racine mésiale (large, souvent 2 canaux) et une racine distale."
+      },
+      {
+        questionText: "La plus petite cuspide de la 1ère molaire inférieure est :",
+        options: [
+          "La Mésio-Vestibulaire",
+          "La Disto-Vestibulaire (ou Distale)",
+          "La Mésio-Linguale",
+          "La Disto-Linguale"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La 5ème cuspide, située en disto-vestibulaire, est la plus petite des cinq."
+      },
+      {
+        questionText: "Le motif 'Dryopithecus pattern' (motif Y5) est caractéristique de :",
+        options: [
+          "La 1ère molaire inférieure",
+          "La 2ème molaire inférieure",
+          "La 1ère molaire supérieure",
+          "La prémolaire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "C'est le motif ancestral à 5 cuspides agencées en Y, typique de la 1ère molaire inf."
+      },
+      {
+        questionText: "La racine mésiale de la molaire inférieure présente généralement :",
+        options: [
+          "1 canal",
+          "2 canaux",
+          "3 canaux",
+          "0 canal"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La racine mésiale est large vestibulo-lingualement et contient le plus souvent 2 canaux (Mésio-Vestibulaire et Mésio-Lingual)."
+      },
+      {
+        questionText: "En vue occlusale, la 1ère molaire inférieure a une forme :",
+        options: [
+          "Rectangulaire ou Hexagonale allongée",
+          "Carrée",
+          "Triangulaire",
+          "Ronde"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Elle est plus large en Mésio-Distal qu'en Vestibulo-Lingual, ce qui lui donne une forme allongée."
+      },
+      {
+        questionText: "La face vestibulaire de la 1ère molaire inférieure présente :",
+        options: [
+          "1 sillon vertical",
+          "2 sillons verticaux",
+          "0 sillon",
+          "3 sillons"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle possède deux sillons vestibulaires qui séparent les 3 cuspides vestibulaires (MV, V, DV)."
+      },
+      {
+        questionText: "Les cuspides linguales des molaires inférieures sont :",
+        options: [
+          "Plus pointues et plus hautes que les vestibulaires",
+          "Plus basses et arrondies",
+          "Absentes",
+          "Toujours au nombre de 3"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les cuspides linguales sont des cuspides guides (non porteuses en occlusion centrée), elles restent pointues et plus hautes que les vestibulaires qui s'usent."
+      },
+      {
+        questionText: "La chambre pulpaire de la molaire inférieure est :",
+        options: [
+          "Rectangulaire à grand axe Mésio-Distal",
+          "Triangulaire",
+          "Ronde",
+          "Très étroite"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La forme de la chambre pulpaire suit la forme de la couronne, elle est donc rectangulaire."
+      },
+      
       {
         questionText: "La deuxième molaire inférieure:",
         options: [
@@ -3159,7 +4117,7 @@ const anatomyQuizzesY2 = [
     ]
   },
   {
-    title: "Occluso-dontie",
+        title: "Occluso-dontie",
     subject: "anatomy-y2",
     questions: [
       {
@@ -3747,7 +4705,230 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 3],
         explanation: "La face linguale de cette dent est convexe verticalement et horizontalement. Morphologiquement, elle peut présenter deux cuspides linguales distinctes ou, dans certaines variations, une seule cuspide linguale peu marquée et émoussée."
-     }
+     },
+     // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2022, 2021) ---
+      {
+        questionText: "La face occlusale de la (35) avec deux sillons occlusaux présente :",
+        options: [
+          "Une cuspide linguale et une vestibulaire plus saillante",
+          "Un sillon MD courbe à convexité linguale",
+          "Deux fossettes marginales plus proches du bord vestibulaire",
+          "Deux cuspides linguales dont la disto-linguale est la plus grande"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le sillon principal est courbe (concave en vestibulaire / convexe en lingual). Les fossettes sont déportées vers le vestibule."
+      },
+      {
+        questionText: "La face linguale des deuxièmes prémolaires inférieures présente :",
+        options: [
+          "Toujours un bord libre divisé en 2 pointes mésiale et distale",
+          "Une convexité dans le sens vertical et horizontal",
+          "Une obliquité de haut en bas dans le sens lingual",
+          "Parfois une seule pointe très émoussée"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Elle est convexe dans les deux sens. Elle peut présenter une seule cuspide linguale (émoussée) ou deux (dans le cas tricuspidé)."
+      },
+      {
+        questionText: "La face occlusale de la deuxième prémolaire inférieure présente :",
+        options: [
+          "Toujours deux cuspides linguales",
+          "Parfois un sillon en forme d'un Y",
+          "Un sillon mésio-distal courbe à convexité vestibulaire",
+          "Deux fossettes marginales près du bord lingual"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Dans la variété à 3 cuspides (1 vestibulaire + 2 linguales), la disposition des sillons forme un 'Y' caractéristique."
+      },
+      {
+        questionText: "La face occlusale de la (34) :",
+        options: [
+          "Est presque circulaire",
+          "Présente un sillon intercuspidien rectiligne placé près du bord lingual",
+          "Présente parfois deux cuspides linguales",
+          "Est oblique à 45° dans le sens mésio-distal"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La première prémolaire inférieure (34) a une silhouette occlusale arrondie ou grossièrement circulaire."
+      },
+      {
+        questionText: "Les caractères différentiels entre les prémolaires supérieures et inférieures :",
+        options: [
+          "Les PM inferieures sont en série descendante",
+          "Les PM supérieures présentent une face V plus oblique que leur face L",
+          "Les PM inferieures ont un sillon intercuspidien rectiligne",
+          "Les PM supérieures sont généralement biradiculées"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La différence majeure est que les PM supérieures (surtout la 1ère) ont tendance à avoir 2 racines, alors que les inférieures sont monoradiculées."
+      },
+      {
+        questionText: "La racine de la 1ère PM Inférieure :",
+        options: [
+          "Est unique, conique, aplatie dans le sens VL",
+          "Elle est plus petite et plus effilée que la racine de la canine inférieure",
+          "Présente des sillons peu marqués sur les faces proximales",
+          "Présente une section ovalaire à petite base vestibulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elle ressemble à la racine de la canine mais en plus réduit, plus pointu et effilé."
+      },
+      {
+        questionText: "La face occlusale de la 1ère PM inferieure :",
+        options: [
+          "Vue de face, elle est trapézoïdale",
+          "Le sillon intercuspidien mésio-distal, placé près du bord lingual",
+          "Présente deux cuspides vestibulaire et une linguale",
+          "Présente deux cuspides vestibulaires et une linguale"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le sillon est déporté lingualement à cause de la prédominance de la cuspide vestibulaire. Elle a 2 cuspides (1 V et 1 L)."
+      },
+      {
+        questionText: "La chambre pulpaire de la 2éme PM inferieure :",
+        options: [
+          "Présente 2 ou 3 cornes, selon que la racine est mono-radiculée ou bi-radiculée",
+          "Présente 2 ou 3 cornes, selon que la couronne présente 2 ou 3 cuspides",
+          "Présente un canal radiculaire très légèrement aplati dans le sens MD",
+          "Présente un canal radiculaire très légèrement aplati dans le sens VL"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le nombre de cornes pulpaires suit le nombre de cuspides (2 ou 3). Le canal est ovalaire, aplati Mésio-Distalement."
+      },
+      {
+        questionText: "Pour la face occlusale de la 2eme PM inférieure à deux cuspides :",
+        options: [
+          "La cuspide linguale est la plus saillante et la plus forte",
+          "Le sillon MD est courbe à convexité linguale",
+          "Les fossettes marginales se retrouvent plus près du bord L que du bord V",
+          "L'ensemble des 2 sillons donnent la forme d'un Y"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Dans le type bicuspidé (H ou U), le sillon est courbe avec une convexité tournée vers le lingual (concavité vestibulaire)."
+      },
+      {
+        questionText: "La racine de la 1ere PM inferieure :",
+        options: [
+          "Unique, conique, aplatie dans le sens MD",
+          "Elle est plus petite et plus effilée que la racine de la 2eme PM inferieure",
+          "Présente un sillon sur les faces proximales ; plus marqué au centre qu' aux extrémités",
+          "A une inclinaison oblique de 5,2° / verticale de bas en haut dans le sens lingual"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Sa section est ovoïde, aplatie sur les faces mésiale et distale."
+      },
+
+      // --- 10 أسئلة إضافية (من إعدادي لتعزيز الفهم) ---
+      {
+        questionText: "La cuspide linguale de la 1ère prémolaire inférieure est :",
+        options: [
+          "Très développée",
+          "Non fonctionnelle (aphasique)",
+          "Plus haute que la vestibulaire",
+          "Divisée en deux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est une caractéristique majeure : la cuspide linguale est très petite, ressemble à un cingulum et n'entre pas en occlusion."
+      },
+      {
+        questionText: "La 1ère prémolaire inférieure a une couronne inclinée vers :",
+        options: [
+          "Le vestibulaire",
+          "Le lingual",
+          "Le mésial",
+          "Le distal"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Vue de profil, la couronne semble 'pencher' vers la langue par rapport à l'axe radiculaire."
+      },
+      {
+        questionText: "La face occlusale 'Snake Eyes' (yeux de serpent) correspond à :",
+        options: [
+          "La 1ère PM inf",
+          "La 2ème PM inf",
+          "La Molaire",
+          "La Canine"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Cela est dû à la présence de deux fossettes profondes séparées par un pont d'émail proéminent, ressemblant à des yeux."
+      },
+      {
+        questionText: "Laquelle des prémolaires inférieures présente souvent 3 cuspides ?",
+        options: [
+          "La 1ère PM inférieure",
+          "La 2ème PM inférieure",
+          "Aucune",
+          "Les deux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La 2ème PM inf (35/45) a fréquemment 3 cuspides (1 Vestibulaire, 1 Mésio-Linguale, 1 Disto-Linguale)."
+      },
+      {
+        questionText: "Le sillon en 'Y' sur la 2ème PM inf est dû à :",
+        options: [
+          "2 cuspides",
+          "3 cuspides",
+          "Une fracture",
+          "Une carie"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "C'est la jonction des sillons séparant les 3 cuspides (1 vestibulaire et 2 linguales)."
+      },
+      {
+        questionText: "Les prémolaires inférieures sont en série :",
+        options: [
+          "Ascendante (la 2ème est plus grosse que la 1ère)",
+          "Descendante",
+          "Egale",
+          "Aléatoire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Contrairement aux supérieures, la 2ème PM inf est plus volumineuse que la 1ère."
+      },
+      {
+        questionText: "La section de la racine de la 1ère PM inférieure est :",
+        options: [
+          "Ovale aplatie mésio-distalement",
+          "Ronde",
+          "Triangulaire",
+          "Double"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Racine unique, ovoïde et aplatie latéralement."
+      },
+      {
+        questionText: "Le sillon mésio-lingual (qui déborde sur la face linguale) est caractéristique de :",
+        options: [
+          "La 1ère prémolaire inférieure",
+          "La 2ème prémolaire inférieure",
+          "La PM sup",
+          "La molaire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Un sillon de développement sépare souvent la crête marginale mésiale de la cuspide linguale sur la 34/44."
+      },
+      {
+        questionText: "La 2ème PM inf tricuspidée a une forme occlusale :",
+        options: [
+          "Carrée / Rectangulaire",
+          "Ronde",
+          "Triangulaire",
+          "Ovale"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'apparition des deux cuspides linguales élargit la table occlusale en lingual, donnant un aspect plus carré."
+      },
+      {
+        questionText: "La cuspide vestibulaire de la 1ère PM inf est :",
+        options: [
+          "Centrée sur l'axe radiculaire",
+          "Déportée en vestibulaire",
+          "Déportée en lingual",
+          "Absente"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La pointe de la cuspide vestibulaire se trouve presque à l'aplomb du centre de la racine."
+      }
     ]
   },
       
