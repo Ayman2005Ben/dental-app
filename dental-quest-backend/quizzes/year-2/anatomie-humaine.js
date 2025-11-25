@@ -3698,7 +3698,7 @@ const anatomyQuizzesY2 = [
     questions: [
       // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2022, 2021) ---
       {
-        questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure ? (Question classée ici dans le PDF)",
+        questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure ? ",
         options: [
           "La racine disto-vestibulaire est toujours courbée mésialement",
           "La racine palatine est toujours droite",
