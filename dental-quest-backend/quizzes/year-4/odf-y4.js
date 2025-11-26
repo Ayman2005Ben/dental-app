@@ -552,7 +552,7 @@ const odfY4Quizzes = [
           "Son activation se fait par ouverture de la spire.",
           "Permet de rétracter la canine en translation."
         ],
-        correctOptionIndexes: [1, 2, 3],
+        correctOptionIndexes: [1],
         explanation: "Le rétracteur canin est un ressort confectionné en fil de 0.7mm. Il permet des mouvements de version (bascule) et non de translation. Son activation se fait en ouvrant la spire pour appliquer une force sur la dent."
       },
       {
@@ -563,7 +563,7 @@ const odfY4Quizzes = [
           "Exerce une force qui s'applique sur une surface d'appui de la dent.",
           "Exerce une force sur un point d'application ponctuel."
         ],
-        correctOptionIndexes: [0, 1],
+        correctOptionIndexes: [ 1,3],
         explanation: "Un appareil amovible applique une force à distance du centre de résistance de la dent, ce qui provoque principalement des mouvements de version (bascule) coronaire."
       },
       {
@@ -574,7 +574,7 @@ const odfY4Quizzes = [
           "Provoque uniquement des mouvements de version coronaire",
           "Est réalisé avec du fil 0,6mm."
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,1,2],
         explanation: "Le vérin est un dispositif mécanique préfabriqué, intégré à une plaque en résine, dont le but est de générer une force d'expansion pour élargir l'arcade."
       },
       {
@@ -585,7 +585,7 @@ const odfY4Quizzes = [
           "Evitent la perte d’ancrage",
           "Utilisent des forces continues"
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,2],
         explanation: "Les appareils amovibles sont indiqués pour corriger une endoalvéolie (arcade étroite). Ils utilisent des forces intermittentes (activées par le patient ou le praticien) et ne permettent pas de réaliser des mouvements complexes comme le torque (mouvement de la racine)."
       },
       {
@@ -607,7 +607,7 @@ const odfY4Quizzes = [
           "Est activé par ouverture des boucles de compensation",
           "Permet un déplacement palatin des incisives en translation"
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,1],
         explanation: "L'arc vestibulaire actif, généralement en fil 0.7mm ou 0.8mm, est utilisé pour lingualer/palater les incisives. Il provoque un mouvement de version (bascule). L'activation se fait en fermant les boucles."
       },
       {
@@ -630,7 +630,7 @@ const odfY4Quizzes = [
           "Permet un déplacement palatin des incisives en version",
           "Est activé par ouverture des boucles de compensation"
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [0,2],
         explanation: "L'arc vestibulaire actif permet de déplacer les incisives vers le palais par un mouvement de version (bascule). Il est activé par fermeture des boucles de compensation."
       },
       {
@@ -641,7 +641,7 @@ const odfY4Quizzes = [
           "Assure la rétention de l'appareil amovible",
           "Nécessite pour sa réalisation une hauteur coronaire suffisante"
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [2,3],
         explanation: "Le crochet d'Adams est le principal élément de rétention d'une plaque amovible. Il est façonné en fil de 0.7mm et se place habituellement sur les prémolaires et les molaires."
       },
       {
@@ -652,7 +652,7 @@ const odfY4Quizzes = [
           "L'appareil permet un mouvement de linguo version ou de palato version des incisives",
           "L'appareil doit être activé toute les trois semaines"
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,1],
         explanation: "Dans une plaque de Hawley utilisée pour la contention, l'arc vestibulaire passif est réalisé avec du fil 0.7 mm. L'appareil est passif, il ne doit pas être activé et la résine ne doit pas être en contact avec les incisives pour ne pas interférer avec l'occlusion."
       },
       {
@@ -709,7 +709,7 @@ const odfY4Quizzes = [
           "Peut servir de rétention pour l'appareillage amovible",
           "Nécessite du 0,7mm pour sa confection"
         ],
-        correctOptionIndexes: [3],
+        correctOptionIndexes: [2,3],
         explanation: "La rampe de Schwartz est un élément de rétention (ancrage) qui est confectionné avec du fil de diamètre 0.7mm. Elle ne corrige pas les malpositions dentaires."
       },
       {
@@ -737,7 +737,7 @@ const odfY4Quizzes = [
           "De raccourcir la durée du traitement.",
           "La diminution de la place disponible pour les dents postérieures."
         ],
-        correctOptionIndexes: [1, 2],
+        correctOptionIndexes: [0,1, 2],
         explanation: "La fermeture de l'espace en cas d'agénésie des latérales permet d'éviter une solution prothétique, de raccourcir la durée du traitement orthodontique et d'augmenter la place disponible pour les dents postérieures."
       },
       {
@@ -748,7 +748,7 @@ const odfY4Quizzes = [
           "Profil rétrusif.",
           "Dysharmonie dento-maxillaire par défaut."
         ],
-        correctOptionIndexes: [2, 3],
+        correctOptionIndexes: [0,1,2, 3],
         explanation: "L'ouverture de l'espace est indiquée quand le profil est déjà concave ou rétrusif (un recul l'aggraverait) ou en cas de manque de place global sur l'arcade (DDM par défaut)."
       },
       {
@@ -759,7 +759,7 @@ const odfY4Quizzes = [
           "La correction d'un profil concave.",
           "D'augmenter la place disponible pour les dents postérieures."
         ],
-        correctOptionIndexes: [0, 3],
+        correctOptionIndexes: [0,1, 3],
         explanation: "La fermeture de l'espace a pour avantages principaux d'éviter le recours à la prothèse (implant, bridge) et d'augmenter l'espace disponible pour le reste des dents."
       },
       {
@@ -770,7 +770,7 @@ const odfY4Quizzes = [
           "La présence d'une dent supplémentaire",
           "Absence des incisives latérales après l’âge d'éruption de ces dernières"
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,1,3],
         explanation: "La persistance d'une dent temporaire bien au-delà de son âge normal de chute est un signe clinique majeur qui doit faire suspecter l'agénésie de la dent permanente sous-jacente."
       },
       {
@@ -781,7 +781,7 @@ const odfY4Quizzes = [
           "On obtient une classe Il canine et une classe II molaire thérapeutique",
           "Permet de soutenir la musculature et évite de creuser le profil"
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,1,3],
         explanation: "L'option d'ouverture d'espace est une approche pluridisciplinaire : l'orthodontiste crée l'espace nécessaire, qui sera ensuite comblé par une solution prothétique (implant, bridge)."
       },
       {
@@ -792,7 +792,7 @@ const odfY4Quizzes = [
           "Extraction des prémolaires supérieures et fermeture des espaces inferieurs en cas de classe II",
           "Réalisation de prothèse implantaire en cas de rapports de classe I"
         ],
-        correctOptionIndexes: [3],
+        correctOptionIndexes: [2,3],
         explanation: "Lorsque l'occlusion est déjà en Classe I et qu'il n'y a pas de DDM à corriger, la solution la plus conservatrice est de maintenir l'espace de l'agénésie pour un remplacement implantaire."
       },
       {
@@ -803,7 +803,7 @@ const odfY4Quizzes = [
           "Est purement orthodontique",
           "Nécessite de préférence la mise en place d'une prothèse implantaire"
         ],
-        correctOptionIndexes: [1],
+        correctOptionIndexes: [1,3],
         explanation: "La gestion d'une agénésie de latérale est complexe et nécessite une collaboration entre plusieurs spécialistes (orthodontiste, implantologiste, prothésiste) pour choisir et réaliser la meilleure solution (fermeture ou ouverture)."
       },
       {
@@ -814,10 +814,17 @@ const odfY4Quizzes = [
           "Extraction des premières prémolaires supérieures et fermeture des espaces inférieures en cas de classe II",
           "La réalisation de prothèse implantaire en cas de rapport de classe I"
         ],
-        correctOptionIndexes: [3],
+        correctOptionIndexes: [2,3],
         explanation: "En présence d'une occlusion de Classe I sans DDM, la solution de choix pour une agénésie de seconde prémolaire inférieure est le maintien de l'espace pour une future restauration implantaire."
       },
-      {
+      questionText: "Dans le cas d’agénésie des deuxièmes prémolaires inferieure, le traitement consiste:",
+        options: [
+          "A la fermeture d’espace en cas de DDM.",
+          "Remplacement des dents absentes en cas de décalage de classe II",
+          "Extraction des premières prémolaires supérieures et fermeture des espaces inférieures en cas de classe II",
+          "La réalisation de prothèse implantaire en cas de rapport de classe I"
+        ],
+        correctOptionIndexes: [2, 3],{
         questionText: "En présence d'une agénésie d’une incisive latérale supérieure, le traitement :",
         options: [
           "Consiste en Ia fermeture de l'espace d'agénésie",
@@ -825,7 +832,7 @@ const odfY4Quizzes = [
           "Est purement orthodontique.",
           "Nécessite de préférence: Ia mise en place d'une prothèse implantaire"
         ],
-        correctOptionIndexes: [1],
+        correctOptionIndexes: [1,3],
         explanation: "Le traitement de l'agénésie de l'incisive latérale est un cas complexe qui requiert une approche pluridisciplinaire, impliquant l'orthodontiste et le prothésiste pour décider entre la fermeture et l'ouverture de l'espace."
       },
       {
@@ -847,7 +854,7 @@ const odfY4Quizzes = [
           "Nécessite parfois l’extraction de 3 prémolaires",
           "Doit être purement orthodontique"
         ],
-        correctOptionIndexes: [0],
+        correctOptionIndexes: [0,2],
         explanation: "La décision thérapeutique (fermer l'espace ou le maintenir pour un implant) dépend crucialement de la situation occlusale globale, notamment de la présence ou de l'absence d'une dysharmonie dento-maxillaire (DDM)."
       },
       {
@@ -858,7 +865,7 @@ const odfY4Quizzes = [
           "La réouverture de l'espace en classe III squelettique",
           "Extraire parfois des dents a l'arcade maxillaire."
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [1],
         explanation: "En cas de Classe III squelettique (manque de développement du maxillaire), on choisit d'ouvrir ou de maintenir l'espace des latérales agénésiques. Cela permet de ne pas aggraver le déficit maxillaire et de conserver une longueur d'arcade suffisante."
       },
       {
@@ -869,7 +876,7 @@ const odfY4Quizzes = [
           "Impose des extractions à l'arcade antagoniste en cas de DDM.",
           "Nécessite la conservation des deuxièmes molaires temporaires dans a plupart des cas."
         ],
-        correctOptionIndexes: [0, 2],
+        correctOptionIndexes: [3],
         explanation: "Une prise en charge précoce est nécessaire pour gérer l'espace. Si l'on décide de fermer les espaces d'agénésie à la mandibule et qu'il y a une DDM au maxillaire, des extractions compensatrices à l'arcade antagoniste sont souvent nécessaires."
       },
       {
@@ -880,7 +887,7 @@ const odfY4Quizzes = [
           "Nécessite une prise en charge pluridisciplinaire.",
           "Peut être la cause d'une inclusion canine."
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [1,2,3],
         explanation: "La gestion de l'agénésie de l'incisive latérale est un défi qui nécessite une planification et une collaboration entre plusieurs disciplines (orthodontie, prothèse, implantologie) pour un résultat optimal."
       },
       {
@@ -891,7 +898,7 @@ const odfY4Quizzes = [
           "Est très fréquente en présence d'une fente Iabio palatine",
           "Nécessite une prise en charge tardive surtout chez l'enfant"
         ],
-        correctOptionIndexes: [1],
+        correctOptionIndexes: [1,2],
         explanation: "La gestion de cette agénésie nécessite une approche pluridisciplinaire. L'agénésie la plus fréquente est celle des deuxièmes prémolaires inférieures."
       }
     ]

@@ -895,8 +895,8 @@ const prothesey2QuizzesY2 = [
         explanation: "Les zones de Schroeder sont situées au niveau de l'arcade maxillaire. Dans ces zones, la fibromuqueuse n'est pas adhérente à l'os mais en est séparée par un tissu cellulo-graisseux. Elles sont dépressibles et constituent un indice négatif, peu favorable à la sustentation ; elles doivent donc être déchargées ou évitées.",
         citations: [454, 455, 456, 457]
       },
-      {
-        questionText: "Le raphé médian :",
+{
+  questionText: "Le raphé médian : 1- Est appelé aussi suture intermaxillaire 2- Est. un indice biologique positif situé sur l'arcade mandibulaire 3- Doit être déchargé s'il est saillant4- Comporte parfois un torus5 Toutes les réponses sont justes",
         options: [
           "(1,2)",
           "(3,4)",
@@ -909,7 +909,7 @@ const prothesey2QuizzesY2 = [
         citations: [700]
       },
       {
-        questionText: "Les tubérosités :",
+        questionText: "Les tubérosités :1- Sont situées dans la partie distale, de chaque côté de l'arcade maxillaire 2.Sont des indices biologiques négatifs à la mandibule 3.Doivent être de dépouille 4.Doivent être systématiquement recouvertes par la prothèse5.Interviennent dans la stabilisation transversale et mésio-distale de la prothèse amovible maxillaire",
         options: [
           "(1,3)",
           "(2,3)",
@@ -934,7 +934,7 @@ const prothesey2QuizzesY2 = [
         citations: [724, 725, 726, 727]
       },
       {
-        questionText: "Les tori mandibulaires",
+        questionText: "Les tori mandibulaires : 1- Sont des exostoses inconstantes situées au niveau de la table externe mandibulaire en regard des prémolaires2- Peuvent s'opposer à l'insertion de la prothèse3- Doivent être exploités par la prothèse amovible pour une meilleure rétention4- Sont recouverts d'une muqueuse fragile et fine5- Toutes les réponses sont justes",
         options: [
           "(1,2)",
           "(2,3)",
@@ -996,7 +996,7 @@ const prothesey2QuizzesY2 = [
         citations: [802, 803, 804]
       },
       {
-        questionText: "Les trigones rétro-molaires",
+        questionText: "Les trigones rétro-molaires1- Sont des plans inclinés osseux à la jonction de la branche horizontale et de la branche montante de la mandibule.2- Servent de butée postérieure à la prothèse 3- Sont des indices négatifs à décharger4- Assurent la sustentation et la stabilisation mésio-distale à la prothèse.5- Toutes les réponses sont fausses.",
         options: [
           "(1,3)",
           "(2,3)",
@@ -1009,7 +1009,7 @@ const prothesey2QuizzesY2 = [
         citations: []
       },
       {
-        questionText: "Les tori mandibulaires",
+        questionText: "Les tori mandibulairesLes tori mandibulaires1- Sont des exostoses inconstantes situées au niveau de la table interne2- Sont situés en regard des apex des molaires.3- Sont des indices positifs et permettent la rétention de la prothèse amovible mandibulaire4- Sont recouverts d'une muqueuse fragile et fine.5- Toutes les réponses sont justes",
         options: [
           "(1,3)",
           "(2,3)",
