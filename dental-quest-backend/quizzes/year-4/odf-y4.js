@@ -817,14 +817,18 @@ const odfY4Quizzes = [
         correctOptionIndexes: [2,3],
         explanation: "En présence d'une occlusion de Classe I sans DDM, la solution de choix pour une agénésie de seconde prémolaire inférieure est le maintien de l'espace pour une future restauration implantaire."
       },
-      questionText: "Dans le cas d’agénésie des deuxièmes prémolaires inferieure, le traitement consiste:",
+      {
+        questionText: "Dans le cas d’agénésie des deuxièmes prémolaires inferieure, le traitement consiste:",
         options: [
           "A la fermeture d’espace en cas de DDM.",
           "Remplacement des dents absentes en cas de décalage de classe II",
           "Extraction des premières prémolaires supérieures et fermeture des espaces inférieures en cas de classe II",
           "La réalisation de prothèse implantaire en cas de rapport de classe I"
         ],
-        correctOptionIndexes: [2, 3],{
+        correctOptionIndexes: [2, 3],
+        explanation: "En présence d'une occlusion de Classe I sans DDM, la solution de choix pour une agénésie de seconde prémolaire inférieure est le maintien de l'espace pour une future restauration implantaire."
+      },
+      {
         questionText: "En présence d'une agénésie d’une incisive latérale supérieure, le traitement :",
         options: [
           "Consiste en Ia fermeture de l'espace d'agénésie",
