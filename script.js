@@ -2146,41 +2146,41 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
         }
     }
 
-// ✅ --- دالة جديدة لتهيئة وبدء الكويز (لتجنب التكرار) ---
-function initializeAndStartQuiz(quizData) {
-    proQuiz = quizData; // Store quiz data
-    proUserAnswers = new Array(proQuiz.questions.length).fill(null); 
-    quizStartTime = Date.now(); 
+    // ✅ --- دالة جديدة لتهيئة وبدء الكويز (لتجنب التكرار) ---
+    function initializeAndStartQuiz(quizData) {
+        proQuiz = quizData; // Store the quiz data
+        proQuestionIndex = 0; // Start at the first question
+        proUserAnswers = new Array(proQuiz.questions.length).fill(null); // Reset answers array
+        quizStartTime = Date.now(); // Record start time
 
-    if(quizLessonNameEl) quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
-    if(quizSubjectNameEl) quizSubjectNameEl.textContent = proQuiz.subjectName || ''; 
+        // Update UI elements with quiz title and subject name
+        if(quizLessonNameEl) quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
+        if(quizSubjectNameEl) quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Use subjectName if available
 
-    // ✅ التعديل: نرسم القائمة مرة واحدة فقط هنا
-    renderQuestionList(); 
-    
-    // ✅ التعديل: نعرض السؤال الأول ونمنع إعادة رسم القائمة (false)
-    renderCurrentQuestion(); 
-    
-    updateStats(); 
-    saveQuizState(); 
-    
-    showPage('#quiz-taking-page'); 
-}
+        // Render the UI components for the quiz
+        renderQuestionList(); // Build the question number navigation
+        renderCurrentQuestion(); // Display the first question
+        updateStats(); // Initialize the stats display (0 correct, 0 incorrect)
+        
+        // Save initial state immediately (in case of immediate refresh)
+        saveQuizState(); 
+        
+        showPage('#quiz-taking-page'); // Navigate to the quiz taking page
+    }
 
     // ✅ --- دالة جديدة لحفظ حالة الكويز في localStorage ---
     function saveQuizState() {
-    if (proQuiz && proUserAnswers) { 
-        const stateToSave = {
-            // حذفنا savedProQuiz لأنه يملأ ذاكرة الهاتف ويسبب الشاشة السوداء
-            quizId: proQuiz._id, 
-            savedProQuestionIndex: proQuestionIndex,
-            savedProUserAnswers: proUserAnswers,
-            savedQuizStartTime: quizStartTime
-        };
-        // الآن الحجم صغير جداً (كيلوبايتات) ولن يعلق الهاتف
-        localStorage.setItem('quizState', JSON.stringify(stateToSave));
+        if (proQuiz && proUserAnswers) { // Only save if a quiz is active
+            const stateToSave = {
+                savedProQuiz: proQuiz,
+                savedProQuestionIndex: proQuestionIndex,
+                savedProUserAnswers: proUserAnswers,
+                savedQuizStartTime: quizStartTime // Save start time too
+            };
+            localStorage.setItem('quizState', JSON.stringify(stateToSave));
+            // console.log("Quiz state saved at index:", proQuestionIndex); // For debugging
+        }
     }
-}
 
     // --- دالة عرض قائمة أرقام الأسئلة ---
     function renderQuestionList() {
@@ -2222,109 +2222,167 @@ function initializeAndStartQuiz(quizData) {
     }
 
 // --- دالة عرض السؤال الحالي ---
-// ✅ لاحظ إضافة (updateListOnly = true)
-function renderCurrentQuestion(updateListOnly = true) {
+function renderCurrentQuestion() {
+    // Stop any existing timer for the previous question
     clearInterval(quizTimerInterval);
     quizTimerInterval = null; 
 
-    // حماية من الأخطاء في حال البيانات ناقصة
+    // Ensure quiz data and current question exist
     if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) {
-        console.error("Quiz data missing.");
+        console.error("Quiz data or current question is missing. Index:", proQuestionIndex);
+        if (quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = "Error: Could not load question data.";
+        if (quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
+        updateQuizControls(); // Update controls to reflect error state if possible
         return;
     }
 
     const question = proQuiz.questions[proQuestionIndex];
-    
-    // --- (بداية كود العرض القديم - لا تغيير هنا) ---
+
+    // --- Safely extract question data with fallbacks ---
     const questionText = question.questionText || question.question || `Question ${proQuestionIndex + 1}`;
+    // Handle various ways correct answers might be stored
     const correctIndexesRaw = question.correctOptionIndexes ?? question.correctIndex ?? question.answer ?? question.answerIndex;
     let correctIndexes = [];
     if (correctIndexesRaw !== undefined && correctIndexesRaw !== null) {
          correctIndexes = Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw];
+    } else {
+         console.warn("Correct answer index missing for question:", proQuestionIndex, question);
+         // Decide how to handle missing answers (e.g., skip, mark as unanswerable)
     }
     const options = question.options || [];
-    const explanation = question.explanation || question.Explanation || '';
+    const explanation = question.explanation || question.Explanation || ''; // Handle both possible keys
 
+    // Basic check for essential data
+    if (options.length === 0 || correctIndexesRaw === undefined) {
+        console.error("Incomplete question data (options or correct index missing):", proQuestionIndex, question);
+        if(quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = "Error: Question data is incomplete. Please skip or report.";
+        if(quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
+        updateQuizControls();
+        return;
+    }
+
+    // --- Update UI Elements ---
     const isAnswered = proUserAnswers[proQuestionIndex] !== null;
-    const optionLabels = ['A', 'B', 'C', 'D', 'E', 'F']; 
+    const optionLabels = ['A', 'B', 'C', 'D', 'E', 'F']; // Labels for options
     const isMultipleChoice = correctIndexes.length > 1;
 
+    // Update progress text
     if (quizProgressEl_pro) quizProgressEl_pro.textContent = `Question ${proQuestionIndex + 1} of ${proQuiz.questions.length}`;
+    // Update question text
     if (quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = questionText;
     
+    // Clear previous options and explanation
     if (quizOptionsContainer_pro) {
          quizOptionsContainer_pro.innerHTML = '';
+         // Set class for single/multiple choice styling
          quizOptionsContainer_pro.className = 'quiz-options-container-pro ' + (isMultipleChoice ? 'multiple-choice' : 'single-choice');
     }
-    if (quizExplanationContainer) quizExplanationContainer.style.display = 'none';
+    if (quizExplanationContainer) quizExplanationContainer.style.display = 'none'; // Hide explanation initially
 
+    // Remove any previous image
      if (quizQuestionTextEl_pro) {
          const parentArea = quizQuestionTextEl_pro.parentElement;
          const oldImageContainer = parentArea?.querySelector('.quiz-image-display');
          if (oldImageContainer) { oldImageContainer.remove(); }
      }
 
+    // Display image if available
     if (question.imageUrl && quizQuestionTextEl_pro) {
         const imgContainer = document.createElement('div');
         imgContainer.className = 'quiz-image-display';
-        const serverUrl = 'https://dental-app-he1p.onrender.com';
+        const serverUrl = 'https://dental-app-he1p.onrender.com'; // Define server URL if needed
+        // Ensure the URL is absolute if filePath doesn't include the domain
         const imageUrl = question.imageUrl.startsWith('http') ? question.imageUrl : `${serverUrl}${question.imageUrl}`;
         imgContainer.innerHTML = `<img src="${imageUrl}" alt="Question Illustration">`;
+        // Insert image after the question text
         quizQuestionTextEl_pro.after(imgContainer); 
     }
 
+    // --- Render Options ---
     options.forEach((optionText, index) => {
-        if (!quizOptionsContainer_pro) return;
+        if (!quizOptionsContainer_pro) return; // Exit if container removed unexpectedly
 
         const optionEl = document.createElement('button');
         optionEl.className = 'quiz-option-pro';
-        optionEl.dataset.index = index;
-        optionEl.disabled = isAnswered;
+        optionEl.dataset.index = index; // Store option index
+        optionEl.disabled = isAnswered; // Disable if already answered
 
+        // --- Option Stats Display Logic ---
         let statsHtml = '';
-        if (isAnswered && question.stats && question.stats.totalAnswers > 0) {
+        // Show stats only if answered AND stats data exists
+        if (isAnswered && question.stats && question.stats.totalAnswers > 0 && question.stats.optionSelectionCounts) {
             const count = question.stats.optionSelectionCounts[index] || 0;
-            const percentage = Math.round((count / question.stats.totalAnswers) * 100);
-            statsHtml = `<div class="option-stats-bar" style="width: ${percentage}%;"></div><span class="option-stats-text">${percentage}%</span>`;
+            const total = question.stats.totalAnswers;
+            const percentage = Math.round((count / total) * 100);
+            
+            // Background bar for percentage
+            statsHtml = `
+                <div class="option-stats-bar" style="width: ${percentage}%;"></div>
+                <span class="option-stats-text">${percentage}%</span>
+            `;
         }
 
-        optionEl.innerHTML = `<div class="quiz-option-prefix"><span class="quiz-option-label">${optionLabels[index] || ''}</span></div><div class="quiz-option-text">${optionText}</div>${statsHtml}`;
+        // Option Structure (Prefix, Text, Stats)
+        optionEl.innerHTML = `
+            <div class="quiz-option-prefix"><span class="quiz-option-label">${optionLabels[index] || ''}</span></div>
+            <div class="quiz-option-text">${optionText || `Option ${index + 1}`}</div>
+            ${statsHtml} 
+        `;
 
+        // Add event listeners only if the question is NOT answered
         if (!isAnswered) {
-            optionEl.addEventListener('click', () => isMultipleChoice ? toggleOption(index) : selectOption(index)); 
-        } else {
+            if (isMultipleChoice) {
+                // Toggle selection for multiple choice
+                optionEl.addEventListener('click', () => toggleOption(index)); 
+            } else {
+                // Select single option for single choice
+                optionEl.addEventListener('click', () => selectOption(index)); 
+            }
+        } 
+        // Apply styling if the question IS answered
+        else {
             const answerData = proUserAnswers[proQuestionIndex];
             const selectedIndexes = answerData?.selectedIndexes || [];
-            if (correctIndexes.includes(index)) optionEl.classList.add('correct');
+
+            // Mark correct options
+            if (correctIndexes.includes(index)) {
+                 optionEl.classList.add('correct');
+            }
+            // Mark selected options
             if (selectedIndexes.includes(index)) {
                 optionEl.classList.add('selected');
-                if (!correctIndexes.includes(index)) optionEl.classList.add('incorrect');
+                // Mark incorrect if selected but not correct
+                if (!correctIndexes.includes(index)) {
+                     optionEl.classList.add('incorrect');
+                }
             }
         }
         quizOptionsContainer_pro.appendChild(optionEl);
     });
 
+    // Display explanation if answered and explanation exists
     if (isAnswered && explanation && quizExplanationContainer && quizExplanationText) {
         quizExplanationText.textContent = explanation;
         quizExplanationContainer.style.display = 'block';
     }
 
-    if (!isAnswered) startQuizTimer(question.timer || 90);
-    else {
+    // --- Timer Handling ---
+    if (!isAnswered) {
+        // Start timer only if not answered
+        startQuizTimer(question.timer || 90); // Use question timer or default 90s
+    } else {
+         // If answered, show "Done!" or similar, disable timer visuals
          if(quizTimerDisplay) quizTimerDisplay.textContent = "Answered";
          if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
-         if(quizTimerDisplay) quizTimerDisplay.style.opacity = '0.7';
+         if(quizTimerDisplay) quizTimerDisplay.style.opacity = '0.7'; // Dim the timer display
     }
     
+    // Update navigation buttons (Prev, Next, Skip, Check)
     updateQuizControls();
-
-    // ✅ التعديل هنا: استخدام دالة التحديث الخفيفة بدلاً من إعادة الرسم
-    if (!updateListOnly) {
-        renderQuestionList(); 
-    } else {
-        updateQuestionListStyles(); // دالة جديدة خفيفة جداً
-    }
+    // Update the question number list highlighting
+    renderQuestionList(); 
 }
+
     
     // ✅ --- [إصلاح] دالة بدء عداد الكويز (اسم جديد) ---
     let isQuizTimerActive = true; // Global flag to control timer activation
@@ -2383,32 +2441,7 @@ function renderCurrentQuestion(updateListOnly = true) {
         renderCurrentQuestion(); // Re-render to show feedback and disable options
         updateStats(); // Update overall stats
     }
-    // ✅ دالة جديدة لتحديث ألوان الأزرار فقط دون تدمير الواجهة (تمنع الكراش)
-function updateQuestionListStyles() {
-    if (!proQuiz || !proQuiz.questions) return;
 
-    // استخدام querySelectorAll أسرع وأخف على الذاكرة من إعادة البناء
-    const allButtons = document.querySelectorAll('.question-number-pro');
-    
-    allButtons.forEach((btn, index) => {
-        btn.classList.remove('current');
-        
-        if (index === proQuestionIndex) {
-            btn.classList.add('current');
-            // تحريك الشريط بسلاسة للموبايل
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-
-        const answer = proUserAnswers[index];
-        if (answer !== null) {
-            btn.classList.add('answered');
-            btn.classList.remove('correct', 'incorrect');
-            
-            if (answer.isCorrect === true) btn.classList.add('correct');
-            else if (answer.isCorrect === false) btn.classList.add('incorrect');
-        }
-    });
-}
     // --- دالة اختيار خيار (إجابة واحدة) ---
     function selectOption(selectedIndex) {
         if (!quizOptionsContainer_pro) return;
