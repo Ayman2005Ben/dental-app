@@ -1,9 +1,10 @@
 // routes/summaryRoutes.js
-const router = require('express').Router();
-const { protect } = require('../middleware/authMiddleware');
-const { getBySubject } = require('../controllers/summaryController');
+const express = require('express');
+const router = express.Router();
+const summaryController = require('../controllers/summaryController'); // تأكد أن المسار صحيح لمجلد controllers
 
-// GET /api/summaries/:subjectId
-router.get('/:subjectId', protect, getBySubject);
+// هذا الرابط يستقبل طلبات مثل: /api/summaries/subjectId
+// الدالة getBySubject موجودة في ملف summaryController.js الذي لديك
+router.get('/:subjectId', summaryController.getBySubject);
 
 module.exports = router;

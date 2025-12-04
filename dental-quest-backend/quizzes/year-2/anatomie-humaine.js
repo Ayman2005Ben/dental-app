@@ -19,6 +19,19 @@ const anatomyQuizzesY2 = [
         citations: [1, 2, 3, 4, 5, 6, 7, 8]
       },
       {
+  questionText: "Concernant la cavité orale :\n1. La cavité orale est de situation cervico-faciale\n2. Elle communique avec le pharynx par l'isthme du gosier\n3. Elle est limitée en haut par le palais mou\n4. Le vestibule est situé en dehors de l'arcade dentaire\n5. La région labiale est formée par le muscle orbiculaire qui délimite la fente labiale",
+  options: [
+    "(1,3,4)",
+    "(2,4,5)",
+    "(3,4)",
+    "(1,3)",
+    "(2,3,5)"
+  ],
+  correctOptionIndexes: [1], 
+  explanation: "Réponse E (2, 3, 5) selon certaines sources, ou B (2,4,5). (Anatomiquement : 2, 4, 5 sont correctes).",
+  citations: [877, 878, 879, 880, 881]
+},
+      {
         questionText: "Concernant La cavité buccale",
         options: [
           "Elle répond latéralement aux régions massétérines",
@@ -190,285 +203,6 @@ const anatomyQuizzesY2 = [
     ]
   },
   {
-    title: "Massif Cranial (Os Frontal+ Tète Osseuse + Os Temporal)",
-    subject: "anatomy-y2",
-    questions: [
-      {
-        questionText: "Cochez la formation non visible sur la face latérale (exocrânienne) de l'os frontal:",
-        options: [
-          "La glabelle",
-          "La suture métopique",
-          "L'arcade sourcilière",
-          "Le foramen cœcum",
-          "Tubérosité frontale"
-        ],
-        correctOptionIndexes: [3],
-        explanation: "Le foramen cœcum (ou trou borgne) se situe sur la face interne (endocrânienne) de l'os frontal. La glabelle, la suture métopique (si présente), l'arcade sourcilière et les tubérosités frontales sont toutes visibles sur la face externe (exocrânienne).",
-        citations: [9, 10, 11, 12, 13]
-      },
-      {
-        questionText: "Concernant l'os ethmoïdal:",
-        options: [
-          "Il est en rapport en arrière avec l'occipital",
-          "C'est un os pair",
-          "Il est constitué de quatre parties",
-          "Il est en rapport avec les fosses nasales",
-          "La lame perpendiculaire se prolonge par l'apophyse de Crista galli"
-        ],
-        correctOptionIndexes: [2, 3, 4],
-        explanation: "L'os ethmoïdal est un os impair, constitué de quatre parties (lame criblée, lame perpendiculaire, et deux labyrinthes latéraux). Il est en rapport avec les fosses nasales et participe à leur formation. Sa lame perpendiculaire se prolonge bien par l'apophyse Crista galli. Il n'est pas en rapport direct avec l'occipital.",
-        citations: [28, 29, 30, 31, 32, 33]
-      },
-      {
-        questionText: "Concernant l'os ethmoïdal",
-        options: [
-          "Appartient à 1' étage moyen de la base du crâne.",
-          "Est un os profond et central de la face.",
-          "Participe à la formation des parois des fosses nasales.",
-          "Participe à la formation de la paroi des 2 cavités orbitaires.",
-          "Participe à la formation des parois de la cavité buccale."
-        ],
-        correctOptionIndexes: [2, 3],
-        explanation: "L'os ethmoïdal appartient à l'étage antérieur de la base du crâne (non moyen) et est considéré comme un os superficiel et central (non profond). Il participe à la formation des parois des fosses nasales ainsi que des parois médiales des deux cavités orbitaires. Il ne participe pas à la formation de la cavité buccale.",
-        citations: [50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
-      },
-      {
-        questionText: "Concernant L'os temporal:",
-        options: [
-          "C'est un os impair",
-          "Il est constitué de 3 éléments",
-          "Il contribue à la formation des étages antérieur et postérieur de la base du crâne",
-          "Il s'articule en avant avec l'os zygomatique",
-          "S'articule La mandibule au niveau de la partie mastoïdienne"
-        ],
-        correctOptionIndexes: [1, 3],
-        explanation: "L'os temporal est un os pair, constitué de trois parties : l'écaille (partie squameuse), le rocher (pyramide pétreuse) et l'os tympanal. Il contribue principalement à l'étage moyen de la base du crâne. Il s'articule en avant avec l'os zygomatique (formant l'arcade zygomatique) et s'articule avec la mandibule au niveau de sa partie squameuse (cavité glénoïde), non mastoïdienne.",
-        citations: [60, 61, 62, 63, 64, 65]
-      },
-      {
-        questionText: "Concernant l'os Temporal",
-        options: [
-          "L'os temporal s'articule avec le Processus zygomatique en avant",
-          "L'os tympanal Constitue la partie squameuse de l'os temporal",
-          "Le bord de l'écaille de l'os temporal est un bord circonférentiel",
-          "Le rocher de l'os temporal présente 2 faces ; une endocrânienne et l'autre exocrânienne",
-          "L'os temporal s'articule La mandibule au niveau de la partie mastoïdienne"
-        ],
-        correctOptionIndexes: [0, 2],
-        explanation: "L'os temporal s'articule en avant avec le processus zygomatique, et le bord de son écaille est circonférentiel. L'os tympanal ne constitue pas l'écaille (partie squameuse). Le rocher (pyramide pétreuse) présente 4 faces (deux endocrâniennes et deux exocrâniennes). L'articulation avec la mandibule se fait au niveau de l'écaille (cavité glénoïde), non de la partie mastoïdienne.",
-        citations: [109, 110, 111, 112, 113, 114]
-      },
-      {
-        questionText: "Concernant l'os sphénoïde :",
-        options: [
-          "Il appartient à l'étage antérieur et moyen de la base du crâne",
-          "Les petites ailes renferme le canal optique lieu de passage du nerf optique est des nerfs oculomoteurs.",
-          "Il s'articule avec tous les os du crâne excepté l'occipital.",
-          "La petite aile participe à la formation du ptyrion.",
-          "Les processus ptérygoïdes s'articule avec le palatin et le maxillaire."
-        ],
-        correctOptionIndexes: [4],
-        explanation: "L'os sphénoïde appartient aux trois étages de la base du crâne. Les petites ailes renferment le canal optique, qui livre passage au nerf optique et à l'artère ophtalmique (pas les nerfs oculomoteurs). Il s'articule avec tous les os du crâne, y compris l'occipital. C'est la grande aile (non la petite) qui participe à la formation du ptérion. Les processus ptérygoïdes s'articulent bien avec le palatin et le maxillaire.",
-        citations: [127, 128, 129, 130, 131, 132, 133, 134, 135, 136]
-      },
-      {
-        questionText: "concernant l'os occipital",
-        options: [
-          "Participe à la formation seulement de l'étage postérieur de l'exobase",
-          "Est uni en avant par l'apophyse basilaire au corps du sphénoïde",
-          "Sur la face endocrânienne des masses latérales se trouvent les gouttières du sinus sigmoïde",
-          "Le foramen magnum laisse passer le premier segment de moelle épinière (spinale)",
-          "Les condyles sont articulaires avec l'axis"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "L'os occipital est uni en avant au corps du sphénoïde par l'apophyse basilaire, et les gouttières du sinus sigmoïde se trouvent sur la face endocrânienne de ses masses latérales. Il participe à la formation de l'endobase et de l'exobase (pas seulement l'exobase). Le foramen magnum laisse passer la moelle allongée (bulbe), pas la moelle spinale. Les condyles s'articulent avec l'atlas (C1), non l'axis (C2).",
-        citations: [152, 153, 154, 155, 156]
-      },
-      {
-        questionText: "Concernant l'ostéologie du crâne",
-        options: [
-          "(1,3)",
-          "(3,4)",
-          "(3,5)",
-          "(2,3)",
-          "(3,4,5)"
-        ],
-        correctOptionIndexes: [2, 3],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (3) 'le tête correspond à l'ensemble crâne et face' est juste. (4) 'le crâne est constitué de huits os' est juste. (1) 'les trois étages de la base du crâne constituent la base du crâne' est faux (ils constituent la base, pas la voûte). (2) 'la base du crâne est le lieu de passage...' est faux (le commentaire dit 'non pas la voûte', mais la proposition elle-même est vraie, le commentaire semble confus). (5) 'tous les os du crâne participent...' est faux. Les options C (3,5) et D (2,3) contiennent des propositions justes, mais le commentaire est ambigu sur 'b'/'2'. En se fiant strictement au commentaire : c (3) et d (4) sont justes. L'option B (3,4) est donc la plus correcte.",
-        citations: [393, 394, 395, 396, 397]
-      },
-      {
-        questionText: "Concernant l'os frontal :",
-        options: [
-          "(1, 3, 4)",
-          "(2, 3, 4)",
-          "(3,5)",
-          "(2, 3)",
-          "(3,4,5)"
-        ],
-        correctOptionIndexes: [0],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'l'os frontal ferme a lui seul l'avant de la boîte crânienne' est juste. (3) 'l’os frontal contient des cavités aériques appelées les sinus frontaux' est juste. (4) 'l’os frontal s'articule avec la lame criblée de l'os ethmoïde' est juste. (2) 'sa partie verticale appelée écaille appartient... à la base du crâne' est faux (elle appartient à la voûte). (5) 'le toit de l'orbite comporte... la fossette trochléaire en médiale et la fossette lacrymale en latéral' est faux (c'est l'inverse : trochléaire en médial/interne, lacrymale en latéral/externe). L'option A (1, 3, 4) combine les trois propositions justes.",
-        citations: [402, 403, 404, 405, 406, 407]
-      },
-      {
-        questionText: "Concernant l'os ethmoïdal",
-        options: [
-          "(1, 3)",
-          "(2, 3, 4)",
-          "(1, 4)",
-          "(2,3)",
-          "(1, 4, 5)"
-        ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'l'os ethmoïde participe seulement à la constitution de base du crâne' est juste. (2) 'l'ethmoïde participe à la formation de la cloison des fosses nasals' est juste. (3) 'il possède un relief intracrânien, le processus de crista galli' est faux (le commentaire dit 'faux' mais la proposition est vraie, le commentaire est erroné). (4) 'les faces latérales... contribue à la formation de l'orbite' est faux (le commentaire dit 'faux' mais la proposition est vraie). (5) 'la lame criblée... laisse passer les filets nerveux du nerf olfactif' est faux (le commentaire dit 'faux' mais la proposition est vraie). En se basant sur les 'JUSTE' explicites du commentaire : (1) et (2) sont justes. Aucune option ne combine (1, 2). En ré-évaluant le commentaire, il semble que (3), (4), (5) soient fausses selon le correcteur, laissant (1) et (2) comme justes. L'option D (2,3) est marquée comme 'correcte' par le commentaire, impliquant que 'b' et 'c' sont justes, mais le texte dit 'c' est faux. Les données sont contradictoires.",
-        citations: [413, 414, 415, 416, 417]
-      },
-      {
-        questionText: "Concernant l'os Temporal",
-        options: [
-          "(1, 2, 4)",
-          "(2, 3, 5)",
-          "(1, 4)",
-          "(2, 3)",
-          "(3,4,5)"
-        ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'l'os temporal s'articule en avant avec le processus zygomatique' est juste. (3) 'il est vrai que le bord de l'écaille de l'os temporal est un bord circonférentiel' est juste. (2) 'l’os tympanal constitue la partie tympanique... et l’écaille constitue la partie squameuse' est faux. (4) 'le rocher... présente quatres faces' est faux (le commentaire dit 'faux', mais la proposition est vraie). (5) 'l'os temporal s'articule avec la mandibule au niveau de sa cavité glénoïde' est (implicitement) juste. Le commentaire est contradictoire. En se fiant aux 'C’EST JUSTE' explicites : (1) et (3) sont justes. Aucune option ne correspond à (1,3).",
-        citations: [450, 451, 452, 453]
-      },
-      {
-        questionText: "Concernant l'os sphénoïde",
-        options: [
-          "(1, 3, 4)",
-          "(2, 3, 4)",
-          "(1,3)",
-          "(2, 5)",
-          "(3,4,5)"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'le sphénoïde participe à la formation de la voûte et la base du crâne' est juste. (3) 'la partie squameuse des grandes ailes du sphénoïde... le ptérion' est juste. (4) 'la petite aile du sphénoïde est creusée du canal optique' est juste. (1) 'le sphénoïde s'articule avec tous les os du crâne même l'occipital' est faux. (5) 'le sphénoïde participe à la formation du foramen déchiré antérieur...' est faux. L'option B (2, 3, 4) combine les trois propositions justes.",
-        citations: [458, 459, 460, 461, 462]
-      },
-      {
-        questionText: "Concernant l'os occipital",
-        options: [
-          "(1,3)",
-          "(2,3,4)",
-          "(1,2,4)",
-          "(2,4)",
-          "(1,4,5)"
-        ],
-        correctOptionIndexes: [3],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'l'os occipital est uni au sphénoïde par l'apophyse basilaire' est juste. (4) 'les masses latérales de l'occipital délimitent le foramen de magnum' est juste. (1) 'l’os occipital participe à la formation de l'étage postérieur de l’endo-base' est faux. (3) 'la gouttière du sinus longitudinal se trouve sur la face endocrânienne de l'écaille' est faux (le commentaire dit 'faux' mais la proposition est vraie). (5) 'Les condyles occipitaux... s'articulent avec l'atlas' est faux (le commentaire dit 'faux' mais la proposition est vraie). En se basant sur les 'C'EST JUSTE' explicites : (2) et (4) sont justes. L'option D (2,4) est correcte.",
-        citations: [463, 464, 465, 466]
-      },
-      {
-        questionText: "L'apophyse CRISTA GALLI est :",
-        options: [
-          "Le segment extra-crânien de la lame perpendiculaire de l'os ethmoïde.",
-          "Le segment extra crânien de la lame horizontale de l'os ethmoïde.",
-          "Le segment nasal de la masse latérale de l'os ethmoïde.",
-          "Le segment intracrânien de la lame horizontale de l'os ethmoïde",
-          "Le segment intracrânien de la lame perpendiculaire de l'os ethmoïde"
-        ],
-        correctOptionIndexes: [3],
-        explanation: "Le commentaire indique que la proposition 'D' est juste, la décrivant comme 'le segment intracrânien de la lame horizontal de l’os ethmoïde'. Les autres propositions sont donc fausses.",
-        citations: [467, 468, 469, 470]
-      },
-      {
-        questionText: "Concernant l'ostéologie du crâne",
-        options: [
-          "L'ethmoïde, seul os n'appartenant pas à la calvaria.",
-          "La selle turcique se situe à la face antérieure du corps du sphénoïde",
-          "Le parietal s'articule avec tous les os qui participent à la constitution de la calvaria",
-          "L'os frontal n'appartient pas à la base du crâne",
-          "La fossette vermienne est une bifurcation de la crête occipitale interne."
-        ],
-        correctOptionIndexes: [0],
-        explanation: "L'ethmoïde appartient à la base du crâne et non à la calvaria (voûte). La selle turcique se situe sur la face supérieure (non antérieure) du corps du sphénoïde. Le pariétal ne s'articule pas avec l'ethmoïde (qui n'est pas dans la calvaria). L'os frontal participe à la fois à la voûte et à la base du crâne.",
-        citations: [604, 605, 606, 607, 608, 609, 610, 611]
-      },
-      {
-        questionText: "Concernant l'os Temporal",
-        options: [
-          "Os de la fosse crânienne antérieure",
-          "Situé au-dessous du pariétal, en avant et dedans du sphénoïde",
-          "Le processus styloïde appartient à la pyramide pétreuse",
-          "Le méat acoustique interne, orifice creusé dans la partie tympanal de l'os",
-          "La fosse trigéminale, apparient à la partie postéro-supérieure de la face endocrânienne du rocher"
-        ],
-        correctOptionIndexes: [1, 4],
-        explanation: "L'os temporal est situé sous le pariétal, en avant et en dedans du sphénoïde. La fosse trigéminale se situe bien dans la partie postéro-supérieure de la face endocrânienne du rocher. Il participe aux fosses crâniennes moyenne et postérieure (non antérieure). Le processus styloïde appartient à la portion tympanique (non pétreuse). Le méat acoustique interne est dans la portion pétreuse (non tympanique).",
-        citations: [625, 626, 627, 628, 629, 630, 631]
-      },
-      {
-        questionText: "Concernant l'os sphénoïde",
-        options: [
-          "Il est articulaire avec tous les os du crâne",
-          "Il forme la voûte et la base du crâne",
-          "Ses petites ailes délimitent le canal optique",
-          "Son corps présente des foramens livrant passage aux nerfs",
-          "Ses grandes ailes forment l'étage moyen de la base du crâne"
-        ],
-        correctOptionIndexes: [0, 1, 2, 3, 4],
-        explanation: "Toutes les propositions sont justes selon le commentaire : L'os sphénoïde s'articule avec tous les os du crâne, il forme à la fois la voûte et la base, ses petites ailes délimitent le canal optique, son corps présente des foramens pour les nerfs, et ses grandes ailes forment l'étage moyen de la base.",
-        citations: [632, 633, 634, 635, 636, 637]
-      },
-      {
-        questionText: "Concernant L'os frontal:",
-        options: [
-          "il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
-          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
-          "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
-          "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
-          "Sa partie verticale, appelée écaille, appartient à la voûte du crâne"
-        ],
-        correctOptionIndexes: [1, 2, 4],
-        explanation: "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires. La fossette trochléaire est bien en dedans (médiale) par rapport à la fossette lacrymale (latérale). La partie verticale (écaille) appartient à la voûte du crâne. La glabelle est sur la face externe (non endocrânienne). L'incisure supra-orbitaire est au tiers médial (non latéral).",
-        citations: [867, 868, 869, 870, 871, 872, 873, 874, 875, 876]
-      },
-      {
-        questionText: "La paroi supérieure de l'orbite osseuse est formée des os suivants :",
-        options: [
-          "L'apophyse orbitaire de l'os malaire",
-          "L'os palatin",
-          "L'os planum",
-          "La fosse orbitaire de l'os frontale",
-          "La petite aile du sphénoïde"
-        ],
-        correctOptionIndexes: [3, 4],
-        explanation: "La paroi supérieure de l'orbite (le toit) est formée par la fosse orbitaire de l'os frontal et par la petite aile du sphénoïde. L'os malaire, l'os palatin et l'os planum (partie de l'ethmoïde) participent à d'autres parois de l'orbite.",
-        citations: [940, 941, 942, 943, 944, 945]
-      },
-      {
-        questionText: "Concernant la lame criblée de l'éthmoïde:",
-        options: [
-          "Est le lieu de passage du nerf optique",
-          "Est le lieu de passage des filets olfactifs",
-          "Est une structure osseuse",
-          "Est située dans l'étage antérieur de la base du crâne",
-          "Est située dans l'étage moyen de la base du crâne"
-        ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "La lame criblée est une structure osseuse de l'ethmoïde, située dans l'étage antérieur de la base du crâne. Elle sert de lieu de passage pour les filets olfactifs (nerf I), et non pour le nerf optique (nerf II).",
-        citations: [1141, 1142, 1143, 1144, 1145]
-      },
-      {
-        questionText: "Concernant l'os ethmoïdal",
-        options: [
-          "Il présente 6 faces et occupe la partie médiane de l'os",
-          "Sa face supérieure présente la gouttière optique",
-          "Sa face inférieure s'articule avec le palatin",
-          "Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde",
-          "Sa face postérieure s'articule avec le temporal"
-        ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Cette description semble concerner le corps du sphénoïde, et non l'ethmoïde. En supposant que la question porte sur le corps du sphénoïde : Il présente six faces et occupe la partie centrale. Sa face supérieure présente la gouttière optique. Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde. Sa face inférieure s'articule avec le vomer (non le palatin) et sa face postérieure s'articule avec l'occipital (non le temporal).",
-        citations: [1296, 1297, 1298, 1299, 1300, 1301]
-      }
-    ]
-  },
-  {
     title: "Massif Facial (Os Maxillaire + La Mandibule Et l’Os Hyoïde +Os palatin)",
     subject: "anatomy-y2",
     questions: [
@@ -485,6 +219,45 @@ const anatomyQuizzesY2 = [
         explanation: "Le relief des arcades sourcilières est bien formé par l'os frontal. L'os lacrymal (unguis) est incurvé en externe avec le maxillaire pour recevoir le sac lacrymal. Il n'y a que 4 os pneumatiques (sphénoïde, ethmoïde, maxillaire, frontal). Le zygomatique forme la paroi latérale (non inférieure) de l'orbite. La cloison nasale est formée par le vomer et la lame perpendiculaire de l'ethmoïde.",
         citations: [14, 15, 16, 17, 18, 19, 20]
       },
+      {
+  questionText: "Concernant le maxillaire :\n1. Le maxillaire est un os pair du massif facial supérieur\n2. Le maxillaire occupe la partie centrale de la face\n3. Le maxillaire est un os immobile\n4. L’os maxillaire comporte des alvéoles dentaires\n5. L'apophyse palatine présente sur sa face inférieure le foramen incisif et palatin antérieur",
+  options: [
+    "(1, 3, 5)",
+    "(2, 3, 5)",
+    "(2,4,5)",
+    "(2, 3)",
+    "(3, 4,)"
+  ],
+  correctOptionIndexes: [2],
+  explanation: "Analyse : 2, 4, 5 sont considérées justes dans ce contexte (Bien que 1 et 3 soient anatomiquement vraies, le QCM semble cibler la combinaison C).",
+  citations: [427, 428, 429, 430, 431]
+},
+{
+  questionText: "Concernant la mandibule :\n1. La mandibule est le seul os fixé au squelette cranio facial\n2. Le trou mentonnier laisse passer le nerf mentonnier\n3. La ligne oblique interne est aussi appelée la ligne mylohyoïdienne\n4. Au niveau du gonion se trouve une dépression pour l'artère faciale\n5. Au niveau de la partie interne se trouve la fossette digastrique",
+  options: [
+    "(1,3)",
+    "(3,4,5)",
+    "(3, 4)",
+    "(2, 3)",
+    "(4,5)"
+  ],
+  correctOptionIndexes: [4],
+  explanation: "Selon le corrigé : 4 et 5 sont les réponses attendues (Réponse E).",
+  citations: [436, 437, 438, 439, 440, 441, 442]
+},
+{
+  questionText: "Concernent l'os zygomatique :\n1. C'est un os pair, latéral et triangulaire (quadrilatère)\n2. La face latérale présente un trou malaire\n3. Sa face médiale est lisse\n4. Le bord antéro-supérieur constitue le rebord latéral de l'orbite\n5. Assure la jonction latérale entre le massif crânien et facial",
+  options: [
+    "(1, 2, 5)",
+    "(2, 3, 4)",
+    "(1,3, 4)",
+    "(2, 3)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [0],
+  explanation: "Selon le corrigé type, les propositions 1, 2 et 5 sont vraies (Réponse A).",
+  citations: [720, 721, 722, 723, 724, 725, 726, 727, 728]
+},
       {
         questionText: "Concernant l'ostéologie du massif facial :",
         options: [
@@ -524,6 +297,97 @@ const anatomyQuizzesY2 = [
         explanation: "La symphyse est une crête verticale et médiane sur le corps de la mandibule. L'éminence mentonnière est une saillie pyramidale. Les jugums alvéolaires correspondent à l'implantation des incisives et canines. C'est la ligne oblique externe (non interne) qui se dirige en bas et en avant. Le foramen mentonnier est situé au niveau des prémolaires (PM), non des canines.",
         citations: [81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
       },
+       {
+        questionText: "Concernant l'ostéologie du massif facial :",
+        options: [
+          "Tous les os du massif facial sont pneumatiques.",
+          "Le relief des arcades sourcilières est formé par l'os frontal",
+          "Le malaire (os zygomatique) constitue l'essentiel de la paroi inférieure de l'orbite",
+          "La cloison nasale osseuse est formée seulement par le vomer",
+          "L'unguis est incurvé en externe de manière à recevoir le sac lacrymal."
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "Le relief des arcades sourcilières est bien une caractéristique de l'os frontal. L'os lacrymal (unguis) est incurvé pour former la gouttière du sac lacrymal. Seuls quelques os sont pneumatiques. L'os zygomatique forme la paroi latérale de l'orbite. La cloison nasale est formée par le vomer et la lame perpendiculaire de l'ethmoïde."
+      },
+      {
+        questionText: "Concernant le maxillaire",
+        options: [
+          "Le processus montant est une paroi commune entre les fosses nasales et l'orbite.",
+          "Le processus palatin forme la moitié antérieure du palais osseux.",
+          "Est formé d'un corps et de 03 processus : alvéolaire, palatin et orbitaire",
+          "L'orifice piriforme est formé des deux os maxillaires et de l'os propre du nez",
+          "Le sinus maxillaire s'ouvre au niveau du méat supérieur."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Le processus montant (frontal) du maxillaire participe à la paroi médiale de l'orbite et latérale des fosses nasales. L'orifice piriforme est bien délimité par les deux maxillaires et les os nasaux. Le processus palatin forme les 2/3 antérieurs du palais. Le maxillaire a 4 processus. Le sinus maxillaire s'ouvre dans le méat moyen."
+      },
+      {
+        questionText: "Concernant la face externe (latérale) de la mandibule",
+        options: [
+          "La symphyse est une crête verticale et médiane.",
+          "L'éminence mentonnière est une saillie en forme de pyramide.",
+          "La ligne oblique interne se dirige en bas et en avant",
+          "Le foramen mentonnier est situé au niveau des canines.",
+          "Les jugums alvéolaires sont en rapports avec l'implantation des incisives et les canines"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "La symphyse, l'éminence mentonnière et les jugums alvéolaires sont des structures de la face externe. La ligne oblique externe (et non interne) se dirige en bas et en avant. Le foramen mentonnier se situe au niveau des prémolaires."
+      },
+      {
+        questionText: "Les apophyses géni supérieures de l'os mandibule donnent insertion au muscle:",
+        options: [
+          "Génio-pharyngien",
+          "Génio-glosse",
+          "Génio-glottique",
+          "Génio-hyoïdien",
+          "Génio-staphylin"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les apophyses géni supérieures donnent insertion au muscle génio-glosse, tandis que les apophyses géni inférieures donnent insertion au muscle génio-hyoïdien."
+      }
+    ]
+  },
+  {
+    title: "Muscles de la langue et du voile du palais",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant Le voile du palais:",
+        options: [
+          "Il limite en bas la cavité buccale",
+          "Il est osseux formé par les os maxillaire et palatin",
+          "Il est fibro-musculaire",
+          "Il sépare le naso-pharynx du laryngopharynx",
+          "Les piliers glosso-staphylin et pharyngo-staphylin limitent la fosse tonsillaire"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le voile du palais est une cloison fibro-musculaire. Ses piliers (arcs palatoglosse et palatopharyngien) délimitent la fosse tonsillaire. Il limite la cavité buccale en arrière (et non en bas). Il sépare le nasopharynx de l'oropharynx."
+      },
+      {
+        questionText: "Parmi les muscles suivants, lequel est tenseur du voile ?",
+        options: [
+          "Péristaphylin latéral (Tenseur du voile)",
+          "Péristaphylin médial (Elévateur du voile)",
+          "Glosso-staphylin (Palato-glosse)",
+          "Pharyngo-staphylin (Palato-pharyngien)",
+          "Palato-staphylin (Uvulaire)"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le muscle péristaphylin latéral (tenseur du voile du palais) est le seul muscle tenseur parmi les choix. Les autres sont des élévateurs ou ont d'autres fonctions."
+      },
+      {
+        questionText: "Parmi les muscles de la langue, certains s'insèrent sur les os voisins, lesquels ?",
+        options: [
+          "Génio-glosse",
+          "Glosso-staphylin",
+          "Hyo-glosse",
+          "Amygdalo-glosse",
+          "Stylo-glosse"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "Le génio-glosse s'insère sur la mandibule, l'hyo-glosse sur l'os hyoïde, et le stylo-glosse sur le processus styloïde de l'os temporal. Le glosso-staphylin s'insère sur le palais mou et l'amygdalo-glosse sur les amygdales."
+      },
+  
       {
         questionText: "Concernant l'articulation temporo-mandibulaire",
         options: [
@@ -680,6 +544,32 @@ const anatomyQuizzesY2 = [
         explanation: "L'os zygomatique (malaire) est un os pair, latéral et triangulaire formant la pommette. Son processus temporal participe à l'arcade zygomatique, et sa face antéro-médiale constitue une partie de la paroi latérale de l'orbite. Son processus frontal est supérieur (non inférieur). L'os zygomatique n'est pas creusé d'un sinus.",
         citations: [720, 721, 722, 723, 724, 725, 726, 727, 728]
       },
+      // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Massif Facial (Os Maxillaire + La Mandibule Et l’Os Hyoïde +Os palatin)"
+
+{
+  questionText: "Concernant l'os zygomatique / malaire (1er EMD 2019):",
+  options: [
+    "Présente une face latérale articulaire avec le maxillaire",
+    "Son angle antéro-supérieur s'articule avec l'apophyse orbitaire externe de l'os frontal",
+    "Son bord antéro supérieur constitue le rebord médial de l'orbite",
+    "C'est un os pair et symétrique",
+    "Assure la jonction latérale entre le massif crânial et le massif facial"
+  ],
+  correctOptionIndexes: [1, 3, 4],
+  explanation: "L'os zygomatique est un os pair qui forme la pommette et assure la jonction crânio-faciale latérale. Son angle supérieur s'articule avec le frontal. Il forme le rebord latéral (et non médial) de l'orbite."
+},
+{
+  questionText: "Concernant l'os maxillaire (1er EMD 2019):",
+  options: [
+    "C'est un os impair et symétrique.",
+    "Il entre dans la formation des cavités de la face (orbitaires, nasales et buccale).",
+    "L'os maxillaire porte les dents de l'arcade inférieure",
+    "On le compare à une pyramide quadrangulaire, à sommet latéral.",
+    "Il participe à la formation de l'étage antérieur de la base du crâne"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Le maxillaire est un os pair qui participe à la formation des cavités orbitaire, nasale et buccale (voûte palatine). Il porte les dents supérieures. On le compare à une pyramide à sommet tronqué (processus zygomatique)."
+},
       {
         questionText: "Concernant le palatin:",
         options: [
@@ -914,6 +804,45 @@ const anatomyQuizzesY2 = [
         citations: [66, 67, 68, 69, 70, 71]
       },
       {
+  questionText: "Concernant la glande sub-mandibulaire :\n1. C'est une glande du plancher buccal, sous-mylo-hyoïdien\n2. Elle est située au-dessus du plancher\n3. Elle présente un prolongement postérieur important\n4. Elle occupe la région supra-hyoïdienne latérale\n5. Son canal excréteur s'ouvre au niveau de la base de la langue",
+  options: [
+    "(1,3,4)",
+    "(4,5)",
+    "(3,4)",
+    "(1,3)",
+    "(2,3,5)"
+  ],
+  correctOptionIndexes: [0],
+  explanation: "Justes : 1, 3, 4 (Réponse A). (Note: la proposition 5 est fausse car le canal s'ouvre au niveau du frein de la langue, pas la base).",
+  citations: [946, 947, 948, 949, 950]
+},
+{
+  questionText: "Concernant les branches collatérales du nerf facial :\n1. Le nerf auriculo-temporal\n2. Le nerf du muscle digastrique\n3. Le nerf alvéolaire inférieur\n4. Le nerf grand pétreux\n5. Les branches temporo-faciales",
+  options: [
+    "(1,2,4)",
+    "(3,4,5)",
+    "(3,4)",
+    "(2,4,5)",
+    "(2,4)"
+  ],
+  correctOptionIndexes: [3],
+  explanation: "Justes : 2, 4, 5 (Réponse D). (Note : 5 est une branche terminale mais souvent acceptée dans ce type de QCM mixte).",
+  citations: [988, 989, 990, 991, 992, 993]
+},
+{
+  questionText: "Concernant la glande parotide (QCM 86/170) :\n1. La glande parotide est située en avant du pavillon de l'oreille\n2. Le canal de Wharton appartient à la glande parotide\n3. Le canal de Sténon perfore le buccinateur\n4. Le canal de Wharton perfore le masséter\n5. Le canal de Sténon chemine en dehors du masséter",
+  options: [
+    "(1,3,4)",
+    "(1,4,5)",
+    "(3,4)",
+    "(1,3)",
+    "(2,3,5)"
+  ],
+  correctOptionIndexes: [3], 
+  explanation: "Note: Il semble y avoir une erreur dans les options de l'image source par rapport à la réponse D (1,5 ou 1,3?). Basé sur l'anatomie : 1 est Vrai, 3 est Vrai, 5 est Vrai. La réponse la plus proche contenant ces vérités est souvent demandée.",
+  citations: []
+},
+      {
         questionText: "A propos de la loge Parotidienne",
         options: [
           "La paroi postéro-médiale, est faite des muscles styliens",
@@ -978,6 +907,32 @@ const anatomyQuizzesY2 = [
         explanation: "Le conduit sous-mandibulaire (de Wharton) s'abouche bien au niveau du frein de la langue. Les glandes salivaires sont exocrines (non endocrines). La parotide se situe en arrière de la branche montante (non du corps) de la mandibule. Elle est divisée en deux lobes par le nerf facial (VII). La glande sublinguale est la plus petite (non la plus volumineuse).",
         citations: [456, 457]
       },
+      // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Les Glandes salivaires"
+
+{
+  questionText: "Concernant la glande parotide (2016/2017):",
+  options: [
+    "présente 3 faces : postéro-médiale, antérieure et inférieure",
+    "b. est contenue dans une loge avec le paquet vasculo-nerveux du cou",
+    "elle pèse 25 grammes",
+    "elle est constituée de 3 lobes",
+    "elle est traversée par le nerf facial"
+  ],
+  correctOptionIndexes: [2, 4],
+  explanation: "La glande parotide pèse environ 25 à 30g et est traversée par le nerf facial (VII) qui la divise en deux lobes (superficiel et profond)."
+},
+{
+  questionText: "Concernant le conduit excréteur parotidien (Sténon) (2016/2017):",
+  options: [
+    "il chemine sur le muscle buccinateur",
+    "il s'ouvre dans le vestibule au regard du collet de la 2ème molaire inférieure",
+    "il conduit long de 4 cm",
+    "il s'ouvre dans le vestibule au regard du collet de la 2ème molaire supérieure",
+    "dans son trajet, il perfore le muscle Masséter"
+  ],
+  correctOptionIndexes: [2, 3],
+  explanation: "Le canal de Sténon mesure environ 4 cm et s'ouvre en regard de la 2ème molaire supérieure. Il chemine sur le masséter et perfore le buccinateur."
+},
       {
         questionText: "Concernant la glande parotide :",
         options: [
@@ -1218,32 +1173,32 @@ const anatomyQuizzesY2 = [
         explanation: "La carotide commune droite présente un trajet thoracique et cervical. Dans le cou, elle forme un paquet vasculo-nerveux avec la veine jugulaire interne et le nerf vague. Elle se divise bien en carotide interne et externe. L'artère carotide interne ne donne aucune branche dans le cou. C'est la carotide commune gauche (non droite) qui naît de la crosse aortique.",
         citations: [663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673]
       },
-      {
-        questionText: "Parmi les branches collatérales artérielles suivantes lesquelles naissent de l'artère sub-clavière",
-        options: [
-          "(1,3,4)",
-          "(1,4,5)",
-          "(3,4)",
-          "(1,3)",
-          "(2,3,5)"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'L'artère vertébrale' est juste. (4) 'Le tronc artériel thyro-bicervico-scapulaire' est juste. (5) 'L'artère thoracique interne' est juste. (2) 'L'artère axillaire' est faux (c'est la continuation). (3) 'L'artère maxillaire interne' est faux (branche de l'ACE). L'option B (1, 4, 5) combine les propositions justes.",
-        citations: [969, 970, 971, 972]
-      },
-      {
-        questionText: "Parmi les branches artérielles suivants invisible naissent de l'artère carotide externe",
-        options: [
-          "(1,3,4)",
-          "(1,2,5)",
-          "(3,4)",
-          "(1,3)",
-          "(2,3,5)"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'Artère faciale' est juste. (2) 'Artère pharyngienne ascendante' est juste. (5) 'Artère occipitale' est juste. (3) 'Artère thyroïdienne inférieure' est faux (branche de la subclavière). (4) 'Artère temporale superficielle' est juste. Le commentaire marque A, B, D, E comme justes. L'option B (1,2,5) est correcte. L'option A (1,3,4) est incorrecte à cause de (3).",
-        citations: [926, 927, 928, 929]
-      },
+{
+  questionText: "Parmi les branches collatérales artérielles suivantes lesquelles naissent de l'artère sub-clavière :\n1. L'artère vertébrale\n2. L'artère axillaire\n3. L'artère maxillaire interne\n4. Le tronc artériel thyro-bicervico-scapulaire\n5. L'artère thoracique interne",
+  options: [
+    "(1,3,4)",
+    "(1,4,5)",
+    "(3,4)",
+    "(1,3)",
+    "(2,3,5)"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Justes : 1, 4, 5 (Réponse B).",
+  citations: [969, 970, 971, 972]
+},
+{
+  questionText: "Parmi les branches artérielles suivantes, lesquelles naissent de l'artère carotide externe :\n1. Artère faciale\n2. Artère pharyngienne ascendante\n3. Artère thyroïdienne inférieure\n4. Artère temporale superficielle\n5. Artère occipitale",
+  options: [
+    "(1,3,4)",
+    "(1,2,5)",
+    "(3,4)",
+    "(1,3)",
+    "(2,3,5)"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Justes : 1, 2, 5 (Réponse B). (4 est aussi juste car branche terminale, mais 3 est faux).",
+  citations: [926, 927, 928, 929]
+},
       {
         questionText: "Concernant L'artère carotide externe :",
         options: [
@@ -1316,30 +1271,31 @@ const anatomyQuizzesY2 = [
         citations: [485, 486]
       },
       {
-        questionText: "A propos du système veineux principale du cou",
-        options: [
-          "(1,2,4)",
-          "(3,4,5)",
-          "(3,4)",
-          "(2,4,5)",
-          "(1,3)"
-        ],
-        correctOptionIndexes: [4],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'La veine jugulaire interne est accompagnée de la carotide interne...' est juste. (3) 'La veine sous-clavière reçoit bien la veine vertébrale' est juste. (2) 'La veine jugulaire interne s'unit avec la veine sous-clavière...' est faux (le commentaire dit 'faux'). (4) 'La veine jugulaire externe se draine dans la veine sous-clavière' est faux (le commentaire dit 'faux'). (5) 'La veine jugulaire antérieure se jette dans la veine jugulaire externe...' est faux (le commentaire dit 'faux'). L'option E (1,3) combine les propositions justes.",
-        citations: [1002, 1003, 1004, 1005, 1006, 1007]
-      },
-      {
-        questionText: "A propos du drainage veineux cervico-faciale.",
-        options: [
-          "(2,4)",
-          "(3,4,5)",
-          "(3,4)",
-          "(2,4,5)",
-          "(3,2,4)"
-        ],
-        correctOptionIndexes: [1, 3],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'La veine jugulaire interne se trouve bien au niveau de l'espace rétro-stylien' est juste. (4) 'La veine jugulaire externe traverse la région parotidienne' est juste. (5) 'Le drainage postérieur se fait par les veines vertébrales et jugulaire externe' est juste. (1) 'La veine jugulaire interne fait partie du système veineux postérieur' est faux. (3) 'Le tronc brachio-céphalique est formé par la veine jugulaire et la veine sous-clavière' est faux. Les options B (3,4,5) et D (2,4,5) sont les plus proches. En se basant sur les 'justes' explicites (2, 4, 5), l'option D est correcte.",
-        citations: [1056, 1057, 1058, 1059, 1060, 1061, 1062]
+  questionText: "A propos du système veineux principal du cou :\n1. La veine jugulaire interne est accompagnée de la carotide interne/commune\n2. La veine jugulaire interne s'unit avec la veine sous-clavière\n3. La veine sous-clavière reçoit la veine vertébrale\n4. La veine jugulaire externe se draine dans la veine vertébrale\n5. La veine jugulaire antérieure se jette dans la veine jugulaire interne",
+  options: [
+    "(1,2,4)",
+    "(3,4,5)",
+    "(3,4)",
+    "(2,4,5)",
+    "(1,3)"
+  ],
+  correctOptionIndexes: [4],
+  explanation: "Selon le corrigé : 1 et 3 sont justes (Réponse E).",
+  citations: [1002, 1003, 1004, 1005, 1006, 1007]
+},
+{
+  questionText: "A propos du drainage veineux cervico-facial :\n1. La veine jugulaire interne fait partie du système veineux postérieur\n2. La veine jugulaire interne se trouve au niveau de l'espace rétro-stylien\n3. Le tronc brachio-céphalique est formé par la jugulaire et la sous-clavière\n4. La veine jugulaire externe traverse la région parotidienne\n5. Le drainage postérieur se fait par les veines vertébrales et jugulaire externe",
+  options: [
+    "(2,4)",
+    "(3,4,5)",
+    "(3,4)",
+    "(2,4,5)",
+    "(3,2,4)"
+  ],
+  correctOptionIndexes: [3],
+  explanation: "Justes : 2, 4, 5 (Réponse D).",
+  citations: [1056, 1057, 1058, 1059, 1060, 1061, 1062]
+
       },
       {
         questionText: "Concernant les veines de la tête et du cou",
@@ -1413,18 +1369,18 @@ const anatomyQuizzesY2 = [
         citations: [247, 248, 249, 250, 251, 252, 253, 254, 255, 256]
       },
       {
-        questionText: "Concernant les fosses nasales",
-        options: [
-          "(2, 3, 5)",
-          "(2, 5)",
-          "(3, 4)",
-          "(1, 3)",
-          "(3,4,5)"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'la paroi médiale est constituée par la lame perpendiculaire de l'ethmoïde... le vomer... et le cartilage' est juste. (5) 'La vascularisation artérielle... est tributaire des deux systèmes carotidiens' est juste. (1) 'assurent une fonction respiratoire et olfactive' est faux (le commentaire dit 'faux' mais la proposition est vraie). (3) 'la paroi latéral est subdivisée en trois régions' est faux. (4) 'les fosses nasales s'ouvrent dans le nasopharynx' est faux (le commentaire dit 'faux' mais la proposition est vraie). En se basant sur les 'C’EST JUSTE' explicites : (2) et (5) sont justes. L'option B (2, 5) est correcte.",
-        citations: [518, 519, 520, 521, 522, 523]
-      },
+  questionText: "Concernant les fosses nasales :\n1. Assurent une fonction respiratoire et olfactive\n2. La paroi médiale est constituée par la lame perpendiculaire de l'ethmoïde, le vomer et le cartilage\n3. La paroi latérale est subdivisée en trois régions\n4. Les fosses nasales s'ouvrent dans le nasopharynx\n5. La vascularisation artérielle est tributaire des deux systèmes carotidiens",
+  options: [
+    "(2, 3, 5)",
+    "(2, 5)",
+    "(3, 4)",
+    "(1, 3)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Selon le corrigé : 2 et 5 sont les réponses retenues (Réponse B).",
+  citations: [518, 519, 520, 521, 522, 523]
+},
       {
         questionText: "Concernant les fosses nasales:",
         options: [
@@ -1815,18 +1771,18 @@ const anatomyQuizzesY2 = [
         citations: [848, 849, 850, 851, 852, 853]
       },
       {
-        questionText: "Concernant le nerf trijumeau",
-        options: [
-          "(1,2,4)",
-          "(3,4,5)",
-          "(3,4)",
-          "(2,4)",
-          "(3,2,4)"
-        ],
-        correctOptionIndexes: [1, 2, 3, 4],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'Il possède quatre noyaux' est juste. (3) 'Son territoire sensitif couvre toute la face' est juste. (4) 'Son ganglion sensitif est le ganglion de Gasser' est juste. (5) est juste (non spécifié). (1) 'Le nerf trijumeau est un nerf mixte' est faux (le commentaire dit 'faux' mais la proposition est vraie). Les données sont contradictoires. En se basant sur les 'justes' explicites (2, 3, 4, 5), l'option B (3,4,5) est correcte, mais (2,4) et (3,2,4) le sont aussi partiellement.",
-        citations: [1083, 1084, 1085]
-      },
+  questionText: "Concernant le nerf trijumeau :\n1. Le nerf trijumeau est un nerf mixte\n2. Il possède quatre noyaux\n3. Son territoire sensitif couvre toute la face\n4. Son ganglion sensitif est le ganglion de Gasser\n5. Son noyau moteur est dans le tronc cérébral",
+  options: [
+    "(1,2,4)",
+    "(3,4,5)",
+    "(3,4)",
+    "(2,4)",
+    "(3,2,4)"
+  ],
+  correctOptionIndexes: [1, 2, 3, 4],
+  explanation: "Selon le corrigé : Réponse B (3,4,5) est souvent la réponse attendue, bien que 2 soit aussi vrai.",
+  citations: [1083, 1084, 1085]
+},
       {
         questionText: "Concernant le nerf trijumeau",
         options: [
@@ -1937,6 +1893,20 @@ const anatomyQuizzesY2 = [
         explanation: "La fosse ptérygo-palatine est bien l'arrière-fond de la fosse infra-temporale, elle communique avec elle, et les branches de l'artère maxillaire la traversent. C'est le nerf maxillaire (V2) qui la traverse, non le mandibulaire (V3). La région des muscles ptérygoïdiens n'est pas traversée par le V2.",
         citations: [963, 964, 965, 966, 967, 968]
       },
+      // أضف هذا السؤال إلى قائمة 'questions' داخل كائن الدرس: "Fosse pterygo-palatine"
+
+{
+  questionText: "Concernant la fosse ptérygo-palatine (1er EMD 2019):",
+  options: [
+    "répond en avant à l'os maxillaire",
+    "communique avec l'orbite par le fissure orbitaire supérieure",
+    "répond à la cavité buccale par les canaux palatins",
+    "communique avec les fosses nasales par le canal sphéno-palatin",
+    "communique avec la cavité crânienne par le foramen ovale"
+  ],
+  correctOptionIndexes: [0, 2, 3],
+  explanation: "La fosse ptérygo-palatine est limitée en avant par la tubérosité maxillaire. Elle communique avec la cavité buccale via les canaux palatins et avec les fosses nasales via le foramen sphéno-palatin. Elle communique avec l'orbite par la fissure orbitaire inférieure (pas supérieure)."
+},
       {
         questionText: "Concernant la fosse ptérygo-palatine:",
         options: [
@@ -1983,18 +1953,18 @@ const anatomyQuizzesY2 = [
         citations: [418, 419, 420, 421, 422]
       },
       {
-        questionText: "Concernant l'Articulation temporo-mandibulaire",
-        options: [
-          "(3,5)",
-          "(2,3,4)",
-          "(1,2,4)",
-          "(2,3)",
-          "(3,4,5)"
-        ],
-        correctOptionIndexes: [4],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (3) 'il existe deux ligaments intrinsèques et trois extrinsèques' est juste. (4) 'seul le versant antérieur est articulaire' est juste. (5) 'la lame tendineuse pré-discale est une zone très innervée et bien vascularisée' est juste. (1) 'L'ATM... est... type ginglyme' est faux (le commentaire dit 'arthrodie'). (2) 'le versant postérieur du condyle est aplati et non articulaire' est faux (le commentaire dit 'faux' mais la proposition est vraie). L'option E (3,4,5) combine les propositions justes.",
-        citations: [487, 488, 489, 490, 491]
-      },
+  questionText: "Concernant l'Articulation temporo-mandibulaire :\n1. L'ATM est de type ginglyme\n2. Le versant postérieur du condyle est aplati et non articulaire\n3. Il existe deux ligaments intrinsèques et trois extrinsèques\n4. Seul le versant antérieur est articulaire\n5. La lame tendineuse pré-discale est une zone très innervée et bien vascularisée",
+  options: [
+    "(3,5)",
+    "(2,3,4)",
+    "(1,2,4)",
+    "(2,3)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [4],
+  explanation: "Justes : 3, 4, 5 (Réponse E).",
+  citations: [487, 488, 489, 490, 491]
+},
       {
         questionText: "Concernant l'articulation temporo-mandibulaire",
         options: [
@@ -2073,6 +2043,44 @@ const anatomyQuizzesY2 = [
         explanation: "Toutes les propositions sont correctes. Le disque (ménisque) inter-condylien de l'ATM est un fibrocartilage biconcave et avasculaire (dans sa partie centrale). Il assure la concordance entre le condyle mandibulaire et la fosse mandibulaire, et divise l'articulation en deux compartiments (supérieur et inférieur).",
         citations: [1072, 1073, 1074]
       },
+      // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Articulation Temporo-Mandibulaire"
+
+{
+  questionText: "Concernant les surfaces articulaires de l'ATM (1er EMD 2019):",
+  options: [
+    "Le condyle temporal fait partie de l'os tympanal",
+    "La scissure de Glaser sépare la cavité glénoïde en segment articulaire postérieure et non articulaire",
+    "Le condyle et le col sont les deux surfaces articulaires du coté mandibulaire.",
+    "Le condyle temporal est représenté par la racine transverse de l'apophyse zygomatique",
+    "Le disque articulaire est une lentille biconcave"
+  ],
+  correctOptionIndexes: [3, 4],
+  explanation: "Le condyle temporal est formé par la racine transverse de l'apophyse zygomatique. Le disque est une lentille biconcave. La scissure de Glaser sépare une partie antérieure articulaire d'une postérieure non articulaire."
+},
+{
+  questionText: "Concernant L'ATM (1er EMD 2019):",
+  options: [
+    "Est une articulation de type amphiarthrose",
+    "Comprend deux surfaces articulaires",
+    "Est une articulation synoviale",
+    "C'est une articulation très mobile et peu stable",
+    "Elle présente un ménisque articulaire permettant l'emboitement des surfaces articulaires."
+  ],
+  correctOptionIndexes: [2, 3],
+  explanation: "L'ATM est une articulation synoviale (diarthrose) très mobile et par conséquent instable (luxations fréquentes). Elle comprend un ménisque (disque) pour adapter les surfaces."
+},
+{
+  questionText: "Les moyens d'union et biomécanique de l'ATM (1er EMD 2019):",
+  options: [
+    "Font appelle à une capsule et des ligaments passif uniquement.",
+    "Les fibres profondes de la capsule sont temporo-mandibulaire.",
+    "Le ligament stylo-mandibulaire est un ligament actif",
+    "Le muscle de la mastication représente les ligaments actifs de l'ATM",
+    "La diduction est un mouvement du plan frontal"
+  ],
+  correctOptionIndexes: [3, 4],
+  explanation: "Les muscles masticateurs agissent comme des ligaments actifs stabilisant l'articulation. La diduction (latéralité) s'observe dans le plan frontal."
+},
       {
         questionText: "Concernant l'articulation temporo-mandibulaire la fosse mandibulaire :",
         options: [
@@ -2145,18 +2153,18 @@ const anatomyQuizzesY2 = [
         citations: [382, 383, 384, 385, 386]
       },
       {
-        questionText: "Concernant la région nasale",
-        options: [
-          "(2, 3, 4)",
-          "(3,4,5)",
-          "(2,4,5)",
-          "(1, 2, 3)",
-          "(1,3)"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'les muscles de la région nasale sont en dehors du muscle masséter' est juste. (4) 'le releveur de l'angle de la bouche est le canin' est juste. (5) 'le buccinateur... intervient dans l'action de siffler' est juste. (1) 'la région nasal comporte 4 muscles' est faux (le commentaire dit 'faux' mais la liste contient 4 muscles). (3) 'non le risorius fait pas partie de la région nasale' est faux. Les options B (3,4,5) et C (2,4,5) sont les plus proches des propositions justes (2, 4, 5).",
-        citations: [549, 550]
-      },
+  questionText: "Concernant la région nasale :\n1. La région nasale comporte 4 muscles\n2. Les muscles de la région nasale sont en dehors du muscle masséter\n3. Le risorius ne fait pas partie de la région nasale\n4. Le releveur de l'angle de la bouche est le canin\n5. Le buccinateur intervient dans l'action de siffler",
+  options: [
+    "(2, 3, 4)",
+    "(3,4,5)",
+    "(2,4,5)",
+    "(1, 2, 3)",
+    "(1,3)"
+  ],
+  correctOptionIndexes: [1, 2],
+  explanation: "Selon le corrigé, les propositions 3, 4, 5 sont vraies (Réponse B). La proposition 2 est anatomiquement fausse (les muscles nasaux sont médiaux par rapport au masséter).",
+  citations: [549, 550]
+},
       {
         questionText: "Concernant Les muscles masticateurs :",
         options: [
@@ -2171,18 +2179,19 @@ const anatomyQuizzesY2 = [
         citations: [558, 559, 560, 561, 562]
       },
       {
-        questionText: "Concernant Les muscles masticateurs :",
-        options: [
-          "(1, 2, 5)",
-          "(2,4,5)",
-          "(1,3,4)",
-          "(2,3)",
-          "(3, 4,5)"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'le temporal est elevateur et rétropulseur' est juste. (4) 'le ptérygoïdien latéral comporte deux faisceaux' est juste. (5) 'les muscles masticateurs sont tous innervé par le nerf mandibulaire' est juste. (1) 'les muscle masticateurs comporte le temporal,le massetere et le ptérygoïdien latéral' est faux (manque le médial). (3) 'le masséter est situé sur la face latéral' est faux (le commentaire dit 'faux' mais la proposition est vraie). L'option B (2,4,5) combine les propositions justes.",
-        citations: [595, 596, 597, 598, 599]
-      },
+  questionText: "Concernant Les muscles masticateurs :\n1. Les muscles masticateurs comportent le temporal, le masséter et le ptérygoïdien latéral\n2. Le temporal est élévateur et rétropulseur\n3. Le masséter est situé sur la face latérale\n4. Le ptérygoïdien latéral comporte deux faisceaux\n5. Les muscles masticateurs sont tous innervés par le nerf mandibulaire",
+  options: [
+    "(1, 2, 5)",
+    "(2,4,5)",
+    "(1,3,4)",
+    "(2,3)",
+    "(3, 4,5)"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Justes : 2, 4, 5 (Réponse B).",
+  citations: [595, 596, 597, 598, 599]
+},
+
       {
         questionText: "parmi les antagonistes de l'orbiculaire de la bouche",
         options: [
@@ -2261,6 +2270,32 @@ const anatomyQuizzesY2 = [
         explanation: "Le muscle ptérygoïdien latéral est le principal muscle responsable des mouvements de propulsion (vers l'avant) et de diduction (latéralité) de la mandibule. Le masséter, le ptérygoïdien médial et le temporal sont principalement des élévateurs. Le géniohyoïdien abaisse la mandibule.",
         citations: [1245, 1246, 1247, 1248, 1249, 1250, 1251, 1252]
       },
+      // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Myologie De la Tète"
+
+{
+  questionText: "Concernant le muscle ptérygoïdien médial (1er EMD 2019):",
+  options: [
+    "S'insère sur le disque articulaire",
+    "Il est élévateur de la mandibule",
+    "Il est propulseur de la mandibule",
+    "Il est innervé par le nerf mandibulaire ou V3",
+    "il s'inséré sur l'aile latérale de l'apophyse ptérygoïde"
+  ],
+  correctOptionIndexes: [1, 2, 3],
+  explanation: "Le muscle ptérygoïdien médial est élévateur et propulseur de la mandibule. Il est innervé par le nerf mandibulaire (V3). Il s'insère dans la fosse ptérygoïde."
+},
+{
+  questionText: "Parmi les muscles masticateurs, lesquels sont élévateurs de la mandibule (2016/2017) :",
+  options: [
+    "le ptérygoïdien médial",
+    "le temporal",
+    "le buccinateur",
+    "le masséter",
+    "le ptérygoïdien latéral"
+  ],
+  correctOptionIndexes: [0, 1, 3],
+  explanation: "Les élévateurs sont le temporal, le masséter et le ptérygoïdien médial. Le ptérygoïdien latéral est propulseur/abaisseur. Le buccinateur est un muscle peaucier."
+},
       {
         questionText: "Concernent les muscles peauciers de la face",
         options: [
@@ -2346,18 +2381,30 @@ const anatomyQuizzesY2 = [
         citations: [1020, 1021, 1022, 1023, 1024]
       },
       {
-        questionText: "la base du crâne présente les orifices de passage des éléments suivants :",
-        options: [
-          "(1, 2)",
-          "(1, 3, 5)",
-          "(3, 4)",
-          "(2, 5)",
-          "(2,3,4)"
-        ],
-        correctOptionIndexes: [0],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'le nerf ophtalmique passe par le fissure orbitaire supérieure' est juste. (2) 'le nerf axillaire passe par le foramen rond' est juste. (3) 'l'artère carotide interne passe par le foramen déchiré antérieur' est faux (le commentaire dit 'faux' mais la proposition est vraie). (4) 'le nerf hypoglosse passe par le trou condylien antérieur' est faux (le commentaire dit 'faux' mais la proposition est vraie). (5) 'les nerfs oculomoteurs passent par la fissure orbitaire supérieure' est faux (le commentaire dit 'faux' mais la proposition est vraie). En se basant sur les 'C’EST JUSTE' explicites : (1) et (2) sont justes. L'option A (1, 2) est correcte.",
-        citations: [538, 539, 540, 541, 542]
-      },
+  questionText: "La base du crâne présente les orifices de passage des éléments suivants :\n1. Le nerf ophtalmique passe par le fissure orbitaire supérieure\n2. Le nerf axillaire passe par le foramen rond\n3. L'artère carotide interne passe par le foramen déchiré antérieur\n4. Le nerf hypoglosse passe par le trou condylien antérieur\n5. Les nerfs oculomoteurs passent par la fissure orbitaire supérieure",
+  options: [
+    "(1, 2)",
+    "(1, 3, 5)",
+    "(3, 4)",
+    "(2, 5)",
+    "(2,3,4)"
+  ],
+  correctOptionIndexes: [0],
+  explanation: "Selon le corrigé étrange de ce QCM : Réponse A (1, 2). (Note: anatomiquement, le nerf axillaire (nerf maxillaire V2) passe par le foramen rond).",
+  citations: [538, 539, 540, 541, 542]
+},
+{
+  questionText: "Concernant Les orifices de la base du crâne les nerfs crâniens suivants émergent de :\n1. Le nerf hypoglosse (XII) émerge du sillon antéro latéral du bulbe rachidien\n2. L'abducens émerge au niveau du sillon bulbo pontique\n3. L'oculomoteur émerge au niveau du sillon qui sépare l'espace perforé postérieur et le pédoncule cérébral\n4. Le nerf trochléaire émerge de la face postérieure du tronc cérébral\n5. Le trijumeau émerge au niveau de la limite de la face antéro latéral du pont",
+  options: [
+    "(1,2,3)",
+    "(2,3,5)",
+    "(3,4,5)",
+    "(4,5)"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Justes : 2, 3, 5 (Réponse B).",
+  citations: [1318, 1319, 1320, 1321]
+},
       {
         questionText: "Concernant l'orbite osseuse-Le canal optique livre passage:",
         options: [
@@ -2561,31 +2608,31 @@ const anatomyQuizzesY2 = [
         citations: [882, 883, 884, 885, 886]
       },
       {
-        questionText: "les lymphonoeuds cervicaux latéraux drainent les territoires suivants :",
-        options: [
-          "(3,4)",
-          "(1,4,5)",
-          "(1,3,4)",
-          "(1,3)",
-          "(2,4,5)"
-        ],
-        correctOptionIndexes: [4],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (2) 'la glande parotide' est juste. (4) 'l'oreille' est juste. (5) 'la région cervicale latérale' est juste. (1) 'la trompe auditive' est faux. (3) 'le nasopharynx' est juste. Le commentaire est contradictoire (dit 1 faux mais 3 juste). En se basant sur le texte, (2), (3), (4), (5) sont drainés par ce groupe. L'option E (2,4,5) est la plus correcte selon les 'justes' explicites.",
-        citations: [893, 894]
-      },
-      {
-        questionText: "Ces propositions concernant les lymphonoeuds sub mandibulaire",
-        options: [
-          "(1,3.4)",
-          "(1,4,5)",
-          "(3,4)",
-          "(1.5)",
-          "(2,3.5)"
-        ],
-        correctOptionIndexes: [3],
-        explanation: "Analyse des propositions (basée sur le commentaire) : (1) 'Sont des nœuds adjacents à la glande sub-mandibulaire' est juste. (5) 'Ils se situent entre les ventres antérieur et postérieur du muscle digastrique' est juste. (2) 'Est le groupe le plus important' est faux. (3) 'Il se situent près du muscle sternocléido-mastoïdien' est faux. (4) 'Ils suivent le trajet du nerf facial' est faux. L'option D (1,5) combine les propositions justes.",
-        citations: [909, 910, 911, 912]
-      },
+  questionText: "les lymphonoeuds cervicaux latéraux drainent les territoires suivants :\n1. La trompe auditive\n2. La glande parotide\n3. Le nasopharynx\n4. L'oreille\n5. La région cervicale latérale",
+  options: [
+    "(3,4)",
+    "(1,4,5)",
+    "(1,3,4)",
+    "(1,3)",
+    "(2,4,5)"
+  ],
+  correctOptionIndexes: [4],
+  explanation: "Justes : 2, 4, 5 (Réponse E).",
+  citations: [893, 894]
+},
+{
+  questionText: "Ces propositions concernant les lymphonoeuds sub mandibulaire :\n1. Sont des nœuds adjacents à la glande sub-mandibulaire\n2. Est le groupe le plus important\n3. Ils se situent près du muscle sternocléido-mastoïdien\n4. Ils suivent le trajet du nerf facial\n5. Ils se situent entre les ventres antérieur et postérieur du muscle digastrique",
+  options: [
+    "(1,3.4)",
+    "(1,4,5)",
+    "(3,4)",
+    "(1.5)",
+    "(2,3.5)"
+  ],
+  correctOptionIndexes: [3],
+  explanation: "Justes : 1 et 5 (Réponse D).",
+  citations: [909, 910, 911, 912]
+},
       {
         questionText: "Les lymphonœuds submandibulaires drainent les organes suivants :",
         options: [
@@ -2722,6 +2769,329 @@ const anatomyQuizzesY2 = [
         explanation: "L'os ethmoïdal est un os impair formé de 4 parties (lame criblée, lame perpendiculaire, et deux labyrinthes). Il est en rapport direct avec les fosses nasales, et sa lame perpendiculaire se prolonge bien par l'apophyse Crista galli. Il n'a pas de rapport direct avec l'os occipital."
       },
       {
+        questionText: "Cochez la formation non visible sur la face latérale (exocrânienne) de l'os frontal:",
+        options: [
+          "La glabelle",
+          "La suture métopique",
+          "L'arcade sourcilière",
+          "Le foramen cœcum",
+          "Tubérosité frontale"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le foramen cœcum (ou trou borgne) se situe sur la face interne (endocrânienne) de l'os frontal. La glabelle, la suture métopique (si présente), l'arcade sourcilière et les tubérosités frontales sont toutes visibles sur la face externe (exocrânienne).",
+        citations: [9, 10, 11, 12, 13]
+      },
+      {
+        questionText: "Concernant l'os ethmoïdal:",
+        options: [
+          "Il est en rapport en arrière avec l'occipital",
+          "C'est un os pair",
+          "Il est constitué de quatre parties",
+          "Il est en rapport avec les fosses nasales",
+          "La lame perpendiculaire se prolonge par l'apophyse de Crista galli"
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "L'os ethmoïdal est un os impair, constitué de quatre parties (lame criblée, lame perpendiculaire, et deux labyrinthes latéraux). Il est en rapport avec les fosses nasales et participe à leur formation. Sa lame perpendiculaire se prolonge bien par l'apophyse Crista galli. Il n'est pas en rapport direct avec l'occipital.",
+        citations: [28, 29, 30, 31, 32, 33]
+      },
+      {
+        questionText: "Concernant l'os ethmoïdal",
+        options: [
+          "Appartient à 1' étage moyen de la base du crâne.",
+          "Est un os profond et central de la face.",
+          "Participe à la formation des parois des fosses nasales.",
+          "Participe à la formation de la paroi des 2 cavités orbitaires.",
+          "Participe à la formation des parois de la cavité buccale."
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "L'os ethmoïdal appartient à l'étage antérieur de la base du crâne (non moyen) et est considéré comme un os superficiel et central (non profond). Il participe à la formation des parois des fosses nasales ainsi que des parois médiales des deux cavités orbitaires. Il ne participe pas à la formation de la cavité buccale.",
+        citations: [50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+      },
+      {
+        questionText: "Concernant L'os temporal:",
+        options: [
+          "C'est un os impair",
+          "Il est constitué de 3 éléments",
+          "Il contribue à la formation des étages antérieur et postérieur de la base du crâne",
+          "Il s'articule en avant avec l'os zygomatique",
+          "S'articule La mandibule au niveau de la partie mastoïdienne"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "L'os temporal est un os pair, constitué de trois parties : l'écaille (partie squameuse), le rocher (pyramide pétreuse) et l'os tympanal. Il contribue principalement à l'étage moyen de la base du crâne. Il s'articule en avant avec l'os zygomatique (formant l'arcade zygomatique) et s'articule avec la mandibule au niveau de sa partie squameuse (cavité glénoïde), non mastoïdienne.",
+        citations: [60, 61, 62, 63, 64, 65]
+      },
+      {
+        questionText: "Concernant l'os Temporal",
+        options: [
+          "L'os temporal s'articule avec le Processus zygomatique en avant",
+          "L'os tympanal Constitue la partie squameuse de l'os temporal",
+          "Le bord de l'écaille de l'os temporal est un bord circonférentiel",
+          "Le rocher de l'os temporal présente 2 faces ; une endocrânienne et l'autre exocrânienne",
+          "L'os temporal s'articule La mandibule au niveau de la partie mastoïdienne"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "L'os temporal s'articule en avant avec le processus zygomatique, et le bord de son écaille est circonférentiel. L'os tympanal ne constitue pas l'écaille (partie squameuse). Le rocher (pyramide pétreuse) présente 4 faces (deux endocrâniennes et deux exocrâniennes). L'articulation avec la mandibule se fait au niveau de l'écaille (cavité glénoïde), non de la partie mastoïdienne.",
+        citations: [109, 110, 111, 112, 113, 114]
+      },
+      {
+        questionText: "Concernant l'os sphénoïde :",
+        options: [
+          "Il appartient à l'étage antérieur et moyen de la base du crâne",
+          "Les petites ailes renferme le canal optique lieu de passage du nerf optique est des nerfs oculomoteurs.",
+          "Il s'articule avec tous les os du crâne excepté l'occipital.",
+          "La petite aile participe à la formation du ptyrion.",
+          "Les processus ptérygoïdes s'articule avec le palatin et le maxillaire."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "L'os sphénoïde appartient aux trois étages de la base du crâne. Les petites ailes renferment le canal optique, qui livre passage au nerf optique et à l'artère ophtalmique (pas les nerfs oculomoteurs). Il s'articule avec tous les os du crâne, y compris l'occipital. C'est la grande aile (non la petite) qui participe à la formation du ptérion. Les processus ptérygoïdes s'articulent bien avec le palatin et le maxillaire.",
+        citations: [127, 128, 129, 130, 131, 132, 133, 134, 135, 136]
+      },
+      {
+        questionText: "concernant l'os occipital",
+        options: [
+          "Participe à la formation seulement de l'étage postérieur de l'exobase",
+          "Est uni en avant par l'apophyse basilaire au corps du sphénoïde",
+          "Sur la face endocrânienne des masses latérales se trouvent les gouttières du sinus sigmoïde",
+          "Le foramen magnum laisse passer le premier segment de moelle épinière (spinale)",
+          "Les condyles sont articulaires avec l'axis"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'os occipital est uni en avant au corps du sphénoïde par l'apophyse basilaire, et les gouttières du sinus sigmoïde se trouvent sur la face endocrânienne de ses masses latérales. Il participe à la formation de l'endobase et de l'exobase (pas seulement l'exobase). Le foramen magnum laisse passer la moelle allongée (bulbe), pas la moelle spinale. Les condyles s'articulent avec l'atlas (C1), non l'axis (C2).",
+        citations: [152, 153, 154, 155, 156]
+      },
+     {
+  questionText: "Concernant l'ostéologie du crâne :\n1. Les trois étages de la base du crâne constituent la base du crâne\n2. La base du crâne est le lieu de passage des nerfs et vaisseaux sanguins non pas la voûte\n3. La tête correspond à l'ensemble crâne et face\n4. Le crâne est constitué de huit os\n5. Tous les os du crâne participent à la constitution de la calvaria et la base",
+  options: [
+    "(1,3)",
+    "(3,4)",
+    "(3,5)",
+    "(2,3)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [2, 3],
+  explanation: "Analyse : (3) et (4) sont justes. (1) Faux (voûte+base). (2) Faux (ambigu). (5) Faux (Ethmoïde base seulement, Pariétal voûte seulement).",
+  citations: [393, 394, 395, 396, 397]
+},
+{
+  questionText: "Concernant l'os frontal :\n1. L'os frontal ferme à lui seul l'avant de la boîte crânienne\n2. Sa partie verticale appelée écaille appartient pour partie à la base du crâne\n3. L’os frontal contient des cavités aériques appelées les sinus frontaux\n4. L’os frontal s'articule avec la lame criblée de l'os ethmoïde\n5. Le toit de l'orbite comporte la fossette trochléaire en médiale et la fossette lacrymale en latéral",
+  options: [
+    "(1, 3, 4)",
+    "(2, 3, 4)",
+    "(3,5)",
+    "(2, 3)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [0],
+  explanation: "Justes : 1, 3, 4. Faux : 2 (Ecaille = voûte), 5 (Trochléaire est médiale, Lacrymale est latérale - proposition inversée ou mal lue dans le commentaire, mais 1,3,4 est la bonne combinaison).",
+  citations: [402, 403, 404, 405, 406, 407]
+},
+{
+  questionText: "Concernant l'os ethmoïdal :\n1. L'os ethmoïde participe seulement à la constitution de base du crâne\n2. L'ethmoïde participe à la formation de la cloison des fosses nasales\n3. Il possède un relief intracrânien, le processus de crista galli\n4. Les faces latérales des masses latérales contribuent à la formation de l'orbite\n5. La lame criblée de l'ethmoïde laisse passer les filets nerveux du nerf olfactif",
+  options: [
+    "(1, 3)",
+    "(2, 3, 4)",
+    "(1, 4)",
+    "(2,3)",
+    "(1, 4, 5)"
+  ],
+  correctOptionIndexes: [0, 1],
+  explanation: "Note: Selon le corrigé fourni dans le texte, la réponse D (2,3) est souvent attendue bien que les propositions 4 et 5 soient anatomiquement vraies. Il y a contradiction dans les sources.",
+  citations: [413, 414, 415, 416, 417]
+},
+{
+  questionText: "Concernant l'os Temporal :\n1. L'os temporal s'articule en avant avec le processus zygomatique\n2. L’os tympanal constitue la partie tympanique et l’écaille constitue la partie squameuse\n3. Le bord de l'écaille de l'os temporal est un bord circonférentiel\n4. Le rocher de l’os temporal présente quatre faces\n5. L'os temporal s'articule avec la mandibule au niveau de sa cavité glénoïde",
+  options: [
+    "(1, 2, 4)",
+    "(2, 3, 5)",
+    "(1, 4)",
+    "(2, 3)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [0, 2],
+  explanation: "Propositions justes selon l'analyse : 1 et 3. (Note: les combinaisons proposées ne correspondent pas parfaitement, vérifiez la source).",
+  citations: [450, 451, 452, 453]
+},
+{
+  questionText: "Concernant l'os sphénoïde :\n1. Le sphénoïde s'articule avec tous les os du crâne même l'occipital\n2. Le sphénoïde participe à la formation de la voûte et la base du crâne\n3. La partie squameuse des grandes ailes du sphénoïde participe au ptérion\n4. La petite aile du sphénoïde est creusée du canal optique\n5. Le sphénoïde participe à la formation du foramen déchiré antérieur",
+  options: [
+    "(1, 3, 4)",
+    "(2, 3, 4)",
+    "(1,3)",
+    "(2, 5)",
+    "(3,4,5)"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Justes : 2, 3, 4. Faux : 1 (Il s'articule avec l'occipital, mais la formulation est parfois piégeuse), 5 (C'est souvent considéré vrai anatomiquement, mais dans ce QCM spécifique, la combinaison B est la meilleure).",
+  citations: [458, 459, 460, 461, 462]
+},
+{
+  questionText: "Concernant l'os occipital :\n1. L’os occipital participe à la formation de l'étage postérieur de l’endo-base\n2. L'os occipital est uni au sphénoïde par l'apophyse basilaire en avant\n3. La gouttière du sinus longitudinal se trouve sur la face endocrânienne de l'écaille\n4. Les masses latérales de l'occipital délimitent le foramen de magnum\n5. Les condyles occipitaux s'articulent avec l'atlas",
+  options: [
+    "(1,3)",
+    "(2,3,4)",
+    "(1,2,4)",
+    "(2,4)",
+    "(1,4,5)"
+  ],
+  correctOptionIndexes: [3],
+  explanation: "Selon le corrigé type de ce QCM spécifique : Réponse D (2,4).",
+  citations: [463, 464, 465, 466]
+},
+      {
+        questionText: "L'apophyse CRISTA GALLI est :",
+        options: [
+          "Le segment extra-crânien de la lame perpendiculaire de l'os ethmoïde.",
+          "Le segment extra crânien de la lame horizontale de l'os ethmoïde.",
+          "Le segment nasal de la masse latérale de l'os ethmoïde.",
+          "Le segment intracrânien de la lame horizontale de l'os ethmoïde",
+          "Le segment intracrânien de la lame perpendiculaire de l'os ethmoïde"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le commentaire indique que la proposition 'D' est juste, la décrivant comme 'le segment intracrânien de la lame horizontal de l’os ethmoïde'. Les autres propositions sont donc fausses.",
+        citations: [467, 468, 469, 470]
+      },
+      // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Massif Cranial (Os Frontal+ Tète Osseuse + Os Temporal)"
+
+{
+  questionText: "Concernant Le frontal (1er EMD 2019):",
+  options: [
+    "Il présente dans sa partie exocrânienne, la glabelle, située au-dessus de la suture métopique.",
+    "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+    "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
+    "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
+    "Sa partie verticale, appelée écaille, appartient à la base du crâne"
+  ],
+  correctOptionIndexes: [1, 2],
+  explanation: "Les fossettes granulaires bordent le sinus sagittal supérieur. La fossette trochléaire est située médialement (en dedans) tandis que la fossette lacrymale est latérale. L'écaille appartient à la voûte du crâne, pas à la base."
+},
+{
+  questionText: "Concernant l'os ethmoïdal (1er EMD 2019):",
+  options: [
+    "L'apophyse crista galli est la partie endocrânienne de la lame perpendiculaire",
+    "Participe à la formation de la cavité orbitaire par sa lame perpendiculaire",
+    "Participe à la formation des fosses nasales par la lame perpendiculaire",
+    "L'os planum est la face médiale de la masse latérale de l'éthmoïde",
+    "Le cornet inférieur fait partie des masses latérales"
+  ],
+  correctOptionIndexes: [0, 2],
+  explanation: "L'apophyse Crista Galli est bien la partie supérieure (endocrânienne) de la lame perpendiculaire. La lame perpendiculaire participe à la cloison nasale. L'os planum est la face latérale (et non médiale) des masses latérales. Le cornet inférieur est un os distinct."
+},
+{
+  questionText: "A propos de l'occipital (1er EMD 2019):",
+  options: [
+    "L'apophyse basilaire s'articule avec l'apophyse ptérygoïde de l'os sphénoïdal",
+    "Les masses latérales délimitent le foramen magnum",
+    "Sur l'écaille occipitale se trouve le canal du canal condylien",
+    "Les fosses cérébrales sont situées au-dessus des fosses cérébelleuses",
+    "Les condyles sont articulaires avec l'axis"
+  ],
+  correctOptionIndexes: [1, 3],
+  explanation: "Les masses latérales de l'occipital bordent le foramen magnum. Les fosses cérébrales (pour les lobes occipitaux) sont situées au-dessus des fosses cérébelleuses. L'apophyse basilaire s'articule avec le corps du sphénoïde (clivus), pas les ptérygoïdes. Les condyles s'articulent avec l'atlas (C1)."
+},
+{
+  questionText: "Concernant la fissure orbitaire supérieure (1er EMD 2019):",
+  options: [
+    "Est limitée en Dehors par le frontal",
+    "Est limitée en dedans par la petite aile du sphénoïde",
+    "Fait communiquer l'orbite avec l'étage moyen de la base du crâne",
+    "Livre passage au nerf optique",
+    "Livre passage aux nerfs oculomoteurs"
+  ],
+  correctOptionIndexes: [0, 2, 4],
+  explanation: "La fissure orbitaire supérieure (fente sphénoïdale) fait communiquer l'orbite avec l'étage moyen et livre passage aux nerfs oculomoteurs (III, IV, VI). Le nerf optique passe par le canal optique."
+},
+      {
+        questionText: "Concernant l'ostéologie du crâne",
+        options: [
+          "L'ethmoïde, seul os n'appartenant pas à la calvaria.",
+          "La selle turcique se situe à la face antérieure du corps du sphénoïde",
+          "Le parietal s'articule avec tous les os qui participent à la constitution de la calvaria",
+          "L'os frontal n'appartient pas à la base du crâne",
+          "La fossette vermienne est une bifurcation de la crête occipitale interne."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'ethmoïde appartient à la base du crâne et non à la calvaria (voûte). La selle turcique se situe sur la face supérieure (non antérieure) du corps du sphénoïde. Le pariétal ne s'articule pas avec l'ethmoïde (qui n'est pas dans la calvaria). L'os frontal participe à la fois à la voûte et à la base du crâne.",
+        citations: [604, 605, 606, 607, 608, 609, 610, 611]
+      },
+      {
+        questionText: "Concernant l'os Temporal",
+        options: [
+          "Os de la fosse crânienne antérieure",
+          "Situé au-dessous du pariétal, en avant et dedans du sphénoïde",
+          "Le processus styloïde appartient à la pyramide pétreuse",
+          "Le méat acoustique interne, orifice creusé dans la partie tympanal de l'os",
+          "La fosse trigéminale, apparient à la partie postéro-supérieure de la face endocrânienne du rocher"
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "L'os temporal est situé sous le pariétal, en avant et en dedans du sphénoïde. La fosse trigéminale se situe bien dans la partie postéro-supérieure de la face endocrânienne du rocher. Il participe aux fosses crâniennes moyenne et postérieure (non antérieure). Le processus styloïde appartient à la portion tympanique (non pétreuse). Le méat acoustique interne est dans la portion pétreuse (non tympanique).",
+        citations: [625, 626, 627, 628, 629, 630, 631]
+      },
+      {
+        questionText: "Concernant l'os sphénoïde",
+        options: [
+          "Il est articulaire avec tous les os du crâne",
+          "Il forme la voûte et la base du crâne",
+          "Ses petites ailes délimitent le canal optique",
+          "Son corps présente des foramens livrant passage aux nerfs",
+          "Ses grandes ailes forment l'étage moyen de la base du crâne"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Toutes les propositions sont justes selon le commentaire : L'os sphénoïde s'articule avec tous les os du crâne, il forme à la fois la voûte et la base, ses petites ailes délimitent le canal optique, son corps présente des foramens pour les nerfs, et ses grandes ailes forment l'étage moyen de la base.",
+        citations: [632, 633, 634, 635, 636, 637]
+      },
+      {
+        questionText: "Concernant L'os frontal:",
+        options: [
+          "il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
+          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+          "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
+          "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
+          "Sa partie verticale, appelée écaille, appartient à la voûte du crâne"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires. La fossette trochléaire est bien en dedans (médiale) par rapport à la fossette lacrymale (latérale). La partie verticale (écaille) appartient à la voûte du crâne. La glabelle est sur la face externe (non endocrânienne). L'incisure supra-orbitaire est au tiers médial (non latéral).",
+        citations: [867, 868, 869, 870, 871, 872, 873, 874, 875, 876]
+      },
+      {
+        questionText: "La paroi supérieure de l'orbite osseuse est formée des os suivants :",
+        options: [
+          "L'apophyse orbitaire de l'os malaire",
+          "L'os palatin",
+          "L'os planum",
+          "La fosse orbitaire de l'os frontale",
+          "La petite aile du sphénoïde"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "La paroi supérieure de l'orbite (le toit) est formée par la fosse orbitaire de l'os frontal et par la petite aile du sphénoïde. L'os malaire, l'os palatin et l'os planum (partie de l'ethmoïde) participent à d'autres parois de l'orbite.",
+        citations: [940, 941, 942, 943, 944, 945]
+      },
+      {
+        questionText: "Concernant la lame criblée de l'éthmoïde:",
+        options: [
+          "Est le lieu de passage du nerf optique",
+          "Est le lieu de passage des filets olfactifs",
+          "Est une structure osseuse",
+          "Est située dans l'étage antérieur de la base du crâne",
+          "Est située dans l'étage moyen de la base du crâne"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La lame criblée est une structure osseuse de l'ethmoïde, située dans l'étage antérieur de la base du crâne. Elle sert de lieu de passage pour les filets olfactifs (nerf I), et non pour le nerf optique (nerf II).",
+        citations: [1141, 1142, 1143, 1144, 1145]
+      },
+      {
+        questionText: "Concernant l'os ethmoïdal",
+        options: [
+          "Il présente 6 faces et occupe la partie médiane de l'os",
+          "Sa face supérieure présente la gouttière optique",
+          "Sa face inférieure s'articule avec le palatin",
+          "Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde",
+          "Sa face postérieure s'articule avec le temporal"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Cette description semble concerner le corps du sphénoïde, et non l'ethmoïde. En supposant que la question porte sur le corps du sphénoïde : Il présente six faces et occupe la partie centrale. Sa face supérieure présente la gouttière optique. Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde. Sa face inférieure s'articule avec le vomer (non le palatin) et sa face postérieure s'articule avec l'occipital (non le temporal).",
+        citations: [1296, 1297, 1298, 1299, 1300, 1301]
+      },
+      {
         questionText: "Concernant L'os temporal:",
         options: [
           "C'est un os impair",
@@ -2759,102 +3129,7 @@ const anatomyQuizzesY2 = [
       }
     ]
   },
-  {
-    title: "Massif Facial (Os Maxillaire + La Mandibule Et l’Os Hyoïde +Os palatin)",
-    subject: "anatomy-y2",
-    questions: [
-      {
-        questionText: "Concernant l'ostéologie du massif facial :",
-        options: [
-          "Tous les os du massif facial sont pneumatiques.",
-          "Le relief des arcades sourcilières est formé par l'os frontal",
-          "Le malaire (os zygomatique) constitue l'essentiel de la paroi inférieure de l'orbite",
-          "La cloison nasale osseuse est formée seulement par le vomer",
-          "L'unguis est incurvé en externe de manière à recevoir le sac lacrymal."
-        ],
-        correctOptionIndexes: [1, 4],
-        explanation: "Le relief des arcades sourcilières est bien une caractéristique de l'os frontal. L'os lacrymal (unguis) est incurvé pour former la gouttière du sac lacrymal. Seuls quelques os sont pneumatiques. L'os zygomatique forme la paroi latérale de l'orbite. La cloison nasale est formée par le vomer et la lame perpendiculaire de l'ethmoïde."
-      },
-      {
-        questionText: "Concernant le maxillaire",
-        options: [
-          "Le processus montant est une paroi commune entre les fosses nasales et l'orbite.",
-          "Le processus palatin forme la moitié antérieure du palais osseux.",
-          "Est formé d'un corps et de 03 processus : alvéolaire, palatin et orbitaire",
-          "L'orifice piriforme est formé des deux os maxillaires et de l'os propre du nez",
-          "Le sinus maxillaire s'ouvre au niveau du méat supérieur."
-        ],
-        correctOptionIndexes: [0, 3],
-        explanation: "Le processus montant (frontal) du maxillaire participe à la paroi médiale de l'orbite et latérale des fosses nasales. L'orifice piriforme est bien délimité par les deux maxillaires et les os nasaux. Le processus palatin forme les 2/3 antérieurs du palais. Le maxillaire a 4 processus. Le sinus maxillaire s'ouvre dans le méat moyen."
-      },
-      {
-        questionText: "Concernant la face externe (latérale) de la mandibule",
-        options: [
-          "La symphyse est une crête verticale et médiane.",
-          "L'éminence mentonnière est une saillie en forme de pyramide.",
-          "La ligne oblique interne se dirige en bas et en avant",
-          "Le foramen mentonnier est situé au niveau des canines.",
-          "Les jugums alvéolaires sont en rapports avec l'implantation des incisives et les canines"
-        ],
-        correctOptionIndexes: [0, 1, 4],
-        explanation: "La symphyse, l'éminence mentonnière et les jugums alvéolaires sont des structures de la face externe. La ligne oblique externe (et non interne) se dirige en bas et en avant. Le foramen mentonnier se situe au niveau des prémolaires."
-      },
-      {
-        questionText: "Les apophyses géni supérieures de l'os mandibule donnent insertion au muscle:",
-        options: [
-          "Génio-pharyngien",
-          "Génio-glosse",
-          "Génio-glottique",
-          "Génio-hyoïdien",
-          "Génio-staphylin"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Les apophyses géni supérieures donnent insertion au muscle génio-glosse, tandis que les apophyses géni inférieures donnent insertion au muscle génio-hyoïdien."
-      }
-    ]
-  },
-  {
-    title: "Muscles de la langue et du voile du palais",
-    subject: "anatomy-y2",
-    questions: [
-      {
-        questionText: "Concernant Le voile du palais:",
-        options: [
-          "Il limite en bas la cavité buccale",
-          "Il est osseux formé par les os maxillaire et palatin",
-          "Il est fibro-musculaire",
-          "Il sépare le naso-pharynx du laryngopharynx",
-          "Les piliers glosso-staphylin et pharyngo-staphylin limitent la fosse tonsillaire"
-        ],
-        correctOptionIndexes: [2, 4],
-        explanation: "Le voile du palais est une cloison fibro-musculaire. Ses piliers (arcs palatoglosse et palatopharyngien) délimitent la fosse tonsillaire. Il limite la cavité buccale en arrière (et non en bas). Il sépare le nasopharynx de l'oropharynx."
-      },
-      {
-        questionText: "Parmi les muscles suivants, lequel est tenseur du voile ?",
-        options: [
-          "Péristaphylin latéral (Tenseur du voile)",
-          "Péristaphylin médial (Elévateur du voile)",
-          "Glosso-staphylin (Palato-glosse)",
-          "Pharyngo-staphylin (Palato-pharyngien)",
-          "Palato-staphylin (Uvulaire)"
-        ],
-        correctOptionIndexes: [0],
-        explanation: "Le muscle péristaphylin latéral (tenseur du voile du palais) est le seul muscle tenseur parmi les choix. Les autres sont des élévateurs ou ont d'autres fonctions."
-      },
-      {
-        questionText: "Parmi les muscles de la langue, certains s'insèrent sur les os voisins, lesquels ?",
-        options: [
-          "Génio-glosse",
-          "Glosso-staphylin",
-          "Hyo-glosse",
-          "Amygdalo-glosse",
-          "Stylo-glosse"
-        ],
-        correctOptionIndexes: [0, 2, 4],
-        explanation: "Le génio-glosse s'insère sur la mandibule, l'hyo-glosse sur l'os hyoïde, et le stylo-glosse sur le processus styloïde de l'os temporal. Le glosso-staphylin s'insère sur le palais mou et l'amygdalo-glosse sur les amygdales."
-      }
-    ]
-  },
+ 
   {
     title: "Le SYSTEME CAROTIDIEN",
     subject: "anatomy-y2",
@@ -3698,7 +3973,7 @@ const anatomyQuizzesY2 = [
     questions: [
       // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2022, 2021) ---
       {
-        questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure ? ",
+        questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure ? (Question classée ici dans le PDF)",
         options: [
           "La racine disto-vestibulaire est toujours courbée mésialement",
           "La racine palatine est toujours droite",
@@ -4294,6 +4569,19 @@ const anatomyQuizzesY2 = [
   ],
   correctOptionIndexes: [2, 3],
   explanation: "Le nerf hypoglosse (XII) émerge du sillon pré-olivaire. Il innerve le muscle thyro-hyoïdien (un muscle sous-hyoïdien) ainsi que les muscles de la langue et le muscle génio-hyoïdien. Il est purement moteur."
+},
+{
+  questionText: "Concernant Les muscles du palais mou (voile du palais) et la langue :\n1. Les muscles du voile du palais prennent origine ou se terminent au niveau de l'aponévrose palatine\n2. Les muscles de la langue sont distingués en 2 catégories (intrinsèques et extrinsèques)\n3. Tous les muscles du voile du palais sont innervés par le nerf vague (X) sauf le tenseur\n4. Le muscle longitudinal est un muscle intrinsèque\n5. Tous les muscles de la langue sont innervés par le nerf hypoglosse sauf le palatoglosse",
+  options: [
+    "(1, 2, 5)",
+    "(2, 3,4)",
+    "(2, 5)",
+    "(1,2,5)",
+    "(1,3,5)"
+  ],
+  correctOptionIndexes: [3],
+  explanation: "Justes : 1, 2, 5 (Réponse D).",
+  citations: [589, 590, 591, 592, 593, 594]
 },
 {
   questionText: "Concernant le nerf glosso-pharyngien",

@@ -1456,11 +1456,22 @@ function animateCarouselAssembly(year) {
                 link.className = 'content-item';
 
                 if (contentType === 'summaries' && item.filePath) {
-                    // Build the correct URL for the PDF viewer or direct link
-                    link.href = buildPdfViewerUrl(item.filePath);
-                    link.target = "_blank"; // Open summaries in a new tab
-                    link.innerHTML = `<i class="fas fa-book-open"></i><span>${item.title || 'Summary'}</span>`;
-                } else if (contentType === 'quizzes' && item._id) {
+    // ❌ القديم (احذفه):
+    // const serverUrl = 'http://localhost:5000';
+
+    // ✅ الجديد (ضعه مكانه): رابط موقعك على Render
+    const serverUrl = 'https://dental-app-he1p.onrender.com';
+    
+    // نتأكد أن المسار يبدأ بـ / لضمان دمج صحيح
+    const filePath = item.filePath.startsWith('/') ? item.filePath : '/' + item.filePath;
+    
+    // بناء الرابط الكامل
+    const fullPath = `${serverUrl}${filePath}`;
+
+    link.href = buildPdfViewerUrl(fullPath);
+    link.target = "_blank"; 
+    link.innerHTML = `<i class="fas fa-book-open"></i><span>${item.title || 'Summary'}</span>`;
+} else if (contentType === 'quizzes' && item._id) {
                     link.innerHTML = `<i class="fas fa-question-circle"></i><span>${item.title || 'Quiz'}</span>`;
                     link.href = '#'; // Prevent default link behavior
                     link.addEventListener('click', (e) => {
