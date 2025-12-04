@@ -92,7 +92,7 @@ async function fetchLessonsBySubject(subjectId) {
 
 async function fetchSummariesBySubject(subjectId) {
     // Using fetchApi helper
-    return fetchApi(`/api/content/summaries/${subjectId}`);
+    return fetchApi(`/api/summaries/${subjectId}`);
 }
 // === end Content API helpers ===
 
