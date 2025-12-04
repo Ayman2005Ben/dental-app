@@ -344,6 +344,54 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1],
         explanation: "Les apophyses géni supérieures donnent insertion au muscle génio-glosse, tandis que les apophyses géni inférieures donnent insertion au muscle génio-hyoïdien."
+      },
+      {
+        questionText: "L'os lacrymal (Unguis) :",
+        options: [
+          "Est un os pair de la face.",
+          "Appartient à la paroi médiale de l'orbite.",
+          "Présente la crête lacrymale postérieure.",
+          "Participe à la formation du canal lacrymo-nasal.",
+          "S'articule avec l'os temporal."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'os lacrymal est un petit os pair de la paroi médiale de l'orbite. Il porte la crête lacrymale postérieure et forme le canal lacrymo-nasal avec le maxillaire. Il ne touche pas le temporal."
+      },
+      {
+        questionText: "L'os pariétal :",
+        options: [
+          "Est un os pair de la voûte crânienne (Calvaria).",
+          "Présente une face exocrânienne convexe avec la bosse pariétale.",
+          "Présente les lignes temporales supérieure et inférieure.",
+          "S'articule en avant avec le frontal par la suture coronale.",
+          "S'articule en bas avec le sphénoïde et le temporal."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "L'os pariétal forme la majeure partie de la voûte. Il porte les lignes temporales. Il s'articule avec le frontal (coronale), l'occipital (lambdoïde), le temporal (squameuse) et le sphénoïde (ptérion)."
+      },
+      {
+        questionText: "Le cornet nasal inférieur :",
+        options: [
+          "Est un os indépendant (ne fait pas partie de l'ethmoïde).",
+          "S'accroche à la paroi latérale des fosses nasales.",
+          "Limite en haut le méat nasal inférieur.",
+          "S'articule avec le maxillaire et le palatin.",
+          "Est un os pneumatique."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le cornet inférieur est un os à part entière (contrairement aux cornets moyen et supérieur qui appartiennent à l'ethmoïde). Il se fixe sur la paroi latérale et surplombe le méat inférieur."
+      },
+      {
+        questionText: "Les os nasaux (Os propres du nez) :",
+        options: [
+          "Sont deux petites lamelles osseuses réunies sur la ligne médiane.",
+          "S'articulent en haut avec l'os frontal.",
+          "S'articulent latéralement avec le processus frontal du maxillaire.",
+          "Forment la partie supérieure du dos du nez.",
+          "S'articulent avec l'os zygomatique."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les os nasaux forment le squelette du nez. Ils s'articulent avec le frontal en haut, le maxillaire latéralement, et entre eux au milieu. Ils ne touchent pas le zygomatique."
       }
     ]
   },
@@ -647,6 +695,102 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [2, 3, 4],
         explanation: "L'épine de Spix (lingula) constitue le rebord postérieur de l'orifice du canal dentaire inférieur. Les épines mentonnières se trouvent sur la face interne de la région symphysaire. La fosse submandibulaire est située au-dessous de la ligne mylohyoïdienne. La ligne myéloïde se trouve bien sur la face médiale, mais son extension est variable. Le gonion donne insertion au masséter sur sa face latérale (non médiale).",
         citations: [1098, 1099, 1100, 1101, 1102, 1103, 1104, 1105, 1106]
+      },
+      {
+        questionText: "Concernant le corps de la mandibule (face externe) :",
+        options: [
+          "Il présente la ligne mylo-hyoïdienne.",
+          "Il présente le foramen mentonnier situé généralement sous la deuxième prémolaire.",
+          "Il présente les épines mentonnières (apophyses geni).",
+          "La ligne oblique externe se dirige en bas et en avant depuis le bord antérieur de la branche montante.",
+          "La symphyse mentonnière est une crête transversale."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Sur la face externe, on trouve le foramen mentonnier (sous la 2ème prémolaire) et la ligne oblique externe. La ligne mylo-hyoïdienne et les épines mentonnières sont sur la face interne. La symphyse est une crête verticale."
+      },
+      {
+        questionText: "À propos de l'os palatin :",
+        options: [
+          "C'est un os impair et médian.",
+          "Sa lame horizontale forme la partie antérieure du palais dur.",
+          "Il présente un processus pyramidal qui s'articule avec le processus ptérygoïde.",
+          "Il a une forme de L majuscule.",
+          "Sa lame verticale participe à la paroi latérale des fosses nasales."
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "L'os palatin est pair, en forme de L. Sa lame verticale forme la paroi latérale des fosses nasales et son processus pyramidal s'articule avec le ptérygoïde. Sa lame horizontale forme la partie POSTÉRIEURE du palais dur (l'antérieure est formée par le maxillaire)."
+      },
+      {
+        questionText: "Concernant l'os maxillaire :",
+        options: [
+          "Le sinus maxillaire s'ouvre dans le méat nasal inférieur.",
+          "Le processus palatin s'unit à son homologue pour former la voûte palatine.",
+          "Le processus frontal s'articule avec l'os nasal et l'os frontal.",
+          "Il s'articule avec la mandibule.",
+          "C'est un os mobile de la face."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le processus palatin forme la majeure partie de la voûte palatine. Le processus frontal remonte vers l'os frontal et nasal. Le sinus s'ouvre dans le méat MOYEN. Le maxillaire est immobile et ne s'articule pas directement avec la mandibule (c'est une articulation dentaire, pas osseuse directe type suture)."
+      },
+      {
+        questionText: "Quelles structures trouve-t-on sur la face interne de la branche montante (Ramus) de la mandibule ?",
+        options: [
+          "La tubérosité massétérique.",
+          "L'épine de Spix (Lingula).",
+          "Le foramen mandibulaire (entrée du canal dentaire).",
+          "La ligne oblique externe.",
+          "Le sillon mylo-hyoïdien."
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "La face interne du ramus présente l'orifice du canal dentaire (foramen mandibulaire) protégé par l'épine de Spix (Lingula) et le sillon mylo-hyoïdien. La tubérosité massétérique est sur la face externe."
+      },
+      {
+        questionText: "Concernant l'os hyoïde :",
+        options: [
+          "Il s'articule avec la mandibule et le sternum.",
+          "C'est un os impair, médian et symétrique en forme de U.",
+          "Il est situé au-dessus du larynx, au niveau de C4.",
+          "Il possède une grande corne et deux petites cornes.",
+          "Il donne insertion aux muscles de la langue."
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "L'os hyoïde est isolé (ne s'articule avec aucun autre os), en forme de U, situé en C4. Il donne insertion aux muscles de la langue (hyo-glosse). Il a deux grandes cornes et deux petites cornes (pluriel)."
+      },
+      {
+        questionText: "L'os zygomatique (Malaire) :",
+        options: [
+          "Forme le squelette de la pommette.",
+          "S'articule avec l'os temporal par son processus frontal.",
+          "Participe à la formation de la paroi latérale de l'orbite.",
+          "Est traversé par le canal zygomatique.",
+          "Est un os pneumatique (contient un sinus)."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'os zygomatique forme la pommette et la paroi latérale de l'orbite. Il est traversé par le canal zygomatique. Il s'articule avec le temporal par son processus TEMPORAL (pas frontal). Il n'est pas pneumatique."
+      },
+      {
+        questionText: "Le vomer :",
+        options: [
+          "Est un os pair des fosses nasales.",
+          "Forme la partie postéro-inférieure de la cloison nasale (septum).",
+          "Son bord postérieur est libre et sépare les choanes.",
+          "S'articule en haut avec la lame criblée de l'ethmoïde.",
+          "S'articule en bas avec les processus palatins des maxillaires."
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "Le vomer est un os IMPAIR. Il forme la partie postéro-inférieure du septum. Son bord postérieur sépare les choanes. Il s'articule en bas avec le palais dur (maxillaires + palatins). En haut, il s'articule avec le corps du sphénoïde et la lame perpendiculaire de l'ethmoïde (pas la lame criblée directement)."
+      },
+      {
+        questionText: "Concernant les bords de la mandibule :",
+        options: [
+          "Le bord supérieur du corps porte les alvéoles dentaires.",
+          "Le bord inférieur du corps présente la fossette digastrique près de la symphyse.",
+          "Le bord supérieur de la branche montante présente l'incisure mandibulaire (échancrure sigmoïde).",
+          "Le processus condylaire est situé en avant du processus coronoïde.",
+          "Le bord postérieur de la branche est mince et tranchant."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le bord supérieur du corps est alvéolaire. Le bord inférieur présente la fossette digastrique. Le bord supérieur du ramus présente l'incisure mandibulaire. Le condyle est en ARRIÈRE du processus coronoïde. Le bord postérieur est épais (le bord antérieur est mince)."
       },
       {
         questionText: "Concernant le palatin:",
@@ -1919,6 +2063,148 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [0, 3, 4],
         explanation: "La fosse ptérygo-palatine est l'arrière-fond de la fosse infra-temporale. Elle livre passage au nerf maxillaire (V2) et aux branches de l'artère maxillaire. Elle ne contient pas le corps adipeux de la joue (boule de Bichat) et n'est pas traversée par le nerf mandibulaire (V3).",
         citations: [1135, 1136, 1137, 1138, 1139, 1140]
+      },
+      {
+        questionText: "Quelles sont les communications de la fosse ptérygo-palatine ?",
+        options: [
+          "Avec la cavité nasale via le foramen sphéno-palatin.",
+          "Avec la cavité buccale via les canaux grand et petit palatins.",
+          "Avec l'orbite via la fissure orbitaire inférieure.",
+          "Avec la fosse crânienne moyenne via le foramen rond.",
+          "Avec la fosse infra-temporale via la fissure ptérygo-maxillaire."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "La fosse ptérygo-palatine est un véritable carrefour. Elle communique avec le nez (en dedans), la bouche (en bas), l'orbite (en avant/haut), le crâne (en arrière/foramen rond) et la fosse infra-temporale (en dehors)."
+      },
+      {
+        questionText: "Le ganglion ptérygo-palatin (Ganglion de Meckel) :",
+        options: [
+          "Est un ganglion parasympathique.",
+          "Est annexé au nerf maxillaire (V2).",
+          "Est situé dans la fosse infra-temporale.",
+          "Reçoit le nerf vidien (nerf du canal ptérygoïdien).",
+          "Contrôle la sécrétion lacrymale et nasale."
+        ],
+        correctOptionIndexes: [0, 1, 3, 4],
+        explanation: "Le ganglion est situé dans la fosse ptérygo-palatine (pas infra-temporale). Il est suspendu au V2, reçoit le nerf vidien et assure l'innervation végétative des glandes lacrymales et nasales."
+      },
+      {
+        questionText: "La paroi postérieure de la fosse ptérygo-palatine est formée par :",
+        options: [
+          "La tubérosité du maxillaire.",
+          "La face antérieure du processus ptérygoïde.",
+          "La grande aile du sphénoïde.",
+          "La lame perpendiculaire du palatin.",
+          "L'os zygomatique."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La limite postérieure est constituée par le processus ptérygoïde et la grande aile du sphénoïde. La tubérosité maxillaire est en avant, et la lame perpendiculaire du palatin est en dedans."
+      },
+      {
+        questionText: "L'artère maxillaire dans la fosse ptérygo-palatine :",
+        options: [
+          "Il s'agit de son troisième segment (segment ptérygo-palatin).",
+          "Elle donne l'artère infra-orbitaire.",
+          "Elle donne l'artère sphéno-palatine (branche terminale).",
+          "Elle donne l'artère palatine descendante.",
+          "Elle passe par le foramen oval."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Dans cette fosse, l'artère maxillaire donne ses branches terminales : infra-orbitaire, sphéno-palatine, et palatine descendante. Elle ne passe pas par le foramen ovale (c'est le nerf V3)."
+      },
+      {
+        questionText: "Le nerf du canal ptérygoïdien (Nerf Vidien) :",
+        options: [
+          "Est formé par l'union du grand pétreux et du pétreux profond.",
+          "Pénètre la fosse ptérygo-palatine par le canal ptérygoïdien.",
+          "Apporte les fibres sympathiques et parasympathiques.",
+          "Est une branche du nerf mandibulaire.",
+          "Se termine dans le ganglion ptérygo-palatin."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Le nerf vidien arrive par l'arrière dans la fosse via le canal ptérygoïdien pour rejoindre le ganglion. Il n'a aucun rapport avec le nerf mandibulaire."
+      },
+      {
+        questionText: "La fissure orbitaire inférieure (Fente sphéno-maxillaire) :",
+        options: [
+          "Fait communiquer la fosse ptérygo-palatine avec l'orbite.",
+          "Livre passage au nerf infra-orbitaire (branche du V2).",
+          "Livre passage au nerf zygomatique.",
+          "Livre passage à l'artère ophtalmique.",
+          "Est située entre la grande aile du sphénoïde et le maxillaire."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Elle livre passage au nerf infra-orbitaire et zygomatique. L'artère ophtalmique passe par le canal optique (pas la fissure inférieure)."
+      },
+      {
+        questionText: "Quelle structure forme la paroi médiale de la fosse ptérygo-palatine ?",
+        options: [
+          "Le corps du sphénoïde.",
+          "La lame perpendiculaire de l'os palatin.",
+          "Le vomer.",
+          "Le cornet nasal inférieur."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La paroi médiale (interne) verticale est formée par la lame perpendiculaire de l'os palatin, qui sépare la fosse de la cavité nasale."
+      },
+      {
+        questionText: "Le nerf maxillaire (V2) pénètre dans la fosse ptérygo-palatine par :",
+        options: [
+          "Le foramen ovale.",
+          "Le foramen épineux.",
+          "Le foramen rond.",
+          "La fissure orbitaire supérieure."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le nerf maxillaire (V2) quitte la base du crâne par le foramen rond pour entrer directement dans la partie haute de la fosse ptérygo-palatine."
+      },
+      {
+        questionText: "Les nerfs grands et petits palatins :",
+        options: [
+          "Naissent du ganglion ptérygo-palatin.",
+          "Descendent dans les canaux palatins.",
+          "Innervent la muqueuse du palais dur et du palais mou.",
+          "Sortent par le foramen sphéno-palatin.",
+          "Sont des branches du nerf facial."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Ils descendent vers la cavité buccale. Ils ne sortent pas par le foramen sphéno-palatin (qui va vers le nez) et ne viennent pas du facial (mais du V2 via le ganglion)."
+      },
+      {
+        questionText: "Concernant la forme et la situation de la fosse ptérygo-palatine :",
+        options: [
+          "Elle a la forme d'une pyramide quadrangulaire inversée.",
+          "Son sommet est dirigé vers le bas et se continue par le canal palatin.",
+          "Elle est située superficiellement sous la peau.",
+          "C'est un espace très étroit situé derrière le maxillaire.",
+          "Sa base est supérieure, formée par le corps du sphénoïde."
+        ],
+        correctOptionIndexes: [0, 1, 3, 4],
+        explanation: "C'est un espace profond (non superficiel), étroit, en forme de pyramide inversée, situé entre le processus ptérygoïde et le maxillaire."
+      },
+      {
+        questionText: "Le foramen sphéno-palatin :",
+        options: [
+          "Se trouve sur la paroi médiale de la fosse ptérygo-palatine.",
+          "Livre passage à l'artère sphéno-palatine.",
+          "Livre passage aux nerfs nasaux supérieurs.",
+          "Fait communiquer la fosse avec l'orbite.",
+          "Est délimité par l'échancrure sphéno-palatine du palatin et le corps du sphénoïde."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Le foramen sphéno-palatin connecte la fosse aux fosses nasales (pas à l'orbite). Il laisse passer l'artère sphéno-palatine et les nerfs nasaux."
+      },
+      {
+        questionText: "Quels sont les rapports osseux de la fosse ptérygo-palatine ?",
+        options: [
+          "En avant : La face infra-temporale (postérieure) du maxillaire.",
+          "En arrière : La base du processus ptérygoïde.",
+          "En haut : La face inférieure du corps du sphénoïde.",
+          "En bas : Le processus pyramidal du palatin.",
+          "En dehors : L'os temporal."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La fosse n'a pas de paroi osseuse 'en dehors' (latérale), elle communique avec la fosse infra-temporale par la fissure ptérygo-maxillaire. L'os temporal est plus loin en arrière."
       }
     ]
   },
@@ -2081,6 +2367,54 @@ const anatomyQuizzesY2 = [
   correctOptionIndexes: [3, 4],
   explanation: "Les muscles masticateurs agissent comme des ligaments actifs stabilisant l'articulation. La diduction (latéralité) s'observe dans le plan frontal."
 },
+{
+        questionText: "Concernant la capsule articulaire de l'ATM :",
+        options: [
+          "C'est un manchon fibreux lâche mais solide.",
+          "Elle s'insère sur le pourtour de la surface articulaire temporale.",
+          "Elle s'insère sur le col du condyle mandibulaire.",
+          "Sa face interne est tapissée par la membrane synoviale.",
+          "Elle est perforée par le muscle ptérygoïdien latéral."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La capsule entoure l'articulation, s'insère sur les surfaces osseuses (temporal et mandibule) et est tapissée intérieurement par la synoviale. Le muscle ptérygoïdien latéral s'insère sur le condyle et le disque, il ne perfore pas la capsule."
+      },
+      {
+        questionText: "Le disque articulaire (ménisque) de l'ATM :",
+        options: [
+          "Est une lentille biconcave.",
+          "Assure la concordance entre le condyle et la fosse mandibulaire.",
+          "Divise la cavité articulaire en deux étages (supra et infra-discal).",
+          "Est vascularisé dans sa partie centrale.",
+          "Se déplace en avant avec le condyle lors de l'ouverture."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Le disque est biconcave, divise l'articulation en deux et suit le condyle lors des mouvements. Il est AVASCULAIRE dans sa partie centrale (zone de pression)."
+      },
+      {
+        questionText: "Quels sont les ligaments intrinsèques (latéraux) de l'ATM ?",
+        options: [
+          "Le ligament latéral externe (le plus puissant).",
+          "Le ligament latéral interne.",
+          "Le ligament sphéno-mandibulaire.",
+          "Le ligament stylo-mandibulaire.",
+          "Le ligament ptérygo-mandibulaire."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les ligaments intrinsèques renforcent directement la capsule : ce sont les ligaments latéraux externe et interne. Les ligaments sphéno-mandibulaire et stylo-mandibulaire sont des ligaments extrinsèques (accessoires)."
+      },
+      {
+        questionText: "Concernant la biomécanique de l'ATM :",
+        options: [
+          "L'ouverture commence par une rotation pure dans le compartiment inférieur.",
+          "L'ouverture se poursuit par une translation dans le compartiment supérieur.",
+          "La propulsion est réalisée par la contraction bilatérale du ptérygoïdien latéral.",
+          "L'élévation (fermeture) est assurée par le muscle temporal et le masséter.",
+          "Le disque reste immobile pendant les mouvements."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'ouverture combine rotation (condyle) puis translation (condyle + disque). Le ptérygoïdien latéral propulse la mandibule. Temporal et Masséter ferment la bouche. Le disque est mobile."
+      },
       {
         questionText: "Concernant l'articulation temporo-mandibulaire la fosse mandibulaire :",
         options: [
@@ -2524,6 +2858,65 @@ const anatomyQuizzesY2 = [
         citations: [1322]
       },
       {
+        questionText: "Concernant l'étage antérieur de la base du crâne (Endobase) :",
+        options: [
+          "Il est limité en arrière par le bord postérieur des petites ailes du sphénoïde.",
+          "Il contient la selle turcique.",
+          "Il est constitué par l'os frontal, l'ethmoïde et les petites ailes du sphénoïde.",
+          "Il présente les trous optiques.",
+          "Il présente le foramen ovale."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'étage antérieur (éthmoïdo-frontal) est limité en arrière par les petites ailes. Il contient le frontal, l'ethmoïde (lame criblée) et les petites ailes (canal optique). La selle turcique et le foramen ovale sont dans l'étage moyen."
+      },
+      {
+        questionText: "Quels éléments communiquent avec l'étage moyen de la base du crâne ?",
+        options: [
+          "La fissure orbitaire supérieure (Fente sphénoïdale).",
+          "Le foramen rond (Grand rond).",
+          "Le foramen ovale.",
+          "Le foramen épineux (Petit rond).",
+          "Le foramen jugulaire (Trou déchiré postérieur)."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Tous ces orifices (Fente sphénoïdale, Rond, Ovale, Épineux) se trouvent dans l'étage moyen (sphéno-temporal). Le foramen jugulaire se trouve dans l'étage postérieur."
+      },
+      {
+        questionText: "Concernant l'étage postérieur de la base du crâne :",
+        options: [
+          "Il est limité en avant par le dos de la selle turcique et le bord supérieur du rocher.",
+          "Il contient le foramen magnum.",
+          "Il contient le méat acoustique interne (sur la face postérieure du rocher).",
+          "Il contient le canal du nerf hypoglosse (XII).",
+          "Il contient le foramen rond."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'étage postérieur (occipito-temporal) contient le foramen magnum, le méat acoustique interne, le foramen jugulaire et le canal condylien (hypoglosse). Le foramen rond est dans l'étage moyen."
+      },
+      {
+        questionText: "Le foramen jugulaire (Trou déchiré postérieur) livre passage à :",
+        options: [
+          "La veine jugulaire interne.",
+          "Le nerf glossopharyngien (IX).",
+          "Le nerf vague (X).",
+          "Le nerf accessoire (XI).",
+          "L'artère carotide interne."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le foramen jugulaire laisse passer la veine jugulaire interne et les nerfs mixtes (IX, X, XI). L'artère carotide interne passe par le canal carotidien et le trou déchiré antérieur."
+      },
+      {
+        questionText: "Sur l'exobase (face inférieure), la ligne bi-mastoïdienne passe par :",
+        options: [
+          "Les tubercules zygomatiques.",
+          "Le sommet des processus mastoïdes.",
+          "Le foramen magnum.",
+          "Les condyles occipitaux."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'exobase est divisée en 3 zones par deux lignes. La ligne bi-mastoïdienne unit le sommet des deux apophyses mastoïdes."
+      },
+      {
         questionText: "Concernant l'orbite osseuse:",
         options: [
           "Est située au-dessous de l'étage moyen du crâne",
@@ -2535,6 +2928,150 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [2, 4],
         explanation: "L'orbite osseuse présente une base antérieure, 4 parois et un sommet. Elle est située en dessous de la région frontale (étage antérieur). Sa forme est pyramidale (non triangulaire).",
         citations: [930, 931, 932, 933]
+      },
+      {
+        questionText: "Le foramen épineux (trou petit rond) livre passage à :",
+        options: [
+          "L'artère méningée moyenne.",
+          "Le nerf mandibulaire (V3).",
+          "Le rameau méningé du nerf mandibulaire.",
+          "L'artère carotide interne.",
+          "La veine jugulaire interne."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le foramen épineux, situé en arrière du foramen ovale, livre passage à l'artère méningée moyenne et au rameau méningé récurrent du V3."
+      },
+      {
+        questionText: "Concernant l'os temporal et la base du crâne :",
+        options: [
+          "L'apex (sommet) du rocher correspond à l'orifice antérieur du canal carotidien.",
+          "Le tegmen tympani se trouve sur la face antéro-supérieure du rocher.",
+          "La fosse jugulaire se trouve sur la face postéro-inférieure (exocrânienne) du rocher.",
+          "Le sillon du sinus pétreux supérieur longe le bord supérieur du rocher.",
+          "L'os temporal ne participe pas à l'étage moyen."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Toutes les propositions descriptives du rocher sont justes. L'os temporal participe bien à l'étage moyen (via sa face antéro-supérieure) et postérieur."
+      },
+      {
+        questionText: "Quels foramens se situent dans la grande aile du sphénoïde ?",
+        options: [
+          "Le foramen rond.",
+          "Le foramen ovale.",
+          "Le foramen épineux.",
+          "Le canal optique.",
+          "La fissure orbitaire supérieure."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La grande aile est percée par les foramens rond, ovale et épineux. Le canal optique est dans la petite aile. La fissure orbitaire supérieure est entre la petite et la grande aile."
+      },
+      {
+        questionText: "Le canal carotidien :",
+        options: [
+          "Est creusé dans le rocher (os temporal).",
+          "Livre passage à l'artère carotide externe.",
+          "Son orifice d'entrée est sur la face exocrânienne (inférieure).",
+          "Son orifice de sortie est au sommet du rocher (apex).",
+          "Est rectiligne."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Le canal carotidien traverse le rocher pour l'artère carotide INTERNE. Il décrit un coude (n'est pas rectiligne), entrant en bas et sortant au sommet."
+      },
+      {
+        questionText: "La selle turcique :",
+        options: [
+          "Appartient à l'os sphénoïde.",
+          "Est limitée en avant par le tubercule de la selle.",
+          "Est limitée en arrière par le dos de la selle (lame quadrilatère).",
+          "Loge l'hypophyse.",
+          "Se trouve dans l'étage postérieur de la base du crâne."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La selle turcique est au centre de l'étage MOYEN (pas postérieur), sur le corps du sphénoïde. Elle loge l'hypophyse entre le tubercule (avant) et le dos de la selle (arrière)."
+      },
+      {
+        questionText: "L'étage postérieur de la base du crâne contient :",
+        options: [
+          "Le foramen magnum.",
+          "Le canal du nerf hypoglosse (condylien antérieur).",
+          "Le méat acoustique interne.",
+          "Le foramen jugulaire.",
+          "Le foramen rond."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Tous ces orifices sont dans l'étage postérieur, sauf le foramen rond qui est dans l'étage moyen."
+      },
+      {
+        questionText: "Le clivus (gouttière basilaire) :",
+        options: [
+          "Est formé par la lame quadrilatère du sphénoïde et l'apophyse basilaire de l'occipital.",
+          "Est une surface plane et horizontale.",
+          "Est situé en avant du foramen magnum.",
+          "Est en rapport avec le tronc cérébral (pont et bulbe).",
+          "Appartient à l'étage antérieur."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Le clivus est une pente osseuse (non horizontale) formée par le sphénoïde et l'occipital, située dans l'étage POSTÉRIEUR, en avant du trou occipital, supportant le tronc cérébral."
+      },
+      {
+        questionText: "Concernant la lame criblée de l'ethmoïde :",
+        options: [
+          "Elle sépare l'étage antérieur de la base du crâne des fosses nasales.",
+          "Elle est traversée par les filets du nerf olfactif (I).",
+          "Elle présente en son centre l'apophyse Crista Galli.",
+          "Elle s'articule latéralement avec l'os frontal.",
+          "Elle appartient à l'étage moyen."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La lame criblée est le centre de l'étage ANTÉRIEUR. Elle est perforée pour le nerf olfactif et surmontée par Crista Galli."
+      },
+      {
+        questionText: "Sur l'os occipital, quels reliefs trouve-t-on sur la face exocrânienne ?",
+        options: [
+          "Les condyles occipitaux.",
+          "La protubérance occipitale externe.",
+          "Les lignes nucales (courbes occipitales) supérieure et inférieure.",
+          "Le tubercule pharyngien.",
+          "La fosse cérébelleuse."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les fosses cérébelleuses sont sur la face ENDOCRÂNIENNE. Tous les autres éléments (condyles, protubérance externe, lignes nucales, tubercule pharyngien) sont exocrâniens."
+      },
+      {
+        questionText: "L'os temporal s'articule avec :",
+        options: [
+          "L'os pariétal en haut.",
+          "La grande aile du sphénoïde en avant.",
+          "L'os occipital en arrière.",
+          "L'os zygomatique en avant (via le processus zygomatique).",
+          "L'os frontal."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'os temporal s'articule avec le pariétal, le sphénoïde, l'occipital, le zygomatique et la mandibule. Il ne s'articule pas directement avec le frontal (séparé par la grande aile du sphénoïde et le pariétal)."
+      },
+      {
+        questionText: "Le méat acoustique interne laisse passer :",
+        options: [
+          "Le nerf facial (VII).",
+          "Le nerf intermédiaire de Wrisberg (VII bis).",
+          "Le nerf vestibulo-cochléaire (VIII).",
+          "L'artère labyrinthique (auditive interne).",
+          "Le nerf vague (X)."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "C'est le paquet acoustico-facial (VII, VIIbis, VIII) et l'artère labyrinthique qui traversent le méat acoustique interne. Le nerf vague passe par le foramen jugulaire."
+      },
+      {
+        questionText: "Quelles structures délimitent le foramen jugulaire (trou déchiré postérieur) ?",
+        options: [
+          "Le bord postérieur du rocher (temporal).",
+          "Le bord latéral de l'os occipital (partie latérale).",
+          "La grande aile du sphénoïde.",
+          "L'apex du rocher.",
+          "Le corps du sphénoïde."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le foramen jugulaire est une suture large entre le bord postérieur du rocher temporal et la partie latérale de l'os occipital."
       }
     ]
   },
@@ -3102,6 +3639,66 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 3],
         explanation: "L'os temporal est un os pair composé de trois parties : l'écaille, le rocher (pyramide pétreuse) et l'os tympanal. Il s'articule en avant avec l'os zygomatique. Il contribue uniquement à l'étage moyen de la base du crâne et s'articule avec la mandibule au niveau de sa partie squameuse."
+      },
+      {
+        questionText: "Concernant l'os sphénoïde (vue supérieure) :",
+        options: [
+          "Le foramen rond (grand rond) livre passage au nerf maxillaire (V2).",
+          "Le foramen ovale livre passage à l'artère méningée moyenne.",
+          "Le canal optique est situé sur les grandes ailes.",
+          "La selle turcique loge la glande hypophyse.",
+          "Le foramen épineux (petit rond) livre passage au nerf mandibulaire (V3)."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Le foramen rond laisse passer le V2. La selle turcique loge l'hypophyse. Le canal optique est sur les PETITES ailes. Le foramen ovale laisse passer le V3 et le foramen épineux laisse passer l'artère méningée moyenne."
+      },
+      {
+        questionText: "Sur l'os temporal, la partie pétreuse (le rocher) :",
+        options: [
+          "A la forme d'une pyramide quadrangulaire.",
+          "Présente le processus styloïde sur sa face exocrânienne.",
+          "Contient l'organe de l'audition et de l'équilibre.",
+          "S'articule en arrière avec la grande aile du sphénoïde.",
+          "Présente le méat acoustique interne sur sa face postéro-supérieure."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Le rocher est une pyramide contenant l'oreille interne. Il porte l'apophyse styloïde en bas et le méat acoustique interne en arrière. Il s'articule en arrière avec l'OCCIPITAL (c'est l'écaille qui s'articule avec le sphénoïde)."
+      },
+      {
+        questionText: "L'os occipital :",
+        options: [
+          "Possède des condyles articulaires pour l'atlas (C1).",
+          "Est traversé par le foramen magnum.",
+          "Présente la protubérance occipitale externe sur l'écaille.",
+          "L'apophyse basilaire est située en arrière du foramen magnum.",
+          "S'articule avec les pariétaux par la suture lambdoïde."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "L'occipital porte les condyles, est percé par le foramen magnum, et présente la protubérance externe. La suture lambdoïde le lie aux pariétaux. L'apophyse basilaire (corps) est EN AVANT du foramen magnum."
+      },
+      {
+        questionText: "Concernant l'os frontal :",
+        options: [
+          "L'échancrure ethmoïdale reçoit la lame criblée de l'ethmoïde.",
+          "Les bosses frontales sont situées sur la face endocrânienne.",
+          "Il forme la majeure partie du toit de l'orbite.",
+          "Les sinus frontaux sont situés dans l'épaisseur de l'os, près de la ligne médiane.",
+          "Il s'articule en arrière avec les os pariétaux par la suture coronale."
+        ],
+        correctOptionIndexes: [0, 2, 3, 4],
+        explanation: "L'échancrure ethmoïdale reçoit l'ethmoïde. Le frontal forme le toit de l'orbite et contient les sinus. La suture coronale le lie aux pariétaux. Les bosses frontales sont des reliefs de la face EXOCRÂNIENNE."
+      },
+      {
+        questionText: "Quels éléments traversent la fente sphénoïdale (fissure orbitaire supérieure) ?",
+        options: [
+          "Le nerf optique (II).",
+          "Le nerf oculomoteur (III).",
+          "Le nerf trochléaire (IV).",
+          "Le nerf abducens (VI).",
+          "Le nerf ophtalmique de Willis (V1)."
+        ],
+        correctOptionIndexes: [1, 2, 3, 4],
+        explanation: "La fente sphénoïdale livre passage aux nerfs moteurs de l'œil (III, IV, VI) et au nerf sensitif ophtalmique (V1). Le nerf optique passe par le canal optique."
       },
       {
         questionText: "Concernant l'os sphénoïde :",
@@ -4509,6 +5106,54 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 3, 4],
         explanation: "La fosse infra-temporale est limitée en avant par la tubérosité du maxillaire, en haut par la grande aile du sphénoïde, et médialement (en dedans) par la lame latérale du processus ptérygoïde."
+      },
+      {
+        questionText: "Quelles sont les limites de la fosse infra-temporale ?",
+        options: [
+          "En haut : la grande aile du sphénoïde.",
+          "En avant : la tubérosité du maxillaire.",
+          "En dehors : la branche montante de la mandibule (ramus).",
+          "En dedans : la lame latérale du processus ptérygoïde.",
+          "En bas : le muscle mylo-hyoïdien."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La fosse infra-temporale est un espace situé sous la base du crâne, derrière le maxillaire, en dedans du ramus et en dehors du processus ptérygoïde. Elle n'a pas de plancher musculaire strict comme le mylo-hyoïdien."
+      },
+      {
+        questionText: "Contenu de la fosse infra-temporale :",
+        options: [
+          "Le muscle ptérygoïdien latéral.",
+          "Le muscle ptérygoïdien médial.",
+          "L'artère maxillaire (et ses branches).",
+          "Le nerf mandibulaire (V3).",
+          "Le ganglion otique."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Tous ces éléments sont contenus dans la fosse infra-temporale : les muscles de la mastication profonds, l'artère maxillaire, le nerf V3 et ses annexes."
+      },
+      {
+        questionText: "Avec quelles régions communique la fosse infra-temporale ?",
+        options: [
+          "Avec l'orbite par la fissure orbitaire inférieure.",
+          "Avec la fosse crânienne moyenne par le foramen ovale.",
+          "Avec la fosse ptérygo-palatine par la fissure ptérygo-maxillaire.",
+          "Avec la cavité buccale.",
+          "Avec la fosse temporale en haut."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Elle communique avec l'orbite (fissure orbitaire inf), le crâne (trous ovale et épineux), la fosse ptérygo-palatine (en dedans) et la fosse temporale (en haut, sous l'arcade zygomatique). Elle ne communique pas directement avec la cavité buccale (séparée par le muscle buccinateur)."
+      },
+      {
+        questionText: "Concernant le nerf mandibulaire (V3) dans la fosse infra-temporale :",
+        options: [
+          "Il sort du crâne par le foramen rond.",
+          "Il donne le nerf lingual.",
+          "Il donne le nerf alvéolaire inférieur.",
+          "Il donne le nerf auriculo-temporal.",
+          "C'est un nerf exclusivement sensitif."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le V3 sort par le foramen OVALE (pas rond). Il se divise dans la fosse pour donner les nerfs lingual, alvéolaire inférieur et auriculo-temporal. C'est un nerf MIXTE (sensitif et moteur pour les muscles masticateurs)."
       },
       {
         questionText: "Concernant la fosse infra-temporale:",

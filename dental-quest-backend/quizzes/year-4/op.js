@@ -108,7 +108,7 @@ const opQuizzes = [
           "En s'adressant directement à L'enfant", // Supported by explanation
           "Par l'échelle du comportement de Franck au nombre de 4" // Common evaluation scale
         ],
-        correctOptionIndexes: [2, 3], // الإجابة: ACD - Corrected to [2, 3] based on explanation.
+        correctOptionIndexes: [0 ,2, 3], // الإجابة: ACD - Corrected to [2, 3] based on explanation.
         explanation: "L'intérêt est de s'adresser directement à l'enfant, sans passer par les parents, en lui permettant d'exprimer ses sentiments s'il n'y parvient pas verbalement. L'échelle des visages au nombre de 5: du très triste au très heureux. [Image description: Échelle de 5 visages allant de très triste à très heureux pour évaluer la douleur ou l'anxiété]."
       },
       {
@@ -636,11 +636,11 @@ const opQuizzes = [
       {
         questionText: "En denture temporaire, le parodonte évolue avec les dents et passe par 3 stades",
         options: [
-          "Résorption, stabilité, maturation0%",
-          "Immaturité, stabilité et transformation0%",
-          "Maturation, stabilité, résorption100%",
-          "Stabilité, résorption, maturation0%",
-          "Toutes les réponses fausses0%"
+          "Résorption, stabilité, maturation",
+          "Immaturité, stabilité et transformation",
+          "Maturation, stabilité, résorption",
+          "Stabilité, résorption, maturation",
+          "Toutes les réponses fausses"
         ],
         correctOptionIndexes: [2], // Inferred based on explanation listing Maturation, Stabilité, Résorption
         explanation: "Le cycle biologique de la dent temporaire suit 3 stades physiologiques : 1. Maturation (M) : édification radiculaire. 2. Stabilité (S) : dent fonctionnelle avec racines complètes. 3. Résorption (R) = Rhizalyse : disparition radiculaire avant exfoliation."
@@ -648,35 +648,35 @@ const opQuizzes = [
       {
         questionText: "Le desmodonte de l'enfant en denture temporaire :",
         options: [
-          "Est de faible épaisseur50%", // Implied false by explanation ("large")
-          "Est peu dense50%", // Supported by implication (less fiber, more vascularization)
-          "Présente dans sa partie cervicale du cément cellulaire0%", // Refuted (acellulaire cervical)
-          "Présente dans sa partie apicale du cément acellulaire.0%", // Refuted (cellulaire apical)
-          "Toutes les réponses sont justes0%"
+          "Est de faible épaisseur", // Implied false by explanation ("large")
+          "Est peu dense", // Supported by implication (less fiber, more vascularization)
+          "Présente dans sa partie cervicale du cément cellulaire", // Refuted (acellulaire cervical)
+          "Présente dans sa partie apicale du cément acellulaire.", // Refuted (cellulaire apical)
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [1], // Inferred based on explanation
+        correctOptionIndexes: [0,1], // Inferred based on explanation
         explanation: "« Le cément des dents temporaires est de faible épaisseur, peu dense, présente dans sa partie cervicale du cément acellulaire et du cément cellulaire sur sa portion apicale. »" // Explanation supports 'peu dense' indirectly.
       },
       {
         questionText: "Le cément des dents temporaires", // Note: Question is about Cementum, explanation talks about Alveolar Bone primarily
         options: [
-          "Est plus calcifié que celui de l'adulte.0%", // Refuted by explanation (bone less calcified)
-          "Est moins trabeculé que celui de l'adulte.50%", // Supported by explanation (bone less trabeculated)
-          "Présente des crêtes alvéolaires plates et convexes.50%", // Supported by explanation (bone crests)
-          "Présente des corticales et des trabeculations épaisses.0%", // Refuted by explanation (bone corticales fines)
-          "Toutes les réponses sont justes0%"
+          "Est plus calcifié que celui de l'adulte.", // Refuted by explanation (bone less calcified)
+          "Est moins trabeculé que celui de l'adulte.", // Supported by explanation (bone less trabeculated)
+          "Présente des crêtes alvéolaires plates et convexes.", // Supported by explanation (bone crests)
+          "Présente des corticales et des trabeculations épaisses.", // Refuted by explanation (bone corticales fines)
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [1, 2], // Inferred based on explanation about Alveolar Bone, assuming similarity or error in question text
+        correctOptionIndexes: [1], // Inferred based on explanation about Alveolar Bone, assuming similarity or error in question text
         explanation: "A : L’os alvéolaire est moins calcifié que celui de l’adult. C : Crêtes alvéolaires plates ou convexes(diastèmes)." // Explanation is about alveolar bone, not cementum directly.
       },
       {
         questionText: "La sécrétion salivaire est environ",
         options: [
-          "De 20ml/h chez l'adulte0%", // Refuted (15ml/h)
-          "De 10 ml/h chez l'enfant50%", // Supported (8-10 ml/h range)
-          "De 4ml/h chez le nourrissan50%", // Supported
-          "De 15ml/h chez l'enfant.0%", // Refuted (8-10 ml/h)
-          "De 8 à 10ml/h chez l'adulte0%" // Refuted (15 ml/h)
+          "De 20ml/h chez l'adulte", // Refuted (15ml/h)
+          "De 10 ml/h chez l'enfant", // Supported (8-10 ml/h range)
+          "De 4ml/h chez le nourrissan", // Supported
+          "De 15ml/h chez l'enfant.", // Refuted (8-10 ml/h)
+          "De 8 à 10ml/h chez l'adulte" // Refuted (15 ml/h)
         ],
         correctOptionIndexes: [1, 2], // Inferred based on explanation
         explanation: "« La sécrétion salivaire est un phénomène constant dans des conditions physiologiques ; elle est d’environ **8 à 10 ml/h chez l’enfant (4 ml/h chez le nourrisson et 15 ml/h chez l’adulte). »"
@@ -684,10 +684,10 @@ const opQuizzes = [
       {
         questionText: "Les diverses différenciations qui se produisent lors de l'embryogénèse du parodonte, vont aboutir à la formation de:",
         options: [
-          "Un feuillet externe qui sera à l'origine de la gencive.11%", // Refuted (origine os alvéolaire)
-          "Un feuillet interne qui sera à l'origine de l'os alvéolaire.7%", // Refuted (origine cément)
-          "Un feuillet intermédiaire qui donnera le desmodonte.45%", // Supported
-          "Un feuillet interne à partir duquel dérivera le cément.36%" // Supported
+          "Un feuillet externe qui sera à l'origine de la gencive.", // Refuted (origine os alvéolaire)
+          "Un feuillet interne qui sera à l'origine de l'os alvéolaire.", // Refuted (origine cément)
+          "Un feuillet intermédiaire qui donnera le desmodonte.", // Supported
+          "Un feuillet interne à partir duquel dérivera le cément." // Supported
         ],
         correctOptionIndexes: [2, 3], // Inferred based on explanation
         explanation: "Les diverses différenciations qui se produisent, vont aboutir à la formation de trois feuillets distincts : • un feuillet externe qui sera à l’origine de l’os alvéolaire, • un feuillet intermédiaire qui donnera le desmodonte, • un feuillet interne dont dérivera le cément."
@@ -695,10 +695,10 @@ const opQuizzes = [
       {
         questionText: "Le desmodonte de l'enfant en denture temporaire est:",
         options: [
-          "Plus riche en fibre que celui de l'adulte.6%", // Refuted (moins riche)
-          "Moins riche en fibre que celui de l'adulte.43%", // Supported
-          "Plus vascularisé que celui de l'adulte.41%", // Supported
-          "Elargi dans sa partie cervicale et étroit dans sa partie apicale.11%" // Refuted (élargi cervical)
+          "Plus riche en fibre que celui de l'adulte.", // Refuted (moins riche)
+          "Moins riche en fibre que celui de l'adulte.", // Supported
+          "Plus vascularisé que celui de l'adulte.", // Supported
+          "Elargi dans sa partie cervicale et étroit dans sa partie apicale." // Refuted (élargi cervical)
         ],
         correctOptionIndexes: [1, 2], // Inferred based on explanation
         explanation: "Elargi dans sa partie cervicale, en conséquence de la finesse du cément, d’un point de vue histologique, il est moins riche en fibre, plus vascularisé que celui de l’adulte."
@@ -706,21 +706,21 @@ const opQuizzes = [
       {
         questionText: "L'os alvéolaire chez l'enfant :",
         options: [
-          "des corticales et des trabéculations épaisses en denture temporaire.3%", // Refuted (fines)
-          "Est plus calcifié que celui de l'adulte en denture temporaire.0%", // Refuted (moins calcifié)
-          "Est moins trabeculé que celui de l'adulte.56%", // Supported (implies less dense/fewer trabeculae)
-          "Présente des crêtes alvéolaires plates et convexes.41%" // Supported
+          "des corticales et des trabéculations épaisses en denture temporaire.", // Refuted (fines)
+          "Est plus calcifié que celui de l'adulte en denture temporaire.", // Refuted (moins calcifié)
+          "Est moins trabeculé que celui de l'adulte.", // Supported (implies less dense/fewer trabeculae)
+          "Présente des crêtes alvéolaires plates et convexes." // Supported
         ],
-        correctOptionIndexes: [2, 3], // Inferred based on explanation
+        correctOptionIndexes: [2], // Inferred based on explanation
         explanation: "présente des corticales fines. L’os alvéolaire est moins calcifié que celui de l’adulte. Crêtes alvéolaires plates ou convexes(diastèmes)."
       },
       {
         questionText: "La sécrétion salivaire est d'environ:",
         options: [
-          "8 à 10ml/h chez l'enfant.42%", // Supported
-          "20ml/h chez l'adulte.6%", // Refuted (15ml/h)
-          "4ml/h chez le nourrisson.44%", // Supported
-          "15ml/h chez l'enfant.8%" // Refuted (8-10ml/h)
+          "8 à 10ml/h chez l'enfant.", // Supported
+          "20ml/h chez l'adulte", // Refuted (15ml/h)
+          "4ml/h chez le nourrisson.", // Supported
+          "15ml/h chez l'enfant." // Refuted (8-10ml/h)
         ],
         correctOptionIndexes: [0, 2], // Inferred based on explanation
         explanation: "8 à 10 ml/h chez l’enfant. 4ml/h chez le nourrisson. 15 ml/h chez l’adulte."
@@ -728,10 +728,10 @@ const opQuizzes = [
       {
         questionText: "En denture mixte, on observe :",
         options: [
-          "Un contour gingival irrégulier.43%", // Supported (due to eruption)
-          "Un sulcus peu profond3%", // Refuted (profondeur maximale)
-          "Une hauteur de la gencive attachée augmentée43%", // Supported
-          "Une hauteur de la gencive attachée réduite11%" // Refuted
+          "Un contour gingival irrégulier.", // Supported (due to eruption)
+          "Un sulcus peu profond", // Refuted (profondeur maximale)
+          "Une hauteur de la gencive attachée augmentée", // Supported
+          "Une hauteur de la gencive attachée réduite" // Refuted
         ],
         correctOptionIndexes: [0, 2], // Inferred based on explanation
         explanation: "Le sulcus à une profondeur maximale au cours de l’éruption. Augmentation de la hauteur de la gencive adhérente avec l’âge."
@@ -739,10 +739,10 @@ const opQuizzes = [
       {
         questionText: "en denture temporaire :",
         options: [
-          "La gencive est plus rose et plus ferme11%", // Refuted (plus rouge, épais, arrondis)
-          "Le rebord gingival est épais avec une forme en lame de couteau0%", // Refuted (épais et arrondis)
-          "La gencive est plus volumineuse que celle de la denture adulte63%", // Supported (implies thicker/more prominent)
-          "L’espace desmodontal est réduit26%" // Refuted (large)
+          "La gencive est plus rose et plus ferme", // Refuted (plus rouge, épais, arrondis)
+          "Le rebord gingival est épais avec une forme en lame de couteau", // Refuted (épais et arrondis)
+          "La gencive est plus volumineuse que celle de la denture adulte", // Supported (implies thicker/more prominent)
+          "L’espace desmodontal est réduit" // Refuted (large)
         ],
         correctOptionIndexes: [2], // Inferred based on explanation
         explanation: "A /B : plus rouge d’aspect épais et arrondis. D : desmodonte large surtout au niveau de la furcation."
@@ -750,10 +750,10 @@ const opQuizzes = [
       {
         questionText: "En denture temporaire :",
         options: [
-          "L'épithélium gingival est plus mince,43%", // Supported
-          "L'os alvéolaire est très minéralisé,3%", // Refuted (moindre minéralisation)
-          "Le cément cellulaire est très abondant.3%", // Refuted (acellulaire coronaire, cellulaire apical)
-          "La gencive présente un rebord arrondi.51%" // Supported
+          "L'épithélium gingival est plus mince,", // Supported
+          "L'os alvéolaire est très minéralisé,", // Refuted (moindre minéralisation)
+          "Le cément cellulaire est très abondant.", // Refuted (acellulaire coronaire, cellulaire apical)
+          "La gencive présente un rebord arrondi." // Supported
         ],
         correctOptionIndexes: [0, 3], // Inferred based on explanation
         explanation: "B : moindre minéralisation. Cément acellulaire au niveau coronaire et cellulaire au niveau apical."
@@ -761,23 +761,23 @@ const opQuizzes = [
        {
         questionText: "Le desmodonte en denture lactéale :",
         options: [
-          "Est élargi surtout dans sa partie cervicale et au niveau des furcations25%", // Supported
-          "Présente des résidus de la gaine de Hertwig et de l'épithélium de l'organe de l'email27%", // Supported (Malassez rests)
-          "Les cellules sont très souvent au repos10%", // Refuted (proliferate with inflammation)
-          "Pendant l'éruptions, les fibres principales sont parallèles a l’axe longitudinal des dents10%", // False (fibers reorient)
-          "La vascularisation sanguine et lymphatique est importante29%" // Supported
+          "Est élargi surtout dans sa partie cervicale et au niveau des furcations", // Supported
+          "Présente des résidus de la gaine de Hertwig et de l'épithélium de l'organe de l'email", // Supported (Malassez rests)
+          "Les cellules sont très souvent au repos", // Refuted (proliferate with inflammation)
+          "Pendant l'éruptions, les fibres principales sont parallèles a l’axe longitudinal des dents", // False (fibers reorient)
+          "La vascularisation sanguine et lymphatique est importante" // Supported
         ],
-        correctOptionIndexes: [0, 1, 4], // Inferred based on explanation and histology
+        correctOptionIndexes: [0, 1,2,3, 4], // Inferred based on explanation and histology
         explanation: "Les cellules sont très souvent au repos elle prolifèrent sous l’influence de l’inflammation du tissu adjacent et participent à l’étiopathogénie de la poche parodontale." // Explanation refutes C.
       },
       {
         questionText: "L'os alvéolaire lactéal :",
         options: [
-          "Est peu volumineux et présente de plus larges espaces médullaires21%", // Supported
-          "Présente une trabéculation osseuse lâche18%", // Supported
-          "Les crêtes inter - dentaires sont plus plates18%", // Supported
-          "La lamina dura est fine21%", // Supported (less calcified)
-          "La vascularisation sanguine et lymphatique est très importantes21%" // Supported
+          "Est peu volumineux et présente de plus larges espaces médullaires", // Supported
+          "Présente une trabéculation osseuse lâche", // Supported
+          "Les crêtes inter - dentaires sont plus plates", // Supported
+          "La lamina dura est fine", // Supported (less calcified)
+          "La vascularisation sanguine et lymphatique est très importantes" // Supported
         ],
         correctOptionIndexes: [0, 1, 2, 3, 4], // Inferred: All seem consistent with characteristics of child bone
         explanation: "" // No explanation provided in source.
@@ -785,10 +785,10 @@ const opQuizzes = [
       {
         questionText: "La gencive de L'enfant :",
         options: [
-          "A un rebord de la gencive libre plus épais et arrondi37%", // Supported (gencive marginale)
-          "Interdentaire est large dans le sens vestibulo-lingual, mais plus étroite dans le sens mesio distal que chez l'adulte14%", // Description matches papillary gingiva characteristics
-          "II y a une absence de piqueté en peau d'orange, car les papilles conjonctives de la lamina propria sont plus courtes et plus plates31%", // Supported (gencive attachée)
-          "L'épithélium gingival est peu mince et translucide, ortho ou para kératinisé desquamé17%" // Supported (histologiquement)
+          "A un rebord de la gencive libre plus épais et arrondi", // Supported (gencive marginale)
+          "Interdentaire est large dans le sens vestibulo-lingual, mais plus étroite dans le sens mesio distal que chez l'adulte", // Description matches papillary gingiva characteristics
+          "II y a une absence de piqueté en peau d'orange, car les papilles conjonctives de la lamina propria sont plus courtes et plus plates", // Supported (gencive attachée)
+          "L'épithélium gingival est peu mince et translucide, ortho ou para kératinisé desquamé" // Supported (histologiquement)
         ],
         correctOptionIndexes: [0, 1, 2, 3], // Inferred: All descriptions seem consistent with child gingiva
         explanation: "A : gencive marginale. B : gencive papillaire. C : gencive attachée. D : histologiquement."
@@ -796,23 +796,23 @@ const opQuizzes = [
       {
         questionText: "Le desmodonte en denture lactéale :", // Duplicate question number
         options: [
-          "Est élargi surtout dans sa partie cervicale et au niveau des furcations23%", // Supported
-          "Présente des résidus de la gaine de Hertwig et de l'épithélium de l'organe de l’email.23%", // Supported
-          "Les cellules sont très souvent au repos.17%", // Refuted
-          "Pendant l'éruptions, les fibres principales sont parallèles a l'axe longitudinal des dents.15%", // Refuted
+          "Est élargi surtout dans sa partie cervicale et au niveau des furcations", // Supported
+          "Présente des résidus de la gaine de Hertwig et de l'épithélium de l'organe de l’email.", // Supported
+          "Les cellules sont très souvent au repos.", // Refuted
+          "Pendant l'éruptions, les fibres principales sont parallèles a l'axe longitudinal des dents.", // Refuted
           "La vascularisation sanguine et lymphatique est importante.21%" // Supported
         ],
-        correctOptionIndexes: [0, 1, 4], // Inferred based on previous explanation
+        correctOptionIndexes: [0, 1,2,3, 4], // Inferred based on previous explanation
         explanation: "" // No explanation provided in source.
       },
       {
         questionText: "Influence de la résorption radiculaire sur le parodonte :",
         options: [
-          "Le tissu conjonctif gingival devient un tissu de granulation fortement hyperémie de type inflammatoire.26%", // Supported
-          "L'attache épithéliale migre vers les régions en voie de résorption19%", // True during exfoliation process
-          "L'os inter-radiculaire est souvent atteint.16%", // Supported
-          "La longueur de la racine diminue.19%", // Supported (definition of resorption)
-          "II y élargissement de l’orifice apical.21%" // Supported (late stage resorption)
+          "Le tissu conjonctif gingival devient un tissu de granulation fortement hyperémie de type inflammatoire.", // Supported
+          "L'attache épithéliale migre vers les régions en voie de résorption", // True during exfoliation process
+          "L'os inter-radiculaire est souvent atteint.", // Supported
+          "La longueur de la racine diminue.", // Supported (definition of resorption)
+          "II y élargissement de l’orifice apical." // Supported (late stage resorption)
         ],
         correctOptionIndexes: [0, 1, 2, 3, 4], // Inferred: All seem consequences of resorption
         explanation: "" // No explanation provided in source.
@@ -820,10 +820,10 @@ const opQuizzes = [
       {
         questionText: "Lors de la résorption des dents de lait :",
         options: [
-          "Le tissu conjonctif gingival devient un tissu de granulation fortement hyperhémie de type inflammatoire27%", // Supported
-          "L'attache épithéliale migre vers les régions en voie de résorption24%", // Supported
-          "L'os inter-radiculaire atteint22%", // Supported
-          "La longueur de Ia racine diminue27%" // Supported
+          "Le tissu conjonctif gingival devient un tissu de granulation fortement hyperhémie de type inflammatoire", // Supported
+          "L'attache épithéliale migre vers les régions en voie de résorption", // Supported
+          "L'os inter-radiculaire atteint", // Supported
+          "La longueur de Ia racine diminue" // Supported
         ],
         correctOptionIndexes: [0, 1, 2, 3], // Inferred based on explanation and previous question
         explanation: "on observe une modification du tissu conjonctif en un tissu de granulation typique fortement hyperhémié de type inflammatoire."
@@ -831,10 +831,10 @@ const opQuizzes = [
       {
         questionText: "Les transformations physiologiques de Ia gencive associe à L'éruption des dents sont :",
         options: [
-          "Le rebord gingival œdémateux48%", // Supported
-          "La gencive d'aspect normal0%", // Refuted (oedémateux, rouge)
-          "La gencive est proéminente au niveau de la région antérieure maxillaire52%", // Supported
-          "La gencive est de couleur normale0%" // Refuted (plus rouge)
+          "Le rebord gingival œdémateux", // Supported
+          "La gencive d'aspect normal", // Refuted (oedémateux, rouge)
+          "La gencive est proéminente au niveau de la région antérieure maxillaire", // Supported
+          "La gencive est de couleur normale" // Refuted (plus rouge)
         ],
         correctOptionIndexes: [0, 2], // Inferred based on explanation
         explanation: "Au cours de l'éruption, le rebord gingival est généralement œdémateux, arrondi et légèrement plus rouge. Pendant la période de la denture mixte, il est normal que la gencive marginale soit assez proéminente, spécialement dans la région antérieure du maxillaire."
@@ -842,9 +842,9 @@ const opQuizzes = [
       {
         questionText: "LE PARODONTE CHEZ LE JEUNE ::",
         options: [
-          "Est un terrain fragile.42%", // Supported (thin epithelium, less dense bone)
-          "Est stable0%", // Refuted (undergoing changes)
-          "Possède un potentiel réparateur beaucoup plus élevé que chez l'adulte.33%", // Supported (high cellular activity)
+          "Est un terrain fragile.", // Supported (thin epithelium, less dense bone)
+          "Est stable", // Refuted (undergoing changes)
+          "Possède un potentiel réparateur beaucoup plus élevé que chez l'adulte.", // Supported (high cellular activity)
           "Possède un potentiel réparateur moins élevé que chez l'adulte." // Refuted
         ],
         correctOptionIndexes: [0, 2], // Inferred based on characteristics
@@ -853,21 +853,21 @@ const opQuizzes = [
       {
         questionText: "LA GENCIVE MARGINALE EN DENTURE TEMPORAIRE EST DE :",
         options: [
-          "Couleur rose24%", // Refuted (rouge)
-          "Consistance ferme et élastique.59%", // Supported (healthy gingiva characteristic)
-          "Consistance ferme seulement6%", // Incomplete
-          "Aspect et granite12%" // Refuted (less stippled than adult)
+          "Couleur rose", // Refuted (rouge)
+          "Consistance ferme et élastique.", // Supported (healthy gingiva characteristic)
+          "Consistance ferme seulement", // Incomplete
+          "Aspect et granite" // Refuted (less stippled than adult)
         ],
-        correctOptionIndexes: [1], // Inferred: B describes healthy state
+        correctOptionIndexes: [1,3], // Inferred: B describes healthy state
         explanation: "" // No explanation provided in source.
       },
       {
         questionText: "EN DENTURE MIXTE, LA GENCIVE EST CARACTERISEE PAR :",
         options: [
-          "De nombreuses cellules inflammatoires,21%", // Supported (eruption gingivitis common)
-          "Des réactions inflammatoires rapides.23%", // Supported (high vascularity)
-          "Une profondeur du sulcus maximale au tours de l'éruptions.28%", // Supported
-          "Une augmentation de la hauteur de gencive adhérente avec l’age.28%" // Supported
+          "De nombreuses cellules inflammatoires,", // Supported (eruption gingivitis common)
+          "Des réactions inflammatoires rapides.", // Supported (high vascularity)
+          "Une profondeur du sulcus maximale au tours de l'éruptions.", // Supported
+          "Une augmentation de la hauteur de gencive adhérente avec l’age." // Supported
         ],
         correctOptionIndexes: [0, 1, 2, 3], // Inferred: All seem characteristic of mixed dentition gingiva
         explanation: "" // No explanation provided in source.
@@ -875,8 +875,8 @@ const opQuizzes = [
       {
         questionText: "LA CONNAISSANCE DES CARACITERISTIQUES PHYSIOLOGIQUES DU PARODONTE DE L'ENFANT, PERMET D'EVITER UN DIAGNOSTIC ERRONE ET DES TRAITEMENTS INUTILES : :",
         options: [
-          "Vrai100%",
-          "Faux0%"
+          "Vrai",
+          "Faux"
         ],
         correctOptionIndexes: [0], // Inferred based on explanation
         explanation: "L’éruption dentaire provoque des changements morphologiques et structuraux que le clinicien doit connaître afin de distinguer une situation physiologique normale d’une pathologie."
@@ -884,10 +884,10 @@ const opQuizzes = [
       {
         questionText: "EN DENTURE TEMPORAIRE, L’OS ALVEOLAIR :",
         options: [
-          "Est moins minéralisé32%", // Supported
-          "Est très vascularise.34%", // Supported
-          "Présente des espaces médullaires larges.34%", // Supported
-          "Prenante des espaces médullaires étroites.0%" // Refuted
+          "Est moins minéralisé", // Supported
+          "Est très vascularise.", // Supported
+          "Présente des espaces médullaires larges.", // Supported
+          "Prenante des espaces médullaires étroites." // Refuted
         ],
         correctOptionIndexes: [0, 1, 2], // Inferred based on characteristics
         explanation: "" // No explanation provided in source.
@@ -895,21 +895,21 @@ const opQuizzes = [
       {
         questionText: "EN DENTURE MIXTE, LE DESMODONTE :",
         options: [
-          "Est riche en fibroblastes au turn over élevé.50%", // Supported
-          "Est pauvre en fibroblastes.0%", // Refuted
-          "Se caractérise une diminution de l'espace desmodontal.39%", // Refuted (decreases with age, but eruption phase might differ)
-          "Se caractérise une augmentation de l'espace desmodontal11%" // Possible during active eruption/remodeling
+          "Est riche en fibroblastes au turn over élevé.", // Supported
+          "Est pauvre en fibroblastes.", // Refuted
+          "Se caractérise une diminution de l'espace desmodontal.", // Refuted (decreases with age, but eruption phase might differ)
+          "Se caractérise une augmentation de l'espace desmodontal" // Possible during active eruption/remodeling
         ],
-        correctOptionIndexes: [0], // Inferred: A is definitely true. C/D depend on specific stage.
+        correctOptionIndexes: [0,2], // Inferred: A is definitely true. C/D depend on specific stage.
         explanation: "Riche en fibroblastes. Turn over: temps que met une cellule épithéliale pour naître de la couche basale , franchir toutes les couches et être éliminées par la couche cornée." // Explanation defines turnover, supports A.
       },
       {
         questionText: "EN DENTURE MIXTE L’OS ALVEOLAIRE SE CARACTER PAR :",
         options: [
-          "Un épaississement des trabéculations73%", // Supported (maturation towards adult bone)
-          "Des corticales très fines.18%", // Refuted (s'épaississent)
-          "Des crêtes alvéolaires plates.9%", // Refuted (characteristic of temp dentition)
-          "Toutes les réponses sont justes.0%"
+          "Un épaississement des trabéculations", // Supported (maturation towards adult bone)
+          "Des corticales très fines.", // Refuted (s'épaississent)
+          "Des crêtes alvéolaires plates.", // Refuted (characteristic of temp dentition)
+          "Toutes les réponses sont justes."
         ],
         correctOptionIndexes: [0], // Inferred based on explanation
         explanation: "Les corticales s’épaississent. C : la crête est plate en denture temporaire."
@@ -917,10 +917,10 @@ const opQuizzes = [
       {
         questionText: "LA GENCIVE EN DENTURE TEMPORAIRE EST :",
         options: [
-          "Rose0%", // Refuted (rouge)
-          "Rouge50%", // Supported
-          "Très Vascularise50%", // Supported
-          "Peu vascularisée0%" // Refuted
+          "Rose", // Refuted (rouge)
+          "Rouge", // Supported
+          "Très Vascularise", // Supported
+          "Peu vascularisée" // Refuted
         ],
         correctOptionIndexes: [1, 2], // Inferred based on characteristics
         explanation: "" // No explanation provided in source.
@@ -928,21 +928,21 @@ const opQuizzes = [
       {
         questionText: "EN DENTURE MIXTE, AU NIVEAU DU DESMODONTE :",
         options: [
-          "L'épaisseur desmodontale augmente avec l’âge6%", // Refuted (diminue)
-          "L'épaisseur desmodontale diminue avec l’âge29%", // Supported
-          "Le nombre des fibroblastes augmente29%", // Refuted (decreases with age)
-          "Le turn over cellulaire est élevé35%" // Supported (characteristic of young tissue)
+          "L'épaisseur desmodontale augmente avec l’âge", // Refuted (diminue)
+          "L'épaisseur desmodontale diminue avec l’âge", // Supported
+          "Le nombre des fibroblastes augmente", // Refuted (decreases with age)
+          "Le turn over cellulaire est élevé" // Supported (characteristic of young tissue)
         ],
-        correctOptionIndexes: [1, 3], // Inferred based on characteristics
+        correctOptionIndexes: [1,2, 3], // Inferred based on characteristics
         explanation: "" // No explanation provided in source.
       },
       {
         questionText: "L'OS ALVEOLAIRE EN DENTURE TEMPORAIRE EST CARACTERISE PAR :",
         options: [
-          "Sa moindre minéralisation33%", // Supported
-          "Sa minéralisation importante0%", // Refuted
-          "Sa vascularisation importante33%", // Supported
-          "Ses larges espaces médullaires33%" // Supported
+          "Sa moindre minéralisation", // Supported
+          "Sa minéralisation importante", // Refuted
+          "Sa vascularisation importante", // Supported
+          "Ses larges espaces médullaires" // Supported
         ],
         correctOptionIndexes: [0, 2, 3], // Inferred based on characteristics
         explanation: "" // No explanation provided in source.
@@ -950,10 +950,10 @@ const opQuizzes = [
       {
         questionText: "EN DENTURE MIXTE, LA GENCIVE EST CARACTERISEE PAR :", // Duplicate question number
         options: [
-          "La présence de nombreuses cellules inflammatoires26%", // Supported
-          "Des réactions inflammatoires rapides26%", // Supported
-          "Une profondeur maximale du sulcus au cours de l'éruption23%", // Supported
-          "Une augmentation de la hauteur de gencive adhérente avec l'age26%" // Supported
+          "La présence de nombreuses cellules inflammatoires", // Supported
+          "Des réactions inflammatoires rapides", // Supported
+          "Une profondeur maximale du sulcus au cours de l'éruption", // Supported
+          "Une augmentation de la hauteur de gencive adhérente avec l'age" // Supported
         ],
         correctOptionIndexes: [0, 1, 2, 3], // Inferred: All seem characteristic
         explanation: "" // No explanation provided in source.
@@ -961,10 +961,10 @@ const opQuizzes = [
       {
         questionText: "SUR UN CLICHE RETRO-ALVEOLAIRE, L'OS EN DENTURE TEMPORAIRE PRESENTE :",
         options: [
-          "Des corticales très fines34%", // Supported
-          "Des crêtes alvéolaires plates ou convexes31%", // Supported
-          "Des espaces médullaires larges34%", // Supported
-          "Des espaces médullaires étroits0%" // Refuted
+          "Des corticales très fines", // Supported
+          "Des crêtes alvéolaires plates ou convexes", // Supported
+          "Des espaces médullaires larges", // Supported
+          "Des espaces médullaires étroits" // Refuted
         ],
         correctOptionIndexes: [0, 1, 2], // Inferred based on characteristics
         explanation: "" // No explanation provided in source.
@@ -972,10 +972,10 @@ const opQuizzes = [
       {
         questionText: "L'OS ALVEOLAIRE DE LA DENTURE TEMPORAIRE EST :",
         options: [
-          "Moins minéralisé.34%", // Supported
-          "Très vascularise.34%", // Supported
+          "Moins minéralisé.", // Supported
+          "Très vascularise.", // Supported
           "Très compact.0%", // Refuted
-          "Peu dense31%" // Supported
+          "Peu dense" // Supported
         ],
         correctOptionIndexes: [0, 1, 3], // Inferred based on explanation
         explanation: "L’os alvéolaire lactéal est peu volumineux et présente de plus larrges espaces médullaires avec des trabéculations moins denses associées à une moindre minéralisation."
@@ -983,10 +983,10 @@ const opQuizzes = [
       {
         questionText: "LA GENCIVE EN DENTURE TEMPORAIRE PRESENTE LES CARACTERISTIQUES SUIVANTES :",
         options: [
-          "Un sulcus d’une profondeur supérieure a 2mm.3%", // Refuted (01mm avg)
-          "Une hauteur de gencive attaché faible.33%", // Supported (increases with age)
-          "Une gencive attachée lisse.30%", // Supported (less stippled)
-          "Une gencive libre d'aspect plus épais et ourle.33%" // Supported (arrondi)
+          "Un sulcus d’une profondeur supérieure a 2mm.", // Refuted (01mm avg)
+          "Une hauteur de gencive attaché faible.", // Supported (increases with age)
+          "Une gencive attachée lisse.", // Supported (less stippled)
+          "Une gencive libre d'aspect plus épais et ourle." // Supported (arrondi)
         ],
         correctOptionIndexes: [1, 2, 3], // Inferred based on explanation and characteristics
         explanation: "En denture lactéal le sulcus est très peu marqué ; sa profondeur a une valeur constante de 01 mm en moyenne."
@@ -994,21 +994,21 @@ const opQuizzes = [
       {
         questionText: "L'IMAGE RADIOGRAPHIQUE DU PARODONTE PROFOND EN DENTURE TEMPORAIRE STABLE REVELE :",
         options: [
-          "Une lamina dura nettement visible.0%", // Refuted (less calcified bone)
-          "Un espace desmodontal plus large que chez l'adulte.33%", // Supported
-          "Des trabécules osseuses plus fines et des espaces médullaires plus larges que chez L’adulte58%", // Supported
-          "Toutes les réponses sont justes.8%"
+          "Une lamina dura nettement visible.", // Refuted (less calcified bone)
+          "Un espace desmodontal plus large que chez l'adulte.", // Supported
+          "Des trabécules osseuses plus fines et des espaces médullaires plus larges que chez L’adulte", // Supported
+          "Toutes les réponses sont justes."
         ],
-        correctOptionIndexes: [1, 2], // Inferred based on characteristics
+        correctOptionIndexes: [1], // Inferred based on characteristics
         explanation: "" // No explanation provided in source.
       },
       {
         questionText: "L'OS ALVEOI.AIRE CHEZ L'ENFANT PRESENTE :",
         options: [
-          "Plus d'os cortical et moins d'os spongieux que chez l'adulte.0%", // Refuted (less cortical, large marrow spaces)
-          "Un meilleur potentiel de réparation.43%", // Supported
-          "Une vascularisation sanguine et lymphatique denses.57%", // Supported
-          "Toutes les réponses sont justes.0%"
+          "Plus d'os cortical et moins d'os spongieux que chez l'adulte", // Refuted (less cortical, large marrow spaces)
+          "Un meilleur potentiel de réparation.", // Supported
+          "Une vascularisation sanguine et lymphatique denses.", // Supported
+          "Toutes les réponses sont justes."
         ],
         correctOptionIndexes: [1, 2], // Inferred based on explanation
         explanation: "Des espaces médullaires plus larges avec trabéculations moins denses."
@@ -1016,10 +1016,10 @@ const opQuizzes = [
       {
         questionText: "LE LIGAMENT ALVEOLO-DENTAIRE EN DENTURE TEMPORAIRE EST :",
         options: [
-          "Plus large au niveau de la furcation.42%", // Supported
-          "Plus mince au niveau de la furcation.4%", // Refuted
-          "Moins vascularise qu'en denture permanente.13%", // Refuted (plus vascularisé)
-          "Caractérisé par la présence des vestiges de la gaine de HERTWIG42%" // Supported (Malassez rests)
+          "Plus large au niveau de la furcation.", // Supported
+          "Plus mince au niveau de la furcation.", // Refuted
+          "Moins vascularise qu'en denture permanente.", // Refuted (plus vascularisé)
+          "Caractérisé par la présence des vestiges de la gaine de HERTWIG" // Supported (Malassez rests)
         ],
         correctOptionIndexes: [0, 3], // Inferred based on explanation
         explanation: "La vascularisation sanguine et lymphatique est importante donc un apport nutritif et un potentiel de défense importants ( moins d’atteintes parodontales )."

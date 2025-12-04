@@ -299,6 +299,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         explanation: "L'HbA1c reflète la fixation irréversible du glucose sur l'hémoglobine et permet donc d'évaluer l'équilibre glycémique sur les 2 à 3 derniers mois (durée de vie d'un globule rouge). Un taux normal chez un non-diabétique est entre 4% et 6%, et l'objectif pour un diabétique équilibré est d'être inférieur ou égal à 7%."
       },
       {
+        questionText: "Le diabète est équilibré si",
+        options: [
+          "HbA1c ≤7%",
+          "HbA1c est compris entre 7 et 8%,",
+          "La glycémie est comprise entre 0.70 et 1.00 g/l",
+          "La glycémie est comprise entre 0.70 et 1.260g/l"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "A : « Cette mesure permet d'évaluer l'équilibre du diabète sur les 2 à 3 derniers mois: le diabète est considéré comme équilibré lorsque le patient a une HbA1c <7%. »B : « Une HbA1c > 7% indique un déséquilibre : léger entre 7-8 %, moyen entre 8-9%, et sévère lorsque l'HbA1c est > 9 %. »C : « La concentration du glucose sanguin ou glycémie est variable au cours de la journée, seule la glycémie à jeun a un chiffre stable: taux normal de la glycémie entre 0.70 et 1.10 g/l (au moins huit heures de jeûne). »."
+      },
+      {
         questionText: "L'hypoglycémie est un état :",
         options: [
           "Correspond à un abaissement de la glycémie <0.5 g/l",
@@ -308,6 +319,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [0, 3],
         explanation: "L'hypoglycémie se définit par une glycémie inférieure à 0.5 g/l. Elle survient plus fréquemment chez le diabétique de type 1 et peut être favorisée par le jeûne ou un effort physique intense sans ajustement de la dose d'insuline."
+      },
+      {
+        questionText: "L'hypoglycémie",
+        options: [
+          "Correspond à un abaissement de la glycémie < 0.5 g/l",
+          "Survient le plus souvent chez le diabétique de type II",
+          "Cliniquement, elle se manifeste essentiellement par une confusion, transpiration, asthénie, vertiges et nausées",
+          "D. Peut compliquer un acte dentaire chez un patient dlabétique à jeun"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "B : « Elle correspond à un abaissement de la glycémie < 0,5 g/l, survient le plus souvent chez le diabétique de type 1. »"
       },
       {
         questionText: "Le diabète de type 1:",
@@ -321,6 +343,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         explanation: "Le diabète de type 1 est une maladie auto-immune qui cause la destruction des cellules bêta du pancréas, menant à une carence totale en insuline. La description C correspond au diabète de type 2 (insulinorésistance) et la D au diabète gestationnel."
       },
       {
+        questionText: "Chez un patient qui présente une hypothyroïdie contrôlée :",
+        options: [
+          "Tous les soins sont possibles en respectant les précautions générales",
+          "Tous les actes invasifs nécessitent une prise en charge hospitalière",
+          "Une antibiothérapie préventive est nécessaire pour tout acte chirurgical.",
+          "Les anesthésiques avec vasoconstricteur sont autorisés"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "A et D sont correctes. Pour un patient dont l'hypothyroïdie est contrôlée, les soins dentaires sont possibles avec les précautions standards, y compris l'utilisation d'anesthésiques locaux avec vasoconstricteur. L'acte invasif ou chirurgical ne nécessite une prise en charge hospitalière que si la pathologie n'est pas traitée ou est mal contrôlée (ce qui invalide l'option B)."
+      },
+      {
         questionText: "L'Hémoglobine glyquée (HbA1c):",
         options: [
           "Permet d’évaluer le taux d’hémoglobine sur les 2 à 3 derniers mois.",
@@ -330,6 +363,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [1],
         explanation: "Cette mesure permet d'évaluer l'équilibre du diabète sur les 2 à 3 derniers mois. Un diabète est considéré comme équilibré lorsque le patient a une HbA1c inférieure à 7%."
+      },
+      {
+        questionText: "L'Hémoglobine glyquée (HbA1c):",
+        options: [
+          "Permet d'évaluer le taux d'hémoglobine dans le sang sur les 2 à 3 derniers mois.",
+          "Permet d'évaluer l'équilibre du diabète sur les 2 à 3 derniers mois.",
+          "Est normale lorsque son taux est compris entre 7% et 8%.",
+          "Permet d'évaluer la concentration du glucose sanguin."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'HbA1c mesure le glucose fixé à l'hémoglobine durant la vie moyenne du globule rouge (environ 120 jours), reflétant ainsi l'équilibre glycémique moyen sur les 2 à 3 derniers mois. Le taux normal est compris entre 4% et 6% chez un patient non diabétique."
       },
       {
         questionText: "Le diabète est équilibré si :",
@@ -343,6 +387,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         explanation: "Un diabète est considéré comme bien équilibré lorsque la valeur de l'HbA1c est inférieure ou égale à 7%. Une valeur entre 7 et 8% indique un déséquilibre léger."
       },
       {
+        questionText: "Chez un patient qui présente une hypothyroïdie traitée et contrôlée:",
+        options: [
+          "Tous les soins sont possibles en respectant les précautions générales.",
+          "Une prise en charge hospitalière est nécessaire pour les actes invasifs.",
+          "Une antibioprophylaxie est réalisée lors des actes chirurgicaux.",
+          "Les anesthésiques avec vasoconstricteur sont à proscrire."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "A : Chez un patient dont l'hypothyroïdie est traitée et contrôlée, tous les soins dentaires sont possibles en respectant les précautions standards. Les autres options (B, C, D) sont des précautions qui ne s'appliquent qu'en cas d'hypothyroïdie non traitée/non contrôlée ou d'hyperthyroïdie."
+      },
+      {
         questionText: "Chez un patient qui présente une hypothyroïdie traitée et contrôlée :",
         options: [
           "Tous les soins sont possibles en respectant les précautions générales.",
@@ -354,15 +409,25 @@ const pathoBuccoDentaire_y4Quizzes = [
         explanation: "Si l'hypothyroïdie est bien contrôlée par le traitement, le patient peut recevoir tous les soins dentaires sans précautions particulières. Les mesures spécifiques (hospitalisation, antibioprophylaxie, éviction des vasoconstricteurs) s'appliquent aux cas non contrôlés ou à l'hyperthyroïdie."
       },
       {
-        questionText: "Chez un patient diabétique de type 1 bien équilibré :",
+        questionText: "L'Hémoglobine glyquée (HbA1c):",
         options: [
-          "La valeur de l’hémoglobine glyquée est supérieure à 7%",
-          "Les avulsions dentaires se feront sous couverture antibiotique",
-          "Le patient est considéré comme sain lors des soins bucco-dentaires",
-          "L’anesthésie avec vasoconstricteur n’est pas contre-indiquée"
+          "Reflète la glycémie moyenne sur les 2 à 3 derniers mois.",
+          "Tenir compte de la valeur de sa dernière HbA1c",
+          "Prendre en compte le risque hémorragique"
         ],
-        correctOptionIndexes: [2, 3],
-        explanation: "Un patient diabétique bien équilibré (HbA1c < 7%) peut être considéré comme sain. Une couverture antibiotique n'est pas systématique, et l'anesthésie avec vasoconstricteur n'est pas contre-indiquée."
+        correctOptionIndexes: [2],
+        explanation: "C : L'HbA1c est l'indicateur le plus pertinent du contrôle métabolique chronique du patient diabétique (sur les 2 à 3 derniers mois). Cette valeur est essentielle car elle permet d'évaluer le risque de complications post-opératoires, notamment le risque infectieux et les troubles de la cicatrisation, qui sont accrus en cas de diabète mal équilibré. Une valeur trop élevée peut justifier le report de l'acte non urgent. La glycémie du jour (B) est cruciale pour écarter une urgence aiguë (hypo/hyperglycémie), mais ne reflète pas le risque à long terme."
+      },
+      {
+        questionText: "Le diabète est équilibré si :",
+        options: [
+          "La valeur de HbA1c est ≤7%",
+          "La valeur de HbA1c est comprise entre 7 et 8 %",
+          "La glycémie est comprise entre 0.70 et 1.10 g",
+          "La glycémie est comprise entre 0.70 et 1.50g"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "A : L'objectif standard pour la majorité des patients diabétiques est d'avoir une valeur d'HbA1c inférieure ou égale à 7% (≤7%). Les options de glycémie données représentent soit la norme chez les non-diabétiques (C), soit des seuils trop élevés (D). L'option B (7-8%) indique un déséquilibre léger ou modéré."
       },
       {
         questionText: "Avant de procéder à une avulsion dentaire chez un patient diabétique il convient de :",
@@ -406,6 +471,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [0],
         explanation: "La parodontite est maintenant reconnue comme la sixième complication majeure du diabète, aux côtés des complications rétiniennes, rénales, neurologiques et cardiovasculaires."
+      }, {
+        questionText: "Cochez parmi les manifestations buccales du diabète, celle qui ne l'est pas :",
+        options: [
+          "Candidoses",
+          "Lichen plan buccal",
+          "Stomatodynie",
+          "Xérostomie",
+          "Parodontites"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "B : Les candidoses, la stomatodynie (sensation de brûlure), la xérostomie (sécheresse buccale) et les parodontites sont des complications buccales directes et fréquentes du diabète, liées à l'hyperglycémie et à l'altération immunitaire. Le lichen plan buccal (LPB) est une maladie auto-immune dont l'association avec le diabète est souvent notée (syndrome de Grinspan), mais il n'est pas considéré comme une complication directe et constante du déséquilibre métabolique en soi, contrairement aux autres manifestations."
       },
       {
         questionText: "Les précautions vis-à-vis du risque infectieux ou du retard de cicatrisation (chez un diabétique non contrôlé) :",
@@ -417,6 +493,27 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [2],
         explanation: "Si le diabète n'est pas contrôlé, une couverture anti-infectieuse est recommandée pour les actes chirurgicaux. Le protocole peut consister à débuter l'antibiothérapie 2 jours avant l'acte et à la poursuivre pendant environ 7-8 jours."
+      }, {
+        questionText: "Dans le cas d'une hypothyroïdie, les soins et extraction dentaires doivent être réalisés :",
+        options: [
+          "Sans aucune précaution préalable",
+          "Sous couverture antibiotique",
+          "Doivent être évités chez les patients souffrant d'hypothyroïdies sévère non traitée"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "C : L'hypothyroïdie sévère et non traitée expose le patient à un risque de décompensation majeure (coma myxœdémateux) sous stress. Par conséquent, tout soin dentaire électif ou invasif doit être **différé** jusqu'à la stabilisation de la maladie thyroïdienne. Les soins urgents nécessitent une prise en charge hospitalière."
+      },
+      {
+        questionText: "La Sécheresse buccale (Xérostomie) peut : (QCM à 5 propositions)",
+        options: [
+          "Être causée par la radiothérapie",
+          "Survenir dans le diabète",
+          "Survenir suite à la prise de psychotropes",
+          "Se compliquer de candidoses",
+          "Entraîner une augmentation des caries radiculaires"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "D : Toutes les propositions sont correctes. La xérostomie a de multiples causes, notamment la radiothérapie (atteinte des glandes salivaires) et la prise de médicaments (psychotropes). Le diabète déséquilibré est également une cause fréquente. Les conséquences d'une diminution de la salive sont la perte de l'effet protecteur, favorisant les infections (candidoses) et la déminéralisation (caries, notamment radiculaires)."
       },
       {
         questionText: "Le diabète de type 2 est principalement dû :",
@@ -428,6 +525,16 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [1, 3],
         explanation: "Le diabète de type 2 est caractérisé par une résistance à l'insuline (diminution de la capacité d'action de l'insuline) et apparaît généralement après l'âge de 40 ans."
+      }, {
+        questionText: "L'Hémoglobine glyquée :",
+        options: [
+          "Est aussi appelé hémoglobine glycosylée",
+          "Est symbolisée par l'acronyme HBANC1",
+          "Les valeurs normales sont comprises entre 14 % et 16 %.",
+          "Reflète glycémique sur les 3 derniers mois"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "A et D sont correctes. L'Hémoglobine glyquée est le résultat d'une glycation non enzymatique (terme préféré à glycosylation) et son rôle clinique essentiel est d'évaluer l'équilibre glycémique moyen sur les 2 à 3 derniers mois, période correspondant à la demi-vie des globules rouges. L'acronyme correct est HbA1c et les valeurs normales sont comprises entre 4% et 6%."
       },
       {
         questionText: "Chez le patient diabétique équilibré de type 1 et 2 :",
@@ -439,6 +546,27 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [2, 3],
         explanation: "Chez un patient diabétique équilibré, l'anesthésie avec vasoconstricteur n'est pas contre-indiquée. Les corticoïdes, qui ont un effet hyperglycémiant, peuvent être prescrits mais avec prudence et surveillance."
+      }, {
+        questionText: "Le diabète est considéré comme équilibré lorsque le patient a:",
+        options: [
+          "Une Hémoglobine glyquée supérieure à 7%.",
+          "Le Glucose sérique à jeun est inférieur à 1,26 g/L",
+          "Une glycémie post prandiale 1,26g/L",
+          "Aucune des réponses n’est juste"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "D : Le critère principal et le plus utilisé pour définir un diabète **équilibré** est l'Hémoglobine glyquée ($\text{HbA}_{1c}$), qui doit être **inférieure à $7\%$** pour la majorité des patients (selon les recommandations standard). L'option A ($\text{HbA}_{1c} > 7\%$) indique un déséquilibre. Les autres options ne sont pas le critère déterminant de l'équilibre chronique."
+      },
+      {
+        questionText: "L'Hémoglobine glyquée :",
+        options: [
+          "Est appelé également HbA1c",
+          "Reflète l'équilibre glycémique sur les 4 derniers mois",
+          "Lorsque sa valeur est ≤ 8%, le diabète est considéré comme équilibré",
+          "Est d'autant plus élevée que les périodes d'hyperglycémies auront été plus fréquentes"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "A et D sont correctes. L'Hémoglobine glyquée est symbolisée par l'acronyme $\\text{HbA}_{1c}$ (A). La $\\text{HbA}_{1c}$ est le reflet de l'exposition moyenne au glucose sur les $2$ à $3$ derniers mois (B est faux pour $4$ mois) ; par conséquent, plus les épisodes d'hyperglycémie sont nombreux, plus la valeur de l'$\\text{HbA}_{1c}$ sera élevée (D). Enfin, le diabète est considéré comme équilibré lorsque l'$\\text{HbA}_{1c}$ est généralement $\\le 7\\%$ (C est faux pour $8\\%$)."
       },
       {
         questionText: "En présence d’une cellulite chez un patient diabétique :",
@@ -450,6 +578,17 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [1],
         explanation: "La cellulite maxillo-faciale est une urgence médico-chirurgicale qui doit être traitée sans délai, quel que soit l'état d'équilibre du diabète, car l'infection elle-même peut aggraver le déséquilibre glycémique."
+      }, {
+        questionText: "En pathologie bucco-dentaire, la prise en charge d'un diabétique insulino-dépendant, pour un acte invasif doit se faire:",
+        options: [
+          "Sans aucune précaution préalable",
+          "Maintenir le taux de glycémie au plus près de normale",
+          "Instaurer une antibioprophylaxie 48 heures avant l'acte opératoire",
+          "Instaurer une antibiothérapie de couverture en post opératoire",
+          "L'acte chirurgicale doit être programmé de préférence le matin"
+        ],
+        correctOptionIndexes: [1, 2, 3, 4],
+        explanation: "E : Chez un patient diabétique insulino-dépendant, il est crucial d'éviter les complications liées à l'hypoglycémie. L'acte invasif doit être programmé **de préférence le matin**, après la prise de l'insuline et du petit-déjeuner habituels, afin que l'intervention se déroule pendant que le patient bénéficie de l'effet de sa dose d'insuline et de son apport alimentaire, réduisant ainsi le risque d'hypoglycémie per-opératoire (A est faux). Bien que le maintien d'une glycémie normale soit l'objectif (B), la planification matinale est une précaution pratique essentielle. L'antibiothérapie (C, D) n'est pas systématique, elle dépend de la gravité de l'acte et de l'équilibre du diabète."
       },
       {
         questionText: "Les manifestations bucco-dentaires les plus fréquentes chez le patient diabétique sont :",
@@ -511,6 +650,16 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [0],
         explanation: "L'Articaïne est la molécule anesthésique de choix chez la femme enceinte car elle présente le plus faible taux de passage placentaire (< 25%), la rendant moins toxique pour le fœtus."
+      }, {
+        questionText: "L'hyperfonctionnement surrénalien :",
+        options: [
+          "Il est représenté par le syndrome d'Addison",
+          "Il expose le patient à un risque infectieux",
+          "Les soins chirurgicaux et non chirurgicaux peuvent être envisagés sans précaution particulière",
+          "L'usage des vasoconstricteurs n’est pas contre-indiqué"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "B : L'hyperfonctionnement surrénalien (ou hypercorticisme) est représenté par le **Syndrome de Cushing**. Il se caractérise par une production excessive de cortisol, un glucocorticoïde. Ce traitement ou cette maladie induit une **immunosuppression**, qui **expose le patient à un risque infectieux** (B). Le Syndrome d'Addison (A est faux) est, au contraire, une insuffisance surrénalienne. Les soins chirurgicaux nécessitent des précautions particulières, notamment l'ajustement de la corticothérapie (supplémentation en corticoïdes, 'stress dose') pour éviter une insuffisance surrénale aiguë per-opératoire (C est faux)."
       },
       {
         questionText: "Chez la femme allaitante le médicament à prescrire sans risque est :",
@@ -1027,15 +1176,41 @@ const pathoBuccoDentaire_y4Quizzes = [
     subject: "patho-bucco-dentaire",
     questions: [
       {
-        questionText: "Un patient présentant un taux de plaquettes à 92 000/mm3 nécessite l’extraction de la 36, pour cela :",
+        questionText: "Un patient présentant un taux de plaquettes à 85 000/mm3 nécessite l'extraction de la 36, pour cela :",
         options: [
-          "Une transfusion sanguine préalable n’est pas nécessaire.",
+          "Une transfusion sanguine préalable n'est pas nécessaire.",
           "Une transfusion sanguine préalable est indispensable.",
-          "Les moyens locaux d’hémostase sont indispensables.",
-          "Les moyens locaux d’hémostase sont facultatifs en cas de transfusion sanguine."
+          "Les moyens locaux d'hémostase sont Indispensables.",
+          "Les moyens locaux d'hémostase sont facultatifs en cas de transfusion sanguine."
         ],
         correctOptionIndexes: [0, 2],
-        explanation: "Avec un taux de plaquettes entre 80 000 et 150 000/mm³, le risque hémorragique est modéré. Une transfusion n'est donc pas nécessaire, mais l'utilisation de moyens locaux d'hémostase est indispensable."
+        explanation: "Avec un taux de plaquettes supérieur à 50 000/mm³ (ici 85 000/mm³), une transfusion plaquettaire n'est pas nécessaire, mais l'utilisation de moyens locaux d'hémostase est indispensable."
+      },
+      {
+        questionText: "Patient qui présente une thrombopénie avec un taux de plaquettes à 70 000/mm3 :",
+        options: [
+          "Présente un risque hémorragique important.",
+          "Nécessite une transfusion sanguine avec des mesures d'hémostase locale pour un acte sanguinolent.",
+          "Nécessite des mesures d'hémostase locale sans transfusion sanguine pour un acte sanguinolent.",
+          "Nécessite une transfusion du facteur VIII de la coagulation pour un acte sanguinolent."
+        ],
+        // L'option correcte est C (index 2).
+        correctOptionIndexes: [2],
+        explanation: "Un taux de plaquettes de 70 000/mm³ correspond à une thrombopénie modérée (> 50 000/mm³). Ce taux est généralement suffisant pour réaliser un acte chirurgical mineur ou sanguinolent. Il n'y a pas d'indication à une transfusion plaquettaire systématique, mais l'utilisation de **Moyens Locaux d'Hémostase (MLH)** renforcés est **indispensable** pour maîtriser le risque de saignement sur le site de l'intervention."
+      },
+      {
+        questionText: "Un patient présentant une hémophilie A sévère nécessite l'extraction de la 48 (dent de sagesse), pour cela :",
+        options: [
+          "L'anesthésie tronculaire est contre-indiquée.",
+          "L'anesthésie avec vasoconstricteur est contre-indiquée.",
+          "Les sutures sont facultatives en cas de substitution du facteur manquant.",
+          "Les moyens locaux d'hémostase sont indispensables."
+        ],
+        // Déduction des réponses correctes basée sur le commentaire :
+        // A est explicitement mentionnée comme étant une précaution essentielle (à éviter/contre-indiquée).
+        // D est une règle générale indispensable pour toute chirurgie chez l'hémophile.
+        correctOptionIndexes: [0, 3],
+        explanation: "Chez un patient atteint d'hémophilie A sévère, la prise en charge doit suivre des protocoles stricts pour prévenir l'hémorragie : 1. La substitution du facteur manquant (Facteur VIII) est nécessaire avant l'acte. 2. L'anesthésie tronculaire est contre-indiquée (A) en raison du risque d'hématome compressif majeur par ponction profonde. 3. L'utilisation de moyens locaux d'hémostase (sutures, agents hémostatiques topiques) est toujours indispensable (D), même après substitution du facteur."
       },
       {
         questionText: "Un patient hémophile A, se présente pour l’extraction de la 37",
@@ -1047,6 +1222,20 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [0, 3],
         explanation: "L'hémophilie A étant un déficit en facteur VIII, sa substitution est requise avant un acte chirurgical. Seul le TCA est allongé. L'anesthésie tronculaire est contre-indiquée (risque d'hématome), et les moyens locaux d'hémostase sont obligatoires."
+      },
+      {
+        questionText: "La thrombopathie de Glanzmann correspond à :",
+        options: [
+          "Une anomalie qualitative des plaquettes.",
+          "Une anomalie quantitative des plaquettes.",
+          "Une affection constitutionnelle.",
+          "Une thrombopathie d'origine immunologique."
+        ],
+        // Déduction des réponses correctes basée sur le commentaire :
+        // A : Anomalie fonctionnelle = Qualitative.
+        // C : Maladie constitutionnelle.
+        correctOptionIndexes: [0, 2],
+        explanation: " Explication de la Thrombopathie de GlanzmannLa maladie de Glanzmann est un excellent exemple de distinction entre les types d'anomalies plaquettaires :Thrombopathie (Qualitative - A) : Les plaquettes sont présentes en nombre normal, mais elles ne fonctionnent pas correctement. Dans le cas de Glanzmann, elles sont incapables de s'agréger entre elles car le récepteur essentiel GPIIb/IIIa est déficient ou absent.Thrombopénie (Quantitative - B) : Le nombre de plaquettes est insuffisant (ex: $< 150\,000/\text{mm}^3$).Constitutionnelle (C) : La maladie est génétique et présente dès la naissance. Elle n'est pas acquise (comme une thrombopathie induite par un médicament ou d'origine immunologique).,La thrombopathie de Glanzmann est une maladie constitutionnelle (C) et héréditaire. Elle se caractérise par un défaut de l'agrégation plaquettaire dû à une anomalie des récepteurs GPIIb/IIIa, ce qui représente une anomalie qualitative ou fonctionnelle des plaquettes (A), malgré un nombre de plaquettes (quantité) normal."
       },
       {
         questionText: "L’avulsion dentaire chez un patient qui présente une thrombopénie à 45000/mm3 nécessite",
@@ -1082,6 +1271,22 @@ const pathoBuccoDentaire_y4Quizzes = [
         explanation: "L'hémophilie B est un déficit en facteur IX (et non VIII). Le TCA est allongé de manière isolée. L'anesthésie tronculaire est formellement contre-indiquée en raison du risque d'hématome, et les moyens locaux d'hémostase sont indispensables."
       },
       {
+        questionText: "Un patient adulte est porteur d'hémophilie mineure. Laquelle des procédures suivantes peut être effectuée en toute sécurité dans la pratique dentaire générale (sans substitution du facteur) ?",
+        options: [
+          "Avulsion d'une dent antérieure supérieure sous anesthésie locale.",
+          "Prise d'empreinte pour une prothèse partielle.",
+          "Détartrage surfaçage.",
+          "Restauration occlusale sur une prémolaire sous anesthésie locale.",
+          "Dévitalisation sur une molaire inférieure sous anesthésie locale."
+        ],
+        // Déduction des réponses correctes basée sur le commentaire :
+        // Le commentaire indique que les soins conservateurs, prothétiques et les restaurations sont à faible risque.
+        // B (Prothèse) et D (Restauration) correspondent à ces catégories.
+        // L'extraction (A), le surfaçage (C), et la dévitalisation (E) sont des actes à risque hémorragique plus élevé.
+        correctOptionIndexes: [1], // B et D sont les actes à faible risque.
+        explanation: "Chez un patient atteint d'hémophilie mineure, les procédures dentaires sont classées en fonction de leur risque hémorragique. Les actes considérés comme à 'très faible risque' ou 'faible risque' par la Société Française de Chirurgie Orale (comme la prise d'empreinte pour prothèse (B), les restaurations (D), ou les examens) peuvent être effectués sans thérapie de substitution préalable du facteur manquant. Les extractions (A), les chirurgies (C) et les traitements endodontiques (E) avec risque de saignement sont considérés comme à risque plus élevé."
+      },
+      {
         questionText: "Un patient présentant un taux de plaquettes à 92 000/mm3 nécessite l’extraction de la 36 pour cela",
         options: [
           "Une transfusion sanguine préalable n’est pas nécessaire.",
@@ -1092,6 +1297,7 @@ const pathoBuccoDentaire_y4Quizzes = [
         correctOptionIndexes: [0, 2],
         explanation: "Pour un taux de plaquettes entre 80 000 et 150 000/mm³, le risque est modéré. Les actes chirurgicaux sont possibles en appliquant rigoureusement les moyens locaux d’hémostase. La transfusion n'est pas systématique."
       },
+
       {
         questionText: "Un patient présentant une hémophilie A sévère, nécessite l’extraction de la 48",
         options: [
@@ -1102,6 +1308,55 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [0, 2],
         explanation: "L'anesthésie tronculaire à l'épine de Spix est une contre-indication absolue chez l'hémophile (risque d'hématome asphyxiant). De plus, tout acte chirurgical invasif nécessite une substitution préalable du facteur de coagulation manquant (facteur VIII)."
+      },
+      {
+        questionText: "Un patient nécessite une avulsion dentaire. Dans ses antécédents médicaux, il déclare qu'il subit un test mensuel d'INR, mais il ne se souvient pas du nom de son médicament. Lequel des médicaments suivants prendrait-il?",
+        options: [
+          "Clopidogrel.",
+          "Zometa (Acide zolédronique).",
+          "Héparine.",
+          "Vitamine K.",
+          "Sintrom (Acénocoumarol)."
+        ],
+        // L'option E correspond à l'index 4.
+        correctOptionIndexes: [4],
+        explanation: "Le test de l'INR (International Normalized Ratio) est l'examen de surveillance spécifique des Anticoagulants Oraux Antagonistes de la Vitamine K (AVK), tels que le Sintrom (Acénocoumarol) ou la Warfarine. L'héparine est surveillée par le TCA, tandis que les antiagrégants (Clopidogrel) et les NACOs ne nécessitent pas de surveillance régulière de l'INR."
+      },
+      {
+        questionText: "Concernant l'Hémostase, quelles sont les propositions exactes?",
+        options: [
+          "Les anti-vitamine K bloquent l'activation des plaquettes.",
+          "L'hémostase primaire est effectuée par l'activation de la thrombine.",
+          "La vasoconstriction est un moyen efficace pour arrêter le saignement sur une longue période.",
+          "L'aspirine agit comme un antiagrégant plaquettaire.",
+          "La thrombine transforme le fibrinogène en fibrine."
+        ],
+        // Les propositions exactes sont 2, 4 et 5, qui correspondent aux index [1, 3, 4] du tableau 'options'.
+        correctOptionIndexes: [1, 3, 4],
+        explanation: "4. L'aspirine est un antiagrégant plaquettaire (Vrai). 5. La thrombine (Facteur IIa) catalyse la transformation du fibrinogène en fibrine (Vrai). La proposition 2 est souvent considérée comme Vraie dans le contexte de l'hémostase globale bien que, de manière stricte, l'hémostase primaire soit la formation du clou plaquettaire. L'activation de la thrombine est l'événement central de l'hémostase secondaire (coagulation). Les AVK (1) agissent sur les facteurs de coagulation hépatiques, pas sur les plaquettes. La vasoconstriction (3) est temporaire et ne suffit pas à arrêter le saignement durablement."
+      }, {
+        questionText: "L'anémie de Biermer est :",
+        options: [
+          "Une maladie caractérisée par un déséquilibre entre la production des différentes chaînes d'hémoglobine.",
+          "Une anémie par déficit en vitamine C.",
+          "Une maladie génétique liée à une anomalie de la structure de la globine.",
+          "Toutes les réponses sont fausses."
+        ],
+        // L'option correcte est 'Toutes les réponses sont fausses', qui correspond à l'index 3.
+        correctOptionIndexes: [3],
+        explanation: "L'anémie de Biermer est une anémie macrocytaire et mégaloblastique causée par une carence en Vitamine B12. Cette carence résulte le plus souvent d'un défaut d'absorption dû à l'absence du facteur intrinsèque (d'où son nom d'anémie pernicieuse). Les options A, B, et C décrivent d'autres pathologies, rendant 'Toutes les réponses sont fausses' la seule proposition correcte."
+      },
+      {
+        questionText: "En cas d'hémophilie, on retrouve (TS = Temps de Saignement, INR = International Normalized Ratio, TCA = Temps de Céphaline Activée) :",
+        options: [
+          "TS augmenté, INR augmenté, TCA normal.",
+          "TS normal, INR normal, TCA augmenté.",
+          "TS normal, INR augmenté, TCA normal.",
+          "Toutes les réponses sont fausses."
+        ],
+        // L'option correcte est B (index 1).
+        correctOptionIndexes: [1],
+        explanation: "L'hémophilie (déficit en facteur VIII ou IX) est un trouble de la voie endogène de la coagulation. Les anomalies se manifestent par un allongement isolé du Temps de Céphaline Activée (TCA), qui explore cette voie. Le Temps de Saignement (TS) reste normal (l'hémostase primaire est intacte) et le Temps de Quick (TQ/INR) reste normal (la voie exogène est intacte)."
       },
       {
         questionText: "L’anémie de Biermer est",
@@ -1247,6 +1502,18 @@ const pathoBuccoDentaire_y4Quizzes = [
         explanation: "Une neutropénie sévère peut causer des lésions ulcéro-nécrotiques douloureuses et favorise grandement les surinfections opportunistes (bactériennes, virales, fongiques)."
       },
       {
+        questionText: "L'hémophilie A :",
+        options: [
+          "Est une coagulopathie dont le gène est porté par le père et exprimé chez le garçon.",
+          "Est due à un déficit en facteur VIII de la coagulation.",
+          "Est moins fréquente que l'hémophilie B et C.",
+          "Est due au déficit en facteur IX de la coagulation."
+        ],
+        // L'option correcte est B (index 1).
+        correctOptionIndexes: [1],
+        explanation: "L'hémophilie A est la coagulopathie constitutionnelle la plus fréquente (80-85% des cas), causée par un déficit en **Facteur VIII (B)**. Elle est due à une mutation sur le chromosome X et est transmise par la mère conductrice. Le déficit en Facteur IX (D) correspond à l'hémophilie B."
+      },
+      {
         questionText: "Un patient présentant une aplasie médullaire présente:",
         options: [
           "Un risque hémorragique",
@@ -1256,6 +1523,18 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [0, 1],
         explanation: "L'aplasie médullaire est une insuffisance de production des trois lignées cellulaires sanguines par la moelle osseuse : globules rouges (anémie), globules blancs (risque infectieux par neutropénie), et plaquettes (risque hémorragique par thrombopénie)."
+      },
+      {
+        questionText: "Un patient présentant une hémophilie A, nécessite l'extraction de la 48 :",
+        options: [
+          "L'anesthésie tronculaire n’est pas contre-indiquée.",
+          "L'anesthésie locale avec vasoconstricteur n’est pas contre-indiquée.",
+          "Les sutures sont facultatives en cas de substitution du facteur manquant.",
+          "Toutes les réponses sont fausses."
+        ],
+        // L'option correcte est B (index 1).
+        correctOptionIndexes: [1],
+        explanation: "Chez un patient hémophile (A ou B), la priorité est d'éviter les hémorragies et hématomes. L'anesthésie tronculaire (A) est formellement **contre-indiquée** en raison du risque d'hématome compressif. L'anesthésie locale par infiltration est la technique de choix. L'adjonction d'un vasoconstricteur (B) n'est pas contre-indiquée (sauf contre-indication cardiaque) et est même conseillée car il favorise l'hémostase locale. Les sutures (C) sont toujours **indispensables**."
       },
       {
         questionText: "L'anémie par carence martiale est caractérisée par un déficit en:",
@@ -1289,6 +1568,16 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [1],
         explanation: "Avec un taux de 70 000 plaquettes/mm³, la thrombopénie est modérée (supérieure au seuil de 50 000). La transfusion n'est pas systématique, mais les moyens locaux d'hémostase, comme des sutures soignées, sont indispensables."
+      }, {
+        questionText: "Chez un patient présentant un désordre thyroïdien:",
+        options: [
+          "Le retard d'éruption dentaire est en rapport avec une hyperthyroïdie",
+          "L'anesthésie doit être sans vasoconstricteur chez tous les patients",
+          "Il faut éviter l'utilisation répétée et prolongée de produits iodés",
+          "Les soins électifs seront à éviter en cas de déséquilibre"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "C et D sont correctes. La prise en charge d'un patient avec un désordre thyroïdien requiert de : 1) **Éviter les soins électifs** tant que le patient n'est pas traité et stabilisé (D), pour prévenir les urgences thyroïdiennes (crise thyrotoxique ou coma myxœdémateux). 2) **Éviter l'iode** (produits iodés), surtout chez l'hyperthyroïdien, car l'iode est un précurseur des hormones thyroïdiennes (C). Le retard d'éruption est lié à l'**hypo**thyroïdie (A est faux). Les vasoconstricteurs (adrénaline) sont principalement contre-indiqués en cas d'**hyper**thyroïdie **non contrôlée** (B est faux)."
       },
       {
         questionText: "Un patient présentant une aplasie médullaire présente",
@@ -1310,10 +1599,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "La chimiothérapie est l'administration de drogues qui :",
         options: [
-            "Agissent uniquement sur les cellules cancéreuses.",
-            "S'adressent aux cellules à division rapide",
-            "Assurent une guérison totale",
-            "Laissent des effets secondaires Irréversibles"
+          "Agissent uniquement sur les cellules cancéreuses.",
+          "S'adressent aux cellules à division rapide",
+          "Assurent une guérison totale",
+          "Laissent des effets secondaires Irréversibles"
         ],
         correctOptionIndexes: [1],
         explanation: "La chimiothérapie agit sur toutes les cellules à division rapide, qu'elles soient cancéreuses ou saines (cellules hématopoïétiques, muqueuses, etc.). Ses effets secondaires sont pour la plupart réversibles après l'arrêt du traitement."
@@ -1321,10 +1610,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Parmi les complications redoutées de la chimiothérapie:",
         options: [
-            "L'aplasie médullaire",
-            "La thrombopénie",
-            "L'ostéochimionécrose",
-            "L'accident vasculaire"
+          "L'aplasie médullaire",
+          "La thrombopénie",
+          "L'ostéochimionécrose",
+          "L'accident vasculaire"
         ],
         correctOptionIndexes: [0, 1],
         explanation: "L'aplasie médullaire (toxicité hématologique) est une complication majeure, car elle induit une thrombopénie (risque hémorragique) et une neutropénie (risque infectieux). Durant cette période d'aplasie, tout soin dentaire est potentiellement dangereux."
@@ -1579,28 +1868,39 @@ const pathoBuccoDentaire_y4Quizzes = [
     title: "Patient sous Radiothérapie",
     subject: "patho-bucco-dentaire",
     questions: [
-        {
-            questionText: "L'extraction dentaire chez un patient irradié de la sphère oro-faciale:",
-            options: [
-                "Impose une prescription antibiotique Jusqu'à cicatrisation osseuse",
-                "Préconise l'utilisation d'une anesthésie sans vasoconstricteur",
-                "Contre-indique l'anesthésie tronculaire",
-                "Peut se compliquer d'une ostéo- chimionécrose"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "L'acte doit se faire sous couverture antibiotique jusqu'à cicatrisation muqueuse complète. L'anesthésie sans vasoconstricteur est préconisée pour ne pas aggraver l'hypovascularisation locale. La complication redoutée est l'ostéoRADIONécrose."
-        },
-        {
-            questionText: "Les facteurs influençant les complications de la radiothérapie sont:",
-            options: [
-                "La dose délivrée",
-                "Le volume Irradié et la localisation",
-                "La technique utilisée",
-                "Les thérapeutiques associées"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Les complications de la radiothérapie sont multifactorielles et dépendent de la dose totale reçue, du volume et de la localisation des tissus irradiés, de la technique d'irradiation et des traitements associés (chimiothérapie)."
-        },
+      {
+        questionText: "L'extraction dentaire chez un patient irradié de la sphère oro-faciale:",
+        options: [
+          "Impose une prescription antibiotique Jusqu'à cicatrisation osseuse",
+          "Préconise l'utilisation d'une anesthésie sans vasoconstricteur",
+          "Contre-indique l'anesthésie tronculaire",
+          "Peut se compliquer d'une ostéo- chimionécrose"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "L'acte doit se faire sous couverture antibiotique jusqu'à cicatrisation muqueuse complète. L'anesthésie sans vasoconstricteur est préconisée pour ne pas aggraver l'hypovascularisation locale. La complication redoutée est l'ostéoRADIONécrose."
+      }, {
+        questionText: "L'extraction d’une racine de la 36 chez un patient hémophile se déroule comme suit :",
+        options: [
+          "Anesthésie tronculaire à la linguale.",
+          "Anesthésie locale sans vasoconstricteur.",
+          "Extraction la moins traumatisante possible.",
+          "Les antalgiques sont contre-indiqués."
+        ],
+        // L'option correcte est C (index 2).
+        correctOptionIndexes: [2],
+        explanation: "La prise en charge chirurgicale chez un hémophile repose sur trois piliers : 1. Correction systémique du facteur manquant. 2. Technique chirurgicale **la moins traumatisante possible (C)** pour réduire l'effraction tissulaire et le saignement. 3. Utilisation de moyens locaux d'hémostase renforcés. L'anesthésie tronculaire (A) est contre-indiquée et les antalgiques (D) non-AINS sont autorisés."
+      },
+      {
+        questionText: "Les facteurs influençant les complications de la radiothérapie sont:",
+        options: [
+          "La dose délivrée",
+          "Le volume Irradié et la localisation",
+          "La technique utilisée",
+          "Les thérapeutiques associées"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les complications de la radiothérapie sont multifactorielles et dépendent de la dose totale reçue, du volume et de la localisation des tissus irradiés, de la technique d'irradiation et des traitements associés (chimiothérapie)."
+      },
       {
         questionText: "L’ostéoradionécrose (ORN) : QCS",
         options: [
@@ -1622,6 +1922,20 @@ const pathoBuccoDentaire_y4Quizzes = [
         ],
         correctOptionIndexes: [1],
         explanation: "L'avulsion doit être atraumatique avec sutures. Un délai minimal de 6 mois après la fin de l'irradiation est nécessaire. L'antibiothérapie doit couvrir 15 à 20 jours. Les vasoconstricteurs sont à éviter."
+      },
+      {
+        questionText: "L'avulsion dentaire chez un patient qui présente une thrombopénie à 45 000/mm³ nécessite :",
+        options: [
+          "L'utilisation exclusive de moyens locaux d'hémostase est suffisante.",
+          "Une transfusion de concentrés plaquettaires préalable est indispensable pour atteindre un seuil supérieur à 50 000/mm³.",
+          "L'anesthésie tronculaire est le choix recommandé pour garantir une analgésie profonde.",
+          "L'utilisation d'un antifibrinolytique local (ex: acide tranéxamique) est recommandée en complément des autres mesures."
+        ],
+        // Déduction des réponses correctes :
+        // 2 : Taux < 50 000/mm³ -> Transfusion indispensable.
+        // 4 : Antifibrinolytique (acide tranéxamique) est un complément standard pour stabiliser le caillot.
+        correctOptionIndexes: [1, 3],
+        explanation: " Précautions IndispensablesLe taux de plaquettes de $45\,000/\text{mm}^3$ est inférieur au seuil critique généralement toléré pour une chirurgie mineure (souvent fixé à $50\,000/\text{mm}^3$ ou $80\,000/\text{mm}^3$). Cette situation impose des mesures correctives et des précautions locales maximales :1. 💉 Correction Systémique (Transfusion)Transfusion Plaquettaire : Une transfusion de concentrés plaquettaires est généralement recommandée ou indispensable avant l'intervention.L'objectif est d'atteindre un taux de plaquettes supérieur à $50\,000/\text{mm}^3$ (et idéalement $80\,000/\text{mm}^3$) pour la durée de l'acte et les premières heures post-opératoires, afin de minimiser le risque d'hémorragie primaire.Consultation Médicale : L'acte doit être réalisé en étroite collaboration avec l'hématologue du patient.2. 🛡️ Moyens d'Hémostase Locaux (Indispensables)Même après correction systémique, les moyens locaux doivent être utilisés de manière maximale :Anesthésie : Utilisation de l'anesthésie par infiltration plutôt que l'anesthésie tronculaire (où le risque d'hématome compressif est élevé en cas de trouble de l'hémostase).Technique Chirurgicale : Geste le plus atraumatique possible.Sutures : Sutures serrées et étanches du site d'extraction pour stabiliser le caillot.Agents Topiques : Utilisation d'agents hémostatiques locaux tels que :Éponges de gélatine ou de collagène résorbables.Ciments chirurgicaux hémostatiques ou colles de fibrine.3. 📝 Surveillance et SuiviLieu de l'Acte : L'extraction devrait être envisagée dans un environnement hospitalier ou dans une clinique où des moyens de prise en charge d'urgence d'une hémorragie (notamment la disponibilité de concentrés plaquettaires) sont rapidement accessibles.Prescription : Prescription de bains de bouche à base d'acide tranéxamique (un antifibrinolytique) à débuter juste avant ou immédiatement après l'acte, pour stabiliser le caillot.Contrôle Post-opératoire : Surveillance attentive du patient dans les heures suivant l'acte.En résumé, la thrombopénie à $45\,000/\text{mm}^3$ nécessite :Transfusion plaquettaire (pour élever le taux au-dessus de $50\,000/\text{mm}^3$).Moyens d'hémostase locaux renforcés (sutures, agents topiques).Anesthésie par infiltration.Collaboration avec l'hématologue.,Le taux de 45 000/mm³ est inférieur au seuil de sécurité pour l'avulsion dentaire. Une transfusion plaquettaire (Option 2) est indispensable pour relever le taux. L'anesthésie tronculaire (Option 3) est contre-indiquée en cas de thrombopénie. Enfin, l'utilisation de moyens locaux d'hémostase et d'un antifibrinolytique local (Option 4) est toujours recommandée pour stabiliser le caillot en post-opératoire."
       },
       {
         questionText: "Les caries post-radiques :",
@@ -1959,10 +2273,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le denosumab fait partie de la famille des :",
         options: [
-            "Anti angiogéniques",
-            "Biphosphonates de 2eme génération",
-            "Anticorps monoclonaux Anti RANK L",
-            "Immunomodulateurs"
+          "Anti angiogéniques",
+          "Biphosphonates de 2eme génération",
+          "Anticorps monoclonaux Anti RANK L",
+          "Immunomodulateurs"
         ],
         correctOptionIndexes: [2],
         explanation: "Le Dénosumab est un anticorps monoclonal (IgG2) qui cible le RANK-Ligand, bloquant ainsi la voie d'activation des ostéoclastes. Ce n'est pas un biphosphonate."
@@ -1970,10 +2284,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "L'action de l'acide zoledronique cible:",
         options: [
-            "Les ostéoclastes",
-            "Les ostéoblastes",
-            "Les récepteurs RANK des ostéoclastes",
-            "Les cellules endothéliales"
+          "Les ostéoclastes",
+          "Les ostéoblastes",
+          "Les récepteurs RANK des ostéoclastes",
+          "Les cellules endothéliales"
         ],
         correctOptionIndexes: [0],
         explanation: "Les biphosphonates, comme l'acide zolédronique, agissent en étant internalisés par les ostéoclastes, provoquant leur apoptose (mort cellulaire) et inhibant ainsi la résorption osseuse."
@@ -2304,10 +2618,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Devant un traumatisme alvéolo-dentaire, l'examen radiologique de choix est",
         options: [
-            "Le scanner",
-            "Le rétro alvéolaire",
-            "Le maxillaire défilé",
-            "Le panoramique"
+          "Le scanner",
+          "Le rétro alvéolaire",
+          "Le maxillaire défilé",
+          "Le panoramique"
         ],
         correctOptionIndexes: [1],
         explanation: "La radiographie rétro-alvéolaire est l'examen de première intention, réalisé en urgence. Elle offre la meilleure définition pour visualiser précisément la dent traumatisée et les structures parodontales environnantes."
@@ -2315,10 +2629,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "La luxation intrusive est",
         options: [
-            "Un déplacement apical de la dent",
-            "Un déplacement vestibulo-lingual de la dent",
-            "Peut s'accompagner d'une fracture alvéolaire",
-            "Fait suite à une fracture radiculaire"
+          "Un déplacement apical de la dent",
+          "Un déplacement vestibulo-lingual de la dent",
+          "Peut s'accompagner d'une fracture alvéolaire",
+          "Fait suite à une fracture radiculaire"
         ],
         correctOptionIndexes: [0, 2],
         explanation: "L'intrusion est le déplacement de la dent vers l'intérieur de son alvéole (direction apicale). C'est un traumatisme sévère qui s'accompagne quasi-systématiquement d'une fracture de l'os alvéolaire."
@@ -2326,10 +2640,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Les milieux de conservation en cas d’expulsion sont",
         options: [
-            "Le sang",
-            "La salive",
-            "Le sérum physiologique",
-            "L’hydroxyde de calcium"
+          "Le sang",
+          "La salive",
+          "Le sérum physiologique",
+          "L’hydroxyde de calcium"
         ],
         correctOptionIndexes: [1, 2],
         explanation: "Les milieux de conservation recommandés, par ordre de préférence décroissante, sont la solution de Hank (HBSS), le lait, la salive (dans la bouche du patient) et le sérum physiologique. L'eau est à proscrire."
@@ -2340,258 +2654,258 @@ const pathoBuccoDentaire_y4Quizzes = [
     title: "Fractures de la mandibule",
     subject: "patho-bucco-dentaire",
     questions: [
-        {
-            questionText: "Cliniquement, les fractures bi-condyliennes déplacées se manifestent:",
-            options: [
-                "Par une propulsion de la mandibule",
-                "Par une béance incisive",
-                "Par des contacts molaires prématurés",
-                "Par un risque de glossoptose"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Une fracture bi-condylienne déplacée entraîne un raccourcissement vertical des branches montantes, ce qui provoque une béance antérieure (infraclusion incisive) et des contacts molaires prématurés."
-        },
-        {
-            questionText: "Parmi les éléments favorisants la survenue de fracture mandibulaire :",
-            options: [
-                "Le col du condyle par son rétrécissement",
-                "La proximité du trou mentonnier de la crête alvéolaire",
-                "L'orientation vestibulo-linguale des racines des molaires",
-                "L'axe oblique de la dent de sagesse incluse"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "Les zones de faiblesse structurelle de la mandibule incluent le col du condyle, la région du foramen mentonnier, l'angle mandibulaire (surtout en présence d'une dent de sagesse incluse) et la région symphysaire/parasymphysaire."
-        },
-        {
-            questionText: "La fracture bi-parasymphysaire est:",
-            options: [
-                "Souvent due un choc violent sur le menton.",
-                "Présente le risque d'asphyxie.",
-                "Symétrique, généralement stable et ne nécessite qu'une surveillance.",
-                "Nécessite un geste d'urgence."
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "Due à un choc mentonnier violent, ce type de fracture rend le segment antérieur mobile et instable. L'action des muscles génio-glosses peut entraîner une chute de la langue en arrière (glossoptose) avec un risque majeur d'asphyxie, ce qui constitue une urgence vitale."
-        },
-        {
-            questionText: "Dans le cas d'une chute sur le menton, on doit rechercher systématiquement :",
-            options: [
-                "Une plaie orbitaire",
-                "Une fracture condylienne",
-                "Une fracture du zygoma",
-                "Une fracture de l'angle mandibulaire"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Un choc direct sur le menton transmet les forces le long de la mandibule vers les articulations temporo-mandibulaires. Il faut donc systématiquement suspecter et rechercher une fracture condylienne (uni ou bilatérale), même en l'absence de signes évidents."
-        },
-        {
-            questionText: "Une fracture sous condylienne non traitée chez un enfant peut se compliquer :",
-            options: [
-                "D'une ankylose",
-                "D'une résorption des racines des dents luxées",
-                "D’un arrêt de croissance mandibulaire",
-                "D'une pseudarthrose"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Chez l'enfant, le condyle est un centre de croissance majeur. Une fracture condylienne non traitée peut entraîner des troubles de croissance sévères (hypomandibulie, 'profil d'oiseau') et une ankylose temporo-mandibulaire (limitation permanente de l'ouverture)."
-        },
-        {
-            questionText: "Une fracture sous condylienne basse :",
-            options: [
-                "S'accompagne généralement d'une modification de l'occlusion",
-                "Peut passer inaperçue",
-                "Survient souvent suite à un traumatisme par mécanisme direct",
-                "Est diagnostiquée grâce à la TDM en première intention"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "La fracture sous-condylienne basse (ou basicervicale), surtout si elle est non déplacée, présente des signes cliniques discrets, sans modification de l'occlusion, et peut donc passer inaperçue. La douleur préauriculaire à la mobilisation est le principal symptôme."
-        },
-        {
-            questionText: "Les fractures sous condyliennes unilatérales de la mandibule sont suspectées devant les signes suivants :",
-            options: [
-                "(1) Absence de la plaie sous-mentonnière",
-                "(2) Limitation douloureuse de l'ouverture de la bouche",
-                "(3) Une béance contro-latérale à la fracture",
-                "(4) Déviation du menton du coté sain lors de l'ouverture de la bouche",
-                "(5) Otorragie"
-            ],
-            correctOptionIndexes: [4], // Corresponds à E (2,3,4) mais les données CSV semblent incorrectes
-            explanation: "Les signes incluent : limitation douloureuse de l'ouverture (2), contact molaire prématuré homolatéral et béance controlatérale (3), et déviation du menton DU CÔTÉ FRACTURÉ lors de l'ouverture (inversion de 4). Une otorragie est possible."
-        },
-        {
-            questionText: "Parmi les éléments cliniques suivants, on peut suspecter une fracture du condyle mandibulaire devant :",
-            options: [
-                "(1) Une béance postérieure unilatérale",
-                "(2) Une ouverture buccale normale",
-                "(3) L'impossibilité de réaliser la propulsion et la diduction",
-                "(4) Une otorragie",
-                "(5) Une ecchymose de plancher"
-            ],
-            correctOptionIndexes: [2], // Corresponds à C (4,5) mais le CSV semble incorrect
-            explanation: "Les signes évocateurs sont l'impossibilité ou la limitation des mouvements de propulsion et diduction (3), une douleur prétragienne, une modification de l'articulé (béance controlatérale et contact molaire prématuré) et parfois une otorragie (4)."
-        },
-        {
-            questionText: "Une fracture condylienne négligée, chez une fille de 7ans, peut entraîner les complications cliniques suivantes :",
-            options: [
-                "(1) Limitation de l'ouverture buccale",
-                "(2) asymétrie faciale",
-                "(3) Ankylose temporo-mandibulaire",
-                "(4) Rétrognathie",
-                "(5) Halitose"
-            ],
-            correctOptionIndexes: [1], // Corresponds à B (1,2,3,4)
-            explanation: "Les complications d'une fracture condylienne non traitée chez l'enfant sont graves : limitation de l'ouverture buccale pouvant évoluer vers une ankylose (1,3), et troubles de croissance majeurs provoquant une asymétrie faciale et une rétrognathie (2,4)."
-        },
-        {
-            questionText: "Cliniquement, les fractures bi-condyliennes déplacées se manifestent par :",
-            options: [
-                "Une limitation de l'ouverture buccale",
-                "Une béance antérieure",
-                "Un recul de la mandibule",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Une fracture bi-condylienne avec déplacement entraîne un recul de la mandibule et un raccourcissement des branches montantes, ce qui se traduit cliniquement par une béance antérieure et des contacts molaires prématurés."
-        },
-        {
-            questionText: "Dans la fracture symphysaire :",
-            options: [
-                "Le trait de fracture est situé au niveau du segment postérieur du corpus",
-                "Une fracture condylienne peut être associée",
-                "Le choc est direct sur le menton",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Une fracture symphysaire est souvent due à un choc direct sur le menton. Par transmission de l'onde de choc, elle est fréquemment associée à une fracture condylienne controlatérale."
-        }
+      {
+        questionText: "Cliniquement, les fractures bi-condyliennes déplacées se manifestent:",
+        options: [
+          "Par une propulsion de la mandibule",
+          "Par une béance incisive",
+          "Par des contacts molaires prématurés",
+          "Par un risque de glossoptose"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Une fracture bi-condylienne déplacée entraîne un raccourcissement vertical des branches montantes, ce qui provoque une béance antérieure (infraclusion incisive) et des contacts molaires prématurés."
+      },
+      {
+        questionText: "Parmi les éléments favorisants la survenue de fracture mandibulaire :",
+        options: [
+          "Le col du condyle par son rétrécissement",
+          "La proximité du trou mentonnier de la crête alvéolaire",
+          "L'orientation vestibulo-linguale des racines des molaires",
+          "L'axe oblique de la dent de sagesse incluse"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les zones de faiblesse structurelle de la mandibule incluent le col du condyle, la région du foramen mentonnier, l'angle mandibulaire (surtout en présence d'une dent de sagesse incluse) et la région symphysaire/parasymphysaire."
+      },
+      {
+        questionText: "La fracture bi-parasymphysaire est:",
+        options: [
+          "Souvent due un choc violent sur le menton.",
+          "Présente le risque d'asphyxie.",
+          "Symétrique, généralement stable et ne nécessite qu'une surveillance.",
+          "Nécessite un geste d'urgence."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Due à un choc mentonnier violent, ce type de fracture rend le segment antérieur mobile et instable. L'action des muscles génio-glosses peut entraîner une chute de la langue en arrière (glossoptose) avec un risque majeur d'asphyxie, ce qui constitue une urgence vitale."
+      },
+      {
+        questionText: "Dans le cas d'une chute sur le menton, on doit rechercher systématiquement :",
+        options: [
+          "Une plaie orbitaire",
+          "Une fracture condylienne",
+          "Une fracture du zygoma",
+          "Une fracture de l'angle mandibulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Un choc direct sur le menton transmet les forces le long de la mandibule vers les articulations temporo-mandibulaires. Il faut donc systématiquement suspecter et rechercher une fracture condylienne (uni ou bilatérale), même en l'absence de signes évidents."
+      },
+      {
+        questionText: "Une fracture sous condylienne non traitée chez un enfant peut se compliquer :",
+        options: [
+          "D'une ankylose",
+          "D'une résorption des racines des dents luxées",
+          "D’un arrêt de croissance mandibulaire",
+          "D'une pseudarthrose"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Chez l'enfant, le condyle est un centre de croissance majeur. Une fracture condylienne non traitée peut entraîner des troubles de croissance sévères (hypomandibulie, 'profil d'oiseau') et une ankylose temporo-mandibulaire (limitation permanente de l'ouverture)."
+      },
+      {
+        questionText: "Une fracture sous condylienne basse :",
+        options: [
+          "S'accompagne généralement d'une modification de l'occlusion",
+          "Peut passer inaperçue",
+          "Survient souvent suite à un traumatisme par mécanisme direct",
+          "Est diagnostiquée grâce à la TDM en première intention"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La fracture sous-condylienne basse (ou basicervicale), surtout si elle est non déplacée, présente des signes cliniques discrets, sans modification de l'occlusion, et peut donc passer inaperçue. La douleur préauriculaire à la mobilisation est le principal symptôme."
+      },
+      {
+        questionText: "Les fractures sous condyliennes unilatérales de la mandibule sont suspectées devant les signes suivants :",
+        options: [
+          "(1) Absence de la plaie sous-mentonnière",
+          "(2) Limitation douloureuse de l'ouverture de la bouche",
+          "(3) Une béance contro-latérale à la fracture",
+          "(4) Déviation du menton du coté sain lors de l'ouverture de la bouche",
+          "(5) Otorragie"
+        ],
+        correctOptionIndexes: [4], // Corresponds à E (2,3,4) mais les données CSV semblent incorrectes
+        explanation: "Les signes incluent : limitation douloureuse de l'ouverture (2), contact molaire prématuré homolatéral et béance controlatérale (3), et déviation du menton DU CÔTÉ FRACTURÉ lors de l'ouverture (inversion de 4). Une otorragie est possible."
+      },
+      {
+        questionText: "Parmi les éléments cliniques suivants, on peut suspecter une fracture du condyle mandibulaire devant :",
+        options: [
+          "(1) Une béance postérieure unilatérale",
+          "(2) Une ouverture buccale normale",
+          "(3) L'impossibilité de réaliser la propulsion et la diduction",
+          "(4) Une otorragie",
+          "(5) Une ecchymose de plancher"
+        ],
+        correctOptionIndexes: [2], // Corresponds à C (4,5) mais le CSV semble incorrect
+        explanation: "Les signes évocateurs sont l'impossibilité ou la limitation des mouvements de propulsion et diduction (3), une douleur prétragienne, une modification de l'articulé (béance controlatérale et contact molaire prématuré) et parfois une otorragie (4)."
+      },
+      {
+        questionText: "Une fracture condylienne négligée, chez une fille de 7ans, peut entraîner les complications cliniques suivantes :",
+        options: [
+          "(1) Limitation de l'ouverture buccale",
+          "(2) asymétrie faciale",
+          "(3) Ankylose temporo-mandibulaire",
+          "(4) Rétrognathie",
+          "(5) Halitose"
+        ],
+        correctOptionIndexes: [1], // Corresponds à B (1,2,3,4)
+        explanation: "Les complications d'une fracture condylienne non traitée chez l'enfant sont graves : limitation de l'ouverture buccale pouvant évoluer vers une ankylose (1,3), et troubles de croissance majeurs provoquant une asymétrie faciale et une rétrognathie (2,4)."
+      },
+      {
+        questionText: "Cliniquement, les fractures bi-condyliennes déplacées se manifestent par :",
+        options: [
+          "Une limitation de l'ouverture buccale",
+          "Une béance antérieure",
+          "Un recul de la mandibule",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Une fracture bi-condylienne avec déplacement entraîne un recul de la mandibule et un raccourcissement des branches montantes, ce qui se traduit cliniquement par une béance antérieure et des contacts molaires prématurés."
+      },
+      {
+        questionText: "Dans la fracture symphysaire :",
+        options: [
+          "Le trait de fracture est situé au niveau du segment postérieur du corpus",
+          "Une fracture condylienne peut être associée",
+          "Le choc est direct sur le menton",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Une fracture symphysaire est souvent due à un choc direct sur le menton. Par transmission de l'onde de choc, elle est fréquemment associée à une fracture condylienne controlatérale."
+      }
     ]
   },
   {
     title: "Fractures du massif facial",
     subject: "patho-bucco-dentaire",
     questions: [
-        {
-            questionText: "La fracture de Lefort I:",
-            options: [
-                "Concerne la mandibule",
-                "Est aussi nommée fracture de Guérin",
-                "Détache le plateau palatin du reste du massif facial",
-                "S'accompagne d'une ecchymose endo buccale vestibulaire"
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "Aussi appelée fracture de Guérin, le trait passe au-dessus des apex dentaires. Le plateau dento-alvéolaire est mobilisable. Cliniquement, on observe une ecchymose 'en fer à cheval' dans le vestibule supérieur."
-        },
-        {
-            questionText: "La fracture de Lefort III:",
-            options: [
-                "Est une disjonction du massif facial",
-                "S'accompagne d'une augmentation de l'étage moyen",
-                "Ne s'accompagne pas d'épistaxis",
-                "Peut s'accompagner d'une brèche méningée"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "C'est une disjonction cranio-faciale complète. L'étage moyen de la face est 'enfoncé'. Elle s'accompagne quasi-systématiquement d'épistaxis et d'un risque élevé de brèche méningée (rhinorrhée cérébrospinale)."
-        },
-        {
-            questionText: "La Fracture de la tubérosité:",
-            options: [
-                "Est fréquente chez l'enfant.",
-                "S'observe en cas de chute avec un objet en bouche.",
-                "Se manifeste par un palais en fer à cheval.",
-                "Peut survenir lors de l'extraction de la dent de sagesse supérieure."
-            ],
-            correctOptionIndexes: [3],
-            explanation: "La fracture de la tubérosité maxillaire est une complication classique lors de l'avulsion difficile d'une molaire supérieure (souvent une dent de sagesse), entraînant un saignement important et une potentielle communication bucco-sinusienne."
-        },
-        {
-            questionText: "Dans la fracture Lefort I:",
-            options: [
-                "On retrouve une ecchymose périorbitaire en lunettes.",
-                "La palpation est douloureuse à l'épine nasale antérieure.",
-                "La pression des ptérygoides est douloureuse appelée \"signe de Guérin\".",
-                "Le plateau dentoalvéolaire, saisi entre le pouce et l'index est mobilisable par rapport au reste du massif facial."
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Le signe pathognomonique de la fracture Lefort I est la mobilité de tout le plateau dento-alvéolaire. L'ecchymose en lunettes est typique du Lefort II. La douleur à l'épine nasale antérieure est également vue dans le Lefort II."
-        },
-        {
-            questionText: "L'examen clinique d'un traumatisé de la face doit :",
-            options: [
-                "Rechercher les dents vivantes",
-                "Eliminer une urgence vitale",
-                "Rechercher une plaie hémorragique",
-                "Rechercher une atteinte parodontale avancée"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "L'évaluation initiale de tout traumatisé doit prioriser la recherche et la gestion des urgences vitales : obstruction des voies aériennes, hémorragie importante, et détresse neurologique."
-        },
-        {
-            questionText: "Le massif facial est renforcé par les structures anatomiques suivantes :",
-            options: [
-                "Les poutres verticales",
-                "Les lignes Lefort I, II et III",
-                "Les piliers canins, les piliers malaires et les piliers ptérygoïdiens",
-                "Le plateau palatin, le plateau maxillaire et le plateau malaire"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "L'architecture du massif facial est renforcée par des poutres horizontales (rebord orbitaire, arcade zygomatique) et des piliers verticaux qui transmettent les forces de mastication. Ces piliers sont les piliers canins, malaires et ptérygoïdiens."
-        },
-        {
-            questionText: "Les déplacements observés lors des fractures du massif facial :",
-            options: [
-                "Dépendent du point d'application et de la direction de la force traumatisante.",
-                "Sont dit secondaires s'ils sont dus aux forces musculaires.",
-                "Sont dit primaires s'ils sont dus à l'agent traumatisant.",
-                "Sont dit secondaires s'ils sont dus à l'agent traumatisant"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Le déplacement global dépend des caractéristiques de l'impact (force, direction, point d'application). Le déplacement primaire est celui causé directement par l'agent traumatisant. Le déplacement secondaire est celui qui survient après, dû aux contractures musculaires."
-        },
-        {
-            questionText: "Les premiers gestes à envisager en cas de traumatisme maxillo-facial QCS :",
-            options: [
-                "Concernent la réduction des fractures",
-                "Doivent être faits après évacuation du patient",
-                "Doivent être faits en milieu hospitalier",
-                "Visent à éliminer une urgence vitale sur les lieux de l'accident"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "La priorité absolue face à un traumatisé, même avant son transport, est la prise en charge des urgences vitales (liberté des voies aériennes, hémostase, etc.). Le traitement des fractures vient dans un second temps."
-        },
-        {
-            questionText: "Quel examen radiologique de référence prescrivez-vous lors d'une suspicion d'une fracture disjonction cranio-faciale QCS :",
-            options: [
-                "Une tomodensitométrie",
-                "Une téléradiographie de profil strict",
-                "Une radiographie panoramique",
-                "Une incidence de Waters"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "L'examen de référence pour l'analyse des traumatismes complexes du massif facial est la tomodensitométrie (TDM ou scanner), qui permet une visualisation précise en 3D des lésions osseuses."
-        },
-        {
-            questionText: "Les fractures du massif facial supérieur :",
-            options: [
-                "(1) Touchent l'adulte de sexe masculin entre 20 à 35 ans",
-                "(2) Sont souvent associées aux fractures de la mandibule",
-                "(3) Touchent en premier lieu le complexe zygomato-maxillaire",
-                "(4) Touchent rarement l'enfant par rapport à l'adulte",
-                "(5) Sont dominées par des chocs indirects"
-            ],
-            correctOptionIndexes: [2], // Corresponds à C (1-3) mais CSV semble erroné
-            explanation: "Elles touchent principalement l'adulte jeune masculin (1), sont plus rares chez l'enfant (4) et sont fréquemment associées aux fractures mandibulaires (2). Le site le plus touché en premier sont les os propres du nez, et non le complexe zygomatique (3)."
-        },
-        {
-            questionText: "Les séquelles fonctionnelles des traumatismes maxillo-faciaux sont",
-            options: [
-                "Un enfoncement de la pyramide nasale avec une obstruction nasale",
-                "Une cicatrice rétractile ou hypertrophique",
-                "Une ankylose temporo-mandibulaire",
-                "toutes les reponses sont fausses"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Les séquelles fonctionnelles peuvent être une obstruction nasale (par déformation), des troubles de l'articulé dentaire, et des limitations d'ouverture buccale pouvant aller jusqu'à l'ankylose temporo-mandibulaire. Les cicatrices sont des séquelles esthétiques."
-        }
+      {
+        questionText: "La fracture de Lefort I:",
+        options: [
+          "Concerne la mandibule",
+          "Est aussi nommée fracture de Guérin",
+          "Détache le plateau palatin du reste du massif facial",
+          "S'accompagne d'une ecchymose endo buccale vestibulaire"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Aussi appelée fracture de Guérin, le trait passe au-dessus des apex dentaires. Le plateau dento-alvéolaire est mobilisable. Cliniquement, on observe une ecchymose 'en fer à cheval' dans le vestibule supérieur."
+      },
+      {
+        questionText: "La fracture de Lefort III:",
+        options: [
+          "Est une disjonction du massif facial",
+          "S'accompagne d'une augmentation de l'étage moyen",
+          "Ne s'accompagne pas d'épistaxis",
+          "Peut s'accompagner d'une brèche méningée"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "C'est une disjonction cranio-faciale complète. L'étage moyen de la face est 'enfoncé'. Elle s'accompagne quasi-systématiquement d'épistaxis et d'un risque élevé de brèche méningée (rhinorrhée cérébrospinale)."
+      },
+      {
+        questionText: "La Fracture de la tubérosité:",
+        options: [
+          "Est fréquente chez l'enfant.",
+          "S'observe en cas de chute avec un objet en bouche.",
+          "Se manifeste par un palais en fer à cheval.",
+          "Peut survenir lors de l'extraction de la dent de sagesse supérieure."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La fracture de la tubérosité maxillaire est une complication classique lors de l'avulsion difficile d'une molaire supérieure (souvent une dent de sagesse), entraînant un saignement important et une potentielle communication bucco-sinusienne."
+      },
+      {
+        questionText: "Dans la fracture Lefort I:",
+        options: [
+          "On retrouve une ecchymose périorbitaire en lunettes.",
+          "La palpation est douloureuse à l'épine nasale antérieure.",
+          "La pression des ptérygoides est douloureuse appelée \"signe de Guérin\".",
+          "Le plateau dentoalvéolaire, saisi entre le pouce et l'index est mobilisable par rapport au reste du massif facial."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le signe pathognomonique de la fracture Lefort I est la mobilité de tout le plateau dento-alvéolaire. L'ecchymose en lunettes est typique du Lefort II. La douleur à l'épine nasale antérieure est également vue dans le Lefort II."
+      },
+      {
+        questionText: "L'examen clinique d'un traumatisé de la face doit :",
+        options: [
+          "Rechercher les dents vivantes",
+          "Eliminer une urgence vitale",
+          "Rechercher une plaie hémorragique",
+          "Rechercher une atteinte parodontale avancée"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'évaluation initiale de tout traumatisé doit prioriser la recherche et la gestion des urgences vitales : obstruction des voies aériennes, hémorragie importante, et détresse neurologique."
+      },
+      {
+        questionText: "Le massif facial est renforcé par les structures anatomiques suivantes :",
+        options: [
+          "Les poutres verticales",
+          "Les lignes Lefort I, II et III",
+          "Les piliers canins, les piliers malaires et les piliers ptérygoïdiens",
+          "Le plateau palatin, le plateau maxillaire et le plateau malaire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'architecture du massif facial est renforcée par des poutres horizontales (rebord orbitaire, arcade zygomatique) et des piliers verticaux qui transmettent les forces de mastication. Ces piliers sont les piliers canins, malaires et ptérygoïdiens."
+      },
+      {
+        questionText: "Les déplacements observés lors des fractures du massif facial :",
+        options: [
+          "Dépendent du point d'application et de la direction de la force traumatisante.",
+          "Sont dit secondaires s'ils sont dus aux forces musculaires.",
+          "Sont dit primaires s'ils sont dus à l'agent traumatisant.",
+          "Sont dit secondaires s'ils sont dus à l'agent traumatisant"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le déplacement global dépend des caractéristiques de l'impact (force, direction, point d'application). Le déplacement primaire est celui causé directement par l'agent traumatisant. Le déplacement secondaire est celui qui survient après, dû aux contractures musculaires."
+      },
+      {
+        questionText: "Les premiers gestes à envisager en cas de traumatisme maxillo-facial QCS :",
+        options: [
+          "Concernent la réduction des fractures",
+          "Doivent être faits après évacuation du patient",
+          "Doivent être faits en milieu hospitalier",
+          "Visent à éliminer une urgence vitale sur les lieux de l'accident"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La priorité absolue face à un traumatisé, même avant son transport, est la prise en charge des urgences vitales (liberté des voies aériennes, hémostase, etc.). Le traitement des fractures vient dans un second temps."
+      },
+      {
+        questionText: "Quel examen radiologique de référence prescrivez-vous lors d'une suspicion d'une fracture disjonction cranio-faciale QCS :",
+        options: [
+          "Une tomodensitométrie",
+          "Une téléradiographie de profil strict",
+          "Une radiographie panoramique",
+          "Une incidence de Waters"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'examen de référence pour l'analyse des traumatismes complexes du massif facial est la tomodensitométrie (TDM ou scanner), qui permet une visualisation précise en 3D des lésions osseuses."
+      },
+      {
+        questionText: "Les fractures du massif facial supérieur :",
+        options: [
+          "(1) Touchent l'adulte de sexe masculin entre 20 à 35 ans",
+          "(2) Sont souvent associées aux fractures de la mandibule",
+          "(3) Touchent en premier lieu le complexe zygomato-maxillaire",
+          "(4) Touchent rarement l'enfant par rapport à l'adulte",
+          "(5) Sont dominées par des chocs indirects"
+        ],
+        correctOptionIndexes: [2], // Corresponds à C (1-3) mais CSV semble erroné
+        explanation: "Elles touchent principalement l'adulte jeune masculin (1), sont plus rares chez l'enfant (4) et sont fréquemment associées aux fractures mandibulaires (2). Le site le plus touché en premier sont les os propres du nez, et non le complexe zygomatique (3)."
+      },
+      {
+        questionText: "Les séquelles fonctionnelles des traumatismes maxillo-faciaux sont",
+        options: [
+          "Un enfoncement de la pyramide nasale avec une obstruction nasale",
+          "Une cicatrice rétractile ou hypertrophique",
+          "Une ankylose temporo-mandibulaire",
+          "toutes les reponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les séquelles fonctionnelles peuvent être une obstruction nasale (par déformation), des troubles de l'articulé dentaire, et des limitations d'ouverture buccale pouvant aller jusqu'à l'ankylose temporo-mandibulaire. Les cicatrices sont des séquelles esthétiques."
+      }
     ]
   },
   {
@@ -2648,739 +2962,739 @@ const pathoBuccoDentaire_y4Quizzes = [
     title: "Les luxations de l'ATM",
     subject: "patho-bucco-dentaire",
     questions: [
-        {
-            questionText: "La luxation condylienne antérieure peut être déclenchée par :",
-            options: [
-                "Un traumatisme iatrogène lors d'une avulsion de dent de sagesse",
-                "Une ouverture buccale forcée et prolongée lors des séances de soins dentaires",
-                "Une édentation postérieure non compensée",
-                "Une béance antérieure"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Les luxations peuvent être déclenchées par une ouverture buccale excessive ou prolongée (bâillement, soins dentaires) ou par un traumatisme iatrogène. Les troubles occlusaux comme l'édentement sont des facteurs favorisants, mais pas déclencheurs."
-        },
-        {
-            questionText: "La manœuvre « de Nélaton » est:",
-            options: [
-                "Destinée à réduire la luxation condylienne antérieure",
-                "Destinée à réduire la luxation condylienne postérieure",
-                "Effectuée alors que le patient est en position assise",
-                "Est exécutée par un mouvement de rétropulsion puis d'abaissement"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La manœuvre de Nélaton est la technique de réduction manuelle de la luxation condylienne antérieure. Le mouvement consiste à ABAISSER d'abord la mandibule, puis à la repousser en arrière (rétropulsion)."
-        },
-        {
-            questionText: "La luxation condylienne latérale est :",
-            options: [
-                "La forme la plus fréquente",
-                "Consécutive à un choc latéral violent",
-                "Consécutive à un choc vertical très violent en bouche ouverte",
-                "Réduite par la manœuvre de Nélaton"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "La luxation latérale est très rare et est la conséquence d'un choc latéral violent. La luxation antérieure est la plus fréquente. La manœuvre de Nélaton est inefficace pour ce type de luxation."
-        },
-        {
-            questionText: "La plupart des luxations condyliennes, de l'ATM surviennent au cours d'un acte physiologique « exagéré » :",
-            options: [
-                "Un bâillement important,",
-                "Un fou rire",
-                "Des vomissements importants",
-                "Un traumatisme maxillo-facial (région condylienne)."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "La majorité des luxations antérieures sont non traumatiques et surviennent lors de mouvements mandibulaires amples et exagérés comme un bâillement, un rire ou des vomissements."
-        },
-        {
-            questionText: "Dans la Luxation antérieure bloquée bilatérale :",
-            options: [
-                "Le condyle mandibulaire glisse en dessous du condyle temporal et reste bloqué",
-                "Le ménisque reste solidaire au tubercule articulaire par les freins postérieurs",
-                "La capsule est souvent déchirée à son bord antéroinférieur",
-                "Le mouvement de rétro pulsion reste possible"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Dans la luxation antérieure, le condyle passe en avant du condyle temporal et reste bloqué. Le disque articulaire (ménisque) reste en place grâce à ses attaches. Tout mouvement de fermeture ou de rétropulsion devient impossible."
-        },
-        {
-            questionText: "La luxation antérieure de l'articulation temporo-mandibulaire présente tous les éléments suivants sauf un, lequel ?",
-            options: [
-                "Elle s'accompagne toujours d'une fracture condylienne",
-                "Elle se réduit par la manœuvre de Nélaton",
-                "Elle se traduit par une ouverture buccale impossible",
-                "Elle n'est pas toujours traumatique"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Une fracture condylienne associée est une luxation compliquée, ce n'est pas systématique. La luxation se caractérise par une IMPOSSIBILITÉ de FERMER la bouche (et non de l'ouvrir). Elle est le plus souvent non traumatique."
-        },
-        {
-            questionText: "La luxation dynamique :",
-            options: [
-                "Est appelée également luxation discale",
-                "Apparait souvent pendant les mouvements exagérés de la mandibule",
-                "Le condyle mandibulaire quitte totalement la cavité glénoïde",
-                "Est définie comme la dissociation du disque articulaire et condyle mandibulaire"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Appelée également luxation condylo-glénoïdienne, elle apparaît lors de mouvements exagérés, et se définit par la perte de contact permanente entre le condyle et la cavité glénoïde, avec impossibilité de retour spontané."
-        },
-        {
-            questionText: "La luxation antérieures des articulations temporo-mandibulaire :",
-            options: [
-                "Peut-être uni ou bilatérale.",
-                "Est la plus fréquente des luxations des ATM.",
-                "Requiert une réduction rapide suivie d'une contention avec une fronde.",
-                "Est souvent récidivante en cas d'hyperlaxité ligamentaire"
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "La luxation antérieure est la plus fréquente, pouvant être uni ou bilatérale. Une réduction manuelle rapide est requise. L'hyperlaxité ligamentaire est un facteur de risque majeur de récidive."
-        },
-        {
-            questionText: "La luxation condylienne postérieure est caractérisée par :",
-            options: [
-                "Une propulsion du menton vers l'avant",
-                "Une ouverture buccale exagérée",
-                "Une otorragie",
-                "Une impossibilité de fermer la bouche",
-                "Un enfoncement tympano-nasal"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Elle est caractérisée par une limitation de l'ouverture buccale, un recul du menton et une otorragie est possible due à l'enfoncement de la paroi antérieure du conduit auditif externe."
-        },
-        {
-            questionText: "Dans la luxation temporo-mandibulaire antérieure unilatérale:",
-            options: [
-                "Le menton est déporté du coté de la luxation.",
-                "L'ouverture buccale devient impossible.",
-                "Le menton est déporté du coté non luxe.",
-                "Il existe une fracture du tympan."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Dans une luxation unilatérale, le menton est dévié du côté opposé (côté sain). La bouche est entrouverte de façon asymétrique."
-        },
-        {
-            questionText: "L'étiologie de la luxation postérieure des articulations temporo-mandibulaire est représentée par:",
-            options: [
-                "Un trouble fonctionnel préexistant des ATM.",
-                "Une ouverture exagérée de la cavité buccale",
-                "Un choc violent en direction postérieure.",
-                "Un choc violent vertical sur le menton en bouche ouverte."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "La luxation postérieure est rare et d'origine traumatique, survenant après un choc horizontal violent sur le menton."
-        },
-        {
-            questionText: "La luxation temporo-mandibulaire supérieure :",
-            options: [
-                "Est la plus fréquente des luxations",
-                "Est due à un choc horizontal sur le menton",
-                "Retrouve en béance antérieures.",
-                "Toute les réponses sont fausses"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Extrêmement rare, la luxation supérieure survient après un choc vertical violent sur le menton en bouche ouverte. Elle entraîne une limitation d'ouverture buccale, et non une béance."
-        },
-        {
-            questionText: "La luxation temporo-mandibulaire antérieure :",
-            options: [
-                "(1) est irréductible",
-                "(2) peut être uni ou bilatérale",
-                "(3) S'accompagne de douleur et de spasmes musculaires",
-                "(4) se manifeste par une réductibilité du condyle",
-                "(5) S'observe après un mouvement forcé et exagéré de l'ATM"
-            ],
-            correctOptionIndexes: [3], // Correspond à (1,4) mais les données CSV semblent incorrectes
-            explanation: "Elle peut être uni ou bilatérale (2), s'observe après un mouvement exagéré (5), s'accompagne de douleur (3), et est par définition IRRÉDUCTIBLE spontanément (le contraire de 4). Sa réduction est manuelle (1)."
-        },
-        {
-            questionText: "La luxation temporo-mandibulaire postérieure se manifeste par :",
-            options: [
-                "Une fracture du tympan ou de la base du crane, après un choc horizontal sur le menton",
-                "Une fracture du tympan ou de la base du crane, après un choc antéropostérieur sur le menton",
-                "Une surdité légère et quelques fois d'hypoacousie",
-                "Une irréductibilité nécessitant une résection des condyles"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Suite à un choc horizontal sur le menton, elle peut se compliquer d'une fracture de l'os tympanal ou de la base du crâne. La compression ou la lésion du conduit auditif externe peut causer une hypoacousie."
-        },
-        {
-            questionText: "La luxation temporo-mandibulaire bilatérale est facile à reconnaitre grâce aux signer suivants :",
-            options: [
-                "Les joues sont aplaties",
-                "Le menton peut être abaissé par pression mais on ne peut pas le relever",
-                "Une béance antérieure avec parfois un contact molaire",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Le signe clinique le plus frappant est la béance incisive majeure (pouvant atteindre 4-5 cm) avec des contacts molaires prématurés."
-        }
+      {
+        questionText: "La luxation condylienne antérieure peut être déclenchée par :",
+        options: [
+          "Un traumatisme iatrogène lors d'une avulsion de dent de sagesse",
+          "Une ouverture buccale forcée et prolongée lors des séances de soins dentaires",
+          "Une édentation postérieure non compensée",
+          "Une béance antérieure"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les luxations peuvent être déclenchées par une ouverture buccale excessive ou prolongée (bâillement, soins dentaires) ou par un traumatisme iatrogène. Les troubles occlusaux comme l'édentement sont des facteurs favorisants, mais pas déclencheurs."
+      },
+      {
+        questionText: "La manœuvre « de Nélaton » est:",
+        options: [
+          "Destinée à réduire la luxation condylienne antérieure",
+          "Destinée à réduire la luxation condylienne postérieure",
+          "Effectuée alors que le patient est en position assise",
+          "Est exécutée par un mouvement de rétropulsion puis d'abaissement"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La manœuvre de Nélaton est la technique de réduction manuelle de la luxation condylienne antérieure. Le mouvement consiste à ABAISSER d'abord la mandibule, puis à la repousser en arrière (rétropulsion)."
+      },
+      {
+        questionText: "La luxation condylienne latérale est :",
+        options: [
+          "La forme la plus fréquente",
+          "Consécutive à un choc latéral violent",
+          "Consécutive à un choc vertical très violent en bouche ouverte",
+          "Réduite par la manœuvre de Nélaton"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La luxation latérale est très rare et est la conséquence d'un choc latéral violent. La luxation antérieure est la plus fréquente. La manœuvre de Nélaton est inefficace pour ce type de luxation."
+      },
+      {
+        questionText: "La plupart des luxations condyliennes, de l'ATM surviennent au cours d'un acte physiologique « exagéré » :",
+        options: [
+          "Un bâillement important,",
+          "Un fou rire",
+          "Des vomissements importants",
+          "Un traumatisme maxillo-facial (région condylienne)."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La majorité des luxations antérieures sont non traumatiques et surviennent lors de mouvements mandibulaires amples et exagérés comme un bâillement, un rire ou des vomissements."
+      },
+      {
+        questionText: "Dans la Luxation antérieure bloquée bilatérale :",
+        options: [
+          "Le condyle mandibulaire glisse en dessous du condyle temporal et reste bloqué",
+          "Le ménisque reste solidaire au tubercule articulaire par les freins postérieurs",
+          "La capsule est souvent déchirée à son bord antéroinférieur",
+          "Le mouvement de rétro pulsion reste possible"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Dans la luxation antérieure, le condyle passe en avant du condyle temporal et reste bloqué. Le disque articulaire (ménisque) reste en place grâce à ses attaches. Tout mouvement de fermeture ou de rétropulsion devient impossible."
+      },
+      {
+        questionText: "La luxation antérieure de l'articulation temporo-mandibulaire présente tous les éléments suivants sauf un, lequel ?",
+        options: [
+          "Elle s'accompagne toujours d'une fracture condylienne",
+          "Elle se réduit par la manœuvre de Nélaton",
+          "Elle se traduit par une ouverture buccale impossible",
+          "Elle n'est pas toujours traumatique"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Une fracture condylienne associée est une luxation compliquée, ce n'est pas systématique. La luxation se caractérise par une IMPOSSIBILITÉ de FERMER la bouche (et non de l'ouvrir). Elle est le plus souvent non traumatique."
+      },
+      {
+        questionText: "La luxation dynamique :",
+        options: [
+          "Est appelée également luxation discale",
+          "Apparait souvent pendant les mouvements exagérés de la mandibule",
+          "Le condyle mandibulaire quitte totalement la cavité glénoïde",
+          "Est définie comme la dissociation du disque articulaire et condyle mandibulaire"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Appelée également luxation condylo-glénoïdienne, elle apparaît lors de mouvements exagérés, et se définit par la perte de contact permanente entre le condyle et la cavité glénoïde, avec impossibilité de retour spontané."
+      },
+      {
+        questionText: "La luxation antérieures des articulations temporo-mandibulaire :",
+        options: [
+          "Peut-être uni ou bilatérale.",
+          "Est la plus fréquente des luxations des ATM.",
+          "Requiert une réduction rapide suivie d'une contention avec une fronde.",
+          "Est souvent récidivante en cas d'hyperlaxité ligamentaire"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La luxation antérieure est la plus fréquente, pouvant être uni ou bilatérale. Une réduction manuelle rapide est requise. L'hyperlaxité ligamentaire est un facteur de risque majeur de récidive."
+      },
+      {
+        questionText: "La luxation condylienne postérieure est caractérisée par :",
+        options: [
+          "Une propulsion du menton vers l'avant",
+          "Une ouverture buccale exagérée",
+          "Une otorragie",
+          "Une impossibilité de fermer la bouche",
+          "Un enfoncement tympano-nasal"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Elle est caractérisée par une limitation de l'ouverture buccale, un recul du menton et une otorragie est possible due à l'enfoncement de la paroi antérieure du conduit auditif externe."
+      },
+      {
+        questionText: "Dans la luxation temporo-mandibulaire antérieure unilatérale:",
+        options: [
+          "Le menton est déporté du coté de la luxation.",
+          "L'ouverture buccale devient impossible.",
+          "Le menton est déporté du coté non luxe.",
+          "Il existe une fracture du tympan."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Dans une luxation unilatérale, le menton est dévié du côté opposé (côté sain). La bouche est entrouverte de façon asymétrique."
+      },
+      {
+        questionText: "L'étiologie de la luxation postérieure des articulations temporo-mandibulaire est représentée par:",
+        options: [
+          "Un trouble fonctionnel préexistant des ATM.",
+          "Une ouverture exagérée de la cavité buccale",
+          "Un choc violent en direction postérieure.",
+          "Un choc violent vertical sur le menton en bouche ouverte."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La luxation postérieure est rare et d'origine traumatique, survenant après un choc horizontal violent sur le menton."
+      },
+      {
+        questionText: "La luxation temporo-mandibulaire supérieure :",
+        options: [
+          "Est la plus fréquente des luxations",
+          "Est due à un choc horizontal sur le menton",
+          "Retrouve en béance antérieures.",
+          "Toute les réponses sont fausses"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Extrêmement rare, la luxation supérieure survient après un choc vertical violent sur le menton en bouche ouverte. Elle entraîne une limitation d'ouverture buccale, et non une béance."
+      },
+      {
+        questionText: "La luxation temporo-mandibulaire antérieure :",
+        options: [
+          "(1) est irréductible",
+          "(2) peut être uni ou bilatérale",
+          "(3) S'accompagne de douleur et de spasmes musculaires",
+          "(4) se manifeste par une réductibilité du condyle",
+          "(5) S'observe après un mouvement forcé et exagéré de l'ATM"
+        ],
+        correctOptionIndexes: [3], // Correspond à (1,4) mais les données CSV semblent incorrectes
+        explanation: "Elle peut être uni ou bilatérale (2), s'observe après un mouvement exagéré (5), s'accompagne de douleur (3), et est par définition IRRÉDUCTIBLE spontanément (le contraire de 4). Sa réduction est manuelle (1)."
+      },
+      {
+        questionText: "La luxation temporo-mandibulaire postérieure se manifeste par :",
+        options: [
+          "Une fracture du tympan ou de la base du crane, après un choc horizontal sur le menton",
+          "Une fracture du tympan ou de la base du crane, après un choc antéropostérieur sur le menton",
+          "Une surdité légère et quelques fois d'hypoacousie",
+          "Une irréductibilité nécessitant une résection des condyles"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Suite à un choc horizontal sur le menton, elle peut se compliquer d'une fracture de l'os tympanal ou de la base du crâne. La compression ou la lésion du conduit auditif externe peut causer une hypoacousie."
+      },
+      {
+        questionText: "La luxation temporo-mandibulaire bilatérale est facile à reconnaitre grâce aux signer suivants :",
+        options: [
+          "Les joues sont aplaties",
+          "Le menton peut être abaissé par pression mais on ne peut pas le relever",
+          "Une béance antérieure avec parfois un contact molaire",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le signe clinique le plus frappant est la béance incisive majeure (pouvant atteindre 4-5 cm) avec des contacts molaires prématurés."
+      }
     ]
   },
   {
     title: "Pathologies inflammatoires et dégénératives des ATM",
     subject: "patho-bucco-dentaire",
     questions: [
-        {
-            questionText: "Quel est le diagnostic suspecté devant une femme âgée de 40 ans qui consulte pour des douleurs au niveau de l'ATM avec limitation progressive de l'ouverture buccale:",
-            options: [
-                "Arthrites traumatiques",
-                "Spondylarthrite ankylosante",
-                "Polyarthrite rhumatoïde",
-                "Arthrite juvénile idiopathique"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "L'association de l'âge (femme d'âge moyen), des douleurs articulaires et d'une limitation progressive de l'ouverture buccale est très évocatrice d'une atteinte de l'ATM dans le cadre d'une polyarthrite rhumatoïde."
-        },
-        {
-            questionText: "Parmi les caractéristiques de la douleur observée dans l'arthrite temporo-mandibulaire :",
-            options: [
-                "Importante raideur matinale",
-                "Absence de raideur matinale",
-                "Augmente durant la journée et atteint son maximum le soir",
-                "Faible pendant la journée"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Les douleurs d'origine inflammatoire (arthrite) sont typiquement maximales le matin et s'accompagnent d'une raideur matinale ('dérouillage'). Les douleurs d'origine mécanique (arthrose) augmentent au cours de la journée."
-        },
-        {
-            questionText: "Lequel des signes radiologiques suivantes n'est pas retrouvé dans une arthrose temporo mandibulaire ?",
-            options: [
-                "Un pincement articulaire",
-                "Un épanchement intra-articulaire",
-                "Une déminéralisation osseuse",
-                "Une ostéonécrose"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Les signes radiologiques cardinaux de l'arthrose sont le pincement de l'interligne articulaire, l'ostéophytose (becs de perroquet), la sclérose de l'os sous-chondral et la présence de géodes. L'ostéonécrose n'est pas un signe d'arthrose."
-        },
-        {
-            questionText: "Dans les atteintes inflammatoires des ATM, la recherche de troubles fonctionnels :",
-            options: [
-                "Ulcération linguale",
-                "Occlusion instable",
-                "Surcharge occlusale",
-                "DDS incluse"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Les facteurs favorisant les pathologies de l'ATM peuvent être des surcharges fonctionnelles, des parafonctions (bruxisme) ou une occlusion instable."
-        },
-        {
-            questionText: "Le traitement des arthrites septiques des ATM est basé sur :",
-            options: [
-                "Une mécanothérapie.",
-                "Un blocage bi-maxillaire.",
-                "Une antibiothérapie.",
-                "Une injection locale de corticoïde."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "L'arthrite septique est une infection de l'articulation. Le traitement principal est une antibiothérapie bactéricide, souvent double et par voie intraveineuse au début, éventuellement associée à un drainage chirurgical."
-        },
-        {
-            questionText: "Le bilan biologique à demander en cas de pathologie inflammatoire des ATM comporte:",
-            options: [
-                "La vitesse de sédimentation (VS).",
-                "L'hémoglobine Glyquée.",
-                "L’INR/TP.",
-                "La Protéine C Réactive CRP"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "Pour objectiver un syndrome inflammatoire systémique, on demande des marqueurs de l'inflammation comme la Vitesse de Sédimentation (VS) et la Protéine C-Réactive (CRP)."
-        },
-        {
-            questionText: "L'atteinte de l'ATM dans spondylarthrite ankylosante :",
-            options: [
-                "Se traduit par un tableau clinique non spécifique",
-                "Se traduit radiologiquement par un épanchement articulaire",
-                "Donne lieu à un ostéophyte",
-                "Toutes les réponses sont fausses."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Radiologiquement, l'atteinte peut montrer une altération des surfaces articulaires avec destruction osseuse et parfois formation d'ostéophytes."
-        },
-        {
-            questionText: "En cas de polyarthrite rhumatoïde:",
-            options: [
-                "La limitation de l'ouverture buccale est d'installation progressive",
-                "L'atteinte de l'ATM est fréquente et tardive",
-                "Le bilan radiologique peut montrer une lyse osseuse",
-                "L'ATM est toujours atteinte précocement."
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "L'atteinte de l'ATM est fréquente et souvent précoce. Elle provoque une limitation d'ouverture progressive et douloureuse. Radiologiquement, on peut observer une destruction des surfaces osseuses (lyse) avec pincement articulaire."
-        },
-        {
-            questionText: "La symptomatologie clinique de l'arthrose temporo-mandibulaire se manifeste par :",
-            options: [
-                "Crépitations intra-articulaires",
-                "Claquements",
-                "Crissement",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Le signe acoustique caractéristique de l'arthrose est la crépitation (bruit de 'sable' ou de 'neige froissée'), dû au frottement des surfaces osseuses altérées. Les claquements sont plutôt liés à des problèmes discaux."
-        },
-        {
-            questionText: "Les Arthrites aiguës traumatiques sont :",
-            options: [
-                "Consécutives a un microtraumatisme, a un bâillement ou une ouverture prolongée",
-                "Consécutives a une maladie de système.",
-                "Marquées par des douleurs bilatérales intenses du coté lésé, atténuées par les tentatives de mobilisation",
-                "La pression occlusale des molaires entre elles est non douloureuse"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Elles sont dues à un micro- ou macro-traumatisme. Elles se manifestent par une douleur unilatérale intense, exacerbée par les mouvements et par la pression sur les molaires du côté atteint."
-        },
-        {
-            questionText: "L'Arthrite chronique juvénile (ACJ) :",
-            options: [
-                "Est une forme des rhumatismes inflammatoires",
-                "Est sans destruction osseuse.",
-                "Peut aboutir a une destruction totale d'un ou le plus souvent des deux condyles mandibulaires.",
-                "Dont les formes systémiques (maladie de Still) touchent seulement les garçons"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "C'est une maladie rhumatismale inflammatoire de l'enfant qui peut entraîner des destructions osseuses majeures au niveau de l'ATM. La maladie de Still touche aussi bien les filles que les garçons."
-        },
-        {
-            questionText: "Quels sont les ligaments accessoires de l'articulation temporo- mandibulaire parmi les suivants :",
-            options: [
-                "Ligament temporal",
-                "Ligament sphéno-mandibulaire",
-                "ligament capsulaire",
-                "Ligament latéral externe",
-                "Ligament stylo-mandibulaire"
-            ],
-            correctOptionIndexes: [3], // Correspond à D (2-5)
-            explanation: "Les ligaments accessoires (ou extrinsèques) de l'ATM sont le ligament sphéno-mandibulaire, le ligament stylo-mandibulaire et le ligament ptérygo-mandibulaire."
-        },
-        {
-            questionText: "L'installation de l'arthrite septique au niveau de l'ATM est souvent consécutive à une infection de voisinage :",
-            options: [
-                "Une otite",
-                "Une cellulite massétérine",
-                "Une parotidite",
-                "Une ostéomyélite"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "L'arthrite septique de l'ATM peut provenir d'une dissémination par voie sanguine ou plus souvent par contiguïté depuis une infection de voisinage comme une otite, une parotidite, une péricoronarite de dent de sagesse ou une ostéomyélite mandibulaire."
-        },
-        {
-            questionText: "L'examen scanographique dans le cas d'une spondylarthrite ankylosante met en évidence au niveau de l'ATM :",
-            options: [
-                "Une érosion osseuse du condyle",
-                "Une présence d'ostéophytes",
-                "Une inflammation synoviale",
-                "Toutes les réponses sont justes"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Le scanner est utile pour visualiser les altérations osseuses telles que les érosions du condyle, la diminution de l'interligne et parfois la présence d'ostéophytes."
-        }
+      {
+        questionText: "Quel est le diagnostic suspecté devant une femme âgée de 40 ans qui consulte pour des douleurs au niveau de l'ATM avec limitation progressive de l'ouverture buccale:",
+        options: [
+          "Arthrites traumatiques",
+          "Spondylarthrite ankylosante",
+          "Polyarthrite rhumatoïde",
+          "Arthrite juvénile idiopathique"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'association de l'âge (femme d'âge moyen), des douleurs articulaires et d'une limitation progressive de l'ouverture buccale est très évocatrice d'une atteinte de l'ATM dans le cadre d'une polyarthrite rhumatoïde."
+      },
+      {
+        questionText: "Parmi les caractéristiques de la douleur observée dans l'arthrite temporo-mandibulaire :",
+        options: [
+          "Importante raideur matinale",
+          "Absence de raideur matinale",
+          "Augmente durant la journée et atteint son maximum le soir",
+          "Faible pendant la journée"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les douleurs d'origine inflammatoire (arthrite) sont typiquement maximales le matin et s'accompagnent d'une raideur matinale ('dérouillage'). Les douleurs d'origine mécanique (arthrose) augmentent au cours de la journée."
+      },
+      {
+        questionText: "Lequel des signes radiologiques suivantes n'est pas retrouvé dans une arthrose temporo mandibulaire ?",
+        options: [
+          "Un pincement articulaire",
+          "Un épanchement intra-articulaire",
+          "Une déminéralisation osseuse",
+          "Une ostéonécrose"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les signes radiologiques cardinaux de l'arthrose sont le pincement de l'interligne articulaire, l'ostéophytose (becs de perroquet), la sclérose de l'os sous-chondral et la présence de géodes. L'ostéonécrose n'est pas un signe d'arthrose."
+      },
+      {
+        questionText: "Dans les atteintes inflammatoires des ATM, la recherche de troubles fonctionnels :",
+        options: [
+          "Ulcération linguale",
+          "Occlusion instable",
+          "Surcharge occlusale",
+          "DDS incluse"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les facteurs favorisant les pathologies de l'ATM peuvent être des surcharges fonctionnelles, des parafonctions (bruxisme) ou une occlusion instable."
+      },
+      {
+        questionText: "Le traitement des arthrites septiques des ATM est basé sur :",
+        options: [
+          "Une mécanothérapie.",
+          "Un blocage bi-maxillaire.",
+          "Une antibiothérapie.",
+          "Une injection locale de corticoïde."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'arthrite septique est une infection de l'articulation. Le traitement principal est une antibiothérapie bactéricide, souvent double et par voie intraveineuse au début, éventuellement associée à un drainage chirurgical."
+      },
+      {
+        questionText: "Le bilan biologique à demander en cas de pathologie inflammatoire des ATM comporte:",
+        options: [
+          "La vitesse de sédimentation (VS).",
+          "L'hémoglobine Glyquée.",
+          "L’INR/TP.",
+          "La Protéine C Réactive CRP"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Pour objectiver un syndrome inflammatoire systémique, on demande des marqueurs de l'inflammation comme la Vitesse de Sédimentation (VS) et la Protéine C-Réactive (CRP)."
+      },
+      {
+        questionText: "L'atteinte de l'ATM dans spondylarthrite ankylosante :",
+        options: [
+          "Se traduit par un tableau clinique non spécifique",
+          "Se traduit radiologiquement par un épanchement articulaire",
+          "Donne lieu à un ostéophyte",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Radiologiquement, l'atteinte peut montrer une altération des surfaces articulaires avec destruction osseuse et parfois formation d'ostéophytes."
+      },
+      {
+        questionText: "En cas de polyarthrite rhumatoïde:",
+        options: [
+          "La limitation de l'ouverture buccale est d'installation progressive",
+          "L'atteinte de l'ATM est fréquente et tardive",
+          "Le bilan radiologique peut montrer une lyse osseuse",
+          "L'ATM est toujours atteinte précocement."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "L'atteinte de l'ATM est fréquente et souvent précoce. Elle provoque une limitation d'ouverture progressive et douloureuse. Radiologiquement, on peut observer une destruction des surfaces osseuses (lyse) avec pincement articulaire."
+      },
+      {
+        questionText: "La symptomatologie clinique de l'arthrose temporo-mandibulaire se manifeste par :",
+        options: [
+          "Crépitations intra-articulaires",
+          "Claquements",
+          "Crissement",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le signe acoustique caractéristique de l'arthrose est la crépitation (bruit de 'sable' ou de 'neige froissée'), dû au frottement des surfaces osseuses altérées. Les claquements sont plutôt liés à des problèmes discaux."
+      },
+      {
+        questionText: "Les Arthrites aiguës traumatiques sont :",
+        options: [
+          "Consécutives a un microtraumatisme, a un bâillement ou une ouverture prolongée",
+          "Consécutives a une maladie de système.",
+          "Marquées par des douleurs bilatérales intenses du coté lésé, atténuées par les tentatives de mobilisation",
+          "La pression occlusale des molaires entre elles est non douloureuse"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Elles sont dues à un micro- ou macro-traumatisme. Elles se manifestent par une douleur unilatérale intense, exacerbée par les mouvements et par la pression sur les molaires du côté atteint."
+      },
+      {
+        questionText: "L'Arthrite chronique juvénile (ACJ) :",
+        options: [
+          "Est une forme des rhumatismes inflammatoires",
+          "Est sans destruction osseuse.",
+          "Peut aboutir a une destruction totale d'un ou le plus souvent des deux condyles mandibulaires.",
+          "Dont les formes systémiques (maladie de Still) touchent seulement les garçons"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "C'est une maladie rhumatismale inflammatoire de l'enfant qui peut entraîner des destructions osseuses majeures au niveau de l'ATM. La maladie de Still touche aussi bien les filles que les garçons."
+      },
+      {
+        questionText: "Quels sont les ligaments accessoires de l'articulation temporo- mandibulaire parmi les suivants :",
+        options: [
+          "Ligament temporal",
+          "Ligament sphéno-mandibulaire",
+          "ligament capsulaire",
+          "Ligament latéral externe",
+          "Ligament stylo-mandibulaire"
+        ],
+        correctOptionIndexes: [3], // Correspond à D (2-5)
+        explanation: "Les ligaments accessoires (ou extrinsèques) de l'ATM sont le ligament sphéno-mandibulaire, le ligament stylo-mandibulaire et le ligament ptérygo-mandibulaire."
+      },
+      {
+        questionText: "L'installation de l'arthrite septique au niveau de l'ATM est souvent consécutive à une infection de voisinage :",
+        options: [
+          "Une otite",
+          "Une cellulite massétérine",
+          "Une parotidite",
+          "Une ostéomyélite"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'arthrite septique de l'ATM peut provenir d'une dissémination par voie sanguine ou plus souvent par contiguïté depuis une infection de voisinage comme une otite, une parotidite, une péricoronarite de dent de sagesse ou une ostéomyélite mandibulaire."
+      },
+      {
+        questionText: "L'examen scanographique dans le cas d'une spondylarthrite ankylosante met en évidence au niveau de l'ATM :",
+        options: [
+          "Une érosion osseuse du condyle",
+          "Une présence d'ostéophytes",
+          "Une inflammation synoviale",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le scanner est utile pour visualiser les altérations osseuses telles que les érosions du condyle, la diminution de l'interligne et parfois la présence d'ostéophytes."
+      }
     ]
   },
   {
     title: "Sémiologie et les limitations de l’ouverture buccale",
     subject: "patho-bucco-dentaire",
     questions: [
-        {
-            questionText: "Dans le test de Krogh Poulsen, la douleur musculaire est diagnostiquée :",
-            options: [
-                "Du même côté de la morsure",
-                "Du côté opposé à la morsure",
-                "Des 2 côtés après morsure",
-                "Par la morsure des incisives"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Le test de Krogh Poulsen (morsure unilatérale sur un abaisse-langue) différencie douleur musculaire (homolatérale à la morsure car le muscle se contracte) et douleur articulaire (controlatérale à la morsure car l'articulation est mise en compression)."
-        },
-        {
-            questionText: "Les douleurs musculaires en rapport avec les DTM sont localisées au niveau du:",
-            options: [
-                "Ptérygoïdien latéral.",
-                "Frontal.",
-                "Temporal.",
-                "Mylo-hyoïdien."
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Les douleurs myalgiques dans le cadre des DTM (Désordres Temporo-Mandibulaires) concernent les muscles masticateurs, principalement le masséter, le temporal, et les ptérygoïdiens médial et latéral."
-        },
-        {
-            questionText: "Les explorations radiographiques indiquées pour l'étude des déplacements discaux sont:",
-            options: [
-                "Schullers",
-                "Cone beam",
-                "IRM",
-                "Arthroscopie"
-            ],
-            correctOptionIndexes: [2, 3],
-            explanation: "L'IRM est l'examen de choix pour visualiser les tissus mous, notamment le disque articulaire. L'arthroscopie, plus invasive, permet une visualisation directe et un traitement éventuel."
-        },
-        {
-            questionText: "Quelles sont les pathologies qui exposent à un risque important d'ankylose:",
-            options: [
-                "Rhumatisme psoriasique",
-                "Polyarthrite rhumatoïde",
-                "Spondylarthrite ankylosante",
-                "Arthrite juvénile idiopathique"
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Les rhumatismes inflammatoires chroniques, en particulier la polyarthrite rhumatoïde, la spondylarthrite ankylosante et l'arthrite juvénile idiopathique, sont de grandes pourvoyeuses d'ankylose temporo-mandibulaire par destruction articulaire."
-        },
-        {
-            questionText: "Toutes ces pathologies peuvent être à l'origine d'un trismus sauf une. Laquelle ?",
-            options: [
-                "Une cellulite en rapport avec la 38",
-                "Une tumeur mixte à localisation palatine",
-                "Un carcinome de la commissure inter-maxillaire",
-                "Un dysfonctionnement temporo-mandibulaire"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Le trismus est une contracture des muscles élévateurs. Une tumeur palatine n'affecte pas directement ces muscles. En revanche, une infection (cellulite), une tumeur infiltrant la région (commissure inter-maxillaire) ou un DTM peuvent en causer un."
-        },
-        {
-            questionText: "L'ankylose temporo-mandibulaire unilatérale se caractérise par:",
-            options: [
-                "Une promandibulie",
-                "Une rétromandibulie",
-                "Une déviation du menton",
-                "Une perturbation du plan d'occlusion"
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "L'ankylose unilatérale, surtout si elle survient durant la croissance, entraîne une rétromandibulie et une insuffisance de hauteur du côté atteint. Il en résulte une asymétrie avec déviation du menton du côté de l'ankylose et une bascule du plan d'occlusion."
-        },
-        {
-            questionText: "Les DTM sont définis comme étant:",
-            options: [
-                "des troubles fonctionnelles des ATM.",
-                "des troubles occlusaux ayant des répercussions sur les ATM.",
-                "des dérangements discaux des ATM.",
-                "Un ensemble de signes douloureux au niveau des ATM."
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Le terme 'Désordres Temporo-Mandibulaires' (DTM) est un terme générique qui englobe l'ensemble des troubles fonctionnels affectant l'appareil manducateur : douleurs musculaires (myalgies), déplacements discaux, et douleurs articulaires (arthralgies)."
-        },
-        {
-            questionText: "Les douleurs musculaires des DTM sont en rapport avec:",
-            options: [
-                "Des luxations discales irréductibles.",
-                "Des luxations discales réductibles.",
-                "Un spasme au niveau du ptérygoïdien latéral.",
-                "Un spasme au niveau du muscle myrtiforme."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Les douleurs musculaires (myalgies) dans les DTM sont dues à un hyperfonctionnement, une fatigue ou un spasme des muscles masticateurs, dont le ptérygoïdien latéral est un élément clé."
-        },
-        {
-            questionText: "La palpation des muscles masticateurs dans le cas du trismus cherche à apprécier:",
-            options: [
-                "La mobilité condylienne et ses troubles éventuels.",
-                "Les zones douloureuses et les faisceaux indurés en particulier au niveau de leurs insertions",
-                "La consistance et le volume musculaire.",
-                "Dans un contexte traumatique, les structures osseuses au niveau des corps mandibulaires et de la région zygomato-malaire."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "La palpation musculaire vise à évaluer la consistance et le volume des muscles, mais surtout à localiser les zones douloureuses et les bandes indurées ('trigger points'), souvent au niveau des insertions musculaires."
-        },
-        {
-            questionText: "le trismus est 'il ?",
-            options: [
-                "Une contracture des muscles masticateurs",
-                "Une contracture réflexe de défense",
-                "une diminution permanente de l'ouverture buccale",
-                "considéré comme un symptôme piège d'un processus malin",
-                "un processus aigue, réversible"
-            ],
-            correctOptionIndexes: [0, 1, 4],
-            explanation: "Le trismus est une limitation temporaire (processus aigu et réversible) de l'ouverture buccale due à une contracture des muscles masticateurs. C'est souvent une contracture réflexe de défense contre la douleur."
-        },
-        {
-            questionText: "Les douleurs articulaires sont le signe d'une inflammation localisée au(à):",
-            options: [
-                "Ptérygoïdien latérale",
-                "La synoviale",
-                "La capsule",
-                "Le conduit auditif interne"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "L'arthralgie (douleur articulaire) est le signe d'une inflammation des structures de l'ATM elle-même, comme la membrane synoviale (synovite) ou la capsule articulaire (capsulite)."
-        },
-        {
-            questionText: "Les bruits articulaires sont le résultat d'un(e):",
-            options: [
-                "Bruxisme",
-                "Contact entre les surfaces osseuses articulaires.",
-                "Déplacement discal réductible.",
-                "Déplacement discale irréductible"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Les bruits de type 'claquement' sont typiquement le signe d'un déplacement discal réductible (le disque se repositionne avec un bruit à l'ouverture et se déplace à nouveau à la fermeture)."
-        },
-        {
-            questionText: "Une constriction permanente des maxillaires est provoquée par :",
-            options: [
-                "Une ankylose temporo-mandibulaire",
-                "accident d'évolution de la dent de sagesse",
-                "Par une synostose coronoido-malaire",
-                "Une subluxation discale non réductible des ATM"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Une constriction permanente (contrairement au trismus qui est temporaire) est due à une entrave mécanique : une ankylose osseuse de l'ATM ou une synostose (fusion osseuse) extra-articulaire, comme entre le processus coronoïde et l'os malaire."
-        },
-        {
-            questionText: "Parmi les lésions traumatiques ou infectieuses suivantes indiquez celles pouvant être à l'origine du trismus :",
-            options: [
-                "Arthrite temporo-mandibulaire",
-                "Fracture zygomato-malaire avec déplacement",
-                "Cellulite en rapport avec la canine (33) nécrosée",
-                "Luxation condylienne antérieure"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Un trismus peut être d'origine articulaire (arthrite), traumatique (fracture de l'arcade zygomatique pouvant bloquer le coronoïde) ou infectieuse (cellulite impliquant les muscles masticateurs)."
-        },
-        {
-            questionText: "Les anomalies occlusales sont considérées comme un facteur:",
-            options: [
-                "isolé dans la genèse des troubles articulaires.",
-                "Un facteur associé dans la genèse des troubles articulaires.",
-                "Un facteur non déterminant dans la genèse des troubles articulaires.",
-                "Un facteur favorisé par les déplacements du disque articulaire."
-            ],
-            correctOptionIndexes: [1],
-            explanation: "L'étiologie des DTM est multifactorielle. Bien que l'occlusion ne soit plus considérée comme le seul facteur, une occlusion instable est un facteur associé et contribuant important."
-        },
-        {
-            questionText: "L'examen radiologique de référence pour l'exploration du système disco-ligamentaire de l'ATM est :",
-            options: [
-                "Le Cône Beam",
-                "La radiographie panoramique",
-                "La tomodensitométrie",
-                "L'imagerie par résonnance magnétique"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "L'IRM est le seul examen d'imagerie qui permet une visualisation directe et précise des tissus mous de l'articulation, notamment le disque articulaire et les ligaments, aussi bien en statique qu'en dynamique."
-        },
-        {
-            questionText: "Le trismus ne fait pas intervenir :",
-            options: [
-                "Le muscle temporal",
-                "Le muscle stylo-hyoïdien",
-                "Le muscle masséter",
-                "Le muscle ptérygoïdien interne"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Le trismus est une contraction des muscles élévateurs de la mandibule (masséter, temporal, ptérygoïdien médial). Le muscle stylo-hyoïdien fait partie des muscles supra-hyoïdiens et n'est pas un muscle masticateur."
-        },
-        {
-            questionText: "Parmi les causes suivantes une n’est pas à l'origine d'un trismus, laquelle ?:",
-            options: [
-                "La myosite rétractile",
-                "La péricoronarite",
-                "La mucite réactionnelle a la radiothérapie",
-                "La fracture du col du condyle"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Une myosite rétractile (fibrose musculaire) est une cause de constriction permanente et non de trismus (qui est une contracture aiguë et réversible)."
-        },
-        {
-            questionText: "Le trismus :",
-            options: [
-                "(1) peut être inaugural et révéler une néoplasie",
-                "(2) peut être d'origine dentaire, salivaire ou tumorale",
-                "(3) Est le maître symptôme des infections de l'espace masticateur",
-                "(4) Sa prise en charge doit faire intervenir plusieurs spécialités",
-                "(5) Peut évoluer vers une ankylose de l'ATM"
-            ],
-            correctOptionIndexes: [1], // Corresponds à B (1,2,3)
-            explanation: "Le trismus est un symptôme majeur des infections de l'espace masticateur (3). Ses causes sont variées (dentaires, salivaires, tumorales...) (2). Il peut être le premier signe révélateur d'un cancer (1). Le trismus est réversible et n'évolue pas en ankylose (constriction)."
-        },
-        {
-            questionText: "La palpation des muscles masticateurs dans le cas de trismus cherche apprécier :",
-            options: [
-                "La mobilité condylienne et ses troubles éventuels.",
-                "Les zones douloureuses et les faisceaux indurés en particulier au niveau de leurs insertions.",
-                "La consistance et le volume musculaire.",
-                "Dans un contexte traumatique, les structures osseuses au niveau des corps mandibulaires et de la région zygomato-malaire."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "La palpation musculaire permet d'évaluer la consistance et le volume des muscles, et surtout de localiser les points gâchettes douloureux ('trigger points') et les bandes indurées."
-        },
-        {
-            questionText: "Suite au bilan radio-clinique, la constriction permanente des maxillaires est évoquée, lorsque on est devant une forme :",
-            options: [
-                "Fixée, a évolution chronique.",
-                "A caractère constant et indolore.",
-                "D'installation rapide.",
-                "Avec un processus de consolidation anormale en rapport avec une lésion récente d'origine (osseuse, musculaire, muqueuse ou cutanée)"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "La constriction permanente, par opposition au trismus, est une limitation chronique et fixée de l'ouverture buccale, résultant d'un processus de cicatrisation ou de consolidation anormal (fibrose, ossification, ankylose)."
-        },
-        {
-            questionText: "Nous citons les causes infectieuses extra dentaires les plus fréquentes du trismus:",
-            options: [
-                "La stomatite odontiasique en rapport avec une molaire en éruption.",
-                "La sub-maxillite.",
-                "L'arthrite temporo-mandibulaire",
-                "La fracture angulaire déplacée de la mandibule"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Parmi les causes extra-dentaires, une arthrite (inflammatoire ou septique) de l'articulation temporo-mandibulaire peut provoquer un trismus réflexe."
-        },
-        {
-            questionText: "Les muscles élévateurs masticateurs sont :",
-            options: [
-                "(1) Les seuls responsables du mouvement d'abaissement",
-                "(2) sont au nombre de 3",
-                "(3) tous Innervés par le nerf mandibulaire sauf le masséter",
-                "(4) Le faisceau postérieur du temporal a une action de rétropulsion",
-                "(5) Les ptérygoïdiens externes ferment la mandibule"
-            ],
-            correctOptionIndexes: [2], // Corresponds à C (4,5) mais le CSV est erroné
-            explanation: "Les élévateurs sont le masséter, le temporal et le ptérygoïdien médial. Ils sont au nombre de 3 paires (B est correct). Le faisceau postérieur du temporal est rétropulseur (D est correct). Les ptérygoïdiens latéraux sont abaisseurs/propulseurs."
-        },
-        {
-            questionText: "Lors de l'exploration radiologique des ATM:",
-            options: [
-                "La TDM permet une bonne évaluation des disques articulaires",
-                "La radiographie panoramique permet une très bonne appréciation.",
-                "Le disque articulaire est bien visualisé sur l'incidence Schuller.",
-                "L'IRM est le seul examen permettant d'évaluer le ménisque"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "L'IRM est l'examen de référence pour l'étude des tissus mous, et donc le seul qui permet de visualiser directement le disque articulaire (ménisque) et ses déplacements."
-        },
-        {
-            questionText: "La physiopathologie de l'ankylose temporo-mandibulaire chez l'enfant est rattachée à la formation le plus souvent d'un cal osseux solidarisant l'os temporal et le bord supérieur de la branche montante de la mandibule:",
-            options: [
-                "Vrai",
-                "Faux"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "C'est exact. L'ankylose est le plus souvent la conséquence d'un traumatisme condylien, où la formation d'un cal osseux hypertrophique finit par fusionner (solidariser) le condyle/la branche montante avec la base du crâne."
-        },
-        {
-            questionText: "Une ankylose temporo-mandibulaire unilatérale, observée à l'âge adulte, est caractérisée par les signes suivants :",
-            options: [
-                "(1) une rétromandibulie bilatérale symétrique",
-                "(2) un effacement de l'angle mandibulaire du coté sain",
-                "(3) la ligne Inter Incisive reste centrée",
-                "(4) le contact molaire est conservé du côté atteint",
-                "(5) Le menton regarde du coté opposé"
-            ],
-            correctOptionIndexes: [3], // Corresponds à D (2,4,5)
-            explanation: "Dans l'ankylose unilatérale de l'adulte, on note une asymétrie avec rétromandibulie et effacement de l'angle du côté atteint. Le menton est dévié vers le côté de l'ankylose. Le contact molaire peut être conservé du côté atteint."
-        },
-        {
-            questionText: "Une pathologie de l'articulation temporo-mandibulaire peut se manifester cliniquement par:",
-            options: [
-                "Douleur",
-                "Une infection",
-                "Des bruits articulaires",
-                "Une tuméfaction"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Les signes cardinaux des pathologies de l'ATM sont les douleurs (arthralgies, myalgies), les bruits articulaires (claquements, crépitations), et les limitations ou déviations des mouvements mandibulaires."
-        },
-        {
-            questionText: "Dans l'exploration des pathologies des ATM, les examens radiologiques les plus indiqués sont :",
-            options: [
-                "L'IRM",
-                "L'incidence de Blondeau",
-                "La TDM",
-                "L'incidence de Hirtz"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Les examens de choix en imagerie avancée sont la TDM (ou Cone Beam) pour une analyse fine des structures osseuses, et l'IRM pour l'étude des tissus mous (disque, ligaments)."
-        },
-        {
-            questionText: "Le Trismus :",
-            options: [
-                "Est un symptôme clinique irréversible",
-                "Est souvent dû à une infiltration des muscles masticateurs en rapport avec une lésion de voisinage",
-                "Peut-être rencontré au cours d'une sclérose cicatricielle",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Le trismus est une contracture musculaire réflexe, le plus souvent en réponse à une douleur ou une inflammation de voisinage (infection, traumatisme). Il est passager et réversible. Une sclérose cicatricielle cause une constriction (permanente)."
-        },
-        {
-            questionText: "Parmi les causes de la constriction permanente des maxillaires, on retient :",
-            options: [
-                "Le tétanos",
-                "L'ankylose temporo-mandibulaire",
-                "La prise de neuroleptiques",
-                "Une sclérose cicatricielle",
-                "Toutes les réponses sont justes"
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "La constriction permanente est due à un blocage mécanique. Les causes peuvent être osseuses (ankylose de l'ATM) ou extra-osseuses, comme une fibrose/sclérose cicatricielle des muscles masticateurs ou de la peau."
-        },
-        {
-            questionText: "Dans l'examen clinique des ATM :",
-            options: [
-                "La profession du patient est un élément important à préciser",
-                "On recherche la notion de traumatisme d'origine iatrogène",
-                "On applique la pulpe des index à 1 cm du tragus pour la palpation endo-auriculaire des ATM",
-                "La palpation musculaire s'effectue à la recherche de zones douloureuses"
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "L'anamnèse recherche les traumatismes (y compris iatrogènes). L'examen clinique comprend une palpation musculaire à la recherche de points douloureux, et une palpation articulaire pré-tragienne ou endo-auriculaire."
-        },
-        {
-            questionText: "Concernant l'exploration radiologique des ATM :",
-            options: [
-                "La radiographie panoramique est demandé en première intention",
-                "Le scanner est moyen fiable d'évaluation du disque et des composantes musculaires",
-                "Les données squelettiques sont mieux explorées par l'IRM",
-                "L'IRM et le scanner sont demandés en deuxième intention"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "La panoramique est souvent réalisée en première intention pour un débrouillage général. Pour une analyse plus fine, le scanner (pour l'os) et l'IRM (pour les tissus mous) sont demandés en deuxième intention."
-        },
-        {
-            questionText: "Chez un patient présentant un trismus :",
-            options: [
-                "La thérapeutique repose, essentiellement, sur un traitement médical symptomatique",
-                "L'étiologie tumorale est évoquée en l'absence de causes évidentes",
-                "Le trismus est d'autant plus serré que la dent est postérieure",
-                "Toutes les réponses sont justes"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Le trismus étant un symptôme, son traitement est étiologique (traitement de la cause). En l'absence de cause évidente, une origine tumorale doit être recherchée. Les infections des molaires postérieures, proches des muscles masticateurs, provoquent souvent les trismus les plus serrés."
-        },
-        {
-            questionText: "Dans l'ankylose temporo-mandibulaire chez l'enfant :",
-            options: [
-                "Les formes bilatérales sont caractérisées par le signe du « menton qui regarde l’ankylose »",
-                "Contrairement à l'adulte, il y a absence de troubles morphogéniques et occlusaux",
-                "Le traitement préventif repose sur le diagnostic précoce et le traitement adéquat des fractures condyliennes",
-                "Toutes les réponses sont justes"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Chez l'enfant, l'ankylose a des conséquences graves sur la croissance. Le traitement préventif est donc essentiel et passe par le dépistage et le traitement correct des fractures condyliennes, qui en sont la cause principale."
-        },
-        {
-            questionText: "Une limitation de l'ouverture buccale dans sa forme aigue, peut se rencontrer en cas :",
-            options: [
-                "D'une cellulite aigue suppurée en rapport avec la 32",
-                "D'une cellulite aigue séreuse en rapport avec la 47",
-                "D'une avulsion chirurgicale de la dent de sagesse maxillaire",
-                "D'une fracture de l'angle mandibulaire"
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "Un trismus (limitation aiguë) est souvent causé par une infection d'une molaire mandibulaire (proche des muscles élévateurs) ou une fracture de l'angle mandibulaire."
-        },
-        {
-            questionText: "Dans le traitement de la limitation de l'ouverture buccale :",
-            options: [
-                "La mécanothérapie est un complément indispensable au traitement",
-                "Les procédés utilisés sont les mêmes quel que soit la forme de la limitation",
-                "La régression de la limitation se fait de façon progressive après suppression de l'étiologie",
-                "Toutes les réponses sont justes"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Le traitement du trismus est avant tout étiologique (traitement de la cause). Une fois la cause supprimée (ex: traitement de l'infection), la contracture musculaire se lève et la limitation d'ouverture régresse progressivement."
-        }
+      {
+        questionText: "Dans le test de Krogh Poulsen, la douleur musculaire est diagnostiquée :",
+        options: [
+          "Du même côté de la morsure",
+          "Du côté opposé à la morsure",
+          "Des 2 côtés après morsure",
+          "Par la morsure des incisives"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le test de Krogh Poulsen (morsure unilatérale sur un abaisse-langue) différencie douleur musculaire (homolatérale à la morsure car le muscle se contracte) et douleur articulaire (controlatérale à la morsure car l'articulation est mise en compression)."
+      },
+      {
+        questionText: "Les douleurs musculaires en rapport avec les DTM sont localisées au niveau du:",
+        options: [
+          "Ptérygoïdien latéral.",
+          "Frontal.",
+          "Temporal.",
+          "Mylo-hyoïdien."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les douleurs myalgiques dans le cadre des DTM (Désordres Temporo-Mandibulaires) concernent les muscles masticateurs, principalement le masséter, le temporal, et les ptérygoïdiens médial et latéral."
+      },
+      {
+        questionText: "Les explorations radiographiques indiquées pour l'étude des déplacements discaux sont:",
+        options: [
+          "Schullers",
+          "Cone beam",
+          "IRM",
+          "Arthroscopie"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "L'IRM est l'examen de choix pour visualiser les tissus mous, notamment le disque articulaire. L'arthroscopie, plus invasive, permet une visualisation directe et un traitement éventuel."
+      },
+      {
+        questionText: "Quelles sont les pathologies qui exposent à un risque important d'ankylose:",
+        options: [
+          "Rhumatisme psoriasique",
+          "Polyarthrite rhumatoïde",
+          "Spondylarthrite ankylosante",
+          "Arthrite juvénile idiopathique"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les rhumatismes inflammatoires chroniques, en particulier la polyarthrite rhumatoïde, la spondylarthrite ankylosante et l'arthrite juvénile idiopathique, sont de grandes pourvoyeuses d'ankylose temporo-mandibulaire par destruction articulaire."
+      },
+      {
+        questionText: "Toutes ces pathologies peuvent être à l'origine d'un trismus sauf une. Laquelle ?",
+        options: [
+          "Une cellulite en rapport avec la 38",
+          "Une tumeur mixte à localisation palatine",
+          "Un carcinome de la commissure inter-maxillaire",
+          "Un dysfonctionnement temporo-mandibulaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le trismus est une contracture des muscles élévateurs. Une tumeur palatine n'affecte pas directement ces muscles. En revanche, une infection (cellulite), une tumeur infiltrant la région (commissure inter-maxillaire) ou un DTM peuvent en causer un."
+      },
+      {
+        questionText: "L'ankylose temporo-mandibulaire unilatérale se caractérise par:",
+        options: [
+          "Une promandibulie",
+          "Une rétromandibulie",
+          "Une déviation du menton",
+          "Une perturbation du plan d'occlusion"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "L'ankylose unilatérale, surtout si elle survient durant la croissance, entraîne une rétromandibulie et une insuffisance de hauteur du côté atteint. Il en résulte une asymétrie avec déviation du menton du côté de l'ankylose et une bascule du plan d'occlusion."
+      },
+      {
+        questionText: "Les DTM sont définis comme étant:",
+        options: [
+          "des troubles fonctionnelles des ATM.",
+          "des troubles occlusaux ayant des répercussions sur les ATM.",
+          "des dérangements discaux des ATM.",
+          "Un ensemble de signes douloureux au niveau des ATM."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le terme 'Désordres Temporo-Mandibulaires' (DTM) est un terme générique qui englobe l'ensemble des troubles fonctionnels affectant l'appareil manducateur : douleurs musculaires (myalgies), déplacements discaux, et douleurs articulaires (arthralgies)."
+      },
+      {
+        questionText: "Les douleurs musculaires des DTM sont en rapport avec:",
+        options: [
+          "Des luxations discales irréductibles.",
+          "Des luxations discales réductibles.",
+          "Un spasme au niveau du ptérygoïdien latéral.",
+          "Un spasme au niveau du muscle myrtiforme."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les douleurs musculaires (myalgies) dans les DTM sont dues à un hyperfonctionnement, une fatigue ou un spasme des muscles masticateurs, dont le ptérygoïdien latéral est un élément clé."
+      },
+      {
+        questionText: "La palpation des muscles masticateurs dans le cas du trismus cherche à apprécier:",
+        options: [
+          "La mobilité condylienne et ses troubles éventuels.",
+          "Les zones douloureuses et les faisceaux indurés en particulier au niveau de leurs insertions",
+          "La consistance et le volume musculaire.",
+          "Dans un contexte traumatique, les structures osseuses au niveau des corps mandibulaires et de la région zygomato-malaire."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La palpation musculaire vise à évaluer la consistance et le volume des muscles, mais surtout à localiser les zones douloureuses et les bandes indurées ('trigger points'), souvent au niveau des insertions musculaires."
+      },
+      {
+        questionText: "le trismus est 'il ?",
+        options: [
+          "Une contracture des muscles masticateurs",
+          "Une contracture réflexe de défense",
+          "une diminution permanente de l'ouverture buccale",
+          "considéré comme un symptôme piège d'un processus malin",
+          "un processus aigue, réversible"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "Le trismus est une limitation temporaire (processus aigu et réversible) de l'ouverture buccale due à une contracture des muscles masticateurs. C'est souvent une contracture réflexe de défense contre la douleur."
+      },
+      {
+        questionText: "Les douleurs articulaires sont le signe d'une inflammation localisée au(à):",
+        options: [
+          "Ptérygoïdien latérale",
+          "La synoviale",
+          "La capsule",
+          "Le conduit auditif interne"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'arthralgie (douleur articulaire) est le signe d'une inflammation des structures de l'ATM elle-même, comme la membrane synoviale (synovite) ou la capsule articulaire (capsulite)."
+      },
+      {
+        questionText: "Les bruits articulaires sont le résultat d'un(e):",
+        options: [
+          "Bruxisme",
+          "Contact entre les surfaces osseuses articulaires.",
+          "Déplacement discal réductible.",
+          "Déplacement discale irréductible"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les bruits de type 'claquement' sont typiquement le signe d'un déplacement discal réductible (le disque se repositionne avec un bruit à l'ouverture et se déplace à nouveau à la fermeture)."
+      },
+      {
+        questionText: "Une constriction permanente des maxillaires est provoquée par :",
+        options: [
+          "Une ankylose temporo-mandibulaire",
+          "accident d'évolution de la dent de sagesse",
+          "Par une synostose coronoido-malaire",
+          "Une subluxation discale non réductible des ATM"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Une constriction permanente (contrairement au trismus qui est temporaire) est due à une entrave mécanique : une ankylose osseuse de l'ATM ou une synostose (fusion osseuse) extra-articulaire, comme entre le processus coronoïde et l'os malaire."
+      },
+      {
+        questionText: "Parmi les lésions traumatiques ou infectieuses suivantes indiquez celles pouvant être à l'origine du trismus :",
+        options: [
+          "Arthrite temporo-mandibulaire",
+          "Fracture zygomato-malaire avec déplacement",
+          "Cellulite en rapport avec la canine (33) nécrosée",
+          "Luxation condylienne antérieure"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Un trismus peut être d'origine articulaire (arthrite), traumatique (fracture de l'arcade zygomatique pouvant bloquer le coronoïde) ou infectieuse (cellulite impliquant les muscles masticateurs)."
+      },
+      {
+        questionText: "Les anomalies occlusales sont considérées comme un facteur:",
+        options: [
+          "isolé dans la genèse des troubles articulaires.",
+          "Un facteur associé dans la genèse des troubles articulaires.",
+          "Un facteur non déterminant dans la genèse des troubles articulaires.",
+          "Un facteur favorisé par les déplacements du disque articulaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'étiologie des DTM est multifactorielle. Bien que l'occlusion ne soit plus considérée comme le seul facteur, une occlusion instable est un facteur associé et contribuant important."
+      },
+      {
+        questionText: "L'examen radiologique de référence pour l'exploration du système disco-ligamentaire de l'ATM est :",
+        options: [
+          "Le Cône Beam",
+          "La radiographie panoramique",
+          "La tomodensitométrie",
+          "L'imagerie par résonnance magnétique"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'IRM est le seul examen d'imagerie qui permet une visualisation directe et précise des tissus mous de l'articulation, notamment le disque articulaire et les ligaments, aussi bien en statique qu'en dynamique."
+      },
+      {
+        questionText: "Le trismus ne fait pas intervenir :",
+        options: [
+          "Le muscle temporal",
+          "Le muscle stylo-hyoïdien",
+          "Le muscle masséter",
+          "Le muscle ptérygoïdien interne"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le trismus est une contraction des muscles élévateurs de la mandibule (masséter, temporal, ptérygoïdien médial). Le muscle stylo-hyoïdien fait partie des muscles supra-hyoïdiens et n'est pas un muscle masticateur."
+      },
+      {
+        questionText: "Parmi les causes suivantes une n’est pas à l'origine d'un trismus, laquelle ?:",
+        options: [
+          "La myosite rétractile",
+          "La péricoronarite",
+          "La mucite réactionnelle a la radiothérapie",
+          "La fracture du col du condyle"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Une myosite rétractile (fibrose musculaire) est une cause de constriction permanente et non de trismus (qui est une contracture aiguë et réversible)."
+      },
+      {
+        questionText: "Le trismus :",
+        options: [
+          "(1) peut être inaugural et révéler une néoplasie",
+          "(2) peut être d'origine dentaire, salivaire ou tumorale",
+          "(3) Est le maître symptôme des infections de l'espace masticateur",
+          "(4) Sa prise en charge doit faire intervenir plusieurs spécialités",
+          "(5) Peut évoluer vers une ankylose de l'ATM"
+        ],
+        correctOptionIndexes: [1], // Corresponds à B (1,2,3)
+        explanation: "Le trismus est un symptôme majeur des infections de l'espace masticateur (3). Ses causes sont variées (dentaires, salivaires, tumorales...) (2). Il peut être le premier signe révélateur d'un cancer (1). Le trismus est réversible et n'évolue pas en ankylose (constriction)."
+      },
+      {
+        questionText: "La palpation des muscles masticateurs dans le cas de trismus cherche apprécier :",
+        options: [
+          "La mobilité condylienne et ses troubles éventuels.",
+          "Les zones douloureuses et les faisceaux indurés en particulier au niveau de leurs insertions.",
+          "La consistance et le volume musculaire.",
+          "Dans un contexte traumatique, les structures osseuses au niveau des corps mandibulaires et de la région zygomato-malaire."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La palpation musculaire permet d'évaluer la consistance et le volume des muscles, et surtout de localiser les points gâchettes douloureux ('trigger points') et les bandes indurées."
+      },
+      {
+        questionText: "Suite au bilan radio-clinique, la constriction permanente des maxillaires est évoquée, lorsque on est devant une forme :",
+        options: [
+          "Fixée, a évolution chronique.",
+          "A caractère constant et indolore.",
+          "D'installation rapide.",
+          "Avec un processus de consolidation anormale en rapport avec une lésion récente d'origine (osseuse, musculaire, muqueuse ou cutanée)"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La constriction permanente, par opposition au trismus, est une limitation chronique et fixée de l'ouverture buccale, résultant d'un processus de cicatrisation ou de consolidation anormal (fibrose, ossification, ankylose)."
+      },
+      {
+        questionText: "Nous citons les causes infectieuses extra dentaires les plus fréquentes du trismus:",
+        options: [
+          "La stomatite odontiasique en rapport avec une molaire en éruption.",
+          "La sub-maxillite.",
+          "L'arthrite temporo-mandibulaire",
+          "La fracture angulaire déplacée de la mandibule"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Parmi les causes extra-dentaires, une arthrite (inflammatoire ou septique) de l'articulation temporo-mandibulaire peut provoquer un trismus réflexe."
+      },
+      {
+        questionText: "Les muscles élévateurs masticateurs sont :",
+        options: [
+          "(1) Les seuls responsables du mouvement d'abaissement",
+          "(2) sont au nombre de 3",
+          "(3) tous Innervés par le nerf mandibulaire sauf le masséter",
+          "(4) Le faisceau postérieur du temporal a une action de rétropulsion",
+          "(5) Les ptérygoïdiens externes ferment la mandibule"
+        ],
+        correctOptionIndexes: [2], // Corresponds à C (4,5) mais le CSV est erroné
+        explanation: "Les élévateurs sont le masséter, le temporal et le ptérygoïdien médial. Ils sont au nombre de 3 paires (B est correct). Le faisceau postérieur du temporal est rétropulseur (D est correct). Les ptérygoïdiens latéraux sont abaisseurs/propulseurs."
+      },
+      {
+        questionText: "Lors de l'exploration radiologique des ATM:",
+        options: [
+          "La TDM permet une bonne évaluation des disques articulaires",
+          "La radiographie panoramique permet une très bonne appréciation.",
+          "Le disque articulaire est bien visualisé sur l'incidence Schuller.",
+          "L'IRM est le seul examen permettant d'évaluer le ménisque"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'IRM est l'examen de référence pour l'étude des tissus mous, et donc le seul qui permet de visualiser directement le disque articulaire (ménisque) et ses déplacements."
+      },
+      {
+        questionText: "La physiopathologie de l'ankylose temporo-mandibulaire chez l'enfant est rattachée à la formation le plus souvent d'un cal osseux solidarisant l'os temporal et le bord supérieur de la branche montante de la mandibule:",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "C'est exact. L'ankylose est le plus souvent la conséquence d'un traumatisme condylien, où la formation d'un cal osseux hypertrophique finit par fusionner (solidariser) le condyle/la branche montante avec la base du crâne."
+      },
+      {
+        questionText: "Une ankylose temporo-mandibulaire unilatérale, observée à l'âge adulte, est caractérisée par les signes suivants :",
+        options: [
+          "(1) une rétromandibulie bilatérale symétrique",
+          "(2) un effacement de l'angle mandibulaire du coté sain",
+          "(3) la ligne Inter Incisive reste centrée",
+          "(4) le contact molaire est conservé du côté atteint",
+          "(5) Le menton regarde du coté opposé"
+        ],
+        correctOptionIndexes: [3], // Corresponds à D (2,4,5)
+        explanation: "Dans l'ankylose unilatérale de l'adulte, on note une asymétrie avec rétromandibulie et effacement de l'angle du côté atteint. Le menton est dévié vers le côté de l'ankylose. Le contact molaire peut être conservé du côté atteint."
+      },
+      {
+        questionText: "Une pathologie de l'articulation temporo-mandibulaire peut se manifester cliniquement par:",
+        options: [
+          "Douleur",
+          "Une infection",
+          "Des bruits articulaires",
+          "Une tuméfaction"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les signes cardinaux des pathologies de l'ATM sont les douleurs (arthralgies, myalgies), les bruits articulaires (claquements, crépitations), et les limitations ou déviations des mouvements mandibulaires."
+      },
+      {
+        questionText: "Dans l'exploration des pathologies des ATM, les examens radiologiques les plus indiqués sont :",
+        options: [
+          "L'IRM",
+          "L'incidence de Blondeau",
+          "La TDM",
+          "L'incidence de Hirtz"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les examens de choix en imagerie avancée sont la TDM (ou Cone Beam) pour une analyse fine des structures osseuses, et l'IRM pour l'étude des tissus mous (disque, ligaments)."
+      },
+      {
+        questionText: "Le Trismus :",
+        options: [
+          "Est un symptôme clinique irréversible",
+          "Est souvent dû à une infiltration des muscles masticateurs en rapport avec une lésion de voisinage",
+          "Peut-être rencontré au cours d'une sclérose cicatricielle",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le trismus est une contracture musculaire réflexe, le plus souvent en réponse à une douleur ou une inflammation de voisinage (infection, traumatisme). Il est passager et réversible. Une sclérose cicatricielle cause une constriction (permanente)."
+      },
+      {
+        questionText: "Parmi les causes de la constriction permanente des maxillaires, on retient :",
+        options: [
+          "Le tétanos",
+          "L'ankylose temporo-mandibulaire",
+          "La prise de neuroleptiques",
+          "Une sclérose cicatricielle",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La constriction permanente est due à un blocage mécanique. Les causes peuvent être osseuses (ankylose de l'ATM) ou extra-osseuses, comme une fibrose/sclérose cicatricielle des muscles masticateurs ou de la peau."
+      },
+      {
+        questionText: "Dans l'examen clinique des ATM :",
+        options: [
+          "La profession du patient est un élément important à préciser",
+          "On recherche la notion de traumatisme d'origine iatrogène",
+          "On applique la pulpe des index à 1 cm du tragus pour la palpation endo-auriculaire des ATM",
+          "La palpation musculaire s'effectue à la recherche de zones douloureuses"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "L'anamnèse recherche les traumatismes (y compris iatrogènes). L'examen clinique comprend une palpation musculaire à la recherche de points douloureux, et une palpation articulaire pré-tragienne ou endo-auriculaire."
+      },
+      {
+        questionText: "Concernant l'exploration radiologique des ATM :",
+        options: [
+          "La radiographie panoramique est demandé en première intention",
+          "Le scanner est moyen fiable d'évaluation du disque et des composantes musculaires",
+          "Les données squelettiques sont mieux explorées par l'IRM",
+          "L'IRM et le scanner sont demandés en deuxième intention"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La panoramique est souvent réalisée en première intention pour un débrouillage général. Pour une analyse plus fine, le scanner (pour l'os) et l'IRM (pour les tissus mous) sont demandés en deuxième intention."
+      },
+      {
+        questionText: "Chez un patient présentant un trismus :",
+        options: [
+          "La thérapeutique repose, essentiellement, sur un traitement médical symptomatique",
+          "L'étiologie tumorale est évoquée en l'absence de causes évidentes",
+          "Le trismus est d'autant plus serré que la dent est postérieure",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le trismus étant un symptôme, son traitement est étiologique (traitement de la cause). En l'absence de cause évidente, une origine tumorale doit être recherchée. Les infections des molaires postérieures, proches des muscles masticateurs, provoquent souvent les trismus les plus serrés."
+      },
+      {
+        questionText: "Dans l'ankylose temporo-mandibulaire chez l'enfant :",
+        options: [
+          "Les formes bilatérales sont caractérisées par le signe du « menton qui regarde l’ankylose »",
+          "Contrairement à l'adulte, il y a absence de troubles morphogéniques et occlusaux",
+          "Le traitement préventif repose sur le diagnostic précoce et le traitement adéquat des fractures condyliennes",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Chez l'enfant, l'ankylose a des conséquences graves sur la croissance. Le traitement préventif est donc essentiel et passe par le dépistage et le traitement correct des fractures condyliennes, qui en sont la cause principale."
+      },
+      {
+        questionText: "Une limitation de l'ouverture buccale dans sa forme aigue, peut se rencontrer en cas :",
+        options: [
+          "D'une cellulite aigue suppurée en rapport avec la 32",
+          "D'une cellulite aigue séreuse en rapport avec la 47",
+          "D'une avulsion chirurgicale de la dent de sagesse maxillaire",
+          "D'une fracture de l'angle mandibulaire"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Un trismus (limitation aiguë) est souvent causé par une infection d'une molaire mandibulaire (proche des muscles élévateurs) ou une fracture de l'angle mandibulaire."
+      },
+      {
+        questionText: "Dans le traitement de la limitation de l'ouverture buccale :",
+        options: [
+          "La mécanothérapie est un complément indispensable au traitement",
+          "Les procédés utilisés sont les mêmes quel que soit la forme de la limitation",
+          "La régression de la limitation se fait de façon progressive après suppression de l'étiologie",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le traitement du trismus est avant tout étiologique (traitement de la cause). Une fois la cause supprimée (ex: traitement de l'infection), la contracture musculaire se lève et la limitation d'ouverture régresse progressivement."
+      }
     ]
   },
   {
@@ -3388,195 +3702,195 @@ const pathoBuccoDentaire_y4Quizzes = [
     subject: "patho-bucco-dentaire",
     questions: [
       {
-          questionText: "L'arthrose temporo-mandibulaire :",
-          options: [
-              "Est un processus aigu d'altération du cartilage",
-              "Est une polysynovite destructrice chronique d'origine auto immune",
-              "Se manifeste cliniquement par des crépitations intra-articulaires en cas de rupture méniscale",
-              "Se traduit radiologiquement par une sclérose sous-chondrale associée à des géodes"
-          ],
-          correctOptionIndexes: [3],
-          explanation: "L'arthrose est un processus dégénératif chronique du cartilage. Radiologiquement, on observe un pincement articulaire, une ostéophytose, une sclérose sous-chondrale et parfois des géodes. Cliniquement, elle se manifeste par des crépitations."
+        questionText: "L'arthrose temporo-mandibulaire :",
+        options: [
+          "Est un processus aigu d'altération du cartilage",
+          "Est une polysynovite destructrice chronique d'origine auto immune",
+          "Se manifeste cliniquement par des crépitations intra-articulaires en cas de rupture méniscale",
+          "Se traduit radiologiquement par une sclérose sous-chondrale associée à des géodes"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'arthrose est un processus dégénératif chronique du cartilage. Radiologiquement, on observe un pincement articulaire, une ostéophytose, une sclérose sous-chondrale et parfois des géodes. Cliniquement, elle se manifeste par des crépitations."
       },
       {
-          questionText: "Dans la terminologie des infections des glandes salivaires :",
-          options: [
-              "le terme de sialites convient aux infections salivaires parenchymateuses et canalaires",
-              "le terme de sialadénites convient aux infections salivaires parenchymateuses",
-              "le terme sialodochite convient aux infections parenchymateuses",
-              "les Oreillons correspondent aux infections bactériennes de la glande parotide"
-          ],
-          correctOptionIndexes: [0, 1],
-          explanation: "Le terme 'sialite' désigne toute infection d'une glande salivaire. On distingue la 'sialadénite' (atteinte du parenchyme glandulaire) de la 'sialodochite' (atteinte du canal excréteur). Les oreillons sont une sialadénite virale."
+        questionText: "Dans la terminologie des infections des glandes salivaires :",
+        options: [
+          "le terme de sialites convient aux infections salivaires parenchymateuses et canalaires",
+          "le terme de sialadénites convient aux infections salivaires parenchymateuses",
+          "le terme sialodochite convient aux infections parenchymateuses",
+          "les Oreillons correspondent aux infections bactériennes de la glande parotide"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le terme 'sialite' désigne toute infection d'une glande salivaire. On distingue la 'sialadénite' (atteinte du parenchyme glandulaire) de la 'sialodochite' (atteinte du canal excréteur). Les oreillons sont une sialadénite virale."
       },
       {
-          questionText: "La parotidite ourlienne :",
-          options: [
-              "Se manifeste par une tuméfaction uni- ou bilatérale",
-              "Est l'infection virale la plus fréquente des glandes salivaires",
-              "Touche uniquement les glandes submandibulaires",
-              "Nécessite une antibiothérapie"
-          ],
-          correctOptionIndexes: [0, 1],
-          explanation: "Les oreillons sont la plus fréquente des sialadénites virales. Elle se manifeste par une tuméfaction parotidienne, uni- ou le plus souvent bilatérale. Le traitement est symptomatique (antalgiques, antipyrétiques), sans antibiotiques."
+        questionText: "La parotidite ourlienne :",
+        options: [
+          "Se manifeste par une tuméfaction uni- ou bilatérale",
+          "Est l'infection virale la plus fréquente des glandes salivaires",
+          "Touche uniquement les glandes submandibulaires",
+          "Nécessite une antibiothérapie"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les oreillons sont la plus fréquente des sialadénites virales. Elle se manifeste par une tuméfaction parotidienne, uni- ou le plus souvent bilatérale. Le traitement est symptomatique (antalgiques, antipyrétiques), sans antibiotiques."
       },
       {
-          questionText: "Le syndrome de Gougerot-Sjögren:",
-          options: [
-              "Se manifeste par une sialorrhée en jet",
-              "Est caractérisée par une dégénérescence progressive des glandes exocrines",
-              "Peut-être primaire ou secondaire",
-              "Ne touche pas les glandes salivaires accessoires"
-          ],
-          correctOptionIndexes: [2],
-          explanation: "C'est une maladie auto-immune caractérisée par une infiltration lymphocytaire des glandes exocrines (sécheresse oculaire et buccale). Il est dit 'primaire' s'il est isolé, et 'secondaire' s'il est associé à une autre maladie auto-immune (ex: polyarthrite rhumatoïde)."
+        questionText: "Le syndrome de Gougerot-Sjögren:",
+        options: [
+          "Se manifeste par une sialorrhée en jet",
+          "Est caractérisée par une dégénérescence progressive des glandes exocrines",
+          "Peut-être primaire ou secondaire",
+          "Ne touche pas les glandes salivaires accessoires"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C'est une maladie auto-immune caractérisée par une infiltration lymphocytaire des glandes exocrines (sécheresse oculaire et buccale). Il est dit 'primaire' s'il est isolé, et 'secondaire' s'il est associé à une autre maladie auto-immune (ex: polyarthrite rhumatoïde)."
       },
       {
-          questionText: "Le premier examen à pratiquer au décours d'une pathologie salivaire infectieuse est :",
-          options: [
-              "La sialographie",
-              "La tomodensitométrie",
-              "L'échographie",
-              "L'imagerie par Résonance Magnétique"
-          ],
-          correctOptionIndexes: [2],
-          explanation: "L'échographie est l'examen de première intention pour explorer les pathologies des glandes salivaires. Elle est non invasive, peu coûteuse, et permet de différencier une lésion kystique d'une lésion solide et de guider une éventuelle ponction."
+        questionText: "Le premier examen à pratiquer au décours d'une pathologie salivaire infectieuse est :",
+        options: [
+          "La sialographie",
+          "La tomodensitométrie",
+          "L'échographie",
+          "L'imagerie par Résonance Magnétique"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'échographie est l'examen de première intention pour explorer les pathologies des glandes salivaires. Elle est non invasive, peu coûteuse, et permet de différencier une lésion kystique d'une lésion solide et de guider une éventuelle ponction."
       },
       {
-          questionText: "En présence d'une pathologie salivaire, le premier examen à demander est :",
-          options: [
-              "Panoramique",
-              "Echographie",
-              "Sialographie",
-              "IRM"
-          ],
-          correctOptionIndexes: [1],
-          explanation: "L'échographie est l'examen d'imagerie de première intention dans l'exploration des glandes salivaires."
+        questionText: "En présence d'une pathologie salivaire, le premier examen à demander est :",
+        options: [
+          "Panoramique",
+          "Echographie",
+          "Sialographie",
+          "IRM"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'échographie est l'examen d'imagerie de première intention dans l'exploration des glandes salivaires."
       },
       {
-          questionText: "La sialite ourlienne :",
-          options: [
-              "Est une infection salivaire virale des glandes submandibulaires.",
-              "Est une infection salivaire microbienne causée par les germes de la cavité buccale",
-              "Est à l'origine de tuméfaction inflammatoire parotidienne uni ou bilatérale",
-              "Peut survenir plusieurs fois chez le même enfant."
-          ],
-          correctOptionIndexes: [2],
-          explanation: "La sialite ourlienne (oreillons) est une infection virale (paramyxovirus) qui cause une tuméfaction de la glande parotide. L'infection confère une immunité durable."
+        questionText: "La sialite ourlienne :",
+        options: [
+          "Est une infection salivaire virale des glandes submandibulaires.",
+          "Est une infection salivaire microbienne causée par les germes de la cavité buccale",
+          "Est à l'origine de tuméfaction inflammatoire parotidienne uni ou bilatérale",
+          "Peut survenir plusieurs fois chez le même enfant."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La sialite ourlienne (oreillons) est une infection virale (paramyxovirus) qui cause une tuméfaction de la glande parotide. L'infection confère une immunité durable."
       },
       {
-          questionText: "L'arthrite des ATM peut être d'origine :",
-          options: [
-              "Immunologique.",
-              "Infectieuse.",
-              "Congénitale.",
-              "Héréditaire."
-          ],
-          correctOptionIndexes: [0, 1],
-          explanation: "Une arthrite est une inflammation de l'articulation. Elle peut être d'origine infectieuse (septique), immunologique (dans le cadre d'un rhumatisme inflammatoire) ou métabolique (ex: goutte)."
+        questionText: "L'arthrite des ATM peut être d'origine :",
+        options: [
+          "Immunologique.",
+          "Infectieuse.",
+          "Congénitale.",
+          "Héréditaire."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Une arthrite est une inflammation de l'articulation. Elle peut être d'origine infectieuse (septique), immunologique (dans le cadre d'un rhumatisme inflammatoire) ou métabolique (ex: goutte)."
       },
       {
-          questionText: "La parotidite aigue suppurée de l'adulte :",
-          options: [
-              "Est l'apanage du sujet immunodéprimé",
-              "Se manifeste par une suppuration à l'ostium du canal de Wharton.",
-              "Peut avoir le même tableau clinique qu'une parotidite aigue lithiasique",
-              "Se manifeste toujours dans un tableau de fièvre et de tuméfaction bilatérale"
-          ],
-          correctOptionIndexes: [0, 2],
-          explanation: "Elle survient sur un terrain débilité ou immunodéprimé. La suppuration se fait à l'ostium du canal de Sténon (et non Wharton). Elle peut être difficile à distinguer cliniquement d'une complication infectieuse de lithiase parotidienne."
+        questionText: "La parotidite aigue suppurée de l'adulte :",
+        options: [
+          "Est l'apanage du sujet immunodéprimé",
+          "Se manifeste par une suppuration à l'ostium du canal de Wharton.",
+          "Peut avoir le même tableau clinique qu'une parotidite aigue lithiasique",
+          "Se manifeste toujours dans un tableau de fièvre et de tuméfaction bilatérale"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Elle survient sur un terrain débilité ou immunodéprimé. La suppuration se fait à l'ostium du canal de Sténon (et non Wharton). Elle peut être difficile à distinguer cliniquement d'une complication infectieuse de lithiase parotidienne."
       },
       {
-          questionText: "La Sialadénite tuberculeuse de la parotide se manifeste cliniquement par :",
-          options: [
-              "Un module froid de la loge glandulaire, souvent prétragien",
-              "Des douleurs lancinantes",
-              "De la fièvre et une altération de l'état général",
-              "Une salive purulente au niveau de l'orifice du Wharton"
-          ],
-          correctOptionIndexes: [0],
-          explanation: "L'atteinte tuberculeuse est généralement torpide. Elle se manifeste par un nodule froid (non inflammatoire), indolore, sans fièvre, avec une salive claire. L'évolution se fait vers l'abcès froid et la fistulisation."
+        questionText: "La Sialadénite tuberculeuse de la parotide se manifeste cliniquement par :",
+        options: [
+          "Un module froid de la loge glandulaire, souvent prétragien",
+          "Des douleurs lancinantes",
+          "De la fièvre et une altération de l'état général",
+          "Une salive purulente au niveau de l'orifice du Wharton"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'atteinte tuberculeuse est généralement torpide. Elle se manifeste par un nodule froid (non inflammatoire), indolore, sans fièvre, avec une salive claire. L'évolution se fait vers l'abcès froid et la fistulisation."
       },
       {
-          questionText: "Le syndrome de Mikulicz est caractérisé par une :",
-          options: [
-              "Paralysie faciale, une chéilite et une langue plicaturée.",
-              "Tuméfaction des glandes salivaires essentiellement les sublinguales.",
-              "Augmentation de volume, le plus souvent indolore, des glandes salivaires (parotides) et des glandes lacrymales dont la cause est inconnue.",
-              "Poly-adénopathie de cause virale simulant une parotidite ourlienne."
-          ],
-          correctOptionIndexes: [2],
-          explanation: "Le syndrome de Mikulicz se définit par une augmentation de volume chronique et bilatérale des glandes lacrymales et salivaires (surtout les parotides). Il n'est pas une maladie en soi, mais un syndrome pouvant être lié à plusieurs pathologies (sarcoïdose, lymphome, etc.)."
+        questionText: "Le syndrome de Mikulicz est caractérisé par une :",
+        options: [
+          "Paralysie faciale, une chéilite et une langue plicaturée.",
+          "Tuméfaction des glandes salivaires essentiellement les sublinguales.",
+          "Augmentation de volume, le plus souvent indolore, des glandes salivaires (parotides) et des glandes lacrymales dont la cause est inconnue.",
+          "Poly-adénopathie de cause virale simulant une parotidite ourlienne."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le syndrome de Mikulicz se définit par une augmentation de volume chronique et bilatérale des glandes lacrymales et salivaires (surtout les parotides). Il n'est pas une maladie en soi, mais un syndrome pouvant être lié à plusieurs pathologies (sarcoïdose, lymphome, etc.)."
       },
       {
-          questionText: "La glande sublinguale a comme canal excréteur :",
-          options: [
-              "(1) Sténon",
-              "(2) Rivinius",
-              "(3) Bartholin",
-              "(4) plusieurs canaux mineurs",
-              "(5) Wharton"
-          ],
-          correctOptionIndexes: [2], // Correspond à C (2,3,4)
-          explanation: "La glande sublinguale est drainée par de multiples canaux mineurs (de Rivinus) qui s'ouvrent directement dans le plancher buccal, et souvent par un canal principal (de Bartholin) qui rejoint le canal de Wharton."
+        questionText: "La glande sublinguale a comme canal excréteur :",
+        options: [
+          "(1) Sténon",
+          "(2) Rivinius",
+          "(3) Bartholin",
+          "(4) plusieurs canaux mineurs",
+          "(5) Wharton"
+        ],
+        correctOptionIndexes: [2], // Correspond à C (2,3,4)
+        explanation: "La glande sublinguale est drainée par de multiples canaux mineurs (de Rivinus) qui s'ouvrent directement dans le plancher buccal, et souvent par un canal principal (de Bartholin) qui rejoint le canal de Wharton."
       },
       {
-          questionText: "La parotidite ourlienne a une étiologie :",
-          options: [
-              "Bactérienne.",
-              "Virale.",
-              "Lithiasique.",
-              "Parasitaire.",
-              "Aucune réponse juste."
-          ],
-          correctOptionIndexes: [1],
-          explanation: "La parotidite ourlienne (les oreillons) est une maladie infectieuse d'origine virale, causée par un Paramyxovirus."
+        questionText: "La parotidite ourlienne a une étiologie :",
+        options: [
+          "Bactérienne.",
+          "Virale.",
+          "Lithiasique.",
+          "Parasitaire.",
+          "Aucune réponse juste."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La parotidite ourlienne (les oreillons) est une maladie infectieuse d'origine virale, causée par un Paramyxovirus."
       },
       {
-          questionText: "Dans la parotidite ourlienne, nous retrouvons :",
-          options: [
-              "(1) tuméfaction parotidienne uni ou bilatérale",
-              "(2) adénopathie prétragienne ou sous mandibulaire",
-              "(3) trismus serré",
-              "(4) pus à la pression de l'ostium du Sténon",
-              "(5) un faciès triangulaire"
-          ],
-          correctOptionIndexes: [0], // Corresponds à A (1-2)
-          explanation: "Elle se manifeste par une tuméfaction parotidienne (qui donne le classique 'faciès piriforme') et s'accompagne d'adénopathies satellites. Il n'y a pas de pus à l'ostium (salive claire) et le trismus est modéré."
+        questionText: "Dans la parotidite ourlienne, nous retrouvons :",
+        options: [
+          "(1) tuméfaction parotidienne uni ou bilatérale",
+          "(2) adénopathie prétragienne ou sous mandibulaire",
+          "(3) trismus serré",
+          "(4) pus à la pression de l'ostium du Sténon",
+          "(5) un faciès triangulaire"
+        ],
+        correctOptionIndexes: [0], // Corresponds à A (1-2)
+        explanation: "Elle se manifeste par une tuméfaction parotidienne (qui donne le classique 'faciès piriforme') et s'accompagne d'adénopathies satellites. Il n'y a pas de pus à l'ostium (salive claire) et le trismus est modéré."
       },
       {
-          questionText: "Dans la pathologie salivaire canalaire, nous retrouvons :",
-          options: [
-              "(1) parotidite ourlienne",
-              "(2) Sialodochite",
-              "(3) dyskinésie salivaire",
-              "(4) polyadénopathie",
-              "(5) sialadénite virale"
-          ],
-          correctOptionIndexes: [2], // Corresponds à C (2-3)
-          explanation: "La pathologie canalaire concerne les canaux excréteurs. Elle inclut la sialodochite (inflammation du canal) et les dyskinésies salivaires (troubles de l'excrétion)."
+        questionText: "Dans la pathologie salivaire canalaire, nous retrouvons :",
+        options: [
+          "(1) parotidite ourlienne",
+          "(2) Sialodochite",
+          "(3) dyskinésie salivaire",
+          "(4) polyadénopathie",
+          "(5) sialadénite virale"
+        ],
+        correctOptionIndexes: [2], // Corresponds à C (2-3)
+        explanation: "La pathologie canalaire concerne les canaux excréteurs. Elle inclut la sialodochite (inflammation du canal) et les dyskinésies salivaires (troubles de l'excrétion)."
       },
       {
-          questionText: "La sialadénite Ourlienne est :",
-          options: [
-              "Une infection virale",
-              "Une Infection bactérienne",
-              "Une infection mycosique",
-              "Une infection spécifique"
-          ],
-          correctOptionIndexes: [0],
-          explanation: "La sialadénite ourlienne, ou oreillons, est une infection causée par un virus (paramyxovirus)."
+        questionText: "La sialadénite Ourlienne est :",
+        options: [
+          "Une infection virale",
+          "Une Infection bactérienne",
+          "Une infection mycosique",
+          "Une infection spécifique"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La sialadénite ourlienne, ou oreillons, est une infection causée par un virus (paramyxovirus)."
       },
       {
-          questionText: "L'exploration radiologique des glandes salivaires :",
-          options: [
-              "Les clichés standards s'adressent aux glandes salivaires accessoires essentiellement à la recherche d'opacités lithiasiques.",
-              "L'image échographique n'a pas de spécificité, elle permet d'éliminer les processus tumoraux.",
-              "La tomodensitométrie (TDM) trouve son intérêt dans la pathologie tumorale",
-              "Toutes les réponses sont fausses"
-          ],
-          correctOptionIndexes: [2],
-          explanation: "L'échographie est l'examen de première intention. La TDM est un examen de seconde intention, très utile dans le bilan d'extension des pathologies tumorales pour évaluer les rapports avec les structures adjacentes."
+        questionText: "L'exploration radiologique des glandes salivaires :",
+        options: [
+          "Les clichés standards s'adressent aux glandes salivaires accessoires essentiellement à la recherche d'opacités lithiasiques.",
+          "L'image échographique n'a pas de spécificité, elle permet d'éliminer les processus tumoraux.",
+          "La tomodensitométrie (TDM) trouve son intérêt dans la pathologie tumorale",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'échographie est l'examen de première intention. La TDM est un examen de seconde intention, très utile dans le bilan d'extension des pathologies tumorales pour évaluer les rapports avec les structures adjacentes."
       }
     ]
   },
@@ -4329,10 +4643,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Une candidose chronique est une lésion blanche:",
         options: [
-            "D'origine bactérienne",
-            "Détachable",
-            "Fréquente chez l'immunodéprimé",
-            "A risque de dégénérescence maligne"
+          "D'origine bactérienne",
+          "Détachable",
+          "Fréquente chez l'immunodéprimé",
+          "A risque de dégénérescence maligne"
         ],
         correctOptionIndexes: [2, 3],
         explanation: "La candidose chronique hyperplasique est une kératose d'origine mycosique. Elle se présente comme une lésion blanche adhérente, souvent observée chez les immunodéprimés et les fumeurs. Elle présente un risque de transformation maligne."
@@ -4340,10 +4654,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Les signes cliniques devant faire suspecter une dégénérescence maligne d'une leucoplasie sont:",
         options: [
-            "Apparition de la douleur",
-            "Apparition d'adénopathies satellites",
-            "Régression de la lésion d'une manière progressive",
-            "Modification de la couleur et de l'aspect de la lésion"
+          "Apparition de la douleur",
+          "Apparition d'adénopathies satellites",
+          "Régression de la lésion d'une manière progressive",
+          "Modification de la couleur et de l'aspect de la lésion"
         ],
         correctOptionIndexes: [0, 1, 3],
         explanation: "Tout changement d'une leucoplasie connue est suspect : modification de l'aspect (relief, texture, couleur), apparition d'une douleur ou d'une induration, et développement d'une adénopathie satellite sont des signes qui doivent alerter et faire pratiquer une biopsie."
@@ -4351,10 +4665,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "La classification des dysplasies épithéliales repose sur :",
         options: [
-            "Le degré de sévérité des anomalies cellulaires",
-            "L'épaisseur de l'épithélium atteinte par les altérations",
-            "La taille totale de la lésion clinique",
-            "La présence ou l'absence d'adénopathies satellites"
+          "Le degré de sévérité des anomalies cellulaires",
+          "L'épaisseur de l'épithélium atteinte par les altérations",
+          "La taille totale de la lésion clinique",
+          "La présence ou l'absence d'adénopathies satellites"
         ],
         correctOptionIndexes: [0, 1],
         explanation: "Le grade de la dysplasie (légère, modérée, sévère) est défini histologiquement par l'association des anomalies architecturales (l'épaisseur de l'épithélium atteinte) et des anomalies cytologiques (sévérité des atypies cellulaires)."
@@ -4558,10 +4872,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "La pigmentation ethnique est :",
         options: [
-            "Une pigmentation physiologique diffuse isolée",
-            "Localisée sur la gencive attachée et épargne la gencive marginale et les papilles dentaires",
-            "Un signe de la maladie de Laugier-Hunziker",
-            "Un tatouage cosmétique"
+          "Une pigmentation physiologique diffuse isolée",
+          "Localisée sur la gencive attachée et épargne la gencive marginale et les papilles dentaires",
+          "Un signe de la maladie de Laugier-Hunziker",
+          "Un tatouage cosmétique"
         ],
         correctOptionIndexes: [1],
         explanation: "Il s'agit d'une pigmentation mélanique physiologique. Elle est typiquement localisée sur la gencive attachée, en épargnant la gencive marginale et les papilles. Elle est non pathologique et sans risque de transformation."
@@ -4569,10 +4883,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Les lésions pigmentées associées à une intoxication:",
         options: [
-            "Sont associées de manière chronologique à l'utilisation d'un médicament spécifique",
-            "Régressent le plus souvent à l'arrêt du médicament",
-            "Peuvent être secondaire à une intoxication tabagique",
-            "Sont des lésions potentiellement malignes"
+          "Sont associées de manière chronologique à l'utilisation d'un médicament spécifique",
+          "Régressent le plus souvent à l'arrêt du médicament",
+          "Peuvent être secondaire à une intoxication tabagique",
+          "Sont des lésions potentiellement malignes"
         ],
         correctOptionIndexes: [0, 1],
         explanation: "Les pigmentations médicamenteuses sont bénignes et régressent généralement à l'arrêt du traitement. Le lien de cause à effet est établi par l'apparition chronologique après l'introduction du médicament."
@@ -4580,10 +4894,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Parmi les pathologies suivantes, lesquelles peuvent être responsables de l'apparition d'une pigmentation de la muqueuse orale?",
         options: [
-            "La maladie d'Addison",
-            "Le syndrome de Peutz-Jeghers",
-            "La maladie de Cooley",
-            "Le syndrome de Zinsser-Cole-Engman"
+          "La maladie d'Addison",
+          "Le syndrome de Peutz-Jeghers",
+          "La maladie de Cooley",
+          "Le syndrome de Zinsser-Cole-Engman"
         ],
         correctOptionIndexes: [0, 1],
         explanation: "De nombreuses maladies systémiques peuvent s'accompagner de pigmentations buccales, notamment des maladies endocriniennes comme la maladie d'Addison et des syndromes génétiques comme le Peutz-Jeghers."
@@ -4591,11 +4905,11 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le mélanome malin de la cavité buccale :",
         options: [
-            "Lésion non mélanocytaire",
-            "Peut-être primitif ou secondaire sur zone pigmentée",
-            "Il résulte histologiquement de la transformation maligne des mélanocytes",
-            "Tumeur qui évolue en envahissant les tissus mous et os sous-jacent",
-            "De pronostic favorable"
+          "Lésion non mélanocytaire",
+          "Peut-être primitif ou secondaire sur zone pigmentée",
+          "Il résulte histologiquement de la transformation maligne des mélanocytes",
+          "Tumeur qui évolue en envahissant les tissus mous et os sous-jacent",
+          "De pronostic favorable"
         ],
         correctOptionIndexes: [2, 3],
         explanation: "Le mélanome est une tumeur maligne issue des mélanocytes. C'est une tumeur agressive qui envahit localement les tissus. Son pronostic est très sombre."
@@ -4603,10 +4917,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le tatouage muqueux à l'amalgame :",
         options: [
-            "Est une Lésion pigmentée mélanique",
-            "Est d'origine endogène",
-            "Se traduit par des opacités visibles à l'examen radiologique",
-            "Se manifeste cliniquement par une macule de couleur blanchâtre"
+          "Est une Lésion pigmentée mélanique",
+          "Est d'origine endogène",
+          "Se traduit par des opacités visibles à l'examen radiologique",
+          "Se manifeste cliniquement par une macule de couleur blanchâtre"
         ],
         correctOptionIndexes: [2],
         explanation: "Il s'agit d'une pigmentation exogène, non mélanique, due à l'implantation de particules d'amalgame dans la muqueuse. La présence d'opacités métalliques à la radiographie confirme le diagnostic."
@@ -4614,10 +4928,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Laquelle des pathologies suivantes ne peut pas être associée à une pigmentation de la muqueuse orale ?",
         options: [
-            "La maladie de Laugier Hunziker",
-            "Le syndrome de Peutz - Jeghers",
-            "La drépanocytose",
-            "La maladie d'Addison"
+          "La maladie de Laugier Hunziker",
+          "Le syndrome de Peutz - Jeghers",
+          "La drépanocytose",
+          "La maladie d'Addison"
         ],
         correctOptionIndexes: [2],
         explanation: "La maladie de Laugier-Hunziker, le Peutz-Jeghers et la maladie d'Addison sont des causes classiques de pigmentation buccale. La drépanocytose est une anémie hémolytique qui ne cause pas de pigmentation mélanique."
@@ -4625,10 +4939,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le signe de Nicolsky correspond :QCS",
         options: [
-            "Au signe de la pince",
-            "Au décollement de l'épithélium par des précelles",
-            "Au décollement de l'épithélium par frottement muqueux.",
-            "A un bâillonnement des cellules épithéliales"
+          "Au signe de la pince",
+          "Au décollement de l'épithélium par des précelles",
+          "Au décollement de l'épithélium par frottement muqueux.",
+          "A un bâillonnement des cellules épithéliales"
         ],
         correctOptionIndexes: [2],
         explanation: "Le signe de Nikolsky (ou Nicolsky) est la provocation d'un décollement bulleux sur une peau ou une muqueuse saine en apparence par une simple pression tangentielle. Il traduit une perte d'adhésion intercellulaire (acantholyse) et est typique du pemphigus."
@@ -4636,9 +4950,9 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Concernant le mélanome buccal, quelle est la proposition juste : QCS",
         options: [
-            "Le mélanome buccal est classé dans les tumeurs bénignes pigmentaires",
-            "Le mélanome buccal se manifeste à un stade précoce par une papule surélevée pouvant déstabiliser une prothèse amovible",
-            "Le mélanome buccal apparaît préférentiellement sur la muqueuse kératinisée du palais osseux et de la gencive"
+          "Le mélanome buccal est classé dans les tumeurs bénignes pigmentaires",
+          "Le mélanome buccal se manifeste à un stade précoce par une papule surélevée pouvant déstabiliser une prothèse amovible",
+          "Le mélanome buccal apparaît préférentiellement sur la muqueuse kératinisée du palais osseux et de la gencive"
         ],
         correctOptionIndexes: [2],
         explanation: "Le mélanome est une tumeur maligne. Il se développe préférentiellement au niveau du palais dur et de la gencive maxillaire."
@@ -4646,10 +4960,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Dans le traitement d'un tatouage à l'amalgame, il est recommandé de : QCS",
         options: [
-            "S'abstenir avec une surveillance périodique de la lésion",
-            "Faire appel a d'autres spécialistes pour une prise en charge adéquate",
-            "Recourir a une biopsie pour éliminer le diagnostic de mélanome",
-            "Procéder à une biopsie-exérèse de la lésion"
+          "S'abstenir avec une surveillance périodique de la lésion",
+          "Faire appel a d'autres spécialistes pour une prise en charge adéquate",
+          "Recourir a une biopsie pour éliminer le diagnostic de mélanome",
+          "Procéder à une biopsie-exérèse de la lésion"
         ],
         correctOptionIndexes: [3],
         explanation: "Si le diagnostic clinique et radiologique n'est pas certain, ou si la lésion change, une biopsie-exérèse est nécessaire pour confirmer qu'il s'agit bien d'un tatouage et pour éliminer un mélanome."
@@ -4657,10 +4971,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Dans le mélanome malin :",
         options: [
-            "L'étiologie est l'intoxication alcoolo-tabagique",
-            "Le taux de survie est de 1%",
-            "L'histologie et l'analyse immuno-cytochimique confirment le diagnostic",
-            "L'étiopathogénie est en rapport avec une surcharge ferrique"
+          "L'étiologie est l'intoxication alcoolo-tabagique",
+          "Le taux de survie est de 1%",
+          "L'histologie et l'analyse immuno-cytochimique confirment le diagnostic",
+          "L'étiopathogénie est en rapport avec une surcharge ferrique"
         ],
         correctOptionIndexes: [2],
         explanation: "Le diagnostic de certitude est posé par l'examen histopathologique et l'analyse immuno-cytochimique. Le pronostic est sombre, avec un taux de survie à 5 ans inférieur à 30%. Le rôle du tabac est discuté mais non prouvé."
@@ -4668,10 +4982,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "La pigmentation mélanique :",
         options: [
-            "La pigmentation varie suivant le phototype du sujet",
-            "Peut être stimulée par les secrétions hormonales (acth, msh, œstrogènes)",
-            "Peut être stimulée par les médicaments",
-            "L'histologie montre une diminution du nombre des mélanocytes (hypermélanocytoses) avec une augmentation de la quantité de mélanine dans les mélanomes"
+          "La pigmentation varie suivant le phototype du sujet",
+          "Peut être stimulée par les secrétions hormonales (acth, msh, œstrogènes)",
+          "Peut être stimulée par les médicaments",
+          "L'histologie montre une diminution du nombre des mélanocytes (hypermélanocytoses) avec une augmentation de la quantité de mélanine dans les mélanomes"
         ],
         correctOptionIndexes: [0, 1, 2],
         explanation: "La production de mélanine est influencée par le phototype, les hormones (grossesse, maladie d'Addison) et certains médicaments. Histologiquement, on peut avoir une augmentation de la mélanine (mélanose) ou du nombre de mélanocytes (mélanocytose)."
@@ -4679,10 +4993,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Sur le plan histologique les lésions pigmentaires se traduisent par :",
         options: [
-            "Une augmentation du nombre des mélanocytes",
-            "Une augmentation de la quantité de mélanine dans l'épithélium",
-            "Une incontinence pigmentaire",
-            "Aucune des réponses n’est juste"
+          "Une augmentation du nombre des mélanocytes",
+          "Une augmentation de la quantité de mélanine dans l'épithélium",
+          "Une incontinence pigmentaire",
+          "Aucune des réponses n’est juste"
         ],
         correctOptionIndexes: [0, 1, 2],
         explanation: "Les mécanismes histologiques des pigmentations sont une hyperproduction de mélanine, une augmentation du nombre de mélanocytes, ou le passage de pigment dans le chorion (incontinence pigmentaire)."
@@ -4696,10 +5010,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Les principales causes buccodentaires responsables de l'apparition des adénopathies cervico-faciales sont:",
         options: [
-            "Une péricoronarite de la dent de sagesse en évolution",
-            "Une dent cariée porteuse d'un crochet de prothèse amovible",
-            "Une gingivo-stomatite de la primo-infection herpétique",
-            "Pulpite aigue sur une dent cariée"
+          "Une péricoronarite de la dent de sagesse en évolution",
+          "Une dent cariée porteuse d'un crochet de prothèse amovible",
+          "Une gingivo-stomatite de la primo-infection herpétique",
+          "Pulpite aigue sur une dent cariée"
         ],
         correctOptionIndexes: [0, 2],
         explanation: "Les adénopathies réactionnelles d'origine bucco-dentaire sont liées à des infections ou des inflammations, telles qu'une gingivo-stomatite virale ou une péricoronarite bactérienne. Une pulpite aiguë non compliquée ne donne pas d'adénopathie."
@@ -4707,10 +5021,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Devant une adénopathie (ADP) cervicale isolée, chronique fixée à la peau et indolore chez un sujet de plus de 55 ans, le diagnostic est en faveur :",
         options: [
-            "D'une ADP néoplasique maligne",
-            "D'un ADP en rapport avec une cellulite chronique",
-            "D'une hémopathie maligne (Lymphome)",
-            "D'une ADP satellite d'un chancre tuberculeux de la muqueuse buccale"
+          "D'une ADP néoplasique maligne",
+          "D'un ADP en rapport avec une cellulite chronique",
+          "D'une hémopathie maligne (Lymphome)",
+          "D'une ADP satellite d'un chancre tuberculeux de la muqueuse buccale"
         ],
         correctOptionIndexes: [0],
         explanation: "L'association des critères (isolée, chronique, dure, fixée, indolore) chez un patient de plus de 40 ans doit systématiquement faire suspecter une adénopathie métastatique d'un cancer jusqu'à preuve du contraire."
@@ -4718,10 +5032,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "L'adénophlegmon:",
         options: [
-            "Correspond à l'évolution d'une adénite aigue non traitée",
-            "Est recouvert d'une peau rouge et chaude",
-            "Est très douloureux à la palpation",
-            "Est retrouvé devant une néoplasie du cavum"
+          "Correspond à l'évolution d'une adénite aigue non traitée",
+          "Est recouvert d'une peau rouge et chaude",
+          "Est très douloureux à la palpation",
+          "Est retrouvé devant une néoplasie du cavum"
         ],
         correctOptionIndexes: [0, 1, 2],
         explanation: "L'adénophlegmon est la diffusion de l'infection au-delà de la capsule ganglionnaire. C'est la complication d'une adénite aiguë, se manifestant par une tuméfaction inflammatoire, chaude et douloureuse, qui a perdu les limites nettes du ganglion initial."
@@ -4729,10 +5043,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Devant une adénopathie d'origine cervicale, quels sont les éléments qui doivent faire évoquer l'étiologie tumorale maligne?",
         options: [
-            "La peau de recouvrement est inflammatoire",
-            "La fistulisation à la peau",
-            "La fixité par rapport au plan profond",
-            "La consistance dure"
+          "La peau de recouvrement est inflammatoire",
+          "La fistulisation à la peau",
+          "La fixité par rapport au plan profond",
+          "La consistance dure"
         ],
         correctOptionIndexes: [2, 3],
         explanation: "Les deux caractéristiques palpatoires majeures qui orientent vers une origine maligne sont la consistance dure, 'ligneuse', et la perte de mobilité (fixité) par rapport aux plans profonds (muscles)."
@@ -4740,10 +5054,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Parmi les pathologies suivantes, lesquelles peuvent être responsables de l’apparition de multiples adénopathies cervico-faciales ?",
         options: [
-            "Une tuberculose",
-            "Une grenouillette",
-            "Une aphtose buccale",
-            "Une primo-infection herpétique"
+          "Une tuberculose",
+          "Une grenouillette",
+          "Une aphtose buccale",
+          "Une primo-infection herpétique"
         ],
         correctOptionIndexes: [0, 3],
         explanation: "Des adénopathies multiples peuvent se voir dans les infections générales comme la primo-infection herpétique, la mononucléose infectieuse, le VIH, ou des infections spécifiques comme la tuberculose."
@@ -4751,10 +5065,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Une adénopathie d'allure tumorale peut être :",
         options: [
-            "Mobile et indolore",
-            "Mobile et douloureuse",
-            "Mobile et élastique",
-            "Fixe et indolore"
+          "Mobile et indolore",
+          "Mobile et douloureuse",
+          "Mobile et élastique",
+          "Fixe et indolore"
         ],
         correctOptionIndexes: [3],
         explanation: "Typiquement, une adénopathie métastatique est dure, indolore et fixée. Au stade initial, elle peut être mobile. Une consistance molle évoque une inflammation, une consistance élastique un lymphome."
@@ -4762,10 +5076,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "L’examen radiographique de première Intention devant la suspicion d'une adénopathie métastatique est :",
         options: [
-            "L'échographie",
-            "La biopsie ganglionnaire",
-            "La tomodensitométrie",
-            "L'IRM"
+          "L'échographie",
+          "La biopsie ganglionnaire",
+          "La tomodensitométrie",
+          "L'IRM"
         ],
         correctOptionIndexes: [0],
         explanation: "L'échographie cervicale (éventuellement couplée à une cytoponction) est l'examen de première intention pour caractériser une adénopathie suspecte."
@@ -4773,10 +5087,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Parmi les étiologies de l'adénite aigue :",
         options: [
-            "Une gingivostomatite",
-            "Un cancer de la langue",
-            "Une péricoronarite de la dent de sagesse",
-            "Un cancer de la thyroïde"
+          "Une gingivostomatite",
+          "Un cancer de la langue",
+          "Une péricoronarite de la dent de sagesse",
+          "Un cancer de la thyroïde"
         ],
         correctOptionIndexes: [0, 2],
         explanation: "L'adénite aiguë est la réponse inflammatoire à une infection bactérienne ou virale d'un territoire drainé, comme une gingivostomatite ou une péricoronarite. Le cancer donne des adénopathies chroniques."
@@ -4784,10 +5098,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Dans le cas de la tuberculose ganglionnaire la ou les ADP :",
         options: [
-            "Sont sous mandibulaires, indolores, mobilisables au stade initial",
-            "Évoluent vers le ramollissement",
-            "Peuvent être le siège d'une fistulisation",
-            "Sont souvent précédées par une cellulite cervico-faciale"
+          "Sont sous mandibulaires, indolores, mobilisables au stade initial",
+          "Évoluent vers le ramollissement",
+          "Peuvent être le siège d'une fistulisation",
+          "Sont souvent précédées par une cellulite cervico-faciale"
         ],
         correctOptionIndexes: [0, 1, 2],
         explanation: "L'adénite tuberculeuse (scrofule) est d'évolution chronique. Les ganglions sont d'abord mobiles, puis adhèrent aux plans profonds, se ramollissent (abcès froid), et se fistulisent à la peau laissant s'écouler un pus typique (caséum)."
@@ -4795,10 +5109,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Dans le cas de la Mononucléose infectieuse (MNI), les adénopathies sont :",
         options: [
-            "De sièges principalement sous-mandibulaires et spinaux",
-            "Non douloureuse à la palpation",
-            "Fermes, mobiles, de volume variable",
-            "Évoluent toujours vers la suppuration"
+          "De sièges principalement sous-mandibulaires et spinaux",
+          "Non douloureuse à la palpation",
+          "Fermes, mobiles, de volume variable",
+          "Évoluent toujours vers la suppuration"
         ],
         correctOptionIndexes: [2],
         explanation: "Les adénopathies de la MNI sont typiquement multiples, de taille variable, fermes, mobiles et sensibles. Elles ne suppurent jamais."
@@ -4806,10 +5120,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Au cours du syndrome d'immunodéficience acquise (sida) :",
         options: [
-            "La réapparition des adénopathies au stade de sida, fait suspecter une infection opportuniste",
-            "Au stade de sida avéré, les adénopathies disparaissent par déplétion lymphocytaire",
-            "Les patients ne développent jamais d'adénopathies",
-            "Toutes les réponses sont fausses"
+          "La réapparition des adénopathies au stade de sida, fait suspecter une infection opportuniste",
+          "Au stade de sida avéré, les adénopathies disparaissent par déplétion lymphocytaire",
+          "Les patients ne développent jamais d'adénopathies",
+          "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [0],
         explanation: "La phase initiale de l'infection VIH se caractérise par des polyadénopathies persistantes. La réapparition d'une adénopathie au stade de SIDA avancé doit faire suspecter une pathologie intercurrente (infection opportuniste ou lymphome)."
@@ -4817,10 +5131,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "L'atteinte du ganglion de Kuttner a une incidence :",
         options: [
-            "Diagnostique",
-            "Pronostique",
-            "Thérapeutique",
-            "Toutes les réponses sont fausses"
+          "Diagnostique",
+          "Pronostique",
+          "Thérapeutique",
+          "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [1],
         explanation: "L'atteinte du ganglion de Küttner (jugulo-carotidien supérieur) est très évocatrice d'une métastase de carcinome du cavum, et son atteinte a une valeur pronostique péjorative."
@@ -4828,10 +5142,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Dans la région sous-mentale, le diagnostic différentiel d’une adénopathie se fait avec :",
         options: [
-            "Une cellulite d'origine dentaire",
-            "Un kyste du tractus thyréoglosse",
-            "Une submandibulite",
-            "Toutes les réponses sont fausses"
+          "Une cellulite d'origine dentaire",
+          "Un kyste du tractus thyréoglosse",
+          "Une submandibulite",
+          "Toutes les réponses sont fausses"
         ],
         correctOptionIndexes: [1],
         explanation: "Dans la région sous-mentale médiane, les principaux diagnostics différentiels d'une adénopathie sont une cellulite d'origine incisive, un kyste du tractus thyréoglosse, ou un kyste dermoïde."
@@ -4845,10 +5159,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "L'urticaire de contact:",
         options: [
-            "Se manifeste par des papules très prurigineuses",
-            "Est une réaction allergique à médiation cellulaire",
-            "Disparaît en quelques jours sans laisser de séquelles ou de cicatrices",
-            "Est traitée par injection d'adrénaline"
+          "Se manifeste par des papules très prurigineuses",
+          "Est une réaction allergique à médiation cellulaire",
+          "Disparaît en quelques jours sans laisser de séquelles ou de cicatrices",
+          "Est traitée par injection d'adrénaline"
         ],
         correctOptionIndexes: [0],
         explanation: "L'urticaire est une réaction d'hypersensibilité immédiate (type I, médiée par les IgE). Elle se manifeste par des papules érythémateuses et prurigineuses (qui démangent), fugaces, qui disparaissent en quelques minutes ou heures sans laisser de cicatrice."
@@ -4856,10 +5170,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Dans les allergies en odontostomatologie:",
         options: [
-            "Les manifestations buccales d'origine allergique sont essentiellement de type III",
-            "Le syndrome de Lyell peut se manifester après l'administration des AINS",
-            "Le Prick-test est utilisé pour explorer l'hypersensibilité retardée",
-            "L'amalgame peut provoquer des réactions lichénoïdes"
+          "Les manifestations buccales d'origine allergique sont essentiellement de type III",
+          "Le syndrome de Lyell peut se manifester après l'administration des AINS",
+          "Le Prick-test est utilisé pour explorer l'hypersensibilité retardée",
+          "L'amalgame peut provoquer des réactions lichénoïdes"
         ],
         correctOptionIndexes: [1, 3],
         explanation: "Les allergies buccales sont surtout de type IV (retardée). Les prick-tests explorent le type I (immédiate). Les AINS sont de grands pourvoyeurs de toxidermies graves comme le syndrome de Lyell. Le mercure de l'amalgame peut provoquer des réactions lichénoïdes de contact."
@@ -4867,10 +5181,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le prurit est retrouvé dans les manifestations allergiques suivantes :",
         options: [
-            "Choc anaphylactique",
-            "Dermatite de contact",
-            "Urticaire",
-            "Œdème de Quincke"
+          "Choc anaphylactique",
+          "Dermatite de contact",
+          "Urticaire",
+          "Œdème de Quincke"
         ],
         correctOptionIndexes: [1, 2],
         explanation: "Le prurit (démangeaison) est un signe cardinal de l'urticaire et de la dermatite de contact (eczéma allergique)."
@@ -4878,10 +5192,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le syndrome de Lyell peut se manifester après l'administration:",
         options: [
-            "Des anti-inflammatoires non stéroïdiens",
-            "Des antifongiques",
-            "Des sulfamides",
-            "Des anesthésiques locaux"
+          "Des anti-inflammatoires non stéroïdiens",
+          "Des antifongiques",
+          "Des sulfamides",
+          "Des anesthésiques locaux"
         ],
         correctOptionIndexes: [0, 2],
         explanation: "Les sulfamides antibactériens et les AINS sont les classes de médicaments les plus fréquemment impliquées dans le déclenchement des nécrolyses épidermiques toxiques (syndromes de Lyell et de Stevens-Johnson)."
@@ -4889,10 +5203,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Cocher les réactions allergiques immédiates :",
         options: [
-            "Œdème de Quincke",
-            "Stomatite allergique",
-            "Choc anaphylactique",
-            "Urticaire"
+          "Œdème de Quincke",
+          "Stomatite allergique",
+          "Choc anaphylactique",
+          "Urticaire"
         ],
         correctOptionIndexes: [0, 2, 3],
         explanation: "Les réactions d'hypersensibilité immédiate (type I) vont de la simple urticaire à l'œdème de Quincke et, dans sa forme la plus grave, au choc anaphylactique. La stomatite allergique de contact est de type IV (retardée)."
@@ -4900,10 +5214,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Les composants potentiellement allergènes dans les solutions anesthésiques sont :",
         options: [
-            "La molécule anesthésique (surtout les esters)",
-            "L'antioxydant",
-            "Le conservateur",
-            "L'adrénaline"
+          "La molécule anesthésique (surtout les esters)",
+          "L'antioxydant",
+          "Le conservateur",
+          "L'adrénaline"
         ],
         correctOptionIndexes: [0, 1, 2],
         explanation: "Plusieurs composants de la cartouche anesthésique peuvent être allergènes : la molécule anesthésique elle-même (surtout la famille des esters), les conservateurs (parabènes) et les antioxydants (sulfites)."
@@ -4911,10 +5225,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le choc anaphylactique : QCS",
         options: [
-            "Est une réaction allergique retardée",
-            "S'accompagne toujours d'une urticaire de contact",
-            "S'accompagne d’une hypertension artérielle",
-            "Peut conduire au décès du malade"
+          "Est une réaction allergique retardée",
+          "S'accompagne toujours d'une urticaire de contact",
+          "S'accompagne d’une hypertension artérielle",
+          "Peut conduire au décès du malade"
         ],
         correctOptionIndexes: [3],
         explanation: "C'est la forme la plus grave de réaction d'hypersensibilité immédiate. Il engage le pronostic vital par collapsus cardiovasculaire (chute de la pression artérielle) et bronchospasme. C'est une urgence médicale absolue."
@@ -4922,10 +5236,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le choc anaphylactique :",
         options: [
-            "Est une réaction allergique retardée",
-            "S'accompagne toujours d'une urticaire de contact",
-            "S'accompagne d'une hypertension artérielle",
-            "Peut conduire au décès du malade"
+          "Est une réaction allergique retardée",
+          "S'accompagne toujours d'une urticaire de contact",
+          "S'accompagne d'une hypertension artérielle",
+          "Peut conduire au décès du malade"
         ],
         correctOptionIndexes: [3],
         explanation: "Il s'agit d'une réaction d'hypersensibilité immédiate et systémique, potentiellement mortelle, caractérisée par une chute de la tension artérielle. Les réactions retardées sont les stomatites de contact ou les dermatoses professionnelles."
@@ -4933,10 +5247,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le diagnostic différentiel du choc anaphylactique se fait avec :",
         options: [
-            "Une hypoglycémie",
-            "Une stomatite allergique",
-            "Un choc toxique",
-            "Un angio-œdème"
+          "Une hypoglycémie",
+          "Une stomatite allergique",
+          "Un choc toxique",
+          "Un angio-œdème"
         ],
         correctOptionIndexes: [2],
         explanation: "Le principal diagnostic différentiel d'un collapsus après injection d'un produit est le surdosage (choc toxique) qui peut mimer certains signes, bien que les mécanismes soient totalement différents."
@@ -4944,10 +5258,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Les composants, potentiellement, allergènes contenu clans les solutions anesthésiques sont :",
         options: [
-            "La molécule anesthésique (surtout les esters)",
-            "L'antioxydant (bisulfite de sodium)",
-            "Le conservateur (parabenzoate de méthyle)",
-            "Les correcteurs à base d'essences balsamiques, essences naturelles"
+          "La molécule anesthésique (surtout les esters)",
+          "L'antioxydant (bisulfite de sodium)",
+          "Le conservateur (parabenzoate de méthyle)",
+          "Les correcteurs à base d'essences balsamiques, essences naturelles"
         ],
         correctOptionIndexes: [0, 1, 2],
         explanation: "Les allergènes potentiels de la cartouche anesthésique sont la molécule active (surtout la famille des esters, peu utilisée aujourd'hui), les conservateurs (parabènes, souvent absents des cartouches actuelles) et l'antioxydant (sulfites, présent si la solution contient un vasoconstricteur)."
@@ -4955,10 +5269,10 @@ const pathoBuccoDentaire_y4Quizzes = [
       {
         questionText: "Le signe de Nikolsky est :",
         options: [
-            "Une observation dermatologique mise en évidence par la biologie",
-            "Une atteinte des muqueuses buccales qui précède souvent les lésions cutanées",
-            "Observé en exerçant une pression tangentielle ou un frottement de la peau à la base d’une lésion",
-            "Le signe pathognomonique du Syndrome de Lyell"
+          "Une observation dermatologique mise en évidence par la biologie",
+          "Une atteinte des muqueuses buccales qui précède souvent les lésions cutanées",
+          "Observé en exerçant une pression tangentielle ou un frottement de la peau à la base d’une lésion",
+          "Le signe pathognomonique du Syndrome de Lyell"
         ],
         correctOptionIndexes: [2, 3],
         explanation: "Il s'agit d'un signe clinique (non biologique) provoqué par une pression tangentielle. Il est caractéristique des dermatoses bulleuses avec clivage intra-épithélial (acantholyse), notamment le Pemphigus, mais il est aussi présent dans le syndrome de Lyell."

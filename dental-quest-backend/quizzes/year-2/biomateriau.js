@@ -1159,6 +1159,94 @@ const biomateriauQuizzesY2 = [
         correctOptionIndexes: [0],
         explanation: "Les qualités requises pour un plâtre à empreinte incluent: bonne stabilité dimensionnelle, caractère hydrophile, permettant une bonne rétention très précise de surface, facilité d'emploi, fluidité suffisante pour toutes les déformations.",
         citations: [471, 472]
+      },
+      {
+        questionText: "Concernant la fabrication du plâtre par le manufacturier :",
+        options: [
+          "Le plâtre de Paris (β) est obtenu par calcination sèche à l'air libre.",
+          "Le plâtre dur (Pierre/α) est obtenu par calcination humide sous pression.",
+          "Les particules du plâtre de Paris sont denses et régulières.",
+          "Les particules du plâtre dur sont poreuses et irrégulières."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le plâtre de Paris (Bêta) est obtenu à l'air libre (particules poreuses/irrégulières). Le plâtre dur (Alpha) est obtenu sous pression (particules denses/régulières). Les options C et D inversent les caractéristiques."
+      },
+      {
+        questionText: "La réaction de prise du plâtre :",
+        options: [
+          "Est une réaction endothermique (absorbe la chaleur).",
+          "Est une réaction exothermique (dégage de la chaleur).",
+          "Transforme l'hémihydrate en dihydrate.",
+          "Ne provoque aucun changement dimensionnel."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La réaction dégage de la chaleur (exothermique) et correspond à la réhydratation de l'hémihydrate pour reformer du gypse (dihydrate). Elle s'accompagne d'une expansion."
+      },
+      {
+        questionText: "L'effet d'un rapport Eau/Poudre (E/P) élevé (trop d'eau) :",
+        options: [
+          "Augmente la porosité du modèle final.",
+          "Augmente le temps de prise (la prise est plus lente).",
+          "Diminue la résistance mécanique.",
+          "Augmente l'expansion de prise."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Plus il y a d'eau, plus les cristaux sont espacés : cela augmente la porosité, fragilise le plâtre (moins résistant) et ralentit la prise. L'expansion est généralement plus faible car les cristaux se poussent moins."
+      },
+      {
+        questionText: "Parmi les additifs utilisés pour contrôler le temps de prise, lequel est un retardateur ?",
+        options: [
+          "Le chlorure de sodium (NaCl).",
+          "Le borax (Borate de sodium).",
+          "Le sulfate de potassium (K2SO4).",
+          "La poudre de gypse (Terra Alba)."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le borax et le citrate de sodium sont des retardateurs typiques. Les sels comme le NaCl (en faible concentration) et le K2SO4 sont des accélérateurs."
+      },
+      {
+        questionText: "Selon la classification ISO des plâtres dentaires, le Type 4 correspond à :",
+        options: [
+          "Un plâtre pour empreinte.",
+          "Une pierre à dureté élevée et faible expansion.",
+          "Un plâtre utilisé pour les modèles positifs unitaires (Die).",
+          "Un plâtre de Paris ordinaire."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le Type 4 est la 'Pierre à dureté élevée et faible expansion' (Die Stone), utilisé pour les modèles unitaires de précision (prothèse conjointe)."
+      },
+      {
+        questionText: "Concernant les propriétés mécaniques du plâtre pris :",
+        options: [
+          "La résistance à la compression est plus élevée que la résistance à la traction.",
+          "Le plâtre humide (récent) est plus résistant que le plâtre sec.",
+          "Le séchage complet augmente la résistance du matériau.",
+          "C'est un matériau très flexible."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le plâtre est un matériau fragile (céramique) : il résiste bien à la compression mais mal à la traction. Le plâtre sec (après évaporation de l'eau libre) est deux fois plus résistant que le plâtre humide."
+      },
+      {
+        questionText: "Quels facteurs influencent l'expansion de prise ?",
+        options: [
+          "La croissance des cristaux de gypse qui se poussent mutuellement.",
+          "L'immersion dans l'eau pendant la prise (expansion hygroscopique).",
+          "Un rapport E/P plus faible (mélange épais).",
+          "L'ajout de borax qui augmente l'expansion."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "L'expansion est due à la poussée des cristaux. Elle est augmentée par l'immersion dans l'eau (hygroscopique) et par un mélange épais (moins d'eau). Le borax (retardateur) tend à réduire l'expansion."
+      },
+      {
+        questionText: "Le stockage du plâtre :",
+        options: [
+          "Doit se faire dans un endroit humide.",
+          "Nécessite un conteneur étanche.",
+          "Est sensible à l'humidité de l'air qui peut altérer le temps de prise.",
+          "Peut se faire à l'air libre sans risque."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'hémihydrate est très hygroscopique (absorbe l'eau). L'humidité de l'air entraine une détérioration graduelle, d'où la nécessité d'un stockage étanche."
       }
     ]
   },
@@ -1311,6 +1399,83 @@ const biomateriauQuizzesY2 = [
         correctOptionIndexes: [1, 2],
         explanation: "La paraffine est une cire d'origine minérale, ajoutée à la cire d'abeille pour réduire sa plasticité. Elle est molle et cireuse.",
         citations: [480, 481, 482, 483]
+      },
+      {
+        questionText: "Parmi les matériaux suivants, lesquels appartiennent à la famille des matériaux 'élastiques' ?",
+        options: [
+          "Le plâtre à empreinte.",
+          "Les hydrocolloïdes (Alginates).",
+          "Les élastomères de synthèse (Silicones).",
+          "Les compositions thermoplastiques (Pâtes de Kerr)."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les matériaux élastiques peuvent sortir des zones de contre-dépouille sans se rompre ni se déformer définitivement. Ce sont les hydrocolloïdes et les élastomères."
+      },
+      {
+        questionText: "La précision (fidélité) d'un matériau à empreinte dépend de :",
+        options: [
+          "Sa viscosité (plus elle est faible, meilleur est l'étalement).",
+          "Sa mouillabilité (aptitude à s'étaler sur les tissus).",
+          "Sa couleur.",
+          "Son caractère hydrophile."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La précision dépend de la capacité du matériau à couler (viscosité) et à s'étaler sur les tissus humides (mouillabilité/hydrophilie). La couleur n'a pas d'impact direct sur la précision de l'enregistrement."
+      },
+      {
+        questionText: "Le phénomène de 'Thixotropie' est défini comme :",
+        options: [
+          "La capacité d'un matériau à devenir plus fluide sous pression (contrainte).",
+          "La capacité d'un matériau à ne pas couler lorsqu'il est au repos (stable sur le porte-empreinte).",
+          "L'augmentation de la viscosité sous pression.",
+          "Le changement de couleur lors de la prise."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Un matériau thixotrope est stable au repos (ne dégouline pas) mais devient très fluide lorsqu'on exerce une pression (lors de l'insertion en bouche), ce qui favorise l'enregistrement des détails."
+      },
+      {
+        questionText: "Concernant la stabilité dimensionnelle :",
+        options: [
+          "C'est la capacité de l'empreinte à conserver ses dimensions dans le temps.",
+          "Elle est influencée par le retrait de polymérisation.",
+          "Elle est influencée par la perte de sous-produits volatils (eau, alcool).",
+          "Elle est absolue pour tous les matériaux (0% de changement)."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Aucun matériau n'est parfaitement stable. La stabilité est affectée par les réactions chimiques (retrait) et physiques (évaporation, contraction thermique)."
+      },
+      {
+        questionText: "Les matériaux à empreinte 'rigides' (inélastiques) sont indiqués pour :",
+        options: [
+          "Les empreintes d'arcades dentées avec fortes contre-dépouilles.",
+          "L'enregistrement des zones sans contre-dépouille.",
+          "L'empreinte primaire chez l'édenté total.",
+          "L'enregistrement des limites sous-gingivales."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les matériaux rigides (Plâtre, Pâte de Kerr, ZOE) cassent ou se déforment s'il y a des rétentions. Ils sont donc réservés aux cas sans contre-dépouille ou aux édentés totaux."
+      },
+      {
+        questionText: "La mouillabilité d'un matériau sur une surface solide est caractérisée par :",
+        options: [
+          "Un angle de contact > 90° (matériau hydrophobe).",
+          "Un angle de contact < 90° (matériau hydrophile).",
+          "Une répulsion de l'eau.",
+          "Un bon étalement du liquide sur le solide."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Une bonne mouillabilité (hydrophilie) se traduit par un angle de contact faible (< 90°) et un bon étalement, assurant une meilleure précision."
+      },
+      {
+        questionText: "Quels facteurs cliniques influencent le choix d'un matériau à empreinte ?",
+        options: [
+          "L'existence de contre-dépouilles.",
+          "La précision recherchée.",
+          "Le temps de travail disponible.",
+          "La tolérance du patient (goût, réflexe nauséeux)."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Tous ces facteurs sont déterminants : la géométrie de l'arcade impose l'élasticité, le type de prothèse impose la précision, et le confort patient est essentiel."
       }
     ]
   },
@@ -1688,7 +1853,129 @@ const biomateriauQuizzesY2 = [
             correctOptionIndexes: [3],
             explanation: "Les silicones peuvent polymériser par addition ou condensation. Les silicones par addition sont hydrophobes et celles par condensation sont hydrophiles. Les silicones par addition ont une bonne stabilité dimensionnelle.",
             citations: [512, 513, 514]
-        }
+        },
+         {
+        questionText: "Les compositions thermoplastiques (Pâtes de Kerr) :",
+        options: [
+          "Durcissent par réaction chimique irréversible.",
+          "Durcissent par refroidissement (phénomène physique).",
+          "Sont réutilisables sur le même patient (réversibles).",
+          "Sont des matériaux élastiques."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Ce sont des matériaux thermoplastiques : ils ramollissent à la chaleur et durcissent au froid. C'est un changement d'état physique réversible. Ils sont rigides (non élastiques) à température buccale."
+      },
+      {
+        questionText: "Concernant la conductivité thermique des compositions :",
+        options: [
+          "Elles sont de très bons conducteurs thermiques.",
+          "Elles sont de mauvais conducteurs thermiques.",
+          "Elles doivent être chauffées dans la masse (à cœur) pour être ramollies uniformément.",
+          "Elles refroidissent instantanément en bouche."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Elles conduisent mal la chaleur. Il faut donc du temps pour les ramollir à cœur sans brûler la surface, et du temps pour qu'elles durcissent complètement en bouche."
+      },
+      {
+        questionText: "Sous quelle(s) forme(s) commerciale(s) trouve-t-on les compositions ?",
+        options: [
+          "Poudre et liquide.",
+          "Plaques (Généralement pour porte-empreinte ou maquette).",
+          "Bâtonnets (Sticks) de différentes couleurs/températures de fusion.",
+          "Système Pâte/Pâte en tubes."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Elles se présentent en plaques (pour les grandes surfaces) ou en bâtonnets (pour les corrections localisées ou joints périphériques). Les couleurs (Vert, Rouge, Gris) indiquent souvent leur température de fusion."
+      },
+      {
+        questionText: "Quelles sont les principales indications des bâtonnets de Kerr (Compositions) ?",
+        options: [
+          "La prise d'empreinte globale d'une arcade dentée.",
+          "Le joint périphérique en prothèse totale (Marginage).",
+          "L'empreinte unitaire de précision sous bague de cuivre.",
+          "L'empreinte des canaux radiculaires."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Leur rigidité et précision permettent de mouler les bords fonctionnels (joint périphérique) et de réaliser des empreintes unitaires compressives sous bague de cuivre."
+      },
+      {
+        questionText: "Lors de la manipulation des compositions thermoplastiques :",
+        options: [
+          "Le chauffage excessif peut brûler les composants et altérer les propriétés.",
+          "Elles doivent être insérées en bouche très chaudes (> 65°C) pour plus de précision.",
+          "Elles doivent être tempérées (refroidies légèrement) avant insertion pour éviter les brûlures.",
+          "Le retrait de la bouche doit se faire avant le refroidissement complet."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Il ne faut pas surchauffer (altération). Il faut tempérer vers 45-50°C pour ne pas brûler la muqueuse. Il faut attendre le refroidissement complet (durcissement) avant de retirer pour éviter la déformation."
+      },
+      {
+        questionText: "Quelle propriété est un inconvénient majeur des compositions thermoplastiques ?",
+        options: [
+          "Leur coefficient de dilatation thermique linéaire élevé (retrait important au refroidissement).",
+          "Leur grande élasticité.",
+          "Leur incapacité à enregistrer les détails fins.",
+          "Leur risque de fracture dans les zones de contre-dépouille."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Elles ont un fort retrait thermique (risque de distorsion) et sont rigides/cassantes, ce qui interdit leur usage dans les zones rétentives (contre-dépouilles)."
+      },
+      {
+        questionText: "La composition chimique des pâtes thermoplastiques inclut généralement :",
+        options: [
+          "Des résines naturelles ou synthétiques.",
+          "Des cires et des acides gras.",
+          "Des charges inertes (Talc, Craie) pour contrôler la viscosité.",
+          "De l'eau et de l'alginate de potassium."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "C'est un mélange complexe de matrices thermoplastiques (résines, cires) et de charges pour donner du corps et réduire le collant."
+      },
+      {
+        questionText: "Les silicones par condensation (Type C) :",
+        options: [
+          "Libèrent de l'alcool (éthanol) comme sous-produit de réaction.",
+          "Possèdent une excellente stabilité dimensionnelle à long terme.",
+          "Subissent une contraction de prise importante due à l'évaporation du sous-produit.",
+          "Doivent être coulés rapidement (dans l'heure qui suit)."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La réaction de condensation produit de l'alcool. Son évaporation entraîne une contraction du matériau, ce qui oblige à couler l'empreinte rapidement pour garder la précision."
+      },
+      {
+        questionText: "Les silicones par addition (Vinyl-Polysiloxanes / Type A) :",
+        options: [
+          "Sont hydrophiles par nature.",
+          "Ne libèrent aucun sous-produit volatil lors de la polymérisation.",
+          "Sont les élastomères les plus stables dimensionnellement.",
+          "Peuvent être coulés plusieurs jours après la prise de l'empreinte."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les silicones A polymérisent sans sous-produit, offrant une stabilité exceptionnelle. Ils sont naturellement hydrophobes (sauf ajout de surfactants)."
+      },
+      {
+        questionText: "Les polyéthers sont caractérisés par :",
+        options: [
+          "Une nature hydrophile (bonne affinité avec l'eau).",
+          "Une très grande rigidité après la prise.",
+          "La libération d'eau comme sous-produit.",
+          "Une indication majeure en implantologie grâce à leur rigidité."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Les polyéthers sont hydrophiles et très rigides (difficiles à désinsérer en cas de contre-dépouilles, mais excellents pour fixer les transferts d'implants). Ils polymérisent par addition (pas de sous-produit)."
+      },
+      {
+        questionText: "Concernant les polysulfures (Thiocols) :",
+        options: [
+          "Leur réaction de prise est une réaction de vulcanisation.",
+          "Ils ont une odeur agréable.",
+          "Ils libèrent de l'eau comme sous-produit, ce qui affecte leur stabilité.",
+          "Ils nécessitent l'utilisation d'un porte-empreinte individuel (PEI) pour réduire l'épaisseur du matériau."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les polysulfures ont une odeur désagréable (soufre), produisent de l'eau (retrait) et s'utilisent en couche fine dans un PEI pour minimiser la contraction."
+      }
+
     ]
   },
   {
@@ -1804,7 +2091,40 @@ const biomateriauQuizzesY2 = [
             correctOptionIndexes: [0],
             explanation: "Les hydrocolloïdes réversibles sont des matériaux à empreinte élastique qui peuvent revenir à l'état initial une fois mélangés.",
             citations: [522, 523, 524]
-        }
+        },
+         {
+        questionText: "Les hydrocolloïdes irréversibles (Alginates) :",
+        options: [
+          "Passent de l'état Sol à l'état Gel par réaction chimique.",
+          "Peuvent être liquéfiés à nouveau par chauffage.",
+          "Sont indiqués pour les empreintes d'étude et antagonistes.",
+          "Ont une excellente stabilité dimensionnelle dans le temps."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La prise est une gélification chimique irréversible (Alginate de Ca insoluble). Ils ne sont pas stables (perte d'eau) et ne peuvent pas être chauffés pour redevenir liquides."
+      },
+      {
+        questionText: "Le phénomène de synérèse observé chez les hydrocolloïdes correspond à :",
+        options: [
+          "L'absorption d'eau par le gel.",
+          "L'exsudation (perte) d'eau à la surface du gel.",
+          "Un gonflement du matériau.",
+          "Une contraction du matériau accompagnée d'une perte de précision."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La synérèse est la perte d'eau (le matériau 'sue'), ce qui entraîne une contraction et une déformation. L'imbibition est le phénomène inverse (absorption/gonflement)."
+      },
+      {
+        questionText: "Les hydrocolloïdes réversibles (Agar-Agar) :",
+        options: [
+          "Nécessitent un matériel spécifique (bacs chauffants, porte-empreintes refroidisseurs).",
+          "Passent de l'état Gel à Sol par chauffage (Liquéfaction).",
+          "Passent de l'état Sol à Gel par refroidissement (Gélification).",
+          "Sont des matériaux hydrophobes."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Ce sont des matériaux thermoplastiques/hydrophiles. Le changement d'état est physique (température) et nécessite un équipement lourd, ce qui limite leur usage actuel."
+      }
     ]
   },
   {
@@ -1944,7 +2264,40 @@ const biomateriauQuizzesY2 = [
             correctOptionIndexes: [0],
             explanation: "Le temps de prise d'un matériau correspond au temps nécessaire à la réaction de prise complète du matériau.",
             citations: [527, 528]
-        }
+        },
+         {
+        questionText: "Le défaut appelé 'Tirage' dans une empreinte :",
+        options: [
+          "Est une déformation par étirement du matériau.",
+          "Est dû à une mauvaise adhérence du matériau au porte-empreinte.",
+          "Est dû à un retrait prématuré de l'empreinte (avant la prise complète).",
+          "Se manifeste par un manque de matière."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le tirage est une déformation plastique. Il survient si le matériau n'est pas assez soutenu (décollement du PE) ou s'il est retiré alors qu'il n'a pas encore acquis son élasticité finale."
+      },
+      {
+        questionText: "Pour éviter le décollement du matériau du porte-empreinte, on utilise :",
+        options: [
+          "Des porte-empreintes perforés (rétention mécanique).",
+          "Des adhésifs spécifiques au matériau (rétention chimique).",
+          "Un matériau très fluide.",
+          "Un mouvement de retrait lent et basculant."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La rétention est assurée mécaniquement (trous) et chimiquement (adhésifs). Le retrait doit être sec et dans l'axe pour éviter les déformations."
+      },
+      {
+        questionText: "L'épaisseur du matériau d'empreinte :",
+        options: [
+          "Doit être uniforme pour éviter les distorsions.",
+          "Doit être la plus fine possible pour les élastomères (2-3 mm).",
+          "Doit être épaisse pour les alginates (pour profiter de leur flexibilité).",
+          "N'a aucune importance sur la précision."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Une épaisseur uniforme garantit une contraction uniforme. Les élastomères sont précis en couche mince (PEI), tandis que les alginates nécessitent de l'épaisseur (PE de série) pour ne pas se déchirer."
+      }
     ]
   },
   {
@@ -2024,7 +2377,40 @@ const biomateriauQuizzesY2 = [
             correctOptionIndexes: [2],
             explanation: "Les revêtements compensateurs sont composés d'une charge réfractaire et d'un liant, et sont utilisés pour la coulée des modèles.",
             citations: [530]
-        }
+        },
+          {
+        questionText: "Le rôle principal du revêtement compensateur est de :",
+        options: [
+          "Créer un moule réfractaire pour la coulée du métal.",
+          "Compenser le retrait de coulée de l'alliage lors de son refroidissement.",
+          "Faciliter le polissage du métal.",
+          "Abaisser la température de fusion de l'alliage."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le revêtement doit résister à la chaleur (réfractaire) et se dilater (expansion) pour compenser exactement la contraction du métal quand il refroidit."
+      },
+      {
+        questionText: "Les types d'expansion du revêtement sont :",
+        options: [
+          "L'expansion de prise (cristallisation du liant).",
+          "L'expansion hygroscopique (prise sous l'eau).",
+          "L'expansion thermique (lors du chauffage au four).",
+          "L'expansion chimique."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "L'expansion totale nécessaire est la somme de l'expansion de prise (+/- hygroscopique) et de l'expansion thermique."
+      },
+      {
+        questionText: "Les revêtements à liant phosphate :",
+        options: [
+          "Sont utilisés pour les alliages à haut point de fusion (Ni-Cr, Co-Cr).",
+          "Sont utilisés pour les céramiques pressées.",
+          "Contiennent du plâtre comme liant.",
+          "Sont moins résistants à la chaleur que les revêtements à liant gypse."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Ils résistent aux très hautes températures (>1000°C), contrairement aux revêtements à liant gypse qui se décomposent vers 700°C. Ils sont donc utilisés pour les alliages non précieux et céramiques."
+      }
     ]
   },
   {
@@ -2140,7 +2526,40 @@ const biomateriauQuizzesY2 = [
             correctOptionIndexes: [0, 3],
             explanation: "Les pâtes à oxyde de zinc-eugénol ont une excellente stabilité dimensionnelle, et le traitement de l'empreinte peut être réalisé dans les 24h qui suivent la prise.",
             citations: [538]
-        }
+        },
+         {
+        questionText: "Les pâtes à l'oxyde de zinc eugénol sont indiquées pour :",
+        options: [
+          "L'empreinte secondaire (de précision) chez l'édenté total.",
+          "L'empreinte des zones de contre-dépouille sévères.",
+          "La réfection de joints périphériques au stent (Pâte de Kerr).",
+          "L'empreinte mucostatique (sans compression)."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Ce sont des matériaux de précision très fluides, idéaux pour enregistrer les détails sans comprimer la muqueuse (mucostatique) chez l'édenté. Étant rigides après prise, elles sont contre-indiquées dans les contre-dépouilles."
+      },
+      {
+        questionText: "Concernant la réaction de prise des pâtes ZOE :",
+        options: [
+          "C'est une réaction de chélation (saponification).",
+          "L'eau et la chaleur accélèrent la prise.",
+          "Le mélange obtenu est thermoplastique.",
+          "Le produit final est de l'eugénolate de zinc."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "C'est une réaction chimique irréversible accélérée par l'humidité buccale et la chaleur. Le produit durci est l'eugénolate de zinc."
+      },
+      {
+        questionText: "La présentation commerciale des pâtes ZOE comprend généralement :",
+        options: [
+          "Deux tubes : une pâte base (blanche) et une pâte accélératrice (colorée).",
+          "Une poudre et un liquide.",
+          "Des bâtonnets solides.",
+          "La pâte accélératrice contient l'eugénol ou des résines."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Elles se présentent en deux tubes. La pâte catalyseur/accélérateur contient l'eugénol et donne souvent la couleur."
+      }
     ]
   },
   {
@@ -2182,8 +2601,41 @@ const biomateriauQuizzesY2 = [
         correctOptionIndexes: [0],
         explanation: "La thixotropie est la propriété de certains fluides de devenir plus fluides sous contrainte (cisaillement) et de reprendre leur viscosité au repos.",
         citations: [198, 1334]
+      },
+      {
+        questionText: "La limite élastique (ou limite proportionnelle) d'un matériau :",
+        options: [
+          "Est la contrainte maximale supportée sans déformation permanente.",
+          "Au-delà de cette limite, le matériau subit une déformation plastique.",
+          "Est le point de rupture du matériau.",
+          "Est plus élevée pour les alliages Co-Cr que pour l'or pur."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "C'est la frontière entre le domaine élastique (réversible) et plastique (irréversible). Les alliages prothétiques (Co-Cr) doivent avoir une limite élastique élevée pour ne pas se tordre en bouche."
+      },
+      {
+        questionText: "Le module d'élasticité (Module de Young) mesure :",
+        options: [
+          "La rigidité d'un matériau.",
+          "La flexibilité d'un matériau.",
+          "Plus le module est élevé, plus le matériau est rigide.",
+          "Plus le module est élevé, plus le matériau est flexible."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le module de Young est une mesure de la rigidité. Un module élevé signifie que le matériau se déforme peu sous la contrainte (ex: émail, alliages)."
+      },
+      {
+        questionText: "Le fluage (Creep) :",
+        options: [
+          "Est une déformation plastique dépendant du temps sous une charge constante.",
+          "Est un phénomène important pour les amalgames dentaires.",
+          "Est une déformation élastique instantanée.",
+          "Peut entraîner la détérioration des joints marginaux."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Le fluage est une déformation lente et permanente sous contrainte (ex: la mastication). C'est un défaut critique pour l'amalgame (expansion retardée)."
       }
-        
+  
     ]
   },
   {
@@ -2365,8 +2817,40 @@ const biomateriauQuizzesY2 = [
         correctOptionIndexes: [0],
         explanation: "On distingue les résines thermo polymérisables (polymérisation par la chaleur) et les résines chémio polymérisables ou auto polymérisables (polymérisation par agent chimique à froid).",
         citations: [553, 554, 555]
-      }
-        
+      },
+        {
+        questionText: "La polymérisation des résines acryliques (PMMA) passe par les stades suivants (sableux, filamenteux, pâteux, élastique). À quel stade doit-on effectuer la mise en moufle (bourrage) ?",
+        options: [
+          "Stade sableux.",
+          "Stade filamenteux (collant).",
+          "Stade pâteux (plastique, non collant).",
+          "Stade élastique (caoutchouteux)."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le bourrage se fait au stade pâteux (dough stage), quand la résine ne colle plus aux doigts mais reste plastique pour être moulée. Au stade élastique, elle est trop dure pour être comprimée."
+      },
+      {
+        questionText: "La porosité gazeuse dans une prothèse en résine cuite est généralement due à :",
+        options: [
+          "Une montée en température trop rapide (ébullition du monomère).",
+          "Un manque de pression lors du bourrage.",
+          "Un mélange trop liquide.",
+          "Un refroidissement trop lent."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Si la température dépasse 100.8°C (point d'ébullition du monomère) alors que la résine est encore molle, le monomère bout et crée des bulles (porosité gazeuse)."
+      },
+      {
+        questionText: "La différence entre résine Chémopolymérisable (Auto) et Thermopolymérisable (Thermo) :",
+        options: [
+          "La résine Auto contient une amine tertiaire (activateur) dans le liquide.",
+          "La résine Thermo nécessite de la chaleur pour activer le peroxyde de benzoyle.",
+          "La résine Auto est plus poreuse et a plus de monomère résiduel.",
+          "La résine Thermo est utilisée pour les réparations rapides."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les résines Auto (activées chimiquement par amine) sont moins denses et ont plus de monomère résiduel. Les Thermo (activées par chaleur) sont plus résistantes et utilisées pour les bases définitives."
+      }  
     ]
   },
   {
