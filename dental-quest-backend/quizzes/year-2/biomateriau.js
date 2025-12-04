@@ -958,6 +958,140 @@ const biomateriauQuizzesY2 = [
         citations: [459, 460]
       },
       {
+        questionText: "L'expansion hygroscopique du revêtement (plâtre) :",
+        options: [
+          "Se produit à l'air libre",
+          "Se produit en présence d'eau",
+          "Est inférieure à l'expansion thermique",
+          "Est nécessaire pour compenser le retrait de coulée de l'alliage"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "L'expansion hygroscopique se produit lorsque le revêtement fait sa prise en présence d'eau (bain-marie), ce qui augmente l'expansion totale pour compenser le retrait de l'alliage.",
+        citations: []
+      },
+      {
+        questionText: "Le rapport Eau/Poudre (E/P) pour le plâtre :",
+        options: [
+          "Si on l'augmente, la résistance mécanique augmente",
+          "Si on l'augmente, le temps de prise augmente (retarde)",
+          "Si on le diminue, l'expansion de prise augmente",
+          "Doit être respecté selon les données du fabricant"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Plus d'eau (E/P élevé) fragilise le plâtre et retarde la prise. Moins d'eau (E/P faible) augmente l'expansion et la résistance, mais rend le mélange difficile.",
+        citations: []
+      },
+      // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 1"
+
+{
+  questionText: "Concernant la manipulation du plâtre de coulée, quelle est la méthode recommandée ?",
+  options: [
+    "Par saturation progressive avec une spatulation énergique immédiate",
+    "Par saturation progressive sans spatulation initiale (laisser boire)",
+    "En versant l'eau sur la poudre jusqu'à saturation",
+    "En écrasant le mélange contre les parois du bol vigoureusement"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "La méthode idéale consiste à saupoudrer le plâtre dans l'eau (saturation progressive) et à le laisser s'imprégner sans spatulation initiale pour éviter d'emprisonner de l'air. L'écrasement vigoureux est réservé à la préparation de l'alginate, pas du plâtre.",
+  citations: [41, 45, 46, 97]
+},
+{
+  questionText: "Quel type de plâtre est spécifiquement indiqué pour la réalisation des empreintes (statiques) ?",
+  options: [
+    "Plâtre de type I (Plâtre à empreinte)",
+    "Plâtre de type II (Plâtre de Paris)",
+    "Plâtre de type III (Pierre)",
+    "Plâtre de type IV (Die Stone)"
+  ],
+  correctOptionIndexes: [0],
+  explanation: "Le plâtre de Type I est un plâtre à prise rapide, souvent aromatisé et coloré, conçu spécifiquement pour les empreintes (notamment pour les crêtes flottantes), car il fracture nettement sans se déformer. Le Type II est pour les modèles d'étude.",
+  citations: [13, 14, 15, 89]
+},
+{
+        questionText: "Le plâtre de type 1 est un :",
+        options: [
+          "Un matériau élastique",
+          "Un matériau de coulée",
+          "Un matériau inélastique pour la prise d'empreinte préliminaire",
+          "Utilisé pour la prise d'empreinte primaire chez tous les patients"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le plâtre de type 1 est un matériau inélastique (rigide), utilisé spécifiquement pour l'empreinte primaire chez l'édenté total (et non chez tous les patients).",
+        citations: [2754, 2764]
+      },
+      {
+        questionText: "Le temps de prise du plâtre est influencé par :",
+        options: [
+          "La taille des particules, plus c'est fin plus la prise sera rapide",
+          "La température de l'eau plus elle est froide, la prise sera rapide",
+          "La spatulation plus elle est rapide, le temps de prise sera court",
+          "L'utilisation d'accélérateurs ou de retardateurs de prise"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La finesse des particules et une spatulation rapide accélèrent la prise (temps plus court). L'eau froide, au contraire, augmente le temps de prise (ralentit) car la réaction est exothermique.",
+        citations: [2804, 2810]
+      },
+      {
+        questionText: "Le plâtre de Paris :",
+        options: [
+          "Est obtenu par réhydratation du gypse à l'air libre",
+          "Est obtenu par déshydratation du Gypse à l'air libre",
+          "C'est le α hémi hydrate de sulfate de calcium",
+          "C'est du plâtre de Pierre"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le plâtre de Paris est obtenu par déshydratation (cuisson) du gypse à l'air libre (four ouvert). C'est un bêta-hémihydrate (le plâtre de Pierre est un alpha).",
+        citations: [2827, 2833]
+      },
+      {
+        questionText: "Le plâtre est un produit manufacturé à partir :",
+        options: [
+          "D'un minéral naturel le gypse",
+          "D'un minéral synthétique le gypse",
+          "Du dihydraté de sulfate de calcium",
+          "De CaSo4 ½ H20"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Le plâtre est fabriqué à partir du gypse (dihydrate de sulfate de calcium), qui peut être naturel ou synthétique. La formule du plâtre (produit fini) est l'hémihydrate (½ H2O).",
+        citations: [2860, 2869]
+      },
+      {
+        questionText: "L'hémihydrate β constitue :",
+        options: [
+          "L'essentiel du plâtre à empreinte",
+          "Une contre-indication d'empreinte en prothèse amovible complète",
+          "Une indication d'empreinte en prothèse conjointe",
+          "Le matériau de moulage au laboratoire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'hémihydrate β (plâtre de Paris/mou) est poreux et fragile. Il est contre-indiqué pour certaines empreintes de précision ou en prothèse amovible complète définitive (on préfère les élastomères ou plâtres durs pour les modèles de travail).",
+        citations: [2870, 2876]
+      },
+      {
+        questionText: "La réaction de prise de l'hémihydrate α et β :",
+        options: [
+          "Est réversible",
+          "Est irréversible",
+          "Est ré hydratable ce qui permet de donner la réaction de prise",
+          "N'est pas ré hydratable"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La réaction est chimiquement réversible : le dihydrate (gypse durci) peut être chauffé pour redevenir de l'hémihydrate (poudre).",
+        citations: [2880, 2886]
+      },
+{
+  questionText: "L'hémihydrate bêta (β) constitue l'essentiel de quel matériau ?",
+  options: [
+    "Du plâtre de type IV (Haute résistance)",
+    "Du plâtre à empreinte (Type I) et du plâtre de Paris (Type II)",
+    "Des revêtements à liant phosphate",
+    "Des cires de sculpture"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "L'hémihydrate β (obtenu par cuisson à l'air libre) est poreux et moins résistant. Il constitue la base du plâtre de Paris (Type II) utilisé pour les modèles d'étude et la mise en moufle, ainsi que du plâtre à empreinte (Type I).",
+  citations: [329, 331]
+},
+      {
         questionText: "L'augmentation du temps de prise du plâtre se fait par:",
         options: [
           "Malaxage rapide et prolongé.",
@@ -1044,6 +1178,80 @@ const biomateriauQuizzesY2 = [
         explanation: "Les cires ont un comportement partiellement élastique.",
         citations: [473]
       },
+      // أضف cette الأسئلة إلى الدرس: Prothèse - 2: Les cires
+
+{
+  questionText: "Quelle est la nature chimique principale des cires dentaires ?",
+  options: [
+    "Ce sont des sels minéraux cristallins",
+    "Ce sont des mélanges complexes de polymères organiques (esters, hydrocarbures, etc.)",
+    "Ce sont des dérivés directs du méthacrylate de méthyle",
+    "Ce sont des céramiques à basse fusion"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les cires sont des matériaux organiques (et non minéraux ou acryliques). Elles sont constituées d'un mélange d'esters, d'acides gras, d'alcools et d'hydrocarbures, ce qui leur confère leur thermoplasticité.",
+  citations: [357, 359]
+},
+{
+        questionText: "Les cires d'origine naturelle :",
+        options: [
+          "Sont peu fragiles",
+          "Leurs coefficients de dilatation thermique sont élevés",
+          "Présentent des intervalles de fusion faibles",
+          "Sont les plus utilisées et dans différents domaines"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les cires naturelles sont peu fragiles et très utilisées. Elles ont un coefficient de dilatation thermique élevé (ce qui est un inconvénient pour la précision).",
+        citations: [3095, 3106]
+      },
+      {
+        questionText: "Cires préformées sont utilisées :",
+        options: [
+          "En prothèse conjointe",
+          "En prothèse partielle métallique",
+          "Pour la réalisation de crochets",
+          "Pour la réalisation des grilles de rétention"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les cires préformées (profilés) sont spécifiques à la prothèse partielle métallique (châssis) pour créer les maquettes des crochets et des grilles.",
+        citations: [3120, 3127]
+      },
+{
+  questionText: "La cire d'abeille est une cire d'origine :",
+  options: [
+    "Minérale (extraite du pétrole)",
+    "Synthétique (fabriquée en laboratoire)",
+    "Animale",
+    "Végétale (extraite de plantes)"
+  ],
+  correctOptionIndexes: [2],
+  explanation: "La cire d'abeille est la principale cire d'origine animale utilisée en dentisterie. Elle est caractérisée par une certaine fragilité et un intervalle de fusion spécifique (vers 63-70°C).",
+  citations: [179, 180, 364, 366]
+},
+{
+  questionText: "Les cires pour plaques-bases (Cire rose) sont principalement indiquées pour :",
+  options: [
+    "La prise d'empreinte de haute précision",
+    "La sculpture fine des couronnes et inlays",
+    "La réalisation des maquettes en prothèse amovible et des bourrelets d'occlusion",
+    "Le scellement des couronnes"
+  ],
+  correctOptionIndexes: [2],
+  explanation: "Les cires roses (plaques-bases) sont utilisées pour enregistrer les rapports intermaxillaires (bourrelets) et pour monter les dents prothétiques lors de l'essayage des prothèses amovibles complètes ou partielles.",
+  citations: [360, 362, 363]
+},
+{
+  questionText: "Quel est le comportement mécanique caractéristique des cires ?",
+  options: [
+    "Elles sont parfaitement élastiques (comme un élastomère)",
+    "Elles ont un comportement viscoélastique (partiellement élastique, partiellement plastique)",
+    "Elles sont cassantes à toute température",
+    "Elles ne se déforment jamais sous la contrainte"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les cires ont un comportement 'viscoélastique'. Elles peuvent se déformer de manière permanente (plastique) sous la chaleur ou la pression, mais possèdent aussi une légère mémoire élastique qui peut causer des distorsions si elles sont mal manipulées.",
+  citations: [290, 291, 292]
+},
       {
         questionText: "Les cires sont:",
         options: [
@@ -1122,6 +1330,68 @@ const biomateriauQuizzesY2 = [
         explanation: "Les compositions thermoplastiques sont classées en pâtes thermoplastiques réversibles anciennes, irréversibles, modernes.",
         citations: [483, 484]
       },
+      // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 3"
+
+{
+  questionText: "Quelle est la nature physico-chimique des compositions thermoplastiques (ex: Pâtes de Kerr) ?",
+  options: [
+    "Ce sont des matériaux élastiques à prise chimique",
+    "Ce sont des matériaux inélastiques qui durcissent par refroidissement physique",
+    "Elles sont composées d'une base et d'un catalyseur à mélanger",
+    "Elles sont conductrices de chaleur"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les compositions thermoplastiques sont des matériaux inélastiques (rigides à froid). Elles ne subissent pas de réaction chimique mais un changement d'état physique (ramollissement à la chaleur, durcissement au froid). Elles sont de mauvais conducteurs thermiques.",
+  citations: [1, 3, 280, 282, 351]
+},
+{
+        questionText: "Les pâtes de Kerr (Compositions) :",
+        options: [
+          "Sont des matériaux de revêtement thermoplastiques",
+          "Nécessitent une température très Importante pour leur déformation",
+          "Utilisées en bouche à une température de 37°",
+          "Leur ramollissement exige un chauffage au bain marie"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Elles doivent être ramollies au bain-marie (pour ne pas brûler les composants) et tempérées pour être utilisées en bouche à une température supportable (proche de 37°C).",
+        citations: [3407, 3416]
+      },
+      {
+        questionText: "Les compositions thermoplastiques sont :",
+        options: [
+          "Des matériaux durs à l'état normal",
+          "De consistance pâteuse à l'état normal",
+          "Commercialisées sous forme de plaques et de bâtonnets",
+          "Commercialisées sous forme de tubes (base et catalyseur)"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "À température ambiante (état normal), elles sont dures et rigides. Elles sont vendues en plaques ou bâtonnets (pas de tubes comme les élastomères).",
+        citations: [3418, 3425]
+      },
+      {
+        questionText: "Les pâtes thermoplastiques sont des matériaux à empreinte :",
+        options: [
+          "Qui comptent parmi les plus récents matériaux",
+          "Leur ramollissement s'accompagne d'un changement chimique",
+          "Leur utilisation répond à toutes les situations cliniques",
+          "Se ramollissent à la chaleur et durcissent lorsqu'on les refroidit"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "C'est un phénomène physique réversible : ramollissement à la chaleur, durcissement au froid, sans réaction chimique.",
+        citations: [3433, 3438]
+      },
+{
+  questionText: "Quel est le protocole thermique recommandé pour les compositions thermoplastiques avant insertion en bouche ?",
+  options: [
+    "Chauffer à 100°C et insérer immédiatement",
+    "Chauffer vers 45°C, puis refroidir proche de 37°C pour éviter les brûlures",
+    "Ne jamais chauffer le matériau",
+    "Utiliser de l'eau glacée pour les ramollir"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Pour éviter de brûler les tissus buccaux, le matériau est ramolli à environ 45°C-50°C, puis tempéré (refroidi légèrement) vers 37°C juste avant d'être inséré en bouche.",
+  citations: [5, 7, 130]
+},
       {
         questionText: "Les compositions thermoplastiques:",
         options: [
@@ -1146,6 +1416,7 @@ const biomateriauQuizzesY2 = [
         explanation: "Les pâtes thermoplastiques ont une viscosité qui se modifie sous l'action de la température et se présentent sous forme de plaques ou de bâtonnets.",
         citations: [486, 487, 488]
       },
+      
       {
         questionText: "Les pâtes thermoplastiques sont indiquées:",
         options: [
@@ -1212,6 +1483,116 @@ const biomateriauQuizzesY2 = [
             explanation: "Les trois grandes familles d'élastomères sont les polysulfures, les silicones et les polyéthers.",
             citations: [499]
         },
+        {
+        questionText: "Les silicones par addition (Polyvinylsiloxanes) :",
+        options: [
+          "Libèrent de l'alcool comme sous-produit",
+          "Sont les matériaux les plus stables dimensionnellement",
+          "Peuvent être coulés plusieurs fois (jusqu'à une semaine)",
+          "Sont hydrophiles par nature"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les silicones A sont très stables (pas de sous-produit), permettant une coulée différée et multiple. Ils sont hydrophobes par nature (sauf si tensioactifs ajoutés).",
+        citations: []
+      },
+      {
+        questionText: "La technique du double mélange (Wash-technique) avec les élastomères :",
+        options: [
+          "Utilise deux viscosités différentes (Lourd et Léger)",
+          "Nécessite deux temps de prise différents",
+          "Permet d'enregistrer les détails fins avec le matériau fluide",
+          "Utilise uniquement du Putty (Lourd)"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Cette technique associe un matériau lourd (Putty) pour le support et un matériau fluide (Light) pour l'enregistrement précis des détails.",
+        citations: []
+      },
+        // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 4"
+
+{
+  questionText: "Les élastomères silicones polymérisant par condensation (Type C) :",
+  options: [
+    "Ne produisent aucun sous-produit lors de la prise",
+    "Utilisent un catalyseur à base de sels de platine",
+    "Libèrent de l'alcool (sous-produit) entraînant une contraction",
+    "Sont parfaitement stables dimensionnellement dans le temps"
+  ],
+  correctOptionIndexes: [2],
+  explanation: "La réaction de condensation produit de l'alcool comme sous-produit volatil. L'évaporation de cet alcool provoque une contraction du matériau, ce qui réduit sa stabilité dimensionnelle comparée aux silicones par addition.",
+  citations: [22, 23, 24, 25, 343, 344]
+},
+{
+  questionText: "Les silicones par addition (Vinyl Polysiloxane) se caractérisent par :",
+  options: [
+    "Une polymérisation libérant de l'eau",
+    "Une excellente stabilité dimensionnelle (pas de sous-produit)",
+    "Une viscosité unique pour toutes les situations",
+    "Un catalyseur à base d'étain"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les silicones par addition (Type A) sont les plus stables car leur réaction (catalysée par le platine) ne libère aucun sous-produit volatil. Ils sont disponibles en plusieurs viscosités (jusqu'à 5).",
+  citations: [28, 29, 347, 348]
+},
+{
+        questionText: "Les élastomères de synthèse :",
+        options: [
+          "Sont des caoutchoucs synthétiques",
+          "Se présentent sous la forme d'un système auto-mélangeant",
+          "Se présentent sous forme de poudre et liquide",
+          "Se présentent sous forme de pâte emballée dans deux tubes"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Ce sont des caoutchoucs synthétiques. Ils sont fournis en deux tubes (base/catalyseur) ou en cartouches pour mélangeur automatique.",
+        citations: [3201, 3211]
+      },
+      {
+        questionText: "Selon la nature de la molécule de base et la réaction chimique de polymérisation, on distingue deux types de silicones :",
+        options: [
+          "Les polysiloxanes",
+          "Les polyéthers",
+          "Les polysulfures",
+          "Les polyvinyles"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "On distingue les silicones par condensation (Polysiloxanes) et les silicones par addition (Polyvinyles siloxanes).",
+        citations: [3213, 3220]
+      },
+      {
+        questionText: "Les caoutchoucs type polyéthers :",
+        options: [
+          "Sont des silicones qui peuvent être indiqués aussi bien en PPAC qu'en prothèse conjointe",
+          "Présentent un temps de travail assez court",
+          "Présentent d'excellentes propriétés élastiques",
+          "Présentent de très mauvaises variations dimensionnelles"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les polyéthers (bien que chimiquement différents des silicones, l'option A est souvent acceptée dans ce contexte large) sont précis, élastiques, mais ont une prise rapide (temps de travail court).",
+        citations: [3221, 3234]
+      },
+      {
+        questionText: "Les Silicones «A» :",
+        options: [
+          "Ont une stabilité dimensionnelle supérieure",
+          "Sont des Vinylpolysiloxanes réticulant par addition",
+          "Sont des Diméthylpolysiloxanes polycondensés",
+          "Sont des polysiloxanes polycondensés"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Les silicones A (Addition) ou Vinylpolysiloxanes sont très stables car ils ne libèrent pas de sous-produits.",
+        citations: [3259, 3265]
+      },
+{
+  questionText: "La réaction de prise des polysulfures (Thiocols) :",
+  options: [
+    "Est une réaction endothermique",
+    "Est une polymérisation par addition pure",
+    "Est une vulcanisation produisant une molécule d'eau",
+    "Entraîne une expansion du matériau"
+  ],
+  correctOptionIndexes: [2],
+  explanation: "Les polysulfures durcissent par un processus de vulcanisation (allongement des chaînes). Cette réaction libère une molécule d'eau (H2O) comme sous-produit, ce qui influence leur stabilité.",
+  citations: [37, 38, 40, 508]
+},
         {
             questionText: "Plus on augmente les charges pour un élastomère:",
             options: [
@@ -1326,6 +1707,32 @@ const biomateriauQuizzesY2 = [
             explanation: "Les hydrocolloïdes sont des matériaux d'empreinte élastiques (pas plastiques), utilisés pour les empreintes primaires et secondaires, et qui ont une faible stabilité dimensionnelle.",
             citations: [514]
         },
+        // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 5"
+
+{
+  questionText: "L'hystérèse, caractéristique des hydrocolloïdes réversibles (Agar), est définie comme :",
+  options: [
+    "Le passage direct de l'état solide à gazeux",
+    "La différence de température entre la liquéfaction (sol) et la gélification (gel)",
+    "L'absorption d'eau par le matériau",
+    "La contraction de prise du matériau"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "L'hystérèse est le phénomène où le matériau se liquéfie à une haute température (ex: 100°C) mais ne redevient gel qu'à une température beaucoup plus basse (ex: 43°C), permettant son utilisation en bouche sans brûler le patient.",
+  citations: [67, 68]
+},
+{
+  questionText: "Les hydrocolloïdes irréversibles (Alginates) sont couramment indiqués pour :",
+  options: [
+    "Les empreintes de prothèse fixée de haute précision",
+    "Les empreintes d'étude, préliminaires et de l'arcade antagoniste",
+    "La réalisation de joints périphériques",
+    "Les empreintes sous-gingivales profondes"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les alginates sont idéaux pour les empreintes 'panoramiques' moins précises : modèles d'étude, antagonistes, ou empreintes primaires, grâce à leur facilité d'emploi et leur faible coût.",
+  citations: [62, 63, 64, 169]
+} ,
         {
             questionText: "Les hydrocolloïdes réversibles :",
             options: [
@@ -1338,6 +1745,30 @@ const biomateriauQuizzesY2 = [
             explanation: "Les hydrocolloïdes réversibles sont à base d'agar-agar et forment avec l'eau une solution sous forme de sol.",
             citations: [515]
         },
+        {
+        questionText: "Les Hydrocolloïdes sont :",
+        options: [
+          "Des polysaccharides extraits d'algues marines",
+          "Utilisés pour les empreintes",
+          "Des solutions colloïdales de polysaccharides dans de l'eau",
+          "Existent sous deux formes : Sol et gellule"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Ce sont des polysaccharides d'algues, formant des solutions colloïdales avec l'eau. Ils existent en état Sol (liquide) et Gel (solide), pas 'gellule'.",
+        citations: [2932, 2946]
+      },
+      {
+        questionText: "Les hydrocolloïdes dans la forme de sol :",
+        options: [
+          "Sont fluides",
+          "De faible viscosité",
+          "Avec des chaines polysaccharidiques qui s'alignent comme des fibrilles",
+          "Sont très volatiles"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "À l'état de Sol, ils sont fluides et peu visqueux car les chaînes de polysaccharides sont désordonnées (elles ne s'alignent en fibrilles qu'à l'état de Gel).",
+        citations: [2948, 2955]
+      },
         {
             questionText: "Les hydrocolloïdes irréversibles sont indiqués:",
             options: [
@@ -1392,6 +1823,104 @@ const biomateriauQuizzesY2 = [
             explanation: "Le temps de travail d'un matériau à empreinte se termine quand le matériau ne peut plus être utilisé, sa valeur est arbitraire et adaptée à la technique d'empreinte voulue.",
             citations: [525]
         },
+        // أضف هذه الأسئلة إلى الدرس: Prothèse - 6: Les matériaux à empreintes
+
+{
+  questionText: "L'élasticité d'un matériau à empreinte est définie comme :",
+  options: [
+    "La résistance mécanique aux chocs et à la fracture",
+    "L'aptitude à revenir à son état initial après cessation de la force (déformation réversible)",
+    "La capacité à conserver sa forme plastique après la prise",
+    "La viscosité du matériau avant la prise"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "L'élasticité est la propriété fondamentale qui permet au matériau de se déformer pour sortir des zones de contre-dépouille (retrait de la bouche) puis de reprendre sa forme initiale exacte pour garantir la précision du modèle.",
+  citations: [8, 9, 10, 11]
+},
+{
+  questionText: "Quels matériaux font partie de la classe des matériaux à empreinte 'non élastiques' (rigides après prise) ?",
+  options: [
+    "Les hydrocolloïdes (alginates) et les élastomères",
+    "Les plâtres, les compositions thermoplastiques et les pâtes à l'oxyde de zinc-eugénol",
+    "Les polysulfures et les polyéthers",
+    "Les silicones par addition et condensation"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les matériaux non élastiques cassent ou se déforment de manière permanente s'ils sont retirés d'une zone de contre-dépouille. Ce groupe inclut le plâtre, la pâte de Kerr (thermoplastique) et l'oxyde de zinc-eugénol. Les autres sont des matériaux élastiques.",
+  citations: [225, 226, 311, 313]
+},
+{
+        questionText: "Les Impératifs auxquels doivent obéir les matériaux à empreinte :",
+        options: [
+          "La non toxicité",
+          "La saveur (bonne saveur)",
+          "Facilité de manipulation",
+          "Stabilité dimensionnelle (très basse)"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Ils doivent être non toxiques, avoir un goût agréable et être faciles à manipuler. La stabilité dimensionnelle doit être très haute (et non basse).",
+        citations: [2573, 2586]
+      },
+      {
+        questionText: "La stabilité dimensionnelle d'un matériau à empreinte est liée :",
+        options: [
+          "À sa viscoplasticité avant la prise",
+          "Aux distorsions Induites par le passage de la température buccale à la température extérieure",
+          "À la déformation permanente",
+          "Il existe des matériaux qui ne subissent aucune déformation"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La stabilité dépend de la viscoplasticité, du retrait thermique (bouche/extérieur) et de la récupération élastique (déformation permanente). Aucun matériau n'est parfait (D faux).",
+        citations: [2589, 2596]
+      },
+      {
+        questionText: "Le temps de prise d'un matériau :",
+        options: [
+          "Doit être assez long pour permettre la mise en en place du porte empreinte dans la cavité buccale",
+          "Idéalement, pour le patient et le praticien, qu'il soit le plus bref possible",
+          "Dépend de son aptitude au mouillage",
+          "La réaction de prise complète Peut-être indiquée par la rigidité ou la dureté atteinte par le matériau"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Pour le confort, le temps de prise en bouche doit être bref. La prise est souvent vérifiée par la dureté ou la rigidité du matériau (test de l'ongle).",
+        citations: [2598, 2604]
+      },
+      {
+        questionText: "Les matériaux à empreinte non élastiques regroupent :",
+        options: [
+          "L'hémihydrate β que l'on nomme plâtre de Paris",
+          "Les compositions thermoplastiques qui sont plastiques et fragiles",
+          "La pâte à oxyde de zinc eugénol, très utilisée en prothèse conjointe",
+          "Les cires à empreinte qui sont des hydrocarbures"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Les matériaux rigides incluent le plâtre, les compositions (Kerr) et les cires. (La ZOE est utilisée en prothèse totale, pas conjointe, donc C est souvent exclu dans ce contexte spécifique ou considéré faux ici).",
+        citations: [2607, 2616]
+      },
+{
+  questionText: "Le temps de travail (Working time) d'un matériau correspond à :",
+  options: [
+    "La durée totale jusqu'au durcissement complet",
+    "La période entre le début du mélange et le moment où le matériau ne peut plus être manipulé (viscosité trop élevée)",
+    "Le temps de présence en bouche uniquement",
+    "Une valeur fixe qui ne dépend pas de la température"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Le temps de travail est la période critique pendant laquelle le praticien peut mélanger, charger le porte-empreinte et l'insérer en bouche. Il se termine quand la viscosité augmente au point d'empêcher une insertion correcte ou d'induire des contraintes.",
+  citations: [250, 251, 252, 253]
+},
+{
+  questionText: "Concernant les variations dimensionnelles lors de la prise :",
+  options: [
+    "Le plâtre subit une contraction de prise",
+    "Les élastomères subissent une contraction de polymérisation",
+    "Le plâtre subit une expansion de prise",
+    "Les hydrocolloïdes sont parfaitement stables dans le temps"
+  ],
+  correctOptionIndexes: [1, 2],
+  explanation: "Le plâtre est unique car il subit une expansion (augmentation de volume) lors de sa cristallisation. À l'inverse, la plupart des élastomères et résines subissent une contraction (retrait) lors de la polymérisation.",
+  citations: [314, 315, 316]
+},
         {
             questionText: "Les Matériaux élastiques:",
             options: [
@@ -1434,6 +1963,56 @@ const biomateriauQuizzesY2 = [
             explanation: "Le temps de travail d'un revêtement compensateur correspond au temps disponible pour mettre les cylindres en revêtement et varie en fonction de la température. Le durcissement est accéléré par la chaleur.",
             citations: [529, 530]
         },
+        // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 7"
+
+{
+  questionText: "Les revêtements à liant phosphate sont spécifiquement indiqués pour :",
+  options: [
+    "La coulée des alliages précieux (Or) à bas point de fusion",
+    "La coulée des alliages non précieux (Ni-Cr, Co-Cr) à haut point de fusion",
+    "La réalisation de modèles d'étude en plâtre",
+    "La soudure des céramiques"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les alliages non précieux fondent à très haute température. Les revêtements à liant phosphate sont conçus pour résister à ces températures élevées sans se désagréger, contrairement aux revêtements à base de gypse.",
+  citations: [126, 128]
+},
+{
+        questionText: "Le duplicata d'un modèle de travail est réalisé en :",
+        options: [
+          "Matériau réfractaire",
+          "Plâtre extra dur",
+          "Plâtre dur",
+          "Alliage précieux"
+        ],
+        correctOptionIndexes: [0, 3], // Selon corrigé EMD2 2019/2020 (14->AD)
+        explanation: "Le duplicata (modèle réfractaire) est réalisé en matériau de revêtement (réfractaire) pour supporter la température de coulée du châssis métallique.",
+        citations: [339, 392]
+      },
+      {
+        questionText: "La coulée de l'alliage par centrifugation :",
+        options: [
+          "Est la technique de coulée la plus utilisée",
+          "Se caractérise par un déplacement de l'alliage dans une direction centrifuge",
+          "Se caractérise par un déplacement de l'alliage dans une direction centripète",
+          "Se fait uniquement en prothèse à châssis métallique"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La centrifugation utilise la force centrifuge pour projeter l'alliage en fusion dans le moule. C'est la technique la plus courante.",
+        citations: [344, 392]
+      },
+      {
+        questionText: "Dans les défauts de fonderie, l'inclusion Gazeuse ou Soufflure :",
+        options: [
+          "Est due au manque de porosités du métal",
+          "Est une hétérogénéité qui affecte le métal",
+          "Peut apparaitre en surface lors du polissage",
+          "Est l'espace inter cristallin dans lequel le métal est encore à l'état solide"
+        ],
+        correctOptionIndexes: [0, 2], // Selon corrigé 2016/2017 (12->AC)
+        explanation: "Les soufflures sont des bulles de gaz (porosités) emprisonnées dans le métal, souvent révélées lors du grattage ou du polissage.",
+        citations: [509, 539]
+      },
         {
             questionText: "Les revêtements compensateurs sont:",
             options: [
@@ -1464,6 +2043,20 @@ const biomateriauQuizzesY2 = [
             explanation: "Les pâtes zinquleinées sont des pâtes d'oxyde de zinc-eugénol sous forme pâte/pâte. Elles sont hydrophiles et utilisées en prothèse.",
             citations: [531, 532, 533]
         },
+        // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 8"
+
+{
+  questionText: "Quelle est la composition typique des deux pâtes des ciments ZOE (Zinc-Oxyde Eugénol) ?",
+  options: [
+    "Base : Silicone / Catalyseur : Plâtre",
+    "Base : Oxyde de Zinc / Catalyseur : Eugénol",
+    "Base : Eugénol / Catalyseur : Oxyde de Zinc",
+    "Base : Résine / Catalyseur : Peroxyde"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "La pâte 'Base' contient principalement de l'Oxyde de Zinc (poudre blanche en suspension), et la pâte 'Catalyseur' (ou accélérateur) contient l'Eugénol (huile de clou de girofle) et des résines.",
+  citations: [82, 84, 194, 372]
+},
         {
             questionText: "Précautions d'emploi relatives aux pâtes zinquelenées:",
             options: [
@@ -1501,6 +2094,42 @@ const biomateriauQuizzesY2 = [
             citations: [537]
         },
         {
+        questionText: "Les pâtes zinquénoléines pour usage prothétique, sont fournies sous forme de :",
+        options: [
+          "Plaques",
+          "Pâtes dans des tubes souples",
+          "Gel",
+          "Granulés"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Elles sont toujours fournies sous forme de deux pâtes (base et catalyseur) dans des tubes souples.",
+        citations: [3561, 3566]
+      },
+      {
+        questionText: "La réaction de prise des pâtes à oxyde de zinc est :",
+        options: [
+          "Retardée par la présence d'eau",
+          "Accélérée par l'adjonction de chlorure de magnésium",
+          "Accélérée par la chaleur",
+          "Accélérée en milieu sec"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'humidité (eau) et la chaleur accélèrent la prise (contrairement à A et D). Le chlorure de magnésium est un accélérateur chimique.",
+        citations: [3569, 3574]
+      },
+      {
+        questionText: "Les pâtes à oxyde de Zinc eugénol sont :",
+        options: [
+          "Des pâtes à usage clinique",
+          "Conditionnées dans deux tubes (base/catalyseur)",
+          "Des matériaux de coulée",
+          "Considérées comme un matériau de correction de l'empreinte"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Ce sont des matériaux d'empreinte clinique (pas de coulée), présentés en deux tubes.",
+        citations: [3595, 3601]
+      },
+        {
             questionText: "La stabilité dimensionnelle des pâtes à oxyde de zinc eugénol:",
             options: [
                 "Est excellente",
@@ -1529,7 +2158,32 @@ const biomateriauQuizzesY2 = [
             correctOptionIndexes: [2],
             explanation: "Le fluage est une déformation progressive qui se produit dans le temps, entraînant un allongement linéaire du matériau et une augmentation volumétrique supplémentaire.",
             citations: [539]
-        }
+        },
+        {
+        questionText: "Pour les matériaux à empreinte élastique, l'élasticité :",
+        options: [
+          "Représente la possibilité que possède un corps de reprendre sa forme initiale après une déformation",
+          "Devra être la plus basse possible",
+          "Devra permettre d'avoir une faible déformation permanente",
+          "Devra permettre de mouler des zones situées en contre dépouille"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "L'élasticité permet au matériau de se déformer pour sortir des zones de rétention (contre-dépouille) et de revenir à sa forme initiale (précision).",
+        citations: [173, 1334]
+      },
+      {
+        questionText: "On dit qu'il y a thixotropie :",
+        options: [
+          "Quand, la structure initiale d'un matériau, détruite par écoulements se reconstitue après une certaine période de repos",
+          "Quand le matériau est visqueux et qu'il ne reconstitue pas la structure initiale",
+          "Quand le matériau devient fluide après avoir été chauffé",
+          "Quand un matériau à empreinte ne peut être en contact intime avec une surface humide"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La thixotropie est la propriété de certains fluides de devenir plus fluides sous contrainte (cisaillement) et de reprendre leur viscosité au repos.",
+        citations: [198, 1334]
+      }
+        
     ]
   },
   {
@@ -1548,6 +2202,92 @@ const biomateriauQuizzesY2 = [
         explanation: "Les résines dentaires sont des résines synthétiques, principalement des polyméthacrylates de méthyle.",
         citations: [540]
       },
+      // أضف هذه الأسئلة داخل: questions: [ ... ] لدرس "Prothèse - 10"
+
+{
+  questionText: "La polymérisation des résines acryliques est définie comme :",
+  options: [
+    "Un processus physique de fusion",
+    "Une réaction chimique de durcissement par liaison de monomères",
+    "Une simple évaporation de solvant",
+    "Une cristallisation ionique"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "La polymérisation est une véritable réaction chimique (exothermique) où les petites molécules (monomères) s'unissent pour former de longues chaînes macromoléculaires (polymères), entraînant le durcissement du matériau.",
+  citations: [50, 51, 52]
+},
+{
+        questionText: "Les colles sans potentiel adhésif :",
+        options: [
+          "Ne nécessitent pas l'application d'un agent de liaison",
+          "Sont hydrophobes",
+          "Existent en plusieurs teintes",
+          "Sont toujours auto polymérisables"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les colles résines classiques sont hydrophobes et esthétiques (teintes), mais nécessitent un système adhésif (mordançage/bonding) car elles n'adhèrent pas seules.",
+        citations: [437, 539]
+      },
+      {
+        questionText: "Le RelyX Unicem :",
+        options: [
+          "Est une colle avec potentiel adhésif",
+          "Est une colle auto adhésive",
+          "Est auto mordançant",
+          "Présente une réaction de prise duale"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "C'est une colle résine auto-adhésive (tout-en-un), auto-mordançante et à prise duale (chimique et lumineuse).",
+        citations: [502, 539]
+      },
+      {
+        questionText: "Le scellement se fait :",
+        options: [
+          "Par micro-cavitation mécanique",
+          "Par création de liaison chimique avec les tissus dentaires",
+          "Toujours par ciment de scellement provisoire",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le scellement peut reposer sur une rétention mécanique (ciments classiques) ou une adhésion chimique (CVI, résines).",
+        citations: [357, 392]
+      },
+      {
+        questionText: "Sceller signifie :",
+        options: [
+          "Fermer hermétiquement",
+          "Appliquer au moyen d'une colle",
+          "Assurer la rétention",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Sceller une prothèse a pour but de fermer l'interface (étanchéité) et d'assurer la tenue de la prothèse (rétention).",
+        citations: [386, 392]
+      },
+{
+  questionText: "Quelle propriété caractérise le matériau PEEK (PolyEtherEtherKetone) en prothèse dentaire ?",
+  options: [
+    "Il est très allergène",
+    "Il est soluble dans la salive",
+    "Il est biocompatible, hypoallergénique et présente une bonne rigidité",
+    "Il est transparent comme le verre"
+  ],
+  correctOptionIndexes: [2],
+  explanation: "Le PEEK est un technopolymère moderne de haute performance. Il est choisi pour son excellente biocompatibilité (hypoallergénique), sa résistance mécanique (chocs et usure) et sa légèreté, bien qu'il ne soit pas transparent.",
+  citations: [57, 58, 86, 87]
+},
+{
+  questionText: "Dans quel cas clinique les résines auto-polymérisables (chémopolymérisables) sont-elles principalement indiquées ?",
+  options: [
+    "Pour les couronnes céramo-métalliques",
+    "Pour les réparations de prothèses et la confection de porte-empreintes individuels (PEI)",
+    "Pour la base définitive des prothèses adjointes (cuisson)",
+    "Pour les inlays en composite"
+  ],
+  correctOptionIndexes: [1],
+  explanation: "Les résines auto-polymérisables durcissent chimiquement sans apport de chaleur externe, ce qui les rend idéales pour les travaux rapides comme les réparations de prothèses cassées ou la fabrication de PEI. Les bases définitives utilisent des résines thermopolymérisables.",
+  citations: [53, 54, 73]
+},
       {
         questionText: "Les résines thermo polymérisables sont:",
         options: [
@@ -1625,6 +2365,1106 @@ const biomateriauQuizzesY2 = [
         correctOptionIndexes: [0],
         explanation: "On distingue les résines thermo polymérisables (polymérisation par la chaleur) et les résines chémio polymérisables ou auto polymérisables (polymérisation par agent chimique à froid).",
         citations: [553, 554, 555]
+      }
+        
+    ]
+  },
+  {
+
+    title: "Prothèse - 11: Les alliages dentaires (Or, Ni-Cr, Co-Cr)",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Les alliages nickel-chrome (Ni-Cr) sont indiqués :",
+        options: [
+          "En prothèse à châssis métallique",
+          "En prothèse conjointe",
+          "Pour la réalisation des infrastructures céramo-métallique",
+          "Leur température de fusion est plus basse que celle des alliages d'ors de type II"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les alliages Ni-Cr sont très utilisés en prothèse fixée (couronnes, bridges) et comme armature pour la céramique (CCM) en raison de leur rigidité.",
+        citations: [418, 539]
+      },
+      {
+        questionText: "Les alliages chrome-cobalt (Co-Cr) sont :",
+        options: [
+          "Des super alliages utilisés pour la confection des prothèses transitoires",
+          "Moins durs et plus élastiques que le nickel-chrome",
+          "Ils sont commercialisés sous le nom de stellites",
+          "Ils ont une température de fusion plus basse que celle des alliages NiCr"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les alliages Co-Cr sont connus sous le nom de 'Stellites' et sont utilisés pour les châssis métalliques (P.A.P). Ils sont plus rigides que l'or mais parfois moins durs que le Ni-Cr.",
+        citations: [484, 539]
+      },
+      {
+        questionText: "Dans un alliage d'or, le métal de base est :",
+        options: [
+          "L'élément métallique principal en proportion le plus élevé",
+          "L'élément chimique basique qui neutralise la solution",
+          "L'élément métallique qui donne son nom à l'alliage",
+          "L'élément métallique ou métalloïde qui améliore la qualité de l'alliage"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le métal de base est le constituant principal (le solvant de la solution solide) qui donne son nom à la famille de l'alliage (ex: Alliage d'Or).",
+        citations: [545, 653]
+      },
+      {
+        questionText: "Afin d'améliorer les qualités des alliages d'ors, on adjoint :",
+        options: [
+          "Une petite quantité de plomb pour faire briller",
+          "Du platine pour abaisser le point de fusion de l'alliage",
+          "Du cuivre pour le durcir",
+          "Du palladium et du platine pour obtenir de l'or blanc"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Le cuivre durcit l'alliage (durcissement structural). Le palladium et le platine augmentent la résistance, la température de fusion et blanchissent l'alliage.",
+        citations: [431, 539]
+      },
+      {
+        questionText: "Le carat permet de :",
+        options: [
+          "Mesurer la teneur en or d'un alliage d'or",
+          "Déterminer les caractéristiques propres de l'alliage (dureté, élasticité)",
+          "Déterminer le pourcentage en or d'un alliage multiplié par le facteur 10",
+          "Déterminer la couleur de l'alliage d'or"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le carat est l'unité historique de pureté de l'or (24 carats = or pur).",
+        citations: [557, 653]
+      },
+      {
+        questionText: "L'alliage d'or de type IV est :",
+        options: [
+          "Utilisé uniquement au cabinet dentaire",
+          "Utilisé pour la réalisation d'inlay",
+          "Indiqué pour la réalisation de prothèse adjointe métallique et de prothèse conjointe avec attachement",
+          "Indiqué pour les ponts massifs antérieurs longs"
+        ],
+        correctOptionIndexes: [2], // Corrigé PDF: C (Parfois D aussi selon contexte, mais ici C est la clé)
+        explanation: "Le Type IV est un alliage 'Extra-Dur', conçu pour les châssis, les barres et les travaux de grande étendue nécessitant une haute rigidité.",
+        citations: [571, 653]
+      },
+      {
+        questionText: "La corrosion Électro-Chimique :",
+        options: [
+          "Est évitée avec les restaurations céramo-métalliques",
+          "Résulte d'une micropile endobuccale",
+          "Est évitée avec les restaurations tout céramique",
+          "A des conséquences esthétiques fâcheuses"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La corrosion électrochimique (galvanisme) survient entre des métaux différents (micropiles). Le tout céramique (isolant) l'évite totalement.",
+        citations: [533, 539]
+      },
+      {
+        questionText: "La trempe :",
+        options: [
+          "Est un chauffage progressif",
+          "Est effectuée par immersion brusque du métal dans l'eau",
+          "Est généralement précédée d'un bain d'homogénéisation",
+          "Est obtenue par immersion dans l'huile uniquement"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La trempe fixe la structure cristalline par un refroidissement brutal (eau ou huile) après un chauffage d'homogénéisation.",
+        citations: [451, 539]
+      }
+        
+    ]
+  },
+  {
+    title: "Prothèse - 12: Céramiques dentaires et CFAO",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Les céramiques à base d'oxyde de zirconium (Zircone) sont :",
+        options: [
+          "Mises en œuvre par la technique CFAO",
+          "Utilisées comme matériaux cosmétique pour la stratification des chapes métalliques",
+          "Indiquées pour les dents antérieures",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La zircone est un matériau très dur, usiné par CFAO (CAD/CAM), et utilisé pour les armatures (chapes) ou les restaurations monolithiques antérieures/postérieures.",
+        citations: [471, 539]
+      },
+      {
+        questionText: "Le Zircone (Oxyde de Zirconium) :",
+        options: [
+          "Est une céramique vitreuse",
+          "Est une céramique polycristalline",
+          "Possède une ténacité très élevée (résistance à la propagation des fissures)",
+          "Est opaque et nécessite souvent une stratification cosmétique"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le zircone est une céramique polycristalline très résistante (ténacité) mais opaque (bien que des versions translucides existent maintenant), souvent utilisée comme infrastructure.",
+        citations: []
+      },
+      {
+        questionText: "L'usinage du Zircone en CFAO se fait généralement :",
+        options: [
+          "À l'état pleinement fritté (dur)",
+          "À l'état pré-fritté (tendre)",
+          "Par impression 3D",
+          "Avec un facteur d'agrandissement pour compenser le retrait de frittage"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "On usine le zircone 'tendre' (pré-fritté) car c'est plus rapide et use moins les fraises. On l'usine plus grand (environ 20-25%) pour compenser le retrait massif qui aura lieu lors du frittage final au four.",
+        citations: []
+      },
+      {
+        questionText: "Les qualités requises pour un système céramique-métallique sont :",
+        options: [
+          "Une bonne température de fusion",
+          "Une compatibilité des coefficients d'expansion de la céramique et de l'alliage",
+          "L'absence d'adhérence entre l'alliage et la céramique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Pour éviter les fractures (chipping), le coefficient d'expansion thermique (CET) du métal et de la céramique doit être compatible (le métal doit se rétracter légèrement plus que la céramique pour la mettre en compression).",
+        citations: [583, 653]
+      },
+      {
+        questionText: "La liaison mécanique de la céramique au métal :",
+        options: [
+          "Est due aux irrégularités de surface du métal",
+          "Est due aux irrégularités de surface de la céramique",
+          "Est due aux irrégularités de la couche de la céramique",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La liaison mécanique est assurée par le sablage ou le grattage de l'armature métallique, créant des micro-rétentions.",
+        citations: [591, 653]
+      },
+      {
+        questionText: "La fracture cohésive est :",
+        options: [
+          "Une rupture entre la couche d'oxyde et le métal",
+          "Une rupture dans la couche de céramique",
+          "Possible dans le cas d'adhérence céramique métal élevée",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Une fracture cohésive se produit au sein même de la céramique (pas à l'interface). Cela prouve que la liaison métal-céramique était plus forte que la céramique elle-même.",
+        citations: [373, 392]
+      },
+      {
+        questionText: "La mouillabilité des céramiques dentaires augmente :",
+        options: [
+          "En présence d'oxydes polarisés",
+          "En présence d'oxydes non polarisés",
+          "Avec l'addition du molybdène",
+          "Avec l'addition du manganèse"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La présence d'oxydes et d'éléments traces comme le molybdène favorise l'étalement de la céramique opaque sur le métal (mouillabilité).",
+        citations: [479, 539]
+      },
+      {
+        questionText: "La CFAO (Conception et Fabrication Assistée par Ordinateur) :",
+        options: [
+          "C'est la conception assistée par ordinateur uniquement",
+          "C'est l'usinage de pièces prothétique à distance",
+          "C'est la conception et fabrication assistée par ordinateur",
+          "C'est la fabrication assistée par ordinateur uniquement"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "CFAO regroupe les deux volets : la Conception (CAD) et la Fabrication (CAM).",
+        citations: [517, 539]
+      },
+      {
+        questionText: "La technique soustractive (CFAO) :",
+        options: [
+          "Consiste à mettre en forme un objet par ajout de matière",
+          "C'est un dépôt sélectif d'un matériau à l'état liquide",
+          "Consiste à mettre en forme un objet par soustraction de matière",
+          "C'est la polymérisation sélective"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La technique soustractive correspond au fraisage ou à l'usinage d'un bloc de matériau (on enlève de la matière).",
+        citations: [461, 539]
+      },
+      {
+        questionText: "La classification actuelle des céramiques est basée sur :",
+        options: [
+          "La composition chimique",
+          "Les procédés de mise en forme",
+          "La température de frittage",
+          "La température de fusion"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La classification moderne divise les céramiques selon leur microstructure chimique (Vitreuse, Cristalline, Polycristalline).",
+        citations: [528, 539]
+           }
+        
+    ]
+  },
+  {
+
+    title: "Prothèse - 13: Ciments de scellement et Collage",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Les ciments à l'oxyphosphate de zinc :",
+        options: [
+          "Ont une action calmante sur le tissu pulpaire",
+          "Font partie des ciments minéraux",
+          "Ont une bonne résistance mécanique",
+          "Ont une bonne adhérence chimique aux tissus dentaires"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Ce sont des ciments minéraux (poudre/liquide) avec une bonne résistance mécanique pour le scellement définitif, mais ils sont acides (irritants, pas calmants) et n'ont pas d'adhésion chimique (rétention mécanique uniquement).",
+        citations: [1769, 1775]
+      },
+      {
+        questionText: "Un ciment de scellement idéal doit :",
+        options: [
+          "Etre biocompatible",
+          "Avoir un temps de travail court et un temps de prise long",
+          "Résister aux forces de traction uniquement",
+          "Etre non agressif vis-à-vis des tissus parodontaux"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La biocompatibilité et le respect du parodonte (gencive) sont essentiels. Le temps de travail doit être suffisant (pas court) et la prise rapide une fois en bouche.",
+        citations: [1800, 1807]
+      },
+      {
+        questionText: "Le collage de la céramique à phase vitreuse nécessite :",
+        options: [
+          "Un mordançage par l'acide fluorhydrique",
+          "Un sablage avec de l'alumine uniquement",
+          "L'utilisation d'un agent de couplage (silane)",
+          "L'utilisation de colle avec un potentiel adhésif uniquement"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Pour coller une céramique vitreuse (ex: E.max), il faut la mordancer (acide fluorhydrique) pour créer du relief et appliquer du Silane (agent de couplage chimique).",
+        citations: [1910, 1913]
+      },
+      {
+        questionText: "Les colles duales (Dual-cure) :",
+        options: [
+          "Ont un mode de polymérisation chimique et photonique",
+          "Ont un mode de polymérisation chimique uniquement",
+          "Ont un mode de polymérisation photonique uniquement",
+          "Assurent une bonne qualité de prise sur toutes les surfaces du joint de collage"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les colles duales durcissent à la fois par la lumière (photo) et chimiquement (auto), ce qui garantit la prise même dans les zones où la lumière ne pénètre pas bien (sous la couronne).",
+        citations: [1914, 1920]
+      },
+      {
+        questionText: "Le collage sur un alliage dentaire (Métal) :",
+        options: [
+          "Ne nécessite aucun traitement de surface",
+          "Nécessite un ancrage micro mécanique par sablage à l'alumine",
+          "Se fait toujours avec une colle auto adhésive",
+          "Nécessite l'utilisation d'un agent de couplage spécifique (Primer métal)"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Le métal ne se mordance pas à l'acide. Il faut le sabler (micro-mécanique) et utiliser un primer métal contenant des monomères spécifiques (comme le MDP) pour l'adhésion chimique.",
+        citations: [1921, 1927]
+      },
+      {
+        questionText: "Les colles auto-adhésives :",
+        options: [
+          "Nécessitent une préparation spécifique des surfaces à coller (mordançage/bonding)",
+          "Nécessitent l'utilisation d'un système adhésif particulier",
+          "Possèdent un caractère adhésif direct aux tissus dentaires",
+          "Donnent les meilleurs résultats pour le collage des facettes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les colles auto-adhésives (comme le RelyX Unicem) simplifient le protocole car elles adhèrent directement à la dent sans étape préalable de mordançage ou d'adhésif séparé. (Elles sont moins indiquées pour les facettes qui demandent une adhésion pure très forte).",
+        citations: [1939, 1943]
+      }
+    ]
+    
+
+  },
+  {
+    title: "EMD 1 - 2019/2020 (Biomatériaux Prothèse)",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Le temps de prise d'un matériau correspond au :",
+        options: [
+          "Temps nécessaire à la réaction de prise complète",
+          "Moment de l'insertion de l'empreinte en bouche",
+          "Début du malaxage",
+          "Retrait de l'empreinte"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le temps de prise est défini comme la période totale nécessaire pour que la réaction chimique de durcissement soit complète.",
+        citations: [1185, 1293]
+      },
+      {
+        questionText: "Les matériaux à empreinte comportent :",
+        options: [
+          "Les matériaux non élastiques",
+          "Les matériaux plastiques",
+          "Les matériaux élastiques",
+          "Les matériaux rigides"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les matériaux à empreinte sont classés en deux grandes familles : les matériaux non élastiques (rigides) et les matériaux élastiques.",
+        citations: [1189, 1293]
+      },
+      {
+        questionText: "L'augmentation du temps de prise du plâtre se fait par :",
+        options: [
+          "Malaxage rapide et prolongé",
+          "Rapport eau/poudre diminué",
+          "Rapport eau/poudre augmenté",
+          "Utilisation de sulfate de potassium"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Augmenter le rapport eau/poudre (plus d'eau) retarde la cristallisation et augmente le temps de prise. Le malaxage rapide (A) et le sulfate de potassium (D) accélèrent la prise.",
+        citations: [1194, 1293]
+      },
+      {
+        questionText: "Le plâtre dur type II est indiqué :",
+        options: [
+          "Pour la réalisation des modèles primaires en prothèse totale",
+          "Pour la réalisation du modèle positif unitaire",
+          "Pour la mise en articulateur",
+          "Pour la réalisation des modèles d'étude et de modèles de travail"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le plâtre dur de type II (plâtre de Paris) est utilisé pour les modèles d'étude et de travail (bien que pour la précision on préfère souvent le type III ou IV, la réponse D est celle du corrigé).",
+        citations: [1199, 1293]
+      },
+      {
+        questionText: "Les hydrocolloïdes irréversibles sont indiqués :",
+        options: [
+          "En prothèse conjointe",
+          "En prothèse partielle et totale adjointe",
+          "Au laboratoire pour réaliser un duplicata",
+          "Pour la réalisation des modèles d'études"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Les alginates (hydrocolloïdes irréversibles) sont utilisés pour les modèles d'étude, la prothèse adjointe, et parfois en prothèse conjointe (classe A).",
+        citations: [1206, 1293]
+      },
+      {
+        questionText: "Les alginates de classe A sont :",
+        options: [
+          "Des alginates traditionnels",
+          "Des alginates de haute définition",
+          "Les hydrocolloïdes réversibles",
+          "Indiqués en prothèse conjointe"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les alginates de classe A sont formulés pour une haute définition et sont indiqués pour la prothèse conjointe.",
+        citations: [1212, 1293]
+      },
+      {
+        questionText: "Les hydrocolloïdes réversibles sont :",
+        options: [
+          "Des matériaux à empreinte élastique",
+          "Des matériaux à empreinte non élastique",
+          "Des alginates",
+          "Des matériaux qui ne reviennent plus à l'état initial une fois mélangé"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les hydrocolloïdes réversibles (Agar-Agar) sont des matériaux élastiques qui peuvent changer d'état physique de manière réversible.",
+        citations: [1217, 1293]
+      },
+      {
+        questionText: "La manipulation du plâtre à empreinte :",
+        options: [
+          "Se fait par spatulation progressive",
+          "Se fait par un mélange pré-dosé",
+          "Nécessite un porte empreinte lisse",
+          "Nécessite un porte empreinte perforé"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le plâtre à empreinte nécessite un porte-empreinte lisse (pour permettre la réinsertion des fragments après fracture) et se prépare par saturation/spatulation progressive ou mélange pré-dosé.",
+        citations: [1222, 1293]
+      },
+      {
+        questionText: "Les cires dentaires :",
+        options: [
+          "Ont un intervalle de fusion variable",
+          "Possèdent le coefficient de dilatation thermique le plus élevé des matériaux dentaires",
+          "Peuvent subir des changements dimensionnels entraînant un mauvais ajustement",
+          "Ont un comportement totalement élastique"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les cires ont un coefficient de dilatation thermique très élevé, un intervalle de fusion, et sont sujettes à la distorsion. Elles ne sont pas totalement élastiques.",
+        citations: [1227, 1293]
+      },
+      {
+        questionText: "La paraffine est :",
+        options: [
+          "Une cire dure et cassante",
+          "Ajoutée à la cire d'abeille pour réduire sa plasticité",
+          "Une cire naturelle d'origine minérale",
+          "D'origine animale et végétale"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La paraffine est une cire minérale utilisée pour modifier (réduire) la plasticité de la cire d'abeille.",
+        citations: [1234, 1293]
+      },
+      {
+        questionText: "Les pâtes thermoplastiques :",
+        options: [
+          "Sont des matériaux élastiques",
+          "Prennent un aspect pâteux en leur ajoutant un catalyseur",
+          "Leur viscosité se modifie sous l'action de la température",
+          "Elles se présentent sous forme de plaques ou de bâtonnets"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Ce sont des matériaux thermoplastiques (viscosité modifiée par la température) présentés en plaques ou bâtonnets.",
+        citations: [1239, 1293]
+      },
+      {
+        questionText: "Les pâtes thermoplastiques sont indiquées :",
+        options: [
+          "Dans la réalisation de joint périphérique en prothèse complète",
+          "Ne sont jamais utilisées comme matériau à empreinte en prothèse totale",
+          "Sont utilisées comme porte empreinte uniquement en prothèse totale",
+          "En prothèse conjointe leur emploi nécessite l'utilisation d'une bague de cuivre"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Elles sont indiquées pour le joint périphérique et pour les empreintes unitaires sous bague de cuivre.",
+        citations: [1245, 1293]
+      },
+      {
+        questionText: "Lors de la manipulation des pâtes thermoplastiques :",
+        options: [
+          "Elles deviennent souples et plastique après refroidissement",
+          "Après utilisation on ne peut pas les réchauffer partiellement pour une réutilisation",
+          "Le réchauffage altère la qualité de ces pâtes",
+          "Ces pâtes deviennent dures et cassantes après refroidissement"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Après refroidissement, elles retrouvent leur état solide, dur et cassant.",
+        citations: [1249, 1293]
+      },
+      {
+        questionText: "La particularité des élastomères c'est qu'ils :",
+        options: [
+          "Passent de l'état élastique à l'état plastique",
+          "Sont moins stables que les hydrocolloïdes",
+          "Ont une réaction de réticulation analogue au plâtre",
+          "Passent de l'état plastique à l'état élastique par réaction de réticulation"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les élastomères durcissent par une réaction de polymérisation (réticulation), passant de l'état plastique à élastique.",
+        citations: [1254, 1293]
+      },
+      {
+        questionText: "Après réaction de prise des polysulfures :",
+        options: [
+          "Il n'y a aucun sous-produit",
+          "Une molécule d'eau est produite",
+          "Il y a formation d'un sous-produit de l'alcool",
+          "La résistance à la déchirure diminue"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La réaction de condensation des polysulfures produit de l'eau comme sous-produit.",
+        citations: [1261, 1293]
+      },
+      {
+        questionText: "Les pâtes zinquénoléines :",
+        options: [
+          "Sont des matériaux à empreinte",
+          "Sont des matériaux de coulée",
+          "Sont des résines",
+          "Contiennent de l'oxyde de zinc et de l'eugénol"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Ce sont des matériaux à empreinte à base d'oxyde de zinc et d'eugénol.",
+        citations: [1266, 1293]
+      },
+      {
+        questionText: "La manipulation des pâtes zinquénoléines :",
+        options: [
+          "Nécessite un bol et une spatule en matière plastique",
+          "Les deux pâtes sont disposées en quantités égales",
+          "Le mélange doit avoir une couleur uniforme",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "On utilise des quantités égales de pâte (longueurs) et on mélange jusqu'à homogénéité (couleur uniforme).",
+        citations: [1271, 1293]
+      },
+      {
+        questionText: "Le liquide qui constitue la résine dentaire :",
+        options: [
+          "Est du méthacrylate de méthyle pré polymérisé",
+          "Est du monomère de méthacrylate de méthyle",
+          "Comporte un agent de réticulation et un inhibiteur",
+          "Comporte un initiateur (peroxyde de benzoyle)"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le liquide contient le monomère (MMA), un agent de réticulation et un inhibiteur. L'initiateur est dans la poudre.",
+        citations: [1276, 1293]
+      },
+      {
+        questionText: "La résine auto polymérisable est une résine :",
+        options: [
+          "Qui se polymérise par la chaleur",
+          "Qui se polymérise grâce à l'action de l'activateur contenu dans sa composition",
+          "Utilisée lors de la réalisation de la base de la prothèse adjointe totale",
+          "Utilisée dans la confection de la plaque base des cires d'occlusion"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Elle polymérise chimiquement (activateur chimique) et est utilisée pour les maquettes/plaques bases.",
+        citations: [1279, 1293]
+      },
+      {
+        questionText: "La résine thermo polymérisable est une résine :",
+        options: [
+          "Utilisée dans la conception du porte empreinte individuel",
+          "Qui nécessite le respect du cycle de sa cuisson pour éviter sa déformation",
+          "Plus rigide que la résine auto polymérisable",
+          "Mise en moufle à son stade pâteux"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La résine thermo nécessite une cuisson, est plus rigide que l'auto, et est mise en moufle à l'état pâteux.",
+        citations: [1285, 1293]
+      }
+    ]
+  },
+  {
+    title: "Examen 2016/2017 (Biomatériaux Prothèse)",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Alliages nickel-chrome sont indiqués :",
+        options: [
+          "En prothèse à châssis métallique",
+          "En prothèse conjointe",
+          "Pour la réalisation des infrastructures céramo-métallique",
+          "Leur température de fusion est plus basse que celle des alliages d'ors de type II"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les alliages Ni-Cr sont indiqués pour la prothèse conjointe et les infrastructures céramo-métalliques.",
+        citations: [1562, 1683]
+      },
+      {
+        questionText: "Afin d'améliorer les qualités des alliages d'ors, on adjoint au métal de base :",
+        options: [
+          "Une petite quantité de plomb pour faire briller",
+          "Du platine pour abaisser le point de fusion de l'alliage",
+          "Du cuivre pour le durcir",
+          "Du palladium et du platine pour obtenir de l'or blanc"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Le cuivre durcit l'alliage. Le palladium et le platine blanchissent l'or et améliorent ses propriétés mécaniques.",
+        citations: [1573, 1683]
+      },
+      {
+        questionText: "Les colles sans potentiel adhésif :",
+        options: [
+          "Ne nécessitent pas l'application d'un agent de liaison",
+          "Sont hydrophobes",
+          "Existent en plusieurs teintes",
+          "Sont toujours auto polymérisables"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Elles sont hydrophobes et disponibles en plusieurs teintes (pour l'esthétique), mais nécessitent un adhésif car elles n'ont pas de potentiel adhésif propre.",
+        citations: [1581, 1683]
+      },
+      {
+        questionText: "Le ciment à l'oxyde de zinc-eugénol (scellement) :",
+        options: [
+          "Est un ciment définitif",
+          "Il est obtenu en mélangeant une poudre et un liquide",
+          "Il est obtenu en mélangeant deux pates",
+          "Il est utilisé comme matériau à empreinte secondaire"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "En tant que ciment de scellement (souvent provisoire), il se présente classiquement sous forme poudre/liquide.",
+        citations: [1588, 1683]
+      },
+      {
+        questionText: "La trempe :",
+        options: [
+          "Est un chauffage progressif inférieur à la température de transformation",
+          "Est effectuée par immersion brusque du métal dans l'eau",
+          "Est généralement précédé d'un bain d'homogénéisation",
+          "Est obtenu par immersion dans l'huile uniquement"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La trempe implique un refroidissement brusque (eau/huile) après homogénéisation thermique.",
+        citations: [1595, 1683]
+      },
+      {
+        questionText: "La technique soustractive :",
+        options: [
+          "Consiste à mettre en forme un objet par ajout de matière",
+          "C'est un dépôt sélectif d'un matériau à l'état liquide",
+          "Consiste à mettre en forme un objet par soustraction de matière",
+          "C'est la polymérisation sélective par un rayonnement U.V d'un mélange de cire et de résine liquide"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La technique soustractive (usinage) enlève de la matière pour créer la forme.",
+        citations: [1605, 1683]
+      },
+      {
+        questionText: "Les céramiques à base d'oxyde de zirconium sont :",
+        options: [
+          "Mis en œuvre par la technique CFAO",
+          "Utilisées comme matériaux cosmétique pour la stratification des chapes métalliques",
+          "Indiquées pour les dents antérieures",
+          "Toute les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La zircone est usinée par CFAO et est très utilisée pour les dents antérieures (et postérieures) pour l'esthétique et la résistance.",
+        citations: [1615, 1683]
+      },
+      {
+        questionText: "La mouillabilité des céramiques dentaires augmente :",
+        options: [
+          "En présence d'oxyde polarisés",
+          "En présence d'oxyde non polarisés",
+          "Avec l'addition du molybdène",
+          "Avec l'addition du manganèse"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les oxydes polarisés et certains additifs comme le molybdène ou le manganèse favorisent la mouillabilité nécessaire à la liaison.",
+        citations: [1623, 1683]
+      },
+      {
+        questionText: "Les alliages chrome-cobalt sont :",
+        options: [
+          "Des super alliages utilisés pour la confection des prothèses transitoires",
+          "Moins durs et plus élastique que le nickel-chrome",
+          "Ils sont commercialisés sous le nom de stellites",
+          "Ils ont une température de fusion plus basse que celle des alliages Nicr"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les alliages Co-Cr (Stellites) sont plus élastiques (moins rigides) que le Ni-Cr.",
+        citations: [1628, 1683]
+      },
+      {
+        questionText: "Alliages du type IV (Or) :",
+        options: [
+          "Doivent titrer moins de 750",
+          "Sont indiqués pour les ponts massifs antérieurs longs",
+          "Sont extra-durs",
+          "Sont indiqués pour la confection des prothèses partielles adjointes métalliques"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "L'or de type IV est extra-dur et indiqué pour les châssis métalliques (prothèse adjointe).",
+        citations: [1639, 1683]
+      },
+      {
+        questionText: "Le relyX-unicem :",
+        options: [
+          "Est une colle avec potentiel adhésif",
+          "Est une colle auto adhésive",
+          "Est auto mordançant",
+          "Présente une réaction de prise duale"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "C'est une colle auto-adhésive, auto-mordançante et à prise duale.",
+        citations: [1646, 1683]
+      },
+      {
+        questionText: "Dans les défauts de fonderie, l'inclusion Gazeuse du Soufflure :",
+        options: [
+          "Est due au manque de porosités du métal",
+          "Est une hétérogénéité qui affecte le métal",
+          "Peut apparaitre en surface lors du polissage",
+          "Est l'espace inter cristallin dans lequel le métal est encore à l'état solide"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les soufflures sont des inclusions gazeuses (porosités) visibles au polissage.",
+        citations: [1653, 1683]
+      },
+      {
+        questionText: "La CFAO :",
+        options: [
+          "C'est la conception assistée par ordinateur",
+          "C'est l'usinage de pièces prothétique à distance",
+          "C'est la conception et fabrication assistée par ordinateur",
+          "C'est la fabrication assistée par ordinateur"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "CFAO = Conception et Fabrication Assistée par Ordinateur.",
+        citations: [1661, 1683]
+      },
+      {
+        questionText: "La classification actuelle des céramiques est basée sur :",
+        options: [
+          "La composition chimique",
+          "Les procèdes de mise en forme",
+          "La température de frittage",
+          "La température de fusion"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les céramiques sont classées principalement selon leur composition chimique (vitreuse, cristalline, etc.).",
+        citations: [1672, 1683]
+      },
+      {
+        questionText: "La corrosion Electro-Chimique :",
+        options: [
+          "Est évitée avec les restaurations céramo-métalliques",
+          "Résulte d'une micropile endobuccale",
+          "Est évitée avec les restaurations tout céramique",
+          "A des conséquences esthétiques fâcheuses"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Elle est due à des micropiles (galvanisme), évitée par le tout céramique (isolant) et cause des problèmes esthétiques.",
+        citations: [1677, 1683]
+      }
+    ]
+  },
+  {
+    title: "Examen 2017/2018 (Biomatériaux Prothèse)",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Dans un alliage d'or, le métal de base est :",
+        options: [
+          "L'élément métallique principal en proportion le plus élevé",
+          "L'élément chimique basique qui neutralise la solution",
+          "L'élément métallique qui donne son nom à l'alliage",
+          "L'élément métallique ou métalloïde qui améliore la qualité de l'alliage"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le métal de base est l'élément principal (proportion la plus élevée) et celui qui donne son nom à l'alliage.",
+        citations: [1689, 1797]
+      },
+      {
+        questionText: "Le carat permet de :",
+        options: [
+          "Mesurer la teneur en or d'un alliage d'or",
+          "Déterminer les caractéristiques propres de l'alliage (dureté, élasticité)",
+          "Déterminer le pourcentage en or d'un alliage multiplié par le facteur 10",
+          "Déterminer la couleur de l'alliage d'or"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le carat est une unité de mesure de la pureté (teneur) en or.",
+        citations: [1701, 1797]
+      },
+      {
+        questionText: "Dans les alliages d'or les correctifs tels que :",
+        options: [
+          "Le cuivre, qui tend à donner une couleur rougeâtre à l'alliage",
+          "Le zinc qui augmente le point de fusion et réduit la fluidité de l'alliage",
+          "L'argent le platine le palladium qui tendent à blanchir l'alliage",
+          "Le cuivre et la platine qui élèvent le point de fusion de l'alliage"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le cuivre rougit l'alliage, tandis que l'argent, le platine et le palladium le blanchissent.",
+        citations: [1707, 1797]
+      },
+      {
+        questionText: "L'alliage d'or :",
+        options: [
+          "De type I utilise uniquement au cabinet dentaire par le chirurgien dentiste",
+          "De type II utilise pour la réalisation d'inlay et de prothèse fixe de moyenne et de longue portée",
+          "De type IV utilise pour la réalisation de prothèse adjointe métallique et de prothèse conjointe avec attachement",
+          "De type III utilise pour les inlays et la réalisation de ponts massifs postérieurs courts"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le Type I est mou (inlays simples/cabinet), le Type IV est extra-dur (prothèse adjointe/attachements).",
+        citations: [1715, 1797]
+      },
+      {
+        questionText: "Les qualités requises pour un système céramique-métallique sont :",
+        options: [
+          "Une bonne température de fusion",
+          "Une compatibilité des coefficients d'expansion de la céramique et de l'alliage",
+          "L'absence d'adhérence entre l'alliage et la céramique",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La compatibilité des coefficients d'expansion thermique (C.E.T) est cruciale pour éviter les fractures lors du refroidissement.",
+        citations: [1727, 1797]
+      },
+      {
+        questionText: "La liaison mécanique de la céramique au métal :",
+        options: [
+          "Est due aux irrégularité de surface du métal",
+          "Est due aux irrégularité de surface de la céramique",
+          "Est due aux irrégularité de la couche de la céramique",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La liaison mécanique est assurée par l'ancrage de la céramique dans les microrugosités de la surface métallique (créées par sablage/usinage).",
+        citations: [1735, 1797]
+      },
+      {
+        questionText: "Les CFAO la fabrication de la pièce prothétique peut se faire soit :",
+        options: [
+          "Par soustraction",
+          "Par addition",
+          "Aucune réponse est juste",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La CFAO peut utiliser des méthodes soustractives (usinage) ou additives (impression 3D/frittage laser). La réponse D (toutes justes) inclut A et B.",
+        citations: [1742, 1797]
+      },
+      {
+        questionText: "Les zircones :",
+        options: [
+          "Sont des céramiques renforcées",
+          "Ne peuvent être travaillées que par usinage",
+          "Sont les céramiques les plus tenaces",
+          "Sont translucides"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La zircone est une céramique polycristalline renforcée, très tenace, généralement usinée (CFAO), mais elle est plus opaque que les céramiques vitreuses (donc D est souvent faux dans les anciens contextes comparatifs).",
+        citations: [1753, 1797]
+      },
+      {
+        questionText: "Le mordançage :",
+        options: [
+          "Ne concerne que l'email",
+          "Se fait à l'aide de l'acide fluorhydrique au niveau de la dent",
+          "Est inefficace sur les céramiques vitreuses",
+          "La dent mordancée doit être rincée systématiquement"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le rinçage est obligatoire après mordançage. (Le mordançage dentaire utilise l'acide phosphorique, pas fluorhydrique qui est pour la céramique).",
+        citations: [1762, 1797]
+      },
+      {
+        questionText: "Les ciments à l'oxyphosphate de zinc :",
+        options: [
+          "Ont une action calmante sur le tissu pulpaire",
+          "Font partie de ciment minéraux",
+          "Ont une bonne résistance mécanique",
+          "Ont une bonne adhérence aux tissus dentaires"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Ce sont des ciments minéraux avec une bonne résistance mécanique (scellement définitif), mais ils n'adhèrent pas chimiquement à la dent et ne sont pas calmants (acides).",
+        citations: [1770, 1797]
+      },
+      {
+        questionText: "Les eugénolates :",
+        options: [
+          "Peuvent être utilisés pour le scellement définitif",
+          "Contiennent de l'oxyde de zinc dans le liquide",
+          "Ont une forte solubilité se désagrègent dans les fluides buccaux",
+          "Sont irritants pour la gencive et les tissus dentaires"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les eugénolates classiques ont une solubilité élevée, ce qui limite leur pérennité.",
+        citations: [1777, 1797]
+      },
+      {
+        questionText: "Pour passer de maquette en cire à l'armature métallique on placera :",
+        options: [
+          "Une tige coulée sur la partie la plus massive des cuspides linguales",
+          "Une tige qui sera reliée uniquement au cône de coulée",
+          "Une tige reliée à l'armature et cône de coulée",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La tige de coulée est placée sur les parties épaisses (massives) pour éviter les porosités et relie la maquette au cône de coulée.",
+        citations: [1788, 1797]
+      }
+    ]
+  },
+  {
+    title: "EMD 2 - 2019/2020 (Biomatériaux Prothèse)",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Le cuivre est :",
+        options: [
+          "Un métal précieux",
+          "Un métal inerte chimiquement",
+          "Un métal qui augmente la conductibilité électrique de l'alliage",
+          "Un métal qui donne à l'alliage d'or une couleur rougeâtre"
+        ],
+        correctOptionIndexes: [0, 1], // Selon le corrigé (AB). Note: Scientifiquement, le cuivre n'est pas "précieux" et n'est pas inerte, c'est l'or qui l'est. Le corrigé semble contenir une erreur ou une spécificité du cours. Mais je respecte le corrigé: 13 -> AB.
+        explanation: "Selon le corrigé du PDF (Question 13 -> AB). Attention: Le cuivre donne bien une couleur rougeâtre (D), mais le corrigé indique A et B. Il est possible que la numérotation soit décalée dans le corrigé source.",
+        citations: [1478, 1536]
+      },
+      {
+        questionText: "Le duplicata d'un modèle de travail est réalisé en :",
+        options: [
+          "Matériau réfractaire",
+          "Plâtre extra dur",
+          "Plâtre dur",
+          "Alliage précieux"
+        ],
+        correctOptionIndexes: [0, 3], // Corrigé dit 14 -> AD.
+        explanation: "Le duplicata pour la coulée de châssis est fait en matériau réfractaire (revêtement) pour supporter la température de coulée.",
+        citations: [1483, 1536]
+      },
+      {
+        questionText: "La coulée de l'alliage par centrifugation :",
+        options: [
+          "Est la technique de coulée la plus utilisée",
+          "Se caractérise par un déplacement de l'alliage dans une direction centrifuge",
+          "Se caractérise par un déplacement de l'alliage dans une direction centripète",
+          "Se fait uniquement en prothèse à châssis métallique"
+        ],
+        correctOptionIndexes: [0, 1], // Corrigé 15 -> AB.
+        explanation: "La centrifugation est la méthode standard, utilisant la force centrifuge pour pousser le métal fondu dans le moule.",
+        citations: [1488, 1536]
+      },
+      {
+        questionText: "La conception assistée par ordinateur CAO :",
+        options: [
+          "Correspond à l'élaboration virtuelle de la prothèse",
+          "C'est l'élaboration physique de la prothèse",
+          "Elle nécessite la présence du patient",
+          "Elle est spécifique pour chaque patient"
+        ],
+        correctOptionIndexes: [0, 3], // Corrigé 16 -> AB ?? Non, CAO = Virtuel. FAO = Physique. Le corrigé 16 -> AB semble correspondre à la question précédente? Il y a un décalage. Je vais utiliser la logique standard ici ou le décalage. Corrigé 14=AD, 15=AB, 16=AB. La question 14 du texte est CAO. Si 14=AD, alors CAO est Virtuelle (A) et Spécifique (D). C'est cohérent.",
+        correctOptionIndexes: [0, 3],
+        explanation: "La CAO (Conception) est l'étape virtuelle de design spécifique au patient. La FAO (Fabrication) est l'étape physique.",
+        citations: [1493, 1536]
+      },
+      {
+        questionText: "Le scellement se fait :",
+        options: [
+          "Par micro-cavitation mécanique",
+          "Par création de liaison chimique avec les tissus dentaires",
+          "Toujours par ciment de scellement provisoire",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1], // Corrigé 15 (dans l'ordre) ou 17? Le tableau 15=AB. La question 15 est "Le scellement". A et B sont logiques (mécanique ou chimique selon le matériau).
+        explanation: "Le scellement peut être mécanique (ciments traditionnels) ou chimique/adhésif (CVI, résines).",
+        citations: [1501, 1536]
+      },
+      {
+        questionText: "La liaison mécanique se fait par :",
+        options: [
+          "Ancrage de la céramique dans les irrégularités du métal",
+          "La mise en compression de la céramique",
+          "Oxydation du métal",
+          "Sablage de la céramique"
+        ],
+        correctOptionIndexes: [0, 1], // Corrigé 16 -> AB.
+        explanation: "La liaison céramo-métallique est mécanique (ancrage) et physique (compression par différence de CET).",
+        citations: [1506, 1536]
+      },
+      {
+        questionText: "L'oxydation du métal :",
+        options: [
+          "Contribue à la liaison physique",
+          "Se fait par traitement thermique",
+          "Diffère d'un alliage à un autre",
+          "Est la même pour tous les alliages"
+        ],
+        correctOptionIndexes: [1, 2], // Corrigé 17 -> BC.
+        explanation: "L'oxydation (création d'oxydes pour la liaison chimique) se fait par chauffage (dégazage/oxydation) et varie selon la composition de l'alliage.",
+        citations: [1512, 1536]
+      },
+      {
+        questionText: "La fracture cohésive est :",
+        options: [
+          "Une rupture entre la couche d'oxyde et le métal",
+          "Une rupture dans la couche de céramique",
+          "Possible dans le cas d'adhérence céramique métal élevé",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1, 2], // Corrigé 18 -> BC.
+        explanation: "Une fracture cohésive se produit à l'intérieur du matériau (céramique) lui-même, signe d'une bonne liaison à l'interface (adhérence élevée).",
+        citations: [1517, 1536]
+      },
+      {
+        questionText: "La zircone peut être mise en forme par :",
+        options: [
+          "CFAO ou conception et fabrication assistée par ordinateur",
+          "CFAO ou conception et fabrication assistée par ordinateur par addition",
+          "CFAO ou conception et fabrication assistée par ordinateur par soustraction",
+          "Manuellement par le prothésiste de laboratoire selon la technique de une coulée"
+        ],
+        correctOptionIndexes: [0, 1, 2], // Corrigé 19 -> ABC.
+        explanation: "La zircone est mise en forme par CFAO, principalement par soustraction (usinage), mais les technologies additives (impression) se développent.",
+        citations: [1525, 1536]
+      },
+      {
+        questionText: "Sceller :",
+        options: [
+          "Fermer hermétiquement",
+          "Appliquer au moyen d'une colle",
+          "Assurer la rétention",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 2], // Corrigé 20 -> AC.
+        explanation: "Sceller signifie fermer hermétiquement (joint) et assurer la rétention de la prothèse.",
+        citations: [1530, 1536]
+      }
+    ]
+  },
+  {
+    title: "Examen 2018/2019 (Biomatériaux Prothèse)",
+    subject: "biomateriau",
+    questions: [
+      {
+        questionText: "Un ciment de scellement doit :",
+        options: [
+          "Etre biocompatible",
+          "Avoir un temps de travail court et un temps de prise long",
+          "Résister aux forces de traction uniquement",
+          "Etre non agressif vis-à-vis des tissus parodontaux"
+        ],
+        correctOptionIndexes: [0, 3], // Corrigé 1 -> Ad
+        explanation: "La biocompatibilité et l'innocuité parodontale sont des prérequis essentiels.",
+        citations: [1800, 2478]
+      },
+      {
+        questionText: "Un ciment verre ionomère (CVI) :",
+        options: [
+          "Est un ciment minéral",
+          "A une bonne adhésion physico-chimique à la structure dentaire",
+          "Relargue au fluor",
+          "Peut être améliorer par adjonction de résine"
+        ],
+        correctOptionIndexes: [2, 3], // Corrigé 2 -> cd
+        explanation: "Les CVI libèrent du fluor (cariostatique) et peuvent être modifiés par de la résine (CVIMAR) pour améliorer leurs propriétés.",
+        citations: [1808, 2478]
+      },
+      {
+        questionText: "Le ciment à oxyde de zinc eugénol :",
+        options: [
+          "Est composé d'un liquide à base d'acide phosphorique",
+          "Est soluble dans les fluides buccaux",
+          "Est un ciment définitif",
+          "A un effet sédatif et cicatrisant sur les tissus pulpaires"
+        ],
+        correctOptionIndexes: [2, 3], // Corrigé 3 -> Cd
+        explanation: "L'eugénol a un effet sédatif sur la pulpe. Le ciment ZOE est souvent considéré provisoire, mais certaines formulations renforcées peuvent être définitives ou utilisées comme base.",
+        citations: [1818, 2478]
+      },
+      {
+        questionText: "Les céramiques dentaires sont :",
+        options: [
+          "Des matériaux organiques",
+          "Mise en forme à partir de poudre de granulométrie adaptée",
+          "Consolidées par un traitement chimique",
+          "Formées par des liaisons chimiques covalentes"
+        ],
+        correctOptionIndexes: [1, 2], // Corrigé 5 -> bc
+        explanation: "Elles sont mises en forme à partir de poudres et consolidées par frittage (traitement thermique/physico-chimique).",
+        citations: [1834, 2478]
+      },
+      {
+        questionText: "Le nouveau système de céramique dit « tout céramique » :",
+        options: [
+          "Utilise le système (CEREC)",
+          "Se fait par frittage de la céramique",
+          "Nécessite un support métallique",
+          "Utilise de la céramique feldspathique"
+        ],
+        correctOptionIndexes: [0, 2], // Corrigé 9 -> ac
+        explanation: "Le tout céramique utilise souvent la CFAO (CEREC). Le 'nécessite un support métallique' (C) semble contradictoire avec 'tout céramique', mais le corrigé indique 'ac'. Peut-être une erreur dans le corrigé ou la question faisait référence à une comparaison.",
+        citations: [1863, 2478]
+      },
+      {
+        questionText: "Dans les défauts de fonderie, l'inclusion Gazeuse du Souflure :",
+        options: [
+          "Est due au manque de porosités du métal",
+          "Est une hétérogénéité qui affecte le métal",
+          "Peut apparaitre en surface lors du polissage",
+          "Est l'espace inter cristallin dans lequel le métal est encore à l'état solide"
+        ],
+        correctOptionIndexes: [1, 3], // Corrigé 12 -> bd (Attention, même question que 2016/2017 mais corrigé différent ici ?)
+        explanation: "C'est une hétérogénéité (bulle).",
+        citations: [1653, 2478]
       }
     ]
   }

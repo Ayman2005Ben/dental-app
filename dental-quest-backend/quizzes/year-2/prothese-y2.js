@@ -1372,7 +1372,7 @@ const prothesey2QuizzesY2 = [
         citations: [180, 181, 182, 183, 184, 185, 186]
       },
       {
-        questionText: "Soit les formules dentaires suivantes, Donnez la classification selon Kennedy /Applegâte :",
+        questionText: "Soit les formules dentaires suivantes, Donnez la classification selon Kennedy /Applegâte :Présence des : 11-12-13-21-22-23 il s'agit d'une : :",
         options: [
           "Classe I",
           "Classe II mod 1",
@@ -1480,7 +1480,7 @@ const prothesey2QuizzesY2 = [
         citations: [701, 702]
       },
       {
-        questionText: "La dualité tissulaire :",
+        questionText: "La dualité tissulaire :1- Est une problématique des édentements encastrés 2- C'est la différence de comportement entre la dent support de crochet et la fibromuqueuse de la crête édentée 3- Concerne le déplacement des selles en extension 4- Son respect est indispensable lors du tracé des plaques prothétiques des édentements distaux 5- Toutes les réponses sont fausses ",
         options: [
           "(1,2)",
           "(2,3,4)",
