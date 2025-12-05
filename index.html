@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentist - Learning Hub</title>
     <link rel="icon" type="image/png" href="images/dental-quest-logo.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,9 +22,11 @@
         /* --- [إضافة جديدة] أنماط قسم استعراض الميزات --- */
         #explore-section {
             padding: 80px 40px;
-            background-color: var(--card-bg); /* لون مختلف قليلاً للتمييز */
+            background-color: var(--card-bg);
+            /* لون مختلف قليلاً للتمييز */
             transition: background-color 0.3s ease;
         }
+
         .explore-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -29,24 +34,29 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .explore-feature-card {
             text-align: center;
         }
+
         .explore-feature-card .icon-large {
             font-size: 3rem;
             color: var(--primary-btn-bg);
             margin-bottom: 20px;
         }
+
         .explore-feature-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: var(--choose-subject-text);
         }
+
         .explore-feature-card p {
             font-size: 1rem;
             color: var(--text-color);
             line-height: 1.6;
         }
+
         .section-title {
             text-align: center;
             font-size: 2.8rem;
@@ -72,10 +82,12 @@
             transition: opacity 0.3s ease, visibility 0.3s ease;
             backdrop-filter: blur(5px);
         }
+
         .modal-overlay.active {
             opacity: 1;
             visibility: visible;
         }
+
         .modal-box {
             background-color: var(--card-bg);
             color: var(--text-color);
@@ -88,31 +100,39 @@
             transform: scale(0.9);
             transition: all 0.3s ease;
         }
+
         .modal-overlay.active .modal-box {
             transform: scale(1);
         }
+
         .modal-box h3 {
             font-size: 1.8rem;
             margin-bottom: 15px;
             color: var(--choose-subject-text);
         }
+
         .modal-box p {
             font-size: 1.1rem;
             margin-bottom: 30px;
             line-height: 1.6;
         }
+
         .modal-box .fas {
             font-size: 3rem;
             color: var(--primary-btn-bg);
             margin-bottom: 20px;
         }
-        .subject-button img.custom-icon, .carousel-item img.custom-icon {
+
+        .subject-button img.custom-icon,
+        .carousel-item img.custom-icon {
             width: 32px;
             height: 32px;
             object-fit: contain;
             transition: transform 0.2s ease, filter 0.2s ease;
         }
-        .subject-button:hover img.custom-icon, .carousel-item:hover img.custom-icon {
+
+        .subject-button:hover img.custom-icon,
+        .carousel-item:hover img.custom-icon {
             transform: scale(1.1);
         }
 
@@ -128,96 +148,105 @@
             width: 100%;
             max-width: 500px;
         }
+
         #report-modal textarea {
-        width: 100%;
-        min-height: 120px;
-        padding: 10px;
-        border-radius: 8px;
-        border: 1px solid var(--input-border);
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-    .modal-actions {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-    }
+            width: 100%;
+            min-height: 120px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--input-border);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
 
-    /* ✅ --- (إضافة جديدة) تنسيق لأزرار التحكم في الهيدر وأزرار الكويز --- ✅ */
-    .quiz-utility-btn {
-        background: none;
-        border: 1px solid var(--input-border);
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 6px 10px;
-        font-size: 1rem;
-        color: var(--text-color);
-        transition: background-color 0.2s;
-    }
-    .quiz-utility-btn:hover {
-        background-color: var(--secondary-btn-hover-bg);
-    }
-    
-    /* ✅ --- (إضافة جديدة) تنسيقات القائمة المنسدلة للمستخدم --- ✅ */
-    .user-menu {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
 
-    #user-menu-toggle {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background: none;
-        border: none;
-        border-radius: 25px;
-        padding: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-    }
-    #user-menu-toggle:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+        /* ✅ --- (إضافة جديدة) تنسيق لأزرار التحكم في الهيدر وأزرار الكويز --- ✅ */
+        .quiz-utility-btn {
+            background: none;
+            border: 1px solid var(--input-border);
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 6px 10px;
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: background-color 0.2s;
+        }
 
-    .user-dropdown-menu {
-        display: none; /* مخفية افتراضياً */
-        position: absolute;
-        top: 120%; /* أسفل الزر */
-        right: 0;
-        background-color: var(--card-bg);
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        border: 1px solid var(--input-border);
-        width: 180px;
-        z-index: 1002;
-        overflow: hidden;
-    }
-    .user-dropdown-menu.active {
-        display: block; /* تظهر عند الضغط */
-    }
+        .quiz-utility-btn:hover {
+            background-color: var(--secondary-btn-hover-bg);
+        }
 
-    #logout-btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background: none;
-        border: none;
-        color: var(--text-color);
-        padding: 12px 15px;
-        width: 100%;
-        text-align: left;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-    }
-    #logout-btn:hover {
-        background-color: var(--secondary-btn-hover-bg);
-    }
-    #logout-btn i {
-        color: var(--primary-btn-bg);
-    }
-    
+        /* ✅ --- (إضافة جديدة) تنسيقات القائمة المنسدلة للمستخدم --- ✅ */
+        .user-menu {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        #user-menu-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: none;
+            border: none;
+            border-radius: 25px;
+            padding: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #user-menu-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .user-dropdown-menu {
+            display: none;
+            /* مخفية افتراضياً */
+            position: absolute;
+            top: 120%;
+            /* أسفل الزر */
+            right: 0;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--input-border);
+            width: 180px;
+            z-index: 1002;
+            overflow: hidden;
+        }
+
+        .user-dropdown-menu.active {
+            display: block;
+            /* تظهر عند الضغط */
+        }
+
+        #logout-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            padding: 12px 15px;
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #logout-btn:hover {
+            background-color: var(--secondary-btn-hover-bg);
+        }
+
+        #logout-btn i {
+            color: var(--primary-btn-bg);
+        }
     </style>
 </head>
 
@@ -246,7 +275,7 @@
             <button class="theme-toggle-btn" aria-label="Toggle dark/light mode">
                 <i class="fas fa-sun"></i>
             </button>
-            
+
             <div class="user-menu">
                 <button class="user-profile-widget" id="user-menu-toggle" aria-label="User Menu">
                     <span id="user-xp-display" class="xp-display">0 XP</span>
@@ -261,7 +290,7 @@
                     </button>
                 </div>
             </div>
-            </div>
+        </div>
     </header>
 
     <main>
@@ -274,17 +303,20 @@
                     <p class="tagline">Your comprehensive learning hub for dentistry students</p>
                     <div class="action-buttons">
                         <button class="btn primary-btn" id="start-learning-btn">Start Learning</button>
-                        <a href="#explore-section" class="btn secondary-btn" id="explore-content-btn">Explore Content</a>
+                        <a href="#explore-section" class="btn secondary-btn" id="explore-content-btn">Explore
+                            Content</a>
                     </div>
                     <div class="social-media">
                         <p>Follow us on social media</p>
                         <div class="social-icons">
-                            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram instagram-icon"></i></a>
-                            <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube youtube-icon"></i></a>
+                            <a href="#" target="_blank" aria-label="Instagram"><i
+                                    class="fab fa-instagram instagram-icon"></i></a>
+                            <a href="#" target="_blank" aria-label="YouTube"><i
+                                    class="fab fa-youtube youtube-icon"></i></a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-image scroll-reveal-element">
                     <div id="welcome-card-container" class="welcome-card-wrapper">
                         <div class="welcome-card">
@@ -294,7 +326,7 @@
                                 <div class="welcome-card-text">
                                     <h3>Welcome to <span class="highlight">Dentist</span></h3>
                                     <p>Start your learning journey and take your first quiz now.</p>
-                                    
+
                                     <div class="progress-container">
                                         <div class="progress-labels">
                                             <span>Progress</span>
@@ -307,14 +339,17 @@
 
                                     <button id="welcome-start-quiz-btn" class="welcome-card-button">
                                         Start Your First Quiz
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                         </svg>
                                     </button>
                                 </div>
 
                                 <div class="welcome-card-illustration">
-                                    <img src="images/3d-books-cap.png" alt="3D illustration of books and a graduation cap">
+                                    <img src="images/3d-books-cap.png"
+                                        alt="3D illustration of books and a graduation cap">
                                 </div>
                             </div>
                         </div>
@@ -344,7 +379,7 @@
                                 <p class="card-label">Incorrect</p>
                                 <p class="stat-main-number incorrect-color" id="stats-quizzes-incorrect">2</p>
                                 <p class="stat-sub-text">Incorrect</p>
-                                 <div class="stat-footer">
+                                <div class="stat-footer">
                                     <i class="fas fa-palette"></i>
                                 </div>
                             </div>
@@ -364,17 +399,20 @@
                     <div class="explore-feature-card scroll-reveal-element">
                         <i class="fas fa-check-double icon-large"></i>
                         <h3>Interactive Quizzes</h3>
-                        <p>Test your knowledge with thousands of corrected questions, track your performance, and review your mistakes to learn faster.</p>
+                        <p>Test your knowledge with thousands of corrected questions, track your performance, and review
+                            your mistakes to learn faster.</p>
                     </div>
                     <div class="explore-feature-card scroll-reveal-element" style="transition-delay: 0.2s;">
                         <i class="fas fa-book-reader icon-large"></i>
                         <h3>Organized Summaries</h3>
-                        <p>Access well-structured and concise summaries for all subjects, making revision sessions more effective and less time-consuming.</p>
+                        <p>Access well-structured and concise summaries for all subjects, making revision sessions more
+                            effective and less time-consuming.</p>
                     </div>
                     <div class="explore-feature-card scroll-reveal-element" style="transition-delay: 0.4s;">
                         <i class="fas fa-robot icon-large"></i>
                         <h3>AI-Powered Hub</h3>
-                        <p>Generate personalized quizzes, summaries, or flashcards from any PDF file. Your personal AI tutor is here to help you study smarter.</p>
+                        <p>Generate personalized quizzes, summaries, or flashcards from any PDF file. Your personal AI
+                            tutor is here to help you study smarter.</p>
                     </div>
                 </div>
             </section>
@@ -404,7 +442,7 @@
         <section class="page-section" id="dashboard-page">
             <div class="dashboard-container">
                 <h2 class="page-title glowing-text">My Performance Dashboard</h2>
-                
+
                 <div class="dashboard-grid">
                     <div class="stat-card glassmorphism-card">
                         <i class="fas fa-star stat-icon"></i>
@@ -429,7 +467,7 @@
                         </div>
                     </div>
 
-                   <div class="recent-activity-card glassmorphism-card">
+                    <div class="recent-activity-card glassmorphism-card">
                         <h3>Recent Activity</h3>
                         <ul id="recent-quizzes-list">
                             <li>Loading recent activities...</li>
@@ -442,10 +480,11 @@
                             <p>Loading your saved quizzes...</p>
                         </div>
                     </div>
-                    </div> </div>
-        </section>
                 </div>
             </div>
+        </section>
+        </div>
+        </div>
         </section>
 
         <section class="page-section" id="year-selection-page">
@@ -457,7 +496,7 @@
                     <button class="btn primary-btn year-select-btn" data-year="2">2nd Year Dental</button>
                     <button class="btn primary-btn year-select-btn" data-year="3">3rd Year Dental</button>
                     <button class="btn primary-btn year-select-btn" data-year="4">4th Year Dental</button>
-                    <button class="btn primary-btn year-select-btn" data-year="5">5th Year Dental</button> 
+                    <button class="btn primary-btn year-select-btn" data-year="5">5th Year Dental</button>
                 </div>
                 <button class="btn secondary-btn" id="back-to-home-from-year">Back to Home</button>
             </div>
@@ -489,17 +528,9 @@
                     <br>
                     <span>a Subject</span>
                 </h2>
-                
-                <div class="carousel-scene">
-                    <div class="carousel-container" id="subjects-carousel">
-                        </div>
-                </div>
 
-                <div class="carousel-controls">
-                    <button id="carousel-prev" class="carousel-arrow"><i class="fas fa-chevron-up"></i></button>
-                    <button id="carousel-next" class="carousel-arrow"><i class="fas fa-chevron-down"></i></button>
-                </div>
-                
+                <div id="subjects-grid" class="tooth-grid-container"></div>
+
                 <div class="heart-bubble glassmorphism-card scroll-reveal-element" style="transition-delay: 0.9s;">
                     <i class="fas fa-heart"></i>
                 </div>
@@ -521,7 +552,7 @@
             <p>This is where you would display lessons related to subjects.</p>
             <p>You are logged in and activated!</p>
         </section>
-        
+
         <section class="page-section" id="content-display-page">
             <div class="content-display-container glassmorphism-card scroll-reveal-element">
                 <h2 id="content-title" class="page-title glowing-text">Content Title Here</h2>
@@ -532,18 +563,19 @@
 
         <section class="page-section" id="lessons-display-page">
             <div class="lessons-display-container glassmorphism-card scroll-reveal-element">
-                
+
                 <button class="btn secondary-btn back-button" id="back-to-subjects-from-lessons-btn">
                     <i class="fas fa-arrow-left"></i> Back to Subjects
                 </button>
-    
+
                 <div class="lessons-header">
-                    <img id="lesson-subject-icon" src="images/ai-logo-circle.png" alt="Subject Icon" class="custom-icon">
+                    <img id="lesson-subject-icon" src="images/ai-logo-circle.png" alt="Subject Icon"
+                        class="custom-icon">
                     <h2 id="lesson-subject-title" class="page-title glowing-text">Subject Lessons</h2>
                 </div>
-                
+
                 <div id="lessons-list-container" class="lessons-list">
-                    </div>
+                </div>
             </div>
         </section>
 
@@ -552,7 +584,7 @@
                 <nav class="quiz-question-list-pro">
                     <h4>Questions</h4>
                     <div id="quiz-question-numbers-pro">
-                        </div>
+                    </div>
                 </nav>
 
                 <main class="quiz-main-area-pro">
@@ -563,16 +595,18 @@
                             <i class="fas fa-chevron-right"></i>
                             <span id="quiz-lesson-name-pro">Quiz Title</span>
                         </div>
-                        
+
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <button id="report-question-btn" class="quiz-utility-btn" title="Report an issue with this question">
+                            <button id="report-question-btn" class="quiz-utility-btn"
+                                title="Report an issue with this question">
                                 <i class="fas fa-flag"></i>
                             </button>
                             <div class="quiz-timer-pro">
                                 <i class="fas fa-clock"></i>
                                 <span id="quiz-timer-display-pro">01:30</span>
                             </div>
-                            <button id="toggle-quiz-timer-btn" class="quiz-utility-btn" title="Toggle Question Timer" style="font-size: 1rem; padding: 6px 10px;">
+                            <button id="toggle-quiz-timer-btn" class="quiz-utility-btn" title="Toggle Question Timer"
+                                style="font-size: 1rem; padding: 6px 10px;">
                                 <i class="fas fa-power-off"></i>
                             </button>
                         </div>
@@ -582,7 +616,7 @@
                         <p id="quiz-progress-pro">Question 1 of 15</p>
                         <h2 id="quiz-question-text-pro">The question text will appear here. Please wait...</h2>
                         <div id="quiz-options-container-pro">
-                            </div>
+                        </div>
                         <div class="quiz-explanation-pro" id="quiz-explanation-container-pro" style="display: none;">
                             <h4><i class="fas fa-lightbulb"></i> Explanation</h4>
                             <p id="quiz-explanation-text-pro"></p>
@@ -591,8 +625,9 @@
 
 
                     <footer class="quiz-footer-pro">
-                        <button class="quiz-nav-btn-pro" id="quiz-prev-btn-pro" title="Previous Question"><i class="fas fa-arrow-left"></i></button>
-                        
+                        <button class="quiz-nav-btn-pro" id="quiz-prev-btn-pro" title="Previous Question"><i
+                                class="fas fa-arrow-left"></i></button>
+
                         <div class="quiz-stats-pro">
                             <div>Correct: <span id="quiz-correct-count-pro">0</span></div>
                             <div>Incorrect: <span id="quiz-incorrect-count-pro">0</span></div>
@@ -600,15 +635,17 @@
                         </div>
 
                         <div style="display: flex; gap: 10px;">
-                            <button class="quiz-nav-btn-pro" id="quiz-skip-btn-pro" title="Skip Question" style="display: none;">
+                            <button class="quiz-nav-btn-pro" id="quiz-skip-btn-pro" title="Skip Question"
+                                style="display: none;">
                                 <i class="fas fa-fast-forward"></i>
                             </button>
                             <button class="quiz-nav-btn-pro primary" id="quiz-action-btn-pro">Check Answer</button>
-                            <button class="quiz-nav-btn-pro" id="quiz-next-btn-pro" style="display: none;" title="Next Question">
+                            <button class="quiz-nav-btn-pro" id="quiz-next-btn-pro" style="display: none;"
+                                title="Next Question">
                                 <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
-                        </footer>
+                    </footer>
 
                 </main>
             </div>
@@ -616,11 +653,11 @@
 
         <section class="page-section" id="quiz-summary-page">
             <div class="quiz-summary-container glassmorphism-card scroll-reveal-element">
-               <div class="summary-actions">
+                <div class="summary-actions">
                     <button class="btn primary-btn" id="save-quiz-btn">
                         <i class="fas fa-save"></i> Save this Quiz
                     </button>
-                </div> 
+                </div>
                 <div class="summary-header">
                     <img src="images/badge-gold.png" alt="Achievement Badge" id="summary-badge-img">
                     <h2 class="page-title glowing-text" id="summary-title">Quiz Results</h2>
@@ -654,13 +691,13 @@
                 <div class="summary-review-section">
                     <h3 class="review-title">Review Your Mistakes</h3>
                     <div id="incorrect-questions-summary">
-                        </div>
+                    </div>
                 </div>
-            
+
                 <div class="summary-review-section" style="margin-top: 30px;">
                     <h3 class="review-title">Review Correct Answers</h3>
                     <div id="correct-questions-summary">
-                        </div>
+                    </div>
                 </div>
                 <button class="btn secondary-btn" id="back-to-subjects-from-summary-btn" style="margin-top: 30px;">
                     <i class="fas fa-arrow-left"></i> Back to Subjects
@@ -673,14 +710,15 @@
             <div class="flashcards-container">
                 <h2 class="page-title glowing-text">My Flashcards</h2>
                 <p class="page-subtitle">Select a subject to start reviewing your saved cards.</p>
-        
+
                 <div id="flashcards-content" class="flashcards-content-grid">
                     <p>Loading your flashcard collections...</p>
                 </div>
-        
+
                 <div id="flashcard-viewer" class="flashcard-viewer-hidden">
                     <div class="flashcard-viewer-header">
-                        <button id="back-to-collections-btn" class="btn secondary-btn"><i class="fas fa-arrow-left"></i> Back to Collections</button>
+                        <button id="back-to-collections-btn" class="btn secondary-btn"><i class="fas fa-arrow-left"></i>
+                            Back to Collections</button>
                         <h3 id="flashcard-viewer-title"></h3>
                         <div id="flashcard-progress">1 / 10</div>
                     </div>
@@ -697,31 +735,33 @@
                         </div>
                     </div>
                     <div id="flashcard-viewer-controls" class="flashcard-viewer-controls">
-    <button id="prev-flashcard-btn" class="btn secondary-btn"><i class="fas fa-chevron-left"></i> Prev</button>
-    <button id="next-flashcard-btn" class="btn primary-btn">Next <i class="fas fa-chevron-right"></i></button>
-</div>
-<div id="ai-flashcard-rating-controls" class="flashcard-rating-controls" style="display: none;">
-    <p>How well did you remember this?</p>
-    <button class="btn rating-btn rating-hard" data-rating="hard" data-interval="1">
-        <i class="fas fa-brain"></i> Hard (Review in 1 day)
-    </button>
-    <button class="btn rating-btn rating-medium" data-rating="medium" data-interval="3">
-        <i class="fas fa-question-circle"></i> Unsure (Review in 3 days)
-    </button>
-    <button class="btn rating-btn rating-easy" data-rating="easy">
-        <i class="fas fa-check-circle"></i> Easy (Don't save)
-    </button>
-</div>
+                        <button id="prev-flashcard-btn" class="btn secondary-btn"><i class="fas fa-chevron-left"></i>
+                            Prev</button>
+                        <button id="next-flashcard-btn" class="btn primary-btn">Next <i
+                                class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div id="ai-flashcard-rating-controls" class="flashcard-rating-controls" style="display: none;">
+                        <p>How well did you remember this?</p>
+                        <button class="btn rating-btn rating-hard" data-rating="hard" data-interval="1">
+                            <i class="fas fa-brain"></i> Hard (Review in 1 day)
+                        </button>
+                        <button class="btn rating-btn rating-medium" data-rating="medium" data-interval="3">
+                            <i class="fas fa-question-circle"></i> Unsure (Review in 3 days)
+                        </button>
+                        <button class="btn rating-btn rating-easy" data-rating="easy">
+                            <i class="fas fa-check-circle"></i> Easy (Don't save)
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="page-section" id="pdfs-display-page">
-    <div class="content-display-container glassmorphism-card scroll-reveal-element">
-        <h2 id="pdfs-lesson-title" class="page-title glowing-text">PDFs for Lesson</h2>
-        <div id="pdfs-list" class="content-list-container"></div>
-        <button class="btn secondary-btn" id="back-to-lessons-btn">Back to Lessons</button>
-    </div>
-</section>
+            <div class="content-display-container glassmorphism-card scroll-reveal-element">
+                <h2 id="pdfs-lesson-title" class="page-title glowing-text">PDFs for Lesson</h2>
+                <div id="pdfs-list" class="content-list-container"></div>
+                <button class="btn secondary-btn" id="back-to-lessons-btn">Back to Lessons</button>
+            </div>
+        </section>
 
         <div class="modal-overlay" id="explore-modal">
             <div class="modal-box explore-box">
@@ -729,7 +769,9 @@
                 <i class="fas fa-rocket"></i>
                 <h2>Your Path to Academic Excellence</h2>
                 <p class="modal-subtitle">
-                    We are here to support your ambition. We provide you with all the essential resources, from organized lessons and concise summaries to smart quizzes and advanced AI features, all designed to ensure your academic distinction.
+                    We are here to support your ambition. We provide you with all the essential resources, from
+                    organized lessons and concise summaries to smart quizzes and advanced AI features, all designed to
+                    ensure your academic distinction.
                 </p>
             </div>
         </div>
@@ -739,11 +781,13 @@
         <div class="modal-box">
             <i class="fas fa-users"></i>
             <h3>A Message From Our Team</h3>
-            <p>This platform was built with passion by dentistry students, just like you, to serve their colleagues. Every feature and summary is the result of student effort. We always welcome your ideas and suggestions to make this place better for everyone.</p>
+            <p>This platform was built with passion by dentistry students, just like you, to serve their colleagues.
+                Every feature and summary is the result of student effort. We always welcome your ideas and suggestions
+                to make this place better for everyone.</p>
             <button class="btn primary-btn" id="close-articles-modal-btn">That's Awesome!</button>
         </div>
     </div>
-    
+
     <div class="ai-hub-modal-overlay" id="aiHubModalOverlay" style="display: none;">
         <div class="ai-hub-modal">
             <button class="close-hub-btn" id="closeHubBtn">&times;</button>
@@ -770,7 +814,8 @@
                     <h4>Summarize PDF</h4>
                     <span>Get key points</span>
                 </div>
-                <div class="ai-option-card" data-task="sculpture" id="sculpture-eval-card" style="display: none;"> <i class="fas fa-tooth"></i>
+                <div class="ai-option-card" data-task="sculpture" id="sculpture-eval-card" style="display: none;"> <i
+                        class="fas fa-tooth"></i>
                     <h4>Sculpture Eval</h4>
                     <span>(2nd Year Only)</span>
                 </div>
@@ -782,43 +827,49 @@
             <button class="close-hub-btn" id="closeProcessorBtn">&times;</button>
             <h3 id="processorTitle">Upload your file</h3>
             <form id="aiFileForm">
-    <p>Please upload the PDF file you want to process.</p>
-    <input type="file" id="aiPdfInput" accept=".pdf" required>
+                <p>Please upload the PDF file you want to process.</p>
+                <input type="file" id="aiPdfInput" accept=".pdf" required>
 
-    <div id="quiz-options-container" style="display: none; width: 100%; max-width: 300px; margin-top: 20px; text-align: left;">
-        <label for="ai-quiz-count" style="display: block; margin-bottom: 5px; font-weight: 500;">Number of Questions:</label>
-        <select id="ai-quiz-count" class="btn secondary-btn" style="width: 100%;">
-            <option value="10" selected>10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-        </select>
-    </div>
+                <div id="quiz-options-container"
+                    style="display: none; width: 100%; max-width: 300px; margin-top: 20px; text-align: left;">
+                    <label for="ai-quiz-count" style="display: block; margin-bottom: 5px; font-weight: 500;">Number of
+                        Questions:</label>
+                    <select id="ai-quiz-count" class="btn secondary-btn" style="width: 100%;">
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
 
-    <div id="flashcard-options-container" style="display: none; width: 100%; max-width: 300px; margin-top: 20px; text-align: left; display: flex; flex-direction: column; gap: 15px;">
-        <div>
-            <label for="ai-flashcard-count" style="display: block; margin-bottom: 5px; font-weight: 500;">Number of Quantity:</label>
-            <select id="ai-flashcard-count" class="btn secondary-btn" style="width: 100%;">
-                <option value="10" selected>10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-            </select>
-        </div>
-        <div>
-            <label for="ai-generation-language" style="display: block; margin-bottom: 5px; font-weight: 500;">Language:</label>
-            <select id="ai-generation-language" class="btn secondary-btn" style="width: 100%;">
-                <option value="the same language as the document" selected>Same as document</option>
-                <option value="English">English</option>
-                <option value="French">French</option>
-            </select>
-        </div>
-    </div>
-    
-    <button type="submit" class="btn primary-btn" id="aiProcessBtn" style="margin-top: 25px;">Start Generation</button>
-</form>
+                <div id="flashcard-options-container"
+                    style="display: none; width: 100%; max-width: 300px; margin-top: 20px; text-align: left; display: flex; flex-direction: column; gap: 15px;">
+                    <div>
+                        <label for="ai-flashcard-count"
+                            style="display: block; margin-bottom: 5px; font-weight: 500;">Number of Quantity:</label>
+                        <select id="ai-flashcard-count" class="btn secondary-btn" style="width: 100%;">
+                            <option value="10" selected>10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ai-generation-language"
+                            style="display: block; margin-bottom: 5px; font-weight: 500;">Language:</label>
+                        <select id="ai-generation-language" class="btn secondary-btn" style="width: 100%;">
+                            <option value="the same language as the document" selected>Same as document</option>
+                            <option value="English">English</option>
+                            <option value="French">French</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn primary-btn" id="aiProcessBtn" style="margin-top: 25px;">Start
+                    Generation</button>
+            </form>
             <div id="aiLoadingIndicator" style="display: none;">
                 <p>AI is working, this might take a moment...</p>
-                </div>
+            </div>
         </div>
     </div>
     <button class="ai-chat-btn" aria-label="Open AI Chat">
@@ -828,12 +879,12 @@
         <i class="fas fa-clock"></i>
     </button>
     <button id="grade-calc-btn" class="grade-calc-fab-btn" aria-label="Open Grade Calculator">
-    <i class="fas fa-calculator"></i>
+        <i class="fas fa-calculator"></i>
     </button>
 
     <div class="ai-chat-modal" id="aiChatModal">
         <div class="ai-chat-box glassmorphism-card" id="aiChatBox">
-            
+
             <div class="chat-header" id="chatHeader">
                 <span>Dentist AI 👨‍🏫</span>
                 <div id="chat-controls">
@@ -853,13 +904,16 @@
                     <p class="ai-message">Hello! How can I assist you today?</p>
                 </div>
             </div>
-            
+
             <div class="chat-input">
                 <div class="chat-actions-container">
                     <div class="upload-options" id="upload-options">
-                        <button class="upload-option-btn" id="upload-pdf-btn" title="Upload PDF"><i class="fas fa-file-pdf"></i></button>
-                        <button class="upload-option-btn" id="upload-image-btn" title="Upload Image"><i class="fas fa-image"></i></button>
-                        <button class="upload-option-btn" id="upload-audio-btn" title="Upload Audio"><i class="fas fa-microphone"></i></button>
+                        <button class="upload-option-btn" id="upload-pdf-btn" title="Upload PDF"><i
+                                class="fas fa-file-pdf"></i></button>
+                        <button class="upload-option-btn" id="upload-image-btn" title="Upload Image"><i
+                                class="fas fa-image"></i></button>
+                        <button class="upload-option-btn" id="upload-audio-btn" title="Upload Audio"><i
+                                class="fas fa-microphone"></i></button>
                     </div>
                     <button class="chat-plus-btn" id="chat-plus-btn" title="Attach File">
                         <i class="fas fa-plus"></i>
@@ -870,11 +924,12 @@
                 <input type="file" id="image-file-input" accept="image/*" style="display: none;">
                 <input type="file" id="audio-file-input" accept="audio/*" style="display: none;">
 
-                <input id="user-chat-input" type="text" placeholder="Post your question or message here..." aria-label="Chat input" autocomplete="off">
-                
+                <input id="user-chat-input" type="text" placeholder="Post your question or message here..."
+                    aria-label="Chat input" autocomplete="off">
+
                 <button id="send-chat-button"><i class="fas fa-paper-plane"></i></button>
             </div>
-            
+
             <div class="resize-handle" id="resizeHandle"></div>
         </div>
     </div>
@@ -887,10 +942,10 @@
             <button id="badge-popup-close" class="btn primary-btn">Continue</button>
         </div>
     </div>
-    
+
     <div class="pomodoro-modal" id="pomodoroModal">
         <div class="pomodoro-box glassmorphism-card" id="pomodoroBox">
-            
+
             <div id="pomodoro-settings-view">
                 <div class="pomodoro-header">
                     <h3>Pomodoro Settings</h3>
@@ -931,8 +986,10 @@
                 <div class="pomodoro-body timer-active-body">
                     <div class="timer-display-container">
                         <svg class="progress-ring" width="220" height="220">
-                           <circle class="progress-ring-bg" stroke-width="8" fill="transparent" r="100" cx="110" cy="110"/>
-                           <circle class="progress-ring-fg" stroke-width="10" fill="transparent" r="100" cx="110" cy="110"/>
+                            <circle class="progress-ring-bg" stroke-width="8" fill="transparent" r="100" cx="110"
+                                cy="110" />
+                            <circle class="progress-ring-fg" stroke-width="10" fill="transparent" r="100" cx="110"
+                                cy="110" />
                         </svg>
                         <div class="time-display" id="time-display">25:00</div>
                     </div>
@@ -952,7 +1009,7 @@
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.1/dist/purify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-    
+
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -967,309 +1024,377 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <div class="modal-overlay" id="report-modal">
-    <div class="modal-box">
-        <h3>Report Question</h3>
-        <p>Please provide a brief explanation of the issue (e.g., incorrect answer, typo, unclear question).</p>
-        <form id="report-form">
-            <textarea id="report-reason" placeholder="Your reason..." required maxlength="500"></textarea>
-            <div class="modal-actions">
-                <button type="button" class="btn secondary-btn" id="cancel-report-btn">Cancel</button>
-                <button type="submit" class="btn primary-btn">Submit Report</button>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="modal-overlay" id="gradeCalcModalOverlay">
-    <div class="modal-box grade-calc-modal">
-        <button class="close-modal-btn" id="closeGradeCalcModalBtn" aria-label="Close">&times;</button>
-        <h3 id="grade-calc-title">Calculateur de Moyenne</h3>
-
-        <div id="grade-calc-y1" class="calculator-year-container" style="display: none;">
-            <nav class="tabs-nav" data-year="y1">
-                <button class="tab-link active" data-tab="y1-s1">Semestre 1</button>
-                <button class="tab-link" data-tab="y1-s2">Semestre 2</button>
-                <button class="tab-link" data-tab="y1-annuel">Moyenne Annuelle</button>
-            </nav>
-            
-            <div id="y1-s1" class="tab-content active">
-                <div class="module-card">
-                    <h3>S1 Histo Cyto Embryo</h3>
-                    <div class="input-group"><label for="y1-s1-histo-td">Note examen TD:</label><input type="number" id="y1-s1-histo-td" placeholder="0-20"></div>
-                    <div class="input-group"><label for="y1-s1-histo-cyto1">1ère EMD Cyto:</label><input type="number" id="y1-s1-histo-cyto1" placeholder="0-20"></div>
-                    <div class="input-group"><label for="y1-s1-histo-histo">EMD Histo Embryo:</label><input type="number" id="y1-s1-histo-histo" placeholder="0-20"></div>
-                    <button data-calc="y1_s1_Histo">Calculer</button>
-                    <p class="result-text" id="result-y1_s1_Histo"></p>
+        <div class="modal-box">
+            <h3>Report Question</h3>
+            <p>Please provide a brief explanation of the issue (e.g., incorrect answer, typo, unclear question).</p>
+            <form id="report-form">
+                <textarea id="report-reason" placeholder="Your reason..." required maxlength="500"></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary-btn" id="cancel-report-btn">Cancel</button>
+                    <button type="submit" class="btn primary-btn">Submit Report</button>
                 </div>
-                <div class="module-card">
-                    <h3>Biochimie (S1)</h3>
-                    <div class="input-group"><label for="y1-s1-biochimie-td">Note TD:</label><input type="number" id="y1-s1-biochimie-td" placeholder="0-20"></div>
-                    <div class="input-group"><label for="y1-s1-biochimie-emd">Note EMD:</label><input type="number" id="y1-s1-biochimie-emd" placeholder="0-20"></div>
-                    <button data-calc="y1_s1_Biochimie">Calculer</button>
-                    <p class="result-text" id="result-y1_s1_Biochimie"></p>
-                </div>
-                <div class="module-card general-average-card">
-                    <h3>Moyenne Générale S1 (Année 1)</h3>
-                    <div class="input-group"><label>Anatomie (coeff 4):</label><input type="number" id="avg-y1-s1-Anatomie"></div>
-                    <div class="input-group"><label>Histo-Cyto-Embryo (coeff 4):</label><input type="number" id="avg-y1-s1-Histo-Cyto-Embryo"></div>
-                    <button data-calc="avg_y1_s1">Calculer Moyenne Générale S1</button>
-                    <p class="result-text" id="result-avg-y1-s1"></p>
-                </div>
-            </div>
-            <div id="y1-s2" class="tab-content">
-                </div>
-            <div id="y1-annuel" class="tab-content">
-                 </div>
+            </form>
         </div>
+    </div>
+    <div class="modal-overlay" id="gradeCalcModalOverlay">
+        <div class="modal-box grade-calc-modal">
+            <button class="close-modal-btn" id="closeGradeCalcModalBtn" aria-label="Close">&times;</button>
+            <h3 id="grade-calc-title">Calculateur de Moyenne</h3>
 
-        <div id="grade-calc-y2" class="calculator-year-container" style="display: none;">
-            <nav class="tabs-nav" data-year="y2">
-                <button class="tab-link active" data-tab="y2-s1">Semestre 1</button>
-                <button class="tab-link" data-tab="y2-s2">Semestre 2</button>
-                <button class="tab-link" data-tab="y2-annuel">Moyenne Annuelle</button>
-            </nav>
-            <div id="y2-s1" class="tab-content active">
-                <div class="module-card">
-                    <h3>Anatomie Dentaire (S1)</h3>
-                    <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-s1-AnatomieDentaire-th" placeholder="0-20"></div>
-                    <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s1-AnatomieDentaire-tp" placeholder="0-20"></div>
-                    <button data-calc="y2_s1_AnatomieDentaire">Calculer</button>
-                    <p class="result-text" id="result-y2_s1_AnatomieDentaire"></p>
+            <div id="grade-calc-y1" class="calculator-year-container" style="display: none;">
+                <nav class="tabs-nav" data-year="y1">
+                    <button class="tab-link active" data-tab="y1-s1">Semestre 1</button>
+                    <button class="tab-link" data-tab="y1-s2">Semestre 2</button>
+                    <button class="tab-link" data-tab="y1-annuel">Moyenne Annuelle</button>
+                </nav>
+
+                <div id="y1-s1" class="tab-content active">
+                    <div class="module-card">
+                        <h3>S1 Histo Cyto Embryo</h3>
+                        <div class="input-group"><label for="y1-s1-histo-td">Note examen TD:</label><input type="number"
+                                id="y1-s1-histo-td" placeholder="0-20"></div>
+                        <div class="input-group"><label for="y1-s1-histo-cyto1">1ère EMD Cyto:</label><input
+                                type="number" id="y1-s1-histo-cyto1" placeholder="0-20"></div>
+                        <div class="input-group"><label for="y1-s1-histo-histo">EMD Histo Embryo:</label><input
+                                type="number" id="y1-s1-histo-histo" placeholder="0-20"></div>
+                        <button data-calc="y1_s1_Histo">Calculer</button>
+                        <p class="result-text" id="result-y1_s1_Histo"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Biochimie (S1)</h3>
+                        <div class="input-group"><label for="y1-s1-biochimie-td">Note TD:</label><input type="number"
+                                id="y1-s1-biochimie-td" placeholder="0-20"></div>
+                        <div class="input-group"><label for="y1-s1-biochimie-emd">Note EMD:</label><input type="number"
+                                id="y1-s1-biochimie-emd" placeholder="0-20"></div>
+                        <button data-calc="y1_s1_Biochimie">Calculer</button>
+                        <p class="result-text" id="result-y1_s1_Biochimie"></p>
+                    </div>
+                    <div class="module-card general-average-card">
+                        <h3>Moyenne Générale S1 (Année 1)</h3>
+                        <div class="input-group"><label>Anatomie (coeff 4):</label><input type="number"
+                                id="avg-y1-s1-Anatomie"></div>
+                        <div class="input-group"><label>Histo-Cyto-Embryo (coeff 4):</label><input type="number"
+                                id="avg-y1-s1-Histo-Cyto-Embryo"></div>
+                        <button data-calc="avg_y1_s1">Calculer Moyenne Générale S1</button>
+                        <p class="result-text" id="result-avg-y1-s1"></p>
+                    </div>
                 </div>
-                <div class="module-card">
-                    <h3>Histologie (S1)</h3>
-                    <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-s1-Histologie-th" placeholder="0-20"></div>
-                    <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s1-Histologie-tp" placeholder="0-20"></div>
-                    <button data-calc="y2_s1_Histologie">Calculer</button>
-                    <p class="result-text" id="result-y2_s1_Histologie"></p>
+                <div id="y1-s2" class="tab-content">
                 </div>
-                <div class="module-card">
-                    <h3>Anglais (S1)</h3>
-                    <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s1-Anglais-th" placeholder="0-20"></div>
-                    <button data-calc="y2_s1_Anglais">Calculer</button>
-                    <p class="result-text" id="result-y2_s1_Anglais"></p>
-                </div>
-                <div class="module-card">
-                    <h3>Hygiène et prévention (S1)</h3>
-                    <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s1-Hygiène-th" placeholder="0-20"></div>
-                    <button data-calc="y2_s1_Hygiène">Calculer</button>
-                    <p class="result-text" id="result-y2_s1_Hygiène"></p>
-                </div>
-                <div class="module-card general-average-card">
-                    <h3>Moyenne Générale S1 (Année 2)</h3>
-                    <div class="input-group"><label>Anatomie Dentaire (coeff 3):</label><input type="number" id="avg-y2-s1-AnatomieDentaire"></div>
-                    <div class="input-group"><label>Histologie (coeff 2):</label><input type="number" id="avg-y2-s1-Histologie"></div>
-                    <div class="input-group"><label>Anglais (coeff 1):</label><input type="number" id="avg-y2-s1-Anglais"></div>
-                    <div class="input-group"><label>Hygiène (coeff 1):</label><input type="number" id="avg-y2-s1-Hygiène"></div>
-                    <button data-calc="avg_y2_s1">Calculer Moyenne Générale S1</button>
-                    <p class="result-text" id="result-avg-y2-s1"></p>
+                <div id="y1-annuel" class="tab-content">
                 </div>
             </div>
-            <div id="y2-s2" class="tab-content">
-                <div class="module-card">
-                    <h3>Parodontologie (S2)</h3>
-                    <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-s2-Parodontologie-th" placeholder="0-20"></div>
-                    <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s2-Parodontologie-tp" placeholder="0-20"></div>
-                    <button data-calc="y2_s2_Parodontologie">Calculer</button>
-                    <p class="result-text" id="result-y2_s2_Parodontologie"></p>
-                </div>
-                <div class="module-card">
-                    <h3>Immunologie (S2)</h3>
-                    <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s2-Immunologie-th" placeholder="0-20"></div>
-                    <button data-calc="y2_s2_Immunologie">Calculer</button>
-                    <p class="result-text" id="result-y2_s2_Immunologie"></p>
-                </div>
-                <div class="module-card">
-                    <h3>Physiologie (S2)</h3>
-                    <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s2-Physiologie-th" placeholder="0-20"></div>
-                    <button data-calc="y2_s2_Physiologie">Calculer</button>
-                    <p class="result-text" id="result-y2_s2_Physiologie"></p>
-                </div>
-                 <div class="module-card">
-                    <h3>Pathologie Bucco-Dentaire (S2)</h3>
-                    <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-s2-Pathologie-th" placeholder="0-20"></div>
-                    <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s2-Pathologie-tp" placeholder="0-20"></div>
-                    <button data-calc="y2_s2_Pathologie">Calculer</button>
-                    <p class="result-text" id="result-y2_s2_Pathologie"></p>
-                </div>
 
-                <div class="module-card general-average-card">
-                    <h3>Moyenne Générale S2 (Année 2)</h3>
-                    <div class="input-group"><label>Parodontologie (coeff 3):</label><input type="number" id="avg-y2-s2-Parodontologie"></div>
-                    <div class="input-group"><label>Immunologie (coeff 1):</label><input type="number" id="avg-y2-s2-Immunologie"></div>
-                    <div class="input-group"><label>Physiologie (coeff 1):</label><input type="number" id="avg-y2-s2-Physiologie"></div>
-                    <div class="input-group"><label>Pathologie (coeff 3):</label><input type="number" id="avg-y2-s2-Pathologie"></div>
-                    <button data-calc="avg_y2_s2">Calculer Moyenne Générale S2</button>
-                    <p class="result-text" id="result-avg-y2-s2"></p>
+            <div id="grade-calc-y2" class="calculator-year-container" style="display: none;">
+                <nav class="tabs-nav" data-year="y2">
+                    <button class="tab-link active" data-tab="y2-s1">Semestre 1</button>
+                    <button class="tab-link" data-tab="y2-s2">Semestre 2</button>
+                    <button class="tab-link" data-tab="y2-annuel">Moyenne Annuelle</button>
+                </nav>
+                <div id="y2-s1" class="tab-content active">
+                    <div class="module-card">
+                        <h3>Anatomie Dentaire (S1)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number"
+                                id="y2-s1-AnatomieDentaire-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number"
+                                id="y2-s1-AnatomieDentaire-tp" placeholder="0-20"></div>
+                        <button data-calc="y2_s1_AnatomieDentaire">Calculer</button>
+                        <p class="result-text" id="result-y2_s1_AnatomieDentaire"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Histologie (S1)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number"
+                                id="y2-s1-Histologie-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s1-Histologie-tp"
+                                placeholder="0-20"></div>
+                        <button data-calc="y2_s1_Histologie">Calculer</button>
+                        <p class="result-text" id="result-y2_s1_Histologie"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Anglais (S1)</h3>
+                        <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s1-Anglais-th"
+                                placeholder="0-20"></div>
+                        <button data-calc="y2_s1_Anglais">Calculer</button>
+                        <p class="result-text" id="result-y2_s1_Anglais"></p>
+                    </div>
+                    <div class="module-card">
+                        <h3>Hygiène et prévention (S1)</h3>
+                        <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-s1-Hygiène-th"
+                                placeholder="0-20"></div>
+                        <button data-calc="y2_s1_Hygiène">Calculer</button>
+                        <p class="result-text" id="result-y2_s1_Hygiène"></p>
+                    </div>
+                    <div class="module-card general-average-card">
+                        <h3>Moyenne Générale S1 (Année 2)</h3>
+                        <div class="input-group"><label>Anatomie Dentaire (coeff 3):</label><input type="number"
+                                id="avg-y2-s1-AnatomieDentaire"></div>
+                        <div class="input-group"><label>Histologie (coeff 2):</label><input type="number"
+                                id="avg-y2-s1-Histologie"></div>
+                        <div class="input-group"><label>Anglais (coeff 1):</label><input type="number"
+                                id="avg-y2-s1-Anglais"></div>
+                        <div class="input-group"><label>Hygiène (coeff 1):</label><input type="number"
+                                id="avg-y2-s1-Hygiène"></div>
+                        <button data-calc="avg_y2_s1">Calculer Moyenne Générale S1</button>
+                        <p class="result-text" id="result-avg-y2-s1"></p>
+                    </div>
                 </div>
-            </div>
-            
-            <div id="y2-annuel" class="tab-content">
-                <div class="annual-card">
-                    <h3>Calcul de la Moyenne Annuelle (Année 2)</h3>
-                    
+                <div id="y2-s2" class="tab-content">
                     <div class="module-card">
-                        <h3>Odontologie C/E (Annuel)</h3>
-                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-OCE-th" placeholder="0-20"></div>
-                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-OCE-tp" placeholder="0-20"></div>
-                        <button data-calc="y2_a_OCE">Calculer</button>
-                        <p class="result-text" id="result-y2_a_OCE"></p>
+                        <h3>Parodontologie (S2)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number"
+                                id="y2-s2-Parodontologie-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number"
+                                id="y2-s2-Parodontologie-tp" placeholder="0-20"></div>
+                        <button data-calc="y2_s2_Parodontologie">Calculer</button>
+                        <p class="result-text" id="result-y2_s2_Parodontologie"></p>
                     </div>
                     <div class="module-card">
-                        <h3>Prothèse (Annuel)</h3>
-                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-Prothèse-th" placeholder="0-20"></div>
-                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-Prothèse-tp" placeholder="0-20"></div>
-                        <button data-calc="y2_a_Prothèse">Calculer</button>
-                        <p class="result-text" id="result-y2_a_Prothèse"></p>
+                        <h3>Immunologie (S2)</h3>
+                        <div class="input-group"><label>Note Finale:</label><input type="number"
+                                id="y2-s2-Immunologie-th" placeholder="0-20"></div>
+                        <button data-calc="y2_s2_Immunologie">Calculer</button>
+                        <p class="result-text" id="result-y2_s2_Immunologie"></p>
                     </div>
                     <div class="module-card">
-                        <h3>Anatomie Humaine (Annuel)</h3>
-                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-AnatomieHumaine-th" placeholder="0-20"></div>
-                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-AnatomieHumaine-tp" placeholder="0-20"></div>
-                        <button data-calc="y2_a_AnatomieHumaine">Calculer</button>
-                        <p class="result-text" id="result-y2_a_AnatomieHumaine"></p>
+                        <h3>Physiologie (S2)</h3>
+                        <div class="input-group"><label>Note Finale:</label><input type="number"
+                                id="y2-s2-Physiologie-th" placeholder="0-20"></div>
+                        <button data-calc="y2_s2_Physiologie">Calculer</button>
+                        <p class="result-text" id="result-y2_s2_Physiologie"></p>
                     </div>
                     <div class="module-card">
-                        <h3>Orthopédie Dento-Faciale (Annuel)</h3>
-                        <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-ODF-th" placeholder="0-20"></div>
-                        <button data-calc="y2_a_ODF">Calculer</button>
-                        <p class="result-text" id="result-y2_a_ODF"></p>
-                    </div>
-                    <div class="module-card">
-                        <h3>Biomatériaux (Annuel)</h3>
-                        <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-a-Biomatériaux-th" placeholder="0-20"></div>
-                        <button data-calc="y2_a_Biomatériaux">Calculer</button>
-                        <p class="result-text" id="result-y2_a_Biomatériaux"></p>
-                    </div>
-                    <div class="module-card">
-                        <h3>Microbiologie (Annuel)</h3>
-                        <div class="input-group"><label>Note Finale:</label><input type="number" id="y2-a-Microbiologie-th" placeholder="0-20"></div>
-                        <button data-calc="y2_a_Microbiologie">Calculer</button>
-                        <p class="result-text" id="result-y2_a_Microbiologie"></p>
-                    </div>
-                    <div class="module-card">
-                        <h3>Informatique (Annuel)</h3>
-                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-Informatique-tp" placeholder="0-20"></div>
-                        <button data-calc="y2_a_Informatique">Calculer</button>
-                        <p class="result-text" id="result-y2_a_Informatique"></p>
+                        <h3>Pathologie Bucco-Dentaire (S2)</h3>
+                        <div class="input-group"><label>Note Théorique:</label><input type="number"
+                                id="y2-s2-Pathologie-th" placeholder="0-20"></div>
+                        <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-s2-Pathologie-tp"
+                                placeholder="0-20"></div>
+                        <button data-calc="y2_s2_Pathologie">Calculer</button>
+                        <p class="result-text" id="result-y2_s2_Pathologie"></p>
                     </div>
 
                     <div class="module-card general-average-card">
-                        <h3>Moyenne Annuelle (Année 2)</h3>
-                        <p>Saisissez le <strong>Moyenne S1</strong> et <strong>Moyenne S2</strong> et les notes des matières annuelles.</p>
-                        
-                        <div class="input-group"><label>Moyenne S1 (Coeff 7):</label><input type="number" id="avg-y2-a-S1"></div>
-                        <div class="input-group"><label>Moyenne S2 (Coeff 8):</label><input type="number" id="avg-y2-a-S2"></div>
-                        <hr>
-                        <div class="input-group"><label>Odontologie C/E (Coeff 5):</label><input type="number" id="avg-y2-a-OCE"></div>
-                        <div class="input-group"><label>Prothèse (Coeff 5):</label><input type="number" id="avg-y2-a-Prothèse"></div>
-                        <div class="input-group"><label>Anatomie Humaine (Coeff 4):</label><input type="number" id="avg-y2-a-AnatomieHumaine"></div>
-                        <div class="input-group"><label>ODF (Coeff 3):</label><input type="number" id="avg-y2-a-ODF"></div>
-                        <div class="input-group"><label>Biomatériaux (Coeff 2):</label><input type="number" id="avg-y2-a-Biomatériaux"></div>
-                        <div class="input-group"><label>Microbiologie (Coeff 2):</label><input type="number" id="avg-y2-a-Microbiologie"></div>
-                        <div class="input-group"><label>Informatique (Coeff 1):</label><input type="number" id="avg-y2-a-Informatique"></div>
-                        
-                        <button data-calc="avg_y2_annuel">Calculer Moyenne Annuelle</button>
-                        <div class="result-text" id="result-avg-y2-annuel"></div>
+                        <h3>Moyenne Générale S2 (Année 2)</h3>
+                        <div class="input-group"><label>Parodontologie (coeff 3):</label><input type="number"
+                                id="avg-y2-s2-Parodontologie"></div>
+                        <div class="input-group"><label>Immunologie (coeff 1):</label><input type="number"
+                                id="avg-y2-s2-Immunologie"></div>
+                        <div class="input-group"><label>Physiologie (coeff 1):</label><input type="number"
+                                id="avg-y2-s2-Physiologie"></div>
+                        <div class="input-group"><label>Pathologie (coeff 3):</label><input type="number"
+                                id="avg-y2-s2-Pathologie"></div>
+                        <button data-calc="avg_y2_s2">Calculer Moyenne Générale S2</button>
+                        <p class="result-text" id="result-avg-y2-s2"></p>
+                    </div>
+                </div>
+
+                <div id="y2-annuel" class="tab-content">
+                    <div class="annual-card">
+                        <h3>Calcul de la Moyenne Annuelle (Année 2)</h3>
+
+                        <div class="module-card">
+                            <h3>Odontologie C/E (Annuel)</h3>
+                            <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-OCE-th"
+                                    placeholder="0-20"></div>
+                            <div class="input-group"><label>Note TP/TD:</label><input type="number" id="y2-a-OCE-tp"
+                                    placeholder="0-20"></div>
+                            <button data-calc="y2_a_OCE">Calculer</button>
+                            <p class="result-text" id="result-y2_a_OCE"></p>
+                        </div>
+                        <div class="module-card">
+                            <h3>Prothèse (Annuel)</h3>
+                            <div class="input-group"><label>Note Théorique:</label><input type="number"
+                                    id="y2-a-Prothèse-th" placeholder="0-20"></div>
+                            <div class="input-group"><label>Note TP/TD:</label><input type="number"
+                                    id="y2-a-Prothèse-tp" placeholder="0-20"></div>
+                            <button data-calc="y2_a_Prothèse">Calculer</button>
+                            <p class="result-text" id="result-y2_a_Prothèse"></p>
+                        </div>
+                        <div class="module-card">
+                            <h3>Anatomie Humaine (Annuel)</h3>
+                            <div class="input-group"><label>Note Théorique:</label><input type="number"
+                                    id="y2-a-AnatomieHumaine-th" placeholder="0-20"></div>
+                            <div class="input-group"><label>Note TP/TD:</label><input type="number"
+                                    id="y2-a-AnatomieHumaine-tp" placeholder="0-20"></div>
+                            <button data-calc="y2_a_AnatomieHumaine">Calculer</button>
+                            <p class="result-text" id="result-y2_a_AnatomieHumaine"></p>
+                        </div>
+                        <div class="module-card">
+                            <h3>Orthopédie Dento-Faciale (Annuel)</h3>
+                            <div class="input-group"><label>Note Théorique:</label><input type="number" id="y2-a-ODF-th"
+                                    placeholder="0-20"></div>
+                            <button data-calc="y2_a_ODF">Calculer</button>
+                            <p class="result-text" id="result-y2_a_ODF"></p>
+                        </div>
+                        <div class="module-card">
+                            <h3>Biomatériaux (Annuel)</h3>
+                            <div class="input-group"><label>Note Finale:</label><input type="number"
+                                    id="y2-a-Biomatériaux-th" placeholder="0-20"></div>
+                            <button data-calc="y2_a_Biomatériaux">Calculer</button>
+                            <p class="result-text" id="result-y2_a_Biomatériaux"></p>
+                        </div>
+                        <div class="module-card">
+                            <h3>Microbiologie (Annuel)</h3>
+                            <div class="input-group"><label>Note Finale:</label><input type="number"
+                                    id="y2-a-Microbiologie-th" placeholder="0-20"></div>
+                            <button data-calc="y2_a_Microbiologie">Calculer</button>
+                            <p class="result-text" id="result-y2_a_Microbiologie"></p>
+                        </div>
+                        <div class="module-card">
+                            <h3>Informatique (Annuel)</h3>
+                            <div class="input-group"><label>Note TP/TD:</label><input type="number"
+                                    id="y2-a-Informatique-tp" placeholder="0-20"></div>
+                            <button data-calc="y2_a_Informatique">Calculer</button>
+                            <p class="result-text" id="result-y2_a_Informatique"></p>
+                        </div>
+
+                        <div class="module-card general-average-card">
+                            <h3>Moyenne Annuelle (Année 2)</h3>
+                            <p>Saisissez le <strong>Moyenne S1</strong> et <strong>Moyenne S2</strong> et les notes des
+                                matières annuelles.</p>
+
+                            <div class="input-group"><label>Moyenne S1 (Coeff 7):</label><input type="number"
+                                    id="avg-y2-a-S1"></div>
+                            <div class="input-group"><label>Moyenne S2 (Coeff 8):</label><input type="number"
+                                    id="avg-y2-a-S2"></div>
+                            <hr>
+                            <div class="input-group"><label>Odontologie C/E (Coeff 5):</label><input type="number"
+                                    id="avg-y2-a-OCE"></div>
+                            <div class="input-group"><label>Prothèse (Coeff 5):</label><input type="number"
+                                    id="avg-y2-a-Prothèse"></div>
+                            <div class="input-group"><label>Anatomie Humaine (Coeff 4):</label><input type="number"
+                                    id="avg-y2-a-AnatomieHumaine"></div>
+                            <div class="input-group"><label>ODF (Coeff 3):</label><input type="number"
+                                    id="avg-y2-a-ODF"></div>
+                            <div class="input-group"><label>Biomatériaux (Coeff 2):</label><input type="number"
+                                    id="avg-y2-a-Biomatériaux"></div>
+                            <div class="input-group"><label>Microbiologie (Coeff 2):</label><input type="number"
+                                    id="avg-y2-a-Microbiologie"></div>
+                            <div class="input-group"><label>Informatique (Coeff 1):</label><input type="number"
+                                    id="avg-y2-a-Informatique"></div>
+
+                            <button data-calc="avg_y2_annuel">Calculer Moyenne Annuelle</button>
+                            <div class="result-text" id="result-avg-y2-annuel"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="grade-calc-y3" class="calculator-year-container" style="display: none;">
-            <div id="y3-annuel" class="tab-content active">
-                <div class="annual-card">
-                    <h3>Calcul de la Moyenne Annuelle (Année 3)</h3>
-                    <div class="module-card">
-                        <h3>Prothèse (Formule Spéciale)</h3>
-                        <div class="input-group"><label>EMD 1:</label><input type="number" id="y3-Prothèse-emd1" placeholder="0-20"></div>
-                        <div class="input-group"><label>EMD 2:</label><input type="number" id="y3-Prothèse-emd2" placeholder="0-20"></div>
-                        <div class="input-group"><label>EMD 3:</label><input type="number" id="y3-Prothèse-emd3" placeholder="0-20"></div>
-                        <div class="input-group"><label>Note CC:</label><input type="number" id="y3-Prothèse-cc" placeholder="0-20"></div>
-                        <div class="input-group"><label>Note TP:</label><input type="number" id="y3-Prothèse-tp" placeholder="0-20"></div>
-                        <button data-calc="y3_Prothèse">Calculer</button>
-                        <p class="result-text" id="result-y3_Prothèse"></p>
-                    </div>
-                    <div class="module-card general-average-card">
-                        <h3>Moyenne Annuelle (Année 3)</h3>
-                        <div class="input-group"><label>Pathologie (Coeff 5):</label><input type="number" id="avg-y3-a-Pathologie"></div>
-                        <div class="input-group"><label>ODF (Coeff 5):</label><input type="number" id="avg-y3-a-ODF"></div>
-                        <div class="input-group"><label>Prothèse (Coeff 5):</label><input type="number" id="avg-y3-a-Prothèse"></div>
-                        <div class="input-group"><label>Parodontologie (Coeff 5):</label><input type="number" id="avg-y3-a-Parodontologie"></div>
-                        <div class="input-group"><label>Occlusodontie (Coeff 5):</label><input type="number" id="avg-y3-a-Occlusodontie"></div>
-                        <div class="input-group"><label>Imagerie (Coeff 3):</label><input type="number" id="avg-y3-a-Imagerie"></div>
-                        <div class="input-group"><label>Occlusion (Coeff 1):</label><input type="number" id="avg-y3-a-Occlusion"></div>
-                        <div class="input-group"><label>Anesthésie (Coeff 1):</label><input type="number" id="avg-y3-a-Anesthésie"></div>
-                        <div class="input-group"><label>Anapath (Coeff 1):</label><input type="number" id="avg-y3-a-Anapath"></div>
-                        <div class="input-group"><label>Pharmacologie (Coeff 1):</label><input type="number" id="avg-y3-a-Pharmacologie"></div>
-                        <button data-calc="avg_y3_annuel">Calculer Moyenne Annuelle</button>
-                        <p class="result-text" id="result-avg_y3_annuel"></p>
+            <div id="grade-calc-y3" class="calculator-year-container" style="display: none;">
+                <div id="y3-annuel" class="tab-content active">
+                    <div class="annual-card">
+                        <h3>Calcul de la Moyenne Annuelle (Année 3)</h3>
+                        <div class="module-card">
+                            <h3>Prothèse (Formule Spéciale)</h3>
+                            <div class="input-group"><label>EMD 1:</label><input type="number" id="y3-Prothèse-emd1"
+                                    placeholder="0-20"></div>
+                            <div class="input-group"><label>EMD 2:</label><input type="number" id="y3-Prothèse-emd2"
+                                    placeholder="0-20"></div>
+                            <div class="input-group"><label>EMD 3:</label><input type="number" id="y3-Prothèse-emd3"
+                                    placeholder="0-20"></div>
+                            <div class="input-group"><label>Note CC:</label><input type="number" id="y3-Prothèse-cc"
+                                    placeholder="0-20"></div>
+                            <div class="input-group"><label>Note TP:</label><input type="number" id="y3-Prothèse-tp"
+                                    placeholder="0-20"></div>
+                            <button data-calc="y3_Prothèse">Calculer</button>
+                            <p class="result-text" id="result-y3_Prothèse"></p>
+                        </div>
+                        <div class="module-card general-average-card">
+                            <h3>Moyenne Annuelle (Année 3)</h3>
+                            <div class="input-group"><label>Pathologie (Coeff 5):</label><input type="number"
+                                    id="avg-y3-a-Pathologie"></div>
+                            <div class="input-group"><label>ODF (Coeff 5):</label><input type="number"
+                                    id="avg-y3-a-ODF"></div>
+                            <div class="input-group"><label>Prothèse (Coeff 5):</label><input type="number"
+                                    id="avg-y3-a-Prothèse"></div>
+                            <div class="input-group"><label>Parodontologie (Coeff 5):</label><input type="number"
+                                    id="avg-y3-a-Parodontologie"></div>
+                            <div class="input-group"><label>Occlusodontie (Coeff 5):</label><input type="number"
+                                    id="avg-y3-a-Occlusodontie"></div>
+                            <div class="input-group"><label>Imagerie (Coeff 3):</label><input type="number"
+                                    id="avg-y3-a-Imagerie"></div>
+                            <div class="input-group"><label>Occlusion (Coeff 1):</label><input type="number"
+                                    id="avg-y3-a-Occlusion"></div>
+                            <div class="input-group"><label>Anesthésie (Coeff 1):</label><input type="number"
+                                    id="avg-y3-a-Anesthésie"></div>
+                            <div class="input-group"><label>Anapath (Coeff 1):</label><input type="number"
+                                    id="avg-y3-a-Anapath"></div>
+                            <div class="input-group"><label>Pharmacologie (Coeff 1):</label><input type="number"
+                                    id="avg-y3-a-Pharmacologie"></div>
+                            <button data-calc="avg_y3_annuel">Calculer Moyenne Annuelle</button>
+                            <p class="result-text" id="result-avg_y3_annuel"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div id="grade-calc-unsupported" class="calculator-year-container" style="display: none;">
-             <i class="fas fa-tools" style="font-size: 3rem; color: var(--primary-btn-bg); margin-bottom: 20px;"></i>
-            <h3>En Construction</h3>
-            <p style="text-align: center;">Le calculateur de moyenne pour votre année d'étude (4ème/5ème année) est en cours de développement.</p>
-        </div>
 
-    </div>
-</div>
-
-        <div id="grade-calc-y2" class="calculator-year-container" style="display: none;">
-            <nav class="tabs-nav" data-year="y2">
-                <button class="tab-link active" data-tab="y2-s1">Semestre 1</button>
-                <button class="tab-link" data-tab="y2-s2">Semestre 2</button>
-                <button class="tab-link" data-tab="y2-annuel">Moyenne Annuelle</button>
-            </nav>
-            <div id="y2-s1" class="tab-content active"></div>
-            <div id="y2-s2" class="tab-content"></div>
-            <div id="y2-annuel" class="tab-content"></div>
-        </div>
-
-        <div id="grade-calc-y3" class="calculator-year-container" style="display: none;">
-            <div id="y3-annuel" class="tab-content active">
-                </div>
-        </div>
-        
-        <div id="grade-calc-unsupported" class="calculator-year-container" style="display: none;">
-             <i class="fas fa-tools" style="font-size: 3rem; color: var(--primary-btn-bg); margin-bottom: 20px;"></i>
-            <h3>En Construction</h3>
-            <p>Le calculateur de moyenne pour votre année d'étude (4ème/5ème année) est en cours de développement.</p>
-        </div>
-
-    </div>
-</div>
-<div class="ai-hub-modal-overlay" id="sculptureEvalModalOverlay" style="display: none;">
-    <div class="ai-hub-modal">
-        <button class="close-hub-btn" id="closeSculptureEvalBtn">&times;</button>
-        <h3><i class="fas fa-tooth" style="margin-right: 10px;"></i> AI Sculpture Evaluation</h3>
-        
-        <form id="sculptureEvalForm">
-            <p>Upload up to 3 images of your sculpture. (Required)</p>
-            <input type="file" id="evalImages" accept="image/*" required multiple>
-            
-            <button type="submit" class="btn primary-btn" id="startEvalBtn" style="margin-top: 25px;">
-                Start Evaluation
-            </button>
-        </form>
-
-        <div id="evalLoadingIndicator" style="display: none;">
-            <p>AI is analyzing your sculpture... This may take up to a minute.</p>
+            <div id="grade-calc-unsupported" class="calculator-year-container" style="display: none;">
+                <i class="fas fa-tools" style="font-size: 3rem; color: var(--primary-btn-bg); margin-bottom: 20px;"></i>
+                <h3>En Construction</h3>
+                <p style="text-align: center;">Le calculateur de moyenne pour votre année d'étude (4ème/5ème année) est
+                    en cours de développement.</p>
             </div>
 
-        <div id="evalOutput" style="margin-top: 20px; text-align: left; max-height: 450px; overflow-y: auto; display: none;">
-            
-            <div id="image-annotation-container" style="position: relative; margin-bottom: 20px; display: none; max-width: 400px; margin-left: auto; margin-right: auto;">
-                <img id="annotated-image-base" src="" alt="Your Sculpture" style="width: 100%; height: auto; border-radius: 10px;">
-                </div>
-
-            <pre id="evaluation-text-output" style="white-space: pre-wrap; font-family: 'Poppins', sans-serif;"></pre>
-        
         </div>
     </div>
-</div>
-<script src="script.js"></script>
+
+    <div id="grade-calc-y2" class="calculator-year-container" style="display: none;">
+        <nav class="tabs-nav" data-year="y2">
+            <button class="tab-link active" data-tab="y2-s1">Semestre 1</button>
+            <button class="tab-link" data-tab="y2-s2">Semestre 2</button>
+            <button class="tab-link" data-tab="y2-annuel">Moyenne Annuelle</button>
+        </nav>
+        <div id="y2-s1" class="tab-content active"></div>
+        <div id="y2-s2" class="tab-content"></div>
+        <div id="y2-annuel" class="tab-content"></div>
+    </div>
+
+    <div id="grade-calc-y3" class="calculator-year-container" style="display: none;">
+        <div id="y3-annuel" class="tab-content active">
+        </div>
+    </div>
+
+    <div id="grade-calc-unsupported" class="calculator-year-container" style="display: none;">
+        <i class="fas fa-tools" style="font-size: 3rem; color: var(--primary-btn-bg); margin-bottom: 20px;"></i>
+        <h3>En Construction</h3>
+        <p>Le calculateur de moyenne pour votre année d'étude (4ème/5ème année) est en cours de développement.</p>
+    </div>
+
+    </div>
+    </div>
+    <div class="ai-hub-modal-overlay" id="sculptureEvalModalOverlay" style="display: none;">
+        <div class="ai-hub-modal">
+            <button class="close-hub-btn" id="closeSculptureEvalBtn">&times;</button>
+            <h3><i class="fas fa-tooth" style="margin-right: 10px;"></i> AI Sculpture Evaluation</h3>
+
+            <form id="sculptureEvalForm">
+                <p>Upload up to 3 images of your sculpture. (Required)</p>
+                <input type="file" id="evalImages" accept="image/*" required multiple>
+
+                <button type="submit" class="btn primary-btn" id="startEvalBtn" style="margin-top: 25px;">
+                    Start Evaluation
+                </button>
+            </form>
+
+            <div id="evalLoadingIndicator" style="display: none;">
+                <p>AI is analyzing your sculpture... This may take up to a minute.</p>
+            </div>
+
+            <div id="evalOutput"
+                style="margin-top: 20px; text-align: left; max-height: 450px; overflow-y: auto; display: none;">
+
+                <div id="image-annotation-container"
+                    style="position: relative; margin-bottom: 20px; display: none; max-width: 400px; margin-left: auto; margin-right: auto;">
+                    <img id="annotated-image-base" src="" alt="Your Sculpture"
+                        style="width: 100%; height: auto; border-radius: 10px;">
+                </div>
+
+                <pre id="evaluation-text-output"
+                    style="white-space: pre-wrap; font-family: 'Poppins', sans-serif;"></pre>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

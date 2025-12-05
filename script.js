@@ -15,7 +15,7 @@ async function fetchApi(endpoint, options = {}) {
     if (token) {
         headers['Authorization'] = `Bearer ${token}`;
     }
-    
+
     // (هذا هو السطر الأهم)
     // لا تقم بإضافة 'Content-Type' إذا كان الجسم عبارة عن FormData
     // المتصفح سيقوم بإضافته تلقائياً (multipart/form-data)
@@ -36,21 +36,21 @@ async function fetchApi(endpoint, options = {}) {
             responseData = await response.json();
         } else {
             // Handle non-JSON responses if necessary, e.g., for DELETE which might return no content
-             if (response.status === 204) { // No Content
-                 return; // Or return a specific success indicator
-             }
-             // Handle other content types or text responses if needed
-             responseData = await response.text(); // Example for text response
+            if (response.status === 204) { // No Content
+                return; // Or return a specific success indicator
+            }
+            // Handle other content types or text responses if needed
+            responseData = await response.text(); // Example for text response
         }
 
 
         if (!response.ok) {
             // Use message from JSON if available, otherwise use status text or default message
             const errorMessage = responseData?.message || response.statusText || `Request failed with status ${response.status}`;
-             // Special handling for 401 Unauthorized
+            // Special handling for 401 Unauthorized
             if (response.status === 401) {
-                 showNotification('Your session has expired. Please log in again.', 'error');
-                 logoutUser(); // Log out the user automatically
+                showNotification('Your session has expired. Please log in again.', 'error');
+                logoutUser(); // Log out the user automatically
             }
             throw new Error(errorMessage);
         }
@@ -60,7 +60,7 @@ async function fetchApi(endpoint, options = {}) {
     } catch (error) {
         console.error('API Fetch Error:', error);
         // Rethrow the error to be caught by the calling function, which can show a notification
-        throw error; 
+        throw error;
     }
 }
 
@@ -71,7 +71,7 @@ function buildPdfViewerUrl(filePath) {
         const base = 'pdf-viewer.html';
         const src = encodeURIComponent(filePath);
         // Use viewer only if explicitly enabled (useful for debugging or specific environments)
-        const useViewer = (typeof window !== 'undefined' && window.USE_PDF_VIEWER === true); 
+        const useViewer = (typeof window !== 'undefined' && window.USE_PDF_VIEWER === true);
         return useViewer ? `${base}?src=${src}` : filePath;
     } catch (e) {
         // Fallback in case of errors (e.g., encodeURIComponent fails)
@@ -86,7 +86,7 @@ async function fetchSubjectsByYear(year) {
 }
 
 async function fetchLessonsBySubject(subjectId) {
-     // Using fetchApi helper
+    // Using fetchApi helper
     return fetchApi(`/api/content/lessons/${subjectId}`);
 }
 
@@ -149,148 +149,148 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-    
-    // --- 1. تعريف متغيرات الحالة العامة للتطبيق ---
-    let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    let isGuest = false; // Note: Guest mode seems unused, consider removing if not implemented
-    let isYearChosen = localStorage.getItem('isYearChosen') === 'true';
-    let selectedYear = localStorage.getItem('selectedYear');
-    let isActivated = localStorage.getItem('isActivated') === 'true';
-    let currentContentType = localStorage.getItem('currentContentType'); // ✅ حفظ نوع المحتوى
+
+// --- 1. تعريف متغيرات الحالة العامة للتطبيق ---
+let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+let isGuest = false; // Note: Guest mode seems unused, consider removing if not implemented
+let isYearChosen = localStorage.getItem('isYearChosen') === 'true';
+let selectedYear = localStorage.getItem('selectedYear');
+let isActivated = localStorage.getItem('isActivated') === 'true';
+let currentContentType = localStorage.getItem('currentContentType'); // ✅ حفظ نوع المحتوى
 // ✅ إضافة جديدة: أضف هذا المتغير لتخزين سياق الإنشاء
-    let currentAiGenerationContext = { subjectId: null, subjectName: null };
-    let particlesInstance = null;
-    let performanceChart = null; // -- متغير الرسم البياني للوحة الأداء
-    const originalDocTitle = document.title; // لحفظ عنوان الصفحة الأصلي
+let currentAiGenerationContext = { subjectId: null, subjectName: null };
+let particlesInstance = null;
+let performanceChart = null; // -- متغير الرسم البياني للوحة الأداء
+const originalDocTitle = document.title; // لحفظ عنوان الصفحة الأصلي
 
-    // ✨ --- دالة جديدة لتشغيل الكويزات المولدة بالذكاء الاصطناعي --- ✨
-    function startAIGeneratedQuiz(quizData) {
-        // 1. تجهيز بيانات الكويز لتتوافق مع نظام الكويز الاحترافي
-        const generatedQuiz = { // Use a local variable to avoid potential conflicts
-            _id: 'ai-generated-' + Date.now(), // نعطي الكويز معرفًا فريدًا
-            title: 'AI Generated Quiz',
-            subject: currentAiGenerationContext.subjectId, // Use context
-            subjectName: currentAiGenerationContext.subjectName, // Use context
-            questions: quizData // هنا نضع الأسئلة التي جاءت من Groq
-        };
+// ✨ --- دالة جديدة لتشغيل الكويزات المولدة بالذكاء الاصطناعي --- ✨
+function startAIGeneratedQuiz(quizData) {
+    // 1. تجهيز بيانات الكويز لتتوافق مع نظام الكويز الاحترافي
+    const generatedQuiz = { // Use a local variable to avoid potential conflicts
+        _id: 'ai-generated-' + Date.now(), // نعطي الكويز معرفًا فريدًا
+        title: 'AI Generated Quiz',
+        subject: currentAiGenerationContext.subjectId, // Use context
+        subjectName: currentAiGenerationContext.subjectName, // Use context
+        questions: quizData // هنا نضع الأسئلة التي جاءت من Groq
+    };
 
-        // التأكد من أن الكويز يحتوي على أسئلة
-        if (!generatedQuiz.questions || generatedQuiz.questions.length === 0) {
-            showNotification('The generated quiz has no questions.', 'error');
-            return;
-        }
-
-        // 2. إعادة تعيين كل متغيرات حالة الكويز واستدعاء دالة البدء
-        initializeAndStartQuiz(generatedQuiz);
+    // التأكد من أن الكويز يحتوي على أسئلة
+    if (!generatedQuiz.questions || generatedQuiz.questions.length === 0) {
+        showNotification('The generated quiz has no questions.', 'error');
+        return;
     }
 
-    // --- نظام تنبيهات يجب تعريفه مبكراً ---
-    function showNotification(message, type = 'info') {
-        const toast = document.createElement('div');
-        toast.className = `notification-toast ${type}`;
-        toast.textContent = message;
-        document.body.appendChild(toast);
-        // Delay showing to allow CSS transition
-        setTimeout(() => { toast.classList.add('show'); }, 10); 
-        // Auto-remove after duration
+    // 2. إعادة تعيين كل متغيرات حالة الكويز واستدعاء دالة البدء
+    initializeAndStartQuiz(generatedQuiz);
+}
+
+// --- نظام تنبيهات يجب تعريفه مبكراً ---
+function showNotification(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `notification-toast ${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    // Delay showing to allow CSS transition
+    setTimeout(() => { toast.classList.add('show'); }, 10);
+    // Auto-remove after duration
+    setTimeout(() => {
+        toast.classList.remove('show');
+        // Remove from DOM after transition finishes
         setTimeout(() => {
-            toast.classList.remove('show');
-            // Remove from DOM after transition finishes
-            setTimeout(() => {
-                if (document.body.contains(toast)) {
-                    document.body.removeChild(toast);
-                }
-            }, 500); // Should match CSS transition duration
-        }, 3000);
+            if (document.body.contains(toast)) {
+                document.body.removeChild(toast);
+            }
+        }, 500); // Should match CSS transition duration
+    }, 3000);
+}
+
+// --- دالة لتسجيل الخروج الآمن ---
+function logoutUser() {
+    console.log("Logging out user...");
+    // Clear all relevant user data from localStorage
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('isYearChosen');
+    localStorage.removeItem('selectedYear');
+    localStorage.removeItem('isActivated');
+    localStorage.removeItem('currentPageId'); // ✅ مسح الصفحة الحالية
+    localStorage.removeItem('quizState'); // ✅ مسح حالة الكويز
+    localStorage.removeItem('currentContentType'); // ✅ مسح نوع المحتوى
+    // Redirect to login page
+    window.location.href = 'login.html';
+}
+
+// --- دالة لجلب بيانات المستخدم من الباك-اند ---
+async function fetchUserProfile() {
+    try {
+        // Use fetchApi which handles token and errors including 401
+        const userProfile = await fetchApi('/api/user/profile');
+        if (userProfile) {
+            console.log("User profile fetched successfully:", userProfile);
+            return userProfile;
+        }
+        return null; // Should not happen if fetchApi works correctly, but good practice
+    } catch (error) {
+        // fetchApi already logs detailed errors and handles 401
+        // You might want to show a generic error here if fetchApi didn't handle it
+        if (error.message.includes('Failed to fetch')) { // Network error example
+            showNotification('Could not connect to the server. Please check your connection.', 'error');
+        }
+        // No need to show 'session expired' here, fetchApi handles it
+        return null;
     }
-    
-    // --- دالة لتسجيل الخروج الآمن ---
-    function logoutUser() {
-        console.log("Logging out user...");
-        // Clear all relevant user data from localStorage
-        localStorage.removeItem('userToken');
-        localStorage.removeItem('isLoggedIn');
-        localStorage.removeItem('isYearChosen');
-        localStorage.removeItem('selectedYear');
-        localStorage.removeItem('isActivated');
-        localStorage.removeItem('currentPageId'); // ✅ مسح الصفحة الحالية
-        localStorage.removeItem('quizState'); // ✅ مسح حالة الكويز
-        localStorage.removeItem('currentContentType'); // ✅ مسح نوع المحتوى
-        // Redirect to login page
+}
+
+// --- دالة تحديث واجهة المستخدم الرئيسية (نسخة معدلة بدون تفعيل إجباري) ---
+function updateUI() {
+    // No user profile means not logged in
+    if (!isLoggedIn) {
+        // Redirect immediately if not logged in
         window.location.href = 'login.html';
-    }
-    
-    // --- دالة لجلب بيانات المستخدم من الباك-اند ---
-    async function fetchUserProfile() {
-        try {
-            // Use fetchApi which handles token and errors including 401
-            const userProfile = await fetchApi('/api/user/profile'); 
-            if (userProfile) {
-                console.log("User profile fetched successfully:", userProfile);
-                return userProfile;
-            }
-            return null; // Should not happen if fetchApi works correctly, but good practice
-        } catch (error) {
-             // fetchApi already logs detailed errors and handles 401
-            // You might want to show a generic error here if fetchApi didn't handle it
-            if (error.message.includes('Failed to fetch')) { // Network error example
-                 showNotification('Could not connect to the server. Please check your connection.', 'error');
-            }
-            // No need to show 'session expired' here, fetchApi handles it
-            return null;
-        }
-    }
-    
-    // --- دالة تحديث واجهة المستخدم الرئيسية (نسخة معدلة بدون تفعيل إجباري) ---
-    function updateUI() {
-        // No user profile means not logged in
-        if (!isLoggedIn) { 
-            // Redirect immediately if not logged in
-            window.location.href = 'login.html'; 
-            return; // Stop further execution
-        }
-
-        // Check if year is chosen
-        if (!isYearChosen) {
-            showPage('#year-selection-page');
-            return; // Stop if year selection is needed
-        } 
-        
-        // If logged in and year chosen, handle activation (if applicable)
-        // This part seems complex and might depend on activation logic.
-        // Assuming activation is checked elsewhere or handled by page content
-        
-        // Restore last page or show home page
-        const lastPageId = localStorage.getItem('currentPageId');
-        // Ensure the last page is valid and not a restricted page if state changed
-        const validPages = ['#home-page', '#dashboard-page', '#subjects-page', '#content-display-page', '#lessons-display-page', '#flashcards-page', '#pdfs-display-page'];
-        
-        if (lastPageId && validPages.includes(lastPageId) && lastPageId !== '#year-selection-page' && lastPageId !== '#activation-page') {
-             // Don't restore if it tries to go back to year/activation
-            console.log("Restoring last page:", lastPageId);
-            showPage(lastPageId);
-        } else {
-             // Default to home page if no valid last page or if it was year/activation
-             console.log("Showing default home page.");
-             showPage('#home-page');
-        }
-
-
-        // Update year display elements if they exist
-        const currentSummaryYear = document.getElementById('current-summary-year');
-        if (currentSummaryYear) { // Check if the element exists
-             currentSummaryYear.textContent = selectedYear || 'N/A';
-             // Assuming these IDs exist as well
-             const currentQuizYear = document.getElementById('current-quiz-year');
-             const currentLessonYear = document.getElementById('current-lesson-year');
-             if(currentQuizYear) currentQuizYear.textContent = selectedYear || 'N/A';
-             if(currentLessonYear) currentLessonYear.textContent = selectedYear || 'N/A';
-        }
+        return; // Stop further execution
     }
 
-    let markmapInstance = null;
+    // Check if year is chosen
+    if (!isYearChosen) {
+        showPage('#year-selection-page');
+        return; // Stop if year selection is needed
+    }
 
-    // ✅ 1. استبدل دالة displayMindMap القديمة بهذه النسخة المطورة
+    // If logged in and year chosen, handle activation (if applicable)
+    // This part seems complex and might depend on activation logic.
+    // Assuming activation is checked elsewhere or handled by page content
+
+    // Restore last page or show home page
+    const lastPageId = localStorage.getItem('currentPageId');
+    // Ensure the last page is valid and not a restricted page if state changed
+    const validPages = ['#home-page', '#dashboard-page', '#subjects-page', '#content-display-page', '#lessons-display-page', '#flashcards-page', '#pdfs-display-page'];
+
+    if (lastPageId && validPages.includes(lastPageId) && lastPageId !== '#year-selection-page' && lastPageId !== '#activation-page') {
+        // Don't restore if it tries to go back to year/activation
+        console.log("Restoring last page:", lastPageId);
+        showPage(lastPageId);
+    } else {
+        // Default to home page if no valid last page or if it was year/activation
+        console.log("Showing default home page.");
+        showPage('#home-page');
+    }
+
+
+    // Update year display elements if they exist
+    const currentSummaryYear = document.getElementById('current-summary-year');
+    if (currentSummaryYear) { // Check if the element exists
+        currentSummaryYear.textContent = selectedYear || 'N/A';
+        // Assuming these IDs exist as well
+        const currentQuizYear = document.getElementById('current-quiz-year');
+        const currentLessonYear = document.getElementById('current-lesson-year');
+        if (currentQuizYear) currentQuizYear.textContent = selectedYear || 'N/A';
+        if (currentLessonYear) currentLessonYear.textContent = selectedYear || 'N/A';
+    }
+}
+
+let markmapInstance = null;
+
+// ✅ 1. استبدل دالة displayMindMap القديمة بهذه النسخة المطورة
 // في ملف script.js
 
 // ✅ استبدل دالة displayMindMap القديمة بهذه النسخة الجديدة
@@ -303,25 +303,25 @@ function displayMindMap(mindmapData) {
         showNotification('Received empty data for mind map.', 'error');
         return;
     }
-    
+
     // 1. حفظ نص الماركداون في الذاكرة المؤقتة للمتصفح
     localStorage.setItem('mindmapMarkdown', mindmapData.markdown);
-    
+
     // 2. فتح ملف العارض في نافذة منبثقة جديدة
     const width = 1200;
     const height = 800;
     const left = (window.screen.width / 2) - (width / 2);
     const top = (window.screen.height / 2) - (height / 2);
-    
+
     // Use a relative path assuming mindmap-viewer.html is in the same directory
     window.open(
-        'mindmap-viewer.html', 
-        'MindMapViewer', 
+        'mindmap-viewer.html',
+        'MindMapViewer',
         `width=${width},height=${height},top=${top},left=${left}`
     );
 }
-    
-    // ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
+
+// ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
 // [السطر 340]
 // ✅ استبدل دالة displayGeneratedFlashcards القديمة بهذه النسخة
 // ✅ [استبدل الدالة القديمة بهذه]
@@ -329,11 +329,11 @@ function displayMindMap(mindmapData) {
 function displayGeneratedFlashcards(flashcardData) {
     // 1. التحقق من البيانات
     if (!Array.isArray(flashcardData)) {
-         showNotification("Invalid flashcard data received from AI.", "error");
-         console.error("Expected flashcardData to be an array, but received:", flashcardData);
-         return;
+        showNotification("Invalid flashcard data received from AI.", "error");
+        console.error("Expected flashcardData to be an array, but received:", flashcardData);
+        return;
     }
-    
+
     currentCollection = flashcardData;
     currentCardIndex = 0;
 
@@ -341,19 +341,19 @@ function displayGeneratedFlashcards(flashcardData) {
         showNotification("The AI didn't generate any flashcards.", "error");
         return;
     }
-    
+
     // --- ✅ [الخطوة 1: الانتقال "يدوياً" إلى صفحة الفلاش كارد] ---
     // (هذا هو البديل الصحيح لـ `showPage('#flashcards-page')` المسبب للمشكلة)
-    
+
     // أ. إخفاء جميع الصفحات الأخرى
     pageSections.forEach(section => section.classList.remove('active'));
-    
+
     // ب. إظهار صفحة الفلاش كارد
     const targetPage = document.querySelector('#flashcards-page');
     if (targetPage) {
         targetPage.classList.add('active');
         localStorage.setItem('currentPageId', '#flashcards-page'); // حفظ الصفحة الحالية
-    
+
         // ج. تحديث الرابط النشط في شريط التنقل
         navLinks.forEach(link => {
             const linkHref = link.getAttribute('href');
@@ -368,7 +368,7 @@ function displayGeneratedFlashcards(flashcardData) {
     }
     // --- [نهاية الخطوة 1] ---
 
-    
+
     // --- [الخطوة 2: إعداد واجهة العارض (هذا الكود سليم)] ---
     const ratingControls = document.getElementById('ai-flashcard-rating-controls');
     const viewerControls = document.getElementById('flashcard-viewer-controls');
@@ -377,9 +377,9 @@ function displayGeneratedFlashcards(flashcardData) {
     if (viewerControls) viewerControls.style.display = 'none'; // إخفاء أزرار التالي/السابق
 
     // إخفاء شبكة المجموعات
-    document.getElementById('flashcards-content').style.display = 'none'; 
+    document.getElementById('flashcards-content').style.display = 'none';
     // إظهار العارض
-    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden'); 
+    document.getElementById('flashcard-viewer').classList.remove('flashcard-viewer-hidden');
     document.getElementById('flashcard-viewer-title').textContent = "AI Generated Flashcards (Review & Save)";
 
     displayCurrentFlashcard(); // عرض البطاقة الأولى
@@ -389,360 +389,360 @@ function displayGeneratedFlashcards(flashcardData) {
 // [السطر 371]
 // --- دالة لتحديث الهيدر بصورة المستخدم ---
 
-    // --- دالة لتحديث الهيدر بصورة المستخدم ---
-    function updateHeaderWithUserData(user) {
-        const headerLogoImg = document.querySelector('.ai-header-logo');
-        if (headerLogoImg && user && user.image) { // Added check for user object
-            headerLogoImg.src = user.image;
-            headerLogoImg.alt = `${user.displayName || 'User'}'s profile picture`;
-        }
-        // Update XP display if the element exists
-        const xpDisplay = document.getElementById('user-xp-display');
-        if(xpDisplay && user) {
-            xpDisplay.textContent = `${user.experiencePoints || 0} XP`;
-        }
+// --- دالة لتحديث الهيدر بصورة المستخدم ---
+function updateHeaderWithUserData(user) {
+    const headerLogoImg = document.querySelector('.ai-header-logo');
+    if (headerLogoImg && user && user.image) { // Added check for user object
+        headerLogoImg.src = user.image;
+        headerLogoImg.alt = `${user.displayName || 'User'}'s profile picture`;
     }
-    
-    // --- دالة رئيسية لتهيئة التطبيق ---
-    async function initializeApp() {
-        const userProfile = await fetchUserProfile();
-        if (userProfile) {
-            isLoggedIn = true;
-            selectedYear = userProfile.studyYear;
-            isYearChosen = !!userProfile.studyYear; // True if studyYear exists and is not null/empty
-            isActivated = userProfile.isActivated;
+    // Update XP display if the element exists
+    const xpDisplay = document.getElementById('user-xp-display');
+    if (xpDisplay && user) {
+        xpDisplay.textContent = `${user.experiencePoints || 0} XP`;
+    }
+}
 
-            // Update localStorage based on fetched profile
-            localStorage.setItem('isLoggedIn', 'true');
-            if (isYearChosen) {
-                 localStorage.setItem('isYearChosen', 'true');
-                 localStorage.setItem('selectedYear', selectedYear);
-            } else {
-                 localStorage.removeItem('isYearChosen');
-                 localStorage.removeItem('selectedYear');
-            }
-             if (isActivated) {
-                 localStorage.setItem('isActivated', 'true');
-            } else {
-                 localStorage.removeItem('isActivated');
-            }
-            
-            updateHeaderWithUserData(userProfile);
-            
-            // ✅ --- استعادة حالة الكويز أو الصفحة ---
-            const savedQuizState = localStorage.getItem('quizState');
-            if (savedQuizState) {
-                console.log("Restoring quiz state...");
-                try {
-                    const { savedProQuiz, savedProQuestionIndex, savedProUserAnswers, savedQuizStartTime } = JSON.parse(savedQuizState);
-                    // Restore quiz variables
-                    proQuiz = savedProQuiz;
-                    proQuestionIndex = savedProQuestionIndex;
-                    proUserAnswers = savedProUserAnswers;
-                    quizStartTime = savedQuizStartTime; // Restore start time
+// --- دالة رئيسية لتهيئة التطبيق ---
+async function initializeApp() {
+    const userProfile = await fetchUserProfile();
+    if (userProfile) {
+        isLoggedIn = true;
+        selectedYear = userProfile.studyYear;
+        isYearChosen = !!userProfile.studyYear; // True if studyYear exists and is not null/empty
+        isActivated = userProfile.isActivated;
 
-                    // Check if restored data is valid
-                    if (proQuiz && proQuiz.questions && proQuiz.questions.length > proQuestionIndex) {
-                        quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
-                        quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Restore subject name too
-
-                        renderQuestionList(); // Render the list based on restored answers
-                        renderCurrentQuestion(); // Render the specific question index
-                        updateStats(); // Update stats display
-
-                        showPage('#quiz-taking-page'); // Show the quiz page directly
-                        console.log("Quiz state restored successfully.");
-                        return; // Stop further UI updates if quiz is restored
-                    } else {
-                         console.error("Invalid quiz state data found. Clearing.");
-                         localStorage.removeItem('quizState'); // Clear invalid state
-                    }
-                } catch (e) {
-                    console.error("Error parsing quiz state:", e);
-                    localStorage.removeItem('quizState'); // Clear corrupted state
-                }
-            }
-            
-            // If no quiz state, proceed with normal UI update (which restores last page or shows home)
-            updateUI();
-
+        // Update localStorage based on fetched profile
+        localStorage.setItem('isLoggedIn', 'true');
+        if (isYearChosen) {
+            localStorage.setItem('isYearChosen', 'true');
+            localStorage.setItem('selectedYear', selectedYear);
         } else {
-            // If fetchUserProfile fails (e.g., token invalid), logout
-            logoutUser();
-        }
-    }
-
-    // --- دالة التحقق من التوكن ---
-    async function checkForAuthToken() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const token = urlParams.get('token');
-
-        if (token) {
-            console.log("Token found in URL, setting up new session...");
-            // Store the new token
-            localStorage.setItem('userToken', token);
-            // Clear potentially outdated state from previous sessions
             localStorage.removeItem('isYearChosen');
             localStorage.removeItem('selectedYear');
-            localStorage.removeItem('isActivated');
-            localStorage.removeItem('currentPageId'); // Clear last page
-            localStorage.removeItem('quizState'); // Clear any old quiz state
-            localStorage.removeItem('currentContentType'); // Clear content type
-            // Remove token from URL for security
-            window.history.replaceState({}, document.title, window.location.pathname);
-            showNotification('Successfully signed in!', 'success');
-            // Initialize app with the new token
-            await initializeApp(); 
-        } else if (localStorage.getItem('userToken')) {
-            console.log("Token found in localStorage. Restoring session.");
-             // Initialize app using existing token
-            await initializeApp();
-        } else {
-            console.log("No token found. Redirecting to login page.");
-             // Redirect to login if no token anywhere
-            window.location.href = 'login.html';
         }
-    }
-    
-    // --- تفعيل خلفية tsParticles ---
-    if (typeof tsParticles !== 'undefined') {
-        tsParticles.load("tsparticles", {
-            // Your particles config here...
-            particles: {
-                number: { value: 50, density: { enable: true, value_area: 800 } },
-                move: { enable: true, speed: 0.8, direction: "none", outModes: { default: "out" } },
-                links: { enable: true, distance: 150, color: "random", opacity: 0.3, width: 1, triangles: { enable: false } },
-                color: { value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"] },
-                shape: { type: "circle" },
-                opacity: { value: { min: 0.3, max: 0.7 } },
-                size: { value: { min: 1, max: 4 } },
-            },
-            interactivity: {
-                events: { onHover: { enable: true, mode: "grab" }, onClick: { enable: false } },
-                modes: { grab: { distance: 140, links: { opacity: 0.6 } } }
-            },
-            detectRetina: true,
-            background: { color: "transparent" }
-        }).then(container => {
-            particlesInstance = container;
-             // Pause initially if quiz page is loaded directly
-             const activePage = document.querySelector('.page-section.active');
-             if (activePage && (activePage.id === 'quiz-taking-page' || activePage.id === 'quiz-summary-page')) {
-                  particlesInstance.pause();
-             }
-        }).catch(error => {
-             console.error("tsParticles load error:", error);
-        });
+        if (isActivated) {
+            localStorage.setItem('isActivated', 'true');
+        } else {
+            localStorage.removeItem('isActivated');
+        }
 
-        // Handle visibility change
-        document.addEventListener("visibilitychange", () => {
-            if (!particlesInstance) return;
-            if (document.hidden) {
-                particlesInstance.pause();
-            } else {
-                 // Only play if not on quiz pages
-                 const activePage = document.querySelector('.page-section.active');
-                 if (!activePage || (activePage.id !== 'quiz-taking-page' && activePage.id !== 'quiz-summary-page')) {
-                     particlesInstance.play();
-                 }
+        updateHeaderWithUserData(userProfile);
+
+        // ✅ --- استعادة حالة الكويز أو الصفحة ---
+        const savedQuizState = localStorage.getItem('quizState');
+        if (savedQuizState) {
+            console.log("Restoring quiz state...");
+            try {
+                const { savedProQuiz, savedProQuestionIndex, savedProUserAnswers, savedQuizStartTime } = JSON.parse(savedQuizState);
+                // Restore quiz variables
+                proQuiz = savedProQuiz;
+                proQuestionIndex = savedProQuestionIndex;
+                proUserAnswers = savedProUserAnswers;
+                quizStartTime = savedQuizStartTime; // Restore start time
+
+                // Check if restored data is valid
+                if (proQuiz && proQuiz.questions && proQuiz.questions.length > proQuestionIndex) {
+                    quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
+                    quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Restore subject name too
+
+                    renderQuestionList(); // Render the list based on restored answers
+                    renderCurrentQuestion(); // Render the specific question index
+                    updateStats(); // Update stats display
+
+                    showPage('#quiz-taking-page'); // Show the quiz page directly
+                    console.log("Quiz state restored successfully.");
+                    return; // Stop further UI updates if quiz is restored
+                } else {
+                    console.error("Invalid quiz state data found. Clearing.");
+                    localStorage.removeItem('quizState'); // Clear invalid state
+                }
+            } catch (e) {
+                console.error("Error parsing quiz state:", e);
+                localStorage.removeItem('quizState'); // Clear corrupted state
             }
-        });
+        }
+
+        // If no quiz state, proceed with normal UI update (which restores last page or shows home)
+        updateUI();
+
+    } else {
+        // If fetchUserProfile fails (e.g., token invalid), logout
+        logoutUser();
     }
+}
+
+// --- دالة التحقق من التوكن ---
+async function checkForAuthToken() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+
+    if (token) {
+        console.log("Token found in URL, setting up new session...");
+        // Store the new token
+        localStorage.setItem('userToken', token);
+        // Clear potentially outdated state from previous sessions
+        localStorage.removeItem('isYearChosen');
+        localStorage.removeItem('selectedYear');
+        localStorage.removeItem('isActivated');
+        localStorage.removeItem('currentPageId'); // Clear last page
+        localStorage.removeItem('quizState'); // Clear any old quiz state
+        localStorage.removeItem('currentContentType'); // Clear content type
+        // Remove token from URL for security
+        window.history.replaceState({}, document.title, window.location.pathname);
+        showNotification('Successfully signed in!', 'success');
+        // Initialize app with the new token
+        await initializeApp();
+    } else if (localStorage.getItem('userToken')) {
+        console.log("Token found in localStorage. Restoring session.");
+        // Initialize app using existing token
+        await initializeApp();
+    } else {
+        console.log("No token found. Redirecting to login page.");
+        // Redirect to login if no token anywhere
+        window.location.href = 'login.html';
+    }
+}
+
+// --- تفعيل خلفية tsParticles ---
+if (typeof tsParticles !== 'undefined') {
+    tsParticles.load("tsparticles", {
+        // Your particles config here...
+        particles: {
+            number: { value: 50, density: { enable: true, value_area: 800 } },
+            move: { enable: true, speed: 0.8, direction: "none", outModes: { default: "out" } },
+            links: { enable: true, distance: 150, color: "random", opacity: 0.3, width: 1, triangles: { enable: false } },
+            color: { value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"] },
+            shape: { type: "circle" },
+            opacity: { value: { min: 0.3, max: 0.7 } },
+            size: { value: { min: 1, max: 4 } },
+        },
+        interactivity: {
+            events: { onHover: { enable: true, mode: "grab" }, onClick: { enable: false } },
+            modes: { grab: { distance: 140, links: { opacity: 0.6 } } }
+        },
+        detectRetina: true,
+        background: { color: "transparent" }
+    }).then(container => {
+        particlesInstance = container;
+        // Pause initially if quiz page is loaded directly
+        const activePage = document.querySelector('.page-section.active');
+        if (activePage && (activePage.id === 'quiz-taking-page' || activePage.id === 'quiz-summary-page')) {
+            particlesInstance.pause();
+        }
+    }).catch(error => {
+        console.error("tsParticles load error:", error);
+    });
+
+    // Handle visibility change
+    document.addEventListener("visibilitychange", () => {
+        if (!particlesInstance) return;
+        if (document.hidden) {
+            particlesInstance.pause();
+        } else {
+            // Only play if not on quiz pages
+            const activePage = document.querySelector('.page-section.active');
+            if (!activePage || (activePage.id !== 'quiz-taking-page' && activePage.id !== 'quiz-summary-page')) {
+                particlesInstance.play();
+            }
+        }
+    });
+}
 
 
-    // --- [كامل] قاعدة بيانات المواد مع الأيقونات (Keep as is) ---
-    const subjectsDatabase = {
-        "1": [
-            { name: "GENETICS", key: "genetics", icon: "GENETICS.png" },
-            { name: "BIOMATHÉMATIQUES", key: "biomathematiques", icon: "BIOMATHS.png" },
-            { name: "ANATOMY", key: "anatomy-y1", icon: "ANATOMY.png" },
-            { name: "BIOCHEMISTRY", key: "biochemistry", icon: "BIOCHEMISTRY.png" },
-            { name: "CHEMISTRY", key: "chemistry1", icon: "CHEMISTRY.png" },
-            { name: "BIOPHYSIQUE", key: "biophysique", icon: "BIOPHYISICS.png" },
-            { name: "PHYSICS", key: "physics", icon: "PHISICS.png" },
-            { name: "EMBRYOLOGY", key: "embryology", icon: "EMBRYOLOGY.png" },
-            { name: "HISTOLOGY", key: "histology-y1", icon: "HISTOLOGY.png" },
-            { name: "CYTOLOGY", key: "cytology", icon: "CYTOLOGY.png" },
-            { name: "SSH", key: "ssh", icon: "SSH.png" },
-            { name: "PHYSIOLOGY", key: "physiology", icon: "PHYSIOLOGY.png" }
-        ],
-        "2": [
-            { name: "ODF", key: "odf-y2", icon: "ODF.png" },
-            { name: "PROTHÈSE", key: "prothese-y2", icon: "PROSTHESIS.png" },
-            { name: "OCE", key: "oce", icon: "OCE.png" },
-            { name: "PARO", key: "paro-y2", icon: "PARODONTOLOGY.png" },
-            { name: "PATHO", key: "patho", icon: "PATHO.png" },
-            { name: "BIOMATERIAU", key: "biomateriau", icon: "BIOMATERIALS.png" },
-            { name: "IMMUNOLOGIE", key: "immunologie", icon: "IMMUNOLOGY.png" },
-            { name: "HISTOLOGIE", key: "histology-y2", icon: "HISTOLOGY.png" },
-            { name: "HYGIÈNE", key: "hygiene", icon: "HYGIÈNE.png" },
-            { name: "MICROBIOLOGIE", key: "microbiologie", icon: "MICROBIOLOGY.png" },
-            { name: "ANATOMIE HUMAINE", key: "anatomy-y2", icon: "ANATOMY2.png" },
-            { name: "INFORMATIQUE", key: "informatique", icon: "default-icon.png" }
-            
+// --- [كامل] قاعدة بيانات المواد مع الأيقونات (Keep as is) ---
+const subjectsDatabase = {
+    "1": [
+        { name: "GENETICS", key: "genetics", icon: "GENETICS.png" },
+        { name: "BIOMATHÉMATIQUES", key: "biomathematiques", icon: "BIOMATHS.png" },
+        { name: "ANATOMY", key: "anatomy-y1", icon: "ANATOMY.png" },
+        { name: "BIOCHEMISTRY", key: "biochemistry", icon: "BIOCHEMISTRY.png" },
+        { name: "CHEMISTRY", key: "chemistry1", icon: "CHEMISTRY.png" },
+        { name: "BIOPHYSIQUE", key: "biophysique", icon: "BIOPHYISICS.png" },
+        { name: "PHYSICS", key: "physics", icon: "PHISICS.png" },
+        { name: "EMBRYOLOGY", key: "embryology", icon: "EMBRYOLOGY.png" },
+        { name: "HISTOLOGY", key: "histology-y1", icon: "HISTOLOGY.png" },
+        { name: "CYTOLOGY", key: "cytology", icon: "CYTOLOGY.png" },
+        { name: "SSH", key: "ssh", icon: "SSH.png" },
+        { name: "PHYSIOLOGY", key: "physiology", icon: "PHYSIOLOGY.png" }
+    ],
+    "2": [
+        { name: "ODF", key: "odf-y2", icon: "ODF.png" },
+        { name: "PROTHÈSE", key: "prothese-y2", icon: "PROSTHESIS.png" },
+        { name: "OCE", key: "oce", icon: "OCE.png" },
+        { name: "PARO", key: "paro-y2", icon: "PARODONTOLOGY.png" },
+        { name: "PATHO", key: "patho", icon: "PATHO.png" },
+        { name: "BIOMATERIAU", key: "biomateriau", icon: "BIOMATERIALS.png" },
+        { name: "IMMUNOLOGIE", key: "immunologie", icon: "IMMUNOLOGY.png" },
+        { name: "HISTOLOGIE", key: "histology-y2", icon: "HISTOLOGY.png" },
+        { name: "HYGIÈNE", key: "hygiene", icon: "HYGIÈNE.png" },
+        { name: "MICROBIOLOGIE", key: "microbiologie", icon: "MICROBIOLOGY.png" },
+        { name: "ANATOMIE HUMAINE", key: "anatomy-y2", icon: "ANATOMY2.png" },
+        { name: "INFORMATIQUE", key: "informatique", icon: "default-icon.png" }
 
-        ],
-        "3": [
-            { name: "ANATOMO-PATHOLOGIE", key: "anatomo-pathologie", icon: "ANATOMO-PATHOLOGIE.png" },
-            { name: "ANESTHÉSIOLOGIE", key: "anesthesiologie", icon: "Anesthésiologie.png" },
-            { name: "IMAGERIE", key: "imagrie", icon: "IMAGERIE .png" },
-            { name: "OC", key: "oc", icon: "OCE.png" },
-            { name: "OCCLUSIO", key: "occlusio", icon: "OCCLUSIO.png" },
-            { name: "ODF", key: "odf-y3", icon: "ODF.png" },
-            { name: "OXYOLOGIE", key: "oxyologie", icon: "OXYOLOGIE.png" },
-            { name: "PARO", key: "paro-y3", icon: "PARODONTOLOGY.png" },
-            { name: "PATHOLOGIE", key: "pathologie-y3", icon: "PATHO.png" },
-            { name: "PHARMACOLOGIE", key: "pharmacologie", icon: "PHARMACOLOGIE.png" },
-            { name: "PROTHÈSE", key: "prothese-y3", icon: "PROSTHESIS.png" }
-        ],
-        "4": [
-            { name: "DÉONTOLOGIE", key: "deontologie", icon: "DEONTOLOGIE.png" },
-            { name: "IMPLANTO", key: "implanto", icon: "IMPLANTO.png" },
-            { name: "OCE", key: "oce-y4", icon: "OCE.png" },
-            { name: "ODF", key: "odf-y4", icon: "ODF.png" },
-            { name: "OG", key: "og", icon: "OG.png" },
-            { name: "OP", key: "op", icon: "OP.png" },
-            { name: "PARO", key: "paro-y4", icon: "PARODONTOLOGY.png" },
-            { name: "PATHO MÉDICALE", key: "patho-medical", icon: "PATHO MÉDICALE .png" },
-            { name: "PATHOLOGIE BUCCO-DENTAIRE", key: "patho-bucco-dentaire", icon: "PATHOLOGIE BUCCO-DENTAIRE.png" },
-            { name: "PROTHÈSE", key: "prothese-y4", icon: "PROSTHESIS.png" }
-        ],
-        "5": [
-            { name: "ÉPIDÉMIO", key: "epidemio-y5", icon: "EPIDEMIO.png" },
-            { name: "ERGONOMIE", key: "ergonomie-y5", icon: "ERGONOMIE.png" },
-            { name: "IMPLANTO", key: "implanto-y5", icon: "IMPLANTO.png" },
-            { name: "OCE", key: "oce-y5", icon: "OCE.png" },
-            { name: "ODF", key: "odf-y5", icon: "ODF.png" },
-            { name: "OP", key: "op-y5", icon: "OP.png" },
-            { name: "PARO", key: "paro-y5", icon: "PARODONTOLOGY.png" },
-            { name: "PATHO", key: "patho-y5", icon: "PATHO.png" },
-            { name: "PROTHÈSE", key: "prothese-y5", icon: "PROSTHESIS.png" }
-        ]
-    };
-    // --- عناصر DOM ---
-    const themeToggleBtn = document.querySelector('.theme-toggle-btn');
-    // --- ✅ إضافة جديدة: عناصر القائمة المتجاوبة ---
-    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-    // const mainNav = document.querySelector('.main-nav'); // Already defined earlier
+
+    ],
+    "3": [
+        { name: "ANATOMO-PATHOLOGIE", key: "anatomo-pathologie", icon: "ANATOMO-PATHOLOGIE.png" },
+        { name: "ANESTHÉSIOLOGIE", key: "anesthesiologie", icon: "Anesthésiologie.png" },
+        { name: "IMAGERIE", key: "imagrie", icon: "IMAGERIE .png" },
+        { name: "OC", key: "oc", icon: "OCE.png" },
+        { name: "OCCLUSIO", key: "occlusio", icon: "OCCLUSIO.png" },
+        { name: "ODF", key: "odf-y3", icon: "ODF.png" },
+        { name: "OXYOLOGIE", key: "oxyologie", icon: "OXYOLOGIE.png" },
+        { name: "PARO", key: "paro-y3", icon: "PARODONTOLOGY.png" },
+        { name: "PATHOLOGIE", key: "pathologie-y3", icon: "PATHO.png" },
+        { name: "PHARMACOLOGIE", key: "pharmacologie", icon: "PHARMACOLOGIE.png" },
+        { name: "PROTHÈSE", key: "prothese-y3", icon: "PROSTHESIS.png" }
+    ],
+    "4": [
+        { name: "DÉONTOLOGIE", key: "deontologie", icon: "DEONTOLOGIE.png" },
+        { name: "IMPLANTO", key: "implanto", icon: "IMPLANTO.png" },
+        { name: "OCE", key: "oce-y4", icon: "OCE.png" },
+        { name: "ODF", key: "odf-y4", icon: "ODF.png" },
+        { name: "OG", key: "og", icon: "OG.png" },
+        { name: "OP", key: "op", icon: "OP.png" },
+        { name: "PARO", key: "paro-y4", icon: "PARODONTOLOGY.png" },
+        { name: "PATHO MÉDICALE", key: "patho-medical", icon: "PATHO MÉDICALE .png" },
+        { name: "PATHOLOGIE BUCCO-DENTAIRE", key: "patho-bucco-dentaire", icon: "PATHOLOGIE BUCCO-DENTAIRE.png" },
+        { name: "PROTHÈSE", key: "prothese-y4", icon: "PROSTHESIS.png" }
+    ],
+    "5": [
+        { name: "ÉPIDÉMIO", key: "epidemio-y5", icon: "EPIDEMIO.png" },
+        { name: "ERGONOMIE", key: "ergonomie-y5", icon: "ERGONOMIE.png" },
+        { name: "IMPLANTO", key: "implanto-y5", icon: "IMPLANTO.png" },
+        { name: "OCE", key: "oce-y5", icon: "OCE.png" },
+        { name: "ODF", key: "odf-y5", icon: "ODF.png" },
+        { name: "OP", key: "op-y5", icon: "OP.png" },
+        { name: "PARO", key: "paro-y5", icon: "PARODONTOLOGY.png" },
+        { name: "PATHO", key: "patho-y5", icon: "PATHO.png" },
+        { name: "PROTHÈSE", key: "prothese-y5", icon: "PROSTHESIS.png" }
+    ]
+};
+// --- عناصر DOM ---
+const themeToggleBtn = document.querySelector('.theme-toggle-btn');
+// --- ✅ إضافة جديدة: عناصر القائمة المتجاوبة ---
+const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+// const mainNav = document.querySelector('.main-nav'); // Already defined earlier
 // --- نهاية الإضافة ---
-    // --- ✨ [إضافة جديدة] تعريف عناصر الواجهة الجديدة ✨ ---
-    const exploreContentBtnNew = document.getElementById('explore-content-btn');
-    const videoLessonsCard = document.getElementById('video-lessons-card');
-    const summariesCard = document.getElementById('summaries-card');
-    const quizzesCard = document.getElementById('quizzes-card');
-    const articlesCard = document.getElementById('articles-card');
-    const articlesModal = document.getElementById('articles-modal');
-    const closeArticlesModalBtn = document.getElementById('close-articles-modal-btn');
-    const exploreModal = document.getElementById('explore-modal');
-    const closeExploreModalBtn = document.getElementById('close-explore-modal-btn');
-    const body = document.body;
-    const navLinks = document.querySelectorAll('.main-nav a');
-    const pageSections = document.querySelectorAll('.page-section');
-    const startLearningBtn = document.getElementById('start-learning-btn');
-    const exploreContentBtn = document.getElementById('explore-content-btn');
-    const yearSelectBtns = document.querySelectorAll('.year-select-btn');
-    const pricingDetailsDiv = document.querySelector('.pricing-details');
-    const confirmActivationBtn = document.getElementById('confirm-activation-btn');
-    const activationStatusMessage = document.getElementById('activation-status');
-    const aiChatBtn = document.querySelector('.ai-chat-btn');
-    const aiChatModal = document.getElementById('aiChatModal');
-    const closeChatBtn = document.querySelector('.close-chat-btn');
-    const chatMessagesDiv = document.getElementById('chat-messages');
-    const userChatInput = document.getElementById('user-chat-input');
-    const sendChatButton = document.getElementById('send-chat-button');
-    const backToHomeBtn = document.getElementById('back-to-home-from-year');
-    const backToYearSelectBtn = document.getElementById('back-to-year-select');
-    const backToSubjectsBtn = document.getElementById('back-to-subjects-btn');
-    const uploadPdfBtn = document.getElementById('upload-pdf-btn');
-    const pdfFileInput = document.getElementById('pdf-file-input');
-    const uploadImageBtn = document.getElementById('upload-image-btn');
-    const imageFileInput = document.getElementById('image-file-input');
-    const uploadAudioBtn = document.getElementById('upload-audio-btn');
-    const audioFileInput = document.getElementById('audio-file-input');
-    const aiChatBox = document.getElementById('aiChatBox');
-    const chatHeader = document.getElementById('chatHeader');
-    const resizeHandle = document.getElementById('resizeHandle');
-    const typingHeadline = document.getElementById('typing-headline');
-    let typingAnimationTriggered = false; 
-    const exportPdfBtn = document.getElementById('export-pdf-btn');
-    const pinnedMessageBar = document.getElementById('pinned-message-bar');
-    const pinnedMessageText = document.getElementById('pinned-message-text');
-    const unpinBtn = document.getElementById('unpin-btn');
-    const chatPlusBtn = document.getElementById('chat-plus-btn');
-    const uploadOptions = document.getElementById('upload-options');
-    // ✅ --- عناصر القائمة المنسدلة للمستخدم ---
-    const userMenuToggle = document.getElementById('user-menu-toggle');
-    const userDropdown = document.getElementById('user-dropdown');
-    const logoutBtn = document.getElementById('logout-btn');
+// --- ✨ [إضافة جديدة] تعريف عناصر الواجهة الجديدة ✨ ---
+const exploreContentBtnNew = document.getElementById('explore-content-btn');
+const videoLessonsCard = document.getElementById('video-lessons-card');
+const summariesCard = document.getElementById('summaries-card');
+const quizzesCard = document.getElementById('quizzes-card');
+const articlesCard = document.getElementById('articles-card');
+const articlesModal = document.getElementById('articles-modal');
+const closeArticlesModalBtn = document.getElementById('close-articles-modal-btn');
+const exploreModal = document.getElementById('explore-modal');
+const closeExploreModalBtn = document.getElementById('close-explore-modal-btn');
+const body = document.body;
+const navLinks = document.querySelectorAll('.main-nav a');
+const pageSections = document.querySelectorAll('.page-section');
+const startLearningBtn = document.getElementById('start-learning-btn');
+const exploreContentBtn = document.getElementById('explore-content-btn');
+const yearSelectBtns = document.querySelectorAll('.year-select-btn');
+const pricingDetailsDiv = document.querySelector('.pricing-details');
+const confirmActivationBtn = document.getElementById('confirm-activation-btn');
+const activationStatusMessage = document.getElementById('activation-status');
+const aiChatBtn = document.querySelector('.ai-chat-btn');
+const aiChatModal = document.getElementById('aiChatModal');
+const closeChatBtn = document.querySelector('.close-chat-btn');
+const chatMessagesDiv = document.getElementById('chat-messages');
+const userChatInput = document.getElementById('user-chat-input');
+const sendChatButton = document.getElementById('send-chat-button');
+const backToHomeBtn = document.getElementById('back-to-home-from-year');
+const backToYearSelectBtn = document.getElementById('back-to-year-select');
+const backToSubjectsBtn = document.getElementById('back-to-subjects-btn');
+const uploadPdfBtn = document.getElementById('upload-pdf-btn');
+const pdfFileInput = document.getElementById('pdf-file-input');
+const uploadImageBtn = document.getElementById('upload-image-btn');
+const imageFileInput = document.getElementById('image-file-input');
+const uploadAudioBtn = document.getElementById('upload-audio-btn');
+const audioFileInput = document.getElementById('audio-file-input');
+const aiChatBox = document.getElementById('aiChatBox');
+const chatHeader = document.getElementById('chatHeader');
+const resizeHandle = document.getElementById('resizeHandle');
+const typingHeadline = document.getElementById('typing-headline');
+let typingAnimationTriggered = false;
+const exportPdfBtn = document.getElementById('export-pdf-btn');
+const pinnedMessageBar = document.getElementById('pinned-message-bar');
+const pinnedMessageText = document.getElementById('pinned-message-text');
+const unpinBtn = document.getElementById('unpin-btn');
+const chatPlusBtn = document.getElementById('chat-plus-btn');
+const uploadOptions = document.getElementById('upload-options');
+// ✅ --- عناصر القائمة المنسدلة للمستخدم ---
+const userMenuToggle = document.getElementById('user-menu-toggle');
+const userDropdown = document.getElementById('user-dropdown');
+const logoutBtn = document.getElementById('logout-btn');
 
 
-    // --- عناصر ومتغيرات الكاروسيل ---
-    const carousel = document.getElementById('subjects-carousel');
-    const carouselScene = document.querySelector('.carousel-scene');
-    const prevButton = document.getElementById('carousel-prev');
-    const nextButton = document.getElementById('carousel-next');
-    let carouselItems = [];
-    let currentIndex = 0;
-    let numItems = 0;
-    let angle = 0;
-    let tz = 0;
-    
-    // --- متغيرات عامة لقسم البطاقات ---
-    let allFlashcardCollections = [];
-    let currentCollection = [];
-    let currentCardIndex = 0;
+// --- عناصر ومتغيرات الكاروسيل ---
+const carousel = document.getElementById('subjects-carousel');
+const carouselScene = document.querySelector('.carousel-scene');
+const prevButton = document.getElementById('carousel-prev');
+const nextButton = document.getElementById('carousel-next');
+let carouselItems = [];
+let currentIndex = 0;
+let numItems = 0;
+let angle = 0;
+let tz = 0;
 
-    // --- عناصر صفحة عرض الدروس ---
-    const backToSubjectsFromLessonsBtn = document.getElementById('back-to-subjects-from-lessons-btn');
-    const lessonSubjectIcon = document.getElementById('lesson-subject-icon');
-    const lessonSubjectTitle = document.getElementById('lesson-subject-title');
-    const lessonsListContainer = document.getElementById('lessons-list-container');
+// --- متغيرات عامة لقسم البطاقات ---
+let allFlashcardCollections = [];
+let currentCollection = [];
+let currentCardIndex = 0;
 
-    // --- (إضافة جديدة) عناصر ومُتغيرات مؤقت البومودورو ---
-    const pomodoroToggleBtn = document.getElementById('pomodoro-toggle-btn');
-    const pomodoroModal = document.getElementById('pomodoroModal');
-    const pomodoroBox = document.getElementById('pomodoroBox');
-    const closePomodoroBtns = document.querySelectorAll('.close-pomodoro-btn');
-    
-    // واجهة الإعدادات
-    const pomodoroSettingsView = document.getElementById('pomodoro-settings-view');
-    const focusDurationInput = document.getElementById('focus-duration');
-    const shortBreakDurationInput = document.getElementById('short-break-duration');
-    const longBreakDurationInput = document.getElementById('long-break-duration');
-    const sessionsInput = document.getElementById('sessions-before-long-break');
-    const startPomodoroBtn = document.getElementById('start-pomodoro-btn');
-    
-    // واجهة المؤقت
-    const pomodoroTimerView = document.getElementById('pomodoro-timer-view');
-    const sessionTitleEl = document.getElementById('timer-session-title');
-    const timeDisplayEl = document.getElementById('time-display');
-    const sessionCounterEl = document.getElementById('session-counter');
-    const pauseResumeBtn = document.getElementById('pause-resume-btn');
-    const resetBtn = document.getElementById('reset-btn');
-    const skipPomodoroBtn = document.getElementById('skip-btn'); // Renamed to avoid confusion
-    const alarmSound = document.getElementById('alarm-sound');
+// --- عناصر صفحة عرض الدروس ---
+const backToSubjectsFromLessonsBtn = document.getElementById('back-to-subjects-from-lessons-btn');
+const lessonSubjectIcon = document.getElementById('lesson-subject-icon');
+const lessonSubjectTitle = document.getElementById('lesson-subject-title');
+const lessonsListContainer = document.getElementById('lessons-list-container');
 
-    // متغيرات حالة البومودورو
-    let pomodoroInterval = null;
-    let totalSeconds = 0;
-    let secondsLeft = 0;
-    let currentSession = 'focus'; // focus, shortBreak, longBreak
-    let sessionsCompleted = 0;
-    let isPaused = true;
-    let isPomodoroActive = false; // <-- متغير الحالة الجديد
-    let settings = {};
+// --- (إضافة جديدة) عناصر ومُتغيرات مؤقت البومودورو ---
+const pomodoroToggleBtn = document.getElementById('pomodoro-toggle-btn');
+const pomodoroModal = document.getElementById('pomodoroModal');
+const pomodoroBox = document.getElementById('pomodoroBox');
+const closePomodoroBtns = document.querySelectorAll('.close-pomodoro-btn');
 
-    // عناصر SVG للدائرة
-    const progressRingFg = document.querySelector('.progress-ring-fg');
-    const radius = progressRingFg ? progressRingFg.r.baseVal.value : 0; // Added check
-    const circumference = 2 * Math.PI * radius;
-    if(progressRingFg) progressRingFg.style.strokeDasharray = `${circumference} ${circumference}`;
+// واجهة الإعدادات
+const pomodoroSettingsView = document.getElementById('pomodoro-settings-view');
+const focusDurationInput = document.getElementById('focus-duration');
+const shortBreakDurationInput = document.getElementById('short-break-duration');
+const longBreakDurationInput = document.getElementById('long-break-duration');
+const sessionsInput = document.getElementById('sessions-before-long-break');
+const startPomodoroBtn = document.getElementById('start-pomodoro-btn');
 
-    // ===================================================================
-    // --- إعدادات واجهات برمجة التطبيقات (APIs) ---
-    // ===================================================================
-    let chatHistory = [{ 
-    role: "system", 
+// واجهة المؤقت
+const pomodoroTimerView = document.getElementById('pomodoro-timer-view');
+const sessionTitleEl = document.getElementById('timer-session-title');
+const timeDisplayEl = document.getElementById('time-display');
+const sessionCounterEl = document.getElementById('session-counter');
+const pauseResumeBtn = document.getElementById('pause-resume-btn');
+const resetBtn = document.getElementById('reset-btn');
+const skipPomodoroBtn = document.getElementById('skip-btn'); // Renamed to avoid confusion
+const alarmSound = document.getElementById('alarm-sound');
+
+// متغيرات حالة البومودورو
+let pomodoroInterval = null;
+let totalSeconds = 0;
+let secondsLeft = 0;
+let currentSession = 'focus'; // focus, shortBreak, longBreak
+let sessionsCompleted = 0;
+let isPaused = true;
+let isPomodoroActive = false; // <-- متغير الحالة الجديد
+let settings = {};
+
+// عناصر SVG للدائرة
+const progressRingFg = document.querySelector('.progress-ring-fg');
+const radius = progressRingFg ? progressRingFg.r.baseVal.value : 0; // Added check
+const circumference = 2 * Math.PI * radius;
+if (progressRingFg) progressRingFg.style.strokeDasharray = `${circumference} ${circumference}`;
+
+// ===================================================================
+// --- إعدادات واجهات برمجة التطبيقات (APIs) ---
+// ===================================================================
+let chatHistory = [{
+    role: "system",
     content: `
 أنت 'Dentist AI'، مساعد ذكاء اصطناعي أكاديمي فائق التخصص، تم تطويرك بواسطة الدكتور أيمن لمساعدة طلاب طب الأسنان في الجزائر.
 
@@ -760,736 +760,678 @@ function displayGeneratedFlashcards(flashcardData) {
 -   **استخدم النص العريض:** استعمل \`**نص عريض**\` لتأكيد النقاط والمصطلحات المهمة.
 -   **استخدم الفقرات:** **اترك سطرًا فارغًا بين الفقرات** لفصل الأفكار ومنع ظهور النص ككتلة واحدة.
 -   **استخدم الرياضيات:** استخدم صيغة LaTeX للرياضيات، مثل \`$E=mc^2$\`.
-` 
-}];    
-    const contentTypes = ['summaries', 'quizzes', 'lessons'];
+`
+}];
+const contentTypes = ['summaries', 'quizzes', 'lessons'];
 // --- وظائف مساعدة ---
-    function updateThemeToggleIcon(theme) {
-        if(themeToggleBtn) themeToggleBtn.innerHTML = theme === 'dark-mode' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+function updateThemeToggleIcon(theme) {
+    if (themeToggleBtn) themeToggleBtn.innerHTML = theme === 'dark-mode' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+}
+
+// ✨ ================== NEW/UPDATED FUNCTIONS START ================== ✨
+// دالة جديدة مخصصة لزر البطاقة الترحيبية
+function handleStartFirstQuiz() {
+    // 1. تعيين نوع المحتوى إلى "كويزات"
+    currentContentType = 'quizzes';
+    localStorage.setItem('currentContentType', currentContentType); // ✅ حفظ النوع
+
+    // 2. تفعيل رابط "Quizzes" في شريط التنقل
+    navLinks.forEach(l => l.classList.remove('active-link'));
+    const quizzesLink = document.querySelector('a[data-page-type="quizzes"]');
+    if (quizzesLink) {
+        quizzesLink.classList.add('active-link');
     }
 
-    // ✨ ================== NEW/UPDATED FUNCTIONS START ================== ✨
-    // دالة جديدة مخصصة لزر البطاقة الترحيبية
-    function handleStartFirstQuiz() {
-        // 1. تعيين نوع المحتوى إلى "كويزات"
-        currentContentType = 'quizzes';
-        localStorage.setItem('currentContentType', currentContentType); // ✅ حفظ النوع
+    // 3. الانتقال إلى صفحة اختيار المواد
+    showPage('#subjects-page');
+}
 
-        // 2. تفعيل رابط "Quizzes" في شريط التنقل
-        navLinks.forEach(l => l.classList.remove('active-link'));
-        const quizzesLink = document.querySelector('a[data-page-type="quizzes"]');
-        if (quizzesLink) {
-            quizzesLink.classList.add('active-link');
-        }
+// النسخة النهائية والمحدثة للدالة
+async function renderHomePageWidget() {
+    const token = localStorage.getItem('userToken');
+    const welcomeContainer = document.getElementById('welcome-card-container');
+    const statsContainer = document.getElementById('stats-dashboard');
 
-        // 3. الانتقال إلى صفحة اختيار المواد
-        showPage('#subjects-page');
+    if (!welcomeContainer || !statsContainer) {
+        console.error("Home page widget containers not found in the DOM.");
+        return;
     }
 
-    // النسخة النهائية والمحدثة للدالة
-    async function renderHomePageWidget() {
-        const token = localStorage.getItem('userToken');
-        const welcomeContainer = document.getElementById('welcome-card-container');
-        const statsContainer = document.getElementById('stats-dashboard');
+    // إخفاء الواجهتين مبدئيًا
+    welcomeContainer.style.display = 'none';
+    statsContainer.style.display = 'none';
 
-        if (!welcomeContainer || !statsContainer) {
-            console.error("Home page widget containers not found in the DOM.");
-            return;
-        }
+    try {
+        // Using fetchApi helper
+        const data = await fetchApi('/api/user/widget-data');
 
-        // إخفاء الواجهتين مبدئيًا
-        welcomeContainer.style.display = 'none';
-        statsContainer.style.display = 'none';
+        if (data.hasActivity) {
+            // ✅  الحالة 1: المستخدم لديه نشاط - عرض لوحة الإحصائيات
+            statsContainer.style.display = 'grid'; // Use grid for stats
 
-        try {
-            // Using fetchApi helper
-            const data = await fetchApi('/api/user/widget-data');
+            const { lastQuiz } = data;
 
-            if (data.hasActivity) {
-                // ✅  الحالة 1: المستخدم لديه نشاط - عرض لوحة الإحصائيات
-                statsContainer.style.display = 'grid'; // Use grid for stats
+            // ملء البيانات الديناميكية من الباك اند (with checks for element existence)
+            const lastLessonTitleEl = document.getElementById('stats-last-lesson-title');
+            const lastLessonModuleEl = document.getElementById('stats-last-lesson-module');
+            const quizzesCorrectEl = document.getElementById('stats-quizzes-correct');
+            const quizzesIncorrectEl = document.getElementById('stats-quizzes-incorrect');
+            const quizzesTimeEl = document.getElementById('stats-quizzes-time');
+            const badgeImg = document.getElementById('achievement-badge-img');
+            const badgeText = document.getElementById('achievement-badge-text');
 
-                const { lastQuiz } = data;
+            if (lastLessonTitleEl) lastLessonTitleEl.textContent = lastQuiz.quizTitle || 'N/A';
+            if (lastLessonModuleEl) lastLessonModuleEl.textContent = lastQuiz.subjectName || 'N/A';
+            if (quizzesCorrectEl) quizzesCorrectEl.textContent = lastQuiz.correctAnswers ?? '0';
+            if (quizzesIncorrectEl) quizzesIncorrectEl.textContent = lastQuiz.incorrectAnswers ?? '0';
 
-                // ملء البيانات الديناميكية من الباك اند (with checks for element existence)
-                const lastLessonTitleEl = document.getElementById('stats-last-lesson-title');
-                const lastLessonModuleEl = document.getElementById('stats-last-lesson-module');
-                const quizzesCorrectEl = document.getElementById('stats-quizzes-correct');
-                const quizzesIncorrectEl = document.getElementById('stats-quizzes-incorrect');
-                const quizzesTimeEl = document.getElementById('stats-quizzes-time');
-                const badgeImg = document.getElementById('achievement-badge-img');
-                const badgeText = document.getElementById('achievement-badge-text');
-
-                if(lastLessonTitleEl) lastLessonTitleEl.textContent = lastQuiz.quizTitle || 'N/A';
-                if(lastLessonModuleEl) lastLessonModuleEl.textContent = lastQuiz.subjectName || 'N/A';
-                if(quizzesCorrectEl) quizzesCorrectEl.textContent = lastQuiz.correctAnswers ?? '0';
-                if(quizzesIncorrectEl) quizzesIncorrectEl.textContent = lastQuiz.incorrectAnswers ?? '0';
-
-                if (quizzesTimeEl && lastQuiz.timeTaken != null) {
-                    const minutes = Math.floor(lastQuiz.timeTaken / 60);
-                    const seconds = lastQuiz.timeTaken % 60;
-                    quizzesTimeEl.textContent = `${minutes}m ${seconds}s`;
-                } else if(quizzesTimeEl) {
-                     quizzesTimeEl.textContent = 'N/A';
-                }
-
-                if (lastQuiz.badge) { // Check if badge exists
-                    if (badgeImg) {
-                        badgeImg.src = lastQuiz.badge.imageUrl || 'images/badge-default.png'; // Default image
-                        badgeImg.alt = lastQuiz.badge.name || 'Badge';
-                    }
-                    if (badgeText) {
-                        const badgeName = lastQuiz.badge.name || "";
-                        if (badgeName.includes('Gold')) badgeText.textContent = "Excellent!";
-                        else if (badgeName.includes('Silver')) badgeText.textContent = "Well Done!";
-                        else badgeText.textContent = "Good Effort!";
-                    }
-                } else {
-                     // Handle case where no badge is returned
-                     if (badgeImg) badgeImg.style.display = 'none'; // Hide image area
-                     if (badgeText) badgeText.textContent = "Keep Going!";
-                }
-                
-            } else {
-                // ❌  الحالة 2: المستخدم جديد - عرض البطاقة الترحيبية
-                welcomeContainer.style.display = 'block'; // Show welcome card
-                
-                const welcomeButton = document.getElementById('welcome-start-quiz-btn');
-                if (welcomeButton) {
-                    // Ensure listener is attached only once
-                    if (!welcomeButton.dataset.listenerAttached) {
-                        welcomeButton.addEventListener('click', handleStartFirstQuiz);
-                        welcomeButton.dataset.listenerAttached = 'true';
-                    }
-                }
+            if (quizzesTimeEl && lastQuiz.timeTaken != null) {
+                const minutes = Math.floor(lastQuiz.timeTaken / 60);
+                const seconds = lastQuiz.timeTaken % 60;
+                quizzesTimeEl.textContent = `${minutes}m ${seconds}s`;
+            } else if (quizzesTimeEl) {
+                quizzesTimeEl.textContent = 'N/A';
             }
-        } catch (error) {
-            console.error("Error rendering home page widget:", error);
-            showNotification('Could not load home page data.', 'error');
-            // Fallback: show welcome card if API fails
-            statsContainer.style.display = 'none'; 
-            welcomeContainer.style.display = 'block';
+
+            if (lastQuiz.badge) { // Check if badge exists
+                if (badgeImg) {
+                    badgeImg.src = lastQuiz.badge.imageUrl || 'images/badge-default.png'; // Default image
+                    badgeImg.alt = lastQuiz.badge.name || 'Badge';
+                }
+                if (badgeText) {
+                    const badgeName = lastQuiz.badge.name || "";
+                    if (badgeName.includes('Gold')) badgeText.textContent = "Excellent!";
+                    else if (badgeName.includes('Silver')) badgeText.textContent = "Well Done!";
+                    else badgeText.textContent = "Good Effort!";
+                }
+            } else {
+                // Handle case where no badge is returned
+                if (badgeImg) badgeImg.style.display = 'none'; // Hide image area
+                if (badgeText) badgeText.textContent = "Keep Going!";
+            }
+
+        } else {
+            // ❌  الحالة 2: المستخدم جديد - عرض البطاقة الترحيبية
+            welcomeContainer.style.display = 'block'; // Show welcome card
+
             const welcomeButton = document.getElementById('welcome-start-quiz-btn');
-            if (welcomeButton && !welcomeButton.dataset.listenerAttached) {
-                welcomeButton.addEventListener('click', handleStartFirstQuiz);
-                welcomeButton.dataset.listenerAttached = 'true';
-            }
-        }
-    }
-    // ✨ =================== NEW/UPDATED FUNCTIONS END ==================== ✨
-    
-    // ✅ --- (تعديل) دالة عرض الصفحات مع حفظ الحالة ---
-    function showPage(targetId) {
-        // Hide all page sections first
-        pageSections.forEach(section => section.classList.remove('active'));
-        
-        const targetPage = document.querySelector(targetId);
-        
-        if (targetPage) {
-            targetPage.classList.add('active');
-            localStorage.setItem('currentPageId', targetId); // ✅ حفظ الصفحة الحالية
-            
-             // Specific actions for certain pages
-            if (targetId === '#home-page') {
-                renderHomePageWidget(); 
-            } else if (targetId === '#subjects-page' && selectedYear) { // Ensure year is selected
-                animateCarouselAssembly(selectedYear);
-            } else if (targetId === '#dashboard-page') {
-                fetchAndDisplayDashboardData(); // Fetch data when dashboard is shown
-            } else if (targetId === '#flashcards-page') {
-                 fetchAndDisplayCollections(); // Fetch collections when flashcards page is shown
-            }
-
-            // Pause/Play particles based on the page
-            if (particlesInstance) {
-                if (targetId === '#quiz-taking-page' || targetId === '#quiz-summary-page') {
-                    particlesInstance.pause();
-                } else {
-                    particlesInstance.play();
+            if (welcomeButton) {
+                // Ensure listener is attached only once
+                if (!welcomeButton.dataset.listenerAttached) {
+                    welcomeButton.addEventListener('click', handleStartFirstQuiz);
+                    welcomeButton.dataset.listenerAttached = 'true';
                 }
             }
-            
-            // Update active link in navigation
-            navLinks.forEach(link => {
-                const linkHref = link.getAttribute('href');
-                const linkPageType = link.dataset.pageType;
-                let isActive = false;
-
-                if (linkPageType) { // For content type links (Summaries, Quizzes, Lessons)
-                    // Activate if the target is subjects, content list, lessons list, or pdf list AND content type matches
-                    if ((targetId === '#subjects-page' || targetId === '#content-display-page' || targetId === '#lessons-display-page' || targetId === '#pdfs-display-page') && linkPageType === currentContentType) {
-                        isActive = true;
-                    }
-                } else { // For direct page links (Home, Dashboard, Flashcards)
-                    if (linkHref === targetId) {
-                        isActive = true;
-                    }
-                }
-                link.classList.toggle('active-link', isActive);
-            });
-            
-            // Trigger scroll reveal animations for the newly displayed page
-            setTimeout(() => triggerScrollReveal(targetPage), 50); // Small delay
-
-        } else {
-            console.error(`Page with ID ${targetId} not found.`);
-             // Fallback: If target page doesn't exist, show home page
-             const homePage = document.querySelector('#home-page');
-             if(homePage) {
-                 homePage.classList.add('active');
-                 localStorage.setItem('currentPageId', '#home-page');
-                 renderHomePageWidget();
-             }
+        }
+    } catch (error) {
+        console.error("Error rendering home page widget:", error);
+        showNotification('Could not load home page data.', 'error');
+        // Fallback: show welcome card if API fails
+        statsContainer.style.display = 'none';
+        welcomeContainer.style.display = 'block';
+        const welcomeButton = document.getElementById('welcome-start-quiz-btn');
+        if (welcomeButton && !welcomeButton.dataset.listenerAttached) {
+            welcomeButton.addEventListener('click', handleStartFirstQuiz);
+            welcomeButton.dataset.listenerAttached = 'true';
         }
     }
+}
+// ✨ =================== NEW/UPDATED FUNCTIONS END ==================== ✨
 
-    function startTypingAnimation(element) {
-        if (!element || typingAnimationTriggered) return; 
-        typingAnimationTriggered = true; 
-        const text = element.dataset.text;
-        if (!text) return;
-        let i = 0;
-        element.innerHTML = ""; // Clear content before typing
-        const speed = 100; // Typing speed in ms
-        
-        function typeWriter() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
+// ✅ --- (تعديل) دالة عرض الصفحات مع حفظ الحالة ---
+function showPage(targetId) {
+    // Hide all page sections first
+    pageSections.forEach(section => section.classList.remove('active'));
+
+    const targetPage = document.querySelector(targetId);
+
+    if (targetPage) {
+        targetPage.classList.add('active');
+        localStorage.setItem('currentPageId', targetId); // ✅ حفظ الصفحة الحالية
+
+        // Specific actions for certain pages
+        if (targetId === '#home-page') {
+            renderHomePageWidget();
+        } else if (targetId === '#subjects-page' && selectedYear) { // Ensure year is selected
+            animateCarouselAssembly(selectedYear);
+        } else if (targetId === '#dashboard-page') {
+            fetchAndDisplayDashboardData(); // Fetch data when dashboard is shown
+        } else if (targetId === '#flashcards-page') {
+            fetchAndDisplayCollections(); // Fetch collections when flashcards page is shown
+        }
+
+        // Pause/Play particles based on the page
+        if (particlesInstance) {
+            if (targetId === '#quiz-taking-page' || targetId === '#quiz-summary-page') {
+                particlesInstance.pause();
             } else {
-                 element.classList.add('typing-complete'); // Add class when done
+                particlesInstance.play();
             }
         }
-        typeWriter(); // Start the typing
-    }
 
-    function setupScrollReveal(elements) {
-        // Ensure IntersectionObserver is supported
-        if (!('IntersectionObserver' in window)) {
-             console.warn("IntersectionObserver not supported, animations disabled.");
-             // Optionally, make elements visible immediately
-             elements.forEach(element => element.classList.add('fade-in'));
-             return;
-        }
+        // Update active link in navigation
+        navLinks.forEach(link => {
+            const linkHref = link.getAttribute('href');
+            const linkPageType = link.dataset.pageType;
+            let isActive = false;
 
-        const observer = new IntersectionObserver((entries, currentObserver) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    // Special handling for typing animation
-                    if (entry.target.contains(typingHeadline)) {
-                        // Delay typing start slightly after fade-in
-                        setTimeout(() => startTypingAnimation(typingHeadline), 300);
-                    }
-                    currentObserver.unobserve(entry.target); // Stop observing once visible
+            if (linkPageType) { // For content type links (Summaries, Quizzes, Lessons)
+                // Activate if the target is subjects, content list, lessons list, or pdf list AND content type matches
+                if ((targetId === '#subjects-page' || targetId === '#content-display-page' || targetId === '#lessons-display-page' || targetId === '#pdfs-display-page') && linkPageType === currentContentType) {
+                    isActive = true;
                 }
-            });
-        }, { threshold: 0.1 }); // Trigger when 10% is visible
-
-        elements.forEach(element => {
-            element.classList.remove('fade-in'); // Ensure it starts hidden
-            observer.observe(element);
-        });
-    }
-    
-    function triggerScrollReveal(pageElement) {
-        if (pageElement) {
-            // Find all elements within the page that need revealing
-            setupScrollReveal(pageElement.querySelectorAll('.scroll-reveal-element'));
-        }
-    }
-    
-    // --- الشات والـ AI (Keep largely as is, ensure fetchApi is used where appropriate) ---
-    function addMessageToChat(message, senderClass, rawMessageContent) {
-        const messageWrapper = document.createElement('div');
-        messageWrapper.classList.add('message-wrapper', `${senderClass}-wrapper`);
-        // Store raw message for actions like copy, summarize
-        messageWrapper.dataset.rawMessage = rawMessageContent !== undefined ? rawMessageContent : message;
-
-        const p = document.createElement('p');
-        p.classList.add(senderClass);
-        
-        // Sanitize AI messages rendered as HTML
-        if (senderClass === 'ai-message') {
-            if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                 // Ensure message is a string before parsing
-                 const messageString = String(message || '');
-                 p.innerHTML = DOMPurify.sanitize(marked.parse(messageString));
-            } else {
-                 p.textContent = message; // Fallback to text content
-            }
-        } else {
-             p.textContent = message; // User messages as plain text
-        }
-        messageWrapper.appendChild(p);
-
-        // --- Message Actions (Copy, Summarize, Pin) ---
-        const messageActions = document.createElement('div');
-        messageActions.className = 'message-actions';
-
-        // Copy Button (for all messages)
-        const copyBtn = document.createElement('button');
-        copyBtn.title = 'Copy Text';
-        copyBtn.innerHTML = '<i class="far fa-copy"></i>';
-        copyBtn.onclick = () => {
-             // Use raw message from dataset for accurate copying
-            navigator.clipboard.writeText(messageWrapper.dataset.rawMessage)
-                .then(() => showNotification('Copied!', 'success'))
-                .catch(err => {
-                     console.error('Failed to copy text: ', err);
-                     showNotification('Copy failed!', 'error');
-                 });
-        };
-        messageActions.appendChild(copyBtn);
-
-        // Actions specific to AI messages
-        if (senderClass === 'ai-message') {
-            const summarizeBtn = document.createElement('button');
-            summarizeBtn.title = 'Summarize this';
-            summarizeBtn.innerHTML = '<i class="fas fa-stream"></i>'; // Icon for summarize
-            summarizeBtn.onclick = () => summarizeMessage(messageWrapper.dataset.rawMessage);
-            messageActions.appendChild(summarizeBtn);
-
-            const pinBtn = document.createElement('button');
-            pinBtn.title = 'Pin this message';
-            pinBtn.innerHTML = '<i class="fas fa-thumbtack"></i>'; // Icon for pin
-            pinBtn.onclick = () => pinMessage(messageWrapper.dataset.rawMessage);
-            messageActions.appendChild(pinBtn);
-        }
-        
-        // Position actions differently for user vs AI messages
-        if (senderClass === 'user-message') {
-             messageWrapper.insertBefore(messageActions, p); // Actions before user message
-        } else {
-             messageWrapper.appendChild(messageActions); // Actions after AI message
-        }
-
-        chatMessagesDiv.appendChild(messageWrapper);
-        // Scroll to the bottom to show the new message
-        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
-        
-        // Render MathJax/KaTeX if applicable for AI messages
-        if (senderClass === 'ai-message' && typeof renderMathInElement === 'function') {
-            renderMathInElement(p, { 
-                delimiters: [
-                    {left: '$$', right: '$$', display: true}, 
-                    {left: '$', right: '$', display: false}
-                ] 
-            });
-        }
-        return p; // Return the paragraph element for potential further manipulation (like typing indicator)
-    }
-    
-    async function summarizeMessage(textToSummarize) {
-        if (!textToSummarize || textToSummarize.trim() === '') {
-            showNotification('Nothing to summarize.', 'info');
-            return;
-        }
-        showNotification('Summarizing...', 'info');
-        // Construct the prompt clearly asking for summarization in bullet points
-        const summaryPrompt = `Please summarize the following text into concise bullet points for a student, in the same language as the text:\n\n--- TEXT ---\n${textToSummarize}`;
-        
-        // Create a temporary history for this specific request
-        // Don't modify the main chatHistory directly for utility functions
-        const tempChatHistory = [...chatHistory, {role: 'user', content: summaryPrompt}];
-        
-        // Call sendApiRequest with isMainConversation set to false
-        sendApiRequest(tempChatHistory, false); 
-    }
-
-    function pinMessage(textToPin) {
-        if (pinnedMessageText && pinnedMessageBar) {
-             pinnedMessageText.textContent = textToPin;
-             pinnedMessageBar.style.display = 'block'; // Show the bar
-             showNotification('Message pinned!', 'success');
-        } else {
-             console.error("Pin message elements not found.");
-        }
-    }
-
-    async function sendChatMessage() {
-        const userText = userChatInput.value.trim();
-        if (!userText) return; // Don't send empty messages
-
-        // Add user message to UI immediately
-        addMessageToChat(userText, 'user-message');
-        // Add user message to the conversation history
-        chatHistory.push({ role: "user", content: userText });
-        
-        userChatInput.value = ''; // Clear the input field
-        
-        // Send the updated history to the API
-        sendApiRequest(chatHistory, true); // true indicates it's part of the main conversation
-    }
-
-    async function sendApiRequest(historyToSend, isMainConversation) {
-        // Disable input while waiting for response
-        userChatInput.disabled = true;
-        sendChatButton.disabled = true;
-
-        // Add a temporary AI message with typing indicator
-        const aiMessageContainer = addMessageToChat("", 'ai-message', ""); // Start with empty content
-        aiMessageContainer.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
-        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Ensure indicator is visible
-
-        // Extract the last user question (or the utility prompt)
-        const userQuestion = historyToSend[historyToSend.length - 1].content;
-        
-        try {
-            // Use fetchApi helper for the request
-            const data = await fetchApi('/api/ai/ask', {
-                 method: 'POST',
-                 body: JSON.stringify({ question: userQuestion }) 
-            });
-
-            const fullReply = data.answer; // Assuming the backend returns { answer: "..." }
-
-            // Update the temporary message container with the actual AI reply
-             if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                 aiMessageContainer.innerHTML = DOMPurify.sanitize(marked.parse(fullReply || ""));
-             } else {
-                 aiMessageContainer.textContent = fullReply || ""; // Fallback
-             }
-            // Store the raw reply in the dataset for actions
-            aiMessageContainer.parentElement.dataset.rawMessage = fullReply; 
-
-            // Add the AI response to the main chat history ONLY if it's part of the main conversation
-            if (isMainConversation) {
-                chatHistory.push({ role: "assistant", content: fullReply });
-            }
-
-            // Render math if necessary
-            if (typeof renderMathInElement === 'function') {
-                renderMathInElement(aiMessageContainer, { 
-                     delimiters: [
-                         { left: '$$', right: '$$', display: true }, 
-                         { left: '$', right: '$', display: false }
-                     ] 
-                 });
-            }
-
-        } catch (error) {
-            console.error("AI Request Error:", error);
-            // Display error message in the chat
-            aiMessageContainer.textContent = `Sorry, an error occurred: ${error.message}`;
-            // If it was a main conversation message that failed, remove the user's last message from history 
-            // to allow them to retry potentially. (Optional, depends on desired UX)
-            // if (isMainConversation) {
-            //     chatHistory.pop(); 
-            // }
-        } finally {
-            // Re-enable input fields regardless of success or failure
-            userChatInput.disabled = false;
-            sendChatButton.disabled = false;
-            userChatInput.focus(); // Set focus back to input
-             chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Ensure final message/error is visible
-        }
-    }
-    
-    async function extractTextFromPdf(file) {
-        // Check if pdfjsLib is loaded
-        if (typeof pdfjsLib === 'undefined') {
-            showNotification("PDF library not loaded. Cannot process PDF.", "error");
-            throw new Error("PDF processing library is not loaded.");
-        }
-        // Ensure workerSrc is set (adjust path if needed)
-        pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js`;
-
-        const reader = new FileReader();
-        
-        return new Promise((resolve, reject) => {
-            reader.onload = async (event) => {
-                try {
-                    const pdfData = new Uint8Array(event.target.result);
-                    const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
-                    let fullText = '';
-                    
-                    // Iterate through all pages
-                    for (let i = 1; i <= pdf.numPages; i++) {
-                        const page = await pdf.getPage(i);
-                        const textContent = await page.getTextContent();
-                        // Join text items, handling potential undefined items gracefully
-                        fullText += textContent.items.map(item => item?.str || '').join(' ') + '\n\n'; 
-                    }
-                    resolve(fullText.trim()); // Trim whitespace from the final result
-                } catch (error) {
-                    console.error("PDF Parsing Error:", error);
-                    reject("Failed to parse the PDF file.");
+            } else { // For direct page links (Home, Dashboard, Flashcards)
+                if (linkHref === targetId) {
+                    isActive = true;
                 }
-            };
-            reader.onerror = (error) => {
-                 console.error("File Reading Error:", error);
-                 reject("Error reading the PDF file.");
-            };
-            // Read the file as ArrayBuffer
-            reader.readAsArrayBuffer(file);
+            }
+            link.classList.toggle('active-link', isActive);
         });
-    }
 
-    // --- Gemini API Calls (Image & Audio) ---
-    async function sendDataAndPromptToGemini(endpoint, prompt, file, fileType = 'image') {
-        // Add user message indicating the action
-        addMessageToChat(`Analyzing ${fileType}: "${prompt}"`, 'user-message');
-        
-        // Add AI typing indicator
-        const aiMsg = addMessageToChat("", 'ai-message');
-        aiMsg.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
-        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+        // Trigger scroll reveal animations for the newly displayed page
+        setTimeout(() => triggerScrollReveal(targetPage), 50); // Small delay
 
-        const formData = new FormData();
-        formData.append('prompt', prompt);
-        formData.append(fileType, file); // Use dynamic key 'image' or 'audio'
-
-        try {
-            // Use fetchApi helper for the request
-            const data = await fetchApi(endpoint, {
-                method: 'POST',
-                // Content-Type is set automatically for FormData by the browser
-                headers: {}, // Remove Content-Type header
-                body: formData
-            });
-
-            const aiReply = data.answer; // Assuming backend returns { answer: "..." }
-            
-             // Update UI with the AI response
-             if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                 aiMsg.innerHTML = DOMPurify.sanitize(marked.parse(aiReply || ""));
-             } else {
-                 aiMsg.textContent = aiReply || ""; // Fallback
-             }
-             aiMsg.parentElement.dataset.rawMessage = aiReply; // Store raw message
-             
-             // Render math if needed
-             if (typeof renderMathInElement === 'function') {
-                 renderMathInElement(aiMsg, { 
-                     delimiters: [
-                         { left: '$$', right: '$$', display: true },
-                         { left: '$', right: '$', display: false }
-                     ] 
-                 });
-             }
-
-        } catch (error) {
-            console.error(`${fileType.charAt(0).toUpperCase() + fileType.slice(1)} Analysis Error:`, error);
-            aiMsg.textContent = `Error analyzing ${fileType}: ${error.message}`;
-        } finally {
-            chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Scroll to final message/error
+    } else {
+        console.error(`Page with ID ${targetId} not found.`);
+        // Fallback: If target page doesn't exist, show home page
+        const homePage = document.querySelector('#home-page');
+        if (homePage) {
+            homePage.classList.add('active');
+            localStorage.setItem('currentPageId', '#home-page');
+            renderHomePageWidget();
         }
     }
+}
 
-    // Wrapper functions for specific file types
-    async function sendImageAndPromptToGemini(prompt, imageFile) {
-        await sendDataAndPromptToGemini('/api/gemini/image', prompt, imageFile, 'image');
+function startTypingAnimation(element) {
+    if (!element || typingAnimationTriggered) return;
+    typingAnimationTriggered = true;
+    const text = element.dataset.text;
+    if (!text) return;
+    let i = 0;
+    element.innerHTML = ""; // Clear content before typing
+    const speed = 100; // Typing speed in ms
+
+    function typeWriter() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            element.classList.add('typing-complete'); // Add class when done
+        }
+    }
+    typeWriter(); // Start the typing
+}
+
+function setupScrollReveal(elements) {
+    // Ensure IntersectionObserver is supported
+    if (!('IntersectionObserver' in window)) {
+        console.warn("IntersectionObserver not supported, animations disabled.");
+        // Optionally, make elements visible immediately
+        elements.forEach(element => element.classList.add('fade-in'));
+        return;
     }
 
-    async function sendAudioAndPromptToGemini(prompt, audioFile) {
-        await sendDataAndPromptToGemini('/api/gemini/audio', prompt, audioFile, 'audio');
-    }
-    
-// --- Carousel Logic ---
-function rotateCarousel() {
-    if (!carousel) return;
-    if (numItems === 0) return; // Prevent division by zero
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                // Special handling for typing animation
+                if (entry.target.contains(typingHeadline)) {
+                    // Delay typing start slightly after fade-in
+                    setTimeout(() => startTypingAnimation(typingHeadline), 300);
+                }
+                currentObserver.unobserve(entry.target); // Stop observing once visible
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when 10% is visible
 
-    // Calculate the angle per item
-    angle = 360 / numItems;
-    // Calculate the offset to center the selected item visually
-    const offsetAngle = angle / 2; 
-    
-    // Calculate the final rotation, including the offset
-    const rotation = (-currentIndex * angle) + offsetAngle;
-    
-    // Apply the rotation and translation to the container
-    carousel.style.transform = `translateZ(${-tz}px) rotateX(${rotation}deg)`;
-
-    // Update the 'active' class on carousel items
-    carouselItems.forEach((item, i) => {
-        item.classList.toggle('active', i === currentIndex);
+    elements.forEach(element => {
+        element.classList.remove('fade-in'); // Ensure it starts hidden
+        observer.observe(element);
     });
 }
 
-function animateCarouselAssembly(year) {
-    if (!carousel || !carouselScene) return; // Ensure elements exist
-    carousel.innerHTML = ''; // Clear previous items
-    
-    const subjects = subjectsDatabase[year] || [];
-    numItems = subjects.length;
-    if (numItems === 0) {
-        carouselScene.style.display = 'none'; // Hide carousel if no subjects
-        // Optionally show a message
-        const messageEl = document.createElement('p');
-        messageEl.textContent = 'No subjects available for this year yet.';
-        messageEl.style.textAlign = 'center';
-        messageEl.style.marginTop = '30px';
-        carouselScene.after(messageEl); // Add message after the scene
-        return;
+function triggerScrollReveal(pageElement) {
+    if (pageElement) {
+        // Find all elements within the page that need revealing
+        setupScrollReveal(pageElement.querySelectorAll('.scroll-reveal-element'));
+    }
+}
+
+// --- الشات والـ AI (Keep largely as is, ensure fetchApi is used where appropriate) ---
+function addMessageToChat(message, senderClass, rawMessageContent) {
+    const messageWrapper = document.createElement('div');
+    messageWrapper.classList.add('message-wrapper', `${senderClass}-wrapper`);
+    // Store raw message for actions like copy, summarize
+    messageWrapper.dataset.rawMessage = rawMessageContent !== undefined ? rawMessageContent : message;
+
+    const p = document.createElement('p');
+    p.classList.add(senderClass);
+
+    // Sanitize AI messages rendered as HTML
+    if (senderClass === 'ai-message') {
+        if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+            // Ensure message is a string before parsing
+            const messageString = String(message || '');
+            p.innerHTML = DOMPurify.sanitize(marked.parse(messageString));
+        } else {
+            p.textContent = message; // Fallback to text content
+        }
     } else {
-         carouselScene.style.display = 'block'; // Ensure carousel is visible
-         // Remove any previously added 'no subjects' message
-         const existingMessage = carouselScene.nextElementSibling;
-         if (existingMessage && existingMessage.tagName === 'P') {
-             existingMessage.remove();
-         }
+        p.textContent = message; // User messages as plain text
+    }
+    messageWrapper.appendChild(p);
+
+    // --- Message Actions (Copy, Summarize, Pin) ---
+    const messageActions = document.createElement('div');
+    messageActions.className = 'message-actions';
+
+    // Copy Button (for all messages)
+    const copyBtn = document.createElement('button');
+    copyBtn.title = 'Copy Text';
+    copyBtn.innerHTML = '<i class="far fa-copy"></i>';
+    copyBtn.onclick = () => {
+        // Use raw message from dataset for accurate copying
+        navigator.clipboard.writeText(messageWrapper.dataset.rawMessage)
+            .then(() => showNotification('Copied!', 'success'))
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
+                showNotification('Copy failed!', 'error');
+            });
+    };
+    messageActions.appendChild(copyBtn);
+
+    // Actions specific to AI messages
+    if (senderClass === 'ai-message') {
+        const summarizeBtn = document.createElement('button');
+        summarizeBtn.title = 'Summarize this';
+        summarizeBtn.innerHTML = '<i class="fas fa-stream"></i>'; // Icon for summarize
+        summarizeBtn.onclick = () => summarizeMessage(messageWrapper.dataset.rawMessage);
+        messageActions.appendChild(summarizeBtn);
+
+        const pinBtn = document.createElement('button');
+        pinBtn.title = 'Pin this message';
+        pinBtn.innerHTML = '<i class="fas fa-thumbtack"></i>'; // Icon for pin
+        pinBtn.onclick = () => pinMessage(messageWrapper.dataset.rawMessage);
+        messageActions.appendChild(pinBtn);
     }
 
-    angle = 360 / numItems;
-    // Estimate item height dynamically or use a fixed value
-    const itemHeight = 90; // Adjust if your item height changes
-    
-    // Calculate translation Z (depth) based on item height and number of items
-    tz = Math.round((itemHeight / 2) / Math.tan(Math.PI / numItems));
+    // Position actions differently for user vs AI messages
+    if (senderClass === 'user-message') {
+        messageWrapper.insertBefore(messageActions, p); // Actions before user message
+    } else {
+        messageWrapper.appendChild(messageActions); // Actions after AI message
+    }
 
-    // Calculate the offset angle for centering
-    const offsetAngle = angle / 2;
+    chatMessagesDiv.appendChild(messageWrapper);
+    // Scroll to the bottom to show the new message
+    chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+
+    // Render MathJax/KaTeX if applicable for AI messages
+    if (senderClass === 'ai-message' && typeof renderMathInElement === 'function') {
+        renderMathInElement(p, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false }
+            ]
+        });
+    }
+    return p; // Return the paragraph element for potential further manipulation (like typing indicator)
+}
+
+async function summarizeMessage(textToSummarize) {
+    if (!textToSummarize || textToSummarize.trim() === '') {
+        showNotification('Nothing to summarize.', 'info');
+        return;
+    }
+    showNotification('Summarizing...', 'info');
+    // Construct the prompt clearly asking for summarization in bullet points
+    const summaryPrompt = `Please summarize the following text into concise bullet points for a student, in the same language as the text:\n\n--- TEXT ---\n${textToSummarize}`;
+
+    // Create a temporary history for this specific request
+    // Don't modify the main chatHistory directly for utility functions
+    const tempChatHistory = [...chatHistory, { role: 'user', content: summaryPrompt }];
+
+    // Call sendApiRequest with isMainConversation set to false
+    sendApiRequest(tempChatHistory, false);
+}
+
+function pinMessage(textToPin) {
+    if (pinnedMessageText && pinnedMessageBar) {
+        pinnedMessageText.textContent = textToPin;
+        pinnedMessageBar.style.display = 'block'; // Show the bar
+        showNotification('Message pinned!', 'success');
+    } else {
+        console.error("Pin message elements not found.");
+    }
+}
+
+async function sendChatMessage() {
+    const userText = userChatInput.value.trim();
+    if (!userText) return; // Don't send empty messages
+
+    // Add user message to UI immediately
+    addMessageToChat(userText, 'user-message');
+    // Add user message to the conversation history
+    chatHistory.push({ role: "user", content: userText });
+
+    userChatInput.value = ''; // Clear the input field
+
+    // Send the updated history to the API
+    sendApiRequest(chatHistory, true); // true indicates it's part of the main conversation
+}
+
+async function sendApiRequest(historyToSend, isMainConversation) {
+    // Disable input while waiting for response
+    userChatInput.disabled = true;
+    sendChatButton.disabled = true;
+
+    // Add a temporary AI message with typing indicator
+    const aiMessageContainer = addMessageToChat("", 'ai-message', ""); // Start with empty content
+    aiMessageContainer.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+    chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Ensure indicator is visible
+
+    // Extract the last user question (or the utility prompt)
+    const userQuestion = historyToSend[historyToSend.length - 1].content;
+
+    try {
+        // Use fetchApi helper for the request
+        const data = await fetchApi('/api/ai/ask', {
+            method: 'POST',
+            body: JSON.stringify({ question: userQuestion })
+        });
+
+        const fullReply = data.answer; // Assuming the backend returns { answer: "..." }
+
+        // Update the temporary message container with the actual AI reply
+        if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+            aiMessageContainer.innerHTML = DOMPurify.sanitize(marked.parse(fullReply || ""));
+        } else {
+            aiMessageContainer.textContent = fullReply || ""; // Fallback
+        }
+        // Store the raw reply in the dataset for actions
+        aiMessageContainer.parentElement.dataset.rawMessage = fullReply;
+
+        // Add the AI response to the main chat history ONLY if it's part of the main conversation
+        if (isMainConversation) {
+            chatHistory.push({ role: "assistant", content: fullReply });
+        }
+
+        // Render math if necessary
+        if (typeof renderMathInElement === 'function') {
+            renderMathInElement(aiMessageContainer, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
+                ]
+            });
+        }
+
+    } catch (error) {
+        console.error("AI Request Error:", error);
+        // Display error message in the chat
+        aiMessageContainer.textContent = `Sorry, an error occurred: ${error.message}`;
+        // If it was a main conversation message that failed, remove the user's last message from history 
+        // to allow them to retry potentially. (Optional, depends on desired UX)
+        // if (isMainConversation) {
+        //     chatHistory.pop(); 
+        // }
+    } finally {
+        // Re-enable input fields regardless of success or failure
+        userChatInput.disabled = false;
+        sendChatButton.disabled = false;
+        userChatInput.focus(); // Set focus back to input
+        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Ensure final message/error is visible
+    }
+}
+
+async function extractTextFromPdf(file) {
+    // Check if pdfjsLib is loaded
+    if (typeof pdfjsLib === 'undefined') {
+        showNotification("PDF library not loaded. Cannot process PDF.", "error");
+        throw new Error("PDF processing library is not loaded.");
+    }
+    // Ensure workerSrc is set (adjust path if needed)
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js`;
+
+    const reader = new FileReader();
+
+    return new Promise((resolve, reject) => {
+        reader.onload = async (event) => {
+            try {
+                const pdfData = new Uint8Array(event.target.result);
+                const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
+                let fullText = '';
+
+                // Iterate through all pages
+                for (let i = 1; i <= pdf.numPages; i++) {
+                    const page = await pdf.getPage(i);
+                    const textContent = await page.getTextContent();
+                    // Join text items, handling potential undefined items gracefully
+                    fullText += textContent.items.map(item => item?.str || '').join(' ') + '\n\n';
+                }
+                resolve(fullText.trim()); // Trim whitespace from the final result
+            } catch (error) {
+                console.error("PDF Parsing Error:", error);
+                reject("Failed to parse the PDF file.");
+            }
+        };
+        reader.onerror = (error) => {
+            console.error("File Reading Error:", error);
+            reject("Error reading the PDF file.");
+        };
+        // Read the file as ArrayBuffer
+        reader.readAsArrayBuffer(file);
+    });
+}
+
+// --- Gemini API Calls (Image & Audio) ---
+async function sendDataAndPromptToGemini(endpoint, prompt, file, fileType = 'image') {
+    // Add user message indicating the action
+    addMessageToChat(`Analyzing ${fileType}: "${prompt}"`, 'user-message');
+
+    // Add AI typing indicator
+    const aiMsg = addMessageToChat("", 'ai-message');
+    aiMsg.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+    chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+
+    const formData = new FormData();
+    formData.append('prompt', prompt);
+    formData.append(fileType, file); // Use dynamic key 'image' or 'audio'
+
+    try {
+        // Use fetchApi helper for the request
+        const data = await fetchApi(endpoint, {
+            method: 'POST',
+            // Content-Type is set automatically for FormData by the browser
+            headers: {}, // Remove Content-Type header
+            body: formData
+        });
+
+        const aiReply = data.answer; // Assuming backend returns { answer: "..." }
+
+        // Update UI with the AI response
+        if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+            aiMsg.innerHTML = DOMPurify.sanitize(marked.parse(aiReply || ""));
+        } else {
+            aiMsg.textContent = aiReply || ""; // Fallback
+        }
+        aiMsg.parentElement.dataset.rawMessage = aiReply; // Store raw message
+
+        // Render math if needed
+        if (typeof renderMathInElement === 'function') {
+            renderMathInElement(aiMsg, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
+                ]
+            });
+        }
+
+    } catch (error) {
+        console.error(`${fileType.charAt(0).toUpperCase() + fileType.slice(1)} Analysis Error:`, error);
+        aiMsg.textContent = `Error analyzing ${fileType}: ${error.message}`;
+    } finally {
+        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Scroll to final message/error
+    }
+}
+
+// Wrapper functions for specific file types
+async function sendImageAndPromptToGemini(prompt, imageFile) {
+    await sendDataAndPromptToGemini('/api/gemini/image', prompt, imageFile, 'image');
+}
+
+async function sendAudioAndPromptToGemini(prompt, audioFile) {
+    await sendDataAndPromptToGemini('/api/gemini/audio', prompt, audioFile, 'audio');
+}
+
+// --- Carousel Logic ---
+
+
+// ✅ --- الدالة الجديدة لبناء شبكة الأسنان (Tooth Grid) ---
+// ✅ --- الدالة الجديدة لبناء شبكة الأسنان (Tooth Grid) ---
+function animateCarouselAssembly(year) {
+    const subjectsGrid = document.getElementById('subjects-grid');
+    if (!subjectsGrid) return;
+
+    subjectsGrid.innerHTML = ''; // تنظيف المحتوى السابق
+
+    // جلب المواد للسنة المختارة
+    const subjects = subjectsDatabase[year] || [];
+
+    if (subjects.length === 0) {
+        subjectsGrid.innerHTML = '<p>No subjects available for this year yet.</p>';
+        return;
+    }
 
     subjects.forEach((subject, i) => {
-        const item = document.createElement('button');
-        item.className = 'subject-button carousel-item';
-        item.dataset.subjectKey = subject.key;
-        item.dataset.subjectName = subject.name;
-        // Use default icon if specific icon is missing
-        item.dataset.subjectIcon = subject.icon || "default-icon.png"; 
+        const card = document.createElement('div');
+        card.className = 'tooth-subject-card';
+        card.dataset.subjectKey = subject.key;
 
-        // Generate icon HTML, handling potential missing icons
-        let iconHtml = subject.icon 
-            ? `<img src="ICONS/${subject.icon}" alt="${subject.name} Icon" class="custom-icon">` 
-            : `<i class="fas fa-book default-icon"></i>`; // Default FontAwesome icon
-        item.innerHTML = `${iconHtml} <span>${subject.name}</span>`;
-        
-        // Calculate the rotation angle for this specific item, including the offset
-        const rotationAngle = (i * angle) + offsetAngle;
+        // --- شرط تصغير الخط (13 حرفاً أو أكثر) ---
+        let textClass = 'tooth-card-name';
 
-        // Initial state for animation (slightly offset and faded)
-        const initialTransform = `rotateX(${rotationAngle}deg) translateZ(${tz}px) translateY(50px) scale(0.9)`;
-        item.style.transform = initialTransform;
-        item.style.opacity = '0'; // Start invisible
+        // يشمل PHARMACOLOGIE و PATHOLOGIE BUCCO-DENTAIRE
+        if (subject.name.length >= 12) {
+            textClass += ' long-text';
+        }
 
-        // Event listener for clicking on a subject
-        item.addEventListener('click', () => {
-            if (i !== currentIndex) {
-                 // If clicking a non-active item, rotate to it
-                currentIndex = i;
-                rotateCarousel();
-            } else {
-                 // If clicking the active item, proceed to content
-                if (currentContentType) { // Check if a content type is selected
-                     if (currentContentType === 'lessons') {
-                         showLessonListForSubject(item.dataset.subjectKey); 
-                     } else if (currentContentType === 'summaries' || currentContentType === 'quizzes') {
-                         showContentListForSubject(item.dataset.subjectKey, currentContentType);
-                     }
-                } else {
-                     // Prompt user to select a content type if none is active
-                     showNotification('Please select Summaries, Quizzes, or Lessons from the top menu first.', 'info');
-                }
+        // ✅ الترتيب المطلوب: الأيقونة أولاً (في الأعلى)، ثم النص (تحت)
+        card.innerHTML = `
+            <img src="ICONS/${subject.icon || 'default-icon.png'}" alt="${subject.name}" class="tooth-card-subject-icon">
+            <h4 class="${textClass}">${subject.name}</h4>
+        `;
+
+        // تأثير بسيط لتتابع ظهور البطاقات
+        card.style.animationDelay = `${i * 0.05}s`;
+
+        // إضافة مستمع النقر
+        card.addEventListener('click', () => {
+            if (currentContentType === 'lessons') {
+                showLessonListForSubject(subject.key);
+            }
+            else if (currentContentType === 'summaries' || currentContentType === 'quizzes') {
+                showContentListForSubject(subject.key, currentContentType);
+            }
+            else {
+                // الافتراضي: الدروس
+                currentContentType = 'lessons';
+                const lessonsLink = document.querySelector('a[data-page-type="lessons"]');
+                if (lessonsLink) lessonsLink.classList.add('active-link');
+                showLessonListForSubject(subject.key);
             }
         });
-        
-        carousel.appendChild(item); // Add the item to the DOM
-    });
 
-    // Update the list of carousel items
-    carouselItems = document.querySelectorAll('.carousel-item');
-    currentIndex = 0; // Start at the first item
-    
-    // Initial rotation without animation to set the stage
-     rotateCarousel(); 
-    
-    // Animate items into their final positions with a delay
-    carouselItems.forEach((item, i) => {
-        setTimeout(() => {
-            const finalRotationAngle = (i * angle) + offsetAngle;
-            const finalTransform = `rotateX(${finalRotationAngle}deg) translateZ(${tz}px)`;
-            item.style.opacity = '1'; // Fade in
-            item.style.transform = finalTransform; // Move to final position
-        }, 100 + (i * 80)); // Staggered animation delay
+        subjectsGrid.appendChild(card);
     });
 }
-    
-    // --- عرض قائمة المحتوى (ملخصات وكويزات) ---
-    async function showContentListForSubject(subjectKey, contentType) {
-        const subjectData = (subjectsDatabase[selectedYear] || []).find(s => s.key === subjectKey);
-        if (!subjectData) {
-            console.error(`Subject data not found for key: ${subjectKey}`);
-            return;
-        }
 
-        const contentTitle = document.getElementById('content-title');
-        const contentListContainer = document.getElementById('content-list');
-
-        // Set title and show loading state
-        contentTitle.textContent = `${subjectData.name} ${contentType.charAt(0).toUpperCase() + contentType.slice(1)}`;
-        contentListContainer.innerHTML = '<p>Loading content...</p>';
-        showPage('#content-display-page'); // Navigate to the content list page
-
-        let contentItems = [];
-        try {
-            // Fetch subjects for the year to get the subject ID
-            const subjectsInYear = await fetchSubjectsByYear(selectedYear);
-            const currentSubject = subjectsInYear.find(s => s.key === subjectKey);
-
-            if (currentSubject && currentSubject._id) { // Ensure subject and its ID exist
-                if (contentType === 'summaries') {
-                    // Fetch summaries using the API helper
-                    contentItems = await fetchSummariesBySubject(currentSubject._id);
-                } else if (contentType === 'quizzes') {
-                    // Fetch quizzes using the API helper
-                     contentItems = await fetchApi(`/api/content/quizzes/subject/${currentSubject._id}`);
-                }
-                 // Add more content types here if needed (e.g., 'videos')
-            } else {
-                 throw new Error(`Subject ID not found for key: ${subjectKey}`);
-            }
-        } catch (error) {
-            console.error(`Failed to fetch ${contentType}:`, error);
-            showNotification(`Could not load ${contentType}. ${error.message}`, 'error');
-            contentListContainer.innerHTML = `<p>Error loading content. Please try again later.</p>`;
-            return; // Stop execution if fetching fails
-        }
-
-        // Render the fetched content items
-        contentListContainer.innerHTML = ''; // Clear loading message
-        if (contentItems && contentItems.length > 0) {
-            contentItems.forEach(item => {
-                const link = document.createElement('a');
-                link.className = 'content-item';
-
-                if (contentType === 'summaries' && item.filePath) {
-    // ❌ القديم (احذفه):
-    // const serverUrl = 'http://localhost:5000';
-
-    // ✅ الجديد (ضعه مكانه): رابط موقعك على Render
-    const serverUrl = 'https://dental-app-he1p.onrender.com';
-    
-    // نتأكد أن المسار يبدأ بـ / لضمان دمج صحيح
-    const filePath = item.filePath.startsWith('/') ? item.filePath : '/' + item.filePath;
-    
-    // بناء الرابط الكامل
-    const fullPath = `${serverUrl}${filePath}`;
-
-    link.href = buildPdfViewerUrl(fullPath);
-    link.target = "_blank"; 
-    link.innerHTML = `<i class="fas fa-book-open"></i><span>${item.title || 'Summary'}</span>`;
-} else if (contentType === 'quizzes' && item._id) {
-                    link.innerHTML = `<i class="fas fa-question-circle"></i><span>${item.title || 'Quiz'}</span>`;
-                    link.href = '#'; // Prevent default link behavior
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault(); // Prevent page jump
-                        startQuiz(item._id); // Start the quiz using its ID
-                    });
-                } else {
-                     // Handle items with missing data or unknown types
-                     console.warn("Skipping item with missing data:", item);
-                     return; // Skip this item
-                }
-                contentListContainer.appendChild(link);
-            });
-        } else {
-            // Display message if no content is available
-            contentListContainer.innerHTML = `<p>No ${contentType} available for this subject yet.</p>`;
-        }
+// --- عرض قائمة المحتوى (ملخصات وكويزات) ---
+async function showContentListForSubject(subjectKey, contentType) {
+    const subjectData = (subjectsDatabase[selectedYear] || []).find(s => s.key === subjectKey);
+    if (!subjectData) {
+        console.error(`Subject data not found for key: ${subjectKey}`);
+        return;
     }
+
+    const contentTitle = document.getElementById('content-title');
+    const contentListContainer = document.getElementById('content-list');
+
+    // Set title and show loading state
+    contentTitle.textContent = `${subjectData.name} ${contentType.charAt(0).toUpperCase() + contentType.slice(1)}`;
+    contentListContainer.innerHTML = '<p>Loading content...</p>';
+    showPage('#content-display-page'); // Navigate to the content list page
+
+    let contentItems = [];
+    try {
+        // Fetch subjects for the year to get the subject ID
+        const subjectsInYear = await fetchSubjectsByYear(selectedYear);
+        const currentSubject = subjectsInYear.find(s => s.key === subjectKey);
+
+        if (currentSubject && currentSubject._id) { // Ensure subject and its ID exist
+            if (contentType === 'summaries') {
+                // Fetch summaries using the API helper
+                contentItems = await fetchSummariesBySubject(currentSubject._id);
+            } else if (contentType === 'quizzes') {
+                // Fetch quizzes using the API helper
+                contentItems = await fetchApi(`/api/content/quizzes/subject/${currentSubject._id}`);
+            }
+            // Add more content types here if needed (e.g., 'videos')
+        } else {
+            throw new Error(`Subject ID not found for key: ${subjectKey}`);
+        }
+    } catch (error) {
+        console.error(`Failed to fetch ${contentType}:`, error);
+        showNotification(`Could not load ${contentType}. ${error.message}`, 'error');
+        contentListContainer.innerHTML = `<p>Error loading content. Please try again later.</p>`;
+        return; // Stop execution if fetching fails
+    }
+
+    // Render the fetched content items
+    contentListContainer.innerHTML = ''; // Clear loading message
+    if (contentItems && contentItems.length > 0) {
+        contentItems.forEach(item => {
+            const link = document.createElement('a');
+            link.className = 'content-item';
+
+            if (contentType === 'summaries' && item.filePath) {
+                // ❌ القديم (احذفه):
+                // const serverUrl = 'http://localhost:5000';
+
+                // ✅ الجديد (ضعه مكانه): رابط موقعك على Render
+                const serverUrl = 'https://dental-app-he1p.onrender.com';
+
+                // نتأكد أن المسار يبدأ بـ / لضمان دمج صحيح
+                const filePath = item.filePath.startsWith('/') ? item.filePath : '/' + item.filePath;
+
+                // بناء الرابط الكامل
+                const fullPath = `${serverUrl}${filePath}`;
+
+                link.href = buildPdfViewerUrl(fullPath);
+                link.target = "_blank";
+                link.innerHTML = `<i class="fas fa-book-open"></i><span>${item.title || 'Summary'}</span>`;
+            } else if (contentType === 'quizzes' && item._id) {
+                link.innerHTML = `<i class="fas fa-question-circle"></i><span>${item.title || 'Quiz'}</span>`;
+                link.href = '#'; // Prevent default link behavior
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent page jump
+                    startQuiz(item._id); // Start the quiz using its ID
+                });
+            } else {
+                // Handle items with missing data or unknown types
+                console.warn("Skipping item with missing data:", item);
+                return; // Skip this item
+            }
+            contentListContainer.appendChild(link);
+        });
+    } else {
+        // Display message if no content is available
+        contentListContainer.innerHTML = `<p>No ${contentType} available for this subject yet.</p>`;
+    }
+}
 
 // ✅ --- النسخة الجديدة والمحسنة ---
 // الصق هذا الكود الجديد بالكامل
@@ -1498,8 +1440,8 @@ function animateCarouselAssembly(year) {
 async function showLessonListForSubject(subjectKey) {
     const subjectData = (subjectsDatabase[selectedYear] || []).find(s => s.key === subjectKey);
     if (!subjectData) {
-         console.error(`Subject data not found for key: ${subjectKey}`);
-         return;
+        console.error(`Subject data not found for key: ${subjectKey}`);
+        return;
     }
 
     const contentTitle = document.getElementById('content-title');
@@ -1508,19 +1450,19 @@ async function showLessonListForSubject(subjectKey) {
     // Update title and show loading state on the generic content page first
     contentTitle.textContent = `${subjectData.name} Lessons`;
     contentListContainer.innerHTML = '<p>Loading lessons...</p>';
-    showPage('#content-display-page'); 
+    showPage('#content-display-page');
 
     let lessons = [];
     try {
         // Fetch subjects to get the ID
         const subjectsFromDB = await fetchSubjectsByYear(selectedYear);
         const subjectFromDB = subjectsFromDB.find(s => s.key === subjectKey);
-        
+
         if (subjectFromDB && subjectFromDB._id) {
             // Fetch lessons for the specific subject ID
             lessons = await fetchLessonsBySubject(subjectFromDB._id);
         } else {
-             throw new Error(`Subject ID not found for key: ${subjectKey}`);
+            throw new Error(`Subject ID not found for key: ${subjectKey}`);
         }
     } catch (e) {
         console.error("Error loading lessons:", e);
@@ -1537,7 +1479,7 @@ async function showLessonListForSubject(subjectKey) {
             link.className = 'content-item'; // Use the same styling as other content items
             link.href = '#'; // Prevent default navigation
             link.innerHTML = `<i class="fas fa-folder-open"></i><span>${lesson.title || 'Lesson'}</span>`;
-            
+
             // Add click listener to show PDFs for this lesson
             link.addEventListener('click', (e) => {
                 e.preventDefault(); // Prevent page jump
@@ -1555,8 +1497,8 @@ async function showLessonListForSubject(subjectKey) {
 function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
     const pdfsTitle = document.getElementById('pdfs-lesson-title');
     const pdfsListContainer = document.getElementById('pdfs-list');
-    
-    if(!pdfsTitle || !pdfsListContainer) {
+
+    if (!pdfsTitle || !pdfsListContainer) {
         console.error("PDF display elements not found.");
         return;
     }
@@ -1570,16 +1512,16 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
 
             const link = document.createElement('a');
             link.className = 'content-item'; // Use consistent styling
-            
+
             // Generate the URL for the PDF viewer page
             const viewerUrl = `pdf-viewer.html?src=${encodeURIComponent(filePath)}`;
             link.href = viewerUrl;
             link.target = "_blank"; // Open PDF viewer in a new tab
 
             // Extract filename for display, remove .pdf extension
-            const fileName = filePath.split('/').pop().replace(/\.pdf$/i, ''); 
+            const fileName = filePath.split('/').pop().replace(/\.pdf$/i, '');
             link.innerHTML = `<i class="fas fa-file-pdf"></i><span>${fileName || 'PDF Document'}</span>`;
-            
+
             pdfsListContainer.appendChild(link);
         });
     } else {
@@ -1589,332 +1531,332 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
     // Setup the back button to return to the lesson list (content-display-page)
     const backToLessonsBtn = document.getElementById('back-to-lessons-btn');
     if (backToLessonsBtn) {
-         // Re-attach listener to ensure it goes back to the correct lesson list
-         backToLessonsBtn.onclick = () => showLessonListForSubject(subjectKey); 
+        // Re-attach listener to ensure it goes back to the correct lesson list
+        backToLessonsBtn.onclick = () => showLessonListForSubject(subjectKey);
     }
 
     showPage('#pdfs-display-page'); // Navigate to the PDF list page
 }
-  // ===================================================================
-    // === [النسخة النهائية] منطق الكويز الاحترافي ---
-    // ===================================================================
-    let proQuiz = null; // Holds the current quiz data
-    let proQuestionIndex = 0; // Index of the currently displayed question
-    let proUserAnswers = []; // Array to store user answers { selectedIndexes: [], isCorrect: bool }
-    let quizTimerInterval = null; // Interval ID for the question timer
-    let quizStartTime = 0; // Timestamp when the quiz started
-    
-    // DOM Elements for Quiz UI
-    const quizQuestionNumbersContainer = document.getElementById('quiz-question-numbers-pro');
-    const quizSubjectNameEl = document.getElementById('quiz-subject-name-pro');
-    const quizLessonNameEl = document.getElementById('quiz-lesson-name-pro');
-    const quizTimerDisplay = document.getElementById('quiz-timer-display-pro');
-    const quizTimerContainer = document.querySelector('.quiz-timer-pro');
-    const quizProgressEl_pro = document.getElementById('quiz-progress-pro');
-    const quizQuestionTextEl_pro = document.getElementById('quiz-question-text-pro');
-    const quizOptionsContainer_pro = document.getElementById('quiz-options-container-pro');    
-    const quizExplanationContainer = document.getElementById('quiz-explanation-container-pro');
-    const quizExplanationText = document.getElementById('quiz-explanation-text-pro');
-    const quizPrevBtn = document.getElementById('quiz-prev-btn-pro');
-    const quizActionBtn = document.getElementById('quiz-action-btn-pro'); // Check Answer button
-    const quizNextBtn_pro = document.getElementById('quiz-next-btn-pro'); // Next/Finish button
-    const quizSkipBtn = document.getElementById('quiz-skip-btn-pro'); // ✅ Skip button
-    const quizCorrectCountEl = document.getElementById('quiz-correct-count-pro');
-    const quizIncorrectCountEl = document.getElementById('quiz-incorrect-count-pro');
-    const quizScoreEl = document.getElementById('quiz-score-pro');
-    const toggleQuizTimerBtn = document.getElementById('toggle-quiz-timer-btn'); // Timer toggle
+// ===================================================================
+// === [النسخة النهائية] منطق الكويز الاحترافي ---
+// ===================================================================
+let proQuiz = null; // Holds the current quiz data
+let proQuestionIndex = 0; // Index of the currently displayed question
+let proUserAnswers = []; // Array to store user answers { selectedIndexes: [], isCorrect: bool }
+let quizTimerInterval = null; // Interval ID for the question timer
+let quizStartTime = 0; // Timestamp when the quiz started
+
+// DOM Elements for Quiz UI
+const quizQuestionNumbersContainer = document.getElementById('quiz-question-numbers-pro');
+const quizSubjectNameEl = document.getElementById('quiz-subject-name-pro');
+const quizLessonNameEl = document.getElementById('quiz-lesson-name-pro');
+const quizTimerDisplay = document.getElementById('quiz-timer-display-pro');
+const quizTimerContainer = document.querySelector('.quiz-timer-pro');
+const quizProgressEl_pro = document.getElementById('quiz-progress-pro');
+const quizQuestionTextEl_pro = document.getElementById('quiz-question-text-pro');
+const quizOptionsContainer_pro = document.getElementById('quiz-options-container-pro');
+const quizExplanationContainer = document.getElementById('quiz-explanation-container-pro');
+const quizExplanationText = document.getElementById('quiz-explanation-text-pro');
+const quizPrevBtn = document.getElementById('quiz-prev-btn-pro');
+const quizActionBtn = document.getElementById('quiz-action-btn-pro'); // Check Answer button
+const quizNextBtn_pro = document.getElementById('quiz-next-btn-pro'); // Next/Finish button
+const quizSkipBtn = document.getElementById('quiz-skip-btn-pro'); // ✅ Skip button
+const quizCorrectCountEl = document.getElementById('quiz-correct-count-pro');
+const quizIncorrectCountEl = document.getElementById('quiz-incorrect-count-pro');
+const quizScoreEl = document.getElementById('quiz-score-pro');
+const toggleQuizTimerBtn = document.getElementById('toggle-quiz-timer-btn'); // Timer toggle
 
 
-    // =======================================================
-    // START: MODIFIED submitQuizResults FUNCTION
-    // =======================================================
-    // في ملف script.js
-    // ✅ استبدل هذه الدالة بالكامل
-    async function submitQuizResults() {
-        clearInterval(quizTimerInterval); // Stop the timer if running
-        quizTimerInterval = null;
-        const timeTakenInSeconds = Math.round((Date.now() - quizStartTime) / 1000);
+// =======================================================
+// START: MODIFIED submitQuizResults FUNCTION
+// =======================================================
+// في ملف script.js
+// ✅ استبدل هذه الدالة بالكامل
+async function submitQuizResults() {
+    clearInterval(quizTimerInterval); // Stop the timer if running
+    quizTimerInterval = null;
+    const timeTakenInSeconds = Math.round((Date.now() - quizStartTime) / 1000);
 
-        // Filter out only the incorrectly answered questions for the payload
-        const incorrectQuestionsPayload = proUserAnswers.map((answer, index) => {
-            // Check if answer exists and is incorrect
-            if (answer && answer.isCorrect === false) { 
-                const questionData = proQuiz.questions[index];
-                // Ensure questionData exists before accessing properties
-                if (!questionData) return null; 
-                return {
-                    questionText: questionData.questionText || questionData.question,
-                    options: questionData.options || [],
-                    correctOptionIndexes: questionData.correctOptionIndexes || [],
-                    explanation: questionData.explanation || '',
-                    userSelectedIndexes: answer.selectedIndexes || [] // Use stored selected indexes
-                };
-            }
-            return null; // Return null for correct or unanswered questions
-        }).filter(q => q !== null); // Remove null entries
+    // Filter out only the incorrectly answered questions for the payload
+    const incorrectQuestionsPayload = proUserAnswers.map((answer, index) => {
+        // Check if answer exists and is incorrect
+        if (answer && answer.isCorrect === false) {
+            const questionData = proQuiz.questions[index];
+            // Ensure questionData exists before accessing properties
+            if (!questionData) return null;
+            return {
+                questionText: questionData.questionText || questionData.question,
+                options: questionData.options || [],
+                correctOptionIndexes: questionData.correctOptionIndexes || [],
+                explanation: questionData.explanation || '',
+                userSelectedIndexes: answer.selectedIndexes || [] // Use stored selected indexes
+            };
+        }
+        return null; // Return null for correct or unanswered questions
+    }).filter(q => q !== null); // Remove null entries
 
-        // Calculate correct count and score
-        const totalQuestions = proQuiz.questions.length;
-        // Count answers that are explicitly marked as correct
-        const correctCount = proUserAnswers.filter(a => a && a.isCorrect === true).length; 
-        const score = totalQuestions > 0 ? (correctCount / totalQuestions) * 20 : 0;
+    // Calculate correct count and score
+    const totalQuestions = proQuiz.questions.length;
+    // Count answers that are explicitly marked as correct
+    const correctCount = proUserAnswers.filter(a => a && a.isCorrect === true).length;
+    const score = totalQuestions > 0 ? (correctCount / totalQuestions) * 20 : 0;
 
-        // Prepare payload for all user answers (answered questions only)
-        const allUserAnswersPayload = proUserAnswers.map((answer, index) => {
-            if (answer) { // Only include questions that have an answer object
-                return {
-                    questionIndex: index,
-                    selectedIndexes: answer.selectedIndexes || [] // Include selected indexes
-                };
-            }
-            return null;
-        }).filter(a => a !== null); // Filter out unanswered questions
+    // Prepare payload for all user answers (answered questions only)
+    const allUserAnswersPayload = proUserAnswers.map((answer, index) => {
+        if (answer) { // Only include questions that have an answer object
+            return {
+                questionIndex: index,
+                selectedIndexes: answer.selectedIndexes || [] // Include selected indexes
+            };
+        }
+        return null;
+    }).filter(a => a !== null); // Filter out unanswered questions
 
-        // Construct the final result payload to send to the backend
-        const resultPayload = {
-            // Use quiz ID, handle different types (normal, AI, mistakes)
-            quizId: proQuiz._id || 'unknown-quiz', 
-            score: parseFloat(score.toFixed(2)),
-            timeTaken: timeTakenInSeconds,
-            correctAnswers: correctCount,
-            totalQuestions: totalQuestions,
-            incorrectQuestions: incorrectQuestionsPayload,
-             // Ensure subject ID exists before sending
-            subjectId: proQuiz.subject || null,
-            allUserAnswers: allUserAnswersPayload 
-        };
+    // Construct the final result payload to send to the backend
+    const resultPayload = {
+        // Use quiz ID, handle different types (normal, AI, mistakes)
+        quizId: proQuiz._id || 'unknown-quiz',
+        score: parseFloat(score.toFixed(2)),
+        timeTaken: timeTakenInSeconds,
+        correctAnswers: correctCount,
+        totalQuestions: totalQuestions,
+        incorrectQuestions: incorrectQuestionsPayload,
+        // Ensure subject ID exists before sending
+        subjectId: proQuiz.subject || null,
+        allUserAnswers: allUserAnswersPayload
+    };
 
-        // Display the summary page immediately
-        showQuizSummaryPage(resultPayload, proQuiz.subject);
-        localStorage.removeItem('quizState'); // ✅ Clear saved quiz state after finishing
+    // Display the summary page immediately
+    showQuizSummaryPage(resultPayload, proQuiz.subject);
+    localStorage.removeItem('quizState'); // ✅ Clear saved quiz state after finishing
 
-        // Attempt to save results to backend if it's a standard quiz with a subject ID
-        if (proQuiz.subject && !proQuiz._id.startsWith('ai-generated-') && !proQuiz._id.startsWith('mistakes_')) {
-            try {
-                const savedResultWithXP = await fetchApi('/api/results', {
-                    method: 'POST',
-                    body: JSON.stringify(resultPayload)
-                });
-                
-                // Update XP display and show notifications based on response
-                if (savedResultWithXP && savedResultWithXP.totalXP != null) {
-                    document.getElementById('user-xp-display').textContent = `${savedResultWithXP.totalXP} XP`;
-                    showNotification(`+${savedResultWithXP.earnedXP || 0} XP earned!`, 'success');
-                     if (savedResultWithXP.newBadge) {
-                         showNewBadgePopup(savedResultWithXP.newBadge);
-                     }
+    // Attempt to save results to backend if it's a standard quiz with a subject ID
+    if (proQuiz.subject && !proQuiz._id.startsWith('ai-generated-') && !proQuiz._id.startsWith('mistakes_')) {
+        try {
+            const savedResultWithXP = await fetchApi('/api/results', {
+                method: 'POST',
+                body: JSON.stringify(resultPayload)
+            });
+
+            // Update XP display and show notifications based on response
+            if (savedResultWithXP && savedResultWithXP.totalXP != null) {
+                document.getElementById('user-xp-display').textContent = `${savedResultWithXP.totalXP} XP`;
+                showNotification(`+${savedResultWithXP.earnedXP || 0} XP earned!`, 'success');
+                if (savedResultWithXP.newBadge) {
+                    showNewBadgePopup(savedResultWithXP.newBadge);
                 }
-            } catch (error) {
-                 // Notify user about failure to save progress
-                showNotification(`Failed to save progress: ${error.message}`, 'error');
-                console.error("Error saving quiz results:", error);
+            }
+        } catch (error) {
+            // Notify user about failure to save progress
+            showNotification(`Failed to save progress: ${error.message}`, 'error');
+            console.error("Error saving quiz results:", error);
+        }
+    } else {
+        // Notify if results weren't saved (AI quiz, mistakes quiz, or missing subject)
+        let reason = !proQuiz.subject ? 'quiz subject is missing' : 'it\'s an AI or mistakes review quiz';
+        showNotification(`Result displayed, but not saved (${reason}).`, 'info');
+    }
+}
+
+
+// =======================================================
+// END: MODIFIED submitQuizResults FUNCTION
+// =======================================================
+
+// --- دالة إظهار نافذة الوسام الجديد ---
+function showNewBadgePopup(badge) {
+    // Find elements and ensure they exist
+    const nameEl = document.getElementById('badge-popup-name');
+    const descEl = document.getElementById('badge-popup-desc');
+    const imgEl = document.getElementById('badge-popup-img'); // Get the image element too
+    const overlay = document.getElementById('badge-popup-overlay');
+    const closeBtn = document.getElementById('badge-popup-close');
+
+    if (!nameEl || !descEl || !imgEl || !overlay || !closeBtn || !badge) {
+        console.error("Badge popup elements or badge data missing.");
+        return;
+    }
+
+    // Populate popup content
+    nameEl.textContent = badge.name || 'New Badge!';
+    descEl.textContent = badge.description || 'You unlocked a new achievement!';
+    imgEl.src = badge.imageUrl || 'images/badge-default.png'; // Set image source
+    imgEl.alt = badge.name || 'Achievement Badge';
+
+    // Display the overlay
+    overlay.classList.add('show');
+
+    // Add event listener to the close button (ensure it's added only once)
+    if (!closeBtn.dataset.listenerAttached) {
+        closeBtn.onclick = () => {
+            overlay.classList.remove('show');
+        };
+        closeBtn.dataset.listenerAttached = 'true'; // Mark as attached
+    }
+}
+
+// =======================================================
+// START: MODIFIED showQuizSummaryPage FUNCTION
+// =======================================================
+// ✅ FIX 3.3: تعديل الدالة لاستقبال معرّف المادة
+function showQuizSummaryPage(resultData, subjectId) {
+    // Get summary elements
+    const summaryScoreEl = document.getElementById('summary-score');
+    const summaryCorrectAnswersEl = document.getElementById('summary-correct-answers');
+    const summaryTimeTakenEl = document.getElementById('summary-time-taken');
+    const summaryBadgeImg = document.getElementById('summary-badge-img'); // Get badge image element
+
+    // Populate summary metrics
+    if (summaryScoreEl) summaryScoreEl.textContent = `${(resultData.score || 0).toFixed(2)} / 20`;
+    if (summaryCorrectAnswersEl) summaryCorrectAnswersEl.textContent = `${resultData.correctAnswers} / ${resultData.totalQuestions}`;
+
+    // Format time taken
+    const minutes = Math.floor(resultData.timeTaken / 60);
+    const seconds = resultData.timeTaken % 60;
+    if (summaryTimeTakenEl) summaryTimeTakenEl.textContent = `${minutes}m ${seconds}s`;
+
+    // Update badge based on score (example logic, adjust as needed)
+    if (summaryBadgeImg) {
+        let badgeSrc = 'images/badge-bronze.png'; // Default badge
+        if (resultData.score >= 18) badgeSrc = 'images/badge-gold.png';
+        else if (resultData.score >= 14) badgeSrc = 'images/badge-silver.png';
+        summaryBadgeImg.src = badgeSrc;
+        summaryBadgeImg.alt = badgeSrc.includes('gold') ? 'Gold Badge' : (badgeSrc.includes('silver') ? 'Silver Badge' : 'Bronze Badge');
+    }
+
+    // Display incorrect questions review section
+    const incorrectQuestionsContainer = document.getElementById('incorrect-questions-summary');
+    // ✅ FIX 3.4: تمرير معرّف المادة لعرض الأسئلة
+    if (incorrectQuestionsContainer) { // Check if container exists
+        displayReviewQuestions(incorrectQuestionsContainer, resultData.incorrectQuestions, subjectId);
+    }
+
+    // Display correct questions review section
+    const correctQuestionsContainer = document.getElementById('correct-questions-summary');
+    if (correctQuestionsContainer && proQuiz && proQuiz.questions) { // Check if container and quiz data exist
+        // Filter questions that were answered correctly
+        const correctQuestions = proQuiz.questions.filter((q, index) => {
+            const answer = proUserAnswers[index];
+            return answer && answer.isCorrect === true; // Check for explicit true
+        }).map((q, index) => {
+            // Map to include user's answer (which is the correct one)
+            const originalIndex = proQuiz.questions.findIndex(origQ => origQ === q); // Find original index if needed
+            const answer = proUserAnswers[originalIndex];
+            return { ...q, userSelectedIndexes: answer ? answer.selectedIndexes : [] };
+        });
+        // ✅ FIX 3.4: تمرير معرّف المادة لعرض الأسئلة
+        displayReviewQuestions(correctQuestionsContainer, correctQuestions, subjectId, true); // Pass true for correct questions
+    }
+
+    // Setup action buttons on the summary page
+    const backBtn = document.getElementById('back-to-subjects-from-summary-btn');
+    const retryBtn = document.getElementById('retry-quiz-btn');
+    const exportBtn = document.getElementById('export-summary-pdf-btn');
+    const saveQuizBtnSummary = document.getElementById('save-quiz-btn'); // Save button on summary
+
+    if (backBtn) backBtn.onclick = () => showPage('#subjects-page');
+    if (retryBtn) {
+        retryBtn.onclick = () => {
+            if (proQuiz && proQuiz._id && !proQuiz._id.startsWith('ai-generated-') && !proQuiz._id.startsWith('mistakes_')) {
+                startQuiz(proQuiz._id); // Allow retry only for standard quizzes
+            } else {
+                showNotification("Cannot retry this type of quiz directly. Please generate a new one or review mistakes again.", "info");
+            }
+        };
+        // Disable retry for AI/Mistakes quizzes
+        retryBtn.disabled = !proQuiz || proQuiz._id.startsWith('ai-generated-') || proQuiz._id.startsWith('mistakes_');
+    }
+
+    if (exportBtn) {
+        // Ensure listener is attached only once
+        if (!exportBtn.dataset.listenerAttached) {
+            exportBtn.onclick = () => {
+                showNotification('Generating PDF, please wait...', 'info');
+                // Use setTimeout to allow UI update before potentially blocking PDF generation
+                setTimeout(() => {
+                    try {
+                        if (proQuiz) {
+                            generateQuizSummaryPDF(resultData, proQuiz.title || 'Quiz Summary');
+                        } else {
+                            showNotification('Cannot generate PDF. Quiz data is missing.', 'error');
+                        }
+                    } catch (error) {
+                        console.error("PDF Generation Error:", error);
+                        showNotification('An error occurred while creating the PDF.', 'error');
+                    }
+                }, 50); // Short delay
+            };
+            exportBtn.dataset.listenerAttached = 'true';
+        }
+    }
+
+    // Show/Hide Save Quiz button based on quiz type
+    if (saveQuizBtnSummary) {
+        if (proQuiz && proQuiz._id.startsWith('ai-generated-')) {
+            saveQuizBtnSummary.style.display = 'block'; // Show for AI quizzes
+            // Ensure listener is attached
+            if (!saveQuizBtnSummary.dataset.listenerAttached) {
+                attachSaveQuizListener(saveQuizBtnSummary);
+                saveQuizBtnSummary.dataset.listenerAttached = 'true';
             }
         } else {
-             // Notify if results weren't saved (AI quiz, mistakes quiz, or missing subject)
-             let reason = !proQuiz.subject ? 'quiz subject is missing' : 'it\'s an AI or mistakes review quiz';
-             showNotification(`Result displayed, but not saved (${reason}).`, 'info');
+            saveQuizBtnSummary.style.display = 'none'; // Hide for non-AI quizzes
         }
     }
 
+    showPage('#quiz-summary-page'); // Navigate to the summary page
+}
+// =======================================================
+// END: MODIFIED showQuizSummaryPage FUNCTION
+// =======================================================
 
-    // =======================================================
-    // END: MODIFIED submitQuizResults FUNCTION
-    // =======================================================
-    
-    // --- دالة إظهار نافذة الوسام الجديد ---
-    function showNewBadgePopup(badge) {
-        // Find elements and ensure they exist
-        const nameEl = document.getElementById('badge-popup-name');
-        const descEl = document.getElementById('badge-popup-desc');
-        const imgEl = document.getElementById('badge-popup-img'); // Get the image element too
-        const overlay = document.getElementById('badge-popup-overlay');
-        const closeBtn = document.getElementById('badge-popup-close');
+// =======================================================
+// START: MODIFIED displayReviewQuestions FUNCTION
+// =======================================================
+// في ملف script.js
+// ✅ استبدل هذه الدالة بالكامل
+function displayReviewQuestions(container, questions, subjectId, isCorrectSection = false) {
+    if (!container) return; // Exit if container doesn't exist
+    container.innerHTML = ''; // Clear previous content
 
-        if (!nameEl || !descEl || !imgEl || !overlay || !closeBtn || !badge) {
-            console.error("Badge popup elements or badge data missing.");
+    if (!questions || questions.length === 0) {
+        const message = isCorrectSection ? 'You answered all questions incorrectly.' : 'No mistakes here. Well done!';
+        container.innerHTML = `<p>${message}</p>`;
+        return;
+    }
+
+    questions.forEach((q, index) => {
+        // Basic validation for question object
+        if (!q || !q.options || !q.correctOptionIndexes) {
+            console.warn(`Skipping invalid question object at index ${index}:`, q);
             return;
         }
 
-        // Populate popup content
-        nameEl.textContent = badge.name || 'New Badge!';
-        descEl.textContent = badge.description || 'You unlocked a new achievement!';
-        imgEl.src = badge.imageUrl || 'images/badge-default.png'; // Set image source
-        imgEl.alt = badge.name || 'Achievement Badge';
+        const questionDiv = document.createElement('div');
+        questionDiv.className = `review-q-summary ${isCorrectSection ? 'correct-q-summary' : 'incorrect-q-summary'}`;
 
-        // Display the overlay
-        overlay.classList.add('show');
+        // Ensure options and indexes are valid before mapping
+        const correctAnswersText = Array.isArray(q.correctOptionIndexes)
+            ? q.correctOptionIndexes.map(i => q.options[i] || `[Option ${i + 1}]`).join(', ')
+            : `[Invalid Correct Index: ${q.correctOptionIndexes}]`;
 
-        // Add event listener to the close button (ensure it's added only once)
-        if (!closeBtn.dataset.listenerAttached) {
-             closeBtn.onclick = () => {
-                 overlay.classList.remove('show');
-             };
-             closeBtn.dataset.listenerAttached = 'true'; // Mark as attached
-        }
-    }
-    
-    // =======================================================
-    // START: MODIFIED showQuizSummaryPage FUNCTION
-    // =======================================================
-    // ✅ FIX 3.3: تعديل الدالة لاستقبال معرّف المادة
-    function showQuizSummaryPage(resultData, subjectId) {
-        // Get summary elements
-        const summaryScoreEl = document.getElementById('summary-score');
-        const summaryCorrectAnswersEl = document.getElementById('summary-correct-answers');
-        const summaryTimeTakenEl = document.getElementById('summary-time-taken');
-        const summaryBadgeImg = document.getElementById('summary-badge-img'); // Get badge image element
-        
-        // Populate summary metrics
-        if (summaryScoreEl) summaryScoreEl.textContent = `${(resultData.score || 0).toFixed(2)} / 20`;
-        if (summaryCorrectAnswersEl) summaryCorrectAnswersEl.textContent = `${resultData.correctAnswers} / ${resultData.totalQuestions}`;
-        
-        // Format time taken
-        const minutes = Math.floor(resultData.timeTaken / 60);
-        const seconds = resultData.timeTaken % 60;
-        if(summaryTimeTakenEl) summaryTimeTakenEl.textContent = `${minutes}m ${seconds}s`;
+        const userAnswersText = (q.userSelectedIndexes && Array.isArray(q.userSelectedIndexes) && q.userSelectedIndexes.length > 0)
+            ? q.userSelectedIndexes.map(i => q.options[i] || `[Option ${i + 1}]`).join(', ')
+            : (isCorrectSection ? correctAnswersText : "No answer / Skipped"); // Show correct if in correct section
 
-        // Update badge based on score (example logic, adjust as needed)
-        if (summaryBadgeImg) {
-             let badgeSrc = 'images/badge-bronze.png'; // Default badge
-             if (resultData.score >= 18) badgeSrc = 'images/badge-gold.png';
-             else if (resultData.score >= 14) badgeSrc = 'images/badge-silver.png';
-             summaryBadgeImg.src = badgeSrc;
-             summaryBadgeImg.alt = badgeSrc.includes('gold') ? 'Gold Badge' : (badgeSrc.includes('silver') ? 'Silver Badge' : 'Bronze Badge');
-        }
-    
-        // Display incorrect questions review section
-        const incorrectQuestionsContainer = document.getElementById('incorrect-questions-summary');
-        // ✅ FIX 3.4: تمرير معرّف المادة لعرض الأسئلة
-        if (incorrectQuestionsContainer) { // Check if container exists
-             displayReviewQuestions(incorrectQuestionsContainer, resultData.incorrectQuestions, subjectId);
-        }
-        
-        // Display correct questions review section
-        const correctQuestionsContainer = document.getElementById('correct-questions-summary');
-        if (correctQuestionsContainer && proQuiz && proQuiz.questions) { // Check if container and quiz data exist
-            // Filter questions that were answered correctly
-            const correctQuestions = proQuiz.questions.filter((q, index) => {
-                const answer = proUserAnswers[index];
-                return answer && answer.isCorrect === true; // Check for explicit true
-            }).map((q, index) => { 
-                 // Map to include user's answer (which is the correct one)
-                 const originalIndex = proQuiz.questions.findIndex(origQ => origQ === q); // Find original index if needed
-                 const answer = proUserAnswers[originalIndex];
-                 return { ...q, userSelectedIndexes: answer ? answer.selectedIndexes : [] }; 
-             });
-            // ✅ FIX 3.4: تمرير معرّف المادة لعرض الأسئلة
-            displayReviewQuestions(correctQuestionsContainer, correctQuestions, subjectId, true); // Pass true for correct questions
-        }
-    
-        // Setup action buttons on the summary page
-        const backBtn = document.getElementById('back-to-subjects-from-summary-btn');
-        const retryBtn = document.getElementById('retry-quiz-btn');
-        const exportBtn = document.getElementById('export-summary-pdf-btn');
-        const saveQuizBtnSummary = document.getElementById('save-quiz-btn'); // Save button on summary
-
-        if (backBtn) backBtn.onclick = () => showPage('#subjects-page');
-        if (retryBtn) {
-            retryBtn.onclick = () => {
-                if (proQuiz && proQuiz._id && !proQuiz._id.startsWith('ai-generated-') && !proQuiz._id.startsWith('mistakes_')) {
-                    startQuiz(proQuiz._id); // Allow retry only for standard quizzes
-                } else {
-                    showNotification("Cannot retry this type of quiz directly. Please generate a new one or review mistakes again.", "info");
-                }
-            };
-            // Disable retry for AI/Mistakes quizzes
-            retryBtn.disabled = !proQuiz || proQuiz._id.startsWith('ai-generated-') || proQuiz._id.startsWith('mistakes_');
-        }
-
-        if (exportBtn) {
-             // Ensure listener is attached only once
-             if (!exportBtn.dataset.listenerAttached) {
-                 exportBtn.onclick = () => {
-                     showNotification('Generating PDF, please wait...', 'info');
-                     // Use setTimeout to allow UI update before potentially blocking PDF generation
-                     setTimeout(() => {
-                         try {
-                             if (proQuiz) {
-                                  generateQuizSummaryPDF(resultData, proQuiz.title || 'Quiz Summary');
-                             } else {
-                                  showNotification('Cannot generate PDF. Quiz data is missing.', 'error');
-                             }
-                         } catch (error) {
-                             console.error("PDF Generation Error:", error);
-                             showNotification('An error occurred while creating the PDF.', 'error');
-                         }
-                     }, 50); // Short delay
-                 };
-                 exportBtn.dataset.listenerAttached = 'true';
-             }
-        }
-
-        // Show/Hide Save Quiz button based on quiz type
-        if (saveQuizBtnSummary) {
-             if (proQuiz && proQuiz._id.startsWith('ai-generated-')) {
-                  saveQuizBtnSummary.style.display = 'block'; // Show for AI quizzes
-                  // Ensure listener is attached
-                  if (!saveQuizBtnSummary.dataset.listenerAttached) {
-                      attachSaveQuizListener(saveQuizBtnSummary);
-                      saveQuizBtnSummary.dataset.listenerAttached = 'true';
-                  }
-             } else {
-                  saveQuizBtnSummary.style.display = 'none'; // Hide for non-AI quizzes
-             }
-        }
-        
-        showPage('#quiz-summary-page'); // Navigate to the summary page
-    }
-    // =======================================================
-    // END: MODIFIED showQuizSummaryPage FUNCTION
-    // =======================================================
-
-    // =======================================================
-    // START: MODIFIED displayReviewQuestions FUNCTION
-    // =======================================================
-    // في ملف script.js
-    // ✅ استبدل هذه الدالة بالكامل
-    function displayReviewQuestions(container, questions, subjectId, isCorrectSection = false) {
-        if (!container) return; // Exit if container doesn't exist
-        container.innerHTML = ''; // Clear previous content
-        
-        if (!questions || questions.length === 0) {
-            const message = isCorrectSection ? 'You answered all questions incorrectly.' : 'No mistakes here. Well done!';
-            container.innerHTML = `<p>${message}</p>`;
-            return;
-        }
-
-        questions.forEach((q, index) => {
-            // Basic validation for question object
-            if (!q || !q.options || !q.correctOptionIndexes) {
-                console.warn(`Skipping invalid question object at index ${index}:`, q);
-                return; 
-            }
-
-            const questionDiv = document.createElement('div');
-            questionDiv.className = `review-q-summary ${isCorrectSection ? 'correct-q-summary' : 'incorrect-q-summary'}`;
-
-            // Ensure options and indexes are valid before mapping
-            const correctAnswersText = Array.isArray(q.correctOptionIndexes) 
-                ? q.correctOptionIndexes.map(i => q.options[i] || `[Option ${i+1}]`).join(', ') 
-                : `[Invalid Correct Index: ${q.correctOptionIndexes}]`;
-                
-            const userAnswersText = (q.userSelectedIndexes && Array.isArray(q.userSelectedIndexes) && q.userSelectedIndexes.length > 0)
-                ? q.userSelectedIndexes.map(i => q.options[i] || `[Option ${i+1}]`).join(', ')
-                : (isCorrectSection ? correctAnswersText : "No answer / Skipped"); // Show correct if in correct section
-
-            // Build HTML for question details
-            let detailsHtml = '';
-            if (!isCorrectSection) { // Only show User Answer vs Correct Answer in the mistakes section
-                 detailsHtml = `<p><em>Your Answer:</em> <span class="user-answer">${userAnswersText}</span></p>
+        // Build HTML for question details
+        let detailsHtml = '';
+        if (!isCorrectSection) { // Only show User Answer vs Correct Answer in the mistakes section
+            detailsHtml = `<p><em>Your Answer:</em> <span class="user-answer">${userAnswersText}</span></p>
                                 <p><em>Correct Answer:</em> <span class="correct-answer">${correctAnswersText}</span></p>`;
-            } else { // In the correct section, just show the answer
-                 detailsHtml = `<p><em>Answer:</em> <span class="correct-answer">${correctAnswersText}</span></p>`;
-            }
+        } else { // In the correct section, just show the answer
+            detailsHtml = `<p><em>Answer:</em> <span class="correct-answer">${correctAnswersText}</span></p>`;
+        }
 
-            const questionText = q.questionText || q.question || `Question ${index + 1}`; // Fallback text
+        const questionText = q.questionText || q.question || `Question ${index + 1}`; // Fallback text
 
-            // Construct the inner HTML for the question review item
-            questionDiv.innerHTML = `
+        // Construct the inner HTML for the question review item
+        questionDiv.innerHTML = `
                 <div class="review-q-text">
                     <p><strong>Q:</strong> ${questionText}</p>
                     ${detailsHtml}
@@ -1924,319 +1866,319 @@ function showPdfsForLesson(lesson, subjectKey) { // Added subjectKey parameter
                         <i class="fas fa-plus-square"></i>
                     </button>
                 </div>`;
-            container.appendChild(questionDiv);
+        container.appendChild(questionDiv);
 
-            // --- Flashcard Saving Logic ---
-            const saveBtn = questionDiv.querySelector('.save-flashcard-btn');
-            if (saveBtn) {
-                 // Prepare content for the back of the flashcard
-                 const backContent = `Correct Answer(s): ${correctAnswersText}\n\nExplanation: ${q.explanation || 'No explanation provided.'}`;
-                
-                 saveBtn.onclick = async () => { // Make onclick async
-                    if (!subjectId) {
-                        showNotification('Cannot save flashcard without a subject context.', 'error');
-                        return;
-                    }
-                    saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>'; // Show loading state
-                    saveBtn.disabled = true;
+        // --- Flashcard Saving Logic ---
+        const saveBtn = questionDiv.querySelector('.save-flashcard-btn');
+        if (saveBtn) {
+            // Prepare content for the back of the flashcard
+            const backContent = `Correct Answer(s): ${correctAnswersText}\n\nExplanation: ${q.explanation || 'No explanation provided.'}`;
 
-                    try {
-                         // Call API to create flashcard
-                         await createFlashcardAPI({
-                             subjectId,
-                             questionText: questionText,   // Use the displayed question text
-                             backContent: backContent,     // Use the prepared back content
-                         });
-                         // Update button state on success
-                         saveBtn.innerHTML = '<i class="fas fa-check-square"></i>'; // Show success
-                         showNotification('Flashcard saved!', 'success');
-                         // Keep button disabled after successful save to prevent duplicates
-                    } catch (error) {
-                         // Re-enable button on failure to allow retry
-                         saveBtn.innerHTML = '<i class="fas fa-plus-square"></i>'; 
-                         saveBtn.disabled = false;
-                         console.error("Error saving flashcard:", error);
-                         // Show error notification (createFlashcardAPI already shows one)
-                    }
-                };
-            }
-        });
-    }
-    // =======================================================
-    // END: MODIFIED displayReviewQuestions FUNCTION
-    // =======================================================
+            saveBtn.onclick = async () => { // Make onclick async
+                if (!subjectId) {
+                    showNotification('Cannot save flashcard without a subject context.', 'error');
+                    return;
+                }
+                saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>'; // Show loading state
+                saveBtn.disabled = true;
 
-    // --- دالة إنشاء بطاقة مراجعة عبر API ---
-    async function createFlashcardAPI(flashcardData) {
-        try {
-            // Use fetchApi helper which handles errors and notifications
-            const data = await fetchApi('/api/flashcards', {
-                method: 'POST',
-                body: JSON.stringify(flashcardData)
-            });
-            // No need for success notification here, handled by the caller (displayReviewQuestions)
-            return data; // Return data if needed by caller
-        } catch (error) {
-            // fetchApi should have shown a notification for API errors (like 400, 500)
-            // If fetchApi itself failed (network error), show a notification
-            if (error.message.includes('Failed to fetch')) {
-                 showNotification('Network error: Could not save flashcard.', 'error');
-            } else {
-                 // For errors thrown by fetchApi (like bad request), let the caller know
-                 showNotification(`Error: ${error.message}`, 'error');
-            }
-            throw error; // Re-throw error so the caller knows it failed
-        }
-    }
-    
-    // --- دالة إنشاء ملخص PDF للكويز ---
-    function generateQuizSummaryPDF(resultData, quizTitle) {
-        // Check if jsPDF library is loaded
-        if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
-            showNotification('PDF library (jsPDF) not loaded. Cannot generate PDF.', 'error');
-            console.error("jsPDF library is missing.");
-            return;
-        }
-
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-        
-        // --- Document Setup ---
-        const pageHeight = doc.internal.pageSize.height;
-        const pageWidth = doc.internal.pageSize.width;
-        const margin = 15;
-        let y = margin; // Current Y position on the page
-        const lineHeight = 7; // Approximate height for a line of text
-        const titleFontSize = 20;
-        const headingFontSize = 16;
-        const textFontSize = 12;
-        const smallFontSize = 10;
-
-        // Helper function to add new page if needed
-        const addPageIfNeeded = (requiredHeight) => {
-            if (y + requiredHeight > pageHeight - margin) {
-                doc.addPage();
-                y = margin; // Reset Y position for the new page
-            }
-        };
-
-        // --- Header ---
-        addPageIfNeeded(titleFontSize + 8 + 10 + 15); // Title + Subtitle + Line + Spacing
-        doc.setFontSize(titleFontSize);
-        doc.setFont("helvetica", "bold");
-        doc.text("Dentist - Quiz Summary", pageWidth / 2, y, { align: "center" });
-        y += 8;
-        doc.setFontSize(headingFontSize - 2); // Slightly smaller for subtitle
-        doc.setFont("helvetica", "normal");
-        doc.text(quizTitle || 'Quiz Results', pageWidth / 2, y, { align: "center" });
-        y += 10;
-        doc.setLineWidth(0.5);
-        doc.line(margin, y, pageWidth - margin, y); // Separator line
-        y += 15;
-
-        // --- Summary Metrics ---
-        addPageIfNeeded((lineHeight * 2) + 10 + 15); // Metrics + Line + Spacing
-        doc.setFontSize(textFontSize);
-        doc.setFont("helvetica", "normal");
-        doc.text(`Final Score: ${(resultData.score || 0).toFixed(2)} / 20`, margin, y);
-        // Format time
-        const minutes = Math.floor(resultData.timeTaken / 60);
-        const seconds = resultData.timeTaken % 60;
-        doc.text(`Time Taken: ${minutes}m ${seconds}s`, pageWidth - margin, y, { align: "right" });
-        y += lineHeight;
-        doc.text(`Correct Answers: ${resultData.correctAnswers} / ${resultData.totalQuestions}`, margin, y);
-        y += 10;
-        doc.line(margin, y, pageWidth - margin, y); // Separator line
-        y += 15;
-
-        // --- Mistake Review Section ---
-        addPageIfNeeded(headingFontSize + 10); // Heading + Spacing
-        doc.setFontSize(headingFontSize);
-        doc.setFont("helvetica", "bold");
-        doc.text("Mistake Review Section", margin, y);
-        y += 10;
-
-        doc.setFontSize(textFontSize);
-        doc.setFont("helvetica", "normal");
-
-        if (!resultData.incorrectQuestions || resultData.incorrectQuestions.length === 0) {
-            addPageIfNeeded(lineHeight);
-            doc.text("Excellent work! You made no mistakes in this quiz.", margin, y);
-            y += lineHeight; // Add some space even if no mistakes
-        } else {
-            resultData.incorrectQuestions.forEach((q, index) => {
-                 // Basic validation
-                 if (!q || !q.options || !q.correctOptionIndexes) return;
-
-                const questionText = q.questionText || `Question ${index + 1}`;
-                const userAnswersText = (q.userSelectedIndexes && q.userSelectedIndexes.length > 0)
-                    ? q.userSelectedIndexes.map(i => q.options[i] || `Opt ${i+1}`).join(', ') 
-                    : "No answer / Skipped";
-                const correctAnswersText = q.correctOptionIndexes.map(i => q.options[i] || `Opt ${i+1}`).join(', ');
-                const explanation = q.explanation || 'No explanation provided.';
-
-                // Estimate required height
-                const questionLines = doc.splitTextToSize(`Q${index + 1}: ${questionText}`, pageWidth - (margin * 2));
-                const explanationLines = doc.splitTextToSize(`Explanation: ${explanation}`, pageWidth - (margin * 2) - 5); // Indented slightly
-                const requiredHeight = (questionLines.length * lineHeight * 0.8) + (lineHeight * 2) + (explanationLines.length * lineHeight * 0.8) + 15; // Estimate height
-
-                addPageIfNeeded(requiredHeight);
-
-                // Print Question
-                doc.setFont("helvetica", "bold");
-                doc.text(questionLines, margin, y);
-                y += questionLines.length * lineHeight * 0.8 + 5; // Adjust spacing
-
-                // Print User Answer (Red)
-                doc.setFont("helvetica", "normal");
-                doc.setTextColor(200, 0, 0); // Red color
-                doc.text(`- Your Answer: ${userAnswersText}`, margin + 5, y);
-                y += lineHeight;
-
-                // Print Correct Answer (Green)
-                doc.setTextColor(34, 139, 34); // ForestGreen color
-                doc.text(`- Correct Answer: ${correctAnswersText}`, margin + 5, y);
-                y += lineHeight;
-                
-                // Print Explanation (Black, Italic)
-                doc.setTextColor(0, 0, 0); // Reset to black
-                doc.setFont("helvetica", "italic");
-                doc.setFontSize(smallFontSize); // Smaller font for explanation
-                doc.text(explanationLines, margin + 5, y);
-                y += explanationLines.length * lineHeight * 0.8 + 5; // Adjust spacing
-                doc.setFontSize(textFontSize); // Reset font size
-                doc.setFont("helvetica", "normal"); // Reset font style
-
-                y += 5; // Extra space between questions
-            });
-        }
-
-        // --- Save the PDF ---
-        try {
-            const date = new Date().toISOString().slice(0, 10);
-            // Sanitize title for filename
-            const safeTitle = (quizTitle || 'Quiz').replace(/[^a-z0-9]/gi, '_').toLowerCase(); 
-            doc.save(`Dentist-${safeTitle}-${date}.pdf`);
-            showNotification('PDF summary has been downloaded!', 'success');
-        } catch (error) {
-             console.error("Error saving PDF:", error);
-             showNotification('Failed to save the PDF summary.', 'error');
-        }
-    }
-    
-    // --- دالة بدء كويز جديد ---
-    async function startQuiz(quizId) {
-        // Clear any previous quiz state first
-        localStorage.removeItem('quizState'); 
-        proQuiz = null;
-        proQuestionIndex = 0;
-        proUserAnswers = [];
-        quizStartTime = 0;
-        clearInterval(quizTimerInterval);
-        quizTimerInterval = null;
-
-        showNotification('Loading quiz...', 'info'); // Loading indicator
-
-        try {
-            // Use fetchApi to get quiz data
-            const quizData = await fetchApi(`/api/content/quiz/${quizId}`);
-            
-            if (!quizData || !quizData.questions || quizData.questions.length === 0) {
-                showNotification('This quiz has no questions or failed to load.', 'error');
-                return; // Stop if quiz data is invalid
-            }
-
-             // Initialize and start the quiz with the fetched data
-             initializeAndStartQuiz(quizData);
-
-        } catch (error) {
-            showNotification(`Error loading quiz: ${error.message}`, 'error');
-            console.error('Failed to start quiz:', error);
-            // Optionally, navigate back or show an error message on the page
-             showPage('#subjects-page'); // Example: Go back to subjects on error
-        }
-    }
-
-    // ✅ --- دالة جديدة لتهيئة وبدء الكويز (لتجنب التكرار) ---
-    function initializeAndStartQuiz(quizData) {
-        proQuiz = quizData; // Store the quiz data
-        proQuestionIndex = 0; // Start at the first question
-        proUserAnswers = new Array(proQuiz.questions.length).fill(null); // Reset answers array
-        quizStartTime = Date.now(); // Record start time
-
-        // Update UI elements with quiz title and subject name
-        if(quizLessonNameEl) quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
-        if(quizSubjectNameEl) quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Use subjectName if available
-
-        // Render the UI components for the quiz
-        renderQuestionList(); // Build the question number navigation
-        renderCurrentQuestion(); // Display the first question
-        updateStats(); // Initialize the stats display (0 correct, 0 incorrect)
-        
-        // Save initial state immediately (in case of immediate refresh)
-        saveQuizState(); 
-        
-        showPage('#quiz-taking-page'); // Navigate to the quiz taking page
-    }
-
-    // ✅ --- دالة جديدة لحفظ حالة الكويز في localStorage ---
-    function saveQuizState() {
-        if (proQuiz && proUserAnswers) { // Only save if a quiz is active
-            const stateToSave = {
-                savedProQuiz: proQuiz,
-                savedProQuestionIndex: proQuestionIndex,
-                savedProUserAnswers: proUserAnswers,
-                savedQuizStartTime: quizStartTime // Save start time too
+                try {
+                    // Call API to create flashcard
+                    await createFlashcardAPI({
+                        subjectId,
+                        questionText: questionText,   // Use the displayed question text
+                        backContent: backContent,     // Use the prepared back content
+                    });
+                    // Update button state on success
+                    saveBtn.innerHTML = '<i class="fas fa-check-square"></i>'; // Show success
+                    showNotification('Flashcard saved!', 'success');
+                    // Keep button disabled after successful save to prevent duplicates
+                } catch (error) {
+                    // Re-enable button on failure to allow retry
+                    saveBtn.innerHTML = '<i class="fas fa-plus-square"></i>';
+                    saveBtn.disabled = false;
+                    console.error("Error saving flashcard:", error);
+                    // Show error notification (createFlashcardAPI already shows one)
+                }
             };
-            localStorage.setItem('quizState', JSON.stringify(stateToSave));
-            // console.log("Quiz state saved at index:", proQuestionIndex); // For debugging
         }
+    });
+}
+// =======================================================
+// END: MODIFIED displayReviewQuestions FUNCTION
+// =======================================================
+
+// --- دالة إنشاء بطاقة مراجعة عبر API ---
+async function createFlashcardAPI(flashcardData) {
+    try {
+        // Use fetchApi helper which handles errors and notifications
+        const data = await fetchApi('/api/flashcards', {
+            method: 'POST',
+            body: JSON.stringify(flashcardData)
+        });
+        // No need for success notification here, handled by the caller (displayReviewQuestions)
+        return data; // Return data if needed by caller
+    } catch (error) {
+        // fetchApi should have shown a notification for API errors (like 400, 500)
+        // If fetchApi itself failed (network error), show a notification
+        if (error.message.includes('Failed to fetch')) {
+            showNotification('Network error: Could not save flashcard.', 'error');
+        } else {
+            // For errors thrown by fetchApi (like bad request), let the caller know
+            showNotification(`Error: ${error.message}`, 'error');
+        }
+        throw error; // Re-throw error so the caller knows it failed
+    }
+}
+
+// --- دالة إنشاء ملخص PDF للكويز ---
+function generateQuizSummaryPDF(resultData, quizTitle) {
+    // Check if jsPDF library is loaded
+    if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+        showNotification('PDF library (jsPDF) not loaded. Cannot generate PDF.', 'error');
+        console.error("jsPDF library is missing.");
+        return;
     }
 
-    // --- دالة عرض قائمة أرقام الأسئلة ---
-    function renderQuestionList() {
-        if (!quizQuestionNumbersContainer || !proQuiz || !proQuiz.questions) return; // Safety check
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-        quizQuestionNumbersContainer.innerHTML = ''; // Clear previous numbers
-        
-        proQuiz.questions.forEach((_, index) => {
-            const numEl = document.createElement('div');
-            numEl.className = 'question-number-pro';
-            numEl.textContent = index + 1;
-            numEl.dataset.index = index; // Store index for navigation
+    // --- Document Setup ---
+    const pageHeight = doc.internal.pageSize.height;
+    const pageWidth = doc.internal.pageSize.width;
+    const margin = 15;
+    let y = margin; // Current Y position on the page
+    const lineHeight = 7; // Approximate height for a line of text
+    const titleFontSize = 20;
+    const headingFontSize = 16;
+    const textFontSize = 12;
+    const smallFontSize = 10;
 
-            // Highlight the current question
-            if (index === proQuestionIndex) {
-                 numEl.classList.add('current');
-            }
-            
-            // Style based on answer status
-            const answer = proUserAnswers[index];
-            if (answer !== null) { // Check if answered (could be correct or incorrect)
-                 numEl.classList.add('answered');
-                 if (answer.isCorrect === true) {
-                     numEl.classList.add('correct');
-                 } else if (answer.isCorrect === false) {
-                     numEl.classList.add('incorrect');
-                 }
-                 // Add a style for skipped/unanswered if needed
-            }
+    // Helper function to add new page if needed
+    const addPageIfNeeded = (requiredHeight) => {
+        if (y + requiredHeight > pageHeight - margin) {
+            doc.addPage();
+            y = margin; // Reset Y position for the new page
+        }
+    };
 
-            // Add click listener to navigate to the question
-            numEl.addEventListener('click', () => {
-                proQuestionIndex = index; // Update current index
-                renderCurrentQuestion(); // Re-render the clicked question
-                // No need to save state here, renderCurrentQuestion handles controls which might trigger save
-            });
-            quizQuestionNumbersContainer.appendChild(numEl);
+    // --- Header ---
+    addPageIfNeeded(titleFontSize + 8 + 10 + 15); // Title + Subtitle + Line + Spacing
+    doc.setFontSize(titleFontSize);
+    doc.setFont("helvetica", "bold");
+    doc.text("Dentist - Quiz Summary", pageWidth / 2, y, { align: "center" });
+    y += 8;
+    doc.setFontSize(headingFontSize - 2); // Slightly smaller for subtitle
+    doc.setFont("helvetica", "normal");
+    doc.text(quizTitle || 'Quiz Results', pageWidth / 2, y, { align: "center" });
+    y += 10;
+    doc.setLineWidth(0.5);
+    doc.line(margin, y, pageWidth - margin, y); // Separator line
+    y += 15;
+
+    // --- Summary Metrics ---
+    addPageIfNeeded((lineHeight * 2) + 10 + 15); // Metrics + Line + Spacing
+    doc.setFontSize(textFontSize);
+    doc.setFont("helvetica", "normal");
+    doc.text(`Final Score: ${(resultData.score || 0).toFixed(2)} / 20`, margin, y);
+    // Format time
+    const minutes = Math.floor(resultData.timeTaken / 60);
+    const seconds = resultData.timeTaken % 60;
+    doc.text(`Time Taken: ${minutes}m ${seconds}s`, pageWidth - margin, y, { align: "right" });
+    y += lineHeight;
+    doc.text(`Correct Answers: ${resultData.correctAnswers} / ${resultData.totalQuestions}`, margin, y);
+    y += 10;
+    doc.line(margin, y, pageWidth - margin, y); // Separator line
+    y += 15;
+
+    // --- Mistake Review Section ---
+    addPageIfNeeded(headingFontSize + 10); // Heading + Spacing
+    doc.setFontSize(headingFontSize);
+    doc.setFont("helvetica", "bold");
+    doc.text("Mistake Review Section", margin, y);
+    y += 10;
+
+    doc.setFontSize(textFontSize);
+    doc.setFont("helvetica", "normal");
+
+    if (!resultData.incorrectQuestions || resultData.incorrectQuestions.length === 0) {
+        addPageIfNeeded(lineHeight);
+        doc.text("Excellent work! You made no mistakes in this quiz.", margin, y);
+        y += lineHeight; // Add some space even if no mistakes
+    } else {
+        resultData.incorrectQuestions.forEach((q, index) => {
+            // Basic validation
+            if (!q || !q.options || !q.correctOptionIndexes) return;
+
+            const questionText = q.questionText || `Question ${index + 1}`;
+            const userAnswersText = (q.userSelectedIndexes && q.userSelectedIndexes.length > 0)
+                ? q.userSelectedIndexes.map(i => q.options[i] || `Opt ${i + 1}`).join(', ')
+                : "No answer / Skipped";
+            const correctAnswersText = q.correctOptionIndexes.map(i => q.options[i] || `Opt ${i + 1}`).join(', ');
+            const explanation = q.explanation || 'No explanation provided.';
+
+            // Estimate required height
+            const questionLines = doc.splitTextToSize(`Q${index + 1}: ${questionText}`, pageWidth - (margin * 2));
+            const explanationLines = doc.splitTextToSize(`Explanation: ${explanation}`, pageWidth - (margin * 2) - 5); // Indented slightly
+            const requiredHeight = (questionLines.length * lineHeight * 0.8) + (lineHeight * 2) + (explanationLines.length * lineHeight * 0.8) + 15; // Estimate height
+
+            addPageIfNeeded(requiredHeight);
+
+            // Print Question
+            doc.setFont("helvetica", "bold");
+            doc.text(questionLines, margin, y);
+            y += questionLines.length * lineHeight * 0.8 + 5; // Adjust spacing
+
+            // Print User Answer (Red)
+            doc.setFont("helvetica", "normal");
+            doc.setTextColor(200, 0, 0); // Red color
+            doc.text(`- Your Answer: ${userAnswersText}`, margin + 5, y);
+            y += lineHeight;
+
+            // Print Correct Answer (Green)
+            doc.setTextColor(34, 139, 34); // ForestGreen color
+            doc.text(`- Correct Answer: ${correctAnswersText}`, margin + 5, y);
+            y += lineHeight;
+
+            // Print Explanation (Black, Italic)
+            doc.setTextColor(0, 0, 0); // Reset to black
+            doc.setFont("helvetica", "italic");
+            doc.setFontSize(smallFontSize); // Smaller font for explanation
+            doc.text(explanationLines, margin + 5, y);
+            y += explanationLines.length * lineHeight * 0.8 + 5; // Adjust spacing
+            doc.setFontSize(textFontSize); // Reset font size
+            doc.setFont("helvetica", "normal"); // Reset font style
+
+            y += 5; // Extra space between questions
         });
     }
+
+    // --- Save the PDF ---
+    try {
+        const date = new Date().toISOString().slice(0, 10);
+        // Sanitize title for filename
+        const safeTitle = (quizTitle || 'Quiz').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        doc.save(`Dentist-${safeTitle}-${date}.pdf`);
+        showNotification('PDF summary has been downloaded!', 'success');
+    } catch (error) {
+        console.error("Error saving PDF:", error);
+        showNotification('Failed to save the PDF summary.', 'error');
+    }
+}
+
+// --- دالة بدء كويز جديد ---
+async function startQuiz(quizId) {
+    // Clear any previous quiz state first
+    localStorage.removeItem('quizState');
+    proQuiz = null;
+    proQuestionIndex = 0;
+    proUserAnswers = [];
+    quizStartTime = 0;
+    clearInterval(quizTimerInterval);
+    quizTimerInterval = null;
+
+    showNotification('Loading quiz...', 'info'); // Loading indicator
+
+    try {
+        // Use fetchApi to get quiz data
+        const quizData = await fetchApi(`/api/content/quiz/${quizId}`);
+
+        if (!quizData || !quizData.questions || quizData.questions.length === 0) {
+            showNotification('This quiz has no questions or failed to load.', 'error');
+            return; // Stop if quiz data is invalid
+        }
+
+        // Initialize and start the quiz with the fetched data
+        initializeAndStartQuiz(quizData);
+
+    } catch (error) {
+        showNotification(`Error loading quiz: ${error.message}`, 'error');
+        console.error('Failed to start quiz:', error);
+        // Optionally, navigate back or show an error message on the page
+        showPage('#subjects-page'); // Example: Go back to subjects on error
+    }
+}
+
+// ✅ --- دالة جديدة لتهيئة وبدء الكويز (لتجنب التكرار) ---
+function initializeAndStartQuiz(quizData) {
+    proQuiz = quizData; // Store the quiz data
+    proQuestionIndex = 0; // Start at the first question
+    proUserAnswers = new Array(proQuiz.questions.length).fill(null); // Reset answers array
+    quizStartTime = Date.now(); // Record start time
+
+    // Update UI elements with quiz title and subject name
+    if (quizLessonNameEl) quizLessonNameEl.textContent = proQuiz.title || 'Quiz';
+    if (quizSubjectNameEl) quizSubjectNameEl.textContent = proQuiz.subjectName || ''; // Use subjectName if available
+
+    // Render the UI components for the quiz
+    renderQuestionList(); // Build the question number navigation
+    renderCurrentQuestion(); // Display the first question
+    updateStats(); // Initialize the stats display (0 correct, 0 incorrect)
+
+    // Save initial state immediately (in case of immediate refresh)
+    saveQuizState();
+
+    showPage('#quiz-taking-page'); // Navigate to the quiz taking page
+}
+
+// ✅ --- دالة جديدة لحفظ حالة الكويز في localStorage ---
+function saveQuizState() {
+    if (proQuiz && proUserAnswers) { // Only save if a quiz is active
+        const stateToSave = {
+            savedProQuiz: proQuiz,
+            savedProQuestionIndex: proQuestionIndex,
+            savedProUserAnswers: proUserAnswers,
+            savedQuizStartTime: quizStartTime // Save start time too
+        };
+        localStorage.setItem('quizState', JSON.stringify(stateToSave));
+        // console.log("Quiz state saved at index:", proQuestionIndex); // For debugging
+    }
+}
+
+// --- دالة عرض قائمة أرقام الأسئلة ---
+function renderQuestionList() {
+    if (!quizQuestionNumbersContainer || !proQuiz || !proQuiz.questions) return; // Safety check
+
+    quizQuestionNumbersContainer.innerHTML = ''; // Clear previous numbers
+
+    proQuiz.questions.forEach((_, index) => {
+        const numEl = document.createElement('div');
+        numEl.className = 'question-number-pro';
+        numEl.textContent = index + 1;
+        numEl.dataset.index = index; // Store index for navigation
+
+        // Highlight the current question
+        if (index === proQuestionIndex) {
+            numEl.classList.add('current');
+        }
+
+        // Style based on answer status
+        const answer = proUserAnswers[index];
+        if (answer !== null) { // Check if answered (could be correct or incorrect)
+            numEl.classList.add('answered');
+            if (answer.isCorrect === true) {
+                numEl.classList.add('correct');
+            } else if (answer.isCorrect === false) {
+                numEl.classList.add('incorrect');
+            }
+            // Add a style for skipped/unanswered if needed
+        }
+
+        // Add click listener to navigate to the question
+        numEl.addEventListener('click', () => {
+            proQuestionIndex = index; // Update current index
+            renderCurrentQuestion(); // Re-render the clicked question
+            // No need to save state here, renderCurrentQuestion handles controls which might trigger save
+        });
+        quizQuestionNumbersContainer.appendChild(numEl);
+    });
+}
 
 // --- دالة عرض السؤال الحالي ---
 function renderCurrentQuestion() {
     // Stop any existing timer for the previous question
     clearInterval(quizTimerInterval);
-    quizTimerInterval = null; 
+    quizTimerInterval = null;
 
     // Ensure quiz data and current question exist
     if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) {
@@ -2255,10 +2197,10 @@ function renderCurrentQuestion() {
     const correctIndexesRaw = question.correctOptionIndexes ?? question.correctIndex ?? question.answer ?? question.answerIndex;
     let correctIndexes = [];
     if (correctIndexesRaw !== undefined && correctIndexesRaw !== null) {
-         correctIndexes = Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw];
+        correctIndexes = Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw];
     } else {
-         console.warn("Correct answer index missing for question:", proQuestionIndex, question);
-         // Decide how to handle missing answers (e.g., skip, mark as unanswerable)
+        console.warn("Correct answer index missing for question:", proQuestionIndex, question);
+        // Decide how to handle missing answers (e.g., skip, mark as unanswerable)
     }
     const options = question.options || [];
     const explanation = question.explanation || question.Explanation || ''; // Handle both possible keys
@@ -2266,8 +2208,8 @@ function renderCurrentQuestion() {
     // Basic check for essential data
     if (options.length === 0 || correctIndexesRaw === undefined) {
         console.error("Incomplete question data (options or correct index missing):", proQuestionIndex, question);
-        if(quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = "Error: Question data is incomplete. Please skip or report.";
-        if(quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
+        if (quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = "Error: Question data is incomplete. Please skip or report.";
+        if (quizOptionsContainer_pro) quizOptionsContainer_pro.innerHTML = '';
         updateQuizControls();
         return;
     }
@@ -2281,21 +2223,21 @@ function renderCurrentQuestion() {
     if (quizProgressEl_pro) quizProgressEl_pro.textContent = `Question ${proQuestionIndex + 1} of ${proQuiz.questions.length}`;
     // Update question text
     if (quizQuestionTextEl_pro) quizQuestionTextEl_pro.textContent = questionText;
-    
+
     // Clear previous options and explanation
     if (quizOptionsContainer_pro) {
-         quizOptionsContainer_pro.innerHTML = '';
-         // Set class for single/multiple choice styling
-         quizOptionsContainer_pro.className = 'quiz-options-container-pro ' + (isMultipleChoice ? 'multiple-choice' : 'single-choice');
+        quizOptionsContainer_pro.innerHTML = '';
+        // Set class for single/multiple choice styling
+        quizOptionsContainer_pro.className = 'quiz-options-container-pro ' + (isMultipleChoice ? 'multiple-choice' : 'single-choice');
     }
     if (quizExplanationContainer) quizExplanationContainer.style.display = 'none'; // Hide explanation initially
 
     // Remove any previous image
-     if (quizQuestionTextEl_pro) {
-         const parentArea = quizQuestionTextEl_pro.parentElement;
-         const oldImageContainer = parentArea?.querySelector('.quiz-image-display');
-         if (oldImageContainer) { oldImageContainer.remove(); }
-     }
+    if (quizQuestionTextEl_pro) {
+        const parentArea = quizQuestionTextEl_pro.parentElement;
+        const oldImageContainer = parentArea?.querySelector('.quiz-image-display');
+        if (oldImageContainer) { oldImageContainer.remove(); }
+    }
 
     // Display image if available
     if (question.imageUrl && quizQuestionTextEl_pro) {
@@ -2306,7 +2248,7 @@ function renderCurrentQuestion() {
         const imageUrl = question.imageUrl.startsWith('http') ? question.imageUrl : `${serverUrl}${question.imageUrl}`;
         imgContainer.innerHTML = `<img src="${imageUrl}" alt="Question Illustration">`;
         // Insert image after the question text
-        quizQuestionTextEl_pro.after(imgContainer); 
+        quizQuestionTextEl_pro.after(imgContainer);
     }
 
     // --- Render Options ---
@@ -2325,7 +2267,7 @@ function renderCurrentQuestion() {
             const count = question.stats.optionSelectionCounts[index] || 0;
             const total = question.stats.totalAnswers;
             const percentage = Math.round((count / total) * 100);
-            
+
             // Background bar for percentage
             statsHtml = `
                 <div class="option-stats-bar" style="width: ${percentage}%;"></div>
@@ -2344,12 +2286,12 @@ function renderCurrentQuestion() {
         if (!isAnswered) {
             if (isMultipleChoice) {
                 // Toggle selection for multiple choice
-                optionEl.addEventListener('click', () => toggleOption(index)); 
+                optionEl.addEventListener('click', () => toggleOption(index));
             } else {
                 // Select single option for single choice
-                optionEl.addEventListener('click', () => selectOption(index)); 
+                optionEl.addEventListener('click', () => selectOption(index));
             }
-        } 
+        }
         // Apply styling if the question IS answered
         else {
             const answerData = proUserAnswers[proQuestionIndex];
@@ -2357,14 +2299,14 @@ function renderCurrentQuestion() {
 
             // Mark correct options
             if (correctIndexes.includes(index)) {
-                 optionEl.classList.add('correct');
+                optionEl.classList.add('correct');
             }
             // Mark selected options
             if (selectedIndexes.includes(index)) {
                 optionEl.classList.add('selected');
                 // Mark incorrect if selected but not correct
                 if (!correctIndexes.includes(index)) {
-                     optionEl.classList.add('incorrect');
+                    optionEl.classList.add('incorrect');
                 }
             }
         }
@@ -2382,184 +2324,184 @@ function renderCurrentQuestion() {
         // Start timer only if not answered
         startQuizTimer(question.timer || 90); // Use question timer or default 90s
     } else {
-         // If answered, show "Done!" or similar, disable timer visuals
-         if(quizTimerDisplay) quizTimerDisplay.textContent = "Answered";
-         if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
-         if(quizTimerDisplay) quizTimerDisplay.style.opacity = '0.7'; // Dim the timer display
+        // If answered, show "Done!" or similar, disable timer visuals
+        if (quizTimerDisplay) quizTimerDisplay.textContent = "Answered";
+        if (quizTimerContainer) quizTimerContainer.classList.remove('warning');
+        if (quizTimerDisplay) quizTimerDisplay.style.opacity = '0.7'; // Dim the timer display
     }
-    
+
     // Update navigation buttons (Prev, Next, Skip, Check)
     updateQuizControls();
     // Update the question number list highlighting
-    renderQuestionList(); 
+    renderQuestionList();
 }
 
-    
-    // ✅ --- [إصلاح] دالة بدء عداد الكويز (اسم جديد) ---
-    let isQuizTimerActive = true; // Global flag to control timer activation
-    function startQuizTimer(duration) {
-        clearInterval(quizTimerInterval); // Clear any existing interval first
-        quizTimerInterval = null;
 
-        // Exit if timer is globally disabled
-        if (!isQuizTimerActive) {
-            if (quizTimerDisplay) quizTimerDisplay.textContent = "Off";
-            if (quizTimerDisplay) quizTimerDisplay.style.opacity = '0.6';
-            if (quizTimerContainer) quizTimerContainer.classList.remove('warning');
-            return; 
+// ✅ --- [إصلاح] دالة بدء عداد الكويز (اسم جديد) ---
+let isQuizTimerActive = true; // Global flag to control timer activation
+function startQuizTimer(duration) {
+    clearInterval(quizTimerInterval); // Clear any existing interval first
+    quizTimerInterval = null;
+
+    // Exit if timer is globally disabled
+    if (!isQuizTimerActive) {
+        if (quizTimerDisplay) quizTimerDisplay.textContent = "Off";
+        if (quizTimerDisplay) quizTimerDisplay.style.opacity = '0.6';
+        if (quizTimerContainer) quizTimerContainer.classList.remove('warning');
+        return;
+    }
+
+    // Ensure duration is a positive number
+    let timeLeft = parseInt(duration);
+    if (isNaN(timeLeft) || timeLeft <= 0) {
+        timeLeft = 90; // Default to 90 seconds if duration is invalid
+    }
+
+    // Reset visual state
+    if (quizTimerContainer) quizTimerContainer.classList.remove('warning');
+    if (quizTimerDisplay) quizTimerDisplay.style.opacity = '1'; // Make sure it's visible
+
+    function updateDisplay() {
+        if (!quizTimerDisplay) return; // Exit if element removed
+        const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+        const seconds = (timeLeft % 60).toString().padStart(2, '0');
+        quizTimerDisplay.textContent = `${minutes}:${seconds}`;
+        // Add warning class for last 10 seconds
+        if (quizTimerContainer) quizTimerContainer.classList.toggle('warning', timeLeft <= 10);
+    }
+
+    updateDisplay(); // Initial display
+
+    // Start the interval
+    quizTimerInterval = setInterval(() => {
+        timeLeft--;
+        updateDisplay();
+        // When timer reaches zero
+        if (timeLeft <= 0) {
+            clearInterval(quizTimerInterval);
+            quizTimerInterval = null;
+            timeUp(); // Call the timeUp function
         }
-        
-        // Ensure duration is a positive number
-        let timeLeft = parseInt(duration);
-        if (isNaN(timeLeft) || timeLeft <= 0) {
-             timeLeft = 90; // Default to 90 seconds if duration is invalid
-        }
+    }, 1000);
+}
 
-        // Reset visual state
-        if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
-        if(quizTimerDisplay) quizTimerDisplay.style.opacity = '1'; // Make sure it's visible
+// --- دالة انتهاء وقت السؤال ---
+function timeUp() {
+    showNotification("Time's up for this question!", 'error');
+    // Mark the question as incorrect with no selected answer
+    proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false };
+    saveQuizState(); // ✅ حفظ الحالة بعد انتهاء الوقت
+    renderCurrentQuestion(); // Re-render to show feedback and disable options
+    updateStats(); // Update overall stats
+}
 
-        function updateDisplay() {
-            if (!quizTimerDisplay) return; // Exit if element removed
-            const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-            const seconds = (timeLeft % 60).toString().padStart(2, '0');
-            quizTimerDisplay.textContent = `${minutes}:${seconds}`;
-            // Add warning class for last 10 seconds
-            if(quizTimerContainer) quizTimerContainer.classList.toggle('warning', timeLeft <= 10);
-        }
-        
-        updateDisplay(); // Initial display
+// --- دالة اختيار خيار (إجابة واحدة) ---
+function selectOption(selectedIndex) {
+    if (!quizOptionsContainer_pro) return;
+    // Deselect any previously selected option
+    document.querySelectorAll('.quiz-option-pro.selected').forEach(btn => btn.classList.remove('selected'));
+    // Select the clicked option
+    const selectedBtn = quizOptionsContainer_pro.querySelector(`[data-index="${selectedIndex}"]`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('selected');
+    }
+    // Enable the Check Answer button
+    if (quizActionBtn) quizActionBtn.disabled = false;
+    if (quizSkipBtn) quizSkipBtn.disabled = true; // Disable skip if an answer is selected
+}
 
-        // Start the interval
-        quizTimerInterval = setInterval(() => {
-            timeLeft--;
-            updateDisplay();
-            // When timer reaches zero
-            if (timeLeft <= 0) {
-                clearInterval(quizTimerInterval);
-                quizTimerInterval = null;
-                timeUp(); // Call the timeUp function
-            }
-        }, 1000);
+// --- دالة تبديل اختيار خيار (إجابات متعددة) ---
+function toggleOption(selectedIndex) {
+    if (!quizOptionsContainer_pro) return;
+    const selectedBtn = quizOptionsContainer_pro.querySelector(`[data-index="${selectedIndex}"]`);
+    if (selectedBtn) {
+        selectedBtn.classList.toggle('selected'); // Toggle the 'selected' class
+    }
+    // Enable Check Answer button only if at least one option is selected
+    const anySelected = quizOptionsContainer_pro.querySelector('.selected');
+    if (quizActionBtn) quizActionBtn.disabled = !anySelected;
+    if (quizSkipBtn) quizSkipBtn.disabled = !!anySelected; // Disable skip if any answer is selected
+}
+
+// --- دالة التحقق من الإجابة ---
+function checkAnswer() {
+    clearInterval(quizTimerInterval); // Stop the timer for this question
+    quizTimerInterval = null;
+
+    if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) return; // Safety check
+
+    const question = proQuiz.questions[proQuestionIndex];
+    const selectedElements = quizOptionsContainer_pro?.querySelectorAll('.selected');
+
+    // Determine correct indexes safely
+    const correctIndexesRaw = question.correctOptionIndexes ?? question.correctIndex ?? question.answer ?? question.answerIndex;
+    const correctIndexes = (Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw]).sort((a, b) => a - b);
+
+    // Get selected indexes safely
+    const selectedIndexes = selectedElements ? Array.from(selectedElements).map(el => parseInt(el.dataset.index)).sort((a, b) => a - b) : [];
+
+    // Determine correctness
+    let isCorrect = false;
+    if (selectedIndexes.length > 0) { // Only check if something was selected
+        // Correct if lengths match and all elements are the same
+        isCorrect = selectedIndexes.length === correctIndexes.length && selectedIndexes.every((val, i) => val === correctIndexes[i]);
     }
 
-    // --- دالة انتهاء وقت السؤال ---
-    function timeUp() {
-        showNotification("Time's up for this question!", 'error');
-        // Mark the question as incorrect with no selected answer
-        proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false }; 
-        saveQuizState(); // ✅ حفظ الحالة بعد انتهاء الوقت
-        renderCurrentQuestion(); // Re-render to show feedback and disable options
-        updateStats(); // Update overall stats
-    }
+    // Store the result
+    proUserAnswers[proQuestionIndex] = { selectedIndexes: selectedIndexes, isCorrect: isCorrect };
+    saveQuizState(); // ✅ حفظ الحالة بعد الإجابة
 
-    // --- دالة اختيار خيار (إجابة واحدة) ---
-    function selectOption(selectedIndex) {
-        if (!quizOptionsContainer_pro) return;
-        // Deselect any previously selected option
-        document.querySelectorAll('.quiz-option-pro.selected').forEach(btn => btn.classList.remove('selected'));
-        // Select the clicked option
-        const selectedBtn = quizOptionsContainer_pro.querySelector(`[data-index="${selectedIndex}"]`);
-        if (selectedBtn) {
-            selectedBtn.classList.add('selected');
-        }
-        // Enable the Check Answer button
-        if(quizActionBtn) quizActionBtn.disabled = false;
-        if(quizSkipBtn) quizSkipBtn.disabled = true; // Disable skip if an answer is selected
-    }
+    renderCurrentQuestion(); // Re-render the question to show feedback
+    updateStats(); // Update the overall quiz stats
+}
 
-    // --- دالة تبديل اختيار خيار (إجابات متعددة) ---
-    function toggleOption(selectedIndex) {
-        if (!quizOptionsContainer_pro) return;
-        const selectedBtn = quizOptionsContainer_pro.querySelector(`[data-index="${selectedIndex}"]`);
-        if (selectedBtn) {
-            selectedBtn.classList.toggle('selected'); // Toggle the 'selected' class
-        }
-        // Enable Check Answer button only if at least one option is selected
-        const anySelected = quizOptionsContainer_pro.querySelector('.selected');
-        if(quizActionBtn) quizActionBtn.disabled = !anySelected;
-        if(quizSkipBtn) quizSkipBtn.disabled = !!anySelected; // Disable skip if any answer is selected
-    }
+// --- دالة تحديث إحصائيات الكويز (صحيح/خطأ/درجة) ---
+function updateStats() {
+    if (!proQuiz || !proUserAnswers || !quizCorrectCountEl || !quizIncorrectCountEl || !quizScoreEl) return; // Safety check
 
-    // --- دالة التحقق من الإجابة ---
-    function checkAnswer() {
-        clearInterval(quizTimerInterval); // Stop the timer for this question
-        quizTimerInterval = null; 
+    // Count correct answers (explicitly true)
+    const correctCount = proUserAnswers.filter(a => a && a.isCorrect === true).length;
+    // Count incorrect answers (explicitly false)
+    const incorrectCount = proUserAnswers.filter(a => a && a.isCorrect === false).length;
+    // Calculate score out of 20
+    const totalQuestions = proQuiz.questions.length;
+    const score = totalQuestions > 0 ? (correctCount / totalQuestions) * 20 : 0;
 
-        if (!proQuiz || !proQuiz.questions || !proQuiz.questions[proQuestionIndex]) return; // Safety check
+    // Update DOM elements
+    quizCorrectCountEl.textContent = correctCount;
+    quizIncorrectCountEl.textContent = incorrectCount;
+    quizScoreEl.textContent = `${score.toFixed(2)} / 20`;
+}
 
-        const question = proQuiz.questions[proQuestionIndex];
-        const selectedElements = quizOptionsContainer_pro?.querySelectorAll('.selected');
-        
-        // Determine correct indexes safely
-        const correctIndexesRaw = question.correctOptionIndexes ?? question.correctIndex ?? question.answer ?? question.answerIndex;
-        const correctIndexes = (Array.isArray(correctIndexesRaw) ? correctIndexesRaw : [correctIndexesRaw]).sort((a, b) => a - b);
-        
-        // Get selected indexes safely
-        const selectedIndexes = selectedElements ? Array.from(selectedElements).map(el => parseInt(el.dataset.index)).sort((a, b) => a - b) : [];
-        
-        // Determine correctness
-        let isCorrect = false;
-        if (selectedIndexes.length > 0) { // Only check if something was selected
-             // Correct if lengths match and all elements are the same
-            isCorrect = selectedIndexes.length === correctIndexes.length && selectedIndexes.every((val, i) => val === correctIndexes[i]);
-        }
-        
-        // Store the result
-        proUserAnswers[proQuestionIndex] = { selectedIndexes: selectedIndexes, isCorrect: isCorrect };
-        saveQuizState(); // ✅ حفظ الحالة بعد الإجابة
-        
-        renderCurrentQuestion(); // Re-render the question to show feedback
-        updateStats(); // Update the overall quiz stats
-    }
+// ✅ --- (تعديل) دالة تحديث أزرار التحكم بالكويز (مع زر التخطي) ---
+function updateQuizControls() {
+    // Safety checks for elements
+    if (!quizPrevBtn || !quizActionBtn || !quizNextBtn_pro || !quizSkipBtn || !proQuiz || !proQuiz.questions) return;
 
-    // --- دالة تحديث إحصائيات الكويز (صحيح/خطأ/درجة) ---
-    function updateStats() {
-        if (!proQuiz || !proUserAnswers || !quizCorrectCountEl || !quizIncorrectCountEl || !quizScoreEl) return; // Safety check
+    const isAnswered = proUserAnswers[proQuestionIndex] !== null;
+    const isFirstQuestion = proQuestionIndex === 0;
+    const isLastQuestion = proQuestionIndex === proQuiz.questions.length - 1;
 
-        // Count correct answers (explicitly true)
-        const correctCount = proUserAnswers.filter(a => a && a.isCorrect === true).length;
-        // Count incorrect answers (explicitly false)
-        const incorrectCount = proUserAnswers.filter(a => a && a.isCorrect === false).length;
-        // Calculate score out of 20
-        const totalQuestions = proQuiz.questions.length;
-        const score = totalQuestions > 0 ? (correctCount / totalQuestions) * 20 : 0;
+    // Previous Button: Enabled unless it's the first question
+    quizPrevBtn.disabled = isFirstQuestion;
 
-        // Update DOM elements
-        quizCorrectCountEl.textContent = correctCount;
-        quizIncorrectCountEl.textContent = incorrectCount;
-        quizScoreEl.textContent = `${score.toFixed(2)} / 20`;
-    }
+    // Check Answer Button: Visible only if NOT answered
+    quizActionBtn.style.display = isAnswered ? 'none' : 'block';
+    // Disabled initially, enabled when an option is selected (handled in selectOption/toggleOption)
+    quizActionBtn.disabled = true;
 
-    // ✅ --- (تعديل) دالة تحديث أزرار التحكم بالكويز (مع زر التخطي) ---
-    function updateQuizControls() {
-         // Safety checks for elements
-         if (!quizPrevBtn || !quizActionBtn || !quizNextBtn_pro || !quizSkipBtn || !proQuiz || !proQuiz.questions) return;
-        
-        const isAnswered = proUserAnswers[proQuestionIndex] !== null;
-        const isFirstQuestion = proQuestionIndex === 0;
-        const isLastQuestion = proQuestionIndex === proQuiz.questions.length - 1;
+    // Skip Button: Visible only if NOT answered
+    quizSkipBtn.style.display = isAnswered ? 'none' : 'block';
+    // Enabled initially, disabled if an option is selected
+    quizSkipBtn.disabled = false;
 
-        // Previous Button: Enabled unless it's the first question
-        quizPrevBtn.disabled = isFirstQuestion;
-
-        // Check Answer Button: Visible only if NOT answered
-        quizActionBtn.style.display = isAnswered ? 'none' : 'block';
-        // Disabled initially, enabled when an option is selected (handled in selectOption/toggleOption)
-        quizActionBtn.disabled = true; 
-
-        // Skip Button: Visible only if NOT answered
-        quizSkipBtn.style.display = isAnswered ? 'none' : 'block';
-         // Enabled initially, disabled if an option is selected
-        quizSkipBtn.disabled = false;
-
-        // Next/Finish Button: Visible only if answered
-        quizNextBtn_pro.style.display = isAnswered ? 'block' : 'none';
-        // Change text to 'Finish' on the last question
-        quizNextBtn_pro.innerHTML = isLastQuestion ? 'Finish <i class="fas fa-check-circle"></i>' : '<i class="fas fa-arrow-right"></i>';
-        quizNextBtn_pro.title = isLastQuestion ? 'Finish Quiz' : 'Next Question';
-    }
-    // ===================================================================
+    // Next/Finish Button: Visible only if answered
+    quizNextBtn_pro.style.display = isAnswered ? 'block' : 'none';
+    // Change text to 'Finish' on the last question
+    quizNextBtn_pro.innerHTML = isLastQuestion ? 'Finish <i class="fas fa-check-circle"></i>' : '<i class="fas fa-arrow-right"></i>';
+    quizNextBtn_pro.title = isLastQuestion ? 'Finish Quiz' : 'Next Question';
+}
+// ===================================================================
 // --- [إضافة جديدة] دالة لإضافة مستمع حفظ الكويز ---
 // ===================================================================
 
@@ -2617,96 +2559,96 @@ function attachSaveQuizListener(buttonElement) {
 // --- [إضافة جديدة ومحصّنة] منطق لوحة الأداء (Dashboard) ---
 // ===================================================================
 
-    // ... باقي الكود الخاص بك يستمر هنا ...
-    // ===================================================================
-    // --- [إضافة جديدة ومحصّنة] منطق لوحة الأداء (Dashboard) ---
-    // ===================================================================
-    // ✅ قم بتحديث دالة fetchAndDisplayDashboardData
-    // في ملف script.js
-    // ✅ استبدل هذه الدالة بالكامل
-    async function fetchAndDisplayDashboardData() {
-        // Ensure necessary elements exist before proceeding
-        const dashboardTotalXpEl = document.getElementById('dashboard-total-xp');
-        const dashboardBadgeCountEl = document.getElementById('dashboard-badge-count');
-        const dashboardQuizCountEl = document.getElementById('dashboard-quiz-count');
-        const recentList = document.getElementById('recent-quizzes-list');
-        const chartCard = document.querySelector('.chart-card');
-        const savedListContainer = document.getElementById('saved-quizzes-list');
+// ... باقي الكود الخاص بك يستمر هنا ...
+// ===================================================================
+// --- [إضافة جديدة ومحصّنة] منطق لوحة الأداء (Dashboard) ---
+// ===================================================================
+// ✅ قم بتحديث دالة fetchAndDisplayDashboardData
+// في ملف script.js
+// ✅ استبدل هذه الدالة بالكامل
+async function fetchAndDisplayDashboardData() {
+    // Ensure necessary elements exist before proceeding
+    const dashboardTotalXpEl = document.getElementById('dashboard-total-xp');
+    const dashboardBadgeCountEl = document.getElementById('dashboard-badge-count');
+    const dashboardQuizCountEl = document.getElementById('dashboard-quiz-count');
+    const recentList = document.getElementById('recent-quizzes-list');
+    const chartCard = document.querySelector('.chart-card');
+    const savedListContainer = document.getElementById('saved-quizzes-list');
 
-        if (!dashboardTotalXpEl || !dashboardBadgeCountEl || !dashboardQuizCountEl || !recentList || !chartCard || !savedListContainer) {
-            console.error("One or more dashboard elements are missing.");
-            showNotification("Could not load dashboard components.", "error");
-            return;
+    if (!dashboardTotalXpEl || !dashboardBadgeCountEl || !dashboardQuizCountEl || !recentList || !chartCard || !savedListContainer) {
+        console.error("One or more dashboard elements are missing.");
+        showNotification("Could not load dashboard components.", "error");
+        return;
+    }
+
+    // Show loading state (optional)
+    recentList.innerHTML = '<li>Loading recent activities...</li>';
+    chartCard.innerHTML = `<h3>Performance by Subject</h3><p>Loading performance data...</p>`;
+    savedListContainer.innerHTML = '<p>Loading your saved quizzes...</p>';
+
+    try {
+        // Fetch dashboard data and user profile concurrently
+        const [data, userProfile, savedQuizzes] = await Promise.all([
+            fetchApi('/api/results/dashboard'),
+            fetchUserProfile(), // Re-fetch profile for latest XP/badges
+            fetchApi('/api/saved-quizzes')
+        ]);
+
+        // --- Update General Stats ---
+        if (userProfile) {
+            dashboardTotalXpEl.textContent = userProfile.experiencePoints || 0;
+            dashboardBadgeCountEl.textContent = (userProfile.badges && userProfile.badges.length) || 0;
+        } else {
+            // Handle case where profile fetch might fail after initial load
+            dashboardTotalXpEl.textContent = '-';
+            dashboardBadgeCountEl.textContent = '-';
         }
+        dashboardQuizCountEl.textContent = data?.totalQuizzesTaken || 0;
 
-        // Show loading state (optional)
-        recentList.innerHTML = '<li>Loading recent activities...</li>';
-        chartCard.innerHTML = `<h3>Performance by Subject</h3><p>Loading performance data...</p>`;
-        savedListContainer.innerHTML = '<p>Loading your saved quizzes...</p>';
+        // --- Update Recent Quizzes List ---
+        recentList.innerHTML = ''; // Clear loading message
+        if (data?.recentQuizzes && data.recentQuizzes.length > 0) {
+            data.recentQuizzes.forEach(result => {
+                if (!result) return; // Skip null/undefined results
 
-        try {
-            // Fetch dashboard data and user profile concurrently
-            const [data, userProfile, savedQuizzes] = await Promise.all([
-                fetchApi('/api/results/dashboard'),
-                fetchUserProfile(), // Re-fetch profile for latest XP/badges
-                fetchApi('/api/saved-quizzes')
-            ]);
+                let quizTitle = 'Quiz'; // Default title
+                // Smartly determine quiz title based on structure or ID prefix
+                if (result.quiz && typeof result.quiz === 'object' && result.quiz.title) {
+                    quizTitle = result.quiz.title; // Normal quiz with title object
+                } else if (typeof result.quiz === 'string' && result.quiz.startsWith('mistakes_')) {
+                    quizTitle = 'Mistakes Review'; // Mistakes quiz by ID prefix
+                } else if (typeof result.quiz === 'string' && result.quiz.startsWith('ai-generated-')) {
+                    quizTitle = 'AI Generated Quiz'; // AI quiz by ID prefix
+                } else if (result.quizTitle) { // Fallback to quizTitle if present directly
+                    quizTitle = result.quizTitle;
+                }
 
-            // --- Update General Stats ---
-            if (userProfile) {
-                dashboardTotalXpEl.textContent = userProfile.experiencePoints || 0;
-                dashboardBadgeCountEl.textContent = (userProfile.badges && userProfile.badges.length) || 0;
-            } else {
-                 // Handle case where profile fetch might fail after initial load
-                 dashboardTotalXpEl.textContent = '-';
-                 dashboardBadgeCountEl.textContent = '-';
-            }
-            dashboardQuizCountEl.textContent = data?.totalQuizzesTaken || 0;
-
-            // --- Update Recent Quizzes List ---
-            recentList.innerHTML = ''; // Clear loading message
-            if (data?.recentQuizzes && data.recentQuizzes.length > 0) {
-                data.recentQuizzes.forEach(result => {
-                    if (!result) return; // Skip null/undefined results
-
-                    let quizTitle = 'Quiz'; // Default title
-                    // Smartly determine quiz title based on structure or ID prefix
-                    if (result.quiz && typeof result.quiz === 'object' && result.quiz.title) {
-                        quizTitle = result.quiz.title; // Normal quiz with title object
-                    } else if (typeof result.quiz === 'string' && result.quiz.startsWith('mistakes_')) {
-                        quizTitle = 'Mistakes Review'; // Mistakes quiz by ID prefix
-                    } else if (typeof result.quiz === 'string' && result.quiz.startsWith('ai-generated-')) {
-                        quizTitle = 'AI Generated Quiz'; // AI quiz by ID prefix
-                    } else if (result.quizTitle) { // Fallback to quizTitle if present directly
-                        quizTitle = result.quizTitle;
-                    }
-
-                    const li = document.createElement('li');
-                    li.innerHTML = `
+                const li = document.createElement('li');
+                li.innerHTML = `
                         <span class="quiz-title">${quizTitle}</span>
                         <span class="quiz-score">${(result.score ?? 0).toFixed(2)} / 20</span>
                     `;
-                    recentList.appendChild(li);
-                });
-            } else {
-                recentList.innerHTML = '<li>No quizzes completed yet. Start a quiz!</li>';
-            }
-            
-            // --- Display Performance by Subject ---
-            chartCard.innerHTML = `<h3>Performance by Subject</h3>`; // Clear loading message
-            if (data?.performanceBySubject && data.performanceBySubject.length > 0) {
-                const subjectList = document.createElement('ul');
-                subjectList.className = 'performance-list';
-                data.performanceBySubject.forEach(subject => {
-                    // Ensure subject data is valid
-                    if (!subject || !subject.subjectId || !subject.subjectName) return; 
-                    
-                    const listItem = document.createElement('li');
-                    const averageScore = subject.averageScore ?? 0;
-                    const percentage = averageScore > 0 ? (averageScore / 20) * 100 : 0; // Calculate percentage safely
-                    const mistakeCount = subject.mistakeCount || 0;
+                recentList.appendChild(li);
+            });
+        } else {
+            recentList.innerHTML = '<li>No quizzes completed yet. Start a quiz!</li>';
+        }
 
-                    listItem.innerHTML = `
+        // --- Display Performance by Subject ---
+        chartCard.innerHTML = `<h3>Performance by Subject</h3>`; // Clear loading message
+        if (data?.performanceBySubject && data.performanceBySubject.length > 0) {
+            const subjectList = document.createElement('ul');
+            subjectList.className = 'performance-list';
+            data.performanceBySubject.forEach(subject => {
+                // Ensure subject data is valid
+                if (!subject || !subject.subjectId || !subject.subjectName) return;
+
+                const listItem = document.createElement('li');
+                const averageScore = subject.averageScore ?? 0;
+                const percentage = averageScore > 0 ? (averageScore / 20) * 100 : 0; // Calculate percentage safely
+                const mistakeCount = subject.mistakeCount || 0;
+
+                listItem.innerHTML = `
                         <div class="subject-info">
                             <span class="subject-name">${subject.subjectName}</span>
                             <span class="subject-score">${averageScore.toFixed(1)}/20</span>
@@ -2722,35 +2664,35 @@ function attachSaveQuizListener(buttonElement) {
                             <i class="fas fa-search"></i> Review Mistakes (${mistakeCount})
                         </button>
                     `;
-                    subjectList.appendChild(listItem);
-                });
-                chartCard.appendChild(subjectList);
-                
-                // Add event listener for mistake review buttons (using event delegation)
-                // Ensure listener is added only once
-                if (!chartCard.dataset.listenerAttached) {
-                     chartCard.addEventListener('click', (event) => {
-                         const reviewButton = event.target.closest('.review-mistakes-btn:not(:disabled)'); // Target only enabled buttons
-                         if (reviewButton) {
-                             startMistakesQuiz(reviewButton.dataset.subjectId, reviewButton.dataset.subjectName);
-                         }
-                     });
-                     chartCard.dataset.listenerAttached = 'true';
-                }
+                subjectList.appendChild(listItem);
+            });
+            chartCard.appendChild(subjectList);
 
-            } else {
-                chartCard.innerHTML += `<p>No performance data yet. Complete quizzes to see stats!</p>`;
+            // Add event listener for mistake review buttons (using event delegation)
+            // Ensure listener is added only once
+            if (!chartCard.dataset.listenerAttached) {
+                chartCard.addEventListener('click', (event) => {
+                    const reviewButton = event.target.closest('.review-mistakes-btn:not(:disabled)'); // Target only enabled buttons
+                    if (reviewButton) {
+                        startMistakesQuiz(reviewButton.dataset.subjectId, reviewButton.dataset.subjectName);
+                    }
+                });
+                chartCard.dataset.listenerAttached = 'true';
             }
 
-            // --- Display Saved Quizzes ---
-            savedListContainer.innerHTML = ''; // Clear loading message
-            if (savedQuizzes && savedQuizzes.length > 0) {
-                savedQuizzes.forEach(quiz => {
-                     if (!quiz || !quiz._id) return; // Skip invalid saved quizzes
+        } else {
+            chartCard.innerHTML += `<p>No performance data yet. Complete quizzes to see stats!</p>`;
+        }
 
-                    const quizCard = document.createElement('div');
-                    quizCard.className = 'saved-quiz-item';
-                    quizCard.innerHTML = `
+        // --- Display Saved Quizzes ---
+        savedListContainer.innerHTML = ''; // Clear loading message
+        if (savedQuizzes && savedQuizzes.length > 0) {
+            savedQuizzes.forEach(quiz => {
+                if (!quiz || !quiz._id) return; // Skip invalid saved quizzes
+
+                const quizCard = document.createElement('div');
+                quizCard.className = 'saved-quiz-item';
+                quizCard.innerHTML = `
                         <div class="saved-quiz-info">
                             <i class="fas fa-robot"></i> <div class="saved-quiz-details">
                                 <span class="saved-quiz-title">${quiz.title || 'Saved Quiz'}</span>
@@ -2762,65 +2704,65 @@ function attachSaveQuizListener(buttonElement) {
                             <button class="btn-delete-saved-quiz" title="Delete Quiz"><i class="fas fa-trash-alt"></i></button>
                         </div>
                     `;
-                    savedListContainer.appendChild(quizCard);
-                    
-                    // Add listeners for start and delete buttons
-                    const startBtn = quizCard.querySelector('.btn-start-saved-quiz');
-                    const deleteBtn = quizCard.querySelector('.btn-delete-saved-quiz');
-                    if(startBtn) startBtn.addEventListener('click', () => startSavedQuiz(quiz));
-                    if(deleteBtn) deleteBtn.addEventListener('click', () => handleDeleteSavedQuiz(quiz._id, quizCard));
-                });
-            } else {
-                savedListContainer.innerHTML = '<p>You have not saved any AI-generated quizzes yet.</p>';
-            }
+                savedListContainer.appendChild(quizCard);
 
-        } catch (error) {
-            console.error('Error rendering dashboard:', error);
-            showNotification(`Failed to load dashboard: ${error.message}`, 'error');
-            // Display error messages in relevant sections
-            recentList.innerHTML = '<li>Could not load recent activities.</li>';
-            chartCard.innerHTML = `<h3>Performance by Subject</h3><p>Error loading performance data.</p>`;
-            savedListContainer.innerHTML = '<p>Error loading saved quizzes.</p>';
+                // Add listeners for start and delete buttons
+                const startBtn = quizCard.querySelector('.btn-start-saved-quiz');
+                const deleteBtn = quizCard.querySelector('.btn-delete-saved-quiz');
+                if (startBtn) startBtn.addEventListener('click', () => startSavedQuiz(quiz));
+                if (deleteBtn) deleteBtn.addEventListener('click', () => handleDeleteSavedQuiz(quiz._id, quizCard));
+            });
+        } else {
+            savedListContainer.innerHTML = '<p>You have not saved any AI-generated quizzes yet.</p>';
         }
+
+    } catch (error) {
+        console.error('Error rendering dashboard:', error);
+        showNotification(`Failed to load dashboard: ${error.message}`, 'error');
+        // Display error messages in relevant sections
+        recentList.innerHTML = '<li>Could not load recent activities.</li>';
+        chartCard.innerHTML = `<h3>Performance by Subject</h3><p>Error loading performance data.</p>`;
+        savedListContainer.innerHTML = '<p>Error loading saved quizzes.</p>';
+    }
+}
+
+
+// --- دالة بدء كويز مراجعة الأخطاء ---
+async function startMistakesQuiz(subjectId, subjectName) {
+    if (!subjectId || !subjectName) {
+        console.error("Missing subjectId or subjectName for mistakes quiz.");
+        return;
     }
 
+    showNotification(`Building your personalized review for ${subjectName}...`, 'info');
+    localStorage.removeItem('quizState'); // Clear any previous state
 
-    // --- دالة بدء كويز مراجعة الأخطاء ---
-    async function startMistakesQuiz(subjectId, subjectName) {
-        if (!subjectId || !subjectName) {
-            console.error("Missing subjectId or subjectName for mistakes quiz.");
-            return;
+    try {
+        // Use fetchApi to get mistake questions
+        const mistakesQuizData = await fetchApi(`/api/results/mistakes/${subjectId}`);
+
+        // Ensure data received is valid
+        if (!mistakesQuizData || !mistakesQuizData.questions || mistakesQuizData.questions.length === 0) {
+            showNotification(`No mistakes found to review for ${subjectName}.`, 'info');
+            return; // Nothing to review
         }
-        
-        showNotification(`Building your personalized review for ${subjectName}...`, 'info');
-        localStorage.removeItem('quizState'); // Clear any previous state
 
-        try {
-            // Use fetchApi to get mistake questions
-            const mistakesQuizData = await fetchApi(`/api/results/mistakes/${subjectId}`);
+        // Add necessary properties for the quiz system
+        mistakesQuizData._id = `mistakes_${subjectId}_${Date.now()}`; // Unique ID for this session
+        mistakesQuizData.title = "Mistakes Review";
+        mistakesQuizData.subject = subjectId; // Store the original subject ID
+        mistakesQuizData.subjectName = subjectName;
 
-            // Ensure data received is valid
-            if (!mistakesQuizData || !mistakesQuizData.questions || mistakesQuizData.questions.length === 0) {
-                 showNotification(`No mistakes found to review for ${subjectName}.`, 'info');
-                 return; // Nothing to review
-            }
-            
-            // Add necessary properties for the quiz system
-            mistakesQuizData._id = `mistakes_${subjectId}_${Date.now()}`; // Unique ID for this session
-            mistakesQuizData.title = "Mistakes Review";
-            mistakesQuizData.subject = subjectId; // Store the original subject ID
-            mistakesQuizData.subjectName = subjectName;
+        // Initialize and start the quiz
+        initializeAndStartQuiz(mistakesQuizData);
 
-            // Initialize and start the quiz
-            initializeAndStartQuiz(mistakesQuizData);
-
-        } catch (error) {
-            console.error('Error starting mistakes quiz:', error);
-            // Show specific error from backend if available, otherwise generic
-            showNotification(error.message || 'Could not load mistake review quiz.', 'error');
-        }
+    } catch (error) {
+        console.error('Error starting mistakes quiz:', error);
+        // Show specific error from backend if available, otherwise generic
+        showNotification(error.message || 'Could not load mistake review quiz.', 'error');
     }
-    // ===============================================
+}
+// ===============================================
 // === [تعديل] دوال منطق مؤقت البومودورو   ===
 // ===============================================
 
@@ -2834,8 +2776,8 @@ function stopAndResetPomodoroCycle() {
     document.title = originalDocTitle; // Restore original page title
     switchPomodoroView('settings'); // Show settings view
     // Reset timer display visuals immediately
-    if (progressRingFg) progressRingFg.style.strokeDashoffset = circumference; 
-    if (timeDisplayEl) timeDisplayEl.textContent = "00:00"; 
+    if (progressRingFg) progressRingFg.style.strokeDashoffset = circumference;
+    if (timeDisplayEl) timeDisplayEl.textContent = "00:00";
     if (sessionTitleEl) sessionTitleEl.textContent = 'Pomodoro';
 }
 
@@ -2847,7 +2789,7 @@ function updateTimerDisplay() {
     const seconds = secondsLeft % 60;
     // Format time as MM:SS
     timeDisplayEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    
+
     // Calculate progress for the ring (0 to 1)
     const progress = totalSeconds > 0 ? (totalSeconds - secondsLeft) / totalSeconds : 0;
     // Calculate stroke offset for the circle
@@ -2876,10 +2818,10 @@ function switchPomodoroSession() {
     clearInterval(pomodoroInterval); // Stop current timer
     pomodoroInterval = null;
     isPaused = true; // Start next session paused
-    if(pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
-    
+    if (pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
+
     // Play alarm sound if available
-    if(alarmSound) {
+    if (alarmSound) {
         alarmSound.play().catch(e => console.warn("Audio play failed:", e)); // Play sound, catch errors
     }
 
@@ -2902,15 +2844,15 @@ function switchPomodoroSession() {
         nextSessionTitle = 'Focus';
         totalSeconds = settings.focusDuration * 60;
     }
-    
+
     secondsLeft = totalSeconds; // Reset time left for the new session
-    
+
     // Update UI elements
     if (sessionTitleEl) sessionTitleEl.textContent = nextSessionTitle;
     if (sessionCounterEl) {
-         // Display session count correctly (e.g., Session 1 of 4, Session 5 of 4 for overflow)
-         const currentSessionNum = currentSession === 'focus' ? sessionsCompleted + 1 : sessionsCompleted;
-         sessionCounterEl.textContent = `Session ${currentSessionNum} / ${settings.sessionsBeforeLongBreak}`;
+        // Display session count correctly (e.g., Session 1 of 4, Session 5 of 4 for overflow)
+        const currentSessionNum = currentSession === 'focus' ? sessionsCompleted + 1 : sessionsCompleted;
+        sessionCounterEl.textContent = `Session ${currentSessionNum} / ${settings.sessionsBeforeLongBreak}`;
     }
     updateTimerDisplay(); // Update time and ring display
     showNotification(`${nextSessionTitle} session started!`, 'info'); // Notify user
@@ -2920,7 +2862,7 @@ function switchPomodoroSession() {
 function startPomodoroTimer() {
     if (secondsLeft <= 0 || !isPomodoroActive) return; // Don't start if time is up or not active
     isPaused = false;
-    if(pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-pause"></i>'; // Show pause icon
+    if (pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-pause"></i>'; // Show pause icon
 
     // Clear any existing interval before starting a new one
     clearInterval(pomodoroInterval);
@@ -2931,7 +2873,7 @@ function startPomodoroTimer() {
 
         secondsLeft--;
         updateTimerDisplay();
-        
+
         // Switch session when time runs out
         if (secondsLeft <= 0) {
             switchPomodoroSession();
@@ -2944,7 +2886,7 @@ function pausePomodoroTimer() {
     isPaused = true;
     clearInterval(pomodoroInterval); // Stop the interval
     pomodoroInterval = null;
-    if(pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
+    if (pauseResumeBtn) pauseResumeBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
 }
 
 // --- إعادة تعيين المؤقت الحالي (ليس الدورة بأكملها) ---
@@ -2973,7 +2915,7 @@ async function fetchAndDisplayCollections() {
     try {
         // Use fetchApi helper
         allFlashcardCollections = await fetchApi('/api/flashcards');
-        
+
         contentDiv.innerHTML = ''; // Clear loading message
 
         if (!allFlashcardCollections || allFlashcardCollections.length === 0) {
@@ -2985,8 +2927,8 @@ async function fetchAndDisplayCollections() {
         allFlashcardCollections.sort((a, b) => (a.subjectName || '').localeCompare(b.subjectName || ''));
 
         allFlashcardCollections.forEach(collection => {
-             // Basic validation for collection data
-             if (!collection || !collection.subjectName || !collection.cards) return;
+            // Basic validation for collection data
+            if (!collection || !collection.subjectName || !collection.cards) return;
 
             const card = document.createElement('div');
             card.className = 'collection-card';
@@ -3002,7 +2944,7 @@ async function fetchAndDisplayCollections() {
     } catch (error) {
         console.error("Error fetching flashcards:", error);
         contentDiv.innerHTML = `<p>Error loading flashcards: ${error.message}. Please try again later.</p>`;
-         showNotification(`Could not load flashcards: ${error.message}`, 'error');
+        showNotification(`Could not load flashcards: ${error.message}`, 'error');
     }
 }
 
@@ -3010,11 +2952,11 @@ async function fetchAndDisplayCollections() {
 function showFlashcardViewer(collection) {
     // Basic validation
     if (!collection || !Array.isArray(collection.cards)) {
-         console.error("Invalid collection data passed to showFlashcardViewer:", collection);
-         showNotification("Could not load this flashcard collection.", "error");
-         return;
+        console.error("Invalid collection data passed to showFlashcardViewer:", collection);
+        showNotification("Could not load this flashcard collection.", "error");
+        return;
     }
-    
+
     currentCollection = collection.cards; // Store the cards array
     currentCardIndex = 0; // Start at the first card
 
@@ -3026,8 +2968,8 @@ function showFlashcardViewer(collection) {
     const viewerTitle = document.getElementById('flashcard-viewer-title');
 
     if (!ratingControls || !viewerControls || !contentDiv || !viewerDiv || !viewerTitle) {
-         console.error("Flashcard viewer UI elements missing.");
-         return;
+        console.error("Flashcard viewer UI elements missing.");
+        return;
     }
 
     // --- Control Visibility ---
@@ -3056,21 +2998,21 @@ function displayCurrentFlashcard() {
         console.warn("Cannot display flashcard. Invalid collection or index.");
         // Optionally display a message in the viewer
         const questionElement = document.getElementById('flashcard-question');
-        if(questionElement) questionElement.textContent = "No card to display.";
+        if (questionElement) questionElement.textContent = "No card to display.";
         const answerElement = document.getElementById('flashcard-answer');
-        if(answerElement) answerElement.textContent = "";
+        if (answerElement) answerElement.textContent = "";
         // Disable navigation buttons
         const prevBtn = document.getElementById('prev-flashcard-btn');
         const nextBtn = document.getElementById('next-flashcard-btn');
-        if(prevBtn) prevBtn.disabled = true;
-        if(nextBtn) nextBtn.disabled = true;
+        if (prevBtn) prevBtn.disabled = true;
+        if (nextBtn) nextBtn.disabled = true;
         return;
     }
 
     const card = currentCollection[currentCardIndex];
     if (!card) {
         console.error("Card data is missing at index:", currentCardIndex);
-        return; 
+        return;
     }
 
     // --- ✅ Handle potential variations in property names ---
@@ -3083,7 +3025,7 @@ function displayCurrentFlashcard() {
 
     // Update content safely
     if (questionElement) {
-        questionElement.textContent = frontText; 
+        questionElement.textContent = frontText;
     }
     if (answerElement) {
         // Use innerHTML for the back if it might contain Markdown/HTML, otherwise textContent
@@ -3101,12 +3043,12 @@ function displayCurrentFlashcard() {
     // Update progress display
     const progressElement = document.getElementById('flashcard-progress');
     if (progressElement) {
-         progressElement.textContent = `${currentCardIndex + 1} / ${currentCollection.length}`;
+        progressElement.textContent = `${currentCardIndex + 1} / ${currentCollection.length}`;
     }
-    
+
     // Ensure card is flipped back to the front side initially
     // --- ✅ [إضافة جديدة] معالج النقر لقلب البطاقة ---
-   // 1. [إصلاح] إعادة البطاقة إلى الوجه الأمامي (حتى لا تبقى مقلوبة عند التنقل)
+    // 1. [إصلاح] إعادة البطاقة إلى الوجه الأمامي (حتى لا تبقى مقلوبة عند التنقل)
     const flashcardElement = document.querySelector('.flashcard');
     if (flashcardElement) {
         flashcardElement.classList.remove('is-flipped');
@@ -3115,71 +3057,71 @@ function displayCurrentFlashcard() {
     // 2. [سليم] تفعيل/تعطيل الأزرار بناءً على البطاقة الحالية
     const prevBtn = document.getElementById('prev-flashcard-btn');
     const nextBtn = document.getElementById('next-flashcard-btn');
-    if(prevBtn) prevBtn.disabled = currentCardIndex === 0;
-    if(nextBtn) nextBtn.disabled = currentCardIndex === currentCollection.length - 1;
+    if (prevBtn) prevBtn.disabled = currentCardIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentCardIndex === currentCollection.length - 1;
 }
 // ===================================================================
 // --- معالجات الأحداث (Event Handlers) ---
 // ===================================================================
 // --- ✅ [إضافة جديدة] معالجات أحداث عارض البطاقات (تُضاف مرة واحدة) ---
 
-    // 1. معالج "قلب البطاقة"
-    const cardContainer = document.getElementById('flashcard-card-container');
-    if (cardContainer) {
-        cardContainer.addEventListener('click', (event) => {
-            // ابحث عن البطاقة التي تم النقر عليها
-            const flashcard = event.target.closest('.flashcard');
-            if (flashcard) {
-                flashcard.classList.toggle('is-flipped');
-            }
-        });
-    } else {
-        console.warn("Flashcard container (#flashcard-card-container) not found.");
-    }
+// 1. معالج "قلب البطاقة"
+const cardContainer = document.getElementById('flashcard-card-container');
+if (cardContainer) {
+    cardContainer.addEventListener('click', (event) => {
+        // ابحث عن البطاقة التي تم النقر عليها
+        const flashcard = event.target.closest('.flashcard');
+        if (flashcard) {
+            flashcard.classList.toggle('is-flipped');
+        }
+    });
+} else {
+    console.warn("Flashcard container (#flashcard-card-container) not found.");
+}
 
-    // 2. معالج زر "السابق"
-    const prevFlashcardBtn = document.getElementById('prev-flashcard-btn');
-    if (prevFlashcardBtn) {
-        prevFlashcardBtn.addEventListener('click', () => {
-            if (currentCardIndex > 0) {
-                currentCardIndex--;
-                displayCurrentFlashcard(); // فقط استدعاء العرض
-            }
-        });
-    } else {
-        console.warn("Previous flashcard button (#prev-flashcard-btn) not found.");
-    }
+// 2. معالج زر "السابق"
+const prevFlashcardBtn = document.getElementById('prev-flashcard-btn');
+if (prevFlashcardBtn) {
+    prevFlashcardBtn.addEventListener('click', () => {
+        if (currentCardIndex > 0) {
+            currentCardIndex--;
+            displayCurrentFlashcard(); // فقط استدعاء العرض
+        }
+    });
+} else {
+    console.warn("Previous flashcard button (#prev-flashcard-btn) not found.");
+}
 
-    // 3. معالج زر "التالي"
-    const nextFlashcardBtn = document.getElementById('next-flashcard-btn');
-    if (nextFlashcardBtn) {
-        nextFlashcardBtn.addEventListener('click', () => {
-            if (currentCollection && currentCardIndex < currentCollection.length - 1) {
-                currentCardIndex++;
-                displayCurrentFlashcard(); // فقط استدعاء العرض
-            }
-        });
-    } else {
-        console.warn("Next flashcard button (#next-flashcard-btn) not found.");
-    }
-    // --- نهاية الإضافة ---
+// 3. معالج زر "التالي"
+const nextFlashcardBtn = document.getElementById('next-flashcard-btn');
+if (nextFlashcardBtn) {
+    nextFlashcardBtn.addEventListener('click', () => {
+        if (currentCollection && currentCardIndex < currentCollection.length - 1) {
+            currentCardIndex++;
+            displayCurrentFlashcard(); // فقط استدعاء العرض
+        }
+    });
+} else {
+    console.warn("Next flashcard button (#next-flashcard-btn) not found.");
+}
+// --- نهاية الإضافة ---
 // --- زر تبديل الثيم ---
 if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => { 
-        body.classList.toggle('dark-mode'); 
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
         // Determine current theme and save to localStorage
-        const currentTheme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode'; 
-        localStorage.setItem('theme', currentTheme); 
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        localStorage.setItem('theme', currentTheme);
         // Update the icon (Sun/Moon)
-        updateThemeToggleIcon(currentTheme); 
+        updateThemeToggleIcon(currentTheme);
     });
 }
 
 // --- روابط شريط التنقل ---
-navLinks.forEach(link => { 
-    link.addEventListener('click', function(e) { 
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default link navigation
-        
+
         const targetId = this.getAttribute('href'); // e.g., "#home-page"
         const pageType = this.dataset.pageType; // e.g., "quizzes"
 
@@ -3197,68 +3139,68 @@ navLinks.forEach(link => {
         const targetIsProtected = protectedTargets.includes(targetId) || !!pageType; // Any content type page is protected
 
         if (targetIsProtected) {
-            if (!isLoggedIn) { 
+            if (!isLoggedIn) {
                 logoutUser(); // Redirect to login if not logged in
                 return; // Stop execution
-            } else if (!isYearChosen) { 
+            } else if (!isYearChosen) {
                 showPage('#year-selection-page'); // Show year selection if needed
                 return; // Stop execution
             }
-             // Add activation check if necessary
-             // else if (!isActivated) {
-             //     showPage('#activation-page');
-             //     return;
-             // }
+            // Add activation check if necessary
+            // else if (!isActivated) {
+            //     showPage('#activation-page');
+            //     return;
+            // }
         }
-        
+
         // 3. Determine which page to show
         let pageToShow = targetId;
         if (pageType) {
-             pageToShow = '#subjects-page'; // Content types always lead to subject selection first
+            pageToShow = '#subjects-page'; // Content types always lead to subject selection first
         }
 
         // 4. Show the target page (showPage handles data loading like dashboard/flashcards)
-        showPage(pageToShow); 
-    }); 
+        showPage(pageToShow);
+    });
 });
 
 // --- أزرار البدء والاستكشاف في الصفحة الرئيسية ---
-function handleStartAndExplore() { 
-    if (!isLoggedIn) { 
+function handleStartAndExplore() {
+    if (!isLoggedIn) {
         window.location.href = 'login.html'; // Go to login if not logged in
-    } else if (!isYearChosen) { 
+    } else if (!isYearChosen) {
         showPage('#year-selection-page'); // Show year select if needed
-    } 
+    }
     // Add activation check if required by your logic
     // else if (!isActivated) { 
     //     showPage('#activation-page'); 
     // } 
-    else { 
+    else {
         // If year chosen (and activated, if needed)
         // Default to 'lessons' if no content type is selected yet
         if (!currentContentType) {
-            currentContentType = 'lessons'; 
+            currentContentType = 'lessons';
             localStorage.setItem('currentContentType', currentContentType); // Save default
             const lessonsLink = document.querySelector('a[data-page-type="lessons"]');
             if (lessonsLink) {
-                 navLinks.forEach(l => l.classList.remove('active-link')); // Deactivate others
-                 lessonsLink.classList.add('active-link'); // Activate lessons link
+                navLinks.forEach(l => l.classList.remove('active-link')); // Deactivate others
+                lessonsLink.classList.add('active-link'); // Activate lessons link
             }
         }
         showPage('#subjects-page'); // Go to subject selection
     }
 }
 // Attach handler to both buttons
-if(startLearningBtn) startLearningBtn.addEventListener('click', handleStartAndExplore);
-if(exploreContentBtn) exploreContentBtn.addEventListener('click', handleStartAndExplore);
+if (startLearningBtn) startLearningBtn.addEventListener('click', handleStartAndExplore);
+if (exploreContentBtn) exploreContentBtn.addEventListener('click', handleStartAndExplore);
 
 
 // --- أزرار اختيار السنة ---
 if (yearSelectBtns) {
-     yearSelectBtns.forEach(btn => {
-        btn.addEventListener('click', async function() {
+    yearSelectBtns.forEach(btn => {
+        btn.addEventListener('click', async function () {
             const year = this.dataset.year;
-            
+
             showNotification(`Saving year ${year}...`, 'info'); // Show feedback
             btn.disabled = true; // Disable button temporarily
 
@@ -3274,7 +3216,7 @@ if (yearSelectBtns) {
                 isYearChosen = true;
                 localStorage.setItem('isYearChosen', 'true');
                 localStorage.setItem('selectedYear', selectedYear);
-                
+
                 showNotification(`Year ${selectedYear} has been saved!`, 'success');
                 updateUI(); // Refresh UI to show the appropriate page (e.g., home)
 
@@ -3287,16 +3229,16 @@ if (yearSelectBtns) {
         });
     });
 }
-    
+
 // --- زر تأكيد التفعيل ---
 if (confirmActivationBtn) {
     confirmActivationBtn.addEventListener('click', async () => {
-        
+
         confirmActivationBtn.disabled = true;
         confirmActivationBtn.textContent = 'Activating...';
         if (activationStatusMessage) {
-             activationStatusMessage.textContent = 'Processing activation...';
-             activationStatusMessage.style.color = 'orange';
+            activationStatusMessage.textContent = 'Processing activation...';
+            activationStatusMessage.style.color = 'orange';
         }
 
         try {
@@ -3307,7 +3249,7 @@ if (confirmActivationBtn) {
             isActivated = true;
             localStorage.setItem('isActivated', 'true');
             showNotification(data.message || 'Account activated successfully!', 'success');
-            
+
             if (activationStatusMessage) {
                 activationStatusMessage.textContent = 'Activation successful! Redirecting...';
                 activationStatusMessage.style.color = 'green';
@@ -3331,136 +3273,76 @@ if (confirmActivationBtn) {
         }
     });
 }
-    
+
 // --- أزرار الرجوع المختلفة ---
 if (backToHomeBtn) backToHomeBtn.addEventListener('click', () => showPage('#home-page'));
 
 if (backToYearSelectBtn) {
-    backToYearSelectBtn.addEventListener('click', () => { 
+    backToYearSelectBtn.addEventListener('click', () => {
         // Clear year selection state
-        isYearChosen = false; 
+        isYearChosen = false;
         selectedYear = null;
-        localStorage.removeItem('isYearChosen'); 
-        localStorage.removeItem('selectedYear'); 
+        localStorage.removeItem('isYearChosen');
+        localStorage.removeItem('selectedYear');
         // Go back to year selection page
-        updateUI(); 
+        updateUI();
     });
 }
 
 if (backToSubjectsBtn) backToSubjectsBtn.addEventListener('click', () => showPage('#subjects-page'));
 // Note: Back button from PDF list is handled in showPdfsForLesson function
 
-// --- Carousel Controls ---
-if(prevButton) {
-    prevButton.addEventListener('click', () => {
-        if (numItems > 0) {
-            // Decrement index, wrapping around using modulo
-            currentIndex = (currentIndex - 1 + numItems) % numItems; 
-            rotateCarousel();
-        }
-    });
-}
-
-if(nextButton) {
-    nextButton.addEventListener('click', () => {
-        if (numItems > 0) {
-            // Increment index, wrapping around using modulo
-            currentIndex = (currentIndex + 1) % numItems;
-            rotateCarousel();
-        }
-    });
-}
-
-// Optional: Carousel rotation with mouse wheel
-if(carouselScene) {
-    carouselScene.addEventListener('wheel', (e) => {
-        // Prevent default page scrolling
-        e.preventDefault(); 
-        if (numItems > 0) {
-            // Rotate up or down based on wheel direction
-            if (e.deltaY > 0) { // Scrolling down
-                currentIndex = (currentIndex + 1) % numItems;
-            } else { // Scrolling up
-                currentIndex = (currentIndex - 1 + numItems) % numItems;
-            }
-            rotateCarousel();
-        }
-    }, { passive: false }); // Need passive: false to preventDefault scroll
-}
-    
-// Optional: Carousel rotation with arrow keys when subjects page is active
-document.addEventListener('keydown', (e) => {
-    // Check if the subjects page is currently active
-    const subjectsPageActive = document.querySelector('#subjects-page.active');
-    if (subjectsPageActive && numItems > 0) {
-        if (e.key === 'ArrowDown') {
-            e.preventDefault(); // Prevent page scrolling
-            currentIndex = (currentIndex + 1) % numItems;
-            rotateCarousel();
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault(); // Prevent page scrolling
-            currentIndex = (currentIndex - 1 + numItems) % numItems;
-            rotateCarousel();
-        }
-        // Optional: Handle Enter key to select the current subject
-        // else if (e.key === 'Enter') {
-        //     const activeItem = carouselItems[currentIndex];
-        //     if (activeItem) activeItem.click(); // Simulate click on Enter
-        // }
-    }
-});
-
 // --- AI Chat Modal Controls ---
-if(aiChatBtn) aiChatBtn.addEventListener('click', () => { 
-    if (aiChatModal) aiChatModal.classList.add('active'); 
+if (aiChatBtn) aiChatBtn.addEventListener('click', () => {
+    if (aiChatModal) aiChatModal.classList.add('active');
     if (userChatInput) userChatInput.focus(); // Focus input when opened
 });
 
-if(closeChatBtn) closeChatBtn.addEventListener('click', () => { 
-    if (aiChatModal) aiChatModal.classList.remove('active'); 
+if (closeChatBtn) closeChatBtn.addEventListener('click', () => {
+    if (aiChatModal) aiChatModal.classList.remove('active');
 });
 
 // Close modal if clicking outside the chat box
-if(aiChatModal) {
-    aiChatModal.addEventListener('click', (e) => { 
+if (aiChatModal) {
+    aiChatModal.addEventListener('click', (e) => {
         if (e.target === aiChatModal) { // Check if the click is on the overlay itself
-            aiChatModal.classList.remove('active'); 
+            aiChatModal.classList.remove('active');
         }
     });
 }
 
 // Close modal on Escape key press
-document.addEventListener('keydown', (e) => { 
+document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && aiChatModal && aiChatModal.classList.contains('active')) {
-        aiChatModal.classList.remove('active'); 
+        aiChatModal.classList.remove('active');
     }
 });
-    
+
 // --- Sending Chat Messages ---
-if(sendChatButton) sendChatButton.addEventListener('click', sendChatMessage);
-if(userChatInput) {
-    userChatInput.addEventListener('keypress', (e) => { 
+if (sendChatButton) sendChatButton.addEventListener('click', sendChatMessage);
+if (userChatInput) {
+    userChatInput.addEventListener('keypress', (e) => {
         // Send message on Enter key press, prevent default line break
         if (e.key === 'Enter' && !e.shiftKey) { // Allow Shift+Enter for new lines if needed later
-            e.preventDefault(); 
-            sendChatMessage(); 
-        } 
+            e.preventDefault();
+            sendChatMessage();
+        }
     });
 }
-    
+
 // --- File Upload Buttons ---
-if(uploadPdfBtn) uploadPdfBtn.addEventListener('click', () => pdfFileInput?.click()); // Use optional chaining
-if(pdfFileInput) {
-    pdfFileInput.addEventListener('change', async (event) => { 
+if (uploadPdfBtn) uploadPdfBtn.addEventListener('click', () => pdfFileInput?.click()); // Use optional chaining
+if (pdfFileInput) {
+    pdfFileInput.addEventListener('change', async (event) => {
         const file = event.target.files?.[0]; // Use optional chaining
         if (!file) return;
 
         addMessageToChat(`Processing PDF: "${file.name}"...`, 'user-message'); // Show processing message
-        
-        try { 
+
+        try {
             const extractedText = await extractTextFromPdf(file);
             showNotification('PDF processed successfully!', 'success');
-            
+
             // Handle image-based PDFs or empty text
             if (!extractedText || extractedText.trim().length === 0) {
                 showNotification('Could not extract text from this PDF. It might be image-based or empty.', 'warning');
@@ -3469,7 +3351,7 @@ if(pdfFileInput) {
 
             // Prompt user for their question about the PDF content
             const userQuestion = prompt("PDF text extracted. What is your question about its content?", "Summarize this document");
-            
+
             if (userQuestion) { // If user provided a question (didn't cancel prompt)
                 const userFriendlyQuestion = `(Regarding PDF: ${file.name}) ${userQuestion}`;
                 addMessageToChat(userFriendlyQuestion, 'user-message'); // Show the question in chat
@@ -3478,53 +3360,53 @@ if(pdfFileInput) {
                 const maxTextLength = 15000; // Limit text length to avoid overly long API requests
                 const truncatedText = extractedText.substring(0, maxTextLength);
                 if (extractedText.length > maxTextLength) {
-                     showNotification('PDF text truncated due to length limits.', 'info');
+                    showNotification('PDF text truncated due to length limits.', 'info');
                 }
 
                 const fullPromptForApi = `Based on the following document text, please answer the user's request.\n\nUser Request: "${userQuestion}"\n\n--- Document Text ---\n\n${truncatedText}`;
-                
+
                 // Send request using a temporary history
                 const apiHistory = [...chatHistory, { role: "user", content: fullPromptForApi }];
                 sendApiRequest(apiHistory, true); // Send as part of main conversation
             }
-        } catch (err) { 
+        } catch (err) {
             // Handle errors from extractTextFromPdf or sendApiRequest
-            showNotification(err.toString(), 'error'); 
+            showNotification(err.toString(), 'error');
             console.error("Error processing PDF:", err);
-        } finally { 
+        } finally {
             pdfFileInput.value = ''; // Reset file input
-        } 
+        }
     });
 }
 
-if(uploadImageBtn) uploadImageBtn.addEventListener('click', () => imageFileInput?.click());
-if(imageFileInput) {
-    imageFileInput.addEventListener('change', async (event) => { 
-        const file = event.target.files?.[0]; 
-        if (!file) return; 
-        
+if (uploadImageBtn) uploadImageBtn.addEventListener('click', () => imageFileInput?.click());
+if (imageFileInput) {
+    imageFileInput.addEventListener('change', async (event) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+
         // Prompt for context/question about the image
-        const q = prompt("Image selected. What should I analyze or describe? (e.g., 'Describe this dental image', 'What condition is shown?')", "Describe this image in detail."); 
-        
+        const q = prompt("Image selected. What should I analyze or describe? (e.g., 'Describe this dental image', 'What condition is shown?')", "Describe this image in detail.");
+
         if (q) { // Proceed if user provided a prompt
-            await sendImageAndPromptToGemini(q, file); 
-        } 
+            await sendImageAndPromptToGemini(q, file);
+        }
         imageFileInput.value = ''; // Reset file input
     });
 }
-    
-if(uploadAudioBtn) uploadAudioBtn.addEventListener('click', () => audioFileInput?.click());
-if(audioFileInput) {
-    audioFileInput.addEventListener('change', async (event) => { 
-        const file = event.target.files?.[0]; 
-        if (!file) return; 
-        
+
+if (uploadAudioBtn) uploadAudioBtn.addEventListener('click', () => audioFileInput?.click());
+if (audioFileInput) {
+    audioFileInput.addEventListener('change', async (event) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+
         // Prompt for action on the audio file
-        const q = prompt("Audio file selected. What should I do? (e.g., 'Transcribe this lecture', 'Summarize the key points')", "Transcribe this audio."); 
-        
+        const q = prompt("Audio file selected. What should I do? (e.g., 'Transcribe this lecture', 'Summarize the key points')", "Transcribe this audio.");
+
         if (q) { // Proceed if user provided a prompt
-            await sendAudioAndPromptToGemini(q, file); 
-        } 
+            await sendAudioAndPromptToGemini(q, file);
+        }
         audioFileInput.value = ''; // Reset file input
     });
 }
@@ -3537,7 +3419,7 @@ if (chatPlusBtn && uploadOptions) {
         uploadOptions.classList.toggle('show');
         chatPlusBtn.classList.toggle('rotated'); // Rotate the '+' icon
     });
-    
+
     // Close options if clicking anywhere else on the document
     document.addEventListener('click', (e) => {
         // Check if the click was outside the options menu and the plus button
@@ -3546,345 +3428,345 @@ if (chatPlusBtn && uploadOptions) {
             chatPlusBtn.classList.remove('rotated'); // Rotate back
         }
     });
-    
+
     // Prevent closing when clicking inside the options menu itself
-    uploadOptions.addEventListener('click', (e) => e.stopPropagation()); 
+    uploadOptions.addEventListener('click', (e) => e.stopPropagation());
 }
 
-    // --- Chat Box Dragging and Resizing Logic ---
-    let isDragging = false, isResizing = false;
-    let offsetX, offsetY, initialWidth, initialHeight, initialMouseX, initialMouseY;
+// --- Chat Box Dragging and Resizing Logic ---
+let isDragging = false, isResizing = false;
+let offsetX, offsetY, initialWidth, initialHeight, initialMouseX, initialMouseY;
 
-    // Dragging functionality (using the header)
-    if (chatHeader) {
-        chatHeader.addEventListener('mousedown', (e) => {
-            // Ignore drag if clicking on buttons within the header
-            if (e.target.closest('.close-chat-btn') || e.target.closest('#chat-controls button')) return;
-            
-            isDragging = true;
-            // Calculate offset from top-left corner of the chat box
-            offsetX = e.clientX - aiChatBox.offsetLeft;
-            offsetY = e.clientY - aiChatBox.offsetTop;
-            aiChatBox.classList.add('is-dragging'); // Add class for visual feedback (optional)
-            chatHeader.style.cursor = 'grabbing'; // Change cursor while dragging
-        });
+// Dragging functionality (using the header)
+if (chatHeader) {
+    chatHeader.addEventListener('mousedown', (e) => {
+        // Ignore drag if clicking on buttons within the header
+        if (e.target.closest('.close-chat-btn') || e.target.closest('#chat-controls button')) return;
+
+        isDragging = true;
+        // Calculate offset from top-left corner of the chat box
+        offsetX = e.clientX - aiChatBox.offsetLeft;
+        offsetY = e.clientY - aiChatBox.offsetTop;
+        aiChatBox.classList.add('is-dragging'); // Add class for visual feedback (optional)
+        chatHeader.style.cursor = 'grabbing'; // Change cursor while dragging
+    });
+}
+
+// Resizing functionality (using the resize handle)
+if (resizeHandle) {
+    resizeHandle.addEventListener('mousedown', (e) => {
+        e.preventDefault(); // Prevent text selection during resize
+        isResizing = true;
+        // Record initial dimensions and mouse position
+        initialWidth = aiChatBox.offsetWidth;
+        initialHeight = aiChatBox.offsetHeight;
+        initialMouseX = e.clientX;
+        initialMouseY = e.clientY;
+        // Change cursor for resize handle itself (can also be done in CSS)
+        // resizeHandle.style.cursor = 'se-resize'; 
+    });
+}
+
+// Handle mouse movement for dragging and resizing
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        e.preventDefault(); // Prevent text selection
+        let newLeft = e.clientX - offsetX;
+        let newTop = e.clientY - offsetY;
+
+        // Constrain dragging within viewport boundaries
+        const maxLeft = window.innerWidth - aiChatBox.offsetWidth;
+        const maxTop = window.innerHeight - aiChatBox.offsetHeight;
+        aiChatBox.style.left = `${Math.max(0, Math.min(newLeft, maxLeft))}px`;
+        aiChatBox.style.top = `${Math.max(0, Math.min(newTop, maxTop))}px`;
+        // Reset transform if previously centered using translate(-50%, -50%)
+        aiChatBox.style.transform = 'none';
     }
+    if (isResizing) {
+        e.preventDefault(); // Prevent text selection
+        const dx = e.clientX - initialMouseX; // Change in X
+        const dy = e.clientY - initialMouseY; // Change in Y
 
-    // Resizing functionality (using the resize handle)
-    if (resizeHandle) {
-        resizeHandle.addEventListener('mousedown', (e) => {
-            e.preventDefault(); // Prevent text selection during resize
-            isResizing = true;
-            // Record initial dimensions and mouse position
-            initialWidth = aiChatBox.offsetWidth;
-            initialHeight = aiChatBox.offsetHeight;
-            initialMouseX = e.clientX;
-            initialMouseY = e.clientY;
-            // Change cursor for resize handle itself (can also be done in CSS)
-            // resizeHandle.style.cursor = 'se-resize'; 
-        });
+        // Calculate new dimensions, apply minimum constraints
+        const newWidth = Math.max(300, initialWidth + dx); // Min width 300px
+        const newHeight = Math.max(400, initialHeight + dy); // Min height 400px
+
+        aiChatBox.style.width = `${newWidth}px`;
+        aiChatBox.style.height = `${newHeight}px`;
     }
+});
 
-    // Handle mouse movement for dragging and resizing
-    document.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            e.preventDefault(); // Prevent text selection
-            let newLeft = e.clientX - offsetX;
-            let newTop = e.clientY - offsetY;
-            
-            // Constrain dragging within viewport boundaries
-            const maxLeft = window.innerWidth - aiChatBox.offsetWidth;
-            const maxTop = window.innerHeight - aiChatBox.offsetHeight;
-            aiChatBox.style.left = `${Math.max(0, Math.min(newLeft, maxLeft))}px`;
-            aiChatBox.style.top = `${Math.max(0, Math.min(newTop, maxTop))}px`;
-            // Reset transform if previously centered using translate(-50%, -50%)
-            aiChatBox.style.transform = 'none'; 
-        }
-        if (isResizing) {
-            e.preventDefault(); // Prevent text selection
-            const dx = e.clientX - initialMouseX; // Change in X
-            const dy = e.clientY - initialMouseY; // Change in Y
-            
-            // Calculate new dimensions, apply minimum constraints
-            const newWidth = Math.max(300, initialWidth + dx); // Min width 300px
-            const newHeight = Math.max(400, initialHeight + dy); // Min height 400px
+// Handle mouse up to stop dragging or resizing
+document.addEventListener('mouseup', () => {
+    if (isDragging) {
+        isDragging = false;
+        aiChatBox.classList.remove('is-dragging');
+        if (chatHeader) chatHeader.style.cursor = 'grab'; // Reset cursor
+    }
+    if (isResizing) {
+        isResizing = false;
+        // Reset resize handle cursor if needed
+        // if(resizeHandle) resizeHandle.style.cursor = 'se-resize';
+    }
+});
 
-            aiChatBox.style.width = `${newWidth}px`;
-            aiChatBox.style.height = `${newHeight}px`;
+// --- Pomodoro Timer Event Handlers ---
+if (pomodoroToggleBtn) {
+    pomodoroToggleBtn.addEventListener('click', () => {
+        if (!pomodoroModal) return;
+        // Show timer view if active, otherwise show settings
+        switchPomodoroView(isPomodoroActive ? 'timer' : 'settings');
+        pomodoroModal.classList.add('active'); // Show the modal
+    });
+}
+
+// Close Pomodoro modal if clicking outside the box
+if (pomodoroModal) {
+    pomodoroModal.addEventListener('click', (e) => {
+        if (e.target === pomodoroModal) { // Click on overlay
+            pomodoroModal.classList.remove('active');
+            // Restore original page title if timer wasn't running or was paused
+            if (isPaused || !isPomodoroActive) document.title = originalDocTitle;
         }
     });
+}
 
-    // Handle mouse up to stop dragging or resizing
-    document.addEventListener('mouseup', () => {
-        if (isDragging) {
-            isDragging = false;
-            aiChatBox.classList.remove('is-dragging');
-            if(chatHeader) chatHeader.style.cursor = 'grab'; // Reset cursor
-        }
-        if (isResizing) {
-            isResizing = false;
-            // Reset resize handle cursor if needed
-            // if(resizeHandle) resizeHandle.style.cursor = 'se-resize';
+// Close Pomodoro modal using close buttons
+closePomodoroBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (pomodoroModal) pomodoroModal.classList.remove('active');
+        if (isPaused || !isPomodoroActive) document.title = originalDocTitle;
+    });
+});
+
+// Start Pomodoro button (from settings)
+if (startPomodoroBtn) {
+    startPomodoroBtn.addEventListener('click', () => {
+        // Read settings from input fields, with validation/defaults
+        settings = {
+            focusDuration: parseInt(focusDurationInput?.value) || 25,
+            shortBreakDuration: parseInt(shortBreakDurationInput?.value) || 5,
+            longBreakDuration: parseInt(longBreakDurationInput?.value) || 30,
+            sessionsBeforeLongBreak: parseInt(sessionsInput?.value) || 4
+        };
+        // Ensure values are positive
+        settings.focusDuration = Math.max(1, settings.focusDuration);
+        settings.shortBreakDuration = Math.max(1, settings.shortBreakDuration);
+        settings.longBreakDuration = Math.max(1, settings.longBreakDuration);
+        settings.sessionsBeforeLongBreak = Math.max(1, settings.sessionsBeforeLongBreak);
+
+        isPomodoroActive = true; // Mark Pomodoro as active
+        currentSession = 'focus'; // Start with a focus session
+        sessionsCompleted = 0; // Reset session count
+        totalSeconds = settings.focusDuration * 60; // Set initial time
+        secondsLeft = totalSeconds;
+
+        // Update UI for the timer view
+        if (sessionTitleEl) sessionTitleEl.textContent = 'Focus';
+        if (sessionCounterEl) sessionCounterEl.textContent = `Session 1 / ${settings.sessionsBeforeLongBreak}`;
+        updateTimerDisplay(); // Initial time display
+        switchPomodoroView('timer'); // Switch to timer view
+        startPomodoroTimer(); // Start the timer countdown
+    });
+}
+
+// Pause/Resume button (in timer view)
+if (pauseResumeBtn) {
+    pauseResumeBtn.addEventListener('click', () => {
+        if (isPaused) {
+            startPomodoroTimer(); // Resume if paused
+        } else {
+            pausePomodoroTimer(); // Pause if running
         }
     });
+}
 
-    // --- Pomodoro Timer Event Handlers ---
-    if (pomodoroToggleBtn) {
-        pomodoroToggleBtn.addEventListener('click', () => {
-            if (!pomodoroModal) return;
-            // Show timer view if active, otherwise show settings
-            switchPomodoroView(isPomodoroActive ? 'timer' : 'settings');
-            pomodoroModal.classList.add('active'); // Show the modal
-        });
-    }
-
-    // Close Pomodoro modal if clicking outside the box
-    if (pomodoroModal) {
-        pomodoroModal.addEventListener('click', (e) => {
-            if (e.target === pomodoroModal) { // Click on overlay
-                pomodoroModal.classList.remove('active');
-                // Restore original page title if timer wasn't running or was paused
-                if(isPaused || !isPomodoroActive) document.title = originalDocTitle; 
-            }
-        });
-    }
-
-    // Close Pomodoro modal using close buttons
-    closePomodoroBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if(pomodoroModal) pomodoroModal.classList.remove('active');
-            if(isPaused || !isPomodoroActive) document.title = originalDocTitle;
-        });
+// Reset button (stops the whole cycle)
+if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+        // Confirm before resetting
+        if (confirm('Are you sure you want to stop and reset the entire Pomodoro cycle?')) {
+            stopAndResetPomodoroCycle(); // Stop and go back to settings
+        }
     });
+}
 
-    // Start Pomodoro button (from settings)
-    if (startPomodoroBtn) {
-        startPomodoroBtn.addEventListener('click', () => {
-             // Read settings from input fields, with validation/defaults
-            settings = {
-                focusDuration: parseInt(focusDurationInput?.value) || 25,
-                shortBreakDuration: parseInt(shortBreakDurationInput?.value) || 5,
-                longBreakDuration: parseInt(longBreakDurationInput?.value) || 30,
-                sessionsBeforeLongBreak: parseInt(sessionsInput?.value) || 4
-            };
-            // Ensure values are positive
-            settings.focusDuration = Math.max(1, settings.focusDuration);
-            settings.shortBreakDuration = Math.max(1, settings.shortBreakDuration);
-            settings.longBreakDuration = Math.max(1, settings.longBreakDuration);
-            settings.sessionsBeforeLongBreak = Math.max(1, settings.sessionsBeforeLongBreak);
+// Skip button (skips to the next session - focus/break)
+if (skipPomodoroBtn) {
+    skipPomodoroBtn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to skip to the next session?')) {
+            switchPomodoroSession(); // Move to the next session immediately
+        }
+    });
+}
 
-            isPomodoroActive = true; // Mark Pomodoro as active
-            currentSession = 'focus'; // Start with a focus session
-            sessionsCompleted = 0; // Reset session count
-            totalSeconds = settings.focusDuration * 60; // Set initial time
-            secondsLeft = totalSeconds;
-            
-            // Update UI for the timer view
-            if(sessionTitleEl) sessionTitleEl.textContent = 'Focus';
-            if(sessionCounterEl) sessionCounterEl.textContent = `Session 1 / ${settings.sessionsBeforeLongBreak}`;
-            updateTimerDisplay(); // Initial time display
-            switchPomodoroView('timer'); // Switch to timer view
-            startPomodoroTimer(); // Start the timer countdown
-        });
-    }
+// --- ✅ [إصلاح] زر تفعيل/إيقاف مؤقت الكويز ---
+if (toggleQuizTimerBtn) {
+    // Set initial icon based on isQuizTimerActive state
+    toggleQuizTimerBtn.innerHTML = isQuizTimerActive ? '<i class="fas fa-power-off"></i>' : '<i class="fas fa-play"></i>';
 
-    // Pause/Resume button (in timer view)
-    if (pauseResumeBtn) {
-        pauseResumeBtn.addEventListener('click', () => {
-            if (isPaused) {
-                startPomodoroTimer(); // Resume if paused
-            } else {
-                pausePomodoroTimer(); // Pause if running
-            }
-        });
-    }
-    
-    // Reset button (stops the whole cycle)
-    if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-            // Confirm before resetting
-            if (confirm('Are you sure you want to stop and reset the entire Pomodoro cycle?')) {
-                stopAndResetPomodoroCycle(); // Stop and go back to settings
-            }
-        });
-    }
-    
-    // Skip button (skips to the next session - focus/break)
-    if (skipPomodoroBtn) {
-        skipPomodoroBtn.addEventListener('click', () => {
-            if (confirm('Are you sure you want to skip to the next session?')) {
-                switchPomodoroSession(); // Move to the next session immediately
-            }
-        });
-    }
-    
-    // --- ✅ [إصلاح] زر تفعيل/إيقاف مؤقت الكويز ---
-    if (toggleQuizTimerBtn) {
-        // Set initial icon based on isQuizTimerActive state
-        toggleQuizTimerBtn.innerHTML = isQuizTimerActive ? '<i class="fas fa-power-off"></i>' : '<i class="fas fa-play"></i>';
+    toggleQuizTimerBtn.addEventListener('click', () => {
+        isQuizTimerActive = !isQuizTimerActive; // Toggle the state
 
-        toggleQuizTimerBtn.addEventListener('click', () => {
-            isQuizTimerActive = !isQuizTimerActive; // Toggle the state
+        if (isQuizTimerActive) {
+            // --- Logic to RESUME or RESTART timer ---
+            toggleQuizTimerBtn.innerHTML = '<i class="fas fa-power-off"></i>'; // Show power-off icon
+            showNotification('Question timer ON', 'info');
 
-            if (isQuizTimerActive) {
-                // --- Logic to RESUME or RESTART timer ---
-                toggleQuizTimerBtn.innerHTML = '<i class="fas fa-power-off"></i>'; // Show power-off icon
-                showNotification('Question timer ON', 'info');
-                
-                // Resume only if a quiz is running and the current question is NOT answered
-                if (quizTimerInterval === null && proQuiz && proUserAnswers[proQuestionIndex] === null) {
-                     // Try to get remaining time from display (less accurate but fallback)
-                     let remainingTime = 0;
-                     if(quizTimerDisplay?.textContent && quizTimerDisplay.textContent.includes(':')) {
-                         const parts = quizTimerDisplay.textContent.split(':');
-                         remainingTime = (parseInt(parts[0]) * 60) + parseInt(parts[1]);
-                     }
-
-                    // If time ran out previously (remaining is 0 or NaN) OR display was 'Off'/'Answered', restart with full duration
-                    if (remainingTime <= 0 || isNaN(remainingTime) || ["Off", "Answered"].includes(quizTimerDisplay?.textContent)) {
-                        const currentQuestion = proQuiz.questions[proQuestionIndex];
-                        startQuizTimer(currentQuestion?.timer || 90); // Restart with question's timer or default
-                    } else {
-                        startQuizTimer(remainingTime); // Resume from remaining time
-                    }
+            // Resume only if a quiz is running and the current question is NOT answered
+            if (quizTimerInterval === null && proQuiz && proUserAnswers[proQuestionIndex] === null) {
+                // Try to get remaining time from display (less accurate but fallback)
+                let remainingTime = 0;
+                if (quizTimerDisplay?.textContent && quizTimerDisplay.textContent.includes(':')) {
+                    const parts = quizTimerDisplay.textContent.split(':');
+                    remainingTime = (parseInt(parts[0]) * 60) + parseInt(parts[1]);
                 }
-            } else {
-                // --- Logic to PAUSE timer ---
-                clearInterval(quizTimerInterval);
-                quizTimerInterval = null; // Mark as stopped
-                toggleQuizTimerBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
-                if(quizTimerDisplay) quizTimerDisplay.textContent = 'Off';
-                if(quizTimerDisplay) quizTimerDisplay.style.opacity = '0.6';
-                if(quizTimerContainer) quizTimerContainer.classList.remove('warning');
-                showNotification('Question timer OFF', 'info');
-            }
-        });
-    }
-    // --- نهاية إصلاح مؤقت الكويز ---
 
-    // --- Quiz Navigation Buttons ---
-    if (quizActionBtn) quizActionBtn.addEventListener('click', checkAnswer); 
-
-    if (quizPrevBtn) {
-        quizPrevBtn.addEventListener('click', () => {
-            if (proQuestionIndex > 0) {
-                proQuestionIndex--;
-                renderCurrentQuestion();
-                saveQuizState(); // ✅ حفظ الحالة عند الرجوع
-            }
-        });
-    }
-
-    if (quizNextBtn_pro) {
-        quizNextBtn_pro.addEventListener('click', () => {
-            // Ensure current question is answered before proceeding (should be, as button is hidden otherwise)
-            if (proUserAnswers[proQuestionIndex] === null) {
-                // This case should ideally not happen if controls are updated correctly
-                showNotification('Please answer the current question or skip it.', 'info');
-                return;
-            }
-            
-            // Check if it's the last question
-            if (proQuestionIndex === proQuiz.questions.length - 1) {
-                submitQuizResults(); // Finish the quiz
-            } else {
-                proQuestionIndex++; // Move to the next question
-                renderCurrentQuestion(); // Display the next question
-                saveQuizState(); // ✅ حفظ الحالة عند التقدم
-            }
-        });
-    }
-
-    // ✅ --- زر التخطي (Skip Button) ---
-    if (quizSkipBtn) {
-        quizSkipBtn.addEventListener('click', () => {
-             // Mark as unanswered or explicitly skipped (using null is simpler for now)
-             // We don't mark as incorrect immediately, user might come back
-            // proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false }; // Option: Mark as incorrect immediately
-            
-            // Just move to the next question without saving an answer for the current one
-            if (proQuestionIndex < proQuiz.questions.length - 1) {
-                 proQuestionIndex++;
-                 renderCurrentQuestion();
-                 saveQuizState(); // ✅ حفظ الحالة بعد التخطي
-            } else {
-                 // If skipping the last question, consider it finished
-                 submitQuizResults();
-            }
-        });
-    }
-
-
-    // --- AI HUB IMPLEMENTATION ---
-    const aiHubBtn = document.querySelector('.ai-chat-btn'); // Assuming this opens the AI Hub now
-    const aiHubOverlay = document.getElementById('aiHubModalOverlay');
-    const closeHubBtn = document.getElementById('closeHubBtn');
-    const aiOptionCards = document.querySelectorAll('.ai-option-card');
-    const aiProcessorOverlay = document.getElementById('aiProcessorModalOverlay');
-    const closeProcessorBtn = document.getElementById('closeProcessorBtn');
-    const aiFileForm = document.getElementById('aiFileForm');
-    const aiPdfInput = document.getElementById('aiPdfInput');
-    const processorTitle = document.getElementById('processorTitle');
-    const aiLoadingIndicator = document.getElementById('aiLoadingIndicator');
-    const aiProcessBtn = document.getElementById('aiProcessBtn');
-    // ▼▼▼ [إضافة جديدة] تعريف عناصر نافذة النحت ▼▼▼
-    const sculptureEvalModalOverlay = document.getElementById('sculptureEvalModalOverlay');
-    const closeSculptureEvalBtn = document.getElementById('closeSculptureEvalBtn');
-    const sculptureEvalForm = document.getElementById('sculptureEvalForm');
-    const evalImagesInput = document.getElementById('evalImages');
-    const startEvalBtn = document.getElementById('startEvalBtn');
-    const evalLoadingIndicator = document.getElementById('evalLoadingIndicator');
-    const evalOutput = document.getElementById('evalOutput');
-// ▲▲▲ نهاية الإضافة ▲▲▲
-    let currentAiTask = ''; // Stores the task selected ('quiz', 'flashcards', etc.)
-
-    // Open AI Hub modal
-    // ▼▼▼ [تعديل] إظهار/إخفاء بطاقة النحت بناءً على السنة ▼▼▼
-    if (aiHubBtn && aiHubOverlay) {
-        aiHubBtn.addEventListener('click', () => {
-            
-            // --- (الجديد) التحقق من سنة الطالب ---
-            const sculptureCard = document.getElementById('sculpture-eval-card');
-            if (sculptureCard) {
-                // selectedYear هو المتغير العام الذي يحمل سنة الطالب
-                if (selectedYear === '2') {
-                    sculptureCard.style.display = 'block'; // إظهار البطاقة
+                // If time ran out previously (remaining is 0 or NaN) OR display was 'Off'/'Answered', restart with full duration
+                if (remainingTime <= 0 || isNaN(remainingTime) || ["Off", "Answered"].includes(quizTimerDisplay?.textContent)) {
+                    const currentQuestion = proQuiz.questions[proQuestionIndex];
+                    startQuizTimer(currentQuestion?.timer || 90); // Restart with question's timer or default
                 } else {
-                    sculptureCard.style.display = 'none'; // إخفاء البطاقة
+                    startQuizTimer(remainingTime); // Resume from remaining time
                 }
             }
-            // --- نهاية التحقق ---
-            
-            aiHubOverlay.style.display = 'flex';
-        });
-    }
+        } else {
+            // --- Logic to PAUSE timer ---
+            clearInterval(quizTimerInterval);
+            quizTimerInterval = null; // Mark as stopped
+            toggleQuizTimerBtn.innerHTML = '<i class="fas fa-play"></i>'; // Show play icon
+            if (quizTimerDisplay) quizTimerDisplay.textContent = 'Off';
+            if (quizTimerDisplay) quizTimerDisplay.style.opacity = '0.6';
+            if (quizTimerContainer) quizTimerContainer.classList.remove('warning');
+            showNotification('Question timer OFF', 'info');
+        }
+    });
+}
+// --- نهاية إصلاح مؤقت الكويز ---
+
+// --- Quiz Navigation Buttons ---
+if (quizActionBtn) quizActionBtn.addEventListener('click', checkAnswer);
+
+if (quizPrevBtn) {
+    quizPrevBtn.addEventListener('click', () => {
+        if (proQuestionIndex > 0) {
+            proQuestionIndex--;
+            renderCurrentQuestion();
+            saveQuizState(); // ✅ حفظ الحالة عند الرجوع
+        }
+    });
+}
+
+if (quizNextBtn_pro) {
+    quizNextBtn_pro.addEventListener('click', () => {
+        // Ensure current question is answered before proceeding (should be, as button is hidden otherwise)
+        if (proUserAnswers[proQuestionIndex] === null) {
+            // This case should ideally not happen if controls are updated correctly
+            showNotification('Please answer the current question or skip it.', 'info');
+            return;
+        }
+
+        // Check if it's the last question
+        if (proQuestionIndex === proQuiz.questions.length - 1) {
+            submitQuizResults(); // Finish the quiz
+        } else {
+            proQuestionIndex++; // Move to the next question
+            renderCurrentQuestion(); // Display the next question
+            saveQuizState(); // ✅ حفظ الحالة عند التقدم
+        }
+    });
+}
+
+// ✅ --- زر التخطي (Skip Button) ---
+if (quizSkipBtn) {
+    quizSkipBtn.addEventListener('click', () => {
+        // Mark as unanswered or explicitly skipped (using null is simpler for now)
+        // We don't mark as incorrect immediately, user might come back
+        // proUserAnswers[proQuestionIndex] = { selectedIndexes: [], isCorrect: false }; // Option: Mark as incorrect immediately
+
+        // Just move to the next question without saving an answer for the current one
+        if (proQuestionIndex < proQuiz.questions.length - 1) {
+            proQuestionIndex++;
+            renderCurrentQuestion();
+            saveQuizState(); // ✅ حفظ الحالة بعد التخطي
+        } else {
+            // If skipping the last question, consider it finished
+            submitQuizResults();
+        }
+    });
+}
+
+
+// --- AI HUB IMPLEMENTATION ---
+const aiHubBtn = document.querySelector('.ai-chat-btn'); // Assuming this opens the AI Hub now
+const aiHubOverlay = document.getElementById('aiHubModalOverlay');
+const closeHubBtn = document.getElementById('closeHubBtn');
+const aiOptionCards = document.querySelectorAll('.ai-option-card');
+const aiProcessorOverlay = document.getElementById('aiProcessorModalOverlay');
+const closeProcessorBtn = document.getElementById('closeProcessorBtn');
+const aiFileForm = document.getElementById('aiFileForm');
+const aiPdfInput = document.getElementById('aiPdfInput');
+const processorTitle = document.getElementById('processorTitle');
+const aiLoadingIndicator = document.getElementById('aiLoadingIndicator');
+const aiProcessBtn = document.getElementById('aiProcessBtn');
+// ▼▼▼ [إضافة جديدة] تعريف عناصر نافذة النحت ▼▼▼
+const sculptureEvalModalOverlay = document.getElementById('sculptureEvalModalOverlay');
+const closeSculptureEvalBtn = document.getElementById('closeSculptureEvalBtn');
+const sculptureEvalForm = document.getElementById('sculptureEvalForm');
+const evalImagesInput = document.getElementById('evalImages');
+const startEvalBtn = document.getElementById('startEvalBtn');
+const evalLoadingIndicator = document.getElementById('evalLoadingIndicator');
+const evalOutput = document.getElementById('evalOutput');
+// ▲▲▲ نهاية الإضافة ▲▲▲
+let currentAiTask = ''; // Stores the task selected ('quiz', 'flashcards', etc.)
+
+// Open AI Hub modal
+// ▼▼▼ [تعديل] إظهار/إخفاء بطاقة النحت بناءً على السنة ▼▼▼
+if (aiHubBtn && aiHubOverlay) {
+    aiHubBtn.addEventListener('click', () => {
+
+        // --- (الجديد) التحقق من سنة الطالب ---
+        const sculptureCard = document.getElementById('sculpture-eval-card');
+        if (sculptureCard) {
+            // selectedYear هو المتغير العام الذي يحمل سنة الطالب
+            if (selectedYear === '2') {
+                sculptureCard.style.display = 'block'; // إظهار البطاقة
+            } else {
+                sculptureCard.style.display = 'none'; // إخفاء البطاقة
+            }
+        }
+        // --- نهاية التحقق ---
+
+        aiHubOverlay.style.display = 'flex';
+    });
+}
 // ▲▲▲ نهاية التعديل ▲▲▲
 
-    // Close AI Hub modal
-    if (closeHubBtn && aiHubOverlay) {
-        closeHubBtn.addEventListener('click', () => {
-            aiHubOverlay.style.display = 'none';
-        });
-    }
-     // Close AI Hub modal on overlay click
-     if (aiHubOverlay) {
-         aiHubOverlay.addEventListener('click', (e) => {
-             if (e.target === aiHubOverlay) aiHubOverlay.style.display = 'none';
-         });
-     }
+// Close AI Hub modal
+if (closeHubBtn && aiHubOverlay) {
+    closeHubBtn.addEventListener('click', () => {
+        aiHubOverlay.style.display = 'none';
+    });
+}
+// Close AI Hub modal on overlay click
+if (aiHubOverlay) {
+    aiHubOverlay.addEventListener('click', (e) => {
+        if (e.target === aiHubOverlay) aiHubOverlay.style.display = 'none';
+    });
+}
 
-    // Close AI Processor modal
-    if (closeProcessorBtn && aiProcessorOverlay) {
-        closeProcessorBtn.addEventListener('click', () => {
-            aiProcessorOverlay.style.display = 'none';
-        });
-    }
-    // Close AI Processor modal on overlay click
-    if (aiProcessorOverlay) {
-        aiProcessorOverlay.addEventListener('click', (e) => {
-            if (e.target === aiProcessorOverlay) aiProcessorOverlay.style.display = 'none';
-        });
-    }
+// Close AI Processor modal
+if (closeProcessorBtn && aiProcessorOverlay) {
+    closeProcessorBtn.addEventListener('click', () => {
+        aiProcessorOverlay.style.display = 'none';
+    });
+}
+// Close AI Processor modal on overlay click
+if (aiProcessorOverlay) {
+    aiProcessorOverlay.addEventListener('click', (e) => {
+        if (e.target === aiProcessorOverlay) aiProcessorOverlay.style.display = 'none';
+    });
+}
 
 
 // --- Handling clicks on AI option cards (Quiz, Flashcards, Summary, Chat) ---
@@ -3895,42 +3777,42 @@ if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorT
     aiOptionCards.forEach(card => {
         card.addEventListener('click', async () => {
             currentAiTask = card.dataset.task; // Get task type (chat, quiz, flashcards, summary)
-            if(!currentAiTask) return;
+            if (!currentAiTask) return;
 
             aiHubOverlay.style.display = 'none'; // Close the Hub selection modal
 
-           if (currentAiTask === 'chat') {
-    // Directly open the chat modal if 'chat' is selected
-    if (aiChatModal) aiChatModal.classList.add('active');
-    if (userChatInput) userChatInput.focus();
-} else if (currentAiTask === 'sculpture') {
-    // ▼▼▼ [إضافة جديدة] معالجة بطاقة النحت ▼▼▼
-    
-    // (التحقق مرة أخرى للأمان)
-    if (selectedYear !== '2') {
-        showNotification("This feature is exclusively for 2nd year students.", "warning");
-        return;
-    }
-    
-    // تنظيف النافذة قبل إظهارها
-    sculptureEvalForm.reset();
-    sculptureEvalForm.style.display = 'block';
-    evalLoadingIndicator.style.display = 'none';
-    evalOutput.style.display = 'none';
-    evalOutput.querySelector('#evaluation-text-output').textContent = ''; // مسح النص
-    evalOutput.querySelector('#image-annotation-container').style.display = 'none'; // إخفاء حاوية الصورة
-    evalOutput.querySelectorAll('.annotation-dot').forEach(dot => dot.remove()); // مسح النقاط
-    
-    // إظهار نافذة النحت
-    sculptureEvalModalOverlay.style.display = 'flex';
+            if (currentAiTask === 'chat') {
+                // Directly open the chat modal if 'chat' is selected
+                if (aiChatModal) aiChatModal.classList.add('active');
+                if (userChatInput) userChatInput.focus();
+            } else if (currentAiTask === 'sculpture') {
+                // ▼▼▼ [إضافة جديدة] معالجة بطاقة النحت ▼▼▼
 
-    // ▲▲▲ نهاية الإضافة ▲▲▲
-} else {
-    // For other tasks (quiz, flashcards, summary), open the file processor modal
-    // ... rest of your existing code
-                
-                 // For other tasks (quiz, flashcards, summary), open the file processor modal
-                
+                // (التحقق مرة أخرى للأمان)
+                if (selectedYear !== '2') {
+                    showNotification("This feature is exclusively for 2nd year students.", "warning");
+                    return;
+                }
+
+                // تنظيف النافذة قبل إظهارها
+                sculptureEvalForm.reset();
+                sculptureEvalForm.style.display = 'block';
+                evalLoadingIndicator.style.display = 'none';
+                evalOutput.style.display = 'none';
+                evalOutput.querySelector('#evaluation-text-output').textContent = ''; // مسح النص
+                evalOutput.querySelector('#image-annotation-container').style.display = 'none'; // إخفاء حاوية الصورة
+                evalOutput.querySelectorAll('.annotation-dot').forEach(dot => dot.remove()); // مسح النقاط
+
+                // إظهار نافذة النحت
+                sculptureEvalModalOverlay.style.display = 'flex';
+
+                // ▲▲▲ نهاية الإضافة ▲▲▲
+            } else {
+                // For other tasks (quiz, flashcards, summary), open the file processor modal
+                // ... rest of your existing code
+
+                // For other tasks (quiz, flashcards, summary), open the file processor modal
+
                 // --- Remember Subject Context ---
                 const activeCarouselItem = document.querySelector('.carousel-item.active');
                 if (!activeCarouselItem || !activeCarouselItem.dataset.subjectKey || !selectedYear) {
@@ -3938,66 +3820,66 @@ if (aiOptionCards.length > 0 && aiHubOverlay && aiProcessorOverlay && processorT
                     return; // Stop if no subject selected
                 }
                 // Store context immediately before showing the processor
-                 // ✅ الكود الصحيح
- try {
-     // --- هذا هو المنطق الجديد والصحيح ---
+                // ✅ الكود الصحيح
+                try {
+                    // --- هذا هو المنطق الجديد والصحيح ---
 
-     // 1. (جديد) اجلب كل المواد للسنة الحالية من الخادم
-     const subjectsInYear = await fetchSubjectsByYear(selectedYear); 
+                    // 1. (جديد) اجلب كل المواد للسنة الحالية من الخادم
+                    const subjectsInYear = await fetchSubjectsByYear(selectedYear);
 
-     // 2. (جديد) ابحث عن المادة التي اختارها المستخدم (باستخدام الكود)
-     const currentSubject = subjectsInYear.find(s => s.key === activeCarouselItem.dataset.subjectKey);
+                    // 2. (جديد) ابحث عن المادة التي اختارها المستخدم (باستخدام الكود)
+                    const currentSubject = subjectsInYear.find(s => s.key === activeCarouselItem.dataset.subjectKey);
 
-     // 3. (جديد) تأكد أننا وجدنا المادة وأنها تحتوي على _id
-     if (!currentSubject || !currentSubject._id) {
-         throw new Error(`Could not find subject data or ID for key: ${activeCarouselItem.dataset.subjectKey}`);
-     }
+                    // 3. (جديد) تأكد أننا وجدنا المادة وأنها تحتوي على _id
+                    if (!currentSubject || !currentSubject._id) {
+                        throw new Error(`Could not find subject data or ID for key: ${activeCarouselItem.dataset.subjectKey}`);
+                    }
 
-     // 4. (هذا الكود سليم) قم بتعيين السياق باستخدام المتغير الصحيح
-     currentAiGenerationContext = {
-         subjectId: currentSubject._id,   // <-- هذا الآن صحيح
-         subjectName: currentSubject.name // <-- وهذا أيضاً صحيح
-     };
-     console.log("AI Generation Context Set:", currentAiGenerationContext);
-     // --- نهاية الكود الجديد ---
+                    // 4. (هذا الكود سليم) قم بتعيين السياق باستخدام المتغير الصحيح
+                    currentAiGenerationContext = {
+                        subjectId: currentSubject._id,   // <-- هذا الآن صحيح
+                        subjectName: currentSubject.name // <-- وهذا أيضاً صحيح
+                    };
+                    console.log("AI Generation Context Set:", currentAiGenerationContext);
+                    // --- نهاية الكود الجديد ---
 
- } catch (error) {
-                     showNotification(`Error setting subject context: ${error.message}`, 'error');
-                     return; // Stop if context cannot be set
-                 }
+                } catch (error) {
+                    showNotification(`Error setting subject context: ${error.message}`, 'error');
+                    return; // Stop if context cannot be set
+                }
                 // --- End Remember Subject Context ---
 
 
-                 // Prepare the processor modal UI
-                 processorTitle.textContent = `Generate ${currentAiTask.charAt(0).toUpperCase() + currentAiTask.slice(1)} from PDF`;
-                 aiFileForm.style.display = 'flex'; // Show the form
-                 aiLoadingIndicator.style.display = 'none'; // Hide loading indicator
-                 aiProcessBtn.disabled = false; // Enable submit button
-                 aiFileForm.reset(); // Clear any previous file selection
-                
-                 // Show/hide specific options based on the task
-                 quizOptionsGenContainer.style.display = (currentAiTask === 'quiz') ? 'block' : 'none';
-                 flashcardOptionsGenContainer.style.display = (currentAiTask === 'flashcards') ? 'block' : 'none';
+                // Prepare the processor modal UI
+                processorTitle.textContent = `Generate ${currentAiTask.charAt(0).toUpperCase() + currentAiTask.slice(1)} from PDF`;
+                aiFileForm.style.display = 'flex'; // Show the form
+                aiLoadingIndicator.style.display = 'none'; // Hide loading indicator
+                aiProcessBtn.disabled = false; // Enable submit button
+                aiFileForm.reset(); // Clear any previous file selection
 
-                 aiProcessorOverlay.style.display = 'flex'; // Show the processor modal
+                // Show/hide specific options based on the task
+                quizOptionsGenContainer.style.display = (currentAiTask === 'quiz') ? 'block' : 'none';
+                flashcardOptionsGenContainer.style.display = (currentAiTask === 'flashcards') ? 'block' : 'none';
+
+                aiProcessorOverlay.style.display = 'flex'; // Show the processor modal
             }
         });
     });
 } else {
-     console.warn("One or more AI Hub/Processor elements are missing. AI generation features might not work.");
+    console.warn("One or more AI Hub/Processor elements are missing. AI generation features might not work.");
 }
 
 // --- Handling the AI File Form Submission ---
 if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcessorOverlay) {
     aiFileForm.addEventListener('submit', async (e) => {
         e.preventDefault(); // Prevent standard form submission
-        
+
         const file = aiPdfInput.files?.[0];
         if (!file) {
             showNotification('Please select a PDF file.', 'error');
             return;
         }
-        
+
         // Double-check subject context (should be set when modal opened)
         if (!currentAiGenerationContext.subjectId || !currentAiGenerationContext.subjectName) {
             showNotification('Error: Subject context is missing. Please select a subject first.', 'error');
@@ -4016,20 +3898,20 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
         formData.append('subjectName', currentAiGenerationContext.subjectName);
 
         let endpoint = '';
-        
+
         // Determine endpoint and add task-specific options
         switch (currentAiTask) {
             case 'quiz':
-                endpoint = '/api/gemini/generateQuiz'; 
+                endpoint = '/api/gemini/generateQuiz';
                 formData.append('count', document.getElementById('ai-quiz-count')?.value || '10'); // Add question count
                 break;
             case 'flashcards':
-                endpoint = '/api/gemini/generateFlashcards'; 
+                endpoint = '/api/gemini/generateFlashcards';
                 formData.append('count', document.getElementById('ai-flashcard-count')?.value || '10'); // Add card count
                 formData.append('language', document.getElementById('ai-generation-language')?.value || 'the same language as the document'); // Add language
                 break;
             case 'summary': // Assuming 'summary' task generates a mind map
-                endpoint = '/api/gemini/generateMindMap'; 
+                endpoint = '/api/gemini/generateMindMap';
                 // Add any specific options for mind map generation if needed
                 break;
             default:
@@ -4046,7 +3928,7 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
             const data = await fetchApi(endpoint, {
                 method: 'POST',
                 headers: {}, // Let browser set Content-Type for FormData
-                body: formData 
+                body: formData
             });
 
             // Close processor modal on success
@@ -4054,12 +3936,12 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
             showNotification(`${currentAiTask.charAt(0).toUpperCase() + currentAiTask.slice(1)} generated successfully!`, 'success');
 
             // Handle the response based on the task
-            if (currentAiTask === 'summary') { 
-                 displayMindMap(data); 
-            } else if (currentAiTask === 'quiz') { 
-                 startAIGeneratedQuiz(data); // Pass the generated questions array
-            } else if (currentAiTask === 'flashcards') { 
-                 displayGeneratedFlashcards(data); // Pass the generated cards array
+            if (currentAiTask === 'summary') {
+                displayMindMap(data);
+            } else if (currentAiTask === 'quiz') {
+                startAIGeneratedQuiz(data); // Pass the generated questions array
+            } else if (currentAiTask === 'flashcards') {
+                displayGeneratedFlashcards(data); // Pass the generated cards array
             }
 
         } catch (error) {
@@ -4076,17 +3958,17 @@ if (aiFileForm && aiPdfInput && aiLoadingIndicator && aiProcessBtn && aiProcesso
         }
     });
 } else {
-     console.warn("AI file form elements missing. PDF processing might not work.");
+    console.warn("AI file form elements missing. PDF processing might not work.");
 }
-    
-    // Back button on the (now unused?) mindmap page
-    // const mindmapBackBtn = document.getElementById('mindmap-back-btn');
-    // if (mindmapBackBtn) {
-    //     mindmapBackBtn.addEventListener('click', () => {
-    //         showPage('#home-page'); // Or perhaps back to subjects?
-    //     });
-    // }
-    // ▼▼▼ [إضافة جديدة] معالج نافذة تقييم النحت بالكامل ▼▼▼
+
+// Back button on the (now unused?) mindmap page
+// const mindmapBackBtn = document.getElementById('mindmap-back-btn');
+// if (mindmapBackBtn) {
+//     mindmapBackBtn.addEventListener('click', () => {
+//         showPage('#home-page'); // Or perhaps back to subjects?
+//     });
+// }
+// ▼▼▼ [إضافة جديدة] معالج نافذة تقييم النحت بالكامل ▼▼▼
 
 // --- إغلاق نافذة النحت ---
 if (closeSculptureEvalBtn && sculptureEvalModalOverlay) {
@@ -4106,7 +3988,7 @@ if (sculptureEvalModalOverlay) {
 if (sculptureEvalForm) {
     sculptureEvalForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const files = evalImagesInput.files;
         if (!files || files.length === 0) {
             showNotification("Please select at least one image.", "error");
@@ -4127,7 +4009,7 @@ if (sculptureEvalForm) {
         for (let i = 0; i < files.length; i++) {
             formData.append('images', files[i]);
         }
-        
+
         try {
             // استخدام دالة fetchApi الذكية
             // (هي تتعامل مع FormData والتوكن تلقائياً)
@@ -4148,7 +4030,7 @@ if (sculptureEvalForm) {
                 // 2. إعداد حاوية الصورة
                 const annotationContainer = document.getElementById('image-annotation-container');
                 const imageBase = document.getElementById('annotated-image-base');
-                
+
                 // إزالة النقاط القديمة
                 annotationContainer.querySelectorAll('.annotation-dot').forEach(dot => dot.remove());
 
@@ -4179,11 +4061,11 @@ if (sculptureEvalForm) {
                         dot.onclick = () => {
                             showNotification(`AI: "${error.comment}"`, 'info');
                         };
-                        
+
                         annotationContainer.appendChild(dot);
                     });
                 }
-                
+
                 evalOutput.style.display = 'block'; // إظهار حاوية النتائج
                 showNotification('Evaluation complete!', 'success');
             } else {
@@ -4200,7 +4082,7 @@ if (sculptureEvalForm) {
         } finally {
             // إخفاء التحميل وإظهار الفورم مجدداً (للسماح بإعادة المحاولة)
             evalLoadingIndicator.style.display = 'none';
-            sculptureEvalForm.style.display = 'block'; 
+            sculptureEvalForm.style.display = 'block';
         }
     });
 }
@@ -4231,10 +4113,10 @@ const gradeDataStore = {
         }
     },
     "3": { // بيانات السنة الثالثة (من البايثون والمعاملات)
-        annual_coeffs: { 
-            "Pathologie": 5, "ODF": 5, "Prothèse": 5, "Parodontologie": 5, "Occlusodontie": 5, 
-            "Imagerie": 3, 
-            "Occlusion": 1, "Anesthésie": 1, "Anapath": 1, "Pharmacologie": 1 
+        annual_coeffs: {
+            "Pathologie": 5, "ODF": 5, "Prothèse": 5, "Parodontologie": 5, "Occlusodontie": 5,
+            "Imagerie": 3,
+            "Occlusion": 1, "Anesthésie": 1, "Anapath": 1, "Pharmacologie": 1
         },
         formulas: {
             "y3_standard": (values) => {
@@ -4265,8 +4147,8 @@ const gradeCalcModalBox = gradeCalcModalOverlay.querySelector('.grade-calc-modal
 // --- 3. الدالة الرئيسية لفتح الحاسبة ---
 function openGradeCalculator() {
     // selectedYear هو المتغير العام الذي يحمل سنة الطالب
-    const year = selectedYear; 
-    
+    const year = selectedYear;
+
     // إخفاء جميع الحاويات أولاً
     document.getElementById('grade-calc-y1').style.display = 'none';
     document.getElementById('grade-calc-y2').style.display = 'none';
@@ -4274,7 +4156,7 @@ function openGradeCalculator() {
     document.getElementById('grade-calc-unsupported').style.display = 'none';
 
     let targetContainer;
-    
+
     if (year === '1') {
         targetContainer = document.getElementById('grade-calc-y1');
         document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (1ère Année)";
@@ -4284,7 +4166,7 @@ function openGradeCalculator() {
         document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (2ème Année)";
     } else if (year === '3') {
         targetContainer = document.getElementById('grade-calc-y3');
-         document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (3ème Année)";
+        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (3ème Année)";
     } else {
         // للسنوات 4, 5 والزوار
         targetContainer = document.getElementById('grade-calc-unsupported');
@@ -4302,7 +4184,7 @@ gradeCalcModalBox.addEventListener('click', (e) => {
     if (e.target.classList.contains('tab-link')) {
         const link = e.target;
         const tabId = link.dataset.tab; // (مثال: "y1-s1" أو "y2-s2")
-        
+
         // 1. العثور على حاوية الأزرار (tabs-nav)
         const tabsNav = link.closest('.tabs-nav');
         // 2. العثور على حاوية المحتوى الرئيسية (calculator-year-container)
@@ -4364,7 +4246,7 @@ function showCalcResult(resultId, moyenne) {
     if (!el) return;
 
     el.innerHTML = `Moyenne: <strong>${moyenne.toFixed(2)} / 20</strong>`;
-    
+
     // تحديد التقدير
     let appreciation = '';
     let msgClass = 'success';
@@ -4376,7 +4258,7 @@ function showCalcResult(resultId, moyenne) {
         appreciation = "Faible (Rattrapage)";
         msgClass = 'danger';
     }
-    
+
     el.innerHTML += `<br><small>Appréciation: ${appreciation}</small>`;
     el.className = `result-text ${msgClass}`; // تطبيق التنسيق
     el.style.display = 'block';
@@ -4395,15 +4277,15 @@ function autoFill(fieldId, value) {
 function calculateWeightedAverage(coeffs, prefix) {
     let sommeNotes = 0;
     let sommeCoeffs = 0;
-    
+
     for (const matiere in coeffs) {
         const note = getCalcValue(`${prefix}-${matiere}`);
         const coeff = coeffs[matiere];
-        
+
         sommeNotes += note * coeff;
         sommeCoeffs += coeff;
     }
-    
+
     if (sommeCoeffs === 0) return 0;
     return sommeNotes / sommeCoeffs;
 }
@@ -4455,12 +4337,12 @@ gradeCalcModalBox.addEventListener('click', (e) => {
             else if (calcKey === 'avg_y2_s1') {
                 moyenne = calculateWeightedAverage(gradeDataStore["2"].s1_coeffs, 'avg-y2-s1');
             }
-             else if (calcKey === 'avg_y2_annuel') {
+            else if (calcKey === 'avg_y2_annuel') {
                 const s1Moy = getCalcValue('avg-y2-a-S1');
                 const s2Moy = getCalcValue('avg-y2-a-S2');
                 const s1Coeff = Object.values(gradeDataStore["2"].s1_coeffs).reduce((a, b) => a + b, 0); // 7
                 const s2Coeff = Object.values(gradeDataStore["2"].s2_coeffs).reduce((a, b) => a + b, 0); // 8
-                
+
                 let notesAnnuel = (s1Moy * s1Coeff) + (s2Moy * s2Coeff);
                 let coeffsAnnuel = s1Coeff + s2Coeff;
 
@@ -4475,29 +4357,29 @@ gradeCalcModalBox.addEventListener('click', (e) => {
 
             // --- منطق السنة الثالثة ---
             else if (calcKey === 'y3_Prothèse') {
-                values = { 
-                    emd1: getCalcValue('y3-Prothèse-emd1'), 
-                    emd2: getCalcValue('y3-Prothèse-emd2'), 
-                    emd3: getCalcValue('y3-Prothèse-emd3'), 
-                    cc: getCalcValue('y3-Prothèse-cc'), 
-                    tp: getCalcValue('y3-Prothèse-tp') 
+                values = {
+                    emd1: getCalcValue('y3-Prothèse-emd1'),
+                    emd2: getCalcValue('y3-Prothèse-emd2'),
+                    emd3: getCalcValue('y3-Prothèse-emd3'),
+                    cc: getCalcValue('y3-Prothèse-cc'),
+                    tp: getCalcValue('y3-Prothèse-tp')
                 };
                 moyenne = gradeDataStore["3"].formulas.y3_Prothèse(values);
                 autoFill('avg-y3-a-Prothèse', moyenne);
             }
             else if (calcKey === 'y3_Pathologie' || calcKey === 'y3_ODF' || calcKey === 'y3_Parodontologie' /*... الخ */) {
                 const matiere = calcKey.split('_')[1]; // (Pathologie, ODF...)
-                values = { 
-                    emd1: getCalcValue(`y3-${matiere}-emd1`), 
-                    emd2: getCalcValue(`y3-${matiere}-emd2`), 
-                    emd3: getCalcValue(`y3-${matiere}-emd3`), 
+                values = {
+                    emd1: getCalcValue(`y3-${matiere}-emd1`),
+                    emd2: getCalcValue(`y3-${matiere}-emd2`),
+                    emd3: getCalcValue(`y3-${matiere}-emd3`),
                     cc: getCalcValue(`y3-${matiere}-cc`)
                 };
                 moyenne = gradeDataStore["3"].formulas.y3_standard(values);
                 autoFill(`avg-y3-a-${matiere}`, moyenne);
             }
             else if (calcKey === 'avg_y3_annuel') {
-                 moyenne = calculateWeightedAverage(gradeDataStore["3"].annual_coeffs, 'avg-y3-a');
+                moyenne = calculateWeightedAverage(gradeDataStore["3"].annual_coeffs, 'avg-y3-a');
             }
 
             // عرض النتيجة النهائية
@@ -4511,96 +4393,96 @@ gradeCalcModalBox.addEventListener('click', (e) => {
 });
 // ▲▲▲ نهاية الإضافة ▲▲▲
 // ▲▲▲ نهاية الإضافة ▲▲▲
-    // --- Initial Theme Setup ---
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) { 
-        body.classList.add(savedTheme); 
-        updateThemeToggleIcon(savedTheme); 
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { 
-        // Default to dark mode if system prefers it and no theme saved
-        body.classList.add('dark-mode'); 
-        updateThemeToggleIcon('dark-mode'); 
-    } else { 
-        // Default to light mode otherwise
-        updateThemeToggleIcon('light-mode'); 
-    }
+// --- Initial Theme Setup ---
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    updateThemeToggleIcon(savedTheme);
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // Default to dark mode if system prefers it and no theme saved
+    body.classList.add('dark-mode');
+    updateThemeToggleIcon('dark-mode');
+} else {
+    // Default to light mode otherwise
+    updateThemeToggleIcon('light-mode');
+}
 
-    // --- Explore Content Modal Handlers ---
-    if (exploreContentBtnNew && exploreModal) {
-        exploreContentBtnNew.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default anchor behavior if it's a link
-            exploreModal.classList.add('active');
-        });
-    }
-    if (closeExploreModalBtn && exploreModal) {
-        closeExploreModalBtn.addEventListener('click', () => {
+// --- Explore Content Modal Handlers ---
+if (exploreContentBtnNew && exploreModal) {
+    exploreContentBtnNew.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior if it's a link
+        exploreModal.classList.add('active');
+    });
+}
+if (closeExploreModalBtn && exploreModal) {
+    closeExploreModalBtn.addEventListener('click', () => {
+        exploreModal.classList.remove('active');
+    });
+}
+// Close explore modal on overlay click
+if (exploreModal) {
+    exploreModal.addEventListener('click', (e) => {
+        if (e.target === exploreModal) {
             exploreModal.classList.remove('active');
-        });
-    }
-    // Close explore modal on overlay click
-    if (exploreModal) {
-        exploreModal.addEventListener('click', (e) => {
-            if (e.target === exploreModal) {
-                exploreModal.classList.remove('active');
-            }
-        });
-    }
+        }
+    });
+}
 
-    // --- Feature Card Click Handlers (Video, Summaries, Quizzes, Articles) ---
-    if (videoLessonsCard) {
-        videoLessonsCard.addEventListener('click', () => {
-            showNotification('Video lessons are coming soon!', 'info');
-            // Optionally, disable the card visually or remove the listener after first click
-        });
-    }
+// --- Feature Card Click Handlers (Video, Summaries, Quizzes, Articles) ---
+if (videoLessonsCard) {
+    videoLessonsCard.addEventListener('click', () => {
+        showNotification('Video lessons are coming soon!', 'info');
+        // Optionally, disable the card visually or remove the listener after first click
+    });
+}
 
-    if (summariesCard) {
-        summariesCard.addEventListener('click', () => {
-            const summariesLink = document.querySelector('a[data-page-type="summaries"]');
-            if (summariesLink) {
-                summariesLink.click(); // Simulate click on the nav link
-                // showNotification('Showing all summaries.', 'info'); // Notification might be redundant as page changes
-            }
-        });
-    }
+if (summariesCard) {
+    summariesCard.addEventListener('click', () => {
+        const summariesLink = document.querySelector('a[data-page-type="summaries"]');
+        if (summariesLink) {
+            summariesLink.click(); // Simulate click on the nav link
+            // showNotification('Showing all summaries.', 'info'); // Notification might be redundant as page changes
+        }
+    });
+}
 
-    if (quizzesCard) {
-        quizzesCard.addEventListener('click', () => {
-            const quizzesLink = document.querySelector('a[data-page-type="quizzes"]');
-            if (quizzesLink) {
-                quizzesLink.click(); // Simulate click on the nav link
-            }
-        });
-    }
+if (quizzesCard) {
+    quizzesCard.addEventListener('click', () => {
+        const quizzesLink = document.querySelector('a[data-page-type="quizzes"]');
+        if (quizzesLink) {
+            quizzesLink.click(); // Simulate click on the nav link
+        }
+    });
+}
 
-    if (articlesCard && articlesModal) {
-        articlesCard.addEventListener('click', () => {
-            articlesModal.classList.add('active');
-        });
-    }
-    if (closeArticlesModalBtn && articlesModal) {
-        closeArticlesModalBtn.addEventListener('click', () => {
+if (articlesCard && articlesModal) {
+    articlesCard.addEventListener('click', () => {
+        articlesModal.classList.add('active');
+    });
+}
+if (closeArticlesModalBtn && articlesModal) {
+    closeArticlesModalBtn.addEventListener('click', () => {
+        articlesModal.classList.remove('active');
+    });
+}
+// Close articles modal on overlay click
+if (articlesModal) {
+    articlesModal.addEventListener('click', (e) => {
+        if (e.target === articlesModal) {
             articlesModal.classList.remove('active');
-        });
-    }
-     // Close articles modal on overlay click
-    if (articlesModal) {
-        articlesModal.addEventListener('click', (e) => {
-            if (e.target === articlesModal) {
-                articlesModal.classList.remove('active');
-            }
-        });
-    }
+        }
+    });
+}
 
-    // --- Initial App Load ---
-    checkForAuthToken(); // Check for token and initialize the app
-    
-    // Initial scroll reveal for the default active page (usually home)
-    triggerScrollReveal(document.querySelector('.page-section.active'));
+// --- Initial App Load ---
+checkForAuthToken(); // Check for token and initialize the app
 
-    // --- Markmap Dynamic Loading (ensureMarkmap not called here, called on demand) ---
-    function loadScript(src) {
-      return new Promise((resolve, reject) => {
+// Initial scroll reveal for the default active page (usually home)
+triggerScrollReveal(document.querySelector('.page-section.active'));
+
+// --- Markmap Dynamic Loading (ensureMarkmap not called here, called on demand) ---
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
         // Check if script already exists
         if (document.querySelector(`script[src="${src}"]`)) {
             console.log(`Script already loaded: ${src}`);
@@ -4614,217 +4496,217 @@ gradeCalcModalBox.addEventListener('click', (e) => {
             resolve();
         };
         s.onerror = (e) => {
-             console.error(`Failed to load script: ${src}`, e);
-             reject(new Error('Failed to load script: ' + src));
+            console.error(`Failed to load script: ${src}`, e);
+            reject(new Error('Failed to load script: ' + src));
         };
         document.head.appendChild(s);
-      });
-    }
+    });
+}
 
-    async function ensureMarkmap() {
-      // Check if necessary Markmap objects exist
-      if (window.markmap && window.markmap.Markmap && window.markmap.Transformer) { // Check for Transformer
+async function ensureMarkmap() {
+    // Check if necessary Markmap objects exist
+    if (window.markmap && window.markmap.Markmap && window.markmap.Transformer) { // Check for Transformer
         console.log("Markmap libraries already available.");
         return; // Already loaded
-      }
+    }
 
-      try {
+    try {
         console.log("Markmap not found. Loading libraries dynamically...");
         // Load dependencies first (D3)
         await loadScript('https://cdn.jsdelivr.net/npm/d3@7'); // Load D3 library
         // Load Markmap core and view components
-        await loadScript('https://cdn.jsdelivr.net/npm/markmap-lib'); 
+        await loadScript('https://cdn.jsdelivr.net/npm/markmap-lib');
         await loadScript('https://cdn.jsdelivr.net/npm/markmap-view');
-        
-         // Verify loading
-         if (window.markmap && window.markmap.Markmap && window.markmap.Transformer) {
-              console.log("Markmap libraries loaded successfully via dynamic import.");
-         } else {
-              throw new Error("Markmap objects not found after loading scripts.");
-         }
-      } catch (error) {
+
+        // Verify loading
+        if (window.markmap && window.markmap.Markmap && window.markmap.Transformer) {
+            console.log("Markmap libraries loaded successfully via dynamic import.");
+        } else {
+            throw new Error("Markmap objects not found after loading scripts.");
+        }
+    } catch (error) {
         console.error("Error loading Markmap libraries:", error);
         showNotification('Failed to load mind map viewer components.', 'error');
         // Re-throw the error if you want calling functions to handle it
-        throw error; 
-      }
+        throw error;
     }
-    
-    // ✅ أضف هذه الدالة الجديدة في أي مكان مع دوال الفلاش كارد
-    // في ملف script.js
-    // ✅ استبدل هذه الدالة بالكامل
-    async function handleFlashcardRating(rating, interval) {
-        if (!currentCollection || !currentCollection[currentCardIndex]) {
-             console.error("Cannot rate flashcard: collection or card missing.");
-             return;
-        }
+}
 
-        const card = currentCollection[currentCardIndex];
-        
-        // Only save if rated 'hard' or 'medium'
-        if (rating === 'hard' || rating === 'medium') {
-            
-            // --- Ensure subject context is available ---
-            if (!currentAiGenerationContext || !currentAiGenerationContext.subjectId) {
-                showNotification('Error: Could not determine the subject to save this card under.', 'error');
-                console.error("Missing subject context for saving AI flashcard:", currentAiGenerationContext);
-                return; // Stop if context is missing
-            }
-            // --- End context check ---
-                
-            try {
-                // Prepare data for saving
-                 const flashcardData = {
-                    subjectId: currentAiGenerationContext.subjectId, // Use the stored context
-                    questionText: card.front || card.questionText || 'Front', // Use available front content
-                    backContent: card.back || card.backContent || 'Back',   // Use available back content
-                    // Optionally add interval if your backend supports it
-                    // interval: interval ? parseInt(interval) : undefined 
-                 };
-
-                 // Disable rating buttons temporarily
-                 document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = true);
-
-                await createFlashcardAPI(flashcardData); // Call API to save
-                
-                // Show success message based on rating
-                const reviewMessage = interval ? `Will be reviewed in ${interval} day(s).` : '';
-                showNotification(`Card saved! ${reviewMessage}`, 'success');
-
-            } catch (e) {
-                 // Error handled by createFlashcardAPI, but re-enable buttons
-                 document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
-                 // Don't proceed to next card on error
-                 return; 
-            } finally {
-                 // Re-enable buttons if needed (though on success we move on)
-                 // document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
-            }
-        } else {
-             // If rated 'easy', just show a confirmation (optional)
-             // showNotification('Card marked as easy.', 'info');
-        }
-
-        // Move to the next card automatically (if not the last one)
-        if (currentCardIndex < currentCollection.length - 1) {
-            currentCardIndex++;
-            displayCurrentFlashcard();
-            // Re-enable buttons for the new card
-            document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
-        } else {
-            // Last card reviewed
-            showNotification('All generated cards have been reviewed!', 'success');
-            // Go back to the collections view
-            const backBtn = document.getElementById('back-to-collections-btn');
-            if (backBtn) backBtn.click();
-        }
+// ✅ أضف هذه الدالة الجديدة في أي مكان مع دوال الفلاش كارد
+// في ملف script.js
+// ✅ استبدل هذه الدالة بالكامل
+async function handleFlashcardRating(rating, interval) {
+    if (!currentCollection || !currentCollection[currentCardIndex]) {
+        console.error("Cannot rate flashcard: collection or card missing.");
+        return;
     }
 
+    const card = currentCollection[currentCardIndex];
 
-    // ✅ أضف هذا الكود في قسم معالجات الأحداث (Event Handlers) في الأسفل
-    // Ensure rating buttons exist before adding listeners
-    const ratingButtons = document.querySelectorAll('.rating-btn');
-    if (ratingButtons.length > 0) {
-        ratingButtons.forEach(btn => {
-            // Prevent adding multiple listeners if script runs multiple times
-             if (!btn.dataset.listenerAttached) { 
-                 btn.addEventListener('click', function() {
-                     const rating = this.dataset.rating;
-                     const interval = this.dataset.interval; // Can be undefined for 'easy'
-                     handleFlashcardRating(rating, interval);
-                 });
-                 btn.dataset.listenerAttached = 'true'; // Mark listener as attached
-             }
-        });
-    } else {
-         console.warn("AI Flashcard rating buttons not found.");
-    }
+    // Only save if rated 'hard' or 'medium'
+    if (rating === 'hard' || rating === 'medium') {
 
-    // ✅ أضف هذه الدالة الجديدة في أي مكان مناسب
-    function startSavedQuiz(quizData) {
-        // Validate saved quiz data
-        if (!quizData || !quizData._id || !Array.isArray(quizData.questions)) {
-             console.error("Invalid saved quiz data:", quizData);
-             showNotification("Could not load this saved quiz.", "error");
-             return;
+        // --- Ensure subject context is available ---
+        if (!currentAiGenerationContext || !currentAiGenerationContext.subjectId) {
+            showNotification('Error: Could not determine the subject to save this card under.', 'error');
+            console.error("Missing subject context for saving AI flashcard:", currentAiGenerationContext);
+            return; // Stop if context is missing
         }
-
-        localStorage.removeItem('quizState'); // Clear any ongoing quiz state
-
-        // Adapt saved quiz structure to the 'proQuiz' format
-        const adaptedQuiz = {
-            _id: quizData._id, // Use the actual ID from the database
-            title: quizData.title || 'Saved Quiz',
-            subject: null, // Saved quizzes might not have a direct subject link in the same way
-            subjectName: quizData.subjectName || "Saved Quiz", // Use saved subject name
-            questions: quizData.questions.map(q => ({
-                // Map fields carefully, providing defaults
-                questionText: q.question || q.questionText || '', 
-                options: q.options || [],
-                // Ensure correctOptionIndexes is always an array
-                correctOptionIndexes: Array.isArray(q.correctOptionIndexes) ? q.correctOptionIndexes : [q.correctOptionIndexes].filter(i => i != null), 
-                explanation: q.explanation || '',
-                // Add imageUrl and timer if they exist in saved data (optional)
-                imageUrl: q.imageUrl, 
-                timer: q.timer 
-            }))
-        };
-
-        // Check if adaptation resulted in valid questions
-        if (!adaptedQuiz.questions || adaptedQuiz.questions.length === 0) {
-            showNotification('This saved quiz appears to have no valid questions.', 'error');
-            return;
-        }
-
-        // Initialize and start the quiz using the adapted data
-        initializeAndStartQuiz(adaptedQuiz);
-    }
-
-    // ✅ أضف هذه الدالة الجديدة أيضاً
-    async function handleDeleteSavedQuiz(quizId, quizElement) {
-        if (!quizId || !quizElement) return; // Need ID and element to remove
-
-        // Confirmation dialog
-        if (!confirm('Are you sure you want to delete this saved quiz permanently?')) {
-            return; // Abort if user cancels
-        }
-
-        // Show loading/disabling state (optional)
-        const deleteButton = quizElement.querySelector('.btn-delete-saved-quiz');
-        if (deleteButton) {
-             deleteButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-             deleteButton.disabled = true;
-        }
+        // --- End context check ---
 
         try {
-            // Use fetchApi to send DELETE request
-            await fetchApi(`/api/saved-quizzes/${quizId}`, { method: 'DELETE' });
-            
-            showNotification('Quiz deleted successfully!', 'success');
-            // Remove the quiz element from the UI smoothly
-            quizElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            quizElement.style.opacity = '0';
-            quizElement.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                 quizElement.remove(); 
-                 // Check if the list is now empty
-                 const savedListContainer = document.getElementById('saved-quizzes-list');
-                 if (savedListContainer && !savedListContainer.querySelector('.saved-quiz-item')) {
-                     savedListContainer.innerHTML = '<p>You have no saved quizzes.</p>';
-                 }
-            }, 300); // Wait for animation
+            // Prepare data for saving
+            const flashcardData = {
+                subjectId: currentAiGenerationContext.subjectId, // Use the stored context
+                questionText: card.front || card.questionText || 'Front', // Use available front content
+                backContent: card.back || card.backContent || 'Back',   // Use available back content
+                // Optionally add interval if your backend supports it
+                // interval: interval ? parseInt(interval) : undefined 
+            };
 
-        } catch (error) {
-            console.error('Failed to delete saved quiz:', error);
-            showNotification(`Failed to delete quiz: ${error.message}`, 'error');
-            // Restore button state on error
-            if (deleteButton) {
-                 deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
-                 deleteButton.disabled = false;
+            // Disable rating buttons temporarily
+            document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = true);
+
+            await createFlashcardAPI(flashcardData); // Call API to save
+
+            // Show success message based on rating
+            const reviewMessage = interval ? `Will be reviewed in ${interval} day(s).` : '';
+            showNotification(`Card saved! ${reviewMessage}`, 'success');
+
+        } catch (e) {
+            // Error handled by createFlashcardAPI, but re-enable buttons
+            document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
+            // Don't proceed to next card on error
+            return;
+        } finally {
+            // Re-enable buttons if needed (though on success we move on)
+            // document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
+        }
+    } else {
+        // If rated 'easy', just show a confirmation (optional)
+        // showNotification('Card marked as easy.', 'info');
+    }
+
+    // Move to the next card automatically (if not the last one)
+    if (currentCardIndex < currentCollection.length - 1) {
+        currentCardIndex++;
+        displayCurrentFlashcard();
+        // Re-enable buttons for the new card
+        document.querySelectorAll('#ai-flashcard-rating-controls .rating-btn').forEach(btn => btn.disabled = false);
+    } else {
+        // Last card reviewed
+        showNotification('All generated cards have been reviewed!', 'success');
+        // Go back to the collections view
+        const backBtn = document.getElementById('back-to-collections-btn');
+        if (backBtn) backBtn.click();
+    }
+}
+
+
+// ✅ أضف هذا الكود في قسم معالجات الأحداث (Event Handlers) في الأسفل
+// Ensure rating buttons exist before adding listeners
+const ratingButtons = document.querySelectorAll('.rating-btn');
+if (ratingButtons.length > 0) {
+    ratingButtons.forEach(btn => {
+        // Prevent adding multiple listeners if script runs multiple times
+        if (!btn.dataset.listenerAttached) {
+            btn.addEventListener('click', function () {
+                const rating = this.dataset.rating;
+                const interval = this.dataset.interval; // Can be undefined for 'easy'
+                handleFlashcardRating(rating, interval);
+            });
+            btn.dataset.listenerAttached = 'true'; // Mark listener as attached
+        }
+    });
+} else {
+    console.warn("AI Flashcard rating buttons not found.");
+}
+
+// ✅ أضف هذه الدالة الجديدة في أي مكان مناسب
+function startSavedQuiz(quizData) {
+    // Validate saved quiz data
+    if (!quizData || !quizData._id || !Array.isArray(quizData.questions)) {
+        console.error("Invalid saved quiz data:", quizData);
+        showNotification("Could not load this saved quiz.", "error");
+        return;
+    }
+
+    localStorage.removeItem('quizState'); // Clear any ongoing quiz state
+
+    // Adapt saved quiz structure to the 'proQuiz' format
+    const adaptedQuiz = {
+        _id: quizData._id, // Use the actual ID from the database
+        title: quizData.title || 'Saved Quiz',
+        subject: null, // Saved quizzes might not have a direct subject link in the same way
+        subjectName: quizData.subjectName || "Saved Quiz", // Use saved subject name
+        questions: quizData.questions.map(q => ({
+            // Map fields carefully, providing defaults
+            questionText: q.question || q.questionText || '',
+            options: q.options || [],
+            // Ensure correctOptionIndexes is always an array
+            correctOptionIndexes: Array.isArray(q.correctOptionIndexes) ? q.correctOptionIndexes : [q.correctOptionIndexes].filter(i => i != null),
+            explanation: q.explanation || '',
+            // Add imageUrl and timer if they exist in saved data (optional)
+            imageUrl: q.imageUrl,
+            timer: q.timer
+        }))
+    };
+
+    // Check if adaptation resulted in valid questions
+    if (!adaptedQuiz.questions || adaptedQuiz.questions.length === 0) {
+        showNotification('This saved quiz appears to have no valid questions.', 'error');
+        return;
+    }
+
+    // Initialize and start the quiz using the adapted data
+    initializeAndStartQuiz(adaptedQuiz);
+}
+
+// ✅ أضف هذه الدالة الجديدة أيضاً
+async function handleDeleteSavedQuiz(quizId, quizElement) {
+    if (!quizId || !quizElement) return; // Need ID and element to remove
+
+    // Confirmation dialog
+    if (!confirm('Are you sure you want to delete this saved quiz permanently?')) {
+        return; // Abort if user cancels
+    }
+
+    // Show loading/disabling state (optional)
+    const deleteButton = quizElement.querySelector('.btn-delete-saved-quiz');
+    if (deleteButton) {
+        deleteButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        deleteButton.disabled = true;
+    }
+
+    try {
+        // Use fetchApi to send DELETE request
+        await fetchApi(`/api/saved-quizzes/${quizId}`, { method: 'DELETE' });
+
+        showNotification('Quiz deleted successfully!', 'success');
+        // Remove the quiz element from the UI smoothly
+        quizElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        quizElement.style.opacity = '0';
+        quizElement.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            quizElement.remove();
+            // Check if the list is now empty
+            const savedListContainer = document.getElementById('saved-quizzes-list');
+            if (savedListContainer && !savedListContainer.querySelector('.saved-quiz-item')) {
+                savedListContainer.innerHTML = '<p>You have no saved quizzes.</p>';
             }
+        }, 300); // Wait for animation
+
+    } catch (error) {
+        console.error('Failed to delete saved quiz:', error);
+        showNotification(`Failed to delete quiz: ${error.message}`, 'error');
+        // Restore button state on error
+        if (deleteButton) {
+            deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
+            deleteButton.disabled = false;
         }
     }
-    
+}
+
 // --- Report Question Modal Logic ---
 const reportBtn = document.getElementById('report-question-btn');
 const reportModal = document.getElementById('report-modal');
@@ -4844,7 +4726,7 @@ if (reportBtn && reportModal && reportReasonInput) {
         reportReasonInput.focus(); // Focus the reason input
     });
 } else {
-     console.warn("Report question elements missing.");
+    console.warn("Report question elements missing.");
 }
 
 // Hide modal on cancel button click
@@ -4859,7 +4741,7 @@ if (cancelReportBtn && reportModal && reportForm) {
 if (reportForm && reportModal && reportReasonInput) {
     reportForm.addEventListener('submit', async (e) => {
         e.preventDefault(); // Prevent default form submission
-        
+
         const reason = reportReasonInput.value.trim();
         if (!reason) {
             showNotification('Please provide a reason for the report.', 'warning');
@@ -4869,14 +4751,14 @@ if (reportForm && reportModal && reportReasonInput) {
         // Get current question data safely
         const currentQuestion = proQuiz?.questions?.[proQuestionIndex];
         if (!currentQuestion) {
-             showNotification('Could not identify the question to report.', 'error');
-             return;
+            showNotification('Could not identify the question to report.', 'error');
+            return;
         }
 
         const reportPayload = {
             quizId: proQuiz._id || 'unknown', // Include quiz ID
             // Use questionText or fallback
-            questionText: currentQuestion.questionText || currentQuestion.question || `Question Index ${proQuestionIndex}`, 
+            questionText: currentQuestion.questionText || currentQuestion.question || `Question Index ${proQuestionIndex}`,
             reason: reason
         };
 
@@ -4907,8 +4789,8 @@ if (reportForm && reportModal && reportReasonInput) {
 if (reportModal) {
     reportModal.addEventListener('click', (e) => {
         if (e.target === reportModal) {
-             reportModal.classList.remove('active');
-             if(reportForm) reportForm.reset();
+            reportModal.classList.remove('active');
+            if (reportForm) reportForm.reset();
         }
     });
 }
@@ -4931,5 +4813,5 @@ if (userMenuToggle && userDropdown && logoutBtn) {
         }
     });
 } else {
-     console.warn("User menu dropdown elements not found.");
+    console.warn("User menu dropdown elements not found.");
 }
