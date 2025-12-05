@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="dashboard-layout">
         <nav class="sidebar">
@@ -14,7 +16,8 @@
                 <h3><i class="fas fa-user-shield"></i> Admin</h3>
             </div>
             <ul>
-                <li><a href="#dashboard" class="nav-link active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#dashboard" class="nav-link active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
                 <li><a href="#users" class="nav-link"><i class="fas fa-users"></i> User Management</a></li>
                 <li><a href="#reports" class="nav-link"><i class="fas fa-flag"></i> Report Center</a></li>
                 <li><a href="#ai-logs" class="nav-link"><i class="fas fa-robot"></i> AI Observatory</a></li>
@@ -74,7 +77,7 @@
                         <p id="stat-year-other">0</p>
                     </div>
                 </div>
-                </section>
+            </section>
 
             <section id="users" class="content-section">
                 <h1>User Management</h1>
@@ -85,9 +88,13 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Study Year</th>
-                                <th>XP</th> <th>Status</th>
+                                <th>XP</th>
+                                <th>Status</th>
                                 <th>AI Access</th>
-                                <th>Status Actions</th> <th>Update Data</th> </tr>
+                                <th>Status Actions</th>
+                                <th>Role Actions</th> <!-- ✅ تمت الإضافة -->
+                                <th>Update Data</th>
+                            </tr>
                         </thead>
                         <tbody id="users-table-body"></tbody>
                     </table>
@@ -129,12 +136,51 @@
                 </div>
             </section>
 
+            <!-- ✅ تم تحديث قسم Content Factory بالكامل -->
             <section id="content" class="content-section">
-                <h1 class="soon">Content Factory (Coming Soon)</h1>
+                <h1>Content Factory (Editor Mode)</h1>
+
+                <div class="filter-bar">
+                    <select id="editor-year-select" class="admin-select">
+                        <option value="">Select Year...</option>
+                        <option value="1">Year 1</option>
+                        <option value="2">Year 2</option>
+                        <option value="3">Year 3</option>
+                        <option value="4">Year 4</option>
+                        <option value="5">Year 5</option>
+                    </select>
+                    <select id="editor-subject-select" class="admin-select" disabled>
+                        <option value="">Select Subject...</option>
+                    </select>
+                    <button id="load-quizzes-btn" class="action-btn btn-activate" disabled>Load Lessons/Quizzes</button>
+                </div>
+
+                <div id="quizzes-list-container" class="grid-container" style="display:none; margin-top: 20px;">
+                    <!-- سيتم تعبئة الكويزات هنا -->
+                </div>
+
+                <div id="question-editor-area"
+                    style="display:none; margin-top: 30px; background: #fff; padding: 20px; border-radius: 8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                        <h2 id="editor-quiz-title">Editing: ...</h2>
+                        <div>
+                            <button id="add-new-question-btn" class="action-btn btn-activate"><i
+                                    class="fas fa-plus"></i> Add Question</button>
+                            <button id="save-quiz-changes-btn" class="action-btn btn-deactivate"
+                                style="background:#2ecc71;"><i class="fas fa-save"></i> Save All Changes</button>
+                        </div>
+                    </div>
+
+                    <div id="questions-wrapper">
+                        <!-- سيتم تعبئة الأسئلة هنا للتعديل -->
+                    </div>
+                </div>
             </section>
+
         </main>
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>

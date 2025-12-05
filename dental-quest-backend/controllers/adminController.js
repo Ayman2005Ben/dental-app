@@ -3,6 +3,7 @@
 const User = require('../models/userModel');
 const Report = require('../models/reportModel');
 const AiLog = require('../models/aiLogModel');
+const Quiz = require('../models/quizModel'); // ✅ تم إضافة استيراد الكويز
 
 // @desc    Get dashboard stats
 // @route   GET /api/admin/stats
@@ -32,7 +33,7 @@ exports.getDashboardStats = async (req, res) => {
                 case '3': statsByYear.year3 = group.count; break;
                 case '4': statsByYear.year4 = group.count; break;
                 case '5': statsByYear.year5 = group.count; break;
-                default: statsByYear.yearOther += group.count; // (null أو N/A)
+                default: statsByYear.yearOther += group.count;
             }
         }
         // --- نهاية الإضافة ---
@@ -55,7 +56,7 @@ exports.getDashboardStats = async (req, res) => {
 // @access  Admin
 exports.getAllUsers = async (req, res) => {
     try {
-        // ✅ جلب نقاط الخبرة مع باقي البيانات
+        // ✅ جلب نقاط الخبرة ودور الأدمن مع باقي البيانات
         const users = await User.find({})
             .select('-password -__v') // تحسين الأداء
             .sort({ createdAt: -1 });
@@ -202,5 +203,79 @@ exports.updateUserExperience = async (req, res) => {
     } catch (error) {
         console.error('[Admin Update XP Error]:', error);
         res.status(500).json({ message: 'Server error updating user XP.' });
+    }
+};
+
+// --- ✅ [إضافة 1] ترقية المستخدم إلى مشرف (Admin) ---
+// @desc    Toggle Admin status
+// @route   PUT /api/admin/users/:id/toggle-admin
+// @access  Admin
+exports.toggleUserAdmin = async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        if (!user) return res.status(404).json({ message: 'User not found.' });
+
+        // التبديل بين مشرف ومستخدم عادي
+        user.isAdmin = !user.isAdmin;
+        await user.save();
+
+        res.status(200).json({
+            message: `User is now ${user.isAdmin ? 'an ADMIN' : 'a standard USER'}.`,
+            isAdmin: user.isAdmin,
+        });
+    } catch (error) {
+        console.error('[Admin Toggle Role Error]:', error);
+        res.status(500).json({ message: 'Server error updating user role.' });
+    }
+};
+
+// --- ✅ [إضافة 2] جلب الكويزات حسب المادة ---
+// @desc    Get quizzes by subject ID
+// @route   GET /api/admin/quizzes/subject/:id
+// @access  Admin
+exports.getQuizzesBySubject = async (req, res) => {
+    try {
+        // بناءً على QuizModel، الربط يكون عبر الـ ObjectId للحقل 'subject'
+        // لذلك نتوقع أن يكون البراميتر هو ID المادة
+        const subjectId = req.params.id;
+
+        const quizzes = await Quiz.find({ subject: subjectId })
+            .select('title questions createdAt') // نجلب فقط الحقول المهمة
+            .sort({ createdAt: -1 });
+
+        res.status(200).json(quizzes);
+    } catch (error) {
+        console.error('[Get Quizzes Error]:', error);
+        res.status(500).json({ message: 'Server error fetching quizzes.' });
+    }
+};
+
+// --- ✅ [إضافة 3] حفظ تعديلات الكويز (تعديل، إضافة، حذف أسئلة) ---
+// @desc    Update quiz questions
+// @route   PUT /api/admin/quizzes/:quizId
+// @access  Admin
+exports.saveQuizChanges = async (req, res) => {
+    try {
+        const { quizId } = req.params;
+        const { questions } = req.body; // نستقبل مصفوفة الأسئلة الجديدة بالكامل
+
+        // التحقق من وجود الكويز
+        const quiz = await Quiz.findById(quizId);
+        if (!quiz) return res.status(404).json({ message: 'Quiz not found.' });
+
+        // تحديث الأسئلة
+        quiz.questions = questions;
+
+        // حفظ التغييرات (سيقوم Mongoose بالتحقق من صحة Schema الأسئلة)
+        await quiz.save();
+
+        res.status(200).json({
+            message: 'Quiz updated successfully!',
+            quizTitle: quiz.title,
+            questionsCount: quiz.questions.length
+        });
+    } catch (error) {
+        console.error('[Update Quiz Error]:', error);
+        res.status(500).json({ message: 'Server error updating quiz.' });
     }
 };
