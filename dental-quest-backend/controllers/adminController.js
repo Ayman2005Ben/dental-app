@@ -1,9 +1,11 @@
 // DENTAL-QUEST-BACKEND/controllers/adminController.js
 
+const mongoose = require('mongoose'); // ✅ ضروري للتحقق من صحة الـ ID
 const User = require('../models/userModel');
 const Report = require('../models/reportModel');
 const AiLog = require('../models/aiLogModel');
-const Quiz = require('../models/quizModel'); // ✅ تم إضافة استيراد الكويز
+const Quiz = require('../models/quizModel');
+const Subject = require('../models/subjectModel'); // ✅ ضروري للبحث عن المادة بالاسم
 
 // @desc    Get dashboard stats
 // @route   GET /api/admin/stats
@@ -17,7 +19,6 @@ exports.getDashboardStats = async (req, res) => {
         const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
         const newUsers = await User.countDocuments({ createdAt: { $gte: oneWeekAgo } });
 
-        // --- ✅ [إضافة جديدة] إحصائيات المستخدمين حسب السنة ---
         const yearCounts = await User.aggregate([
             { $group: { _id: "$studyYear", count: { $sum: 1 } } }
         ]);
@@ -36,14 +37,13 @@ exports.getDashboardStats = async (req, res) => {
                 default: statsByYear.yearOther += group.count;
             }
         }
-        // --- نهاية الإضافة ---
 
         res.status(200).json({
             totalUsers,
             activeUsers,
             newReports,
             newUsers,
-            statsByYear, // ✅ إرجاع الإحصائيات الجديدة
+            statsByYear,
         });
     } catch (error) {
         console.error('[Admin Stats Error]:', error);
@@ -56,9 +56,8 @@ exports.getDashboardStats = async (req, res) => {
 // @access  Admin
 exports.getAllUsers = async (req, res) => {
     try {
-        // ✅ جلب نقاط الخبرة ودور الأدمن مع باقي البيانات
         const users = await User.find({})
-            .select('-password -__v') // تحسين الأداء
+            .select('-password -__v')
             .sort({ createdAt: -1 });
         res.status(200).json(users);
     } catch (error) {
@@ -143,7 +142,6 @@ exports.toggleAiAccess = async (req, res) => {
     }
 };
 
-// --- ✅ [إضافة جديدة] تعديل السنة الدراسية للمستخدم ---
 // @desc    Update user study year
 // @route   PUT /api/admin/users/:id/year
 // @access  Admin
@@ -172,7 +170,6 @@ exports.updateUserStudyYear = async (req, res) => {
     }
 };
 
-// --- ✅ [إضافة جديدة] تعديل نقاط الخبرة للمستخدم ---
 // @desc    Update user experience points
 // @route   PUT /api/admin/users/:id/xp
 // @access  Admin
@@ -206,7 +203,6 @@ exports.updateUserExperience = async (req, res) => {
     }
 };
 
-// --- ✅ [إضافة 1] ترقية المستخدم إلى مشرف (Admin) ---
 // @desc    Toggle Admin status
 // @route   PUT /api/admin/users/:id/toggle-admin
 // @access  Admin
@@ -215,7 +211,6 @@ exports.toggleUserAdmin = async (req, res) => {
         const user = await User.findById(req.params.id);
         if (!user) return res.status(404).json({ message: 'User not found.' });
 
-        // التبديل بين مشرف ومستخدم عادي
         user.isAdmin = !user.isAdmin;
         await user.save();
 
@@ -229,18 +224,34 @@ exports.toggleUserAdmin = async (req, res) => {
     }
 };
 
-// --- ✅ [إضافة 2] جلب الكويزات حسب المادة ---
-// @desc    Get quizzes by subject ID
+// --- ✅ [تم التعديل لإصلاح الخطأ] ---
+// @desc    Get quizzes by subject ID OR Name
 // @route   GET /api/admin/quizzes/subject/:id
 // @access  Admin
 exports.getQuizzesBySubject = async (req, res) => {
     try {
-        // بناءً على QuizModel، الربط يكون عبر الـ ObjectId للحقل 'subject'
-        // لذلك نتوقع أن يكون البراميتر هو ID المادة
-        const subjectId = req.params.id;
+        let inputParam = req.params.id;
+        let subjectId = inputParam;
 
+        // 1. التحقق: هل المدخل هو ID صالح لـ MongoDB؟
+        if (!mongoose.Types.ObjectId.isValid(inputParam)) {
+            // إذا لم يكن ID، نبحث عنه كاسم مادة
+            // نستخدم RegExp للبحث غير الحساس لحالة الأحرف
+            const subject = await Subject.findOne({
+                name: { $regex: new RegExp(`^${inputParam}$`, 'i') }
+            });
+
+            if (!subject) {
+                console.log(`[Admin] Subject '${inputParam}' not found in DB.`);
+                // نرجع مصفوفة فارغة بدلاً من خطأ 404 لتجنب توقف الواجهة
+                return res.status(200).json([]);
+            }
+            subjectId = subject._id; // استخراج الـ ID الحقيقي
+        }
+
+        // 2. البحث عن الكويزات باستخدام الـ ID
         const quizzes = await Quiz.find({ subject: subjectId })
-            .select('title questions createdAt') // نجلب فقط الحقول المهمة
+            .select('title questions createdAt')
             .sort({ createdAt: -1 });
 
         res.status(200).json(quizzes);
@@ -250,23 +261,18 @@ exports.getQuizzesBySubject = async (req, res) => {
     }
 };
 
-// --- ✅ [إضافة 3] حفظ تعديلات الكويز (تعديل، إضافة، حذف أسئلة) ---
 // @desc    Update quiz questions
 // @route   PUT /api/admin/quizzes/:quizId
 // @access  Admin
 exports.saveQuizChanges = async (req, res) => {
     try {
         const { quizId } = req.params;
-        const { questions } = req.body; // نستقبل مصفوفة الأسئلة الجديدة بالكامل
+        const { questions } = req.body;
 
-        // التحقق من وجود الكويز
         const quiz = await Quiz.findById(quizId);
         if (!quiz) return res.status(404).json({ message: 'Quiz not found.' });
 
-        // تحديث الأسئلة
         quiz.questions = questions;
-
-        // حفظ التغييرات (سيقوم Mongoose بالتحقق من صحة Schema الأسئلة)
         await quiz.save();
 
         res.status(200).json({
