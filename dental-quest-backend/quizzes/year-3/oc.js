@@ -479,13 +479,13 @@ const ocQuizzes = [
           "L'injection doit être passive contact, retrait, éjection",
           "C'est le mouvement des instruments dans le canal (va et vient) qui fait pénétrer la solution sur tout le trajet du canal jusqu'à la limite apicale.",
           "Il faut une grande pression de l'éjection pour atteindre le péri-apex",
-    "Le praticien utilise une seringue avec une aiguille.",
-    "Toutes les réponses sont justes"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "L’irrigation efficace du canal radiculaire dépend du mouvement actif des instruments à l’intérieur du canal. Ce va-et-vient favorise la pénétration de la solution d’irrigation (comme l’hypochlorite de sodium) sur toute la longueur du canal, jusqu’à la constriction apicale, en facilitant l’élimination des débris et des bactéries. Cette technique est appelée « irrigation active ». Les autres affirmations sont inexactes : l’injection n’est pas passive, une pression excessive peut provoquer une extrusion apicale dangereuse, et l’utilisation d’une seringue avec aiguille, bien qu’habituelle, ne garantit pas à elle seule une irrigation efficace sans mouvement actif.",
-  citations: []
-},
+          "Le praticien utilise une seringue avec une aiguille.",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L’irrigation efficace du canal radiculaire dépend du mouvement actif des instruments à l’intérieur du canal. Ce va-et-vient favorise la pénétration de la solution d’irrigation (comme l’hypochlorite de sodium) sur toute la longueur du canal, jusqu’à la constriction apicale, en facilitant l’élimination des débris et des bactéries. Cette technique est appelée « irrigation active ». Les autres affirmations sont inexactes : l’injection n’est pas passive, une pression excessive peut provoquer une extrusion apicale dangereuse, et l’utilisation d’une seringue avec aiguille, bien qu’habituelle, ne garantit pas à elle seule une irrigation efficace sans mouvement actif.",
+        citations: []
+      },
       {
         questionText: "Le vasoconstricteur:",
         options: [
@@ -3178,12 +3178,12 @@ const ocQuizzes = [
           "C'est le mouvement des instruments dans le canal (va et vient) qui fait pénétrer la solution sur tout le trajet du canal jusqu'à la limite apicale.",
           "Il faut une grande pression de l'éjection pour atteindre le péri-apex",
           "Le praticien utilise une seringue avec une aiguille.",
-    "Toutes les réponses sont justes"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "L’irrigation efficace du canal radiculaire dépend du mouvement actif des instruments à l’intérieur du canal. Ce va-et-vient favorise la pénétration de la solution d’irrigation (comme l’hypochlorite de sodium) sur toute la longueur du canal, jusqu’à la constriction apicale, en facilitant l’élimination des débris et des bactéries. Cette technique est appelée « irrigation active ». Les autres affirmations sont inexactes : l’injection n’est pas passive, une pression excessive peut provoquer une extrusion apicale dangereuse, et l’utilisation d’une seringue avec aiguille, bien qu’habituelle, ne garantit pas à elle seule une irrigation efficace sans mouvement actif.",
-  citations: []
-}
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L’irrigation efficace du canal radiculaire dépend du mouvement actif des instruments à l’intérieur du canal. Ce va-et-vient favorise la pénétration de la solution d’irrigation (comme l’hypochlorite de sodium) sur toute la longueur du canal, jusqu’à la constriction apicale, en facilitant l’élimination des débris et des bactéries. Cette technique est appelée « irrigation active ». Les autres affirmations sont inexactes : l’injection n’est pas passive, une pression excessive peut provoquer une extrusion apicale dangereuse, et l’utilisation d’une seringue avec aiguille, bien qu’habituelle, ne garantit pas à elle seule une irrigation efficace sans mouvement actif.",
+        citations: []
+      }
     ],
   },
   {
@@ -6020,7 +6020,7 @@ const ocQuizzes = [
       },
     ],
   },
-   
+
   {
     title: "Test 1: 1er EMD, 2019/2020",
     subject: "oc",
@@ -6562,6 +6562,790 @@ const ocQuizzes = [
         ],
         correctOptionIndexes: [1, 2, 3],
         explanation: "La turbine est un instrument rotatif à très haute vitesse (plus de 300 000 tr/min), actionnée par l'air comprimé (l'eau servant au refroidissement). Elle est utilisée pour les étapes de préparation qui nécessitent une coupe rapide de l'émail, comme le biseautage."
+      }
+    ]
+  },
+  {
+    title: "Test 3: 1er CC OC, 2019/2020",
+    subject: "oc",
+    questions: [
+      {
+        questionText: "Le curetage dentinaire mécanique est réalisé au moyen :",
+        options: [
+          "D'une fraise boule montée sur turbine.",
+          "D'une fraise boule montée sur contre-angle.",
+          "D'un excavateur.",
+          "D'une curette.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le curetage mécanique se fait à basse vitesse pour un meilleur contrôle tactile et pour éviter de surchauffer la pulpe. On utilise donc une fraise boule sur contre-angle (bague bleue)."
+      },
+      {
+        questionText: "Le coiffage juxta-pulpaire est :",
+        options: [
+          "Un coiffage dentinaire.",
+          "Un coiffage pulpaire direct.",
+          "Un coiffage pulpaire indirect.",
+          "Indiqué dans le cas de pulpite chronique ouverte.",
+          "Indiqué dans le cas de pulpite chronique fermée."
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "C'est un coiffage pulpaire indirect, indiqué sur une dent vivante asymptomatique ou avec pulpite réversible (chronique fermée)."
+      },
+      {
+        questionText: "La technique radiologique pour visualiser les caries proximales exclusivement est :",
+        options: [
+          "La rétro-alvéolaire.",
+          "La rétro coronaire.",
+          "Le bite wing.",
+          "Le mordu occlusal.",
+          "La panoramique dentaire."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La technique de choix pour le diagnostic des caries proximales est le cliché \"Bite-wing\" (ou rétro-coronaire), qui donne une image nette des couronnes des dents maxillaires et mandibulaires sans superposition."
+      },
+      {
+        questionText: "Dans les thérapeutiques dentinogènes, il y a formation :",
+        options: [
+          "De dentine réactionnelle.",
+          "De dentine tertiaire.",
+          "De dentine sclérotique.",
+          "De dentine décalcifiée.",
+          "De barrière dentinaire."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "En réponse à une agression (carie, fraisage), la pulpe forme de la dentine tertiaire, qui peut être réactionnelle (formée par les odontoblastes primaires) ou réparatrice (formée par de nouveaux odontoblastes). La dentine sclérotique est une oblitération des tubuli. L'ensemble forme une barrière de protection."
+      },
+      {
+        questionText: "La digue :",
+        options: [
+          "Empêche la chute d'instrument dans la gorge.",
+          "Protège la dent de la salive.",
+          "Empêche d'avaler de l'hypochlorite de sodium.",
+          "Sert à isoler les dents.",
+          "Est de couleur blanche."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La digue assure une isolation parfaite du champ opératoire. Elle protège le patient (chute d'objet, ingestion de produits) et protège la dent de la contamination salivaire, garantissant la qualité des soins."
+      },
+      {
+        questionText: "La fraise de Batt est :",
+        options: [
+          "Une fraise boule en carbure de Tungstène.",
+          "Une fraise fissurée à bout rond en acier.",
+          "Une fraise diamantée à cône renversé.",
+          "Indiquée pour l'ablation du plafond pulpaire.",
+          "Indiquée pour la trépanation de la chambre pulpaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La fraise de Batt est une fraise en carbure de tungstène, lisse, à bout mousse (inactif), utilisée pour élargir la cavité d'accès et éliminer les surplombs sans risque de perforer le plancher pulpaire."
+      },
+      {
+        questionText: "La carie initiale :",
+        options: [
+          "Correspond au stade 0 SISTA.",
+          "Correspond à une atteinte amélaire.",
+          "Correspond à une atteinte dentinaire.",
+          "Correspond au stade de la tache blanche.",
+          "Est traitée par reminéralisassions."
+        ],
+        correctOptionIndexes: [0, 1, 3, 4],
+        explanation: "La carie initiale est une lésion non cavitaire confinée à l'émail (stade 0 SISTA), se présentant cliniquement comme une tache blanche. Son traitement est non-invasif (reminéralisation par le fluor, hygiène)."
+      },
+      {
+        questionText: "L'oxyde de zinc eugénol :",
+        options: [
+          "Est appelé aussi l'eugénolate.",
+          "Possède un PH proche de celui du tissu pulpaire vital.",
+          "Possède une action stimulante directe de la dentinogenèse.",
+          "Peut être renforcé en incorporant-dans sa composition une résine.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "L'eugénol réagit avec l'oxyde de zinc pour former de l'eugénolate de zinc. Son pH est neutre. Il a une action sédative mais pas directement stimulante. Les ciments ZOE renforcés (type IRM) contiennent des résines."
+      },
+      {
+        questionText: "Le pouvoir tampon de la salive est sa capacité de :",
+        options: [
+          "Limiter les chutes de PH salivaire buccal.",
+          "Lutter contre l'acidité buccale.",
+          "Compenser les baisses de PH.",
+          "Lubrifier les dents.",
+          "Neutraliser les bactéries."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le pouvoir tampon (principalement dû aux bicarbonates) est la capacité de la salive à neutraliser les acides et à s'opposer aux variations de pH, protégeant ainsi l'émail de la déminéralisation."
+      },
+      {
+        questionText: "La turbine :",
+        options: [
+          "Tourne à une vitesse de 30 000 tour/min.",
+          "Elle a une source d'énergie fournie par l'air et l'eau.",
+          "Est utilisée pour réaliser le biseautage.",
+          "Elle comporte une tête porte fraise et un manche.",
+          "Est utilisée pour réaliser le curetage dentinaire."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La turbine est un instrument rotatif à très haute vitesse (plus de 300 000 tr/min), actionnée par l'air comprimé (l'eau servant au refroidissement). Elle est utilisée pour les étapes de préparation qui nécessitent une coupe rapide de l'émail, comme le biseautage."
+      }
+    ]
+  },
+  {
+    title: "Test 3: 1er CC OC, 2019/2020",
+    subject: "oc",
+    questions: [
+      {
+        questionText: "Le curetage dentinaire mécanique est réalisé au moyen :",
+        options: [
+          "D'une fraise boule montée sur turbine.",
+          "D'une fraise boule montée sur contre-angle.",
+          "D'un excavateur.",
+          "D'une curette.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le curetage mécanique se fait à basse vitesse pour un meilleur contrôle tactile et pour éviter de surchauffer la pulpe. On utilise donc une fraise boule sur contre-angle (bague bleue)."
+      },
+      {
+        questionText: "Le coiffage juxta-pulpaire est :",
+        options: [
+          "Un coiffage dentinaire.",
+          "Un coiffage pulpaire direct.",
+          "Un coiffage pulpaire indirect.",
+          "Indiqué dans le cas de pulpite chronique ouverte.",
+          "Indiqué dans le cas de pulpite chronique fermée."
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "C'est un coiffage pulpaire indirect, indiqué sur une dent vivante asymptomatique ou avec pulpite réversible (chronique fermée)."
+      },
+      {
+        questionText: "La technique radiologique pour visualiser les caries proximales exclusivement est :",
+        options: [
+          "La rétro-alvéolaire.",
+          "La rétro coronaire.",
+          "Le bite wing.",
+          "Le mordu occlusal.",
+          "La panoramique dentaire."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La technique de choix pour le diagnostic des caries proximales est le cliché \"Bite-wing\" (ou rétro-coronaire), qui donne une image nette des couronnes des dents maxillaires et mandibulaires sans superposition."
+      },
+      {
+        questionText: "Dans les thérapeutiques dentinogènes, il y a formation :",
+        options: [
+          "De dentine réactionnelle.",
+          "De dentine tertiaire.",
+          "De dentine sclérotique.",
+          "De dentine décalcifiée.",
+          "De barrière dentinaire."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "En réponse à une agression (carie, fraisage), la pulpe forme de la dentine tertiaire, qui peut être réactionnelle (formée par les odontoblastes primaires) ou réparatrice (formée par de nouveaux odontoblastes). La dentine sclérotique est une oblitération des tubuli. L'ensemble forme une barrière de protection."
+      },
+      {
+        questionText: "La digue :",
+        options: [
+          "Empêche la chute d'instrument dans la gorge.",
+          "Protège la dent de la salive.",
+          "Empêche d'avaler de l'hypochlorite de sodium.",
+          "Sert à isoler les dents.",
+          "Est de couleur blanche."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La digue assure une isolation parfaite du champ opératoire. Elle protège le patient (chute d'objet, ingestion de produits) et protège la dent de la contamination salivaire, garantissant la qualité des soins."
+      },
+      {
+        questionText: "La fraise de Batt est :",
+        options: [
+          "Une fraise boule en carbure de Tungstène.",
+          "Une fraise fissurée à bout rond en acier.",
+          "Une fraise diamantée à cône renversé.",
+          "Indiquée pour l'ablation du plafond pulpaire.",
+          "Indiquée pour la trépanation de la chambre pulpaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La fraise de Batt est une fraise en carbure de tungstène, lisse, à bout mousse (inactif), utilisée pour élargir la cavité d'accès et éliminer les surplombs sans risque de perforer le plancher pulpaire."
+      },
+      {
+        questionText: "La carie initiale :",
+        options: [
+          "Correspond au stade 0 SISTA.",
+          "Correspond à une atteinte amélaire.",
+          "Correspond à une atteinte dentinaire.",
+          "Correspond au stade de la tache blanche.",
+          "Est traitée par reminéralisassions."
+        ],
+        correctOptionIndexes: [0, 1, 3, 4],
+        explanation: "La carie initiale est une lésion non cavitaire confinée à l'émail (stade 0 SISTA), se présentant cliniquement comme une tache blanche. Son traitement est non-invasif (reminéralisation par le fluor, hygiène)."
+      },
+      {
+        questionText: "L'oxyde de zinc eugénol :",
+        options: [
+          "Est appelé aussi l'eugénolate.",
+          "Possède un PH proche de celui du tissu pulpaire vital.",
+          "Possède une action stimulante directe de la dentinogenèse.",
+          "Peut être renforcé en incorporant-dans sa composition une résine.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "L'eugénol réagit avec l'oxyde de zinc pour former de l'eugénolate de zinc. Son pH est neutre. Il a une action sédative mais pas directement stimulante. Les ciments ZOE renforcés (type IRM) contiennent des résines."
+      },
+      {
+        questionText: "Le pouvoir tampon de la salive est sa capacité de :",
+        options: [
+          "Limiter les chutes de PH salivaire buccal.",
+          "Lutter contre l'acidité buccale.",
+          "Compenser les baisses de PH.",
+          "Lubrifier les dents.",
+          "Neutraliser les bactéries."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le pouvoir tampon (principalement dû aux bicarbonates) est la capacité de la salive à neutraliser les acides et à s'opposer aux variations de pH, protégeant ainsi l'émail de la déminéralisation."
+      },
+      {
+        questionText: "La turbine :",
+        options: [
+          "Tourne à une vitesse de 30 000 tour/min.",
+          "Elle a une source d'énergie fournie par l'air et l'eau.",
+          "Est utilisée pour réaliser le biseautage.",
+          "Elle comporte une tête porte fraise et un manche.",
+          "Est utilisée pour réaliser le curetage dentinaire."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La turbine est un instrument rotatif à très haute vitesse (plus de 300 000 tr/min), actionnée par l'air comprimé (l'eau servant au refroidissement). Elle est utilisée pour les étapes de préparation qui nécessitent une coupe rapide de l'émail, comme le biseautage."
+      }
+    ]
+  },
+  {
+    title: "Test 2: 3eme EMD, 2019/2020",
+    subject: "oc",
+    questions: [
+      {
+        questionText: "La préparation canalaire mécanisée :",
+        options: [
+          "Nécessite des instruments en acier inoxydable",
+          "Nécessite des instruments en Nickel Titane.",
+          "Est une technique apico-coronaire.",
+          "Nécessite une irrigation abondante.",
+          "Impose des mouvements de va et vient de grande amplitude."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La préparation mécanisée (rotation continue ou réciprocité) utilise des instruments en NiTi pour leur flexibilité. Elle est généralement corono-apicale (\"crown-down\") et requiert une irrigation abondante pour éliminer les débris."
+      },
+      {
+        questionText: "Cochez les dynamiques instrumentales de la préparation canalaire mécanisée :",
+        options: [
+          "Mouvement alternatif asymétrique.",
+          "Rotation continue.",
+          "Mouvement de raclage asymétrique.",
+          "Mouvement vertical de grande amplitude."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les deux principaux mouvements sont la rotation continue (ex: ProTaper, Revo-S) et le mouvement alternatif asymétrique ou \"réciprocité\" (ex: WaveOne, Reciproc). Le \"raclage\" décrit le contact de l'instrument contre les parois."
+      },
+      {
+        questionText: "Les indications du traitement canalaire sont :",
+        options: [
+          "Pulpite réversible.",
+          "Pulpite irréversible.",
+          "Fracture coronaire non pénétrante.",
+          "Parodontite apicale chronique.",
+          "Atteinte dentinaire profonde."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Le traitement canalaire (endodontique) est indiqué lorsque la pulpe est nécrosée ou atteinte d'une inflammation irréversible (pulpite irréversible, parodontite apicale)."
+      },
+      {
+        questionText: "L'hypochlorite de sodium :",
+        options: [
+          "Possède une action solvante sur les débris pulpaires.",
+          "Est utilisé à une concentration de 2.5 à 5%.",
+          "Est très efficace sur la boue dentinaire.",
+          "Possède une action bactéricide et protéolytique.",
+          "N'a aucun effet sur les virus et les champignons."
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "NaOCl est le principal irrigant. Il dissout les tissus organiques (débris pulpaires), est un puissant bactéricide, mais a une action limitée sur la boue dentinaire (partie minérale), qui nécessite un chélatant comme l'EDTA."
+      },
+      {
+        questionText: "Dans les thérapeutiques des mortifications pulpaires, l'hypochlorite de sodium est utilisé :",
+        options: [
+          "En association avec l'eau oxygénée.",
+          "En irrigation.",
+          "Juste après la réalisation de la cavité d'accès.",
+          "A l'aide d'une seringue endodontique.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "L'irrigation avec NaOCl doit commencer dès l'ouverture de la chambre pulpaire et se poursuivre tout au long de la préparation, en utilisant une seringue endodontique spécifique pour éviter les extrusions. L'association avec H2O2 n'est plus recommandée."
+      },
+      {
+        questionText: "La solution d'irrigation endodontique idéale doit :",
+        options: [
+          "Avoir une action antibactérienne.",
+          "Permettre la dissolution des tissus organiques.",
+          "Etre non irritante pour les tissus péri-apicaux.",
+          "Permettre l'inhibition des toxines bactériennes.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Ces propositions décrivent l'ensemble des propriétés recherchées pour une solution d'irrigation idéale, bien qu'aucune solution unique ne les possède toutes parfaitement."
+      },
+      {
+        questionText: "Le traitement d'une pulpite irréversible sur une '46 mature est :",
+        options: [
+          "Une bio-pulpectomie.",
+          "Un coiffage pulpaire direct.",
+          "Un coiffage pulpaire indirect.",
+          "Une pulpotomie partielle.",
+          "Une pulpectomie immédiate."
+        ],
+        correctOptionIndexes: [0, 4],
+        explanation: "Le traitement d'une pulpite irréversible sur une dent mature est la pulpectomie (ablation totale de la pulpe). \"Bio-pulpectomie\" est un synonyme pour une pulpectomie sur une dent vivante."
+      },
+      {
+        questionText: "La technique de compactage vertical à chaud utilise :",
+        options: [
+          "Des cônes de gutta normalisés.",
+          "Des cônes de gutta non normalisés.",
+          "Des fouloirs verticaux de diamètres croissants.",
+          "Des fouloirs verticaux de diamètres décroissants.",
+          "Une quantité de ciment d'environ 5%."
+        ],
+        correctOptionIndexes: [1, 3, 4],
+        explanation: "La technique de Schilder utilise des cônes non normalisés, des fouloirs (pluggers) de diamètres décroissants pour le compactage apical (\"down-pack\"), puis des diamètres croissants pour le \"back-pack\". Une faible quantité de ciment est utilisée."
+      },
+      {
+        questionText: "Les cônes de gutta-percha :",
+        options: [
+          "Sont toujours normalisés.",
+          "Sont proposés exclusivement selon la norme ISO.",
+          "S'oxydent à la lumière.",
+          "S'oxydent à l'air.",
+          "Doivent être décontaminés à l'hypochlorite de sodium."
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "La gutta-percha est sensible à l'oxydation par l'air et la lumière, ce qui la rend cassante. Avant utilisation, les cônes doivent être décontaminés par trempage rapide dans du NaOCl."
+      },
+      {
+        questionText: "Le ciment de scellement endodontique :",
+        options: [
+          "Constitue le matériau d'obturation principal.",
+          "N'est pas utilisé dans les techniques de compactage.",
+          "Joue le rôle d'un joint.",
+          "Assure l'adhésion de la gutta aux parois dentinaires.",
+          "Est utilisé en fine couche."
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "Le ciment comble les espaces entre la gutta-percha (matériau principal) et les parois, assurant l'étanchéité (joint) et l'adhésion. Il doit être appliqué en fine couche."
+      },
+      {
+        questionText: "La cavité d'accès endodontique au niveau d'une incisive centrale maxillaire :",
+        options: [
+          "Est réalisée au niveau de la face vestibulaire.",
+          "Est réalisée au niveau de la région cingulaire.",
+          "Présente une forme triangulaire.",
+          "Présente une forme trapézoïdale.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La cavité d'accès pour les incisives et canines maxillaires se situe au niveau de la face palatine (cingulum). Sa forme est triangulaire avec la base vers le bord incisif pour respecter les cornes pulpaires."
+      },
+      {
+        questionText: "La cavité d'accès endodontique :",
+        options: [
+          "Est réalisée toujours à partir de la cavité de carie pré existante.",
+          "Permet la visibilité des apex radiculaires.",
+          "Permet la visibilité des entrées canalaires.",
+          "Doit suivre la configuration du contour externe de la dent.",
+          "Se situe dans l'axe des canaux."
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "La cavité d'accès doit permettre un accès rectiligne aux canaux. Sa forme suit la morphologie de la chambre pulpaire (qui est une projection du contour externe de la dent)."
+      },
+      {
+        questionText: "La préparation canalaire doit :",
+        options: [
+          "Calquer l'anatomie originelle.",
+          "Permettre l'élimination de la dentine pariétale dans le cas de gangrènes (thérapeutique des gangrènes).",
+          "Respecter les structures anatomiques apicales.",
+          "Etre corono-apicale lorsqu'elle est mécanisée.",
+          "Etre très conique lorsqu'elle est manuelle."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les objectifs de la mise en forme sont de nettoyer et de conformer le canal en respectant son anatomie d'origine et la constriction apicale. Les techniques mécanisées sont majoritairement corono-apicales."
+      },
+      {
+        questionText: "La technique de compactage latéral à froid :",
+        options: [
+          "Exploite la malléabilité de la gutta.",
+          "Exploite la plasticité de la gutta.",
+          "Impose une préparation conique.",
+          "Utilise des spreaders.",
+          "Utilise une quantité de ciment d'environ 15%."
+        ],
+        correctOptionIndexes: [0, 2, 3, 4],
+        explanation: "Cette technique utilise un maître-cône et des cônes accessoires compactés latéralement avec des \"spreaders\". Elle nécessite une préparation canalaire conique pour permettre l'insertion des instruments."
+      },
+      {
+        questionText: "Les signes objectifs lors d'un syndrome du septum sont :",
+        options: [
+          "Absence de point de contact.",
+          "Tassement alimentaire.",
+          "La papille est tuméfiée et rouge.",
+          "La papille saigne au sondage.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le syndrome du septum est une inflammation de la papille interdentaire due à l'absence de point de contact. Tous les signes décrits (tassement, inflammation, saignement) sont caractéristiques."
+      },
+      {
+        questionText: "La réussite d'une restauration d'une cavité de classe II nécessite l'utilisation :",
+        options: [
+          "Des coins inter-dentaires.",
+          "Des matériaux biocompatibles.",
+          "Obligatoire d'une bague en cuivre.",
+          "D'une matrice simple.",
+          "D'une matrice adaptée."
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La restauration d'une classe II requiert un système de matriçage (matrice adaptée + coin interdentaire) pour reconstituer correctement le point de contact et le profil proximal."
+      },
+      {
+        questionText: "Le point de contact assure :",
+        options: [
+          "Le maintien de position de la dent.",
+          "La préservation du parodonte.",
+          "Une harmonie du sourire.",
+          "Une réussite de la thérapeutique endodontique.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Un point de contact correct est crucial pour stabiliser la dent sur l'arcade, protéger la papille interdentaire et contribuer à l'esthétique du sourire."
+      },
+      {
+        questionText: "L'espace inter-dentaire est formé de :",
+        options: [
+          "La crête marginale.",
+          "Le point de contact.",
+          "Les embrasures.",
+          "La papille gingivale.",
+          "Le septum inter radiculaire."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'espace inter-dentaire est une zone complexe délimitée occlusalement par les crêtes marginales, latéralement par les faces proximales (au niveau du point de contact), et remplie par la papille gingivale."
+      },
+      {
+        questionText: "Le cathétérisme :",
+        options: [
+          "Est l'exploration active du système canalaire.",
+          "Est l'exploration passive du système canalaire.",
+          "Est l'exploration initiale du système canalaire.",
+          "Est réalisée à l'aide d'une lime K n°10.",
+          "Permet de déterminer la longueur de travail."
+        ],
+        correctOptionIndexes: [1, 2, 3, 4],
+        explanation: "C'est la première exploration passive du canal, réalisée avec une lime fine (K10 ou K15), pour évaluer sa perméabilité et déterminer la longueur de travail estimée."
+      },
+      {
+        questionText: "Le canal accessoire :",
+        options: [
+          "Est une ramification du canal principal.",
+          "Est une ramification du canal secondaire.",
+          "Est situé dans le tiers (1/3) apical.",
+          "Est situé dans le tiers (1/3) moyen.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Un canal accessoire est une ramification qui part d'un canal secondaire (qui lui-même part du canal principal) et qui débouche au niveau du cément. On les trouve le plus souvent dans le tiers apical."
+      }
+    ]
+  },
+  {
+    title: "Test 1: 1er EMD, 2019/2020",
+    subject: "oc",
+    questions: [
+      {
+        questionText: "Le traitement non invasif de l'hyperesthésie dentinaire consiste à :",
+        options: [
+          "Réaliser une anesthésie.",
+          "Prescrire des antalgiques.",
+          "Appliquer un vernis.",
+          "Appliquer un adhésif.",
+          "Utiliser le LASER."
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "Les traitements non invasifs visent à obturer les tubuli dentinaires. Les vernis fluorés, les adhésifs et certains types de lasers sont des méthodes reconnues pour atteindre cet objectif."
+      },
+      {
+        questionText: "La durée approximative d'application du produit de coiffage dentinaire est de :",
+        options: [
+          "06 mois.",
+          "06 semaines.",
+          "03 mois.",
+          "03 semaines.",
+          "01 semaine."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La période standard pour permettre la formation d'un pont de dentine réparatrice sous un matériau de coiffage est de 6 à 8 semaines."
+      },
+      {
+        questionText: "Le coiffage juxta-pulpaire est :",
+        options: [
+          "Un coiffage dentinaire.",
+          "Un coiffage pulpaire direct.",
+          "Un coiffage pulpaire indirect.",
+          "Indiqué dans le cas de pulpite chronique ouverte.",
+          "Indiqué dans le cas de pulpite chronique fermée."
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le coiffage juxta-pulpaire est un synonyme du coiffage pulpaire indirect. Il est indiqué sur des dents vivantes présentant une carie très profonde sans signes de pulpite irréversible (ex: pulpite chronique fermée)."
+      },
+      {
+        questionText: "Dans l'atteinte dentinaire stade 2 :",
+        options: [
+          "Le patient se plaint de douleurs provoquées uniquement au froid.",
+          "Le patient se plaint de douleurs provoquées uniquement.",
+          "Le patient se plaint de douleurs aux variations thermiques.",
+          "Le patient se plaint de douleurs aux acides et sucres.",
+          "Le patient se plaint de douleurs spontanées."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Ce stade correspond à une pulpite réversible. La douleur est toujours provoquée (non spontanée) et cède à l'arrêt du stimulus (thermique, chimique, osmotique)."
+      },
+      {
+        questionText: "Le conditionnement des instruments se fait :",
+        options: [
+          "Avant la stérilisation.",
+          "Après la stérilisation.",
+          "Uniquement pour le matériel à stocker.",
+          "Pour le matériel à usage unique.",
+          "Après la désinfection."
+        ],
+        correctOptionIndexes: [0, 4],
+        explanation: "La chaîne de stérilisation est : pré-désinfection, nettoyage, séchage, conditionnement (emballage), puis stérilisation. Le conditionnement se fait donc après désinfection et avant stérilisation."
+      },
+      {
+        questionText: "La turbine et le contre angle sont :",
+        options: [
+          "Stérilisés au poupinel.",
+          "Stérilisés à l'autoclave.",
+          "Désinfectés en fin de journée.",
+          "Désinfectés après chaque malade."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les instruments rotatifs doivent être désinfectés par lingette entre chaque patient, puis stérilisés à l'autoclave (cycle pour corps creux) à la fin de la séance ou journée."
+      },
+      {
+        questionText: "L'abrasion est due à un processus :",
+        options: [
+          "Chimique.",
+          "Mécanique.",
+          "Infectieux.",
+          "Dégénératif.",
+          "Malformatif."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'abrasion est une usure mécanique pathologique causée par un agent externe (ex: brossage traumatique). L'usure chimique est l'érosion."
+      },
+      {
+        questionText: "L'hypersensibilité dentinaire peut être en rapport avec :",
+        options: [
+          "L'attrition.",
+          "L'abrasion.",
+          "L'érosion.",
+          "L'abfraction.",
+          "La fêlure."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Toute situation clinique entraînant une exposition des tubuli dentinaires est une cause potentielle d'hypersensibilité."
+      },
+      {
+        questionText: "Le traitement de l'hyperesthésie dentinaire :",
+        options: [
+          "Est médicamenteux.",
+          "Est étiologique.",
+          "Consiste à réaliser dans tous les cas un coiffage dentinaire.",
+          "Consiste à réaliser dans tous les cas une pulpectomie.",
+          "Consiste à réaliser dans tous les cas un dentifrice à haute teneur en fluor."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le traitement primordial de toute pathologie est de supprimer sa cause (traitement étiologique). Les autres options sont des traitements symptomatiques."
+      },
+      {
+        questionText: "Le test de sensibilité au froid est réalisé :",
+        options: [
+          "Au chlorure de sodium.",
+          "Au chlorure d'éthyle.",
+          "Au fond de la cavité.",
+          "Toujours après une isolation et séchage de la dent.",
+          "Au niveau cervical."
+        ],
+        correctOptionIndexes: [1, 3, 4],
+        explanation: "Le test se fait avec un produit réfrigérant (chlorure d'éthyle), sur la dent isolée et séchée, au niveau du tiers cervical vestibulaire qui est la zone la plus sensible."
+      },
+      {
+        questionText: "Le test au fraisage est réalisé :",
+        options: [
+          "A la turbine.",
+          "Au contre angle.",
+          "Au niveau de la dentine saine.",
+          "Au niveau de la dentine décalcifiée.",
+          "Au niveau de la dentine ramollie."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "C'est un test de vitalité ultime, réalisé sans anesthésie, à basse vitesse (contre-angle) et sur une zone de dentine saine pour être certain d'atteindre les prolongements odontoblastiques."
+      },
+      {
+        questionText: "Le diagnostic de la fêlure est confirmé par :",
+        options: [
+          "Radiographie rétro-alvéolaire.",
+          "Réponse positive au test au froid.",
+          "Par la transillumination.",
+          "Une réponse positive au test de percussion.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La transillumination est l'examen de choix. La lumière est stoppée par le trait de fêlure, créant une ombre qui le révèle."
+      },
+      {
+        questionText: "Dans les signes subjectifs, on note :",
+        options: [
+          "Le caractère de la douleur.",
+          "L'intensité de la douleur.",
+          "La durée de la douleur.",
+          "Le siège de la carie.",
+          "La profondeur de la carie."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les signes subjectifs sont les informations rapportées par le patient lors de l'interrogatoire (anamnèse), relatives à sa douleur. Les autres sont des signes objectifs (cliniques)."
+      },
+      {
+        questionText: "L'infection nosocomiale est :",
+        options: [
+          "Liée à l'affection pour laquelle le patient est hospitalisé.",
+          "Liée à une infection dentaire.",
+          "Contractée à l'hôpital.",
+          "Contractée dès la sortie de l'hôpital.",
+          "Est une infection croisée."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C'est la définition même : une infection acquise dans un établissement de santé, qui n'était pas présente à l'admission."
+      }
+    ]
+  },
+  {
+    title: "Test 5: QROC Convertis et Questions Manuscrites",
+    subject: "oc",
+    questions: [
+      {
+        questionText: "Quels sont les avantages du curetage dentinaire par le LASER ? (Question convertie)",
+        options: [
+          "Préparation cavitaire directe sans carbonisation.",
+          "Travail sans bruit et sans vibration (confort du patient).",
+          "Effet stérilisant et hémostatique.",
+          "Moins de risque de fêlures (micro-fractures).",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Le Laser (Er:YAG) permet un curetage sélectif, moins douloureux (moins de vibrations/bruit), stérilise la surface et évite les micro-fêlures souvent causées par les instruments rotatifs."
+      },
+      {
+        questionText: "Quelles sont les qualités biologiques requises d'un produit de coiffage ? (Question convertie)",
+        options: [
+          "Être bactéricide et bactériostatique.",
+          "Avoir un pH acide pour stimuler la pulpe.",
+          "Être biocompatible et non irritant pour la pulpe.",
+          "Stimuler la formation de dentine réparatrice (dentinogène).",
+          "Assurer une étanchéité marginale."
+        ],
+        correctOptionIndexes: [0, 2, 3, 4],
+        explanation: "Un bon produit de coiffage doit être basique (pH alcalin) pour neutraliser l'acidité, biocompatible, sédatif, et induire la minéralisation (pont dentinaire)."
+      },
+      {
+        questionText: "Quels sont les tests de vérification du curetage dentinaire manuel ? (Question convertie)",
+        options: [
+          "Le cri dentinaire (son clair au passage de la sonde).",
+          "La dureté des parois à la sonde.",
+          "L'absence de copeaux dentinaires lors du grattage.",
+          "L'aspect brillant de la dentine.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Le curetage est complet lorsque la dentine est dure (« cri dentinaire »), lisse, brillante et que l'excavateur ou la sonde ne ramène plus de copeaux mous."
+      },
+      {
+        questionText: "Quelle est la comparaison correcte entre la radiographie numérique et classique ? (Question convertie)",
+        options: [
+          "La radio numérique nécessite plus de dose d'irradiation que la classique.",
+          "La radio numérique permet un traitement d'image (contraste, zoom) impossible en classique.",
+          "La radio numérique nécessite un développement chimique en chambre noire.",
+          "La radio classique permet un archivage et un partage plus facile.",
+          "Le stockage des films argentiques est plus durable que le stockage numérique."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La radiographie numérique réduit la dose d'irradiation (jusqu'à -80%), élimine la chimie (développement), et permet le traitement et l'archivage informatique des images."
+      },
+      {
+        questionText: "Quel est l'aspect microscopique de la lésion amélaire initiale (Tache blanche) ? (Question convertie)",
+        options: [
+          "Une destruction totale de la surface de l'émail.",
+          "Une zone superficielle intacte recouvrant une zone déminéralisée (corps de la lésion).",
+          "La présence de bactéries au sein des tubuli dentinaires.",
+          "Une invasion de la jonction émail-dentine.",
+          "Une cavitation macroscopique."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Histologiquement, la tache blanche présente une couche de surface pseudo-intacte (grâce à la reminéralisation salivaire) qui recouvre le corps de la lésion (zone de déminéralisation sub-surface)."
+      },
+      {
+        questionText: "Quels facteurs influencent l'équilibre Déminéralisation / Reminéralisation ? (Question convertie)",
+        options: [
+          "Le pH salivaire et le pouvoir tampon.",
+          "La fréquence d'ingestion des sucres (hydrates de carbone).",
+          "La présence de fluor.",
+          "Le flux salivaire et l'hygiène bucco-dentaire.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La balance dépend de l'attaque acide (bactéries + sucres) contre les défenses (salive, fluor, hygiène)."
+      },
+      {
+        questionText: "Quel est l'intérêt de la digue en endodontie ? (Question convertie)",
+        options: [
+          "Assurer l'asepsie (éviter la contamination salivaire).",
+          "Protéger le patient contre l'ingestion d'instruments ou de produits.",
+          "Améliorer la visibilité et l'accès.",
+          "Protéger les tissus mous.",
+          "Toutes les réponses sont justes."
+        ],
+        correctOptionIndexes: [4],
+        explanation: "La digue est obligatoire en endodontie pour l'asepsie, la sécurité (risque d'ingestion de limes/NaOCl) et le confort."
+      },
+      {
+        questionText: "Citez trois moyens de polissage des restaurations dentaires (Question convertie) :",
+        options: [
+          "Disques abrasifs (ex: Sof-Lex) de grains décroissants.",
+          "Pointes ou cupules en silicone (caoutchouc).",
+          "Pâtes à polir diamantées ou à l'oxyde d'alumine.",
+          "Fraises diamantées à grain grossier.",
+          "Brossettes."
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "Le polissage se fait avec des abrasifs de plus en plus fins : disques, caoutchoucs, brossettes et pâtes. Les fraises à grain grossier servent à la taille, pas au polissage."
+      },
+      {
+        questionText: "Quelle est la contre-indication absolue du coiffage pulpaire direct ? (Question convertie)",
+        options: [
+          "Une exposition pulpaire récente (< 24h).",
+          "Une exposition pulpaire traumatique de petite taille.",
+          "Une exposition pulpaire en milieu contaminé (ex: salive, carie profonde).",
+          "Une dent jeune immature (apex ouvert).",
+          "Une exposition accidentelle sur champ opératoire isolé (digue)."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le coiffage direct est voué à l'échec si la pulpe est enflammée de manière irréversible ou si le site est contaminé par la salive ou la carie. Il nécessite une pulpe saine et un champ opératoire stérile."
       }
     ]
   },
