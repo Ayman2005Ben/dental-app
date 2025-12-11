@@ -44,8 +44,10 @@ router.get('/reports', protectAdmin, getAllReports);
 router.get('/ailogs', protectAdmin, getAiLogs);
 
 // --- ✅ [إضافة جديدة] إدارة المحتوى (Content Factory) ---
-// ملاحظة: البراميتر هنا :id ليتوافق مع req.params.id في الكنترولر
-router.get('/quizzes/subject/:id', protectAdmin, getQuizzesBySubject);
+
+// ✅ الجديد: يبحث بالسنة واسم المادة
+router.get('/quizzes/year/:year/subject/:subjectName', protectAdmin, getQuizzesBySubject);
+
 router.put('/quizzes/:quizId', protectAdmin, saveQuizChanges);
 
 module.exports = router;

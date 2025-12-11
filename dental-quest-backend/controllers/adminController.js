@@ -224,37 +224,33 @@ exports.toggleUserAdmin = async (req, res) => {
     }
 };
 
-// --- ✅ [تم التعديل لإصلاح الخطأ] ---
-// @desc    Get quizzes by subject ID OR Name
-// @route   GET /api/admin/quizzes/subject/:id
+// --- ✅ [تم التعديل للبحث بالسنة واسم المادة] ---
+// @desc    Get quizzes by subject Name AND Year
+// @route   GET /api/admin/quizzes/year/:year/subject/:subjectName
 // @access  Admin
 exports.getQuizzesBySubject = async (req, res) => {
     try {
-        let inputParam = req.params.id;
-        let subjectId = inputParam;
+        // نستقبل السنة والاسم من الرابط
+        const { year, subjectName } = req.params;
 
-        // 1. التحقق: هل المدخل هو ID صالح لـ MongoDB؟
-        if (!mongoose.Types.ObjectId.isValid(inputParam)) {
-            // إذا لم يكن ID، نبحث عنه كاسم مادة
-            // نستخدم RegExp للبحث غير الحساس لحالة الأحرف
-            const subject = await Subject.findOne({
-                name: { $regex: new RegExp(`^${inputParam}$`, 'i') }
-            });
+        // 1. البحث عن المادة باستخدام (الاسم + السنة) معاً
+        // هذا هو الحل السحري: لن يختلط OCE سنة 2 مع OCE سنة 4
+        const subject = await Subject.findOne({
+            name: { $regex: new RegExp(`^${subjectName}$`, 'i') },
+            year: year // ✅ شرط السنة ضروري جداً
+        });
 
-            if (!subject) {
-                console.log(`[Admin] Subject '${inputParam}' not found in DB.`);
-                // نرجع مصفوفة فارغة بدلاً من خطأ 404 لتجنب توقف الواجهة
-                return res.status(200).json([]);
-            }
-            subjectId = subject._id; // استخراج الـ ID الحقيقي
+        if (!subject) {
+            return res.status(404).json({ message: `Subject '${subjectName}' for Year ${year} not found.` });
         }
 
-        // 2. البحث عن الكويزات باستخدام الـ ID
-        const quizzes = await Quiz.find({ subject: subjectId })
+        // 2. البحث عن الكويزات التابعة لـ ID هذه المادة بالتحديد
+        const quizzes = await Quiz.find({ subject: subject._id })
             .select('title questions createdAt')
             .sort({ createdAt: -1 });
 
         res.status(200).json(quizzes);
+
     } catch (error) {
         console.error('[Get Quizzes Error]:', error);
         res.status(500).json({ message: 'Server error fetching quizzes.' });

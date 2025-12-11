@@ -331,13 +331,13 @@ function handleDashboardPage() {
     // 🏭 5. Content Factory Logic (إدارة المحتوى)
     // ========================
 
-    // بيانات المواد (قوائم ثابتة لتسهيل الاختيار)
+    // ✅ القائمة الصحيحة المطابقة لملف seeder.js 100%
     const subjectsData = {
-        "1": ["GENETICS", "ANATOMY", "BIOCHEMISTRY", "HISTOLOGY", "EMBRYOLOGY", "PHYSIOLOGY", "CYTOLOGY"],
-        "2": ["ODF", "PROTHÈSE", "OCE", "PARO", "PATHO", "BIOMATERIAU", "ANATOMIE HUMAINE", "PHYSIOLOGIE"],
-        "3": ["ODF", "PROTHÈSE", "OCE", "PARO", "PATHOLOGIE", "PHARMACOLOGIE", "MICROBIOLOGIE", "IMAGERIE", "ANATOMIE PATHOLOGIQUE"],
-        "4": ["ODF", "PROTHÈSE", "OCE", "PARO", "PATHOLOGIE", "PÉDODONTIE", "ORTHODONTIE", "OCCLUSODONTIE"],
-        "5": ["ODF", "PROTHÈSE", "OCE", "PARO", "PATHOLOGIE", "PÉDODONTIE", "IMPLANTOLOGIE", "DÉONTOLOGIE"]
+        "1": ["GENETICS", "BIOMATHÉMATIQUES", "ANATOMY", "BIOCHEMISTRY", "CHEMISTRY", "BIOPHYSIQUE", "PHYSICS", "EMBRYOLOGY", "HISTOLOGY", "CYTOLOGY", "SSH", "PHYSIOLOGY"],
+        "2": ["ODF", "PROTHÈSE", "OCE", "PARO", "PATHO", "BIOMATERIAU", "IMMUNOLOGIE", "HISTOLOGIE", "HYGIÈNE", "MICROBIOLOGIE", "ANATOMIE HUMAINE", "INFORMATIQUE"],
+        "3": ["ANATOMO-PATHOLOGIE", "ANESTHÉSIOLOGIE", "IMAGERIE", "OC", "OCCLUSIO", "ODF", "OXYOLOGIE", "PARO", "PATHOLOGIE", "PHARMACOLOGIE", "PROTHÈSE"],
+        "4": ["DÉONTOLOGIE", "IMPLANTO", "OCE", "ODF", "OG", "OP", "PARO", "PATHO MÉDICALE", "PATHOLOGIE BUCCO-DENTAIRE", "PROTHÈSE"],
+        "5": ["ÉPIDÉMIO", "ERGONOMIE", "IMPLANTO", "OCE", "ODF", "OP", "PARO", "PATHO", "PROTHÈSE"]
     };
 
     const yearSelect = document.getElementById('editor-year-select');
@@ -382,21 +382,15 @@ function handleDashboardPage() {
     if (loadQuizzesBtn) {
         loadQuizzesBtn.addEventListener('click', async () => {
             const subject = subjectSelect.value;
+            const year = yearSelect.value; // ✅ نحصل على السنة المختارة
+
             quizzesContainer.style.display = 'grid'; // Grid layout
             quizzesContainer.innerHTML = '<p>Loading lessons/quizzes...</p>';
             editorArea.style.display = 'none';
 
             try {
-                // ملاحظة: نستخدم الاسم هنا للبحث، تأكد أن الباك اند يدعم البحث بالاسم أو عدل الرابط هنا
-                // إذا كان الباك اند يتوقع ID، يجب عليك جلب الـ IDs أولاً. سنفترض هنا أن الباك اند تم تعديله ليقبل الاسم أو الـ ID
-                // أو أنك ستقوم بتعديل الرابط أدناه ليتوافق مع منطقك.
-                // بناءً على طلبك السابق، سنرسل اسم المادة أو الـ ID الخاص بها.
-                // لتجنب الأخطاء، سنقوم بترميز النص (Encode URI).
-
-                // ⚠️ هام: إذا كان الباك اند يتوقع Subject ID حصراً، يجب عليك معرفة الـ ID.
-                // بما أننا لا نملك IDs في المصفوفة subjectsData، سنفترض أن الراوت يقبل البحث باسم المادة 
-                // أو أنك ستستبدل المصفوفة أعلاه بـ IDs حقيقية من قاعدة بياناتك.
-                const quizzes = await fetchAdminApi(`/quizzes/subject/${encodeURIComponent(subject)}`);
+                // ✅ نرسل السنة والمادة في الرابط الجديد
+                const quizzes = await fetchAdminApi(`/quizzes/year/${year}/subject/${encodeURIComponent(subject)}`);
 
                 quizzesContainer.innerHTML = '';
 
