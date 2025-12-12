@@ -8,9 +8,9 @@ const Subject = require('../models/subjectModel');
 const Quiz = require('../models/quizModel');
 
 // --- Import Data Structures ---
-const { allQuizzes } = require('../quizzes'); // Import the aggregated quizzes array
+const { allQuizzes } = require('../quizzes');
 
-// --- Full and Correct Subject Data ---
+// --- Full Subject Data ---
 const subjectsDatabase = {
     "1": [
         { "name": "GENETICS", "key": "genetics", "icon": "GENETICS.png" },
@@ -83,45 +83,72 @@ dotenv.config({ path: './.env' });
 const importData = async () => {
     try {
         await connectDB();
-        console.log('MongoDB Connected for data import...');
+        console.log('MongoDB Connected for smart update...');
 
-        // Clear old Subjects and Quizzes only
-        await Quiz.deleteMany();
-        await Subject.deleteMany();
-        console.log('Old Subjects and Quizzes cleared...');
+        // ❌ حذفنا سطور المسح (deleteMany) نهائياً للحفاظ على البيانات
 
-        // 1. Import Subjects
-        const subjectsToInsert = [];
+        // 1. تحديث أو إضافة المواد (Subjects)
+        const subjectsToProcess = [];
         Object.keys(subjectsDatabase).forEach(year => {
             subjectsDatabase[year].forEach(subject => {
-                subjectsToInsert.push({ ...subject, year: parseInt(year) });
+                subjectsToProcess.push({ ...subject, year: parseInt(year) });
             });
         });
-        const insertedSubjects = await Subject.insertMany(subjectsToInsert);
-        console.log(`✅ ${insertedSubjects.length} subjects imported.`);
 
-        // 2. Import Quizzes
-        const quizzesToInsert = [];
+        for (const subjectData of subjectsToProcess) {
+            // نبحث عن المادة: إذا وجدت نحدثها، إذا لم توجد ننشئها
+            await Subject.findOneAndUpdate(
+                { key: subjectData.key, year: subjectData.year }, // شرط البحث
+                subjectData, // البيانات الجديدة
+                { upsert: true, new: true } // خيارات: أنشئ إذا لم يوجد
+            );
+        }
+        console.log(`✅ Subjects synced successfully (Created/Updated).`);
+
+        // جلب المواد من قاعدة البيانات للحصول على الـ IDs الصحيحة
+        const allSubjectsInDb = await Subject.find({});
+
+        // 2. تحديث أو إضافة الكويزات (Quizzes)
+        let createdCount = 0;
+        let updatedCount = 0;
+
         for (const quizData of allQuizzes) {
-            const parentSubject = insertedSubjects.find(s => s.key === quizData.subject);
+            // العثور على المادة الأب
+            const parentSubject = allSubjectsInDb.find(s => s.key === quizData.subject);
+
             if (!parentSubject) {
-                console.warn(`\x1b[33m[WARN] Skipping quiz "${quizData.title}" because its subject key "${quizData.subject}" was not found in the database.\x1b[0m`);
+                console.warn(`⚠️ Warning: Skipping quiz "${quizData.title}" because subject "${quizData.subject}" not found.`);
                 continue;
             }
-            const quizObject = {
+
+            // محاولة العثور على الكويز الموجود مسبقاً
+            const existingQuiz = await Quiz.findOne({
                 title: quizData.title,
-                questions: quizData.questions,
-                subject: parentSubject._id,
-            };
-            quizzesToInsert.push(quizObject);
+                subject: parentSubject._id
+            });
+
+            if (existingQuiz) {
+                // --- حالة التحديث ---
+                // نقوم بتحديث الأسئلة فقط (هذا يضيف الجديد ويعدل القديم)
+                existingQuiz.questions = quizData.questions;
+                await existingQuiz.save();
+                updatedCount++;
+            } else {
+                // --- حالة الإنشاء الجديد ---
+                await Quiz.create({
+                    title: quizData.title,
+                    questions: quizData.questions,
+                    subject: parentSubject._id,
+                });
+                createdCount++;
+            }
         }
 
-        if (quizzesToInsert.length > 0) {
-            const insertedQuizzes = await Quiz.insertMany(quizzesToInsert);
-            console.log(`✅ ${insertedQuizzes.length} quizzes imported successfully.`);
-        }
+        console.log(`✅ Quizzes Sync Complete:`);
+        console.log(`   - New Quizzes Created: ${createdCount}`);
+        console.log(`   - Existing Quizzes Updated: ${updatedCount}`);
 
-        console.log('\x1b[32m[SUCCESS] Data Imported Successfully!\x1b[0m');
+        console.log('\x1b[32m[SUCCESS] Data Sync Finished!\x1b[0m');
         process.exit();
     } catch (error) {
         console.error(`\x1b[31m[ERROR] ${error.message}\x1b[0m`);
@@ -132,14 +159,15 @@ const importData = async () => {
 const destroyData = async () => {
     try {
         await connectDB();
-        console.log('MongoDB Connected for data destruction...');
+        console.log('MongoDB Connected for destruction...');
 
+        // هذا الخيار فقط إذا كنت تريد الحذف يدوياً باستخدام '-d'
         await Quiz.deleteMany();
         await Subject.deleteMany();
 
-        console.log('Subjects and Quizzes Destroyed!');
+        console.log('🧨 Data Destroyed!');
         process.exit();
-    } catch (error) { // <-- THE FIX IS HERE
+    } catch (error) {
         console.error(`Error: ${error.message}`);
         process.exit(1);
     }
