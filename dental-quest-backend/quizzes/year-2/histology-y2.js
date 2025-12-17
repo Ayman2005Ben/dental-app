@@ -34,6 +34,39 @@ const histologyQuizzesY2 = [
         ]
       },
       {
+        "questionText": "La jonction gingivo-dentaire est composée de :",
+        "options": [
+          "Un épithélium jonctionnel.",
+          "Une attache épithéliale.",
+          "Une attache conjonctive.",
+          "Fibres alvéolo-dentaires."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "La jonction gingivo-dentaire (JGD) est composée de l'épithélium jonctionnel (qui assure l'attache épithéliale) et d'une attache conjonctive constituée des fibres gingivo-dentaires.",
+        "citations": [
+          "PDF Formation de la jonction gingivo-dentaire - Page 3"
+        ]
+      },
+      {
+        "questionText": "L'épithélium jonctionnel :",
+        "options": [
+          "Entoure le collet des dents",
+          "Est moins épais que l'épithélium sulculaire",
+          "Est seulement en contact avec l'émail",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L'épithélium jonctionnel entoure le collet de la dent (A). Il forme une manchette autour de la dent. Bien qu'initialement sur l'émail, il peut migrer sur le cément avec l'âge (donc C est discutable/faux dans l'absolu).",
+        "citations": [
+          "PDF Formation de la jonction gingivo-dentaire - Page 3"
+        ]
+      },
+      {
         "questionText": "La double assise épithéliale:",
         "options": [
           "Est formée par une couche superficielle d'améloblastes et une couche profonde de cellules aplaties.",
@@ -218,6 +251,38 @@ const histologyQuizzesY2 = [
           407,
           408,
           409
+        ]
+      },
+      {
+        "questionText": "La couche comportant des fibrilles d'ancrage qui permet l'ancrage de la membrane basale à la papille ectomésenchymateuses est appelée :",
+        "options": [
+          "La couche odontoblastique.",
+          "La lamina densa.",
+          "La lamina lucida.",
+          "La lamina fibroreticularis."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La membrane basale sépare l'EDI de la papille. Elle comprend la lamina fibroreticularis qui comporte des fibrilles d'ancrage permettant l'ancrage de la membrane basale à la papille ectomésenchymateuse.",
+        "citations": [
+          "PDF Histogenèse de la Dentine - Page 4"
+        ]
+      },
+      {
+        "questionText": "Parmi les trois conditions pour que les odontoblastes soient fonctionnels et synthétisant la prédentine, une est fausse laquelle ?",
+        "options": [
+          "La membrane basale doit disparaitre au moment où la prédentine va se former.",
+          "La couche odontoblastique doit être formée.",
+          "Le terminal web doit être formé.",
+          "Le complexe de jonctions circulaires doivent être formés."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "C'est FAUX. La membrane basale sert de support initial. La prédentine se dépose d'abord au contact de la membrane basale, puis celle-ci disparaîtra ultérieurement lors de la minéralisation et du contact avec les pré-améloblastes (pour former l'émail). Les autres conditions (couche formée, terminal web, jonctions) sont requises pour la fonctionnalité.",
+        "citations": [
+          "PDF Histogenèse de la Dentine - Page 5, 8"
         ]
       },
       {
@@ -954,6 +1019,89 @@ const histologyQuizzesY2 = [
         ]
       },
       {
+        "questionText": "Quelle pathologie de l'émail est due à une ingestion excessive de fluor pendant l'odontogenèse ?",
+        "options": [
+          "Hypominéralisation des molaires-incisives",
+          "Amélogenèse imparfaite",
+          "Fluorose dentaire",
+          "Hypoplasie amélaire traumatique",
+          "Dysplasie dentinaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La fluorose dentaire est une anomalie de structure de l'émail (hypominéralisation) causée par une ingestion excessive de fluor durant la formation de la dent (amélogenèse).",
+        "citations": []
+      },
+      {
+        "questionText": "Dans le cycle de la vie d'un améloblaste on retrouve :",
+        "options": [
+          "L'améloblaste pré-sécréteur avec prolongement de Tomes.",
+          "L'améloblaste sécréteur sans prolongement de Tomes.",
+          "L'améloblaste sécréteur avec prolongement de Tomes.",
+          "L'améloblaste de maturation."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "Le cycle de l'améloblaste comprend : pré-sécréteur (sans Tomes), sécréteur sans prolongement de Tomes (initial), sécréteur avec prolongement de Tomes (émail prismatique), et maturation. L'option A est fausse car le pré-sécréteur n'a pas encore de prolongement de Tomes.",
+        "citations": [
+          "PDF Histogenèse de l'Email - Page 4, 5, 6, 8"
+        ]
+      },
+      {
+        "questionText": "Quelle est la principale unité structurale de l'émail ?",
+        "options": [
+          "Le dentinoblaste",
+          "Le prisme d'émail",
+          "Le collagène",
+          "Les odontoblastes",
+          "Le calcium"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le prisme d'émail est l'unité structurale de base de l'émail, formé par la partie distale du prolongement de Tomes de l'améloblaste.",
+        "citations": [
+          "PDF Histogenèse de l'Email - Page 7"
+        ]
+      },
+      {
+        "questionText": "La sénescence de l'émail se traduit par :",
+        "options": [
+          "Une augmentation du nombre des minéraux",
+          "Une diminution du nombre des minéraux",
+          "Une diminution de sa perméabilité",
+          "Une coloration disgracieuse des dents"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "Avec l'âge (sénescence), l'émail subit une maturation post-éruptive continue : il devient plus minéralisé (A), moins perméable (C) en raison de l'obstruction des pores, et peut changer de couleur (D) en s'amincissant (laissant voir la dentine) ou en absorbant des colorants.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel élément n'est pas un constituant de la phase minérale de l'émail ?",
+        "options": [
+          "Calcium",
+          "Phosphate",
+          "Magnésium",
+          "Fluor",
+          "Collagène"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "L'émail est une structure acellulaire hautement minéralisée (Hydroxyapatite : Calcium, Phosphate). Il contient des protéines spécifiques (Amélogénines, Énamélines) mais ne contient PAS de collagène, contrairement à la dentine et à l'os.",
+        "citations": [
+          "PDF Histogenèse de l'Email - Page 3"
+        ]
+      },
+      {
         "questionText": "Les améloblastes sont des cellules épithéliales qui:",
         "options": [
           "Sont sécrétrices de l'émail.",
@@ -1478,6 +1626,107 @@ const histologyQuizzesY2 = [
         ]
       },
       {
+        "questionText": "Quel est le rôle principal des papilles filiformes ?",
+        "options": [
+          "La perception du goût.",
+          "La détection de la douleur.",
+          "Le toucher et la perception de la texture des aliments.",
+          "La production de salive."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les papilles filiformes sont les plus nombreuses, elles ont un rôle mécanique (abrasif) et tactile (texture). Elles sont dépourvues de bourgeons du goût (donc pas de rôle gustatif).",
+        "citations": []
+      },
+      {
+        "questionText": "La vascularisation de la muqueuse buccale se situe au niveau de :",
+        "options": [
+          "L'épithélium",
+          "Chorion",
+          "Membrane basale",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'épithélium est avasculaire. La vascularisation sanguine et lymphatique se trouve dans le tissu conjonctif sous-jacent, appelé le chorion (ou lamina propria).",
+        "citations": []
+      },
+      {
+        "questionText": "Le fonctionnement des glandes salivaires chez la personne âgée a pour conséquences :",
+        "options": [
+          "Des mega-canaux salivaires",
+          "Une atrophie des canaux sécrétoires",
+          "Une irrégularité des acini",
+          "Une xérostomie et hyposialie"
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "Le vieillissement entraîne une atrophie des acini glandulaires, une fibrose et souvent une dilatation canalaire. La conséquence clinique majeure est la diminution du flux salivaire (hyposialie) et la sécheresse buccale (xérostomie).",
+        "citations": []
+      },
+      {
+        "questionText": "La glande parotide est :",
+        "options": [
+          "constituée de deux lobes reliés par l'isthme",
+          "son canal excréteur est le Wharton",
+          "située en regard de la branche horizontale de la mandibule",
+          "Une glande séreuse"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La glande parotide est une glande salivaire purement séreuse. Son canal excréteur est le canal de Sténon (le Wharton est pour la sous-maxillaire). Elle est située en arrière de la branche montante de la mandibule.",
+        "citations": []
+      },
+      {
+        "questionText": "Quels nerfs sont impliqués dans la perception gustative ?",
+        "options": [
+          "Nerf facial (VII)",
+          "Nerf trijumeau (V)",
+          "Nerf glossopharyngien (IX)",
+          "Nerf accessoire (XI)"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "La gustation est assurée par le nerf facial (VII) pour les 2/3 antérieurs de la langue et le nerf glossopharyngien (IX) pour le 1/3 postérieur. Le trijumeau (V) assure la sensibilité somatique (tact, douleur).",
+        "citations": []
+      },
+      {
+        "questionText": "Au niveau de la muqueuse sinusienne, la mucine est secrétée par :",
+        "options": [
+          "Les cellules caliciformes",
+          "Les cellules basales",
+          "Les cellules ciliées",
+          "Les glandes séro-muqueuses"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Dans l'épithélium respiratoire sinusien, le mucus (mucine) est produit par les cellules caliciformes (en forme de calice) et par les glandes séro-muqueuses présentes dans le chorion.",
+        "citations": []
+      },
+      {
+        "questionText": "Les cellules caliciformes de l'épithélium de la muqueuse sinusienne :",
+        "options": [
+          "Représentent près de 80% de la population cellulaire",
+          "Secrètent des mucines",
+          "Contiennent des micro-granules",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Leur rôle principal est la sécrétion de mucines (mucus). Elles ne représentent pas 80% (ce sont les cellules ciliées qui sont majoritaires).",
+        "citations": []
+      },
+      {
         "questionText": "La muqueuse pharyngée: (QCM)",
         "options": [
           "Ne présente pas de variations histologiques en fonction des segments.",
@@ -1874,6 +2123,39 @@ const histologyQuizzesY2 = [
           436,
           437,
           438
+        ]
+      },
+      {
+        "questionText": "Le cément acellulaire :",
+        "options": [
+          "apparait en même temps que la formation du ligament parodontal",
+          "apparait avant la formation du ligament parodontal",
+          "se dépose à partir de la région apicale de la racine",
+          "se dépose sur toute la longueur de la racine"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le cément acellulaire (primaire) se dépose à partir du collet jusqu'au tiers supérieur de la racine AVANT que le ligament parodontal (LAD) ne se différencie. Il ne couvre pas toute la longueur (l'apex est couvert de cément cellulaire).",
+        "citations": [
+          "PDF Le Cément - Page 4",
+          "PDF Histogenèse du Parodonte - Page 5"
+        ]
+      },
+      {
+        "questionText": "Le périoste :",
+        "options": [
+          "recouvre tangentiellement l'os lamellaire haversien.",
+          "contient des ostéoblastes, ostéocytes et ostéoclastes.",
+          "est riche en fibres desmodontales cémento-périostées.",
+          "contient les fibres intrinsèques."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le périoste recouvre la surface externe de l'os (souvent de l'os cortical/haversien). Il contient des cellules ostéogéniques (ostéoblastes) dans sa couche interne mais pas d'ostéocytes (qui sont enfermés dans la matrice osseuse).",
+        "citations": [
+          "PDF L'os alvéolaire - Page 4, 5"
         ]
       },
       {
@@ -3273,6 +3555,40 @@ const histologyQuizzesY2 = [
           651,
           652,
           653
+        ]
+      },
+      {
+        "questionText": "Le Diaphragme épithélial :",
+        "options": [
+          "Est produit par la papille mésenchymateuse.",
+          "Est produit par la gaine épithéliale de Hertwig.",
+          "Est une membrane basale de la gaine épithéliale de Hertwig.",
+          "Participe à l'édification radiculaire."
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "Le diaphragme épithélial est formé par l'inflexion de la gaine de Hertwig vers l'axe médian du germe dentaire (B). Il délimite le foramen provisoire et joue un rôle crucial dans l'édification de la racine (D) et la détermination du nombre de racines.",
+        "citations": [
+          "PDF Développement de l'organe dentaire - Page 11",
+          "PDF Histogenèse du Parodonte - Page 4"
+        ]
+      },
+      {
+        "questionText": "Le stomodéum est :",
+        "options": [
+          "Délimité par les bourgeons faciaux : frontal, maxillaire et mandibulaire.",
+          "Formé dans sa partie supérieure par cloisonnement des bourgeons maxillaires uniquement.",
+          "Cloisonné par phénomène de mésodermisation.",
+          "Tapissé par un tissu mésenchymateux."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le stomodéum (bouche primitive) est délimité par les bourgeons faciaux (bourgeon frontal/nasal, maxillaires et mandibulaires). Il est tapissé d'ectoderme (pas de mésenchyme). Le cloisonnement implique la rupture de la membrane buccopharyngienne.",
+        "citations": [
+          "PDF Développement de l'organe dentaire - Page 3"
         ]
       },
       {
