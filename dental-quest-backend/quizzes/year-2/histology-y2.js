@@ -196,6 +196,114 @@ const histologyQuizzesY2 = [
           403
         ]
       },
+          {
+      "questionText": "La formation de la jonction gingivo-dentaire se fait lors de :",
+      "options": [
+        "La formation du parodonte",
+        "L'éruption dentaire",
+        "L'édification radiculaire",
+        "Toutes les réponses sont fausses"
+      ],
+      "correctOptionIndexes": [1],
+      "explanation": "La jonction gingivo-dentaire se met en place précisément au moment où la dent perce la muqueuse buccale (éruption).",
+      "citations": ["PDF الأصيل - الصفحة 110 (سؤال 4)"]
+    },
+    {
+      "questionText": "La jonction gingivo-dentaire a pour origine :",
+      "options": [
+        "La gaine épithéliale de Hertwig",
+        "L'épithélium adamantin réduit",
+        "L'épithélium de la muqueuse buccale",
+        "Le follicule dentaire"
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "Elle provient de la fusion entre l'épithélium réduit de l'émail et l'épithélium buccal oral.",
+      "citations": ["PDF الأصيل - الصفحة 117 (سؤال 14)"]
+    },
+    {
+  "questionText": "La jonction gingivo-dentaire a pour origine :",
+  "options": [
+    "A) l'épithélium adamantin réduit.",
+    "B) l'épithélium de la muqueuse buccale.",
+    "C) la gaine épithéliale de Hertwig.",
+    "D) le follicule dentaire."
+  ],
+  "correctOptionIndexes": [0, 1],
+  "explanation": "Selon le corrigé EMD1 2021 (Q11), l'origine est double : épithélium réduit et muqueuse buccale.",
+  "citations": ["EMD1 2021 - Q11"]
+},
+{
+  "questionText": "L'attache épithéliale :",
+  "options": [
+    "A) Ne fait pas partie de la gencive.",
+    "B) Est aussi appelée \"épithélium jonctionnel\".",
+    "C) Son intégrité conditionne l'intégrité des structures parodontales sous-jacentes.",
+    "D) Toutes les réponses sont justes."
+  ],
+  "correctOptionIndexes": [1, 2],
+  "explanation": "Corrigé EMD1 2022 (Q10).",
+  "citations": ["EMD1 2022 - Q10"]
+},
+{
+  "questionText": "La double assise épithéliale :",
+  "options": [
+    "a) Est formée par une couche superficielle d'ameloblastes et une couche profonde de cellules aplaties.",
+    "b) Apparaît qu'au moment de l'éruption de la dent.",
+    "c) Revêt la surface de la couronne dentaire avant l'éruption dentaire.",
+    "d) Aucune des réponses n'est juste."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2022 (Q11).",
+  "citations": ["EMD1 2022 - Q11"]
+},
+{
+  "questionText": "L'épithélium jonctionnel :",
+  "options": [
+    "A. Entoure le collet des dents",
+    "B. Est moins épais que l'épithélium sulculaire",
+    "C. Est seulement en contact avec l'émail",
+    "D. Toutes les réponses sont justes"
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD2 2022 (Q18).",
+  "citations": ["EMD2 2022 - Q18"]
+},
+    {
+      "questionText": "La jonction gingivo-dentaire :",
+      "options": [
+        "Se forme lors de l'éruption de la dent",
+        "Se forme avant l'éruption de la dent",
+        "Est composée d'une attache épithéliale et d'une attache conjonctive",
+        "Est composée d'une gencive libre et d'une gencive attachée"
+      ],
+      "correctOptionIndexes": [0, 2],
+      "explanation": "C'est un complexe qui comprend l'attache épithéliale (jonctionnel) et l'attache conjonctive (fibres).",
+      "citations": ["PDF الأصيل - الصفحة 121 (سؤال 15)"]
+    },
+    {
+      "questionText": "L’attache épithéliale :",
+      "options": [
+        "Est formée par l'adhésion des desmosomes sur la surface dentaire",
+        "Est formée par l'adhésion des hemidesmosomes sur la surface dentaire",
+        "Est formée par l'adhésion des fibres gingivales sur le cément radiculaire",
+        "Est assurée par l'épithélium jonctionnel"
+      ],
+      "correctOptionIndexes": [1, 3],
+      "explanation": "L'attache se fait via des hémidesmosomes (pas des desmosomes) et elle est constituée par l'épithélium jonctionnel.",
+      "citations": ["PDF الأصيل - الصفحة 121 (سؤال 16)"]
+    },
+    {
+      "questionText": "Le sulcus (sillon gingivo-dentaire) est :",
+      "options": [
+        "Limité par une surface dentaire et une surface de tissu conjonctif",
+        "Limité par une surface dentaire et une surface de tissu épithélial",
+        "Composé d'un épithélium kératinisé",
+        "Composé d'un épithélium non kératinisé"
+      ],
+      "correctOptionIndexes": [1, 3],
+      "explanation": "Le sulcus est le petit espace libre limité par la dent d'un côté et l'épithélium sulculaire (non kératinisé) de l'autre.",
+      "citations": ["PDF الأصيل - الصفحة 136 (سؤال 12)"]
+      },
       {
         "questionText": "La jonction gingivo-dentaire:",
         "options": [
@@ -285,6 +393,211 @@ const histologyQuizzesY2 = [
           "PDF Histogenèse de la Dentine - Page 5, 8"
         ]
       },
+      {
+      "questionText": "La dentine est :",
+      "options": [
+        "Un tissu conjonctif minéralisé et vasculaire",
+        "Plus dure que l'os et moins dure que l'émail",
+        "Constituée de 70% de matière organique",
+        "Un tissu perméable car elle est traversée par des tubuli dentinaires"
+      ],
+      "correctOptionIndexes": [1, 3],
+      "explanation": "La dentine est avasculaire (contrairement à l'option A) et contient 70% de minéraux (pas d'organique).",
+      "citations": ["PDF الأصيل - الصفحة 111 (سؤال 8)"]
+    },
+    {
+      "questionText": "La dentine secondaire est :",
+      "options": [
+        "Une dentine pathologique",
+        "La partie la plus externe est non tubulaire",
+        "Secrétée de manière physiologique après l'éruption",
+        "Responsable de la diminution progressive de la lumière canalaire"
+      ],
+      "correctOptionIndexes": [2, 3],
+      "explanation": "La dentine secondaire se dépose toute la vie, ce qui rétrécit la chambre pulpaire avec l'âge.",
+      "citations": ["PDF الأصيل - الصفحة 112 (سؤال 9)"]
+    },
+    {
+      "questionText": "La dentine présente :",
+      "options": [
+        "Une connexion permanente avec la pulpe par l'intermédiaire des fibroblastes",
+        "Une couche granuleuse de Tomes située entre l'émail et la dentine coronaire",
+        "Des zones de moindre calcification dites 'dentine interglobulaire'",
+        "Une structure constituée de dentine inter-tubulaire et intra-tubulaire"
+      ],
+      "correctOptionIndexes": [2, 3],
+      "explanation": "La connexion se fait par les odontoblastes (pas fibroblastes). La couche de Tomes est dans la racine, pas la couronne.",
+      "citations": ["PDF الأصيل - الصفحة 112 (سؤال 10)"]
+    },
+    {
+      "questionText": "Le mantle dentine (manteau dentinaire) est un type de dentine qui est :",
+      "options": [
+        "Pourvu de prolongements cellulaires",
+        "Plus minéralisé que la dentine circum-pulpaire",
+        "Situé immédiatement sous l'émail",
+        "Dépourvu de canalicules dentinaires"
+      ],
+      "correctOptionIndexes": [2, 3],
+      "explanation": "C'est la première couche de dentine, elle est moins minéralisée et considérée comme atubulaire (dépourvue de canalicules organisés).",
+      "citations": ["PDF الأصيل - الصفحة 117 (سؤال 16) / الصفحة 125 (سؤال 15)"]
+    },
+    {
+      "questionText": "Les lignes de Von Ebner :",
+      "options": [
+        "Sont caractérisées par des stries correspondant aux zones d'arrêt des odontoblastes",
+        "Sont des zones de non fusion des unités de minéralisation",
+        "Sont localisées dans la couche acellulaire de Weil",
+        "Sont situées dans l'émail"
+      ],
+      "correctOptionIndexes": [0],
+      "explanation": "Ce sont des lignes de croissance journalières dans la dentine.",
+      "citations": ["PDF الأصيل - الصفحة 118 (سؤال 3)"]
+    },
+    {
+  "questionText": "Les odontoblastes sont des cellules qui :",
+  "options": [
+    "A) se différencient progressivement depuis le sommet de la papille ectomésenchymateuse.",
+    "B) peuvent se diviser et se multiplier.",
+    "C) peuvent se différencier et augmenter de volume.",
+    "D) Aucune réponse n'est juste."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2021 (Q1).",
+  "citations": ["EMD1 2021 - Q1"]
+},
+{
+  "questionText": "Les odontoblastes dérivent :",
+  "options": [
+    "A) des cellules de l'épithélium dentaire interne.",
+    "B) des cellules de la papille ectomésenchymateuse.",
+    "C) des cellules des crêtes neurales céphaliques.",
+    "D) des cellules endotheliales de la pulpe dentaire."
+  ],
+  "correctOptionIndexes": [1],
+  "explanation": "Corrigé EMD1 2021 (Q2).",
+  "citations": ["EMD1 2021 - Q2"]
+},
+{
+  "questionText": "Le prolongement odontoblastique contient :",
+  "options": [
+    "A) du réticulum endoplasmique granulaire.",
+    "B) des mitochondries.",
+    "C) des vésicules d'endocytose.",
+    "D) des vésicules de sécrétion."
+  ],
+  "correctOptionIndexes": [2, 3],
+  "explanation": "Corrigé EMD1 2021 (Q5).",
+  "citations": ["EMD1 2021 - Q5"]
+},
+{
+  "questionText": "La différenciation des cellules périphériques de la papille mésenchymateuse est à l'origine des :",
+  "options": [
+    "A) ostéoblastes.",
+    "B) cémentoblastes.",
+    "C) odontoblastes.",
+    "D) fibroblastes."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2021 (Q7).",
+  "citations": ["EMD1 2021 - Q7"]
+},
+{
+  "questionText": "La dentine primaire :",
+  "options": [
+    "A) est physiologique.",
+    "B) elle comprend la dentine secondaire et tertiaire.",
+    "C) elle comprend le manteau dentinaire et la dentine circumpulpaire.",
+    "D) c'est la Mantel dentine."
+  ],
+  "correctOptionIndexes": [0, 2],
+  "explanation": "Corrigé EMD1 2021 (Q15).",
+  "citations": ["EMD1 2021 - Q15"]
+},
+{
+  "questionText": "Les lignes de Von Hebner :",
+  "options": [
+    "A) sont caractérisées par des stries et se rapportent aux zones d'arrêt du fonctionnement des Odontoblastes.",
+    "B) sont des zones de non fusion des unités de minéralisation.",
+    "C) sont localisées sous la couche des odontoblastes dans la couche acellulaire de Weil.",
+    "D) sont situées dans l'émail."
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD1 2021 (Q17).",
+  "citations": ["EMD1 2021 - Q17"]
+},
+{
+  "questionText": "La dentine secondaire :",
+  "options": [
+    "a) Est secrétée avant l'éruption dentaire.",
+    "b) Est responsable de la diminution progressive de la lumière canalaire.",
+    "c) Est physiologique.",
+    "d) Est secrétée en cas d'agression pathologique."
+  ],
+  "correctOptionIndexes": [1, 2],
+  "explanation": "Corrigé EMD1 2022 (Q3).",
+  "citations": ["EMD1 2022 - Q3"]
+},
+{
+  "questionText": "Dans la structure de la dentine primaire on retrouve :",
+  "options": [
+    "a) La dentine circumpulpaire.",
+    "b) La dentine péritubulaire et inter tubulaire.",
+    "c) La dentine sclérotique.",
+    "d) Une partie de dentine non tubulaire."
+  ],
+  "correctOptionIndexes": [0, 1, 3],
+  "explanation": "Corrigé EMD1 2022 (Q4).",
+  "citations": ["EMD1 2022 - Q4"]
+},
+{
+  "questionText": "La dentinogénèse est subdivisée en cinq stades: ordonnez-les",
+  "options": [
+    "a) Formation de la dentine primaire et secondaire.",
+    "b) Formation de la dentine tertiaire.",
+    "c) Dépôt d'une matrice organique.",
+    "d) Minéralisation et maturation de cette matrice.",
+    "e) Différenciation des odontoblastes."
+  ],
+  "correctOptionIndexes": [1],
+  "explanation": "L'ordre est e-c-d-a-b (Option B dans le Q6 EMD1 2022).",
+  "citations": ["EMD1 2022 - Q6"]
+},
+{
+  "questionText": "Les odontoblastes radiculaires ont pour origine :",
+  "options": [
+    "a) la gaine épithéliale de Hertwig",
+    "b) les cellules pulpaires périphériques",
+    "c) les cellules du follicule dentaire",
+    "d) le diaphragme épithélial"
+  ],
+  "correctOptionIndexes": [1],
+  "explanation": "Corrigé EMD1 2022 (Q12).",
+  "citations": ["EMD1 2022 - Q12"]
+},
+{
+  "questionText": "Parmi les trois conditions pour que les odontoblastes soient fonctionnels et synthétisant la prédentine, une est fausse laquelle ?",
+  "options": [
+    "A) La membrane basale doit disparaitre au moment où la prédentine va se former.",
+    "B) La couche odontoblastique doit être formée.",
+    "C) Le terminal web doit être formé.",
+    "D) Le complexe de jonctions circulaires doivent être formés."
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD2 2022 (Q16).",
+  "citations": ["EMD2 2022 - Q16"]
+},
+    {
+      "questionText": "Au cours du vieillissement dentaire, la dentine devient :",
+      "options": [
+        "Moins minéralisée",
+        "Plus translucide",
+        "Plus sensible",
+        "Plus fine"
+      ],
+      "correctOptionIndexes": [1],
+      "explanation": "La minéralisation des tubuli (dentine sclérotique) la rend translucide.",
+      "citations": ["PDF الأصيل - الصفحة 134 (سؤال 2)"]
+    },
       {
         "questionText": "Quelles sont les caractéristiques du manteau dentinaire: (QCM)",
         "options": [
@@ -784,6 +1097,163 @@ const histologyQuizzesY2 = [
         ]
       },
       {
+      "questionText": "Parmi les particularités de l'émail :",
+      "options": [
+        "Il est élaboré en totalité pendant l'odontogénèse et ne peut être reconstruit",
+        "C'est un tissu acellulaire",
+        "Il est radio transparent",
+        "Il se régénère grâce au pouvoir tampon de la salive"
+      ],
+      "correctOptionIndexes": [0, 1],
+      "explanation": "L'émail est le plus minéralisé، لذا فهو Radio-opaque وليس transparent. ولا يتجدد لأن الخلايا التي صنعته (Améloblastes) تموت بعد البزوغ.",
+      "citations": ["PDF الأصيل - الصفحة 111 (سؤال 6)"]
+    },
+    {
+      "questionText": "Les buissons de l'émail :",
+      "options": [
+        "Partent de la jonction amélo-dentinaire و s'épanouissent dans l'émail",
+        "Sont riches en substance organique",
+        "Sont hyper minéralisés",
+        "S'enfoncent perpendiculairement vers la dentine"
+      ],
+      "correctOptionIndexes": [0, 1],
+      "explanation": "Les buissons (Enamel tufts) sont des zones hypominéralisées (donc riches en organique) qui partent de la JAD.",
+      "citations": ["PDF الأصيل - الصفحة 111 (سؤال 7)"]
+    },
+    {
+      "questionText": "Le fort pourcentage de minéraux dans l'émail est responsable de :",
+      "options": [
+        "Sa force seulement",
+        "Sa friabilité seulement",
+        "Sa sensibilité aux acides d'origine bactérienne",
+        "Toutes les réponses sont fausses"
+      ],
+      "correctOptionIndexes": [2],
+      "explanation": "Le contenu minéral élevé rend l'émail vulnérable à la déminéralisation acide (caries).",
+      "citations": ["PDF الأصيل - الصفحة 116 (سؤال 7)"]
+    },
+    {
+  "questionText": "L'émail est :",
+  "options": [
+    "A) un tissu hautement minéralisé.",
+    "B) élaboré pendant et après l'odontogénèse.",
+    "C) formé de cristaux d'hydroxyapatite enrobés de matrice organique et d'eau.",
+    "D) constitué de 50 % de minéraux, de 50 % de matériel organique et d'eau."
+  ],
+  "correctOptionIndexes": [0, 2],
+  "explanation": "Corrigé EMD1 2021 (Q12).",
+  "citations": ["EMD1 2021 - Q12"]
+},
+{
+  "questionText": "L'émail se compose de :",
+  "options": [
+    "A) l'émail aprismatique interne.",
+    "B) l'émail prismatique.",
+    "C) l'émail aprismatique externe.",
+    "D) cellules améloblastiques avec prolongement de Tomes."
+  ],
+  "correctOptionIndexes": [0, 1, 2],
+  "explanation": "Corrigé EMD1 2021 (Q13).",
+  "citations": ["EMD1 2021 - Q13"]
+},
+{
+  "questionText": "L'unité fonctionnelle de l'émail est :",
+  "options": [
+    "A) une lamelle.",
+    "B) un buisson.",
+    "C) un prisme.",
+    "D) une aiguille."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2021 (Q14).",
+  "citations": ["EMD1 2021 - Q14"]
+},
+{
+  "questionText": "L'émail est :",
+  "options": [
+    "a) La structure la plus minéralisée des tissus durs.",
+    "b) Dépourvu de cellules.",
+    "c) Reconstruit dans la dent adulte.",
+    "d) Elaboré en totalité pendant l'odontogénèse."
+  ],
+  "correctOptionIndexes": [0, 1, 3],
+  "explanation": "L'émail ne se reconstruit pas. Corrigé EMD1 2022 (Q13).",
+  "citations": ["EMD1 2022 - Q13"]
+},
+{
+  "questionText": "Dans la structure chimique de l'émail :",
+  "options": [
+    "a) On trouve deux phases : minérale et organique.",
+    "b) Les minéraux sont en majeure partie des cristaux d'hydroxyapatite.",
+    "c) La cristallite est la plus petite unité composant l'émail.",
+    "d) La phase organique constitue 96 % de sa structure."
+  ],
+  "correctOptionIndexes": [0, 1, 2],
+  "explanation": "La phase minérale est de 96%, pas l'organique. Corrigé EMD1 2022 (Q14).",
+  "citations": ["EMD1 2022 - Q14"]
+},
+{
+  "questionText": "Sur le plan histologique :",
+  "options": [
+    "a) L'émail prismatique est constitué d'un assemblage de prisme et d'une substance interprismatique.",
+    "b) L'émail aprismatique occupe la plus grande partie de l'épaisseur de l'émail.",
+    "c) Les Stries de Retzius correspondent au trajet onduleux des prismes.",
+    "d) Les Bandes d'Hunter-Schreger sont dues à l'activité intermittente des améloblastes."
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD1 2022 (Q15).",
+  "citations": ["EMD1 2022 - Q15"]
+},
+{
+  "questionText": "Quel élément n'est pas un constituant de la phase minérale de l'émail ?",
+  "options": [
+    "A. Calcium",
+    "B. Phosphate",
+    "C. Magnésium",
+    "D. Fluor",
+    "E. Collagène"
+  ],
+  "correctOptionIndexes": [4],
+  "explanation": "L'émail ne contient pas de collagène. Corrigé EMD2 2022 (Q17).",
+  "citations": ["EMD2 2022 - Q17"]
+},
+    {
+      "questionText": "L’email est une structure inerte car :",
+      "options": [
+        "Elle ne se répare pas",
+        "Les améloblastes se calcifient à la sénescence",
+        "Elle n'est pas innervée",
+        "Toutes les propositions sont fausses"
+      ],
+      "correctOptionIndexes": [0, 2],
+      "explanation": "Inerte signifie qu'il n'y a pas de réaction biologique active (pas de réparation, pas d'innervation).",
+      "citations": ["PDF الأصيل - الصفحة 124 (سؤال 8)"]
+    },
+    {
+      "questionText": "L’email dit 'soft' (mou) immature est :",
+      "options": [
+        "Moins résistant aux forces de mastication",
+        "Composée de 13% d'éléments minéraux",
+        "Un émail interne dont les améloblastes sont au contact de la dentine",
+        "Constituée d'améloblastes sans prolongement de Tomes"
+      ],
+      "correctOptionIndexes": [0],
+      "explanation": "L'émail immature est poreux و fragile قبل أن يكتمل تمعدنه النهائي.",
+      "citations": ["PDF الأصيل - الصفحة 124 (سؤال 9)"]
+    },
+    {
+      "questionText": "Au cours du vieillissement dentaire, l'email devient :",
+      "options": [
+        "Plus perméable",
+        "Plus foncé",
+        "D'aspect craquelé",
+        "D'aspect translucide"
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "Avec l'âge, l'émail s'use (darker because of dentin) et présente des fêlures (craquelé).",
+      "citations": ["PDF الأصيل - الصفحة 133 (سؤال 1 / سؤال 19)"]
+    },
+      {
         "questionText": "L'émail est:",
         "options": [
           "un tissu hautement minéralisé.",
@@ -1085,6 +1555,79 @@ const histologyQuizzesY2 = [
         "citations": []
       },
       {
+  "questionText": "La formation de l'émail :",
+  "options": [
+    "A) débute au stade de la cupule.",
+    "B) débute avant la formation de la dentine.",
+    "C) à lieu tout au long de la vie.",
+    "D) Aucune réponse n'est juste."
+  ],
+  "correctOptionIndexes": [3],
+  "explanation": "Corrigé EMD1 2021 (Q3).",
+  "citations": ["EMD1 2021 - Q3"]
+},
+{
+  "questionText": "L'améloblaste pré-secréteur :",
+  "options": [
+    "A) est une cellule post mitotique.",
+    "B) se situe en face de cémentoblastes différenciés.",
+    "C) est une cellule polarisée.",
+    "D) présente des complexes de jonction."
+  ],
+  "correctOptionIndexes": [0, 2, 3],
+  "explanation": "Corrigé EMD1 2021 (Q4).",
+  "citations": ["EMD1 2021 - Q4"]
+},
+{
+  "questionText": "L'endroit où les améloblastes commencent à sécréter l'émail est connu sous le nom de :",
+  "options": [
+    "A) région cervicale ou collet.",
+    "B) jonction émail-cément.",
+    "C) jonction émail dentine.",
+    "D) foramen apical."
+  ],
+  "correctOptionIndexes": [0, 2],
+  "explanation": "Corrigé EMD1 2021 (Q6).",
+  "citations": ["EMD1 2021 - Q6"]
+},
+{
+  "questionText": "Au stade améloblaste de protection, l'émail est :",
+  "options": [
+    "A) aprismatique au niveau de la jonction émail-dentine.",
+    "B) mature au niveau de la jonction émail-dentine.",
+    "C) immature.",
+    "D) minéralisé."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2021 (Q8).",
+  "citations": ["EMD1 2021 - Q8"]
+},
+{
+  "questionText": "Les améloblastes sont des cellules épithéliales qui :",
+  "options": [
+    "a) Sont sécrétrices de l'émail.",
+    "b) Se différencient à partir de l'épithélium adamantin interne.",
+    "c) Disparaissent lors de l'éruption dentaire par un phénomène d'apoptose.",
+    "d) Sont incorporés dans l'émail."
+  ],
+  "correctOptionIndexes": [0, 1, 2],
+  "explanation": "Corrigé EMD1 2022 (Q5).",
+  "citations": ["EMD1 2022 - Q5"]
+},
+{
+  "questionText": "La cytodifférenciation de l'améloblaste confère à l'émail différent Aspects. Cochez le faux :",
+  "options": [
+    "a) Améloblaste pré-secréteur : Email aprismatique.",
+    "b) Améloblaste pré-secréteur : Email aprismatique.",
+    "c) Améloblaste sécréteur : Email prismatique.",
+    "d) Améloblaste de maturation : Email mature.",
+    "e) Améloblaste de protection : dentine."
+  ],
+  "correctOptionIndexes": [4],
+  "explanation": "Corrigé EMD1 2022 (Q16).",
+  "citations": ["EMD1 2022 - Q16"]
+},
+      {
         "questionText": "Quel élément n'est pas un constituant de la phase minérale de l'émail ?",
         "options": [
           "Calcium",
@@ -1154,6 +1697,42 @@ const histologyQuizzesY2 = [
           847
         ]
       },
+       {
+      "questionText": "Selon son cycle de vie , l’Améloblaste :",
+      "options": [
+        "a) Pré sécréteur est en regard de la dentine",
+        "b) Sans prolongement de Tomes secrète l’émail aprismatique",
+        "c) Avec prolongement de Tomes secrète l’émail prismatique immature",
+        "d) De protection recouvre l’émail majoritairement prismatique"
+      ],
+      "correctOptionIndexes": [0, 1, 2, 3],
+      "explanation": "D'après le corrigé type (p.114), les réponses justes sont a, b, c et d.",
+      "citations": ["PDF الأصيل - الصفحة 112 - السؤال 13"]
+    },
+    {
+      "questionText": "La cytodiffernciation de l’ameloblaste se traduit par : (abcd)",
+      "options": [
+        "a. un allongement important (jusqu’à 80µ)",
+        "b. un développement des organites intra-cytoplasmiques",
+        "c. une polarisation du noyau qui prend une position basale",
+        "d. un cytoplasme supra-nucléaire renfermant des vacuoles sécrétoires"
+      ],
+      "correctOptionIndexes": [0, 1, 2, 3],
+      "explanation": "D'après le corrigé type (p.121), les réponses justes sont a, b, c et d.",
+      "citations": ["PDF الأصيل - الصفحة 121 - السؤال 11"]
+    },
+    {
+      "questionText": "L’ameloblaste de maturation : (abc)",
+      "options": [
+        "a. migrede plus en plus a distance de la dentine",
+        "b. diminue de volume",
+        "c. renferme des organites, moins nombreux, car captees par des enzymes",
+        "d. regenere la membrane basale"
+      ],
+      "correctOptionIndexes": [0, 1, 2],
+      "explanation": "D'après le corrigé type (p.124), les réponses justes sont a, b et c.",
+      "citations": ["PDF الأصيل - الصفحة 124 - السؤال 10"]
+    },
       {
         "questionText": "La formation de l'émail:",
         "options": [
@@ -1669,6 +2248,30 @@ const histologyQuizzesY2 = [
         "citations": []
       },
       {
+      "questionText": "La muqueuse sinusienne est constituée :",
+      "options": [
+        "a. une seule assise de cellules épithéliales",
+        "b. de cellules ciliees vibratiles",
+        "c. dun chorion depourvu de glandes sereuses",
+        "d. toutes les reponses sont justes"
+      ],
+      "correctOptionIndexes": [1],
+      "explanation": "D'après le corrigé type (p.132), la réponse juste est b.",
+      "citations": ["PDF الأصيل - الصفحة 140 - السؤال 30"]
+    },
+    {
+      "questionText": "La muqueuse pharyngee est :",
+      "options": [
+        "a. de type respiratoire au niveau du rhino-pharynx",
+        "b. de type digestif au niveau de l’oropharynx",
+        "c. de type digestif dans sa totalite",
+        "d. toutes les reponses sont fausses"
+      ],
+      "correctOptionIndexes": [0, 1],
+      "explanation": "D'après le corrigé type (p.132), les réponses justes sont a et b.",
+      "citations": ["PDF الأصيل - الصفحة 141 - السؤال 32"]
+    },
+      {
         "questionText": "La glande parotide est :",
         "options": [
           "constituée de deux lobes reliés par l'isthme",
@@ -1697,6 +2300,30 @@ const histologyQuizzesY2 = [
         "explanation": "La gustation est assurée par le nerf facial (VII) pour les 2/3 antérieurs de la langue et le nerf glossopharyngien (IX) pour le 1/3 postérieur. Le trijumeau (V) assure la sensibilité somatique (tact, douleur).",
         "citations": []
       },
+      {
+  "questionText": "Au niveau de la muqueuse sinusienne, la mucine est secrétée par :",
+  "options": [
+    "A. Les cellules caliciformes",
+    "B. Les cellules basales",
+    "C. Les cellules ciliées",
+    "D. Les glandes séro-muqueuses"
+  ],
+  "correctOptionIndexes": [0, 3],
+  "explanation": "Corrigé EMD2 2022 (Q15).",
+  "citations": ["EMD2 2022 - Q15"]
+},
+{
+  "questionText": "Les cellules caliciformes de l'épithélium de la muqueuse sinusienne :",
+  "options": [
+    "A. Représentent près de 80% de la population cellulaire",
+    "B. Secrètent des mucines",
+    "C. Contiennent des micro-granules",
+    "D. Toutes les réponses sont justes"
+  ],
+  "correctOptionIndexes": [1, 2],
+  "explanation": "Corrigé EMD2 2022 (Q19).",
+  "citations": ["EMD2 2022 - Q19"]
+},
       {
         "questionText": "Au niveau de la muqueuse sinusienne, la mucine est secrétée par :",
         "options": [
@@ -2210,6 +2837,18 @@ const histologyQuizzesY2 = [
         ]
       },
       {
+  "questionText": "Le périoste :",
+  "options": [
+    "A. recouvre tangentiellement l'os lamellaire haversien.",
+    "B. contient des ostéoblastes, ostéocytes et ostéoclastes.",
+    "C. est riche en fibres desmodontales cémento-périostées.",
+    "D. contient les fibres intrinsèques."
+  ],
+  "correctOptionIndexes": [1],
+  "explanation": "Corrigé EMD2 2022 (Q20).",
+  "citations": ["EMD2 2022 - Q20"]
+},
+      {
         "questionText": "La différenciation des cémentoblastes est issue des interactions entre les cellules du follicule dentaire et les cellules de la pulpe mésenchymateuse:",
         "options": [
           "Vrai.",
@@ -2230,6 +2869,76 @@ const histologyQuizzesY2 = [
           445
         ]
       },
+      {
+  "questionText": "Les cémentoblastes sont issus :",
+  "options": [
+    "A) de la différenciation des fibroblastes.",
+    "B) des cellules conjonctives du follicule dentaire.",
+    "C) à partir de la couche hyaline de Hopewell-Smith.",
+    "D) à partir de la membrane basale externe de la gaine de Hertwig."
+  ],
+  "correctOptionIndexes": [0, 1],
+  "explanation": "Corrigé EMD1 2021 (Q9).",
+  "citations": ["EMD1 2021 - Q9"]
+},
+{
+  "questionText": "La gaine épithéliale de Hertwig :",
+  "options": [
+    "A) recouvre le germe dentaire.",
+    "B) a pour origine la papille mésenchymateuse.",
+    "C) est d'origine épithéliale.",
+    "D) détermine la formation de dents mono ou pluriradiculées."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2021 (Q10).",
+  "citations": ["EMD1 2021 - Q10"]
+},
+{
+  "questionText": "La formation de la racine :",
+  "options": [
+    "a) Débute au même temps que le développement coronaire.",
+    "b) Résulte de la progression de la gaine de Hertwig.",
+    "c) Résulte de la progression de l'accolement formé par l'épithélium dentaire interne et externe.",
+    "d) Résulte de la progression de l'épithélium stellaire."
+  ],
+  "correctOptionIndexes": [1, 2],
+  "explanation": "Corrigé EMD1 2022 (Q2).",
+  "citations": ["EMD1 2022 - Q2"]
+},
+{
+  "questionText": "La formation de dents mono ou pluriradiculées a pour origine :",
+  "options": [
+    "a) La gaine épithéliale de Hertwig.",
+    "b) La papille mésenchymateuse.",
+    "c) Le diaphragme épithélial.",
+    "d) La dentinogénèse radiculaire."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2022 (Q9).",
+  "citations": ["EMD1 2022 - Q9"]
+},
+{
+  "questionText": "Le follicule dentaire donne naissance :",
+  "options": [
+    "a) à la pulpe dentaire.",
+    "b) à la dentine radiculaire.",
+    "c) au cément radiculaire.",
+    "d) à la gaine épithéliale de Hertwig."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2022 (Q17).",
+  "citations": ["EMD1 2022 - Q17"]
+},
+{
+  "questionText": "La différenciation des cémentoblastes est issue des interactions entre les cellules du follicule dentaire et les cellules de la pulpe mésenchymateuse :",
+  "options": [
+    "a) Vrai.",
+    "b) Faux."
+  ],
+  "correctOptionIndexes": [1],
+  "explanation": "Faux, c'est entre follicule et Gaine de Hertwig. Corrigé EMD1 2022 (Q20).",
+  "citations": ["EMD1 2022 - Q20"]
+},
       {
         "questionText": "Le cément acellulaire à fibres intrinsèques:",
         "options": [
@@ -2628,13 +3337,8 @@ const histologyQuizzesY2 = [
           382,
           473
         ]
-      }
-    ]
-  },
-  {
-    "title": "Histologie du parodonte",
-    "subject": "histology-y2",
-    "questions": [
+      },
+    
       {
         "questionText": "Le cément acellulaire à fibres intrinsèques:",
         "options": [
@@ -2755,6 +3459,66 @@ const histologyQuizzesY2 = [
           235
         ]
       },
+       {
+      "questionText": "La gaine épithéliale de Hertwig est essentielle au développement de la racine , car elle :",
+      "options": [
+        "a) Donne naissance aux cémentoblastes",
+        "b) Donne la forme des racines et stimule la différenciation des odontoblastes",
+        "c) Donne naissance aux odontoblastes qui déposent de la dentine sur la racine",
+        "d) Reste un constituant essentiel du ligament parodontal"
+      ],
+      "correctOptionIndexes": [1],
+      "explanation": "D'après le corrigé type (p.114), la réponse juste est b.",
+      "citations": ["PDF الأصيل - الصفحة 110 - السؤال 3"]
+    },
+    {
+      "questionText": "Au cours du processus de Rhizagénèse, la formation d’une pluri-radiculée a pour origine : (b)",
+      "options": [
+        "a- La papille mésenchymateuse",
+        "b- Le diaphragme épithélial",
+        "c- Le follicule dentaire",
+        "d- Toutes les réponses sont fausses"
+      ],
+      "correctOptionIndexes": [1],
+      "explanation": "D'après le corrigé type (p.116), la réponse juste est b.",
+      "citations": ["PDF الأصيل - الصفحة 116 - السؤال 6"]
+    },
+    {
+      "questionText": "Le cément a pour origine : (bc)",
+      "options": [
+        "a- La gaine épithéliale de Hertwig",
+        "b- Le sac folliculaire",
+        "c- Le fibroblaste",
+        "d- La papille mésenchymateuse"
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "D'après le corrigé type (p.117), les réponses justes sont b et c.",
+      "citations": ["PDF الأصيل - الصفحة 117 - السؤال 13"]
+    },
+    {
+      "questionText": "Les fibres de Sharpey : (ab)",
+      "options": [
+        "a. secretees par les fibroblastes du desmodonte",
+        "b. ancrees d’une part dans le cement et d’autre part dan l’os alveolaire",
+        "c. ancrees uniquement dans le cement",
+        "d. ancrees uniquement dans l’os alveolaire"
+      ],
+      "correctOptionIndexes": [0, 1],
+      "explanation": "D'après le corrigé type (p.144), les réponses justes sont a et b.",
+      "citations": ["PDF الأصيل - الصفحة 144 - السؤال 9"]
+    },
+    {
+      "questionText": "Le cement est un tissu conjonctif vascularisee. Il est classee selon la presence ou labsence des cellules dans sa matrice et lorigine des fibres de collagene : (d)",
+      "options": [
+        "a. le premier item est juste, le deuxieme item est faux",
+        "b. le premier item est juste, le deuxieme item est juste",
+        "c. le premier item est faux, le deuxieme item est faux",
+        "d. le premier item est faux, le deuxieme item est juste"
+      ],
+      "correctOptionIndexes": [3],
+      "explanation": "Le cément est avasculaire (donc item 1 faux). Il est classé selon les cellules/fibres (donع item 2 juste).",
+      "citations": ["PDF الأصيل - الصفحة 135 - السؤال 7"]
+    },
       {
         "questionText": "Le ligament alvéolo-dentaire contient:",
         "options": [
@@ -3103,6 +3867,17 @@ const histologyQuizzesY2 = [
           573
         ]
       },
+      {
+  "questionText": "La dentine est en connexion permanente avec la pulpe par l'intermédiaire :",
+  "options": [
+    "A) des prolongements cytoplasmiques des odontoblastes.",
+    "B) des odontoblastes.",
+    "C) des fibres de Tomes."
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD1 2021 (Q16).",
+  "citations": ["EMD1 2021 - Q16"]
+},
       {
         "questionText": "La dentine secondaire:",
         "options": [
@@ -3531,6 +4306,98 @@ const histologyQuizzesY2 = [
     ]
   },
   {
+  "title": "Muqueuse sinusienne et pharyngée",
+  "subject": "histology-y2",
+  "questions": [
+    {
+      "questionText": "La muqueuse sinusienne est constituée :",
+      "options": [
+        "a. une seule assise de cellules épithéliales",
+        "b. de cellules ciliees vibratiles",
+        "c. dun chorion depourvu de glandes sereuses",
+        "d. toutes les reponses sont justes"
+      ],
+      "correctOptionIndexes": [1],
+      "explanation": "D'après le corrigé type (p.132), la réponse juste est b.",
+      "citations": ["PDF الأصيل - الصفحة 140 - السؤال 30"]
+    },
+    {
+      "questionText": "La muqueuse pharyngee est :",
+      "options": [
+        "a. de type respiratoire au niveau du rhino-pharynx",
+        "b. de type digestif au niveau de l’oropharynx",
+        "c. de type digestif dans sa totalite",
+        "d. toutes les reponses sont fausses"
+      ],
+      "correctOptionIndexes": [0, 1],
+      "explanation": "D'après le corrigé type (p.132), les réponses justes sont a et b.",
+      "citations": ["PDF الأصيل - الصفحة 141 - السؤال 32"]
+    }
+  ]
+},
+{
+  "title": "Les Glandes Salivaires",
+  "subject": "histology-y2",
+  "questions": [
+    {
+      "questionText": "La glande parotide : (bc)",
+      "options": [
+        "a. est en volume la 2eme glande salivaire",
+        "b. responsable de la secretion de lamylase salivaire",
+        "c. son canal excreteurest le canal de Stenon",
+        "d. est logee a la partie lateralesus hyoidienne"
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "D'après le corrigé type (p.132), les réponses justes sont b et c.",
+      "citations": ["PDF الأصيل - الصفحة 130 - السؤال 5"]
+    },
+    {
+      "questionText": "Les acini mixtes : (c)",
+      "options": [
+        "a. sont un ensemble d’acini majoritairement muqueux",
+        "b. sont un ensemble d’acini majoritairement sereux",
+        "c. contiennent des cellules sereuses regroupees formant des croissants en demi-lune de Gianuzzi",
+        "d. contiennent des cellules muqueuses regroupees formant des croissants en demi-lune de Gianuzzi"
+      ],
+      "correctOptionIndexes": [2],
+      "explanation": "D'après le corrigé type (p.143), la réponse juste est c.",
+      "citations": ["PDF الأصيل - الصفحة 137 - السؤال 16"]
+    }
+  ]
+},
+{
+  "title": "Sénescence des tissus buccaux",
+  "subject": "histology-y2",
+  "questions": [
+    {
+      "questionText": "Au cours du vieillissement dentaire l’email devient : (bc)",
+      "options": [
+        "a. plus permeable",
+        "b. plus foncee",
+        "c. daspect craquete",
+        "d. daspect translucide",
+        "e. toutes les reponses sont justes"
+      ],
+      "correctOptionIndexes": [1, 2],
+      "explanation": "D'après le corrigé type (p.143), les réponses justes sont b et c.",
+      "citations": ["PDF الأصيل - الصفحة 133 - السؤال 1"]
+    },
+    {
+      "questionText": "La senescence des tissus buccaux comprend : (abcde)",
+      "options": [
+        "a. une alteration de la balance de resorption et dapposition osseuse en faveur dun augmentation de la resorption",
+        "b. une alteration de la balance de resorption et dapposition osseuse en faveur dun augmentation de l'apposition",
+        "c. une mineralisation de la chambre pulpaire",
+        "d. une perte de lelasticite du parodonte",
+        "e. un risque carieux elevee"
+      ],
+      "correctOptionIndexes": [0, 1, 2, 3, 4],
+      "explanation": "D'après le corrigé type (p.143), toutes les options sont cochées (abcde).",
+      "citations": ["PDF الأصيل - الصفحة 134 - السؤال 5"]
+    }
+  ]
+},
+  {
     "title": "Développement de l'organe dentaire",
     "subject": "histology-y2",
     "questions": [
@@ -3635,6 +4502,163 @@ const histologyQuizzesY2 = [
           664
         ]
       },
+      {
+      "questionText": "La gaine épithéliale de Hertwig s’interpose entre :",
+      "options": [
+        "a) L’épithélium adamantin externe et l’épithélium adamantin interne",
+        "b) Une membrane basale interne et une membrane basale externe",
+        "c) L’épithélium buccale et l’ectomésenchyme",
+        "d) La papille ectomésenchymateuse et le follicule dentaire"
+      ],
+      "correctOptionIndexes": [1, 3],
+      "explanation": "D'après le corrigé type (p.114), les réponses justes sont b et d.",
+      "citations": ["PDF الأصيل - الصفحة 110 - السؤال 1"]
+    },
+    {
+  "questionText": "Le nœud de l'émail :",
+  "options": [
+    "A) apparaît lors de la morphogenèse.",
+    "B) est une structure histologique transitoire.",
+    "C) apparaît au centre de l'EDE (Epithélium Dentaire Externe).",
+    "D) présente une expression moléculaire spécifique."
+  ],
+  "correctOptionIndexes": [0, 1, 3],
+  "explanation": "Corrigé EMD1 2021 (Q18).",
+  "citations": ["EMD1 2021 - Q18"]
+},
+{
+  "questionText": "La morphogénèse dentaire commence par le stade de :",
+  "options": [
+    "A) cloche dentaire.",
+    "B) cupule dentaire.",
+    "C) bourgeon dentaire.",
+    "D) lame dentaire."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2021 (Q19).",
+  "citations": ["EMD1 2021 - Q19"]
+},
+{
+  "questionText": "La Différenciation cellulaire se produit au stade de :",
+  "options": [
+    "A) cloche dentaire.",
+    "B) bourgeon dentaire.",
+    "C) cupule dentaire.",
+    "D) lame dentaire."
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD1 2021 (Q20).",
+  "citations": ["EMD1 2021 - Q20"]
+},
+{
+  "questionText": "Choisissez l'ordre chronologique correct correspondant au développement de l'organe dentaire :",
+  "options": [
+    "a) Bourgeon, cupule, lame, cloche.",
+    "b) Cupule, cloche, bourgeon, lame.",
+    "c) Lame, bourgeon, capuchon, cloche.",
+    "d) Lame, cupule, bourgeon, cloche."
+  ],
+  "correctOptionIndexes": [2],
+  "explanation": "Corrigé EMD1 2022 (Q1).",
+  "citations": ["EMD1 2022 - Q1"]
+},
+{
+  "questionText": "Le Stade de cupule correspond à un stade :",
+  "options": [
+    "a) d'initiation.",
+    "b) de morphogénèse.",
+    "c) de cytodifférenciation.",
+    "d) aucun stade n'y correspond."
+  ],
+  "correctOptionIndexes": [1],
+  "explanation": "Corrigé EMD1 2022 (Q7).",
+  "citations": ["EMD1 2022 - Q7"]
+},
+{
+  "questionText": "Quel(s) est (sont) les couches cellulaires qui n'entrent pas dans la structure de la cloche dentaire ?",
+  "options": [
+    "a) Organe de l'émail.",
+    "b) Stratum intermédium.",
+    "c) Réticulum étoilé.",
+    "d) Epithélium adamantin externe.",
+    "e) Membrane basale."
+  ],
+  "correctOptionIndexes": [0, 4],
+  "explanation": "Corrigé EMD1 2022 (Q8).",
+  "citations": ["EMD1 2022 - Q8"]
+},
+{
+  "questionText": "Au cours du stade de capuchon :",
+  "options": [
+    "a) Le bourgeon dentaire prend la forme d'une cupule.",
+    "b) On assistه à la formation de nœud de l'émail.",
+    "c) Le stratum inter medium apparaît.",
+    "d) On assistه à la formation du réticulum étoilé."
+  ],
+  "correctOptionIndexes": [0, 1, 3],
+  "explanation": "Corrigé EMD1 2022 (Q18).",
+  "citations": ["EMD1 2022 - Q18"]
+},
+{
+  "questionText": "Le stomodéum est :",
+  "options": [
+    "A. Délimité par les bourgeons faciaux : frontal, maxillaire et mandibulaire",
+    "B. Formé dans sa partie supérieure par cloisonnement des bourgeons maxillaires uniquement",
+    "C. Cloisonné par phénomène de mésodermisation",
+    "D. Tapissé par un tissu mésenchymateux"
+  ],
+  "correctOptionIndexes": [0],
+  "explanation": "Corrigé EMD2 2022 (Q14).",
+  "citations": ["EMD2 2022 - Q14"]
+},
+    {
+      "questionText": "Le follicule dentaire :",
+      "options": [
+        "a) Dérive du mésenchyme pulpaire",
+        "b) Dérive des crêtes neurales",
+        "c) Apparait durant le stade de la cloche",
+        "d) Est un tissu ectomésenchymateux"
+      ],
+      "correctOptionIndexes": [1, 3],
+      "explanation": "D'après le corrigé type (p.114), les réponses justes sont b et d.",
+      "citations": ["PDF الأصيل - الصفحة 110 - السؤال 2"]
+    },
+    {
+      "questionText": "La première molaire permanente :",
+      "options": [
+        "a) Est une dent dite successionnelle",
+        "b) Se forme à partir d’un prolongement en direction linguale ou palatine , entre le 3 ème et le 4 ème mois",
+        "c) Apparait sous forme de bourgeon , vers la 16 ème semaine à l’extrémité distale de la lame dentaire",
+        "d) Dérive des vestiges épithéliaux entre les follicules dentaires"
+      ],
+      "correctOptionIndexes": [2],
+      "explanation": "D'après le corrigé type (p.114), la réponse juste est c.",
+      "citations": ["PDF الأصيل - الصفحة 113 - السؤال 14"]
+    },
+    {
+      "questionText": "Le stade de cloche c'est :",
+      "options": [
+        "a- l'étape déterminant la forme de la dent",
+        "b- l'étape déterminant l'identité de la dent",
+        "c- l'étape déterminant le nombre des racines",
+        "d- l'étape déterminant le nombre des dents"
+      ],
+      "correctOptionIndexes": [0],
+      "explanation": "D'après le corrigé type (p.116), la réponse juste est a.",
+      "citations": ["PDF الأصيل - الصفحة 115 - السؤال 3"]
+    },
+    {
+      "questionText": "Une Prolifération plus importante ( plus volumineuse) du bourgeon dentaire conduit à une :",
+      "options": [
+        "a- Macrodontie",
+        "b- Microdontie",
+        "c- Dens in dente",
+        "d- Gemination"
+      ],
+      "correctOptionIndexes": [0],
+      "explanation": "D'après le corrigé type (p.116), la réponse juste est a.",
+      "citations": ["PDF الأصيل - الصفحة 115 - السؤال 4"]
+    },
       {
         "questionText": "Au cours du stade de la cloche:",
         "options": [
