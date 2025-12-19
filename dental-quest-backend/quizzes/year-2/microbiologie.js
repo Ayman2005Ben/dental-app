@@ -560,6 +560,127 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Pour le choix d'une antibiothérapie, certains critères bactériologiques sont à respecter, sauf un lequel ? (cocher la réponse fausse)",
+        "options": [
+          "La nature de la bactérie responsable",
+          "La sensibilité de la bactérie à l'antibiotique",
+          "L'âge et l'état physiologique du patient",
+          "Le spectre d'activité de l'antibiotique",
+          "La connaissance des résistances naturelles et acquises"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'âge et l'état physiologique sont des critères CLINIQUES (liés à l'hôte) et non des critères bactériologiques (liés au germe).",
+        "citations": []
+      },
+      {
+        "questionText": "Le choix d'un antibiotique repose sur la détermination de la CMI. La CMI est :",
+        "options": [
+          "La plus forte concentration d'antibiotique inhibant la croissance",
+          "La plus faible concentration d'antibiotique inhibant toute croissance visible",
+          "Une concentration proche de la CMB pour un bactériostatique",
+          "D'autant plus élevée que la bactérie est sensible",
+          "La concentration qui tue 99,9% des bactéries"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La Concentration Minimale Inhibitrice (CMI) définit la sensibilité in vitro. Plus elle est faible, plus la bactérie est sensible à l'antibiotique.",
+        "citations": []
+      },
+      {
+        "questionText": "L'antibiogramme est une étape cruciale pour le choix thérapeutique car :",
+        "options": [
+          "Il permet de mesurer la concentration sérique de l'antibiotique",
+          "Il permet de déterminer la sensibilité de la bactérie à plusieurs antibiotiques",
+          "Il donne un résultat instantané sans culture",
+          "Il est réalisé directement sur le pus sans isolement",
+          "Il ne détecte que les résistances naturelles"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'antibiogramme guide le praticien en classant les antibiotiques en Sensible (S), Intermédiaire (I) ou Résistant (R) pour adapter le traitement.",
+        "citations": []
+      },
+      {
+        "questionText": "Dans l'interprétation d'un antibiogramme, la réponse « I » signifie :",
+        "options": [
+          "Insignifiant : l'antibiotique n'a aucun effet",
+          "Inadapté : le patient est allergique",
+          "Intermédiaire : l'efficacité dépend de la dose et du site",
+          "Incubé : la bactérie est en phase de latence",
+          "Immunisé : la bactérie possède un plasmide"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La catégorie Intermédiaire (I) indique que le succès thérapeutique est incertain sauf si l'on utilise de fortes doses ou si l'antibiotique se concentre naturellement au site infectieux.",
+        "citations": []
+      },
+      {
+        "questionText": "L'antibiotique idéal doit posséder une toxicité sélective, cela signifie :",
+        "options": [
+          "Qu'il tue tous les microorganismes sans distinction",
+          "Qu'il cible une structure absente ou différente chez l'hôte humain",
+          "Qu'il est toxique uniquement pour les bactéries à Gram négatif",
+          "Qu'il ne provoque jamais d'effets secondaires",
+          "Qu'il agit uniquement en présence d'oxygène"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La toxicité sélective est la capacité d'inhiber ou de tuer le germe sans nuire aux cellules du patient (ex: cibler le peptidoglycane que l'humain n'a pas).",
+        "citations": []
+      },
+      {
+        "questionText": "L'association de deux antibiotiques est indiquée pour : (cocher la réponse fausse)",
+        "options": [
+          "Élargir le spectre d'activité",
+          "Obtenir une synergie bactérienne",
+          "Prévenir l'émergence de mutants résistants",
+          "Traiter une infection polymicrobienne",
+          "Réduire systématiquement le coût du traitement"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le coût n'est pas un critère médical d'association. Les objectifs sont cliniques (synergie, spectre, prévention des résistances).",
+        "citations": []
+      },
+      {
+        "questionText": "L'antibiogramme standardisé (méthode des disques) doit respecter :",
+        "options": [
+          "Un milieu de culture riche en sang uniquement",
+          "Un inoculum précis de 10^8 bactéries/ml (0.5 McFarland)",
+          "Une incubation à une température de 20°C",
+          "Une lecture après 4 heures d'incubation",
+          "L'utilisation de disques d'antibiotiques périmés pour tester la stabilité"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Pour que le choix soit fiable, l'inoculum doit être standardisé à environ 10^8 bactéries/ml pour obtenir une nappe de culture homogène.",
+        "citations": []
+      },
+      {
+        "questionText": "Un antibiotique est dit bactériostatique lorsque :",
+        "options": [
+          "Sa CMI est très éloignée de sa CMB",
+          "Il entraîne la mort définitive des bactéries",
+          "Il inhibe temporairement la multiplication bactérienne",
+          "Il agit uniquement sur la paroi cellulaire",
+          "Il est actif sur les virus et les bactéries"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Un bactériostatique inhibe la croissance sans tuer. Mathématiquement, sa CMB (Concentration Minimale Bactéricide) est beaucoup plus élevée que sa CMI.",
+        "citations": []
+      },
+      {
         "questionText": "Suite à un prélèvement de pus d'abcès dentaire pour INFECTION à Fusobacterium nucleatum, l'antibiogramme donne Erythromycine I. La réponse «I» veut dire : (cocher la réponse juste)",
         "options": [
           "Insertion (peut donner ATB)",
@@ -749,6 +870,141 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Le diagnostic bactériologique direct comporte les étapes suivantes, SAUF une laquelle ? (cocher la réponse fausse)",
+        "options": [
+          "Examen cytologique",
+          "Mise en culture",
+          "Recherche d'anticorps spécifiques",
+          "Antibiogramme",
+          "Examen microscopique à l'état frais"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le diagnostic direct vise à mettre en évidence le germe lui-même (microscopie, culture, ADN). La recherche d'anticorps est un diagnostic INDIRECT car elle étudie la réponse de l'hôte.",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic bactériologique indirect est basé sur : (cocher la réponse juste)",
+        "options": [
+          "La mise en évidence du germe par culture",
+          "La détection des antigènes bactériens",
+          "La détection des anticorps spécifiques (sérologie)",
+          "L'étude de la sensibilité aux antibiotiques",
+          "La coloration de Gram"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le diagnostic indirect consiste à rechercher les traces du passage du germe dans l'organisme en dosant les anticorps produits par le système immunitaire.",
+        "citations": []
+      },
+      {
+        "questionText": "L’utilisation d’un milieu de transport pour les prélèvements permet de : (cocher la réponse fausse)",
+        "options": [
+          "Protéger les anaérobies de la toxicité de l’oxygène",
+          "Protéger le prélèvement de la dessiccation",
+          "Maintenir la viabilité des germes",
+          "Assurer la multiplication rapide des bactéries",
+          "Maintenir les proportions des différentes espèces"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Un milieu de transport est conçu pour maintenir les bactéries en vie sans favoriser leur multiplication, afin de ne pas fausser les proportions initiales du microbiote prélevé.",
+        "citations": []
+      },
+      {
+        "questionText": "La culture bactérienne : (cocher la réponse fausse)",
+        "options": [
+          "Est une technique de diagnostic direct",
+          "Nécessite une incubation à 37°C pour les pathogènes humains",
+          "N’est jamais réalisée en conditions d'anaérobiose",
+          "Peut être faussée par une prise d’antibiotiques",
+          "Permet d'isoler des colonies pures"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est faux. En odontologie, la recherche de bactéries anaérobies strictes (impliquées dans les abcès et les parodontites) impose une culture en anaérobiose.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est le prélèvement bactériologique indiqué pour confirmer une endocardite infectieuse d'origine dentaire ?",
+        "options": [
+          "Écouvillonnage de la plaque dentaire",
+          "Hémoculture (prélèvement de sang)",
+          "Prélèvement de salive",
+          "Examen cytobactériologique des urines",
+          "Biopsie gingivale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'endocardite étant une infection de l'endocarde suite à une bactériémie, l'hémoculture est l'examen de référence pour isoler le germe circulant dans le sang.",
+        "citations": []
+      },
+      {
+        "questionText": "L’examen microscopique après coloration de GRAM : (cocher la réponse fausse)",
+        "options": [
+          "Permet d’apprécier la morphologie des bactéries",
+          "Permet de détecter systématiquement le bacille de la tuberculose (BK)",
+          "Est une technique de diagnostic direct",
+          "Est basé sur la composition chimique de la paroi",
+          "Distingue les bactéries violettes (G+) des roses (G-)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le BK (Mycobacterium tuberculosis) possède une paroi riche en cires qui ne prend pas la coloration de Gram. Il nécessite une coloration spécifique : Ziehl-Neelsen.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est, parmi les suivants, le prélèvement considéré comme polymicrobien ? (cocher la réponse juste)",
+        "options": [
+          "Le sang",
+          "Le liquide céphalo-rachidien (LCR)",
+          "Les crachats",
+          "Le liquide articulaire",
+          "L'urine prélevée par ponction vésicale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les crachats traversent la cavité buccale et sont contaminés par la flore commensale normale, ce qui en fait un échantillon contenant de multiples espèces bactériennes.",
+        "citations": []
+      },
+      {
+        "questionText": "Lors d'un prélèvement de pus d'un abcès dentaire à la seringue, il faut : (cocher la réponse fausse)",
+        "options": [
+          "Désinfecter la zone de ponction",
+          "Garder les bulles d'air dans la seringue",
+          "Aspirer le pus directement dans la lésion",
+          "Étiqueter correctement le prélèvement",
+          "Acheminer rapidement le prélèvement au laboratoire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Il faut IMPÉRATIVEMENT chasser les bulles d'air de la seringue pour préserver la survie des bactéries anaérobies strictes, car l'oxygène leur est toxique.",
+        "citations": []
+      },
+      {
+        "questionText": "La technique de PCR (Polymerase Chain Reaction) en diagnostic : (cocher la réponse fausse)",
+        "options": [
+          "Est une méthode de diagnostic moléculaire",
+          "Détecte l'acide nucléique (ADN/ARN) du germe",
+          "Permet d'affirmer que la bactérie prélevée est vivante",
+          "Est très utile pour les germes à culture difficile",
+          "Est une technique de diagnostic direct"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La PCR détecte l'ADN, que la bactérie soit vivante ou morte. Elle ne permet pas de tester la viabilité ou la sensibilité réelle aux antibiotiques (contrairement à la culture).",
+        "citations": []
+      },
+      {
         "questionText": "L'examen microscopique après coloration de GRAM (cocher la réponse fausse):",
         "options": [
           "Permet d'apprécier la forme des bactéries.",
@@ -786,6 +1042,7 @@ const microbiologyQuizzesY2 = [
         "explanation": "Les procaryotes (bactéries) se distinguent par l'absence d'organites membranaires (pas de réticulum ni mitochondries - donc D et E marquent la distinction par leur absence chez les uns et présence chez les autres) et la présence d'une paroi (C).",
         "citations": []
       },
+
       {
         "questionText": "La coloration de Gram colore en VIOLET:",
         "options": [
@@ -875,6 +1132,152 @@ const microbiologyQuizzesY2 = [
           2
         ],
         "explanation": "Couleur violette = Gram positif. Forme allongée = Bacille. Donc Bacille Gram positif.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries sont : (cocher la réponse juste)",
+        "options": [
+          "Des cellules dont le diamètre dépasse 100 microns",
+          "Des cellules eucaryotes",
+          "Des cellules procaryotes",
+          "Dépourvues de chromosomes",
+          "La plupart possède une paroi fine"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les bactéries appartiennent au règne des procaryotes, caractérisés par l'absence d'enveloppe nucléaire et d'organites membraneux, avec une taille généralement comprise entre 0,5 et 5 micromètres.",
+        "citations": []
+      },
+      {
+        "questionText": "Les étapes de coloration de Gram sont : (cocher la réponse juste)",
+        "options": [
+          "Fushine puis alcool-lugol et violet de gentiane",
+          "Fushine puis lugol-alcool et violet de gentiane",
+          "Violet de gentiane puis lugol-alcool et fushine",
+          "Violet de gentiane puis alcool-lugol et fushine",
+          "Violet de gentiane puis lugol-fushine et alcool"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La coloration de Gram suit un protocole précis : 1. Coloration primaire (Violet de gentiane), 2. Mordançage (Lugol), 3. Décoloration (Alcool), 4. Contre-coloration (Fushine ou Safranine).",
+        "citations": []
+      },
+      {
+        "questionText": "La coloration de Gram permet de différencier les bactéries : (cocher la réponse juste)",
+        "options": [
+          "Selon la structure de la membrane cytoplasmique",
+          "Selon la structure de la membrane nucléaire",
+          "Selon leur mobilité",
+          "Selon la structure de leur paroi",
+          "Selon la structure de leur cytoplasme"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Cette coloration différentielle repose sur l'aptitude de la paroi bactérienne à retenir (Gram positif) ou non (Gram négatif) le complexe violet-lugol après action de l'alcool, selon sa richesse en peptidoglycane.",
+        "citations": []
+      },
+      {
+        "questionText": "La capsule : (cocher la réponse juste)",
+        "options": [
+          "Permet à la bactérie d’échapper à la phagocytose",
+          "Est le constituant le plus superficiel",
+          "Joue un rôle essentiel dans la virulence",
+          "Elle permet une classification antigénique",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La capsule est une couche externe (souvent polyosidique) facultative qui protège la bactérie contre le système immunitaire (phagocytose) et définit la spécificité sérologique.",
+        "citations": []
+      },
+      {
+        "questionText": "Le peptidoglycane : (cocher la réponse juste)",
+        "options": [
+          "Est composé de chaines lipidiques",
+          "Est composé de chaines lipidiques et protéiques",
+          "Est composé de chaines polysaccharidiques et lipidiques",
+          "Est composé de chaines polysaccharidiques et protéiques",
+          "Est composé de chaines polysaccharidiques"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Selon les corrigés de ce concours (EL ASSIL), l'option retenant les chaînes polysaccharidiques et lipidiques est cochée, bien que biochimiquement le peptidoglycane soit composé de glycanes et de peptides.",
+        "citations": []
+      },
+      {
+        "questionText": "Quelle est la différence la plus importante entre une cellule procaryote et une cellule eucaryote ? (cocher la réponse juste)",
+        "options": [
+          "La présence de ribosomes",
+          "La structure de la membrane cytoplasmique",
+          "L'absence d'une membrane nucléaire chez les procaryotes",
+          "La présence d'ADN",
+          "La mobilité"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La distinction majeure réside dans l'organisation du matériel génétique : les procaryotes n'ont pas de noyau individualisé par une membrane nucléaire.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries à Gram positif possèdent une couche fine de peptidoglycanes et une membrane externe : (Vrai/Faux)",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "C'est faux. Les bactéries à Gram positif possèdent une couche ÉPAISSE de peptidoglycane et n'ont PAS de membrane externe. Cette description correspond aux bactéries à Gram négatif.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries à GRAM négatif possèdent une couche fine de peptidoglycanes et une membrane externe : (Vrai/Faux)",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Vrai. La paroi des Gram négatif est caractérisée par une membrane externe complexe (contenant du LPS) recouvrant une fine couche de peptidoglycane.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les éléments suivants, lequel est un constituant facultatif de la cellule bactérienne ?",
+        "options": [
+          "La membrane cytoplasmique",
+          "Le cytoplasme",
+          "Le plasmide",
+          "Le chromosome",
+          "Le ribosome"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le plasmide est un ADN extra-chromosomique circulaire capable de réplication autonome. Il n'est pas indispensable à la survie de base de la bactérie, contrairement aux autres éléments cités.",
+        "citations": []
+      },
+      {
+        "questionText": "L'examen microscopique après coloration de GRAM : (cocher la réponse fausse)",
+        "options": [
+          "Ne permet d'apprécier que la morphologie des bactéries",
+          "Permet de détecter le bacille de la tuberculose",
+          "Est une Technique de diagnostic indirect",
+          "Est basé sur la composition chimique de la paroi bactérienne",
+          "Permet d'apprécier la mobilité des bactéries"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2,
+          4
+        ],
+        "explanation": "Le BK ne se colore pas au Gram (nécessite Ziehl-Neelsen). C'est un diagnostic DIRECT. La coloration fixe les bactéries, donc elle ne permet pas de voir la mobilité (qui nécessite l'état frais).",
         "citations": []
       },
       {
@@ -1019,6 +1422,124 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Dans la symbiose (mutualisme) : (cocher la réponse juste)",
+        "options": [
+          "La bactérie et l'hôte profitent tous deux de leur association",
+          "La bactérie est douée d'un pouvoir pathogène obligatoire",
+          "La bactérie profite de l'hôte en détruisant ses cellules",
+          "La bactérie vit uniquement sur les végétaux en décomposition",
+          "L'association est toujours temporaire et accidentelle"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La symbiose ou mutualisme est une interaction biologique à bénéfice réciproque où les deux organismes tirent profit de l'association.",
+        "citations": []
+      },
+      {
+        "questionText": "Une bactérie est dite commensale lorsqu'elle : (cocher la réponse juste)",
+        "options": [
+          "Est capable de provoquer une maladie chez un hôte sain",
+          "Vit au contact des revêtements de l'hôte sans entraîner de troubles",
+          "Est une bactérie d'origine environnementale (sol, eau)",
+          "Possède obligatoirement une capsule et des toxines",
+          "Est toujours intracellulaire obligatoire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le commensalisme définit une relation où le microorganisme vit sur ou dans l'hôte (peau, muqueuses) sans lui nuire, profitant simplement des nutriments.",
+        "citations": []
+      },
+      {
+        "questionText": "Le microbiote humain normal : (cocher la réponse fausse)",
+        "options": [
+          "S'installe dès la naissance",
+          "Joue un rôle de barrière contre les bactéries pathogènes",
+          "Contribue à la synthèse de certaines vitamines (ex: Vitamine K)",
+          "Est quantitativement identique chez tous les individus",
+          "Participe à la maturation du système immunitaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le microbiote est propre à chaque individu. Sa composition varie selon l'âge, l'alimentation, l'hygiène et l'état de santé.",
+        "citations": []
+      },
+      {
+        "questionText": "La plaque dentaire est composée de : (cocher la réponse fausse)",
+        "options": [
+          "Microorganismes et matrice intercellulaire",
+          "Environ 20% de matière solide et 80% d'eau",
+          "70 à 80% de matière solide d'origine alimentaire",
+          "Bactéries Gram positif et Gram négatif",
+          "Une prédominance de germes anaérobies dans les zones profondes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La fraction solide de la plaque dentaire est constituée majoritairement (environ 70-80%) de débris microbiens et de polymères produits par les bactéries, et non de résidus alimentaires directs.",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant la poche parodontale : (cocher la réponse fausse)",
+        "options": [
+          "Elle fait partie de la plaque sous-gingivale",
+          "L'auto-nettoyage par la salive y est très efficace",
+          "La concentration en oxygène y est très réduite",
+          "Elle constitue un milieu fermé favorisant les anaérobies",
+          "La concentration en bactéries y est très élevée"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La poche parodontale est un espace confiné où la salive ne circule pas bien. L'absence d'auto-nettoyage favorise la stagnation des bactéries et l'inflammation.",
+        "citations": []
+      },
+      {
+        "questionText": "Une bactérie saprophyte est une bactérie qui :",
+        "options": [
+          "Vit aux dépens d'un hôte vivant",
+          "Est responsable de maladies transmissibles",
+          "Vit dans le milieu extérieur sur des matières organiques en décomposition",
+          "Fait partie du microbiote buccal normal",
+          "Est toujours aérobie stricte"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les saprophytes tirent leur énergie de la matière morte dans l'environnement (terre, eau) et ne sont généralement pas pathogènes pour l'homme.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries opportunistes sont des germes qui : (cocher la réponse juste)",
+        "options": [
+          "Sont d'emblée très virulents pour tout individu",
+          "Ne provoquent des maladies que chez les sujets immunodéprimés",
+          "Appartiennent uniquement au genre des virus",
+          "Sont incapables de se multiplier dans l'organisme humain",
+          "Sont toujours transmises par les animaux (zoonoses)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Une bactérie opportuniste appartient souvent à la flore normale mais profite d'une baisse des défenses de l'hôte pour devenir pathogène.",
+        "citations": []
+      },
+      {
+        "questionText": "La plaque dentaire renferme des glycoprotéines d'origine salivaire : (Vrai/Faux)",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Vrai. La pellicule acquise exogène (PAE), qui sert de base à la fixation des bactéries, est constituée de glycoprotéines salivaires adsorbées sur l'émail.",
+        "citations": []
+      }
+      ,
+      {
         "questionText": "Dans le contexte de relation hôte-bactérie, la notion de commensalisme exprime:",
         "options": [
           "Un mutualisme",
@@ -1115,6 +1636,127 @@ const microbiologyQuizzesY2 = [
         "explanation": "Comme A, B, C et D sont tous des modes de transmission valides, l'affirmation E est la seule fausse.",
         "citations": []
       },
+      {
+        "questionText": "Le pouvoir pathogène (pathogénicité) d'une bactérie est : (cocher la réponse juste)",
+        "options": [
+          "Une notion quantitative mesurable",
+          "La capacité d'une bactérie à engendrer une maladie",
+          "Toujours identique pour toutes les souches d'une même espèce",
+          "Lié uniquement à la production de toxines",
+          "Défini par la dose létale 50 (DL50)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le pouvoir pathogène est une notion QUALITATIVE (c'est la capacité potentielle à causer une maladie). La virulence, elle, est quantitative (mesurable par la DL50).",
+        "citations": []
+      },
+      {
+        "questionText": "La virulence des bactéries : (cocher la réponse fausse)",
+        "options": [
+          "Est une notion quantitative",
+          "Peut varier au sein d'une même espèce bactérienne",
+          "Est définie par la dose infectante ou létale",
+          "Est indépendante des facteurs de pathogénicité",
+          "Reflète le degré d'agressivité d'une souche"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "C'est faux. La virulence dépend directement de l'expression des facteurs de pathogénicité (adhésines, capsules, toxines, enzymes).",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les éléments suivants, lesquels sont considérés comme des facteurs de pathogénicité ? (cocher les réponses justes)",
+        "options": [
+          "La capsule",
+          "Les pili (fimbriae)",
+          "Les toxines",
+          "Le biofilm",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La capsule (antiphagocytaire), les pili (adhésion), le biofilm (protection/persistance) et les toxines (agression) sont tous des outils que la bactérie utilise pour infecter l'hôte.",
+        "citations": []
+      },
+      {
+        "questionText": "La période d'incubation correspond à :",
+        "options": [
+          "La phase où les signes cliniques sont les plus intenses",
+          "La période de convalescence",
+          "L'intervalle de temps entre la contamination et l'apparition des premiers symptômes",
+          "La phase de déclin de la maladie",
+          "Une période où le sujet n'est jamais contagieux"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est la phase silencieuse cliniquement, durant laquelle le germe se multiplie ou migre vers son site cible avant de provoquer des dégâts visibles.",
+        "citations": []
+      },
+      {
+        "questionText": "Les défenses immunitaires de l'organisme comportent : (cocher la réponse fausse)",
+        "options": [
+          "Les barrières anatomiques (peau et muqueuses)",
+          "La réaction inflammatoire",
+          "La phagocytose",
+          "La production d'anticorps",
+          "L'administration d'antibiotiques"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Les antibiotiques sont une aide thérapeutique EXOGÈNE (extérieure). Les défenses immunitaires (innées ou acquises) sont des mécanismes ENDOGÈNES (propres à l'organisme).",
+        "citations": []
+      },
+      {
+        "questionText": "Une bactérie pathogène spécifique :",
+        "options": [
+          "Provoque une maladie chez un sujet aux défenses immunitaires affaiblies",
+          "Provoque une maladie cliniquement définie chez un sujet sain",
+          "Est toujours une bactérie de la flore commensale",
+          "Ne possède pas de facteurs de virulence",
+          "Est synonyme de bactérie opportuniste"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le pathogène spécifique (ex: Tuberculose, Typhoïde) peut rendre malade n'importe qui, même en bonne santé, contrairement au pathogène opportuniste.",
+        "citations": []
+      },
+      {
+        "questionText": "Les modes de transmission des maladies infectieuses peuvent être : (cocher la réponse fausse)",
+        "options": [
+          "Horizontaux (contact direct ou indirect)",
+          "Verticaux (mère-enfant)",
+          "Aériens (gouttelettes)",
+          "Héréditaires (génétiques)",
+          "Vectoriels (insectes)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Une maladie infectieuse est *transmissible* mais pas *héréditaire* (elle n'est pas inscrite dans les gènes du patient, elle est acquise de l'extérieur ou de la mère pendant la grossesse).",
+        "citations": []
+      },
+      {
+        "questionText": "Le réservoir d'une infection est :",
+        "options": [
+          "Le lieu où l'agent pathogène vit et se multiplie",
+          "Toujours un animal",
+          "Toujours l'environnement",
+          "Le vecteur qui transmet la maladie",
+          "L'anticorps qui bloque la bactérie"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le réservoir est l'habitat naturel du germe (Homme, Animal, ou Environnement tellurique/hydrique).",
+        "citations": []
+      }
+      ,
       {
         "questionText": "La virulence des bactéries: (cocher la réponse fausse)",
         "options": [
@@ -1286,6 +1928,120 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Parmi ces bactéries, laquelle est une aérobie stricte ? (cocher la réponse juste)",
+        "options": [
+          "Escherichia coli",
+          "Campylobacter",
+          "Pseudomonas aeruginosa",
+          "Bacteroides fragilis",
+          "Haemophilus influenzae"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Pseudomonas aeruginosa est le prototype de la bactérie aérobie stricte ; elle ne peut se multiplier qu'en présence d'oxygène, contrairement aux entérobactéries (A) ou aux anaérobies (D).",
+        "citations": []
+      },
+      {
+        "questionText": "Une bactérie mésophile est une bactérie qui : (cocher la réponse juste)",
+        "options": [
+          "Préfère les milieux alcalins",
+          "Préfère les basses températures",
+          "Cultive sur des milieux contenant 6.5% de NaCl",
+          "Nécessite de l'air pour sa croissance",
+          "Toutes ces réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Par définition, une bactérie mésophile se développe de manière optimale à une température comprise entre 20°C et 45°C (moyenne de 37°C pour les pathogènes humains). Aucune des options proposées ne définit la mésophilie.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries exigeant des composés organiques comme source de carbone sont dites :",
+        "options": [
+          "Autotrophes",
+          "Hétérotrophes",
+          "Chimioorganotrophes",
+          "Auxotrophes",
+          "Prototrophes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les hétérotrophes utilisent des molécules organiques préexistantes comme source de carbone, alors que les autotrophes utilisent le CO2 minéral.",
+        "citations": []
+      },
+      {
+        "questionText": "Dans la courbe de croissance bactérienne, la phase stationnaire correspond à :",
+        "options": [
+          "La phase où la masse bactérienne est maximale",
+          "La phase d'adaptation des bactéries à leur milieu",
+          "La phase qui suit la phase de déclin",
+          "La mise en route des systèmes enzymatiques",
+          "La période où le temps de génération est le plus court"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "En phase stationnaire, le taux de croissance devient nul (autant de morts que de divisions). C'est le moment où la concentration bactérienne atteint son plateau maximal.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est le processus énergétique dont le rendement est le plus élevé chez les bactéries ?",
+        "options": [
+          "La fermentation lactique",
+          "La fermentation alcoolique",
+          "La respiration anaérobie",
+          "La respiration aérobie",
+          "La glycolyse seule"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La respiration aérobie est le processus le plus efficace car elle permet l'oxydation complète du glucose en CO2 et H2O, produisant jusqu'à 38 molécules d'ATP, contre seulement 2 pour la fermentation.",
+        "citations": []
+      },
+      {
+        "questionText": "Le facteur de croissance est une vitamine que l'on ajoute dans les milieux de cultures : (Vrai/Faux)",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Vrai. Les facteurs de croissance sont des substances organiques (vitamines, acides aminés, bases azotées) indispensables que la bactérie ne peut pas synthétiser elle-même.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries d'intérêt médical sont chimiotrophes et lithotrophes : (Vrai/Faux)",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Selon le corrigé du livre (page 201), cette affirmation est considérée comme vraie. Note : La majorité des pathogènes sont chimio-organotrophes, mais certaines espèces utilisent des substrats minéraux.",
+        "citations": []
+      },
+      {
+        "questionText": "Quels sont les deux principaux processus énergétiques existant chez les bactéries ? (Question ouverte adaptée)",
+        "options": [
+          "Photosynthèse et Respiration",
+          "Fermentation et Photosynthèse",
+          "Fermentation et Respiration",
+          "Oxydation et Réduction",
+          "Scissiparité et Conjugaison"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La fermentation et la respiration (aérobie ou anaérobie) sont les deux voies métaboliques majeures permettant de transformer l'énergie chimique en ATP.",
+        "citations": []
+      },
+      {
         "questionText": "Dans le métabolisme énergétique bactérien, la production d'énergie se produit dans les structures suivantes, sauf une : (la réponse fausse)",
         "options": [
           "Le cycle de Krebs",
@@ -1364,6 +2120,111 @@ const microbiologyQuizzesY2 = [
           1
         ],
         "explanation": "La mutation est stable. Bien qu'une réversion soit possible, la réversibilité n'est pas un caractère définitoire primaire (et est très rare), contrairement à la stabilité du changement génétique.",
+        "citations": []
+      },
+      {
+        "questionText": "La génétique bactérienne a pour objet l'étude : (cocher la réponse juste)",
+        "options": [
+          "Du ribosome bactérien",
+          "De l'ARN bactérien",
+          "Du génome bactérien (ADN)",
+          "Des acides nucléiques bactériens",
+          "Du noyau bactérien"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La génétique étudie la transmission et l'expression des caractères héréditaires, dont le support universel chez les bactéries est le génome constitué d'ADN (chromosome et plasmides).",
+        "citations": []
+      },
+      {
+        "questionText": "La délétion est un phénomène génétique qui consiste en : (cocher la réponse juste)",
+        "options": [
+          "L'insertion d'une séquence de nucléotides",
+          "Le remplacement d'un nucléotide par un autre",
+          "La suppression ou l'insertion d'un nucléotide",
+          "La suppression de toute une séquence nucléotidique",
+          "La suppression ou l'insertion d'une séquence nucléotidique"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "En génétique, une délétion correspond à la perte (suppression) d'un fragment d'ADN, allant d'un seul nucléotide à toute une séquence de gènes.",
+        "citations": []
+      },
+      {
+        "questionText": "La mutation est un phénomène : (cocher la réponse juste)",
+        "options": [
+          "Rare, spontané, continu, spécifique et indépendant",
+          "Rare, spontané, discontinu, spécifique et indépendant",
+          "Rare, spontané, continu, non spécifique et indépendant",
+          "Rare, spontané, continu, spécifique et dépendant",
+          "Rare, spontané, discontinu, spécifique et dépendant"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Une mutation est rare (fréquence 10^-6), spontanée (non induite), discontinue (événement brusque), spécifique (touche un caractère précis) et indépendante (une mutation n'en favorise pas une autre).",
+        "citations": []
+      },
+      {
+        "questionText": "La transformation est un transfert de matériel génétique par : (cocher la réponse juste)",
+        "options": [
+          "L'introduction dans une bactérie d'un fragment d'ADN d'une bactérie génétiquement différente",
+          "Contact direct entre les deux bactéries",
+          "Phénomène spontané via un virus",
+          "Un bactériophage vecteur",
+          "Conversion lysogénique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La transformation est la capture et l'intégration par une bactérie réceptrice d'ADN nu (fragment d'ADN libre) provenant du milieu extérieur.",
+        "citations": []
+      },
+      {
+        "questionText": "L'information génétique est à la fois bactérienne et virale lors du phénomène de :",
+        "options": [
+          "De mutation",
+          "De conversion lysogénique",
+          "De conjugaison",
+          "De transduction",
+          "De transformation"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La conversion lysogénique se produit lorsqu'un bactériophage (virus) intègre son ADN dans le chromosome bactérien, apportant de nouveaux caractères génétiques à la bactérie (comme la toxine diphtérique).",
+        "citations": []
+      },
+      {
+        "questionText": "Le support génétique de la résistance naturelle est un : (cocher la réponse juste)",
+        "options": [
+          "Plasmide",
+          "Chromosome",
+          "Transposon",
+          "Intégron",
+          "Bactériophage"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La résistance naturelle est une caractéristique fixe, propre à une espèce bactérienne, et elle est inscrite de manière stable dans le chromosome (hérédité verticale).",
+        "citations": []
+      },
+      {
+        "questionText": "Le transfert génétique par conjugaison nécessite : (cocher la réponse juste)",
+        "options": [
+          "L'incorporation d'ADN nu",
+          "Un bactériophage comme vecteur",
+          "Un contact physique entre deux bactéries via un pili sexuel",
+          "Une mutation spontanée",
+          "Une division cellulaire binaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La conjugaison est le transfert d'ADN (souvent un plasmide) d'une bactérie donatrice à une réceptrice grâce à un contact direct établi par un pili sexuel.",
         "citations": []
       },
       {
@@ -1630,6 +2491,171 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Les antibiotiques possèdent une caractéristique majeure appelée :",
+        "options": [
+          "Une activité anti-virale",
+          "Une activité anti-bactérienne uniquement",
+          "Une toxicité sélective",
+          "Une activité en milieu inorganique",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La toxicité sélective signifie que l'antibiotique s'attaque à des structures spécifiques de la bactérie (ex: paroi, ribosome 70S) sans endommager les cellules de l'hôte humain.",
+        "citations": []
+      },
+      {
+        "questionText": "L'Oxacilline appartient au groupe des :",
+        "options": [
+          "Pénicillines G",
+          "Pénicillines V",
+          "Pénicillines A",
+          "Pénicillines M",
+          "Céphalosporines"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les pénicillines M (comme l'Oxacilline ou la Cloxacilline) sont résistantes à la pénicillinase des staphylocoques.",
+        "citations": []
+      },
+      {
+        "questionText": "L'Amoxicilline est classée parmi les :",
+        "options": [
+          "Pénicillines V",
+          "Pénicillines A",
+          "Pénicillines G",
+          "Pénicillines M",
+          "Cyclines"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'Amoxicilline est une aminopénicilline, classée dans le groupe des Pénicillines A, caractérisée par un spectre plus large que la Pénicilline G.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi ces molécules, laquelle est une céphalosporine de 1ère génération (C1G) ?",
+        "options": [
+          "Céfotaxime",
+          "Céfoxitine",
+          "Céphazoline",
+          "Ceftazidime",
+          "Aztréonam"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La Céphazoline est une C1G. Le Céfotaxime et le Ceftazidime sont des C3G, et la Céfoxitine est une C2G.",
+        "citations": []
+      },
+      {
+        "questionText": "La Gentamicine appartient à la famille des :",
+        "options": [
+          "Macrolides",
+          "Tétracyclines",
+          "Aminosides (Aminoglycosides)",
+          "Quinolones",
+          "Phénicolés"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La Gentamicine est un aminoside, une famille d'antibiotiques bactéricides agissant sur la sous-unité 30S du ribosome.",
+        "citations": []
+      },
+      {
+        "questionText": "La Ciprofloxacine fait partie de la famille des :",
+        "options": [
+          "Rifampicines",
+          "Fluoroquinolones",
+          "Sulfamides",
+          "Glycopeptides",
+          "Macrolides"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La Ciprofloxacine est une fluoroquinolone de deuxième génération, agissant par inhibition de l'ADN-gyrase bactérienne.",
+        "citations": []
+      },
+      {
+        "questionText": "Lequel de ces antibiotiques est utilisé comme antituberculeux ?",
+        "options": [
+          "Streptomycine",
+          "Érythromycine",
+          "Triméthoprime",
+          "Ceftriaxone",
+          "Imipénème"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La Streptomycine (un aminoside) fait partie des antibiotiques classiques utilisés dans le traitement de la tuberculose.",
+        "citations": []
+      },
+      {
+        "questionText": "Les antibiotiques suivants agissent par inhibition de la synthèse de la paroi bactérienne, SAUF un lequel ? (cocher la réponse fausse)",
+        "options": [
+          "Pénicillines",
+          "Céphalosporines",
+          "Gentamicine",
+          "Glycopeptides",
+          "Fosfomycine"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La Gentamicine est un aminoside qui inhibe la synthèse protéique (ribosome). Les autres cités agissent tous sur différentes étapes de la synthèse du peptidoglycane.",
+        "citations": []
+      },
+      {
+        "questionText": "Les antibiotiques suivants appartiennent à la famille des Macrolides et apparentés, SAUF un lequel ?",
+        "options": [
+          "Érythromycine",
+          "Azithromycine",
+          "Streptomycine",
+          "Lincomycine",
+          "Pristinamycine"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La Streptomycine est un Aminoside. L'Érythromycine et l'Azithromycine sont des Macrolides vrais, la Lincomycine est une Lincosamide et la Pristinamycine une Synergistine (tous apparentés aux macrolides).",
+        "citations": []
+      },
+      {
+        "questionText": "La Pénicilline G appartient à la famille des :",
+        "options": [
+          "Aminosides",
+          "Macrolides",
+          "Béta-lactamines",
+          "Quinolones",
+          "Tétracyclines"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La Pénicilline G est le chef de file historique de la famille des Béta-lactamines.",
+        "citations": []
+      },
+      {
+        "questionText": "Les antibiotiques bactéricides sont des molécules qui :",
+        "options": [
+          "Ralentissent la croissance bactérienne",
+          "Agissent comme des antiseptiques",
+          "Entraînent la mort bactérienne",
+          "Agissent sur les bactéries résistantes",
+          "Agissent sur n'importe quelle bactérie"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Un antibiotique est dit bactéricide lorsqu'il tue les bactéries (contrairement aux bactériostatiques qui ne font qu'inhiber leur multiplication).",
+        "citations": []
+      },
+      {
         "questionText": "Les antibiotiques suivants agissent par inhibition de la synthèse des acides nucléiques (Cochez la réponse fausse)",
         "options": [
           "Quinolones",
@@ -1820,6 +2846,128 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "La production de bêta-lactamase chez Staphylococcus aureus induit une résistance à : (cocher la réponse fausse)",
+        "options": [
+          "La pénicilline G",
+          "L'ampicilline",
+          "La ticarcilline",
+          "La pipéracilline",
+          "Les céphalosporines de 3ème génération"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La pénicillinase (bêta-lactamase) de S. aureus hydrolyse les pénicillines G et A, ainsi que les carboxypénicillines. Cependant, elle n'est pas active sur les céphalosporines de 3ème génération (C3G).",
+        "citations": []
+      },
+      {
+        "questionText": "Le support génétique de la résistance naturelle est un : (cocher la réponse juste)",
+        "options": [
+          "Plasmide",
+          "Chromosome",
+          "Transposon",
+          "Intégron",
+          "Bactériophage"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La résistance naturelle est une caractéristique fixe, propre à toutes les souches d'une même espèce, et son support génétique est systématiquement chromosomique.",
+        "citations": []
+      },
+      {
+        "questionText": "La résistance acquise : (cocher la réponse juste)",
+        "options": [
+          "Est rencontrée uniquement chez les entérobactéries",
+          "A le même support génétique que la résistance naturelle",
+          "Est transférable d'une bactérie à une autre",
+          "N'est pas détectable à l'antibiogramme",
+          "Est présente chez toutes les souches d'une même espèce"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La résistance acquise est le résultat d'une modification génétique (mutation ou acquisition de gènes) et elle est souvent transférable horizontalement via des plasmides ou des transposons.",
+        "citations": []
+      },
+      {
+        "questionText": "Une souche MRSA (Staphylococcus aureus méticillino-résistant) : (cocher la ou les réponses justes)",
+        "options": [
+          "Est sensible aux bêta-lactamines",
+          "Est résistante aux pénicillines sensibles aux autres bêta-lactamines",
+          "Est résistante aux céphalosporines de 3ème génération",
+          "Est résistante aux carbapénèmes",
+          "Est résistante à toutes les bêta-lactamines"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3,
+          4
+        ],
+        "explanation": "Le SARM (ou MRSA) possède une modification de sa cible (PLP2a) qui lui confère une résistance croisée à la quasi-totalité de la famille des bêta-lactamines (Pénicillines, C3G, Carbapénèmes).",
+        "citations": []
+      },
+      {
+        "questionText": "Lequel de ces antibiotiques n'a aucune activité sur les entérobactéries ? (cocher la réponse juste)",
+        "options": [
+          "La vancomycine",
+          "La gentamicine",
+          "L'imipénème",
+          "La colistine",
+          "Les fluoroquinolones"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les entérobactéries possèdent une résistance naturelle à la Vancomycine (glycopeptide) car cette grosse molécule ne peut pas traverser la membrane externe des bactéries à Gram négatif.",
+        "citations": []
+      },
+      {
+        "questionText": "Bacteroides fragilis présente une résistance naturelle aux aminosides car :",
+        "options": [
+          "Elle produit une enzyme inactivante",
+          "Elle possède une paroi imperméable",
+          "C'est une bactérie anaérobie stricte",
+          "Sa cible ribosomale est modifiée",
+          "Elle possède un système d'efflux actif"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le passage des aminosides à travers la membrane cytoplasmique nécessite de l'énergie issue de la chaîne respiratoire aérobie. Les anaérobies stricts ne possédant pas ce métabolisme, ils sont naturellement résistants.",
+        "citations": []
+      },
+      {
+        "questionText": "Une résistance bactérienne qui touche toutes les molécules d'une même famille est appelée :",
+        "options": [
+          "Résistance intrinsèque",
+          "Résistance acquise",
+          "Résistance croisée",
+          "Résistance associée",
+          "Multi-résistance"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La résistance croisée survient lorsqu'un seul mécanisme (ex: modification de cible) protège la bactérie contre l'ensemble des antibiotiques d'une même famille chimique.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries à Gram négatif sont naturellement résistantes aux antibiotiques à grosse molécule (comme les glycopeptides) grâce à :",
+        "options": [
+          "Leur couche fine de peptidoglycane",
+          "Leur membrane externe",
+          "Leur espace périplasmique",
+          "Leur capsule",
+          "Leur flagelle"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La membrane externe des Gram négatifs agit comme une barrière de perméabilité sélective, empêchant l'entrée des molécules volumineuses ou hydrophobes.",
+        "citations": []
+      },
+      {
         "questionText": "Le support génétique de la résistance naturelle est un : (cocher la réponse Juste)",
         "options": [
           "Plasmide",
@@ -1946,6 +3094,126 @@ const microbiologyQuizzesY2 = [
           2
         ],
         "explanation": "Les furoncles sont causés par Staphylococcus aureus. Les Bacteroides sont des anaérobies impliqués dans les infections profondes et abcès.",
+        "citations": []
+      },
+      {
+        "questionText": "Staphylococcus aureus est une bactérie caractérisée par : (cocher la réponse fausse)",
+        "options": [
+          "Sa forme de cocci Gram positif en amas (grappes de raisin)",
+          "La production d'une enzyme appelée coagulase",
+          "La production d'un pigment jaune doré",
+          "Sa forme de cocci Gram positif en longues chaînettes",
+          "La production de bêta-lactamases (pénicillinases)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Staphylococcus aureus se regroupe en AMAS (grappes de raisin). La disposition en CHAÎNETTES est la caractéristique distinctive du genre Streptococcus.",
+        "citations": []
+      },
+      {
+        "questionText": "Le genre Veillonella regroupe des bactéries qui sont : (cocher la réponse fausse)",
+        "options": [
+          "Des bacilles à Gram négatif",
+          "Des cocci à Gram négatif",
+          "Des bactéries anaérobies strictes",
+          "Des commensaux de la cavité buccale",
+          "Souvent associées aux streptocoques dans la plaque"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "C'est un piège classique : Veillonella est un COCCI à Gram négatif (l'un des rares d'intérêt médical avec Neisseria), et non un bacille.",
+        "citations": []
+      },
+      {
+        "questionText": "Les streptocoques du groupe Viridans (ex: S. mutans, S. sanguinis) : (cocher la réponse fausse)",
+        "options": [
+          "Sont des streptocoques alpha-hémolytiques ou non hémolytiques",
+          "Font partie de la flore commensale buccale",
+          "Sont les principaux responsables de la carie dentaire",
+          "Sont fréquemment responsables d'endocardites infectieuses (maladie d'Osler)",
+          "Sont les agents responsables de l'angine érythémato-pultacée"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "L'angine érythémato-pultacée est causée par Streptococcus pyogenes (Groupe A, bêta-hémolytique). Les Viridans (alpha-hémolytiques) causent caries et endocardites.",
+        "citations": []
+      },
+      {
+        "questionText": "Les bactéries du genre Bacteroides (ex: B. fragilis) sont : (cocher la réponse fausse)",
+        "options": [
+          "Des bacilles à Gram négatif",
+          "Des bactéries anaérobies strictes",
+          "Des agents de suppurations et d'abcès profonds",
+          "Naturellement sensibles aux aminosides (Gentamicine)",
+          "Des commensaux du tube digestif"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les anaérobies stricts comme Bacteroides sont naturellement RÉSISTANTS aux aminosides car ces antibiotiques nécessitent de l'oxygène pour pénétrer dans la bactérie.",
+        "citations": []
+      },
+      {
+        "questionText": "Escherichia coli est une bactérie caractérisée par : (cocher la réponse juste)",
+        "options": [
+          "Une forme de cocci Gram positif",
+          "Une appartenance à la famille des Enterobacteriaceae (Bacille Gram -)",
+          "Une exigence stricte en anaérobiose",
+          "Une absence totale de pouvoir pathogène",
+          "Une production constante de coagulase"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "E. coli est le prototype des Entérobactéries : c'est un Bacille Gram Négatif, aéro-anaérobie facultatif (et non anaérobie strict).",
+        "citations": []
+      },
+      {
+        "questionText": "Treponema pallidum (agent de la syphilis) : (cocher la réponse fausse)",
+        "options": [
+          "Est une bactérie de la famille des Spirochaetaceae (forme hélicoïdale)",
+          "Est visible facilement au microscope optique après coloration de Gram standard",
+          "Est l'agent d'une infection sexuellement transmisible",
+          "Provoque une lésion primaire appelée chancre",
+          "Reste très sensible à la Pénicilline G"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les tréponèmes sont trop fins pour être vus avec une coloration de Gram classique. On utilise le microscope à fond noir ou l'immunofluorescence.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les bactéries suivantes, laquelle est un cocci à Gram positif catalase négatif ?",
+        "options": [
+          "Staphylococcus aureus",
+          "Streptococcus pyogenes",
+          "Neisseria meningitidis",
+          "Escherichia coli",
+          "Pseudomonas aeruginosa"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le test Catalase permet de différencier les Staphylocoques (Catalase +) des Streptocoques (Catalase -).",
+        "citations": []
+      },
+      {
+        "questionText": "L'association bactérienne Fusobacterium nucleatum et Borrelia vincentii est responsable de :",
+        "options": [
+          "La carie dentaire",
+          "L'angine de Vincent (ulcéro-nécrotique)",
+          "L'impétigo",
+          "La furonculose",
+          "La tuberculose"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "C'est l'association fuso-spirillaire caractéristique de l'angine de Vincent (infection nécrosante des amygdales et gencives).",
         "citations": []
       },
       {
@@ -2224,6 +3492,96 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Les streptocoques du groupe Viridans (flore orale) sont : (cocher la réponse fausse)",
+        "options": [
+          "Des streptocoques de la flore bucco-dentaire",
+          "Certaines espèces sont responsables de caries dentaires",
+          "Peuvent être impliqués dans la pathologie parodontale",
+          "Sont souvent impliqués dans les endocardites infectieuses (Maladie d'Osler)",
+          "Sont également impliqués dans les angines érythémateuses"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Les angines érythémateuses sont causées par le Streptocoque bêta-hémolytique du groupe A (S. pyogenes). Les Viridans (alpha-hémolytiques) sont les agents majeurs des caries et des endocardites lentes.",
+        "citations": []
+      },
+      {
+        "questionText": "Chez un malade présentant un abcès collecté de la gencive, vous décidez de faire un prélèvement de pus. Quelles sont les précautions à prendre ? (cocher la réponse fausse)",
+        "options": [
+          "Nettoyer la zone de prélèvement avec un antiseptique",
+          "Ponctionner l'abcès à l'aide d'une aiguille fine montée sur une seringue",
+          "Aspirer le pus dans le piston de la seringue",
+          "Garder les bulles d'air dans la seringue pour oxygéner le prélèvement",
+          "Étiqueter et envoyer rapidement au laboratoire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Il faut ABSOLUMENT chasser l'air de la seringue. Les agents des abcès dentaires sont souvent des anaérobies stricts (Bacteroides, Fusobacterium) qui meurent en présence d'oxygène.",
+        "citations": []
+      },
+      {
+        "questionText": "Une semaine plus tard, vous recevez le résultat pour ce malade (abcès gingival) : « E.C.B de Suppuration gingivale : Prevotella intermedia ». (Cocher la réponse fausse)",
+        "options": [
+          "Cette bactérie se présente sous forme de bacile",
+          "C'est une bactérie à Gram négatif",
+          "C'est une bactérie anaérobie stricte",
+          "Elle est responsable de l'angine de Vincent",
+          "Elle est à métabolisme fermentaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'angine de Vincent est causée par l'association fuso-spirillaire (Fusobacterium nucleatum + Spirochètes), et non par Prevotella intermedia isolée.",
+        "citations": []
+      },
+      {
+        "questionText": "La flore de la poche parodontale : (cocher la réponse fausse)",
+        "options": [
+          "Est beaucoup plus dense que celle de la gencive saine",
+          "Est plus dense que la gingivite au niveau de la plaque supragingivale",
+          "Dans la zone intermédiaire, on retrouve des bactéries anaérobies et des bactéries mobiles",
+          "Dans la plaque sous-gingivale, on retrouve surtout des bactéries aérobies strictes",
+          "Elle est caractérisée par une forte proportion d'anaérobies (30% des spirochètes)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La poche parodontale est un milieu confiné, profond et pauvre en oxygène. La flore y est donc dominée par les ANAÉROBIES stricts, et non les aérobies.",
+        "citations": []
+      },
+      {
+        "questionText": "L'association bactérienne Fusobacterium nucleatum et Borrelia vincentii (Treponema) est responsable de :",
+        "options": [
+          "La carie dentaire",
+          "L'angine de Vincent",
+          "L'endocardite infectieuse",
+          "La cellulite cervico-faciale",
+          "La tuberculose ganglionnaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "C'est la définition microbiologique de l'angine de Vincent (angine ulcéro-nécrotique) : une synergie entre un bacille fusiforme et un spirochète.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est le prélèvement indiqué pour le diagnostic d'une endocardite infectieuse suspectée après des soins dentaires ?",
+        "options": [
+          "Écouvillonnage de la gencive",
+          "Hémoculture",
+          "Prélèvement de salive",
+          "Biopsie de la lésion dentaire",
+          "Coproculture"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'endocardite est une infection de la paroi interne du cœur via le sang. Le diagnostic se fait donc par culture du sang (hémocultures répétées).",
+        "citations": []
+      },
+      {
         "questionText": "L'angine de Vincent est causée par: (cocher la réponse juste)",
         "options": [
           "Fusobacterium nucleatum",
@@ -2363,6 +3721,97 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Quels sont les éléments obligatoires qui constituent une particule virale (virion) ? (cocher la réponse juste)",
+        "options": [
+          "L'ADN et la capside",
+          "L'acide nucléique (génome) et la capside",
+          "L'ARN et la capsule",
+          "L'acide nucléique, la capside et l'enveloppe",
+          "L'acide nucléique et une paroi cellulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Tout virus est constitué au minimum d'un génome (ADN ou ARN) et d'une coque protéique protectrice appelée capside. L'ensemble forme la nucléocapside (virus nu). L'enveloppe est facultative.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les virus suivants, lequel est un virus enveloppé ? (cocher la réponse juste)",
+        "options": [
+          "Entérovirus",
+          "Rotavirus",
+          "Virus de la Grippe (Influenza)",
+          "Rhinovirus",
+          "Coxsackie virus"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le virus de la grippe possède une enveloppe lipidique dérivée de la membrane de la cellule hôte, ce qui le rend fragile dans le milieu extérieur. Les autres cités sont des virus nus.",
+        "citations": []
+      },
+      {
+        "questionText": "La classification des virus (Lwoff, Horne et Tournier) repose sur les critères suivants, SAUF un :",
+        "options": [
+          "La nature de l'acide nucléique (ADN ou ARN)",
+          "La symétrie de la capside (cubique ou hélicoïdale)",
+          "La présence ou l'absence d'enveloppe",
+          "Le pouvoir pathogène pour l'homme",
+          "Le nombre de capsomères"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La classification virale moderne est basée sur la structure et la morphologie du virion, et non sur la maladie qu'il provoque (pouvoir pathogène) ou son tropisme.",
+        "citations": []
+      },
+      {
+        "questionText": "Les virus à ARN : (cocher la réponse fausse)",
+        "options": [
+          "Peuvent avoir un génome segmenté (ex: Grippe)",
+          "Se répliquent généralement dans le cytoplasme",
+          "Sont génétiquement plus stables que les virus à ADN",
+          "Le VIH est un rétrovirus à ARN",
+          "Le virus de l'hépatite C est un virus à ARN"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est l'inverse : les virus à ARN sont génétiquement INSTABLES (taux de mutation élevé) car les enzymes qui recopient l'ARN (ARN polymérases) font beaucoup d'erreurs et ne corrigent pas.",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant la multiplication virale :",
+        "options": [
+          "Le virus se divise par scissiparité binaire (comme les bactéries)",
+          "Le virus se multiplie par assemblage de ses constituants préformés",
+          "Elle peut se faire sur des milieux de culture inertes (géloses)",
+          "Elle ne nécessite pas l'entrée du virus dans la cellule",
+          "Elle aboutit toujours à la mort de la cellule hôte"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les virus sont des parasites intracellulaires obligatoires. Ils détournent la machinerie cellulaire pour fabriquer leurs pièces détachées (génome, protéines) qui s'assemblent ensuite pour former de nouveaux virions.",
+        "citations": []
+      },
+      {
+        "questionText": "Le virus de l'hépatite B (VHB) est un virus :",
+        "options": [
+          "À ARN, nu",
+          "À ADN, enveloppé",
+          "À ARN, enveloppé",
+          "À ADN, nu",
+          "Strictement animal"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le VHB est un Hepadnaviridae : c'est un virus à ADN partiellement double brin, et il possède une enveloppe (d'où la présence de l'Ag HBs en surface).",
+        "citations": []
+      }
+      ,
+      {
         "questionText": "Quel est parmi les virus cités, celui qui est enveloppé (cochez la réponse juste)",
         "options": [
           "Enterovirus",
@@ -2461,6 +3910,96 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "La période d'incubation d'une infection virale : (cocher la réponse juste)",
+        "options": [
+          "Est la période qui précède la contamination",
+          "Est toujours de courte durée (quelques heures)",
+          "Correspond à l'intervalle entre l'entrée du virus et l'apparition des symptômes",
+          "Est la période durant laquelle le virus est éliminé de l'organisme",
+          "Correspond à la phase de convalescence"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'incubation est la période silencieuse où le virus se multiplie activement avant que les signes cliniques ne deviennent visibles. Sa durée varie selon le virus (ex: courte pour la grippe, longue pour la rage).",
+        "citations": []
+      },
+      {
+        "questionText": "Une cellule est dite « permissive » vis-à-vis d'un virus lorsqu'elle :",
+        "options": [
+          "Possède le récepteur spécifique au virus sur sa membrane",
+          "Permet la fixation du virus mais pas sa pénétration",
+          "Permet le cycle complet de multiplication virale (production de nouveaux virions)",
+          "Est capable de détruire le virus par phagocytose",
+          "Est résistante à l'infection virale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Il faut distinguer : 'Sensible' (a le récepteur pour l'entrée) et 'Permissive' (a la machinerie intracellulaire pour répliquer le virus). Une cellule doit être les deux pour qu'il y ait infection productive.",
+        "citations": []
+      },
+      {
+        "questionText": "L'effet cytopathogène (ECP) est défini comme :",
+        "options": [
+          "La production d'anticorps par la cellule infectée",
+          "L'ensemble des lésions morphologiques cellulaires visibles au microscope",
+          "L'intégration du génome viral dans le chromosome cellulaire",
+          "La libération du virus sans mort cellulaire",
+          "La réponse inflammatoire de l'hôte"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'ECP regroupe les altérations visibles de la cellule infectée : arrondissement, lyse (mort), formation de syncytiums (cellules géantes) ou d'inclusions (usines à virus).",
+        "citations": []
+      },
+      {
+        "questionText": "Une infection virale latente se caractérise par : (cocher la réponse juste)",
+        "options": [
+          "Une multiplication virale intense et continue",
+          "L'élimination rapide du virus par le système immunitaire",
+          "La persistance du génome viral dans la cellule sans production de virus infectieux",
+          "Une évolution toujours fatale",
+          "La présence constante de symptômes cliniques"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Dans la latence (ex: Herpes, VZV), le virus 'dort' dans la cellule (sous forme d'épisome ou intégré) et ne se réplique pas, jusqu'à une éventuelle réactivation.",
+        "citations": []
+      },
+      {
+        "questionText": "La virémie correspond à :",
+        "options": [
+          "La présence de virus dans les urines",
+          "La présence de virus dans le sang",
+          "La présence de virus dans le liquide céphalo-rachidien",
+          "La présence de virus dans les selles",
+          "La transmission du virus par voie aérienne"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La virémie est le passage et la circulation des virus dans le sang, permettant l'atteinte d'organes cibles éloignés de la porte d'entrée.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les virus suivants, lequel est responsable d'une infection chronique persistante (portage chronique) ?",
+        "options": [
+          "Le virus de la Grippe",
+          "Le virus de l'Hépatite A",
+          "Le virus de l'Hépatite B (VHB)",
+          "Le Rotavirus",
+          "Le Rhinovirus"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le VHB (et le VHC) peut persister dans l'organisme pendant des années (chronicité), contrairement à la grippe ou l'hépatite A qui sont des infections aiguës résolutives.",
+        "citations": []
+      },
+      {
         "questionText": "Le principal réservoir du virus de la grippe est l'animal (Vrai/Faux)",
         "options": [
           "VRAI",
@@ -2536,6 +4075,96 @@ const microbiologyQuizzesY2 = [
           3
         ],
         "explanation": "Définition du diagnostic direct : trouver le virus ou ses morceaux (Ag, génome).",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic virologique direct repose sur la mise en évidence : (cocher la réponse juste)",
+        "options": [
+          "Des anticorps antiviraux (IgM, IgG)",
+          "Du virus lui-même, de ses antigènes ou de son génome",
+          "D'une réaction inflammatoire non spécifique",
+          "De la séroconversion",
+          "De l'augmentation du taux d'anticorps"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le diagnostic direct cherche le virus (culture), ses morceaux (antigènes par ELISA/IF) ou son code génétique (PCR). Tout ce qui concerne les anticorps est du diagnostic INDIRECT.",
+        "citations": []
+      },
+      {
+        "questionText": "Quelles sont les conditions optimales pour le prélèvement en vue d'un isolement viral (culture) ? (cocher la réponse fausse)",
+        "options": [
+          "Le prélèvement doit être précoce (phase aiguë)",
+          "Le transport doit être rapide au laboratoire",
+          "Le prélèvement doit être conservé à +4°C si le transport est court",
+          "Le prélèvement doit être congelé à -20°C",
+          "L'asepsie doit être rigoureuse pour éviter la contamination bactérienne"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La congélation à -20°C est souvent destructrice pour les virus infectieux (cristallisation lente). On préfère +4°C (court terme) ou -80°C (long terme) pour préserver la viabilité.",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic sérologique (indirect) permet : (cocher la réponse juste)",
+        "options": [
+          "De visualiser le virus au microscope électronique",
+          "D'isoler le virus sur culture cellulaire",
+          "De détecter une infection récente par la présence d'IgM spécifiques",
+          "De détecter le génome viral par PCR",
+          "De déterminer la charge virale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La sérologie détecte la réponse immunitaire. La présence d'IgM (Immunoglobulines M) signe un contact récent ou une infection en cours (primo-infection).",
+        "citations": []
+      },
+      {
+        "questionText": "La technique ELISA (Enzyme Linked Immuno Sorbent Assay) est utilisée en virologie pour :",
+        "options": [
+          "Uniquement la détection d'antigènes viraux",
+          "Uniquement la détection d'anticorps",
+          "La détection d'antigènes ou d'anticorps selon le kit utilisé",
+          "L'observation de l'effet cytopathogène",
+          "L'amplification du génome viral"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "ELISA est une technique polyvalente. Elle peut être 'Directe' (Ag HBs pour l'hépatite B) ou 'Indirecte' (Sérodiagnostic VIH, Rubéole...).",
+        "citations": []
+      },
+      {
+        "questionText": "Pour le transport des prélèvements viraux, il est recommandé d'utiliser :",
+        "options": [
+          "Un milieu de transport spécifique (ex: milieu à virus)",
+          "De l'eau distillée",
+          "Du formol",
+          "De l'alcool à 70°",
+          "Un tube sec à température ambiante pendant 48h"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les virus sont fragiles. Ils nécessitent un milieu de transport (contenant des protéines et des antibiotiques) pour survivre et ne pas sécher jusqu'au laboratoire.",
+        "citations": []
+      },
+      {
+        "questionText": "L'amplification génique (PCR) est une technique qui permet : (cocher la réponse fausse)",
+        "options": [
+          "De détecter l'ADN ou l'ARN viral",
+          "Un diagnostic rapide et très sensible",
+          "De quantifier la charge virale (PCR en temps réel)",
+          "De déterminer la sensibilité du virus aux antiviraux (recherche de mutations)",
+          "De cultiver le virus pour le multiplier"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La PCR amplifie l'ADN (copie moléculaire), elle ne fait pas pousser le virus vivant. La culture cellulaire est la seule méthode pour multiplier le virus biologique.",
         "citations": []
       },
       {
@@ -2788,6 +4417,126 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Les hépatites à transmission oro-fécales sont causées par : (cocher la réponse juste)",
+        "options": [
+          "Le virus de l'hépatite A et le virus de l'hépatite E",
+          "Le virus de l'hépatite B et le virus de l'hépatite C",
+          "Le virus de l'hépatite B et le virus de l'hépatite Delta",
+          "Le virus de l'hépatite A, B et C",
+          "Le virus de l'hépatite Delta uniquement"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les VHA (HAV) et VHE (HEV) sont des virus nus très résistants dans le milieu extérieur, transmis par l'eau ou les aliments souillés (péril fécal).",
+        "citations": []
+      },
+      {
+        "questionText": "Le virus de l'hépatite B (VHB) est un virus : (cocher la réponse juste)",
+        "options": [
+          "À ARN, nu",
+          "À ADN, enveloppé",
+          "À ARN, enveloppé",
+          "À ADN, nu",
+          "Appartenant à la famille des Flaviviridae"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le VHB est un Hepadnaviridae. C'est un virus à ADN (partiellement bicaténaire) et il possède une enveloppe portant l'Antigène HBs.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est le marqueur sérologique retrouvé chez un sujet vacciné contre l'hépatite B ? (cocher la réponse juste)",
+        "options": [
+          "Ag HBs positif",
+          "Ac anti-HBc positif",
+          "Ag HBe positif",
+          "Ac anti-HBs positif (isolé)",
+          "Ac anti-HBc et Ac anti-HBs positifs"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le vaccin contient uniquement l'antigène de surface. Le patient vacciné développe donc uniquement des anticorps Anti-HBs. Il n'a jamais rencontré le virus entier, donc il n'a pas d'Ac Anti-HBc.",
+        "citations": []
+      },
+      {
+        "questionText": "Le virus de l'hépatite C (VHC) : (cocher la réponse juste)",
+        "options": [
+          "Est un virus à ADN",
+          "Est un virus à ARN enveloppé",
+          "Est un virus à ARN nu",
+          "Possède un vaccin efficace disponible",
+          "Ne passe jamais à la chronicité"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le VHC est un virus à ARN enveloppé (Flaviviridae). Contrairement au VHB, il n'y a pas de vaccin, mais il évolue très souvent (80%) vers la chronicité.",
+        "citations": []
+      },
+      {
+        "questionText": "L'hépatite B se transmet par voie : (cocher la réponse fausse)",
+        "options": [
+          "Parentérale (sang)",
+          "Sexuelle",
+          "Mère-enfant (verticale)",
+          "Oro-fécale (alimentaire)",
+          "Percutanée (accident d'exposition au sang)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le VHB est un virus enveloppé fragile qui ne survit pas dans le tube digestif. Il ne se transmet pas par l'eau ou les aliments (contrairement au VHA).",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic de l'hépatite C repose en première intention sur :",
+        "options": [
+          "La recherche de l'ADN viral",
+          "La recherche des anticorps anti-VHC (Sérologie)",
+          "La biopsie hépatique",
+          "La culture virale",
+          "La recherche de l'antigène HBs"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le dépistage se fait par sérologie ELISA (recherche des Ac anti-VHC). Si positif, on confirme par une PCR (recherche de l'ARN viral) pour voir si l'infection est active.",
+        "citations": []
+      },
+      {
+        "questionText": "Le virus Delta (VHD) est un virus défectif qui nécessite pour sa réplication la présence du :",
+        "options": [
+          "Virus de l'hépatite A",
+          "Virus de l'hépatite B",
+          "Virus de l'hépatite C",
+          "Virus de l'hépatite E",
+          "VIH"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le VHD a besoin de l'enveloppe du VHB (Ag HBs) pour entrer dans les hépatocytes et s'assembler. Sans VHB, pas d'infection VHD possible.",
+        "citations": []
+      },
+      {
+        "questionText": "Les papillomavirus humains (HPV) sont des virus : (cocher la réponse juste)",
+        "options": [
+          "À ARN enveloppés",
+          "À ADN nus",
+          "Responsables uniquement de verrues cutanées bénignes",
+          "Qui ne sont jamais impliqués dans les cancers",
+          "Strictement dermotropes (peau uniquement)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les HPV sont des petits virus à ADN nus. Certains génotypes (16, 18) sont oncogènes et responsables de cancers (col de l'utérus, oropharynx).",
+        "citations": []
+      },
+      {
         "questionText": "Les virus suivants peuvent être transmis par voie parentérale sauf un, lequel?",
         "options": [
           "Le virus de l'hépatite A",
@@ -2976,6 +4725,111 @@ const microbiologyQuizzesY2 = [
           3
         ],
         "explanation": "Pas de transmission respiratoire.",
+        "citations": []
+      },
+      {
+        "questionText": "Le virus de l'immunodéficience humaine (VIH) est caractérisé par : (cocher la réponse fausse)",
+        "options": [
+          "C'est un virus à ARN",
+          "Il appartient à la famille des Retroviridae",
+          "Il possède une enzyme appelée transcriptase inverse",
+          "Son génome est diploïde (2 molécules d'ARN)",
+          "C'est un virus nu très résistant dans le milieu extérieur"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le VIH est un virus ENVELOPPÉ. Cette enveloppe lipidique le rend très fragile dans le milieu extérieur (détruit par la chaleur, l'eau de javel, etc.).",
+        "citations": []
+      },
+      {
+        "questionText": "Quelle est la principale cible cellulaire du VIH ?",
+        "options": [
+          "Les lymphocytes B",
+          "Les hépatocytes",
+          "Les lymphocytes T CD4+",
+          "Les érythrocytes (globules rouges)",
+          "Les cellules épithéliales"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le VIH se fixe spécifiquement sur le récepteur CD4 présent à la surface des Lymphocytes T auxiliaires (Helper) et des macrophages.",
+        "citations": []
+      },
+      {
+        "questionText": "La transmission du VIH se fait par les voies suivantes, SAUF une :",
+        "options": [
+          "Voie sexuelle",
+          "Voie sanguine (transfusion, drogues IV)",
+          "Voie materno-fœtale (grossesse, accouchement)",
+          "Allaitement maternel",
+          "Voie aérienne (toux, éternuements)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Le VIH ne se transmet pas par l'air, ni par les contacts sociaux usuels (poignée de main), ni par la salive ou les piqûres d'insectes.",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic de dépistage de l'infection à VIH repose en première intention sur :",
+        "options": [
+          "Le test ELISA combiné (détection des anticorps et de l'Ag p24)",
+          "Le Western Blot",
+          "La mesure de la charge virale par PCR",
+          "La numération des CD4",
+          "L'isolement viral sur culture"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le test de dépistage standard est un test ELISA de 4ème génération qui détecte simultanément les anticorps anti-VIH et l'antigène p24 (pour réduire la fenêtre sérologique).",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant la réplication du VIH, quel est le rôle de la transcriptase inverse (Reverse Transcriptase) ?",
+        "options": [
+          "Elle permet l'entrée du virus dans la cellule",
+          "Elle transcrit l'ARN viral en ADN proviral",
+          "Elle intègre l'ADN viral dans le chromosome de l'hôte",
+          "Elle découpe les protéines virales",
+          "Elle permet la sortie des nouveaux virions"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La transcriptase inverse est l'enzyme clé des rétrovirus : elle rétro-transcrit le génome viral (ARN) en ADN pour qu'il puisse ensuite être intégré dans le noyau de la cellule.",
+        "citations": []
+      },
+      {
+        "questionText": "Le test de confirmation d'une sérologie VIH positive est :",
+        "options": [
+          "Un deuxième test ELISA",
+          "Le Western Blot (Immunoblot)",
+          "L'hémoculture",
+          "La recherche d'antigène HBs",
+          "Le test de Coombs"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Si le test ELISA est positif, il doit impérativement être confirmé par un Western Blot qui visualise spécifiquement les anticorps dirigés contre les différentes protéines du virus.",
+        "citations": []
+      },
+      {
+        "questionText": "La fenêtre sérologique correspond à :",
+        "options": [
+          "La période où le patient est guéri",
+          "La période entre la contamination et l'apparition des anticorps détectables",
+          "La phase de SIDA déclaré",
+          "La période où le virus n'est pas transmissible",
+          "La phase de latence clinique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Pendant la fenêtre sérologique, le patient est infecté et très contagieux (virémie élevée), mais les tests sérologiques classiques sont encore négatifs car les anticorps n'ont pas encore été produits.",
         "citations": []
       },
       {
@@ -3175,6 +5029,96 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Les champignons microscopiques (micromycètes) sont des organismes : (cocher la réponse juste)",
+        "options": [
+          "Procaryotes photosynthétiques",
+          "Eucaryotes dépourvus de chlorophylle",
+          "Procaryotes hétérotrophes",
+          "Eucaryotes autotrophes",
+          "Virus géants"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les champignons sont des Eucaryotes (vrai noyau), hétérotrophes (ne fabriquent pas leur énergie par photosynthèse car sans chlorophylle) et possèdent une paroi.",
+        "citations": []
+      },
+      {
+        "questionText": "La paroi cellulaire des champignons contient un composant caractéristique qui est :",
+        "options": [
+          "Le peptidoglycane",
+          "La cellulose",
+          "La chitine",
+          "Le cholestérol",
+          "La kératine"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La paroi fongique est rigide et composée principalement de polysaccharides comme la chitine et les glucanes, contrairement aux bactéries (peptidoglycane) ou aux plantes (cellulose).",
+        "citations": []
+      },
+      {
+        "questionText": "Les levures sont des champignons : (cocher la réponse fausse)",
+        "options": [
+          "Unicellulaires",
+          "Qui se multiplient généralement par bourgeonnement",
+          "Capables de former des pseudomycéliums (ex: Candida)",
+          "Toujours pluricellulaires filamenteux",
+          "D'aspect crémeux en culture sur gélose"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les levures sont par définition unicellulaires (forme ronde ou ovale). Les champignons pluricellulaires filamenteux sont appelés 'moisissures'.",
+        "citations": []
+      },
+      {
+        "questionText": "Le stérol majeur de la membrane cytoplasmique des champignons, cible de nombreux antifongiques, est :",
+        "options": [
+          "Le cholestérol",
+          "L'ergostérol",
+          "Le phytostérol",
+          "Le lanostérol",
+          "Le glycérol"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'ergostérol est le stérol spécifique des champignons (les humains ont du cholestérol). Les antifongiques comme les azolés ou l'amphotéricine B ciblent cette molécule.",
+        "citations": []
+      },
+      {
+        "questionText": "Les champignons dimorphiques sont caractérisés par :",
+        "options": [
+          "Une reproduction uniquement sexuée",
+          "Une capacité à changer de forme (levure/filament) selon la température",
+          "Une absence totale de pouvoir pathogène",
+          "Une résistance naturelle à tous les antifongiques",
+          "Une croissance uniquement en milieu liquide"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le dimorphisme est la capacité de certains champignons pathogènes (ex: Histoplasma) de pousser sous forme de moisissure dans l'environnement (25°C) et sous forme de levure chez l'hôte (37°C).",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant la reproduction des champignons : (cocher la réponse juste)",
+        "options": [
+          "Elle est exclusivement asexuée",
+          "Elle est exclusivement sexuée",
+          "Elle peut être sexuée (spores parfaites) ou asexuée (conidies)",
+          "Elle se fait par fission binaire comme les bactéries",
+          "Elle nécessite obligatoirement un hôte vivant"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La plupart des champignons possèdent deux modes de reproduction : asexuée (rapide, dissémination) et sexuée (adaptation, brassage génétique).",
+        "citations": []
+      },
+      {
         "questionText": "Parmi les champignons suivants, une seule espèce fait partie des levures, laquelle ? (cocher la réponse juste)",
         "options": [
           "Aspergillus fumigatus",
@@ -3241,6 +5185,96 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Candida albicans est un champignon microscopique qui : (cocher la réponse fausse)",
+        "options": [
+          "Est une levure (champignon unicellulaire)",
+          "Est un commensal habituel de la cavité buccale et du tube digestif",
+          "Est une bactérie anaérobie stricte",
+          "Peut devenir pathogène sous l'influence de facteurs favorisants",
+          "Est capable de former un pseudo-mycélium (filaments)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est l'erreur classique à éviter : Candida est un CHAMPIGNON (Eucaryote), pas une bactérie. De plus, il est aéro-anaérobie facultatif, et non anaérobie strict.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les facteurs favorisant l'apparition d'une candidose buccale, on trouve : (cocher la réponse juste)",
+        "options": [
+          "La prise prolongée d'antibiotiques à large spectre",
+          "Le diabète non équilibré",
+          "L'infection par le VIH (immunodépression)",
+          "Le port d'une prothèse dentaire mal adaptée",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La candidose est une infection opportuniste. Elle survient quand l'équilibre est rompu (antibiotiques détruisant la flore concurrente) ou quand l'immunité baisse (Diabète, VIH).",
+        "citations": []
+      },
+      {
+        "questionText": "La forme clinique la plus fréquente de la candidose buccale aiguë est :",
+        "options": [
+          "La candidose érythémateuse (rouge)",
+          "Le muguet (candidose pseudo-membraneuse)",
+          "La perlèche (chéilite angulaire)",
+          "La candidose hyperplasique chronique",
+          "Le granulome candidosique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le muguet est la forme typique : des taches blanchâtres (aspect de lait caillé) sur la muqueuse qui se détachent au grattage, laissant une base rouge.",
+        "citations": []
+      },
+      {
+        "questionText": "Le traitement de première intention d'une candidose buccale simple repose sur :",
+        "options": [
+          "Des antibiotiques comme l'Amoxicilline",
+          "Des antiviraux comme l'Aciclovir",
+          "Des antifongiques locaux (ex: Nystatine ou Miconazole)",
+          "Des corticoïdes en bain de bouche",
+          "Une chirurgie d'exérèse"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "On traite un champignon avec un antifongique. Les antibiotiques sont inefficaces (voire aggravants) et les corticoïdes sont contre-indiqués (baissent l'immunité locale).",
+        "citations": []
+      },
+      {
+        "questionText": "L'Amphotéricine B (Fungizone) appartient à la famille des :",
+        "options": [
+          "Azolés",
+          "Polyènes",
+          "Echinocandines",
+          "Pyrimidines",
+          "Allylamines"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L'Amphotéricine B et la Nystatine sont des Polyènes. Ils agissent en se liant à l'ergostérol de la membrane fongique, créant des pores mortels.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est l'agent pathogène le plus fréquemment isolé dans les candidoses buccales ?",
+        "options": [
+          "Candida glabrata",
+          "Candida krusei",
+          "Candida albicans",
+          "Candida tropicalis",
+          "Candida dubliniensis"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Candida albicans est responsable de 70 à 80% des candidoses buccales. Les autres espèces (C. glabrata, etc.) sont plus rares et souvent plus résistantes.",
+        "citations": []
+      },
+      {
         "questionText": "L'amphotéricine B est: (cocher la réponse fausse)",
         "options": [
           "Un antifongique de la famille des polyènes",
@@ -3292,6 +5326,66 @@ const microbiologyQuizzesY2 = [
         "citations": []
       },
       {
+        "questionText": "Entamoeba gingivalis est un protozoaire qui appartient à la classe des :",
+        "options": [
+          "Flagellés",
+          "Ciliés",
+          "Rhizopodes (Amibes)",
+          "Sporozoaires",
+          "Helminthes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Entamoeba gingivalis est une amibe. Elle se déplace grâce à des pseudopodes, ce qui la classe parmi les Rhizopodes.",
+        "citations": []
+      },
+      {
+        "questionText": "Trichomonas tenax est un protozoaire caractérisé par : (cocher la réponse juste)",
+        "options": [
+          "L'absence de mobilité",
+          "La présence de flagelles (Flagellé)",
+          "La présence de cils vibratiles",
+          "La formation de kystes de résistance",
+          "Une localisation intestinale exclusive"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Trichomonas tenax appartient à la classe des Flagellés. Il est mobile grâce à ses flagelles et est spécifique de la cavité buccale (contrairement à Trichomonas vaginalis).",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant les protozoaires buccaux (Entamoeba gingivalis et Trichomonas tenax) : (cocher la réponse fausse)",
+        "options": [
+          "Ce sont des organismes unicellulaires Eucaryotes",
+          "Ils se présentent uniquement sous la forme végétative (Trophozoïte)",
+          "Ils ne forment pas de kystes",
+          "Ils sont transmis par la salive (baiser, échange de couverts)",
+          "Ils sont les agents responsables de la carie dentaire"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Ces parasites ne causent pas de caries. Ils sont souvent associés aux maladies parodontales (gingivites, parodontites) et témoignent d'une mauvaise hygiène bucco-dentaire.",
+        "citations": []
+      },
+      {
+        "questionText": "Quel est le rôle pathogène des protozoaires buccaux ?",
+        "options": [
+          "Ils sont des parasites obligatoires très virulents",
+          "Ils sont considérés comme des commensaux opportunistes associés aux parodontopathies",
+          "Ils détruisent l'émail dentaire",
+          "Ils provoquent des cancers de la langue",
+          "Ils sont responsables d'aphtes récidivants"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "On les retrouve en grande quantité dans la plaque dentaire et les poches parodontales chez les patients atteints de parodontite, mais ils ne sont pas considérés comme des pathogènes stricts primaires.",
+        "citations": []
+      },
+      {
         "questionText": "Trichomonas tenax est classé parmi:",
         "options": [
           "Les sporozoaires",
@@ -3307,7 +5401,468 @@ const microbiologyQuizzesY2 = [
         "citations": []
       }
     ]
+  },
+  {
+    "title": "Examen 2025 (EMD2) - Virologie, Mycologie & Parasitologie",
+    "subject": "microbiologie",
+    "questions": [
+      {
+        "questionText": "Un virus peut être transmis : (cocher la réponse fausse)",
+        "options": [
+          "De la mère à l'enfant",
+          "Lors de rapport sexuel protégé",
+          "Par voie fécale-orale",
+          "Par voie aérienne",
+          "Par voie iatrogène"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Un rapport sexuel protégé (avec préservatif) empêche la transmission des virus. C'est donc la proposition 'fausse' dans le contexte des modes de transmission (les autres sont des modes de transmission virale avérés).",
+        "citations": []
+      },
+      {
+        "questionText": "Un virus peut être excrété : (cocher la réponse fausse)",
+        "options": [
+          "Par la salive",
+          "Par les urines",
+          "Par la sueur",
+          "Par les selles",
+          "Par les sécrétions génitales"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'excrétion virale se fait classiquement par la salive (EBV, CMV), les urines (CMV, Rougeole), les selles (Entérovirus) ou les sécrétions génitales (VIH, VHB). L'excrétion par la sueur n'est pas une voie majeure ou standard en virologie clinique.",
+        "citations": []
+      },
+      {
+        "questionText": "Les maladies à prions ou encéphalopathies spongiformes transmissibles (EST) sont : (cocher la réponse fausse)",
+        "options": [
+          "Des maladies humaines ou animales",
+          "Transmissibles naturellement ou expérimentalement",
+          "A longue durée d'incubation",
+          "A évolution fatale sans rémission",
+          "Dues à un agent non conventionnel, constitué par un seul type d'acide nucléique et des protéines"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Les prions (agents transmissibles non conventionnels) sont constitués uniquement de protéines (PrPsc) et sont dépourvus d'acide nucléique (ni ADN, ni ARN).",
+        "citations": []
+      },
+      {
+        "questionText": "Le Varicelle Zona Virus (VZV) est : (cocher la réponse fausse)",
+        "options": [
+          "Responsable de la varicelle",
+          "Responsable du zona",
+          "Associé aux tumeurs",
+          "Un Herpesviridae",
+          "Responsable d'infections congénitales"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le VZV cause la varicelle (primo-infection) et le zona (récurrence). Il peut causer des infections congénitales. Contrairement à l'EBV ou l'HHV-8, le VZV n'est pas classiquement associé au développement de tumeurs.",
+        "citations": []
+      },
+      {
+        "questionText": "Les Herpesviridae sont : (cocher la réponse fausse)",
+        "options": [
+          "Des virus à ADN",
+          "Sensibles aux antirétroviraux",
+          "Caractérisés par une phase de latence après une primo-infection",
+          "Recherchés chez les immunodéprimés",
+          "Au nombre de huit qui sont responsables d'infections chez l'homme"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les Herpesviridae sont sensibles aux antiviraux (ex: Acyclovir), et non aux antirétroviraux (qui ciblent les rétrovirus comme le VIH).",
+        "citations": []
+      },
+      {
+        "questionText": "Quelles sont les conditions optimales pour isoler des anaérobies en laboratoire ? (cocher la réponse fausse)",
+        "options": [
+          "Incubation en atmosphère enrichie en CO2",
+          "Utilisation d'un générateur d'atmosphère anaérobie (jarre ou sachet)",
+          "Transport dans un milieu anaérobie",
+          "Prélèvement en seringue purgée d'air",
+          "Culture sur gélose au sang en anaérobiose"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les anaérobies stricts nécessitent une absence totale d'oxygène. Une simple atmosphère enrichie en CO2 (microaérophilie ou capnophilie) contient encore de l'oxygène, ce qui est toxique pour eux.",
+        "citations": []
+      },
+      {
+        "questionText": "Quels antibiotiques sont généralement actifs contre les germes anaérobies odontogènes ? (cocher les réponses justes)",
+        "options": [
+          "Métronidazole",
+          "Clindamycine",
+          "Amoxicilline seule",
+          "Amoxicilline-acide clavulanique",
+          "Céftriaxone"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "Le Métronidazole et la Clindamycine sont les références anti-anaérobies. L'Amoxicilline-Acide Clavulanique couvre les souches productrices de bêta-lactamases. L'Amoxicilline seule est souvent active mais la résistance existe.",
+        "citations": []
+      },
+      {
+        "questionText": "Pour cultiver des bactéries anaérobies strictes, il faut : (cocher les réponses fausses)",
+        "options": [
+          "Une incubation à 37 °C",
+          "Une atmosphère sans oxygène",
+          "Une température de 25 °C",
+          "Une gélose riche au sang",
+          "Une incubation dans une étuve ventilée"
+        ],
+        "correctOptionIndexes": [
+          2,
+          4
+        ],
+        "explanation": "Les pathogènes humains nécessitent 37°C (pas 25°C). Une étuve ventilée renouvelle l'air (donc l'oxygène), ce qui tuerait les anaérobies (sauf si elles sont dans des jarres étanches, mais la condition 'étuve ventilée' en soi est un piège).",
+        "citations": []
+      },
+      {
+        "questionText": "La transmission des papillomavirus peut se faire par : (cocher la réponse fausse)",
+        "options": [
+          "Contact avec les surfaces contaminées",
+          "Voie sexuelle",
+          "Voie aérienne",
+          "Voie orale",
+          "Contact avec le linge, les mains"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le HPV se transmet par contact direct (peau à peau, muqueuses) ou indirect (linges, sols). La transmission aérienne (respiratoire comme la grippe) n'est pas un mode de contamination.",
+        "citations": []
+      },
+      {
+        "questionText": "Les papillomavirus sont des agents pathogènes : (cocher la réponse fausse)",
+        "options": [
+          "A tropisme muqueux",
+          "A tropisme cutané",
+          "Dont le pouvoir oncogène est retrouvé pour certains HPV",
+          "Responsables de papillomatose bénigne",
+          "Qui n'infectent que les femmes"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Les HPV infectent aussi bien les hommes que les femmes (verrues, condylomes, cancers anaux/ORL/péniens).",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic des papillomavirus : (cocher la réponse juste)",
+        "options": [
+          "Est sérologique par technique ELISA",
+          "Ne se fait pas par PCR",
+          "Est un diagnostic clinique par élimination",
+          "Anatomo-pathologique par frottis cervico-vaginal",
+          "Sérologique et moléculaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "En dépistage de routine, on utilise le frottis (cytologie/anatomo-pathologie) pour voir les lésions, ou le test HPV (moléculaire/PCR) pour détecter le virus. La sérologie n'a pas d'intérêt diagnostique.",
+        "citations": []
+      },
+      {
+        "questionText": "L'hépatite B est une infection qui se transmet par : (cocher la réponse fausse)",
+        "options": [
+          "Voie sanguine",
+          "Voie sexuelle",
+          "Voie aérienne par les aérosols",
+          "Voie verticale de la mère à l'enfant",
+          "Voie horizontale dans les collectivités"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le VHB ne se transmet pas par voie aérienne (toux, éternuements).",
+        "citations": []
+      },
+      {
+        "questionText": "Le diagnostic de l'hépatite B se fait par : (cocher la réponse juste)",
+        "options": [
+          "Des tests sérologiques par technique ELISA",
+          "Des techniques de biologie moléculaire par PCR en temps réel",
+          "Des tests rapides d'orientation diagnostic (TROD)",
+          "La clinique sans examens biologiques",
+          "Séquençage"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le diagnostic de base repose sur la détection des marqueurs sérologiques (Ag HBs, Ac anti-HBc, etc.) par ELISA. La PCR (B) sert au suivi de la charge virale.",
+        "citations": []
+      },
+      {
+        "questionText": "L'hépatite C est une infection : (cocher la réponse juste)",
+        "options": [
+          "Classée parmi les infections sexuellement transmissibles",
+          "Transmise par voie parentérale",
+          "Transmise par voie fécale-orale",
+          "Transmise par voie aérienne",
+          "Ne peut pas être transmise en cas d'accident d'exposition au sang"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "La voie parentérale (sang) est le mode de transmission majeur du VHC. La transmission sexuelle est rare (sauf contextes spécifiques). La voie fécale-orale concerne VHA/VHE.",
+        "citations": []
+      },
+      {
+        "questionText": "Les anticorps anti-VHC :",
+        "options": [
+          "Témoignent d'une infection active par le virus de l'hépatite C (VHC)",
+          "Doivent être compléter par une PCR pour poser le diagnostic de l'infection par le VHC",
+          "Témoignent d'un contact avec le VHC",
+          "Signent le portage du VHC",
+          "Peuvent être absents chez les immunodéprimés"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2,
+          4
+        ],
+        "explanation": "Les anticorps prouvent seulement le contact (infection passée ou active). Il faut une PCR pour confirmer l'infection active (B). Ils peuvent manquer chez l'immunodéprimé (E).",
+        "citations": []
+      },
+      {
+        "questionText": "Quel test est utilisé en première intention pour dépister une infection par le VIH ? (cocher la réponse juste)",
+        "options": [
+          "PCR ARN VIH",
+          "Western Blot",
+          "Test ELISA de 4e génération",
+          "Test de charge virale plasmatique",
+          "Test d'agglutination"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le test ELISA combiné (Ag p24 + Anticorps) de 4ème génération est le standard de dépistage.",
+        "citations": []
+      },
+      {
+        "questionText": "Pendant la période fenêtre sérologique du VIH : (cocher la réponse juste)",
+        "options": [
+          "La sérologie est toujours positive",
+          "Le patient n'est pas contagieux",
+          "Le virus est présent mais les anticorps ne sont pas encore détectables",
+          "Aucun test ne permet de détecter l'infection",
+          "L'ARN viral ne peut pas être détecté"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C'est la définition de la fenêtre sérologique : infection présente, virus circulant (très contagieux), mais anticorps pas encore apparus.",
+        "citations": []
+      },
+      {
+        "questionText": "Les tests rapides de détection des anticorps anti- VIH : (cocher la réponse fausse)",
+        "options": [
+          "Sont des tests qui donnent les résultats en moins de 20 mn",
+          "Ils sont d'utilisation facile",
+          "Sont réalisés dans un laboratoire de haute sécurité",
+          "Nécessitent peu ou pas de matériel pour leur réalisation",
+          "Font partie des tests utilisés en Algérie pour le dépistage du VIH"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les tests rapides (TROD) sont conçus pour être utilisés hors laboratoire (associations, cabinets), sans équipement de haute sécurité.",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant le parasitisme, laquelle de ces proposition est juste ? (cocher la réponse juste)",
+        "options": [
+          "C'est l'association temporaire ou permanente de deux êtres vivants (hôte et parasite) dont un seul, tire profit, ce qui peut causer des troubles à l'hôte",
+          "C'est l'association temporaire ou permanente de deux êtres vivants, dont un seul tire profit, sans causer des troubles à l'hôte",
+          "C'est l'association temporaire ou permanente de deux êtres vivants dont les deux tirent profit",
+          "C'est l'association temporaire ou permanente de deux parasites dont les deux tirent profit, ce qui peut causer des troubles",
+          "C'est l'association temporaire ou permanente de deux êtres vivants (hôte et parasite) dont un seul, tire profit, ce qui peut causer des troubles au parasite"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le parasitisme se définit par le bénéfice d'un seul partenaire (le parasite) au détriment de l'autre (l'hôte). (L'option E contient une contradiction 'troubles au parasite').",
+        "citations": []
+      },
+      {
+        "questionText": "Les parasites peuvent nuire à leur hôte, selon plusieurs mécanismes, laquelle de ces propositions est fausse ? (cocher la réponse fausse)",
+        "options": [
+          "Action mécanique",
+          "Action métabolique",
+          "Action traumatique",
+          "Action inflammatoire",
+          "Action toxique"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L'action inflammatoire est une réaction de défense de l'hôte CONTRE le parasite, et non une action directe du parasite (contrairement aux actions mécanique, spoliatrice/métabolique, traumatique ou toxique).",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant le diagnostic des maladies parasitaires : (cocher la réponse fausse)",
+        "options": [
+          "Les prélèvements sont variés et peuvent aller du simple grattage à la biopsie des lésions",
+          "L'examen microscopique direct est de réalisation facile",
+          "L'examen microscopique direct nécessite un œil expérimenté",
+          "La réalisation d'une PCR est systématique",
+          "Un seul examen direct négatif n'élimine pas une parasitose"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La PCR est une technique coûteuse et spécifique, elle n'est pas systématique pour toutes les parasitoses (l'examen direct microscopique reste la base).",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant les protozoaires de la cavité buccale, laquelle de ces proposition est juste ? (cocher la réponse juste)",
+        "options": [
+          "Ce sont des eucaryotes, protistes, unicellulaires",
+          "Ce sont des procaryotes, protistes, unicellulaires",
+          "Ce sont des eucaryotes, protistes, pluricellulaires",
+          "Ce sont des procaryotes, protistes, pluricellulaires",
+          "Ce sont des algues"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les protozoaires sont par définition des Eucaryotes unicellulaires.",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant la morphologie des protozoaires de la cavité buccale, laquelle de ces propositions est fausse ? (cocher la réponse fausse)",
+        "options": [
+          "Trichomonas tenax et Entamoeba gingivalis se présentent sous forme de trophozoïte",
+          "Trichomonas tenax peut être ovoïde à piriforme",
+          "Entamoeba gingivalis peut être ovoïde à piriforme",
+          "Trichomonas tenax est caractérisé par la présence de flagelles",
+          "Chez Entamoeba gingivalis, le cytoplasme, peut être divisé en ectoplasme et endoplasme"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Entamoeba gingivalis est une amibe, sa forme est irrégulière et changeante due à l'émission de pseudopodes. La forme 'ovoïde à piriforme' est caractéristique des flagellés comme Trichomonas.",
+        "citations": []
+      },
+      {
+        "questionText": "Concernant le prélèvement pour le diagnostic des protozoaires de la cavité buccale : (cocher la réponse fausse)",
+        "options": [
+          "Il peut se faire par un écouvillonnage gingival",
+          "Il peut se faire par un lavage-aspiration d'un sulcus ou d'une poche parodontale",
+          "Il peut se faire par un curetage du biofilm sus- ou sous-gingival",
+          "Il peut se faire par biopsie",
+          "Toutes ces propositions sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Ces protozoaires sont des commensaux de surface ou des poches; la biopsie (invasive) n'est pas une méthode de prélèvement standard pour leur diagnostic.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les organismes suivants, lequel est considéré comme un champignon ? (cocher la réponse juste)",
+        "options": [
+          "Levures",
+          "Helminthes",
+          "Bactéries",
+          "Algues",
+          "Protozoaires"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les levures (ex: Candida) sont des champignons unicellulaires.",
+        "citations": []
+      },
+      {
+        "questionText": "Quelle est la structure qui constitue l'unité de base et l'organe de dissémination et de résistance associée aux champignons ? (cocher la réponse juste)",
+        "options": [
+          "Filaments mycéliens",
+          "Graines",
+          "Spores",
+          "Ovules",
+          "Bourgeons"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La spore est l'élément caractéristique de reproduction, dissémination et résistance des champignons.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les pathologies suivantes, laquelle est causée par des champignons ? (cocher la réponse juste)",
+        "options": [
+          "Paludisme",
+          "Hydatidose",
+          "Tuberculose",
+          "Candidose",
+          "Cryptosporidiose"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La candidose est une mycose (infection fongique). Paludisme/Hydatidose/Cryptosporidiose sont parasitaires. Tuberculose est bactérienne.",
+        "citations": []
+      },
+      {
+        "questionText": "Quelle est l'espèce de Candida la plus fréquemment responsable des candidoses buccales ? (cocher la réponse juste)",
+        "options": [
+          "Candida glabrata",
+          "Candida tropicalis",
+          "Candida albicans",
+          "Candida krusei",
+          "Candida dubliniensis"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C. albicans est l'agent étiologique majoritaire.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les formes cliniques de candidoses buccales suivantes, laquelle est la plus fréquente ? (cocher la réponse juste)",
+        "options": [
+          "Candidose hyperplasique chronique",
+          "Candidose érythémateuse",
+          "Chéilite candidosique",
+          "Candidose pseudomembraneuse (muguet)",
+          "Érythème gingival linéaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le muguet (forme pseudomembraneuse) est la présentation la plus commune.",
+        "citations": []
+      },
+      {
+        "questionText": "Parmi les traitements suivants, lequel est le plus souvent utilisé en première intention pour traiter une candidose buccale simple ? (cocher la réponse juste)",
+        "options": [
+          "Itraconazole systémique",
+          "Kétoconazole topique",
+          "Griséofulvine",
+          "Posaconazole",
+          "Nystatine en suspension buvable"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "La Nystatine (polyène local) est le traitement de première intention classique pour les formes simples.",
+        "citations": []
+      }
+    ]
   }
 ];
 
-module.exports = microbiologyQuizzesY2;
+module.exports = microbiologyQuizzesY2
