@@ -1,6 +1,6 @@
 // ============================================================
 //  ملف: pdf-viewer.js
-//  الوصف: المشغل الرئيسي لعارض PDF مع أدوات الرسم والذكاء الاصطناعي
+//  الوصف: النسخة المحدثة - تركيز على المحتوى، OCR، QCM، والحفظ التلقائي
 // ============================================================
 
 // --- 1. التعريفات والعناصر (DOM Elements) ---
@@ -13,9 +13,7 @@ const DOM = {
     // منطقة العرض
     viewerSection: document.getElementById('viewer-section'),
     container: document.getElementById('pdf-canvas-container'),
-    layersWrapper: document.getElementById('pdf-layers-wrapper'),
     pdfCanvas: document.getElementById('pdf-canvas'),
-    drawCanvas: document.getElementById('drawing-canvas'),
     textLayer: document.getElementById('text-layer'),
 
     // أزرار التحكم في الصفحة
@@ -24,19 +22,22 @@ const DOM = {
     prevPageBtn: document.getElementById('prev-page'),
     nextPageBtn: document.getElementById('next-page'),
     saveCloudBtn: document.getElementById('save-cloud-btn'),
+    btnExplainPage: document.getElementById('btn-explain-page'), // زر الشرح الجديد
 
-    // أدوات الرسم
+    // أدوات التحديد
     btnSelect: document.getElementById('select-btn'),
-    btnPen: document.getElementById('pen-btn'),
-    btnErase: document.getElementById('erase-btn'),
-    btnClear: document.getElementById('clear-drawings-btn'),
-    colorPicker: document.getElementById('color-picker'),
 
     // الشريط الجانبي والذكاء الاصطناعي
     aiResults: document.getElementById('ai-results-area'),
     flashcardsContainer: document.getElementById('flashcards-container'),
+
+    // أزرار التوليد ومدخلات الأرقام
     btnQuiz: document.getElementById('btn-quiz'),
+    inpQuizCount: document.getElementById('quiz-count'),
+
     btnFlashcards: document.getElementById('btn-flashcards'),
+    inpFlashcardCount: document.getElementById('flashcard-count'),
+
     btnMindmap: document.getElementById('btn-mindmap'),
 
     // القوائم المنبثقة
@@ -51,49 +52,46 @@ const DOM = {
     backdrop: document.getElementById('modal-backdrop')
 };
 
-// سياقات الرسم
+// سياق الرسم (للعرض فقط)
 const ctx = DOM.pdfCanvas.getContext('2d');
-const drawCtx = DOM.drawCanvas.getContext('2d');
 
 // --- 2. متغيرات الحالة (Global State) ---
 const STATE = {
     pdfDoc: null,
     pageNum: 1,
     scale: 1.5,
-    renderTask: null, // مهم جداً لمنع تداخل الرسم
+    renderTask: null,
     isRendering: false,
     currentFileId: null,
 
-    // أدوات الرسم
-    tool: 'select', // 'select', 'pen', 'erase'
-    isDrawing: false,
-    drawings: JSON.parse(localStorage.getItem('pdfDrawings')) || {}, // { pageNum: [paths] }
-    currentPath: [],
-    penColor: '#FFFF00', // لون الهايلايتر الافتراضي
-    penSize: 15,
+    // بيانات المحتوى (يتم حفظها لاسترجاعها عند الريفرش)
+    // الهيكل: { page_1: { quiz: [], flashcards: [], mindmap: '' }, page_2: ... }
+    pageContent: JSON.parse(localStorage.getItem('smartCore_content')) || {},
 
-    // بيانات الملاحظات
-    flashcards: {} // { pageNum: [cards] }
+    // الملاحظات اليدوية
+    userNotes: JSON.parse(localStorage.getItem('smartCore_notes')) || {}
 };
 
-const USER_TOKEN = localStorage.getItem('userToken');
-const API_BASE = '/api/progress';
+const USER_TOKEN = localStorage.getItem('userToken') || 'demo-token'; // استبدل بالتوكن الحقيقي
 
 // إعداد مكتبة PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
 
 // ============================================================
-//  3. تحميل وفتح الملف (File Loading)
+//  3. تحميل وفتح الملف
 // ============================================================
 
 DOM.fileInput.addEventListener('change', function (e) {
     const file = e.target.files[0];
     if (file && file.type === 'application/pdf') {
-        // توليد معرف فريد للملف
-        STATE.currentFileId = `local_${file.name.replace(/\s/g, '_')}_${file.size}`;
+        // توليد ID فريد للملف لربط البيانات به
+        STATE.currentFileId = `doc_${file.name}_${file.size}`;
 
-        // إظهار الواجهة الرئيسية
+        // محاولة استرجاع بيانات قديمة لهذا الملف
+        const savedContent = localStorage.getItem(`smartCore_content_${STATE.currentFileId}`);
+        if (savedContent) STATE.pageContent = JSON.parse(savedContent);
+
         DOM.startContainer.style.display = 'none';
         DOM.mainLayout.style.display = 'flex';
 
@@ -111,48 +109,35 @@ async function loadPdf(url) {
 
         DOM.pageCount.textContent = STATE.pdfDoc.numPages;
 
-        // محاولة تحميل البيانات المحفوظة من السيرفر
-        await loadProgressFromCloud(STATE.currentFileId);
-
-        // عرض الصفحة الأولى
         STATE.pageNum = 1;
         renderPage();
     } catch (err) {
         console.error('PDF Load Error:', err);
-        alert('Error loading PDF. Check console for details.');
+        alert('Error loading PDF.');
     }
 }
 
 
 // ============================================================
-//  4. عرض الصفحة (Rendering Engine)
+//  4. عرض الصفحة (Rendering)
 // ============================================================
 
 async function renderPage() {
     if (!STATE.pdfDoc) return;
 
     STATE.isRendering = true;
+    if (STATE.renderTask) await STATE.renderTask.cancel();
 
-    // 1. إلغاء أي عملية رسم سابقة لمنع التداخل
-    if (STATE.renderTask) {
-        await STATE.renderTask.cancel();
-    }
-
-    // 2. تجهيز الصفحة
     const page = await STATE.pdfDoc.getPage(STATE.pageNum);
     const viewport = page.getViewport({ scale: STATE.scale });
 
-    // 3. ضبط أبعاد الكانفاس لتطابق الصفحة بدقة
-    DOM.pdfCanvas.width = DOM.drawCanvas.width = viewport.width;
-    DOM.pdfCanvas.height = DOM.drawCanvas.height = viewport.height;
-
+    DOM.pdfCanvas.width = viewport.width;
+    DOM.pdfCanvas.height = viewport.height;
     DOM.textLayer.style.width = `${viewport.width}px`;
     DOM.textLayer.style.height = `${viewport.height}px`;
 
-    // تحديث العدادات
     DOM.pageNum.textContent = STATE.pageNum;
 
-    // 4. رسم محتوى PDF
     const renderContext = {
         canvasContext: ctx,
         viewport: viewport
@@ -163,7 +148,7 @@ async function renderPage() {
     try {
         await STATE.renderTask.promise;
 
-        // 5. رسم طبقة النصوص (للتحديد)
+        // رسم طبقة النصوص
         const textContent = await page.getTextContent();
         DOM.textLayer.innerHTML = '';
         pdfjsLib.renderTextLayer({
@@ -173,17 +158,13 @@ async function renderPage() {
             textDivs: []
         });
 
-        // 6. استعادة الرسومات والملاحظات لهذه الصفحة
-        redrawDrawings();
-        updateSidebarNotes();
+        // *** استرجاع المحتوى المحفوظ (AI + Notes) ***
+        restorePageContent();
 
         STATE.isRendering = false;
 
     } catch (error) {
-        // تجاهل أخطاء الإلغاء (طبيعية عند التقليب السريع)
-        if (error.name !== 'RenderingCancelledException') {
-            console.error('Render Error:', error);
-        }
+        if (error.name !== 'RenderingCancelledException') console.error(error);
         STATE.isRendering = false;
     }
 }
@@ -203,499 +184,339 @@ DOM.nextPageBtn.addEventListener('click', () => {
 
 
 // ============================================================
-//  5. نظام الرسم المتقدم (Drawing System)
+//  5. إدارة المحتوى والحفظ (Persistence Manager)
 // ============================================================
 
-// تبديل الأدوات
-function setTool(toolName) {
-    STATE.tool = toolName;
-
-    // تفعيل التفاعل مع الرسم فقط للقلم والممحاة
-    const isDrawingTool = (toolName === 'pen' || toolName === 'erase');
-    DOM.drawCanvas.style.pointerEvents = isDrawingTool ? 'auto' : 'none';
-    DOM.container.style.cursor = isDrawingTool ? 'crosshair' : 'default';
-
-    // تحديث الأزرار النشطة
-    document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
-    if (toolName === 'select') DOM.btnSelect.classList.add('active');
-    if (toolName === 'pen') DOM.btnPen.classList.add('active');
-    if (toolName === 'erase') DOM.btnErase.classList.add('active');
+function saveContentToLocal() {
+    // الحفظ في localStorage لضمان البقاء بعد الريفرش
+    localStorage.setItem(`smartCore_content_${STATE.currentFileId}`, JSON.stringify(STATE.pageContent));
 }
 
-DOM.btnSelect.onclick = () => setTool('select');
-DOM.btnPen.onclick = () => setTool('pen');
-DOM.btnErase.onclick = () => setTool('erase');
+function restorePageContent() {
+    // مسح النتائج الحالية
+    DOM.aiResults.innerHTML = '<div class="empty-state" style="margin-top:20px;"><i class="fas fa-robot"></i><p>Select settings and click generate.</p></div>';
+    DOM.flashcardsContainer.innerHTML = '<div class="empty-state"><i class="far fa-sticky-note"></i><p>No notes yet.</p></div>';
 
-// تغيير اللون
-DOM.colorPicker.addEventListener('change', (e) => {
-    STATE.penColor = e.target.value;
-});
+    const pageKey = `page_${STATE.pageNum}`;
+    const data = STATE.pageContent[pageKey];
 
-// مسح الصفحة
-DOM.btnClear.onclick = () => {
-    if (confirm('Are you sure you want to clear all drawings on this page?')) {
-        STATE.drawings[STATE.pageNum] = [];
-        redrawDrawings();
-        saveLocalData();
-    }
-};
+    if (data) {
+        // إذا كان هناك بيانات محفوظة لهذه الصفحة، قم بعرضها
+        DOM.aiResults.innerHTML = ''; // تنظيف
 
-// --- أحداث الرسم (ماوس + لمس) ---
-function getPointerPos(e) {
-    const rect = DOM.drawCanvas.getBoundingClientRect();
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-    return {
-        x: clientX - rect.left,
-        y: clientY - rect.top
-    };
-}
-
-function startDrawing(e) {
-    if (STATE.tool === 'select') return;
-    if (e.type === 'touchstart') e.preventDefault(); // منع التمرير في الموبايل
-
-    STATE.isDrawing = true;
-    const pos = getPointerPos(e);
-    STATE.currentPath = [pos];
-
-    drawCtx.beginPath();
-    drawCtx.moveTo(pos.x, pos.y);
-
-    // إعدادات الفرشاة
-    if (STATE.tool === 'pen') {
-        drawCtx.strokeStyle = hexToRGBA(STATE.penColor, 0.5); // شفافية للهايلايتر
-        drawCtx.lineWidth = STATE.penSize;
-        drawCtx.globalCompositeOperation = 'source-over';
-    } else if (STATE.tool === 'erase') {
-        drawCtx.lineWidth = 30;
-        drawCtx.globalCompositeOperation = 'destination-out'; // وضع المسح
+        if (data.quiz && data.quiz.length > 0) renderQuiz(data.quiz);
+        if (data.flashcardsAI && data.flashcardsAI.length > 0) renderAIFlashcards(data.flashcardsAI);
+        if (data.mindmap) renderMindmap(data.mindmap);
     }
 
-    drawCtx.lineCap = 'round';
-    drawCtx.lineJoin = 'round';
-}
-
-function draw(e) {
-    if (!STATE.isDrawing) return;
-    if (e.type === 'touchmove') e.preventDefault();
-
-    const pos = getPointerPos(e);
-    STATE.currentPath.push(pos);
-
-    drawCtx.lineTo(pos.x, pos.y);
-    drawCtx.stroke();
-}
-
-function stopDrawing() {
-    if (!STATE.isDrawing) return;
-    STATE.isDrawing = false;
-
-    // حفظ المسار في الذاكرة
-    if (!STATE.drawings[STATE.pageNum]) STATE.drawings[STATE.pageNum] = [];
-
-    STATE.drawings[STATE.pageNum].push({
-        points: [...STATE.currentPath],
-        tool: STATE.tool,
-        color: STATE.penColor
-    });
-
-    drawCtx.globalCompositeOperation = 'source-over'; // إعادة الوضع الطبيعي
-    saveLocalData();
-}
-
-// ربط الأحداث
-DOM.drawCanvas.addEventListener('mousedown', startDrawing);
-DOM.drawCanvas.addEventListener('mousemove', draw);
-DOM.drawCanvas.addEventListener('mouseup', stopDrawing);
-DOM.drawCanvas.addEventListener('mouseout', stopDrawing);
-
-// دعم اللمس (للموبايل والتابلت)
-DOM.drawCanvas.addEventListener('touchstart', startDrawing, { passive: false });
-DOM.drawCanvas.addEventListener('touchmove', draw, { passive: false });
-DOM.drawCanvas.addEventListener('touchend', stopDrawing);
-
-// دالة إعادة رسم كل شيء
-function redrawDrawings() {
-    drawCtx.clearRect(0, 0, DOM.drawCanvas.width, DOM.drawCanvas.height);
-    const paths = STATE.drawings[STATE.pageNum] || [];
-
-    paths.forEach(pathData => {
-        drawCtx.beginPath();
-
-        if (pathData.tool === 'erase') {
-            drawCtx.globalCompositeOperation = 'destination-out';
-            drawCtx.lineWidth = 30;
-        } else {
-            drawCtx.globalCompositeOperation = 'source-over';
-            drawCtx.strokeStyle = hexToRGBA(pathData.color || '#FFFF00', 0.5);
-            drawCtx.lineWidth = 15;
-        }
-
-        drawCtx.lineCap = 'round';
-        drawCtx.lineJoin = 'round';
-
-        const points = pathData.points;
-        if (points.length > 0) {
-            drawCtx.moveTo(points[0].x, points[0].y);
-            for (let i = 1; i < points.length; i++) {
-                drawCtx.lineTo(points[i].x, points[i].y);
-            }
-            drawCtx.stroke();
-        }
-    });
-
-    // تأكد من إعادة الوضع الطبيعي
-    drawCtx.globalCompositeOperation = 'source-over';
-}
-
-// دالة مساعدة لتحويل الألوان
-function hexToRGBA(hex, alpha) {
-    let r = parseInt(hex.slice(1, 3), 16),
-        g = parseInt(hex.slice(3, 5), 16),
-        b = parseInt(hex.slice(5, 7), 16);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    // استرجاع الملاحظات اليدوية
+    // (يمكن إضافتها هنا بنفس المنطق)
 }
 
 
 // ============================================================
-//  6. التحديد والنصوص والملاحظات (Selection & Notes)
+//  6. ميزات الذكاء الاصطناعي (AI Core Features)
 // ============================================================
 
-DOM.container.addEventListener('mouseup', handleSelection);
-
-function handleSelection(e) {
-    if (STATE.tool !== 'select') return;
-
-    // تأخير بسيط للتأكد من اكتمال التحديد
-    setTimeout(() => {
-        const text = window.getSelection().toString().trim();
-        if (text.length > 0) {
-            DOM.selectionPopup.style.display = 'flex';
-            // وضع القائمة فوق الماوس
-            DOM.selectionPopup.style.left = `${e.clientX}px`;
-            DOM.selectionPopup.style.top = `${e.clientY - 60}px`;
-            DOM.selectionPopup.dataset.text = text;
-        } else {
-            DOM.selectionPopup.style.display = 'none';
-        }
-    }, 10);
+// دالة مساعدة لجلب صورة الصفحة الحالية (للتعامل مع Scanner PDF)
+function capturePageImage() {
+    // تحويل الكانفاس إلى صورة Base64
+    return DOM.pdfCanvas.toDataURL('image/jpeg', 0.8);
 }
 
-// إضافة ملاحظة يدوية
-DOM.btnCreateNote.onclick = () => {
-    const text = DOM.selectionPopup.dataset.text;
-    const note = prompt("Enter your note:");
-    if (note) {
-        if (!STATE.flashcards[STATE.pageNum]) STATE.flashcards[STATE.pageNum] = [];
-        STATE.flashcards[STATE.pageNum].push({ front: text, back: note });
-
-        updateSidebarNotes();
-        saveLocalData();
-        DOM.selectionPopup.style.display = 'none';
-    }
-};
-
-function updateSidebarNotes() {
-    DOM.flashcardsContainer.innerHTML = '';
-    const cards = STATE.flashcards[STATE.pageNum] || [];
-
-    if (cards.length === 0) {
-        DOM.flashcardsContainer.innerHTML = `
-            <div class="empty-state">
-                <i class="far fa-sticky-note"></i>
-                <p>No notes for this page.</p>
-            </div>`;
-        return;
-    }
-
-    cards.forEach(card => {
-        const div = document.createElement('div');
-        div.className = 'note-card';
-        div.innerHTML = `<h4>${card.front.substring(0, 50)}...</h4><p>${card.back}</p>`;
-        DOM.flashcardsContainer.appendChild(div);
-    });
-}
-
-
-// ============================================================
-//  7. أدوات الذكاء الاصطناعي (AI Tools Integration)
-// ============================================================
-
-async function callAiApi(endpoint, body) {
-    if (!USER_TOKEN) {
-        alert("Please login first to use AI features.");
-        throw new Error("No token");
-    }
-
-    try {
-        const res = await fetch(`/api/ai/${endpoint}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${USER_TOKEN}`
-            },
-            body: JSON.stringify(body)
-        });
-
-        if (!res.ok) {
-            const errText = await res.text();
-            throw new Error(`Server Error (${res.status}): ${errText.substring(0, 100)}`);
-        }
-
-        return await res.json();
-    } catch (err) {
-        console.error("AI API Error:", err);
-        throw err;
-    }
-}
-
+// دالة مساعدة لجلب النص (للملفات النصية العادية)
 async function getPageText() {
     const page = await STATE.pdfDoc.getPage(STATE.pageNum);
     const content = await page.getTextContent();
     return content.items.map(i => i.str).join(' ');
 }
 
-// --- أداة الكويز (Quiz) ---
+// الدالة الرئيسية للاتصال بالباك اند
+async function callAiApi(endpoint, body) {
+    // يمكنك إضافة Loading Indicator هنا
+    try {
+        const res = await fetch(`/api/ai/${endpoint}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        });
+        return await res.json();
+    } catch (err) {
+        console.error(err);
+        alert("Connection Error");
+        throw err;
+    }
+}
+
+// ------------------------------------
+// A. ميزة شرح الصفحة (Explain Page - OCR)
+// ------------------------------------
+DOM.btnExplainPage.onclick = async () => {
+    showModal('🔍 Analyzing page image (OCR)... Please wait.');
+
+    try {
+        const imageData = capturePageImage(); // التقاط صورة الصفحة
+
+        // إرسال الصورة للسيرفر
+        const res = await callAiApi('explain-page-image', {
+            image: imageData,
+            prompt: "اشرح هذه الصفحة بالتفصيل، استخدم مزيجاً من العربية والفرنسية للمصطلحات العلمية في نفس السياق."
+        });
+
+        const explanation = res.explanation || res.text || res.answer;
+
+        // عرض النتيجة
+        DOM.explainContent.innerHTML = formatText(explanation);
+
+    } catch (e) {
+        DOM.explainContent.innerHTML = "Error processing image. Ensure backend supports vision.";
+    }
+};
+
+// ------------------------------------
+// B. ميزة الكويز (QCM - Validation)
+// ------------------------------------
 DOM.btnQuiz.onclick = async () => {
-    DOM.aiResults.innerHTML = '<div style="text-align:center; padding:20px;">⏳ Generating Quiz...</div>';
+    const count = parseInt(DOM.inpQuizCount.value) || 5;
+    if (count < 1 || count > 25) return alert("Please choose between 1 and 25 questions.");
+
+    DOM.aiResults.innerHTML = '<div style="text-align:center; padding:20px;">⏳ Generating QCM...</div>';
 
     try {
+        // نفضل إرسال النص، لكن يمكن تعديلها لإرسال صورة إذا كان سكانر
         const text = await getPageText();
-        if (text.length < 50) {
-            DOM.aiResults.innerHTML = '<div style="color:orange; padding:10px;">Page text is too short.</div>';
-            return;
+
+        const res = await callAiApi('generate-quiz', {
+            text,
+            count,
+            type: 'QCM_MULTI'
+        });
+
+        let questions = res.questions || res;
+
+        // حفظ في الذاكرة
+        if (!STATE.pageContent[`page_${STATE.pageNum}`]) STATE.pageContent[`page_${STATE.pageNum}`] = {};
+        STATE.pageContent[`page_${STATE.pageNum}`].quiz = questions;
+        saveContentToLocal();
+
+        // عرض
+        DOM.aiResults.innerHTML = '';
+        renderQuiz(questions);
+
+    } catch (e) {
+        DOM.aiResults.innerHTML = `<div style="color:red">Error: ${e.message}</div>`;
+    }
+};
+
+function renderQuiz(questions) {
+    questions.forEach((q, qIndex) => {
+        const card = document.createElement('div');
+        card.className = 'note-card';
+
+        // نص السؤال
+        let html = `<h4>Q${qIndex + 1}: ${q.question}</h4><div class="options-container">`;
+
+        // الخيارات (Checkboxes)
+        q.options.forEach((opt, optIndex) => {
+            html += `
+            <label class="qcm-option" id="q${qIndex}_opt${optIndex}">
+                <input type="checkbox" name="q${qIndex}" value="${optIndex}">
+                <span>${opt}</span>
+            </label>`;
+        });
+
+        // زر التحقق والمنطقة المخفية للشرح
+        html += `</div>
+            <button class="btn-validate-qcm" onclick="validateAnswer(${qIndex}, [${q.correctOptionIndexes}])">Valider (Check)</button>
+            <div id="feedback_q${qIndex}" class="qcm-feedback">
+                <p><strong>Explanation:</strong> ${q.explanation}</p>
+            </div>
+        `;
+
+        card.innerHTML = html;
+        DOM.aiResults.appendChild(card);
+    });
+}
+
+// دالة التحقق من الإجابة (Global scope لتشغيلها من HTML)
+window.validateAnswer = function (qIndex, correctIndexes) {
+    const selectedInputs = document.querySelectorAll(`input[name="q${qIndex}"]:checked`);
+    const feedbackDiv = document.getElementById(`feedback_q${qIndex}`);
+
+    // تحويل NodeList لمصفوفة أرقام
+    const userAnswers = Array.from(selectedInputs).map(cb => parseInt(cb.value));
+
+    // منطق التحقق (هل المصفوفات متطابقة؟)
+    const isCorrect = userAnswers.length === correctIndexes.length &&
+        userAnswers.every(val => correctIndexes.includes(val));
+
+    // تلوين الخيارات
+    const allOptions = document.querySelectorAll(`input[name="q${qIndex}"]`);
+    allOptions.forEach(input => {
+        const parent = input.parentElement;
+        const val = parseInt(input.value);
+
+        // إعادة تعيين الألوان
+        parent.style.borderColor = '#e2e8f0';
+        parent.style.background = 'transparent';
+
+        if (correctIndexes.includes(val)) {
+            // الإجابة الصحيحة دائماً خضراء ليعرفها الطالب
+            parent.style.borderColor = '#22c55e';
+            parent.style.background = '#f0fdf4';
+            // إضافة علامة صح
+            if (!parent.querySelector('.mark')) parent.insertAdjacentHTML('beforeend', ' <span class="mark" style="color:green">✔</span>');
+        } else if (input.checked && !correctIndexes.includes(val)) {
+            // إجابة خاطئة اختارها الطالب (حمراء)
+            parent.style.borderColor = '#ef4444';
+            parent.style.background = '#fef2f2';
         }
+    });
 
-        const res = await callAiApi('generate-quiz-text', { text, count: 5 });
+    // إظهار الشرح
+    feedbackDiv.className = `qcm-feedback ${isCorrect ? 'correct' : 'wrong'}`;
+    feedbackDiv.style.display = 'block';
 
-        // معالجة هيكل البيانات المختلف المحتمل
-        let questions = [];
-        if (Array.isArray(res)) questions = res;
-        else if (res.questions) questions = res.questions;
-        else if (res.data) questions = res.data;
-
-        if (!questions || questions.length === 0) throw new Error("Format Mismatch: No questions found.");
-
-        DOM.aiResults.innerHTML = '';
-        questions.forEach((q, idx) => {
-            const card = document.createElement('div');
-            card.className = 'note-card';
-            card.innerHTML = `<h4>Q${idx + 1}: ${q.question}</h4>`;
-
-            q.options.forEach((opt, i) => {
-                const btn = document.createElement('button');
-                btn.textContent = opt;
-                btn.style.cssText = "display:block; width:100%; margin:5px 0; padding:8px; border:1px solid #ddd; background:white; cursor:pointer; text-align:left; border-radius:6px;";
-
-                btn.onclick = () => {
-                    const isCorrect = (i === q.correctOptionIndexes[0]);
-                    btn.style.background = isCorrect ? '#dcfce7' : '#fee2e2';
-                    btn.style.borderColor = isCorrect ? '#22c55e' : '#ef4444';
-
-                    if (!card.querySelector('.exp')) {
-                        const exp = document.createElement('div');
-                        exp.className = 'exp';
-                        exp.style.marginTop = '10px';
-                        exp.innerHTML = `<b>${isCorrect ? '✅ Correct' : '❌ Incorrect'}</b><br>${q.explanation || ''}`;
-                        card.appendChild(exp);
-                    }
-                };
-                card.appendChild(btn);
-            });
-            DOM.aiResults.appendChild(card);
-        });
-
-    } catch (e) {
-        DOM.aiResults.innerHTML = `<div style="color:red; padding:10px;">Error: ${e.message}</div>`;
-    }
+    // إضافة رسالة النتيجة قبل الشرح
+    const statusMsg = isCorrect ? '✅ Excellent! Correct Answer.' : '❌ Incorrect. Review the explanation below.';
+    feedbackDiv.querySelector('strong').innerHTML = statusMsg + "<br>Explanation:";
 };
 
-// --- أداة الفلاش كاردز (Flashcards) ---
+// ------------------------------------
+// C. ميزة الفلاش كاردز (Language Match)
+// ------------------------------------
 DOM.btnFlashcards.onclick = async () => {
-    DOM.aiResults.innerHTML = '<div style="text-align:center; padding:20px;">⏳ Creating Flashcards...</div>';
+    const count = parseInt(DOM.inpFlashcardCount.value) || 6;
+    if (count < 1 || count > 30) return alert("Please choose between 1 and 30 cards.");
+
+    DOM.aiResults.innerHTML = '<div>⏳ Creating Flashcards...</div>';
 
     try {
         const text = await getPageText();
-        const res = await callAiApi('generate-flashcards-text', { text, count: 6 });
-
-        let cards = res.flashcards || res;
-        if (!Array.isArray(cards)) throw new Error("Invalid response format");
-
-        DOM.aiResults.innerHTML = '';
-        cards.forEach(fc => {
-            const card = document.createElement('div');
-            card.className = 'note-card';
-            card.style.cursor = 'pointer';
-            card.innerHTML = `<div class="front"><b>Q:</b> ${fc.front}</div>`;
-
-            card.onclick = () => {
-                if (card.querySelector('.back')) {
-                    card.innerHTML = `<div class="front"><b>Q:</b> ${fc.front}</div>`;
-                    card.style.borderLeftColor = '#2563eb';
-                } else {
-                    card.innerHTML = `<div class="back" style="color:#2563eb"><b>A:</b> ${fc.back}</div>`;
-                    card.style.borderLeftColor = '#f59e0b';
-                }
-            };
-            DOM.aiResults.appendChild(card);
+        // نطلب من الباك اند استخدام نفس لغة النص
+        const res = await callAiApi('generate-flashcards', {
+            text,
+            count,
+            instruction: "Match the language of the source text strictly."
         });
 
+        const cards = res.flashcards || res;
+
+        // حفظ
+        if (!STATE.pageContent[`page_${STATE.pageNum}`]) STATE.pageContent[`page_${STATE.pageNum}`] = {};
+        STATE.pageContent[`page_${STATE.pageNum}`].flashcardsAI = cards;
+        saveContentToLocal();
+
+        DOM.aiResults.innerHTML = '';
+        renderAIFlashcards(cards);
+
     } catch (e) {
-        DOM.aiResults.innerHTML = `<div style="color:red; padding:10px;">Error: ${e.message}</div>`;
+        DOM.aiResults.innerHTML = `Error: ${e.message}`;
     }
 };
 
-// --- أداة المايند ماب (Mind Map) - مضمنة ---
-DOM.btnMindmap.onclick = async () => {
-    DOM.aiResults.innerHTML = '<div style="text-align:center; padding:20px;">⏳ Building Mind Map...</div>';
+function renderAIFlashcards(cards) {
+    cards.forEach(fc => {
+        const card = document.createElement('div');
+        card.className = 'note-card';
+        card.style.cursor = 'pointer';
+        card.style.borderLeft = '4px solid var(--accent-orange)';
 
+        // تخزين الوجه والظهر في البيانات
+        card.dataset.front = fc.front;
+        card.dataset.back = fc.back;
+        card.dataset.state = 'front'; // front or back
+
+        card.innerHTML = `<div style="font-weight:600; color:#333;">${fc.front}</div><div style="font-size:12px; color:#999; margin-top:5px;">(Click to flip)</div>`;
+
+        card.onclick = () => {
+            if (card.dataset.state === 'front') {
+                card.innerHTML = `<div style="color:var(--primary); line-height:1.6;">${fc.back}</div>`;
+                card.dataset.state = 'back';
+                card.style.background = '#fffbeb'; // لون أصفر فاتح للخلف
+            } else {
+                card.innerHTML = `<div style="font-weight:600; color:#333;">${fc.front}</div><div style="font-size:12px; color:#999; margin-top:5px;">(Click to flip)</div>`;
+                card.dataset.state = 'front';
+                card.style.background = '#fff';
+            }
+        };
+        DOM.aiResults.appendChild(card);
+    });
+}
+
+// ------------------------------------
+// D. ميزة المايند ماب
+// ------------------------------------
+DOM.btnMindmap.onclick = async () => {
+    DOM.aiResults.innerHTML = '<div>⏳ Building Mind Map...</div>';
     try {
         const text = await getPageText();
-        const res = await callAiApi('generate-mindmap-text', { text });
+        const res = await callAiApi('generate-mindmap', { text });
         const markdown = res.markdown || res;
 
-        // تنظيف وتجهيز الحاوية
-        DOM.aiResults.innerHTML = '';
-        const svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svgEl.id = 'markmap';
-        svgEl.style.width = '100%';
-        svgEl.style.height = '350px';
-        svgEl.style.background = '#f8fafc';
-        svgEl.style.border = '1px solid #e2e8f0';
-        svgEl.style.borderRadius = '8px';
-        DOM.aiResults.appendChild(svgEl);
+        // حفظ
+        if (!STATE.pageContent[`page_${STATE.pageNum}`]) STATE.pageContent[`page_${STATE.pageNum}`] = {};
+        STATE.pageContent[`page_${STATE.pageNum}`].mindmap = markdown;
+        saveContentToLocal();
 
-        // استخدام مكتبة Markmap
-        if (window.markmap) {
-            const { Transformer, Markmap } = window.markmap;
-            const transformer = new Transformer();
-            const { root } = transformer.transform(markdown);
-            Markmap.create(svgEl, null, root);
-        } else {
-            throw new Error("Markmap library is missing in HTML.");
-        }
+        DOM.aiResults.innerHTML = '';
+        renderMindmap(markdown);
 
     } catch (e) {
-        DOM.aiResults.innerHTML = `<div style="color:red; padding:10px;">Error: ${e.message}</div>`;
+        DOM.aiResults.innerHTML = `Error: ${e.message}`;
     }
 };
 
-// --- الشرح والترجمة (Explain & Translate) ---
-DOM.btnAskAi.onclick = async () => {
-    const text = DOM.selectionPopup.dataset.text;
-    showModal('Thinking... 🤖');
-    try {
-        const res = await callAiApi('ask', { question: `Explain this concept simply:\n"${text}"` });
-        showModal(res.answer);
-    } catch (e) { showModal('Error fetching explanation.'); }
-};
+function renderMindmap(markdown) {
+    const svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgEl.style.width = '100%';
+    svgEl.style.height = '300px';
+    svgEl.style.background = '#f8fafc';
+    DOM.aiResults.appendChild(svgEl);
 
-DOM.btnTranslate.onclick = async () => {
-    const text = DOM.selectionPopup.dataset.text;
-    showModal('Translating... 📖');
-    try {
-        const res = await callAiApi('ask', { question: `Translate to Arabic:\n"${text}"` });
-        showModal(res.answer);
-    } catch (e) { showModal('Error fetching translation.'); }
-};
+    if (window.markmap) {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+        const { root } = transformer.transform(markdown);
+        Markmap.create(svgEl, null, root);
+    }
+}
+
+
+// ============================================================
+//  7. التحديد والقوائم المنبثقة (UI Helpers)
+// ============================================================
+
+DOM.container.addEventListener('mouseup', (e) => {
+    // تأخير بسيط لضمان اكتمال التحديد
+    setTimeout(() => {
+        const text = window.getSelection().toString().trim();
+        if (text.length > 0) {
+            DOM.selectionPopup.style.display = 'flex';
+            const rect = DOM.container.getBoundingClientRect();
+            // حساب الموقع بالنسبة للحاوية
+            DOM.selectionPopup.style.left = `${e.clientX}px`;
+            DOM.selectionPopup.style.top = `${e.clientY - 50}px`;
+            DOM.selectionPopup.dataset.text = text;
+        } else {
+            DOM.selectionPopup.style.display = 'none';
+        }
+    }, 10);
+});
+
+// تنسيق النصوص (تحويل Newlines إلى <br>)
+function formatText(text) {
+    return text.replace(/\n/g, '<br>');
+}
 
 function showModal(content) {
     DOM.selectionPopup.style.display = 'none';
     DOM.backdrop.style.display = 'block';
     DOM.explainPopup.style.display = 'block';
-    DOM.explainContent.innerHTML = content.replace(/\n/g, '<br>');
+    DOM.explainContent.innerHTML = formatText(content);
 }
 
-
-// ============================================================
-//  8. الحفظ والاسترجاع السحابي (Cloud & Local Storage)
-// ============================================================
-
-// حفظ محلي (سريع)
-function saveLocalData() {
-    localStorage.setItem('pdfDrawings', JSON.stringify(STATE.drawings));
-    localStorage.setItem('pdfNotes', JSON.stringify(STATE.flashcards));
-}
-
-// حفظ سحابي (عند الضغط على الزر)
-DOM.saveCloudBtn.onclick = async () => {
-    if (!STATE.currentFileId) return alert('No file loaded.');
-
-    DOM.saveCloudBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-
-    const payload = {
-        lessonId: STATE.currentFileId,
-        progressData: {
-            drawings: STATE.drawings,
-            flashcards: STATE.flashcards,
-            lastPage: STATE.pageNum
-        }
-    };
-
-    try {
-        const res = await fetch(`${API_BASE}/save`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${USER_TOKEN}`
-            },
-            body: JSON.stringify(payload)
-        });
-
-        const data = await res.json();
-        if (data.success) {
-            alert('Progress saved to cloud!');
-        } else {
-            alert('Save failed: ' + data.message);
-        }
-    } catch (err) {
-        console.error(err);
-        alert('Network error while saving.');
-    } finally {
-        DOM.saveCloudBtn.innerHTML = '<i class="fas fa-save"></i>';
-    }
+window.closeModal = function () {
+    DOM.backdrop.style.display = 'none';
+    DOM.explainPopup.style.display = 'none';
 };
-
-// استرجاع سحابي (عند التحميل)
-async function loadProgressFromCloud(fileId) {
-    if (!USER_TOKEN) return;
-    try {
-        const res = await fetch(`${API_BASE}/?lessonId=${fileId}`, {
-            headers: { 'Authorization': `Bearer ${USER_TOKEN}` }
-        });
-        const json = await res.json();
-
-        if (json.success && json.data) {
-            if (json.data.drawings) STATE.drawings = json.data.drawings;
-            if (json.data.flashcards) STATE.flashcards = json.data.flashcards;
-            if (json.data.lastPage) STATE.pageNum = json.data.lastPage;
-            console.log("Cloud data loaded.");
-        }
-    } catch (e) {
-        console.warn("No cloud save found, using local/empty state.");
-    }
-}
-
-
-// ============================================================
-//  9. التشغيل التلقائي (Auto Init)
-// ============================================================
-
-window.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const fileSrc = urlParams.get('src');
-
-    if (fileSrc) {
-        // إذا كان هناك ملف في الرابط (للمشغل من الداشبورد)
-        DOM.startContainer.style.display = 'none';
-        DOM.mainLayout.style.display = 'flex';
-        try {
-            loadPdf(decodeURIComponent(fileSrc));
-        } catch (e) { console.error(e); }
-    }
-
-    // استعادة الملاحظات المحفوظة محلياً إذا وجدت
-    const localNotes = localStorage.getItem('pdfNotes');
-    if (localNotes) STATE.flashcards = JSON.parse(localNotes);
-});
