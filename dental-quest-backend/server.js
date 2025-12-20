@@ -142,7 +142,7 @@ app.use('/api/results', quizResultRoutes);
 app.use('/api/flashcards', flashcardRoutes);
 app.use('/api/saved-quizzes', savedQuizRoutes);
 app.use('/api/admin', adminRoutes);
-app.use('/api/progress', progressRoutes);
+app.use('/api/progress', require('./routes/progressRoutes'));
 // 8. تشغيل السيرفر
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
