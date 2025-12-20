@@ -1470,19 +1470,11 @@ async function showLessonListForSubject(subjectKey) {
         uploadBtn.style.fontSize = '1.1rem';
         uploadBtn.innerHTML = `<i class="fas fa-cloud-upload-alt"></i> Upload New PDF to ${subjectData.name}`;
 
+        // ✅ الكود الجديد: الانتقال لصفحة العارض مباشرة لتجنب حظر المتصفح
         uploadBtn.onclick = () => {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = 'application/pdf';
-            input.onchange = (e) => {
-                const file = e.target.files[0];
-                if (file) {
-                    const fileURL = URL.createObjectURL(file);
-                    // فتح العارض في نافذة جديدة
-                    window.open(`pdf-viewer.html?src=${encodeURIComponent(fileURL)}`, '_blank');
-                }
-            };
-            input.click();
+            // نرسل اسم المادة معنا لنعرضه هناك
+            const subjectName = encodeURIComponent(subjectData.name);
+            window.location.href = `pdf-viewer.html?subject=${subjectName}`;
         };
 
         uploadContainer.appendChild(uploadBtn);

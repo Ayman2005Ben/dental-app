@@ -484,41 +484,38 @@ if (btnTranslate) {
 
 
 // ============================================================
-// ✅ كود التشغيل التلقائي (النسخة النهائية والمدمجة)
+// ✅ كود التشغيل التلقائي (النسخة المحدثة)
 // ============================================================
 window.addEventListener('DOMContentLoaded', () => {
-    // 1. البحث عن رابط الملف في شريط العنوان (URL)
     const urlParams = new URLSearchParams(window.location.search);
     const fileSrc = urlParams.get('src');
     const subjectName = urlParams.get('subject');
 
+    // 1. تحديث عنوان الصفحة باسم المادة (إن وجد)
+    if (subjectName) {
+        document.title = `${decodeURIComponent(subjectName)} - Smart Study`;
+    }
+
+    // 2. فحص هل يوجد ملف في الرابط؟
     if (fileSrc) {
+        // --- حالة أ: يوجد ملف (جاي من رابط محفوظ) ---
         console.log("PDF Source found:", fileSrc);
 
-        // 2. إخفاء شاشة الرفع (Start Screen) فوراً
-        const startScreen = document.getElementById('start-container');
-        if (startScreen) startScreen.style.display = 'none';
+        // إخفاء شاشة الرفع وإظهار الاستوديو
+        document.getElementById('start-container').style.display = 'none';
+        document.getElementById('main-layout').style.display = 'flex';
 
-        // 3. إظهار واجهة الاستوديو (Main Layout)
-        const mainLayout = document.getElementById('main-layout');
-        if (mainLayout) mainLayout.style.display = 'flex';
+        // توليد ID والتحميل
+        if (!currentFileId) currentFileId = 'uploaded_lesson_' + Date.now();
 
-        // 4. توليد ID للملف (ضروري للحفظ السحابي)
-        if (!currentFileId) {
-            currentFileId = 'uploaded_lesson_' + Date.now();
-        }
-
-        // 5. بدء تحميل الملف في الـ Canvas
         try {
-            const decodedSrc = decodeURIComponent(fileSrc);
-            loadPdf(decodedSrc);
+            loadPdf(decodeURIComponent(fileSrc));
+        } catch (e) { console.error(e); }
 
-            // تحديث عنوان الصفحة إذا وجدنا اسم المادة
-            if (subjectName) {
-                document.title = `${decodeURIComponent(subjectName)} - Smart Study`;
-            }
-        } catch (e) {
-            console.error("Error auto-loading PDF:", e);
-        }
+    } else {
+        // --- حالة ب: لا يوجد ملف (جاي من زر Upload الجديد) ---
+        // ✅ إجبار شاشة الرفع على الظهور
+        document.getElementById('start-container').style.display = 'flex';
+        document.getElementById('main-layout').style.display = 'none';
     }
 });
