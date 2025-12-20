@@ -51,7 +51,6 @@ app.use(helmet({
 // 3. تمكين JSON body parser
 app.use(express.json());
 app.use('/api/reports', reportRoutes);
-app.use('/api/progress', require('./routes/progressRoutes'));
 // 4. إعداد الجلسات
 app.use(session({
   secret: process.env.SESSION_SECRET || 'CHANGE_ME',
