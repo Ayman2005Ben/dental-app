@@ -34,18 +34,16 @@ let pageFlashcards = {}; // { pageNum: [cards] }
 
 // API Endpoint
 const API_BASE = '/api/progress';
-const USER_TOKEN = localStorage.getItem('userToken'); // تأكد أن التوكن محفوظ هنا عند تسجيل الدخول
+const USER_TOKEN = localStorage.getItem('userToken');
 
 // --- 2. منطق اختيار الملف (Start Screen) ---
 fileInput.addEventListener('change', function (e) {
     const file = e.target.files[0];
     if (file && file.type === 'application/pdf') {
-
-        // توليد ID فريد للملف: (local_FileName_FileSize)
-        // هذا يسمح لنا بالتعرف على الملف لو رفعه الطالب مرة ثانية غداً
+        // توليد ID فريد للملف محلياً
         currentFileId = `local_${file.name.replace(/\s/g, '_')}_${file.size}`;
 
-        // إنشاء رابط للملف لعرضه
+        // إنشاء رابط للملف
         const fileURL = URL.createObjectURL(file);
 
         // التبديل للواجهة الرئيسية
@@ -61,6 +59,7 @@ fileInput.addEventListener('change', function (e) {
 
 // --- 3. تحميل وعرض PDF ---
 function loadPdf(url) {
+    // تحديد مسار الـ worker
     pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js`;
 
     pdfjsLib.getDocument(url).promise.then(doc => {
@@ -68,14 +67,18 @@ function loadPdf(url) {
         pageCountSpan.textContent = pdfDoc.numPages;
 
         // محاولة جلب بيانات قديمة لهذا الملف من السيرفر
-        loadProgressFromCloud(currentFileId).then(() => {
+        if (currentFileId) {
+            loadProgressFromCloud(currentFileId).then(() => {
+                renderPage(pageNum);
+            });
+        } else {
             renderPage(pageNum);
-        });
+        }
 
     }).catch(err => {
         console.error('Error loading PDF:', err);
-        alert('Error parsing PDF file.');
-        location.reload();
+        // في حالة الخطأ، لا تقم بإعادة تحميل الصفحة لتجنب حلقة لا نهائية، بل أظهر رسالة
+        alert('Error parsing PDF file. Please try again.');
     });
 }
 
@@ -194,7 +197,7 @@ function paint(e) {
         drawingCtx.fillRect(currentPath.start.x, currentPath.start.y, pos.x - currentPath.start.x, pos.y - currentPath.start.y);
     } else {
         currentPath.points.push(pos);
-        // رسم فوري للأداء السريع
+        // رسم فوري
         drawingCtx.beginPath();
         drawingCtx.strokeStyle = currentPath.color;
         drawingCtx.lineWidth = currentPath.size;
@@ -294,7 +297,7 @@ document.getElementById('pdf-canvas-container').addEventListener('mouseup', (e) 
 });
 
 
-// --- 7. الحفظ والاسترجاع السحابي (Cloud Logic) ☁️ ---
+// --- 7. الحفظ والاسترجاع السحابي (Cloud Logic) ---
 
 async function saveProgressToCloud() {
     if (!currentFileId) return alert('No file loaded.');
@@ -315,7 +318,7 @@ async function saveProgressToCloud() {
                 'Authorization': `Bearer ${USER_TOKEN}`
             },
             body: JSON.stringify({
-                lessonId: currentFileId, // استخدام الـ ID المولد من اسم الملف
+                lessonId: currentFileId,
                 progressData: progressData
             })
         });
@@ -344,38 +347,33 @@ async function loadProgressFromCloud(fileId) {
         const data = await res.json();
 
         if (data.success && data.data && data.data.drawings) {
-            // استرجاع البيانات
             pageDrawings = data.data.drawings || {};
             pageFlashcards = data.data.flashcards || {};
 
-            // الذهاب لآخر صفحة وقف عندها الطالب
             if (data.data.lastPage) {
                 pageNum = data.data.lastPage;
             }
-
             console.log("Data loaded successfully!");
         }
     } catch (err) {
         console.error("No saved progress or error loading:", err);
-        // لا نظهر خطأ للمستخدم لأنها قد تكون المرة الأولى له
     }
 }
 
-// ربط زر الحفظ
 saveCloudBtn.addEventListener('click', saveProgressToCloud);
-// --- 8. تفعيل أزرار الذكاء الاصطناعي (AI Integration) ---
-// أضف هذا الكود في نهاية ملف pdf-viewer.js
 
-// دالة مساعدة للاتصال بالـ API
+
+// --- 8. تفعيل أزرار الذكاء الاصطناعي (AI Integration) ---
+
 async function callAiApi(endpoint, body) {
-    const token = localStorage.getItem('userToken'); // نستخدم التوكن المحفوظ
+    const token = localStorage.getItem('userToken');
     if (!token) {
         alert("Please login first!");
         return null;
     }
 
     try {
-        const res = await fetch(`/api/${endpoint}`, { // تأكد أن مسارات الـ API صحيحة في سيرفرك
+        const res = await fetch(`/api/${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -398,7 +396,6 @@ async function callAiApi(endpoint, body) {
 const btnQuiz = document.getElementById('btn-quiz');
 if (btnQuiz) {
     btnQuiz.addEventListener('click', async () => {
-        // نأخذ نص الصفحة الحالية فقط (لتقليل حجم البيانات)
         const page = await pdfDoc.getPage(pageNum);
         const textContent = await page.getTextContent();
         const pageText = textContent.items.map(item => item.str).join(' ');
@@ -410,26 +407,22 @@ if (btnQuiz) {
 
         btnQuiz.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
 
-        // نرسل النص للباك إند (geminiController)
-        // ملاحظة: تأكد أن لديك راوت اسمه /api/gemini/quiz
         const result = await callAiApi('gemini/quiz', {
-            text: pageText, // نرسل النص مباشرة بدلاً من الملف لتسريع العملية
+            text: pageText,
             count: 5
         });
 
         if (result) {
-            // عرض النتيجة
             const quizContainer = document.getElementById('quiz-results');
-            quizContainer.innerHTML = ''; // تنظيف القديم
+            quizContainer.innerHTML = '';
 
-            // نفترض أن الرد يأتي كمصفوفة أسئلة
-            const questions = result.questions || result; // حسب هيكلة الرد عندك
+            const questions = result.questions || result;
 
             if (Array.isArray(questions)) {
                 questions.forEach((q, idx) => {
                     const div = document.createElement('div');
-                    div.className = 'note-card'; // نعيد استخدام ستايل الكروت
-                    div.style.borderLeftColor = '#e67e22'; // لون برتقالي للكويز
+                    div.className = 'note-card';
+                    div.style.borderLeftColor = '#e67e22';
                     div.innerHTML = `
                         <h4>Q${idx + 1}: ${q.question}</h4>
                         <ul>
@@ -443,12 +436,11 @@ if (btnQuiz) {
                 quizContainer.innerHTML = '<p>Could not parse quiz data.</p>';
             }
         }
-
         btnQuiz.innerHTML = '<i class="fas fa-question-circle"></i> Generate Quiz';
     });
 }
 
-// 2. زر الشرح (Explain) في القائمة المنبثقة
+// 2. زر الشرح (Explain)
 const btnExplain = document.getElementById('ask-ai-btn');
 if (btnExplain) {
     btnExplain.addEventListener('click', async () => {
@@ -459,7 +451,6 @@ if (btnExplain) {
 
         btnExplain.innerHTML = 'Thinking...';
 
-        // استخدام aiController (Groq) أو Gemini للشرح
         const result = await callAiApi('ai/ask', {
             question: `Explain this concept simply for a dental student: "${text}"`
         });
@@ -490,24 +481,44 @@ if (btnTranslate) {
         popup.style.display = 'none';
     });
 }
-// --- 9. (تصحيح هام) التقاط الملف من الرابط تلقائياً ---
-document.addEventListener('DOMContentLoaded', () => {
-    // التحقق هل يوجد رابط ملف في العنوان (URL)؟
+
+
+// ============================================================
+// ✅ كود التشغيل التلقائي (النسخة النهائية والمدمجة)
+// ============================================================
+window.addEventListener('DOMContentLoaded', () => {
+    // 1. البحث عن رابط الملف في شريط العنوان (URL)
     const urlParams = new URLSearchParams(window.location.search);
     const fileSrc = urlParams.get('src');
+    const subjectName = urlParams.get('subject');
 
     if (fileSrc) {
-        // إذا وجدنا ملفاً، نخفي شاشة البداية فوراً
-        startContainer.style.display = 'none';
-        mainLayout.style.display = 'flex';
+        console.log("PDF Source found:", fileSrc);
 
-        // ونبدأ تحميل الملف
-        // (decodeURIComponent مهم لفك تشفير الرموز في الرابط)
-        const cleanSrc = decodeURIComponent(fileSrc);
+        // 2. إخفاء شاشة الرفع (Start Screen) فوراً
+        const startScreen = document.getElementById('start-container');
+        if (startScreen) startScreen.style.display = 'none';
 
-        // تعيين ID مؤقت للجلسة
-        currentFileId = 'session_file_' + Date.now();
+        // 3. إظهار واجهة الاستوديو (Main Layout)
+        const mainLayout = document.getElementById('main-layout');
+        if (mainLayout) mainLayout.style.display = 'flex';
 
-        loadPdf(cleanSrc);
+        // 4. توليد ID للملف (ضروري للحفظ السحابي)
+        if (!currentFileId) {
+            currentFileId = 'uploaded_lesson_' + Date.now();
+        }
+
+        // 5. بدء تحميل الملف في الـ Canvas
+        try {
+            const decodedSrc = decodeURIComponent(fileSrc);
+            loadPdf(decodedSrc);
+
+            // تحديث عنوان الصفحة إذا وجدنا اسم المادة
+            if (subjectName) {
+                document.title = `${decodeURIComponent(subjectName)} - Smart Study`;
+            }
+        } catch (e) {
+            console.error("Error auto-loading PDF:", e);
+        }
     }
 });
