@@ -4,120 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DentaScope - Advanced PDF Viewer</title>
+    <title>DentaScope – PDF AI Study</title>
 
-    <!-- Fonts & Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- KaTeX for math formulas -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-
-    <!-- Main Style -->
-    <link rel="stylesheet" href="style.css">
 
     <style>
-        :root {
-            --sidebar-width: 380px;
-            --accent-orange: #f59e0b;
-        }
-
         body {
             margin: 0;
-            overflow: hidden;
-            background-color: #0f172a;
-            color: #f1f5f9;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background: #0f172a;
+            color: #f1f5f9;
+            font-family: system-ui, sans-serif;
+            overflow: hidden;
         }
 
-        /* Loading Screen */
+        /* Loader */
         #loader-overlay {
             position: fixed;
             inset: 0;
             background: rgba(15, 23, 42, 0.9);
-            z-index: 9999;
             display: none;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(8px);
+            z-index: 9999;
         }
 
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid #334155;
-            border-top: 4px solid var(--primary-btn-bg);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Start Container (Full screen file upload) */
+        /* Start */
         #start-container {
-            flex: 1;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 20px;
         }
 
         .upload-box {
-            background: rgba(30, 41, 59, 0.5);
-            padding: 40px;
-            border-radius: 20px;
             border: 2px dashed #475569;
-            transition: all 0.3s ease;
+            padding: 40px;
+            border-radius: 18px;
+            text-align: center;
             cursor: pointer;
-            max-width: 500px;
-            width: 100%;
+            max-width: 420px;
         }
 
-        .upload-box:hover {
-            border-color: var(--primary-btn-bg);
-            background: rgba(30, 41, 59, 0.8);
-        }
-
-        /* Main Layout */
+        /* Layout */
         #main-layout {
             display: none;
             height: 100vh;
-            overflow: hidden;
+        }
+
+        #viewer-section {
+            flex: 1;
+            background: #334155;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .page-wrapper {
+            background: white;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
         }
 
         /* Sidebar */
         .sidebar {
-            width: var(--sidebar-width);
+            width: 360px;
             background: #1e293b;
             border-left: 1px solid #334155;
             display: flex;
             flex-direction: column;
-            height: 100%;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-            z-index: 100;
         }
 
         .sidebar-header {
-            padding: 20px;
+            padding: 16px;
             border-bottom: 1px solid #334155;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            font-weight: bold;
         }
 
         .sidebar-content {
             flex: 1;
             overflow-y: auto;
-            padding: 20px;
+            padding: 16px;
         }
 
         .tool-group {
@@ -125,11 +92,9 @@
         }
 
         .tool-group h3 {
-            font-size: 0.9rem;
-            text-transform: uppercase;
+            font-size: 0.85rem;
             color: #94a3b8;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .tool-grid {
@@ -145,125 +110,24 @@
             padding: 12px;
             border-radius: 10px;
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            transition: all 0.2s;
         }
 
         .ai-btn:hover {
             background: #475569;
-            transform: translateY(-2px);
         }
 
-        .ai-btn i {
-            font-size: 1.2rem;
-            color: var(--primary-btn-bg);
+        /* Results */
+        #ai-results-area {
+            min-height: 150px;
         }
 
-        /* PDF Viewer Area */
-        #viewer-section {
-            flex: 1;
-            overflow-y: auto;
-            background: #334155;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .page-wrapper {
-            position: relative;
-            margin-bottom: 20px;
-            background: white;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        canvas {
-            display: block;
-            max-width: 100%;
-        }
-
-        .textLayer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0.2;
-            line-height: 1.0;
-            pointer-events: auto;
-        }
-
-        /* QCM & Notes Cards */
-        .note-card {
-            background: #334155;
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid transparent;
-            transition: all 0.2s;
-        }
-
-        .note-card h4 {
-            margin-top: 0;
-            color: #f1f5f9;
-        }
-
-        .qcm-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
-            border: 1px solid #475569;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            cursor: pointer;
-        }
-
-        .qcm-feedback {
-            display: none;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
-        .qcm-feedback.correct {
-            background: #064e3b;
-            color: #a7f3d0;
-        }
-
-        .qcm-feedback.wrong {
-            background: #7f1d1d;
-            color: #fecaca;
-        }
-
-        /* Floating Nav */
-        .page-nav {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(30, 41, 59, 0.9);
-            padding: 10px 20px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid #475569;
-            z-index: 50;
-        }
-
-        /* Modals */
+        /* Modal */
         #modal-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
+            background: rgba(0, 0, 0, .6);
             display: none;
-            backdrop-filter: blur(4px);
+            z-index: 1000;
         }
 
         .ai-modal {
@@ -275,140 +139,95 @@
             width: 90%;
             max-width: 700px;
             max-height: 80vh;
-            border-radius: 20px;
-            z-index: 1001;
             display: none;
             flex-direction: column;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            z-index: 1001;
         }
 
         .modal-header {
-            padding: 20px;
+            padding: 16px;
             border-bottom: 1px solid #334155;
             display: flex;
             justify-content: space-between;
-            align-items: center;
         }
 
         .modal-body {
-            padding: 20px;
+            padding: 16px;
             overflow-y: auto;
-            line-height: 1.8;
+            line-height: 1.7;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- Loader -->
     <div id="loader-overlay">
-        <div class="spinner"></div>
-        <p id="loader-text" style="margin-top:20px;">AI is thinking...</p>
+        <div>Processing…</div>
     </div>
 
-    <!-- 1. Start Screen -->
+    <!-- Start -->
     <div id="start-container">
         <div class="upload-box" onclick="document.getElementById('file-input').click()">
-            <i class="fas fa-cloud-upload-alt" style="font-size: 4rem; color: var(--primary-btn-bg);"></i>
-            <h2 style="margin-top:20px;">Open PDF to Start Learning</h2>
-            <p>Upload your document and let AI generate QCMs, Summaries and Mind Maps</p>
+            <i class="fas fa-file-pdf" style="font-size:3rem;"></i>
+            <h2>افتح ملف PDF</h2>
+            <p>ثم استخدم أدوات الذكاء الاصطناعي للدراسة</p>
             <input type="file" id="file-input" hidden accept=".pdf">
         </div>
     </div>
 
-    <!-- 2. Main Interface -->
+    <!-- Main -->
     <div id="main-layout">
 
-        <!-- Center: PDF Viewer -->
         <section id="viewer-section">
-            <!-- Pages will be injected here -->
+            <!-- PDF pages injected by JS -->
         </section>
 
-        <!-- Right: AI Sidebar -->
         <aside class="sidebar">
-            <div class="sidebar-header">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <i class="fas fa-brain" style="color:var(--primary-btn-bg);"></i>
-                    <h2 style="font-size:1.1rem; margin:0;">AI Study Tools</h2>
-                </div>
-                <div id="current-page-display" class="glassmorphism-card" style="padding:4px 10px; font-weight:bold;">1
-                </div>
-            </div>
+            <div class="sidebar-header">AI Study Tools</div>
 
             <div class="sidebar-content">
+
                 <div class="tool-group">
-                    <h3>Page Generation</h3>
+                    <h3>الصفحة الحالية</h3>
                     <div class="tool-grid">
-                        <button class="ai-btn" id="btn-quiz">
-                            <i class="fas fa-tasks"></i>
-                            <span>QCM Quiz</span>
-                        </button>
-                        <button class="ai-btn" id="btn-flashcards">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Flashcards</span>
-                        </button>
-                        <button class="ai-btn" id="btn-mindmap">
-                            <i class="fas fa-sitemap"></i>
-                            <span>Mind Map</span>
-                        </button>
-                        <button class="ai-btn" id="btn-explain-page">
-                            <i class="fas fa-search-plus"></i>
-                            <span>OCR Explain</span>
-                        </button>
-                    </div>
-                    <div style="margin-top:15px; display:flex; gap:10px; align-items:center;">
-                        <span style="font-size:0.8rem; color:#94a3b8;">Count:</span>
-                        <input type="number" id="quiz-count" value="5" min="1" max="25"
-                            style="width:50px; background:#334155; border:1px solid #475569; color:white; border-radius:4px; padding:2px 5px;">
-                        <input type="number" id="flashcard-count" value="6" min="1" max="30"
-                            style="width:50px; background:#334155; border:1px solid #475569; color:white; border-radius:4px; padding:2px 5px;">
+                        <button class="ai-btn" id="btn-quiz">كويز</button>
+                        <button class="ai-btn" id="btn-flashcards">فلاش كارد</button>
+                        <button class="ai-btn" id="btn-mindmap">مايند ماب</button>
+                        <button class="ai-btn" id="btn-explain">شرح</button>
+                        <button class="ai-btn" id="btn-translate">ترجمة</button>
+                        <button class="ai-btn" id="btn-ocr" style="opacity:0.7;">OCR (اختياري)</button>
                     </div>
                 </div>
 
                 <div class="tool-group">
-                    <h3>Results</h3>
+                    <h3>النتائج</h3>
                     <div id="ai-results-area">
-                        <div class="empty-state" style="text-align:center; padding:40px 20px; color:#64748b;">
-                            <i class="fas fa-robot" style="font-size:2rem; margin-bottom:15px; display:block;"></i>
-                            <p>Choose a tool above to start analyzing the current page.</p>
-                        </div>
+                        <p style="color:#64748b; text-align:center;">
+                            اختر أداة لبدء التحليل
+                        </p>
                     </div>
                 </div>
+
             </div>
         </aside>
 
     </div>
 
-    <!-- Floating Navigation -->
-    <div class="page-nav" id="page-nav" style="display:none;">
-        <button id="prev-page" class="ai-btn" style="padding:8px 15px; flex-direction:row;"><i
-                class="fas fa-chevron-left"></i></button>
-        <div style="display:flex; align-items:center; gap:5px; font-weight:bold;">
-            <span id="page-num">1</span> / <span id="page-count">0</span>
-        </div>
-        <button id="next-page" class="ai-btn" style="padding:8px 15px; flex-direction:row;"><i
-                class="fas fa-chevron-right"></i></button>
-    </div>
-
-    <!-- Modals -->
-    <div id="modal-backdrop" onclick="closeModal()"></div>
-    <div id="explain-modal" class="ai-modal">
+    <!-- Modal -->
+    <div id="modal-backdrop"></div>
+    <div class="ai-modal" id="ai-modal">
         <div class="modal-header">
-            <h3 id="modal-title">AI Explanation</h3>
-            <button onclick="closeModal()"
-                style="background:none; border:none; color:white; cursor:pointer; font-size:1.5rem;">&times;</button>
+            <span id="modal-title">AI</span>
+            <button onclick="closeModal()">×</button>
         </div>
-        <div class="modal-body" id="explain-content">
-            <!-- Explanation content here -->
-        </div>
+        <div class="modal-body" id="modal-content"></div>
     </div>
 
     <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
-    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
-
     <script src="pdf-viewer.js"></script>
-</body>
 
+</body>
 </html>
