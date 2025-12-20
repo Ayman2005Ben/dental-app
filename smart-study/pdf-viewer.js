@@ -490,3 +490,24 @@ if (btnTranslate) {
         popup.style.display = 'none';
     });
 }
+// --- 9. (تصحيح هام) التقاط الملف من الرابط تلقائياً ---
+document.addEventListener('DOMContentLoaded', () => {
+    // التحقق هل يوجد رابط ملف في العنوان (URL)؟
+    const urlParams = new URLSearchParams(window.location.search);
+    const fileSrc = urlParams.get('src');
+
+    if (fileSrc) {
+        // إذا وجدنا ملفاً، نخفي شاشة البداية فوراً
+        startContainer.style.display = 'none';
+        mainLayout.style.display = 'flex';
+
+        // ونبدأ تحميل الملف
+        // (decodeURIComponent مهم لفك تشفير الرموز في الرابط)
+        const cleanSrc = decodeURIComponent(fileSrc);
+
+        // تعيين ID مؤقت للجلسة
+        currentFileId = 'session_file_' + Date.now();
+
+        loadPdf(cleanSrc);
+    }
+});
