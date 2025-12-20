@@ -1,337 +1,402 @@
-// pdf-viewer.js
+// ================== 1. إعدادات ومتغيرات عامة ==================
+const DOM = {
+    fileInput: document.getElementById('file-input'),
+    startContainer: document.getElementById('start-container'),
+    mainLayout: document.getElementById('main-layout'),
+    pdfCanvas: document.getElementById('pdf-canvas'),
+    drawCanvas: document.getElementById('drawing-canvas'),
+    textLayer: document.getElementById('text-layer'),
+    selectionPopup: document.getElementById('selection-popup'),
+    explainPopup: document.getElementById('ai-explain-popup'),
+    explainContent: document.getElementById('ai-explain-content'),
+    aiResults: document.getElementById('ai-results-area'),
+    btnQuiz: document.getElementById('btn-quiz'),
+    btnFlashcards: document.getElementById('btn-flashcards'),
+    btnMindmap: document.getElementById('btn-mindmap'),
+    btnAskAi: document.getElementById('ask-ai-btn'),
+    btnPen: document.getElementById('pen-btn'),
+    btnErase: document.getElementById('erase-btn'),
+    container: document.getElementById('pdf-canvas-container')
+};
 
-// ============================================================
-// 1. التعريفات والمتغيرات الأساسية
-// ============================================================
-const fileInput = document.getElementById('file-input');
-const startContainer = document.getElementById('start-container');
-const mainLayout = document.getElementById('main-layout');
-
-const canvas = document.getElementById('pdf-canvas');
-const drawingCanvas = document.getElementById('drawing-canvas');
-const textLayerDiv = document.getElementById('text-layer');
-const ctx = canvas.getContext('2d');
-const drawingCtx = drawingCanvas.getContext('2d');
-const layersWrapper = document.getElementById('pdf-layers-wrapper');
-
-const pageNumSpan = document.getElementById('page-num');
-const pageCountSpan = document.getElementById('page-count');
-const saveCloudBtn = document.getElementById('save-cloud-btn');
-const flashcardsContainer = document.getElementById('flashcards-container');
-
-let pdfDoc = null;
-let pageNum = 1;
-let pageRendering = false;
-let pageNumPending = null;
-let scale = 1.5;
-let currentFileId = null;
-
-let currentTool = 'select';
-let isPainting = false;
-let currentPath = {};
-let pageDrawings = {};
-let pageFlashcards = {};
-
-const API_BASE = '/api/progress';
+const ctx = DOM.pdfCanvas.getContext('2d');
+const drawCtx = DOM.drawCanvas.getContext('2d');
 const USER_TOKEN = localStorage.getItem('userToken');
 
-// ============================================================
-// 2. أدوات مساعدة (Context Resolver)
-// ============================================================
-async function getCurrentPageText() {
-    const page = await pdfDoc.getPage(pageNum);
-    const textContent = await page.getTextContent();
-    return textContent.items.map(i => i.str).join(' ');
-}
+// حالة التطبيق
+const state = {
+    pdfDoc: null,
+    pageNum: 1,
+    scale: 1.4,
+    renderTask: null, // للتحكم في عملية الريندر ومنع التداخل
+    currentTool: 'select',
+    isDrawing: false,
+    drawings: JSON.parse(localStorage.getItem('pdfDrawings')) || {} // استرجاع الرسومات المحفوظة
+};
 
-function getSelectedText() {
-    return window.getSelection().toString().trim();
-}
+// ================== 2. تحميل PDF ==================
+// إعداد Worker مرة واحدة فقط
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
-// ============================================================
-// 3. تحميل الملف
-// ============================================================
-fileInput.addEventListener('change', function (e) {
+DOM.fileInput.addEventListener('change', (e) => {
     const file = e.target.files[0];
-    if (!file || file.type !== 'application/pdf') {
-        alert('Please select a valid PDF file.');
+    if (!file) return;
+
+    // UI Update
+    DOM.startContainer.style.display = 'none';
+    DOM.mainLayout.style.display = 'flex';
+
+    const url = URL.createObjectURL(file);
+    loadPdf(url);
+});
+
+async function loadPdf(url) {
+    try {
+        const doc = await pdfjsLib.getDocument(url).promise;
+        state.pdfDoc = doc;
+        state.pageNum = 1;
+        renderPage();
+    } catch (error) {
+        console.error('Error loading PDF:', error);
+        alert('حدث خطأ أثناء تحميل الملف.');
+    }
+}
+
+// ================== 3. عرض الصفحة (Rendering) ==================
+async function renderPage() {
+    if (!state.pdfDoc) return;
+
+    // إلغاء أي عملية ريندر سابقة جارية
+    if (state.renderTask) {
+        await state.renderTask.cancel();
+    }
+
+    const page = await state.pdfDoc.getPage(state.pageNum);
+    const viewport = page.getViewport({ scale: state.scale });
+
+    // تحديث أبعاد الكانفاس فقط إذا تغيرت لتقليل الوميض
+    if (DOM.pdfCanvas.width !== viewport.width) {
+        DOM.pdfCanvas.width = DOM.drawCanvas.width = viewport.width;
+        DOM.pdfCanvas.height = DOM.drawCanvas.height = viewport.height;
+    }
+
+    // رسم الـ PDF
+    const renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+    };
+
+    state.renderTask = page.render(renderContext);
+
+    try {
+        await state.renderTask.promise;
+
+        // رسم طبقة النص (للتحديد)
+        const textContent = await page.getTextContent();
+        DOM.textLayer.innerHTML = '';
+        DOM.textLayer.style.width = `${viewport.width}px`;
+        DOM.textLayer.style.height = `${viewport.height}px`;
+
+        pdfjsLib.renderTextLayer({
+            textContent,
+            container: DOM.textLayer,
+            viewport,
+            textDivs: []
+        });
+
+        // إعادة رسم الرسومات المحفوظة لهذه الصفحة
+        redrawStoredPaths();
+
+    } catch (error) {
+        if (error.name !== 'RenderingCancelledException') {
+            console.error('Render error:', error);
+        }
+    }
+}
+
+// ================== 4. منطق الرسم المحسن (Optimized) ==================
+DOM.btnPen.addEventListener('click', () => setTool('pen'));
+DOM.btnErase.addEventListener('click', clearPageDrawings);
+
+function setTool(tool) {
+    state.currentTool = tool;
+    // تفعيل التفاعل مع كانفاس الرسم فقط عند اختيار القلم
+    DOM.drawCanvas.style.pointerEvents = tool === 'pen' ? 'auto' : 'none';
+    DOM.container.style.cursor = tool === 'pen' ? 'crosshair' : 'default';
+}
+
+function clearPageDrawings() {
+    drawCtx.clearRect(0, 0, DOM.drawCanvas.width, DOM.drawCanvas.height);
+    state.drawings[state.pageNum] = [];
+    saveDrawings();
+}
+
+// أحداث الرسم
+DOM.drawCanvas.addEventListener('mousedown', startDrawing);
+DOM.drawCanvas.addEventListener('mousemove', draw);
+DOM.drawCanvas.addEventListener('mouseup', stopDrawing);
+DOM.drawCanvas.addEventListener('mouseout', stopDrawing);
+
+let currentPath = [];
+
+function startDrawing(e) {
+    if (state.currentTool !== 'pen') return;
+    state.isDrawing = true;
+    const pos = getMousePos(e);
+    currentPath = [pos];
+
+    drawCtx.beginPath();
+    drawCtx.moveTo(pos.x, pos.y);
+    drawCtx.strokeStyle = 'rgba(255, 255, 0, 0.5)'; // لون الهايلايتر
+    drawCtx.lineWidth = 15;
+    drawCtx.lineCap = 'round';
+    drawCtx.lineJoin = 'round';
+}
+
+function draw(e) {
+    if (!state.isDrawing) return;
+    const pos = getMousePos(e);
+    currentPath.push(pos);
+
+    // رسم الخط الجديد مباشرة دون مسح الكانفاس (أداء عالي)
+    drawCtx.lineTo(pos.x, pos.y);
+    drawCtx.stroke();
+}
+
+function stopDrawing() {
+    if (!state.isDrawing) return;
+    state.isDrawing = false;
+
+    // حفظ المسار في الذاكرة
+    if (!state.drawings[state.pageNum]) state.drawings[state.pageNum] = [];
+    state.drawings[state.pageNum].push([...currentPath]);
+
+    saveDrawings(); // حفظ في LocalStorage
+    currentPath = [];
+}
+
+function redrawStoredPaths() {
+    drawCtx.clearRect(0, 0, DOM.drawCanvas.width, DOM.drawCanvas.height);
+    const paths = state.drawings[state.pageNum] || [];
+
+    paths.forEach(path => {
+        if (path.length < 1) return;
+        drawCtx.beginPath();
+        drawCtx.strokeStyle = 'rgba(255, 255, 0, 0.5)';
+        drawCtx.lineWidth = 15;
+        drawCtx.lineCap = 'round';
+        drawCtx.moveTo(path[0].x, path[0].y);
+        for (let i = 1; i < path.length; i++) {
+            drawCtx.lineTo(path[i].x, path[i].y);
+        }
+        drawCtx.stroke();
+    });
+}
+
+function getMousePos(evt) {
+    const rect = DOM.drawCanvas.getBoundingClientRect();
+    return {
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+    };
+}
+
+function saveDrawings() {
+    localStorage.setItem('pdfDrawings', JSON.stringify(state.drawings));
+}
+
+// ================== 5. أدوات النصوص والذكاء الاصطناعي ==================
+DOM.container.addEventListener('mouseup', handleTextSelection);
+
+function handleTextSelection(e) {
+    if (state.currentTool !== 'select') return;
+
+    // تأخير بسيط لضمان اكتمال عملية التحديد
+    setTimeout(() => {
+        const text = window.getSelection().toString().trim();
+        if (text.length > 0) {
+            showPopup(e.clientX, e.clientY, text);
+        } else {
+            DOM.selectionPopup.style.display = 'none';
+        }
+    }, 10);
+}
+
+function showPopup(x, y, text) {
+    DOM.selectionPopup.style.display = 'block';
+    DOM.selectionPopup.style.left = `${x}px`;
+    // رفع البوب أب قليلاً للأعلى حتى لا يغطي النص
+    DOM.selectionPopup.style.top = `${y - 50}px`;
+    DOM.selectionPopup.dataset.text = text;
+}
+
+// دوال مساعدة للنصوص
+async function getPageText() {
+    const page = await state.pdfDoc.getPage(state.pageNum);
+    const content = await page.getTextContent();
+    return content.items.map(i => i.str).join(' ');
+}
+
+async function isScannedPDF() {
+    // فحص ذكي: إذا كان النص فارغاً تقريباً في أول صفحة
+    const page = await state.pdfDoc.getPage(1);
+    const content = await page.getTextContent();
+    return content.items.length < 2; // تقليل الحد للكشف الأدق
+}
+
+// API Wrapper
+async function callAI(endpoint, body) {
+    if (!USER_TOKEN) {
+        alert("يرجى تسجيل الدخول أولاً");
+        throw new Error("No token");
+    }
+
+    try {
+        const res = await fetch(`/api/ai/${endpoint}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${USER_TOKEN}`
+            },
+            body: JSON.stringify(body)
+        });
+
+        if (!res.ok) {
+            const errData = await res.json();
+            throw new Error(errData.message || 'AI service error');
+        }
+        return await res.json();
+    } catch (error) {
+        console.error("AI Error:", error);
+        DOM.aiResults.innerHTML = `<div class="error">❌ حدث خطأ: ${error.message}</div>`;
+        throw error;
+    }
+}
+
+// ================== 6. معالجات الأحداث (Event Handlers) ==================
+
+// زر الشرح (Explain)
+DOM.btnAskAi.addEventListener('click', async () => {
+    DOM.selectionPopup.style.display = 'none';
+    const selectedText = DOM.selectionPopup.dataset.text;
+
+    if (await isScannedPDF()) {
+        showExplainModal("⚠️ هذا الملف عبارة عن صور (Scanned). ميزة التعرف على النصوص غير مدعومة حالياً لهذا النوع.");
         return;
     }
 
-    currentFileId = `local_${file.name.replace(/\s/g, '_')}_${file.size}`;
-    const fileURL = URL.createObjectURL(file);
+    const textToExplain = selectedText || await getPageText();
 
-    startContainer.style.display = 'none';
-    mainLayout.style.display = 'flex';
+    showExplainModal("Thinking... 🤖"); // حالة تحميل
 
-    loadPdf(fileURL);
-});
-
-function loadPdf(url) {
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
-
-    pdfjsLib.getDocument(url).promise.then(async doc => {
-        pdfDoc = doc;
-        pageCountSpan.textContent = pdfDoc.numPages;
-
-        if (currentFileId) {
-            await loadProgressFromCloud(currentFileId);
-        }
-        renderPage(pageNum);
-    }).catch(err => {
-        console.error(err);
-        alert('Error loading PDF');
-    });
-}
-
-// ============================================================
-// 4. عرض الصفحة
-// ============================================================
-async function renderPage(num) {
-    pageRendering = true;
-    const page = await pdfDoc.getPage(num);
-
-    const container = document.getElementById('pdf-canvas-container');
-    const containerWidth = container.clientWidth * 0.95;
-    const viewportDefault = page.getViewport({ scale: 1.0 });
-    scale = containerWidth / viewportDefault.width;
-    const viewport = page.getViewport({ scale });
-
-    canvas.width = drawingCanvas.width = viewport.width;
-    canvas.height = drawingCanvas.height = viewport.height;
-
-    layersWrapper.style.width = viewport.width + 'px';
-    layersWrapper.style.height = viewport.height + 'px';
-
-    await page.render({ canvasContext: ctx, viewport }).promise;
-
-    textLayerDiv.innerHTML = '';
-    const textContent = await page.getTextContent();
-    pdfjsLib.renderTextLayer({
-        textContent,
-        container: textLayerDiv,
-        viewport,
-        textDivs: []
-    });
-
-    redrawDrawings(num);
-    updateSidebarContent(num);
-
-    pageNumSpan.textContent = num;
-    pageRendering = false;
-    if (pageNumPending) {
-        renderPage(pageNumPending);
-        pageNumPending = null;
-    }
-}
-
-document.getElementById('prev-page').onclick = () => {
-    if (pageNum > 1) {
-        pageNum--;
-        renderPage(pageNum);
-    }
-};
-
-document.getElementById('next-page').onclick = () => {
-    if (pageNum < pdfDoc.numPages) {
-        pageNum++;
-        renderPage(pageNum);
-    }
-};
-
-// ============================================================
-// 5. الرسم البسيط (Pen / Erase)
-// ============================================================
-function redrawDrawings(num) {
-    drawingCtx.clearRect(0, 0, drawingCanvas.width, drawingCanvas.height);
-    (pageDrawings[num] || []).forEach(path => {
-        drawingCtx.beginPath();
-        drawingCtx.strokeStyle = path.color;
-        drawingCtx.lineWidth = path.size;
-        drawingCtx.lineCap = 'round';
-        drawingCtx.moveTo(path.points[0].x, path.points[0].y);
-        path.points.forEach(p => drawingCtx.lineTo(p.x, p.y));
-        drawingCtx.stroke();
-    });
-}
-
-drawingCanvas.onmousedown = e => {
-    if (currentTool !== 'pen') return;
-    isPainting = true;
-    const rect = drawingCanvas.getBoundingClientRect();
-    currentPath = {
-        color: '#f1c40f',
-        size: 3,
-        points: [{ x: e.clientX - rect.left, y: e.clientY - rect.top }]
-    };
-};
-
-drawingCanvas.onmousemove = e => {
-    if (!isPainting) return;
-    const rect = drawingCanvas.getBoundingClientRect();
-    currentPath.points.push({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-    redrawDrawings(pageNum);
-};
-
-drawingCanvas.onmouseup = () => {
-    if (!isPainting) return;
-    isPainting = false;
-    if (!pageDrawings[pageNum]) pageDrawings[pageNum] = [];
-    pageDrawings[pageNum].push(currentPath);
-};
-
-// ============================================================
-// 6. Popup التحديد
-// ============================================================
-document.getElementById('pdf-canvas-container').addEventListener('mouseup', e => {
-    if (currentTool !== 'select') return;
-    const text = getSelectedText();
-    const popup = document.getElementById('selection-popup');
-
-    if (text) {
-        popup.dataset.selectedText = text;
-        popup.style.display = 'block';
-        popup.style.left = e.clientX + 'px';
-        popup.style.top = (e.clientY - 40) + 'px';
-    } else {
-        popup.style.display = 'none';
-    }
-});
-
-// ============================================================
-// 7. AI API
-// ============================================================
-async function callAiApi(endpoint, body) {
-    const res = await fetch(`/api/ai/${endpoint}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${USER_TOKEN}`
-        },
-        body: JSON.stringify(body)
-    });
-    if (!res.ok) throw new Error('AI Error');
-    return res.json();
-}
-
-// ============================================================
-// 8. Explain (Popup حقيقي)
-// ============================================================
-document.getElementById('ask-ai-btn').onclick = async () => {
-    const popup = document.getElementById('selection-popup');
-    const text = popup.dataset.selectedText || await getCurrentPageText();
-
-    const result = await callAiApi('ask', {
-        question: `Explain simply for a dental student:\n${text}`
-    });
-
-    const explainBox = document.getElementById('ai-explain-popup');
-    explainBox.innerHTML = `
-        <h4>🤖 Explanation</h4>
-        <p>${result.answer}</p>
-        <button onclick="this.parentElement.style.display='none'">Close</button>
-    `;
-    explainBox.style.display = 'block';
-    explainBox.style.top = '120px';
-    explainBox.style.left = '50%';
-    explainBox.style.transform = 'translateX(-50%)';
-
-    popup.style.display = 'none';
-};
-
-// ============================================================
-// 9. Quiz تفاعلي
-// ============================================================
-document.getElementById('btn-quiz').onclick = async () => {
-    const text = await getCurrentPageText();
-    const result = await callAiApi('generate-quiz-text', { text, count: 5 });
-
-    const container = document.getElementById('ai-results-area');
-    container.innerHTML = '';
-
-    result.questions.forEach(q => {
-        const div = document.createElement('div');
-        div.className = 'note-card';
-        div.innerHTML = `<h4>${q.question}</h4>`;
-        q.options.forEach((opt, i) => {
-            const btn = document.createElement('button');
-            btn.textContent = opt;
-            btn.onclick = () => {
-                btn.style.background =
-                    i === q.correctOptionIndexes[0] ? '#2ecc71' : '#e74c3c';
-            };
-            div.appendChild(btn);
+    try {
+        const res = await callAI('ask', {
+            question: `Explain simply for a dental student:\n${textToExplain}`
         });
-        container.appendChild(div);
-    });
-};
-
-// ============================================================
-// 10. Flashcards Flip
-// ============================================================
-document.getElementById('btn-flashcards').onclick = async () => {
-    const text = await getCurrentPageText();
-    const result = await callAiApi('generate-flashcards-text', { text, count: 5 });
-
-    const container = document.getElementById('ai-results-area');
-    container.innerHTML = '';
-
-    result.flashcards.forEach(card => {
-        const div = document.createElement('div');
-        div.className = 'note-card';
-        let flipped = false;
-        div.innerHTML = `<h4>${card.front}</h4>`;
-        div.onclick = () => {
-            flipped = !flipped;
-            div.innerHTML = flipped ? `<p>${card.back}</p>` : `<h4>${card.front}</h4>`;
-        };
-        container.appendChild(div);
-    });
-};
-
-// ============================================================
-// 11. Mind Map (داخل الصفحة)
-// ============================================================
-document.getElementById('btn-mindmap').onclick = async () => {
-    const text = await getCurrentPageText();
-    const result = await callAiApi('generate-mindmap-text', { text });
-
-    const container = document.getElementById('ai-results-area');
-    container.innerHTML = `<pre>${result.markdown}</pre>`;
-};
-
-// ============================================================
-// 12. الحفظ والاسترجاع
-// ============================================================
-async function saveProgressToCloud() {
-    await fetch(`${API_BASE}/save`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${USER_TOKEN}`
-        },
-        body: JSON.stringify({
-            lessonId: currentFileId,
-            progressData: {
-                drawings: pageDrawings,
-                flashcards: pageFlashcards,
-                lastPage: pageNum
-            }
-        })
-    });
-}
-
-async function loadProgressFromCloud(fileId) {
-    const res = await fetch(`${API_BASE}/?lessonId=${fileId}`, {
-        headers: { 'Authorization': `Bearer ${USER_TOKEN}` }
-    });
-    const data = await res.json();
-    if (data.success && data.data) {
-        pageDrawings = data.data.drawings || {};
-        pageFlashcards = data.data.flashcards || {};
-        pageNum = data.data.lastPage || 1;
+        showExplainModal(res.answer);
+    } catch (e) {
+        showExplainModal("فشل في جلب الشرح. حاول مرة أخرى.");
     }
+});
+
+function showExplainModal(html) {
+    DOM.explainContent.innerHTML = html;
+    DOM.explainPopup.style.display = 'block';
 }
 
-saveCloudBtn.onclick = saveProgressToCloud;
+// زر الكويز (Quiz)
+DOM.btnQuiz.addEventListener('click', async () => {
+    DOM.aiResults.innerHTML = '<div class="loading">⏳ Generating Quiz...</div>';
+
+    try {
+        const text = await getPageText();
+        const res = await callAI('generate-quiz-text', { text, count: 5 });
+
+        DOM.aiResults.innerHTML = '';
+        if (!res.questions || res.questions.length === 0) throw new Error("No questions generated");
+
+        res.questions.forEach((q, idx) => {
+            const card = document.createElement('div');
+            card.className = 'card quiz-card';
+            card.innerHTML = `<h4>Q${idx + 1}: ${q.question}</h4>`;
+
+            q.options.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = opt;
+                btn.onclick = () => {
+                    const isCorrect = i === q.correctOptionIndexes[0];
+                    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+
+                    // إظهار التفسير
+                    const explanationDiv = document.createElement('div');
+                    explanationDiv.className = 'explanation';
+                    explanationDiv.innerHTML = `<b>${isCorrect ? '✅ Excellent!' : '❌ Incorrect'}</b><br>${q.explanation || ''}`;
+                    card.appendChild(explanationDiv);
+
+                    // تعطيل باقي الأزرار
+                    card.querySelectorAll('button').forEach(b => b.disabled = true);
+                };
+                card.appendChild(btn);
+            });
+            DOM.aiResults.appendChild(card);
+        });
+    } catch (e) {
+        // Error is handled in callAI
+    }
+});
+
+// زر الفلاش كارد (Flashcards)
+DOM.btnFlashcards.addEventListener('click', async () => {
+    DOM.aiResults.innerHTML = '<div class="loading">⏳ Generating Flashcards...</div>';
+
+    try {
+        const text = await getPageText();
+        const res = await callAI('generate-flashcards-text', { text, count: 8 });
+
+        DOM.aiResults.innerHTML = '<div class="flashcards-grid"></div>';
+        const grid = DOM.aiResults.querySelector('.flashcards-grid');
+
+        res.flashcards.forEach(fc => {
+            const card = document.createElement('div');
+            card.className = 'card flashcard';
+
+            const content = document.createElement('div');
+            content.className = 'flashcard-content';
+            content.innerHTML = `<div class="front"><b>Q:</b> ${fc.front}</div>`;
+
+            card.onclick = () => {
+                card.classList.toggle('flipped');
+                if (card.classList.contains('flipped')) {
+                    content.innerHTML = `<div class="back"><b>A:</b> ${fc.back}</div>`;
+                    card.style.borderColor = '#3498db';
+                } else {
+                    content.innerHTML = `<div class="front"><b>Q:</b> ${fc.front}</div>`;
+                    card.style.borderColor = '#ddd';
+                }
+            };
+
+            card.appendChild(content);
+            grid.appendChild(card);
+        });
+    } catch (e) { }
+});
+
+// زر الخريطة الذهنية (Mind Map)
+DOM.btnMindmap.addEventListener('click', async () => {
+    DOM.aiResults.innerHTML = '<div class="loading">⏳ Structuring Mind Map...</div>';
+
+    try {
+        const text = await getPageText();
+        const res = await callAI('generate-mindmap-text', { text });
+
+        // تحسين العرض بدلاً من pre بسيط
+        DOM.aiResults.innerHTML = `
+            <div class="card mindmap-container">
+                <h4>Markdown Structure</h4>
+                <pre>${res.markdown}</pre>
+                <small>Tip: Copy this into a Markdown viewer like Markmap.</small>
+            </div>
+        `;
+    } catch (e) { }
+});
