@@ -4,222 +4,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Study Core</title>
+    <title>Smart Study | Intelligent Learning</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            /* Color Palette */
+            --primary: #2563eb;
+            /* Royal Blue */
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            /* Slate Gray */
+            --bg-light: #f1f5f9;
+            /* Light Gray Blue */
+            --white: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --accent-orange: #f59e0b;
+            /* For Notes/Flashcards */
+            --accent-green: #10b981;
+            /* For Success/Quiz */
+            --accent-purple: #8b5cf6;
+            /* For MindMaps */
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
             height: 100vh;
             overflow: hidden;
         }
 
-        /* --- 1. شاشة البداية (Start Screen) --- */
+        /* ================= Scrollbar Styling ================= */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* ================= Start Screen ================= */
         #start-container {
-            width: 100%;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa;
-            color: #333;
-            animation: fadeIn 0.5s;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            animation: fadeIn 0.6s ease-out;
         }
 
         .upload-card {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            background: var(--white);
+            padding: 60px 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
             text-align: center;
-            border: 2px dashed #dce1e6;
             max-width: 450px;
             width: 90%;
-            transition: 0.3s;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border);
         }
 
         .upload-card:hover {
-            border-color: #3498db;
             transform: translateY(-5px);
         }
 
-        .icon-large {
-            font-size: 70px;
-            color: #3498db;
-            margin-bottom: 25px;
+        .upload-icon-wrapper {
+            width: 100px;
+            height: 100px;
+            background: #eff6ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .upload-card i {
+            font-size: 48px;
+            color: var(--primary);
+        }
+
+        .upload-card h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .upload-card p {
+            color: var(--text-light);
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.5;
         }
 
         .main-btn {
-            background-color: #3498db;
-            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
             border: none;
-            padding: 15px 40px;
-            border-radius: 30px;
-            font-size: 18px;
-            font-weight: bold;
+            background: var(--primary);
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            margin-top: 25px;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-            transition: all 0.3s ease;
+            transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            width: 100%;
+            justify-content: center;
         }
 
         .main-btn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 10px -1px rgba(37, 99, 235, 0.3);
         }
 
-        /* --- 2. واجهة الدراسة الرئيسية (Main Layout) --- */
+        /* ================= Main Layout ================= */
         #main-layout {
             display: none;
+            /* Controlled by JS */
             height: 100vh;
             width: 100vw;
-            animation: fadeIn 0.5s;
+            display: flex;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
             to {
                 opacity: 1;
             }
         }
 
-        /* --- تقسيم الشاشة --- */
+        /* Left Section: PDF Viewer */
         #viewer-section {
             flex: 7;
             display: flex;
             flex-direction: column;
-            border-right: 1px solid #e0e0e0;
+            border-right: 1px solid var(--border);
             position: relative;
+            background: #525659;
+            /* Standard PDF Viewer dark grey */
         }
 
-        #viewer-toolbar {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            z-index: 20;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Right Section: Sidebar */
         #smart-sidebar {
             flex: 3;
-            background-color: #fff;
+            background: var(--white);
             display: flex;
             flex-direction: column;
-            min-width: 300px;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
-            z-index: 30;
+            min-width: 350px;
+            max-width: 450px;
+            box-shadow: -4px 0 15px rgba(0, 0, 0, 0.05);
+            z-index: 20;
         }
 
-        #sidebar-header {
-            background-color: #34495e;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.1em;
-            letter-spacing: 0.5px;
-        }
-
-        #sidebar-tabs {
-            display: flex;
-            border-bottom: 2px solid #ecf0f1;
-        }
-
-        .tab-btn {
-            flex: 1;
+        /* ================= Toolbar ================= */
+        #viewer-toolbar {
+            background: #333639;
             padding: 12px;
-            border: none;
-            background: #f8f9fa;
-            cursor: pointer;
-            font-weight: 600;
-            color: #7f8c8d;
-            transition: 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: #fff;
         }
 
-        .tab-btn:hover {
-            background: #ecf0f1;
-            color: #2c3e50;
-        }
-
-        .tab-btn.active {
-            background: #fff;
-            border-bottom: 3px solid #3498db;
-            color: #3498db;
-        }
-
-        #sidebar-content {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background-color: #fff;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
-
-        /* أدوات الشريط العلوي */
         .tool-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .tool-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
         }
 
         .tool-btn.active {
-            background-color: #3498db;
-            border-color: #3498db;
-            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
         }
 
-        #save-cloud-btn {
-            background-color: #27ae60;
-            border-color: #2ecc71;
-            font-weight: bold;
+        .page-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin: 0 15px;
+            font-size: 14px;
+            font-family: monospace;
         }
 
-        #save-cloud-btn:hover {
-            background-color: #2ecc71;
-        }
-
-        /* منطقة الرسم والـ PDF */
+        /* ================= PDF Canvas Area ================= */
         #pdf-canvas-container {
-            flex-grow: 1;
+            flex: 1;
             overflow: auto;
-            background-color: #525659;
             display: flex;
             justify-content: center;
-            padding: 30px 0;
+            padding: 40px 20px;
         }
 
         #pdf-layers-wrapper {
             position: relative;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         #pdf-canvas,
@@ -232,72 +263,294 @@
             height: 100%;
         }
 
-        #drawing-canvas {
-            z-index: 10;
-            pointer-events: none;
-        }
-
         .textLayer {
-            z-index: 5;
             opacity: 0.2;
-            line-height: 1.0;
-            color: transparent;
+            mix-blend-mode: multiply;
         }
 
-        .textLayer.drawing-active {
-            user-select: none;
-        }
-
-        /* القائمة المنبثقة */
-        #selection-popup {
-            position: absolute;
-            display: none;
-            background-color: #34495e;
-            padding: 6px;
-            border-radius: 8px;
-            z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        #selection-popup button {
-            color: white;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px 12px;
-            font-size: 14px;
+        /* ================= Sidebar Components ================= */
+        #sidebar-header {
+            background: var(--white);
+            color: var(--text-main);
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            font-weight: 700;
+            font-size: 18px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            border-radius: 4px;
+            gap: 10px;
+        }
+
+        #sidebar-header i {
+            color: var(--primary);
+        }
+
+        /* Tabs */
+        #sidebar-tabs {
+            display: flex;
+            background: #f8fafc;
+            padding: 6px;
+            gap: 5px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            border-radius: 8px;
             transition: 0.2s;
+            font-size: 14px;
         }
 
-        #selection-popup button:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: #3498db;
+        .tab-btn:hover {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--text-main);
         }
 
-        /* كروت الملاحظات */
-        .note-card {
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
+        .tab-btn.active {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Sidebar Content */
+        #sidebar-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8fafc;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= AI Tools & Results ================= */
+        .ai-actions {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .ai-actions .main-btn {
+            font-size: 14px;
             padding: 12px;
-            margin-bottom: 12px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            justify-content: flex-start;
+        }
+
+        /* Specific button colors */
+        #btn-flashcards {
+            background-color: var(--accent-orange);
+        }
+
+        #btn-flashcards:hover {
+            background-color: #d97706;
+        }
+
+        #btn-mindmap {
+            background-color: var(--accent-purple);
+        }
+
+        #btn-mindmap:hover {
+            background-color: #7c3aed;
+        }
+
+        /* Result Cards (Generated by JS) */
+        .note-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            /* Default */
+            transition: transform 0.2s;
+        }
+
+        .note-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
 
         .note-card h4 {
-            margin: 0 0 5px 0;
-            color: #2c3e50;
-            font-size: 0.95em;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+            font-size: 15px;
+            line-height: 1.4;
         }
 
-        .note-card p {
+        .note-card p,
+        .note-card li {
             margin: 0;
-            color: #555;
-            font-size: 0.9em;
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .note-card ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 50px;
+        }
+
+        .empty-state i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        /* ================= Popups ================= */
+        /* Selection Tooltip */
+        #selection-popup {
+            position: absolute;
+            display: none;
+            background: #1e293b;
+            padding: 8px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            gap: 5px;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #selection-popup button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #selection-popup button:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Modal Backdrop */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            z-index: 9998;
+            display: none;
+        }
+
+        /* Explain Popup */
+        #ai-explain-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 500px;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: none;
+            /* JS Toggles this */
+            z-index: 9999;
+            animation: slideUpFade 0.3s ease;
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        #ai-explain-popup h3 {
+            margin: 0 0 15px 0;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #ai-explain-popup h3 i {
+            color: var(--accent-purple);
+        }
+
+        #ai-explain-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-light);
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .close-btn:hover {
+            background: #475569;
         }
     </style>
 </head>
@@ -306,88 +559,55 @@
 
     <div id="start-container">
         <div class="upload-card">
-            <div class="icon-large"><i class="fas fa-book-reader"></i></div>
-            <h1 style="margin: 0; color: #2c3e50; font-size: 2em;">Smart Study</h1>
-            <p style="color: #7f8c8d; margin-top: 15px; line-height: 1.6;">
-                Upload your lecture PDF to unlock AI summaries, quizzes, and smart notes.
-            </p>
+            <div class="upload-icon-wrapper">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h1>Smart Study Hub</h1>
+            <p>Upload your lecture PDF to unlock AI-powered summaries, quizzes, and smart flashcards.</p>
 
-            <input type="file" id="file-input" accept="application/pdf" style="display: none;">
+            <input type="file" id="file-input" accept="application/pdf" hidden>
             <button class="main-btn" onclick="document.getElementById('file-input').click()">
-                <i class="fas fa-cloud-upload-alt"></i> Select PDF from Device
+                <i class="fas fa-folder-open"></i> Select PDF File
             </button>
-            <p style="font-size: 13px; color: #bdc3c7; margin-top: 25px;">Supported format: PDF</p>
+            <p style="font-size: 13px; color: #94a3b8; margin-top: 20px; margin-bottom: 0;">Supported Formats: PDF</p>
         </div>
     </div>
 
-    <div id="main-layout">
-
-        <div id="smart-sidebar">
-            <div id="sidebar-header"><i class="fas fa-brain"></i> AI Assistant</div>
-            <div id="sidebar-tabs">
-                <button class="tab-btn active" onclick="switchTab('notes')">My Notes</button>
-                <button class="tab-btn" onclick="switchTab('ai')">AI Tools</button>
-            </div>
-            <div id="sidebar-content">
-                <div id="notes-tab" class="tab-content active">
-                    <div id="flashcards-container">
-                        <p style="color:#bdc3c7; text-align:center; margin-top:20px;">
-                            <i class="fas fa-highlighter" style="font-size:2em; margin-bottom:10px; display:block;"></i>
-                            Select text in the PDF to create notes.
-                        </p>
-                    </div>
-                </div>
-                <div id="ai-tab" class="tab-content">
-
-                    <button class="main-btn" id="btn-quiz"
-                        style="width:100%; padding:12px; font-size:15px; margin:0 0 10px 0;">
-                        <i class="fas fa-question-circle"></i> Generate Quiz
-                    </button>
-
-                    <button class="main-btn" id="btn-flashcards"
-                        style="width:100%; padding:12px; font-size:15px; margin:0 0 10px 0; background-color: #e67e22;">
-                        <i class="fas fa-layer-group"></i> Generate Flashcards
-                    </button>
-
-                    <button class="main-btn" id="btn-mindmap"
-                        style="width:100%; padding:12px; font-size:15px; margin:0 0 15px 0; background-color: #9b59b6;">
-                        <i class="fas fa-project-diagram"></i> Generate Mind Map
-                    </button>
-
-                    <div id="ai-results-area" style="margin-top: 15px;"></div>
-                </div>
-            </div>
-        </div>
+    <div id="main-layout" style="display: none;">
 
         <div id="viewer-section">
             <div id="viewer-toolbar">
-                <button class="tool-btn" onclick="location.reload()" title="Open New File"><i
-                        class="fas fa-folder-open"></i></button>
+                <button class="tool-btn" onclick="document.getElementById('file-input').click()" title="Open New File">
+                    <i class="fas fa-folder-open"></i>
+                </button>
+                <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 5px;"></div>
 
-                <span style="border-left:1px solid #555; margin:0 10px; height: 20px;"></span>
+                <button class="tool-btn" id="save-cloud-btn" title="Save Progress">
+                    <i class="fas fa-save"></i>
+                </button>
 
-                <button class="tool-btn" id="save-cloud-btn"><i class="fas fa-save"></i> Save Progress</button>
+                <div class="page-controls">
+                    <button class="tool-btn" id="prev-page" style="width: 25px; height: 25px; border:none;"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <span>Page <span id="page-num" style="color:white; font-weight:bold;">0</span> / <span
+                            id="page-count">0</span></span>
+                    <button class="tool-btn" id="next-page" style="width: 25px; height: 25px; border:none;"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
 
-                <span style="border-left:1px solid #555; margin:0 10px; height: 20px;"></span>
-
-                <button class="tool-btn" id="prev-page"><i class="fas fa-chevron-left"></i></button>
-                <span style="font-size:14px;"> <span id="page-num">0</span> / <span id="page-count">0</span> </span>
-                <button class="tool-btn" id="next-page"><i class="fas fa-chevron-right"></i></button>
-
-                <span style="border-left:1px solid #555; margin:0 10px; height: 20px;"></span>
+                <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 5px;"></div>
 
                 <button class="tool-btn active" id="select-btn" title="Select Text"><i
                         class="fas fa-mouse-pointer"></i></button>
-                <button class="tool-btn" id="highlight-btn" title="Highlighter"><i
-                        class="fas fa-highlighter"></i></button>
-                <button class="tool-btn" id="pen-btn" title="Pen"><i class="fas fa-pencil-alt"></i></button>
-                <button class="tool-btn" id="conceal-btn" title="Hide/Reveal"><i class="fas fa-eye-slash"></i></button>
+                <button class="tool-btn" id="pen-btn" title="Draw"><i class="fas fa-pencil-alt"></i></button>
+                <button class="tool-btn" id="conceal-btn" title="Hide Area"><i class="fas fa-eye-slash"></i></button>
                 <button class="tool-btn" id="erase-btn" title="Eraser"><i class="fas fa-eraser"></i></button>
 
                 <input type="color" id="color-picker" value="#FFFF00"
-                    style="width:30px; height:30px; border:none; background:none; cursor:pointer;">
-                <button class="tool-btn" id="clear-drawings-btn" title="Clear Page"><i
-                        class="fas fa-trash"></i></button>
+                    style="width: 30px; height: 30px; border: none; background: transparent; cursor: pointer; border-radius: 4px;">
+
+                <button class="tool-btn" id="clear-drawings-btn" title="Clear Page Drawings" style="color: #ef4444;"><i
+                        class="fas fa-trash-alt"></i></button>
             </div>
 
             <div id="pdf-canvas-container">
@@ -398,24 +618,115 @@
                 </div>
             </div>
         </div>
+
+        <div id="smart-sidebar">
+            <div id="sidebar-header">
+                <i class="fas fa-brain"></i> AI Companion
+            </div>
+
+            <div id="sidebar-tabs">
+                <button class="tab-btn active" onclick="switchTab('notes')">My Notes</button>
+                <button class="tab-btn" onclick="switchTab('ai')">AI Tools</button>
+            </div>
+
+            <div id="sidebar-content">
+                <div id="notes-tab" class="tab-content active">
+                    <div id="flashcards-container">
+                        <div class="empty-state">
+                            <i class="far fa-sticky-note"></i>
+                            <p>No notes yet.<br>Select text on the PDF to create one.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ai-tab" class="tab-content">
+                    <div class="ai-actions">
+                        <button class="main-btn" id="btn-quiz">
+                            <i class="fas fa-question-circle"></i> Generate Quiz from Page
+                        </button>
+                        <button class="main-btn" id="btn-flashcards">
+                            <i class="fas fa-layer-group"></i> Generate Flashcards
+                        </button>
+                        <button class="main-btn" id="btn-mindmap">
+                            <i class="fas fa-project-diagram"></i> Create Mind Map
+                        </button>
+                    </div>
+
+                    <h4
+                        style="margin: 20px 0 10px; font-size: 14px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px;">
+                        Results</h4>
+                    <div id="ai-results-area">
+                        <div class="empty-state" style="margin-top: 20px;">
+                            <i class="fas fa-magic"></i>
+                            <p>Use the buttons above to generate AI content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="selection-popup">
         <button id="ask-ai-btn"><i class="fas fa-robot"></i> Explain</button>
         <button id="translate-btn"><i class="fas fa-language"></i> Translate</button>
-        <button id="create-flashcard-btn"><i class="fas fa-sticky-note"></i> Add Note</button>
+        <button id="create-flashcard-btn"><i class="fas fa-plus-circle"></i> Note</button>
+    </div>
+
+    <div class="modal-backdrop" id="modal-backdrop"
+        onclick="document.getElementById('ai-explain-popup').style.display='none'; this.style.display='none';"></div>
+
+    <div id="ai-explain-popup">
+        <h3><i class="fas fa-sparkles"></i> AI Insight</h3>
+        <div id="ai-explain-content">Loading...</div>
+        <button class="close-btn"
+            onclick="document.getElementById('ai-explain-popup').style.display='none'; document.getElementById('modal-backdrop').style.display='none';">Close</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <script src="pdf-viewer.js"></script>
+
     <script>
-        function switchTab(t) {
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(t + '-tab').classList.add('active');
-            event.target.classList.add('active');
+        // Simple Tab Switcher Logic
+        function switchTab(tabName) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Deactivate all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Activate specific tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Logic to show backdrop when explanation popup opens
+        const originalObserver = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.type === "attributes" && mutation.attributeName === "style") {
+                    const popup = document.getElementById('ai-explain-popup');
+                    const backdrop = document.getElementById('modal-backdrop');
+                    if (popup.style.display === 'block' || popup.style.display === '') { // '' implies block via CSS if not set
+                        // Check computed style to be sure
+                        if (window.getComputedStyle(popup).display !== 'none') {
+                            backdrop.style.display = 'block';
+                        }
+                    } else {
+                        backdrop.style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // Attach observer to popup to handle backdrop automatically when JS shows it
+        const popupElement = document.getElementById('ai-explain-popup');
+        if (popupElement) {
+            originalObserver.observe(popupElement, { attributes: true });
         }
     </script>
+
 </body>
 
 </html>
