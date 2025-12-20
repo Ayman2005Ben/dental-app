@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Dental Study | AI Viewer</title>
+    <title>Smart Dental Viewer | Final Version</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
@@ -36,11 +39,12 @@
             display: flex;
         }
 
-        /* منطقة الـ PDF */
+        /* --- 1. منطقة عرض الـ PDF (اليسار) --- */
         #viewer-container {
             flex: 1;
             background: var(--bg-viewer);
             overflow-y: auto;
+            /* سكرول عمودي */
             display: flex;
             justify-content: center;
             position: relative;
@@ -51,32 +55,30 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            /* مسافة بين الصفحات */
             align-items: center;
         }
 
         .page-container {
             position: relative;
             background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            /* الحجم سيتم ضبطه بدقة من JS */
         }
 
-        canvas {
-            display: block;
-        }
-
-        /* طبقة نصوص مخفية (فقط للنسخ إذا احتاج الطالب) */
+        /* --- 2. إصلاح طبقة النصوص (التحديد الأصفر) --- */
         .textLayer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: transparent;
-            line-height: 1.0;
-            opacity: 0.1;
+            opacity: 1;
+            mix-blend-mode: multiply;
         }
 
-        /* الشريط الجانبي */
+        /* جعل لون التحديد أصفر شفاف */
+        .textLayer ::selection {
+            background: rgba(255, 235, 59, 0.4);
+            color: transparent;
+        }
+
+        /* --- 3. الشريط الجانبي (اليمين) --- */
         #sidebar {
             width: 400px;
             background: var(--bg-sidebar);
@@ -95,15 +97,6 @@
             background: #f8fafc;
         }
 
-        #sidebar-header h3 {
-            margin: 0;
-            color: var(--primary);
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
         .upload-btn {
             background: white;
             border: 1px solid var(--border);
@@ -111,8 +104,8 @@
             border-radius: 6px;
             cursor: pointer;
             color: var(--text-main);
-            font-size: 12px;
             font-weight: 600;
+            font-size: 13px;
         }
 
         /* التبويبات */
@@ -130,7 +123,7 @@
             cursor: pointer;
             font-weight: 600;
             color: #64748b;
-            border-bottom: 2px solid transparent;
+            border-bottom: 3px solid transparent;
         }
 
         .tab-btn.active {
@@ -149,7 +142,7 @@
             display: block;
         }
 
-        /* التحكم */
+        /* أدوات التحكم */
         .control-panel {
             background: #f8fafc;
             padding: 15px;
@@ -169,7 +162,7 @@
         .toggle-row {
             display: flex;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .toggle-btn {
@@ -186,10 +179,6 @@
             background: var(--primary);
             color: white;
             border-color: var(--primary);
-        }
-
-        input[type=range] {
-            width: 100%;
         }
 
         .action-grid {
@@ -210,14 +199,9 @@
             justify-content: center;
             gap: 6px;
             font-size: 13px;
-            width: 100%;
         }
 
         /* النتائج */
-        #results-area {
-            margin-top: 20px;
-        }
-
         .result-card {
             background: white;
             border: 1px solid var(--border);
@@ -233,12 +217,18 @@
             margin-bottom: 5px;
             cursor: pointer;
             font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .quiz-opt:hover {
+            background: #f8fafc;
         }
 
         .quiz-opt.selected {
             background: #eff6ff;
             border-color: var(--primary);
             color: var(--primary);
+            font-weight: 600;
         }
 
         .quiz-opt.correct {
@@ -251,7 +241,7 @@
             border-color: #ef4444;
         }
 
-        /* شاشة التحميل */
+        /* التحميل */
         .loader {
             text-align: center;
             color: var(--text-main);
@@ -274,7 +264,9 @@
 
     <div id="sidebar">
         <div id="sidebar-header">
-            <h3><i class="fas fa-tooth"></i> Dental AI</h3>
+            <h3 style="margin:0; color:var(--primary); font-size:16px;">
+                <i class="fas fa-tooth"></i> Dental AI
+            </h3>
             <button class="upload-btn" onclick="document.getElementById('file-input').click()">
                 <i class="fas fa-folder-open"></i> Upload
             </button>
@@ -288,15 +280,16 @@
 
         <div id="tools-tab" class="tab-content active">
             <div class="control-panel">
-                <label class="control-label">Source</label>
+                <label class="control-label">Source du contenu</label>
                 <div class="toggle-row">
                     <button class="toggle-btn active" id="scope-page" onclick="setScope('page')">Page Actuelle</button>
                     <button class="toggle-btn" id="scope-full" onclick="setScope('full')">Tout le PDF</button>
                 </div>
+
                 <div id="count-control" style="display: none;">
                     <label class="control-label">Quantité: <span id="count-val">10</span></label>
                     <input type="range" id="count-slider" min="1" max="25" value="10"
-                        oninput="document.getElementById('count-val').textContent = this.value">
+                        oninput="document.getElementById('count-val').textContent = this.value" style="width:100%">
                 </div>
             </div>
 
@@ -311,24 +304,28 @@
             </div>
 
             <button class="main-btn" id="btn-download-results" onclick="downloadResultsAsPDF()"
-                style="background: #334155; margin-top: 15px; display:none;">
-                <i class="fas fa-file-download"></i> Télécharger PDF
+                style="background: #334155; margin-top: 15px; width:100%; display:none;">
+                <i class="fas fa-file-download"></i> Télécharger en PDF
             </button>
 
-            <div id="results-area"></div>
+            <div id="results-area" style="margin-top:20px;"></div>
         </div>
 
         <div id="mindmap-tab" class="tab-content">
-            <button class="main-btn" onclick="generateMindMap()" style="background: #8b5cf6; margin-bottom: 15px;">
+            <button class="main-btn" onclick="generateMindMap()"
+                style="background: #8b5cf6; width: 100%; margin-bottom: 15px;">
                 <i class="fas fa-project-diagram"></i> Créer Mind Map
             </button>
-            <div id="mindmap-svg-container" style="height: 500px; border: 1px solid #e2e8f0; border-radius: 8px;"></div>
+            <div id="mindmap-svg-container"
+                style="height: 500px; border: 1px solid #e2e8f0; border-radius: 8px; background:white;"></div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <script src="pdf-viewer.js"></script>
+
     <script>
+        // كود بسيط لتبديل التبويبات
         function setTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
