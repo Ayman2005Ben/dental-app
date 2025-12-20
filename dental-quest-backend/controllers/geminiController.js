@@ -1,6 +1,6 @@
 // controllers/geminiController.js
 
-const { parseKeys } = require('../utils/keyPool'); // removed makePool as we will iterate manually
+const { parseKeys } = require('../utils/keyPool');
 const pdf = require('pdf-parse');
 const { groqChat } = require('../utils/aiClient.js');
 const fetch = require('node-fetch');
@@ -23,7 +23,6 @@ async function executeGeminiRequest(model, requestBody) {
 
   // الدوران على جميع المفاتيح المتوفرة
   for (let i = 0; i < geminiKeys.length; i++) {
-    // استخراج نص المفتاح (سواء كان كائن أو نص مباشرة)
     const apiKey = geminiKeys[i].key || geminiKeys[i];
 
     try {
@@ -37,13 +36,10 @@ async function executeGeminiRequest(model, requestBody) {
 
       const data = await response.json();
 
-      // إذا نجح الطلب (Status 200) ولم يكن هناك خطأ في الرد
       if (response.ok && !data.error) {
-        return data; // مبروك! نرجع البيانات ونوقف المحاولات
+        return data;
       }
 
-      // إذا كان الخطأ 429 (Too Many Requests) أو مشاكل سيرفر، نعتبره فشل للمفتاح ونكمل
-      // أما إذا كان الخطأ 400 (مشكلة في الداتا المرسلة) غالباً لن يحلها تغيير المفتاح، لكن سنجرب التالي للاحتياط
       console.warn(`⚠️ Key #${i + 1} failed (Status: ${response.status}). Trying next key... Error: ${data.error?.message || 'Unknown'}`);
       lastError = new Error(data.error?.message || `API Error ${response.status}`);
 
@@ -53,7 +49,6 @@ async function executeGeminiRequest(model, requestBody) {
     }
   }
 
-  // إذا وصلنا هنا، يعني جربنا كل المفاتيح وكلها فشلت
   throw new Error(`All Gemini keys failed. Last error: ${lastError?.message}`);
 }
 
@@ -68,7 +63,7 @@ async function logAiRequest(req, task, prompt, status, response = '', tokenCount
       response: response?.toString().slice(0, 2000),
       status,
       tokenCount,
-      duration // تم إضافة المدة الزمنية
+      duration
     });
   } catch (err) {
     console.error('⚠️ Failed to log AI request:', err.message);
@@ -84,6 +79,10 @@ function checkAiAccess(req, res) {
 }
 
 
+// ============================================================
+// 1. دوال التعامل مع الوسائط والملفات (القديمة)
+// ============================================================
+
 // --- 🖼️ تحليل الصور ---
 exports.handleImageQuery = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
@@ -96,7 +95,6 @@ exports.handleImageQuery = async (req, res) => {
     };
 
     console.log('🖼️ Sending Image request with Failover...');
-    // استخدام الدالة الجديدة بدلاً من fetch المباشر
     const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
     const answer = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.';
@@ -133,7 +131,7 @@ exports.handleAudioQuery = async (req, res) => {
   }
 };
 
-// --- 🧠 الخريطة الذهنية ---
+// --- 🧠 الخريطة الذهنية (من ملف PDF) ---
 exports.generateMindMap = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
@@ -145,7 +143,6 @@ exports.generateMindMap = async (req, res) => {
     prompt = `Summarize the following text as a hierarchical mind map in Markdown syntax. Use "#" for the main title, "##" for main topics, and "-" for subtopics. The main title should be the core subject of the text. The language must be the same as the source text. Do NOT include any explanation, only the structured mind map text in clean Markdown. TEXT:\n---\n${data.text.substring(0, 30000)}\n---`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
-
     const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
     const markdownContent = responseData.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/```markdown|```/g, '').trim() || '# Error\n- Could not generate mind map.';
@@ -158,57 +155,30 @@ exports.generateMindMap = async (req, res) => {
   }
 };
 
-// --- ❓ إنشاء Quiz ---
+// --- ❓ إنشاء Quiz (من ملف PDF) ---
 exports.generateQuiz = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
     console.log('📘 Sending Quiz request with Failover...');
-    const { count = 10, language = 'the same language as the document' } = req.body;
+    const { count = 10 } = req.body;
     const questionCount = Math.min(parseInt(count, 10), 20);
     if (!req.file) return res.status(400).json({ message: 'No PDF file uploaded.' });
-
-    if (!req.file.buffer || req.file.buffer.length === 0) {
-      return res.status(400).json({ message: 'The uploaded PDF file is empty.' });
-    }
 
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
 
     prompt = `
-You are an expert quiz designer known for creating brutally difficult exams that push the limits of even the most prepared students. Your task is to create a final exam for advanced dentistry students based on the provided text. The goal is maximum difficulty.
-
-Generate exactly ${questionCount} multiple-choice questions in French.
-
-**NON-NEGOTIABLE RULES FOR EVERY QUESTION:**
-1.  **Extreme Difficulty:** Every single question must be exceptionally hard. They must target the most obscure, easy-to-miss details: specific percentages, uncommon classifications, exceptions to rules, subtle differences between similar concepts, and data points hidden in dense text. Avoid general knowledge questions entirely.
-2.  **Mandatory Multiple Correct Answers:** Every question MUST have two or three correct answers. No question should have only one correct answer. This is a critical requirement.
-3.  **Masterful Traps:** All incorrect options (distractors) must be highly plausible and cleverly designed to deceive students who have only a superficial understanding. Use common misconceptions, slightly incorrect numbers, or options that are correct in a different context as traps.
-
-**CRITICAL OUTPUT FORMAT:**
--   Your entire response MUST be a single, valid JSON array. Do not include any introductory text, explanations, conversational filler like "Here is the quiz", or markdown code fences such as \`\`\`json.
--   Each object in the array represents one question and must have these exact keys:
-    - "question": The question text (string).
-    - "options": An array of 4-5 answer choices (array of strings).
-    - "correctOptionIndexes": An array containing the 0-based indexes of ALL correct answers. Since every question has multiple correct answers, this array will always contain 2 or 3 numbers (e.g., \`[1, 3]\` or \`[0, 2, 4]\`).
-    - "explanation": A detailed explanation that clearly justifies why EACH of the correct answers is right and why the incorrect options are wrong, referencing the source text.
-
-**TEXT TO ANALYZE:**
----
-${data.text.substring(0, 30000)}
----
-`;
+    Create exactly ${questionCount} multiple-choice questions based on this text.
+    Format: JSON array of objects { question, options (array), correctOptionIndexes (array of indexes), explanation }.
+    Return ONLY JSON.
+    TEXT:\n---\n${data.text.substring(0, 30000)}\n---`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
     const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
-    if (!responseData.candidates?.[0]?.content?.parts?.[0]?.text) throw new Error("Gemini returned an empty or invalid response.");
-
-    const quizText = responseData.candidates[0].content.parts[0].text;
-
-    let cleanedText = quizText.replace(/```json|```/g, '').trim();
-    cleanedText = cleanedText.replace(/[\x00-\x1F\x7F-\x9F]/g, ""); // تنظيف
-
+    const quizText = responseData.candidates?.[0]?.content?.parts?.[0]?.text;
+    const cleanedText = quizText.replace(/```json|```/g, '').trim();
     const quizJson = JSON.parse(cleanedText);
 
     res.status(200).json(quizJson);
@@ -217,18 +187,17 @@ ${data.text.substring(0, 30000)}
   } catch (error) {
     console.error('[Gemini Quiz Error]:', error);
     await logAiRequest(req, 'quiz', prompt, 'error', error.message);
-    res.status(500).json({ message: 'Failed to generate quiz with Gemini.', errorDetail: error.message });
+    res.status(500).json({ message: 'Failed to generate quiz.', errorDetail: error.message });
   }
 };
 
-// --- 💡 إنشاء Flashcards ---
+// --- 💡 إنشاء Flashcards (من ملف PDF - باستخدام Groq) ---
 exports.generateFlashcards = async (req, res) => {
-  // هذه الدالة تستخدم Groq وليس Gemini، لذا تبقى كما هي
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
-    console.log('💡 Sending professional flashcards request to Groq...');
-    const { count = 10, language = 'English' } = req.body;
+    console.log('💡 Sending flashcards request to Groq...');
+    const { count = 10 } = req.body;
     const cardCount = Math.min(parseInt(count, 10), 25);
 
     if (!req.file) return res.status(400).json({ message: 'No PDF file uploaded.' });
@@ -236,25 +205,9 @@ exports.generateFlashcards = async (req, res) => {
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
 
     prompt = `
-You are an AI assistant tasked with creating extremely difficult flashcards for advanced students from the provided text. Your goal is to force deep learning and memorization of non-obvious information.
-
-From the text below, extract exactly ${cardCount} flashcards in ${language}.
-
-**MANDATORY RULES FOR ALL FLASHCARDS:**
-1.  **[NEW] Expert Difficulty & Complexity:** Your goal is to create expert-level, exam-style "trap questions".
-2.  **[NEW] Focus on Synthesis, Not Recall:** The 'front' of the card MUST force the student to think.
-3.  **[NEW] Detailed Answers:** The 'back' must contain the detailed, comprehensive answer.
-4.  **[EXISTING] Ignore Metadata.**
-
-**CRITICAL OUTPUT FORMAT:**
--   The final output MUST be a valid JSON array of objects and nothing else.
--   Each object must have exactly two keys: "front" and "back".
-
-**TEXT TO ANALYZE:**
----
-${data.text.substring(0, 30000)}
----
-`;
+    Create exactly ${cardCount} flashcards from this text.
+    Format: JSON array of objects { front, back }. Return ONLY JSON.
+    TEXT:\n---\n${data.text.substring(0, 30000)}\n---`;
 
     const responseText = await groqChat({ messages: [{ role: 'user', content: prompt }], json: true });
     const flashcardsJson = JSON.parse(responseText.replace(/```json|```/g, '').trim());
@@ -265,13 +218,12 @@ ${data.text.substring(0, 30000)}
   } catch (error) {
     console.error('[Groq Flashcards Error]:', error);
     await logAiRequest(req, 'flashcards', prompt, 'error', error.message);
-    res.status(500).json({ message: 'Failed to generate flashcards with Groq.', errorDetail: error.message });
+    res.status(500).json({ message: 'Failed to generate flashcards.', errorDetail: error.message });
   }
 };
 
 // --- 🌍 الترجمة ---
 exports.translateContent = async (req, res) => {
-  // تستخدم Groq - تبقى كما هي
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
@@ -295,7 +247,7 @@ exports.translateContent = async (req, res) => {
   }
 };
 
-// --- 📝 إنشاء ملخص ---
+// --- 📝 إنشاء ملخص (من ملف PDF) ---
 exports.generateSummary = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
@@ -304,8 +256,7 @@ exports.generateSummary = async (req, res) => {
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
 
-    prompt = `Summarize the following academic text for dentistry students in clear, well-structured paragraphs. Use Markdown for headings and bullet points if necessary.\n\nTEXT:\n${data.text.substring(0, 30000)}`;
-    console.log('🧩 Sending Summary request with Failover...');
+    prompt = `Summarize the following academic text for dentistry students in clear, well-structured paragraphs. Use Markdown.\n\nTEXT:\n${data.text.substring(0, 30000)}`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
     const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
@@ -345,7 +296,6 @@ exports.handleSculptureEvaluation = async (req, res) => {
       const pdfBuffer = fs.readFileSync(pdfPath);
       const pdfData = await pdf(pdfBuffer);
       referenceText = pdfData.text;
-      if (!referenceText) throw new Error('PDF text is empty');
     } catch (pdfErr) {
       console.error("CRITICAL PDF LOAD ERROR:", pdfErr);
       throw new Error('Could not load the reference PDF document.');
@@ -356,28 +306,10 @@ exports.handleSculptureEvaluation = async (req, res) => {
     }));
 
     builtPrompt = `
-You are a strict examiner in dental anatomy. Your *only* source of truth is the provided reference text ("Les planches des dents").
-I am sending you ${req.files.length} images of a single soap-carved tooth.
-You must also use this reference text to evaluate them:
---- REFERENCE TEXT START ---
-${referenceText.substring(0, 30000)}
---- REFERENCE TEXT END ---
-
---- ANALYSIS TASKS ---
-1. Analyze all images for a complete understanding.
-2. Provide a detailed evaluation (in French) covering all anatomical errors compared to the REFERENCE TEXT.
-3. Give a final numeric grade out of 20.
-4. **CRITICAL TASK:** Identify 3-5 specific anatomical errors on the **first image**. For each error, provide its (x, y) coordinate and a brief comment. The (x, y) coordinates should be percentages (from 0.0 to 100.0) relative to the image dimensions.
-
---- CRITICAL OUTPUT FORMAT ---
-You MUST respond with a single, valid JSON object.
-{
-  "evaluationText": "Your full text evaluation in French...",
-  "grade": <numeric_grade_out_of_20>,
-  "errorCoordinates": [ { "x": 50.5, "y": 30.2, "comment": "..." } ]
-}
-If you cannot find any errors, return an empty array: "errorCoordinates": []
-    `;
+    Evaluate these images of a soap-carved tooth based on the reference text.
+    Return a single JSON object:
+    { "evaluationText": "...", "grade": number, "errorCoordinates": [{ "x": 50, "y": 30, "comment": "..." }] }
+    REFERENCE:\n${referenceText.substring(0, 30000)}`;
 
     const requestParts = [{ text: builtPrompt }, ...imageParts];
     const requestBody = {
@@ -385,39 +317,19 @@ If you cannot find any errors, return an empty array: "errorCoordinates": []
       generationConfig: { "maxOutputTokens": 8192 }
     };
 
-    // استخدام دالة Failover
     const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+    const aiResponseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
-    if (!data.candidates || data.candidates.length === 0) {
-      if (data.promptFeedback && data.promptFeedback.blockReason) {
-        throw new Error(`Request blocked by Gemini. Reason: ${data.promptFeedback.blockReason}`);
-      } else {
-        throw new Error('Gemini returned an empty response (no candidates).');
-      }
-    }
-
-    const aiResponseText = data.candidates[0]?.content?.parts?.[0]?.text;
-    if (!aiResponseText) throw new Error('Gemini returned a candidate but the text part was empty.');
-
-    // --- تحليل الرد (نفس المنطق القديم) ---
+    // استخراج JSON من الرد باستخدام Regex (لضمان الدقة)
     let resultJson = { evaluationText: null, grade: null, errorCoordinates: [] };
-    try {
-      const evalMatch = aiResponseText.match(/"?evaluationText"?\s*:\s*"([\s\S]*?)"\s*,\s*"?grade"?/);
-      if (evalMatch && evalMatch[1]) resultJson.evaluationText = evalMatch[1];
+    const evalMatch = aiResponseText.match(/"?evaluationText"?\s*:\s*"([\s\S]*?)"\s*,\s*"?grade"?/);
+    if (evalMatch && evalMatch[1]) resultJson.evaluationText = evalMatch[1];
 
-      const gradeMatch = aiResponseText.match(/"?grade"?\s*:\s*(\d+(\.\d+)?)/);
-      if (gradeMatch && gradeMatch[1]) resultJson.grade = parseFloat(gradeMatch[1]);
+    const gradeMatch = aiResponseText.match(/"?grade"?\s*:\s*(\d+(\.\d+)?)/);
+    if (gradeMatch && gradeMatch[1]) resultJson.grade = parseFloat(gradeMatch[1]);
 
-      const coordsMatch = aiResponseText.match(/"?errorCoordinates"?\s*:\s*(\[[\s\S]*?\])/);
-      if (coordsMatch && coordsMatch[1]) resultJson.errorCoordinates = JSON.parse(coordsMatch[1]);
-    } catch (parseError) {
-      console.error("Regex/JSON parsing failed:", parseError);
-      throw new Error("AI returned a response, but it was in an unreadable format.");
-    }
-
-    if (!resultJson.evaluationText || resultJson.grade === null) {
-      throw new Error("AI returned a response, but key information was missing.");
-    }
+    const coordsMatch = aiResponseText.match(/"?errorCoordinates"?\s*:\s*(\[[\s\S]*?\])/);
+    if (coordsMatch && coordsMatch[1]) resultJson.errorCoordinates = JSON.parse(coordsMatch[1]);
 
     const durationMs = Date.now() - startTime;
     await logAiRequest(req, 'sculpture', builtPrompt, 'success', JSON.stringify(resultJson), 0, durationMs);
@@ -427,9 +339,91 @@ If you cannot find any errors, return an empty array: "errorCoordinates": []
     console.error('[Gemini Sculpture Error]:', error);
     const durationMs = Date.now() - startTime;
     logAiRequest(req, 'sculpture', builtPrompt, 'error', error.message, 0, durationMs).catch(() => { });
+    res.status(500).json({ success: false, error: 'Server error processing evaluation', details: error.message });
+  }
+};
 
-    if (!res.headersSent) {
-      res.status(500).json({ success: false, error: 'Server error processing evaluation', details: error.message });
-    }
+
+// ============================================================
+// ✅ 2. دوال التعامل مع النصوص (الجديدة - لإصلاح الخطأ)
+// ============================================================
+
+// --- 1. كويز من نص مباشر ---
+exports.generateQuizFromText = async (req, res) => {
+  if (!checkAiAccess(req, res)) return;
+  try {
+    const { text, count = 5 } = req.body;
+    if (!text) return res.status(400).json({ message: 'Text content is required' });
+
+    const prompt = `Create a quiz with ${count} multiple-choice questions based on this text.
+    Format: JSON array of objects { question, options (array), correctOptionIndexes (array of one index), explanation }.
+    Return ONLY JSON. Do not include markdown formatting.
+    TEXT: "${text.substring(0, 15000)}..."`;
+
+    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
+    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+
+    const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!textResponse) throw new Error("Empty response from AI");
+
+    const cleanJson = textResponse.replace(/```json|```/g, '').trim();
+    const validJson = JSON.parse(cleanJson);
+
+    res.json(validJson);
+    await logAiRequest(req, 'quiz-text', prompt, 'success', cleanJson);
+  } catch (error) {
+    console.error('Quiz Text Error:', error);
+    res.status(500).json({ message: 'AI generation failed', errorDetail: error.message });
+    await logAiRequest(req, 'quiz-text', 'text-request', 'error', error.message);
+  }
+};
+
+// --- 2. فلاش كاردز من نص مباشر ---
+exports.generateFlashcardsFromText = async (req, res) => {
+  if (!checkAiAccess(req, res)) return;
+  try {
+    const { text, count = 5 } = req.body;
+    if (!text) return res.status(400).json({ message: 'Text content is required' });
+
+    const prompt = `Create ${count} flashcards (front/back) from this text.
+    Format: JSON array of objects { front, back }. Return ONLY JSON.
+    TEXT: "${text.substring(0, 15000)}..."`;
+
+    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
+    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+
+    const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!textResponse) throw new Error("Empty response from AI");
+
+    const cleanJson = textResponse.replace(/```json|```/g, '').trim();
+    res.json({ flashcards: JSON.parse(cleanJson) });
+
+    await logAiRequest(req, 'flashcards-text', prompt, 'success', cleanJson);
+  } catch (error) {
+    console.error('Flashcards Text Error:', error);
+    res.status(500).json({ message: 'AI generation failed', errorDetail: error.message });
+  }
+};
+
+// --- 3. خريطة ذهنية من نص مباشر ---
+exports.generateMindMapFromText = async (req, res) => {
+  if (!checkAiAccess(req, res)) return;
+  try {
+    const { text } = req.body;
+    if (!text) return res.status(400).json({ message: 'Text content is required' });
+
+    const prompt = `Create a markdown mindmap (markmap format) for this text. Return ONLY markdown.
+    TEXT: "${text.substring(0, 15000)}..."`;
+
+    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
+    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+
+    const markdown = data.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/```markdown|```/g, '').trim();
+
+    res.json({ markdown });
+    await logAiRequest(req, 'mindmap-text', prompt, 'success', markdown);
+  } catch (error) {
+    console.error('Mindmap Text Error:', error);
+    res.status(500).json({ message: 'AI generation failed', errorDetail: error.message });
   }
 };
