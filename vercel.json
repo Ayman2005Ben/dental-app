@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "https://dental-app-he1p.onrender.com/api/$1"
+        }
+    ]
+}
