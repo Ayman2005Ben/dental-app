@@ -365,6 +365,7 @@ saveCloudBtn.addEventListener('click', saveProgressToCloud);
 
 // --- 8. تفعيل أزرار الذكاء الاصطناعي (AI Integration) ---
 
+// ✅ دالة API المحدثة والنظيفة (تضيف /api/ai/ تلقائياً وتتحقق من الأخطاء)
 async function callAiApi(endpoint, body) {
     const token = localStorage.getItem('userToken');
     if (!token) {
@@ -373,7 +374,12 @@ async function callAiApi(endpoint, body) {
     }
 
     try {
-        const res = await fetch(`/api/${endpoint}`, {
+        // بناء الرابط بشكل صحيح: نضيف /api/ai/ هنا
+        const fullUrl = `/api/ai/${endpoint}`;
+
+        console.log("Calling API:", fullUrl);
+
+        const res = await fetch(fullUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -382,8 +388,13 @@ async function callAiApi(endpoint, body) {
             body: JSON.stringify(body)
         });
 
+        // التحقق من استجابة السيرفر قبل قراءة JSON
+        if (!res.ok) {
+            const errorText = await res.text();
+            throw new Error(`Server Error (${res.status}): ${errorText.substring(0, 100)}...`);
+        }
+
         const data = await res.json();
-        if (!res.ok) throw new Error(data.message || 'AI Error');
         return data;
     } catch (err) {
         console.error("AI API Error:", err);
@@ -392,7 +403,7 @@ async function callAiApi(endpoint, body) {
     }
 }
 
-// 1. زر إنشاء كويز (Quiz) - معدل للمسار الجديد (text)
+// 1. زر إنشاء كويز (Quiz)
 const btnQuiz = document.getElementById('btn-quiz');
 if (btnQuiz) {
     btnQuiz.addEventListener('click', async () => {
@@ -407,14 +418,13 @@ if (btnQuiz) {
 
         btnQuiz.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
 
-        // ✅ استخدام المسار الجديد الذي يقبل النص
-        const result = await callAiApi('ai/generate-quiz-text', {
+        // ✅ نداء نظيف: نرسل اسم الدالة فقط
+        const result = await callAiApi('generate-quiz-text', {
             text: pageText,
             count: 5
         });
 
         if (result) {
-            // ملاحظة: قمنا بتوحيد مكان العرض في HTML إلى ai-results-area
             const container = document.getElementById('ai-results-area') || document.getElementById('quiz-results');
             container.innerHTML = '';
 
@@ -442,7 +452,7 @@ if (btnQuiz) {
     });
 }
 
-// 2. ✅ زر إنشاء الفلاش كاردز (Flashcards) - جديد
+// 2. زر إنشاء الفلاش كاردز (Flashcards)
 const btnFlashcards = document.getElementById('btn-flashcards');
 if (btnFlashcards) {
     btnFlashcards.addEventListener('click', async () => {
@@ -457,7 +467,8 @@ if (btnFlashcards) {
 
         btnFlashcards.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
 
-        const result = await callAiApi('ai/generate-flashcards-text', {
+        // ✅ نداء نظيف
+        const result = await callAiApi('generate-flashcards-text', {
             text: pageText,
             count: 5
         });
@@ -478,7 +489,7 @@ if (btnFlashcards) {
     });
 }
 
-// 3. ✅ زر الخريطة الذهنية (Mind Map) - جديد
+// 3. زر الخريطة الذهنية (Mind Map)
 const btnMindMap = document.getElementById('btn-mindmap');
 if (btnMindMap) {
     btnMindMap.addEventListener('click', async () => {
@@ -493,7 +504,8 @@ if (btnMindMap) {
 
         btnMindMap.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
 
-        const result = await callAiApi('ai/generate-mindmap-text', { text: pageText });
+        // ✅ نداء نظيف
+        const result = await callAiApi('generate-mindmap-text', { text: pageText });
 
         if (result && result.markdown) {
             // نحفظ كود الخريطة في المتصفح
@@ -508,7 +520,7 @@ if (btnMindMap) {
     });
 }
 
-// 4. زر الشرح (Explain) - الأدوات المنبثقة
+// 4. زر الشرح (Explain)
 const btnExplain = document.getElementById('ask-ai-btn');
 if (btnExplain) {
     btnExplain.addEventListener('click', async () => {
@@ -519,7 +531,8 @@ if (btnExplain) {
 
         btnExplain.innerHTML = 'Thinking...';
 
-        const result = await callAiApi('ai/ask', {
+        // نستخدم 'ask' فقط، والدالة ستضيف /api/ai/
+        const result = await callAiApi('ask', {
             question: `Explain this concept simply for a dental student: "${text}"`
         });
 
@@ -539,7 +552,8 @@ if (btnTranslate) {
         const popup = document.getElementById('selection-popup');
         const text = popup.dataset.selectedText;
 
-        const result = await callAiApi('ai/ask', {
+        // نستخدم 'ask' للترجمة أيضاً
+        const result = await callAiApi('ask', {
             question: `Translate this to Arabic: "${text}"`
         });
 
