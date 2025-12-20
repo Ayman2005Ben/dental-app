@@ -77,7 +77,7 @@ function loadPdf(url) {
 
     }).catch(err => {
         console.error('Error loading PDF:', err);
-        // في حالة الخطأ، لا تقم بإعادة تحميل الصفحة لتجنب حلقة لا نهائية، بل أظهر رسالة
+        // في حالة الخطأ، لا تقم بإعادة تحميل الصفحة لتجنب حلقة لا نهائية
         alert('Error parsing PDF file. Please try again.');
     });
 }
@@ -392,7 +392,7 @@ async function callAiApi(endpoint, body) {
     }
 }
 
-// 1. زر إنشاء كويز (Quiz)
+// 1. زر إنشاء كويز (Quiz) - معدل للمسار الجديد (text)
 const btnQuiz = document.getElementById('btn-quiz');
 if (btnQuiz) {
     btnQuiz.addEventListener('click', async () => {
@@ -407,14 +407,16 @@ if (btnQuiz) {
 
         btnQuiz.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
 
-        const result = await callAiApi('gemini/quiz', {
+        // ✅ استخدام المسار الجديد الذي يقبل النص
+        const result = await callAiApi('ai/generate-quiz-text', {
             text: pageText,
             count: 5
         });
 
         if (result) {
-            const quizContainer = document.getElementById('quiz-results');
-            quizContainer.innerHTML = '';
+            // ملاحظة: قمنا بتوحيد مكان العرض في HTML إلى ai-results-area
+            const container = document.getElementById('ai-results-area') || document.getElementById('quiz-results');
+            container.innerHTML = '';
 
             const questions = result.questions || result;
 
@@ -430,17 +432,83 @@ if (btnQuiz) {
                         </ul>
                         <p style="font-size:0.8em; color:green; margin-top:5px;"><strong>Answer:</strong> ${q.options[q.correctOptionIndexes[0]]}</p>
                     `;
-                    quizContainer.appendChild(div);
+                    container.appendChild(div);
                 });
             } else {
-                quizContainer.innerHTML = '<p>Could not parse quiz data.</p>';
+                container.innerHTML = '<p>Could not parse quiz data.</p>';
             }
         }
         btnQuiz.innerHTML = '<i class="fas fa-question-circle"></i> Generate Quiz';
     });
 }
 
-// 2. زر الشرح (Explain)
+// 2. ✅ زر إنشاء الفلاش كاردز (Flashcards) - جديد
+const btnFlashcards = document.getElementById('btn-flashcards');
+if (btnFlashcards) {
+    btnFlashcards.addEventListener('click', async () => {
+        const page = await pdfDoc.getPage(pageNum);
+        const textContent = await page.getTextContent();
+        const pageText = textContent.items.map(item => item.str).join(' ');
+
+        if (pageText.length < 50) {
+            alert("Not enough text on this page.");
+            return;
+        }
+
+        btnFlashcards.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+
+        const result = await callAiApi('ai/generate-flashcards-text', {
+            text: pageText,
+            count: 5
+        });
+
+        if (result && result.flashcards) {
+            const container = document.getElementById('ai-results-area') || document.getElementById('quiz-results');
+            container.innerHTML = '';
+
+            result.flashcards.forEach(card => {
+                const div = document.createElement('div');
+                div.className = 'note-card';
+                div.style.borderLeftColor = '#27ae60';
+                div.innerHTML = `<h4>Q: ${card.front}</h4><p>A: ${card.back}</p>`;
+                container.appendChild(div);
+            });
+        }
+        btnFlashcards.innerHTML = '<i class="fas fa-layer-group"></i> Generate Flashcards';
+    });
+}
+
+// 3. ✅ زر الخريطة الذهنية (Mind Map) - جديد
+const btnMindMap = document.getElementById('btn-mindmap');
+if (btnMindMap) {
+    btnMindMap.addEventListener('click', async () => {
+        const page = await pdfDoc.getPage(pageNum);
+        const textContent = await page.getTextContent();
+        const pageText = textContent.items.map(item => item.str).join(' ');
+
+        if (pageText.length < 50) {
+            alert("Not enough text on this page.");
+            return;
+        }
+
+        btnMindMap.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+
+        const result = await callAiApi('ai/generate-mindmap-text', { text: pageText });
+
+        if (result && result.markdown) {
+            // نحفظ كود الخريطة في المتصفح
+            localStorage.setItem('mindmapMarkdown', result.markdown);
+            // نفتح صفحة العارض
+            window.open('mindmap-viewer.html', '_blank');
+        } else {
+            alert("Failed to generate Mind Map.");
+        }
+
+        btnMindMap.innerHTML = '<i class="fas fa-project-diagram"></i> Generate Mind Map';
+    });
+}
+
+// 4. زر الشرح (Explain) - الأدوات المنبثقة
 const btnExplain = document.getElementById('ask-ai-btn');
 if (btnExplain) {
     btnExplain.addEventListener('click', async () => {
@@ -464,7 +532,7 @@ if (btnExplain) {
     });
 }
 
-// 3. زر الترجمة (Translate)
+// 5. زر الترجمة (Translate)
 const btnTranslate = document.getElementById('translate-btn');
 if (btnTranslate) {
     btnTranslate.addEventListener('click', async () => {
@@ -484,38 +552,45 @@ if (btnTranslate) {
 
 
 // ============================================================
-// ✅ كود التشغيل التلقائي (النسخة المحدثة)
+// ✅ كود التشغيل التلقائي (النسخة النهائية والمدمجة)
 // ============================================================
 window.addEventListener('DOMContentLoaded', () => {
+    // 1. البحث عن رابط الملف في شريط العنوان (URL)
     const urlParams = new URLSearchParams(window.location.search);
     const fileSrc = urlParams.get('src');
     const subjectName = urlParams.get('subject');
 
-    // 1. تحديث عنوان الصفحة باسم المادة (إن وجد)
+    // تحديث عنوان الصفحة باسم المادة (إن وجد)
     if (subjectName) {
         document.title = `${decodeURIComponent(subjectName)} - Smart Study`;
     }
 
-    // 2. فحص هل يوجد ملف في الرابط؟
     if (fileSrc) {
         // --- حالة أ: يوجد ملف (جاي من رابط محفوظ) ---
         console.log("PDF Source found:", fileSrc);
 
         // إخفاء شاشة الرفع وإظهار الاستوديو
-        document.getElementById('start-container').style.display = 'none';
-        document.getElementById('main-layout').style.display = 'flex';
+        const startScreen = document.getElementById('start-container');
+        if (startScreen) startScreen.style.display = 'none';
+
+        const mainLayout = document.getElementById('main-layout');
+        if (mainLayout) mainLayout.style.display = 'flex';
 
         // توليد ID والتحميل
         if (!currentFileId) currentFileId = 'uploaded_lesson_' + Date.now();
 
         try {
-            loadPdf(decodeURIComponent(fileSrc));
+            const decodedSrc = decodeURIComponent(fileSrc);
+            loadPdf(decodedSrc);
         } catch (e) { console.error(e); }
 
     } else {
         // --- حالة ب: لا يوجد ملف (جاي من زر Upload الجديد) ---
         // ✅ إجبار شاشة الرفع على الظهور
-        document.getElementById('start-container').style.display = 'flex';
-        document.getElementById('main-layout').style.display = 'none';
+        const startScreen = document.getElementById('start-container');
+        if (startScreen) startScreen.style.display = 'flex';
+
+        const mainLayout = document.getElementById('main-layout');
+        if (mainLayout) mainLayout.style.display = 'none';
     }
 });
