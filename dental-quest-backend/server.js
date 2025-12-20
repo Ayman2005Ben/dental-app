@@ -10,7 +10,7 @@ const path = require('path');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const reportRoutes = require('./routes/reportRoutes');
-
+const progressRoutes = require('./routes/progressRoutes.js'); // ✅ أضف هذا السطر
 // 2️⃣ تحميل متغيرات البيئة
 dotenv.config();
 
@@ -35,23 +35,23 @@ app.use(cors({
 
 // 2. تفعيل Helmet مع الإعداد الصحيح للسماح بعرض الموارد عبر النطاقات
 app.use(helmet({
-    contentSecurityPolicy: {
-        directives: {
-            defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com", "https://upload.wikimedia.org"],
-            connectSrc: ["'self'", "http://localhost:5000", "https://accounts.google.com"],
-            imgSrc: ["'self'", "data:", "https://upload.wikimedia.org", "https://lh3.googleusercontent.com"],
-            frameSrc: ["'self'", "https://accounts.google.com"],
-        },
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com", "https://upload.wikimedia.org"],
+      connectSrc: ["'self'", "http://localhost:5000", "https://accounts.google.com"],
+      imgSrc: ["'self'", "data:", "https://upload.wikimedia.org", "https://lh3.googleusercontent.com"],
+      frameSrc: ["'self'", "https://accounts.google.com"],
     },
-    crossOriginResourcePolicy: { policy: "cross-origin" }
+  },
+  crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
 
 
 // 3. تمكين JSON body parser
 app.use(express.json());
 app.use('/api/reports', reportRoutes);
-
+app.use('/api/progress', require('./routes/progressRoutes'));
 // 4. إعداد الجلسات
 app.use(session({
   secret: process.env.SESSION_SECRET || 'CHANGE_ME',
@@ -101,17 +101,17 @@ const authController = require('./controllers/authController'); // <-- ✅ تم 
 // --- ✅ إضافة جديدة وتصحيح: مسارات المصادقة الخاصة بالمشرف ---
 // هذا المسار يبدأ عملية تسجيل دخول المشرف
 app.get('/auth/google/admin', passport.authenticate('google', {
-    scope: ['profile', 'email'],
-    callbackURL: '/auth/google/callback/admin' // <-- ✅ تم إضافة السطر المطلوب
+  scope: ['profile', 'email'],
+  callbackURL: '/auth/google/callback/admin' // <-- ✅ تم إضافة السطر المطلوب
 }));
 
 // هذا المسار يستقبل المشرف بعد عودته من جوجل
 app.get('/auth/google/callback/admin',
-    passport.authenticate('google', {
-        failureRedirect: process.env.CLIENT_URL + '/admin-panel/login.html?error=failed',
-        callbackURL: '/auth/google/callback/admin' // <-- ✅ وتم إضافة السطر المطلوب هنا أيضًا
-    }),
-    authController.googleAdminCallback
+  passport.authenticate('google', {
+    failureRedirect: process.env.CLIENT_URL + '/admin-panel/login.html?error=failed',
+    callbackURL: '/auth/google/callback/admin' // <-- ✅ وتم إضافة السطر المطلوب هنا أيضًا
+  }),
+  authController.googleAdminCallback
 );
 // --- نهاية الإضافة والتصحيح ---
 
@@ -142,7 +142,7 @@ app.use('/api/results', quizResultRoutes);
 app.use('/api/flashcards', flashcardRoutes);
 app.use('/api/saved-quizzes', savedQuizRoutes);
 app.use('/api/admin', adminRoutes);
-
+app.use('/api/progress', progressRoutes);
 // 8. تشغيل السيرفر
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

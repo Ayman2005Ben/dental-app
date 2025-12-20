@@ -1,17 +1,64 @@
 // controllers/geminiController.js
 
-const { parseKeys, makePool } = require('../utils/keyPool');
+const { parseKeys } = require('../utils/keyPool'); // removed makePool as we will iterate manually
 const pdf = require('pdf-parse');
 const { groqChat } = require('../utils/aiClient.js');
 const fetch = require('node-fetch');
 const AiLog = require('../models/aiLogModel');
 const fs = require('fs');
 const path = require('path');
+
+// تحميل المفاتيح في مصفوفة
 const geminiKeys = parseKeys('GEMINI_API_KEYS');
-const geminiPool = makePool(geminiKeys);
+
+// --- 🛡️ نظام الإنقاذ الذكي (Failover System) ---
+// هذه الدالة هي القلب الجديد: تحاول بالمفتاح الأول، إذا فشل تنتقل للثاني فوراً
+async function executeGeminiRequest(model, requestBody) {
+  let lastError = null;
+
+  // التأكد من وجود مفاتيح
+  if (!geminiKeys || geminiKeys.length === 0) {
+    throw new Error('No Gemini API keys configured on server.');
+  }
+
+  // الدوران على جميع المفاتيح المتوفرة
+  for (let i = 0; i < geminiKeys.length; i++) {
+    // استخراج نص المفتاح (سواء كان كائن أو نص مباشرة)
+    const apiKey = geminiKeys[i].key || geminiKeys[i];
+
+    try {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      });
+
+      const data = await response.json();
+
+      // إذا نجح الطلب (Status 200) ولم يكن هناك خطأ في الرد
+      if (response.ok && !data.error) {
+        return data; // مبروك! نرجع البيانات ونوقف المحاولات
+      }
+
+      // إذا كان الخطأ 429 (Too Many Requests) أو مشاكل سيرفر، نعتبره فشل للمفتاح ونكمل
+      // أما إذا كان الخطأ 400 (مشكلة في الداتا المرسلة) غالباً لن يحلها تغيير المفتاح، لكن سنجرب التالي للاحتياط
+      console.warn(`⚠️ Key #${i + 1} failed (Status: ${response.status}). Trying next key... Error: ${data.error?.message || 'Unknown'}`);
+      lastError = new Error(data.error?.message || `API Error ${response.status}`);
+
+    } catch (err) {
+      console.error(`❌ Connection error with Key #${i + 1}: ${err.message}. Trying next...`);
+      lastError = err;
+    }
+  }
+
+  // إذا وصلنا هنا، يعني جربنا كل المفاتيح وكلها فشلت
+  throw new Error(`All Gemini keys failed. Last error: ${lastError?.message}`);
+}
 
 // --- الدوال المساعدة ---
-async function logAiRequest(req, task, prompt, status, response = '', tokenCount = 0) {
+async function logAiRequest(req, task, prompt, status, response = '', tokenCount = 0, duration = 0) {
   try {
     const promptToLog = prompt || `[No prompt available for task: ${task}]`;
     await AiLog.create({
@@ -21,6 +68,7 @@ async function logAiRequest(req, task, prompt, status, response = '', tokenCount
       response: response?.toString().slice(0, 2000),
       status,
       tokenCount,
+      duration // تم إضافة المدة الزمنية
     });
   } catch (err) {
     console.error('⚠️ Failed to log AI request:', err.message);
@@ -39,25 +87,17 @@ function checkAiAccess(req, res) {
 // --- 🖼️ تحليل الصور ---
 exports.handleImageQuery = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
-  const pickedKey = geminiPool.getNext();
   try {
     if (!req.file || !req.body.prompt)
       return res.status(400).json({ message: 'Prompt and image file are required.' });
-    if (!pickedKey)
-      return res.status(500).json({ message: 'No Gemini API keys available.' });
 
     const requestBody = {
       contents: [{ parts: [{ text: req.body.prompt }, { inline_data: { mime_type: req.file.mimetype, data: req.file.buffer.toString('base64') } }] }],
     };
 
-    console.log('🖼️ Sending Image request to Gemini 2.5 Flash...');
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
-      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(requestBody) }
-    );
-
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.error?.message || 'Gemini API returned an error.');
+    console.log('🖼️ Sending Image request with Failover...');
+    // استخدام الدالة الجديدة بدلاً من fetch المباشر
+    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
     const answer = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.';
     res.status(200).json({ answer });
@@ -65,33 +105,24 @@ exports.handleImageQuery = async (req, res) => {
   } catch (error) {
     console.error('[Gemini Image Error]:', error);
     await logAiRequest(req, 'image', req.body.prompt || 'Prompt not available', 'error', error.message);
-    res.status(500).json({ message: 'Error processing image.', errorDetail: error.message });
+    res.status(500).json({ message: 'Error processing image (All keys failed).', errorDetail: error.message });
   }
 };
 
 // --- 🎧 تحليل الصوت ---
 exports.handleAudioQuery = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
-  const pickedKey = geminiPool.getNext();
   try {
     if (!req.file || !req.body.prompt)
       return res.status(400).json({ message: 'Prompt and audio file are required.' });
-    if (!pickedKey)
-      return res.status(500).json({ message: 'No Gemini API keys available.' });
 
     const requestBody = {
       contents: [{ parts: [{ text: req.body.prompt }, { inline_data: { mime_type: req.file.mimetype, data: req.file.buffer.toString('base64') } }] }],
     };
 
-    console.log('🎧 Sending Audio request to Gemini 2.5 Flash...');
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
-      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(requestBody) }
-    );
+    console.log('🎧 Sending Audio request with Failover...');
+    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.error?.message || 'Gemini API returned an error.');
-    
     const answer = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.';
     res.status(200).json({ answer });
     await logAiRequest(req, 'audio', req.body.prompt, 'success', answer);
@@ -107,21 +138,15 @@ exports.generateMindMap = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
-    const pickedKey = geminiPool.getNext();
     if (!req.file) return res.status(400).json({ message: 'No PDF file uploaded.' });
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
-    if (!pickedKey) return res.status(500).json({ message: 'No Gemini API keys available.' });
 
     prompt = `Summarize the following text as a hierarchical mind map in Markdown syntax. Use "#" for the main title, "##" for main topics, and "-" for subtopics. The main title should be the core subject of the text. The language must be the same as the source text. Do NOT include any explanation, only the structured mind map text in clean Markdown. TEXT:\n---\n${data.text.substring(0, 30000)}\n---`;
 
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
-      { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }) }
-    );
+    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
 
-    const responseData = await response.json();
-    if (!response.ok) throw new Error(responseData.error?.message || 'Gemini API error');
+    const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
     const markdownContent = responseData.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/```markdown|```/g, '').trim() || '# Error\n- Could not generate mind map.';
     res.status(200).json({ markdown: markdownContent });
@@ -138,21 +163,18 @@ exports.generateQuiz = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
-    console.log('📘 Sending professional quiz request to Gemini 2.5 Flash...');
-    const pickedKey = geminiPool.getNext();
+    console.log('📘 Sending Quiz request with Failover...');
     const { count = 10, language = 'the same language as the document' } = req.body;
     const questionCount = Math.min(parseInt(count, 10), 20);
     if (!req.file) return res.status(400).json({ message: 'No PDF file uploaded.' });
-    
-    // ▼▼▼ [الإصلاح 1: التحقق من الملف الفارغ] ▼▼▼
+
     if (!req.file.buffer || req.file.buffer.length === 0) {
       return res.status(400).json({ message: 'The uploaded PDF file is empty.' });
     }
 
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
-    if (!pickedKey) return res.status(500).json({ message: 'No Gemini API keys available.' });
-    
+
     prompt = `
 You are an expert quiz designer known for creating brutally difficult exams that push the limits of even the most prepared students. Your task is to create a final exam for advanced dentistry students based on the provided text. The goal is maximum difficulty.
 
@@ -177,26 +199,18 @@ ${data.text.substring(0, 30000)}
 ---
 `;
 
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
-      { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }) }
-    );
+    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
+    const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
-    const responseData = await response.json();
-    if (responseData.error) throw new Error(responseData.error.message);
     if (!responseData.candidates?.[0]?.content?.parts?.[0]?.text) throw new Error("Gemini returned an empty or invalid response.");
 
     const quizText = responseData.candidates[0].content.parts[0].text;
-    
-    // 1. التنظيف الأولي
+
     let cleanedText = quizText.replace(/```json|```/g, '').trim();
-    
-    // ▼▼▼ [الإصلاح 2: تنظيف الأحرف الضارة] ▼▼▼
-    // (هذا السطر يزيل الأحرف غير الصالحة قبل التحليل)
-    cleanedText = cleanedText.replace(/[\x00-\x1F\x7F-\x9F]/g, "");
+    cleanedText = cleanedText.replace(/[\x00-\x1F\x7F-\x9F]/g, ""); // تنظيف
 
     const quizJson = JSON.parse(cleanedText);
-    
+
     res.status(200).json(quizJson);
     await logAiRequest(req, 'quiz', prompt, 'success', JSON.stringify(quizJson));
 
@@ -209,6 +223,7 @@ ${data.text.substring(0, 30000)}
 
 // --- 💡 إنشاء Flashcards ---
 exports.generateFlashcards = async (req, res) => {
+  // هذه الدالة تستخدم Groq وليس Gemini، لذا تبقى كما هي
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
@@ -220,29 +235,20 @@ exports.generateFlashcards = async (req, res) => {
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
 
-    // 🚀🚀 --- البرومبت الجديد والمُحسَّن لبطاقات المذاكرة --- 🚀🚀
     prompt = `
 You are an AI assistant tasked with creating extremely difficult flashcards for advanced students from the provided text. Your goal is to force deep learning and memorization of non-obvious information.
 
 From the text below, extract exactly ${cardCount} flashcards in ${language}.
 
-
 **MANDATORY RULES FOR ALL FLASHCARDS:**
+1.  **[NEW] Expert Difficulty & Complexity:** Your goal is to create expert-level, exam-style "trap questions".
+2.  **[NEW] Focus on Synthesis, Not Recall:** The 'front' of the card MUST force the student to think.
+3.  **[NEW] Detailed Answers:** The 'back' must contain the detailed, comprehensive answer.
+4.  **[EXISTING] Ignore Metadata.**
 
-1.  **[NEW] Expert Difficulty & Complexity (الأهم):** Your goal is to create expert-level, exam-style "trap questions" ("questions pièges"). Do not create cards for simple facts.
-2.  **[NEW] Focus on Synthesis, Not Recall:** The 'front' of the card MUST force the student to think, not just remember. Ask for:
-    * **Comparisons:** (e.g., "Compare the primary differences between X and Y based on the text.").
-    * **Exceptions:** (e.g., "What is the main exception to the Z rule mentioned in the document?").
-    * **Relationships:** (e.g., "According to the text, how does process A specifically influence outcome B?").
-    * **Multi-Step Info:** (e.g., "List the 3 specific percentages related to topic C.").
-3.  **[NEW] Detailed Answers :** The 'back' of the card must contain the detailed, comprehensive answer to the complex question on the 'front'. It should list all the compared points, the full exception, or all 3 percentages.
-4.  **[EXISTING] Ignore Metadata:** You MUST ignore any text that is not part of the core academic content (professor names, university names, page numbers, etc.). Focus ONLY on the scientific and academic body of the text.
 **CRITICAL OUTPUT FORMAT:**
 -   The final output MUST be a valid JSON array of objects and nothing else.
--   Do not include any text, explanations, or markdown formatting outside of the main JSON array.
--   Each object must have exactly two keys:
-    - "front": The term, concept, or a very specific question.
-    - "back": The precise and detailed answer.
+-   Each object must have exactly two keys: "front" and "back".
 
 **TEXT TO ANALYZE:**
 ---
@@ -265,6 +271,7 @@ ${data.text.substring(0, 30000)}
 
 // --- 🌍 الترجمة ---
 exports.translateContent = async (req, res) => {
+  // تستخدم Groq - تبقى كما هي
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
@@ -273,7 +280,7 @@ exports.translateContent = async (req, res) => {
 
     const contentAsString = JSON.stringify(req.body.content, null, 2);
     prompt = `Translate only the string values in this JSON object to ${req.body.targetLanguage}. Keep keys unchanged. Return valid JSON only.\n\n${contentAsString}`;
-    
+
     const translatedText = await groqChat({ messages: [{ role: 'user', content: prompt }] });
     const cleaned = translatedText.replace(/```json|```/g, '').trim();
     const translatedJson = JSON.parse(cleaned);
@@ -293,22 +300,15 @@ exports.generateSummary = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   let prompt = '';
   try {
-    const pickedKey = geminiPool.getNext();
     if (!req.file) return res.status(400).json({ message: 'No PDF file uploaded.' });
     const data = await pdf(req.file.buffer);
     if (!data.text) return res.status(400).json({ message: 'Could not extract text from PDF.' });
-    if (!pickedKey) return res.status(500).json({ message: 'No Gemini API keys available.' });
-    
+
     prompt = `Summarize the following academic text for dentistry students in clear, well-structured paragraphs. Use Markdown for headings and bullet points if necessary.\n\nTEXT:\n${data.text.substring(0, 30000)}`;
-    console.log('🧩 Sending Summary request to Gemini 2.5 Flash...');
+    console.log('🧩 Sending Summary request with Failover...');
 
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
-      { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }) }
-    );
-
-    const responseData = await response.json();
-    if (!response.ok) throw new Error(responseData.error?.message || 'Gemini API returned an error.');
+    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
+    const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
     const summaryText = responseData.candidates?.[0]?.content?.parts?.[0]?.text || 'Could not generate summary.';
     res.status(200).json({ summary: summaryText });
@@ -321,36 +321,24 @@ exports.generateSummary = async (req, res) => {
     }
   }
 };
-// ▼▼▼ [إضافة جديدة] دالة تقييم النحت الكاملة ▼▼▼
 
+// --- 🦷 تقييم النحت (Sculpture) ---
 exports.handleSculptureEvaluation = async (req, res) => {
-  // --- 👮‍♂️ الخطوة 1: الأمان (التحقق من السنة الثانية) ---
-  // هذا هو "الحارس" الذي اتفقنا عليه
   if (req.user?.studyYear !== '2') {
-    return res.status(403).json({ 
-      success: false, 
-      error: 'This feature is exclusively available for 2nd year students.' 
-    });
+    return res.status(403).json({ success: false, error: 'This feature is exclusively available for 2nd year students.' });
   }
 
-  // --- التحقق من المدخلات ---
-  if (!checkAiAccess(req, res)) return; // التحقق من صلاحيات AI العامة
+  if (!checkAiAccess(req, res)) return;
   if (!req.files || req.files.length === 0) {
     return res.status(400).json({ success: false, error: 'No images uploaded.' });
-  }
-
-  const pickedKey = geminiPool.getNext();
-  if (!pickedKey) {
-    return res.status(500).json({ success: false, error: 'No Gemini API keys available.' });
   }
 
   let builtPrompt = '';
   let startTime = Date.now();
 
   try {
-    console.log('🦷 Sending Sculpture Evaluation request to Gemini (using AIza... )');
+    console.log('🦷 Sending Sculpture Evaluation request with Failover...');
 
-    // --- الخطوة 2: تحميل ملف PDF المرجعي (من الخادم) ---
     let referenceText = '';
     try {
       const pdfPath = path.join(__dirname, '..', 'public', 'pdf', 'Les planches des dents.pdf');
@@ -360,18 +348,13 @@ exports.handleSculptureEvaluation = async (req, res) => {
       if (!referenceText) throw new Error('PDF text is empty');
     } catch (pdfErr) {
       console.error("CRITICAL PDF LOAD ERROR:", pdfErr);
-      throw new Error('Could not load the reference PDF document "Les planches des dents.pdf" from server.');
+      throw new Error('Could not load the reference PDF document.');
     }
 
-    // --- الخطوة 3: تحضير صور النحت (من الرفع) ---
     const imageParts = req.files.map(file => ({
-      inline_data: {
-        mime_type: file.mimetype,
-        data: file.buffer.toString('base64')
-      }
+      inline_data: { mime_type: file.mimetype, data: file.buffer.toString('base64') }
     }));
 
-    // --- الخطوة 4: بناء البرومبت (النهائي) ---
     builtPrompt = `
 You are a strict examiner in dental anatomy. Your *only* source of truth is the provided reference text ("Les planches des dents").
 I am sending you ${req.files.length} images of a single soap-carved tooth.
@@ -384,132 +367,69 @@ ${referenceText.substring(0, 30000)}
 1. Analyze all images for a complete understanding.
 2. Provide a detailed evaluation (in French) covering all anatomical errors compared to the REFERENCE TEXT.
 3. Give a final numeric grade out of 20.
-4. **CRITICAL TASK:** Identify 3-5 specific anatomical errors on the **first image**. For each error, provide its (x, y) coordinate and a brief comment. The (x, y) coordinates should be percentages (from 0.0 to 100.0) relative to the image dimensions. (x: 0, y: 0) is top-left, (x: 100, y: 100) is bottom-right.
+4. **CRITICAL TASK:** Identify 3-5 specific anatomical errors on the **first image**. For each error, provide its (x, y) coordinate and a brief comment. The (x, y) coordinates should be percentages (from 0.0 to 100.0) relative to the image dimensions.
 
 --- CRITICAL OUTPUT FORMAT ---
-You MUST respond with a single, valid JSON object. Do not add any text before or after the JSON.
-The JSON object must contain these exact keys:
+You MUST respond with a single, valid JSON object.
 {
   "evaluationText": "Your full text evaluation in French...",
   "grade": <numeric_grade_out_of_20>,
-  "errorCoordinates": [
-    { "x": 50.5, "y": 30.2, "comment": "Cuspide trop pointue" },
-    { "x": 75.0, "y": 60.8, "comment": "Sillon mal défini" }
-  ]
+  "errorCoordinates": [ { "x": 50.5, "y": 30.2, "comment": "..." } ]
 }
 If you cannot find any errors, return an empty array: "errorCoordinates": []
     `;
 
-    // --- الخطوة 5: بناء جسم الطلب ---
     const requestParts = [{ text: builtPrompt }, ...imageParts];
     const requestBody = {
       contents: [{ parts: requestParts }],
-      generationConfig: {
-        "maxOutputTokens": 8192 // ضروري للسماح بردود طويلة
-      }
+      generationConfig: { "maxOutputTokens": 8192 }
     };
 
-    // --- الخطوة 6: إرسال الطلب إلى Gemini ---
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${pickedKey.key}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestBody)
-      }
-    );
-    
-    const data = await response.json();
-    if (!response.ok) {
-        throw new Error(data.error?.message || `Gemini API error (Status: ${response.status})`);
-    }
+    // استخدام دالة Failover
+    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
-    // ▼▼▼ [الإصلاح 3: التحقق من فلاتر الأمان] ▼▼▼
     if (!data.candidates || data.candidates.length === 0) {
-        if (data.promptFeedback && data.promptFeedback.blockReason) {
-            console.error('Gemini Safety Block:', data.promptFeedback);
-            // سنرمي خطأ واضح يظهر في الفرونت-اند
-            throw new Error(`Request blocked by Gemini. Reason: ${data.promptFeedback.blockReason}`);
-        } else {
-            console.error('Gemini Empty Response Data:', data); // اطبع الرد الغريب
-            throw new Error('Gemini returned an empty response (no candidates) for an unknown reason.');
-        }
+      if (data.promptFeedback && data.promptFeedback.blockReason) {
+        throw new Error(`Request blocked by Gemini. Reason: ${data.promptFeedback.blockReason}`);
+      } else {
+        throw new Error('Gemini returned an empty response (no candidates).');
+      }
     }
-    // --- [نهاية الإصلاح 3] ---
 
     const aiResponseText = data.candidates[0]?.content?.parts?.[0]?.text;
-    if (!aiResponseText) {
-      // هذا الخطأ سيحدث الآن فقط إذا كان data.candidates موجوداً ولكن text فارغ
-      throw new Error('Gemini returned a candidate but the text part was empty.');
-    }
+    if (!aiResponseText) throw new Error('Gemini returned a candidate but the text part was empty.');
 
-    // --- الخطوة 7: "المحلل الذكي" (Safe Regex Parser) ---
-    let resultJson = {
-      evaluationText: null,
-      grade: null,
-      errorCoordinates: []
-    };
-
+    // --- تحليل الرد (نفس المنطق القديم) ---
+    let resultJson = { evaluationText: null, grade: null, errorCoordinates: [] };
     try {
-      // ▼▼▼ [الإصلاح 4: جعل المحلل مرناً (يقبل الاقتباسات أو لا يقبلها)] ▼▼▼
-      // (لاحظ إضافة "? بعد كل " لجعلها اختيارية)
-      
-      // 1. استخراج evaluationText
       const evalMatch = aiResponseText.match(/"?evaluationText"?\s*:\s*"([\s\S]*?)"\s*,\s*"?grade"?/);
-      if (evalMatch && evalMatch[1]) {
-        resultJson.evaluationText = evalMatch[1];
-      }
+      if (evalMatch && evalMatch[1]) resultJson.evaluationText = evalMatch[1];
 
-      // 2. استخراج grade
       const gradeMatch = aiResponseText.match(/"?grade"?\s*:\s*(\d+(\.\d+)?)/);
-      if (gradeMatch && gradeMatch[1]) {
-        resultJson.grade = parseFloat(gradeMatch[1]);
-      }
+      if (gradeMatch && gradeMatch[1]) resultJson.grade = parseFloat(gradeMatch[1]);
 
-      // 3. استخراج errorCoordinates
       const coordsMatch = aiResponseText.match(/"?errorCoordinates"?\s*:\s*(\[[\s\S]*?\])/);
-      if (coordsMatch && coordsMatch[1]) {
-        resultJson.errorCoordinates = JSON.parse(coordsMatch[1]); 
-      }
-      // --- [نهاية الإصلاح 4] ---
-    
+      if (coordsMatch && coordsMatch[1]) resultJson.errorCoordinates = JSON.parse(coordsMatch[1]);
     } catch (parseError) {
       console.error("Regex/JSON parsing failed:", parseError);
       throw new Error("AI returned a response, but it was in an unreadable format.");
     }
-    
-    // التحقق من صحة النتائج
+
     if (!resultJson.evaluationText || resultJson.grade === null) {
-      console.error("Failed to parse AI response with Regex. Raw response:", aiResponseText);
-      throw new Error("AI returned a response, but key information was missing (text or grade).");
+      throw new Error("AI returned a response, but key information was missing.");
     }
 
-    // --- الخطوة 8: إرسال الرد الناجح ---
     const durationMs = Date.now() - startTime;
     await logAiRequest(req, 'sculpture', builtPrompt, 'success', JSON.stringify(resultJson), 0, durationMs);
     res.status(200).json({ success: true, result: resultJson });
 
   } catch (error) {
-    // --- معالجة الأخطاء ---
-    console.log("\n\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-    console.log("!!!!!!!!!!   ERROR CAUGHT   !!!!!!!!!!!!");
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\n");
     console.error('[Gemini Sculpture Error]:', error);
-    
     const durationMs = Date.now() - startTime;
-    logAiRequest(
-      req, 
-      'sculpture', 
-      builtPrompt, 
-      'error', 
-      error.message,
-      0,
-      durationMs
-    ).catch(logErr => console.error("CRITICAL: Failed to even log the error:", logErr));
+    logAiRequest(req, 'sculpture', builtPrompt, 'error', error.message, 0, durationMs).catch(() => { });
 
     if (!res.headersSent) {
       res.status(500).json({ success: false, error: 'Server error processing evaluation', details: error.message });
     }
   }
 };
-// ▲▲▲ نهاية الإضافة ▲▲▲

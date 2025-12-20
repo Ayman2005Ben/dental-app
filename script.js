@@ -1333,6 +1333,10 @@ function animateCarouselAssembly(year) {
             if (currentContentType === 'lessons') {
                 showLessonListForSubject(subject.key);
             }
+            // ✅ إضافة: دعم Smart Study
+            else if (currentContentType === 'smart-study') {
+                showLessonListForSubject(subject.key);
+            }
             else if (currentContentType === 'summaries' || currentContentType === 'quizzes') {
                 showContentListForSubject(subject.key, currentContentType);
             }
@@ -1447,9 +1451,52 @@ async function showLessonListForSubject(subjectKey) {
     const contentTitle = document.getElementById('content-title');
     const contentListContainer = document.getElementById('content-list');
 
-    // Update title and show loading state on the generic content page first
-    contentTitle.textContent = `${subjectData.name} Lessons`;
-    contentListContainer.innerHTML = '<p>Loading lessons...</p>';
+    // Update title based on mode
+    const modeTitle = currentContentType === 'smart-study' ? 'Smart Study' : 'Lessons';
+    contentTitle.textContent = `${subjectData.name} - ${modeTitle}`;
+
+    contentListContainer.innerHTML = ''; // تنظيف
+
+    // ✅ [حصري لـ Smart Study] إضافة زر "رفع درس جديد"
+    if (currentContentType === 'smart-study') {
+        const uploadContainer = document.createElement('div');
+        uploadContainer.style.marginBottom = '20px';
+        uploadContainer.style.textAlign = 'center';
+
+        const uploadBtn = document.createElement('button');
+        uploadBtn.className = 'btn primary-btn';
+        uploadBtn.style.width = '100%';
+        uploadBtn.style.padding = '15px';
+        uploadBtn.style.fontSize = '1.1rem';
+        uploadBtn.innerHTML = `<i class="fas fa-cloud-upload-alt"></i> Upload New PDF to ${subjectData.name}`;
+
+        uploadBtn.onclick = () => {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'application/pdf';
+            input.onchange = (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const fileURL = URL.createObjectURL(file);
+                    // فتح العارض في نافذة جديدة
+                    window.open(`pdf-viewer.html?src=${encodeURIComponent(fileURL)}`, '_blank');
+                }
+            };
+            input.click();
+        };
+
+        uploadContainer.appendChild(uploadBtn);
+        contentListContainer.appendChild(uploadContainer);
+
+        // فاصل
+        const divider = document.createElement('div');
+        divider.innerHTML = '<p style="color:#888; margin: 10px 0;">— Saved Lessons —</p>';
+        divider.style.textAlign = 'center';
+        contentListContainer.appendChild(divider);
+    } else {
+        contentListContainer.innerHTML = '<p>Loading lessons...</p>';
+    }
+
     showPage('#content-display-page');
 
     let lessons = [];
@@ -3721,23 +3768,32 @@ const evalOutput = document.getElementById('evalOutput');
 let currentAiTask = ''; // Stores the task selected ('quiz', 'flashcards', etc.)
 
 // Open AI Hub modal
-// ▼▼▼ [تعديل] إظهار/إخفاء بطاقة النحت بناءً على السنة ▼▼▼
+// ▼▼▼ [تعديل ذكي] توجيه حسب السنة ▼▼▼
 if (aiHubBtn && aiHubOverlay) {
-    aiHubBtn.addEventListener('click', () => {
+    aiHubBtn.addEventListener('click', (e) => {
+        e.preventDefault();
 
-        // --- (الجديد) التحقق من سنة الطالب ---
-        const sculptureCard = document.getElementById('sculpture-eval-card');
-        if (sculptureCard) {
-            // selectedYear هو المتغير العام الذي يحمل سنة الطالب
-            if (selectedYear === '2') {
-                sculptureCard.style.display = 'block'; // إظهار البطاقة
-            } else {
-                sculptureCard.style.display = 'none'; // إخفاء البطاقة
-            }
+        // 1. إذا كان الطالب سنة ثانية: نفتح القائمة (لأن لديه خيار النحت)
+        if (selectedYear === '2') {
+            const sculptureCard = document.getElementById('sculpture-eval-card');
+            if (sculptureCard) sculptureCard.style.display = 'block';
+            aiHubOverlay.style.display = 'flex';
         }
-        // --- نهاية التحقق ---
+        // 2. باقي السنوات: توجيه مباشر لـ Smart Study
+        else {
+            aiHubOverlay.style.display = 'none'; // إغلاق القائمة
+            currentContentType = 'smart-study'; // ضبط الوضع
+            localStorage.setItem('currentContentType', 'smart-study');
 
-        aiHubOverlay.style.display = 'flex';
+            // تفعيل الرابط في الهيدر
+            navLinks.forEach(l => l.classList.remove('active-link'));
+            const smartLink = document.querySelector('a[data-page-type="smart-study"]');
+            if (smartLink) smartLink.classList.add('active-link');
+
+            // الذهاب لصفحة المواد
+            showPage('#subjects-page');
+            animateCarouselAssembly(selectedYear);
+        }
     });
 }
 // ▲▲▲ نهاية التعديل ▲▲▲

@@ -268,6 +268,8 @@
                 <li><a href="#subjects-page" data-page-type="summaries">Summaries</a></li>
                 <li><a href="#subjects-page" data-page-type="quizzes">Quizzes</a></li>
                 <li><a href="#subjects-page" data-page-type="lessons">Lessons</a></li>
+                <li><a href="#subjects-page" data-page-type="smart-study"><i class="fas fa-brain"></i> Smart Study</a>
+                </li>
                 <li><a href="#flashcards-page">My Flashcards</a></li>
             </ul>
         </nav>
@@ -486,7 +488,17 @@
         </div>
         </div>
         </section>
+        <section id="content-display-page" class="page-section">
+            <div class="content-display-container">
+                <button id="back-to-subjects-btn" class="btn secondary-btn" style="margin-bottom: 20px;">
+                    <i class="fas fa-arrow-left"></i> Back to Subjects
+                </button>
 
+                <h2 id="content-title" style="margin-bottom: 30px;">Lessons</h2>
+
+                <div class="content-list-container" id="content-list"></div>
+            </div>
+        </section>
         <section class="page-section" id="year-selection-page">
             <div class="year-selection-container glassmorphism-card scroll-reveal-element">
                 <h2>Choose Your Study Year</h2>
@@ -794,31 +806,17 @@
             <h3>AI Assistant Toolkit</h3>
             <p>Choose a smart tool to help you with your studies.</p>
             <div class="ai-options-grid">
-                <div class="ai-option-card" data-task="chat">
-                    <i class="fas fa-comments"></i>
-                    <h4>Smart Chat</h4>
-                    <span>Ask any question</span>
+                <div class="ai-option-card" data-task="smart-study">
+                    <i class="fas fa-book-reader"></i>
+                    <h4>Smart Study</h4>
+                    <span>Lessons & Notes</span>
                 </div>
-                <div class="ai-option-card" data-task="quiz">
-                    <i class="fas fa-vial"></i>
-                    <h4>Generate Quiz</h4>
-                    <span>From any PDF</span>
-                </div>
-                <div class="ai-option-card" data-task="flashcards">
-                    <i class="fas fa-layer-group"></i>
-                    <h4>Create Flashcards</h4>
-                    <span>From any PDF</span>
-                </div>
-                <div class="ai-option-card" data-task="summary">
-                    <i class="fas fa-file-pdf"></i>
-                    <h4>Summarize PDF</h4>
-                    <span>Get key points</span>
-                </div>
-                <div class="ai-option-card" data-task="sculpture" id="sculpture-eval-card" style="display: none;"> <i
-                        class="fas fa-tooth"></i>
+                <div class="ai-option-card" data-task="sculpture" id="sculpture-eval-card">
+                    <i class="fas fa-tooth"></i>
                     <h4>Sculpture Eval</h4>
                     <span>(2nd Year Only)</span>
                 </div>
+
             </div>
         </div>
     </div>

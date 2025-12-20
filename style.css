@@ -4784,3 +4784,106 @@ button:hover i {
 }
 
 /* ▲▲▲ نهاية الإضافة ▲▲▲ */
+/* ======================================================= */
+/* === [إضافة جديدة] تنسيقات Smart Study & Upload      === */
+/* ======================================================= */
+
+/* 1. تنسيق حاوية زر الرفع */
+.smart-upload-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px dashed var(--primary-btn-bg);
+    /* إطار متقطع مميز */
+    text-align: center;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.smart-upload-container:hover {
+    background-color: var(--secondary-btn-hover-bg);
+    border-color: var(--choose-subject-text);
+    transform: translateY(-2px);
+}
+
+/* 2. زر الرفع الكبير */
+.btn-smart-upload {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(135deg, var(--primary-btn-bg), #16a085);
+    /* تدرج لوني */
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-smart-upload:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.6);
+}
+
+.btn-smart-upload i {
+    font-size: 1.5rem;
+}
+
+/* 3. الفاصل الجمالي (Divider) */
+.smart-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--price-label-color);
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.smart-divider::before,
+.smart-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--input-border);
+}
+
+.smart-divider::before {
+    margin-right: 15px;
+}
+
+.smart-divider::after {
+    margin-left: 15px;
+}
+
+/* 4. تحسين شكل عناصر القائمة (الدروس المحفوظة) */
+.content-list-container .content-item {
+    background-color: var(--card-bg) !important;
+    /* تغطية على اللون القديم */
+    border-left: 5px solid var(--primary-btn-bg) !important;
+    /* شريط جانبي ملون */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px !important;
+}
+
+.content-list-container .content-item:hover {
+    transform: translateX(5px) !important;
+    /* حركة للجانب بدلاً من الأعلى */
+    border-left-width: 10px !important;
+    /* تكبير الشريط الجانبي */
+}
+
+/* 5. زر العودة (تحسين المظهر) */
+#back-to-subjects-btn {
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
