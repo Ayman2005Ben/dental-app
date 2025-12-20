@@ -379,13 +379,18 @@ exports.generateQuizFromText = async (req, res) => {
 };
 
 // --- 2. فلاش كاردز من نص مباشر ---
+// --- 2. فلاش كاردز من نص مباشر ---
 exports.generateFlashcardsFromText = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
   try {
-    const { text, count = 5 } = req.body;
+    // 1. استقبال متغير اللغة من الطلب (language)
+    const { text, count = 5, language = 'French' } = req.body;
+
     if (!text) return res.status(400).json({ message: 'Text content is required' });
 
+    // 2. تحديث التعليمات لإجبار اللغة المطلوبة
     const prompt = `Create ${count} flashcards (front/back) from this text.
+    The content MUST be in ${language} language (same as source text).
     Format: JSON array of objects { front, back }. Return ONLY JSON.
     TEXT: "${text.substring(0, 15000)}..."`;
 
