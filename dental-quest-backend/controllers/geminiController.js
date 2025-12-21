@@ -395,7 +395,7 @@ exports.generateFlashcardsFromText = async (req, res) => {
     TEXT: "${text.substring(0, 15000)}..."`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
-    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+    const data = await executeGeminiRequest('gemini-2.5-flash', requestBody);
 
     const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!textResponse) throw new Error("Empty response from AI");

@@ -2323,13 +2323,9 @@ function renderCurrentQuestion() {
 
         // Add event listeners only if the question is NOT answered
         if (!isAnswered) {
-            if (isMultipleChoice) {
-                // Toggle selection for multiple choice
-                optionEl.addEventListener('click', () => toggleOption(index));
-            } else {
-                // Select single option for single choice
-                optionEl.addEventListener('click', () => selectOption(index));
-            }
+            // [تعديل] جعل الاختيار دائماً متعدد (Toggle) لإخفاء نوع السؤال عن الطالب
+            // إذا اختار الطالب إجابتين في سؤال إجابة واحدة، سيحسبها النظام خطأ عند التصحيح
+            optionEl.addEventListener('click', () => toggleOption(index));
         }
         // Apply styling if the question IS answered
         else {
@@ -4134,312 +4130,196 @@ if (sculptureEvalForm) {
         }
     });
 }
-// ▼▼▼ [إضافة جديدة] منطق حاسبة المعدل بالكامل ▼▼▼
+// ▼▼▼ [منطق حاسبة المعدل الجديد - 2025] ▼▼▼
 
-// --- 1. قاعدة بيانات الحاسبة (Data Store) ---
-// هنا نضع كل المعاملات والقوانين
-const gradeDataStore = {
-    "1": { // بيانات السنة الأولى (من ملفاتك)
-        s1_coeffs: { "Anatomie": 4, "Histo-Cyto-Embryo": 4, "Biophysique": 3, "Biochimie": 3, "Biomaths": 3, "Chimie": 3, "Physique": 2, "Génétique": 2, "Anglais": 1, "Français": 1 },
-        s2_coeffs: { "Anatomie": 4, "Histo-Cyto-Embryo": 4, "Biophysique": 3, "Biochimie": 3, "Biomaths": 3, "Chimie": 3, "Physiologie": 2, "SSH": 1, "Anglais": 1, "Français": 1 },
-        // (سنقوم بإنشاء الـ HTML لهذه المواد ديناميكياً)
-        formulas: {
-            "y1_s1_Histo": (values) => (Math.max(values.td, values.cyto1) + values.histo) / 2,
-            "y1_s1_Biochimie": (values) => (values.td * 0.3) + (values.emd * 0.7),
-            // (يمكن إضافة باقي القوانين الخاصة هنا)
-        }
-    },
-    "2": { // بيانات السنة الثانية (من الصورة والقانون)
-        s1_coeffs: { "AnatomieDentaire": 3, "Histologie": 2, "Anglais": 1, "Hygiène": 1 },
-        s2_coeffs: { "Parodontologie": 3, "Immunologie": 1, "Physiologie": 1, "Pathologie": 3 },
-        annual_coeffs: { "OCE": 5, "Prothèse": 5, "AnatomieHumaine": 4, "ODF": 3, "Biomatériaux": 2, "Microbiologie": 2, "Informatique": 1 },
-        // القوانين العامة للسنة الثانية
-        formulas: {
-            "y2_standard_tp": (values) => (values.th * 0.33) + (values.tp * 0.67), // 33% نظري, 67% عملي
-            "y2_simple_th": (values) => values.th, // نظري فقط
-            "y2_simple_tp": (values) => values.tp, // عملي فقط
-        }
-    },
-    "3": { // بيانات السنة الثالثة (من البايثون والمعاملات)
-        annual_coeffs: {
-            "Pathologie": 5, "ODF": 5, "Prothèse": 5, "Parodontologie": 5, "Occlusodontie": 5,
-            "Imagerie": 3,
-            "Occlusion": 1, "Anesthésie": 1, "Anapath": 1, "Pharmacologie": 1
-        },
-        formulas: {
-            "y3_standard": (values) => {
-                let emds = [];
-                if (values.emd1) emds.push(values.emd1);
-                if (values.emd2) emds.push(values.emd2);
-                if (values.emd3) emds.push(values.emd3);
-                if (emds.length === 0) return (values.cc / 2); // احتياطي
-                const avgEmd = emds.reduce((a, b) => a + b, 0) / emds.length;
-                return (avgEmd + values.cc) / 2;
-            },
-            "y3_Prothèse": (values) => {
-                const emds = [values.emd1, values.emd2, values.emd3];
-                const avgEmd = emds.reduce((a, b) => a + b, 0) / 3;
-                const part1 = (avgEmd + values.cc) / 2;
-                return (part1 + (values.tp * 2)) / 3;
-            }
-        }
-    }
-};
+// دالة مساعدة: جلب القيمة (رقم) من حقل إدخال
+function getVal(id) {
+    const el = document.getElementById(id);
+    return el && el.value ? parseFloat(el.value) : 0;
+}
 
-// --- 2. تعريف عناصر DOM ---
+// دالة مساعدة: حساب معدل مجموعة اختبارات (EMDs)
+// تمرر لها مصفوفة بمعرفات الحقول (IDs)
+function getAvgEMD(ids) {
+    let sum = 0;
+    let count = 0;
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.value !== "") {
+            sum += parseFloat(el.value);
+            count++;
+        }
+    });
+    return count > 0 ? sum / count : 0;
+}
+
+// دالة مساعدة: حساب معدل CC/TP (إذا كان هناك أكثر من حقل)
+function getAvgCC(ids) {
+    return getAvgEMD(ids); // نفس المنطق
+}
+
+// === الدالة الرئيسية: فتح الحاسبة ===
 const gradeCalcBtn = document.getElementById('grade-calc-btn');
 const gradeCalcModalOverlay = document.getElementById('gradeCalcModalOverlay');
 const closeGradeCalcModalBtn = document.getElementById('closeGradeCalcModalBtn');
-const gradeCalcModalBox = gradeCalcModalOverlay.querySelector('.grade-calc-modal');
 
-// --- 3. الدالة الرئيسية لفتح الحاسبة ---
-function openGradeCalculator() {
-    // selectedYear هو المتغير العام الذي يحمل سنة الطالب
-    const year = selectedYear;
-
-    // إخفاء جميع الحاويات أولاً
-    document.getElementById('grade-calc-y1').style.display = 'none';
-    document.getElementById('grade-calc-y2').style.display = 'none';
-    document.getElementById('grade-calc-y3').style.display = 'none';
-    document.getElementById('grade-calc-unsupported').style.display = 'none';
-
-    let targetContainer;
-
-    if (year === '1') {
-        targetContainer = document.getElementById('grade-calc-y1');
-        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (1ère Année)";
-        // (يفضل استدعاء دالة لإنشاء HTML السنة الأولى هنا إذا لم يكن موجوداً)
-    } else if (year === '2') {
-        targetContainer = document.getElementById('grade-calc-y2');
-        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (2ème Année)";
-    } else if (year === '3') {
-        targetContainer = document.getElementById('grade-calc-y3');
-        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne (3ème Année)";
-    } else {
-        // للسنوات 4, 5 والزوار
-        targetContainer = document.getElementById('grade-calc-unsupported');
-        document.getElementById('grade-calc-title').textContent = "Calculateur de Moyenne";
-    }
-
-    targetContainer.style.display = 'block';
-    gradeCalcModalOverlay.classList.add('active'); // إظهار النافذة
-}
-
-// --- 4. ربط الأحداث ---
-// ▼▼▼ [إضافة جديدة] منطق تبديل التبويبات (Tabs) داخل النافذة ▼▼▼
-gradeCalcModalBox.addEventListener('click', (e) => {
-    // التأكد أننا نضغط على زر تبويب (tab-link)
-    if (e.target.classList.contains('tab-link')) {
-        const link = e.target;
-        const tabId = link.dataset.tab; // (مثال: "y1-s1" أو "y2-s2")
-
-        // 1. العثور على حاوية الأزرار (tabs-nav)
-        const tabsNav = link.closest('.tabs-nav');
-        // 2. العثور على حاوية المحتوى الرئيسية (calculator-year-container)
-        const yearContainer = link.closest('.calculator-year-container');
-
-        if (!tabsNav || !yearContainer) return;
-
-        // 3. إزالة 'active' من كل الأزرار والمحتويات داخل هذه السنة فقط
-        tabsNav.querySelectorAll('.tab-link').forEach(item => item.classList.remove('active'));
-        yearContainer.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
-
-        // 4. تفعيل الزر والمحتوى الذي تم النقر عليه
-        link.classList.add('active');
-        const contentToShow = document.getElementById(tabId);
-        if (contentToShow) {
-            contentToShow.classList.add('active');
-        } else {
-            console.error(`Tab content with ID "${tabId}" not found!`);
-        }
-    }
-});
-// ▲▲▲ نهاية الإضافة ▲▲▲
-
-// فتح النافذة
 if (gradeCalcBtn) {
-    gradeCalcBtn.addEventListener('click', openGradeCalculator);
+    gradeCalcBtn.addEventListener('click', () => {
+        // إخفاء كل السنوات أولاً
+        ['grade-calc-y1', 'grade-calc-y2', 'grade-calc-y3', 'grade-calc-unsupported'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'none';
+        });
+
+        // تحديد السنة وعرض المناسب
+        const modalTitle = document.getElementById('grade-calc-title');
+
+        if (selectedYear === '1') {
+            document.getElementById('grade-calc-y1').style.display = 'block';
+            modalTitle.textContent = "Calculateur (1ère Année)";
+        } else if (selectedYear === '2') {
+            document.getElementById('grade-calc-y2').style.display = 'block';
+            modalTitle.textContent = "Calculateur (2ème Année)";
+        } else if (selectedYear === '3') {
+            document.getElementById('grade-calc-y3').style.display = 'block';
+            modalTitle.textContent = "Calculateur (3ème Année)";
+        } else {
+            document.getElementById('grade-calc-unsupported').style.display = 'block';
+            modalTitle.textContent = "Calculateur de Moyenne";
+        }
+
+        gradeCalcModalOverlay.classList.add('active');
+    });
 }
 
-// إغلاق النافذة
 if (closeGradeCalcModalBtn) {
     closeGradeCalcModalBtn.addEventListener('click', () => {
         gradeCalcModalOverlay.classList.remove('active');
     });
 }
-if (gradeCalcModalOverlay) {
-    gradeCalcModalOverlay.addEventListener('click', (e) => {
-        if (e.target === gradeCalcModalOverlay) {
-            gradeCalcModalOverlay.classList.remove('active');
-        }
+
+// === منطق الحساب للسنة الثانية (Y2) ===
+const calcY2Btn = document.getElementById('calc-y2-btn');
+if (calcY2Btn) {
+    calcY2Btn.addEventListener('click', () => {
+        let totalPoints = 0;
+        let totalCoeff = 37;
+
+        // دالة الحساب: (معدل الامتحانات * 0.33) + (TP * 0.67)
+        const calcModuleTpHeavy = (emdIds, tpId, coeff) => {
+            const avgEmd = getAvgEMD(emdIds);
+            const tp = getVal(tpId);
+            const moy = (avgEmd * 0.33) + (tp * 0.67);
+            totalPoints += moy * coeff;
+            return moy;
+        };
+
+        // دالة الحساب: نظري فقط (معدل الامتحانات)
+        const calcModuleExamOnly = (emdIds, coeff) => {
+            const avgEmd = getAvgEMD(emdIds);
+            totalPoints += avgEmd * coeff;
+            return avgEmd;
+        };
+
+        // دالة الحساب: TP فقط
+        const calcModuleTpOnly = (tpId, coeff) => {
+            const tp = getVal(tpId);
+            totalPoints += tp * coeff;
+            return tp;
+        };
+
+        // 1. Modules avec TP (33% Exam / 67% TP)
+        calcModuleTpHeavy(['y2-oce-emd1', 'y2-oce-emd2', 'y2-oce-emd3'], 'y2-oce-tp', 5); // OCE
+        calcModuleTpHeavy(['y2-proth-emd1', 'y2-proth-emd2'], 'y2-proth-tp', 5);          // Prothèse
+        calcModuleTpHeavy(['y2-anatd-emd1', 'y2-anatd-emd2'], 'y2-anatd-tp', 3);          // Anat Dentaire
+        calcModuleTpHeavy(['y2-paro-emd1', 'y2-paro-emd2'], 'y2-paro-tp', 3);              // Paro
+
+        // 2. Modules Théoriques (2 EMDs)
+        calcModuleExamOnly(['y2-anath-emd1', 'y2-anath-emd2'], 4); // Anat Humaine
+        calcModuleExamOnly(['y2-odf-emd1', 'y2-odf-emd2'], 3);     // ODF
+        calcModuleExamOnly(['y2-patho-emd1', 'y2-patho-emd2'], 3); // Patho
+        calcModuleExamOnly(['y2-biomat-emd1', 'y2-biomat-emd2'], 2); // Biomat
+        calcModuleExamOnly(['y2-micro-emd1', 'y2-micro-emd2'], 2);   // Microbio
+        calcModuleExamOnly(['y2-histo-emd1', 'y2-histo-emd2'], 2);   // Histo
+        calcModuleExamOnly(['y2-physio-emd1', 'y2-physio-emd2'], 1); // Physio (1 Coeff)
+
+        // 3. Modules Single Exam (1 EMD)
+        calcModuleExamOnly(['y2-anglais-emd'], 1);
+        calcModuleExamOnly(['y2-hygiene-emd'], 1);
+        calcModuleExamOnly(['y2-immuno-emd'], 1);
+
+        // 4. Informatique (TP Only)
+        calcModuleTpOnly('y2-info-tp', 1);
+
+        // النتيجة النهائية
+        const finalAvg = totalPoints / totalCoeff;
+        const resultDiv = document.getElementById('result-y2-annuel');
+        resultDiv.style.display = 'block';
+
+        let appreciation = finalAvg >= 10 ? "Admis(e)" : "Ajourné(e)";
+        let color = finalAvg >= 10 ? "#27ae60" : "#e74c3c";
+
+        resultDiv.innerHTML = `
+            Moyenne Annuelle: <strong style="font-size:1.4em; color:${color}">${finalAvg.toFixed(2)} / 20</strong><br>
+            <span style="font-size:0.9em; color:#555">Mention: ${appreciation}</span>
+        `;
     });
 }
 
-// --- 5. منطق الحاسبة (باستخدام تفويض الأحداث) ---
+// === منطق الحساب للسنة الثالثة (Y3) ===
+const calcY3Btn = document.getElementById('calc-y3-btn');
+if (calcY3Btn) {
+    calcY3Btn.addEventListener('click', () => {
+        let totalPoints = 0;
+        let totalCoeff = 35;
 
-// دالة مساعدة للحصول على القيمة
-function getCalcValue(id) {
-    const el = document.getElementById(id);
-    if (!el) {
-        console.error(`Element not found: ${id}`);
-        return 0; // إرجاع صفر إذا كان الحقل غير موجود (مثل EMD 3 في مادة بها 2 فقط)
-    }
-    const value = parseFloat(el.value);
-    return isNaN(value) ? 0 : value; // إرجاع صفر إذا كان فارغاً
+        // 1. Prothèse (استثناء: 33% Exam, 67% CC)
+        const avgProthExam = getAvgEMD(['y3-proth-emd1', 'y3-proth-emd2', 'y3-proth-emd3']);
+        const prothCC = getVal('y3-proth-cc');
+        const prothMoy = (avgProthExam * 0.33) + (prothCC * 0.67);
+        totalPoints += prothMoy * 5;
+
+        // دالة عامة لباقي المواد الأساسية (50% / 50%)
+        const calcMixed50 = (emdIds, ccIds, coeff) => {
+            const avgEmd = getAvgEMD(emdIds);
+            const avgCc = getAvgCC(ccIds);
+            const moy = (avgEmd * 0.5) + (avgCc * 0.5);
+            totalPoints += moy * coeff;
+        };
+
+        // OCE (2 EMDs, 2 CCs)
+        calcMixed50(['y3-oce-emd1', 'y3-oce-emd2'], ['y3-oce-cc1', 'y3-oce-cc2'], 5);
+        // ODF (3 EMDs, 3 CCs)
+        calcMixed50(['y3-odf-emd1', 'y3-odf-emd2', 'y3-odf-emd3'], ['y3-odf-cc1', 'y3-odf-cc2', 'y3-odf-cc3'], 5);
+        // Patho (3 EMDs, 2 CCs)
+        calcMixed50(['y3-patho-emd1', 'y3-patho-emd2', 'y3-patho-emd3'], ['y3-patho-cc1', 'y3-patho-cc2'], 5);
+        // Paro (2 EMDs, 1 CC)
+        calcMixed50(['y3-paro-emd1', 'y3-paro-emd2'], ['y3-paro-cc'], 5);
+        // Imagerie (2 EMDs, 1 CC) - Coeff 3
+        calcMixed50(['y3-img-emd1', 'y3-img-emd2'], ['y3-img-cc'], 3);
+
+        // المواد الثانوية (Exam Only)
+        totalPoints += getAvgEMD(['y3-pharma-emd1', 'y3-pharma-emd2', 'y3-pharma-emd3']) * 1;
+        totalPoints += getAvgEMD(['y3-anapath-emd1', 'y3-anapath-emd2']) * 1;
+        totalPoints += getVal('y3-oxyo-emd') * 1;
+        totalPoints += getVal('y3-occluso-emd') * 3; // Occluso has coeff 3 in inputs usually? Check coeff (Input label says 3)
+        totalPoints += getVal('y3-anesth-emd') * 1;
+
+        // النتيجة النهائية
+        const finalAvg = totalPoints / totalCoeff;
+        const resultDiv = document.getElementById('result-y3-annuel');
+        resultDiv.style.display = 'block';
+
+        let appreciation = finalAvg >= 10 ? "Admis(e)" : "Ajourné(e)";
+        let color = finalAvg >= 10 ? "#27ae60" : "#e74c3c";
+
+        resultDiv.innerHTML = `
+            Moyenne Annuelle: <strong style="font-size:1.4em; color:${color}">${finalAvg.toFixed(2)} / 20</strong><br>
+            <span style="font-size:0.9em; color:#555">Mention: ${appreciation}</span>
+        `;
+    });
 }
-
-// دالة مساعدة لإظهار النتيجة
-function showCalcResult(resultId, moyenne) {
-    const el = document.getElementById(resultId);
-    if (!el) return;
-
-    el.innerHTML = `Moyenne: <strong>${moyenne.toFixed(2)} / 20</strong>`;
-
-    // تحديد التقدير
-    let appreciation = '';
-    let msgClass = 'success';
-    if (moyenne >= 16) appreciation = "Excellent";
-    else if (moyenne >= 14) appreciation = "Très Bien";
-    else if (moyenne >= 12) appreciation = "Bien";
-    else if (moyenne >= 10) appreciation = "Moyen";
-    else {
-        appreciation = "Faible (Rattrapage)";
-        msgClass = 'danger';
-    }
-
-    el.innerHTML += `<br><small>Appréciation: ${appreciation}</small>`;
-    el.className = `result-text ${msgClass}`; // تطبيق التنسيق
-    el.style.display = 'block';
-    return moyenne;
-}
-
-// دالة مساعدة للملء التلقائي
-function autoFill(fieldId, value) {
-    const el = document.getElementById(fieldId);
-    if (el) {
-        el.value = value.toFixed(2);
-    }
-}
-
-// دالة حساب المعدل العام (موزون)
-function calculateWeightedAverage(coeffs, prefix) {
-    let sommeNotes = 0;
-    let sommeCoeffs = 0;
-
-    for (const matiere in coeffs) {
-        const note = getCalcValue(`${prefix}-${matiere}`);
-        const coeff = coeffs[matiere];
-
-        sommeNotes += note * coeff;
-        sommeCoeffs += coeff;
-    }
-
-    if (sommeCoeffs === 0) return 0;
-    return sommeNotes / sommeCoeffs;
-}
-
-// ربط كل أزرار "Calculer" داخل النافذة
-gradeCalcModalBox.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON' && e.target.dataset.calc) {
-        const calcKey = e.target.dataset.calc;
-        const resultId = `result-${calcKey}`;
-        let moyenne = 0;
-        let values = {};
-
-        try {
-            // --- منطق السنة الأولى (من ملفك) ---
-            if (calcKey === 'y1_s1_Histo') {
-                values = { td: getCalcValue('y1-s1-histo-td'), cyto1: getCalcValue('y1-s1-histo-cyto1'), histo: getCalcValue('y1-s1-histo-histo') };
-                moyenne = gradeDataStore["1"].formulas.y1_s1_Histo(values);
-                autoFill('avg-y1-s1-Histo-Cyto-Embryo', moyenne);
-                autoFill('avg-y1-annuel-Histo-Cyto-Embryo-s1', moyenne);
-            }
-            else if (calcKey === 'y1_s1_Biochimie') {
-                values = { td: getCalcValue('y1-s1-biochimie-td'), emd: getCalcValue('y1-s1-biochimie-emd') };
-                moyenne = gradeDataStore["1"].formulas.y1_s1_Biochimie(values);
-                autoFill('avg-y1-s1-Biochimie', moyenne);
-                autoFill('avg-y1-annuel-Biochimie-s1', moyenne);
-            }
-            else if (calcKey === 'avg_y1_s1') {
-                moyenne = calculateWeightedAverage(gradeDataStore["1"].s1_coeffs, 'avg-y1-s1');
-            }
-            // (أضف باقي حسابات السنة الأولى هنا...)
-
-            // --- منطق السنة الثانية ---
-            else if (calcKey === 'y2_s1_AnatomieDentaire') {
-                values = { th: getCalcValue('y2-s1-AnatomieDentaire-th'), tp: getCalcValue('y2-s1-AnatomieDentaire-tp') };
-                moyenne = gradeDataStore["2"].formulas.y2_standard_tp(values);
-                autoFill('avg-y2-s1-AnatomieDentaire', moyenne);
-            }
-            else if (calcKey === 'y2_s1_Histologie') {
-                values = { th: getCalcValue('y2-s1-Histologie-th'), tp: getCalcValue('y2-s1-Histologie-tp') };
-                moyenne = gradeDataStore["2"].formulas.y2_standard_tp(values);
-                autoFill('avg-y2-s1-Histologie', moyenne);
-            }
-            else if (calcKey === 'y2_s1_Anglais') {
-                values = { th: getCalcValue('y2-s1-Anglais-th') };
-                moyenne = gradeDataStore["2"].formulas.y2_simple_th(values);
-                autoFill('avg-y2-s1-Anglais', moyenne);
-            }
-            // (أضف باقي حسابات السنة الثانية هنا...)
-            else if (calcKey === 'avg_y2_s1') {
-                moyenne = calculateWeightedAverage(gradeDataStore["2"].s1_coeffs, 'avg-y2-s1');
-            }
-            else if (calcKey === 'avg_y2_annuel') {
-                const s1Moy = getCalcValue('avg-y2-a-S1');
-                const s2Moy = getCalcValue('avg-y2-a-S2');
-                const s1Coeff = Object.values(gradeDataStore["2"].s1_coeffs).reduce((a, b) => a + b, 0); // 7
-                const s2Coeff = Object.values(gradeDataStore["2"].s2_coeffs).reduce((a, b) => a + b, 0); // 8
-
-                let notesAnnuel = (s1Moy * s1Coeff) + (s2Moy * s2Coeff);
-                let coeffsAnnuel = s1Coeff + s2Coeff;
-
-                for (const matiere in gradeDataStore["2"].annual_coeffs) {
-                    const note = getCalcValue(`avg-y2-a-${matiere}`);
-                    const coeff = gradeDataStore["2"].annual_coeffs[matiere];
-                    notesAnnuel += note * coeff;
-                    coeffsAnnuel += coeff; // المجموع الكلي يجب أن يكون 37
-                }
-                moyenne = notesAnnuel / coeffsAnnuel;
-            }
-
-            // --- منطق السنة الثالثة ---
-            else if (calcKey === 'y3_Prothèse') {
-                values = {
-                    emd1: getCalcValue('y3-Prothèse-emd1'),
-                    emd2: getCalcValue('y3-Prothèse-emd2'),
-                    emd3: getCalcValue('y3-Prothèse-emd3'),
-                    cc: getCalcValue('y3-Prothèse-cc'),
-                    tp: getCalcValue('y3-Prothèse-tp')
-                };
-                moyenne = gradeDataStore["3"].formulas.y3_Prothèse(values);
-                autoFill('avg-y3-a-Prothèse', moyenne);
-            }
-            else if (calcKey === 'y3_Pathologie' || calcKey === 'y3_ODF' || calcKey === 'y3_Parodontologie' /*... الخ */) {
-                const matiere = calcKey.split('_')[1]; // (Pathologie, ODF...)
-                values = {
-                    emd1: getCalcValue(`y3-${matiere}-emd1`),
-                    emd2: getCalcValue(`y3-${matiere}-emd2`),
-                    emd3: getCalcValue(`y3-${matiere}-emd3`),
-                    cc: getCalcValue(`y3-${matiere}-cc`)
-                };
-                moyenne = gradeDataStore["3"].formulas.y3_standard(values);
-                autoFill(`avg-y3-a-${matiere}`, moyenne);
-            }
-            else if (calcKey === 'avg_y3_annuel') {
-                moyenne = calculateWeightedAverage(gradeDataStore["3"].annual_coeffs, 'avg-y3-a');
-            }
-
-            // عرض النتيجة النهائية
-            showCalcResult(resultId, moyenne);
-
-        } catch (err) {
-            console.error("Erreur de calcul:", err);
-            showNotification(`Erreur: ${err.message}`, 'error');
-        }
-    }
-});
-// ▲▲▲ نهاية الإضافة ▲▲▲
+// ▲▲▲ [نهاية منطق حاسبة المعدل الجديد] ▲▲▲
 // ▲▲▲ نهاية الإضافة ▲▲▲
 // --- Initial Theme Setup ---
 const savedTheme = localStorage.getItem('theme');

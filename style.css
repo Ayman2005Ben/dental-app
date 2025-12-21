@@ -4570,30 +4570,118 @@ button:hover i {
 
 /* --- 1. تصميم الأيقونة (FAB) --- */
 /* --- 1. تصميم الأيقونة (FAB) --- */
+/* --- زر الآلة الحاسبة المحدث (دائري ومتناسق) --- */
 .grade-calc-fab-btn {
     position: fixed;
     bottom: 180px;
-    /* <-- تم تعديل هذه القيمة لرفعه فوق الأزرار الأخرى */
-    right: 20px;
+    /* فوق زر البومودورو بمسافة مناسبة */
+    right: 30px;
+    /* محاذاة لليمين */
     width: 60px;
     height: 60px;
-    background: linear-gradient(145deg, #007bff, #0056b3);
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
     color: white;
     border: none;
     border-radius: 50%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 4000;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grade-calc-fab-btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+}
+
+/* --- تنسيقات نافذة حساب المعدل الداخلية --- */
+.grade-calc-modal {
+    max-width: 550px !important;
+    width: 95%;
+    padding: 20px !important;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modules-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-bottom: 15px;
+    /* شريط تمرير جميل */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-btn-bg) #f1f1f1;
+}
+
+/* بطاقة المادة الواحدة */
+.module-card {
+    background: var(--card-bg);
+    border: 1px solid var(--input-border);
+    border-left: 4px solid var(--primary-btn-bg);
+    /* خط ملون على اليسار */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.module-card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* تنسيق خانات الإدخال داخل البطاقة */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #555;
+    flex: 1;
+}
+
+.input-group input {
+    width: 70px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* النصوص التوضيحية والنتائج */
+.modal-subtitle {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.result-text {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8fff9;
+    border: 1px solid #2ecc71;
+    border-radius: 8px;
+    color: #27ae60;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* --- 2. تصميم النافذة (Modal) --- */
