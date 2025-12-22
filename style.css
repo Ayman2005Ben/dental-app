@@ -2712,14 +2712,27 @@ button:hover i {
     transition: all 0.2s ease;
 }
 
-/* نمط الدوائر للأسئلة ذات الإجابة الواحدة */
-#quiz-options-container-pro.single-choice .quiz-option-pro::before {
-    border-radius: 50%;
+/* --- توحيد نظام الاختيار (Unified Choice System) --- */
+/* جعل جميع الخيارات تبدو كمربعات مستديرة لإخفاء نوع السؤال */
+#quiz-options-container-pro .quiz-option-pro::before {
+    border-radius: 6px;
+    /* شكل موحد للكل */
 }
 
-/* نمط المربعات للأسئلة ذات الإجابات المتعددة */
-#quiz-options-container-pro.multiple-choice .quiz-option-pro::before {
-    border-radius: 6px;
+/* تحسين مظهر المربع عند التحديد */
+.quiz-option-pro.selected::before {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    /* إضافة أيقونة صغيرة عند التحديد لتمييزها */
+    font-family: "Font Awesome 6 Free";
+    content: '\f00c';
+    /* علامة صح صغيرة */
+    font-weight: 900;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* عند اختيار الخيار (قبل التحقق) */
@@ -4437,6 +4450,36 @@ button:hover i {
     font-weight: bold;
     font-size: 0.9rem;
     padding-left: 10px;
+}
+
+/* ======================================================= */
+/* === [إضافة جديدة] تنسيق صورة الشرح داخل الكويز      === */
+/* ======================================================= */
+
+.explanation-image {
+    width: 100%;
+    max-width: 600px;
+    /* لضمان عدم كبرها بشكل مفرط على الشاشات الكبيرة */
+    display: block;
+    margin: 20px auto 10px auto;
+    /* توسيط وهامش علوي */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--input-border);
+    transition: transform 0.3s ease;
+}
+
+.explanation-image:hover {
+    transform: scale(1.02);
+    /* تأثير تكبير بسيط عند التمرير */
+}
+
+/* تعديل للهاتف */
+@media (max-width: 768px) {
+    .explanation-image {
+        margin: 15px 0;
+        border-radius: 8px;
+    }
 }
 
 /* ================================== */

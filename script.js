@@ -2351,6 +2351,29 @@ function renderCurrentQuestion() {
     // Display explanation if answered and explanation exists
     if (isAnswered && explanation && quizExplanationContainer && quizExplanationText) {
         quizExplanationText.textContent = explanation;
+
+        // --- إضافة منطق عرض صورة الشرح الجديدة ---
+        // حذف أي صورة شرح قديمة أولاً لتجنب التكرار
+        const oldExpImage = quizExplanationContainer.querySelector('.explanation-image');
+        if (oldExpImage) oldExpImage.remove();
+
+        if (question.explanationImage) {
+            const expImg = document.createElement('img');
+            const serverUrl = 'https://dental-app-he1p.onrender.com';
+
+            // بناء الرابط: إذا كان يبدأ بـ http نأخذه كما هو، وإلا نضيف رابط السيرفر
+            expImg.src = question.explanationImage.startsWith('http')
+                ? question.explanationImage
+                : `${serverUrl}${question.explanationImage}`;
+
+            expImg.className = 'explanation-image';
+            expImg.alt = "Explanation Illustration";
+
+            // إضافة الصورة بعد نص الشرح
+            quizExplanationText.after(expImg);
+        }
+        // ----------------------------------------
+
         quizExplanationContainer.style.display = 'block';
     }
 

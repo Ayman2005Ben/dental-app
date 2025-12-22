@@ -16,21 +16,23 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 2],
         explanation: "La cavité buccale répond latéralement aux régions massétérines et est limitée en haut par la voûte palatine. Elle est divisée par les arcades alvéolo-dentaires en deux parties : le vestibule en avant et la cavité orale proprement dite en arrière. La langue qu'elle contient est un organe musculo-membraneux, et non ostéofibreux. De plus, le nerf hypoglosse innerve tous les muscles de la langue à l’exception du muscle palatoglosse.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q1.jpg",
         citations: [1, 2, 3, 4, 5, 6, 7, 8]
       },
       {
-  questionText: "Concernant la cavité orale :\n1. La cavité orale est de situation cervico-faciale\n2. Elle communique avec le pharynx par l'isthme du gosier\n3. Elle est limitée en haut par le palais mou\n4. Le vestibule est situé en dehors de l'arcade dentaire\n5. La région labiale est formée par le muscle orbiculaire qui délimite la fente labiale",
-  options: [
-    "(1,3,4)",
-    "(2,4,5)",
-    "(3,4)",
-    "(1,3)",
-    "(2,3,5)"
-  ],
-  correctOptionIndexes: [1], 
-  explanation: "Réponse E (2, 3, 5) selon certaines sources, ou B (2,4,5). (Anatomiquement : 2, 4, 5 sont correctes).",
-  citations: [877, 878, 879, 880, 881]
-},
+        questionText: "Concernant la cavité orale :\n1. La cavité orale est de situation cervico-faciale\n2. Elle communique avec le pharynx par l'isthme du gosier\n3. Elle est limitée en haut par le palais mou\n4. Le vestibule est situé en dehors de l'arcade dentaire\n5. La région labiale est formée par le muscle orbiculaire qui délimite la fente labiale",
+        options: [
+          "(1,3,4)",
+          "(2,4,5)",
+          "(3,4)",
+          "(1,3)",
+          "(2,3,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Réponse E (2, 3, 5) selon certaines sources, ou B (2,4,5). (Anatomiquement : 2, 4, 5 sont correctes).",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q2.jpg",
+        citations: [877, 878, 879, 880, 881]
+      },
       {
         questionText: "Concernant La cavité buccale",
         options: [
@@ -42,6 +44,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 2],
         explanation: "La cavité buccale répond latéralement aux régions massétérines et est limitée en haut par la voûte palatine. Elle est divisée en deux parties par les arcades alvéolo-dentaires : le vestibule oral et la cavité orale proprement dite. La langue est un organe musculo-membraneux. Le nerf hypoglosse innerve tous les muscles de la langue à l'exception du palato-glosse.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q1.jpg",
         citations: [91, 92, 93, 94, 95, 96]
       },
       {
@@ -55,6 +58,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 2],
         explanation: "La face supérieure (dorsale) de la langue, et non inférieure, est divisée en deux parties par le sillon terminal. Les muscles de la langue sont bien classés en intrinsèques et extrinsèques. La vascularisation est assurée par l'artère linguale, branche de l'artère carotide externe. La langue possède 17 muscles (8 pairs et 1 impair). Le squelette ostéo-fibreux comprend l'os hyoïde, la membrane hyoglossienne et le septum lingual.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q3.jpg",
         citations: [228, 229, 230, 231, 232, 233]
       },
       {
@@ -68,6 +72,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 2],
         explanation: "La cavité buccale répond en bas à la région cervicale infra-hyoïdienne et en arrière au pharynx. Elle répond en haut à la voûte palatine et latéralement à la région massétérine. En avant, elle répond à la région labiale, tandis que les fosses nasales et le sinus maxillaire sont en haut.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q4.jpg",
         citations: [400, 401]
       },
       {
@@ -81,6 +86,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 3],
         explanation: "La région palatine représente la paroi supérieure de la cavité orale. Elle est formée de deux parties : le palais dur (osseux) en avant et le palais mou en arrière. Le palais osseux présente bien le raphé médian sur sa face inférieure. Le foramen incisif se trouve en avant du palais osseux, non en arrière.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q65.jpg",
         citations: [411, 412]
       },
       {
@@ -94,6 +100,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 2],
         explanation: "La langue est un organe musculo-membraneux contenu dans la cavité orale (et non le vestibule). Elle présente bien deux parties, antérieure et postérieure, séparées par le V lingual. Cependant, la partie antérieure mobile est le corps, et la partie postérieure fixe est la racine.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q6.jpg",
         citations: [423, 424]
       },
       {
@@ -107,6 +114,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 3, 4],
         explanation: "La langue est un organe musculaire situé dans la cavité orale proprement dite (et non le vestibule). Elle présente une partie antérieure mobile (le corps) et une partie postérieure fixe (la racine), séparées par le V lingual (et non par un sillon supérieur/inférieur).",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q7.jpg",
         citations: [425, 426]
       },
       {
@@ -120,6 +128,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 1, 3],
         explanation: "La face supérieure de la langue est bien divisée par le sillon terminal, et ses muscles sont classés en extrinsèques et intrinsèques. La langue possède neuf muscles (sept pairs et deux impairs). Cependant, sa vascularisation vient de l'artère carotide externe (via l'artère linguale), et sa base est attachée à la mandibule et à l'os hyoïde, elle ne repose pas sur le plancher buccal.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q8.jpg",
         citations: [638, 639, 640, 641, 642, 643, 644]
       },
       {
@@ -133,6 +142,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 1, 4],
         explanation: "Le vestibule oral est un espace en forme de fer à cheval, tapissé par une muqueuse orale qui se continue avec les gencives, et il comprend deux gouttières vestibulaires (supérieure et inférieure). Il n'est pas limité en avant par la région génienne (mais par les lèvres) ni en arrière par l'isthme du gosier (mais par les arcades dentaires).",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q9.jpg",
         citations: [612, 613, 614, 615, 616, 617]
       },
       {
@@ -146,6 +156,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 1, 4],
         explanation: "La région palatine constitue la paroi supérieure de la cavité buccale. Elle comprend la voûte palatine (palais dur) en avant et le voile du palais (palais mou) en arrière. La couche musculaire du voile est bien formée de cinq muscles de chaque côté, et la voûte palatine a un aspect de demi-cercle à concavité antérieure.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q10.jpg",
         citations: [681, 682, 683, 684, 685, 686, 687]
       },
       {
@@ -159,6 +170,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 3, 4],
         explanation: "La cavité orale communique avec le pharynx par l'isthme du gosier. Le vestibule est situé en dehors (et non en dedans) de l'arcade dentaire. La région labiale est formée par le muscle orbiculaire délimitant la fente labiale. (Note : L'explication d'origine indique que 'a' est juste, 'c' est juste, et 'e' est juste, mais marque la réponse 'B (a,d,e)', ce qui est contradictoire. En se basant sur les commentaires, B, D, et E sont corrects).",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q11.jpg",
         citations: [877, 878, 879, 880, 881]
       },
       {
@@ -172,6 +184,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 1, 4],
         explanation: "Le vestibule oral est un espace en forme de fer à cheval, tapissé par une muqueuse orale qui se continue avec les gencives. Il comprend deux gouttières vestibulaires, supérieure et inférieure. Il est limité en avant par les lèvres (non la région génienne) et en arrière par les arcades dentaires (non l'isthme du gosier).",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q12.jpg",
         citations: [1092, 1093, 1094, 1095, 1096, 1097]
       },
       {
@@ -181,10 +194,11 @@ const anatomyQuizzesY2 = [
           "La couche musculaire du voile du palais est formée de cinq muscles de chaque côté",
           "Elle comprend en avant le voile du palais ou palais mou",
           "Elle comprend en arrière la voûte palatine palais dur",
-          "Le palais dur est formé dans ses 3/4 postérieurs par l'accolement des 2 processus palatins des os maxillaires"
+          "Le palais dur est formé dans ses 3/4 antérieurs par l'accolement des 2 processus palatins des os maxillaires"
         ],
         correctOptionIndexes: [0, 1],
         explanation: "Le palais forme la paroi supérieure de la cavité buccale, et la couche musculaire du voile du palais est formée de cinq muscles de chaque côté. Le palais mou (voile) est en arrière, et le palais dur (voûte) est en avant. Le palais dur est formé dans ses 3/4 antérieurs (non postérieurs) par les processus palatins des os maxillaires.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q13.jpg",
         citations: [1107, 1108, 1109, 1110, 1111, 1112]
       },
       {
@@ -198,6 +212,7 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [0, 2, 3, 4],
         explanation: "Cette question concerne le nerf glossopharyngien (IX), et non la cavité buccale. Le nerf IX est la neuvième paire crânienne. Il est destiné à l'oreille moyenne, la langue, la parotide et le pharynx, et contrôle la sensibilité gustative du tiers postérieur de la langue. C'est un nerf mixte (non moteur pur). L'innervation sensitive de la face est aussi une de ses fonctions.",
+        explanationImage: "/images/quizzes/year-2/anatomy-y2/q14.jpg",
         citations: [1302, 1303, 1304, 1305, 1306]
       }
     ]
@@ -220,44 +235,44 @@ const anatomyQuizzesY2 = [
         citations: [14, 15, 16, 17, 18, 19, 20]
       },
       {
-  questionText: "Concernant le maxillaire :\n1. Le maxillaire est un os pair du massif facial supérieur\n2. Le maxillaire occupe la partie centrale de la face\n3. Le maxillaire est un os immobile\n4. L’os maxillaire comporte des alvéoles dentaires\n5. L'apophyse palatine présente sur sa face inférieure le foramen incisif et palatin antérieur",
-  options: [
-    "(1, 3, 5)",
-    "(2, 3, 5)",
-    "(2,4,5)",
-    "(2, 3)",
-    "(3, 4,)"
-  ],
-  correctOptionIndexes: [2],
-  explanation: "Analyse : 2, 4, 5 sont considérées justes dans ce contexte (Bien que 1 et 3 soient anatomiquement vraies, le QCM semble cibler la combinaison C).",
-  citations: [427, 428, 429, 430, 431]
-},
-{
-  questionText: "Concernant la mandibule :\n1. La mandibule est le seul os fixé au squelette cranio facial\n2. Le trou mentonnier laisse passer le nerf mentonnier\n3. La ligne oblique interne est aussi appelée la ligne mylohyoïdienne\n4. Au niveau du gonion se trouve une dépression pour l'artère faciale\n5. Au niveau de la partie interne se trouve la fossette digastrique",
-  options: [
-    "(1,3)",
-    "(3,4,5)",
-    "(3, 4)",
-    "(2, 3)",
-    "(4,5)"
-  ],
-  correctOptionIndexes: [4],
-  explanation: "Selon le corrigé : 4 et 5 sont les réponses attendues (Réponse E).",
-  citations: [436, 437, 438, 439, 440, 441, 442]
-},
-{
-  questionText: "Concernent l'os zygomatique :\n1. C'est un os pair, latéral et triangulaire (quadrilatère)\n2. La face latérale présente un trou malaire\n3. Sa face médiale est lisse\n4. Le bord antéro-supérieur constitue le rebord latéral de l'orbite\n5. Assure la jonction latérale entre le massif crânien et facial",
-  options: [
-    "(1, 2, 5)",
-    "(2, 3, 4)",
-    "(1,3, 4)",
-    "(2, 3)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [0],
-  explanation: "Selon le corrigé type, les propositions 1, 2 et 5 sont vraies (Réponse A).",
-  citations: [720, 721, 722, 723, 724, 725, 726, 727, 728]
-},
+        questionText: "Concernant le maxillaire :\n1. Le maxillaire est un os pair du massif facial supérieur\n2. Le maxillaire occupe la partie centrale de la face\n3. Le maxillaire est un os immobile\n4. L’os maxillaire comporte des alvéoles dentaires\n5. L'apophyse palatine présente sur sa face inférieure le foramen incisif et palatin antérieur",
+        options: [
+          "(1, 3, 5)",
+          "(2, 3, 5)",
+          "(2,4,5)",
+          "(2, 3)",
+          "(3, 4,)"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Analyse : 2, 4, 5 sont considérées justes dans ce contexte (Bien que 1 et 3 soient anatomiquement vraies, le QCM semble cibler la combinaison C).",
+        citations: [427, 428, 429, 430, 431]
+      },
+      {
+        questionText: "Concernant la mandibule :\n1. La mandibule est le seul os fixé au squelette cranio facial\n2. Le trou mentonnier laisse passer le nerf mentonnier\n3. La ligne oblique interne est aussi appelée la ligne mylohyoïdienne\n4. Au niveau du gonion se trouve une dépression pour l'artère faciale\n5. Au niveau de la partie interne se trouve la fossette digastrique",
+        options: [
+          "(1,3)",
+          "(3,4,5)",
+          "(3, 4)",
+          "(2, 3)",
+          "(4,5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Selon le corrigé : 4 et 5 sont les réponses attendues (Réponse E).",
+        citations: [436, 437, 438, 439, 440, 441, 442]
+      },
+      {
+        questionText: "Concernent l'os zygomatique :\n1. C'est un os pair, latéral et triangulaire (quadrilatère)\n2. La face latérale présente un trou malaire\n3. Sa face médiale est lisse\n4. Le bord antéro-supérieur constitue le rebord latéral de l'orbite\n5. Assure la jonction latérale entre le massif crânien et facial",
+        options: [
+          "(1, 2, 5)",
+          "(2, 3, 4)",
+          "(1,3, 4)",
+          "(2, 3)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Selon le corrigé type, les propositions 1, 2 et 5 sont vraies (Réponse A).",
+        citations: [720, 721, 722, 723, 724, 725, 726, 727, 728]
+      },
       {
         questionText: "Concernant l'ostéologie du massif facial :",
         options: [
@@ -297,7 +312,7 @@ const anatomyQuizzesY2 = [
         explanation: "La symphyse est une crête verticale et médiane sur le corps de la mandibule. L'éminence mentonnière est une saillie pyramidale. Les jugums alvéolaires correspondent à l'implantation des incisives et canines. C'est la ligne oblique externe (non interne) qui se dirige en bas et en avant. Le foramen mentonnier est situé au niveau des prémolaires (PM), non des canines.",
         citations: [81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
       },
-       {
+      {
         questionText: "Concernant l'ostéologie du massif facial :",
         options: [
           "Tous les os du massif facial sont pneumatiques.",
@@ -435,7 +450,7 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [0, 2, 4],
         explanation: "Le génio-glosse s'insère sur la mandibule, l'hyo-glosse sur l'os hyoïde, et le stylo-glosse sur le processus styloïde de l'os temporal. Le glosso-staphylin s'insère sur le palais mou et l'amygdalo-glosse sur les amygdales."
       },
-  
+
       {
         questionText: "Concernant l'articulation temporo-mandibulaire",
         options: [
@@ -594,30 +609,30 @@ const anatomyQuizzesY2 = [
       },
       // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Massif Facial (Os Maxillaire + La Mandibule Et l’Os Hyoïde +Os palatin)"
 
-{
-  questionText: "Concernant l'os zygomatique / malaire (1er EMD 2019):",
-  options: [
-    "Présente une face latérale articulaire avec le maxillaire",
-    "Son angle antéro-supérieur s'articule avec l'apophyse orbitaire externe de l'os frontal",
-    "Son bord antéro supérieur constitue le rebord médial de l'orbite",
-    "C'est un os pair et symétrique",
-    "Assure la jonction latérale entre le massif crânial et le massif facial"
-  ],
-  correctOptionIndexes: [1, 3, 4],
-  explanation: "L'os zygomatique est un os pair qui forme la pommette et assure la jonction crânio-faciale latérale. Son angle supérieur s'articule avec le frontal. Il forme le rebord latéral (et non médial) de l'orbite."
-},
-{
-  questionText: "Concernant l'os maxillaire (1er EMD 2019):",
-  options: [
-    "C'est un os impair et symétrique.",
-    "Il entre dans la formation des cavités de la face (orbitaires, nasales et buccale).",
-    "L'os maxillaire porte les dents de l'arcade inférieure",
-    "On le compare à une pyramide quadrangulaire, à sommet latéral.",
-    "Il participe à la formation de l'étage antérieur de la base du crâne"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Le maxillaire est un os pair qui participe à la formation des cavités orbitaire, nasale et buccale (voûte palatine). Il porte les dents supérieures. On le compare à une pyramide à sommet tronqué (processus zygomatique)."
-},
+      {
+        questionText: "Concernant l'os zygomatique / malaire (1er EMD 2019):",
+        options: [
+          "Présente une face latérale articulaire avec le maxillaire",
+          "Son angle antéro-supérieur s'articule avec l'apophyse orbitaire externe de l'os frontal",
+          "Son bord antéro supérieur constitue le rebord médial de l'orbite",
+          "C'est un os pair et symétrique",
+          "Assure la jonction latérale entre le massif crânial et le massif facial"
+        ],
+        correctOptionIndexes: [1, 3, 4],
+        explanation: "L'os zygomatique est un os pair qui forme la pommette et assure la jonction crânio-faciale latérale. Son angle supérieur s'articule avec le frontal. Il forme le rebord latéral (et non médial) de l'orbite."
+      },
+      {
+        questionText: "Concernant l'os maxillaire (1er EMD 2019):",
+        options: [
+          "C'est un os impair et symétrique.",
+          "Il entre dans la formation des cavités de la face (orbitaires, nasales et buccale).",
+          "L'os maxillaire porte les dents de l'arcade inférieure",
+          "On le compare à une pyramide quadrangulaire, à sommet latéral.",
+          "Il participe à la formation de l'étage antérieur de la base du crâne"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le maxillaire est un os pair qui participe à la formation des cavités orbitaire, nasale et buccale (voûte palatine). Il porte les dents supérieures. On le compare à une pyramide à sommet tronqué (processus zygomatique)."
+      },
       {
         questionText: "Concernant le palatin:",
         options: [
@@ -948,44 +963,44 @@ const anatomyQuizzesY2 = [
         citations: [66, 67, 68, 69, 70, 71]
       },
       {
-  questionText: "Concernant la glande sub-mandibulaire :\n1. C'est une glande du plancher buccal, sous-mylo-hyoïdien\n2. Elle est située au-dessus du plancher\n3. Elle présente un prolongement postérieur important\n4. Elle occupe la région supra-hyoïdienne latérale\n5. Son canal excréteur s'ouvre au niveau de la base de la langue",
-  options: [
-    "(1,3,4)",
-    "(4,5)",
-    "(3,4)",
-    "(1,3)",
-    "(2,3,5)"
-  ],
-  correctOptionIndexes: [0],
-  explanation: "Justes : 1, 3, 4 (Réponse A). (Note: la proposition 5 est fausse car le canal s'ouvre au niveau du frein de la langue, pas la base).",
-  citations: [946, 947, 948, 949, 950]
-},
-{
-  questionText: "Concernant les branches collatérales du nerf facial :\n1. Le nerf auriculo-temporal\n2. Le nerf du muscle digastrique\n3. Le nerf alvéolaire inférieur\n4. Le nerf grand pétreux\n5. Les branches temporo-faciales",
-  options: [
-    "(1,2,4)",
-    "(3,4,5)",
-    "(3,4)",
-    "(2,4,5)",
-    "(2,4)"
-  ],
-  correctOptionIndexes: [3],
-  explanation: "Justes : 2, 4, 5 (Réponse D). (Note : 5 est une branche terminale mais souvent acceptée dans ce type de QCM mixte).",
-  citations: [988, 989, 990, 991, 992, 993]
-},
-{
-  questionText: "Concernant la glande parotide (QCM 86/170) :\n1. La glande parotide est située en avant du pavillon de l'oreille\n2. Le canal de Wharton appartient à la glande parotide\n3. Le canal de Sténon perfore le buccinateur\n4. Le canal de Wharton perfore le masséter\n5. Le canal de Sténon chemine en dehors du masséter",
-  options: [
-    "(1,3,4)",
-    "(1,4,5)",
-    "(3,4)",
-    "(1,3)",
-    "(2,3,5)"
-  ],
-  correctOptionIndexes: [3], 
-  explanation: "Note: Il semble y avoir une erreur dans les options de l'image source par rapport à la réponse D (1,5 ou 1,3?). Basé sur l'anatomie : 1 est Vrai, 3 est Vrai, 5 est Vrai. La réponse la plus proche contenant ces vérités est souvent demandée.",
-  citations: []
-},
+        questionText: "Concernant la glande sub-mandibulaire :\n1. C'est une glande du plancher buccal, sous-mylo-hyoïdien\n2. Elle est située au-dessus du plancher\n3. Elle présente un prolongement postérieur important\n4. Elle occupe la région supra-hyoïdienne latérale\n5. Son canal excréteur s'ouvre au niveau de la base de la langue",
+        options: [
+          "(1,3,4)",
+          "(4,5)",
+          "(3,4)",
+          "(1,3)",
+          "(2,3,5)"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Justes : 1, 3, 4 (Réponse A). (Note: la proposition 5 est fausse car le canal s'ouvre au niveau du frein de la langue, pas la base).",
+        citations: [946, 947, 948, 949, 950]
+      },
+      {
+        questionText: "Concernant les branches collatérales du nerf facial :\n1. Le nerf auriculo-temporal\n2. Le nerf du muscle digastrique\n3. Le nerf alvéolaire inférieur\n4. Le nerf grand pétreux\n5. Les branches temporo-faciales",
+        options: [
+          "(1,2,4)",
+          "(3,4,5)",
+          "(3,4)",
+          "(2,4,5)",
+          "(2,4)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Justes : 2, 4, 5 (Réponse D). (Note : 5 est une branche terminale mais souvent acceptée dans ce type de QCM mixte).",
+        citations: [988, 989, 990, 991, 992, 993]
+      },
+      {
+        questionText: "Concernant la glande parotide (QCM 86/170) :\n1. La glande parotide est située en avant du pavillon de l'oreille\n2. Le canal de Wharton appartient à la glande parotide\n3. Le canal de Sténon perfore le buccinateur\n4. Le canal de Wharton perfore le masséter\n5. Le canal de Sténon chemine en dehors du masséter",
+        options: [
+          "(1,3,4)",
+          "(1,4,5)",
+          "(3,4)",
+          "(1,3)",
+          "(2,3,5)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Note: Il semble y avoir une erreur dans les options de l'image source par rapport à la réponse D (1,5 ou 1,3?). Basé sur l'anatomie : 1 est Vrai, 3 est Vrai, 5 est Vrai. La réponse la plus proche contenant ces vérités est souvent demandée.",
+        citations: []
+      },
       {
         questionText: "A propos de la loge Parotidienne",
         options: [
@@ -1053,30 +1068,30 @@ const anatomyQuizzesY2 = [
       },
       // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Les Glandes salivaires"
 
-{
-  questionText: "Concernant la glande parotide (2016/2017):",
-  options: [
-    "présente 3 faces : postéro-médiale, antérieure et inférieure",
-    "b. est contenue dans une loge avec le paquet vasculo-nerveux du cou",
-    "elle pèse 25 grammes",
-    "elle est constituée de 3 lobes",
-    "elle est traversée par le nerf facial"
-  ],
-  correctOptionIndexes: [2, 4],
-  explanation: "La glande parotide pèse environ 25 à 30g et est traversée par le nerf facial (VII) qui la divise en deux lobes (superficiel et profond)."
-},
-{
-  questionText: "Concernant le conduit excréteur parotidien (Sténon) (2016/2017):",
-  options: [
-    "il chemine sur le muscle buccinateur",
-    "il s'ouvre dans le vestibule au regard du collet de la 2ème molaire inférieure",
-    "il conduit long de 4 cm",
-    "il s'ouvre dans le vestibule au regard du collet de la 2ème molaire supérieure",
-    "dans son trajet, il perfore le muscle Masséter"
-  ],
-  correctOptionIndexes: [2, 3],
-  explanation: "Le canal de Sténon mesure environ 4 cm et s'ouvre en regard de la 2ème molaire supérieure. Il chemine sur le masséter et perfore le buccinateur."
-},
+      {
+        questionText: "Concernant la glande parotide (2016/2017):",
+        options: [
+          "présente 3 faces : postéro-médiale, antérieure et inférieure",
+          "b. est contenue dans une loge avec le paquet vasculo-nerveux du cou",
+          "elle pèse 25 grammes",
+          "elle est constituée de 3 lobes",
+          "elle est traversée par le nerf facial"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "La glande parotide pèse environ 25 à 30g et est traversée par le nerf facial (VII) qui la divise en deux lobes (superficiel et profond)."
+      },
+      {
+        questionText: "Concernant le conduit excréteur parotidien (Sténon) (2016/2017):",
+        options: [
+          "il chemine sur le muscle buccinateur",
+          "il s'ouvre dans le vestibule au regard du collet de la 2ème molaire inférieure",
+          "il conduit long de 4 cm",
+          "il s'ouvre dans le vestibule au regard du collet de la 2ème molaire supérieure",
+          "dans son trajet, il perfore le muscle Masséter"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Le canal de Sténon mesure environ 4 cm et s'ouvre en regard de la 2ème molaire supérieure. Il chemine sur le masséter et perfore le buccinateur."
+      },
       {
         questionText: "Concernant la glande parotide :",
         options: [
@@ -1317,32 +1332,32 @@ const anatomyQuizzesY2 = [
         explanation: "La carotide commune droite présente un trajet thoracique et cervical. Dans le cou, elle forme un paquet vasculo-nerveux avec la veine jugulaire interne et le nerf vague. Elle se divise bien en carotide interne et externe. L'artère carotide interne ne donne aucune branche dans le cou. C'est la carotide commune gauche (non droite) qui naît de la crosse aortique.",
         citations: [663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673]
       },
-{
-  questionText: "Parmi les branches collatérales artérielles suivantes lesquelles naissent de l'artère sub-clavière :\n1. L'artère vertébrale\n2. L'artère axillaire\n3. L'artère maxillaire interne\n4. Le tronc artériel thyro-bicervico-scapulaire\n5. L'artère thoracique interne",
-  options: [
-    "(1,3,4)",
-    "(1,4,5)",
-    "(3,4)",
-    "(1,3)",
-    "(2,3,5)"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Justes : 1, 4, 5 (Réponse B).",
-  citations: [969, 970, 971, 972]
-},
-{
-  questionText: "Parmi les branches artérielles suivantes, lesquelles naissent de l'artère carotide externe :\n1. Artère faciale\n2. Artère pharyngienne ascendante\n3. Artère thyroïdienne inférieure\n4. Artère temporale superficielle\n5. Artère occipitale",
-  options: [
-    "(1,3,4)",
-    "(1,2,5)",
-    "(3,4)",
-    "(1,3)",
-    "(2,3,5)"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Justes : 1, 2, 5 (Réponse B). (4 est aussi juste car branche terminale, mais 3 est faux).",
-  citations: [926, 927, 928, 929]
-},
+      {
+        questionText: "Parmi les branches collatérales artérielles suivantes lesquelles naissent de l'artère sub-clavière :\n1. L'artère vertébrale\n2. L'artère axillaire\n3. L'artère maxillaire interne\n4. Le tronc artériel thyro-bicervico-scapulaire\n5. L'artère thoracique interne",
+        options: [
+          "(1,3,4)",
+          "(1,4,5)",
+          "(3,4)",
+          "(1,3)",
+          "(2,3,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Justes : 1, 4, 5 (Réponse B).",
+        citations: [969, 970, 971, 972]
+      },
+      {
+        questionText: "Parmi les branches artérielles suivantes, lesquelles naissent de l'artère carotide externe :\n1. Artère faciale\n2. Artère pharyngienne ascendante\n3. Artère thyroïdienne inférieure\n4. Artère temporale superficielle\n5. Artère occipitale",
+        options: [
+          "(1,3,4)",
+          "(1,2,5)",
+          "(3,4)",
+          "(1,3)",
+          "(2,3,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Justes : 1, 2, 5 (Réponse B). (4 est aussi juste car branche terminale, mais 3 est faux).",
+        citations: [926, 927, 928, 929]
+      },
       {
         questionText: "Concernant L'artère carotide externe :",
         options: [
@@ -1415,30 +1430,30 @@ const anatomyQuizzesY2 = [
         citations: [485, 486]
       },
       {
-  questionText: "A propos du système veineux principal du cou :\n1. La veine jugulaire interne est accompagnée de la carotide interne/commune\n2. La veine jugulaire interne s'unit avec la veine sous-clavière\n3. La veine sous-clavière reçoit la veine vertébrale\n4. La veine jugulaire externe se draine dans la veine vertébrale\n5. La veine jugulaire antérieure se jette dans la veine jugulaire interne",
-  options: [
-    "(1,2,4)",
-    "(3,4,5)",
-    "(3,4)",
-    "(2,4,5)",
-    "(1,3)"
-  ],
-  correctOptionIndexes: [4],
-  explanation: "Selon le corrigé : 1 et 3 sont justes (Réponse E).",
-  citations: [1002, 1003, 1004, 1005, 1006, 1007]
-},
-{
-  questionText: "A propos du drainage veineux cervico-facial :\n1. La veine jugulaire interne fait partie du système veineux postérieur\n2. La veine jugulaire interne se trouve au niveau de l'espace rétro-stylien\n3. Le tronc brachio-céphalique est formé par la jugulaire et la sous-clavière\n4. La veine jugulaire externe traverse la région parotidienne\n5. Le drainage postérieur se fait par les veines vertébrales et jugulaire externe",
-  options: [
-    "(2,4)",
-    "(3,4,5)",
-    "(3,4)",
-    "(2,4,5)",
-    "(3,2,4)"
-  ],
-  correctOptionIndexes: [3],
-  explanation: "Justes : 2, 4, 5 (Réponse D).",
-  citations: [1056, 1057, 1058, 1059, 1060, 1061, 1062]
+        questionText: "A propos du système veineux principal du cou :\n1. La veine jugulaire interne est accompagnée de la carotide interne/commune\n2. La veine jugulaire interne s'unit avec la veine sous-clavière\n3. La veine sous-clavière reçoit la veine vertébrale\n4. La veine jugulaire externe se draine dans la veine vertébrale\n5. La veine jugulaire antérieure se jette dans la veine jugulaire interne",
+        options: [
+          "(1,2,4)",
+          "(3,4,5)",
+          "(3,4)",
+          "(2,4,5)",
+          "(1,3)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Selon le corrigé : 1 et 3 sont justes (Réponse E).",
+        citations: [1002, 1003, 1004, 1005, 1006, 1007]
+      },
+      {
+        questionText: "A propos du drainage veineux cervico-facial :\n1. La veine jugulaire interne fait partie du système veineux postérieur\n2. La veine jugulaire interne se trouve au niveau de l'espace rétro-stylien\n3. Le tronc brachio-céphalique est formé par la jugulaire et la sous-clavière\n4. La veine jugulaire externe traverse la région parotidienne\n5. Le drainage postérieur se fait par les veines vertébrales et jugulaire externe",
+        options: [
+          "(2,4)",
+          "(3,4,5)",
+          "(3,4)",
+          "(2,4,5)",
+          "(3,2,4)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Justes : 2, 4, 5 (Réponse D).",
+        citations: [1056, 1057, 1058, 1059, 1060, 1061, 1062]
 
       },
       {
@@ -1513,18 +1528,18 @@ const anatomyQuizzesY2 = [
         citations: [247, 248, 249, 250, 251, 252, 253, 254, 255, 256]
       },
       {
-  questionText: "Concernant les fosses nasales :\n1. Assurent une fonction respiratoire et olfactive\n2. La paroi médiale est constituée par la lame perpendiculaire de l'ethmoïde, le vomer et le cartilage\n3. La paroi latérale est subdivisée en trois régions\n4. Les fosses nasales s'ouvrent dans le nasopharynx\n5. La vascularisation artérielle est tributaire des deux systèmes carotidiens",
-  options: [
-    "(2, 3, 5)",
-    "(2, 5)",
-    "(3, 4)",
-    "(1, 3)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Selon le corrigé : 2 et 5 sont les réponses retenues (Réponse B).",
-  citations: [518, 519, 520, 521, 522, 523]
-},
+        questionText: "Concernant les fosses nasales :\n1. Assurent une fonction respiratoire et olfactive\n2. La paroi médiale est constituée par la lame perpendiculaire de l'ethmoïde, le vomer et le cartilage\n3. La paroi latérale est subdivisée en trois régions\n4. Les fosses nasales s'ouvrent dans le nasopharynx\n5. La vascularisation artérielle est tributaire des deux systèmes carotidiens",
+        options: [
+          "(2, 3, 5)",
+          "(2, 5)",
+          "(3, 4)",
+          "(1, 3)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Selon le corrigé : 2 et 5 sont les réponses retenues (Réponse B).",
+        citations: [518, 519, 520, 521, 522, 523]
+      },
       {
         questionText: "Concernant les fosses nasales:",
         options: [
@@ -1915,18 +1930,18 @@ const anatomyQuizzesY2 = [
         citations: [848, 849, 850, 851, 852, 853]
       },
       {
-  questionText: "Concernant le nerf trijumeau :\n1. Le nerf trijumeau est un nerf mixte\n2. Il possède quatre noyaux\n3. Son territoire sensitif couvre toute la face\n4. Son ganglion sensitif est le ganglion de Gasser\n5. Son noyau moteur est dans le tronc cérébral",
-  options: [
-    "(1,2,4)",
-    "(3,4,5)",
-    "(3,4)",
-    "(2,4)",
-    "(3,2,4)"
-  ],
-  correctOptionIndexes: [1, 2, 3, 4],
-  explanation: "Selon le corrigé : Réponse B (3,4,5) est souvent la réponse attendue, bien que 2 soit aussi vrai.",
-  citations: [1083, 1084, 1085]
-},
+        questionText: "Concernant le nerf trijumeau :\n1. Le nerf trijumeau est un nerf mixte\n2. Il possède quatre noyaux\n3. Son territoire sensitif couvre toute la face\n4. Son ganglion sensitif est le ganglion de Gasser\n5. Son noyau moteur est dans le tronc cérébral",
+        options: [
+          "(1,2,4)",
+          "(3,4,5)",
+          "(3,4)",
+          "(2,4)",
+          "(3,2,4)"
+        ],
+        correctOptionIndexes: [1, 2, 3, 4],
+        explanation: "Selon le corrigé : Réponse B (3,4,5) est souvent la réponse attendue, bien que 2 soit aussi vrai.",
+        citations: [1083, 1084, 1085]
+      },
       {
         questionText: "Concernant le nerf trijumeau",
         options: [
@@ -2039,18 +2054,18 @@ const anatomyQuizzesY2 = [
       },
       // أضف هذا السؤال إلى قائمة 'questions' داخل كائن الدرس: "Fosse pterygo-palatine"
 
-{
-  questionText: "Concernant la fosse ptérygo-palatine (1er EMD 2019):",
-  options: [
-    "répond en avant à l'os maxillaire",
-    "communique avec l'orbite par le fissure orbitaire supérieure",
-    "répond à la cavité buccale par les canaux palatins",
-    "communique avec les fosses nasales par le canal sphéno-palatin",
-    "communique avec la cavité crânienne par le foramen ovale"
-  ],
-  correctOptionIndexes: [0, 2, 3],
-  explanation: "La fosse ptérygo-palatine est limitée en avant par la tubérosité maxillaire. Elle communique avec la cavité buccale via les canaux palatins et avec les fosses nasales via le foramen sphéno-palatin. Elle communique avec l'orbite par la fissure orbitaire inférieure (pas supérieure)."
-},
+      {
+        questionText: "Concernant la fosse ptérygo-palatine (1er EMD 2019):",
+        options: [
+          "répond en avant à l'os maxillaire",
+          "communique avec l'orbite par le fissure orbitaire supérieure",
+          "répond à la cavité buccale par les canaux palatins",
+          "communique avec les fosses nasales par le canal sphéno-palatin",
+          "communique avec la cavité crânienne par le foramen ovale"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La fosse ptérygo-palatine est limitée en avant par la tubérosité maxillaire. Elle communique avec la cavité buccale via les canaux palatins et avec les fosses nasales via le foramen sphéno-palatin. Elle communique avec l'orbite par la fissure orbitaire inférieure (pas supérieure)."
+      },
       {
         questionText: "Concernant la fosse ptérygo-palatine:",
         options: [
@@ -2239,18 +2254,18 @@ const anatomyQuizzesY2 = [
         citations: [418, 419, 420, 421, 422]
       },
       {
-  questionText: "Concernant l'Articulation temporo-mandibulaire :\n1. L'ATM est de type ginglyme\n2. Le versant postérieur du condyle est aplati et non articulaire\n3. Il existe deux ligaments intrinsèques et trois extrinsèques\n4. Seul le versant antérieur est articulaire\n5. La lame tendineuse pré-discale est une zone très innervée et bien vascularisée",
-  options: [
-    "(3,5)",
-    "(2,3,4)",
-    "(1,2,4)",
-    "(2,3)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [4],
-  explanation: "Justes : 3, 4, 5 (Réponse E).",
-  citations: [487, 488, 489, 490, 491]
-},
+        questionText: "Concernant l'Articulation temporo-mandibulaire :\n1. L'ATM est de type ginglyme\n2. Le versant postérieur du condyle est aplati et non articulaire\n3. Il existe deux ligaments intrinsèques et trois extrinsèques\n4. Seul le versant antérieur est articulaire\n5. La lame tendineuse pré-discale est une zone très innervée et bien vascularisée",
+        options: [
+          "(3,5)",
+          "(2,3,4)",
+          "(1,2,4)",
+          "(2,3)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Justes : 3, 4, 5 (Réponse E).",
+        citations: [487, 488, 489, 490, 491]
+      },
       {
         questionText: "Concernant l'articulation temporo-mandibulaire",
         options: [
@@ -2331,43 +2346,43 @@ const anatomyQuizzesY2 = [
       },
       // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Articulation Temporo-Mandibulaire"
 
-{
-  questionText: "Concernant les surfaces articulaires de l'ATM (1er EMD 2019):",
-  options: [
-    "Le condyle temporal fait partie de l'os tympanal",
-    "La scissure de Glaser sépare la cavité glénoïde en segment articulaire postérieure et non articulaire",
-    "Le condyle et le col sont les deux surfaces articulaires du coté mandibulaire.",
-    "Le condyle temporal est représenté par la racine transverse de l'apophyse zygomatique",
-    "Le disque articulaire est une lentille biconcave"
-  ],
-  correctOptionIndexes: [3, 4],
-  explanation: "Le condyle temporal est formé par la racine transverse de l'apophyse zygomatique. Le disque est une lentille biconcave. La scissure de Glaser sépare une partie antérieure articulaire d'une postérieure non articulaire."
-},
-{
-  questionText: "Concernant L'ATM (1er EMD 2019):",
-  options: [
-    "Est une articulation de type amphiarthrose",
-    "Comprend deux surfaces articulaires",
-    "Est une articulation synoviale",
-    "C'est une articulation très mobile et peu stable",
-    "Elle présente un ménisque articulaire permettant l'emboitement des surfaces articulaires."
-  ],
-  correctOptionIndexes: [2, 3],
-  explanation: "L'ATM est une articulation synoviale (diarthrose) très mobile et par conséquent instable (luxations fréquentes). Elle comprend un ménisque (disque) pour adapter les surfaces."
-},
-{
-  questionText: "Les moyens d'union et biomécanique de l'ATM (1er EMD 2019):",
-  options: [
-    "Font appelle à une capsule et des ligaments passif uniquement.",
-    "Les fibres profondes de la capsule sont temporo-mandibulaire.",
-    "Le ligament stylo-mandibulaire est un ligament actif",
-    "Le muscle de la mastication représente les ligaments actifs de l'ATM",
-    "La diduction est un mouvement du plan frontal"
-  ],
-  correctOptionIndexes: [3, 4],
-  explanation: "Les muscles masticateurs agissent comme des ligaments actifs stabilisant l'articulation. La diduction (latéralité) s'observe dans le plan frontal."
-},
-{
+      {
+        questionText: "Concernant les surfaces articulaires de l'ATM (1er EMD 2019):",
+        options: [
+          "Le condyle temporal fait partie de l'os tympanal",
+          "La scissure de Glaser sépare la cavité glénoïde en segment articulaire postérieure et non articulaire",
+          "Le condyle et le col sont les deux surfaces articulaires du coté mandibulaire.",
+          "Le condyle temporal est représenté par la racine transverse de l'apophyse zygomatique",
+          "Le disque articulaire est une lentille biconcave"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Le condyle temporal est formé par la racine transverse de l'apophyse zygomatique. Le disque est une lentille biconcave. La scissure de Glaser sépare une partie antérieure articulaire d'une postérieure non articulaire."
+      },
+      {
+        questionText: "Concernant L'ATM (1er EMD 2019):",
+        options: [
+          "Est une articulation de type amphiarthrose",
+          "Comprend deux surfaces articulaires",
+          "Est une articulation synoviale",
+          "C'est une articulation très mobile et peu stable",
+          "Elle présente un ménisque articulaire permettant l'emboitement des surfaces articulaires."
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "L'ATM est une articulation synoviale (diarthrose) très mobile et par conséquent instable (luxations fréquentes). Elle comprend un ménisque (disque) pour adapter les surfaces."
+      },
+      {
+        questionText: "Les moyens d'union et biomécanique de l'ATM (1er EMD 2019):",
+        options: [
+          "Font appelle à une capsule et des ligaments passif uniquement.",
+          "Les fibres profondes de la capsule sont temporo-mandibulaire.",
+          "Le ligament stylo-mandibulaire est un ligament actif",
+          "Le muscle de la mastication représente les ligaments actifs de l'ATM",
+          "La diduction est un mouvement du plan frontal"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Les muscles masticateurs agissent comme des ligaments actifs stabilisant l'articulation. La diduction (latéralité) s'observe dans le plan frontal."
+      },
+      {
         questionText: "Concernant la capsule articulaire de l'ATM :",
         options: [
           "C'est un manchon fibreux lâche mais solide.",
@@ -2487,18 +2502,18 @@ const anatomyQuizzesY2 = [
         citations: [382, 383, 384, 385, 386]
       },
       {
-  questionText: "Concernant la région nasale :\n1. La région nasale comporte 4 muscles\n2. Les muscles de la région nasale sont en dehors du muscle masséter\n3. Le risorius ne fait pas partie de la région nasale\n4. Le releveur de l'angle de la bouche est le canin\n5. Le buccinateur intervient dans l'action de siffler",
-  options: [
-    "(2, 3, 4)",
-    "(3,4,5)",
-    "(2,4,5)",
-    "(1, 2, 3)",
-    "(1,3)"
-  ],
-  correctOptionIndexes: [1, 2],
-  explanation: "Selon le corrigé, les propositions 3, 4, 5 sont vraies (Réponse B). La proposition 2 est anatomiquement fausse (les muscles nasaux sont médiaux par rapport au masséter).",
-  citations: [549, 550]
-},
+        questionText: "Concernant la région nasale :\n1. La région nasale comporte 4 muscles\n2. Les muscles de la région nasale sont en dehors du muscle masséter\n3. Le risorius ne fait pas partie de la région nasale\n4. Le releveur de l'angle de la bouche est le canin\n5. Le buccinateur intervient dans l'action de siffler",
+        options: [
+          "(2, 3, 4)",
+          "(3,4,5)",
+          "(2,4,5)",
+          "(1, 2, 3)",
+          "(1,3)"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Selon le corrigé, les propositions 3, 4, 5 sont vraies (Réponse B). La proposition 2 est anatomiquement fausse (les muscles nasaux sont médiaux par rapport au masséter).",
+        citations: [549, 550]
+      },
       {
         questionText: "Concernant Les muscles masticateurs :",
         options: [
@@ -2513,18 +2528,18 @@ const anatomyQuizzesY2 = [
         citations: [558, 559, 560, 561, 562]
       },
       {
-  questionText: "Concernant Les muscles masticateurs :\n1. Les muscles masticateurs comportent le temporal, le masséter et le ptérygoïdien latéral\n2. Le temporal est élévateur et rétropulseur\n3. Le masséter est situé sur la face latérale\n4. Le ptérygoïdien latéral comporte deux faisceaux\n5. Les muscles masticateurs sont tous innervés par le nerf mandibulaire",
-  options: [
-    "(1, 2, 5)",
-    "(2,4,5)",
-    "(1,3,4)",
-    "(2,3)",
-    "(3, 4,5)"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Justes : 2, 4, 5 (Réponse B).",
-  citations: [595, 596, 597, 598, 599]
-},
+        questionText: "Concernant Les muscles masticateurs :\n1. Les muscles masticateurs comportent le temporal, le masséter et le ptérygoïdien latéral\n2. Le temporal est élévateur et rétropulseur\n3. Le masséter est situé sur la face latérale\n4. Le ptérygoïdien latéral comporte deux faisceaux\n5. Les muscles masticateurs sont tous innervés par le nerf mandibulaire",
+        options: [
+          "(1, 2, 5)",
+          "(2,4,5)",
+          "(1,3,4)",
+          "(2,3)",
+          "(3, 4,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Justes : 2, 4, 5 (Réponse B).",
+        citations: [595, 596, 597, 598, 599]
+      },
 
       {
         questionText: "parmi les antagonistes de l'orbiculaire de la bouche",
@@ -2606,30 +2621,30 @@ const anatomyQuizzesY2 = [
       },
       // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Myologie De la Tète"
 
-{
-  questionText: "Concernant le muscle ptérygoïdien médial (1er EMD 2019):",
-  options: [
-    "S'insère sur le disque articulaire",
-    "Il est élévateur de la mandibule",
-    "Il est propulseur de la mandibule",
-    "Il est innervé par le nerf mandibulaire ou V3",
-    "il s'inséré sur l'aile latérale de l'apophyse ptérygoïde"
-  ],
-  correctOptionIndexes: [1, 2, 3],
-  explanation: "Le muscle ptérygoïdien médial est élévateur et propulseur de la mandibule. Il est innervé par le nerf mandibulaire (V3). Il s'insère dans la fosse ptérygoïde."
-},
-{
-  questionText: "Parmi les muscles masticateurs, lesquels sont élévateurs de la mandibule (2016/2017) :",
-  options: [
-    "le ptérygoïdien médial",
-    "le temporal",
-    "le buccinateur",
-    "le masséter",
-    "le ptérygoïdien latéral"
-  ],
-  correctOptionIndexes: [0, 1, 3],
-  explanation: "Les élévateurs sont le temporal, le masséter et le ptérygoïdien médial. Le ptérygoïdien latéral est propulseur/abaisseur. Le buccinateur est un muscle peaucier."
-},
+      {
+        questionText: "Concernant le muscle ptérygoïdien médial (1er EMD 2019):",
+        options: [
+          "S'insère sur le disque articulaire",
+          "Il est élévateur de la mandibule",
+          "Il est propulseur de la mandibule",
+          "Il est innervé par le nerf mandibulaire ou V3",
+          "il s'inséré sur l'aile latérale de l'apophyse ptérygoïde"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le muscle ptérygoïdien médial est élévateur et propulseur de la mandibule. Il est innervé par le nerf mandibulaire (V3). Il s'insère dans la fosse ptérygoïde."
+      },
+      {
+        questionText: "Parmi les muscles masticateurs, lesquels sont élévateurs de la mandibule (2016/2017) :",
+        options: [
+          "le ptérygoïdien médial",
+          "le temporal",
+          "le buccinateur",
+          "le masséter",
+          "le ptérygoïdien latéral"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Les élévateurs sont le temporal, le masséter et le ptérygoïdien médial. Le ptérygoïdien latéral est propulseur/abaisseur. Le buccinateur est un muscle peaucier."
+      },
       {
         questionText: "Concernent les muscles peauciers de la face",
         options: [
@@ -2715,30 +2730,30 @@ const anatomyQuizzesY2 = [
         citations: [1020, 1021, 1022, 1023, 1024]
       },
       {
-  questionText: "La base du crâne présente les orifices de passage des éléments suivants :\n1. Le nerf ophtalmique passe par le fissure orbitaire supérieure\n2. Le nerf axillaire passe par le foramen rond\n3. L'artère carotide interne passe par le foramen déchiré antérieur\n4. Le nerf hypoglosse passe par le trou condylien antérieur\n5. Les nerfs oculomoteurs passent par la fissure orbitaire supérieure",
-  options: [
-    "(1, 2)",
-    "(1, 3, 5)",
-    "(3, 4)",
-    "(2, 5)",
-    "(2,3,4)"
-  ],
-  correctOptionIndexes: [0],
-  explanation: "Selon le corrigé étrange de ce QCM : Réponse A (1, 2). (Note: anatomiquement, le nerf axillaire (nerf maxillaire V2) passe par le foramen rond).",
-  citations: [538, 539, 540, 541, 542]
-},
-{
-  questionText: "Concernant Les orifices de la base du crâne les nerfs crâniens suivants émergent de :\n1. Le nerf hypoglosse (XII) émerge du sillon antéro latéral du bulbe rachidien\n2. L'abducens émerge au niveau du sillon bulbo pontique\n3. L'oculomoteur émerge au niveau du sillon qui sépare l'espace perforé postérieur et le pédoncule cérébral\n4. Le nerf trochléaire émerge de la face postérieure du tronc cérébral\n5. Le trijumeau émerge au niveau de la limite de la face antéro latéral du pont",
-  options: [
-    "(1,2,3)",
-    "(2,3,5)",
-    "(3,4,5)",
-    "(4,5)"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Justes : 2, 3, 5 (Réponse B).",
-  citations: [1318, 1319, 1320, 1321]
-},
+        questionText: "La base du crâne présente les orifices de passage des éléments suivants :\n1. Le nerf ophtalmique passe par le fissure orbitaire supérieure\n2. Le nerf axillaire passe par le foramen rond\n3. L'artère carotide interne passe par le foramen déchiré antérieur\n4. Le nerf hypoglosse passe par le trou condylien antérieur\n5. Les nerfs oculomoteurs passent par la fissure orbitaire supérieure",
+        options: [
+          "(1, 2)",
+          "(1, 3, 5)",
+          "(3, 4)",
+          "(2, 5)",
+          "(2,3,4)"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Selon le corrigé étrange de ce QCM : Réponse A (1, 2). (Note: anatomiquement, le nerf axillaire (nerf maxillaire V2) passe par le foramen rond).",
+        citations: [538, 539, 540, 541, 542]
+      },
+      {
+        questionText: "Concernant Les orifices de la base du crâne les nerfs crâniens suivants émergent de :\n1. Le nerf hypoglosse (XII) émerge du sillon antéro latéral du bulbe rachidien\n2. L'abducens émerge au niveau du sillon bulbo pontique\n3. L'oculomoteur émerge au niveau du sillon qui sépare l'espace perforé postérieur et le pédoncule cérébral\n4. Le nerf trochléaire émerge de la face postérieure du tronc cérébral\n5. Le trijumeau émerge au niveau de la limite de la face antéro latéral du pont",
+        options: [
+          "(1,2,3)",
+          "(2,3,5)",
+          "(3,4,5)",
+          "(4,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Justes : 2, 3, 5 (Réponse B).",
+        citations: [1318, 1319, 1320, 1321]
+      },
       {
         questionText: "Concernant l'orbite osseuse-Le canal optique livre passage:",
         options: [
@@ -3145,31 +3160,31 @@ const anatomyQuizzesY2 = [
         citations: [882, 883, 884, 885, 886]
       },
       {
-  questionText: "les lymphonoeuds cervicaux latéraux drainent les territoires suivants :\n1. La trompe auditive\n2. La glande parotide\n3. Le nasopharynx\n4. L'oreille\n5. La région cervicale latérale",
-  options: [
-    "(3,4)",
-    "(1,4,5)",
-    "(1,3,4)",
-    "(1,3)",
-    "(2,4,5)"
-  ],
-  correctOptionIndexes: [4],
-  explanation: "Justes : 2, 4, 5 (Réponse E).",
-  citations: [893, 894]
-},
-{
-  questionText: "Ces propositions concernant les lymphonoeuds sub mandibulaire :\n1. Sont des nœuds adjacents à la glande sub-mandibulaire\n2. Est le groupe le plus important\n3. Ils se situent près du muscle sternocléido-mastoïdien\n4. Ils suivent le trajet du nerf facial\n5. Ils se situent entre les ventres antérieur et postérieur du muscle digastrique",
-  options: [
-    "(1,3.4)",
-    "(1,4,5)",
-    "(3,4)",
-    "(1.5)",
-    "(2,3.5)"
-  ],
-  correctOptionIndexes: [3],
-  explanation: "Justes : 1 et 5 (Réponse D).",
-  citations: [909, 910, 911, 912]
-},
+        questionText: "les lymphonoeuds cervicaux latéraux drainent les territoires suivants :\n1. La trompe auditive\n2. La glande parotide\n3. Le nasopharynx\n4. L'oreille\n5. La région cervicale latérale",
+        options: [
+          "(3,4)",
+          "(1,4,5)",
+          "(1,3,4)",
+          "(1,3)",
+          "(2,4,5)"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Justes : 2, 4, 5 (Réponse E).",
+        citations: [893, 894]
+      },
+      {
+        questionText: "Ces propositions concernant les lymphonoeuds sub mandibulaire :\n1. Sont des nœuds adjacents à la glande sub-mandibulaire\n2. Est le groupe le plus important\n3. Ils se situent près du muscle sternocléido-mastoïdien\n4. Ils suivent le trajet du nerf facial\n5. Ils se situent entre les ventres antérieur et postérieur du muscle digastrique",
+        options: [
+          "(1,3.4)",
+          "(1,4,5)",
+          "(3,4)",
+          "(1.5)",
+          "(2,3.5)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Justes : 1 et 5 (Réponse D).",
+        citations: [909, 910, 911, 912]
+      },
       {
         questionText: "Les lymphonœuds submandibulaires drainent les organes suivants :",
         options: [
@@ -3396,84 +3411,84 @@ const anatomyQuizzesY2 = [
         explanation: "L'os occipital est uni en avant au corps du sphénoïde par l'apophyse basilaire, et les gouttières du sinus sigmoïde se trouvent sur la face endocrânienne de ses masses latérales. Il participe à la formation de l'endobase et de l'exobase (pas seulement l'exobase). Le foramen magnum laisse passer la moelle allongée (bulbe), pas la moelle spinale. Les condyles s'articulent avec l'atlas (C1), non l'axis (C2).",
         citations: [152, 153, 154, 155, 156]
       },
-     {
-  questionText: "Concernant l'ostéologie du crâne :\n1. Les trois étages de la base du crâne constituent la base du crâne\n2. La base du crâne est le lieu de passage des nerfs et vaisseaux sanguins non pas la voûte\n3. La tête correspond à l'ensemble crâne et face\n4. Le crâne est constitué de huit os\n5. Tous les os du crâne participent à la constitution de la calvaria et la base",
-  options: [
-    "(1,3)",
-    "(3,4)",
-    "(3,5)",
-    "(2,3)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [2, 3],
-  explanation: "Analyse : (3) et (4) sont justes. (1) Faux (voûte+base). (2) Faux (ambigu). (5) Faux (Ethmoïde base seulement, Pariétal voûte seulement).",
-  citations: [393, 394, 395, 396, 397]
-},
-{
-  questionText: "Concernant l'os frontal :\n1. L'os frontal ferme à lui seul l'avant de la boîte crânienne\n2. Sa partie verticale appelée écaille appartient pour partie à la base du crâne\n3. L’os frontal contient des cavités aériques appelées les sinus frontaux\n4. L’os frontal s'articule avec la lame criblée de l'os ethmoïde\n5. Le toit de l'orbite comporte la fossette trochléaire en médiale et la fossette lacrymale en latéral",
-  options: [
-    "(1, 3, 4)",
-    "(2, 3, 4)",
-    "(3,5)",
-    "(2, 3)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [0],
-  explanation: "Justes : 1, 3, 4. Faux : 2 (Ecaille = voûte), 5 (Trochléaire est médiale, Lacrymale est latérale - proposition inversée ou mal lue dans le commentaire, mais 1,3,4 est la bonne combinaison).",
-  citations: [402, 403, 404, 405, 406, 407]
-},
-{
-  questionText: "Concernant l'os ethmoïdal :\n1. L'os ethmoïde participe seulement à la constitution de base du crâne\n2. L'ethmoïde participe à la formation de la cloison des fosses nasales\n3. Il possède un relief intracrânien, le processus de crista galli\n4. Les faces latérales des masses latérales contribuent à la formation de l'orbite\n5. La lame criblée de l'ethmoïde laisse passer les filets nerveux du nerf olfactif",
-  options: [
-    "(1, 3)",
-    "(2, 3, 4)",
-    "(1, 4)",
-    "(2,3)",
-    "(1, 4, 5)"
-  ],
-  correctOptionIndexes: [0, 1],
-  explanation: "Note: Selon le corrigé fourni dans le texte, la réponse D (2,3) est souvent attendue bien que les propositions 4 et 5 soient anatomiquement vraies. Il y a contradiction dans les sources.",
-  citations: [413, 414, 415, 416, 417]
-},
-{
-  questionText: "Concernant l'os Temporal :\n1. L'os temporal s'articule en avant avec le processus zygomatique\n2. L’os tympanal constitue la partie tympanique et l’écaille constitue la partie squameuse\n3. Le bord de l'écaille de l'os temporal est un bord circonférentiel\n4. Le rocher de l’os temporal présente quatre faces\n5. L'os temporal s'articule avec la mandibule au niveau de sa cavité glénoïde",
-  options: [
-    "(1, 2, 4)",
-    "(2, 3, 5)",
-    "(1, 4)",
-    "(2, 3)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [0, 2],
-  explanation: "Propositions justes selon l'analyse : 1 et 3. (Note: les combinaisons proposées ne correspondent pas parfaitement, vérifiez la source).",
-  citations: [450, 451, 452, 453]
-},
-{
-  questionText: "Concernant l'os sphénoïde :\n1. Le sphénoïde s'articule avec tous les os du crâne même l'occipital\n2. Le sphénoïde participe à la formation de la voûte et la base du crâne\n3. La partie squameuse des grandes ailes du sphénoïde participe au ptérion\n4. La petite aile du sphénoïde est creusée du canal optique\n5. Le sphénoïde participe à la formation du foramen déchiré antérieur",
-  options: [
-    "(1, 3, 4)",
-    "(2, 3, 4)",
-    "(1,3)",
-    "(2, 5)",
-    "(3,4,5)"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Justes : 2, 3, 4. Faux : 1 (Il s'articule avec l'occipital, mais la formulation est parfois piégeuse), 5 (C'est souvent considéré vrai anatomiquement, mais dans ce QCM spécifique, la combinaison B est la meilleure).",
-  citations: [458, 459, 460, 461, 462]
-},
-{
-  questionText: "Concernant l'os occipital :\n1. L’os occipital participe à la formation de l'étage postérieur de l’endo-base\n2. L'os occipital est uni au sphénoïde par l'apophyse basilaire en avant\n3. La gouttière du sinus longitudinal se trouve sur la face endocrânienne de l'écaille\n4. Les masses latérales de l'occipital délimitent le foramen de magnum\n5. Les condyles occipitaux s'articulent avec l'atlas",
-  options: [
-    "(1,3)",
-    "(2,3,4)",
-    "(1,2,4)",
-    "(2,4)",
-    "(1,4,5)"
-  ],
-  correctOptionIndexes: [3],
-  explanation: "Selon le corrigé type de ce QCM spécifique : Réponse D (2,4).",
-  citations: [463, 464, 465, 466]
-},
+      {
+        questionText: "Concernant l'ostéologie du crâne :\n1. Les trois étages de la base du crâne constituent la base du crâne\n2. La base du crâne est le lieu de passage des nerfs et vaisseaux sanguins non pas la voûte\n3. La tête correspond à l'ensemble crâne et face\n4. Le crâne est constitué de huit os\n5. Tous les os du crâne participent à la constitution de la calvaria et la base",
+        options: [
+          "(1,3)",
+          "(3,4)",
+          "(3,5)",
+          "(2,3)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Analyse : (3) et (4) sont justes. (1) Faux (voûte+base). (2) Faux (ambigu). (5) Faux (Ethmoïde base seulement, Pariétal voûte seulement).",
+        citations: [393, 394, 395, 396, 397]
+      },
+      {
+        questionText: "Concernant l'os frontal :\n1. L'os frontal ferme à lui seul l'avant de la boîte crânienne\n2. Sa partie verticale appelée écaille appartient pour partie à la base du crâne\n3. L’os frontal contient des cavités aériques appelées les sinus frontaux\n4. L’os frontal s'articule avec la lame criblée de l'os ethmoïde\n5. Le toit de l'orbite comporte la fossette trochléaire en médiale et la fossette lacrymale en latéral",
+        options: [
+          "(1, 3, 4)",
+          "(2, 3, 4)",
+          "(3,5)",
+          "(2, 3)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Justes : 1, 3, 4. Faux : 2 (Ecaille = voûte), 5 (Trochléaire est médiale, Lacrymale est latérale - proposition inversée ou mal lue dans le commentaire, mais 1,3,4 est la bonne combinaison).",
+        citations: [402, 403, 404, 405, 406, 407]
+      },
+      {
+        questionText: "Concernant l'os ethmoïdal :\n1. L'os ethmoïde participe seulement à la constitution de base du crâne\n2. L'ethmoïde participe à la formation de la cloison des fosses nasales\n3. Il possède un relief intracrânien, le processus de crista galli\n4. Les faces latérales des masses latérales contribuent à la formation de l'orbite\n5. La lame criblée de l'ethmoïde laisse passer les filets nerveux du nerf olfactif",
+        options: [
+          "(1, 3)",
+          "(2, 3, 4)",
+          "(1, 4)",
+          "(2,3)",
+          "(1, 4, 5)"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Note: Selon le corrigé fourni dans le texte, la réponse D (2,3) est souvent attendue bien que les propositions 4 et 5 soient anatomiquement vraies. Il y a contradiction dans les sources.",
+        citations: [413, 414, 415, 416, 417]
+      },
+      {
+        questionText: "Concernant l'os Temporal :\n1. L'os temporal s'articule en avant avec le processus zygomatique\n2. L’os tympanal constitue la partie tympanique et l’écaille constitue la partie squameuse\n3. Le bord de l'écaille de l'os temporal est un bord circonférentiel\n4. Le rocher de l’os temporal présente quatre faces\n5. L'os temporal s'articule avec la mandibule au niveau de sa cavité glénoïde",
+        options: [
+          "(1, 2, 4)",
+          "(2, 3, 5)",
+          "(1, 4)",
+          "(2, 3)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Propositions justes selon l'analyse : 1 et 3. (Note: les combinaisons proposées ne correspondent pas parfaitement, vérifiez la source).",
+        citations: [450, 451, 452, 453]
+      },
+      {
+        questionText: "Concernant l'os sphénoïde :\n1. Le sphénoïde s'articule avec tous les os du crâne même l'occipital\n2. Le sphénoïde participe à la formation de la voûte et la base du crâne\n3. La partie squameuse des grandes ailes du sphénoïde participe au ptérion\n4. La petite aile du sphénoïde est creusée du canal optique\n5. Le sphénoïde participe à la formation du foramen déchiré antérieur",
+        options: [
+          "(1, 3, 4)",
+          "(2, 3, 4)",
+          "(1,3)",
+          "(2, 5)",
+          "(3,4,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Justes : 2, 3, 4. Faux : 1 (Il s'articule avec l'occipital, mais la formulation est parfois piégeuse), 5 (C'est souvent considéré vrai anatomiquement, mais dans ce QCM spécifique, la combinaison B est la meilleure).",
+        citations: [458, 459, 460, 461, 462]
+      },
+      {
+        questionText: "Concernant l'os occipital :\n1. L’os occipital participe à la formation de l'étage postérieur de l’endo-base\n2. L'os occipital est uni au sphénoïde par l'apophyse basilaire en avant\n3. La gouttière du sinus longitudinal se trouve sur la face endocrânienne de l'écaille\n4. Les masses latérales de l'occipital délimitent le foramen de magnum\n5. Les condyles occipitaux s'articulent avec l'atlas",
+        options: [
+          "(1,3)",
+          "(2,3,4)",
+          "(1,2,4)",
+          "(2,4)",
+          "(1,4,5)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Selon le corrigé type de ce QCM spécifique : Réponse D (2,4).",
+        citations: [463, 464, 465, 466]
+      },
       {
         questionText: "L'apophyse CRISTA GALLI est :",
         options: [
@@ -3489,54 +3504,54 @@ const anatomyQuizzesY2 = [
       },
       // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Massif Cranial (Os Frontal+ Tète Osseuse + Os Temporal)"
 
-{
-  questionText: "Concernant Le frontal (1er EMD 2019):",
-  options: [
-    "Il présente dans sa partie exocrânienne, la glabelle, située au-dessus de la suture métopique.",
-    "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
-    "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
-    "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
-    "Sa partie verticale, appelée écaille, appartient à la base du crâne"
-  ],
-  correctOptionIndexes: [1, 2],
-  explanation: "Les fossettes granulaires bordent le sinus sagittal supérieur. La fossette trochléaire est située médialement (en dedans) tandis que la fossette lacrymale est latérale. L'écaille appartient à la voûte du crâne, pas à la base."
-},
-{
-  questionText: "Concernant l'os ethmoïdal (1er EMD 2019):",
-  options: [
-    "L'apophyse crista galli est la partie endocrânienne de la lame perpendiculaire",
-    "Participe à la formation de la cavité orbitaire par sa lame perpendiculaire",
-    "Participe à la formation des fosses nasales par la lame perpendiculaire",
-    "L'os planum est la face médiale de la masse latérale de l'éthmoïde",
-    "Le cornet inférieur fait partie des masses latérales"
-  ],
-  correctOptionIndexes: [0, 2],
-  explanation: "L'apophyse Crista Galli est bien la partie supérieure (endocrânienne) de la lame perpendiculaire. La lame perpendiculaire participe à la cloison nasale. L'os planum est la face latérale (et non médiale) des masses latérales. Le cornet inférieur est un os distinct."
-},
-{
-  questionText: "A propos de l'occipital (1er EMD 2019):",
-  options: [
-    "L'apophyse basilaire s'articule avec l'apophyse ptérygoïde de l'os sphénoïdal",
-    "Les masses latérales délimitent le foramen magnum",
-    "Sur l'écaille occipitale se trouve le canal du canal condylien",
-    "Les fosses cérébrales sont situées au-dessus des fosses cérébelleuses",
-    "Les condyles sont articulaires avec l'axis"
-  ],
-  correctOptionIndexes: [1, 3],
-  explanation: "Les masses latérales de l'occipital bordent le foramen magnum. Les fosses cérébrales (pour les lobes occipitaux) sont situées au-dessus des fosses cérébelleuses. L'apophyse basilaire s'articule avec le corps du sphénoïde (clivus), pas les ptérygoïdes. Les condyles s'articulent avec l'atlas (C1)."
-},
-{
-  questionText: "Concernant la fissure orbitaire supérieure (1er EMD 2019):",
-  options: [
-    "Est limitée en Dehors par le frontal",
-    "Est limitée en dedans par la petite aile du sphénoïde",
-    "Fait communiquer l'orbite avec l'étage moyen de la base du crâne",
-    "Livre passage au nerf optique",
-    "Livre passage aux nerfs oculomoteurs"
-  ],
-  correctOptionIndexes: [0, 2, 4],
-  explanation: "La fissure orbitaire supérieure (fente sphénoïdale) fait communiquer l'orbite avec l'étage moyen et livre passage aux nerfs oculomoteurs (III, IV, VI). Le nerf optique passe par le canal optique."
-},
+      {
+        questionText: "Concernant Le frontal (1er EMD 2019):",
+        options: [
+          "Il présente dans sa partie exocrânienne, la glabelle, située au-dessus de la suture métopique.",
+          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+          "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
+          "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
+          "Sa partie verticale, appelée écaille, appartient à la base du crâne"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les fossettes granulaires bordent le sinus sagittal supérieur. La fossette trochléaire est située médialement (en dedans) tandis que la fossette lacrymale est latérale. L'écaille appartient à la voûte du crâne, pas à la base."
+      },
+      {
+        questionText: "Concernant l'os ethmoïdal (1er EMD 2019):",
+        options: [
+          "L'apophyse crista galli est la partie endocrânienne de la lame perpendiculaire",
+          "Participe à la formation de la cavité orbitaire par sa lame perpendiculaire",
+          "Participe à la formation des fosses nasales par la lame perpendiculaire",
+          "L'os planum est la face médiale de la masse latérale de l'éthmoïde",
+          "Le cornet inférieur fait partie des masses latérales"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "L'apophyse Crista Galli est bien la partie supérieure (endocrânienne) de la lame perpendiculaire. La lame perpendiculaire participe à la cloison nasale. L'os planum est la face latérale (et non médiale) des masses latérales. Le cornet inférieur est un os distinct."
+      },
+      {
+        questionText: "A propos de l'occipital (1er EMD 2019):",
+        options: [
+          "L'apophyse basilaire s'articule avec l'apophyse ptérygoïde de l'os sphénoïdal",
+          "Les masses latérales délimitent le foramen magnum",
+          "Sur l'écaille occipitale se trouve le canal du canal condylien",
+          "Les fosses cérébrales sont situées au-dessus des fosses cérébelleuses",
+          "Les condyles sont articulaires avec l'axis"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les masses latérales de l'occipital bordent le foramen magnum. Les fosses cérébrales (pour les lobes occipitaux) sont situées au-dessus des fosses cérébelleuses. L'apophyse basilaire s'articule avec le corps du sphénoïde (clivus), pas les ptérygoïdes. Les condyles s'articulent avec l'atlas (C1)."
+      },
+      {
+        questionText: "Concernant la fissure orbitaire supérieure (1er EMD 2019):",
+        options: [
+          "Est limitée en Dehors par le frontal",
+          "Est limitée en dedans par la petite aile du sphénoïde",
+          "Fait communiquer l'orbite avec l'étage moyen de la base du crâne",
+          "Livre passage au nerf optique",
+          "Livre passage aux nerfs oculomoteurs"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "La fissure orbitaire supérieure (fente sphénoïdale) fait communiquer l'orbite avec l'étage moyen et livre passage aux nerfs oculomoteurs (III, IV, VI). Le nerf optique passe par le canal optique."
+      },
       {
         questionText: "Concernant l'ostéologie du crâne",
         options: [
@@ -3726,7 +3741,7 @@ const anatomyQuizzesY2 = [
       }
     ]
   },
- 
+
   {
     title: "Le SYSTEME CAROTIDIEN",
     subject: "anatomy-y2",
@@ -4387,7 +4402,7 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [2],
         explanation: "Le trou borgne est une caractéristique beaucoup plus fréquente et marquée sur l'incisive latérale que sur la centrale. Le modelé distal et le lobe distal sont plus marqués (galbés) sur la latérale, et ses faces proximales sont plus petites que celles de la centrale."
       },
-            // --- الأسئلة الناقصة من ملف PDF (سنوات 2024, 2023, 2022) ---
+      // --- الأسئلة الناقصة من ملف PDF (سنوات 2024, 2023, 2022) ---
       {
         questionText: "Le modelé des faces linguales des incisives inférieures :",
         options: [
@@ -4974,7 +4989,7 @@ const anatomyQuizzesY2 = [
         correctOptionIndexes: [0],
         explanation: "La forme de la chambre pulpaire suit la forme de la couronne, elle est donc rectangulaire."
       },
-      
+
       {
         questionText: "La deuxième molaire inférieure:",
         options: [
@@ -4989,7 +5004,7 @@ const anatomyQuizzesY2 = [
     ]
   },
   {
-        title: "Occluso-dontie",
+    title: "Occluso-dontie",
     subject: "anatomy-y2",
     questions: [
       {
@@ -5204,53 +5219,53 @@ const anatomyQuizzesY2 = [
         explanation: "Le nerf glosso-pharyngien est bien la 9ème paire crânienne. Il est destiné à l'oreille moyenne, la langue, la parotide et au pharynx, et il assure la sensibilité gustative du 1/3 postérieur de la langue. C'est un nerf mixte, non moteur pur."
       },
       {
-  questionText: "Concernant le nerf hypoglosse :",
-  options: [
-    "Nait du sillon retro-olivaire",
-    "Se termine au niveau de la base de la langue",
-    "Innerve un seul muscle sous-hyoidien",
-    "Est un nerf moteur de la langue et le muscle géniohyoidien",
-    "Assure la sensibilité de l'oreille moyenne"
-  ],
-  correctOptionIndexes: [2, 3],
-  explanation: "Le nerf hypoglosse (XII) émerge du sillon pré-olivaire. Il innerve le muscle thyro-hyoïdien (un muscle sous-hyoïdien) ainsi que les muscles de la langue et le muscle génio-hyoïdien. Il est purement moteur."
-},
-{
-  questionText: "Concernant Les muscles du palais mou (voile du palais) et la langue :\n1. Les muscles du voile du palais prennent origine ou se terminent au niveau de l'aponévrose palatine\n2. Les muscles de la langue sont distingués en 2 catégories (intrinsèques et extrinsèques)\n3. Tous les muscles du voile du palais sont innervés par le nerf vague (X) sauf le tenseur\n4. Le muscle longitudinal est un muscle intrinsèque\n5. Tous les muscles de la langue sont innervés par le nerf hypoglosse sauf le palatoglosse",
-  options: [
-    "(1, 2, 5)",
-    "(2, 3,4)",
-    "(2, 5)",
-    "(1,2,5)",
-    "(1,3,5)"
-  ],
-  correctOptionIndexes: [3],
-  explanation: "Justes : 1, 2, 5 (Réponse D).",
-  citations: [589, 590, 591, 592, 593, 594]
-},
-{
-  questionText: "Concernant le nerf glosso-pharyngien",
-  options: [
-    "C'est le nerf du premier arc branchial.",
-    "C'est un nerf moteur.",
-    "Son origine apparente se fait au niveau de la protubérance annulaire.",
-    "Il contient un contingent provenant du noyau salivaire supérieur.",
-    "Permis ses branches collatérale le nerf tympanique"
-  ],
-  correctOptionIndexes: [4],
-  explanation: "Le nerf glosso-pharyngien (IX) est le nerf du 3ème arc branchial, c'est un nerf mixte et son origine apparente est au niveau du sillon dorso-latéral du bulbe. Il provient du noyau salivaire inférieur. Le nerf tympanique est l'une de ses branches collatérales."
-},
-{
-  questionText: "A propos du nerf glossopharyngien:",
-  options: [
-    "C'est un nerf mixte qui innerve des structures issues du 3ᵉ arc branchial.",
-    "Présente plusieurs noyaux pour son origine réelle (noyau ambigu, noyau salivaire inférieur, etc.).",
-    "Son trajet intracrânien est vertical.",
-    "Il sort du crâne par le foramen jugulaire, aussi appelé trou déchiré postérieur."
-  ],
-  correctOptionIndexes: [0, 1, 2, 3],
-  explanation: "Le nerf glossopharyngien est un nerf mixte du 3ème arc branchial, avec plusieurs noyaux d'origine. Son trajet intracrânien est vertical et il sort du crâne par le foramen jugulaire (trou déchiré postérieur)."
-},
+        questionText: "Concernant le nerf hypoglosse :",
+        options: [
+          "Nait du sillon retro-olivaire",
+          "Se termine au niveau de la base de la langue",
+          "Innerve un seul muscle sous-hyoidien",
+          "Est un nerf moteur de la langue et le muscle géniohyoidien",
+          "Assure la sensibilité de l'oreille moyenne"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Le nerf hypoglosse (XII) émerge du sillon pré-olivaire. Il innerve le muscle thyro-hyoïdien (un muscle sous-hyoïdien) ainsi que les muscles de la langue et le muscle génio-hyoïdien. Il est purement moteur."
+      },
+      {
+        questionText: "Concernant Les muscles du palais mou (voile du palais) et la langue :\n1. Les muscles du voile du palais prennent origine ou se terminent au niveau de l'aponévrose palatine\n2. Les muscles de la langue sont distingués en 2 catégories (intrinsèques et extrinsèques)\n3. Tous les muscles du voile du palais sont innervés par le nerf vague (X) sauf le tenseur\n4. Le muscle longitudinal est un muscle intrinsèque\n5. Tous les muscles de la langue sont innervés par le nerf hypoglosse sauf le palatoglosse",
+        options: [
+          "(1, 2, 5)",
+          "(2, 3,4)",
+          "(2, 5)",
+          "(1,2,5)",
+          "(1,3,5)"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Justes : 1, 2, 5 (Réponse D).",
+        citations: [589, 590, 591, 592, 593, 594]
+      },
+      {
+        questionText: "Concernant le nerf glosso-pharyngien",
+        options: [
+          "C'est le nerf du premier arc branchial.",
+          "C'est un nerf moteur.",
+          "Son origine apparente se fait au niveau de la protubérance annulaire.",
+          "Il contient un contingent provenant du noyau salivaire supérieur.",
+          "Permis ses branches collatérale le nerf tympanique"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Le nerf glosso-pharyngien (IX) est le nerf du 3ème arc branchial, c'est un nerf mixte et son origine apparente est au niveau du sillon dorso-latéral du bulbe. Il provient du noyau salivaire inférieur. Le nerf tympanique est l'une de ses branches collatérales."
+      },
+      {
+        questionText: "A propos du nerf glossopharyngien:",
+        options: [
+          "C'est un nerf mixte qui innerve des structures issues du 3ᵉ arc branchial.",
+          "Présente plusieurs noyaux pour son origine réelle (noyau ambigu, noyau salivaire inférieur, etc.).",
+          "Son trajet intracrânien est vertical.",
+          "Il sort du crâne par le foramen jugulaire, aussi appelé trou déchiré postérieur."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le nerf glossopharyngien est un nerf mixte du 3ème arc branchial, avec plusieurs noyaux d'origine. Son trajet intracrânien est vertical et il sort du crâne par le foramen jugulaire (trou déchiré postérieur)."
+      },
       {
         questionText: "Concernant Le nerf hypoglosse :",
         options: [
@@ -5284,14 +5299,14 @@ const anatomyQuizzesY2 = [
       },
       {
         questionText: "Parmi les techniques de mise en évidence de l'anatomie endodontique on peut citer :",
-  options: [
-    "La diaphanisation.",
-    "La radiographie (2D ou 3D, avec ou sans remplissage par un produit de contraste).",
-    "Les coupes anatomiques",
-    "Toutes les réponses sont fausses."
-  ],
-  correctOptionIndexes: [0, 1, 2],
-  explanation: "Toutes les techniques mentionnées sont valides pour la mise en évidence de l'anatomie endodontique : la diaphanisation, la radiographie et les coupes anatomiques."
+        options: [
+          "La diaphanisation.",
+          "La radiographie (2D ou 3D, avec ou sans remplissage par un produit de contraste).",
+          "Les coupes anatomiques",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Toutes les techniques mentionnées sont valides pour la mise en évidence de l'anatomie endodontique : la diaphanisation, la radiographie et les coupes anatomiques."
       },
       {
         questionText: "Cochez-la ou les réponses justes:",
@@ -5410,34 +5425,34 @@ const anatomyQuizzesY2 = [
         explanation: "La dentition est le processus dynamique de mise en place des dents sur l'arcade, qui évolue avec le temps. L'option A décrit l'odontogenèse. Un phénomène statique serait la denture (l'ensemble des dents à un instant T)."
       },
       {
-  questionText: "Au niveau des dents cuspidées on retrouve:",
-  options: [
-    "Une face occlusale.",
-    "Un bord libre.",
-    "Une face triturante.",
-    "Un point de contact."
-  ],
-  correctOptionIndexes: [0],
-  explanation: "Les dents cuspidées ont une surface occlusale. Le bord libre est typique des incisives et canines. Le point de contact n'est pas spécifique aux dents cuspidées."
-},
-{
-  questionText: "La nomenclature des dents selon l'OMS est la nomenclature utilisée actuellement et reprend les mêmes principes que celle de la nomenclature de Palmer.",
-  options: [
-    "Vrai",
-    "Faux"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "Faux. La nomenclature de l'OMS (FDI) utilise un système à deux chiffres (quadrant puis dent), tandis que Palmer utilise un chiffre et un symbole graphique. Leurs principes sont différents."
-},
-{
-  questionText: "La denture est un phénomène dynamique ou les dents sont déjà en place.",
-  options: [
-    "Vrai",
-    "Faux"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "La proposition est fausse. La denture est l'ensemble des dents présentes à un moment donné (état statique), tandis que la dentition est le processus dynamique de leur mise en place."
-},
+        questionText: "Au niveau des dents cuspidées on retrouve:",
+        options: [
+          "Une face occlusale.",
+          "Un bord libre.",
+          "Une face triturante.",
+          "Un point de contact."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les dents cuspidées ont une surface occlusale. Le bord libre est typique des incisives et canines. Le point de contact n'est pas spécifique aux dents cuspidées."
+      },
+      {
+        questionText: "La nomenclature des dents selon l'OMS est la nomenclature utilisée actuellement et reprend les mêmes principes que celle de la nomenclature de Palmer.",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Faux. La nomenclature de l'OMS (FDI) utilise un système à deux chiffres (quadrant puis dent), tandis que Palmer utilise un chiffre et un symbole graphique. Leurs principes sont différents."
+      },
+      {
+        questionText: "La denture est un phénomène dynamique ou les dents sont déjà en place.",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La proposition est fausse. La denture est l'ensemble des dents présentes à un moment donné (état statique), tandis que la dentition est le processus dynamique de leur mise en place."
+      },
       {
         questionText: "Pour identifier une dent selon la nomenclature de Palmer:",
         options: [
@@ -5507,38 +5522,38 @@ const anatomyQuizzesY2 = [
         explanation: "Le 'Dens in dente' est l'anomalie de développement où l'organe de l'émail s'invagine dans la dent. Le taurodontisme affecte la chambre pulpaire, la macrodontie est une anomalie de taille et la concrescence est une fusion des racines par le cément."
       },
       {
-  questionText: "Quelle est la (quelles sont les) principale(s) caractéristique(s) d'une dent géminée ?",
-  options: [
-    "Une cavité pulpaire simple",
-    "Deux racines distinctes accoles",
-    "Une fusion de deux germes dentaires",
-    "Une encoche sur le bord libre"
-  ],
-  correctOptionIndexes: [0, 3],
-  explanation: "La gémination résulte du dédoublement d'un seul germe dentaire, ce qui donne généralement une seule racine, une seule cavité pulpaire simple, et une encoche sur le bord libre. La fusion, en revanche, implique deux germes dentaires."
-},
-{
-  questionText: "Quelle est la caractéristique de la microdontie ?",
-  options: [
-    "Un volume dentaire supérieur à la moyenne",
-    "La présence de diastèmes interdentaires",
-    "Une augmentation du nombre de racines",
-    "Elle se manifeste par des malpositions dentaires"
-  ],
-  correctOptionIndexes: [1],
-  explanation: "La microdontie se définit par une dent plus petite que la normale, ce qui peut entraîner la présence de diastèmes (espaces) interdentaires. Elle ne concerne pas le nombre de racines."
-},
-{
-  questionText: "Quelle est la différence principale entre la gémination et la fusion dentaire ?",
-  options: [
-    "La gémination concerne un seul germe dentaire, tandis que la fusion implique deux germes",
-    "La fusion concerne uniquement les dents primaires",
-    "Dans la gémination, il y a deux cavités pulpaires distinctes",
-    "La fusion se produit uniquement entre dents surnuméraires"
-  ],
-  correctOptionIndexes: [0],
-  explanation: "La différence fondamentale est l'origine : la gémination est le dédoublement d'un seul germe, tandis que la fusion est l'union de deux germes dentaires distincts."
-},
+        questionText: "Quelle est la (quelles sont les) principale(s) caractéristique(s) d'une dent géminée ?",
+        options: [
+          "Une cavité pulpaire simple",
+          "Deux racines distinctes accoles",
+          "Une fusion de deux germes dentaires",
+          "Une encoche sur le bord libre"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La gémination résulte du dédoublement d'un seul germe dentaire, ce qui donne généralement une seule racine, une seule cavité pulpaire simple, et une encoche sur le bord libre. La fusion, en revanche, implique deux germes dentaires."
+      },
+      {
+        questionText: "Quelle est la caractéristique de la microdontie ?",
+        options: [
+          "Un volume dentaire supérieur à la moyenne",
+          "La présence de diastèmes interdentaires",
+          "Une augmentation du nombre de racines",
+          "Elle se manifeste par des malpositions dentaires"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La microdontie se définit par une dent plus petite que la normale, ce qui peut entraîner la présence de diastèmes (espaces) interdentaires. Elle ne concerne pas le nombre de racines."
+      },
+      {
+        questionText: "Quelle est la différence principale entre la gémination et la fusion dentaire ?",
+        options: [
+          "La gémination concerne un seul germe dentaire, tandis que la fusion implique deux germes",
+          "La fusion concerne uniquement les dents primaires",
+          "Dans la gémination, il y a deux cavités pulpaires distinctes",
+          "La fusion se produit uniquement entre dents surnuméraires"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La différence fondamentale est l'origine : la gémination est le dédoublement d'un seul germe, tandis que la fusion est l'union de deux germes dentaires distincts."
+      },
       {
         questionText: "Quelle anomalie peut être causée par la syphilis congénitale ?",
         options: [
@@ -5638,8 +5653,8 @@ const anatomyQuizzesY2 = [
         ],
         correctOptionIndexes: [1, 3],
         explanation: "La face linguale de cette dent est convexe verticalement et horizontalement. Morphologiquement, elle peut présenter deux cuspides linguales distinctes ou, dans certaines variations, une seule cuspide linguale peu marquée et émoussée."
-     },
-     // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2022, 2021) ---
+      },
+      // --- الأسئلة الناقصة من ملف PDF (سنوات 2025, 2024, 2022, 2021) ---
       {
         questionText: "La face occlusale de la (35) avec deux sillons occlusaux présente :",
         options: [
@@ -5864,1460 +5879,1460 @@ const anatomyQuizzesY2 = [
       }
     ]
   },
-      
-// --- EXAMENS ANCIENS ---
-//
 
-// Ajout de l'examen: 2022 (1°EMD) Anatomie Humaine
-{
-  title: "2022 (1°EMD) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant L'os frontal:",
-      options: [
-        "il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
-        "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
-        "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
-        "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
-        "Sa partie verticale, appelée écaille, appartient à la voûte du crâne"
-      ],
-      correctOptionIndexes: [1, 2, 4],
-      explanation: "La glabelle est sur la face externe. Les fossettes granulaires sont bien de part et d'autre du sinus sagittal supérieur. La fossette trochléaire est en dedans (médiale) de la fossette lacrymale (latérale). L'incisure supra-orbitaire est au tiers médial. L'écaille (partie verticale) appartient bien à la voûte."
-    },
-    {
-      questionText: "Concernant l'os sphénoïde:",
-      options: [
-        "L'os sphénoïde s'articule avec les os; frontal, pariétal, maxillaire, temporal et occipital",
-        "la face inférieure du corps présente la gouttière optique",
-        "Participe à la formation de l'étage postérieur de la base du crâne",
-        "la face antérieure du corps s'articule avec la lame perpendiculaire de l'ethmoïde",
-        "La face inférieure du corps sphénoïdal présente le jugum"
-      ],
-      correctOptionIndexes: [3],
-      explanation: "L'os sphénoïde s'articule avec le frontal, pariétal, temporal, occipital, ethmoïde et vomer (pas le maxillaire). La gouttière optique est sur la face supérieure. Il participe principalement à l'étage moyen. La face antérieure s'articule bien avec la lame perpendiculaire de l'ethmoïde. Le jugum est sur la face supérieure."
-    },
-    {
-      questionText: "Concernant la base du crâne :",
-      options: [
-        "Disposée en marche d'escalier",
-        "L'étage antérieur présente les trous optiques",
-        "La fosse crânienne moyenne présente le foramen magnum",
-        "La fosse crânienne antérieure est inférieure",
-        "La fosse crânienne postérieure est limitée en avant par la face postéro-supérieure du rocher"
-      ],
-      correctOptionIndexes: [0, 1],
-      explanation: "La base du crâne est bien disposée en marche d'escalier (3 étages). L'étage antérieur présente les trous optiques. Le foramen magnum se situe dans la fosse crânienne postérieure. La fosse antérieure est la plus haute (supérieure)."
-    },
-    {
-      questionText: "Concernant l'os temporal:",
-      options: [
-        "Appartient uniquement à la base du crâne.",
-        "Est formé d'une partie squameuse, une pyramide pétreuse et un os tympanal.",
-        "Le sommet du rocher abrite le siphon carotidien.",
-        "L'os tympanal forme le conduit auditif interne.",
-        "Le condyle temporal est postérieur par rapport à la cavité glénoïde."
-      ],
-      correctOptionIndexes: [1, 2],
-      explanation: "L'os temporal appartient à la voûte et à la base du crâne. Il est bien formé de trois parties : squameuse, pétreuse et tympanale. Le sommet du rocher abrite le siphon carotidien. L'os tympanal forme le conduit auditif externe. Le condyle temporal est antérieur à la cavité glénoïde."
-    },
-    {
-      questionText: "Concernant la mandibule :",
-      options: [
-        "L'épine de Spix se situe à la face médiale du Ramus.",
-        "La fosse submandibulaire est située au-dessus de la ligne myéloïde.",
-        "L'angle mandibulaire est appelé Gonion.",
-        "Le corps contient sur la ligne médiane de sa face interne quatre apophyses geni.",
-        "Le canal dentaire inferieure est creusé totalement au niveau du Ramus."
-      ],
-      correctOptionIndexes: [0, 2, 3],
-      explanation: "L'épine de Spix est bien sur la face médiale du ramus. La fosse submandibulaire est située en dessous de la ligne mylohyoïdienne. L'angle mandibulaire est bien appelé gonion. La face interne présente quatre apophyses géni sur la ligne médiane."
-    },
-    {
-      questionText: "Concernant l'orbite osseuse:",
-      options: [
-        "Est située au-dessous de l'étage moyen du crâne",
-        "Est située au-dessus de la région temporale",
-        "Présente une base antérieure",
-        "Est de forme triangulaire",
-        "Présente 04 parois, une base et un sommet"
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "L'orbite est située sous l'étage antérieur du crâne. Elle présente une base antérieure, 4 parois et un sommet. Sa forme est pyramidale, pas triangulaire."
-    },
-    {
-      questionText: "La paroi supérieure de l'orbite osseuse est formée des os suivants :",
-      options: [
-        "L'apophyse orbitaire de l'os malaire",
-        "L'os palatin",
-        "L'os planum",
-        "La fosse orbitaire de l'os frontale",
-        "La petite aile du sphénoïde"
-      ],
-      correctOptionIndexes: [3, 4],
-      explanation: "La paroi supérieure (le toit) de l'orbite est constituée par la fosse orbitaire de l'os frontal et la petite aile du sphénoïde."
-    },
-    {
-      questionText: "Concernant la fosse infra-temporale:",
-      options: [
-        "La fosse pterygo-palatine est l'arrière fond de la fosse infra-temporale",
-        "La fosse pterygo-palatine livre passage au nerf mandibulaire (V3)",
-        "La région des muscles ptérygoïdiens livre pas nerf maxillaire (V2)",
-        "La fosse pterygo-palatine communique avec infra temporale",
-        "Les branches de l'artère maxillaire traverse la fosse pterygo-palatine"
-      ],
-      correctOptionIndexes: [0, 3, 4],
-      explanation: "La fosse ptérygo-palatine est l'arrière-fond de la fosse infra-temporale, communique avec elle et est traversée par les branches de l'artère maxillaire. Elle livre passage au nerf maxillaire (V2), non au mandibulaire (V3)."
-    },
-    {
-      questionText: "Par le trou déchiré antérieur passe:",
-      options: [
-        "IX, X, XI",
-        "La veine jugulaire interne",
-        "III, IV, V1 (ophtalmique), VI",
-        "XII",
-        "L'artère carotide interne"
-      ],
-      correctOptionIndexes: [4],
-      explanation: "Le trou déchiré antérieur (foramen lacerum) livre passage à l'artère carotide interne à sa sortie du canal carotidien."
-    },
-    {
-      questionText: "Concernant la tête osseuse :",
-      options: [
-        "L'os pariétal est un os de la voûte crânienne uniquement.",
-        "La cloison nasale osseuse est formée du vomer et de la lame perpendiculaire de l'ethmoïde.",
-        "L'unguis est un os appartenant uniquement à l'orbite.",
-        "La lame verticale du palatin forme le palais osseux",
-        "Le malaire forme avec le temporale l'arcade temporo-malaire au-dessus de la quelle passe le muscle temporale."
-      ],
-      correctOptionIndexes: [0, 1, 4],
-      explanation: "L'os pariétal appartient uniquement à la voûte. La cloison nasale est bien formée par le vomer et la lame perpendiculaire de l'ethmoïde. L'unguis participe aussi à la paroi de la cavité nasale. C'est la lame horizontale du palatin qui forme le palais osseux. Le malaire (zygomatique) et le temporal forment l'arcade zygomatique."
-    },
-    {
-      questionText: "Concernant le maxillaire :",
-      options: [
-        "Présente un corps et trois processus.",
-        "Le processus frontal s'articule avec l'ethmoïde",
-        "Le processus palatin forme avec son controlatéral la moitié du palais osseux",
-        "L'orifice piriforme est délimité par les maxillaires et les os propre du nez.",
-        "Le sinus maxillaire est fermé par le cornet moyen."
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "Le maxillaire a 4 processus. Son processus frontal s'articule bien avec l'ethmoïde. L'orifice piriforme est délimité par les maxillaires et les os du nez. Le processus palatin forme les 2/3 antérieurs du palais."
-    },
-    {
-      questionText: "Concernant l'étage antérieur de la base du crâne",
-      options: [
-        "Il est appelé étage sphéno-temporal",
-        "Présente les grandes ailes du sphénoïde avec les sutures sphéno-temporales",
-        "limité en arrière par les petites ailes du sphénoïde",
-        "limité en arrière par la face postérieure du rocher",
-        "Il est appelé étage éthmoïdo-frontal"
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "L'étage antérieur est appelé éthmoïdo-frontal et il est bien limité en arrière par le bord postérieur des petites ailes du sphénoïde. L'étage moyen est le sphéno-temporal."
-    },
-    {
-      questionText: "l'étage moyen présent les éléments suivants sauf :",
-      options: [
-        "La loge hypophysaire",
-        "La face postérieure de la pyramide pétreuse",
-        "Le trou ovale",
-        "Les grandes ailes du sphénoïde",
-        "Le méat acoustique interne"
-      ],
-      correctOptionIndexes: [1, 4],
-      explanation: "La loge hypophysaire, le trou ovale et les grandes ailes du sphénoïde sont dans l'étage moyen. La face postérieure de la pyramide pétreuse et le méat acoustique interne appartiennent à l'étage postérieur."
-    },
-    {
-      questionText: "Les muscles masticateurs :",
-      options: [
-        "Comportent le temporal, le masséter et le buccinateur",
-        "Sont tous innervés par le nerf maxillaire",
-        "Le muscle temporal est un élévateur et rétropulseur",
-        "Le muscle masséter est un diducteur de la mandibule",
-        "Les muscles ptérygoïdiens latéral et médial sont des Didicteurs"
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "Le muscle temporal est un élévateur et rétropulseur. Les ptérygoïdiens sont des diducteurs (mouvements de latéralité). Le buccinateur n'est pas un muscle masticateur. L'innervation vient du nerf mandibulaire (V3). Le masséter est un élévateur."
-    },
-    {
-      questionText: "Concernent les muscles peauciers de la face",
-      options: [
-        "Sont des muscles qui présentent une insertion sur la peau",
-        "Sont tous innervés par les branches terminales du nerf facial",
-        "Sont au nombre de 29 muscles",
-        "Interviennent dans la mastication",
-        "Sont responsables de la mimique"
-      ],
-      correctOptionIndexes: [0, 1, 4],
-      explanation: "Les muscles peauciers présentent une insertion cutanée, sont innervés par le nerf facial (VII) et sont responsables de la mimique. Ils n'interviennent pas dans la mastication."
-    },
-    {
-      questionText: "Concernant l'orbite osseuse-Le canal optique livre passage:",
-      options: [
-        "Le nerf optique",
-        "L'artère ophtalmique",
-        "Le nerf trochléaire(IV)",
-        "Le nerf abducens(VI)",
-        "Des branches du nerf oculomoteur(III)"
-      ],
-      correctOptionIndexes: [0, 1],
-      explanation: "Le canal optique livre passage au nerf optique (II) et à l'artère ophtalmique. Les autres nerfs listés passent par la fissure orbitaire supérieure."
-    },
-    {
-      questionText: "Concernant l'articulation temporo-mandibulaire",
-      options: [
-        "C'est une articulation solide",
-        "Elle est profonde",
-        "Un seul groupe musculaire assure sa mobilité",
-        "C'est une bi-condylienne",
-        "C'est une articulation à mobilité réduite"
-      ],
-      correctOptionIndexes: [3],
-      explanation: "L'ATM est une articulation bi-condylienne. Elle est superficielle, très mobile, et sa mobilité est assurée par plusieurs groupes musculaires (les muscles masticateurs)."
-    },
-    {
-      questionText: "Concernant l'articulation temporo-mandibulaire : le disque inter-condylien",
-      options: [
-        "C'est un fibrocartilage",
-        "Il est biconcave",
-        "Il est avasculaire",
-        "Il permet la concordance des surfaces articulaires",
-        "Il divise l'articulation en 02 parties"
-      ],
-      correctOptionIndexes: [0, 1, 2, 3, 4],
-      explanation: "Toutes les affirmations sont correctes. Le disque est un fibrocartilage biconcave, avasculaire en sa partie centrale, qui assure la concordance des surfaces et divise l'articulation en deux compartiments."
-    },
-    {
-      questionText: "Concernant l'articulation temporo-mandibulaire la fosse mandibulaire :",
-      options: [
-        "Est située sur la branche montante de la mandibule",
-        "Est située sur l'os temporal",
-        "Est divisée en 02 parties",
-        "Seule sa partie antérieure est articulaire",
-        "Seule sa partie postérieure est articulaire"
-      ],
-      correctOptionIndexes: [1, 2, 3],
-      explanation: "La fosse mandibulaire est située sur l'os temporal. Elle est divisée en deux par la scissure de Glaser, et seule sa partie antérieure est articulaire."
-    }
-  ]
-},
-{
-  title: "2022 (2°EMD) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant Le nerf hypoglosse:",
-      options: [
-        "Est la deuxième paire crânienne",
-        "Est un nerf complet sensitivo-moteur et végétatif",
-        "Il innerve les muscles de la langue sauf le muscle palatoglosse.",
-        "Il est destiné au pharynx et larynx",
-        "sort de la base du crâne par canal condylien postérieur"
-      ],
-      correctOptionIndexes: [2],
-      explanation: "Le nerf hypoglosse est la 12ème paire crânienne, c'est un nerf purement moteur qui innerve tous les muscles de la langue sauf le palatoglosse. Il sort du crâne par le canal condylien antérieur (canal du grand hypoglosse)."
-    }
-  ]
-},
-{
-  title: "2023 (1°EMD) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant l'ostéologie du crâne",
-      options: [
-        "L'ethmoïde, seul os n'appartenant pas à la calvaria.",
-        "La selle turcique se situe à la face antérieure du corps du sphénoïde",
-        "Le parietal s'articule avec tous les os qui participent à la constitution de la calvaria",
-        "L'os frontal n'appartient pas à la base du crâne",
-        "La fossette vermienne est une bifurcation de la crête occipitale interne."
-      ],
-      correctOptionIndexes: [0],
-      explanation: "L'ethmoïde est un os de la base du crâne et n'appartient pas à la calvaria (voûte). La selle turcique est sur la face supérieure du corps du sphénoïde. L'os frontal participe à la fois à la voûte et à la base."
-    },
-    {
-      questionText: "Concernant l'os Temporal",
-      options: [
-        "Os de la fosse crânienne antérieure",
-        "Situé au-dessous du pariétal, en avant et dedans du sphénoïde",
-        "Le processus styloïde appartient à la pyramide pétreuse",
-        "Le méat acoustique interne, orifice creusé dans la partie tympanal de l'os",
-        "La fosse trigéminale, apparient à la partie postéro-supérieure de la face endocrânienne du rocher"
-      ],
-      correctOptionIndexes: [1, 4],
-      explanation: "L'os temporal participe aux fosses crâniennes moyenne et postérieure. Il est bien situé sous le pariétal, en avant et en dedans du sphénoïde. Le processus styloïde appartient à la portion tympanique. Le méat acoustique interne est dans la portion pétreuse. La fosse trigéminale est bien située sur la face endocrânienne du rocher."
-    },
-    {
-      questionText: "Concernant l'os sphénoïde",
-      options: [
-        "Il est articulaire avec tous les os du crâne",
-        "Il forme la voûte et la base du crâne",
-        "Ses petites ailes délimitent le canal optique",
-        "Son corps présente des foramens livrant passage aux nerfs",
-        "Ses grandes ailes forment l'étage moyen de la base du crâne"
-      ],
-      correctOptionIndexes: [0, 1, 2, 3, 4],
-      explanation: "Toutes les propositions sont correctes. L'os sphénoïde s'articule avec tous les os du crâne, il participe à la formation de la voûte et de la base, ses petites ailes délimitent le canal optique, son corps présente plusieurs foramens pour les nerfs, et ses grandes ailes forment l'étage moyen de la base."
-    },
-    {
-      questionText: "Concernant la mandibule :",
-      options: [
-        "C'est l'unique os mobile du squelette cranio-facial.",
-        "S'articule avec les 2 os pariétaux via les articulations temporo-mandibulaires.",
-        "Le corps de la mandibule, est une structure verticale.",
-        "On retrouve des insertions musculaires sur les deux faces de l'angle mandibulaire.",
-        "La fosse sub mandibulaire est située au-dessous de la ligne myloïde"
-      ],
-      correctOptionIndexes: [0, 3, 4],
-      explanation: "La mandibule est bien l'unique os mobile. Elle s'articule avec les os temporaux. Son corps est horizontal. Des muscles s'insèrent sur les deux faces de l'angle mandibulaire, et la fosse submandibulaire est située sous la ligne mylohyoïdienne."
-    },
-    {
-      questionText: "Concernant le massif facial:",
-      options: [
-        "Tous les os du massif facial sont pneumatiques",
-        "L'os maxillaire est un os impair et médian",
-        "Le vomer est articulaire avec la lame perpendiculaire de l'ethmoïde",
-        "L'os lacrymal comporte 2faces et 4bords",
-        "Le cornet nasal inférieur est un os disposé contre la paroi latérale de la cavité nasale"
-      ],
-      correctOptionIndexes: [2, 3, 4],
-      explanation: "Seuls certains os du massif facial sont pneumatiques. Le maxillaire est un os pair. Le vomer s'articule avec la lame perpendiculaire de l'ethmoïde. L'os lacrymal a 2 faces et 4 bords. Le cornet nasal inférieur est un os indépendant de la paroi latérale."
-    },
-    {
-      questionText: "Concernant le maxillaire :",
-      options: [
-        "Le processus montant est une paroi commune entre les fausses nasales et l'orbite.",
-        "La fosse canine se projette en regard de la jonction canine incisive latérale.",
-        "Le sillon grand palatin est situé en arrière du sinus maxillaire.",
-        "L'orifice piriforme est formé deux os maxillaires.",
-        "Le sinus maxillaire s'ouvre au niveau du méat supérieur"
-      ],
-      correctOptionIndexes: [0, 2],
-      explanation: "Le processus montant participe bien aux parois des fosses nasales et de l'orbite. Le sillon grand palatin se situe bien en arrière du sinus maxillaire. La fosse canine est en regard des prémolaires. L'orifice piriforme inclut aussi les os propres du nez. Le sinus maxillaire s'ouvre dans le méat moyen."
-    },
-    {
-      questionText: "Concernant le palatin:",
-      options: [
-        "S'articule avec le sphénoïde et l'éthmoïde.",
-        "Les deux lames horizontales du palatin forme la moitié postérieure du palais osseux.",
-        "La face médiale de la lame verticale présente deux crêtes pour les cornets supérieure et inférieure.",
-        "L'apophyse orbitaire fait partie des parois de l'orbite",
-        "Le processus pyramidal rentre en contact avec le processus ptérygoïde du sphénoïde."
-      ],
-      correctOptionIndexes: [0, 3, 4],
-      explanation: "Le palatin s'articule bien avec le sphénoïde et l'éthmoïde. Son apophyse orbitaire participe à la paroi de l'orbite et son processus pyramidal contacte le processus ptérygoïde. Les lames horizontales forment le tiers postérieur du palais osseux."
-    },
-    {
-      questionText: "Concernant les fosses nasales:",
-      options: [
-        "Elles sont situées en dehors des sinus maxillaires",
-        "Elles s'ouvrent en arrière dans l'oropharynx",
-        "Elles présentent un squelette ostéo-membraneux",
-        "Elles sont entourées par les sinus para-nasaux",
-        "La partie supérieure de leur muqueuse est olfactive"
-      ],
-      correctOptionIndexes: [2, 3, 4],
-      explanation: "Les fosses nasales sont situées médialement aux sinus maxillaires. Elles s'ouvrent dans le nasopharynx. Elles ont un squelette ostéo-membraneux, sont entourées des sinus para-nasaux et leur partie supérieure est olfactive."
-    }
-  ]
-},
-{
-  title: "2023 (2°EMD) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant Le vestibule oral :",
-      options: [
-        "Il est tapissé par une muqueuse orale qui devient les gencives sur les arcades dentaires",
-        "C'est un espace en forme de fer à cheval",
-        "Il est limité en avant par la région génienne",
-        "Il est limité en arrière par l'isthme du gosier",
-        "comprend deux gouttières vestibulaires : supérieure et inférieure"
-      ],
-      correctOptionIndexes: [0, 1, 4],
-      explanation: "Le vestibule oral est un espace en fer à cheval, tapissé par une muqueuse qui se continue avec les gencives, et comprend deux gouttières. Il est limité en avant par les lèvres et en arrière par les arcades dentaires."
-    },
-    {
-      questionText: "Concernant l'artère carotide externe:",
-      options: [
-        "Nait à hauteur du cartilage thyroïde.",
-        "Présente trois portions thoraciques, cervicale et faciale",
-        "Au niveau de la face elle se trouve au niveau de l'espace pré stylien.",
-        "Au niveau du cou elle est satellite du muscle sterno-cleido- mastoïdien.",
-        "Elle se termine au niveau du col mandibulaire en artère temporelle et artère occipital."
-      ],
-      correctOptionIndexes: [0, 2, 3],
-      explanation: "L'artère carotide externe naît bien à hauteur du cartilage thyroïde, se trouve dans l'espace pré-stylien au niveau de la face, et est satellite du SCM dans le cou. Elle n'a pas de portion thoracique et se termine en artères maxillaire et temporale superficielle."
-    },
-    {
-      questionText: "Concernant la langue :",
-      options: [
-        "La face supérieure de la langue est divisée en deux parties par le sillon terminal",
-        "Les muscles de la langue sont distingués en deux catégories : muscles extrinsèques et muscles intrinsèques",
-        "La vascularisation de la langue est assurée par l'artère linguale, branche de l'artère carotide interne",
-        "La langue possède neuf muscles, dont sept muscles pairs et deux impairs",
-        "La base de la langue repose sur le plancher buccal"
-      ],
-      correctOptionIndexes: [0, 1, 3],
-      explanation: "La face supérieure est bien divisée par le sillon terminal, et les muscles sont classés en extrinsèques et intrinsèques. La langue possède neuf muscles (7 pairs, 2 impairs). Sa vascularisation provient de la carotide externe. Sa base est attachée à la mandibule et à l'os hyoïde."
-    },
-    {
-      questionText: "concernant la glande parotide:",
-      options: [
-        "Son canal excréteur est appelé canal de Wharton",
-        "La loge parotidienne est située dans l'espace pré stylien.",
-        "Elle est clivée par le nerf trijumeau.",
-        "Elle est traversée par l'artère carotide externe.",
-        "L'ouverture du canal parotidien se fait à hauteur de la deuxième molaire inferieure"
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "La loge parotidienne est bien dans l'espace pré-stylien et la glande est traversée par la carotide externe. Son canal est le canal de Sténon. Elle est traversée par le nerf facial (VII). Le canal s'ouvre au niveau de la deuxième molaire supérieure."
-    },
-    {
-      questionText: "Concernant l'axe artérielle carotidien :",
-      options: [
-        "L'artère carotide commune droite nait directement de la crosse aortique.",
-        "La carotide commune droite présente un trajet thoracique et un trajet cervical.",
-        "Dans le cou elle est au niveau d'une gaine vasculaire avec la veine jugula ire interne et le nerf vague.",
-        "La carotide commune se termine en artère carotide interne et externe.",
-        "L'artère carotide interne ne donne aucune branche au niveau du cou."
-      ],
-      correctOptionIndexes: [1, 2, 3, 4],
-      explanation: "La carotide commune gauche naît de l'aorte. La droite a bien un trajet thoracique et cervical, est dans la gaine vasculaire avec la VJI et le nerf vague, se divise en interne et externe, et l'interne ne donne pas de branches cervicales."
-    },
-    {
-      questionText: "Concernant la région palatine:",
-      options: [
-        "C'est La paroi supérieure de la cavité buccale.",
-        "La couche musculaire du voile du palais est formée de cinq muscles de chaque côté",
-        "Elle comprend en avant le voile du palais ou palais mou",
-        "Elle comprend en arrière la voûte palatine: palais dur",
-        "La voûte palatine a l'aspect d'un demi-cercle à concavité antérieure"
-      ],
-      correctOptionIndexes: [0, 1, 4],
-      explanation: "La région palatine est bien la paroi supérieure. Le voile du palais est formé de 5 muscles de chaque côté et la voûte a un aspect de demi-cercle à concavité antérieure. Le palais mou (voile) est en arrière et le palais dur (voûte) est en avant."
-    },
-    {
-      questionText: "Concernant les branches terminales de l'artère carotide externe:",
-      options: [
-        "L'artère maxillaire présente trois segments.",
-        "L'artère alvéolaire inferieure nait du segment intermédiaire de l'artère maxillaire interne.",
-        "La maxillaire interne se termine en artère sphéno-palatine",
-        "L'artère temporale superficielle donne des rameaux pariétal et occipital uniquement.",
-        "L'artère linguale est une branche de la maxillaire interne."
-      ],
-      correctOptionIndexes: [0, 2],
-      explanation: "L'artère maxillaire présente trois segments et se termine en artère sphéno-palatine. L'artère alvéolaire inférieure naît du premier segment. La temporale superficielle donne des rameaux frontal et pariétal. L'artère linguale est une branche de la carotide externe."
-    }
-  ]
-},
-{
-  title: "2024 (RATT) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant l'os maxillaire",
-      options: [
-        "Est un os pair du massif facial supérieur",
-        "Occupe la partie latérale de la face",
-        "Est un os mobile",
-        "Comporte les alvéoles dentaires",
-        "L'apophyse palatine présente sur sa face inférieure le foramen incisif et palatin antérieur"
-      ],
-      correctOptionIndexes: [0, 3],
-      explanation: "Le maxillaire est un os pair du massif facial supérieur et comporte les alvéoles dentaires. Il occupe la partie médiale de la face et est immobile. Le foramen palatin antérieur n'est pas sur sa face inférieure."
-    },
-    {
-      questionText: "Au niveau de la mandibule, la ligne oblique interne donne insertion au :",
-      options: [
-        "Muscle mylo-hyoidien.",
-        "Muscle stylo-hyoidien.",
-        "Muscle styloglosse.",
-        "Muscle genio-hyoïdien",
-        "Muscle génio-glosse"
-      ],
-      correctOptionIndexes: [0, 3],
-      explanation: "La ligne oblique interne (ligne mylo-hyoïdienne) donne insertion aux muscles mylo-hyoïdien et génio-hyoïdien."
-    },
-    {
-      questionText: "Concernant l'articulation temporo-mandibulaire",
-      options: [
-        "C'est une articulation de type ginglyme",
-        "Le versant postérieur du condyle mandibulaire est aplati et articulaire",
-        "Il existe deux ligaments intrinsèques et trois ligaments extrinsèques",
-        "Seul le versant antérieur doit être considéré comme articulaire",
-        "La lame tendineuse pré-discale est une zone richement innervée et bien vascularisée"
-      ],
-      correctOptionIndexes: [0, 2, 3, 4],
-      explanation: "L'ATM est de type ginglymo-arthrodial. Le versant postérieur du condyle est non articulaire. Elle possède bien 2 ligaments intrinsèques et 3 extrinsèques. Seul le versant antérieur est considéré comme articulaire, et la zone pré-discale est richement innervée et vascularisée."
-    },
-    {
-      questionText: "Concernant la langue de la cavité buccale :",
-      options: [
-        "C'est un organe musculaire",
-        "Est contenue dans le vestibule oral",
-        "Présente 02 parties supérieure et inférieure séparées par le lingual",
-        "La partie antérieure est mobile ; c'est le corps de la langue",
-        "La partie postérieure est fixe, c'est la racine de la langue"
-      ],
-      correctOptionIndexes: [0, 3, 4],
-      explanation: "La langue est un organe musculaire situé dans la cavité orale proprement dite (et non le vestibule). Elle présente une partie antérieure mobile (le corps) et une partie postérieure fixe (la racine), séparées par le V lingual."
-    },
-    {
-      questionText: "Par le foramen jugulaire (trou déchiré postérieur) passent les nerfs crâniens suivants :",
-      options: [
-        "IX, X, XI",
-        "VII, VIII",
-        "III, IV, V1, VI",
-        "XII",
-        "IX,X XII"
-      ],
-      correctOptionIndexes: [0],
-      explanation: "Le foramen jugulaire, ou trou déchiré postérieur, livre passage aux nerfs crâniens IX (glossopharyngien), X (vague) et XI (accessoire)."
-    },
-    {
-      questionText: "La face médiale (interne) de l'os maxillaire est divisée en deux parties -supérieure et inférieure par :",
-      options: [
-        "L'apophyse montante.",
-        "L'apophyse pyramidale.",
-        "L'apophyse palatine.",
-        "L'apophyse zygomatique",
-        "L'apophyse orbitaire"
-      ],
-      correctOptionIndexes: [2],
-      explanation: "C'est l'apophyse palatine (processus palatin) qui divise horizontalement la face médiale de l'os maxillaire en une partie supérieure (nasale) et une partie inférieure (buccale)."
-    },
-    {
-      questionText: "Concernant la glande parotide :",
-      options: [
-        "Située dans les espaces profonds de la face",
-        "Le canal de Sténon s'ouvre au niveau du collet de la 2eme molaire supérieure",
-        "Traversée par l'artère carotide externe, le nerf facial et la veine jugulaire interne",
-        "Limitée en avant par le diaphragme stylien",
-        "En rapport avec l'artère faciale"
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La glande parotide est superficielle. Son canal s'ouvre bien au niveau du collet de la 2ème molaire supérieure. Elle est traversée par la carotide externe, le nerf facial et la veine jugulaire externe. Elle est limitée en postéro-médial par le diaphragme stylien."
-    },
-    {
-      questionText: "Concernant le nerf hypoglosse :",
-      options: [
-        "Nait du sillon retro-olivaire",
-        "Se termine au niveau de la base de la langue",
-        "Innerve un seul muscle sous-hyoidien",
-        "Est un nerf moteur de la langue et le muscle géniohyoidien",
-        "Assure la sensibilité de l'oreille moyenne"
-      ],
-      correctOptionIndexes: [2, 3],
-      explanation: "Le nerf hypoglosse (XII) émerge du sillon pré-olivaire. Il innerve le muscle thyro-hyoïdien (un muscle sous-hyoïdien) ainsi que les muscles de la langue, y compris le génio-hyoïdien. C'est un nerf purement moteur."
-    }
-  ]
-},
-{
-  title: "2025 (1°EMD) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant l'ostéologie du massif facial :",
-      options: [
-        "Tous les os du massif facial sont pneumatiques.",
-        "Le relief des arcades sourcilières est formé par l'os frontal",
-        "Le malaire (os zygomatique) constitue l'essentiel de la paroi inferieur Le de l'orbite",
-        "La cloison nasale osseuse est formée seleument par le vomer",
-        "L'unguis est incurvé en externe de manière à recevoir le sac lacrymal."
-      ],
-      correctOptionIndexes: [1, 4],
-      explanation: "Le relief des arcades sourcilières est bien une caractéristique de l'os frontal. L'os lacrymal (unguis) est incurvé pour former la gouttière du sac lacrymal. Seuls quelques os sont pneumatiques. L'os zygomatique forme la paroi latérale de l'orbite. La cloison nasale est formée par le vomer et la lame perpendiculaire de l'ethmoïde."
-    },
-    {
-      questionText: "Concernant l'os frontal :",
-      options: [
-        "II présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique",
-        "Sa partie verticale, appelée écaille, appartient pour partie à la base du crâne.",
-        "II contient une cavité aérique, appelée sinus frontal",
-        "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
-        "Le toit de l'orbite comporte deux reliefs : la fossette trochléaire en latéral, et la fossette lacrymale en médial"
-      ],
-      correctOptionIndexes: [2, 3],
-      explanation: "L'os frontal contient bien les sinus frontaux. Les fossettes granulaires se situent de part et d'autre du sinus sagittal supérieur sur sa face endocrânienne. La glabelle est exocrânienne. L'écaille appartient à la voûte. La fossette trochléaire est médiale et la lacrymale est latérale."
-    },
-    {
-      questionText: "Concernant l'os ethmoïdal",
-      options: [
-        "Appartient à 1' étage moyen de la base du crâne.",
-        "Est un os profond et central de la face.",
-        "Participe à la formation des parois des fosses nasales.",
-        "Participe à la formation de la paroi des 2 cavités orbitaires.",
-        "Participe à la formation des parois de la cavité buccale."
-      ],
-      correctOptionIndexes: [2, 3],
-      explanation: "L'os ethmoïdal appartient à l'étage antérieur de la base du crâne. Il participe à la formation des parois des fosses nasales et des parois médiales des deux cavités orbitaires. Il est considéré comme un os superficiel."
-    },
-    {
-      questionText: "Concernant la branche mantante de la mandibule",
-      options: [
-        "Sa face latérale donne insertion au muscle masséter",
-        "Sa face médiale présente l'orifice du canal dentaire inférieur",
-        "Le bord supérieur est marqué par l'échancrure sigmoïde entre le processus coronoïde et le condyle",
-        "Le bord antérieur est limité par deux lèvres qui donnent insertion au muscle ptérygoïdien latéral",
-        "Le bord postérieur donne insertion au ligament stylo-mandibulaire"
-      ],
-      correctOptionIndexes: [0, 1, 2, 4],
-      explanation: "La face latérale du ramus donne insertion au masséter, sa face médiale présente l'orifice du canal dentaire. Son bord supérieur a l'échancrure sigmoïde. Son bord postérieur donne insertion au ligament stylo-mandibulaire. Le bord antérieur donne insertion au muscle temporal."
-    },
-    {
-      questionText: "quelles sont les structures présentes sur la face interne (médiale) du corps de la mandibule",
-      options: [
-        "Les épines mentonnières supérieures et inférieures",
-        "Le foramen mentonnier",
-        "La ligne mylo-hyoidienne",
-        "La fosse sublinguale et la fosse submandibulaire",
-        "La ligne oblique externe"
-      ],
-      correctOptionIndexes: [0, 2, 3],
-      explanation: "La face interne du corps de la mandibule présente les épines mentonnières, la ligne mylo-hyoïdienne (ligne oblique interne), ainsi que les fosses sublinguale et submandibulaire. Le foramen mentonnier et la ligne oblique externe se situent sur la face externe."
-    },
-    {
-      questionText: "Concernant les fosses nasales:",
-      options: [
-        "L'orifice piriforme est l'orifice antérieur des fosses nasales.",
-        "Les méats nasaux sont compris entre la paroi médiale et les cornets.",
-        "La muqueuse nasale est divisée fonctionnellement en zones olfactive inférieure et respiratoire supérieure.",
-        "Sont vascularisées principalement par l'artère sphéno- palatine.",
-        "Son innervation sensorielle est assurée par le nerf trijumeau."
-      ],
-      correctOptionIndexes: [0, 3],
-      explanation: "L'orifice piriforme est bien l'orifice antérieur. La vascularisation principale vient de l'artère sphéno-palatine. Les méats sont entre la paroi latérale et les cornets. La zone olfactive est supérieure. L'innervation sensorielle (olfaction) vient du nerf olfactif (I)."
-    }
-  ]
-},
-{
-  title: "2025 (2°EMD) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant Le voile du palais:",
-      options: [
-        "Il limite en bas la cavité buccale",
-        "Il est osseux formé par les os ; maxillaire et palatin",
-        "Il est fibro-musculaire",
-        "Il sépare le naso-pharynx du laryngopharynx",
-        "Les piliers glosso-staphylin et pharyngo-staphylin limitent la fosseitonsillaire"
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "Le voile du palais est une structure fibro-musculaire. Ses piliers (arcs palatoglosse et palatopharyngien) délimitent la fosse tonsillaire. Il sépare le nasopharynx de l'oropharynx."
-    },
-    {
-      questionText: "Parmi les muscles suivants, lequel est tenseur du voile ?",
-      options: [
-        "Péristaphylin latéral (Tenseur du voile)",
-        "Péristaphylin médial (Elévateur du voile)",
-        "Glosso-staphylin (Palato-glosse)",
-        "Pharyngo-staphylin (Palato-pharyngien)",
-        "Palato-staphylin (Uvulaire)"
-      ],
-      correctOptionIndexes: [0],
-      explanation: "Le muscle péristaphylin latéral est le tenseur du voile du palais. Le péristaphylin médial en est l'élévateur."
-    },
-    {
-      questionText: "A propos de la loge Parotidienne",
-      options: [
-        "La paroi postéro-médiale, est faite des muscles styliens",
-        "La paroi antérieure, faite de la branche montante de la mandibule, tapissée du muscle buccinateur",
-        "La paroi latérale, Fascia cervical superficiel",
-        "Elle se situe en dedans du muscle Masséter",
-        "Traversé par l'artère faciale"
-      ],
-      correctOptionIndexes: [0, 2],
-      explanation: "La paroi postéro-médiale de la loge parotidienne est constituée des muscles styliens, et sa paroi latérale par le fascia cervical superficiel. La paroi antérieure est tapissée par le masséter (en dehors) et le ptérygoïdien médial (en dedans). La loge se situe en dehors du masséter."
-    },
-    {
-      questionText: "Concernant la Glande submandibulaire caroncule",
-      options: [
-        "Se situe en avant de la glande parotide",
-        "En rapports avec le nerf lingual",
-        "Son canal excréteur est le canal de Wharton",
-        "Occupe une loge, limitée en arrière par le muscle sylo-pharyngien",
-        "Son canal excréteur s'ouvre au sommet de l'ostium ombilical sur le versant interne de la"
-      ],
-      correctOptionIndexes: [1, 2, 4],
-      explanation: "La glande submandibulaire est bien en rapport avec le nerf lingual, son canal est le canal de Wharton, et celui-ci s'ouvre au sommet de l'ostium ombilical. Sa loge est limitée en arrière par le ventre postérieur du digastrique."
-    },
-    {
-      questionText: "A propos du facial intra pétreux:",
-      options: [
-        "Il décrit trois portions en bañonnette.",
-        "La portion tympanique est en contact avec la paroi externe de la caisse du tympan.",
-        "Parmi les branches intra pétreuse la corde du tympan et les nerfs grands pétreux superficiels.",
-        "La portion méatique est l'une des portions de l'aqueduc de Fallope.",
-        "Il réalise des anastomoses avec le plexus carotidien"
-      ],
-      correctOptionIndexes: [0, 2],
-      explanation: "Le trajet intra-pétreux du nerf facial décrit bien trois portions en baïonnette. Ses branches intra-pétreuses incluent la corde du tympan et les nerfs grands pétreux. La portion tympanique est en contact avec la paroi interne de la caisse du tympan."
-    },
-    {
-      questionText: "Concernant la veine jugulaire interne fait suite au:",
-      options: [
-        "Fait suite au sinus veineux longitudinal supérieur.",
-        "Fait suite au sinus veineux latéral",
-        "Est une veine superficielle du cou",
-        "Dans le cou, elle est accompagnée du nerf IX",
-        "Présente à son origine le golf de la jugulaire"
-      ],
-      correctOptionIndexes: [1, 4],
-      explanation: "La veine jugulaire interne fait suite au sinus veineux latéral (sigmoïde). Elle présente à son origine le golfe de la jugulaire. C'est une veine profonde du cou, accompagnée du nerf vague (X)."
-    },
-    {
-      questionText: "Concernant la portion labyrinthique du nerf facial :",
-      options: [
-        "Elle fait suite à la portion cis sternal.",
-        "Est l'une des portions de l'aqueduc de fallope.",
-        "Elle passe entre la cochlée et les canaux semi circulaire",
-        "L'intermédiaire de wirsberg (VII bis) est décollé de cette portion.",
-        "Elle donne suite à la portion mastoïdienne en décrivant un genou"
-      ],
-      correctOptionIndexes: [1, 2],
-      explanation: "La portion labyrinthique est l'une des trois portions de l'aqueduc de Fallope et elle passe bien entre la cochlée et les canaux semi-circulaires. Elle se termine par le ganglion géniculé (genou) qui donne suite à la portion tympanique."
-    }
-  ]
-},
-{
-  title: "2025 (RATT) Anatomie Humaine",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant la face externe (latérale) de la mandibule",
-      options: [
-        "La symphyse est une crête verticale et médiane.",
-        "L'éminence mentonnière est une saillie en forme de pyramide.",
-        "La ligne oblique interne se dirige en bas et en avant",
-        "Le foramen mentonnier est situé au niveau des canines.",
-        "Les jugums alvéolaires sont en rapports avec l'implantation des incisives et les canines"
-      ],
-      correctOptionIndexes: [0, 1, 4],
-      explanation: "La symphyse, l'éminence mentonnière et les jugums alvéolaires sont des structures de la face externe. La ligne oblique externe (et non interne) se dirige en bas et en avant. Le foramen mentonnier se situe au niveau des prémolaires."
-    },
-    {
-      questionText: "Le trou stylo-mastoidien livre passage au :",
-      options: [
-        "Nerf trijumeau",
-        "Nerf facial",
-        "Nerf pneumogastique",
-        "Nerf auditif",
-        "Nerf glosso-pharingien"
-      ],
-      correctOptionIndexes: [1],
-      explanation: "Le trou stylo-mastoïdien livre passage uniquement au nerf facial (VII)."
-    },
-    {
-      questionText: "Concernant Le nerf trijumeau :",
-      options: [
-        "Prend naissance dans le tronc cérébral au niveau du mésencéphale",
-        "Assure la motricité des muscles masticateurs et la sensibilité de la face",
-        "Le ganglion trigéminal se trouve dans le cavum du Meckel",
-        "Prend naissance dans le pont (protubérance) du tronc cérébral",
-        "Son nerf ophtalmique assure la motricité des muscles de l'œil"
-      ],
-      correctOptionIndexes: [1, 2, 3],
-      explanation: "Le nerf trijumeau (V) naît au niveau du pont, assure la motricité des muscles masticateurs et la sensibilité de la face, et son ganglion (de Gasser) se trouve dans le cavum de Meckel. Le nerf ophtalmique est purement sensitif."
-    },
-    {
-      questionText: "Concernant le nerf ophtalmique (V1)",
-      options: [
-        "C'est un nerf sensitif",
-        "C'est un nerf moteur",
-        "Il sort du crâne par la fissure orbitaire supérieure",
-        "C'est la branche latérale du ganglion trigéminé",
-        "Il donne 03 branches terminales"
-      ],
-      correctOptionIndexes: [0, 2, 4],
-      explanation: "Le nerf ophtalmique (V1) est un nerf purement sensitif qui sort du crâne par la fissure orbitaire supérieure et se divise en trois branches terminales (frontal, lacrymal, naso-ciliaire). C'est la branche médiale du ganglion trigéminé."
-    },
-    {
-      questionText: "Concernant le nerf maxillaire(V2)",
-      options: [
-        "C'est la seule branche mixte du nerf trijumeau",
-        "Il traverse la fissure orbitaire supérieure",
-        "Il traverse la fosse ptérygo-palatine",
-        "Il se termine par 02 troncs: antérieur et postérieur",
-        "Il est sensitif pour la mâchoire supérieure"
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "Le nerf maxillaire (V2) est purement sensitif, traverse la fosse ptérygo-palatine (après être passé par le foramen grand rond) et assure la sensibilité de la mâchoire supérieure. La branche mixte est le nerf mandibulaire (V3)."
-    },
-    {
-      questionText: "Concernant Le nerf glossopharyngien:",
-      options: [
-        "Est la neuvième paire crânienne",
-        "Est un nerf moteur pur",
-        "Il assure l'innervation sensitive de la face",
-        "Destiné à l'oreille moyenne, à la langue, à la parotide et au pharynx",
-        "Il contrôle la sensibilité gustative du tiers postérieur de la langue"
-      ],
-      correctOptionIndexes: [0, 2, 3, 4],
-      explanation: "Le nerf glossopharyngien (IX) est la 9ème paire crânienne, c'est un nerf mixte. Il a un rôle sensitif pour la face, innerve l'oreille moyenne, la langue, la parotide et le pharynx, et contrôle la gustation du tiers postérieur de la langue."
-    }
-  ]
-},
-//
-// --- EXAMENS ANATOMIE DENTAIRE ---
-//
+  // --- EXAMENS ANCIENS ---
+  //
 
-// Ajout de l'examen: 2025 (RATT) Anatomie Dentaire
-{
-  title: "2025 (RATT) Anatomie Dentaire",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "La classification de Weine:",
-      options: [
-        "Est une classification de l'anatomie endodontique en cinq (5) types de canaux.",
-        "Le type II: deux canaux se rejoignant en un seul canal et présentant une seule sortie foraminale (2-1).",
-        "Le type IV: deux canaux distincts, de l'entrée canalaire au foramen apical (2-2).",
-        "Le type I: un seul canal avec un seul orifice et un seul foramen apical (1-1)."
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "La classification de Weine comporte 4 types (pas 5). Le type II correspond à une configuration (2-1) et le type I à (1-1). Le type IV de Weine est une configuration (1-2), tandis que (2-2) correspond au type IV de Vertucci."
-    },
-    {
-      questionText: "La première prémolaire supérieure présente:",
-      options: [
-        "Une configuration canalaire unique.",
-        "Généralement deux racines, chaque racine comportant un canal.",
-        "Une configuration canalaire de type II, III ou IV.",
-        "Un canal volumineux, très large dans le sens vestibulo-lingual, au niveau de sa partie médiane."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La première prémolaire supérieure présente le plus souvent deux racines (vestibulaire et palatine), chacune avec un seul canal. Les autres configurations, bien que possibles, sont moins fréquentes."
-    },
-    {
-      questionText: "Cochez-la ou les réponses justes:",
-      options: [
-        "Un delta apical correspond à un réseau de fins canalicules secondaires et latéraux.",
-        "Il existe différentes configurations du canal principal dans les 3 derniers millimètres apicaux: Un, deux, trois foramina apicaux ou un delta apical.",
-        "Pour les dents monoradiculées :la chambre pulpaire est parfaitement délimitée, elle répond grossièrement à la forme de la couronne.",
-        "Il n'y a pas de limites précises entre la chambre pulpaire et le canal radiculaire pour les dents pluriradiculées."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "L'anatomie apicale est très variable et peut présenter plusieurs foramina ou un delta apical. La définition du delta apical est vague. La chambre pulpaire des monoradiculées n'est pas toujours parfaitement délimitée, et la transition chambre/canal est marquée chez les pluriradiculées."
-    },
-    {
-      questionText: "Les dents temporaires sont :",
-      options: [
-        "Toutes plus petites que leurs correspondantes permanentes.",
-        "Légèrement petites que leurs correspondantes permanentes, excepté les molaires temporaires",
-        "Plus petites que leurs correspondantes permanentes, excepté les molaires temporaires",
-        "Plus grandes que leurs correspondantes permanentes, excepté les molaires temporaires"
-      ],
-      correctOptionIndexes: [1, 2],
-      explanation: "En général, les dents temporaires sont plus petites que leurs homologues permanentes. Cependant, les molaires temporaires ont un diamètre mésio-distal plus grand que celui des prémolaires qui les remplacent."
-    },
-    {
-      questionText: "Dans une chambre pulpaire on retrouve",
-      options: [
-        "Les entrées canalaires au niveau du plafond",
-        "Les cornes pulpaires au niveau du plancher",
-        "Un plancher dans une chambre pulpaire d'une dent monoradiculée",
-        "L'extrémité occlusale de la chambre présente des cornes pulpaires."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "Les cornes pulpaires sont des projections de la chambre pulpaire situées sous les cuspides, donc au niveau du plafond (extrémité occlusale). Les entrées canalaires sont au niveau du plancher. Les dents monoradiculées n'ont pas de plancher pulpaire distinct."
-    },
-    {
-      questionText: "Concernant les racines de la première molaire mandibulaire, laquelle de ces affirmations est correcte?",
-      options: [
-        "La racine distale est plus étroite que la mésiale dans le sens mésio-distal",
-        "La racine mésiale contient un seul canal dans 100 % des cas",
-        "La racine mésiale contient les plus souvent deux canaux séparés : un vestibulaire et un lingual",
-        "La racine distale ne présente jamais de courbure"
-      ],
-      correctOptionIndexes: [2],
-      explanation: "Il est très fréquent que la racine mésiale de la première molaire mandibulaire contienne deux canaux (mésio-vestibulaire et mésio-lingual). La racine distale est généralement plus large que la mésiale et peut présenter des courbures."
-    },
-    {
-      questionText: "Quelle est la configuration canalaire la plus fréquente dans la racine distale de la première molaire mandibulaire ?",
-      options: [
-        "Deux canaux fusionnés",
-        "Un canal unique",
-        "Deux canaux complètement séparés",
-        "Trois canaux distincts"
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La configuration la plus courante dans la racine distale de la première molaire mandibulaire est la présence d'un seul canal. Les configurations à deux canaux sont plus rares."
-    },
-    {
-      questionText: "A propos de l'anatomie canalaire de la racine mésio-vestibulaire de la première molaire supérieure, quelle affirmation est correcte?",
-      options: [
-        "Elle contient toujours un seul canal large et circulaire",
-        "Elle contient un seul canal dans la majorité des cas",
-        "Elle présente souvent une configuration canalaire complexe avec plusieurs variantes",
-        "Elle contient systématiquement deux canaux fusionnés"
-      ],
-      correctOptionIndexes: [2],
-      explanation: "La racine mésio-vestibulaire (MV) de la première molaire supérieure est réputée pour sa complexité anatomique et la haute fréquence d'un deuxième canal (MV2), ce qui en fait une configuration souvent complexe avec de nombreuses variantes."
-    },
-    {
-      questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure?",
-      options: [
-        "La racine disto-vestibulaire est toujours courbée mésialement",
-        "La racine palatine est toujours droite",
-        "Les trois racines contiennent systématiquement un seul canal",
-        "La racine palatine est la plus massive et présente une courbure dans 56 % des cas"
-      ],
-      correctOptionIndexes: [3],
-      explanation: "La racine palatine est la plus volumineuse. Elle peut être droite ou présenter une courbure (dans environ 56% des cas). La racine disto-vestibulaire est souvent droite ou courbée distalement. La racine mésio-vestibulaire présente fréquemment deux canaux."
-    }
-  ]
-},
-{
-  title: "2025 (2°EMD) Anatomie Dentaire",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Quelle est la (quelles sont les) principale(s) caractéristique(s) d'une dent géminée ?",
-      options: [
-        "Une cavité pulpaire simple",
-        "Deux racines distinctes accoles",
-        "Une fusion de deux germes dentaires",
-        "Une encoche sur le bord libre"
-      ],
-      correctOptionIndexes: [0, 3],
-      explanation: "La gémination est la division d'un seul germe dentaire. Elle se caractérise par une couronne large avec une encoche sur le bord libre, mais une seule racine et une seule cavité pulpaire. La fusion concerne deux germes distincts."
-    },
-    {
-      questionText: "Quelle est la caractéristique de la microdontie ?",
-      options: [
-        "Un volume dentaire supérieur à la moyenne",
-        "La présence de diastèmes interdentaires",
-        "Une augmentation du nombre de racines",
-        "Elle se manifeste par des malpositions dentaires"
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La microdontie est une anomalie de taille où la dent est plus petite que la normale, ce qui peut créer des espaces interdentaires (diastèmes). Elle ne concerne ni le nombre de racines, ni la forme de la dent."
-    },
-    {
-      questionText: "Quelle est la différence principale entre la gémination et la fusion dentaire ?",
-      options: [
-        "La gémination concerne un seul germe dentaire, tandis que la fusion implique deux germes",
-        "La fusion concerne uniquement les dents primaires",
-        "Dans la gémination, il y a deux cavités pulpaires distinctes",
-        "La fusion se produit uniquement entre dents surnuméraires"
-      ],
-      correctOptionIndexes: [0],
-      explanation: "La distinction fondamentale réside dans l'origine : la gémination provient de la division incomplète d'un seul germe, tandis que la fusion est l'union de deux germes dentaires initialement séparés."
-    },
-    {
-      questionText: "Quelle anomalie est caractérisée par l'invagination de l'organe de l'émail à l'intérieur de la dent?",
-      options: [
-        "Dens in dente",
-        "Taurodontisme",
-        "Macrodontie",
-        "Concrescence"
-      ],
-      correctOptionIndexes: [0],
-      explanation: "Le 'Dens in dente' (dent dans la dent) est une anomalie de développement où l'organe de l'émail s'invagine à l'intérieur de la dent avant la minéralisation."
-    },
-    {
-      questionText: "Quelle anomalie peut être causée par la syphilis congénitale ?",
-      options: [
-        "Incisive en pelle",
-        "Incisive en lame de tournevis (Hutchinson)",
-        "Microdontie",
-        "Macrodontie"
-      ],
-      correctOptionIndexes: [1],
-      explanation: "L'incisive de Hutchinson, avec sa forme caractéristique en 'lame de tournevis', est l'une des manifestations dentaires pathognomoniques de la syphilis congénitale."
-    },
-    {
-      questionText: "Les couronnes des dents temporaires sont :",
-      options: [
-        "Recouvertes d'un émail plus translucide et plus finque celui des dents permanentes.",
-        "Recouvertes d'un émail plus opaque et plus finque celui des dents permanentes.",
-        "Recouvertes d'un émail plus translucide et plus épaisque celui des dents permanentes.",
-        "La couronne des dents temporaires représente le tiers de la hauteur totale."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "L'émail des dents temporaires est plus fin, moins minéralisé, et donc plus opaque (aspect blanc laiteux) que celui des dents permanentes."
-    },
-    {
-      questionText: "À l'observation par une face proximale, Les dents temporaires antérieures présentent un bourrelet d'émail cervical:",
-      options: [
-        "Qui-forme un angle obtus avec la surface radiculaire à la jonction amélo-cémentaire",
-        "Qui forme un angle vif avec la surface radiculaire à la jonction amélo-dentinaire",
-        "Qui forme un angle vif avec la surface radiculaire à la jonction amélo-cémentaire",
-        "Peu accentué."
-      ],
-      correctOptionIndexes: [2],
-      explanation: "Le bourrelet cervical est très prononcé sur les dents temporaires et forme un angle vif avec la racine au niveau de la jonction amélo-cémentaire (JAC)."
-    },
-    {
-      questionText: "Les molaires temporaires présentent une:",
-      options: [
-        "Éminence dans le tiers cervical coronaire vestibulaire et lingual.",
-        "Éminence dans le quart cervical coronaire vestibulaire et lingual",
-        "A l'inverse des dents permanentes, les portions vestibulaires et linguales, situées au-dessus des maximas de convexité, sont plus arrondies.",
-        "A l'inverse des dents permanentes, les portions vestibulaires et linguales, situées au-dessus des maximas de convexité, sont plus planes."
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "Une caractéristique des molaires temporaires est la présence d'une éminence très marquée dans le quart cervical, au-dessus de laquelle les faces sont plus planes comparativement aux dents permanentes."
-    },
-    {
-      questionText: "Dans les caractéristiques morphologiques internes des dents temporaires:",
-      options: [
-        "La dentine est plus épaisse sur les dents temporaires.",
-        "Les cornes pulpaires sont très aiguës. Elles remontent très haut sous les cuspides.",
-        "Le plafond de la chambre pulpaire est moins convexe et plus profondément enchâssé dans la couronne.",
-        "Le volume pulpaire est plus important que celui des dents permanentes."
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "Les dents temporaires ont une dentine plus fine, un volume pulpaire proportionnellement plus grand, et des cornes pulpaires plus hautes et plus pointues, ce qui les rend plus vulnérables aux caries."
-    },
-    {
-      questionText: "Dans les variations morphologiques des dents temporaires:",
-      options: [
-        "La 1ère molaire supérieure peut présenter S cuspides.",
-        "La 1ère molaire inférieure peut présenter You 4 cuspides",
-        "La 1ère molaire inférieure peut n'avoir que 3(cuspides (2V, 1L). 4",
-        "Le tubercule de Carabelli peut être présent sur la face palatine de la 2ème molaire sup."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "La deuxième molaire supérieure temporaire ressemble morphologiquement à la première molaire permanente et peut donc présenter un tubercule de Carabelli sur sa cuspide mésio-palatine."
-    },
-    {
-      questionText: "Parmi les techniques de mise en évidence de l'anatomie endodontique on peut citer :",
-      options: [
-        "La diaphanisation.",
-        "La radiographie (2D ou 3D, avec ou sans remplissage par un produit de contraste).",
-        "Les coupesanatomiques",
-        "Toutes les réponses sont fausses."
-      ],
-      correctOptionIndexes: [0, 1, 2],
-      explanation: "Toutes les méthodes listées (diaphanisation, radiographie, coupes anatomiques) sont des techniques valides et utilisées pour étudier la complexité de l'anatomie endodontique."
-    },
-    {
-      questionText: "La classification de Vertucci:",
-      options: [
-        "Est une classification de l'anatomie endodontique en huit (8) types de canaux.",
-        "Le type V canal unique se divisant en 2 dans la partie moyenne les deux canaux se rejoignent dans le tiers apical (1-2-1).",
-        "Le type VIII deux canäux restant distincts jusqu'au tiers apical (2-2).",
-        "Le type II deux canaux se rejoignant en un seul canal et présentant une seule sortie foraminale (2-1)."
-      ],
-      correctOptionIndexes: [0, 3],
-      explanation: "La classification de Vertucci est la plus utilisée et comporte bien 8 types. Le type II est correctement décrit (2-1). Le type V est une configuration (1-2), tandis que (1-2-1) est le type VI. Le type VIII correspond à 3 canaux distincts."
-    },
-    {
-      questionText: "L'incisive centrale supérieure présente :",
-      options: [
-        "Un seul canal dans 100 des cas",
-        "Une chambre pulpaire aplatie dans le sens vestibulo-palatin et large dans le sens mésio-distal.",
-        "Des cornes pulpaires situées sensiblement au même niveauque le bord libre de la dent.",
-        "Une chambre pulpaire avec un volume équivaut un tiers du diamètre mésio-distal et la moitié du diamètre vestibulo-palatin mesurés au collet."
-      ],
-      correctOptionIndexes: [0, 1],
-      explanation: "L'incisive centrale supérieure a presque toujours un seul canal. Sa chambre pulpaire est large dans le sens mésio-distal et plus aplatie dans le sens vestibulo-palatin. Ses cornes pulpaires sont situées en deçà du bord libre."
-    },
-    {
-      questionText: "La première molaire maxillaire présente :",
-      options: [
-        "Deux racines assez larges dans le sens vestibulo-lingual et aplaties dans le sens mésio-distal.",
-        "Une racine mésiale plus étroite dans le sens mésio-distal, mais assez large dans le sens vestibulo-lingual",
-        "Une racine distale peuvant être rectiligne ou présentant parfois une orientation distale très accentuée.",
-        "Trois racines, deux vestibulaires et une palatine avec trois canaux, un par racine."
-      ],
-      correctOptionIndexes: [2, 3],
-      explanation: "La première molaire maxillaire a typiquement trois racines (deux vestibulaires, une palatine). La racine distale peut être droite ou avoir une courbure distale marquée. Cependant, la racine mésio-vestibulaire présente très souvent un deuxième canal (MV2)."
-    },
-    {
-      questionText: "Dans la première prémolaire inférieure:",
-      options: [
-        "Les systèmes canalaires peuvent se résumer à un canal et à une configuration de type V.",
-        "La fréquence de canaux latéraux est faible.",
-        "Elle peut présenter une configuration canalaire de type II, III ou IV.",
-        "Elle peut également avoir deux racines distinctes."
-      ],
-      correctOptionIndexes: [0],
-      explanation: "La première prémolaire inférieure a le plus souvent un seul canal, mais est connue pour sa grande variabilité anatomique, incluant des divisions complexes comme le type V de Vertucci (1-2). La présence de deux racines est très rare."
-    }
-  ]
-},
-{
-  title: "2025 (1°EMD) Anatomie Dentaire",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Au niveau des dents cuspidées on retrouve:",
-      options: [
-        "Une face occlusale.",
-        "Un bord libre.",
-        "Une face triturante.",
-        "Un point de contact."
-      ],
-      correctOptionIndexes: [0],
-      explanation: "Les dents cuspidées (prémolaires et molaires) sont caractérisées par la présence d'une face occlusale destinée à la mastication. Le bord libre est typique des dents antérieures (incisives et canines)."
-    },
-    {
-      questionText: "La dentition est :",
-      options: [
-        "L'ensemble des phénomènes histologique et physiologiques conduisant à la mise en place de la denture.",
-        "Un phénomène statique.",
-        "Un phénomène Dynamique.",
-        "Un phénomène allant de la formation à l'éruption des dents."
-      ],
-      correctOptionIndexes: [2],
-      explanation: "La dentition est le processus dynamique de développement et d'éruption des dents. L'odontogenèse décrit la formation. La denture est l'état statique des dents à un moment donné."
-    },
-    {
-      questionText: "Parmi les éminences coronaires retrouvées au niveau des faces vestibulaires de la 1ère molaire supérieure:",
-      options: [
-        "Les crêtes marginales.",
-        "Le tubercule de Bolk .",
-        "Le tubercule de Carabelli .",
-        "Les sillons intercuspidiens."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "Le tubercule de Bolk est une éminence inconstante située sur la face vestibulaire de la première molaire supérieure. Le tubercule de Carabelli est sur la face palatine. Les crêtes marginales et les sillons sont sur la face occlusale."
-    },
-    {
-      questionText: "Pour identifier une dent selon la nomenclature de Palmer:",
-      options: [
-        "On commence par le code du quadrant suivit du code de la dent.",
-        "On commence par le code du quadrant suivit d'un point puis du code de la dent.",
-        "On commence par le code de la dent suivit par le code du quadrant.",
-        "On utilise La combinaison du code de la dent et celui de l'hémi arcade."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "Le système de Palmer utilise un symbole graphique représentant l'hémi-arcade (quadrant) autour du numéro de la dent (de 1 à 8)."
-    },
-    {
-      questionText: "Les dents antérieures :",
-      options: [
-        "Constituent le bloc incisivo-canin",
-        "Interviennent dans la mastication",
-        "Concernent les incisives et canines supérieures",
-        "Interviennent dans la section des aliments"
-      ],
-      correctOptionIndexes: [0, 3],
-      explanation: "Les dents antérieures (incisives et canines, supérieures et inférieures) forment le bloc incisivo-canin et leur rôle principal est de couper (sectionner) les aliments. La mastication (broyage) est le rôle des dents postérieures."
-    },
-    {
-      questionText: "La cavité pulpaire de l'incisive latérale supérieure est constituée de :",
-      options: [
-        "Un canal radiculaire",
-        "Trois cornes pulpaires",
-        "Trois canaux radiculaires",
-        "Une chambre pulpaire"
-      ],
-      correctOptionIndexes: [0, 1, 3],
-      explanation: "La cavité pulpaire d'une dent est l'ensemble de la chambre pulpaire et du (des) canal(aux) radiculaire(s). L'incisive latérale supérieure possède une chambre pulpaire, généralement trois cornes pulpaires et un seul canal radiculaire."
-    },
-    {
-      questionText: "Quelle est la ou les comparaison(s) incorrecte (s) ?",
-      options: [
-        "La 11 est plus volumineuse que 12",
-        "La 11 est moins volumineuse que la 12",
-        "La 41 est plus volumineuse que la 42",
-        "La 41 est moins volumineuse que la 31"
-      ],
-      correctOptionIndexes: [1, 2, 3],
-      explanation: "Correct : L'incisive centrale sup (11) est plus grande que la latérale sup (12). Incorrect : L'incisive centrale inf (41) est plus petite que la latérale inf (42). Incorrect : Les incisives centrales inf (41 et 31) ont la même taille."
-    },
-    {
-      questionText: "Le trou borgne est retrouvé au niveau de la :",
-      options: [
-        "12",
-        "22",
-        "21",
-        "11"
-      ],
-      correctOptionIndexes: [0, 1],
-      explanation: "Le foramen caecum, ou trou borgne, est une dépression anatomique fréquente sur la face palatine des incisives latérales supérieures (12 et 22)."
-    }
-  ]
-},
-{
-  title: "Examen d’anatomie dentaire - Essai 1",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Quelle caractéristique n'appartient PAS à la première prémolaire maxillaire ?",
-      options: [
-        "Une racine fréquemment bi-furquée.",
-        "Une cuspide vestibulaire beaucoup plus haute que la cuspide palatine.",
-        "Une dépression marquée sur la face mésiale (fossette canine).",
-        "Une face occlusale de forme globalement symétrique."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "La première prémolaire maxillaire a une face occlusale asymétrique, avec une moitié mésiale plus petite que la moitié distale. Les autres caractéristiques (racine double, cuspide vestibulaire dominante, dépression mésiale) sont typiques de cette dent."
-    },
-    {
-      questionText: "Le tubercule de Carabelli est une structure inconstante que l'on retrouve sur :",
-      options: [
-        "La face vestibulaire de la première molaire inférieure.",
-        "La face palatine de la deuxième molaire supérieure.",
-        "La face palatine de la première molaire supérieure.",
-        "La face linguale de la première molaire inférieure."
-      ],
-      correctOptionIndexes: [2],
-      explanation: "Le tubercule de Carabelli est une petite cuspide accessoire qui se trouve sur la face palatine de la cuspide mésio-palatine de la première molaire maxillaire (et parfois sur la deuxième molaire temporaire)."
-    },
-    {
-      questionText: "Concernant la deuxième molaire mandibulaire :",
-      options: [
-        "Elle possède généralement 5 cuspides.",
-        "La disposition de ses sillons occlusaux forme souvent un '+'.",
-        "Sa racine mésiale présente presque toujours deux canaux.",
-        "Elle est plus volumineuse que la première molaire mandibulaire."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La deuxième molaire mandibulaire a typiquement 4 cuspides, et ses sillons principaux se croisent pour former un '+'. La première molaire a 5 cuspides et des sillons en 'Y' ou 'X'. La complexité canalaire est moins prononcée que sur la première molaire."
-    },
-    {
-      questionText: "Laquelle de ces affirmations concernant les dents temporaires est VRAIE ?",
-      options: [
-        "L'émail est plus épais et plus minéralisé que celui des dents permanentes.",
-        "Les racines des molaires temporaires sont convergentes.",
-        "Le volume pulpaire est proportionnellement plus petit que celui des dents permanentes.",
-        "Elles présentent un bourrelet cervical très marqué."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "Les dents temporaires sont caractérisées par un bourrelet cervical très prononcé. Leur émail est plus fin et moins minéralisé, leurs racines sont divergentes pour accueillir le germe de la dent permanente, et leur volume pulpaire est proportionnellement plus grand."
-    }
-  ]
-},
-{
-  title: "Examen d’anatomie dentaire - Essai 2",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "L'incisive centrale mandibulaire se distingue de la latérale mandibulaire par :",
-      options: [
-        "Une couronne plus large.",
-        "Un bord libre parfaitement rectiligne et horizontal.",
-        "Un angle disto-incisif plus arrondi.",
-        "Une symétrie quasi parfaite."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "L'incisive centrale inférieure est la dent la plus symétrique de l'arcade. La latérale est légèrement plus large, son bord libre est incliné vers le bas distalement et son angle disto-incisif est plus arrondi."
-    },
-    {
-      questionText: "Quelle configuration canalaire correspond au Type III de Vertucci ?",
-      options: [
-        "Deux canaux séparés qui fusionnent en un seul avant l'apex. (2-1)",
-        "Un canal qui se divise en deux, puis les deux canaux fusionnent. (1-2-1)",
-        "Un seul canal à l'entrée qui se divise en deux canaux distincts à l'apex. (1-2)",
-        "Un seul canal qui présente une division puis une fusion dans le corps de la racine, avant de se rediviser à l'apex."
-      ],
-      correctOptionIndexes: [2],
-      explanation: "La classification de Vertucci est précise : le Type III correspond à un canal unique qui se divise en deux canaux distincts dans la racine, chacun avec sa propre sortie foraminale (configuration 1-2)."
-    },
-    {
-      questionText: "Le pont d'émail (ou crête oblique) est une structure qui relie :",
-      options: [
-        "La cuspide mésio-vestibulaire et la cuspide disto-vestibulaire.",
-        "La cuspide mésio-palatine et la cuspide disto-vestibulaire.",
-        "La cuspide mésio-linguale et la cuspide disto-linguale.",
-        "La cuspide disto-palatine et la cuspide disto-vestibulaire."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "Le pont d'émail est une crête caractéristique de la face occlusale des molaires supérieures, reliant la cuspide mésio-palatine à la cuspide disto-vestibulaire."
-    },
-    {
-      questionText: "Quelle affirmation est correcte concernant la canine maxillaire ?",
-      options: [
-        "Elle est la dent la plus courte de l'arcade.",
-        "Sa face vestibulaire présente un seul lobe central très développé.",
-        "Elle possède systématiquement deux canaux radiculaires.",
-        "Son éruption précède celle de l'incisive latérale maxillaire."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La canine maxillaire est la dent la plus longue de l'arcade. Sa face vestibulaire est dominée par un lobe central puissant qui se termine par la pointe de la cuspide. Elle a quasi systématiquement un seul canal. Son éruption est plus tardive que celle des incisives."
-    }
-  ]
-},
-// --- EXAMENS التجريبي ---
-
-{
-  title: "Examen d’anatomie humaine - Essai 1",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant les orifices de la base du crâne :",
-      options: [
-        "Le foramen ovale livre passage au nerf maxillaire (V2).",
-        "L'artère carotide interne traverse le foramen jugulaire.",
-        "Le nerf facial (VII) et le nerf vestibulo-cochléaire (VIII) passent par le méat acoustique interne.",
-        "Le foramen magnum ne contient que la moelle allongée (bulbe rachidien).",
-        "Les nerfs crâniens III, IV, et VI sortent du crâne par le foramen rond."
-      ],
-      correctOptionIndexes: [2],
-      explanation: "Le foramen ovale livre passage au nerf mandibulaire (V3). L'artère carotide interne passe par le canal carotidien. Le méat acoustique interne livre bien passage aux nerfs VII et VIII. Le foramen magnum contient aussi les artères vertébrales et les méninges. Les nerfs III, IV, et VI passent par la fissure orbitaire supérieure."
-    },
-    {
-      questionText: "A propos de la mandibule :",
-      options: [
-        "Le processus coronoïde est articulaire avec l'os temporal.",
-        "Le muscle masséter s'insère sur la face médiale du ramus.",
-        "La ligne mylo-hyoïdienne donne insertion au muscle génio-glosse.",
-        "Le foramen mentonnier est le point de sortie du nerf alvéolaire inférieur.",
-        "C'est le seul os mobile de la face."
-      ],
-      correctOptionIndexes: [3, 4],
-      explanation: "Le processus condylien est articulaire, pas le coronoïde. Le masséter s'insère sur la face latérale du ramus. La ligne mylo-hyoïdienne donne insertion au muscle mylo-hyoïdien. Le foramen mentonnier est bien l'orifice de sortie du nerf alvéolaire inférieur (qui devient le nerf mentonnier). La mandibule est le seul os mobile de la face."
-    },
-    {
-      questionText: "Concernant le nerf facial (VII) :",
-      options: [
-        "Il est responsable de la motricité de tous les muscles de la langue.",
-        "Il assure la sensibilité gustative du tiers postérieur de la langue.",
-        "C'est un nerf purement moteur.",
-        "Il innerve le muscle digastrique (ventre postérieur).",
-        "Il contrôle la sécrétion de la glande parotide."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "La motricité de la langue est assurée par le nerf hypoglosse (XII). La gustation du 1/3 postérieur est le rôle du nerf glossopharyngien (IX). Le nerf facial est un nerf mixte. Il innerve bien le ventre postérieur du muscle digastrique. La sécrétion de la parotide est contrôlée par le nerf glossopharyngien (IX)."
-    },
-    {
-      questionText: "Parmi les muscles suivants, lesquels sont des élévateurs de la mandibule ?",
-      options: [
-        "Le muscle temporal",
-        "Le muscle ptérygoïdien latéral",
-        "Le muscle masséter",
-        "Le muscle mylo-hyoïdien",
-        "Le muscle ptérygoïdien médial"
-      ],
-      correctOptionIndexes: [0, 2, 4],
-      explanation: "Les muscles temporal, masséter et ptérygoïdien médial sont les principaux muscles élévateurs de la mandibule (fermeture de la bouche). Le ptérygoïdien latéral est principalement propulseur et abaisseur. Le mylo-hyoïdien est un abaisseur."
-    },
-    {
-      questionText: "A propos du système artériel carotidien :",
-      options: [
-        "L'artère carotide commune gauche naît du tronc artériel brachiocéphalique.",
-        "L'artère carotide interne ne donne aucune branche collatérale dans le cou.",
-        "L'artère faciale est une branche terminale de la carotide externe.",
-        "L'artère maxillaire passe en dedans du muscle ptérygoïdien médial.",
-        "La première branche de la carotide externe est l'artère occipitale."
-      ],
-      correctOptionIndexes: [1],
-      explanation: "La carotide commune gauche naît de l'arc aortique. L'artère carotide interne est connue pour ne donner aucune branche dans le cou. L'artère faciale est une branche collatérale. L'artère maxillaire a des rapports complexes avec le ptérygoïdien latéral. La première branche de la carotide externe est l'artère thyroïdienne supérieure."
-    },
-    {
-      questionText: "Concernant la glande parotide :",
-      options: [
-        "Son canal excréteur est le canal de Wharton.",
-        "Elle est traversée par l'artère carotide interne.",
-        "Elle est située en arrière du muscle masséter.",
-        "Son innervation sécrétoire provient du nerf facial (VII).",
-        "Elle est la plus volumineuse des glandes salivaires principales."
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "Son canal est le canal de Sténon. Elle est traversée par la carotide externe. Elle est bien située en arrière du masséter. Son innervation sécrétoire vient du nerf glossopharyngien (IX). Elle est bien la plus volumineuse des trois glandes salivaires principales."
-    },
-    {
-      questionText: "A propos du voile du palais (palais mou) :",
-      options: [
-        "Il est innervé entièrement par le nerf vague (X).",
-        "Il sépare le nasopharynx de l'oropharynx.",
-        "Le muscle tenseur du voile du palais est innervé par le nerf trijumeau (V3).",
-        "Il contient une armature osseuse formée par l'os palatin.",
-        "Il se contracte lors de la déglutition pour fermer la communication avec les fosses nasales."
-      ],
-      correctOptionIndexes: [1, 2, 4],
-      explanation: "Le muscle tenseur du voile est innervé par le V3, les autres par le X. Il sépare bien le nasopharynx de l'oropharynx et se contracte pour empêcher le reflux nasal lors de la déglutition. Il n'a pas d'armature osseuse."
-    }
-  ]
-},
-{
-  title: "Examen d’anatomie humaine - Essai 2",
-  subject: "anatomy-y2",
-  questions: [
-    {
-      questionText: "Concernant l'os ethmoïde :",
-      options: [
-        "Sa lame criblée laisse passer le nerf optique (II).",
-        "L'apophyse Crista Galli sert d'insertion à la faux du cerveau.",
-        "Il s'articule en arrière avec l'os occipital.",
-        "Il forme la totalité de la cloison nasale.",
-        "Les cornets supérieur et moyen en font partie."
-      ],
-      correctOptionIndexes: [1, 4],
-      explanation: "La lame criblée laisse passer les filets du nerf olfactif (I). Crista Galli sert bien d'insertion à la faux du cerveau. L'ethmoïde s'articule avec le sphénoïde en arrière. Le vomer participe aussi à la cloison nasale. Les cornets supérieur et moyen sont des parties de l'ethmoïde (le cornet inférieur est un os indépendant)."
-    },
-    {
-      questionText: "Concernant le nerf trijumeau (V) :",
-      options: [
-        "Le nerf ophtalmique (V1) sort du crâne par le foramen rond.",
-        "Le nerf maxillaire (V2) est un nerf mixte.",
-        "Le nerf mandibulaire (V3) innerve les muscles de la mimique.",
-        "Son ganglion sensitif (de Gasser) est situé dans la fosse crânienne moyenne.",
-        "Il assure la sensibilité de la dure-mère."
-      ],
-      correctOptionIndexes: [3, 4],
-      explanation: "Le V1 sort par la fissure orbitaire supérieure. Le V2 est purement sensitif. Le V3 innerve les muscles masticateurs. Le ganglion de Gasser est bien situé dans la fosse crânienne moyenne. Le nerf trijumeau assure une grande partie de la sensibilité de la dure-mère via ses rameaux méningés."
-    },
-    {
-      questionText: "A propos de l'Articulation Temporo-Mandibulaire (ATM) :",
-      options: [
-        "Le disque articulaire est une lentille biconvexe.",
-        "Le ligament principal est le ligament sphéno-mandibulaire.",
-        "Les mouvements de propulsion sont principalement réalisés par le muscle temporal.",
-        "C'est une articulation synoviale de type ginglymo-arthrodial.",
-        "La partie postérieure de la fosse mandibulaire est la surface articulaire principale."
-      ],
-      correctOptionIndexes: [3],
-      explanation: "Le disque est biconcave. Le ligament principal est le ligament latéral. La propulsion est assurée par le ptérygoïdien latéral. C'est bien une articulation de type ginglymo-arthrodial (charnière + glissement). La partie antérieure de la fosse est la surface articulaire."
-    },
-    {
-      questionText: "Concernant le drainage veineux de la tête et du cou :",
-      options: [
-        "La veine jugulaire externe se jette directement dans le tronc brachiocéphalique.",
-        "La veine jugulaire interne est la continuation du sinus sigmoïde.",
-        "Le tronc thyro-linguo-facial est un affluent de la veine jugulaire externe.",
-        "Les sinus veineux de la dure-mère sont dépourvus de valvules.",
-        "La veine faciale ne possède aucune anastomose avec le système veineux intracrânien."
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "La VJE se jette dans la veine subclavière. La VJI est bien la continuation du sinus sigmoïde. Le tronc thyro-linguo-facial se jette dans la VJI. Les sinus veineux sont bien avasculaires. La veine faciale communique avec le sinus caverneux via les veines ophtalmiques."
-    },
-    {
-      questionText: "Concernant les muscles peauciers (de la mimique) :",
-      options: [
-        "Ils sont tous innervés par le nerf trijumeau (V).",
-        "Le muscle orbiculaire de l'œil est responsable de la fermeture des paupières.",
-        "Le muscle buccinateur est un muscle masticateur principal.",
-        "Ils prennent tous une insertion sur un os et se terminent sur la peau.",
-        "Le muscle risorius est le principal muscle du sourire."
-      ],
-      correctOptionIndexes: [1, 3],
-      explanation: "Ils sont innervés par le nerf facial (VII). L'orbiculaire de l'œil ferme bien les paupières. Le buccinateur est un muscle peaucier accessoire à la mastication. Ils prennent bien une insertion osseuse et une insertion cutanée. Le muscle principal du sourire est le grand zygomatique."
-    },
-    {
-      questionText: "A propos de la langue :",
-      options: [
-        "L'innervation motrice de tous ses muscles provient du nerf hypoglosse (XII).",
-        "L'artère linguale est une branche de l'artère carotide interne.",
-        "Le V lingual sépare la langue en une partie antérieure (corps) et une partie postérieure (racine).",
-        "Le muscle stylo-glosse est un muscle intrinsèque.",
-        "La sensibilité générale des 2/3 antérieurs est assurée par le nerf lingual (branche du V3)."
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "Le muscle palatoglosse est innervé par le nerf vague (X). L'artère linguale vient de la carotide externe. Le V lingual sépare bien le corps et la racine. Le stylo-glosse est un muscle extrinsèque. La sensibilité générale des 2/3 antérieurs est bien assurée par le nerf lingual."
-    },
-    {
-      questionText: "Concernant le maxillaire :",
-      options: [
-        "C'est un os impair et médian de la face.",
-        "Le processus palatin forme le tiers postérieur du palais dur.",
-        "Il s'articule avec tous les os de la face sauf la mandibule.",
-        "Le sinus maxillaire s'ouvre dans le méat nasal inférieur.",
-        "Il participe à la formation des parois de l'orbite, des fosses nasales et de la cavité buccale."
-      ],
-      correctOptionIndexes: [2, 4],
-      explanation: "Le maxillaire est un os pair. Son processus palatin forme les 2/3 antérieurs du palais dur. Il s'articule avec tous les os de la face sauf la mandibule. Le sinus maxillaire s'ouvre dans le méat moyen. Il participe bien à la formation des trois cavités."
-        }
+  // Ajout de l'examen: 2022 (1°EMD) Anatomie Humaine
+  {
+    title: "2022 (1°EMD) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant L'os frontal:",
+        options: [
+          "il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
+          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+          "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
+          "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
+          "Sa partie verticale, appelée écaille, appartient à la voûte du crâne"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "La glabelle est sur la face externe. Les fossettes granulaires sont bien de part et d'autre du sinus sagittal supérieur. La fossette trochléaire est en dedans (médiale) de la fossette lacrymale (latérale). L'incisure supra-orbitaire est au tiers médial. L'écaille (partie verticale) appartient bien à la voûte."
+      },
+      {
+        questionText: "Concernant l'os sphénoïde:",
+        options: [
+          "L'os sphénoïde s'articule avec les os; frontal, pariétal, maxillaire, temporal et occipital",
+          "la face inférieure du corps présente la gouttière optique",
+          "Participe à la formation de l'étage postérieur de la base du crâne",
+          "la face antérieure du corps s'articule avec la lame perpendiculaire de l'ethmoïde",
+          "La face inférieure du corps sphénoïdal présente le jugum"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'os sphénoïde s'articule avec le frontal, pariétal, temporal, occipital, ethmoïde et vomer (pas le maxillaire). La gouttière optique est sur la face supérieure. Il participe principalement à l'étage moyen. La face antérieure s'articule bien avec la lame perpendiculaire de l'ethmoïde. Le jugum est sur la face supérieure."
+      },
+      {
+        questionText: "Concernant la base du crâne :",
+        options: [
+          "Disposée en marche d'escalier",
+          "L'étage antérieur présente les trous optiques",
+          "La fosse crânienne moyenne présente le foramen magnum",
+          "La fosse crânienne antérieure est inférieure",
+          "La fosse crânienne postérieure est limitée en avant par la face postéro-supérieure du rocher"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "La base du crâne est bien disposée en marche d'escalier (3 étages). L'étage antérieur présente les trous optiques. Le foramen magnum se situe dans la fosse crânienne postérieure. La fosse antérieure est la plus haute (supérieure)."
+      },
+      {
+        questionText: "Concernant l'os temporal:",
+        options: [
+          "Appartient uniquement à la base du crâne.",
+          "Est formé d'une partie squameuse, une pyramide pétreuse et un os tympanal.",
+          "Le sommet du rocher abrite le siphon carotidien.",
+          "L'os tympanal forme le conduit auditif interne.",
+          "Le condyle temporal est postérieur par rapport à la cavité glénoïde."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'os temporal appartient à la voûte et à la base du crâne. Il est bien formé de trois parties : squameuse, pétreuse et tympanale. Le sommet du rocher abrite le siphon carotidien. L'os tympanal forme le conduit auditif externe. Le condyle temporal est antérieur à la cavité glénoïde."
+      },
+      {
+        questionText: "Concernant la mandibule :",
+        options: [
+          "L'épine de Spix se situe à la face médiale du Ramus.",
+          "La fosse submandibulaire est située au-dessus de la ligne myéloïde.",
+          "L'angle mandibulaire est appelé Gonion.",
+          "Le corps contient sur la ligne médiane de sa face interne quatre apophyses geni.",
+          "Le canal dentaire inferieure est creusé totalement au niveau du Ramus."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'épine de Spix est bien sur la face médiale du ramus. La fosse submandibulaire est située en dessous de la ligne mylohyoïdienne. L'angle mandibulaire est bien appelé gonion. La face interne présente quatre apophyses géni sur la ligne médiane."
+      },
+      {
+        questionText: "Concernant l'orbite osseuse:",
+        options: [
+          "Est située au-dessous de l'étage moyen du crâne",
+          "Est située au-dessus de la région temporale",
+          "Présente une base antérieure",
+          "Est de forme triangulaire",
+          "Présente 04 parois, une base et un sommet"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "L'orbite est située sous l'étage antérieur du crâne. Elle présente une base antérieure, 4 parois et un sommet. Sa forme est pyramidale, pas triangulaire."
+      },
+      {
+        questionText: "La paroi supérieure de l'orbite osseuse est formée des os suivants :",
+        options: [
+          "L'apophyse orbitaire de l'os malaire",
+          "L'os palatin",
+          "L'os planum",
+          "La fosse orbitaire de l'os frontale",
+          "La petite aile du sphénoïde"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "La paroi supérieure (le toit) de l'orbite est constituée par la fosse orbitaire de l'os frontal et la petite aile du sphénoïde."
+      },
+      {
+        questionText: "Concernant la fosse infra-temporale:",
+        options: [
+          "La fosse pterygo-palatine est l'arrière fond de la fosse infra-temporale",
+          "La fosse pterygo-palatine livre passage au nerf mandibulaire (V3)",
+          "La région des muscles ptérygoïdiens livre pas nerf maxillaire (V2)",
+          "La fosse pterygo-palatine communique avec infra temporale",
+          "Les branches de l'artère maxillaire traverse la fosse pterygo-palatine"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La fosse ptérygo-palatine est l'arrière-fond de la fosse infra-temporale, communique avec elle et est traversée par les branches de l'artère maxillaire. Elle livre passage au nerf maxillaire (V2), non au mandibulaire (V3)."
+      },
+      {
+        questionText: "Par le trou déchiré antérieur passe:",
+        options: [
+          "IX, X, XI",
+          "La veine jugulaire interne",
+          "III, IV, V1 (ophtalmique), VI",
+          "XII",
+          "L'artère carotide interne"
+        ],
+        correctOptionIndexes: [4],
+        explanation: "Le trou déchiré antérieur (foramen lacerum) livre passage à l'artère carotide interne à sa sortie du canal carotidien."
+      },
+      {
+        questionText: "Concernant la tête osseuse :",
+        options: [
+          "L'os pariétal est un os de la voûte crânienne uniquement.",
+          "La cloison nasale osseuse est formée du vomer et de la lame perpendiculaire de l'ethmoïde.",
+          "L'unguis est un os appartenant uniquement à l'orbite.",
+          "La lame verticale du palatin forme le palais osseux",
+          "Le malaire forme avec le temporale l'arcade temporo-malaire au-dessus de la quelle passe le muscle temporale."
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "L'os pariétal appartient uniquement à la voûte. La cloison nasale est bien formée par le vomer et la lame perpendiculaire de l'ethmoïde. L'unguis participe aussi à la paroi de la cavité nasale. C'est la lame horizontale du palatin qui forme le palais osseux. Le malaire (zygomatique) et le temporal forment l'arcade zygomatique."
+      },
+      {
+        questionText: "Concernant le maxillaire :",
+        options: [
+          "Présente un corps et trois processus.",
+          "Le processus frontal s'articule avec l'ethmoïde",
+          "Le processus palatin forme avec son controlatéral la moitié du palais osseux",
+          "L'orifice piriforme est délimité par les maxillaires et les os propre du nez.",
+          "Le sinus maxillaire est fermé par le cornet moyen."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Le maxillaire a 4 processus. Son processus frontal s'articule bien avec l'ethmoïde. L'orifice piriforme est délimité par les maxillaires et les os du nez. Le processus palatin forme les 2/3 antérieurs du palais."
+      },
+      {
+        questionText: "Concernant l'étage antérieur de la base du crâne",
+        options: [
+          "Il est appelé étage sphéno-temporal",
+          "Présente les grandes ailes du sphénoïde avec les sutures sphéno-temporales",
+          "limité en arrière par les petites ailes du sphénoïde",
+          "limité en arrière par la face postérieure du rocher",
+          "Il est appelé étage éthmoïdo-frontal"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "L'étage antérieur est appelé éthmoïdo-frontal et il est bien limité en arrière par le bord postérieur des petites ailes du sphénoïde. L'étage moyen est le sphéno-temporal."
+      },
+      {
+        questionText: "l'étage moyen présent les éléments suivants sauf :",
+        options: [
+          "La loge hypophysaire",
+          "La face postérieure de la pyramide pétreuse",
+          "Le trou ovale",
+          "Les grandes ailes du sphénoïde",
+          "Le méat acoustique interne"
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "La loge hypophysaire, le trou ovale et les grandes ailes du sphénoïde sont dans l'étage moyen. La face postérieure de la pyramide pétreuse et le méat acoustique interne appartiennent à l'étage postérieur."
+      },
+      {
+        questionText: "Les muscles masticateurs :",
+        options: [
+          "Comportent le temporal, le masséter et le buccinateur",
+          "Sont tous innervés par le nerf maxillaire",
+          "Le muscle temporal est un élévateur et rétropulseur",
+          "Le muscle masséter est un diducteur de la mandibule",
+          "Les muscles ptérygoïdiens latéral et médial sont des Didicteurs"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le muscle temporal est un élévateur et rétropulseur. Les ptérygoïdiens sont des diducteurs (mouvements de latéralité). Le buccinateur n'est pas un muscle masticateur. L'innervation vient du nerf mandibulaire (V3). Le masséter est un élévateur."
+      },
+      {
+        questionText: "Concernent les muscles peauciers de la face",
+        options: [
+          "Sont des muscles qui présentent une insertion sur la peau",
+          "Sont tous innervés par les branches terminales du nerf facial",
+          "Sont au nombre de 29 muscles",
+          "Interviennent dans la mastication",
+          "Sont responsables de la mimique"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "Les muscles peauciers présentent une insertion cutanée, sont innervés par le nerf facial (VII) et sont responsables de la mimique. Ils n'interviennent pas dans la mastication."
+      },
+      {
+        questionText: "Concernant l'orbite osseuse-Le canal optique livre passage:",
+        options: [
+          "Le nerf optique",
+          "L'artère ophtalmique",
+          "Le nerf trochléaire(IV)",
+          "Le nerf abducens(VI)",
+          "Des branches du nerf oculomoteur(III)"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le canal optique livre passage au nerf optique (II) et à l'artère ophtalmique. Les autres nerfs listés passent par la fissure orbitaire supérieure."
+      },
+      {
+        questionText: "Concernant l'articulation temporo-mandibulaire",
+        options: [
+          "C'est une articulation solide",
+          "Elle est profonde",
+          "Un seul groupe musculaire assure sa mobilité",
+          "C'est une bi-condylienne",
+          "C'est une articulation à mobilité réduite"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'ATM est une articulation bi-condylienne. Elle est superficielle, très mobile, et sa mobilité est assurée par plusieurs groupes musculaires (les muscles masticateurs)."
+      },
+      {
+        questionText: "Concernant l'articulation temporo-mandibulaire : le disque inter-condylien",
+        options: [
+          "C'est un fibrocartilage",
+          "Il est biconcave",
+          "Il est avasculaire",
+          "Il permet la concordance des surfaces articulaires",
+          "Il divise l'articulation en 02 parties"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Toutes les affirmations sont correctes. Le disque est un fibrocartilage biconcave, avasculaire en sa partie centrale, qui assure la concordance des surfaces et divise l'articulation en deux compartiments."
+      },
+      {
+        questionText: "Concernant l'articulation temporo-mandibulaire la fosse mandibulaire :",
+        options: [
+          "Est située sur la branche montante de la mandibule",
+          "Est située sur l'os temporal",
+          "Est divisée en 02 parties",
+          "Seule sa partie antérieure est articulaire",
+          "Seule sa partie postérieure est articulaire"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La fosse mandibulaire est située sur l'os temporal. Elle est divisée en deux par la scissure de Glaser, et seule sa partie antérieure est articulaire."
+      }
     ]
-}
+  },
+  {
+    title: "2022 (2°EMD) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant Le nerf hypoglosse:",
+        options: [
+          "Est la deuxième paire crânienne",
+          "Est un nerf complet sensitivo-moteur et végétatif",
+          "Il innerve les muscles de la langue sauf le muscle palatoglosse.",
+          "Il est destiné au pharynx et larynx",
+          "sort de la base du crâne par canal condylien postérieur"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le nerf hypoglosse est la 12ème paire crânienne, c'est un nerf purement moteur qui innerve tous les muscles de la langue sauf le palatoglosse. Il sort du crâne par le canal condylien antérieur (canal du grand hypoglosse)."
+      }
+    ]
+  },
+  {
+    title: "2023 (1°EMD) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant l'ostéologie du crâne",
+        options: [
+          "L'ethmoïde, seul os n'appartenant pas à la calvaria.",
+          "La selle turcique se situe à la face antérieure du corps du sphénoïde",
+          "Le parietal s'articule avec tous les os qui participent à la constitution de la calvaria",
+          "L'os frontal n'appartient pas à la base du crâne",
+          "La fossette vermienne est une bifurcation de la crête occipitale interne."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'ethmoïde est un os de la base du crâne et n'appartient pas à la calvaria (voûte). La selle turcique est sur la face supérieure du corps du sphénoïde. L'os frontal participe à la fois à la voûte et à la base."
+      },
+      {
+        questionText: "Concernant l'os Temporal",
+        options: [
+          "Os de la fosse crânienne antérieure",
+          "Situé au-dessous du pariétal, en avant et dedans du sphénoïde",
+          "Le processus styloïde appartient à la pyramide pétreuse",
+          "Le méat acoustique interne, orifice creusé dans la partie tympanal de l'os",
+          "La fosse trigéminale, apparient à la partie postéro-supérieure de la face endocrânienne du rocher"
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "L'os temporal participe aux fosses crâniennes moyenne et postérieure. Il est bien situé sous le pariétal, en avant et en dedans du sphénoïde. Le processus styloïde appartient à la portion tympanique. Le méat acoustique interne est dans la portion pétreuse. La fosse trigéminale est bien située sur la face endocrânienne du rocher."
+      },
+      {
+        questionText: "Concernant l'os sphénoïde",
+        options: [
+          "Il est articulaire avec tous les os du crâne",
+          "Il forme la voûte et la base du crâne",
+          "Ses petites ailes délimitent le canal optique",
+          "Son corps présente des foramens livrant passage aux nerfs",
+          "Ses grandes ailes forment l'étage moyen de la base du crâne"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Toutes les propositions sont correctes. L'os sphénoïde s'articule avec tous les os du crâne, il participe à la formation de la voûte et de la base, ses petites ailes délimitent le canal optique, son corps présente plusieurs foramens pour les nerfs, et ses grandes ailes forment l'étage moyen de la base."
+      },
+      {
+        questionText: "Concernant la mandibule :",
+        options: [
+          "C'est l'unique os mobile du squelette cranio-facial.",
+          "S'articule avec les 2 os pariétaux via les articulations temporo-mandibulaires.",
+          "Le corps de la mandibule, est une structure verticale.",
+          "On retrouve des insertions musculaires sur les deux faces de l'angle mandibulaire.",
+          "La fosse sub mandibulaire est située au-dessous de la ligne myloïde"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La mandibule est bien l'unique os mobile. Elle s'articule avec les os temporaux. Son corps est horizontal. Des muscles s'insèrent sur les deux faces de l'angle mandibulaire, et la fosse submandibulaire est située sous la ligne mylohyoïdienne."
+      },
+      {
+        questionText: "Concernant le massif facial:",
+        options: [
+          "Tous les os du massif facial sont pneumatiques",
+          "L'os maxillaire est un os impair et médian",
+          "Le vomer est articulaire avec la lame perpendiculaire de l'ethmoïde",
+          "L'os lacrymal comporte 2faces et 4bords",
+          "Le cornet nasal inférieur est un os disposé contre la paroi latérale de la cavité nasale"
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "Seuls certains os du massif facial sont pneumatiques. Le maxillaire est un os pair. Le vomer s'articule avec la lame perpendiculaire de l'ethmoïde. L'os lacrymal a 2 faces et 4 bords. Le cornet nasal inférieur est un os indépendant de la paroi latérale."
+      },
+      {
+        questionText: "Concernant le maxillaire :",
+        options: [
+          "Le processus montant est une paroi commune entre les fausses nasales et l'orbite.",
+          "La fosse canine se projette en regard de la jonction canine incisive latérale.",
+          "Le sillon grand palatin est situé en arrière du sinus maxillaire.",
+          "L'orifice piriforme est formé deux os maxillaires.",
+          "Le sinus maxillaire s'ouvre au niveau du méat supérieur"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le processus montant participe bien aux parois des fosses nasales et de l'orbite. Le sillon grand palatin se situe bien en arrière du sinus maxillaire. La fosse canine est en regard des prémolaires. L'orifice piriforme inclut aussi les os propres du nez. Le sinus maxillaire s'ouvre dans le méat moyen."
+      },
+      {
+        questionText: "Concernant le palatin:",
+        options: [
+          "S'articule avec le sphénoïde et l'éthmoïde.",
+          "Les deux lames horizontales du palatin forme la moitié postérieure du palais osseux.",
+          "La face médiale de la lame verticale présente deux crêtes pour les cornets supérieure et inférieure.",
+          "L'apophyse orbitaire fait partie des parois de l'orbite",
+          "Le processus pyramidal rentre en contact avec le processus ptérygoïde du sphénoïde."
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "Le palatin s'articule bien avec le sphénoïde et l'éthmoïde. Son apophyse orbitaire participe à la paroi de l'orbite et son processus pyramidal contacte le processus ptérygoïde. Les lames horizontales forment le tiers postérieur du palais osseux."
+      },
+      {
+        questionText: "Concernant les fosses nasales:",
+        options: [
+          "Elles sont situées en dehors des sinus maxillaires",
+          "Elles s'ouvrent en arrière dans l'oropharynx",
+          "Elles présentent un squelette ostéo-membraneux",
+          "Elles sont entourées par les sinus para-nasaux",
+          "La partie supérieure de leur muqueuse est olfactive"
+        ],
+        correctOptionIndexes: [2, 3, 4],
+        explanation: "Les fosses nasales sont situées médialement aux sinus maxillaires. Elles s'ouvrent dans le nasopharynx. Elles ont un squelette ostéo-membraneux, sont entourées des sinus para-nasaux et leur partie supérieure est olfactive."
+      }
+    ]
+  },
+  {
+    title: "2023 (2°EMD) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant Le vestibule oral :",
+        options: [
+          "Il est tapissé par une muqueuse orale qui devient les gencives sur les arcades dentaires",
+          "C'est un espace en forme de fer à cheval",
+          "Il est limité en avant par la région génienne",
+          "Il est limité en arrière par l'isthme du gosier",
+          "comprend deux gouttières vestibulaires : supérieure et inférieure"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "Le vestibule oral est un espace en fer à cheval, tapissé par une muqueuse qui se continue avec les gencives, et comprend deux gouttières. Il est limité en avant par les lèvres et en arrière par les arcades dentaires."
+      },
+      {
+        questionText: "Concernant l'artère carotide externe:",
+        options: [
+          "Nait à hauteur du cartilage thyroïde.",
+          "Présente trois portions thoraciques, cervicale et faciale",
+          "Au niveau de la face elle se trouve au niveau de l'espace pré stylien.",
+          "Au niveau du cou elle est satellite du muscle sterno-cleido- mastoïdien.",
+          "Elle se termine au niveau du col mandibulaire en artère temporelle et artère occipital."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'artère carotide externe naît bien à hauteur du cartilage thyroïde, se trouve dans l'espace pré-stylien au niveau de la face, et est satellite du SCM dans le cou. Elle n'a pas de portion thoracique et se termine en artères maxillaire et temporale superficielle."
+      },
+      {
+        questionText: "Concernant la langue :",
+        options: [
+          "La face supérieure de la langue est divisée en deux parties par le sillon terminal",
+          "Les muscles de la langue sont distingués en deux catégories : muscles extrinsèques et muscles intrinsèques",
+          "La vascularisation de la langue est assurée par l'artère linguale, branche de l'artère carotide interne",
+          "La langue possède neuf muscles, dont sept muscles pairs et deux impairs",
+          "La base de la langue repose sur le plancher buccal"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La face supérieure est bien divisée par le sillon terminal, et les muscles sont classés en extrinsèques et intrinsèques. La langue possède neuf muscles (7 pairs, 2 impairs). Sa vascularisation provient de la carotide externe. Sa base est attachée à la mandibule et à l'os hyoïde."
+      },
+      {
+        questionText: "concernant la glande parotide:",
+        options: [
+          "Son canal excréteur est appelé canal de Wharton",
+          "La loge parotidienne est située dans l'espace pré stylien.",
+          "Elle est clivée par le nerf trijumeau.",
+          "Elle est traversée par l'artère carotide externe.",
+          "L'ouverture du canal parotidien se fait à hauteur de la deuxième molaire inferieure"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La loge parotidienne est bien dans l'espace pré-stylien et la glande est traversée par la carotide externe. Son canal est le canal de Sténon. Elle est traversée par le nerf facial (VII). Le canal s'ouvre au niveau de la deuxième molaire supérieure."
+      },
+      {
+        questionText: "Concernant l'axe artérielle carotidien :",
+        options: [
+          "L'artère carotide commune droite nait directement de la crosse aortique.",
+          "La carotide commune droite présente un trajet thoracique et un trajet cervical.",
+          "Dans le cou elle est au niveau d'une gaine vasculaire avec la veine jugula ire interne et le nerf vague.",
+          "La carotide commune se termine en artère carotide interne et externe.",
+          "L'artère carotide interne ne donne aucune branche au niveau du cou."
+        ],
+        correctOptionIndexes: [1, 2, 3, 4],
+        explanation: "La carotide commune gauche naît de l'aorte. La droite a bien un trajet thoracique et cervical, est dans la gaine vasculaire avec la VJI et le nerf vague, se divise en interne et externe, et l'interne ne donne pas de branches cervicales."
+      },
+      {
+        questionText: "Concernant la région palatine:",
+        options: [
+          "C'est La paroi supérieure de la cavité buccale.",
+          "La couche musculaire du voile du palais est formée de cinq muscles de chaque côté",
+          "Elle comprend en avant le voile du palais ou palais mou",
+          "Elle comprend en arrière la voûte palatine: palais dur",
+          "La voûte palatine a l'aspect d'un demi-cercle à concavité antérieure"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "La région palatine est bien la paroi supérieure. Le voile du palais est formé de 5 muscles de chaque côté et la voûte a un aspect de demi-cercle à concavité antérieure. Le palais mou (voile) est en arrière et le palais dur (voûte) est en avant."
+      },
+      {
+        questionText: "Concernant les branches terminales de l'artère carotide externe:",
+        options: [
+          "L'artère maxillaire présente trois segments.",
+          "L'artère alvéolaire inferieure nait du segment intermédiaire de l'artère maxillaire interne.",
+          "La maxillaire interne se termine en artère sphéno-palatine",
+          "L'artère temporale superficielle donne des rameaux pariétal et occipital uniquement.",
+          "L'artère linguale est une branche de la maxillaire interne."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "L'artère maxillaire présente trois segments et se termine en artère sphéno-palatine. L'artère alvéolaire inférieure naît du premier segment. La temporale superficielle donne des rameaux frontal et pariétal. L'artère linguale est une branche de la carotide externe."
+      }
+    ]
+  },
+  {
+    title: "2024 (RATT) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant l'os maxillaire",
+        options: [
+          "Est un os pair du massif facial supérieur",
+          "Occupe la partie latérale de la face",
+          "Est un os mobile",
+          "Comporte les alvéoles dentaires",
+          "L'apophyse palatine présente sur sa face inférieure le foramen incisif et palatin antérieur"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Le maxillaire est un os pair du massif facial supérieur et comporte les alvéoles dentaires. Il occupe la partie médiale de la face et est immobile. Le foramen palatin antérieur n'est pas sur sa face inférieure."
+      },
+      {
+        questionText: "Au niveau de la mandibule, la ligne oblique interne donne insertion au :",
+        options: [
+          "Muscle mylo-hyoidien.",
+          "Muscle stylo-hyoidien.",
+          "Muscle styloglosse.",
+          "Muscle genio-hyoïdien",
+          "Muscle génio-glosse"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La ligne oblique interne (ligne mylo-hyoïdienne) donne insertion aux muscles mylo-hyoïdien et génio-hyoïdien."
+      },
+      {
+        questionText: "Concernant l'articulation temporo-mandibulaire",
+        options: [
+          "C'est une articulation de type ginglyme",
+          "Le versant postérieur du condyle mandibulaire est aplati et articulaire",
+          "Il existe deux ligaments intrinsèques et trois ligaments extrinsèques",
+          "Seul le versant antérieur doit être considéré comme articulaire",
+          "La lame tendineuse pré-discale est une zone richement innervée et bien vascularisée"
+        ],
+        correctOptionIndexes: [0, 2, 3, 4],
+        explanation: "L'ATM est de type ginglymo-arthrodial. Le versant postérieur du condyle est non articulaire. Elle possède bien 2 ligaments intrinsèques et 3 extrinsèques. Seul le versant antérieur est considéré comme articulaire, et la zone pré-discale est richement innervée et vascularisée."
+      },
+      {
+        questionText: "Concernant la langue de la cavité buccale :",
+        options: [
+          "C'est un organe musculaire",
+          "Est contenue dans le vestibule oral",
+          "Présente 02 parties supérieure et inférieure séparées par le lingual",
+          "La partie antérieure est mobile ; c'est le corps de la langue",
+          "La partie postérieure est fixe, c'est la racine de la langue"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La langue est un organe musculaire situé dans la cavité orale proprement dite (et non le vestibule). Elle présente une partie antérieure mobile (le corps) et une partie postérieure fixe (la racine), séparées par le V lingual."
+      },
+      {
+        questionText: "Par le foramen jugulaire (trou déchiré postérieur) passent les nerfs crâniens suivants :",
+        options: [
+          "IX, X, XI",
+          "VII, VIII",
+          "III, IV, V1, VI",
+          "XII",
+          "IX,X XII"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le foramen jugulaire, ou trou déchiré postérieur, livre passage aux nerfs crâniens IX (glossopharyngien), X (vague) et XI (accessoire)."
+      },
+      {
+        questionText: "La face médiale (interne) de l'os maxillaire est divisée en deux parties -supérieure et inférieure par :",
+        options: [
+          "L'apophyse montante.",
+          "L'apophyse pyramidale.",
+          "L'apophyse palatine.",
+          "L'apophyse zygomatique",
+          "L'apophyse orbitaire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "C'est l'apophyse palatine (processus palatin) qui divise horizontalement la face médiale de l'os maxillaire en une partie supérieure (nasale) et une partie inférieure (buccale)."
+      },
+      {
+        questionText: "Concernant la glande parotide :",
+        options: [
+          "Située dans les espaces profonds de la face",
+          "Le canal de Sténon s'ouvre au niveau du collet de la 2eme molaire supérieure",
+          "Traversée par l'artère carotide externe, le nerf facial et la veine jugulaire interne",
+          "Limitée en avant par le diaphragme stylien",
+          "En rapport avec l'artère faciale"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La glande parotide est superficielle. Son canal s'ouvre bien au niveau du collet de la 2ème molaire supérieure. Elle est traversée par la carotide externe, le nerf facial et la veine jugulaire externe. Elle est limitée en postéro-médial par le diaphragme stylien."
+      },
+      {
+        questionText: "Concernant le nerf hypoglosse :",
+        options: [
+          "Nait du sillon retro-olivaire",
+          "Se termine au niveau de la base de la langue",
+          "Innerve un seul muscle sous-hyoidien",
+          "Est un nerf moteur de la langue et le muscle géniohyoidien",
+          "Assure la sensibilité de l'oreille moyenne"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Le nerf hypoglosse (XII) émerge du sillon pré-olivaire. Il innerve le muscle thyro-hyoïdien (un muscle sous-hyoïdien) ainsi que les muscles de la langue, y compris le génio-hyoïdien. C'est un nerf purement moteur."
+      }
+    ]
+  },
+  {
+    title: "2025 (1°EMD) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant l'ostéologie du massif facial :",
+        options: [
+          "Tous les os du massif facial sont pneumatiques.",
+          "Le relief des arcades sourcilières est formé par l'os frontal",
+          "Le malaire (os zygomatique) constitue l'essentiel de la paroi inferieur Le de l'orbite",
+          "La cloison nasale osseuse est formée seleument par le vomer",
+          "L'unguis est incurvé en externe de manière à recevoir le sac lacrymal."
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "Le relief des arcades sourcilières est bien une caractéristique de l'os frontal. L'os lacrymal (unguis) est incurvé pour former la gouttière du sac lacrymal. Seuls quelques os sont pneumatiques. L'os zygomatique forme la paroi latérale de l'orbite. La cloison nasale est formée par le vomer et la lame perpendiculaire de l'ethmoïde."
+      },
+      {
+        questionText: "Concernant l'os frontal :",
+        options: [
+          "II présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique",
+          "Sa partie verticale, appelée écaille, appartient pour partie à la base du crâne.",
+          "II contient une cavité aérique, appelée sinus frontal",
+          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+          "Le toit de l'orbite comporte deux reliefs : la fossette trochléaire en latéral, et la fossette lacrymale en médial"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "L'os frontal contient bien les sinus frontaux. Les fossettes granulaires se situent de part et d'autre du sinus sagittal supérieur sur sa face endocrânienne. La glabelle est exocrânienne. L'écaille appartient à la voûte. La fossette trochléaire est médiale et la lacrymale est latérale."
+      },
+      {
+        questionText: "Concernant l'os ethmoïdal",
+        options: [
+          "Appartient à 1' étage moyen de la base du crâne.",
+          "Est un os profond et central de la face.",
+          "Participe à la formation des parois des fosses nasales.",
+          "Participe à la formation de la paroi des 2 cavités orbitaires.",
+          "Participe à la formation des parois de la cavité buccale."
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "L'os ethmoïdal appartient à l'étage antérieur de la base du crâne. Il participe à la formation des parois des fosses nasales et des parois médiales des deux cavités orbitaires. Il est considéré comme un os superficiel."
+      },
+      {
+        questionText: "Concernant la branche mantante de la mandibule",
+        options: [
+          "Sa face latérale donne insertion au muscle masséter",
+          "Sa face médiale présente l'orifice du canal dentaire inférieur",
+          "Le bord supérieur est marqué par l'échancrure sigmoïde entre le processus coronoïde et le condyle",
+          "Le bord antérieur est limité par deux lèvres qui donnent insertion au muscle ptérygoïdien latéral",
+          "Le bord postérieur donne insertion au ligament stylo-mandibulaire"
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "La face latérale du ramus donne insertion au masséter, sa face médiale présente l'orifice du canal dentaire. Son bord supérieur a l'échancrure sigmoïde. Son bord postérieur donne insertion au ligament stylo-mandibulaire. Le bord antérieur donne insertion au muscle temporal."
+      },
+      {
+        questionText: "quelles sont les structures présentes sur la face interne (médiale) du corps de la mandibule",
+        options: [
+          "Les épines mentonnières supérieures et inférieures",
+          "Le foramen mentonnier",
+          "La ligne mylo-hyoidienne",
+          "La fosse sublinguale et la fosse submandibulaire",
+          "La ligne oblique externe"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La face interne du corps de la mandibule présente les épines mentonnières, la ligne mylo-hyoïdienne (ligne oblique interne), ainsi que les fosses sublinguale et submandibulaire. Le foramen mentonnier et la ligne oblique externe se situent sur la face externe."
+      },
+      {
+        questionText: "Concernant les fosses nasales:",
+        options: [
+          "L'orifice piriforme est l'orifice antérieur des fosses nasales.",
+          "Les méats nasaux sont compris entre la paroi médiale et les cornets.",
+          "La muqueuse nasale est divisée fonctionnellement en zones olfactive inférieure et respiratoire supérieure.",
+          "Sont vascularisées principalement par l'artère sphéno- palatine.",
+          "Son innervation sensorielle est assurée par le nerf trijumeau."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "L'orifice piriforme est bien l'orifice antérieur. La vascularisation principale vient de l'artère sphéno-palatine. Les méats sont entre la paroi latérale et les cornets. La zone olfactive est supérieure. L'innervation sensorielle (olfaction) vient du nerf olfactif (I)."
+      }
+    ]
+  },
+  {
+    title: "2025 (2°EMD) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant Le voile du palais:",
+        options: [
+          "Il limite en bas la cavité buccale",
+          "Il est osseux formé par les os ; maxillaire et palatin",
+          "Il est fibro-musculaire",
+          "Il sépare le naso-pharynx du laryngopharynx",
+          "Les piliers glosso-staphylin et pharyngo-staphylin limitent la fosseitonsillaire"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le voile du palais est une structure fibro-musculaire. Ses piliers (arcs palatoglosse et palatopharyngien) délimitent la fosse tonsillaire. Il sépare le nasopharynx de l'oropharynx."
+      },
+      {
+        questionText: "Parmi les muscles suivants, lequel est tenseur du voile ?",
+        options: [
+          "Péristaphylin latéral (Tenseur du voile)",
+          "Péristaphylin médial (Elévateur du voile)",
+          "Glosso-staphylin (Palato-glosse)",
+          "Pharyngo-staphylin (Palato-pharyngien)",
+          "Palato-staphylin (Uvulaire)"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le muscle péristaphylin latéral est le tenseur du voile du palais. Le péristaphylin médial en est l'élévateur."
+      },
+      {
+        questionText: "A propos de la loge Parotidienne",
+        options: [
+          "La paroi postéro-médiale, est faite des muscles styliens",
+          "La paroi antérieure, faite de la branche montante de la mandibule, tapissée du muscle buccinateur",
+          "La paroi latérale, Fascia cervical superficiel",
+          "Elle se situe en dedans du muscle Masséter",
+          "Traversé par l'artère faciale"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La paroi postéro-médiale de la loge parotidienne est constituée des muscles styliens, et sa paroi latérale par le fascia cervical superficiel. La paroi antérieure est tapissée par le masséter (en dehors) et le ptérygoïdien médial (en dedans). La loge se situe en dehors du masséter."
+      },
+      {
+        questionText: "Concernant la Glande submandibulaire caroncule",
+        options: [
+          "Se situe en avant de la glande parotide",
+          "En rapports avec le nerf lingual",
+          "Son canal excréteur est le canal de Wharton",
+          "Occupe une loge, limitée en arrière par le muscle sylo-pharyngien",
+          "Son canal excréteur s'ouvre au sommet de l'ostium ombilical sur le versant interne de la"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "La glande submandibulaire est bien en rapport avec le nerf lingual, son canal est le canal de Wharton, et celui-ci s'ouvre au sommet de l'ostium ombilical. Sa loge est limitée en arrière par le ventre postérieur du digastrique."
+      },
+      {
+        questionText: "A propos du facial intra pétreux:",
+        options: [
+          "Il décrit trois portions en bañonnette.",
+          "La portion tympanique est en contact avec la paroi externe de la caisse du tympan.",
+          "Parmi les branches intra pétreuse la corde du tympan et les nerfs grands pétreux superficiels.",
+          "La portion méatique est l'une des portions de l'aqueduc de Fallope.",
+          "Il réalise des anastomoses avec le plexus carotidien"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le trajet intra-pétreux du nerf facial décrit bien trois portions en baïonnette. Ses branches intra-pétreuses incluent la corde du tympan et les nerfs grands pétreux. La portion tympanique est en contact avec la paroi interne de la caisse du tympan."
+      },
+      {
+        questionText: "Concernant la veine jugulaire interne fait suite au:",
+        options: [
+          "Fait suite au sinus veineux longitudinal supérieur.",
+          "Fait suite au sinus veineux latéral",
+          "Est une veine superficielle du cou",
+          "Dans le cou, elle est accompagnée du nerf IX",
+          "Présente à son origine le golf de la jugulaire"
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "La veine jugulaire interne fait suite au sinus veineux latéral (sigmoïde). Elle présente à son origine le golfe de la jugulaire. C'est une veine profonde du cou, accompagnée du nerf vague (X)."
+      },
+      {
+        questionText: "Concernant la portion labyrinthique du nerf facial :",
+        options: [
+          "Elle fait suite à la portion cis sternal.",
+          "Est l'une des portions de l'aqueduc de fallope.",
+          "Elle passe entre la cochlée et les canaux semi circulaire",
+          "L'intermédiaire de wirsberg (VII bis) est décollé de cette portion.",
+          "Elle donne suite à la portion mastoïdienne en décrivant un genou"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La portion labyrinthique est l'une des trois portions de l'aqueduc de Fallope et elle passe bien entre la cochlée et les canaux semi-circulaires. Elle se termine par le ganglion géniculé (genou) qui donne suite à la portion tympanique."
+      }
+    ]
+  },
+  {
+    title: "2025 (RATT) Anatomie Humaine",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant la face externe (latérale) de la mandibule",
+        options: [
+          "La symphyse est une crête verticale et médiane.",
+          "L'éminence mentonnière est une saillie en forme de pyramide.",
+          "La ligne oblique interne se dirige en bas et en avant",
+          "Le foramen mentonnier est situé au niveau des canines.",
+          "Les jugums alvéolaires sont en rapports avec l'implantation des incisives et les canines"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "La symphyse, l'éminence mentonnière et les jugums alvéolaires sont des structures de la face externe. La ligne oblique externe (et non interne) se dirige en bas et en avant. Le foramen mentonnier se situe au niveau des prémolaires."
+      },
+      {
+        questionText: "Le trou stylo-mastoidien livre passage au :",
+        options: [
+          "Nerf trijumeau",
+          "Nerf facial",
+          "Nerf pneumogastique",
+          "Nerf auditif",
+          "Nerf glosso-pharingien"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le trou stylo-mastoïdien livre passage uniquement au nerf facial (VII)."
+      },
+      {
+        questionText: "Concernant Le nerf trijumeau :",
+        options: [
+          "Prend naissance dans le tronc cérébral au niveau du mésencéphale",
+          "Assure la motricité des muscles masticateurs et la sensibilité de la face",
+          "Le ganglion trigéminal se trouve dans le cavum du Meckel",
+          "Prend naissance dans le pont (protubérance) du tronc cérébral",
+          "Son nerf ophtalmique assure la motricité des muscles de l'œil"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le nerf trijumeau (V) naît au niveau du pont, assure la motricité des muscles masticateurs et la sensibilité de la face, et son ganglion (de Gasser) se trouve dans le cavum de Meckel. Le nerf ophtalmique est purement sensitif."
+      },
+      {
+        questionText: "Concernant le nerf ophtalmique (V1)",
+        options: [
+          "C'est un nerf sensitif",
+          "C'est un nerf moteur",
+          "Il sort du crâne par la fissure orbitaire supérieure",
+          "C'est la branche latérale du ganglion trigéminé",
+          "Il donne 03 branches terminales"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "Le nerf ophtalmique (V1) est un nerf purement sensitif qui sort du crâne par la fissure orbitaire supérieure et se divise en trois branches terminales (frontal, lacrymal, naso-ciliaire). C'est la branche médiale du ganglion trigéminé."
+      },
+      {
+        questionText: "Concernant le nerf maxillaire(V2)",
+        options: [
+          "C'est la seule branche mixte du nerf trijumeau",
+          "Il traverse la fissure orbitaire supérieure",
+          "Il traverse la fosse ptérygo-palatine",
+          "Il se termine par 02 troncs: antérieur et postérieur",
+          "Il est sensitif pour la mâchoire supérieure"
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le nerf maxillaire (V2) est purement sensitif, traverse la fosse ptérygo-palatine (après être passé par le foramen grand rond) et assure la sensibilité de la mâchoire supérieure. La branche mixte est le nerf mandibulaire (V3)."
+      },
+      {
+        questionText: "Concernant Le nerf glossopharyngien:",
+        options: [
+          "Est la neuvième paire crânienne",
+          "Est un nerf moteur pur",
+          "Il assure l'innervation sensitive de la face",
+          "Destiné à l'oreille moyenne, à la langue, à la parotide et au pharynx",
+          "Il contrôle la sensibilité gustative du tiers postérieur de la langue"
+        ],
+        correctOptionIndexes: [0, 2, 3, 4],
+        explanation: "Le nerf glossopharyngien (IX) est la 9ème paire crânienne, c'est un nerf mixte. Il a un rôle sensitif pour la face, innerve l'oreille moyenne, la langue, la parotide et le pharynx, et contrôle la gustation du tiers postérieur de la langue."
+      }
+    ]
+  },
+  //
+  // --- EXAMENS ANATOMIE DENTAIRE ---
+  //
+
+  // Ajout de l'examen: 2025 (RATT) Anatomie Dentaire
+  {
+    title: "2025 (RATT) Anatomie Dentaire",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "La classification de Weine:",
+        options: [
+          "Est une classification de l'anatomie endodontique en cinq (5) types de canaux.",
+          "Le type II: deux canaux se rejoignant en un seul canal et présentant une seule sortie foraminale (2-1).",
+          "Le type IV: deux canaux distincts, de l'entrée canalaire au foramen apical (2-2).",
+          "Le type I: un seul canal avec un seul orifice et un seul foramen apical (1-1)."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La classification de Weine comporte 4 types (pas 5). Le type II correspond à une configuration (2-1) et le type I à (1-1). Le type IV de Weine est une configuration (1-2), tandis que (2-2) correspond au type IV de Vertucci."
+      },
+      {
+        questionText: "La première prémolaire supérieure présente:",
+        options: [
+          "Une configuration canalaire unique.",
+          "Généralement deux racines, chaque racine comportant un canal.",
+          "Une configuration canalaire de type II, III ou IV.",
+          "Un canal volumineux, très large dans le sens vestibulo-lingual, au niveau de sa partie médiane."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La première prémolaire supérieure présente le plus souvent deux racines (vestibulaire et palatine), chacune avec un seul canal. Les autres configurations, bien que possibles, sont moins fréquentes."
+      },
+      {
+        questionText: "Cochez-la ou les réponses justes:",
+        options: [
+          "Un delta apical correspond à un réseau de fins canalicules secondaires et latéraux.",
+          "Il existe différentes configurations du canal principal dans les 3 derniers millimètres apicaux: Un, deux, trois foramina apicaux ou un delta apical.",
+          "Pour les dents monoradiculées :la chambre pulpaire est parfaitement délimitée, elle répond grossièrement à la forme de la couronne.",
+          "Il n'y a pas de limites précises entre la chambre pulpaire et le canal radiculaire pour les dents pluriradiculées."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'anatomie apicale est très variable et peut présenter plusieurs foramina ou un delta apical. La définition du delta apical est vague. La chambre pulpaire des monoradiculées n'est pas toujours parfaitement délimitée, et la transition chambre/canal est marquée chez les pluriradiculées."
+      },
+      {
+        questionText: "Les dents temporaires sont :",
+        options: [
+          "Toutes plus petites que leurs correspondantes permanentes.",
+          "Légèrement petites que leurs correspondantes permanentes, excepté les molaires temporaires",
+          "Plus petites que leurs correspondantes permanentes, excepté les molaires temporaires",
+          "Plus grandes que leurs correspondantes permanentes, excepté les molaires temporaires"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "En général, les dents temporaires sont plus petites que leurs homologues permanentes. Cependant, les molaires temporaires ont un diamètre mésio-distal plus grand que celui des prémolaires qui les remplacent."
+      },
+      {
+        questionText: "Dans une chambre pulpaire on retrouve",
+        options: [
+          "Les entrées canalaires au niveau du plafond",
+          "Les cornes pulpaires au niveau du plancher",
+          "Un plancher dans une chambre pulpaire d'une dent monoradiculée",
+          "L'extrémité occlusale de la chambre présente des cornes pulpaires."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les cornes pulpaires sont des projections de la chambre pulpaire situées sous les cuspides, donc au niveau du plafond (extrémité occlusale). Les entrées canalaires sont au niveau du plancher. Les dents monoradiculées n'ont pas de plancher pulpaire distinct."
+      },
+      {
+        questionText: "Concernant les racines de la première molaire mandibulaire, laquelle de ces affirmations est correcte?",
+        options: [
+          "La racine distale est plus étroite que la mésiale dans le sens mésio-distal",
+          "La racine mésiale contient un seul canal dans 100 % des cas",
+          "La racine mésiale contient les plus souvent deux canaux séparés : un vestibulaire et un lingual",
+          "La racine distale ne présente jamais de courbure"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Il est très fréquent que la racine mésiale de la première molaire mandibulaire contienne deux canaux (mésio-vestibulaire et mésio-lingual). La racine distale est généralement plus large que la mésiale et peut présenter des courbures."
+      },
+      {
+        questionText: "Quelle est la configuration canalaire la plus fréquente dans la racine distale de la première molaire mandibulaire ?",
+        options: [
+          "Deux canaux fusionnés",
+          "Un canal unique",
+          "Deux canaux complètement séparés",
+          "Trois canaux distincts"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La configuration la plus courante dans la racine distale de la première molaire mandibulaire est la présence d'un seul canal. Les configurations à deux canaux sont plus rares."
+      },
+      {
+        questionText: "A propos de l'anatomie canalaire de la racine mésio-vestibulaire de la première molaire supérieure, quelle affirmation est correcte?",
+        options: [
+          "Elle contient toujours un seul canal large et circulaire",
+          "Elle contient un seul canal dans la majorité des cas",
+          "Elle présente souvent une configuration canalaire complexe avec plusieurs variantes",
+          "Elle contient systématiquement deux canaux fusionnés"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La racine mésio-vestibulaire (MV) de la première molaire supérieure est réputée pour sa complexité anatomique et la haute fréquence d'un deuxième canal (MV2), ce qui en fait une configuration souvent complexe avec de nombreuses variantes."
+      },
+      {
+        questionText: "Parmi les affirmations suivantes, laquelle est correcte concernant les racines de la première molaire supérieure?",
+        options: [
+          "La racine disto-vestibulaire est toujours courbée mésialement",
+          "La racine palatine est toujours droite",
+          "Les trois racines contiennent systématiquement un seul canal",
+          "La racine palatine est la plus massive et présente une courbure dans 56 % des cas"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La racine palatine est la plus volumineuse. Elle peut être droite ou présenter une courbure (dans environ 56% des cas). La racine disto-vestibulaire est souvent droite ou courbée distalement. La racine mésio-vestibulaire présente fréquemment deux canaux."
+      }
+    ]
+  },
+  {
+    title: "2025 (2°EMD) Anatomie Dentaire",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Quelle est la (quelles sont les) principale(s) caractéristique(s) d'une dent géminée ?",
+        options: [
+          "Une cavité pulpaire simple",
+          "Deux racines distinctes accoles",
+          "Une fusion de deux germes dentaires",
+          "Une encoche sur le bord libre"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La gémination est la division d'un seul germe dentaire. Elle se caractérise par une couronne large avec une encoche sur le bord libre, mais une seule racine et une seule cavité pulpaire. La fusion concerne deux germes distincts."
+      },
+      {
+        questionText: "Quelle est la caractéristique de la microdontie ?",
+        options: [
+          "Un volume dentaire supérieur à la moyenne",
+          "La présence de diastèmes interdentaires",
+          "Une augmentation du nombre de racines",
+          "Elle se manifeste par des malpositions dentaires"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La microdontie est une anomalie de taille où la dent est plus petite que la normale, ce qui peut créer des espaces interdentaires (diastèmes). Elle ne concerne ni le nombre de racines, ni la forme de la dent."
+      },
+      {
+        questionText: "Quelle est la différence principale entre la gémination et la fusion dentaire ?",
+        options: [
+          "La gémination concerne un seul germe dentaire, tandis que la fusion implique deux germes",
+          "La fusion concerne uniquement les dents primaires",
+          "Dans la gémination, il y a deux cavités pulpaires distinctes",
+          "La fusion se produit uniquement entre dents surnuméraires"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La distinction fondamentale réside dans l'origine : la gémination provient de la division incomplète d'un seul germe, tandis que la fusion est l'union de deux germes dentaires initialement séparés."
+      },
+      {
+        questionText: "Quelle anomalie est caractérisée par l'invagination de l'organe de l'émail à l'intérieur de la dent?",
+        options: [
+          "Dens in dente",
+          "Taurodontisme",
+          "Macrodontie",
+          "Concrescence"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le 'Dens in dente' (dent dans la dent) est une anomalie de développement où l'organe de l'émail s'invagine à l'intérieur de la dent avant la minéralisation."
+      },
+      {
+        questionText: "Quelle anomalie peut être causée par la syphilis congénitale ?",
+        options: [
+          "Incisive en pelle",
+          "Incisive en lame de tournevis (Hutchinson)",
+          "Microdontie",
+          "Macrodontie"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'incisive de Hutchinson, avec sa forme caractéristique en 'lame de tournevis', est l'une des manifestations dentaires pathognomoniques de la syphilis congénitale."
+      },
+      {
+        questionText: "Les couronnes des dents temporaires sont :",
+        options: [
+          "Recouvertes d'un émail plus translucide et plus finque celui des dents permanentes.",
+          "Recouvertes d'un émail plus opaque et plus finque celui des dents permanentes.",
+          "Recouvertes d'un émail plus translucide et plus épaisque celui des dents permanentes.",
+          "La couronne des dents temporaires représente le tiers de la hauteur totale."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'émail des dents temporaires est plus fin, moins minéralisé, et donc plus opaque (aspect blanc laiteux) que celui des dents permanentes."
+      },
+      {
+        questionText: "À l'observation par une face proximale, Les dents temporaires antérieures présentent un bourrelet d'émail cervical:",
+        options: [
+          "Qui-forme un angle obtus avec la surface radiculaire à la jonction amélo-cémentaire",
+          "Qui forme un angle vif avec la surface radiculaire à la jonction amélo-dentinaire",
+          "Qui forme un angle vif avec la surface radiculaire à la jonction amélo-cémentaire",
+          "Peu accentué."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le bourrelet cervical est très prononcé sur les dents temporaires et forme un angle vif avec la racine au niveau de la jonction amélo-cémentaire (JAC)."
+      },
+      {
+        questionText: "Les molaires temporaires présentent une:",
+        options: [
+          "Éminence dans le tiers cervical coronaire vestibulaire et lingual.",
+          "Éminence dans le quart cervical coronaire vestibulaire et lingual",
+          "A l'inverse des dents permanentes, les portions vestibulaires et linguales, situées au-dessus des maximas de convexité, sont plus arrondies.",
+          "A l'inverse des dents permanentes, les portions vestibulaires et linguales, situées au-dessus des maximas de convexité, sont plus planes."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Une caractéristique des molaires temporaires est la présence d'une éminence très marquée dans le quart cervical, au-dessus de laquelle les faces sont plus planes comparativement aux dents permanentes."
+      },
+      {
+        questionText: "Dans les caractéristiques morphologiques internes des dents temporaires:",
+        options: [
+          "La dentine est plus épaisse sur les dents temporaires.",
+          "Les cornes pulpaires sont très aiguës. Elles remontent très haut sous les cuspides.",
+          "Le plafond de la chambre pulpaire est moins convexe et plus profondément enchâssé dans la couronne.",
+          "Le volume pulpaire est plus important que celui des dents permanentes."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Les dents temporaires ont une dentine plus fine, un volume pulpaire proportionnellement plus grand, et des cornes pulpaires plus hautes et plus pointues, ce qui les rend plus vulnérables aux caries."
+      },
+      {
+        questionText: "Dans les variations morphologiques des dents temporaires:",
+        options: [
+          "La 1ère molaire supérieure peut présenter S cuspides.",
+          "La 1ère molaire inférieure peut présenter You 4 cuspides",
+          "La 1ère molaire inférieure peut n'avoir que 3(cuspides (2V, 1L). 4",
+          "Le tubercule de Carabelli peut être présent sur la face palatine de la 2ème molaire sup."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La deuxième molaire supérieure temporaire ressemble morphologiquement à la première molaire permanente et peut donc présenter un tubercule de Carabelli sur sa cuspide mésio-palatine."
+      },
+      {
+        questionText: "Parmi les techniques de mise en évidence de l'anatomie endodontique on peut citer :",
+        options: [
+          "La diaphanisation.",
+          "La radiographie (2D ou 3D, avec ou sans remplissage par un produit de contraste).",
+          "Les coupesanatomiques",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Toutes les méthodes listées (diaphanisation, radiographie, coupes anatomiques) sont des techniques valides et utilisées pour étudier la complexité de l'anatomie endodontique."
+      },
+      {
+        questionText: "La classification de Vertucci:",
+        options: [
+          "Est une classification de l'anatomie endodontique en huit (8) types de canaux.",
+          "Le type V canal unique se divisant en 2 dans la partie moyenne les deux canaux se rejoignent dans le tiers apical (1-2-1).",
+          "Le type VIII deux canäux restant distincts jusqu'au tiers apical (2-2).",
+          "Le type II deux canaux se rejoignant en un seul canal et présentant une seule sortie foraminale (2-1)."
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La classification de Vertucci est la plus utilisée et comporte bien 8 types. Le type II est correctement décrit (2-1). Le type V est une configuration (1-2), tandis que (1-2-1) est le type VI. Le type VIII correspond à 3 canaux distincts."
+      },
+      {
+        questionText: "L'incisive centrale supérieure présente :",
+        options: [
+          "Un seul canal dans 100 des cas",
+          "Une chambre pulpaire aplatie dans le sens vestibulo-palatin et large dans le sens mésio-distal.",
+          "Des cornes pulpaires situées sensiblement au même niveauque le bord libre de la dent.",
+          "Une chambre pulpaire avec un volume équivaut un tiers du diamètre mésio-distal et la moitié du diamètre vestibulo-palatin mesurés au collet."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "L'incisive centrale supérieure a presque toujours un seul canal. Sa chambre pulpaire est large dans le sens mésio-distal et plus aplatie dans le sens vestibulo-palatin. Ses cornes pulpaires sont situées en deçà du bord libre."
+      },
+      {
+        questionText: "La première molaire maxillaire présente :",
+        options: [
+          "Deux racines assez larges dans le sens vestibulo-lingual et aplaties dans le sens mésio-distal.",
+          "Une racine mésiale plus étroite dans le sens mésio-distal, mais assez large dans le sens vestibulo-lingual",
+          "Une racine distale peuvant être rectiligne ou présentant parfois une orientation distale très accentuée.",
+          "Trois racines, deux vestibulaires et une palatine avec trois canaux, un par racine."
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "La première molaire maxillaire a typiquement trois racines (deux vestibulaires, une palatine). La racine distale peut être droite ou avoir une courbure distale marquée. Cependant, la racine mésio-vestibulaire présente très souvent un deuxième canal (MV2)."
+      },
+      {
+        questionText: "Dans la première prémolaire inférieure:",
+        options: [
+          "Les systèmes canalaires peuvent se résumer à un canal et à une configuration de type V.",
+          "La fréquence de canaux latéraux est faible.",
+          "Elle peut présenter une configuration canalaire de type II, III ou IV.",
+          "Elle peut également avoir deux racines distinctes."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La première prémolaire inférieure a le plus souvent un seul canal, mais est connue pour sa grande variabilité anatomique, incluant des divisions complexes comme le type V de Vertucci (1-2). La présence de deux racines est très rare."
+      }
+    ]
+  },
+  {
+    title: "2025 (1°EMD) Anatomie Dentaire",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Au niveau des dents cuspidées on retrouve:",
+        options: [
+          "Une face occlusale.",
+          "Un bord libre.",
+          "Une face triturante.",
+          "Un point de contact."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Les dents cuspidées (prémolaires et molaires) sont caractérisées par la présence d'une face occlusale destinée à la mastication. Le bord libre est typique des dents antérieures (incisives et canines)."
+      },
+      {
+        questionText: "La dentition est :",
+        options: [
+          "L'ensemble des phénomènes histologique et physiologiques conduisant à la mise en place de la denture.",
+          "Un phénomène statique.",
+          "Un phénomène Dynamique.",
+          "Un phénomène allant de la formation à l'éruption des dents."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La dentition est le processus dynamique de développement et d'éruption des dents. L'odontogenèse décrit la formation. La denture est l'état statique des dents à un moment donné."
+      },
+      {
+        questionText: "Parmi les éminences coronaires retrouvées au niveau des faces vestibulaires de la 1ère molaire supérieure:",
+        options: [
+          "Les crêtes marginales.",
+          "Le tubercule de Bolk .",
+          "Le tubercule de Carabelli .",
+          "Les sillons intercuspidiens."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le tubercule de Bolk est une éminence inconstante située sur la face vestibulaire de la première molaire supérieure. Le tubercule de Carabelli est sur la face palatine. Les crêtes marginales et les sillons sont sur la face occlusale."
+      },
+      {
+        questionText: "Pour identifier une dent selon la nomenclature de Palmer:",
+        options: [
+          "On commence par le code du quadrant suivit du code de la dent.",
+          "On commence par le code du quadrant suivit d'un point puis du code de la dent.",
+          "On commence par le code de la dent suivit par le code du quadrant.",
+          "On utilise La combinaison du code de la dent et celui de l'hémi arcade."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le système de Palmer utilise un symbole graphique représentant l'hémi-arcade (quadrant) autour du numéro de la dent (de 1 à 8)."
+      },
+      {
+        questionText: "Les dents antérieures :",
+        options: [
+          "Constituent le bloc incisivo-canin",
+          "Interviennent dans la mastication",
+          "Concernent les incisives et canines supérieures",
+          "Interviennent dans la section des aliments"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les dents antérieures (incisives et canines, supérieures et inférieures) forment le bloc incisivo-canin et leur rôle principal est de couper (sectionner) les aliments. La mastication (broyage) est le rôle des dents postérieures."
+      },
+      {
+        questionText: "La cavité pulpaire de l'incisive latérale supérieure est constituée de :",
+        options: [
+          "Un canal radiculaire",
+          "Trois cornes pulpaires",
+          "Trois canaux radiculaires",
+          "Une chambre pulpaire"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La cavité pulpaire d'une dent est l'ensemble de la chambre pulpaire et du (des) canal(aux) radiculaire(s). L'incisive latérale supérieure possède une chambre pulpaire, généralement trois cornes pulpaires et un seul canal radiculaire."
+      },
+      {
+        questionText: "Quelle est la ou les comparaison(s) incorrecte (s) ?",
+        options: [
+          "La 11 est plus volumineuse que 12",
+          "La 11 est moins volumineuse que la 12",
+          "La 41 est plus volumineuse que la 42",
+          "La 41 est moins volumineuse que la 31"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Correct : L'incisive centrale sup (11) est plus grande que la latérale sup (12). Incorrect : L'incisive centrale inf (41) est plus petite que la latérale inf (42). Incorrect : Les incisives centrales inf (41 et 31) ont la même taille."
+      },
+      {
+        questionText: "Le trou borgne est retrouvé au niveau de la :",
+        options: [
+          "12",
+          "22",
+          "21",
+          "11"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Le foramen caecum, ou trou borgne, est une dépression anatomique fréquente sur la face palatine des incisives latérales supérieures (12 et 22)."
+      }
+    ]
+  },
+  {
+    title: "Examen d’anatomie dentaire - Essai 1",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Quelle caractéristique n'appartient PAS à la première prémolaire maxillaire ?",
+        options: [
+          "Une racine fréquemment bi-furquée.",
+          "Une cuspide vestibulaire beaucoup plus haute que la cuspide palatine.",
+          "Une dépression marquée sur la face mésiale (fossette canine).",
+          "Une face occlusale de forme globalement symétrique."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La première prémolaire maxillaire a une face occlusale asymétrique, avec une moitié mésiale plus petite que la moitié distale. Les autres caractéristiques (racine double, cuspide vestibulaire dominante, dépression mésiale) sont typiques de cette dent."
+      },
+      {
+        questionText: "Le tubercule de Carabelli est une structure inconstante que l'on retrouve sur :",
+        options: [
+          "La face vestibulaire de la première molaire inférieure.",
+          "La face palatine de la deuxième molaire supérieure.",
+          "La face palatine de la première molaire supérieure.",
+          "La face linguale de la première molaire inférieure."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le tubercule de Carabelli est une petite cuspide accessoire qui se trouve sur la face palatine de la cuspide mésio-palatine de la première molaire maxillaire (et parfois sur la deuxième molaire temporaire)."
+      },
+      {
+        questionText: "Concernant la deuxième molaire mandibulaire :",
+        options: [
+          "Elle possède généralement 5 cuspides.",
+          "La disposition de ses sillons occlusaux forme souvent un '+'.",
+          "Sa racine mésiale présente presque toujours deux canaux.",
+          "Elle est plus volumineuse que la première molaire mandibulaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La deuxième molaire mandibulaire a typiquement 4 cuspides, et ses sillons principaux se croisent pour former un '+'. La première molaire a 5 cuspides et des sillons en 'Y' ou 'X'. La complexité canalaire est moins prononcée que sur la première molaire."
+      },
+      {
+        questionText: "Laquelle de ces affirmations concernant les dents temporaires est VRAIE ?",
+        options: [
+          "L'émail est plus épais et plus minéralisé que celui des dents permanentes.",
+          "Les racines des molaires temporaires sont convergentes.",
+          "Le volume pulpaire est proportionnellement plus petit que celui des dents permanentes.",
+          "Elles présentent un bourrelet cervical très marqué."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les dents temporaires sont caractérisées par un bourrelet cervical très prononcé. Leur émail est plus fin et moins minéralisé, leurs racines sont divergentes pour accueillir le germe de la dent permanente, et leur volume pulpaire est proportionnellement plus grand."
+      }
+    ]
+  },
+  {
+    title: "Examen d’anatomie dentaire - Essai 2",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "L'incisive centrale mandibulaire se distingue de la latérale mandibulaire par :",
+        options: [
+          "Une couronne plus large.",
+          "Un bord libre parfaitement rectiligne et horizontal.",
+          "Un angle disto-incisif plus arrondi.",
+          "Une symétrie quasi parfaite."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'incisive centrale inférieure est la dent la plus symétrique de l'arcade. La latérale est légèrement plus large, son bord libre est incliné vers le bas distalement et son angle disto-incisif est plus arrondi."
+      },
+      {
+        questionText: "Quelle configuration canalaire correspond au Type III de Vertucci ?",
+        options: [
+          "Deux canaux séparés qui fusionnent en un seul avant l'apex. (2-1)",
+          "Un canal qui se divise en deux, puis les deux canaux fusionnent. (1-2-1)",
+          "Un seul canal à l'entrée qui se divise en deux canaux distincts à l'apex. (1-2)",
+          "Un seul canal qui présente une division puis une fusion dans le corps de la racine, avant de se rediviser à l'apex."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La classification de Vertucci est précise : le Type III correspond à un canal unique qui se divise en deux canaux distincts dans la racine, chacun avec sa propre sortie foraminale (configuration 1-2)."
+      },
+      {
+        questionText: "Le pont d'émail (ou crête oblique) est une structure qui relie :",
+        options: [
+          "La cuspide mésio-vestibulaire et la cuspide disto-vestibulaire.",
+          "La cuspide mésio-palatine et la cuspide disto-vestibulaire.",
+          "La cuspide mésio-linguale et la cuspide disto-linguale.",
+          "La cuspide disto-palatine et la cuspide disto-vestibulaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le pont d'émail est une crête caractéristique de la face occlusale des molaires supérieures, reliant la cuspide mésio-palatine à la cuspide disto-vestibulaire."
+      },
+      {
+        questionText: "Quelle affirmation est correcte concernant la canine maxillaire ?",
+        options: [
+          "Elle est la dent la plus courte de l'arcade.",
+          "Sa face vestibulaire présente un seul lobe central très développé.",
+          "Elle possède systématiquement deux canaux radiculaires.",
+          "Son éruption précède celle de l'incisive latérale maxillaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La canine maxillaire est la dent la plus longue de l'arcade. Sa face vestibulaire est dominée par un lobe central puissant qui se termine par la pointe de la cuspide. Elle a quasi systématiquement un seul canal. Son éruption est plus tardive que celle des incisives."
+      }
+    ]
+  },
+  // --- EXAMENS التجريبي ---
+
+  {
+    title: "Examen d’anatomie humaine - Essai 1",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant les orifices de la base du crâne :",
+        options: [
+          "Le foramen ovale livre passage au nerf maxillaire (V2).",
+          "L'artère carotide interne traverse le foramen jugulaire.",
+          "Le nerf facial (VII) et le nerf vestibulo-cochléaire (VIII) passent par le méat acoustique interne.",
+          "Le foramen magnum ne contient que la moelle allongée (bulbe rachidien).",
+          "Les nerfs crâniens III, IV, et VI sortent du crâne par le foramen rond."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le foramen ovale livre passage au nerf mandibulaire (V3). L'artère carotide interne passe par le canal carotidien. Le méat acoustique interne livre bien passage aux nerfs VII et VIII. Le foramen magnum contient aussi les artères vertébrales et les méninges. Les nerfs III, IV, et VI passent par la fissure orbitaire supérieure."
+      },
+      {
+        questionText: "A propos de la mandibule :",
+        options: [
+          "Le processus coronoïde est articulaire avec l'os temporal.",
+          "Le muscle masséter s'insère sur la face médiale du ramus.",
+          "La ligne mylo-hyoïdienne donne insertion au muscle génio-glosse.",
+          "Le foramen mentonnier est le point de sortie du nerf alvéolaire inférieur.",
+          "C'est le seul os mobile de la face."
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Le processus condylien est articulaire, pas le coronoïde. Le masséter s'insère sur la face latérale du ramus. La ligne mylo-hyoïdienne donne insertion au muscle mylo-hyoïdien. Le foramen mentonnier est bien l'orifice de sortie du nerf alvéolaire inférieur (qui devient le nerf mentonnier). La mandibule est le seul os mobile de la face."
+      },
+      {
+        questionText: "Concernant le nerf facial (VII) :",
+        options: [
+          "Il est responsable de la motricité de tous les muscles de la langue.",
+          "Il assure la sensibilité gustative du tiers postérieur de la langue.",
+          "C'est un nerf purement moteur.",
+          "Il innerve le muscle digastrique (ventre postérieur).",
+          "Il contrôle la sécrétion de la glande parotide."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La motricité de la langue est assurée par le nerf hypoglosse (XII). La gustation du 1/3 postérieur est le rôle du nerf glossopharyngien (IX). Le nerf facial est un nerf mixte. Il innerve bien le ventre postérieur du muscle digastrique. La sécrétion de la parotide est contrôlée par le nerf glossopharyngien (IX)."
+      },
+      {
+        questionText: "Parmi les muscles suivants, lesquels sont des élévateurs de la mandibule ?",
+        options: [
+          "Le muscle temporal",
+          "Le muscle ptérygoïdien latéral",
+          "Le muscle masséter",
+          "Le muscle mylo-hyoïdien",
+          "Le muscle ptérygoïdien médial"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "Les muscles temporal, masséter et ptérygoïdien médial sont les principaux muscles élévateurs de la mandibule (fermeture de la bouche). Le ptérygoïdien latéral est principalement propulseur et abaisseur. Le mylo-hyoïdien est un abaisseur."
+      },
+      {
+        questionText: "A propos du système artériel carotidien :",
+        options: [
+          "L'artère carotide commune gauche naît du tronc artériel brachiocéphalique.",
+          "L'artère carotide interne ne donne aucune branche collatérale dans le cou.",
+          "L'artère faciale est une branche terminale de la carotide externe.",
+          "L'artère maxillaire passe en dedans du muscle ptérygoïdien médial.",
+          "La première branche de la carotide externe est l'artère occipitale."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La carotide commune gauche naît de l'arc aortique. L'artère carotide interne est connue pour ne donner aucune branche dans le cou. L'artère faciale est une branche collatérale. L'artère maxillaire a des rapports complexes avec le ptérygoïdien latéral. La première branche de la carotide externe est l'artère thyroïdienne supérieure."
+      },
+      {
+        questionText: "Concernant la glande parotide :",
+        options: [
+          "Son canal excréteur est le canal de Wharton.",
+          "Elle est traversée par l'artère carotide interne.",
+          "Elle est située en arrière du muscle masséter.",
+          "Son innervation sécrétoire provient du nerf facial (VII).",
+          "Elle est la plus volumineuse des glandes salivaires principales."
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Son canal est le canal de Sténon. Elle est traversée par la carotide externe. Elle est bien située en arrière du masséter. Son innervation sécrétoire vient du nerf glossopharyngien (IX). Elle est bien la plus volumineuse des trois glandes salivaires principales."
+      },
+      {
+        questionText: "A propos du voile du palais (palais mou) :",
+        options: [
+          "Il est innervé entièrement par le nerf vague (X).",
+          "Il sépare le nasopharynx de l'oropharynx.",
+          "Le muscle tenseur du voile du palais est innervé par le nerf trijumeau (V3).",
+          "Il contient une armature osseuse formée par l'os palatin.",
+          "Il se contracte lors de la déglutition pour fermer la communication avec les fosses nasales."
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "Le muscle tenseur du voile est innervé par le V3, les autres par le X. Il sépare bien le nasopharynx de l'oropharynx et se contracte pour empêcher le reflux nasal lors de la déglutition. Il n'a pas d'armature osseuse."
+      }
+    ]
+  },
+  {
+    title: "Examen d’anatomie humaine - Essai 2",
+    subject: "anatomy-y2",
+    questions: [
+      {
+        questionText: "Concernant l'os ethmoïde :",
+        options: [
+          "Sa lame criblée laisse passer le nerf optique (II).",
+          "L'apophyse Crista Galli sert d'insertion à la faux du cerveau.",
+          "Il s'articule en arrière avec l'os occipital.",
+          "Il forme la totalité de la cloison nasale.",
+          "Les cornets supérieur et moyen en font partie."
+        ],
+        correctOptionIndexes: [1, 4],
+        explanation: "La lame criblée laisse passer les filets du nerf olfactif (I). Crista Galli sert bien d'insertion à la faux du cerveau. L'ethmoïde s'articule avec le sphénoïde en arrière. Le vomer participe aussi à la cloison nasale. Les cornets supérieur et moyen sont des parties de l'ethmoïde (le cornet inférieur est un os indépendant)."
+      },
+      {
+        questionText: "Concernant le nerf trijumeau (V) :",
+        options: [
+          "Le nerf ophtalmique (V1) sort du crâne par le foramen rond.",
+          "Le nerf maxillaire (V2) est un nerf mixte.",
+          "Le nerf mandibulaire (V3) innerve les muscles de la mimique.",
+          "Son ganglion sensitif (de Gasser) est situé dans la fosse crânienne moyenne.",
+          "Il assure la sensibilité de la dure-mère."
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Le V1 sort par la fissure orbitaire supérieure. Le V2 est purement sensitif. Le V3 innerve les muscles masticateurs. Le ganglion de Gasser est bien situé dans la fosse crânienne moyenne. Le nerf trijumeau assure une grande partie de la sensibilité de la dure-mère via ses rameaux méningés."
+      },
+      {
+        questionText: "A propos de l'Articulation Temporo-Mandibulaire (ATM) :",
+        options: [
+          "Le disque articulaire est une lentille biconvexe.",
+          "Le ligament principal est le ligament sphéno-mandibulaire.",
+          "Les mouvements de propulsion sont principalement réalisés par le muscle temporal.",
+          "C'est une articulation synoviale de type ginglymo-arthrodial.",
+          "La partie postérieure de la fosse mandibulaire est la surface articulaire principale."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le disque est biconcave. Le ligament principal est le ligament latéral. La propulsion est assurée par le ptérygoïdien latéral. C'est bien une articulation de type ginglymo-arthrodial (charnière + glissement). La partie antérieure de la fosse est la surface articulaire."
+      },
+      {
+        questionText: "Concernant le drainage veineux de la tête et du cou :",
+        options: [
+          "La veine jugulaire externe se jette directement dans le tronc brachiocéphalique.",
+          "La veine jugulaire interne est la continuation du sinus sigmoïde.",
+          "Le tronc thyro-linguo-facial est un affluent de la veine jugulaire externe.",
+          "Les sinus veineux de la dure-mère sont dépourvus de valvules.",
+          "La veine faciale ne possède aucune anastomose avec le système veineux intracrânien."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La VJE se jette dans la veine subclavière. La VJI est bien la continuation du sinus sigmoïde. Le tronc thyro-linguo-facial se jette dans la VJI. Les sinus veineux sont bien avasculaires. La veine faciale communique avec le sinus caverneux via les veines ophtalmiques."
+      },
+      {
+        questionText: "Concernant les muscles peauciers (de la mimique) :",
+        options: [
+          "Ils sont tous innervés par le nerf trijumeau (V).",
+          "Le muscle orbiculaire de l'œil est responsable de la fermeture des paupières.",
+          "Le muscle buccinateur est un muscle masticateur principal.",
+          "Ils prennent tous une insertion sur un os et se terminent sur la peau.",
+          "Le muscle risorius est le principal muscle du sourire."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Ils sont innervés par le nerf facial (VII). L'orbiculaire de l'œil ferme bien les paupières. Le buccinateur est un muscle peaucier accessoire à la mastication. Ils prennent bien une insertion osseuse et une insertion cutanée. Le muscle principal du sourire est le grand zygomatique."
+      },
+      {
+        questionText: "A propos de la langue :",
+        options: [
+          "L'innervation motrice de tous ses muscles provient du nerf hypoglosse (XII).",
+          "L'artère linguale est une branche de l'artère carotide interne.",
+          "Le V lingual sépare la langue en une partie antérieure (corps) et une partie postérieure (racine).",
+          "Le muscle stylo-glosse est un muscle intrinsèque.",
+          "La sensibilité générale des 2/3 antérieurs est assurée par le nerf lingual (branche du V3)."
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le muscle palatoglosse est innervé par le nerf vague (X). L'artère linguale vient de la carotide externe. Le V lingual sépare bien le corps et la racine. Le stylo-glosse est un muscle extrinsèque. La sensibilité générale des 2/3 antérieurs est bien assurée par le nerf lingual."
+      },
+      {
+        questionText: "Concernant le maxillaire :",
+        options: [
+          "C'est un os impair et médian de la face.",
+          "Le processus palatin forme le tiers postérieur du palais dur.",
+          "Il s'articule avec tous les os de la face sauf la mandibule.",
+          "Le sinus maxillaire s'ouvre dans le méat nasal inférieur.",
+          "Il participe à la formation des parois de l'orbite, des fosses nasales et de la cavité buccale."
+        ],
+        correctOptionIndexes: [2, 4],
+        explanation: "Le maxillaire est un os pair. Son processus palatin forme les 2/3 antérieurs du palais dur. Il s'articule avec tous les os de la face sauf la mandibule. Le sinus maxillaire s'ouvre dans le méat moyen. Il participe bien à la formation des trois cavités."
+      }
+    ]
+  }
 ];
 
 module.exports = anatomyQuizzesY2;
