@@ -2698,25 +2698,27 @@ button:hover i {
     color: #E01E5B;
 }
 
-/* --- [إضافة جديدة] أنماط أيقونات الاختيار (دوائر ومربعات) --- */
+/* --- [تعديل] أنماط أيقونات الاختيار (مربعات دائماً) --- */
 .quiz-option-pro::before {
     content: '';
     display: inline-block;
     width: 24px;
-    /* حجم أكبر قليلاً */
     height: 24px;
-    /* حجم أكبر قليلاً */
     border: 2px solid var(--input-border);
     margin-right: 15px;
     flex-shrink: 0;
     transition: all 0.2s ease;
+
+    /* ✅ إجبار الشكل المربع دائماً لجميع الحالات */
+    border-radius: 6px !important;
 }
 
-/* --- توحيد نظام الاختيار (Unified Choice System) --- */
-/* جعل جميع الخيارات تبدو كمربعات مستديرة لإخفاء نوع السؤال */
-#quiz-options-container-pro .quiz-option-pro::before {
-    border-radius: 6px;
-    /* شكل موحد للكل */
+/* --- توحيد نظام الاختيار --- */
+/* ضمان عدم تحول الشكل إلى دائرة سواء كان اختيار فردي أو متعدد */
+#quiz-options-container-pro .quiz-option-pro::before,
+#quiz-options-container-pro.single-choice .quiz-option-pro::before,
+#quiz-options-container-pro.multiple-choice .quiz-option-pro::before {
+    border-radius: 6px !important;
 }
 
 /* تحسين مظهر المربع عند التحديد */
