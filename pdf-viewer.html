@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Dental Viewer | Pro Fixed</title>
+    <title>Smart Dental Viewer | AI System</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -25,6 +24,7 @@
             --border: #e2e8f0;
             --accent-quiz: #10b981;
             --accent-card: #f59e0b;
+            --chat-bg: #f8fafc;
         }
 
         * {
@@ -39,7 +39,7 @@
             display: flex;
         }
 
-        /* --- منطقة العرض --- */
+        /* --- 1. منطقة عرض PDF --- */
         #viewer-container {
             flex: 1;
             background: var(--bg-viewer);
@@ -61,98 +61,139 @@
             position: relative;
             background: white;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-            /* الأبعاد ستأتي من JS */
         }
 
-        /* --- إصلاح الطبقات (مهم جداً) --- */
         .textLayer {
             opacity: 1;
             mix-blend-mode: multiply;
         }
 
-        /* لون التحديد الأصفر */
         .textLayer ::selection {
-            background: rgba(255, 235, 59, 0.4);
+            background: rgba(37, 99, 235, 0.2);
+            /* أزرق فاتح جداً للتحديد */
             color: transparent;
         }
 
-        /* الهايلايت الثابت */
         .highlight {
-            background-color: rgba(255, 235, 59, 0.6);
+            background-color: rgba(255, 235, 59, 0.5);
             cursor: pointer;
+            border-bottom: 2px solid #facc15;
         }
 
-        /* --- القائمة المنبثقة (Popup) --- */
-        #selection-popup {
+        /* --- 2. الشريط العائم السريع (يظهر عند التحديد) --- */
+        #quick-actions-toolbar {
             position: fixed;
             display: none;
+            /* مخفي افتراضياً */
             background: #1e293b;
-            padding: 6px;
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             gap: 5px;
-            transform: translate(-50%, -120%);
+            transform: translate(-50%, -130%);
+            animation: fadeIn 0.2s ease-out;
         }
 
-        #selection-popup button {
+        #quick-actions-toolbar button {
             background: transparent;
             border: none;
             color: white;
             cursor: pointer;
-            padding: 6px 10px;
-            font-size: 13px;
+            padding: 5px 8px;
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: 0.2s;
+            font-size: 14px;
         }
 
-        #selection-popup button:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--primary);
-        }
-
-        .divider {
-            width: 1px;
+        #quick-actions-toolbar button:hover {
             background: rgba(255, 255, 255, 0.2);
-            margin: 0 2px;
         }
 
-        /* --- نافذة AI Modal --- */
-        .modal-overlay {
+        /* --- 3. نافذة المحادثة الذكية (AI Chat Popover) --- */
+        #ai-chat-popover {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2000;
             display: none;
-            justify-content: center;
+            width: 320px;
+            height: 400px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 1100;
+            /* أعلى من الشريط */
+            flex-direction: column;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .chat-header {
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
 
-        .modal-content {
+        .chat-body {
+            flex: 1;
+            background: var(--chat-bg);
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 13px;
+        }
+
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            max-width: 85%;
+            line-height: 1.5;
+        }
+
+        .msg-user {
+            background: #e0f2fe;
+            color: #0369a1;
+            margin-left: auto;
+            border-bottom-right-radius: 2px;
+        }
+
+        .msg-ai {
             background: white;
-            width: 500px;
-            max-width: 90%;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            position: relative;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            margin-right: auto;
+            border-bottom-left-radius: 2px;
         }
 
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        .chat-input-area {
+            padding: 10px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 5px;
+            background: white;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .chat-input-area button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 12px;
+            border-radius: 6px;
             cursor: pointer;
-            color: #64748b;
         }
 
-        /* --- الشريط الجانبي --- */
+        /* --- 4. الشريط الجانبي (Sidebar) --- */
         #sidebar {
             width: 400px;
             background: var(--bg-sidebar);
@@ -181,7 +222,6 @@
             font-size: 13px;
         }
 
-        /* التبويبات */
         #sidebar-tabs {
             display: flex;
             border-bottom: 1px solid var(--border);
@@ -215,37 +255,7 @@
             display: block;
         }
 
-        /* أدوات التحكم */
-        .control-panel {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            margin-bottom: 20px;
-        }
-
-        .toggle-row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .toggle-btn {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #cbd5e1;
-            background: white;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-
-        .toggle-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
+        /* الأزرار والنتائج */
         .main-btn {
             padding: 10px;
             border: none;
@@ -261,7 +271,6 @@
             width: 100%;
         }
 
-        /* النتائج */
         .result-card {
             background: white;
             border: 1px solid var(--border);
@@ -270,58 +279,156 @@
             margin-bottom: 10px;
         }
 
-        .quiz-opt {
-            padding: 8px;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
+        /* مودال الإعدادات (Quiz Config) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            width: 400px;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تحسينات الخرائط الذهنية */
+        .mindmap-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        #mindmap-fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            z-index: 3000;
+            display: none;
+            flex-direction: column;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* تنسيقات النموذج (Inputs) */
+        label {
+            display: block;
             margin-bottom: 5px;
-            cursor: pointer;
-            font-size: 13px;
-            transition: 0.2s;
-        }
-
-        .quiz-opt.selected {
-            background: #eff6ff;
-            border-color: var(--primary);
-            color: var(--primary);
             font-weight: 600;
+            font-size: 12px;
+            color: #475569;
         }
 
-        .quiz-opt.correct {
-            background: #dcfce7;
-            border-color: #22c55e;
-        }
-
-        .quiz-opt.wrong {
-            background: #fee2e2;
-            border-color: #ef4444;
-        }
-
-        .loader {
-            text-align: center;
-            color: var(--text-main);
-            margin: 20px 0;
-            font-size: 14px;
+        select,
+        input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="selection-popup">
-        <button onclick="handlePopupAction('explain')"><i class="fas fa-lightbulb"></i> Expliquer</button>
-        <button onclick="handlePopupAction('translate')"><i class="fas fa-language"></i> Traduire</button>
-        <div class="divider"></div>
-        <button onclick="handlePopupAction('highlight')" style="color:#facc15;"><i
+    <div id="quick-actions-toolbar">
+        <button onclick="window.openAiChat()" title="Ask AI"><i class="fas fa-robot"></i> Ask AI</button>
+        <div
+            style="width:1px; height:15px; background:rgba(255,255,255,0.2); display:inline-block; vertical-align:middle;">
+        </div>
+        <button onclick="window.handleHighlight()" title="Surligner" style="color:#facc15;"><i
                 class="fas fa-highlighter"></i></button>
     </div>
 
-    <div class="modal-overlay" id="ai-modal">
-        <div class="modal-content">
-            <i class="fas fa-times close-modal" onclick="closeModal()"></i>
-            <h3 id="modal-title" style="margin-top:0; color:var(--primary);">AI Result</h3>
-            <div id="modal-body" style="line-height:1.6; color:#334155; max-height:400px; overflow-y:auto;"></div>
+    <div id="ai-chat-popover">
+        <div class="chat-header">
+            <span><i class="fas fa-brain"></i> Assistant Intelligent</span>
+            <i class="fas fa-times" onclick="window.closeAiChat()" style="cursor:pointer;"></i>
         </div>
+        <div id="chat-history" class="chat-body">
+            <div class="chat-message msg-ai">Bonjour! Sélectionnez un texte pour poser une question.</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="ai-user-input" placeholder="Posez une question..."
+                onkeypress="if(event.key==='Enter') window.submitAiQuery()">
+            <button onclick="window.submitAiQuery()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div id="quiz-config-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                <h3 style="margin:0;">Configuration Quiz</h3>
+                <i class="fas fa-times" onclick="document.getElementById('quiz-config-modal').style.display='none'"
+                    style="cursor:pointer;"></i>
+            </div>
+
+            <label>Niveau de Difficulté:</label>
+            <select id="quiz-difficulty">
+                <option value="medium">Moyen (Standard)</option>
+                <option value="hard">Difficile (Nightmare Mode 😈)</option>
+            </select>
+
+            <label>Type de Questions:</label>
+            <select id="quiz-type">
+                <option value="single">Choix Unique (QCM)</option>
+                <option value="multiple">Choix Multiples (QRM)</option>
+            </select>
+
+            <label>Nombre de questions:</label>
+            <select id="quiz-count">
+                <option value="5">5 Questions</option>
+                <option value="10" selected>10 Questions</option>
+                <option value="20">20 Questions</option>
+            </select>
+
+            <button class="main-btn" onclick="window.startQuizGeneration()" style="background: var(--primary);">
+                Commencer
+            </button>
+        </div>
+    </div>
+
+    <div id="mindmap-fullscreen-overlay">
+        <div
+            style="padding:10px; background:#f1f5f9; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc;">
+            <span style="font-weight:bold;">Carte Mentale (Plein Écran)</span>
+            <button onclick="document.getElementById('mindmap-fullscreen-overlay').style.display='none'"
+                style="padding:5px 10px; cursor:pointer;">Fermer</button>
+        </div>
+        <svg id="mindmap-svg-full" style="width:100%; height:100%;"></svg>
     </div>
 
     <div id="viewer-container">
@@ -335,7 +442,7 @@
 
     <div id="sidebar">
         <div id="sidebar-header">
-            <h3 style="margin:0; color:var(--primary); font-size:16px;"><i class="fas fa-tooth"></i> Dental AI</h3>
+            <h3 style="margin:0; color:var(--primary); font-size:16px;"><i class="fas fa-tooth"></i> Smart Core</h3>
             <button class="upload-btn" onclick="document.getElementById('file-input').click()">
                 <i class="fas fa-folder-open"></i> Upload
             </button>
@@ -343,66 +450,62 @@
         </div>
 
         <div id="sidebar-tabs">
-            <button class="tab-btn active" onclick="setTab('tools')">Quiz & Cards</button>
+            <button class="tab-btn active" onclick="setTab('tools')">Étude</button>
             <button class="tab-btn" onclick="setTab('mindmap')">Mind Map</button>
         </div>
 
         <div id="tools-tab" class="tab-content active">
-            <div class="control-panel">
-                <label style="display:block; margin-bottom:10px; font-weight:bold; font-size:12px;">Source:</label>
-                <div class="toggle-row">
-                    <button class="toggle-btn active" id="scope-page" onclick="setScope('page')">Page Actuelle</button>
-                    <button class="toggle-btn" id="scope-full" onclick="setScope('full')">Tout le PDF</button>
-                </div>
-                <div id="count-control" style="display: none;">
-                    <label>Quantité: <span id="count-val">10</span></label>
-                    <input type="range" id="count-slider" min="1" max="25" value="10" style="width:100%"
-                        oninput="document.getElementById('count-val').textContent = this.value">
-                </div>
-            </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <button class="main-btn" onclick="generateContent('quiz')" style="background: var(--accent-quiz);">
+            <button class="main-btn" id="btn-save-progress" onclick="window.saveProgress()"
+                style="background: #0f172a; margin-bottom: 20px;">
+                <i class="fas fa-save"></i> Sauvegarder la session
+            </button>
+
+            <label style="font-weight:bold;">Générateur IA:</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 5px;">
+                <button class="main-btn" onclick="document.getElementById('quiz-config-modal').style.display='flex'"
+                    style="background: var(--accent-quiz);">
                     <i class="fas fa-clipboard-check"></i> Quiz
                 </button>
-                <button class="main-btn" onclick="generateContent('flashcards')"
+                <button class="main-btn" onclick="window.generateContent('flashcards')"
                     style="background: var(--accent-card);">
                     <i class="fas fa-layer-group"></i> Cards
                 </button>
             </div>
 
-            <button class="main-btn" id="btn-download-results" onclick="downloadResultsAsPDF()"
-                style="background: #334155; margin-top: 15px; display:none;">
-                <i class="fas fa-file-download"></i> Télécharger PDF
-            </button>
-            <div id="results-area" style="margin-top:20px;"></div>
+            <div id="results-area" style="margin-top:20px;">
+                <p style="color:#94a3b8; text-align:center; font-size:13px;">Les résultats (Quiz/Cards) apparaîtront
+                    ici.</p>
+            </div>
         </div>
 
         <div id="mindmap-tab" class="tab-content">
-            <button class="main-btn" onclick="generateMindMap()" style="background: #8b5cf6; margin-bottom: 10px;">
-                <i class="fas fa-project-diagram"></i> Créer Mind Map (Full PDF)
+            <button class="main-btn" onclick="window.generateMindMap()"
+                style="background: #8b5cf6; margin-bottom: 10px;">
+                <i class="fas fa-project-diagram"></i> Générer Mind Map
             </button>
-            <button class="main-btn" id="btn-download-map" onclick="downloadMindMap()"
-                style="background: #475569; display:none; margin-bottom:15px; font-size:12px;">
-                <i class="fas fa-download"></i> Télécharger Carte (SVG)
-            </button>
-            <div id="mindmap-svg-container" style="background:white; border:1px solid #e2e8f0; border-radius:8px;">
+
+            <div style="position:relative; height:300px; border:1px solid #e2e8f0; border-radius:8px; overflow:hidden;">
+                <svg id="mindmap-svg-preview" style="width:100%; height:100%;"></svg>
+                <button onclick="document.getElementById('mindmap-fullscreen-overlay').style.display='flex'"
+                    style="position:absolute; bottom:10px; right:10px; background:white; border:1px solid #ccc; padding:5px; cursor:pointer; border-radius:4px;">
+                    <i class="fas fa-expand"></i>
+                </button>
             </div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
     <script src="pdf-viewer.js"></script>
 
     <script>
+        // دوال بسيطة للتبديل بين التبويبات
         function setTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
             document.getElementById(tabId + '-tab').classList.add('active');
             event.currentTarget.classList.add('active');
-        }
-        function closeModal() {
-            document.getElementById('ai-modal').style.display = 'none';
         }
     </script>
 </body>

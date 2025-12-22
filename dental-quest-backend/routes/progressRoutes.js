@@ -1,32 +1,18 @@
+// routes/progressRoutes.js
 const express = require('express');
 const router = express.Router();
-const { protect } = require('../middleware/authMiddleware');
-const Progress = require('../models/progressModel');
+// استدعاء الكونترولر الخاص بـ Cloudinary
+const progressController = require('../controllers/progressController');
 
-// حفظ التقدم
-router.post('/save', protect, async (req, res) => {
-    try {
-        const { lessonId, progressData } = req.body;
-        const updated = await Progress.findOneAndUpdate(
-            { user: req.user._id, lessonId },
-            { ...progressData },
-            { new: true, upsert: true }
-        );
-        res.json({ success: true, data: updated });
-    } catch (err) {
-        res.status(500).json({ success: false, message: err.message });
-    }
-});
+// حماية المسار (تأكد أن المستخدم مسجل دخول)
+// ملاحظة: تأكد أن ملف الميدلوير لديك اسمه authMiddleware أو غيره حسب مشروعك
+// إذا كان الملف في مجلد middleware واسمه authMiddleware.js:
+const { protect } = require('../middleware/authMiddleware'); // أو checkAuth حسب تسميتك
 
-// استرجاع التقدم
-router.get('/', protect, async (req, res) => {
-    try {
-        const { lessonId } = req.query;
-        const data = await Progress.findOne({ user: req.user._id, lessonId });
-        res.json({ success: true, data: data || null });
-    } catch (err) {
-        res.status(500).json({ success: false, message: err.message });
-    }
-});
+// 1. مسار الحفظ (يرفع JSON إلى Cloudinary ويخزن الرابط)
+router.post('/save', protect, progressController.saveLessonProgress);
+
+// 2. مسار الاسترجاع (يجلب الرابط من الداتابيز ثم يحمل البيانات من السحابة)
+router.get('/', protect, progressController.getLessonProgress);
 
 module.exports = router;
