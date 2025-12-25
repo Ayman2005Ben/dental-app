@@ -2547,7 +2547,7 @@ const odfQuizzesY2 = [
         citations: []
       },
       {
-        questionText: "La flexion basicrânienne",
+        questionText: "La flexion basicrânienne1- Intervient dans le décalage maxillo-mandibulaire2- Est liée aux phénomènes de rotation horaire du sphénoide et anti-horaire de l'occipital3- Est liée aux phénomènes de rotation anti-horaire du sphénoïde et horaire de l'occipital4- Est liée aux phénomènes de rotations horaires du sphénoïde et de l'occipital5- Est indépendante de l'activité de la synchondrose sphéno-occipitale.",
         options: [
           "A (1,3)",
           "B (1,2)",
@@ -2556,8 +2556,7 @@ const odfQuizzesY2 = [
           "E (3,5)"
         ],
         correctOptionIndexes: [1],
-        explanation: "",
-        citations: []
+        explanation: "La flexion basicrânienne : 1- Intervient dans le décalage maxillo-mandibulaire (Vrai). 2- Est liée à une rotation horaire du sphénoïde et anti-horaire de l'occipital (Vrai). 3 et 4 sont faux car les sens de rotation sont inversés ou incorrects. 5 est faux car elle dépend directement de l'activité de la synchondrose sphéno-occipitale.", citations: []
       },
       {
         questionText: "La rotation antéro-externe de l'os temporal signifie :",
