@@ -175,7 +175,7 @@ exports.generateQuiz = async (req, res) => {
     TEXT:\n---\n${data.text.substring(0, 30000)}\n---`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
-    const responseData = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+    const responseData = await executeGeminiRequest('gemini-3-flash-preview', requestBody);
 
     const quizText = responseData.candidates?.[0]?.content?.parts?.[0]?.text;
     const cleanedText = quizText.replace(/```json|```/g, '').trim();
@@ -361,7 +361,7 @@ exports.generateQuizFromText = async (req, res) => {
     TEXT: "${text.substring(0, 15000)}..."`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
-    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+    const data = await executeGeminiRequest('gemini-3-flash-preview', requestBody);
 
     const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!textResponse) throw new Error("Empty response from AI");
