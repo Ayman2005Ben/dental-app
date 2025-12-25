@@ -1,5 +1,5 @@
 // =============================================================================
-//  Smart Dental Viewer - PRO AI SYSTEM (Phase 2: Full Integration)
+//  Smart Dental Viewer - PRO AI SYSTEM (Final Version: Fixed Zoom + Short Chat)
 // =============================================================================
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
@@ -9,7 +9,7 @@ const STATE = {
     pdfDoc: null,
     scale: 1.2,
     currentPage: 1,
-    lessonId: 'demo_lesson_001', // سيتم جلبه ديناميكياً لاحقاً من الرابط
+    lessonId: 'demo_lesson_001', // سيتم تحديثه عند رفع ملف
 
     // بيانات الجلسة (للحفظ والاسترجاع)
     sessionData: {
@@ -21,7 +21,8 @@ const STATE = {
     },
 
     // مؤشرات العرض
-    renderedPages: new Set()
+    renderedPages: new Set(),
+    currentContext: null // النص المحدد حالياً للسؤال عنه
 };
 
 // --- عناصر DOM الرئيسية ---
@@ -48,10 +49,9 @@ const DOM = {
 };
 
 // =============================================================================
-//  1. تهيئة النظام وتحميل PDF
+//  1. تهيئة النظام والاتصال بالسيرفر
 // =============================================================================
 
-// استعادة التوكن
 const USER_TOKEN = localStorage.getItem('userToken');
 
 // دالة API موحدة
@@ -61,7 +61,7 @@ async function callApi(endpoint, method = 'POST', body = {}) {
         throw new Error("Auth Error");
     }
 
-    // إضافة الـ Lesson ID لكل الطلبات
+    // إضافة الـ Lesson ID لكل الطلبات لربط البيانات
     if (method === 'POST') body.lessonId = STATE.lessonId;
 
     const res = await fetch(endpoint.startsWith('/') ? endpoint : `/api/${endpoint}`, {
@@ -83,7 +83,7 @@ DOM.fileInput.addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
-    // إنشاء ID للدرس بناء على اسم الملف (مؤقتاً)
+    // إنشاء ID فريد للدرس بناءً على الاسم
     STATE.lessonId = file.name.replace(/\s+/g, '_').toLowerCase();
 
     const url = URL.createObjectURL(file);
@@ -111,15 +111,13 @@ function initPagesPlaceholders() {
         const div = document.createElement('div');
         div.className = 'page-container';
         div.id = `page-${i}`;
-        // أبعاد افتراضية مؤقتة
-        div.style.width = '600px'; div.style.height = '800px';
+        div.style.width = '600px'; div.style.height = '800px'; // أبعاد مؤقتة
         div.style.marginBottom = '20px';
         DOM.wrapper.appendChild(div);
     }
     setupObserver();
 }
 
-// مراقب التمرير (Lazy Loading)
 function setupObserver() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -142,13 +140,13 @@ async function renderPage(num) {
     const viewport = page.getViewport({ scale: STATE.scale });
     const div = document.getElementById(`page-${num}`);
 
+    // استخدام Math.floor لمنع مشاكل الإزاحة
     const width = Math.floor(viewport.width);
     const height = Math.floor(viewport.height);
 
     div.style.width = `${width}px`;
     div.style.height = `${height}px`;
 
-    // Canvas
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = width; canvas.height = height;
@@ -156,7 +154,6 @@ async function renderPage(num) {
 
     await page.render({ canvasContext: ctx, viewport }).promise;
 
-    // Text Layer (للتحديد)
     const textDiv = document.createElement('div');
     textDiv.className = 'textLayer';
     textDiv.style.width = `${width}px`;
@@ -173,17 +170,19 @@ async function renderPage(num) {
 }
 
 // =============================================================================
-//  2. أدوات التحديد والشريط السريع (Quick Toolbar)
+//  2. الشريط العائم السريع (Quick Toolbar)
 // =============================================================================
 
 document.addEventListener('mouseup', (e) => {
     const selection = window.getSelection();
     if (!selection || selection.toString().trim() === '') {
-        DOM.quickToolbar.style.display = 'none';
+        // إخفاء الشريط إذا لم يكن هناك تحديد، بشرط عدم الضغط داخله
+        if (!DOM.quickToolbar.contains(e.target) && !DOM.chatPopover.contains(e.target)) {
+            DOM.quickToolbar.style.display = 'none';
+        }
         return;
     }
 
-    // إذا كان التحديد داخل الـ PDF
     if (DOM.container.contains(selection.anchorNode)) {
         const range = selection.getRangeAt(0);
         const rect = range.getBoundingClientRect();
@@ -194,11 +193,9 @@ document.addEventListener('mouseup', (e) => {
     }
 });
 
-// دالة التلوين (Highlight)
 window.handleHighlight = () => {
     const selection = window.getSelection();
     if (!selection.rangeCount) return;
-
     const range = selection.getRangeAt(0);
     const span = document.createElement('span');
     span.className = 'highlight';
@@ -206,13 +203,11 @@ window.handleHighlight = () => {
         range.surroundContents(span);
         selection.removeAllRanges();
         DOM.quickToolbar.style.display = 'none';
-    } catch (e) {
-        console.log('Highlight Error (Cross-block):', e);
-    }
+    } catch (e) { console.log('Highlight Error:', e); }
 };
 
 // =============================================================================
-//  3. نظام المحادثة الذكي (AI Chat)
+//  3. نظام المحادثة الذكي (Fixed Short Answers)
 // =============================================================================
 
 window.openAiChat = () => {
@@ -220,17 +215,15 @@ window.openAiChat = () => {
     const text = selection.toString().trim();
 
     DOM.chatPopover.style.display = 'flex';
-    // تحديد موقع النافذة
     const rect = DOM.quickToolbar.getBoundingClientRect();
     DOM.chatPopover.style.top = `${rect.top}px`;
-    DOM.chatPopover.style.left = `${rect.left + 20}px`; // إزاحة قليلة
+    DOM.chatPopover.style.left = `${rect.left + 20}px`;
 
-    // إذا كان هناك نص محدد، نضيفه كسياق مخفي أو رسالة
     if (text) {
-        addMessage(`Context: "${text.substring(0, 30)}..."`, 'system');
-        STATE.currentContext = text; // نحتفظ بالنص للسؤال عنه
+        STATE.currentContext = text;
+        DOM.chatInput.placeholder = "Posez une question sur ce texte...";
+        DOM.chatInput.focus();
     }
-
     DOM.quickToolbar.style.display = 'none';
 };
 
@@ -242,35 +235,32 @@ window.submitAiQuery = async () => {
     const query = DOM.chatInput.value.trim();
     if (!query) return;
 
-    // 1. عرض رسالة المستخدم
     addMessage(query, 'user');
     DOM.chatInput.value = '';
 
-    // 2. تجهيز الطلب
+    // 🔥 التعديل: إجبار الذكاء الاصطناعي على الإيجاز الشديد
     const prompt = STATE.currentContext
-        ? `Context: "${STATE.currentContext}"\n\nQuestion: ${query}`
+        ? `Context: "${STATE.currentContext}"\n\nUser Question: ${query}\n\nInstruction: Answer strictly based on the context. Be very concise, direct, and short. Do not elaborate unless asked.`
         : query;
 
-    // 3. الاتصال بـ API
     try {
-        addMessage('...', 'loading'); // مؤشر تحميل
+        addMessage('...', 'loading');
         const res = await callApi('ai/ask', 'POST', { question: prompt });
 
-        // إزالة مؤشر التحميل
         DOM.chatHistory.querySelector('.msg-loading')?.remove();
 
-        // عرض الرد
         const answer = res.answer || res.result;
         addMessage(answer, 'ai');
 
-        // 4. حفظ المحادثة في الذاكرة المحلية
+        // حفظ المحادثة
         STATE.sessionData.chatHistory.push({ q: query, a: answer, ctx: STATE.currentContext });
 
     } catch (err) {
+        DOM.chatHistory.querySelector('.msg-loading')?.remove();
         addMessage("Erreur: " + err.message, 'error');
     }
 
-    STATE.currentContext = null; // تصفير السياق
+    STATE.currentContext = null;
 };
 
 function addMessage(text, type) {
@@ -282,10 +272,9 @@ function addMessage(text, type) {
 }
 
 // =============================================================================
-//  4. الكويزات (Nightmare Mode) والفلاش كاردز
+//  4. الكويزات والفلاش كاردز (Nightmare Mode)
 // =============================================================================
 
-// فتح نافذة إعدادات الكويز
 window.startQuizGeneration = async () => {
     DOM.quizModal.style.display = 'none';
     const difficulty = document.getElementById('quiz-difficulty').value;
@@ -295,31 +284,25 @@ window.startQuizGeneration = async () => {
     await generateContent('quiz', { difficulty, type, count });
 };
 
-// دالة التوليد العامة
 window.generateContent = async (contentType, options = {}) => {
-    DOM.resultsArea.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-spin"></i> Génération en cours...</div>';
+    DOM.resultsArea.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
 
     try {
-        // جمع النص (من الصفحة الحالية لعدم الثقل، أو يمكن تغييره لكامل الملف)
         const text = await getPageText(STATE.currentPage);
 
+        // استخدام أسماء المهام الجديدة التي حدثناها في الباك إند
         let endpoint = contentType === 'quiz' ? 'ai/generate-quiz-text' : 'ai/generate-flashcards-text';
 
-        const payload = {
-            text,
-            ...options, // خيارات الصعوبة والعدد
-            language: 'fr'
-        };
-
+        const payload = { text, ...options, language: 'fr' };
         const res = await callApi(endpoint, 'POST', payload);
 
         if (contentType === 'quiz') {
             const quizzes = res.questions || res.data || [];
-            STATE.sessionData.quizzes.push(...quizzes); // حفظ في الحالة
+            STATE.sessionData.quizzes.push(...quizzes);
             renderQuizzes(quizzes);
         } else {
             const cards = res.flashcards || res.cards || [];
-            STATE.sessionData.flashcards.push(...cards); // حفظ في الحالة
+            STATE.sessionData.flashcards.push(...cards);
             renderFlashcards(cards);
         }
 
@@ -328,19 +311,17 @@ window.generateContent = async (contentType, options = {}) => {
     }
 };
 
-// استخراج نص صفحة
 async function getPageText(pageNum) {
     const page = await STATE.pdfDoc.getPage(pageNum);
     const content = await page.getTextContent();
     return content.items.map(i => i.str).join(' ');
 }
 
-// دوال العرض (Rendering)
 function renderQuizzes(list) {
     DOM.resultsArea.innerHTML = list.map((q, i) => `
         <div class="result-card">
             <div style="font-weight:bold; margin-bottom:8px;">
-                <span style="color:red; font-size:10px;">[${q.difficulty || 'Moyen'}]</span> 
+                <span style="color:red; font-size:10px;">[${q.difficulty || 'Quiz'}]</span> 
                 ${i + 1}. ${q.question}
             </div>
             <div>
@@ -374,22 +355,25 @@ function renderFlashcards(list) {
 }
 
 // =============================================================================
-//  5. الخريطة الذهنية (Mind Map)
+//  5. الخريطة الذهنية (Fixed Zoom & Pan)
 // =============================================================================
 
 window.generateMindMap = async () => {
-    DOM.mindMapPreview.innerHTML = '';
+    // تنظيف الحاويات
+    DOM.mindMapPreview.innerHTML = '<div class="loader">...</div>';
 
     try {
-        const text = await getPageText(STATE.currentPage); // أو كامل الملف
+        const text = await getPageText(STATE.currentPage);
+        // نستخدم الاسم الجديد للمهمة الذي يقبله الباك إند
         const res = await callApi('ai/generate-mindmap-text', 'POST', { text });
 
         const markdown = res.markdown || res.data;
-        STATE.sessionData.mindMapData = markdown; // حفظ
+        STATE.sessionData.mindMapData = markdown;
 
         drawMindMap(markdown);
 
     } catch (err) {
+        DOM.mindMapPreview.innerHTML = "Erreur MindMap";
         alert("Erreur MindMap: " + err.message);
     }
 };
@@ -400,14 +384,34 @@ function drawMindMap(markdown) {
     const transformer = new Transformer();
     const { root } = transformer.transform(markdown);
 
-    // رسم في المصغر
-    Markmap.create(DOM.mindMapPreview, null, root);
-    // رسم في الكبير
-    Markmap.create(DOM.mindMapFull, null, root);
+    // 🔥 التعديل: تفعيل التكبير والتحريك (Zoom & Pan)
+    const options = {
+        zoom: true,
+        pan: true,
+        fitRatio: 1
+    };
+
+    // تنظيف الحاويات بالكامل
+    DOM.mindMapPreview.innerHTML = '';
+    DOM.mindMapFull.innerHTML = '';
+
+    // إنشاء SVG جديد للنسخة المصغرة
+    const svgPreview = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgPreview.style.width = "100%";
+    svgPreview.style.height = "100%";
+    DOM.mindMapPreview.appendChild(svgPreview);
+    Markmap.create(svgPreview, options, root);
+
+    // إنشاء SVG جديد للنسخة الكاملة
+    const svgFull = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgFull.style.width = "100%";
+    svgFull.style.height = "100%";
+    DOM.mindMapFull.appendChild(svgFull);
+    Markmap.create(svgFull, options, root);
 }
 
 // =============================================================================
-//  6. نظام الحفظ والاسترجاع (Save & Load)
+//  6. نظام الحفظ والاسترجاع (Cloudinary Integration)
 // =============================================================================
 
 window.saveProgress = async () => {
@@ -415,7 +419,6 @@ window.saveProgress = async () => {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sauvegarde...';
 
     try {
-        // تجميع كل البيانات
         const progressPayload = {
             chatHistory: STATE.sessionData.chatHistory,
             flashcards: STATE.sessionData.flashcards,
@@ -437,19 +440,18 @@ window.saveProgress = async () => {
     } catch (err) {
         console.error(err);
         btn.innerHTML = '<i class="fas fa-times"></i> Erreur!';
-        alert("فشل الحفظ: تأكد من السيرفر");
+        alert("فشل الحفظ: تأكد من إعدادات Cloudinary في السيرفر");
     }
 };
 
-// دالة الاسترجاع (تستدعى عند تحميل الملف)
 async function loadSavedProgress() {
     try {
         const res = await callApi(`progress?lessonId=${STATE.lessonId}`, 'GET');
 
         if (res.success && res.data) {
-            const data = res.data; // البيانات القادمة من Cloudinary
+            const data = res.data;
 
-            // 1. استعادة الشات
+            // استعادة الشات
             if (data.chatHistory) {
                 STATE.sessionData.chatHistory = data.chatHistory;
                 data.chatHistory.forEach(msg => {
@@ -458,19 +460,21 @@ async function loadSavedProgress() {
                 });
             }
 
-            // 2. استعادة الكويزات والفلاش كاردز
+            // استعادة الكويزات
             if (data.quizzes && data.quizzes.length > 0) {
                 STATE.sessionData.quizzes = data.quizzes;
                 renderQuizzes(data.quizzes);
             }
+
+            // استعادة الفلاش كاردز
             if (data.flashcards && data.flashcards.length > 0) {
                 STATE.sessionData.flashcards = data.flashcards;
-                // إضافة الفلاش كاردز للقائمة (append)
-                const currentHtml = DOM.resultsArea.innerHTML;
-                renderFlashcards(data.flashcards); // هذا سيستبدل المحتوى، لذا قد تحتاج لدمجه
+                const current = DOM.resultsArea.innerHTML;
+                renderFlashcards(data.flashcards);
+                // ملاحظة: هذا يستبدل العرض الحالي، يمكن دمجه إذا أردت
             }
 
-            // 3. استعادة الخريطة
+            // استعادة الخريطة
             if (data.mindMap) {
                 STATE.sessionData.mindMapData = data.mindMap;
                 drawMindMap(data.mindMap);
@@ -479,6 +483,6 @@ async function loadSavedProgress() {
             console.log("Session loaded successfully!");
         }
     } catch (err) {
-        console.log("No saved session found or error loading.");
+        console.log("No saved session found.");
     }
 }

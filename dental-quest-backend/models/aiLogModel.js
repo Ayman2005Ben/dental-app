@@ -10,11 +10,11 @@ const aiLogSchema = new mongoose.Schema({
     required: true
   },
 
-  // 🔹 نوع المهمة (quiz, flashcards, chat, summary...)
+  // 🔹 نوع المهمة
+  // تم حذف الـ enum للسماح بقبول أنواع جديدة مثل (quiz-text, mindmap-text) دون أخطاء
   task: {
     type: String,
-    required: true,
-    enum: ['quiz', 'flashcards', 'chat', 'summary', 'mindmap', 'image', 'sculpture'], // لضبط القيم المقبولة
+    required: true
   },
 
   // 🔹 نص الطلب المرسل للذكاء الاصطناعي
@@ -49,7 +49,7 @@ const aiLogSchema = new mongoose.Schema({
     default: 0
   },
 
-  // 🔹 مستوى الأهمية أو التصنيف (يمكنك استعماله لاحقًا)
+  // 🔹 مستوى الأهمية أو التصنيف
   priority: {
     type: String,
     enum: ['low', 'normal', 'high'],
