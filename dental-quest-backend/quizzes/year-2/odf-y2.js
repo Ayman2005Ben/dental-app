@@ -2339,6 +2339,277 @@ const odfQuizzesY2 = [
     ]
   },
   {
+    title: "10- Biodynamique basi-crânienne",
+    subject: "odf-y2",
+    questions: [
+      {
+        questionText: "Lorsque la base du crâne est en flexion, elle entraîne",
+        options: [
+          "La fermeture de l'angle sphénoidal.",
+          "Un allongement du champs crânio-facial.",
+          "La fermeture de l'angle antérieur de la face.",
+          "Un abaissement de l'occiput et de l'odontoide."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Lorsque la base du crane est en flexion, elle entraine : A : VRAI : la fermeture de l’angle sphénoïdal B : FAUX : raccourcissement du champ cranio facial C : FAUX : ouverture de l’angle antérieur de la face  D : VRAI : un abaissement de l’occiput et de l’odontoide",
+        citations: []
+      },
+      {
+        questionText: "L'établissement d'une malocclusion de classe ill squelettique est lié à :",
+        options: [
+          "L'hyper flexion de la base du crâne",
+          "L'hypo flexion de la base du crâne",
+          "Une fermeture de l'angle sphénoïdal",
+          "Une ouverture de l'angle sphénoïdal"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'établissement d'une malocclusion de classe III squelettique est lié à :  A. L'hyper flexion de la base du crâne. Vrai. B. L'hypo flexion de la base du crâne. Faux. C. Une fermeture de l'angle sphénoïdal. Vrai. Une classe III est liée à une fermeture de l'angle. D. Une ouverture de l'angle sphénoïdal. Faux. Une ouverture de l'angle sphénoïdal est associée à une classe 2.",
+        citations: []
+      },
+      {
+        questionText: "La flexion basicrânienne est un phénomène :",
+        options: [
+          "Physiologique spécifique à l'être humain.*",
+          "Pathologique lié aux grands syndromes.",
+          "Lié à la croissance du cerveau",
+          "Lié à la bipédie."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La flexion basi crânienne est : -physiologique (non lié a une pathologie) -spécifique a l’homme car on a remarqué que la base du crane des grands singes et autres animaux était plate.   Voici une comparaison entre un crane humain et un crane de primate :   -La bipédie et la croissance du cerveau sont des facteurs qui induisent cette flexion.",
+        citations: []
+      },
+      {
+        questionText: "Le remodelage de l'occipital est dit positif lorsque ce dernier réalise :",
+        options: [
+          "Une rotation horaire.",
+          "Une rotation anti horaire.",
+          "Un élargissement de la base du crâne.",
+          "Un recul du trou occipital."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Un remodelage occipital positif se caractérise par : -une rotation anti horaire. -un élargissement de la base du crane. -une avancée du trou occipital.",
+        citations: []
+      },
+      {
+        questionText: "La contraction cranio faciale :",
+        options: [
+          "Correspond à une pliure au niveau de la base du crâne.",
+          "Correspond à une pliure au niveau de la voute du crâne,",
+          "Se poursuit après l'âge de 6 ans.",
+          "S'achève avec l'éruption des dents de 6 ans."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La flexion s’arrête a l’âge de 6 ans.",
+        citations: []
+      },
+      {
+        questionText: "Une rotation exagérée de l'os sphénoïdal dans le sens horaire implique:",
+        options: [
+          "Un recul du maxillaire.",
+          "Une avancée de la mandibule.",
+          "Un arrêt de la croissance des deux maxillaires.",
+          "Une rotation externe des maxillaires."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La rotation du secteur ethmoido-sphenoidal dans le sens horaire a un impact sur les maxillaires uniquement et son exagération se traduit par : -une rotation externe des maxillaires. -une avancée des maxillaires.",
+        citations: []
+      },
+      {
+        questionText: "Le premier moteur de la flexion bas crânienne est :",
+        options: [
+          "L'os occipital.",
+          "L'os sphénoïde.",
+          "L'os temporal.",
+          "La suture sphéno-occipitale."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le premier moteur de la flexion bas crânienne est :  A. L'os occipital. Vrai. B. L'os sphénoïde. Faux. L'os sphénoïde est le 2eme moteur de la flexion basi crânienne. C. L'os temporal. Faux. L'os temporal n'est pas le moteur principal de la flexion bas crânienne. D. La suture sphéno-occipitale. Faux. La suture sphéno-occipitale n'est pas un moteur mais une structure passive dans ce mouvement.",
+        citations: []
+      },
+      {
+        questionText: "Le maxillaire supérieur est rattaché à la base du crâne par :",
+        options: [
+          "L'unité occipito-temporale.",
+          "L'unité sphéno- éthmoïdale.",
+          "L'unité sphéno-occipitale.",
+          "L'unité temporo-mandibulaire."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le maxillaire supérieur est rattaché à la base du crâne par :  A. L'unité occipito-temporale. Faux. Cette unité n'est pas directement impliquée dans la connexion du maxillaire supérieur à la base du crâne. B. L'unité sphéno- éthmoïdale. Vrai. Le maxillaire supérieur est rattaché à la base du crâne via cette unité. C. L'unité sphéno-occipitale. Faux. L'unité sphéno-occipitale concerne la connexion entre le sphénoïde et l'occipital, non le maxillaire supérieur. D. L'unité temporo-mandibulaire. Faux. Cette unité concerne l'articulation de la mandibule, pas le maxillaire supérieur.",
+        citations: []
+      },
+      {
+        questionText: "Lors de la flexion basi-cranienne l'occipital fait :",
+        options: [
+          "Une rotation antérieure antihoraire.",
+          "Une rotation postérieure horaire.",
+          "Une rotation antérieure horaire.",
+          "Une rotation postérieure antihoraire."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Lors de la flexion basi-crânienne l'occipital fait :  A. Une rotation antérieure antihoraire. Vrai.  B. Une rotation postérieure horaire. Faux. Ce mouvement n'est pas correct pour l'occipital dans ce contexte. C. Une rotation antérieure horaire. Faux. L'occipital fait une rotation antérieure antihoraire lors de la flexion basi-crânienne. D. Une rotation postérieure antihoraire. Faux. Ce n'est pas le mouvement observé lors de la flexion basi-crânienne.",
+        citations: []
+      },
+      {
+        questionText: "La classe ll squelettique s'accompagne :",
+        options: [
+          "D'une hyperflexion de l'angle basi-cranien.",
+          "D'une hyperextention de l'angle basi-cranien.",
+          "D'un recul des cavités glénoïdes.",
+          "D'une position en avant des cavités glénoïdes."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La classe II squelettique s'accompagne :  A. D'une hyperflexion de l'angle basi-crânien. Faux. La classe II squelettique est souvent associée à une hyperextension, non une hyperflexion. B. D'une hyperextention de l'angle basi-crânien. Vrai. La classe II squelettique s'accompagne souvent d'une hyperextension de l'angle basi-crânien. C. D'un recul des cavités glénoïdes. Vrai.  D. D'une position en avant des cavités glénoïdes. Faux. Les cavités glénoïdes ne se positionnent pas en avant dans cette classe.",
+        citations: []
+      },
+      {
+        questionText: "La classe Ili squelettique s'accompagne:",
+        options: [
+          "D'une hyperflexion de l'angle basi-cranien.",
+          "D'une hyperextention de l'angle basi-cranien.",
+          "D'un recul des cavités glénoïdes.",
+          "D'une position en avant des cavités glénoïdes."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La classe III squelettique s'accompagne:  A. D'une hyperflexion de l'angle basi-crânien. Vrai. La classe III squelettique est souvent associée à une hyperflexion de l'angle basi-crânien. B. D'une hyperextention de l'angle basi-crânien. Faux. L'hyperextension est associée à la classe II, pas à la classe III. C. D'un recul des cavités glénoïdes. Faux. Cette classe est caractérisée par une avancée des cavités glénoïdes. D. D'une position en avant des cavités glénoïdes. Vrai.",
+        citations: []
+      },
+      {
+        questionText: "Une flexion exagérée de la synchondrose sphéno-occipitale peut participer à l'installation:",
+        options: [
+          "D'une classe 2 squelettique.",
+          "D'une classe 3 squelettique.",
+          "D'une classe 1 squelettique.",
+          "D'une anomalie du sens vertical."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Une flexion exagérée de la synchondrose sphéno-occipitale peut participer à l'installation :  A. D'une classe 2 squelettique : Faux.  B. D'une classe 3 squelettique : Vrai. Une flexion exagérée, favoriserait une classe 3. C. D'une classe 1 squelettique : Faux. Classe 1 est neutre, non liée à une flexion exagérée. D. D'une anomalie du sens vertical : Vrai. Une flexion exagérée peut affecter la croissance verticale.",
+        citations: []
+      },
+      {
+        questionText: "Lors de la flexion basi-crânienne le sphénoïde fait :",
+        options: [
+          "Une rotation antérieure antihoraire.",
+          "Une rotation postérieure horaire.",
+          "Une rotation antérieure horaire.",
+          "Une rotation postérieure antihoraire"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Lors de la flexion basi-crânienne le sphénoïde fait :  A. Une rotation antérieure antihoraire. Faux. Cette rotation n'est pas correcte pour le sphénoïde lors de la flexion basi-crânienne. B. Une rotation postérieure horaire. Faux. Ce mouvement n'est pas observé pour le sphénoïde lors de cette flexion. C. Une rotation antérieure horaire. Vrai. Le sphénoïde fait une rotation antérieure horaire lors de la flexion basi-crânienne. D. Une rotation postérieure antihoraire. Faux. Cette rotation est incorrecte pour le sphénoïde dans ce contexte.",
+        citations: []
+      },
+      {
+        questionText: "La rotation antérieure de l’occipital est :",
+        options: [
+          "Une rotation antihoraire",
+          "Une rotation horaire avec déplacement vers le bas de l’écaille occipitale",
+          "Un déplacement vers l’avant de la partie basse de l’écaille occipitale",
+          "Une rotation antihoraire avec déplacement vers le bas de l’écaille occipitale"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La rotation antérieure de l’occipital est :  A. Une rotation antihoraire. Faux. La rotation antérieure de l'occipital est une rotation horaire. B. Une rotation horaire avec déplacement vers le bas de l’écaille occipitale. Faux.  La rotation antérieure de l’occipital implique une rotation horaire, avec un déplacement vers l’avant de l'écaille occipitale. C. Un déplacement vers l’avant de la partie basse de l’écaille occipitale. Vrai. D. Une rotation antihoraire avec déplacement vers le bas de l’écaille occipitale. Faux. La rotation antérieure est horaire, pas antihoraire.",
+        citations: []
+      },
+      {
+        questionText: "lors d’une flexion basi-crânienne modérée, l’os temporal effectue :",
+        options: [
+          "Une rotation postéro-interne",
+          "Une rotation antéro-externe",
+          "Un mouvement vers le haut et vers l’extérieur",
+          "Un mouvement vers le haut et vers l’intérieur."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Lors d’une flexion basi-crânienne modérée, l’os temporal effectue :  A. Une rotation postéro-interne. Faux. Ce mouvement n'est pas associé à une flexion basi-crânienne modérée. B. Une rotation antéro-externe. Vrai. Lors d'une flexion basi-crânienne, l'os temporal effectue une rotation antéro-externe. C. Un mouvement vers le haut et vers l’extérieur. Faux. Ce mouvement est partiellement correct mais n'englobe pas totalement le mouvement du temporal. D. Un mouvement vers le haut et vers l’intérieur. Faux. Le mouvement est plutôt vers l'extérieur.",
+        citations: []
+      },
+      {
+        questionText: "Une rotation horaire du sphénoïde est :",
+        options: [
+          "Une bascule ethmoïdale positive",
+          "Une bascule sphénoïdale négative",
+          "Une rotation sphénoïdale antérieure",
+          "Une rotation sphénoïdale postérieure."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Une rotation horaire du sphénoïde est :  A. Une bascule ethmoïdale positive. Faux. La rotation horaire du sphénoïde n'est pas une bascule ethmoïdale. B. Une bascule sphénoïdale négative. Faux. La rotation horaire n'est pas décrite comme une bascule négative. C. Une rotation sphénoïdale antérieure. Vrai. La rotation horaire du sphénoïde correspond à une rotation antérieure. D. Une rotation sphénoïdale postérieure. Faux. La rotation horaire est une rotation antérieure.",
+        citations: []
+      },
+      {
+        questionText: "Une flexion modérée de la Synchondrose Sphéno-Occipitale se traduit par :",
+        options: [
+          "Une rotation horaire du sphénoïde",
+          "Une rotation antihoraire de l’occipital",
+          "Une rotation antéro-externe des temporaux",
+          "Une rotation externe des maxillaires."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Une flexion modérée de la Synchondrose Sphéno-Occipitale se traduit par :  A. Une rotation horaire du sphénoïde. Faux. antihoraire B. Une rotation antihoraire de l’occipital. Faux. L'occipital effectue une rotation horaire avec le sphénoïde. C. Une rotation antéro-externe des temporaux. Vrai. Les temporaux effectuent une rotation antéro-externe. D. Une rotation externe des maxillaires. Vrai.",
+        citations: []
+      },
+      {
+        questionText: "La flexion basicrânienne",
+        options: [
+          "A (1,3)",
+          "B (1,2)",
+          "C (1,5)",
+          "D (1,4)",
+          "E (3,5)"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "",
+        citations: []
+      },
+      {
+        questionText: "La rotation antéro-externe de l'os temporal signifie :",
+        options: [
+          "Qu'il effectue un mouvement vers le haut.",
+          "Qu'il fait un déplacement vers l'avant uniquement.",
+          "Qu'il se déplace vers l'avant et vers l'extérieur,",
+          "Qu’il se déplace dans le sens opposé aux aiguilles d'une montre."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La rotation antéro-externe de l'os temporal signifie : · A. Qu'il effectue un mouvement vers le haut : Vrai. · B. Qu'il fait un déplacement vers l'avant uniquement : Faux. · C. Qu'il se déplace vers l'avant et vers l'extérieur : Vrai. C'est exactement ce qu'indique ce terme. · D. Qu’il se déplace dans le sens opposé aux aiguilles d'une montre : Vrai. Son déplacement antérieur est antihoraire.",
+        citations: []
+      },
+      {
+        questionText: "La bascule sphénoïdale est « positive» pour la flexion si elle se fait :",
+        options: [
+          "En rotation antérieure.",
+          "En rotation horaire.",
+          "En rotation antihoraire.",
+          "En rotation postéro-externe."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La bascule sphénoïdale est « positive» pour la flexion si elle se fait : · A. En rotation antérieure : Vrai. Cela signifie que la base du crâne est en flexion. · B. En rotation horaire : Vrai.  · C. En rotation antihoraire : Faux. · D. En rotation postéro-externe : Faux.",
+        citations: []
+      },
+      {
+        questionText: "Une rotation antérieure de l'occipital signifie:",
+        options: [
+          "Un déplacement vers l'arrière de l'occipital.",
+          "Un déplacement vers l'avant de la partie basse de l'écaille occipitale.",
+          "Un déplacement vers l'avant et vers le bas de la partie basse de l'écaille occipitale.",
+          "Toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Une rotation antérieure de l'occipital signifie : · A. Un déplacement vers l'arrière de l'occipital : Faux. · B. Un déplacement vers l'avant de la partie basse de l'écaille occipitale : Vrai. C’est exactement ca. · C. Un déplacement vers l'avant et vers le bas de la partie basse de l'écaille occipitale : Faux.",
+        citations: []
+      },
+      {
+        questionText: "L'établissement d'une malocclusion de classe ill squelettique est lié à :",
+        options: [
+          "La fermeture de l'angle sphénoidal.",
+          "Un allongement du champs crânio-facial.",
+          "La fermeture de l'angle antérieur de la face.",
+          "Un abaissement de l'occiput et de l'odontoide."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Lorsque la base du crane est en flexion, elle entraine : A : VRAI : la fermeture de l’angle sphénoïdal B : FAUX : raccourcissement du champ cranio facial C : FAUX : ouverture de l’angle antérieur de la face  D : VRAI : un abaissement de l’occiput et de l’odontoide",
+        citations: []
+      }
+    ]
+  },
+  {
     title: "11- Critères d'harmonie du visage",
     subject: "odf-y2",
     questions: [
@@ -2733,1767 +3004,1767 @@ const odfQuizzesY2 = [
     title: "13- Fonctions oro-faciales",
     subject: "odf-y2",
     questions: [
-        {
-            questionText: "Le développement 3D des cavités narinaires, nasosinusiennes et nasopharyngiennes dépend :",
-            options: [
-                "Du passage de l'air dans les fosses nasales lors de la ventilation nasale.",
-                "De l'application de la langue sur le palais et les secteurs alvéolo-dentaires.",
-                "De la croissance basicrânienne cartilagineuse avec croissance du septum",
-                "Du passage de l'air dans la cavité buccale lors de la ventilation."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Le développement tridimensionnel des cavités narinaires, nasosinusiennes et nasopharyngiennes dépend du passage de l'air lors de la ventilation nasale (A), de l'application de la langue sur le palais et les secteurs alvéolo-dentaires (B), et de la croissance basicrânienne cartilagineuse avec croissance du septum (C).",
-            citations: []
-        },
-        {
-            questionText: "La déglutition fonctionnelle est caractérisée par",
-            options: [
-                "L'absence de contacts dentaires.",
-                "Une contraction exagérée des lèvres et des muscles faciaux.",
-                "Une interposition linguale antérieure.",
-                "L'absence de contraction des muscles du menton avec des lèvres jointes,"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "La déglutition fonctionnelle est caractérisée par des dents en occlusion et l'absence de contraction des muscles du menton, avec les lèvres jointes sans contraction des muscles orbiculaires des lèvres et mentonniers.",
-            citations: []
-        },
-        {
-            questionText: "Le faciès du respirateur buccal se caractérise par",
-            options: [
-                "Des narines larges et fonctionnelles.",
-                "Une posture haute de la langue.",
-                "Un Stomion obtenu par contraction du muscle mentonnier.",
-                "Une face longue."
-            ],
-            correctOptionIndexes: [2, 3],
-            explanation: "Le faciès adénoïdien ou faciès du respirateur buccal se caractérise par un stomion forcé (C) et une face longue et pâle (D), des narines étroites et une posture basse de la langue.",
-            citations: []
-        },
-        {
-            questionText: "Les habitudes de succion (du pouce par exemple):",
-            options: [
-                "Sont considérées comme normales chez l'enfant de 6 ans.",
-                "Entraînent rarement des déformations dentoalvéolaires.",
-                "Sont souvent liées à un problème de développement psychoaffectif de l'enfant.",
-                "Doivent être recherchées et éliminées le plus tôt possible."
-            ],
-            correctOptionIndexes: [2, 3],
-            explanation: "Les habitudes de succion sont souvent liées à un problème de développement psychoaffectif de l'enfant (C) et doivent être recherchées et éliminées le plus tôt possible (D) en raison de leurs effets néfastes sur l'alignement dentaire.",
-            citations: []
-        },
-        {
-            questionText: "Pendant la déglutition physiologique, il se produit:",
-            options: [
-                "Une contraction des muscles du menton",
-                "L'ouverture des cavités naturelles postérieures par lesquelles transite le flux ventilatoire",
-                "Une élévation de la langue par contraction du mylohyoïdien",
-                "Une contraction des 17 muscles de la langue qui fait progresser le bol alimentaire vers le pharynx"
-            ],
-            correctOptionIndexes: [2, 3],
-            explanation: "Pendant la déglutition physiologique, il se produit une élévation de la langue par contraction du mylohyoïdien (C) et une contraction des 17 muscles de la langue qui fait progresser le bol alimentaire vers le pharynx (D).",
-            citations: []
-        },
-        {
-            questionText: "La déglutition physiologique s'effectue avec",
-            options: [
-                "Des arcades dentaires en occlusion.",
-                "Une contraction des muscles élévateurs, sans participation des orbiculaires des lèvres.",
-                "La pointe de la langue appuyée sur la papille rétro-incisive.",
-                "Une Interposition de la langue entre les arcades dentaires."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "La déglutition physiologique s'effectue avec des arcades dentaires en occlusion (A), une contraction des muscles élévateurs sans participation des orbiculaires des lèvres (B), et la pointe de la langue appuyée sur la papille rétro-incisive (C).",
-            citations: []
-        },
-        {
-            questionText: "Le << faciès adénoïdien >> :",
-            options: [
-                "Est retrouvé lors d'une déglutition atypique.",
-                "S'accompagne d'un visage allongé.",
-                "Est caractéristique d'un respirateur buccal.",
-                "Représente un enfant avec des parafonctions."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Le faciès adénoïdien s'accompagne d'un visage allongé (B) et est caractéristique d'un respirateur buccal (C), souvent dû à une respiration atypique.",
-            citations: []
-        },
-        {
-            questionText: "Dans Une mastication unilatérale préférentielle gauche:",
-            options: [
-                "l'AFMP gauche est plus petit.",
-                "L'hémi maxillaire gauche est plus développé.",
-                "Le milieu inter incisif supérieur est dévié à droite.",
-                "Le milieu inter incisif supérieur est dévié à gauche."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Dans une mastication unilatérale préférentielle gauche, l'AFMP gauche est plus petit (A), l'hémi maxillaire gauche est plus développé (B), et le milieu inter incisif supérieur est dévié à droite (C).",
-            citations: []
-        },
-        {
-            questionText: "Parmi ces signes, lesquels sont en rapport avec une respiration buccale? :",
-            options: [
-                "Un test de Rosenthal positif.",
-                "Des voies aérifères supérieures en Forme << d'entonnoir >> sur une TLR de profil.",
-                "Des signes de rotation mandibulaire antérieure.",
-                "La présence d'onychophagie."
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Un test de Rosenthal positif (A) et des voies aérifères supérieures en forme \"d'entonnoir\" sur une TLR de profil (B) sont des signes pouvant indiquer une respiration buccale.",
-            citations: []
-        },
-        {
-            questionText: "La déglutition infantile:",
-            options: [
-                "Est considérée atypique à partir de 4ans.",
-                "Se fait avec une contraction des muscles péri-oraux.",
-                "Se fait avec une contraction des muscles élévateurs de la mandibule.",
-                "Est physiologique à 4ans."
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "La déglutition infantile se fait avec une contraction des muscles péri-oraux (B) et est physiologique à 4 ans (D), mais sa persistance au-delà de 6 ans est considérée comme atypique.",
-            citations: []
-        },
-        {
-            questionText: "Chez le nourrisson, la déglutition se fait :",
-            options: [
-                "En association avec la succion",
-                "Avec interposition linguale entre les arcades",
-                "Sans participation des muscles faciaux",
-                "Arcades serrées"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Chez le nourrisson, la déglutition se fait en association avec la succion (A), et avec interposition linguale entre les arcades (B).",
-            citations: []
-        },
-        {
-            questionText: "La ventilation nasale nécessite :",
-            options: [
-                "Le libre passage de l'air par les fosses nasales",
-                "La fermeture hermétique de la bouche",
-                "L'absence de stomion",
-                "La présence de contact entre le voile du palais et la base de la langue"
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "La ventilation nasale nécessite un libre passage de l'air par les fosses nasales (A), une fermeture hermétique de la bouche (B) et la présence de contact entre le voile du palais et la base de la langue (D).",
-            citations: []
-        },
-        {
-            questionText: "La mastication est dite physiologique lorsqu'elle est :",
-            options: [
-                "Unilatérale alternée",
-                "Bilatérale (en charnière)",
-                "Unilatérale stricte ou dominante",
-                "Bilatérale alternée"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "La mastication physiologique est unilatérale alternée, ce qui est considéré comme le mode idéal.",
-            citations: []
-        },
-        {
-            questionText: "La déglutition adulte ou mature se fait :",
-            options: [
-                "Lèvres en contact, sans contraction de l'orbiculaire",
-                "Pointe de la langue en bas, vers le plancher buccal",
-                "Pointe de la langue en haut et prend un appui palatin antérieur",
-                "Lèvres en contact, avec contraction de l'orbiculaire"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La déglutition adulte ou mature se fait avec les lèvres en contact, sans contraction excessive de l'orbiculaire (A), et la pointe de la langue en haut, prenant un appui palatin antérieur (C).",
-            citations: []
-        },
-        {
-            questionText: "La ventilation physiologique au repos est :",
-            options: [
-                "Une ventilation nasale.",
-                "Une ventilation buccale.",
-                "Une ventilation mixte.",
-                "Une ventilation à prédominance buccale."
-            ],
-            correctOptionIndexes: [0],
-            explanation: "La ventilation physiologique normale au repos est principalement nasale.",
-            citations: []
-        },
-        {
-            questionText: "Durant une ventilation buccale; la langue peut être :",
-            options: [
-                "En position basse et avancée.",
-                "En position haute.",
-                "Interposée entre les arcades.",
-                "En forme de << tuile >>."
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Lors d'une ventilation buccale, la langue est souvent en position basse et avancée (A) et peut être interposée entre les arcades dentaires (C).",
-            citations: []
-        },
-        {
-            questionText: "Une déglutition normale physiologique s'effectue avec :",
-            options: [
-                "Arcades dentaires en occlusion.",
-                "Contraction des muscles élévateurs, sans participation des orbiculaires des lèvres.",
-                "La pointe de la langue appuyée sur la papille rétro-incisive.",
-                "Interposition de la langue entre les arcades dentaires."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Une déglutition normale physiologique s'effectue avec des arcades dentaires en occlusion (A), une contraction des muscles élévateurs sans participation des orbiculaires des lèvres (B), et la pointe de la langue appuyée sur la papille rétro-incisive (C).",
-            citations: []
-        },
-        {
-            questionText: "Lors d'une ventilation buccale, l'interrogatoire révèle:",
-            options: [
-                "Une bouche ouverte fréquente, essentiellement la nuit.",
-                "Des ronflements avec un sommeil perturbé.",
-                "Une pathologie ORL.",
-                "Une herméticité labiale."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Lors d'une ventilation buccale, l'interrogatoire révèle une bouche ouverte fréquente, essentiellement la nuit (A), des ronflements avec un sommeil perturbé (B), et souvent une pathologie ORL (C).",
-            citations: []
-        },
-        {
-            questionText: "Les Angles Fonctionnels Masticatoires de Planas:",
-            options: [
-                "Sont révélateurs de la fonction masticatrice.",
-                "Représentent les trajectoires finales de fermeture du cycle masticateur dans le plan frontal.",
-                "Matérialisent l'abaissement de la mandibule lors du glissement latéral de l'OIM jusqu'au bout à bout latéral.",
-                "Matérialisent l'abaissement de la mandibule lors du glissement antérieur de l'OIM jusqu'au bout à bout incisif"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Les Angles Fonctionnels Masticatoires de Planas sont révélateurs de la fonction masticatrice (A), représentent les trajectoires finales de fermeture du cycle masticateur dans le plan frontal (B), et matérialisent l'abaissement de la mandibule lors du glissement latéral (C).",
-            citations: []
-        },
-        {
-            questionText: "Parmi les parafonctions retrouvées au niveau de la sphère oro faciale, on retrouve :",
-            options: [
-                "La succion digitale.",
-                "Le bruxisme.",
-                "L'onychophagie.",
-                "Les troubles de la phonation."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Les parafonctions retrouvées au niveau de la sphère oro-faciale incluent la succion digitale (A), le bruxisme (B) et l'onychophagie (C).",
-            citations: []
-        },
-        {
-            questionText: "La succion du pouce:",
-            options: [
-                "Est considérée comme une fonction perturbée",
-                "Est considérée comme une parafonction",
-                "N'entraîne aucune malocclusion",
-                "Peut causer des béances antérieures"
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "La succion du pouce est une parafonction (B) et peut causer des béances antérieures (D) et d'autres malocclusions.",
-            citations: []
-        },
-        {
-            questionText: "La respiration physiologique est :",
-            options: [
-                "Strictement nasale",
-                "Mixte à prédominance nasale",
-                "Un facteur important pour le développement transversal du maxillaire",
-                "Régie par le système nerveux autonome"
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "La respiration physiologique est mixte à prédominance nasale (B), est un facteur important pour le développement transversal du maxillaire (C), et est régie par le système nerveux autonome (D).",
-            citations: []
-        },
-        {
-            questionText: "Les signes d'une déglutition adulte sont :",
-            options: [
-                "Lèvres jointes, contractées",
-                "Muscles faciaux au repos",
-                "Arcades serrées, les molaires étant en occlusion",
-                "la langue est contenue à l'intérieur des arcades"
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Les signes d'une déglutition adulte sont des muscles faciaux au repos (B), des arcades serrées avec les molaires en occlusion (C), et la langue contenue à l'intérieur des arcades dentaires (D).",
-            citations: []
-        },
-        {
-            questionText: "L'examen de la respiration se base sur les tests suivants :",
-            options: [
-                "Test de Rosenthal",
-                "Test du réflexe narinaire",
-                "Test du réflexe vélaire",
-                "Test de la contraction labiale."
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "L'examen de la respiration se base sur plusieurs tests, dont le test de Rosenthal (A), le test du réflexe narinaire (B), le test du réflexe vélaire (C) et le test de la contraction labiale (D).",
-            citations: []
-        },
-        {
-            questionText: "La mastication physiologique est une mastication :",
-            options: [
-                "Alternée unilatérale",
-                "Alternée unilatérale stricte",
-                "Bilatérale alternée",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "La mastication physiologique normale se fait généralement d'un côté à la fois, en alternant les côtés, elle est donc alternée unilatérale.",
-            citations: []
-        },
-        {
-            questionText: "La respiration est :",
-            options: [
-                "Une permutation exclusivement gazeuse",
-                "Réalisée avec contraction relâchement des muscles faciaux",
-                "Perturbée par un processus d'hypertrophie des tissus"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La respiration est une permutation exclusivement gazeuse (A) et peut être perturbée par un processus d'hypertrophie des tissus (C), comme celle des amygdales.",
-            citations: []
-        },
-        {
-            questionText: "La déglutition est:",
-            options: [
-                "Une fonction involontaire chez les enfants",
-                "Atypique en denture temporaire stable",
-                "Une fonction qui fait participer les muscles des lèvres et des joues pendant la mastication des aliments"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Chez les enfants, la déglutition est principalement un réflexe involontaire.",
-            citations: []
-        },
-        {
-            questionText: "L'examen de la respiration se base sur les tests suivants :",
-            options: [
-                "Test de ROSENTHAL",
-                "Test du réflexe narinaire",
-                "Test du réflexe vélaire",
-                "Test de la contraction labiale"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "L'examen de la respiration se base sur le test de Rosenthal (A), le test du réflexe narinaire (B), le test du réflexe vélaire (C) et le test de la contraction labiale (D).",
-            citations: []
-        },
-        {
-            questionText: "La mastication physiologique se fait en :",
-            options: [
-                "Unilatérale alternée",
-                "Bilatérale alternée",
-                "Ouverture fermeture",
-                "Propulsion mandibulaire"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La mastication physiologique se fait en unilatérale alternée (A) et par ouverture-fermeture (C).",
-            citations: []
-        },
-        {
-            questionText: "La déglutition infantile implique",
-            options: [
-                "Un contact dentaire serré",
-                "Une interposition de la langue",
-                "Une contraction péribuccale",
-                "Une contraction massétérine"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "La déglutition infantile implique une interposition de la langue (B) et une contraction péribuccale (C), en particulier des orbiculaires des lèvres.",
-            citations: []
-        },
-        {
-            questionText: "Les angles fonctionnels masticateurs de Planas doivent être :",
-            options: [
-                "Symétriques et grandes",
-                "Asymétriques et petites",
-                "Symétriques et petites",
-                "Asymétriques et grandes"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Les angles fonctionnels masticateurs de Planas doivent être symétriques et petits pour un bon équilibre fonctionnel et une mastication équilibrée.",
-            citations: []
-        },
-        {
-            questionText: "La réalisation d'une onde péristaltique pendant la déglutition adulte :",
-            options: [
-                "Nécessite une stabilité mandibulaire, qui est assurée par la contraction des muscles abaisseurs de la mandibule",
-                "Nécessite une fixation de l'os hyoïde, et cette fixation dépend de la stabilité mandibulaire assurée par le digastrique",
-                "Nécessite un mouvement de montée-descente de l'os hyoïde, et ce mouvement ne peut se réaliser sans une bonne fixation de cet os",
-                "Nécessitent une bonne étanchéité buccale: qui est assurée par la contraction des orbiculaires",
-                "Permet la propulsion du bol alimentaire"
-            ],
-            correctOptionIndexes: [1, 2, 4],
-            explanation: "La réalisation d'une onde péristaltique pendant la déglutition adulte nécessite une fixation de l'os hyoïde dépendante du digastrique (B), un mouvement de montée-descente de l'os hyoïde (C), et permet la propulsion du bol alimentaire (E).",
-            citations: []
-        },
-        {
-            questionText: "La déglutition transitoire :",
-            options: [
-                "A les mêmes caractéristiques que la déglutition adulte",
-                "S'effectue lors de la phase physiologique d'élévation de la langue",
-                "S'effectue lors de la phase d'apparition des incisives permanentes",
-                "S'effectue lors de la phase d'allongement des lèvres",
-                "Permet le passage à une déglutition adulte atypique ou typique"
-            ],
-            correctOptionIndexes: [1, 2, 4],
-            explanation: "La déglutition transitoire s'effectue lors de la phase physiologique d'élévation de la langue (B), lors de la phase d'apparition des incisives permanentes (C), et permet le passage à une déglutition adulte atypique ou typique (E).",
-            citations: []
-        },
-        {
-            questionText: "La fonction morphogénétique lors de la respiration nasale :",
-            options: [
-                "Ne Concerne que le maxillaire supérieur",
-                "Nécessite une bonne pneumatisation des sinus maxillaires uniquement",
-                "Permet une bonne croissance transversale maxillaire",
-                "Est responsable du développement tridimensionnel des cavités narinaires, naso-sinusiennes et naso-pharyngées pendant la croissance"
-            ],
-            correctOptionIndexes: [2, 3],
-            explanation: "La fonction morphogénétique lors de la respiration nasale permet une bonne croissance transversale maxillaire (C) et est responsable du développement tridimensionnel des cavités narinaires, nasosinusiennes et nasopharyngées pendant la croissance (D).",
-            citations: []
-        },
-        {
-            questionText: "Les conséquences d'une mastication unilatérale dominante sont :",
-            options: [
-                "Déviation du point incisif inférieur du coté non mastiquant",
-                "Déviation du point incisif supérieur du côté mastiquant",
-                "Endognathie ou endoalvéolie du coté non mastiquant",
-                "Articulé inversé latéral du coté non mastiquant"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Une mastication unilatérale dominante peut entraîner une déviation du point incisif inférieur du côté non mastiquant (A), une endognathie ou endoalvéolie du côté non mastiquant (C), et un articulé inversé latéral du côté non mastiquant (D).",
-            citations: []
-        },
-        {
-            questionText: "La déglutition est l'acte par lequel le contenu buccal est propulsé de la bouche vers l'estomac, cette fonction vitale se produit :",
-            options: [
-                "200 à 1000 fois",
-                "400 à 800 fois",
-                "500 à 1200 fois",
-                "600 à 1400 fois",
-                "800 à 10000 fois"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "La déglutition se produit en moyenne 500 à 1200 fois par jour.",
-            citations: []
-        },
-        {
-            questionText: "MAGENDIE en 1815, décrit les premiers temps de déglutition :",
-            options: [
-                "Buccal",
-                "Lingual",
-                "Pharyngien",
-                "Laryngé",
-                "Œsophagien"
-            ],
-            correctOptionIndexes: [0, 2, 4],
-            explanation: "Magendie a décrit les trois temps de la déglutition : le temps buccal (A), le temps pharyngien (C) et le temps œsophagien (E).",
-            citations: []
-        },
-        {
-            questionText: "La maturation de la déglutition passe par une ou plusieurs phases:",
-            options: [
-                "Déglutition fœtale",
-                "Déglutition de nouveau-né",
-                "Déglutition infantile",
-                "Déglutition immature",
-                "Déglutition mature"
-            ],
-            correctOptionIndexes: [0, 1, 2, 4],
-            explanation: "La maturation de la déglutition passe par les phases fœtale (A), de nouveau-né (B), infantile (C) et mature (E).",
-            citations: []
-        },
-        {
-            questionText: "La description des différents temps de la déglutition secondaire permet de reconnaître un temps:",
-            options: [
-                "Buccal",
-                "Lingual",
-                "Laryngé",
-                "Pharyngien",
-                "Œsophagien"
-            ],
-            correctOptionIndexes: [0, 3, 4],
-            explanation: "La description des différents temps de la déglutition secondaire permet de reconnaître le temps buccal (A), le temps pharyngien (D) et le temps œsophagien (E).",
-            citations: []
-        },
-        {
-            questionText: "Le temps de préparation se distingue nettement car la déglutition peut être arrêtée à n'importe quel moment de ce temps :",
-            options: [
-                "Buccal",
-                "Lingual",
-                "Laryngé",
-                "Pharyngien",
-                "Œsophagien"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Le temps buccal de préparation est sous contrôle volontaire, permettant d'arrêter la déglutition à tout moment avant le déclenchement du réflexe pharyngien.",
-            citations: []
-        },
-        {
-            questionText: "La contraction simultanée des 17 muscles linguaux développe une onde péristaltique de pression d'avant en arrière qui fait progresser le bol alimentaire, elle serait de l'ordre de :",
-            options: [
-                "80g/cm²",
-                "100g/cm²",
-                "120g/cm²",
-                "130g/cm²",
-                "150g/cm²"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "La pression péristaltique générée par les muscles linguaux lors de la déglutition est d'environ 120g/cm², assurant un transport efficace des aliments.",
-            citations: []
-        },
-        {
-            questionText: "La déglutition est une activité rythmique, ce rythme régit la fréquence des déglutitions, les mouvements d'ouverture/fermeture. Il est cependant modifiable selon :",
-            options: [
-                "Le moment",
-                "L'état physique",
-                "Les états émotionnels",
-                "L'état cortical ou sous-cortical",
-                "Le réflexe"
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Le rythme de la déglutition est modifiable selon l'état physique (B), les états émotionnels (C) et l'état cortical ou sous-cortical (D).",
-            citations: []
-        },
-        {
-            questionText: "La déglutition fonctionnelle mature est sous le contrôle dominant du nerf V. Elle est la résultante de l'activité coordonnée des muscles :",
-            options: [
-                "Péri-oraux",
-                "Sus-hyoïdiens",
-                "Sous-hyoïdiens",
-                "Masticateurs",
-                "Linguaux"
-            ],
-            correctOptionIndexes: [0, 2, 3, 4],
-            explanation: "La déglutition mature est une action coordonnée impliquant plusieurs groupes musculaires : péri-oraux (A), sous-hyoïdiens (C), masticateurs (D) et linguaux (E), sous la direction du nerf trijumeau (nerf V).",
-            citations: []
-        },
-        {
-            questionText: "Un contact est normal entre la pointe de la langue et le palais dur se fait exactement au niveau :",
-            options: [
-                "La papille incisivo-canine",
-                "La papille pro-incisives",
-                "La papille rétro-incisives",
-                "La papille pro-canine",
-                "La papille rétro-canine"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Un contact normal entre la pointe de la langue et le palais dur se fait exactement au niveau de la papille rétro-incisives.",
-            citations: []
-        },
-        {
-            questionText: "Des perturbations peuvent survenir dans un fonctionnement musculaire à différents niveaux d'activité entraînant schématiquement :",
-            options: [
-                "Une absence dentaire",
-                "Hyperactivité des lèvres",
-                "Hypoactivité des muscles faciaux",
-                "Une projection linguale antérieure",
-                "Une projection linguale latérale"
-            ],
-            correctOptionIndexes: [3, 4],
-            explanation: "Des perturbations musculaires peuvent entraîner une projection linguale antérieure (D) ou une projection linguale latérale (E).",
-            citations: []
-        },
-        {
-            questionText: "Le comportement lingual pendant la déglutition est lié à:",
-            options: [
-                "La forme",
-                "Le volume",
-                "La position",
-                "Hypotonicité linguale",
-                "Hypertonicité linguale"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Le comportement lingual pendant la déglutition est lié à la forme (A), au volume (B) et à la position (C) de la langue.",
-            citations: []
-        },
-        {
-            questionText: "Une position trop basse distale de la langue pendant la déglutition détermine:",
-            options: [
-                "Syndrome de CAU PE-FIEUX",
-                "Classe II squelettique division 2",
-                "Classe II squelettique division 1 vestibulo version des incisives maxillaires",
-                "Classe II squelettique division 1 avec distoclusion mandibulaire",
-                "Classe III squelettique"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Une position trop basse et distale de la langue pendant la déglutition est associée au syndrome de Cau-Pe-Fieux.",
-            citations: []
-        },
-        {
-            questionText: "L'évaluation de l'efficacité de rééducation n'est pas simple. Il est cependant intéressant de citer les résultats de MASO qui trouve :",
-            options: [
-                "40 à 50% de succès",
-                "50 à 60% de succès",
-                "70 à 80% de succès",
-                "80 à 90% de succès",
-                "90 à 95% de succès"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Les résultats de MASO indiquent un taux de succès de 70 à 80% pour l'efficacité de la rééducation.",
-            citations: []
-        },
-        {
-            questionText: "Certains appareillages peuvent être considérés comme de véritables rééducateurs cryo-fonctionnels en :",
-            options: [
-                "Enveloppe linguale nocturne",
-                "Perle de TUCAT",
-                "Appareil fixe",
-                "Propulseur",
-                "Activateur"
-            ],
-            correctOptionIndexes: [0, 1, 3, 4],
-            explanation: "Des appareillages tels que l'enveloppe linguale nocturne (A), la perle de TUCAT (B), le propulseur (D) et l'activateur (E) sont des rééducateurs cryo-fonctionnels qui corrigent les dysfonctions de la langue et des arcades dentaires.",
-            citations: []
-        },
-        {
-            questionText: "La ventilation, au sommet de la hiérarchie fonctionnelle, a une grande influence sur la :",
-            options: [
-                "Morphogenèse cranio-faciale",
-                "Dysfonction ventilatoire",
-                "La prise en charge thérapeutique des anomalies"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "La ventilation, étant au sommet de la hiérarchie fonctionnelle, a une grande influence sur la morphogenèse cranio-faciale.",
-            citations: []
-        },
-        {
-            questionText: "Pour TALMANT, la ventilation nasale optimale (VNO) est exclusivement nasale. Cette VNO répond à la fois à la physiologie :",
-            options: [
-                "Broncho-pulmonaire",
-                "Cardiaque",
-                "Digestive",
-                "Hémostase",
-                "Cérébrale"
-            ],
-            correctOptionIndexes: [0, 1, 4],
-            explanation: "La ventilation nasale optimale est essentielle pour la physiologie broncho-pulmonaire (A), cardiaque (B) et cérébrale (E), assurant une oxygénation correcte.",
-            citations: []
-        },
-        {
-            questionText: "Les étiologies de l'obstruction nasale fonctionnelle (ONF) sont nombreuses tel que :",
-            options: [
-                "Pharyngite",
-                "Hypertrophie adénoïdienne",
-                "Hypertrophie choanale",
-                "Congestion de la muqueuse nasale",
-                "Déviation septale"
-            ],
-            correctOptionIndexes: [1, 3, 4],
-            explanation: "Les étiologies courantes de l'obstruction nasale fonctionnelle incluent l'hypertrophie adénoïdienne (B), la congestion de la muqueuse nasale (D) et la déviation septale (E).",
-            citations: []
-        },
-        {
-            questionText: "Les vibrations du voile du palais lors de la ventilation mixte nocturne correspondent à une :",
-            options: [
-                "Ronchopathie",
-                "Hypertrophie adénoïdienne",
-                "Hypertrophie amygdalienne",
-                "Ronflement",
-                "Déviation septale"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "Les vibrations du voile du palais lors de la ventilation mixte nocturne sont des signes de ronchopathie (A) et de ronflement (D).",
-            citations: []
-        },
-        {
-            questionText: "L'appareil vocal est constitué de 3 éléments nécessaires à la phonation dont une soufflerie, qui comprend :",
-            options: [
-                "Trachée",
-                "Cavité buccale",
-                "Cage thoracique",
-                "Diaphragme",
-                "Poumons, bronches"
-            ],
-            correctOptionIndexes: [0, 2, 4],
-            explanation: "La soufflerie de l'appareil vocal comprend la trachée (A), la cage thoracique (C) et les poumons avec les bronches (E), qui fournissent l'air nécessaire à la production du son.",
-            citations: []
-        },
-        {
-            questionText: "La langue est appelée sac muqueux lingual et tout son développement est << formaté >> par les contacts qu'elle entretient avec les muqueuses :",
-            options: [
-                "Vélaire",
-                "Palatine",
-                "Nasale",
-                "Jugale",
-                "Labiale"
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "Le développement de la langue est influencé par les contacts qu'elle entretient avec les muqueuses vélaire (A), palatine (B) et jugale (D).",
-            citations: []
-        },
-        {
-            questionText: "Les patients atteints de troubles respiratoires présentent certains comportements lors du sommeil tels que les :",
-            options: [
-                "Ronchopathie",
-                "Céphalées",
-                "Somnolence",
-                "Besoin de hydrateur",
-                "Polyurie"
-            ],
-            correctOptionIndexes: [0, 2, 4],
-            explanation: "Les patients souffrant de troubles respiratoires peuvent présenter des symptômes nocturnes tels que la ronchopathie (A), la somnolence (C) et un besoin accru d'hydratation (E).",
-            citations: []
-        },
-        {
-            questionText: "Lors d'obstruction ventilatoire, il existe souvent une insuffisance de développement de la face. Celle-ci pourra se faire par une diversité de moyens orthodontiques :",
-            options: [
-                "Plaque à vérin",
-                "Quadhelix",
-                "Ostéotomie segmentaire de WASSMUND",
-                "Cross bite sur multi attache",
-                "Force extraorale"
-            ],
-            correctOptionIndexes: [0, 1, 4],
-            explanation: "Lors d'une obstruction ventilatoire, des moyens orthodontiques comme la plaque à vérin (A), le Quadhelix (B) et la force extra-orale (E) peuvent être utilisés pour corriger l'insuffisance de développement de la face.",
-            citations: []
-        },
-        {
-            questionText: "La forme générale du visage des patients qui présentent des troubles ventilatoires est typique et présente les signes suivants :",
-            options: [
-                "Visage étroit",
-                "Étage moyen hyper développé dans le sens vertical",
-                "Étage inférieur hypo développé dans le sens vertical",
-                "Absence de stomion",
-                "Asymétrie narinaire"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Les troubles ventilatoires chroniques peuvent entraîner une forme de visage typique, caractérisée par un visage étroit (A), un étage moyen hyper développé verticalement (B), un étage inférieur hypo développé verticalement (C) et une absence de stomion (D).",
-            citations: []
-        },
-        {
-            questionText: "Énumérez les tests et les examens complémentaires pour diagnostiquer les troubles ventilatoires :",
-            options: [
-                "Le miroir de GLATZEL",
-                "Le test de GUDIN",
-                "Le test de PLANAS",
-                "Le test de ROSENTHAL",
-                "L'AÉROPHONOSCOPE"
-            ],
-            correctOptionIndexes: [0, 1, 3, 4],
-            explanation: "Les tests et examens complémentaires pour diagnostiquer les troubles ventilatoires incluent le miroir de GLATZEL (A), le test de GUDIN (B), le test de ROSENTHAL (D) et l'AÉROPHONOSCOPE (E).",
-            citations: []
-        }
+      {
+        questionText: "Le développement 3D des cavités narinaires, nasosinusiennes et nasopharyngiennes dépend :",
+        options: [
+          "Du passage de l'air dans les fosses nasales lors de la ventilation nasale.",
+          "De l'application de la langue sur le palais et les secteurs alvéolo-dentaires.",
+          "De la croissance basicrânienne cartilagineuse avec croissance du septum",
+          "Du passage de l'air dans la cavité buccale lors de la ventilation."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le développement tridimensionnel des cavités narinaires, nasosinusiennes et nasopharyngiennes dépend du passage de l'air lors de la ventilation nasale (A), de l'application de la langue sur le palais et les secteurs alvéolo-dentaires (B), et de la croissance basicrânienne cartilagineuse avec croissance du septum (C).",
+        citations: []
+      },
+      {
+        questionText: "La déglutition fonctionnelle est caractérisée par",
+        options: [
+          "L'absence de contacts dentaires.",
+          "Une contraction exagérée des lèvres et des muscles faciaux.",
+          "Une interposition linguale antérieure.",
+          "L'absence de contraction des muscles du menton avec des lèvres jointes,"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "La déglutition fonctionnelle est caractérisée par des dents en occlusion et l'absence de contraction des muscles du menton, avec les lèvres jointes sans contraction des muscles orbiculaires des lèvres et mentonniers.",
+        citations: []
+      },
+      {
+        questionText: "Le faciès du respirateur buccal se caractérise par",
+        options: [
+          "Des narines larges et fonctionnelles.",
+          "Une posture haute de la langue.",
+          "Un Stomion obtenu par contraction du muscle mentonnier.",
+          "Une face longue."
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Le faciès adénoïdien ou faciès du respirateur buccal se caractérise par un stomion forcé (C) et une face longue et pâle (D), des narines étroites et une posture basse de la langue.",
+        citations: []
+      },
+      {
+        questionText: "Les habitudes de succion (du pouce par exemple):",
+        options: [
+          "Sont considérées comme normales chez l'enfant de 6 ans.",
+          "Entraînent rarement des déformations dentoalvéolaires.",
+          "Sont souvent liées à un problème de développement psychoaffectif de l'enfant.",
+          "Doivent être recherchées et éliminées le plus tôt possible."
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Les habitudes de succion sont souvent liées à un problème de développement psychoaffectif de l'enfant (C) et doivent être recherchées et éliminées le plus tôt possible (D) en raison de leurs effets néfastes sur l'alignement dentaire.",
+        citations: []
+      },
+      {
+        questionText: "Pendant la déglutition physiologique, il se produit:",
+        options: [
+          "Une contraction des muscles du menton",
+          "L'ouverture des cavités naturelles postérieures par lesquelles transite le flux ventilatoire",
+          "Une élévation de la langue par contraction du mylohyoïdien",
+          "Une contraction des 17 muscles de la langue qui fait progresser le bol alimentaire vers le pharynx"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "Pendant la déglutition physiologique, il se produit une élévation de la langue par contraction du mylohyoïdien (C) et une contraction des 17 muscles de la langue qui fait progresser le bol alimentaire vers le pharynx (D).",
+        citations: []
+      },
+      {
+        questionText: "La déglutition physiologique s'effectue avec",
+        options: [
+          "Des arcades dentaires en occlusion.",
+          "Une contraction des muscles élévateurs, sans participation des orbiculaires des lèvres.",
+          "La pointe de la langue appuyée sur la papille rétro-incisive.",
+          "Une Interposition de la langue entre les arcades dentaires."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La déglutition physiologique s'effectue avec des arcades dentaires en occlusion (A), une contraction des muscles élévateurs sans participation des orbiculaires des lèvres (B), et la pointe de la langue appuyée sur la papille rétro-incisive (C).",
+        citations: []
+      },
+      {
+        questionText: "Le << faciès adénoïdien >> :",
+        options: [
+          "Est retrouvé lors d'une déglutition atypique.",
+          "S'accompagne d'un visage allongé.",
+          "Est caractéristique d'un respirateur buccal.",
+          "Représente un enfant avec des parafonctions."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le faciès adénoïdien s'accompagne d'un visage allongé (B) et est caractéristique d'un respirateur buccal (C), souvent dû à une respiration atypique.",
+        citations: []
+      },
+      {
+        questionText: "Dans Une mastication unilatérale préférentielle gauche:",
+        options: [
+          "l'AFMP gauche est plus petit.",
+          "L'hémi maxillaire gauche est plus développé.",
+          "Le milieu inter incisif supérieur est dévié à droite.",
+          "Le milieu inter incisif supérieur est dévié à gauche."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Dans une mastication unilatérale préférentielle gauche, l'AFMP gauche est plus petit (A), l'hémi maxillaire gauche est plus développé (B), et le milieu inter incisif supérieur est dévié à droite (C).",
+        citations: []
+      },
+      {
+        questionText: "Parmi ces signes, lesquels sont en rapport avec une respiration buccale? :",
+        options: [
+          "Un test de Rosenthal positif.",
+          "Des voies aérifères supérieures en Forme << d'entonnoir >> sur une TLR de profil.",
+          "Des signes de rotation mandibulaire antérieure.",
+          "La présence d'onychophagie."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Un test de Rosenthal positif (A) et des voies aérifères supérieures en forme \"d'entonnoir\" sur une TLR de profil (B) sont des signes pouvant indiquer une respiration buccale.",
+        citations: []
+      },
+      {
+        questionText: "La déglutition infantile:",
+        options: [
+          "Est considérée atypique à partir de 4ans.",
+          "Se fait avec une contraction des muscles péri-oraux.",
+          "Se fait avec une contraction des muscles élévateurs de la mandibule.",
+          "Est physiologique à 4ans."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La déglutition infantile se fait avec une contraction des muscles péri-oraux (B) et est physiologique à 4 ans (D), mais sa persistance au-delà de 6 ans est considérée comme atypique.",
+        citations: []
+      },
+      {
+        questionText: "Chez le nourrisson, la déglutition se fait :",
+        options: [
+          "En association avec la succion",
+          "Avec interposition linguale entre les arcades",
+          "Sans participation des muscles faciaux",
+          "Arcades serrées"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Chez le nourrisson, la déglutition se fait en association avec la succion (A), et avec interposition linguale entre les arcades (B).",
+        citations: []
+      },
+      {
+        questionText: "La ventilation nasale nécessite :",
+        options: [
+          "Le libre passage de l'air par les fosses nasales",
+          "La fermeture hermétique de la bouche",
+          "L'absence de stomion",
+          "La présence de contact entre le voile du palais et la base de la langue"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La ventilation nasale nécessite un libre passage de l'air par les fosses nasales (A), une fermeture hermétique de la bouche (B) et la présence de contact entre le voile du palais et la base de la langue (D).",
+        citations: []
+      },
+      {
+        questionText: "La mastication est dite physiologique lorsqu'elle est :",
+        options: [
+          "Unilatérale alternée",
+          "Bilatérale (en charnière)",
+          "Unilatérale stricte ou dominante",
+          "Bilatérale alternée"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La mastication physiologique est unilatérale alternée, ce qui est considéré comme le mode idéal.",
+        citations: []
+      },
+      {
+        questionText: "La déglutition adulte ou mature se fait :",
+        options: [
+          "Lèvres en contact, sans contraction de l'orbiculaire",
+          "Pointe de la langue en bas, vers le plancher buccal",
+          "Pointe de la langue en haut et prend un appui palatin antérieur",
+          "Lèvres en contact, avec contraction de l'orbiculaire"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La déglutition adulte ou mature se fait avec les lèvres en contact, sans contraction excessive de l'orbiculaire (A), et la pointe de la langue en haut, prenant un appui palatin antérieur (C).",
+        citations: []
+      },
+      {
+        questionText: "La ventilation physiologique au repos est :",
+        options: [
+          "Une ventilation nasale.",
+          "Une ventilation buccale.",
+          "Une ventilation mixte.",
+          "Une ventilation à prédominance buccale."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La ventilation physiologique normale au repos est principalement nasale.",
+        citations: []
+      },
+      {
+        questionText: "Durant une ventilation buccale; la langue peut être :",
+        options: [
+          "En position basse et avancée.",
+          "En position haute.",
+          "Interposée entre les arcades.",
+          "En forme de << tuile >>."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Lors d'une ventilation buccale, la langue est souvent en position basse et avancée (A) et peut être interposée entre les arcades dentaires (C).",
+        citations: []
+      },
+      {
+        questionText: "Une déglutition normale physiologique s'effectue avec :",
+        options: [
+          "Arcades dentaires en occlusion.",
+          "Contraction des muscles élévateurs, sans participation des orbiculaires des lèvres.",
+          "La pointe de la langue appuyée sur la papille rétro-incisive.",
+          "Interposition de la langue entre les arcades dentaires."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Une déglutition normale physiologique s'effectue avec des arcades dentaires en occlusion (A), une contraction des muscles élévateurs sans participation des orbiculaires des lèvres (B), et la pointe de la langue appuyée sur la papille rétro-incisive (C).",
+        citations: []
+      },
+      {
+        questionText: "Lors d'une ventilation buccale, l'interrogatoire révèle:",
+        options: [
+          "Une bouche ouverte fréquente, essentiellement la nuit.",
+          "Des ronflements avec un sommeil perturbé.",
+          "Une pathologie ORL.",
+          "Une herméticité labiale."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Lors d'une ventilation buccale, l'interrogatoire révèle une bouche ouverte fréquente, essentiellement la nuit (A), des ronflements avec un sommeil perturbé (B), et souvent une pathologie ORL (C).",
+        citations: []
+      },
+      {
+        questionText: "Les Angles Fonctionnels Masticatoires de Planas:",
+        options: [
+          "Sont révélateurs de la fonction masticatrice.",
+          "Représentent les trajectoires finales de fermeture du cycle masticateur dans le plan frontal.",
+          "Matérialisent l'abaissement de la mandibule lors du glissement latéral de l'OIM jusqu'au bout à bout latéral.",
+          "Matérialisent l'abaissement de la mandibule lors du glissement antérieur de l'OIM jusqu'au bout à bout incisif"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les Angles Fonctionnels Masticatoires de Planas sont révélateurs de la fonction masticatrice (A), représentent les trajectoires finales de fermeture du cycle masticateur dans le plan frontal (B), et matérialisent l'abaissement de la mandibule lors du glissement latéral (C).",
+        citations: []
+      },
+      {
+        questionText: "Parmi les parafonctions retrouvées au niveau de la sphère oro faciale, on retrouve :",
+        options: [
+          "La succion digitale.",
+          "Le bruxisme.",
+          "L'onychophagie.",
+          "Les troubles de la phonation."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les parafonctions retrouvées au niveau de la sphère oro-faciale incluent la succion digitale (A), le bruxisme (B) et l'onychophagie (C).",
+        citations: []
+      },
+      {
+        questionText: "La succion du pouce:",
+        options: [
+          "Est considérée comme une fonction perturbée",
+          "Est considérée comme une parafonction",
+          "N'entraîne aucune malocclusion",
+          "Peut causer des béances antérieures"
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "La succion du pouce est une parafonction (B) et peut causer des béances antérieures (D) et d'autres malocclusions.",
+        citations: []
+      },
+      {
+        questionText: "La respiration physiologique est :",
+        options: [
+          "Strictement nasale",
+          "Mixte à prédominance nasale",
+          "Un facteur important pour le développement transversal du maxillaire",
+          "Régie par le système nerveux autonome"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La respiration physiologique est mixte à prédominance nasale (B), est un facteur important pour le développement transversal du maxillaire (C), et est régie par le système nerveux autonome (D).",
+        citations: []
+      },
+      {
+        questionText: "Les signes d'une déglutition adulte sont :",
+        options: [
+          "Lèvres jointes, contractées",
+          "Muscles faciaux au repos",
+          "Arcades serrées, les molaires étant en occlusion",
+          "la langue est contenue à l'intérieur des arcades"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les signes d'une déglutition adulte sont des muscles faciaux au repos (B), des arcades serrées avec les molaires en occlusion (C), et la langue contenue à l'intérieur des arcades dentaires (D).",
+        citations: []
+      },
+      {
+        questionText: "L'examen de la respiration se base sur les tests suivants :",
+        options: [
+          "Test de Rosenthal",
+          "Test du réflexe narinaire",
+          "Test du réflexe vélaire",
+          "Test de la contraction labiale."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'examen de la respiration se base sur plusieurs tests, dont le test de Rosenthal (A), le test du réflexe narinaire (B), le test du réflexe vélaire (C) et le test de la contraction labiale (D).",
+        citations: []
+      },
+      {
+        questionText: "La mastication physiologique est une mastication :",
+        options: [
+          "Alternée unilatérale",
+          "Alternée unilatérale stricte",
+          "Bilatérale alternée",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La mastication physiologique normale se fait généralement d'un côté à la fois, en alternant les côtés, elle est donc alternée unilatérale.",
+        citations: []
+      },
+      {
+        questionText: "La respiration est :",
+        options: [
+          "Une permutation exclusivement gazeuse",
+          "Réalisée avec contraction relâchement des muscles faciaux",
+          "Perturbée par un processus d'hypertrophie des tissus"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La respiration est une permutation exclusivement gazeuse (A) et peut être perturbée par un processus d'hypertrophie des tissus (C), comme celle des amygdales.",
+        citations: []
+      },
+      {
+        questionText: "La déglutition est:",
+        options: [
+          "Une fonction involontaire chez les enfants",
+          "Atypique en denture temporaire stable",
+          "Une fonction qui fait participer les muscles des lèvres et des joues pendant la mastication des aliments"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Chez les enfants, la déglutition est principalement un réflexe involontaire.",
+        citations: []
+      },
+      {
+        questionText: "L'examen de la respiration se base sur les tests suivants :",
+        options: [
+          "Test de ROSENTHAL",
+          "Test du réflexe narinaire",
+          "Test du réflexe vélaire",
+          "Test de la contraction labiale"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'examen de la respiration se base sur le test de Rosenthal (A), le test du réflexe narinaire (B), le test du réflexe vélaire (C) et le test de la contraction labiale (D).",
+        citations: []
+      },
+      {
+        questionText: "La mastication physiologique se fait en :",
+        options: [
+          "Unilatérale alternée",
+          "Bilatérale alternée",
+          "Ouverture fermeture",
+          "Propulsion mandibulaire"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La mastication physiologique se fait en unilatérale alternée (A) et par ouverture-fermeture (C).",
+        citations: []
+      },
+      {
+        questionText: "La déglutition infantile implique",
+        options: [
+          "Un contact dentaire serré",
+          "Une interposition de la langue",
+          "Une contraction péribuccale",
+          "Une contraction massétérine"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "La déglutition infantile implique une interposition de la langue (B) et une contraction péribuccale (C), en particulier des orbiculaires des lèvres.",
+        citations: []
+      },
+      {
+        questionText: "Les angles fonctionnels masticateurs de Planas doivent être :",
+        options: [
+          "Symétriques et grandes",
+          "Asymétriques et petites",
+          "Symétriques et petites",
+          "Asymétriques et grandes"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les angles fonctionnels masticateurs de Planas doivent être symétriques et petits pour un bon équilibre fonctionnel et une mastication équilibrée.",
+        citations: []
+      },
+      {
+        questionText: "La réalisation d'une onde péristaltique pendant la déglutition adulte :",
+        options: [
+          "Nécessite une stabilité mandibulaire, qui est assurée par la contraction des muscles abaisseurs de la mandibule",
+          "Nécessite une fixation de l'os hyoïde, et cette fixation dépend de la stabilité mandibulaire assurée par le digastrique",
+          "Nécessite un mouvement de montée-descente de l'os hyoïde, et ce mouvement ne peut se réaliser sans une bonne fixation de cet os",
+          "Nécessitent une bonne étanchéité buccale: qui est assurée par la contraction des orbiculaires",
+          "Permet la propulsion du bol alimentaire"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "La réalisation d'une onde péristaltique pendant la déglutition adulte nécessite une fixation de l'os hyoïde dépendante du digastrique (B), un mouvement de montée-descente de l'os hyoïde (C), et permet la propulsion du bol alimentaire (E).",
+        citations: []
+      },
+      {
+        questionText: "La déglutition transitoire :",
+        options: [
+          "A les mêmes caractéristiques que la déglutition adulte",
+          "S'effectue lors de la phase physiologique d'élévation de la langue",
+          "S'effectue lors de la phase d'apparition des incisives permanentes",
+          "S'effectue lors de la phase d'allongement des lèvres",
+          "Permet le passage à une déglutition adulte atypique ou typique"
+        ],
+        correctOptionIndexes: [1, 2, 4],
+        explanation: "La déglutition transitoire s'effectue lors de la phase physiologique d'élévation de la langue (B), lors de la phase d'apparition des incisives permanentes (C), et permet le passage à une déglutition adulte atypique ou typique (E).",
+        citations: []
+      },
+      {
+        questionText: "La fonction morphogénétique lors de la respiration nasale :",
+        options: [
+          "Ne Concerne que le maxillaire supérieur",
+          "Nécessite une bonne pneumatisation des sinus maxillaires uniquement",
+          "Permet une bonne croissance transversale maxillaire",
+          "Est responsable du développement tridimensionnel des cavités narinaires, naso-sinusiennes et naso-pharyngées pendant la croissance"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "La fonction morphogénétique lors de la respiration nasale permet une bonne croissance transversale maxillaire (C) et est responsable du développement tridimensionnel des cavités narinaires, nasosinusiennes et nasopharyngées pendant la croissance (D).",
+        citations: []
+      },
+      {
+        questionText: "Les conséquences d'une mastication unilatérale dominante sont :",
+        options: [
+          "Déviation du point incisif inférieur du coté non mastiquant",
+          "Déviation du point incisif supérieur du côté mastiquant",
+          "Endognathie ou endoalvéolie du coté non mastiquant",
+          "Articulé inversé latéral du coté non mastiquant"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Une mastication unilatérale dominante peut entraîner une déviation du point incisif inférieur du côté non mastiquant (A), une endognathie ou endoalvéolie du côté non mastiquant (C), et un articulé inversé latéral du côté non mastiquant (D).",
+        citations: []
+      },
+      {
+        questionText: "La déglutition est l'acte par lequel le contenu buccal est propulsé de la bouche vers l'estomac, cette fonction vitale se produit :",
+        options: [
+          "200 à 1000 fois",
+          "400 à 800 fois",
+          "500 à 1200 fois",
+          "600 à 1400 fois",
+          "800 à 10000 fois"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La déglutition se produit en moyenne 500 à 1200 fois par jour.",
+        citations: []
+      },
+      {
+        questionText: "MAGENDIE en 1815, décrit les premiers temps de déglutition :",
+        options: [
+          "Buccal",
+          "Lingual",
+          "Pharyngien",
+          "Laryngé",
+          "Œsophagien"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "Magendie a décrit les trois temps de la déglutition : le temps buccal (A), le temps pharyngien (C) et le temps œsophagien (E).",
+        citations: []
+      },
+      {
+        questionText: "La maturation de la déglutition passe par une ou plusieurs phases:",
+        options: [
+          "Déglutition fœtale",
+          "Déglutition de nouveau-né",
+          "Déglutition infantile",
+          "Déglutition immature",
+          "Déglutition mature"
+        ],
+        correctOptionIndexes: [0, 1, 2, 4],
+        explanation: "La maturation de la déglutition passe par les phases fœtale (A), de nouveau-né (B), infantile (C) et mature (E).",
+        citations: []
+      },
+      {
+        questionText: "La description des différents temps de la déglutition secondaire permet de reconnaître un temps:",
+        options: [
+          "Buccal",
+          "Lingual",
+          "Laryngé",
+          "Pharyngien",
+          "Œsophagien"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "La description des différents temps de la déglutition secondaire permet de reconnaître le temps buccal (A), le temps pharyngien (D) et le temps œsophagien (E).",
+        citations: []
+      },
+      {
+        questionText: "Le temps de préparation se distingue nettement car la déglutition peut être arrêtée à n'importe quel moment de ce temps :",
+        options: [
+          "Buccal",
+          "Lingual",
+          "Laryngé",
+          "Pharyngien",
+          "Œsophagien"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le temps buccal de préparation est sous contrôle volontaire, permettant d'arrêter la déglutition à tout moment avant le déclenchement du réflexe pharyngien.",
+        citations: []
+      },
+      {
+        questionText: "La contraction simultanée des 17 muscles linguaux développe une onde péristaltique de pression d'avant en arrière qui fait progresser le bol alimentaire, elle serait de l'ordre de :",
+        options: [
+          "80g/cm²",
+          "100g/cm²",
+          "120g/cm²",
+          "130g/cm²",
+          "150g/cm²"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "La pression péristaltique générée par les muscles linguaux lors de la déglutition est d'environ 120g/cm², assurant un transport efficace des aliments.",
+        citations: []
+      },
+      {
+        questionText: "La déglutition est une activité rythmique, ce rythme régit la fréquence des déglutitions, les mouvements d'ouverture/fermeture. Il est cependant modifiable selon :",
+        options: [
+          "Le moment",
+          "L'état physique",
+          "Les états émotionnels",
+          "L'état cortical ou sous-cortical",
+          "Le réflexe"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le rythme de la déglutition est modifiable selon l'état physique (B), les états émotionnels (C) et l'état cortical ou sous-cortical (D).",
+        citations: []
+      },
+      {
+        questionText: "La déglutition fonctionnelle mature est sous le contrôle dominant du nerf V. Elle est la résultante de l'activité coordonnée des muscles :",
+        options: [
+          "Péri-oraux",
+          "Sus-hyoïdiens",
+          "Sous-hyoïdiens",
+          "Masticateurs",
+          "Linguaux"
+        ],
+        correctOptionIndexes: [0, 2, 3, 4],
+        explanation: "La déglutition mature est une action coordonnée impliquant plusieurs groupes musculaires : péri-oraux (A), sous-hyoïdiens (C), masticateurs (D) et linguaux (E), sous la direction du nerf trijumeau (nerf V).",
+        citations: []
+      },
+      {
+        questionText: "Un contact est normal entre la pointe de la langue et le palais dur se fait exactement au niveau :",
+        options: [
+          "La papille incisivo-canine",
+          "La papille pro-incisives",
+          "La papille rétro-incisives",
+          "La papille pro-canine",
+          "La papille rétro-canine"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Un contact normal entre la pointe de la langue et le palais dur se fait exactement au niveau de la papille rétro-incisives.",
+        citations: []
+      },
+      {
+        questionText: "Des perturbations peuvent survenir dans un fonctionnement musculaire à différents niveaux d'activité entraînant schématiquement :",
+        options: [
+          "Une absence dentaire",
+          "Hyperactivité des lèvres",
+          "Hypoactivité des muscles faciaux",
+          "Une projection linguale antérieure",
+          "Une projection linguale latérale"
+        ],
+        correctOptionIndexes: [3, 4],
+        explanation: "Des perturbations musculaires peuvent entraîner une projection linguale antérieure (D) ou une projection linguale latérale (E).",
+        citations: []
+      },
+      {
+        questionText: "Le comportement lingual pendant la déglutition est lié à:",
+        options: [
+          "La forme",
+          "Le volume",
+          "La position",
+          "Hypotonicité linguale",
+          "Hypertonicité linguale"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le comportement lingual pendant la déglutition est lié à la forme (A), au volume (B) et à la position (C) de la langue.",
+        citations: []
+      },
+      {
+        questionText: "Une position trop basse distale de la langue pendant la déglutition détermine:",
+        options: [
+          "Syndrome de CAU PE-FIEUX",
+          "Classe II squelettique division 2",
+          "Classe II squelettique division 1 vestibulo version des incisives maxillaires",
+          "Classe II squelettique division 1 avec distoclusion mandibulaire",
+          "Classe III squelettique"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Une position trop basse et distale de la langue pendant la déglutition est associée au syndrome de Cau-Pe-Fieux.",
+        citations: []
+      },
+      {
+        questionText: "L'évaluation de l'efficacité de rééducation n'est pas simple. Il est cependant intéressant de citer les résultats de MASO qui trouve :",
+        options: [
+          "40 à 50% de succès",
+          "50 à 60% de succès",
+          "70 à 80% de succès",
+          "80 à 90% de succès",
+          "90 à 95% de succès"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les résultats de MASO indiquent un taux de succès de 70 à 80% pour l'efficacité de la rééducation.",
+        citations: []
+      },
+      {
+        questionText: "Certains appareillages peuvent être considérés comme de véritables rééducateurs cryo-fonctionnels en :",
+        options: [
+          "Enveloppe linguale nocturne",
+          "Perle de TUCAT",
+          "Appareil fixe",
+          "Propulseur",
+          "Activateur"
+        ],
+        correctOptionIndexes: [0, 1, 3, 4],
+        explanation: "Des appareillages tels que l'enveloppe linguale nocturne (A), la perle de TUCAT (B), le propulseur (D) et l'activateur (E) sont des rééducateurs cryo-fonctionnels qui corrigent les dysfonctions de la langue et des arcades dentaires.",
+        citations: []
+      },
+      {
+        questionText: "La ventilation, au sommet de la hiérarchie fonctionnelle, a une grande influence sur la :",
+        options: [
+          "Morphogenèse cranio-faciale",
+          "Dysfonction ventilatoire",
+          "La prise en charge thérapeutique des anomalies"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La ventilation, étant au sommet de la hiérarchie fonctionnelle, a une grande influence sur la morphogenèse cranio-faciale.",
+        citations: []
+      },
+      {
+        questionText: "Pour TALMANT, la ventilation nasale optimale (VNO) est exclusivement nasale. Cette VNO répond à la fois à la physiologie :",
+        options: [
+          "Broncho-pulmonaire",
+          "Cardiaque",
+          "Digestive",
+          "Hémostase",
+          "Cérébrale"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "La ventilation nasale optimale est essentielle pour la physiologie broncho-pulmonaire (A), cardiaque (B) et cérébrale (E), assurant une oxygénation correcte.",
+        citations: []
+      },
+      {
+        questionText: "Les étiologies de l'obstruction nasale fonctionnelle (ONF) sont nombreuses tel que :",
+        options: [
+          "Pharyngite",
+          "Hypertrophie adénoïdienne",
+          "Hypertrophie choanale",
+          "Congestion de la muqueuse nasale",
+          "Déviation septale"
+        ],
+        correctOptionIndexes: [1, 3, 4],
+        explanation: "Les étiologies courantes de l'obstruction nasale fonctionnelle incluent l'hypertrophie adénoïdienne (B), la congestion de la muqueuse nasale (D) et la déviation septale (E).",
+        citations: []
+      },
+      {
+        questionText: "Les vibrations du voile du palais lors de la ventilation mixte nocturne correspondent à une :",
+        options: [
+          "Ronchopathie",
+          "Hypertrophie adénoïdienne",
+          "Hypertrophie amygdalienne",
+          "Ronflement",
+          "Déviation septale"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "Les vibrations du voile du palais lors de la ventilation mixte nocturne sont des signes de ronchopathie (A) et de ronflement (D).",
+        citations: []
+      },
+      {
+        questionText: "L'appareil vocal est constitué de 3 éléments nécessaires à la phonation dont une soufflerie, qui comprend :",
+        options: [
+          "Trachée",
+          "Cavité buccale",
+          "Cage thoracique",
+          "Diaphragme",
+          "Poumons, bronches"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "La soufflerie de l'appareil vocal comprend la trachée (A), la cage thoracique (C) et les poumons avec les bronches (E), qui fournissent l'air nécessaire à la production du son.",
+        citations: []
+      },
+      {
+        questionText: "La langue est appelée sac muqueux lingual et tout son développement est << formaté >> par les contacts qu'elle entretient avec les muqueuses :",
+        options: [
+          "Vélaire",
+          "Palatine",
+          "Nasale",
+          "Jugale",
+          "Labiale"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Le développement de la langue est influencé par les contacts qu'elle entretient avec les muqueuses vélaire (A), palatine (B) et jugale (D).",
+        citations: []
+      },
+      {
+        questionText: "Les patients atteints de troubles respiratoires présentent certains comportements lors du sommeil tels que les :",
+        options: [
+          "Ronchopathie",
+          "Céphalées",
+          "Somnolence",
+          "Besoin de hydrateur",
+          "Polyurie"
+        ],
+        correctOptionIndexes: [0, 2, 4],
+        explanation: "Les patients souffrant de troubles respiratoires peuvent présenter des symptômes nocturnes tels que la ronchopathie (A), la somnolence (C) et un besoin accru d'hydratation (E).",
+        citations: []
+      },
+      {
+        questionText: "Lors d'obstruction ventilatoire, il existe souvent une insuffisance de développement de la face. Celle-ci pourra se faire par une diversité de moyens orthodontiques :",
+        options: [
+          "Plaque à vérin",
+          "Quadhelix",
+          "Ostéotomie segmentaire de WASSMUND",
+          "Cross bite sur multi attache",
+          "Force extraorale"
+        ],
+        correctOptionIndexes: [0, 1, 4],
+        explanation: "Lors d'une obstruction ventilatoire, des moyens orthodontiques comme la plaque à vérin (A), le Quadhelix (B) et la force extra-orale (E) peuvent être utilisés pour corriger l'insuffisance de développement de la face.",
+        citations: []
+      },
+      {
+        questionText: "La forme générale du visage des patients qui présentent des troubles ventilatoires est typique et présente les signes suivants :",
+        options: [
+          "Visage étroit",
+          "Étage moyen hyper développé dans le sens vertical",
+          "Étage inférieur hypo développé dans le sens vertical",
+          "Absence de stomion",
+          "Asymétrie narinaire"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les troubles ventilatoires chroniques peuvent entraîner une forme de visage typique, caractérisée par un visage étroit (A), un étage moyen hyper développé verticalement (B), un étage inférieur hypo développé verticalement (C) et une absence de stomion (D).",
+        citations: []
+      },
+      {
+        questionText: "Énumérez les tests et les examens complémentaires pour diagnostiquer les troubles ventilatoires :",
+        options: [
+          "Le miroir de GLATZEL",
+          "Le test de GUDIN",
+          "Le test de PLANAS",
+          "Le test de ROSENTHAL",
+          "L'AÉROPHONOSCOPE"
+        ],
+        correctOptionIndexes: [0, 1, 3, 4],
+        explanation: "Les tests et examens complémentaires pour diagnostiquer les troubles ventilatoires incluent le miroir de GLATZEL (A), le test de GUDIN (B), le test de ROSENTHAL (D) et l'AÉROPHONOSCOPE (E).",
+        citations: []
+      }
     ]
   },
   {
     title: "14- Imagerie en ODF",
     subject: "odf-y2",
     questions: [
-        {
-            questionText: "La radiographie panoramique est une radiographie qui:",
-            options: [
-                "Montre l'ensemble des deux maxillaires.",
-                "Présente des dimensions mésio-distales très fiables.",
-                "Présente souvent un agrandissement en hauteur.",
-                "Présente les mêmes informations que le Cône Beam."
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La radiographie panoramique montre l'ensemble des deux maxillaires (A) et présente souvent un agrandissement en hauteur (C). Les dimensions mésio-distales ne sont pas très fiables, et elle ne donne pas les mêmes informations que le Cône Beam (qui est 3D).",
-            citations: []
-        },
-        {
-            questionText: "Le Cône Beam :",
-            options: [
-                "Remplace la radiographie panoramique en ODF.",
-                "Remplace le scanner dentaire en ODF.",
-                "Est moins irradiant que le scanner dentaire.",
-                "Est prescrit pour visualiser les tissus mous"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Le Cône Beam est moins irradiant que le scanner dentaire classique (C) car il focalise le rayonnement dans une zone délimitée, réduisant les doses. Il ne remplace pas la panoramique car ils ont des indications et propriétés différentes.",
-            citations: []
-        },
-        {
-            questionText: "Le Cône Beam:",
-            options: [
-                "Est demandé en première intention à la place de la radiographie panoramique",
-                "Remplace le scanner dentaire en odf",
-                "Est un examen 2D",
-                "Est souvent indiquée dans le cas de canine incluse"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Le Cône Beam est souvent indiqué dans le cas de canine incluse (D) pour évaluer leur position précise. Il n'est pas systématiquement demandé en première intention à la place de la panoramique et est un examen 3D, non 2D.",
-            citations: []
-        },
-        {
-            questionText: "La téléradiographie de profil:",
-            options: [
-                "Est une radiographie systématique pour le bilan diagnostique en odf",
-                "Mesure toutes les dimensions du maxillaire supérieur",
-                "Évalue le rapport des mâchoires entre elles",
-                "Évalue la position et l'inclinaison des incisives supérieures et inférieures"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "La téléradiographie de profil est une radiographie systématique pour le bilan diagnostique en ODF (A), évalue le rapport des mâchoires entre elles (C), et évalue la position et l'inclinaison des incisives supérieures et inférieures (D). Elle ne mesure pas toutes les dimensions du maxillaire supérieur.",
-            citations: []
-        },
-        {
-            questionText: "Parmi les avantages de l'orthopantomogramme, on retrouve:",
-            options: [
-                "La formule dentaire.",
-                "L'état général du parodonte.",
-                "L'état des ATM.",
-                "La possibilité d'effectuer des mensurations."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "L'orthopantomogramme permet de visualiser la formule dentaire (A), d'évaluer l'état général du parodonte (B) et l'état des ATM (C).",
-            citations: []
-        },
-        {
-            questionText: "La TLR de profil permet d'apporter :",
-            options: [
-                "Une image du crâne et de la face de profil.",
-                "Une image du crâne de face.",
-                "Une image nette du parodonte.",
-                "Une image précise de la morphologie de toutes les dents."
-            ],
-            correctOptionIndexes: [0],
-            explanation: "La téléradiographie de profil fournit une image du crâne et de la face de profil (A), principalement utilisée pour des analyses céphalométriques.",
-            citations: []
-        },
-        {
-            questionText: "La tomodensitométrie TDM:",
-            options: [
-                "Utilise une dosimétrie relatively élevée.",
-                "Peut présenter des artefacts métalliques.",
-                "Apporte une bonne résolution de la densité.",
-                "Ne permet pas une visualisation des tissus mous."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "La tomodensitométrie (TDM) utilise une dosimétrie relativement élevée (A), peut présenter des artefacts métalliques (B), et apporte une bonne résolution de la densité (C). Elle permet une visualisation limitée des tissus mous, mais n'est pas sa principale application.",
-            citations: []
-        },
-        {
-            questionText: "Le CBCT (Cône beam):",
-            options: [
-                "Est adapté aux organes dentaires et tissus durs.",
-                "Est moins irradiant que la TDM (Scanner).",
-                "Fait partie de l'imagerie sectionnelle en 3D.",
-                "Permet une bonne visualisation des tissus mous."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Le CBCT est adapté aux organes dentaires et tissus durs (A), est moins irradiant que la TDM (B), et fait partie de l'imagerie sectionnelle en 3D (C). Sa visualisation des tissus mous est limitée.",
-            citations: []
-        },
-        {
-            questionText: "Le cliché occlusal permet :",
-            options: [
-                "une étude détaillée de la dent et des structures avoisinantes.",
-                "de déterminer avec précision le nombre et la position des dents supplémentaires.",
-                "une étude détaillée du parodonte.",
-                "de déterminer la position d'une dent incluse"
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "Le cliché occlusal permet une étude détaillée de la dent et des structures avoisinantes (A), de déterminer avec précision le nombre et la position des dents supplémentaires (B), et de déterminer la position d'une dent incluse (D). Il n'est pas optimal pour une étude détaillée du parodonte.",
-            citations: []
-        },
-        {
-            questionText: "L'échographie:",
-            options: [
-                "est un examen utilisé pour l'exploration des tissus durs.",
-                "est un examen qui utilise les protons du corps humain.",
-                "permet l'exploration des glandes salivaires.",
-                "est un examen qui utilise des rayons X."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "L'échographie est un examen qui permet l'exploration des glandes salivaires (C), en utilisant des ultrasons, non des rayons X.",
-            citations: []
-        },
-        {
-            questionText: "Le Cône Beam permet:",
-            options: [
-                "l'acquisition rapide des images.",
-                "des simulations céphalométriques.",
-                "de réduire le champ d'irradiation.",
-                "d'augmenter le nombre de rotations de la surface de détection autour de la tête du patient."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Le Cône Beam permet l'acquisition rapide des images (A), des simulations céphalométriques précises (B), et de réduire le champ d'irradiation (C).",
-            citations: []
-        },
-        {
-            questionText: "La radiographie panoramique ou orthopanthomogramme visualise :",
-            options: [
-                "Les condyles.",
-                "Les cornets.",
-                "Les os propres du nez.",
-                "La cloison nasale."
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La radiographie panoramique ou orthopantomogramme visualise les condyles mandibulaires (A) et les os propres du nez (C). Les cornets et la cloison nasale sont moins bien visualisés.",
-            citations: []
-        },
-        {
-            questionText: "La radiovisiographie nécessite :",
-            options: [
-                "Un film.",
-                "Un capteur.",
-                "Un cliché.",
-                "Des rayons X."
-            ],
-            correctOptionIndexes: [1],
-            explanation: "La radiovisiographie utilise un capteur numérique (B) pour capturer l'image, sans utiliser de film.",
-            citations: []
-        },
-        {
-            questionText: "L'incidence la plus usuelle de la téléradiographie est :",
-            options: [
-                "L'incidence oblique.",
-                "L'incidence de face.",
-                "De profil.",
-                "L'incidence de BOUVET."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "L'incidence la plus usuelle de la téléradiographie est l'incidence de profil (C).",
-            citations: []
-        },
-        {
-            questionText: "Le Cône Beam ou la tomodensitométrie à faisceau conique :",
-            options: [
-                "Est moins irradiant que le scanner.",
-                "Est plus irradiant que le scanner.",
-                "Permet des reconstitutions à 3 dimensions.",
-                "Ne trouve jamais son indication en orthodontie."
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Le Cône Beam est moins irradiant que le scanner traditionnel (A) et permet des reconstitutions en 3 dimensions (C). Il est fréquemment utilisé en orthodontie.",
-            citations: []
-        },
-        {
-            questionText: "En orthodontie le cône beam:",
-            options: [
-                "Est prescrit systématiquement chez l'adulte",
-                "est préféré au scanner parce qu'il donne plus de précisions",
-                "Est préféré au scanner parce qu'est moins irradiant",
-                "Permet une reconstruction panoramique"
-            ],
-            correctOptionIndexes: [2, 3],
-            explanation: "En orthodontie, le Cône Beam est préféré au scanner car il est moins irradiant (C) et permet une reconstruction panoramique ainsi que d'autres vues 3D (D).",
-            citations: []
-        },
-        {
-            questionText: "Les clichés rétro-alvéolaires en orthodontie permettent :",
-            options: [
-                "De localiser les chevauchements dentaires",
-                "la mesure de l'espace nécessaire",
-                "La mesure des diamètres mésio-distaux des dents",
-                "Une exploration ciblée avec une radiation minime."
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Les clichés rétro-alvéolaires permettent de localiser les chevauchements dentaires (A), de mesurer les diamètres mésio-distaux des dents (C), et d'effectuer une exploration ciblée avec une radiation minime (D).",
-            citations: []
-        },
-        {
-            questionText: "L'imagerie à résonance magnétique est prescrite en orthodontie :",
-            options: [
-                "En cas d'anomalies osseuses sévères",
-                "En cas de fentes labio-palatines",
-                "En cas de chevauchements dentaires importants",
-                "Pour l'étude du ménisque de l'ATM."
-            ],
-            correctOptionIndexes: [3],
-            explanation: "L'imagerie par résonance magnétique (IRM) est principalement utilisée en orthodontie pour l'étude du ménisque de l'articulation temporo-mandibulaire (ATM) et des tissus mous environnants. Elle n'est pas le premier choix pour les anomalies osseuses ou les fentes labio-palatines.",
-            citations: []
-        },
-        {
-            questionText: "En orthodontie la téléradiographie de profil permet l'étude :",
-            options: [
-                "Des structures osseuses.",
-                "Des structures dentaires",
-                "Des dimensions faciales transversales",
-                "Des voies aérifères"
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "La téléradiographie de profil permet l'étude des structures osseuses (A), des structures dentaires (B), et des voies aérifères supérieures (D).",
-            citations: []
-        },
-        {
-            questionText: "La radiographie panoramique :",
-            options: [
-                "Peut être numérique ou conventionnelle",
-                "Présente une irradiation supérieure par rapport au bilan rétro-alvéolaire",
-                "Est suggérée dans le dossier orthodontique",
-                "N'est pas un bon cliché pour l'étude du tissu",
-                "Permet la mesure des diamètres réels des dents"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "La radiographie panoramique peut être numérique ou conventionnelle (A), présente une irradiation supérieure par rapport au bilan rétro-alvéolaire (B), est suggérée dans le dossier orthodontique (C), et n'est pas un bon cliché pour l'étude du tissu mou (D). Elle ne permet pas la mesure des diamètres réels des dents avec précision.",
-            citations: []
-        },
-        {
-            questionText: "Par rapport à l'imagerie conventionnelle, les avantages de l'imagerie numérique :",
-            options: [
-                "Irradiation inférieure",
-                "Définition légèrement supérieure",
-                "Meilleure visualisation des régions profondes",
-                "Post-traitement informatique",
-                "Archivage"
-            ],
-            correctOptionIndexes: [0, 3, 4],
-            explanation: "Les avantages de l'imagerie numérique par rapport à l'imagerie conventionnelle incluent une irradiation inférieure (A), un post-traitement informatique (D) et un archivage facilité (E).",
-            citations: []
-        },
-        {
-            questionText: "Le bite-wing:",
-            options: [
-                "Utilise un film porteur d'une ailette",
-                "Permet l'étude des racines dentaires",
-                "Permet l'étude des couronnes dentaires",
-                "Renseigne sur les espaces inter-proximaux",
-                "Utilise un film-alvéolaire classique"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Le bite-wing utilise un film porteur d'une ailette (A), permet l'étude des couronnes dentaires (C) et renseigne sur les espaces inter-proximaux (D), étant spécifiquement conçu pour détecter les caries inter-proximales.",
-            citations: []
-        },
-        {
-            questionText: "La téléradiographie :",
-            options: [
-                "Est obligatoire dans le dossier orthodontique",
-                "Permet une grandeur réelle de la tête",
-                "Est prise en occlusion d'intercuspidation maximale",
-                "Est prise en occlusion de relation centrée",
-                "Peut être réalisée sans céphalostat"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "La téléradiographie est obligatoire dans le dossier orthodontique (A) pour évaluer les relations squelettiques et dentaires, et est souvent prise en occlusion d'intercuspidation maximale (C). Elle ne permet pas une grandeur réelle de la tête et nécessite un céphalostat.",
-            citations: []
-        }
+      {
+        questionText: "La radiographie panoramique est une radiographie qui:",
+        options: [
+          "Montre l'ensemble des deux maxillaires.",
+          "Présente des dimensions mésio-distales très fiables.",
+          "Présente souvent un agrandissement en hauteur.",
+          "Présente les mêmes informations que le Cône Beam."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La radiographie panoramique montre l'ensemble des deux maxillaires (A) et présente souvent un agrandissement en hauteur (C). Les dimensions mésio-distales ne sont pas très fiables, et elle ne donne pas les mêmes informations que le Cône Beam (qui est 3D).",
+        citations: []
+      },
+      {
+        questionText: "Le Cône Beam :",
+        options: [
+          "Remplace la radiographie panoramique en ODF.",
+          "Remplace le scanner dentaire en ODF.",
+          "Est moins irradiant que le scanner dentaire.",
+          "Est prescrit pour visualiser les tissus mous"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le Cône Beam est moins irradiant que le scanner dentaire classique (C) car il focalise le rayonnement dans une zone délimitée, réduisant les doses. Il ne remplace pas la panoramique car ils ont des indications et propriétés différentes.",
+        citations: []
+      },
+      {
+        questionText: "Le Cône Beam:",
+        options: [
+          "Est demandé en première intention à la place de la radiographie panoramique",
+          "Remplace le scanner dentaire en odf",
+          "Est un examen 2D",
+          "Est souvent indiquée dans le cas de canine incluse"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le Cône Beam est souvent indiqué dans le cas de canine incluse (D) pour évaluer leur position précise. Il n'est pas systématiquement demandé en première intention à la place de la panoramique et est un examen 3D, non 2D.",
+        citations: []
+      },
+      {
+        questionText: "La téléradiographie de profil:",
+        options: [
+          "Est une radiographie systématique pour le bilan diagnostique en odf",
+          "Mesure toutes les dimensions du maxillaire supérieur",
+          "Évalue le rapport des mâchoires entre elles",
+          "Évalue la position et l'inclinaison des incisives supérieures et inférieures"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La téléradiographie de profil est une radiographie systématique pour le bilan diagnostique en ODF (A), évalue le rapport des mâchoires entre elles (C), et évalue la position et l'inclinaison des incisives supérieures et inférieures (D). Elle ne mesure pas toutes les dimensions du maxillaire supérieur.",
+        citations: []
+      },
+      {
+        questionText: "Parmi les avantages de l'orthopantomogramme, on retrouve:",
+        options: [
+          "La formule dentaire.",
+          "L'état général du parodonte.",
+          "L'état des ATM.",
+          "La possibilité d'effectuer des mensurations."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "L'orthopantomogramme permet de visualiser la formule dentaire (A), d'évaluer l'état général du parodonte (B) et l'état des ATM (C).",
+        citations: []
+      },
+      {
+        questionText: "La TLR de profil permet d'apporter :",
+        options: [
+          "Une image du crâne et de la face de profil.",
+          "Une image du crâne de face.",
+          "Une image nette du parodonte.",
+          "Une image précise de la morphologie de toutes les dents."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "La téléradiographie de profil fournit une image du crâne et de la face de profil (A), principalement utilisée pour des analyses céphalométriques.",
+        citations: []
+      },
+      {
+        questionText: "La tomodensitométrie TDM:",
+        options: [
+          "Utilise une dosimétrie relatively élevée.",
+          "Peut présenter des artefacts métalliques.",
+          "Apporte une bonne résolution de la densité.",
+          "Ne permet pas une visualisation des tissus mous."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La tomodensitométrie (TDM) utilise une dosimétrie relativement élevée (A), peut présenter des artefacts métalliques (B), et apporte une bonne résolution de la densité (C). Elle permet une visualisation limitée des tissus mous, mais n'est pas sa principale application.",
+        citations: []
+      },
+      {
+        questionText: "Le CBCT (Cône beam):",
+        options: [
+          "Est adapté aux organes dentaires et tissus durs.",
+          "Est moins irradiant que la TDM (Scanner).",
+          "Fait partie de l'imagerie sectionnelle en 3D.",
+          "Permet une bonne visualisation des tissus mous."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le CBCT est adapté aux organes dentaires et tissus durs (A), est moins irradiant que la TDM (B), et fait partie de l'imagerie sectionnelle en 3D (C). Sa visualisation des tissus mous est limitée.",
+        citations: []
+      },
+      {
+        questionText: "Le cliché occlusal permet :",
+        options: [
+          "une étude détaillée de la dent et des structures avoisinantes.",
+          "de déterminer avec précision le nombre et la position des dents supplémentaires.",
+          "une étude détaillée du parodonte.",
+          "de déterminer la position d'une dent incluse"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Le cliché occlusal permet une étude détaillée de la dent et des structures avoisinantes (A), de déterminer avec précision le nombre et la position des dents supplémentaires (B), et de déterminer la position d'une dent incluse (D). Il n'est pas optimal pour une étude détaillée du parodonte.",
+        citations: []
+      },
+      {
+        questionText: "L'échographie:",
+        options: [
+          "est un examen utilisé pour l'exploration des tissus durs.",
+          "est un examen qui utilise les protons du corps humain.",
+          "permet l'exploration des glandes salivaires.",
+          "est un examen qui utilise des rayons X."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'échographie est un examen qui permet l'exploration des glandes salivaires (C), en utilisant des ultrasons, non des rayons X.",
+        citations: []
+      },
+      {
+        questionText: "Le Cône Beam permet:",
+        options: [
+          "l'acquisition rapide des images.",
+          "des simulations céphalométriques.",
+          "de réduire le champ d'irradiation.",
+          "d'augmenter le nombre de rotations de la surface de détection autour de la tête du patient."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le Cône Beam permet l'acquisition rapide des images (A), des simulations céphalométriques précises (B), et de réduire le champ d'irradiation (C).",
+        citations: []
+      },
+      {
+        questionText: "La radiographie panoramique ou orthopanthomogramme visualise :",
+        options: [
+          "Les condyles.",
+          "Les cornets.",
+          "Les os propres du nez.",
+          "La cloison nasale."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La radiographie panoramique ou orthopantomogramme visualise les condyles mandibulaires (A) et les os propres du nez (C). Les cornets et la cloison nasale sont moins bien visualisés.",
+        citations: []
+      },
+      {
+        questionText: "La radiovisiographie nécessite :",
+        options: [
+          "Un film.",
+          "Un capteur.",
+          "Un cliché.",
+          "Des rayons X."
+        ],
+        correctOptionIndexes: [1],
+        explanation: "La radiovisiographie utilise un capteur numérique (B) pour capturer l'image, sans utiliser de film.",
+        citations: []
+      },
+      {
+        questionText: "L'incidence la plus usuelle de la téléradiographie est :",
+        options: [
+          "L'incidence oblique.",
+          "L'incidence de face.",
+          "De profil.",
+          "L'incidence de BOUVET."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "L'incidence la plus usuelle de la téléradiographie est l'incidence de profil (C).",
+        citations: []
+      },
+      {
+        questionText: "Le Cône Beam ou la tomodensitométrie à faisceau conique :",
+        options: [
+          "Est moins irradiant que le scanner.",
+          "Est plus irradiant que le scanner.",
+          "Permet des reconstitutions à 3 dimensions.",
+          "Ne trouve jamais son indication en orthodontie."
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le Cône Beam est moins irradiant que le scanner traditionnel (A) et permet des reconstitutions en 3 dimensions (C). Il est fréquemment utilisé en orthodontie.",
+        citations: []
+      },
+      {
+        questionText: "En orthodontie le cône beam:",
+        options: [
+          "Est prescrit systématiquement chez l'adulte",
+          "est préféré au scanner parce qu'il donne plus de précisions",
+          "Est préféré au scanner parce qu'est moins irradiant",
+          "Permet une reconstruction panoramique"
+        ],
+        correctOptionIndexes: [2, 3],
+        explanation: "En orthodontie, le Cône Beam est préféré au scanner car il est moins irradiant (C) et permet une reconstruction panoramique ainsi que d'autres vues 3D (D).",
+        citations: []
+      },
+      {
+        questionText: "Les clichés rétro-alvéolaires en orthodontie permettent :",
+        options: [
+          "De localiser les chevauchements dentaires",
+          "la mesure de l'espace nécessaire",
+          "La mesure des diamètres mésio-distaux des dents",
+          "Une exploration ciblée avec une radiation minime."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les clichés rétro-alvéolaires permettent de localiser les chevauchements dentaires (A), de mesurer les diamètres mésio-distaux des dents (C), et d'effectuer une exploration ciblée avec une radiation minime (D).",
+        citations: []
+      },
+      {
+        questionText: "L'imagerie à résonance magnétique est prescrite en orthodontie :",
+        options: [
+          "En cas d'anomalies osseuses sévères",
+          "En cas de fentes labio-palatines",
+          "En cas de chevauchements dentaires importants",
+          "Pour l'étude du ménisque de l'ATM."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "L'imagerie par résonance magnétique (IRM) est principalement utilisée en orthodontie pour l'étude du ménisque de l'articulation temporo-mandibulaire (ATM) et des tissus mous environnants. Elle n'est pas le premier choix pour les anomalies osseuses ou les fentes labio-palatines.",
+        citations: []
+      },
+      {
+        questionText: "En orthodontie la téléradiographie de profil permet l'étude :",
+        options: [
+          "Des structures osseuses.",
+          "Des structures dentaires",
+          "Des dimensions faciales transversales",
+          "Des voies aérifères"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "La téléradiographie de profil permet l'étude des structures osseuses (A), des structures dentaires (B), et des voies aérifères supérieures (D).",
+        citations: []
+      },
+      {
+        questionText: "La radiographie panoramique :",
+        options: [
+          "Peut être numérique ou conventionnelle",
+          "Présente une irradiation supérieure par rapport au bilan rétro-alvéolaire",
+          "Est suggérée dans le dossier orthodontique",
+          "N'est pas un bon cliché pour l'étude du tissu",
+          "Permet la mesure des diamètres réels des dents"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "La radiographie panoramique peut être numérique ou conventionnelle (A), présente une irradiation supérieure par rapport au bilan rétro-alvéolaire (B), est suggérée dans le dossier orthodontique (C), et n'est pas un bon cliché pour l'étude du tissu mou (D). Elle ne permet pas la mesure des diamètres réels des dents avec précision.",
+        citations: []
+      },
+      {
+        questionText: "Par rapport à l'imagerie conventionnelle, les avantages de l'imagerie numérique :",
+        options: [
+          "Irradiation inférieure",
+          "Définition légèrement supérieure",
+          "Meilleure visualisation des régions profondes",
+          "Post-traitement informatique",
+          "Archivage"
+        ],
+        correctOptionIndexes: [0, 3, 4],
+        explanation: "Les avantages de l'imagerie numérique par rapport à l'imagerie conventionnelle incluent une irradiation inférieure (A), un post-traitement informatique (D) et un archivage facilité (E).",
+        citations: []
+      },
+      {
+        questionText: "Le bite-wing:",
+        options: [
+          "Utilise un film porteur d'une ailette",
+          "Permet l'étude des racines dentaires",
+          "Permet l'étude des couronnes dentaires",
+          "Renseigne sur les espaces inter-proximaux",
+          "Utilise un film-alvéolaire classique"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Le bite-wing utilise un film porteur d'une ailette (A), permet l'étude des couronnes dentaires (C) et renseigne sur les espaces inter-proximaux (D), étant spécifiquement conçu pour détecter les caries inter-proximales.",
+        citations: []
+      },
+      {
+        questionText: "La téléradiographie :",
+        options: [
+          "Est obligatoire dans le dossier orthodontique",
+          "Permet une grandeur réelle de la tête",
+          "Est prise en occlusion d'intercuspidation maximale",
+          "Est prise en occlusion de relation centrée",
+          "Peut être réalisée sans céphalostat"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "La téléradiographie est obligatoire dans le dossier orthodontique (A) pour évaluer les relations squelettiques et dentaires, et est souvent prise en occlusion d'intercuspidation maximale (C). Elle ne permet pas une grandeur réelle de la tête et nécessite un céphalostat.",
+        citations: []
+      }
     ]
   },
   {
     title: "17- Biomatériaux en ODF",
     subject: "odf-y2",
     questions: [
-        {
-            questionText: "Le fil en acier utilisé en orthodontie :",
-            options: [
-                "Est principalement composé de fer.",
-                "Est rendu inoxydable par l'adjonction de titane.",
-                "Est rendu brillant par l'adjonction de chrome.",
-                "Possède une limite élastique très élevée"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Le fil en acier utilisé en orthodontie est principalement composé de fer (A) et est rendu brillant par l'adjonction de chrome (C). Il est rendu inoxydable par l'adjonction de nickel et de chrome, et a une limite d'élasticité relativement faible par rapport aux fils à base de titane.",
-            citations: []
-        },
-        {
-            questionText: "Les fils en alliage NiTi :",
-            options: [
-                "Ont une élasticité moins importante que l'acier.",
-                "Sont utilisés durant la phase de nivellement.",
-                "Ont une propriété de mémoire de forme.",
-                "Sont utilisés durant la phase de finition"
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Les fils en alliage NiTi (nickel-titane) sont utilisés durant la phase de nivellement (B) en raison de leur grande élasticité et de leur propriété de mémoire de forme (C).",
-            citations: []
-        },
-        {
-            questionText: "Biodégradation:",
-            options: [
-                "Ne nécessite pas le retrait du biomatériau concerné.",
-                "Est un phénomène créé par l'environnement biologique.",
-                "Peut être due à une attaque microbienne.",
-                "Est un phénomène nocif pour l'être humain."
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "La biodégradation est un phénomène créé par l'environnement biologique (B), peut être due à une attaque microbienne (C), et est un phénomène nocif pour l'être humain (D), nécessitant le retrait du biomatériau dégradé.",
-            citations: []
-        },
-        {
-            questionText: "Les arcs Ni-Ti:",
-            options: [
-                "Offrent une très grande élasticité.",
-                "Sont utilisés à la fin du traitement orthodontique.",
-                "Peuvent avoir un effet mémoire de forme.",
-                "Permettent le nivellement et l'alignement des dents"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Les arcs en nickel-titane (Ni-Ti) offrent une très grande élasticité (A), peuvent avoir un effet mémoire de forme (C), et permettent le nivellement et l'alignement des dents (D). Ils sont généralement utilisés au début du traitement.",
-            citations: []
-        },
-        {
-            questionText: "Un composant élastomérique",
-            options: [
-                "Est un polymère plastique.",
-                "Est un polymère élastique.",
-                "Est incapable d'exercer une force d'intensité constante pendant une longue période.",
-                "Peut-être dégradé par la salive."
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Un élastomère est un polymère élastique (B). Il est incapable d'exercer une force d'intensité constante sur une longue période car il perd de son élasticité avec le temps (C), et il peut être dégradé par la salive (D).",
-            citations: []
-        },
-        {
-            questionText: "Parmi les différents types de déformation des matériaux utilisés en ODF on retrouve :",
-            options: [
-                "L'allongement.",
-                "Le raccourcissement",
-                "Le mouvement de torsion.",
-                "Le mouvement de flexion"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Les différents types de déformation des matériaux utilisés en ODF incluent l'allongement (A), le raccourcissement (B), le mouvement de torsion (C) et le mouvement de flexion (D).",
-            citations: []
-        },
-        {
-            questionText: "Parmi les caractéristiques de l'acier inoxydable utilisé en ODF ; on retrouve :",
-            options: [
-                "sa bonne malléabilité.",
-                "sa super élasticité.",
-                "sa facilité à être façonné",
-                "son coût faible"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "L'acier inoxydable est caractérisé par sa bonne malléabilité (A), sa facilité à être façonné (C) et son coût faible (D). Il n'est pas super élastique.",
-            citations: []
-        },
-        {
-            questionText: "La dégradation des matériaux en orthodontie peut être provoquée par :",
-            options: [
-                "L'environnement biologique.",
-                "Les contraintes mécaniques",
-                "Les phénomène de fatigue du matériau",
-                "Le praticien"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "La dégradation des matériaux en orthodontie peut être provoquée par l'environnement biologique (A), les contraintes mécaniques (B) et le phénomène de fatigue du matériau (C).",
-            citations: []
-        },
-        {
-            questionText: "Le titane est retrouvé dans la composition des :",
-            options: [
-                "Arcs en acier inoxydables.",
-                "Brackets.",
-                "Gouttières thermoformées.",
-                "Arcs super élastiques japonais."
-            ],
-            correctOptionIndexes: [1, 3],
-            explanation: "Le titane est retrouvé dans la composition de certains brackets (B) et des arcs super élastiques japonais (D) pour leurs propriétés spécifiques.",
-            citations: []
-        },
-        {
-            questionText: "L'arc en acier inoxydable:",
-            options: [
-                "est un alliage constitué de fer, de chrome, de nickel et de carbone",
-                "Est un alliage constitué de fer, de chrome, de cuivre et de carbone",
-                "Peut se présenter en section ronde ou rectangulaire",
-                "Peut-être monobrin ou multibrins"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "L'arc en acier inoxydable est un alliage constitué de fer, de chrome, de nickel et de carbone (A). Il peut se présenter en section ronde ou rectangulaire (C) et peut être monobrin ou multibrins (D).",
-            citations: []
-        },
-        {
-            questionText: "Un bracket est :",
-            options: [
-                "Un élément collé directement sur une dent ou soudé sur une bague",
-                "Seul il ne permet pas le déplacement d'une dent",
-                "Est toujours fabriqué en acier",
-                "Biocompatible et biodégradable"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Un bracket est un élément collé directement sur une dent ou soudé sur une bague (A), et seul, il ne permet pas le déplacement d'une dent (B) car il a besoin d'un arc pour exercer une force.",
-            citations: []
-        },
-        {
-            questionText: "Un élastomère :",
-            options: [
-                "Est capable d'exercer une force d'intensité constante pendant une longue période",
-                "Apporte de très grandes déformations",
-                "Subit une forte dégradation de ses propriétés en milieu buccal",
-                "Peut-être détérioré par une mauvaise hygiène"
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Un élastomère apporte de très grandes déformations (B), subit une forte dégradation de ses propriétés en milieu buccal (C), et peut être détérioré par une mauvaise hygiène (D). Il n'est pas capable d'exercer une force constante sur une longue période.",
-            citations: []
-        },
-        {
-            questionText: "Parmi les élastomères utilisés en orthodontie, nous avons :",
-            options: [
-                "Les élastiques",
-                "Les arcs NiTi",
-                "Les ligatures",
-                "Les ressorts"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Parmi les élastomères utilisés en orthodontie, on retrouve les élastiques (A), les ligatures (C) et certains ressorts (D). Les arcs NiTi sont des alliages, non des élastomères.",
-            citations: []
-        },
-        {
-            questionText: "Les brackets en céramique :",
-            options: [
-                "Peuvent provoquer des allergies.",
-                "Sont constitués d'oxyde de zirconium et d'oxyde d'aluminium",
-                "Sont très résistants à la fracture.",
-                "Présentent une grande porosité due à la salive"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Les brackets en céramique sont constitués d'oxyde de zirconium et d'oxyde d'aluminium (B). Ils sont généralement hypoallergéniques, ont une faible résistance à la fracture et une faible porosité.",
-            citations: []
-        },
-        {
-            questionText: "La résine acrylique utilisée en orthopédie dento-faciale :",
-            options: [
-                "Se présente le plus souvent sous la forme liquide-poudre",
-                "Est composée de cristaux d'hydroxyapatite",
-                "Est biodégradable en milieu buccal, très agressif (température élevée, Ph très varié)",
-                "Est composée de polyméthacrylate de méthyle"
-            ],
-            correctOptionIndexes: [0, 3],
-            explanation: "La résine acrylique se présente le plus souvent sous la forme liquide-poudre (A) et est principalement composée de polyméthacrylate de méthyle (D). Elle n'est pas biodégradable en milieu buccal.",
-            citations: []
-        },
-        {
-            questionText: "Le Copper Ni-Ti :",
-            options: [
-                "Est un alliage à mémoire de forme thermoactif",
-                "Est disponible en quatre couleurs bleu, jaune, vert et rouge",
-                "Est un fil multibrin à contour rond torsadé",
-                "Délivre une force constante sur une plus grande étendue d'activation"
-            ],
-            correctOptionIndexes: [0, 1, 3],
-            explanation: "Le Copper Ni-Ti est un alliage à mémoire de forme thermoactif (A), disponible en quatre couleurs (B), et délivre une force constante sur une grande étendue d'activation (D). C'est généralement un fil monobrin.",
-            citations: []
-        },
-        {
-            questionText: "Les fils en acier inoxydable se présentent toujours de section ronde :",
-            options: [
-                "Vrai",
-                "Faux"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Les fils en acier inoxydable peuvent se présenter en section ronde ou rectangulaire, selon l'application clinique.",
-            citations: []
-        },
-        {
-            questionText: "Les brackets utilisés en orthopédie dento-faciale:",
-            options: [
-                "Sont le plus souvent fabriqués en acier inoxydable",
-                "Sont des dispositifs amovibles",
-                "Peuvent être soudés sur les molaires",
-                "Peuvent être fabriqués en élastique pour améliorer l'esthétique"
-            ],
-            correctOptionIndexes: [0, 2],
-            explanation: "Les brackets sont le plus souvent fabriqués en acier inoxydable (A) pour leur durabilité, et peuvent être soudés sur les molaires (C) pour une meilleure stabilité. Ils ne sont pas amovibles et ne sont pas fabriqués en élastique.",
-            citations: []
-        },
-        {
-            questionText: "Le Titane Molybdène Alloy ou ß-Titanium:",
-            options: [
-                "Est un alliage à base d'or",
-                "Est un acier inoxydable",
-                "Est un alliage à base de fer",
-                "Est un alliage à base de titane"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Le Titane Molybdène Alloy ou ß-Titanium est un alliage à base de titane (D).",
-            citations: []
-        },
-        {
-            questionText: "Un biomatériau à usage orthodontique doit :",
-            options: [
-                "Être compatible avec l'environnement buccal",
-                "Résister à la corrosion",
-                "Permettre la libération de produits de dégradation",
-                "Toutes les réponses sont justes"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Un biomatériau à usage orthodontique doit être compatible avec l'environnement buccal (A) et résister à la corrosion (B). Il ne doit pas libérer de produits de dégradation nocifs.",
-            citations: []
-        },
-        {
-            questionText: "Quel est parmi les alliages suivants le plus allergisant :",
-            options: [
-                "L'acier inoxydable",
-                "L'Elgiloy",
-                "Le fil australien",
-                "Les alliages de Nickel-Titane"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Les alliages de Nickel-Titane (D) sont souvent les plus allergisants en raison de la présence de nickel.",
-            citations: []
-        },
-        {
-            questionText: "L'assemblage d'éléments métalliques entre eux se fait par :",
-            options: [
-                "Soudure au laser avec brasure d'argent",
-                "Soudure au chalumeau avec brasure d'argent et flux désoxydant",
-                "Soudure à l'arc",
-                "Toutes les réponses sont fausses"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "L'assemblage d'éléments métalliques se fait couramment par soudure au chalumeau avec brasure d'argent et flux désoxydant (B).",
-            citations: []
-        },
-        {
-            questionText: "Les brackets en céramique :",
-            options: [
-                "Peuvent provoquer des allergies",
-                "Se décolorent avec le temps",
-                "Présentent une forte résistance à la fracture",
-                "Induisent une force de friction qui ralentit le mouvement dentaire"
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Les brackets en céramique induisent une force de friction qui ralentit le mouvement dentaire (D). Ils sont hypoallergéniques, résistants à la décoloration mais ont une faible résistance à la fracture.",
-            citations: []
-        },
-        {
-            questionText: "Les ligatures élastomériques :",
-            options: [
-                "Exercent une force d'intensité constante",
-                "N'engendrent pas plus de friction que les ligatures métalliques",
-                "Se dégradent avec la salive et les variations de températures",
-                "Sont préférées durant les phases de glissement"
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Les ligatures élastomériques se dégradent avec la salive et les variations de températures (C). Elles perdent de leur force avec le temps et créent plus de friction que les ligatures métalliques, et ne sont pas idéales pour les phases de glissement.",
-            citations: []
-        }
+      {
+        questionText: "Le fil en acier utilisé en orthodontie :",
+        options: [
+          "Est principalement composé de fer.",
+          "Est rendu inoxydable par l'adjonction de titane.",
+          "Est rendu brillant par l'adjonction de chrome.",
+          "Possède une limite élastique très élevée"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Le fil en acier utilisé en orthodontie est principalement composé de fer (A) et est rendu brillant par l'adjonction de chrome (C). Il est rendu inoxydable par l'adjonction de nickel et de chrome, et a une limite d'élasticité relativement faible par rapport aux fils à base de titane.",
+        citations: []
+      },
+      {
+        questionText: "Les fils en alliage NiTi :",
+        options: [
+          "Ont une élasticité moins importante que l'acier.",
+          "Sont utilisés durant la phase de nivellement.",
+          "Ont une propriété de mémoire de forme.",
+          "Sont utilisés durant la phase de finition"
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les fils en alliage NiTi (nickel-titane) sont utilisés durant la phase de nivellement (B) en raison de leur grande élasticité et de leur propriété de mémoire de forme (C).",
+        citations: []
+      },
+      {
+        questionText: "Biodégradation:",
+        options: [
+          "Ne nécessite pas le retrait du biomatériau concerné.",
+          "Est un phénomène créé par l'environnement biologique.",
+          "Peut être due à une attaque microbienne.",
+          "Est un phénomène nocif pour l'être humain."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "La biodégradation est un phénomène créé par l'environnement biologique (B), peut être due à une attaque microbienne (C), et est un phénomène nocif pour l'être humain (D), nécessitant le retrait du biomatériau dégradé.",
+        citations: []
+      },
+      {
+        questionText: "Les arcs Ni-Ti:",
+        options: [
+          "Offrent une très grande élasticité.",
+          "Sont utilisés à la fin du traitement orthodontique.",
+          "Peuvent avoir un effet mémoire de forme.",
+          "Permettent le nivellement et l'alignement des dents"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les arcs en nickel-titane (Ni-Ti) offrent une très grande élasticité (A), peuvent avoir un effet mémoire de forme (C), et permettent le nivellement et l'alignement des dents (D). Ils sont généralement utilisés au début du traitement.",
+        citations: []
+      },
+      {
+        questionText: "Un composant élastomérique",
+        options: [
+          "Est un polymère plastique.",
+          "Est un polymère élastique.",
+          "Est incapable d'exercer une force d'intensité constante pendant une longue période.",
+          "Peut-être dégradé par la salive."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Un élastomère est un polymère élastique (B). Il est incapable d'exercer une force d'intensité constante sur une longue période car il perd de son élasticité avec le temps (C), et il peut être dégradé par la salive (D).",
+        citations: []
+      },
+      {
+        questionText: "Parmi les différents types de déformation des matériaux utilisés en ODF on retrouve :",
+        options: [
+          "L'allongement.",
+          "Le raccourcissement",
+          "Le mouvement de torsion.",
+          "Le mouvement de flexion"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les différents types de déformation des matériaux utilisés en ODF incluent l'allongement (A), le raccourcissement (B), le mouvement de torsion (C) et le mouvement de flexion (D).",
+        citations: []
+      },
+      {
+        questionText: "Parmi les caractéristiques de l'acier inoxydable utilisé en ODF ; on retrouve :",
+        options: [
+          "sa bonne malléabilité.",
+          "sa super élasticité.",
+          "sa facilité à être façonné",
+          "son coût faible"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'acier inoxydable est caractérisé par sa bonne malléabilité (A), sa facilité à être façonné (C) et son coût faible (D). Il n'est pas super élastique.",
+        citations: []
+      },
+      {
+        questionText: "La dégradation des matériaux en orthodontie peut être provoquée par :",
+        options: [
+          "L'environnement biologique.",
+          "Les contraintes mécaniques",
+          "Les phénomène de fatigue du matériau",
+          "Le praticien"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "La dégradation des matériaux en orthodontie peut être provoquée par l'environnement biologique (A), les contraintes mécaniques (B) et le phénomène de fatigue du matériau (C).",
+        citations: []
+      },
+      {
+        questionText: "Le titane est retrouvé dans la composition des :",
+        options: [
+          "Arcs en acier inoxydables.",
+          "Brackets.",
+          "Gouttières thermoformées.",
+          "Arcs super élastiques japonais."
+        ],
+        correctOptionIndexes: [1, 3],
+        explanation: "Le titane est retrouvé dans la composition de certains brackets (B) et des arcs super élastiques japonais (D) pour leurs propriétés spécifiques.",
+        citations: []
+      },
+      {
+        questionText: "L'arc en acier inoxydable:",
+        options: [
+          "est un alliage constitué de fer, de chrome, de nickel et de carbone",
+          "Est un alliage constitué de fer, de chrome, de cuivre et de carbone",
+          "Peut se présenter en section ronde ou rectangulaire",
+          "Peut-être monobrin ou multibrins"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'arc en acier inoxydable est un alliage constitué de fer, de chrome, de nickel et de carbone (A). Il peut se présenter en section ronde ou rectangulaire (C) et peut être monobrin ou multibrins (D).",
+        citations: []
+      },
+      {
+        questionText: "Un bracket est :",
+        options: [
+          "Un élément collé directement sur une dent ou soudé sur une bague",
+          "Seul il ne permet pas le déplacement d'une dent",
+          "Est toujours fabriqué en acier",
+          "Biocompatible et biodégradable"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Un bracket est un élément collé directement sur une dent ou soudé sur une bague (A), et seul, il ne permet pas le déplacement d'une dent (B) car il a besoin d'un arc pour exercer une force.",
+        citations: []
+      },
+      {
+        questionText: "Un élastomère :",
+        options: [
+          "Est capable d'exercer une force d'intensité constante pendant une longue période",
+          "Apporte de très grandes déformations",
+          "Subit une forte dégradation de ses propriétés en milieu buccal",
+          "Peut-être détérioré par une mauvaise hygiène"
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Un élastomère apporte de très grandes déformations (B), subit une forte dégradation de ses propriétés en milieu buccal (C), et peut être détérioré par une mauvaise hygiène (D). Il n'est pas capable d'exercer une force constante sur une longue période.",
+        citations: []
+      },
+      {
+        questionText: "Parmi les élastomères utilisés en orthodontie, nous avons :",
+        options: [
+          "Les élastiques",
+          "Les arcs NiTi",
+          "Les ligatures",
+          "Les ressorts"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Parmi les élastomères utilisés en orthodontie, on retrouve les élastiques (A), les ligatures (C) et certains ressorts (D). Les arcs NiTi sont des alliages, non des élastomères.",
+        citations: []
+      },
+      {
+        questionText: "Les brackets en céramique :",
+        options: [
+          "Peuvent provoquer des allergies.",
+          "Sont constitués d'oxyde de zirconium et d'oxyde d'aluminium",
+          "Sont très résistants à la fracture.",
+          "Présentent une grande porosité due à la salive"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les brackets en céramique sont constitués d'oxyde de zirconium et d'oxyde d'aluminium (B). Ils sont généralement hypoallergéniques, ont une faible résistance à la fracture et une faible porosité.",
+        citations: []
+      },
+      {
+        questionText: "La résine acrylique utilisée en orthopédie dento-faciale :",
+        options: [
+          "Se présente le plus souvent sous la forme liquide-poudre",
+          "Est composée de cristaux d'hydroxyapatite",
+          "Est biodégradable en milieu buccal, très agressif (température élevée, Ph très varié)",
+          "Est composée de polyméthacrylate de méthyle"
+        ],
+        correctOptionIndexes: [0, 3],
+        explanation: "La résine acrylique se présente le plus souvent sous la forme liquide-poudre (A) et est principalement composée de polyméthacrylate de méthyle (D). Elle n'est pas biodégradable en milieu buccal.",
+        citations: []
+      },
+      {
+        questionText: "Le Copper Ni-Ti :",
+        options: [
+          "Est un alliage à mémoire de forme thermoactif",
+          "Est disponible en quatre couleurs bleu, jaune, vert et rouge",
+          "Est un fil multibrin à contour rond torsadé",
+          "Délivre une force constante sur une plus grande étendue d'activation"
+        ],
+        correctOptionIndexes: [0, 1, 3],
+        explanation: "Le Copper Ni-Ti est un alliage à mémoire de forme thermoactif (A), disponible en quatre couleurs (B), et délivre une force constante sur une grande étendue d'activation (D). C'est généralement un fil monobrin.",
+        citations: []
+      },
+      {
+        questionText: "Les fils en acier inoxydable se présentent toujours de section ronde :",
+        options: [
+          "Vrai",
+          "Faux"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Les fils en acier inoxydable peuvent se présenter en section ronde ou rectangulaire, selon l'application clinique.",
+        citations: []
+      },
+      {
+        questionText: "Les brackets utilisés en orthopédie dento-faciale:",
+        options: [
+          "Sont le plus souvent fabriqués en acier inoxydable",
+          "Sont des dispositifs amovibles",
+          "Peuvent être soudés sur les molaires",
+          "Peuvent être fabriqués en élastique pour améliorer l'esthétique"
+        ],
+        correctOptionIndexes: [0, 2],
+        explanation: "Les brackets sont le plus souvent fabriqués en acier inoxydable (A) pour leur durabilité, et peuvent être soudés sur les molaires (C) pour une meilleure stabilité. Ils ne sont pas amovibles et ne sont pas fabriqués en élastique.",
+        citations: []
+      },
+      {
+        questionText: "Le Titane Molybdène Alloy ou ß-Titanium:",
+        options: [
+          "Est un alliage à base d'or",
+          "Est un acier inoxydable",
+          "Est un alliage à base de fer",
+          "Est un alliage à base de titane"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le Titane Molybdène Alloy ou ß-Titanium est un alliage à base de titane (D).",
+        citations: []
+      },
+      {
+        questionText: "Un biomatériau à usage orthodontique doit :",
+        options: [
+          "Être compatible avec l'environnement buccal",
+          "Résister à la corrosion",
+          "Permettre la libération de produits de dégradation",
+          "Toutes les réponses sont justes"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Un biomatériau à usage orthodontique doit être compatible avec l'environnement buccal (A) et résister à la corrosion (B). Il ne doit pas libérer de produits de dégradation nocifs.",
+        citations: []
+      },
+      {
+        questionText: "Quel est parmi les alliages suivants le plus allergisant :",
+        options: [
+          "L'acier inoxydable",
+          "L'Elgiloy",
+          "Le fil australien",
+          "Les alliages de Nickel-Titane"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les alliages de Nickel-Titane (D) sont souvent les plus allergisants en raison de la présence de nickel.",
+        citations: []
+      },
+      {
+        questionText: "L'assemblage d'éléments métalliques entre eux se fait par :",
+        options: [
+          "Soudure au laser avec brasure d'argent",
+          "Soudure au chalumeau avec brasure d'argent et flux désoxydant",
+          "Soudure à l'arc",
+          "Toutes les réponses sont fausses"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'assemblage d'éléments métalliques se fait couramment par soudure au chalumeau avec brasure d'argent et flux désoxydant (B).",
+        citations: []
+      },
+      {
+        questionText: "Les brackets en céramique :",
+        options: [
+          "Peuvent provoquer des allergies",
+          "Se décolorent avec le temps",
+          "Présentent une forte résistance à la fracture",
+          "Induisent une force de friction qui ralentit le mouvement dentaire"
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les brackets en céramique induisent une force de friction qui ralentit le mouvement dentaire (D). Ils sont hypoallergéniques, résistants à la décoloration mais ont une faible résistance à la fracture.",
+        citations: []
+      },
+      {
+        questionText: "Les ligatures élastomériques :",
+        options: [
+          "Exercent une force d'intensité constante",
+          "N'engendrent pas plus de friction que les ligatures métalliques",
+          "Se dégradent avec la salive et les variations de températures",
+          "Sont préférées durant les phases de glissement"
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Les ligatures élastomériques se dégradent avec la salive et les variations de températures (C). Elles perdent de leur force avec le temps et créent plus de friction que les ligatures métalliques, et ne sont pas idéales pour les phases de glissement.",
+        citations: []
+      }
     ]
   },
   {
     title: "18- Notions de génétique appliquées à l'ODF",
     subject: "odf-y2",
     questions: [
-        {
-            questionText: "L'agénésie dentaire",
-            options: [
-                "Est l'absence d'une dent sur l'arcade",
-                "Est l'absence du germe dentaire.",
-                "Touche le plus souvent la 3ème molaire mandibulaire.",
-                "Touche le plus souvent les 2èmes prémolaires supérieures."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "L'agénésie dentaire est l'absence du germe dentaire (B) et touche par ordre de fréquence : la 3ème molaire inférieure, les 2èmes prémolaires inférieures et les incisives latérales supérieures (C est partiellement correct car la 3ème molaire mandibulaire est la plus souvent touchée, mais l'option C seule ne couvre pas toute la fréquence).",
-            citations: []
-        },
-        {
-            questionText: "Le Mésiodens",
-            options: [
-                "Est une dent supplémentaire ayant la forme d'une incisive centrale supérieure.",
-                "Est une dent conoïde de forme atypique.",
-                "Siège entre les deux incisives centrales maxillaires.",
-                "Siège entre les deux prémolaires mandibulaires."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Le mésiodens est une dent conoïde de forme atypique (B) et siège typiquement entre les deux incisives centrales maxillaires (C).",
-            citations: []
-        },
-        {
-            questionText: "L'Amélogénèse imparfaite :",
-            options: [
-                "Est une anomalie de forme dentaire",
-                "Est à transmission autosomale dominante",
-                "Atteint uniquement les dents temporaires",
-                "Atteint uniquement les dents définitives"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "L'amélogénèse imparfaite est une anomalie de structure de l'émail, non de forme, et elle est souvent à transmission autosomale dominante (B). Elle peut affecter les deux dentitions, temporaire et permanente.",
-            citations: []
-        },
-        {
-            questionText: "Le phénotype est :",
-            options: [
-                "L'ensemble de codons au niveau des chromosomes.",
-                "L'ensemble des caractères morphologiques et physiologiques visibles.",
-                "Le résultat du patrimoine génétique.",
-                "Le résultat de l'action du milieu environnant."
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Le phénotype est l'ensemble des caractères morphologiques et physiologiques visibles (B) d'un individu. Il résulte de l'expression du génotype (C) et est influencé par l'action du milieu environnant (D).",
-            citations: []
-        },
-        {
-            questionText: "L'agénésie dentaire :",
-            options: [
-                "Est l'absence d'un ou de plusieurs germes dentaires.",
-                "Est héréditaire à transmission récessive.",
-                "Est héréditaire à transmission dominante.",
-                "Incrimine le gène RUNX2."
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "L'agénésie dentaire est l'absence congénitale d'un ou de plusieurs germes dentaires (A). Elle est généralement à transmission dominante (C) et le gène RUNX2 est incriminé dans cette condition ainsi que d'autres pathologies.",
-            citations: []
-        },
-        {
-            questionText: "Les éléments hautement héréditaires, sont:",
-            options: [
-                "La hauteur faciale postérieure.",
-                "La longueur mandibulaire.",
-                "La longueur de la base du crâne.",
-                "L'angle goniaque."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Les éléments hautement héréditaires incluent la longueur mandibulaire (B) et la longueur de la base du crâne (C), ces traits étant fortement influencés génétiquement. La hauteur faciale postérieure et l'angle goniaque sont moins directement héréditaires.",
-            citations: []
-        },
-        {
-            questionText: "Les éléments faiblement héréditaires, sont:",
-            options: [
-                "Les relations occlusales.",
-                "Les relations sagittales maxillo-mandibulaires.",
-                "La position dentaire.",
-                "La morphologie labiale."
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Les éléments faiblement héréditaires sont les relations occlusales (A), la position dentaire (C) et la morphologie labiale (D), car ils sont davantage influencés par des facteurs fonctionnels et environnementaux que par la génétique stricte.",
-            citations: []
-        },
-        {
-            questionText: "Les fentes labio-palatines, sont le plus souvent:",
-            options: [
-                "Des malformations héréditaires.",
-                "Des malformations isolées.",
-                "Des malformations sans anomalies dentaires.",
-                "Associées à des syndromes."
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Les fentes labio-palatines sont le plus souvent associées à des syndromes (D), comme le syndrome de Van der Woude, bien qu'elles puissent aussi être multifactorielles.",
-            citations: []
-        },
-        {
-            questionText: "Les caractéristiques cranio-dento-faciales hautement héréditaires sont :",
-            options: [
-                "la forme générale de la face.",
-                "la longueur mandibulaire.",
-                "La longueur de la base du crâne .",
-                "les relations sagittales maxillo-mandibulaires."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Les caractéristiques cranio-dento-faciales hautement héréditaires sont la forme générale de la face (A), la longueur mandibulaire (B) et la longueur de la base du crâne (C).",
-            citations: []
-        },
-        {
-            questionText: "Les caractéristiques cranio-dento-faciales moyennement héritées sont :",
-            options: [
-                "le type facial.",
-                "les relations sagittales maxillo-mandibulaires.",
-                "la convexité du profil individuel.",
-                "la longueur de la base du crane."
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Les caractéristiques cranio-dento-faciales moyennement héritées sont le type facial (A), les relations sagittales maxillo-mandibulaires (B) et la convexité du profil individuel (C).",
-            citations: []
-        },
-        {
-            questionText: "Les caractéristiques cranio-dento-faciales à faible potentiel héréditaire :",
-            options: [
-                "les relations incisives.",
-                "l'angle goniaque.",
-                "La position dentaire.",
-                "Les relations occlusales"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Les relations incisives (A), la position dentaire (C) et les relations occlusales (D) sont des caractéristiques à faible potentiel héréditaire, étant plus influencées par l'environnement et les fonctions.",
-            citations: []
-        },
-        {
-            questionText: "Le comportement neuro-musculaire de l'individu :",
-            options: [
-                "est prédéfini et hérité des parents.",
-                "ne subit aucune influence de l'environnement.",
-                "est sujet aux changements par les facteurs environnementaux.",
-                "toutes les réponses sont fausses."
-            ],
-            correctOptionIndexes: [2],
-            explanation: "Le comportement neuro-musculaire de l'individu est sujet aux changements par les facteurs environnementaux (C), et n'est pas strictement prédéfini ni à l'abri de l'influence de l'environnement.",
-            citations: []
-        },
-        {
-            questionText: "L'épigénétique :",
-            options: [
-                "Correspond à l'étude des mutations de L'acide désoxyribonucléique.",
-                "Correspond à l'étude des modifications réversibles de l'activité des gènes.",
-                "Elle permet une lecture différente d'un même code génétique.",
-                "Elle contribuerait à l'apparition de certaines pathologies."
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "L'épigénétique correspond à l'étude des modifications réversibles de l'activité des gènes (B), permet une lecture différente d'un même code génétique (C), et contribuerait à l'apparition de certaines pathologies (D).",
-            citations: []
-        },
-        {
-            questionText: "Un allèle:",
-            options: [
-                "Dominant peut être masqué.",
-                "Est une variation de la séquence nucléotidique d'un même gène.",
-                "Peut être transmis par les ascendants.",
-                "Est présent sur chaque gène."
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Un allèle est une variation de la séquence nucléotidique d'un même gène (B), peut être transmis par les ascendants (C) et est présent sur chaque gène (D). Un allèle dominant n'est pas masqué.",
-            citations: []
-        },
-        {
-            questionText: "Le syndrome de Pierre Robin est caractérisé par :",
-            options: [
-                "Une prognathie mandibulaire.",
-                "Une hypoplasie du condyle mandibulaire.",
-                "Une latérognathie mandibulaire.",
-                "Une petite mandibule."
-            ],
-            correctOptionIndexes: [3],
-            explanation: "Le syndrome de Pierre Robin est caractérisé par une petite mandibule (D), souvent appelée micrognathie ou rétrognathie. Il ne comprend pas spécifiquement une hypoplasie condylienne ou une latérognathie.",
-            citations: []
-        },
-        {
-            questionText: "Les gènes impliqués dans le développement crâniofacial sont :",
-            options: [
-                "Les FGG 1, 2, 4, 5, 8,12.",
-                "Les facteurs de signalisation.",
-                "Les facteurs de transcription.",
-                "Les gènes Hox."
-            ],
-            correctOptionIndexes: [1, 2, 3],
-            explanation: "Les gènes impliqués dans le développement crâniofacial incluent les facteurs de signalisation (B), les facteurs de transcription (C) qui régulent l'expression des gènes, et les gènes Hox (D).",
-            citations: []
-        },
-        {
-            questionText: "L'agénésie touche par ordre de fréquence :",
-            options: [
-                "la 3ème molaire, les incisives latérales supérieures, les 2èmes prémolaires inférieures",
-                "Les incisives latérales supérieures, la 3ème molaire, les 2èmes prémolaires inférieures",
-                "la 3eme molaire, les 2emes prémolaires inférieures, les incisives latérales supérieures",
-                "Les incisives latérales supérieures, les 2èmes prémolaires inférieures, la 3ème molaire"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "L'agénésie touche le plus fréquemment la 3ème molaire, suivie des incisives latérales supérieures, puis des 2èmes prémolaires inférieures.",
-            citations: []
-        },
-        {
-            questionText: "Le mésiodens :",
-            options: [
-                "Est une dent supplémentaire",
-                "est une dent surnuméraire",
-                "Siège entre les incisives centrales maxillaires.",
-                "A une forme harmonieuse et presque identique à la dent habituelle."
-            ],
-            correctOptionIndexes: [1, 2],
-            explanation: "Le mésiodens est un type spécifique de dent surnuméraire (B) qui siège typiquement entre les incisives centrales maxillaires (C). Il a souvent une forme conique ou irrégulière.",
-            citations: []
-        },
-        {
-            questionText: "L'hérédité des dimensions verticales de la face",
-            options: [
-                "Serait moins constante que celle des dimensions antéropostérieures",
-                "Serait surtout transmise par la mère",
-                "Serait surtout transmis par le père",
-                "Est aussi bien transmise par le père et la mère"
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "L'hérédité des dimensions verticales de la face serait moins constante que celle des dimensions antéropostérieures (A) et serait surtout transmise par la mère (B).",
-            citations: []
-        },
-        {
-            questionText: "La dysostose craniofaciale de CROUZON :",
-            options: [
-                "Est une malformation maxillaire associée à des malformations crâniennes héréditaires",
-                "Présente une hypoplasie de l'étage inférieur",
-                "Est caractérisée par une fermeture retardée des fontanelles",
-                "est caractérisée par une endognathie et une classe II squelettique."
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Le syndrome de Crouzon est une dysostose craniofaciale héréditaire caractérisée par une malformation maxillaire associée à des malformations crâniennes (A) et une hypoplasie de l'étage moyen de la face. Il présente une synostose précoce des sutures crâniennes, pas un retard de fermeture.",
-            citations: []
-        },
-        {
-            questionText: "Citez 4 caractères dentaires héréditaires",
-            options: [
-                "La forme des dents.",
-                "La taille des dents.",
-                "La couleur des dents.",
-                "La présence de dents surnuméraires."
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Les caractères dentaires héréditaires peuvent inclure : La forme des dents, La taille des dents, La couleur des dents, La présence de dents surnuméraires. Ces traits sont souvent influencés par la génétique transmise des parents.",
-            citations: []
-        },
-        {
-            questionText: "Donner les 1ers gènes identifiés chez l'homme, impliqués dans la croissance cranio-faciale.",
-            options: [
-                "HOX",
-                "MSX1, MSX2",
-                "PAX9",
-                "FGFR1, FGFR2, FGFR3",
-                "RUNX2"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3, 4],
-            explanation: "Les premiers gènes identifiés chez l'homme impliqués dans la croissance cranio-faciale incluent les gènes HOX, MSX1, MSX2, PAX9, FGFR1, FGFR2, FGFR3, et RUNX2. Ces gènes jouent un rôle crucial dans la formation et le développement des structures cranio-faciales.",
-            citations: []
-        },
-        {
-            questionText: "Hérédité et caractères cranio-faciaux : quelle relation ?",
-            options: [
-                "L'hérédité détermine fortement les traits cranio-faciaux.",
-                "La forme du visage et la structure osseuse sont influencées par les gènes.",
-                "Des anomalies génétiques peuvent causer des dysmorphoses.",
-                "La génétique est une composante majeure de la morphologie."
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "L'hérédité joue un rôle fondamental dans la détermination des caractères cranio-faciaux. Les traits tels que la forme du visage, la position des dents, et la structure osseuse sont fortement influencés par les gènes hérités des parents. Des anomalies génétiques peuvent également conduire à des dysmorphoses cranio-faciales, indiquant une relation étroite entre l'hérédité et la morphologie cranio-faciale. La génétique est une composante majeure de la morphologie cranio-faciale.",
-            citations: []
-        },
-        {
-            questionText: "Le syndrome de Crouzon est caractérisé par :",
-            options: [
-                "Une diminution des diamètres verticaux et transversaux du crâne",
-                "Une hypoplasie du maxillaire dans les trois sens de l'espace",
-                "Une DDM avec occlusion de classe III",
-                "Une exophtalmie avec exorbitisme"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Le syndrome de Crouzon entraîne une diminution des diamètres verticaux et transversaux du crâne (A), une hypoplasie du maxillaire dans les trois sens de l'espace (B), une dysmorphose dento-maxillaire (DDM) avec occlusion de classe III (C), et une exophtalmie marquée (D).",
-            citations: []
-        },
-        {
-            questionText: "Le patient porteur d'une fente labio-palatine présente :",
-            options: [
-                "Des troubles de la croissance maxillaire",
-                "Des troubles de la croissance mandibulaire",
-                "Des anomalies de la dentition",
-                "Des troubles de la phonation"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "Le patient porteur d'une fente labio-palatine présente des troubles de la croissance maxillaire (A), des anomalies de la dentition (C), et des troubles de la phonation (D).",
-            citations: []
-        },
-        {
-            questionText: "Le syndrome de Binder :",
-            options: [
-                "Est une malformation héréditaire de la partie médiane de la face",
-                "S'accompagne d'une réduction ou de l'absence de l'épine nasale antérieure",
-                "S'accompagne d'une inversion de l'articulé incisivo-canin dans le sens sagittal",
-                "S'accompagne d'une supraclusion antérieure",
-                "S'accompagne d'une protrusion du maxillaire supérieur"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Le syndrome de Binder est une malformation héréditaire de la partie médiane de la face (A), s'accompagne d'une réduction ou de l'absence de l'épine nasale antérieure (B), et d'une inversion de l'articulé incisivo-canin dans le sens sagittal (C).",
-            citations: []
-        },
-        {
-            questionText: "Parmi les anomalies ayant un support génétique prépondérant nous citons :",
-            options: [
-                "La classe II squelettique",
-                "Le pro génie",
-                "Les béances squelettiques",
-                "Les rotations dentaires",
-                "L'ectopie canine"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Les anomalies ayant un support génétique prépondérant incluent la classe II squelettique (A), le prognathisme (pro génie) (B) et les béances squelettiques (C).",
-            citations: []
-        },
-        {
-            questionText: "L'expression génétique est la transmission des informations génétiques, elle se fait en deux processus successifs :",
-            options: [
-                "Transcription: La copie de l'ADN en ARN.",
-                "Traduction: La conversion de l'ARN en protéines."
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "L'expression génétique se fait en deux processus successifs : Transcription (la copie de l'ADN en ARN) et Traduction (la conversion de l'ARN en protéines). Ces deux étapes sont fondamentales pour la synthèse des protéines à partir du code génétique.",
-            citations: []
-        },
-        {
-            questionText: "Quelle est la différence entre la macrodontie vraie et la macrodontie relative :",
-            options: [
-                "Macrodontie vraie : Augmentation anormale de la taille des dents.",
-                "Macrodontie relative : Taille normale des dents mais qui paraissent plus grandes en raison de la petite taille des mâchoires."
-            ],
-            correctOptionIndexes: [0, 1],
-            explanation: "Macrodontie vraie : Augmentation anormale de la taille des dents. Macrodontie relative : Taille normale des dents mais qui paraissent plus grandes en raison de la petite taille des mâchoires. La macrodontie vraie est un problème de taille intrinsèque des dents, tandis que la macrodontie relative est un problème de proportion entre la taille des dents et celle des maxillaires.",
-            citations: []
-        },
-        {
-            questionText: "Le syndrome de Crouzon est caractérisé par :",
-            options: [
-                "Dysostose craniofaciale (fusion prématurée des sutures crâniennes - craniosynostose).",
-                "Hypoplasie maxillaire.",
-                "Proptose oculaire (yeux globuleux).",
-                "Anomalies dentaires."
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Le syndrome de Crouzon est caractérisé par : Dysostose craniofaciale (fusion prématurée des sutures crâniennes), Hypoplasie maxillaire, Proptose oculaire (yeux globuleux), et des Anomalies dentaires. C'est une maladie génétique qui affecte le développement du crâne et du visage.",
-            citations: []
-        },
-        {
-            questionText: "Le nombre des dents peut être altéré par l'hérédité, donc on a des :",
-            options: [
-                "Agénésies",
-                "Surnuméraires",
-                "Supplémentaires",
-                "Microdontie",
-                "Macrodontie"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Le nombre des dents peut être altéré par l'hérédité, entraînant des agénésies (diminution du nombre de dents) (A), des dents surnuméraires (B) ou supplémentaires (C) (augmentation du nombre de dents).",
-            citations: []
-        },
-        {
-            questionText: "Il existe des caractères correspondants à l'origine ethnique, qui n'ont rien à voir avec un trouble pathologique et qui sont transmis héréditairement:",
-            options: [
-                "La biprotrusion des Africains.",
-                "Les fentes labio-palatines",
-                "Prognathisme facial de la race noire.",
-                "La brachygnathie de la race vietnamienne.",
-                "Les anomalies de classe II"
-            ],
-            correctOptionIndexes: [0, 2, 3],
-            explanation: "La biprotrusion des Africains (A), le prognathisme facial de la race noire (C), et la brachygnathie de la race vietnamienne (D) sont des particularités morphologiques récurrentes dans certaines populations, transmises héréditairement et non pathologiques.",
-            citations: []
-        },
-        {
-            questionText: "Une étude réalisée sur 700 familles fait état que le risque de transmission héréditaire est plus grand lorsqu'une fente est déjà présente chez :",
-            options: [
-                "La mère",
-                "Le père"
-            ],
-            correctOptionIndexes: [1],
-            explanation: "Le risque de transmission héréditaire d'une fente est plus grand lorsque la fente est déjà présente chez le père.",
-            citations: []
-        },
-        {
-            questionText: "Dans La dysostose cranio-faciale de Crouzon, la face est caractéristique par les signes suivants :",
-            options: [
-                "Exophtalmie",
-                "Strabisme",
-                "Nez arqué en bec de perroquet",
-                "Hypoplasie de l'étage moyen",
-                "Dentaires: DDM, béance, endognathie"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3, 4],
-            explanation: "Les signes caractéristiques de la face dans la dysostose cranio-faciale de Crouzon incluent l'exophtalmie (A), le strabisme (B), un nez arqué en bec de perroquet (C), l'hypoplasie de l'étage moyen (D), et des anomalies dentaires comme une DDM, une béance et une endognathie (E).",
-            citations: []
-        },
-        {
-            questionText: "Dans la dysostose cléïdo-crânienne, la face est caractéristique par les signes Suivant :",
-            options: [
-                "Hypoplasie du massif facial",
-                "Persistance anormale des dents temporaires chez l'adulte",
-                "Retard d'éruption et dents surnuméraires en occlusion",
-                "Langue polylobée",
-                "Division palatine"
-            ],
-            correctOptionIndexes: [0, 1, 2],
-            explanation: "Les signes caractéristiques de la face dans la dysostose cléïdo-crânienne incluent l'hypoplasie du massif facial (A), la persistance anormale des dents temporaires chez l'adulte (B), et le retard d'éruption avec des dents surnuméraires en occlusion (C).",
-            citations: []
-        },
-        {
-            questionText: "Dans le Syndrome de Robin la face est caractéristique par les signes sont :",
-            options: [
-                "Rétromandibulie primitive",
-                "Rétrognathie inférieure vraie",
-                "Endognathie supérieure",
-                "Supraclusion incisive",
-                "Exoalvéolie supérieure"
-            ],
-            correctOptionIndexes: [0],
-            explanation: "Le syndrome de Robin est caractérisé par une rétromandibulie primitive (A), c'est-à-dire une mandibule petite et en retrait.",
-            citations: []
-        },
-        {
-            questionText: "Dans la Thalassémie, la face est caractéristique par les signes sont :",
-            options: [
-                "Une crânio-dolicho-céphalie",
-                "Développement exagéré des bosses frontaux et pariétaux",
-                "Protrusion du profil sous-naso-labial",
-                "Couronne dentaire normale avec racine courte.",
-                "Exophtalmie"
-            ],
-            correctOptionIndexes: [0, 1, 2, 3],
-            explanation: "Dans la Thalassémie, la face est caractérisée par une crânio-dolicho-céphalie (A), un développement exagéré des bosses frontales et pariétales (B), une protrusion du profil sous-naso-labial (C), et des couronnes dentaires normales avec des racines courtes (D). L'exophtalmie peut aussi être présente.",
-            citations: []
-        }
+      {
+        questionText: "L'agénésie dentaire",
+        options: [
+          "Est l'absence d'une dent sur l'arcade",
+          "Est l'absence du germe dentaire.",
+          "Touche le plus souvent la 3ème molaire mandibulaire.",
+          "Touche le plus souvent les 2èmes prémolaires supérieures."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "L'agénésie dentaire est l'absence du germe dentaire (B) et touche par ordre de fréquence : la 3ème molaire inférieure, les 2èmes prémolaires inférieures et les incisives latérales supérieures (C est partiellement correct car la 3ème molaire mandibulaire est la plus souvent touchée, mais l'option C seule ne couvre pas toute la fréquence).",
+        citations: []
+      },
+      {
+        questionText: "Le Mésiodens",
+        options: [
+          "Est une dent supplémentaire ayant la forme d'une incisive centrale supérieure.",
+          "Est une dent conoïde de forme atypique.",
+          "Siège entre les deux incisives centrales maxillaires.",
+          "Siège entre les deux prémolaires mandibulaires."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le mésiodens est une dent conoïde de forme atypique (B) et siège typiquement entre les deux incisives centrales maxillaires (C).",
+        citations: []
+      },
+      {
+        questionText: "L'Amélogénèse imparfaite :",
+        options: [
+          "Est une anomalie de forme dentaire",
+          "Est à transmission autosomale dominante",
+          "Atteint uniquement les dents temporaires",
+          "Atteint uniquement les dents définitives"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "L'amélogénèse imparfaite est une anomalie de structure de l'émail, non de forme, et elle est souvent à transmission autosomale dominante (B). Elle peut affecter les deux dentitions, temporaire et permanente.",
+        citations: []
+      },
+      {
+        questionText: "Le phénotype est :",
+        options: [
+          "L'ensemble de codons au niveau des chromosomes.",
+          "L'ensemble des caractères morphologiques et physiologiques visibles.",
+          "Le résultat du patrimoine génétique.",
+          "Le résultat de l'action du milieu environnant."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Le phénotype est l'ensemble des caractères morphologiques et physiologiques visibles (B) d'un individu. Il résulte de l'expression du génotype (C) et est influencé par l'action du milieu environnant (D).",
+        citations: []
+      },
+      {
+        questionText: "L'agénésie dentaire :",
+        options: [
+          "Est l'absence d'un ou de plusieurs germes dentaires.",
+          "Est héréditaire à transmission récessive.",
+          "Est héréditaire à transmission dominante.",
+          "Incrimine le gène RUNX2."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "L'agénésie dentaire est l'absence congénitale d'un ou de plusieurs germes dentaires (A). Elle est généralement à transmission dominante (C) et le gène RUNX2 est incriminé dans cette condition ainsi que d'autres pathologies.",
+        citations: []
+      },
+      {
+        questionText: "Les éléments hautement héréditaires, sont:",
+        options: [
+          "La hauteur faciale postérieure.",
+          "La longueur mandibulaire.",
+          "La longueur de la base du crâne.",
+          "L'angle goniaque."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Les éléments hautement héréditaires incluent la longueur mandibulaire (B) et la longueur de la base du crâne (C), ces traits étant fortement influencés génétiquement. La hauteur faciale postérieure et l'angle goniaque sont moins directement héréditaires.",
+        citations: []
+      },
+      {
+        questionText: "Les éléments faiblement héréditaires, sont:",
+        options: [
+          "Les relations occlusales.",
+          "Les relations sagittales maxillo-mandibulaires.",
+          "La position dentaire.",
+          "La morphologie labiale."
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les éléments faiblement héréditaires sont les relations occlusales (A), la position dentaire (C) et la morphologie labiale (D), car ils sont davantage influencés par des facteurs fonctionnels et environnementaux que par la génétique stricte.",
+        citations: []
+      },
+      {
+        questionText: "Les fentes labio-palatines, sont le plus souvent:",
+        options: [
+          "Des malformations héréditaires.",
+          "Des malformations isolées.",
+          "Des malformations sans anomalies dentaires.",
+          "Associées à des syndromes."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Les fentes labio-palatines sont le plus souvent associées à des syndromes (D), comme le syndrome de Van der Woude, bien qu'elles puissent aussi être multifactorielles.",
+        citations: []
+      },
+      {
+        questionText: "Les caractéristiques cranio-dento-faciales hautement héréditaires sont :",
+        options: [
+          "la forme générale de la face.",
+          "la longueur mandibulaire.",
+          "La longueur de la base du crâne .",
+          "les relations sagittales maxillo-mandibulaires."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les caractéristiques cranio-dento-faciales hautement héréditaires sont la forme générale de la face (A), la longueur mandibulaire (B) et la longueur de la base du crâne (C).",
+        citations: []
+      },
+      {
+        questionText: "Les caractéristiques cranio-dento-faciales moyennement héritées sont :",
+        options: [
+          "le type facial.",
+          "les relations sagittales maxillo-mandibulaires.",
+          "la convexité du profil individuel.",
+          "la longueur de la base du crane."
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les caractéristiques cranio-dento-faciales moyennement héritées sont le type facial (A), les relations sagittales maxillo-mandibulaires (B) et la convexité du profil individuel (C).",
+        citations: []
+      },
+      {
+        questionText: "Les caractéristiques cranio-dento-faciales à faible potentiel héréditaire :",
+        options: [
+          "les relations incisives.",
+          "l'angle goniaque.",
+          "La position dentaire.",
+          "Les relations occlusales"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Les relations incisives (A), la position dentaire (C) et les relations occlusales (D) sont des caractéristiques à faible potentiel héréditaire, étant plus influencées par l'environnement et les fonctions.",
+        citations: []
+      },
+      {
+        questionText: "Le comportement neuro-musculaire de l'individu :",
+        options: [
+          "est prédéfini et hérité des parents.",
+          "ne subit aucune influence de l'environnement.",
+          "est sujet aux changements par les facteurs environnementaux.",
+          "toutes les réponses sont fausses."
+        ],
+        correctOptionIndexes: [2],
+        explanation: "Le comportement neuro-musculaire de l'individu est sujet aux changements par les facteurs environnementaux (C), et n'est pas strictement prédéfini ni à l'abri de l'influence de l'environnement.",
+        citations: []
+      },
+      {
+        questionText: "L'épigénétique :",
+        options: [
+          "Correspond à l'étude des mutations de L'acide désoxyribonucléique.",
+          "Correspond à l'étude des modifications réversibles de l'activité des gènes.",
+          "Elle permet une lecture différente d'un même code génétique.",
+          "Elle contribuerait à l'apparition de certaines pathologies."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "L'épigénétique correspond à l'étude des modifications réversibles de l'activité des gènes (B), permet une lecture différente d'un même code génétique (C), et contribuerait à l'apparition de certaines pathologies (D).",
+        citations: []
+      },
+      {
+        questionText: "Un allèle:",
+        options: [
+          "Dominant peut être masqué.",
+          "Est une variation de la séquence nucléotidique d'un même gène.",
+          "Peut être transmis par les ascendants.",
+          "Est présent sur chaque gène."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Un allèle est une variation de la séquence nucléotidique d'un même gène (B), peut être transmis par les ascendants (C) et est présent sur chaque gène (D). Un allèle dominant n'est pas masqué.",
+        citations: []
+      },
+      {
+        questionText: "Le syndrome de Pierre Robin est caractérisé par :",
+        options: [
+          "Une prognathie mandibulaire.",
+          "Une hypoplasie du condyle mandibulaire.",
+          "Une latérognathie mandibulaire.",
+          "Une petite mandibule."
+        ],
+        correctOptionIndexes: [3],
+        explanation: "Le syndrome de Pierre Robin est caractérisé par une petite mandibule (D), souvent appelée micrognathie ou rétrognathie. Il ne comprend pas spécifiquement une hypoplasie condylienne ou une latérognathie.",
+        citations: []
+      },
+      {
+        questionText: "Les gènes impliqués dans le développement crâniofacial sont :",
+        options: [
+          "Les FGG 1, 2, 4, 5, 8,12.",
+          "Les facteurs de signalisation.",
+          "Les facteurs de transcription.",
+          "Les gènes Hox."
+        ],
+        correctOptionIndexes: [1, 2, 3],
+        explanation: "Les gènes impliqués dans le développement crâniofacial incluent les facteurs de signalisation (B), les facteurs de transcription (C) qui régulent l'expression des gènes, et les gènes Hox (D).",
+        citations: []
+      },
+      {
+        questionText: "L'agénésie touche par ordre de fréquence :",
+        options: [
+          "la 3ème molaire, les incisives latérales supérieures, les 2èmes prémolaires inférieures",
+          "Les incisives latérales supérieures, la 3ème molaire, les 2èmes prémolaires inférieures",
+          "la 3eme molaire, les 2emes prémolaires inférieures, les incisives latérales supérieures",
+          "Les incisives latérales supérieures, les 2èmes prémolaires inférieures, la 3ème molaire"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "L'agénésie touche le plus fréquemment la 3ème molaire, suivie des incisives latérales supérieures, puis des 2èmes prémolaires inférieures.",
+        citations: []
+      },
+      {
+        questionText: "Le mésiodens :",
+        options: [
+          "Est une dent supplémentaire",
+          "est une dent surnuméraire",
+          "Siège entre les incisives centrales maxillaires.",
+          "A une forme harmonieuse et presque identique à la dent habituelle."
+        ],
+        correctOptionIndexes: [1, 2],
+        explanation: "Le mésiodens est un type spécifique de dent surnuméraire (B) qui siège typiquement entre les incisives centrales maxillaires (C). Il a souvent une forme conique ou irrégulière.",
+        citations: []
+      },
+      {
+        questionText: "L'hérédité des dimensions verticales de la face",
+        options: [
+          "Serait moins constante que celle des dimensions antéropostérieures",
+          "Serait surtout transmise par la mère",
+          "Serait surtout transmis par le père",
+          "Est aussi bien transmise par le père et la mère"
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "L'hérédité des dimensions verticales de la face serait moins constante que celle des dimensions antéropostérieures (A) et serait surtout transmise par la mère (B).",
+        citations: []
+      },
+      {
+        questionText: "La dysostose craniofaciale de CROUZON :",
+        options: [
+          "Est une malformation maxillaire associée à des malformations crâniennes héréditaires",
+          "Présente une hypoplasie de l'étage inférieur",
+          "Est caractérisée par une fermeture retardée des fontanelles",
+          "est caractérisée par une endognathie et une classe II squelettique."
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le syndrome de Crouzon est une dysostose craniofaciale héréditaire caractérisée par une malformation maxillaire associée à des malformations crâniennes (A) et une hypoplasie de l'étage moyen de la face. Il présente une synostose précoce des sutures crâniennes, pas un retard de fermeture.",
+        citations: []
+      },
+      {
+        questionText: "Citez 4 caractères dentaires héréditaires",
+        options: [
+          "La forme des dents.",
+          "La taille des dents.",
+          "La couleur des dents.",
+          "La présence de dents surnuméraires."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Les caractères dentaires héréditaires peuvent inclure : La forme des dents, La taille des dents, La couleur des dents, La présence de dents surnuméraires. Ces traits sont souvent influencés par la génétique transmise des parents.",
+        citations: []
+      },
+      {
+        questionText: "Donner les 1ers gènes identifiés chez l'homme, impliqués dans la croissance cranio-faciale.",
+        options: [
+          "HOX",
+          "MSX1, MSX2",
+          "PAX9",
+          "FGFR1, FGFR2, FGFR3",
+          "RUNX2"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Les premiers gènes identifiés chez l'homme impliqués dans la croissance cranio-faciale incluent les gènes HOX, MSX1, MSX2, PAX9, FGFR1, FGFR2, FGFR3, et RUNX2. Ces gènes jouent un rôle crucial dans la formation et le développement des structures cranio-faciales.",
+        citations: []
+      },
+      {
+        questionText: "Hérédité et caractères cranio-faciaux : quelle relation ?",
+        options: [
+          "L'hérédité détermine fortement les traits cranio-faciaux.",
+          "La forme du visage et la structure osseuse sont influencées par les gènes.",
+          "Des anomalies génétiques peuvent causer des dysmorphoses.",
+          "La génétique est une composante majeure de la morphologie."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "L'hérédité joue un rôle fondamental dans la détermination des caractères cranio-faciaux. Les traits tels que la forme du visage, la position des dents, et la structure osseuse sont fortement influencés par les gènes hérités des parents. Des anomalies génétiques peuvent également conduire à des dysmorphoses cranio-faciales, indiquant une relation étroite entre l'hérédité et la morphologie cranio-faciale. La génétique est une composante majeure de la morphologie cranio-faciale.",
+        citations: []
+      },
+      {
+        questionText: "Le syndrome de Crouzon est caractérisé par :",
+        options: [
+          "Une diminution des diamètres verticaux et transversaux du crâne",
+          "Une hypoplasie du maxillaire dans les trois sens de l'espace",
+          "Une DDM avec occlusion de classe III",
+          "Une exophtalmie avec exorbitisme"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le syndrome de Crouzon entraîne une diminution des diamètres verticaux et transversaux du crâne (A), une hypoplasie du maxillaire dans les trois sens de l'espace (B), une dysmorphose dento-maxillaire (DDM) avec occlusion de classe III (C), et une exophtalmie marquée (D).",
+        citations: []
+      },
+      {
+        questionText: "Le patient porteur d'une fente labio-palatine présente :",
+        options: [
+          "Des troubles de la croissance maxillaire",
+          "Des troubles de la croissance mandibulaire",
+          "Des anomalies de la dentition",
+          "Des troubles de la phonation"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "Le patient porteur d'une fente labio-palatine présente des troubles de la croissance maxillaire (A), des anomalies de la dentition (C), et des troubles de la phonation (D).",
+        citations: []
+      },
+      {
+        questionText: "Le syndrome de Binder :",
+        options: [
+          "Est une malformation héréditaire de la partie médiane de la face",
+          "S'accompagne d'une réduction ou de l'absence de l'épine nasale antérieure",
+          "S'accompagne d'une inversion de l'articulé incisivo-canin dans le sens sagittal",
+          "S'accompagne d'une supraclusion antérieure",
+          "S'accompagne d'une protrusion du maxillaire supérieur"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le syndrome de Binder est une malformation héréditaire de la partie médiane de la face (A), s'accompagne d'une réduction ou de l'absence de l'épine nasale antérieure (B), et d'une inversion de l'articulé incisivo-canin dans le sens sagittal (C).",
+        citations: []
+      },
+      {
+        questionText: "Parmi les anomalies ayant un support génétique prépondérant nous citons :",
+        options: [
+          "La classe II squelettique",
+          "Le pro génie",
+          "Les béances squelettiques",
+          "Les rotations dentaires",
+          "L'ectopie canine"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les anomalies ayant un support génétique prépondérant incluent la classe II squelettique (A), le prognathisme (pro génie) (B) et les béances squelettiques (C).",
+        citations: []
+      },
+      {
+        questionText: "L'expression génétique est la transmission des informations génétiques, elle se fait en deux processus successifs :",
+        options: [
+          "Transcription: La copie de l'ADN en ARN.",
+          "Traduction: La conversion de l'ARN en protéines."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "L'expression génétique se fait en deux processus successifs : Transcription (la copie de l'ADN en ARN) et Traduction (la conversion de l'ARN en protéines). Ces deux étapes sont fondamentales pour la synthèse des protéines à partir du code génétique.",
+        citations: []
+      },
+      {
+        questionText: "Quelle est la différence entre la macrodontie vraie et la macrodontie relative :",
+        options: [
+          "Macrodontie vraie : Augmentation anormale de la taille des dents.",
+          "Macrodontie relative : Taille normale des dents mais qui paraissent plus grandes en raison de la petite taille des mâchoires."
+        ],
+        correctOptionIndexes: [0, 1],
+        explanation: "Macrodontie vraie : Augmentation anormale de la taille des dents. Macrodontie relative : Taille normale des dents mais qui paraissent plus grandes en raison de la petite taille des mâchoires. La macrodontie vraie est un problème de taille intrinsèque des dents, tandis que la macrodontie relative est un problème de proportion entre la taille des dents et celle des maxillaires.",
+        citations: []
+      },
+      {
+        questionText: "Le syndrome de Crouzon est caractérisé par :",
+        options: [
+          "Dysostose craniofaciale (fusion prématurée des sutures crâniennes - craniosynostose).",
+          "Hypoplasie maxillaire.",
+          "Proptose oculaire (yeux globuleux).",
+          "Anomalies dentaires."
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Le syndrome de Crouzon est caractérisé par : Dysostose craniofaciale (fusion prématurée des sutures crâniennes), Hypoplasie maxillaire, Proptose oculaire (yeux globuleux), et des Anomalies dentaires. C'est une maladie génétique qui affecte le développement du crâne et du visage.",
+        citations: []
+      },
+      {
+        questionText: "Le nombre des dents peut être altéré par l'hérédité, donc on a des :",
+        options: [
+          "Agénésies",
+          "Surnuméraires",
+          "Supplémentaires",
+          "Microdontie",
+          "Macrodontie"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Le nombre des dents peut être altéré par l'hérédité, entraînant des agénésies (diminution du nombre de dents) (A), des dents surnuméraires (B) ou supplémentaires (C) (augmentation du nombre de dents).",
+        citations: []
+      },
+      {
+        questionText: "Il existe des caractères correspondants à l'origine ethnique, qui n'ont rien à voir avec un trouble pathologique et qui sont transmis héréditairement:",
+        options: [
+          "La biprotrusion des Africains.",
+          "Les fentes labio-palatines",
+          "Prognathisme facial de la race noire.",
+          "La brachygnathie de la race vietnamienne.",
+          "Les anomalies de classe II"
+        ],
+        correctOptionIndexes: [0, 2, 3],
+        explanation: "La biprotrusion des Africains (A), le prognathisme facial de la race noire (C), et la brachygnathie de la race vietnamienne (D) sont des particularités morphologiques récurrentes dans certaines populations, transmises héréditairement et non pathologiques.",
+        citations: []
+      },
+      {
+        questionText: "Une étude réalisée sur 700 familles fait état que le risque de transmission héréditaire est plus grand lorsqu'une fente est déjà présente chez :",
+        options: [
+          "La mère",
+          "Le père"
+        ],
+        correctOptionIndexes: [1],
+        explanation: "Le risque de transmission héréditaire d'une fente est plus grand lorsque la fente est déjà présente chez le père.",
+        citations: []
+      },
+      {
+        questionText: "Dans La dysostose cranio-faciale de Crouzon, la face est caractéristique par les signes suivants :",
+        options: [
+          "Exophtalmie",
+          "Strabisme",
+          "Nez arqué en bec de perroquet",
+          "Hypoplasie de l'étage moyen",
+          "Dentaires: DDM, béance, endognathie"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3, 4],
+        explanation: "Les signes caractéristiques de la face dans la dysostose cranio-faciale de Crouzon incluent l'exophtalmie (A), le strabisme (B), un nez arqué en bec de perroquet (C), l'hypoplasie de l'étage moyen (D), et des anomalies dentaires comme une DDM, une béance et une endognathie (E).",
+        citations: []
+      },
+      {
+        questionText: "Dans la dysostose cléïdo-crânienne, la face est caractéristique par les signes Suivant :",
+        options: [
+          "Hypoplasie du massif facial",
+          "Persistance anormale des dents temporaires chez l'adulte",
+          "Retard d'éruption et dents surnuméraires en occlusion",
+          "Langue polylobée",
+          "Division palatine"
+        ],
+        correctOptionIndexes: [0, 1, 2],
+        explanation: "Les signes caractéristiques de la face dans la dysostose cléïdo-crânienne incluent l'hypoplasie du massif facial (A), la persistance anormale des dents temporaires chez l'adulte (B), et le retard d'éruption avec des dents surnuméraires en occlusion (C).",
+        citations: []
+      },
+      {
+        questionText: "Dans le Syndrome de Robin la face est caractéristique par les signes sont :",
+        options: [
+          "Rétromandibulie primitive",
+          "Rétrognathie inférieure vraie",
+          "Endognathie supérieure",
+          "Supraclusion incisive",
+          "Exoalvéolie supérieure"
+        ],
+        correctOptionIndexes: [0],
+        explanation: "Le syndrome de Robin est caractérisé par une rétromandibulie primitive (A), c'est-à-dire une mandibule petite et en retrait.",
+        citations: []
+      },
+      {
+        questionText: "Dans la Thalassémie, la face est caractéristique par les signes sont :",
+        options: [
+          "Une crânio-dolicho-céphalie",
+          "Développement exagéré des bosses frontaux et pariétaux",
+          "Protrusion du profil sous-naso-labial",
+          "Couronne dentaire normale avec racine courte.",
+          "Exophtalmie"
+        ],
+        correctOptionIndexes: [0, 1, 2, 3],
+        explanation: "Dans la Thalassémie, la face est caractérisée par une crânio-dolicho-céphalie (A), un développement exagéré des bosses frontales et pariétales (B), une protrusion du profil sous-naso-labial (C), et des couronnes dentaires normales avec des racines courtes (D). L'exophtalmie peut aussi être présente.",
+        citations: []
+      }
     ]
   },
   {
