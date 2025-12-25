@@ -2350,8 +2350,8 @@ const odfQuizzesY2 = [
           "La fermeture de l'angle antérieur de la face.",
           "Un abaissement de l'occiput et de l'odontoide."
         ],
-        correctOptionIndexes: [0],
-        explanation: "Lorsque la base du crane est en flexion, elle entraine : A : VRAI : la fermeture de l’angle sphénoïdal B : FAUX : raccourcissement du champ cranio facial C : FAUX : ouverture de l’angle antérieur de la face  D : VRAI : un abaissement de l’occiput et de l’odontoide",
+        correctOptionIndexes: [0, 3],
+        explanation: "Lorsque la base du crane est en flexion, elle entraine : A : VRAI : la fermeture de l’angle sphénoïdal B : FAUX : raccourcissement du champ cranio facial C : FAUX : ouverture de l’angle antérieur de la face D : VRAI : un abaissement de l’occiput et de l’odontoide",
         citations: []
       },
       {
@@ -2362,8 +2362,8 @@ const odfQuizzesY2 = [
           "Une fermeture de l'angle sphénoïdal",
           "Une ouverture de l'angle sphénoïdal"
         ],
-        correctOptionIndexes: [2],
-        explanation: "L'établissement d'une malocclusion de classe III squelettique est lié à :  A. L'hyper flexion de la base du crâne. Vrai. B. L'hypo flexion de la base du crâne. Faux. C. Une fermeture de l'angle sphénoïdal. Vrai. Une classe III est liée à une fermeture de l'angle. D. Une ouverture de l'angle sphénoïdal. Faux. Une ouverture de l'angle sphénoïdal est associée à une classe 2.",
+        correctOptionIndexes: [0, 2],
+        explanation: "L'établissement d'une malocclusion de classe III squelettique est lié à : A. L'hyper flexion de la base du crâne. Vrai. B. L'hypo flexion de la base du crâne. Faux. C. Une fermeture de l'angle sphénoïdal. Vrai. Une classe III est liée à une fermeture de l'angle. D. Une ouverture de l'angle sphénoïdal. Faux. Une ouverture de l'angle sphénoïdal est associée à une classe 2.",
         citations: []
       },
       {
@@ -2375,7 +2375,7 @@ const odfQuizzesY2 = [
           "Lié à la bipédie."
         ],
         correctOptionIndexes: [2],
-        explanation: "La flexion basi crânienne est : -physiologique (non lié a une pathologie) -spécifique a l’homme car on a remarqué que la base du crane des grands singes et autres animaux était plate.   Voici une comparaison entre un crane humain et un crane de primate :   -La bipédie et la croissance du cerveau sont des facteurs qui induisent cette flexion.",
+        explanation: "La flexion basi crânienne est : -physiologique (non lié a une pathologie) -spécifique a l’homme car on a remarqué que la base du crane des grands singes et autres animaux était plate. Voici une comparaison entre un crane humain et un crane de primate : -La bipédie et la croissance du cerveau sont des facteurs qui induisent cette flexion.",
         citations: []
       },
       {
@@ -2423,7 +2423,7 @@ const odfQuizzesY2 = [
           "La suture sphéno-occipitale."
         ],
         correctOptionIndexes: [0],
-        explanation: "Le premier moteur de la flexion bas crânienne est :  A. L'os occipital. Vrai. B. L'os sphénoïde. Faux. L'os sphénoïde est le 2eme moteur de la flexion basi crânienne. C. L'os temporal. Faux. L'os temporal n'est pas le moteur principal de la flexion bas crânienne. D. La suture sphéno-occipitale. Faux. La suture sphéno-occipitale n'est pas un moteur mais une structure passive dans ce mouvement.",
+        explanation: "Le premier moteur de la flexion bas crânienne est : A. L'os occipital. Vrai. B. L'os sphénoïde. Faux. L'os sphénoïde est le 2eme moteur de la flexion basi crânienne. C. L'os temporal. Faux. L'os temporal n'est pas le moteur principal de la flexion bas crânienne. D. La suture sphéno-occipitale. Faux. La suture sphéno-occipitale n'est pas un moteur mais une structure passive dans ce mouvement.",
         citations: []
       },
       {
@@ -2435,7 +2435,7 @@ const odfQuizzesY2 = [
           "L'unité temporo-mandibulaire."
         ],
         correctOptionIndexes: [1],
-        explanation: "Le maxillaire supérieur est rattaché à la base du crâne par :  A. L'unité occipito-temporale. Faux. Cette unité n'est pas directement impliquée dans la connexion du maxillaire supérieur à la base du crâne. B. L'unité sphéno- éthmoïdale. Vrai. Le maxillaire supérieur est rattaché à la base du crâne via cette unité. C. L'unité sphéno-occipitale. Faux. L'unité sphéno-occipitale concerne la connexion entre le sphénoïde et l'occipital, non le maxillaire supérieur. D. L'unité temporo-mandibulaire. Faux. Cette unité concerne l'articulation de la mandibule, pas le maxillaire supérieur.",
+        explanation: "Le maxillaire supérieur est rattaché à la base du crâne par : A. L'unité occipito-temporale. Faux. Cette unité n'est pas directement impliquée dans la connexion du maxillaire supérieur à la base du crâne. B. L'unité sphéno- éthmoïdale. Vrai. Le maxillaire supérieur est rattaché à la base du crâne via cette unité. C. L'unité sphéno-occipitale. Faux. L'unité sphéno-occipitale concerne la connexion entre le sphénoïde et l'occipital, non le maxillaire supérieur. D. L'unité temporo-mandibulaire. Faux. Cette unité concerne l'articulation de la mandibule, pas le maxillaire supérieur.",
         citations: []
       },
       {
@@ -2447,7 +2447,7 @@ const odfQuizzesY2 = [
           "Une rotation postérieure antihoraire."
         ],
         correctOptionIndexes: [0],
-        explanation: "Lors de la flexion basi-crânienne l'occipital fait :  A. Une rotation antérieure antihoraire. Vrai.  B. Une rotation postérieure horaire. Faux. Ce mouvement n'est pas correct pour l'occipital dans ce contexte. C. Une rotation antérieure horaire. Faux. L'occipital fait une rotation antérieure antihoraire lors de la flexion basi-crânienne. D. Une rotation postérieure antihoraire. Faux. Ce n'est pas le mouvement observé lors de la flexion basi-crânienne.",
+        explanation: "Lors de la flexion basi-crânienne l'occipital fait : A. Une rotation antérieure antihoraire. Vrai. B. Une rotation postérieure horaire. Faux. Ce mouvement n'est pas correct pour l'occipital dans ce contexte. C. Une rotation antérieure horaire. Faux. L'occipital fait une rotation antérieure antihoraire lors de la flexion basi-crânienne. D. Une rotation postérieure antihoraire. Faux. Ce n'est pas le mouvement observé lors de la flexion basi-crânienne.",
         citations: []
       },
       {
@@ -2458,8 +2458,8 @@ const odfQuizzesY2 = [
           "D'un recul des cavités glénoïdes.",
           "D'une position en avant des cavités glénoïdes."
         ],
-        correctOptionIndexes: [1],
-        explanation: "La classe II squelettique s'accompagne :  A. D'une hyperflexion de l'angle basi-crânien. Faux. La classe II squelettique est souvent associée à une hyperextension, non une hyperflexion. B. D'une hyperextention de l'angle basi-crânien. Vrai. La classe II squelettique s'accompagne souvent d'une hyperextension de l'angle basi-crânien. C. D'un recul des cavités glénoïdes. Vrai.  D. D'une position en avant des cavités glénoïdes. Faux. Les cavités glénoïdes ne se positionnent pas en avant dans cette classe.",
+        correctOptionIndexes: [1, 2],
+        explanation: "La classe II squelettique s'accompagne : A. D'une hyperflexion de l'angle basi-crânien. Faux. La classe II squelettique est souvent associée à une hyperextension, non une hyperflexion. B. D'une hyperextention de l'angle basi-crânien. Vrai. La classe II squelettique s'accompagne souvent d'une hyperextension de l'angle basi-crânien. C. D'un recul des cavités glénoïdes. Vrai. D. D'une position en avant des cavités glénoïdes. Faux. Les cavités glénoïdes ne se positionnent pas en avant dans cette classe.",
         citations: []
       },
       {
@@ -2470,8 +2470,8 @@ const odfQuizzesY2 = [
           "D'un recul des cavités glénoïdes.",
           "D'une position en avant des cavités glénoïdes."
         ],
-        correctOptionIndexes: [0],
-        explanation: "La classe III squelettique s'accompagne:  A. D'une hyperflexion de l'angle basi-crânien. Vrai. La classe III squelettique est souvent associée à une hyperflexion de l'angle basi-crânien. B. D'une hyperextention de l'angle basi-crânien. Faux. L'hyperextension est associée à la classe II, pas à la classe III. C. D'un recul des cavités glénoïdes. Faux. Cette classe est caractérisée par une avancée des cavités glénoïdes. D. D'une position en avant des cavités glénoïdes. Vrai.",
+        correctOptionIndexes: [0, 3],
+        explanation: "La classe III squelettique s'accompagne: A. D'une hyperflexion de l'angle basi-crânien. Vrai. La classe III squelettique est souvent associée à une hyperflexion de l'angle basi-crânien. B. D'une hyperextention de l'angle basi-crânien. Faux. L'hyperextension est associée à la classe II, pas à la classe III. C. D'un recul des cavités glénoïdes. Faux. Cette classe est caractérisée par une avancée des cavités glénoïdes. D. D'une position en avant des cavités glénoïdes. Vrai.",
         citations: []
       },
       {
@@ -2482,8 +2482,8 @@ const odfQuizzesY2 = [
           "D'une classe 1 squelettique.",
           "D'une anomalie du sens vertical."
         ],
-        correctOptionIndexes: [1],
-        explanation: "Une flexion exagérée de la synchondrose sphéno-occipitale peut participer à l'installation :  A. D'une classe 2 squelettique : Faux.  B. D'une classe 3 squelettique : Vrai. Une flexion exagérée, favoriserait une classe 3. C. D'une classe 1 squelettique : Faux. Classe 1 est neutre, non liée à une flexion exagérée. D. D'une anomalie du sens vertical : Vrai. Une flexion exagérée peut affecter la croissance verticale.",
+        correctOptionIndexes: [1, 3],
+        explanation: "Une flexion exagérée de la synchondrose sphéno-occipitale peut participer à l'installation : A. D'une classe 2 squelettique : Faux. B. D'une classe 3 squelettique : Vrai. Une flexion exagérée, favoriserait une classe 3. C. D'une classe 1 squelettique : Faux. Classe 1 est neutre, non liée à une flexion exagérée. D. D'une anomalie du sens vertical : Vrai. Une flexion exagérée peut affecter la croissance verticale.",
         citations: []
       },
       {
@@ -2495,7 +2495,7 @@ const odfQuizzesY2 = [
           "Une rotation postérieure antihoraire"
         ],
         correctOptionIndexes: [2],
-        explanation: "Lors de la flexion basi-crânienne le sphénoïde fait :  A. Une rotation antérieure antihoraire. Faux. Cette rotation n'est pas correcte pour le sphénoïde lors de la flexion basi-crânienne. B. Une rotation postérieure horaire. Faux. Ce mouvement n'est pas observé pour le sphénoïde lors de cette flexion. C. Une rotation antérieure horaire. Vrai. Le sphénoïde fait une rotation antérieure horaire lors de la flexion basi-crânienne. D. Une rotation postérieure antihoraire. Faux. Cette rotation est incorrecte pour le sphénoïde dans ce contexte.",
+        explanation: "Lors de la flexion basi-crânienne le sphénoïde fait : A. Une rotation antérieure antihoraire. Faux. Cette rotation n'est pas correcte pour le sphénoïde lors de la flexion basi-crânienne. B. Une rotation postérieure horaire. Faux. Ce mouvement n'est pas observé pour le sphénoïde lors de cette flexion. C. Une rotation antérieure horaire. Vrai. Le sphénoïde fait une rotation antérieure horaire lors de la flexion basi-crânienne. D. Une rotation postérieure antihoraire. Faux. Cette rotation est incorrecte pour le sphénoïde dans ce contexte.",
         citations: []
       },
       {
@@ -2506,8 +2506,8 @@ const odfQuizzesY2 = [
           "Un déplacement vers l’avant de la partie basse de l’écaille occipitale",
           "Une rotation antihoraire avec déplacement vers le bas de l’écaille occipitale"
         ],
-        correctOptionIndexes: [0],
-        explanation: "La rotation antérieure de l’occipital est :  A. Une rotation antihoraire. Faux. La rotation antérieure de l'occipital est une rotation horaire. B. Une rotation horaire avec déplacement vers le bas de l’écaille occipitale. Faux.  La rotation antérieure de l’occipital implique une rotation horaire, avec un déplacement vers l’avant de l'écaille occipitale. C. Un déplacement vers l’avant de la partie basse de l’écaille occipitale. Vrai. D. Une rotation antihoraire avec déplacement vers le bas de l’écaille occipitale. Faux. La rotation antérieure est horaire, pas antihoraire.",
+        correctOptionIndexes: [2],
+        explanation: "La rotation antérieure de l’occipital est : A. Une rotation antihoraire. Faux. La rotation antérieure de l'occipital est une rotation horaire. B. Une rotation horaire avec déplacement vers le bas de l’écaille occipitale. Faux. La rotation antérieure de l’occipital implique une rotation horaire, avec un déplacement vers l’avant de l'écaille occipitale. C. Un déplacement vers l’avant de la partie basse de l’écaille occipitale. Vrai. D. Une rotation antihoraire avec déplacement vers le bas de l’écaille occipitale. Faux. La rotation antérieure est horaire, pas antihoraire.",
         citations: []
       },
       {
@@ -2519,7 +2519,7 @@ const odfQuizzesY2 = [
           "Un mouvement vers le haut et vers l’intérieur."
         ],
         correctOptionIndexes: [1],
-        explanation: "Lors d’une flexion basi-crânienne modérée, l’os temporal effectue :  A. Une rotation postéro-interne. Faux. Ce mouvement n'est pas associé à une flexion basi-crânienne modérée. B. Une rotation antéro-externe. Vrai. Lors d'une flexion basi-crânienne, l'os temporal effectue une rotation antéro-externe. C. Un mouvement vers le haut et vers l’extérieur. Faux. Ce mouvement est partiellement correct mais n'englobe pas totalement le mouvement du temporal. D. Un mouvement vers le haut et vers l’intérieur. Faux. Le mouvement est plutôt vers l'extérieur.",
+        explanation: "Lors d’une flexion basi-crânienne modérée, l’os temporal effectue : A. Une rotation postéro-interne. Faux. Ce mouvement n'est pas associé à une flexion basi-crânienne modérée. B. Une rotation antéro-externe. Vrai. Lors d'une flexion basi-crânienne, l'os temporal effectue une rotation antéro-externe. C. Un mouvement vers le haut et vers l’extérieur. Faux. Ce mouvement est partiellement correct mais n'englobe pas totalement le mouvement du temporal. D. Un mouvement vers le haut et vers l’intérieur. Faux. Le mouvement est plutôt vers l'extérieur.",
         citations: []
       },
       {
@@ -2531,7 +2531,7 @@ const odfQuizzesY2 = [
           "Une rotation sphénoïdale postérieure."
         ],
         correctOptionIndexes: [2],
-        explanation: "Une rotation horaire du sphénoïde est :  A. Une bascule ethmoïdale positive. Faux. La rotation horaire du sphénoïde n'est pas une bascule ethmoïdale. B. Une bascule sphénoïdale négative. Faux. La rotation horaire n'est pas décrite comme une bascule négative. C. Une rotation sphénoïdale antérieure. Vrai. La rotation horaire du sphénoïde correspond à une rotation antérieure. D. Une rotation sphénoïdale postérieure. Faux. La rotation horaire est une rotation antérieure.",
+        explanation: "Une rotation horaire du sphénoïde est : A. Une bascule ethmoïdale positive. Faux. La rotation horaire du sphénoïde n'est pas une bascule ethmoïdale. B. Une bascule sphénoïdale négative. Faux. La rotation horaire n'est pas décrite comme une bascule négative. C. Une rotation sphénoïdale antérieure. Vrai. La rotation horaire du sphénoïde correspond à une rotation antérieure. D. Une rotation sphénoïdale postérieure. Faux. La rotation horaire est une rotation antérieure.",
         citations: []
       },
       {
@@ -2542,8 +2542,8 @@ const odfQuizzesY2 = [
           "Une rotation antéro-externe des temporaux",
           "Une rotation externe des maxillaires."
         ],
-        correctOptionIndexes: [2],
-        explanation: "Une flexion modérée de la Synchondrose Sphéno-Occipitale se traduit par :  A. Une rotation horaire du sphénoïde. Faux. antihoraire B. Une rotation antihoraire de l’occipital. Faux. L'occipital effectue une rotation horaire avec le sphénoïde. C. Une rotation antéro-externe des temporaux. Vrai. Les temporaux effectuent une rotation antéro-externe. D. Une rotation externe des maxillaires. Vrai.",
+        correctOptionIndexes: [2, 3],
+        explanation: "Une flexion modérée de la Synchondrose Sphéno-Occipitale se traduit par : A. Une rotation horaire du sphénoïde. Faux. antihoraire B. Une rotation antihoraire de l’occipital. Faux. L'occipital effectue une rotation horaire avec le sphénoïde. C. Une rotation antéro-externe des temporaux. Vrai. Les temporaux effectuent une rotation antéro-externe. D. Une rotation externe des maxillaires. Vrai.",
         citations: []
       },
       {
@@ -2567,7 +2567,7 @@ const odfQuizzesY2 = [
           "Qu'il se déplace vers l'avant et vers l'extérieur,",
           "Qu’il se déplace dans le sens opposé aux aiguilles d'une montre."
         ],
-        correctOptionIndexes: [2],
+        correctOptionIndexes: [0, 2, 3],
         explanation: "La rotation antéro-externe de l'os temporal signifie : · A. Qu'il effectue un mouvement vers le haut : Vrai. · B. Qu'il fait un déplacement vers l'avant uniquement : Faux. · C. Qu'il se déplace vers l'avant et vers l'extérieur : Vrai. C'est exactement ce qu'indique ce terme. · D. Qu’il se déplace dans le sens opposé aux aiguilles d'une montre : Vrai. Son déplacement antérieur est antihoraire.",
         citations: []
       },
@@ -2579,8 +2579,8 @@ const odfQuizzesY2 = [
           "En rotation antihoraire.",
           "En rotation postéro-externe."
         ],
-        correctOptionIndexes: [1],
-        explanation: "La bascule sphénoïdale est « positive» pour la flexion si elle se fait : · A. En rotation antérieure : Vrai. Cela signifie que la base du crâne est en flexion. · B. En rotation horaire : Vrai.  · C. En rotation antihoraire : Faux. · D. En rotation postéro-externe : Faux.",
+        correctOptionIndexes: [0, 1],
+        explanation: "La bascule sphénoïdale est « positive» pour la flexion si elle se fait : · A. En rotation antérieure : Vrai. Cela signifie que la base du crâne est en flexion. · B. En rotation horaire : Vrai. · C. En rotation antihoraire : Faux. · D. En rotation postéro-externe : Faux.",
         citations: []
       },
       {
@@ -2603,8 +2603,8 @@ const odfQuizzesY2 = [
           "La fermeture de l'angle antérieur de la face.",
           "Un abaissement de l'occiput et de l'odontoide."
         ],
-        correctOptionIndexes: [0],
-        explanation: "Lorsque la base du crane est en flexion, elle entraine : A : VRAI : la fermeture de l’angle sphénoïdal B : FAUX : raccourcissement du champ cranio facial C : FAUX : ouverture de l’angle antérieur de la face  D : VRAI : un abaissement de l’occiput et de l’odontoide",
+        correctOptionIndexes: [0, 3],
+        explanation: "Lorsque la base du crane est en flexion, elle entraine : A : VRAI : la fermeture de l’angle sphénoïdal B : FAUX : raccourcissement du champ cranio facial C : FAUX : ouverture de l’angle antérieur de la face D : VRAI : un abaissement de l’occiput et de l’odontoide",
         citations: []
       }
     ]
