@@ -3503,245 +3503,401 @@ const anatomyQuizzesY2 = [
         citations: [467, 468, 469, 470]
       },
       // أضف هذه الأسئلة إلى قائمة 'questions' داخل كائن الدرس: "Massif Cranial (Os Frontal+ Tète Osseuse + Os Temporal)"
-
-      {
-        questionText: "Concernant Le frontal (1er EMD 2019):",
-        options: [
-          "Il présente dans sa partie exocrânienne, la glabelle, située au-dessus de la suture métopique.",
-          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
-          "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
-          "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
-          "Sa partie verticale, appelée écaille, appartient à la base du crâne"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "Les fossettes granulaires bordent le sinus sagittal supérieur. La fossette trochléaire est située médialement (en dedans) tandis que la fossette lacrymale est latérale. L'écaille appartient à la voûte du crâne, pas à la base."
-      },
-      {
-        questionText: "Concernant l'os ethmoïdal (1er EMD 2019):",
-        options: [
-          "L'apophyse crista galli est la partie endocrânienne de la lame perpendiculaire",
-          "Participe à la formation de la cavité orbitaire par sa lame perpendiculaire",
-          "Participe à la formation des fosses nasales par la lame perpendiculaire",
-          "L'os planum est la face médiale de la masse latérale de l'éthmoïde",
-          "Le cornet inférieur fait partie des masses latérales"
-        ],
-        correctOptionIndexes: [0, 2],
-        explanation: "L'apophyse Crista Galli est bien la partie supérieure (endocrânienne) de la lame perpendiculaire. La lame perpendiculaire participe à la cloison nasale. L'os planum est la face latérale (et non médiale) des masses latérales. Le cornet inférieur est un os distinct."
-      },
-      {
-        questionText: "A propos de l'occipital (1er EMD 2019):",
-        options: [
-          "L'apophyse basilaire s'articule avec l'apophyse ptérygoïde de l'os sphénoïdal",
-          "Les masses latérales délimitent le foramen magnum",
-          "Sur l'écaille occipitale se trouve le canal du canal condylien",
-          "Les fosses cérébrales sont situées au-dessus des fosses cérébelleuses",
-          "Les condyles sont articulaires avec l'axis"
-        ],
-        correctOptionIndexes: [1, 3],
-        explanation: "Les masses latérales de l'occipital bordent le foramen magnum. Les fosses cérébrales (pour les lobes occipitaux) sont situées au-dessus des fosses cérébelleuses. L'apophyse basilaire s'articule avec le corps du sphénoïde (clivus), pas les ptérygoïdes. Les condyles s'articulent avec l'atlas (C1)."
-      },
-      {
-        questionText: "Concernant la fissure orbitaire supérieure (1er EMD 2019):",
-        options: [
-          "Est limitée en Dehors par le frontal",
-          "Est limitée en dedans par la petite aile du sphénoïde",
-          "Fait communiquer l'orbite avec l'étage moyen de la base du crâne",
-          "Livre passage au nerf optique",
-          "Livre passage aux nerfs oculomoteurs"
-        ],
-        correctOptionIndexes: [0, 2, 4],
-        explanation: "La fissure orbitaire supérieure (fente sphénoïdale) fait communiquer l'orbite avec l'étage moyen et livre passage aux nerfs oculomoteurs (III, IV, VI). Le nerf optique passe par le canal optique."
-      },
-      {
-        questionText: "Concernant l'ostéologie du crâne",
-        options: [
-          "L'ethmoïde, seul os n'appartenant pas à la calvaria.",
-          "La selle turcique se situe à la face antérieure du corps du sphénoïde",
-          "Le parietal s'articule avec tous les os qui participent à la constitution de la calvaria",
-          "L'os frontal n'appartient pas à la base du crâne",
-          "La fossette vermienne est une bifurcation de la crête occipitale interne."
-        ],
-        correctOptionIndexes: [0],
-        explanation: "L'ethmoïde appartient à la base du crâne et non à la calvaria (voûte). La selle turcique se situe sur la face supérieure (non antérieure) du corps du sphénoïde. Le pariétal ne s'articule pas avec l'ethmoïde (qui n'est pas dans la calvaria). L'os frontal participe à la fois à la voûte et à la base du crâne.",
-        citations: [604, 605, 606, 607, 608, 609, 610, 611]
-      },
-      {
-        questionText: "Concernant l'os Temporal",
-        options: [
-          "Os de la fosse crânienne antérieure",
-          "Situé au-dessous du pariétal, en avant et dedans du sphénoïde",
-          "Le processus styloïde appartient à la pyramide pétreuse",
-          "Le méat acoustique interne, orifice creusé dans la partie tympanal de l'os",
-          "La fosse trigéminale, apparient à la partie postéro-supérieure de la face endocrânienne du rocher"
-        ],
-        correctOptionIndexes: [1, 4],
-        explanation: "L'os temporal est situé sous le pariétal, en avant et en dedans du sphénoïde. La fosse trigéminale se situe bien dans la partie postéro-supérieure de la face endocrânienne du rocher. Il participe aux fosses crâniennes moyenne et postérieure (non antérieure). Le processus styloïde appartient à la portion tympanique (non pétreuse). Le méat acoustique interne est dans la portion pétreuse (non tympanique).",
-        citations: [625, 626, 627, 628, 629, 630, 631]
-      },
-      {
-        questionText: "Concernant l'os sphénoïde",
-        options: [
-          "Il est articulaire avec tous les os du crâne",
-          "Il forme la voûte et la base du crâne",
-          "Ses petites ailes délimitent le canal optique",
-          "Son corps présente des foramens livrant passage aux nerfs",
-          "Ses grandes ailes forment l'étage moyen de la base du crâne"
-        ],
-        correctOptionIndexes: [0, 1, 2, 3, 4],
-        explanation: "Toutes les propositions sont justes selon le commentaire : L'os sphénoïde s'articule avec tous les os du crâne, il forme à la fois la voûte et la base, ses petites ailes délimitent le canal optique, son corps présente des foramens pour les nerfs, et ses grandes ailes forment l'étage moyen de la base.",
-        citations: [632, 633, 634, 635, 636, 637]
-      },
-      {
-        questionText: "Concernant L'os frontal:",
-        options: [
-          "il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
-          "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
-          "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
-          "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
-          "Sa partie verticale, appelée écaille, appartient à la voûte du crâne"
-        ],
-        correctOptionIndexes: [1, 2, 4],
-        explanation: "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires. La fossette trochléaire est bien en dedans (médiale) par rapport à la fossette lacrymale (latérale). La partie verticale (écaille) appartient à la voûte du crâne. La glabelle est sur la face externe (non endocrânienne). L'incisure supra-orbitaire est au tiers médial (non latéral).",
-        citations: [867, 868, 869, 870, 871, 872, 873, 874, 875, 876]
-      },
-      {
-        questionText: "La paroi supérieure de l'orbite osseuse est formée des os suivants :",
-        options: [
-          "L'apophyse orbitaire de l'os malaire",
-          "L'os palatin",
-          "L'os planum",
-          "La fosse orbitaire de l'os frontale",
-          "La petite aile du sphénoïde"
-        ],
-        correctOptionIndexes: [3, 4],
-        explanation: "La paroi supérieure de l'orbite (le toit) est formée par la fosse orbitaire de l'os frontal et par la petite aile du sphénoïde. L'os malaire, l'os palatin et l'os planum (partie de l'ethmoïde) participent à d'autres parois de l'orbite.",
-        citations: [940, 941, 942, 943, 944, 945]
-      },
-      {
-        questionText: "Concernant la lame criblée de l'éthmoïde:",
-        options: [
-          "Est le lieu de passage du nerf optique",
-          "Est le lieu de passage des filets olfactifs",
-          "Est une structure osseuse",
-          "Est située dans l'étage antérieur de la base du crâne",
-          "Est située dans l'étage moyen de la base du crâne"
-        ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "La lame criblée est une structure osseuse de l'ethmoïde, située dans l'étage antérieur de la base du crâne. Elle sert de lieu de passage pour les filets olfactifs (nerf I), et non pour le nerf optique (nerf II).",
-        citations: [1141, 1142, 1143, 1144, 1145]
-      },
-      {
-        questionText: "Concernant l'os ethmoïdal",
-        options: [
-          "Il présente 6 faces et occupe la partie médiane de l'os",
-          "Sa face supérieure présente la gouttière optique",
-          "Sa face inférieure s'articule avec le palatin",
-          "Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde",
-          "Sa face postérieure s'articule avec le temporal"
-        ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Cette description semble concerner le corps du sphénoïde, et non l'ethmoïde. En supposant que la question porte sur le corps du sphénoïde : Il présente six faces et occupe la partie centrale. Sa face supérieure présente la gouttière optique. Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde. Sa face inférieure s'articule avec le vomer (non le palatin) et sa face postérieure s'articule avec l'occipital (non le temporal).",
-        citations: [1296, 1297, 1298, 1299, 1300, 1301]
-      },
-      {
-        questionText: "Concernant L'os temporal:",
-        options: [
-          "C'est un os impair",
-          "Il est constitué de 3 éléments",
-          "Il contribue à la formation des étages antérieur et postérieur de la base du crâne",
-          "Il s'articule en avant avec l'os zygomatique",
-          "S'articule avec la mandibule au niveau de la partie mastoïdienne"
-        ],
-        correctOptionIndexes: [1, 3],
-        explanation: "L'os temporal est un os pair composé de trois parties : l'écaille, le rocher (pyramide pétreuse) et l'os tympanal. Il s'articule en avant avec l'os zygomatique. Il contribue uniquement à l'étage moyen de la base du crâne et s'articule avec la mandibule au niveau de sa partie squameuse."
-      },
-      {
-        questionText: "Concernant l'os sphénoïde (vue supérieure) :",
-        options: [
-          "Le foramen rond (grand rond) livre passage au nerf maxillaire (V2).",
-          "Le foramen ovale livre passage à l'artère méningée moyenne.",
-          "Le canal optique est situé sur les grandes ailes.",
-          "La selle turcique loge la glande hypophyse.",
-          "Le foramen épineux (petit rond) livre passage au nerf mandibulaire (V3)."
-        ],
-        correctOptionIndexes: [0, 3],
-        explanation: "Le foramen rond laisse passer le V2. La selle turcique loge l'hypophyse. Le canal optique est sur les PETITES ailes. Le foramen ovale laisse passer le V3 et le foramen épineux laisse passer l'artère méningée moyenne."
-      },
-      {
-        questionText: "Sur l'os temporal, la partie pétreuse (le rocher) :",
-        options: [
-          "A la forme d'une pyramide quadrangulaire.",
-          "Présente le processus styloïde sur sa face exocrânienne.",
-          "Contient l'organe de l'audition et de l'équilibre.",
-          "S'articule en arrière avec la grande aile du sphénoïde.",
-          "Présente le méat acoustique interne sur sa face postéro-supérieure."
-        ],
-        correctOptionIndexes: [0, 1, 2, 4],
-        explanation: "Le rocher est une pyramide contenant l'oreille interne. Il porte l'apophyse styloïde en bas et le méat acoustique interne en arrière. Il s'articule en arrière avec l'OCCIPITAL (c'est l'écaille qui s'articule avec le sphénoïde)."
-      },
-      {
-        questionText: "L'os occipital :",
-        options: [
-          "Possède des condyles articulaires pour l'atlas (C1).",
-          "Est traversé par le foramen magnum.",
-          "Présente la protubérance occipitale externe sur l'écaille.",
-          "L'apophyse basilaire est située en arrière du foramen magnum.",
-          "S'articule avec les pariétaux par la suture lambdoïde."
-        ],
-        correctOptionIndexes: [0, 1, 2, 4],
-        explanation: "L'occipital porte les condyles, est percé par le foramen magnum, et présente la protubérance externe. La suture lambdoïde le lie aux pariétaux. L'apophyse basilaire (corps) est EN AVANT du foramen magnum."
-      },
-      {
-        questionText: "Concernant l'os frontal :",
-        options: [
-          "L'échancrure ethmoïdale reçoit la lame criblée de l'ethmoïde.",
-          "Les bosses frontales sont situées sur la face endocrânienne.",
-          "Il forme la majeure partie du toit de l'orbite.",
-          "Les sinus frontaux sont situés dans l'épaisseur de l'os, près de la ligne médiane.",
-          "Il s'articule en arrière avec les os pariétaux par la suture coronale."
-        ],
-        correctOptionIndexes: [0, 2, 3, 4],
-        explanation: "L'échancrure ethmoïdale reçoit l'ethmoïde. Le frontal forme le toit de l'orbite et contient les sinus. La suture coronale le lie aux pariétaux. Les bosses frontales sont des reliefs de la face EXOCRÂNIENNE."
-      },
-      {
-        questionText: "Quels éléments traversent la fente sphénoïdale (fissure orbitaire supérieure) ?",
-        options: [
-          "Le nerf optique (II).",
-          "Le nerf oculomoteur (III).",
-          "Le nerf trochléaire (IV).",
-          "Le nerf abducens (VI).",
-          "Le nerf ophtalmique de Willis (V1)."
-        ],
-        correctOptionIndexes: [1, 2, 3, 4],
-        explanation: "La fente sphénoïdale livre passage aux nerfs moteurs de l'œil (III, IV, VI) et au nerf sensitif ophtalmique (V1). Le nerf optique passe par le canal optique."
-      },
-      {
-        questionText: "Concernant l'os sphénoïde :",
-        options: [
-          "Il appartient à l'étage antérieur et moyen de la base du crâne",
-          "Les petites ailes renferment le canal optique, lieu de passage du nerf optique et des nerfs oculomoteurs.",
-          "Il s'articule avec tous les os du crâne excepté l'occipital.",
-          "La petite aile participe à la formation du ptéryion.",
-          "Les processus ptérygoïdes s'articulent avec le palatin et le maxillaire."
-        ],
-        correctOptionIndexes: [4],
-        explanation: "Les processus ptérygoïdes s'articulent correctement avec l'os palatin et le maxillaire. L'os sphénoïde appartient aux trois étages de la base du crâne. Le canal optique contient le nerf optique et l'artère ophtalmique, mais pas les nerfs oculomoteurs. Il s'articule avec tous les os du crâne, y compris l'occipital. C'est la grande aile qui participe à la formation du ptéryion."
-      },
-      {
-        questionText: "concernant l'os occipital",
-        options: [
-          "Participe à la formation seulement de l'étage postérieur de l'exobase",
-          "Est uni en avant par l'apophyse basilaire au corps du sphénoïde",
-          "Sur la face endocrânienne des masses latérales se trouvent les gouttières du sinus sigmoïde",
-          "Le foramen magnum laisse passer le premier segment de moelle épinière (spinale)",
-          "Les condyles sont articulaires avec l'axis"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "L'os occipital s'unit en avant au sphénoïde via l'apophyse basilaire, et les gouttières du sinus sigmoïde se trouvent sur ses masses latérales. Il participe à l'endobase et à l'exobase. Le foramen magnum laisse passer la moelle allongée (bulbe rachidien). Les condyles s'articulent avec l'atlas (C1), pas l'axis (C2)."
-      }
-    ]
+      
+        {
+          questionText: "Concernant l'os frontal (S1-2025) :",
+          options: [
+            "Il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
+            "Sa partie verticale, appelée écaille, appartient pour partie à la base du crâne.",
+            "Il contient une cavité aérique, appelée sinus frontal.",
+            "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+            "Le toit de l'orbite comporte la fossette trochléaire en latéral et la fossette lacrymale en médial."
+          ],
+          correctOptionIndexes: [2, 3],
+          explanation: "Le sinus frontal est une cavité aérique et les fossettes granulaires bordent le sinus sagittal. La glabelle est exocrânienne, l'écaille appartient à la voûte, et la position des fossettes trochléaire (médiale) et lacrymale (latérale) est ici inversée."
+        },
+        {
+          questionText: "Concernant l'os ethmoïdal (Rattrapage 2025) :",
+          options: [
+            "Lame criblée",
+            "Masse latérale",
+            "Cornet inférieur",
+            "Lame perpendiculaire",
+            "Apophyse de Crista Galli"
+          ],
+          correctOptionIndexes: [1, 3],
+          explanation: "Selon le corrigé, les masses latérales et la lame perpendiculaire sont les réponses attendues. Notez que le cornet inférieur est un os indépendant."
+        },
+        {
+          questionText: "Concernant Le corps du sphénoïde (Rattrapage 2025) :",
+          options: [
+            "Il présente 6 faces et occupe la partie médiane de l'os.",
+            "Sa face supérieure présente la gouttière optique.",
+            "Sa face inférieure s'articule avec le palatin.",
+            "Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde.",
+            "Sa face postérieure s'articule avec le temporal."
+          ],
+          correctOptionIndexes: [0, 1, 3],
+          explanation: "Le corps est central, possède 6 faces et la gouttière optique. Il s'articule en avant avec l'ethmoïde. Sa face inférieure s'articule avec le vomer (non le palatin) et sa face postérieure avec l'occipital."
+        },
+        {
+          questionText: "L'apophyse CRISTA GALLI est (Correction Rappel) :",
+          options: [
+            "Le segment extra-crânien de la lame perpendiculaire de l'os ethmoïde.",
+            "Le segment extra crânien de la lame horizontale de l'os ethmoïde.",
+            "Le segment nasal de la masse latérale de l'os ethmoïde.",
+            "Le segment intracrânien de la lame horizontale de l'os ethmoïde.",
+            "Le segment intracrânien de la lame perpendiculaire de l'os ethmoïde."
+          ],
+          correctOptionIndexes: [4],
+          explanation: "Crista Galli est la saillie verticale située au-dessus de la lame criblée, elle prolonge vers le haut la lame perpendiculaire dans la cavité crânienne."
+        },
+        {
+          questionText: "Concernant l'os temporal (EMD1-2022) :",
+          options: [
+            "Appartient uniquement à la base du crâne.",
+            "Est formé d'une partie squameuse, une pyramide pétreuse et un os tympanal.",
+            "Le sommet du rocher abrite le siphon carotidien.",
+            "L'os tympanal forme le conduit auditif interne.",
+            "Le condyle temporal est postérieur par rapport à la cavité glénoïde."
+          ],
+          correctOptionIndexes: [1, 2],
+          explanation: "L'os temporal a 3 parties (squameuse, pétreuse, tympanale). Le siphon carotidien est au sommet du rocher. L'os tympanal forme le conduit auditif EXTERNE. Le condyle est antérieur à la cavité glénoïde."
+        },
+        {
+          questionText: "Concernant l'orbite osseuse (EMD1-2022) :",
+          options: [
+            "Est située au-dessous de l'étage moyen du crâne.",
+            "Est située au-dessus de la région temporale.",
+            "Présente une base antérieure.",
+            "Est de forme triangulaire.",
+            "Présente 04 parois, une base et un sommet."
+          ],
+          correctOptionIndexes: [2, 4],
+          explanation: "L'orbite est une pyramide quadrangulaire (4 parois) à base antérieure et sommet postérieur."
+        },
+        {
+          questionText: "Concernant l'ostéologie du crâne (EMD1-2021) :",
+          options: [
+            "La boîte crânienne est formée d'une base et d'une voute.",
+            "On peut diviser la base du crâne en 4 étages.",
+            "Le corps du sphénoïde se trouve au centre de la base du crâne.",
+            "L'os temporal comprend deux portions principales: l'écaille et la partie squameuse.",
+            "Le foramen jugulaire se trouve dans l'étage moyen de la base du crâne."
+          ],
+          correctOptionIndexes: [0, 2],
+          explanation: "La base a 3 étages. Le corps du sphénoïde est central. Le foramen jugulaire est dans l'étage postérieur."
+        },
+        {
+          questionText: "Concernant l'os temporal (EMD1 2020) :",
+          options: [
+            "C'est un os appartenant à l'étage antérieur de la base du crâne.",
+            "Constitué de trois parties dont le tympanal forme le conduit auditif externe.",
+            "L'apophyse zygomatique s'implante sur le tympanal.",
+            "Les surfaces articulaires sont portées par le rocher.",
+            "L'orifice interne du canal carotidien se trouve sur le sommet du rocher."
+          ],
+          correctOptionIndexes: [1, 4],
+          explanation: "Le tympanal forme le CAE et l'orifice du canal carotidien est bien au sommet du rocher. L'os appartient aux étages moyen et postérieur."
+        },
+        {
+          questionText: "Concernant la cavité orbitaire (EMD1 2020) :",
+          options: [
+            "Est située en dehors de la région temporale.",
+            "Est creusée dans le massif facial.",
+            "Le rebord orbital limite sa base.",
+            "Sa paroi latérale est formée par l'os planum.",
+            "La petite aile du sphénoïde forme sa paroi supérieure."
+          ],
+          correctOptionIndexes: [1, 2, 4],
+          explanation: "L'orbite est creusée dans la face, sa base est limitée par le rebord orbitaire. L'os planum forme la paroi médiale (non latérale), mais selon le corrigé BCE, la paroi supérieure par la petite aile est confirmée."
+        },
+        {
+          questionText: "Concernant la paroi médiale de l'orbite (EMD1 2019) :",
+          options: [
+            "La face latérale de la branche montante du maxillaire.",
+            "La face médiale de l'unguis.",
+            "L'os planum.",
+            "La face latérale du corps du sphénoïde.",
+            "La face latérale de l'os propre du nez."
+          ],
+          correctOptionIndexes: [0, 1, 2],
+          explanation: "La paroi médiale comprend l'os unguis (lacrymal), l'os planum (ethmoïde) et le processus frontal du maxillaire."
+        },
+        {
+          questionText: "Concernant l'os occipital (EMD1 2017) :",
+          options: [
+            "Formé de 3 parties.",
+            "Le foramen magnum fait communiquer la cavité crânienne avec le canal rachidien.",
+            "Le tubercule pharyngien occupe la partie basilaire interne.",
+            "La fossette vermienne occupe la face endocrânienne de l'écaille occipitale.",
+            "Fixé à l'os pariétal par la suture lambdoïde."
+          ],
+          correctOptionIndexes: [1, 2, 3, 4],
+          explanation: "L'occipital est lié aux pariétaux par la suture lambdoïde. Le foramen magnum assure la continuité avec le canal rachidien. La fossette vermienne est bien sur l'écaille interne."
+        },
+        {
+          questionText: "La paroi latérale de l'orbite est constituée de :",
+          options: [
+            "La grande aile du sphénoïde.",
+            "La petite aile du sphénoïde.",
+            "L'apophyse orbitaire externe du frontal.",
+            "L'apophyse orbitaire externe du malaire.",
+            "L'os planum."
+          ],
+          correctOptionIndexes: [0, 2, 3],
+          explanation: "La paroi latérale est formée par l'os zygomatique (malaire), la grande aile du sphénoïde et le processus zygomatique du frontal."
+        },
+        {
+          questionText: "Concernant l'os frontal (EMD1 2017) :",
+          options: [
+            "Os pair, médian, symétrique.",
+            "L'incisure ethmoïdale se trouve sur la partie verticale endocrânienne.",
+            "L'incisure frontale appartient à la crête orbito-nasale.",
+            "Les arcades orbitaires se continuent en dehors par le processus zygomatique.",
+            "L'incisure nasale s'articule en dedans avec le processus frontal du maxillaire."
+          ],
+          correctOptionIndexes: [2],
+          explanation: "Le frontal est un os IMPAIR. L'incisure frontale est bien un élément de la crête orbito-nasale. L'incisure ethmoïdale est sur la partie horizontale."
+        }
+        ,
+        {
+          questionText: "Concernant Le frontal (1er EMD 2019):",
+          options: [
+            "Il présente dans sa partie exocrânienne, la glabelle, située au-dessus de la suture métopique.",
+            "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+            "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
+            "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
+            "Sa partie verticale, appelée écaille, appartient à la base du crâne"
+          ],
+          correctOptionIndexes: [1, 2],
+          explanation: "Les fossettes granulaires bordent le sinus sagittal supérieur. La fossette trochléaire est située médialement (en dedans) tandis que la fossette lacrymale est latérale. L'écaille appartient à la voûte du crâne, pas à la base."
+        },
+        {
+          questionText: "Concernant l'os ethmoïdal (1er EMD 2019):",
+          options: [
+            "L'apophyse crista galli est la partie endocrânienne de la lame perpendiculaire",
+            "Participe à la formation de la cavité orbitaire par sa lame perpendiculaire",
+            "Participe à la formation des fosses nasales par la lame perpendiculaire",
+            "L'os planum est la face médiale de la masse latérale de l'éthmoïde",
+            "Le cornet inférieur fait partie des masses latérales"
+          ],
+          correctOptionIndexes: [0, 2],
+          explanation: "L'apophyse Crista Galli est bien la partie supérieure (endocrânienne) de la lame perpendiculaire. La lame perpendiculaire participe à la cloison nasale. L'os planum est la face latérale (et non médiale) des masses latérales. Le cornet inférieur est un os distinct."
+        },
+        {
+          questionText: "A propos de l'occipital (1er EMD 2019):",
+          options: [
+            "L'apophyse basilaire s'articule avec l'apophyse ptérygoïde de l'os sphénoïdal",
+            "Les masses latérales délimitent le foramen magnum",
+            "Sur l'écaille occipitale se trouve le canal du canal condylien",
+            "Les fosses cérébrales sont situées au-dessus des fosses cérébelleuses",
+            "Les condyles sont articulaires avec l'axis"
+          ],
+          correctOptionIndexes: [1, 3],
+          explanation: "Les masses latérales de l'occipital bordent le foramen magnum. Les fosses cérébrales (pour les lobes occipitaux) sont situées au-dessus des fosses cérébelleuses. L'apophyse basilaire s'articule avec le corps du sphénoïde (clivus), pas les ptérygoïdes. Les condyles s'articulent avec l'atlas (C1)."
+        },
+        {
+          questionText: "Concernant la fissure orbitaire supérieure (1er EMD 2019):",
+          options: [
+            "Est limitée en Dehors par le frontal",
+            "Est limitée en dedans par la petite aile du sphénoïde",
+            "Fait communiquer l'orbite avec l'étage moyen de la base du crâne",
+            "Livre passage au nerf optique",
+            "Livre passage aux nerfs oculomoteurs"
+          ],
+          correctOptionIndexes: [0, 2, 4],
+          explanation: "La fissure orbitaire supérieure (fente sphénoïdale) fait communiquer l'orbite avec l'étage moyen et livre passage aux nerfs oculomoteurs (III, IV, VI). Le nerf optique passe par le canal optique."
+        },
+        {
+          questionText: "Concernant l'ostéologie du crâne",
+          options: [
+            "L'ethmoïde, seul os n'appartenant pas à la calvaria.",
+            "La selle turcique se situe à la face antérieure du corps du sphénoïde",
+            "Le parietal s'articule avec tous les os qui participent à la constitution de la calvaria",
+            "L'os frontal n'appartient pas à la base du crâne",
+            "La fossette vermienne est une bifurcation de la crête occipitale interne."
+          ],
+          correctOptionIndexes: [0],
+          explanation: "L'ethmoïde appartient à la base du crâne et non à la calvaria (voûte). La selle turcique se situe sur la face supérieure (non antérieure) du corps du sphénoïde. Le pariétal ne s'articule pas avec l'ethmoïde (qui n'est pas dans la calvaria). L'os frontal participe à la fois à la voûte et à la base du crâne.",
+          citations: [604, 605, 606, 607, 608, 609, 610, 611]
+        },
+        {
+          questionText: "Concernant l'os Temporal",
+          options: [
+            "Os de la fosse crânienne antérieure",
+            "Situé au-dessous du pariétal, en avant et dedans du sphénoïde",
+            "Le processus styloïde appartient à la pyramide pétreuse",
+            "Le méat acoustique interne, orifice creusé dans la partie tympanal de l'os",
+            "La fosse trigéminale, apparient à la partie postéro-supérieure de la face endocrânienne du rocher"
+          ],
+          correctOptionIndexes: [1, 4],
+          explanation: "L'os temporal est situé sous le pariétal, en avant et en dedans du sphénoïde. La fosse trigéminale se situe bien dans la partie postéro-supérieure de la face endocrânienne du rocher. Il participe aux fosses crâniennes moyenne et postérieure (non antérieure). Le processus styloïde appartient à la portion tympanique (non pétreuse). Le méat acoustique interne est dans la portion pétreuse (non tympanique).",
+          citations: [625, 626, 627, 628, 629, 630, 631]
+        },
+        {
+          questionText: "Concernant l'os sphénoïde",
+          options: [
+            "Il est articulaire avec tous les os du crâne",
+            "Il forme la voûte et la base du crâne",
+            "Ses petites ailes délimitent le canal optique",
+            "Son corps présente des foramens livrant passage aux nerfs",
+            "Ses grandes ailes forment l'étage moyen de la base du crâne"
+          ],
+          correctOptionIndexes: [0, 1, 2, 3, 4],
+          explanation: "Toutes les propositions sont justes selon le commentaire : L'os sphénoïde s'articule avec tous les os du crâne, il forme à la fois la voûte et la base, ses petites ailes délimitent le canal optique, son corps présente des foramens pour les nerfs, et ses grandes ailes forment l'étage moyen de la base.",
+          citations: [632, 633, 634, 635, 636, 637]
+        },
+        {
+          questionText: "Concernant L'os frontal:",
+          options: [
+            "il présente dans sa partie endocrânienne, la glabelle, située au-dessus de la suture métopique.",
+            "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires.",
+            "La fossette trochléaire est en dedans par rapport à la fossette lacrymale.",
+            "L'incisure supra-orbitaire est située au tiers latéral du bord supra-orbitaire.",
+            "Sa partie verticale, appelée écaille, appartient à la voûte du crâne"
+          ],
+          correctOptionIndexes: [1, 2, 4],
+          explanation: "De part et d'autre du sinus sagittal supérieur se situent les fossettes granulaires. La fossette trochléaire est bien en dedans (médiale) par rapport à la fossette lacrymale (latérale). La partie verticale (écaille) appartient à la voûte du crâne. La glabelle est sur la face externe (non endocrânienne). L'incisure supra-orbitaire est au tiers médial (non latéral).",
+          citations: [867, 868, 869, 870, 871, 872, 873, 874, 875, 876]
+        },
+        {
+          questionText: "La paroi supérieure de l'orbite osseuse est formée des os suivants :",
+          options: [
+            "L'apophyse orbitaire de l'os malaire",
+            "L'os palatin",
+            "L'os planum",
+            "La fosse orbitaire de l'os frontale",
+            "La petite aile du sphénoïde"
+          ],
+          correctOptionIndexes: [3, 4],
+          explanation: "La paroi supérieure de l'orbite (le toit) est formée par la fosse orbitaire de l'os frontal et par la petite aile du sphénoïde. L'os malaire, l'os palatin et l'os planum (partie de l'ethmoïde) participent à d'autres parois de l'orbite.",
+          citations: [940, 941, 942, 943, 944, 945]
+        },
+        {
+          questionText: "Concernant la lame criblée de l'éthmoïde:",
+          options: [
+            "Est le lieu de passage du nerf optique",
+            "Est le lieu de passage des filets olfactifs",
+            "Est une structure osseuse",
+            "Est située dans l'étage antérieur de la base du crâne",
+            "Est située dans l'étage moyen de la base du crâne"
+          ],
+          correctOptionIndexes: [1, 2, 3],
+          explanation: "La lame criblée est une structure osseuse de l'ethmoïde, située dans l'étage antérieur de la base du crâne. Elle sert de lieu de passage pour les filets olfactifs (nerf I), et non pour le nerf optique (nerf II).",
+          citations: [1141, 1142, 1143, 1144, 1145]
+        },
+        {
+          questionText: "Concernant l'os ethmoïdal",
+          options: [
+            "Il présente 6 faces et occupe la partie médiane de l'os",
+            "Sa face supérieure présente la gouttière optique",
+            "Sa face inférieure s'articule avec le palatin",
+            "Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde",
+            "Sa face postérieure s'articule avec le temporal"
+          ],
+          correctOptionIndexes: [0, 1, 3],
+          explanation: "Cette description semble concerner le corps du sphénoïde, et non l'ethmoïde. En supposant que la question porte sur le corps du sphénoïde : Il présente six faces et occupe la partie centrale. Sa face supérieure présente la gouttière optique. Sa face antérieure s'articule avec la lame perpendiculaire de l'ethmoïde. Sa face inférieure s'articule avec le vomer (non le palatin) et sa face postérieure s'articule avec l'occipital (non le temporal).",
+          citations: [1296, 1297, 1298, 1299, 1300, 1301]
+        },
+        {
+          questionText: "Concernant L'os temporal:",
+          options: [
+            "C'est un os impair",
+            "Il est constitué de 3 éléments",
+            "Il contribue à la formation des étages antérieur et postérieur de la base du crâne",
+            "Il s'articule en avant avec l'os zygomatique",
+            "S'articule avec la mandibule au niveau de la partie mastoïdienne"
+          ],
+          correctOptionIndexes: [1, 3],
+          explanation: "L'os temporal est un os pair composé de trois parties : l'écaille, le rocher (pyramide pétreuse) et l'os tympanal. Il s'articule en avant avec l'os zygomatique. Il contribue uniquement à l'étage moyen de la base du crâne et s'articule avec la mandibule au niveau de sa partie squameuse."
+        },
+        {
+          questionText: "Concernant l'os sphénoïde (vue supérieure) :",
+          options: [
+            "Le foramen rond (grand rond) livre passage au nerf maxillaire (V2).",
+            "Le foramen ovale livre passage à l'artère méningée moyenne.",
+            "Le canal optique est situé sur les grandes ailes.",
+            "La selle turcique loge la glande hypophyse.",
+            "Le foramen épineux (petit rond) livre passage au nerf mandibulaire (V3)."
+          ],
+          correctOptionIndexes: [0, 3],
+          explanation: "Le foramen rond laisse passer le V2. La selle turcique loge l'hypophyse. Le canal optique est sur les PETITES ailes. Le foramen ovale laisse passer le V3 et le foramen épineux laisse passer l'artère méningée moyenne."
+        },
+        {
+          questionText: "Sur l'os temporal, la partie pétreuse (le rocher) :",
+          options: [
+            "A la forme d'une pyramide quadrangulaire.",
+            "Présente le processus styloïde sur sa face exocrânienne.",
+            "Contient l'organe de l'audition et de l'équilibre.",
+            "S'articule en arrière avec la grande aile du sphénoïde.",
+            "Présente le méat acoustique interne sur sa face postéro-supérieure."
+          ],
+          correctOptionIndexes: [0, 1, 2, 4],
+          explanation: "Le rocher est une pyramide contenant l'oreille interne. Il porte l'apophyse styloïde en bas et le méat acoustique interne en arrière. Il s'articule en arrière avec l'OCCIPITAL (c'est l'écaille qui s'articule avec le sphénoïde)."
+        },
+        {
+          questionText: "L'os occipital :",
+          options: [
+            "Possède des condyles articulaires pour l'atlas (C1).",
+            "Est traversé par le foramen magnum.",
+            "Présente la protubérance occipitale externe sur l'écaille.",
+            "L'apophyse basilaire est située en arrière du foramen magnum.",
+            "S'articule avec les pariétaux par la suture lambdoïde."
+          ],
+          correctOptionIndexes: [0, 1, 2, 4],
+          explanation: "L'occipital porte les condyles, est percé par le foramen magnum, et présente la protubérance externe. La suture lambdoïde le lie aux pariétaux. L'apophyse basilaire (corps) est EN AVANT du foramen magnum."
+        },
+        {
+          questionText: "Concernant l'os frontal :",
+          options: [
+            "L'échancrure ethmoïdale reçoit la lame criblée de l'ethmoïde.",
+            "Les bosses frontales sont situées sur la face endocrânienne.",
+            "Il forme la majeure partie du toit de l'orbite.",
+            "Les sinus frontaux sont situés dans l'épaisseur de l'os, près de la ligne médiane.",
+            "Il s'articule en arrière avec les os pariétaux par la suture coronale."
+          ],
+          correctOptionIndexes: [0, 2, 3, 4],
+          explanation: "L'échancrure ethmoïdale reçoit l'ethmoïde. Le frontal forme le toit de l'orbite et contient les sinus. La suture coronale le lie aux pariétaux. Les bosses frontales sont des reliefs de la face EXOCRÂNIENNE."
+        },
+        {
+          questionText: "Quels éléments traversent la fente sphénoïdale (fissure orbitaire supérieure) ?",
+          options: [
+            "Le nerf optique (II).",
+            "Le nerf oculomoteur (III).",
+            "Le nerf trochléaire (IV).",
+            "Le nerf abducens (VI).",
+            "Le nerf ophtalmique de Willis (V1)."
+          ],
+          correctOptionIndexes: [1, 2, 3, 4],
+          explanation: "La fente sphénoïdale livre passage aux nerfs moteurs de l'œil (III, IV, VI) et au nerf sensitif ophtalmique (V1). Le nerf optique passe par le canal optique."
+        },
+        {
+          questionText: "Concernant l'os sphénoïde :",
+          options: [
+            "Il appartient à l'étage antérieur et moyen de la base du crâne",
+            "Les petites ailes renferment le canal optique, lieu de passage du nerf optique et des nerfs oculomoteurs.",
+            "Il s'articule avec tous les os du crâne excepté l'occipital.",
+            "La petite aile participe à la formation du ptéryion.",
+            "Les processus ptérygoïdes s'articulent avec le palatin et le maxillaire."
+          ],
+          correctOptionIndexes: [4],
+          explanation: "Les processus ptérygoïdes s'articulent correctement avec l'os palatin et le maxillaire. L'os sphénoïde appartient aux trois étages de la base du crâne. Le canal optique contient le nerf optique et l'artère ophtalmique, mais pas les nerfs oculomoteurs. Il s'articule avec tous les os du crâne, y compris l'occipital. C'est la grande aile qui participe à la formation du ptéryion."
+        },
+        {
+          questionText: "concernant l'os occipital",
+          options: [
+            "Participe à la formation seulement de l'étage postérieur de l'exobase",
+            "Est uni en avant par l'apophyse basilaire au corps du sphénoïde",
+            "Sur la face endocrânienne des masses latérales se trouvent les gouttières du sinus sigmoïde",
+            "Le foramen magnum laisse passer le premier segment de moelle épinière (spinale)",
+            "Les condyles sont articulaires avec l'axis"
+          ],
+          correctOptionIndexes: [1, 2],
+          explanation: "L'os occipital s'unit en avant au sphénoïde via l'apophyse basilaire, et les gouttières du sinus sigmoïde se trouvent sur ses masses latérales. Il participe à l'endobase et à l'exobase. Le foramen magnum laisse passer la moelle allongée (bulbe rachidien). Les condyles s'articulent avec l'atlas (C1), pas l'axis (C2)."
+        }
+      ]
   },
-
   {
     title: "Le SYSTEME CAROTIDIEN",
     subject: "anatomy-y2",
