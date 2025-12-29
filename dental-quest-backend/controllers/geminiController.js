@@ -449,24 +449,109 @@ exports.generateFlashcardsFromText = async (req, res) => {
 };
 
 // --- 3. خريطة ذهنية من نص مباشر ---
+// --- 3. خريطة ذهنية من نص مباشر (باستخدام Groq - openai/gpt-oss-120b) ---
 exports.generateMindMapFromText = async (req, res) => {
   if (!checkAiAccess(req, res)) return;
+
+  const startTime = Date.now();
+  let promptForLog = "Generate Markmap from text";
+
   try {
     const { text } = req.body;
     if (!text) return res.status(400).json({ message: 'Text content is required' });
 
-    const prompt = `Create a markdown mindmap (markmap format) for this text. Return ONLY markdown.
-    TEXT: "${text.substring(0, 15000)}..."`;
+    // إعداد البرومبت الخاص بالمايند ماب
+    const prompt = `
+    Create a detailed hierarchical mindmap using Markdown syntax (compatible with Markmap).
+    - Use "#" for the central topic (Root).
+    - Use "##" for main branches.
+    - Use "-" for sub-branches.
+    - Return **ONLY** the raw Markdown content. No introduction, no conclusion, no code blocks (\`\`\`).
+    
+    TEXT CONTENT:
+    "${text.substring(0, 20000)}..."`; // زدنا الحد قليلاً لأن النموذج قوي
 
-    const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
-    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
+    console.log('🧠 Generating Mindmap (Model: openai/gpt-oss-120b)...');
 
-    const markdown = data.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/```markdown|```/g, '').trim();
+    // استدعاء Groq بنفس إعداداتك المطلوبة
+    const markdownResponse = await groqChat({
+      messages: [
+        { role: 'user', content: prompt }
+      ],
+      model: 'openai/gpt-oss-120b',     // ✅ النموذج المطلوب
+      reasoning_effort: "medium",      // ✅ الجهد المتوسط
+      temperature: 1,                  // ✅ الحرارة
+      max_completion_tokens: 8192      // ✅ التوكنز
+    });
 
-    res.json({ markdown });
-    await logAiRequest(req, 'mindmap-text', prompt, 'success', markdown);
+    // تنظيف النص من علامات الكود إن وجدت
+    const cleanMarkdown = markdownResponse.replace(/```markdown|```/g, '').trim();
+
+    const duration = Date.now() - startTime;
+
+    res.json({ markdown: cleanMarkdown });
+
+    await logAiRequest(req, 'mindmap-text-groq', promptForLog, 'success', cleanMarkdown, 0, duration);
+
   } catch (error) {
-    console.error('Mindmap Text Error:', error);
+    console.error('Mindmap Text Error (Groq):', error);
+    const duration = Date.now() - startTime;
+    await logAiRequest(req, 'mindmap-text-groq', promptForLog, 'error', error.message, 0, duration);
     res.status(500).json({ message: 'AI generation failed', errorDetail: error.message });
+  }
+};
+// --- 4. اسأل Dentist AI (Using openai/gpt-oss-120b) ---
+exports.askDentistAi = async (req, res) => {
+  if (!checkAiAccess(req, res)) return;
+
+  const startTime = Date.now();
+  let promptForLog = "";
+
+  try {
+    const { text, question } = req.body;
+
+    if (!text || !question) {
+      return res.status(400).json({ message: 'Context text and question are required.' });
+    }
+
+    // إعداد الرسائل
+    const messages = [
+      {
+        role: "system",
+        content: "You are an expert Professor of Dentistry. Answer the student's question accurately based strictly on the provided context."
+      },
+      {
+        role: "user",
+        content: `CONTEXT:\n"${text.substring(0, 15000)}"\n\nQUESTION:\n"${question}"`
+      }
+    ];
+
+    promptForLog = `Question: ${question}`;
+
+    console.log('🦷 Asking Dentist AI (Model: openai/gpt-oss-120b)...');
+
+    // استدعاء دالة Groq مع تحديد النموذج الخاص الذي طلبته
+    // نمرر البراميترات الإضافية لضمان عمل النموذج كما في مثالك
+    const answer = await groqChat({
+      messages: messages,
+      model: 'openai/gpt-oss-120b',     // ✅ اسم النموذج كما طلبت
+      reasoning_effort: "medium",      // ✅ إعداد الجهد
+      temperature: 1,                  // ✅ الحرارة
+      max_completion_tokens: 8192      // ✅ عدد التوكنز
+    });
+
+    const duration = Date.now() - startTime;
+
+    // إرسال الإجابة
+    res.status(200).json({ answer: answer });
+
+    // تسجيل العملية في القاعدة
+    await logAiRequest(req, 'ask-dentist-oss', promptForLog, 'success', answer, 0, duration);
+
+  } catch (error) {
+    console.error('Ask Dentist AI Error:', error);
+    const duration = Date.now() - startTime;
+    await logAiRequest(req, 'ask-dentist-oss', promptForLog, 'error', error.message, 0, duration);
+    res.status(500).json({ message: 'Dentist AI failed to respond', errorDetail: error.message });
   }
 };

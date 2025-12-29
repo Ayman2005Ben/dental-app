@@ -25,7 +25,8 @@ const {
     // ✅✅✅ الدوال الجديدة للتعامل مع النصوص (مهمة جداً لـ pdf-viewer.js)
     generateQuizFromText,
     generateFlashcardsFromText,
-    generateMindMapFromText
+    generateMindMapFromText,
+    askDentistAi
 
 } = require('../controllers/geminiController');
 
@@ -68,6 +69,7 @@ router.post('/evaluate', protect, upload.array('images', 3), handleSculptureEval
 router.post('/generate-quiz-text', protect, generateQuizFromText);
 router.post('/generate-flashcards-text', protect, generateFlashcardsFromText);
 router.post('/generate-mindmap-text', protect, generateMindMapFromText);
+router.post('/ask-dentist-ai', protect, askDentistAi);
 
 
 module.exports = router;
