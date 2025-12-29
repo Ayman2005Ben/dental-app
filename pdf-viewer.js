@@ -1,6 +1,5 @@
 // =============================================================================
-//  SMART CORE - LOGIC CONTROLLER (FIXED & OPTIMIZED)
-//  Fixes: Auth (401), PDF Scale Factor, Variable Names Matching
+//  SMART CORE - FINAL FIXED LOGIC
 // =============================================================================
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
@@ -8,7 +7,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 const STATE = {
     pdfDoc: null,
     fileHash: null,
-    fileName: "Document",
     scale: 1.2,
     tool: null,
     isDrawing: false,
@@ -21,27 +19,23 @@ const STATE = {
     activePinId: null
 };
 
-// =============================================================================
-//  1. FILE UPLOAD & HASHING
-// =============================================================================
-
+// 1. UPLOAD & AUTH CHECK
 async function handleFileUpload(input) {
     const file = input.files[0];
     if (!file) return;
 
-    document.getElementById('upload-status').textContent = "Analyse et sécurisation...";
-    STATE.fileName = file.name;
-    document.getElementById('file-name-display').textContent = file.name;
+    const statusEl = document.getElementById('upload-status');
+    statusEl.textContent = "Traitement en cours...";
 
     try {
         const arrayBuffer = await file.arrayBuffer();
 
-        // حساب الهاش (البصمة)
+        // حساب الهاش
         const spark = new SparkMD5.ArrayBuffer();
         spark.append(arrayBuffer);
         STATE.fileHash = spark.end();
-        console.log("File Hash (Lesson ID):", STATE.fileHash);
 
+        // تحميل PDF
         const loadingTask = pdfjsLib.getDocument(arrayBuffer);
         STATE.pdfDoc = await loadingTask.promise;
 
@@ -52,19 +46,15 @@ async function handleFileUpload(input) {
             await renderPage(i);
         }
 
+        // محاولة استرجاع البيانات
         await loadSession();
 
     } catch (e) {
-        console.error(e);
-        alert("Erreur fichier: " + e.message);
-        document.getElementById('upload-status').textContent = "";
+        statusEl.innerHTML = `<span style="color:red">Erreur: ${e.message}</span>`;
     }
 }
 
-// =============================================================================
-//  2. RENDERING (Fixed Scale Factor)
-// =============================================================================
-
+// 2. RENDER PAGE (FIXED SELECTION)
 async function renderPage(num) {
     const page = await STATE.pdfDoc.getPage(num);
     const viewport = page.getViewport({ scale: STATE.scale });
@@ -76,19 +66,21 @@ async function renderPage(num) {
     wrapper.style.height = `${viewport.height}px`;
     wrapper.style.marginBottom = '20px';
 
+    // طبقة الكانفاس (الصورة)
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
+    // طبقة النص (للتحديد) - ✅ الحل هنا
     const textLayer = document.createElement('div');
     textLayer.className = 'textLayer';
     textLayer.style.width = `${viewport.width}px`;
     textLayer.style.height = `${viewport.height}px`;
-
-    // ✅ FIX: إضافة CSS Variable المطلوبة من PDF.js v3+
+    // 🔥 هذا السطر هو الذي يصلح مشكلة التحديد في الإصدارات الجديدة
     textLayer.style.setProperty('--scale-factor', STATE.scale);
 
+    // طبقة الرسم
     const drawCanvas = document.createElement('canvas');
     drawCanvas.className = 'drawLayer';
     drawCanvas.id = `draw-${num}`;
@@ -111,13 +103,13 @@ async function renderPage(num) {
     setupDrawing(drawCanvas, num);
 }
 
-// =============================================================================
-//  3. DRAWING LOGIC
-// =============================================================================
-
+// 3. DRAWING
 function setTool(t) {
     STATE.tool = (STATE.tool === t) ? null : t;
-    ['pen', 'highlighter', 'eraser'].forEach(id => document.getElementById(`btn-${id}`).classList.toggle('active', STATE.tool === id));
+    ['pen', 'highlighter', 'eraser'].forEach(id => {
+        document.getElementById(`btn-${id}`).style.background = (STATE.tool === id) ? '#eff6ff' : '';
+    });
+    // تفعيل استقبال الماوس لطبقة الرسم فقط عند اختيار أداة
     document.querySelectorAll('.drawLayer').forEach(el => el.classList.toggle('drawing', !!STATE.tool));
 }
 
@@ -180,22 +172,25 @@ function redrawAll() {
     });
 }
 
-// =============================================================================
-//  4. ASK DENTIST AI
-// =============================================================================
-
+// 4. SMART SELECTION (ASK AI)
 document.addEventListener('selectionchange', () => {
     const sel = window.getSelection();
     const toolbar = document.getElementById('smart-toolbar');
+
+    // إخفاء الزر إذا لم يكن هناك تحديد
     if (sel.isCollapsed || !document.getElementById('pdf-container').contains(sel.anchorNode)) {
         toolbar.style.display = 'none'; return;
     }
-    const rect = sel.getRangeAt(0).getBoundingClientRect();
+
+    const range = sel.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+
     STATE.selection.text = sel.toString();
     STATE.selection.rect = rect;
+
     toolbar.style.top = `${rect.top + window.scrollY - 50}px`;
-    toolbar.style.left = `${rect.left + (rect.width / 2) - 60}px`;
-    toolbar.style.display = 'flex';
+    toolbar.style.left = `${rect.left + (rect.width / 2) - 40}px`;
+    toolbar.style.display = 'block';
 });
 
 function askDentistAI() {
@@ -210,7 +205,7 @@ async function submitAiQuestion() {
     box.style.display = 'block'; box.innerHTML = 'Réflexion...';
 
     try {
-        // ✅ FIX: إضافة credentials لإرسال الكوكيز
+        // ✅ إضافة credentials
         const res = await fetch('/api/ai/ask-dentist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -218,12 +213,11 @@ async function submitAiQuestion() {
             body: JSON.stringify({ text: STATE.selection.text, question: q })
         });
 
-        if (res.status === 401) throw new Error("Veuillez vous connecter d'abord.");
+        if (res.status === 401) throw new Error("Veuillez vous connecter.");
 
         const data = await res.json();
         const ans = data.answer || "Erreur";
         box.innerHTML = marked.parse(ans);
-
         createPin(STATE.selection.rect, q, ans);
     } catch (e) { box.innerHTML = e.message; }
 }
@@ -273,25 +267,22 @@ function deleteActivePin() {
     document.getElementById('pin-details').style.display = 'none';
 }
 
-// =============================================================================
-//  5. CONTENT GENERATION (Quiz, Cards, Map)
-// =============================================================================
-
+// 5. GENERATION
 async function generateContent(type) {
     let endpoint = type === 'quiz' ? 'generate-quiz-text' : type === 'flashcards' ? 'generate-flashcards-text' : 'generate-mindmap-text';
     const container = document.getElementById(type === 'quiz' ? 'quiz-results' : type === 'flashcards' ? 'cards-results' : 'markmap-svg');
     container.innerHTML = 'Chargement AI...';
 
+    // جمع نص مبسط
     let text = "";
-    const max = Math.min(STATE.pdfDoc.numPages, 15);
-    for (let i = 1; i <= max; i++) {
+    for (let i = 1; i <= Math.min(STATE.pdfDoc.numPages, 10); i++) {
         const p = await STATE.pdfDoc.getPage(i);
         const t = await p.getTextContent();
         text += t.items.map(s => s.str).join(' ') + "\n";
     }
 
     try {
-        // ✅ FIX: إضافة credentials للمصادقة
+        // ✅ إضافة credentials
         const res = await fetch(`/api/ai/${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -299,67 +290,38 @@ async function generateContent(type) {
             body: JSON.stringify({ text, count: 5 })
         });
 
-        if (res.status === 401) throw new Error("Session expirée. Reconnectez-vous.");
+        if (res.status === 401) throw new Error("Veuillez vous connecter.");
 
         const data = await res.json();
 
-        if (type === 'quiz') {
-            STATE.quizData = data.questions;
-            renderQuiz(data.questions);
-        } else if (type === 'flashcards') {
-            STATE.flashcardsData = data.flashcards;
-            renderCards(data.flashcards);
-        } else {
-            STATE.mindMapMd = data.markdown;
-            renderMap(data.markdown);
-        }
+        if (type === 'quiz') { STATE.quizData = data.questions; renderQuiz(data.questions); }
+        else if (type === 'flashcards') { STATE.flashcardsData = data.flashcards; renderCards(data.flashcards); }
+        else { STATE.mindMapMd = data.markdown; renderMap(data.markdown); }
     } catch (e) { container.innerHTML = "Erreur: " + e.message; }
 }
 
 function renderQuiz(qs) {
     const div = document.getElementById('quiz-results'); div.innerHTML = '';
-    if (!qs) return;
-    qs.forEach((q, i) => {
-        div.innerHTML += `<div style="background:white; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #eee;">
-            <b>Q${i + 1}: ${q.question}</b><br>
-            <small style="color:green">Rep: ${q.correctOptionIndexes.map(x => q.options[x]).join(',')}</small>
-        </div>`;
+    qs?.forEach((q, i) => {
+        div.innerHTML += `<div style="background:white; padding:10px; margin-bottom:5px; border:1px solid #eee;"><b>Q${i + 1}</b> ${q.question}</div>`;
     });
 }
-
 function renderCards(cs) {
     const div = document.getElementById('cards-results'); div.innerHTML = '';
-    if (!cs) return;
-    cs.forEach(c => {
-        div.innerHTML += `<div style="background:white; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #eee;">
-            <b>Face:</b> ${c.front}<br><b>Dos:</b> ${c.back}
-        </div>`;
+    cs?.forEach(c => {
+        div.innerHTML += `<div style="background:white; padding:10px; margin-bottom:5px; border:1px solid #eee;"><b>F:</b> ${c.front}<br><b>B:</b> ${c.back}</div>`;
     });
 }
-
 function renderMap(md) {
-    const svg = document.getElementById('markmap-svg'); svg.innerHTML = '';
+    document.getElementById('markmap-svg').innerHTML = '';
     const { Transformer, Markmap } = window.markmap;
-    const transformer = new Transformer();
-    const { root } = transformer.transform(md);
-    Markmap.create(svg, null, root);
-    document.getElementById('dl-map-btn').style.display = 'flex';
+    const { root } = new Transformer().transform(md);
+    Markmap.create(document.getElementById('markmap-svg'), null, root);
 }
 
-function downloadMindMap() {
-    const blob = new Blob([STATE.mindMapMd], { type: 'text/markdown' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = `${STATE.fileName}_map.md`;
-    a.click();
-}
-
-// =============================================================================
-//  6. SAVE & LOAD (FIXED CREDENTIALS & VARIABLES)
-// =============================================================================
-
+// 6. SAVE & LOAD
 async function saveSession() {
-    if (!STATE.fileHash) { alert("Aucun fichier ouvert !"); return; }
+    if (!STATE.fileHash) return alert("Pas de fichier !");
 
     const payload = {
         fileHash: STATE.fileHash,
@@ -371,54 +333,47 @@ async function saveSession() {
     };
 
     try {
-        // ✅ FIX: مطابقة الـ Body مع ما يتوقعه الباك إند (lessonId, progressData)
-        // ✅ FIX: إضافة credentials: 'include'
+        // ✅ إضافة credentials
         const res = await fetch('/api/progress/save', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
-            body: JSON.stringify({
-                lessonId: STATE.fileHash,  // إرسال الهاش كـ lessonId
-                progressData: payload
-            })
+            body: JSON.stringify({ lessonId: STATE.fileHash, progressData: payload })
         });
 
-        if (res.status === 401) {
-            alert("Erreur 401: Vous n'êtes pas connecté !");
-            return;
-        }
+        if (res.status === 401) return alert("Non connecté !");
 
         const data = await res.json();
-        if (data.success) alert("Sauvegarde réussie sur le Cloud !");
-        else alert("Erreur: " + data.message);
-
-    } catch (e) { alert("Erreur de sauvegarde: " + e.message); }
+        if (data.success) alert("Sauvegardé !");
+    } catch (e) { alert("Erreur réseau"); }
 }
 
 async function loadSession() {
     if (!STATE.fileHash) return;
 
     try {
-        // ✅ FIX: تغيير الباراميتر من hash إلى lessonId ليتوافق مع السيرفر
-        // ✅ FIX: إضافة credentials
+        // ✅ إضافة credentials وتغيير المتغير إلى lessonId
         const res = await fetch(`/api/progress?lessonId=${STATE.fileHash}`, {
             credentials: 'include'
         });
 
+        // 🔥 التعامل مع الخطأ 401 (غير مسجل دخول)
         if (res.status === 401) {
-            console.log("Utilisateur non connecté - Mode Invité");
+            document.getElementById('landing-overlay').style.display = 'flex';
+            document.getElementById('upload-status').innerHTML = `
+                <div style="color:red; font-weight:bold;">Vous n'êtes pas connecté !</div>
+                <a href="http://localhost:5000/auth/google" target="_blank" 
+                   style="display:inline-block; margin-top:10px; padding:10px 20px; background:#2563eb; color:white; text-decoration:none; border-radius:5px;">
+                   Se connecter avec Google
+                </a>
+                <p style="font-size:12px; margin-top:5px;">Rafraîchissez la page après connexion.</p>
+            `;
             return;
         }
 
         const data = await res.json();
-
         if (data.success && data.data) {
-            const p = data.data; // البيانات تأتي داخل data.data لأننا نجلبها من Cloudinary
-
-            // بما أن البيانات تأتي من Cloudinary، الهيكل قد يكون مختلفاً قليلاً حسب طريقة حفظك السابقة
-            // لكن حسب كود الحفظ أعلاه، البيانات ستكون في p مباشرة أو p.progressData
-            const content = p.progressData || p;
-
+            const content = data.data.progressData || data.data;
             STATE.drawings = content.drawings || [];
             STATE.pins = content.pins || [];
             STATE.quizData = content.quizData || [];
@@ -430,26 +385,15 @@ async function loadSession() {
             if (STATE.quizData.length) renderQuiz(STATE.quizData);
             if (STATE.flashcardsData.length) renderCards(STATE.flashcardsData);
             if (STATE.mindMapMd) renderMap(STATE.mindMapMd);
-
-            console.log("Session restaurée depuis le Cloud !");
         }
-    } catch (e) { console.log("Erreur chargement session: ", e); }
+    } catch (e) { console.log("Nouvelle session"); }
 }
 
-// =============================================================================
-//  7. UI HELPERS
-// =============================================================================
+// UI
 function switchTab(id) {
     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(`tab-${id}`).classList.add('active');
     event.target.classList.add('active');
 }
-
-function toggleFocus() {
-    document.body.classList.toggle('focus-mode');
-}
-
-function closeAiModal() {
-    document.getElementById('ai-modal').style.display = 'none';
-}
+function toggleFocus() { document.body.classList.toggle('focus-mode'); }
