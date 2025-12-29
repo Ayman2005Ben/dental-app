@@ -354,58 +354,65 @@ exports.handleSculptureEvaluation = async (req, res) => {
 // ... (بقية الكود في الأعلى كما هو) ...
 
 // ✅ التعديل الجديد: نسخة مطابقة للمنطق الذي يعمل معك في الملفات
-exports.generateQuizFromText = async (req, res) => {
-  // 1. التحقق من الصلاحية
-  if (!checkAiAccess(req, res)) return;
+// controllers/geminiController.js - (Updated generateQuizFromText)
 
-  let prompt = ''; // لغرض التسجيل في حالة الخطأ
+exports.generateQuizFromText = async (req, res) => {
+  if (!checkAiAccess(req, res)) return;
+  let prompt = '';
 
   try {
-    console.log('📘 Sending Quiz (Text-Based) request...');
-
-    // 2. استقبال البيانات من الـ Frontend
+    console.log('📘 Sending PRO Quiz Request...');
     const { text, count = 10 } = req.body;
-
     if (!text) return res.status(400).json({ message: 'No text provided.' });
 
-    // تحديد عدد الأسئلة (بحد أقصى 20 لضمان الجودة)
     const questionCount = Math.min(parseInt(count, 10), 20);
 
-    // 3. بناء البرومبت (نفس البرومبت الناجح في دالة الملفات)
+    // 🔥 البرومبت الجديد: أسئلة صعبة ومتعددة الإجابات
     prompt = `
-    Create exactly ${questionCount} multiple-choice questions based on this text.
-    Format: JSON array of objects { question, options (array), correctOptionIndexes (array of one index), explanation }.
-    Return ONLY JSON. Do not include markdown formatting.
-    TEXT:
+    You are a Professor of Dentistry creating a FINAL EXAM.
+    Create exactly ${questionCount} **HARD / CLINICAL CASE-BASED** multiple-choice questions based on the text below.
+    
+    IMPORTANT RULES:
+    1. **Type:** "Multiple Response" (Select All That Apply).
+    2. Each question can have **1, 2, or 3 correct answers**.
+    3. Options should be tricky (distractors).
+    4. Format: JSON array of objects.
+    
+    JSON Structure:
+    [
+      {
+        "question": "The clinical scenario...",
+        "options": ["Option A", "Option B", "Option C", "Option D", "Option E"],
+        "correctOptionIndexes": [0, 2], // Array of ALL correct indices (e.g., A and C)
+        "explanation": "Detailed clinical explanation why these are correct and others are wrong."
+      }
+    ]
+
+    Return ONLY JSON. No markdown.
+    
+    TEXT CONTEXT:
     ---
     ${text.substring(0, 28000)}
     ---`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
 
-    // 4. إرسال الطلب (استخدمنا النسخة القياسية لضمان عدم التوقف)
-    // لاحظ: استخدمنا gemini-2.5-flash بدلاً من lite لتفادي limit: 20
+    // استخدام الموديل القياسي القوي
     const data = await executeGeminiRequest('gemini-2.5-flash', requestBody);
 
-    // 5. معالجة الرد
     const quizText = data.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!quizText) throw new Error("Empty response from AI");
 
-    // تنظيف الرد من علامات الـ Markdown
     const cleanedText = quizText.replace(/```json|```/g, '').trim();
     const quizJson = JSON.parse(cleanedText);
 
-    // 6. إرسال الرد للواجهة
-    // نضعه داخل object { questions: ... } ليتوافق مع pdf-viewer.js
     res.status(200).json({ questions: quizJson });
-
-    // تسجيل العملية
     await logAiRequest(req, 'quiz-text', prompt, 'success', JSON.stringify(quizJson));
 
   } catch (error) {
-    console.error('[Gemini Quiz Text Error]:', error);
+    console.error('[Gemini Quiz Error]:', error);
     await logAiRequest(req, 'quiz-text', prompt, 'error', error.message);
-    res.status(500).json({ message: 'Failed to generate quiz from text.', errorDetail: error.message });
+    res.status(500).json({ message: 'Failed to generate quiz.', errorDetail: error.message });
   }
 };
 
