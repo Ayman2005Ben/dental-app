@@ -349,32 +349,63 @@ exports.handleSculptureEvaluation = async (req, res) => {
 // ============================================================
 
 // --- 1. كويز من نص مباشر ---
-exports.generateQuizFromText = async (req, res) => {
-  if (!checkAiAccess(req, res)) return;
-  try {
-    const { text, count = 5 } = req.body;
-    if (!text) return res.status(400).json({ message: 'Text content is required' });
+// controllers/geminiController.js
 
-    const prompt = `Create a quiz with ${count} multiple-choice questions based on this text.
+// ... (بقية الكود في الأعلى كما هو) ...
+
+// ✅ التعديل الجديد: نسخة مطابقة للمنطق الذي يعمل معك في الملفات
+exports.generateQuizFromText = async (req, res) => {
+  // 1. التحقق من الصلاحية
+  if (!checkAiAccess(req, res)) return;
+
+  let prompt = ''; // لغرض التسجيل في حالة الخطأ
+
+  try {
+    console.log('📘 Sending Quiz (Text-Based) request...');
+
+    // 2. استقبال البيانات من الـ Frontend
+    const { text, count = 10 } = req.body;
+
+    if (!text) return res.status(400).json({ message: 'No text provided.' });
+
+    // تحديد عدد الأسئلة (بحد أقصى 20 لضمان الجودة)
+    const questionCount = Math.min(parseInt(count, 10), 20);
+
+    // 3. بناء البرومبت (نفس البرومبت الناجح في دالة الملفات)
+    prompt = `
+    Create exactly ${questionCount} multiple-choice questions based on this text.
     Format: JSON array of objects { question, options (array), correctOptionIndexes (array of one index), explanation }.
     Return ONLY JSON. Do not include markdown formatting.
-    TEXT: "${text.substring(0, 15000)}..."`;
+    TEXT:
+    ---
+    ${text.substring(0, 28000)}
+    ---`;
 
     const requestBody = { contents: [{ parts: [{ text: prompt }] }] };
-    const data = await executeGeminiRequest('gemini-2.5-flash-lite', requestBody);
 
-    const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (!textResponse) throw new Error("Empty response from AI");
+    // 4. إرسال الطلب (استخدمنا النسخة القياسية لضمان عدم التوقف)
+    // لاحظ: استخدمنا gemini-2.5-flash بدلاً من lite لتفادي limit: 20
+    const data = await executeGeminiRequest('gemini-2.5-flash', requestBody);
 
-    const cleanJson = textResponse.replace(/```json|```/g, '').trim();
-    const validJson = JSON.parse(cleanJson);
+    // 5. معالجة الرد
+    const quizText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!quizText) throw new Error("Empty response from AI");
 
-    res.json(validJson);
-    await logAiRequest(req, 'quiz-text', prompt, 'success', cleanJson);
+    // تنظيف الرد من علامات الـ Markdown
+    const cleanedText = quizText.replace(/```json|```/g, '').trim();
+    const quizJson = JSON.parse(cleanedText);
+
+    // 6. إرسال الرد للواجهة
+    // نضعه داخل object { questions: ... } ليتوافق مع pdf-viewer.js
+    res.status(200).json({ questions: quizJson });
+
+    // تسجيل العملية
+    await logAiRequest(req, 'quiz-text', prompt, 'success', JSON.stringify(quizJson));
+
   } catch (error) {
-    console.error('Quiz Text Error:', error);
-    res.status(500).json({ message: 'AI generation failed', errorDetail: error.message });
-    await logAiRequest(req, 'quiz-text', 'text-request', 'error', error.message);
+    console.error('[Gemini Quiz Text Error]:', error);
+    await logAiRequest(req, 'quiz-text', prompt, 'error', error.message);
+    res.status(500).json({ message: 'Failed to generate quiz from text.', errorDetail: error.message });
   }
 };
 
