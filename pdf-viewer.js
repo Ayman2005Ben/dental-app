@@ -1,12 +1,13 @@
 // =============================================================================
-//  SMART DENTAL VIEWER - FINAL INTEGRATED CONTROLLER
-//  Fixes: Auth (401), Drawing Restoration, Safe Data Handling
+//  SMART DENTAL VIEWER - FINAL FIXED CONTROLLER
+//  Fixes: Auth (401), Drawing, & Data Safety
 // =============================================================================
 
-// 👇 رابط السيرفر الخاص بك (Render)
+// 👇 تأكد أن هذا الرابط صحيح ويطابق سيرفرك
 const API_BASE_URL = "https://dental-app-he1p.onrender.com";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+// إعداد مكتبة PDF.js
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
 // --- إدارة الحالة (Global State) ---
 const STATE = {
@@ -18,9 +19,9 @@ const STATE = {
     // أدوات الرسم
     tool: null,       // 'pen', 'highlighter', 'eraser'
     isDrawing: false,
-    drawings: [],     // تخزين الرسومات
+    drawings: [],
 
-    // بيانات الكويز والبطاقات (Professor Mode)
+    // بيانات الكويز والبطاقات
     quizData: [],
     currentQuizIndex: 0,
     userAnswers: {},
@@ -43,22 +44,22 @@ const STATE = {
 };
 
 // =============================================================================
-//  1. الاتصال الآمن (FIXED: Credentials Include) 🔌
+//  1. الاتصال الآمن (FIXED: Session/Cookie Support) 🔌
 // =============================================================================
 
 async function callApi(endpoint, body = {}) {
-    // نستخدم credentials: 'include' بدلاً من الهيدر اليدوي
-    // هذا يجعل المتصفح يرسل كوكيز الجلسة تلقائياً للسيرفر
     try {
+        // 🔥 التغيير الجذري هنا: استخدام credentials: 'include'
+        // هذا يجبر المتصفح على إرسال كوكيز الجلسة مع الطلب
         const res = await fetch(`${API_BASE_URL}/api/${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            credentials: 'include', // 🔥 الحل السحري لمشكلة 401
+            credentials: 'include',
             body: JSON.stringify(body)
         });
 
         if (res.status === 401) {
-            alert("Session expirée. Veuillez vous reconnecter.");
+            alert("Session expirée. Veuillez vous reconnecter via la page d'accueil.");
             throw new Error("Unauthorized");
         }
 
@@ -74,10 +75,8 @@ async function callApi(endpoint, body = {}) {
 async function getSmartText(scopeInputName) {
     if (!STATE.pdfDoc) return "";
 
-    // محاولة قراءة الخيار من HTML، وإذا لم يوجد نستخدم 'page' كافتراضي
     const scopeEl = document.querySelector(`input[name="${scopeInputName}"]:checked`);
     const scope = scopeEl ? scopeEl.value : 'page';
-
     let text = "";
 
     if (scope === 'page') {
@@ -85,7 +84,8 @@ async function getSmartText(scopeInputName) {
         const content = await page.getTextContent();
         text = content.items.map(i => i.str).join(' ');
     } else {
-        const maxPages = Math.min(STATE.pdfDoc.numPages, 15); // تقليل الحد لتسريع الطلب
+        // تقليل عدد الصفحات لتجنب بطء الطلب
+        const maxPages = Math.min(STATE.pdfDoc.numPages, 15);
         for (let i = 1; i <= maxPages; i++) {
             const page = await STATE.pdfDoc.getPage(i);
             const content = await page.getTextContent();
@@ -105,17 +105,17 @@ async function handleFileUpload(input) {
     const file = input.files[0];
     if (!file) return;
 
-    // حساب الهاش للملف (للحفظ والاسترجاع)
+    // حساب الهاش للملف (Lesson ID)
     const arrayBuffer = await file.arrayBuffer();
     const spark = new SparkMD5.ArrayBuffer();
     spark.append(arrayBuffer);
-    STATE.fileHash = spark.end(); // Lesson ID الثابت
+    STATE.fileHash = spark.end();
 
     // تحميل PDF
     const loadingTask = pdfjsLib.getDocument(arrayBuffer);
     STATE.pdfDoc = await loadingTask.promise;
 
-    const container = document.getElementById('pdf-wrapper'); // تأكد أن هذا الـ ID موجود في HTML
+    const container = document.getElementById('pdf-wrapper');
     if (container) container.innerHTML = '';
 
     // عرض الصفحات
@@ -127,7 +127,6 @@ async function handleFileUpload(input) {
     loadSavedProgress(); // استرجاع البيانات المحفوظة
 }
 
-// ربط الحدث إذا كان العنصر موجوداً
 if (fileInput) {
     fileInput.addEventListener('change', (e) => handleFileUpload(e.target));
 }
@@ -145,20 +144,20 @@ async function renderPage(num, container) {
     wrapper.style.marginBottom = '20px';
     wrapper.style.position = 'relative';
 
-    // 1. طبقة الكانفاس (PDF)
+    // 1. طبقة PDF
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
-    // 2. طبقة النص (للتحديد)
+    // 2. طبقة النص
     const textLayer = document.createElement('div');
     textLayer.className = 'textLayer';
     textLayer.style.width = `${viewport.width}px`;
     textLayer.style.height = `${viewport.height}px`;
     textLayer.style.setProperty('--scale-factor', STATE.scale);
 
-    // 3. طبقة الرسم (Drawing) - 🔥 تمت إعادتها
+    // 3. طبقة الرسم (تمت إعادتها)
     const drawCanvas = document.createElement('canvas');
     drawCanvas.className = 'drawLayer';
     drawCanvas.id = `draw-${num}`;
@@ -167,13 +166,12 @@ async function renderPage(num, container) {
     drawCanvas.style.position = 'absolute';
     drawCanvas.style.top = '0';
     drawCanvas.style.left = '0';
-    drawCanvas.style.pointerEvents = 'none'; // السماح بمرور الماوس للنص إلا عند الرسم
+    drawCanvas.style.pointerEvents = 'none';
     drawCanvas.style.zIndex = '10';
 
     wrapper.append(canvas, textLayer, drawCanvas);
     container.appendChild(wrapper);
 
-    // رسم المحتوى
     await page.render({ canvasContext: ctx, viewport }).promise;
 
     const textContent = await page.getTextContent();
@@ -184,7 +182,6 @@ async function renderPage(num, container) {
         textDivs: []
     });
 
-    // تفعيل منطق الرسم لهذه الصفحة
     setupDrawingLogic(drawCanvas, num);
 }
 
@@ -196,19 +193,16 @@ function setupPageObserver() {
             }
         });
     }, { threshold: 0.5 });
-
     document.querySelectorAll('.page-container').forEach(p => observer.observe(p));
 }
 
 // =============================================================================
-//  3. منطق الرسم (Restored Drawing Logic) ✏️
+//  3. منطق الرسم (Drawing Logic Restored) ✏️
 // =============================================================================
 
-// دالة تغيير الأداة (يتم استدعاؤها من HTML)
 window.setTool = function (t) {
     STATE.tool = (STATE.tool === t) ? null : t;
 
-    // تحديث ستايل الأزرار (اختياري، تأكد من وجود الـ IDs في HTML)
     ['pen', 'highlighter', 'eraser'].forEach(id => {
         const btn = document.getElementById(`btn-${id}`);
         if (btn) {
@@ -217,7 +211,6 @@ window.setTool = function (t) {
         }
     });
 
-    // تفعيل/تعطيل استقبال الماوس في طبقات الرسم
     document.querySelectorAll('.drawLayer').forEach(el => {
         el.style.pointerEvents = STATE.tool ? 'auto' : 'none';
         el.style.cursor = STATE.tool ? 'crosshair' : 'default';
@@ -234,12 +227,8 @@ function setupDrawingLogic(canvas, pageNum) {
         [lastX, lastY] = [e.offsetX, e.offsetY];
 
         const color = document.getElementById('color-picker')?.value || '#ff0000';
-
         STATE.drawings.push({
-            page: pageNum,
-            tool: STATE.tool,
-            color: color,
-            points: [{ x: lastX, y: lastY }]
+            page: pageNum, tool: STATE.tool, color: color, points: [{ x: lastX, y: lastY }]
         });
     });
 
@@ -259,7 +248,6 @@ function setupDrawingLogic(canvas, pageNum) {
 
         ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke();
 
-        // حفظ النقاط
         if (STATE.drawings.length > 0) {
             STATE.drawings[STATE.drawings.length - 1].points.push({ x: e.offsetX, y: e.offsetY });
         }
@@ -293,7 +281,7 @@ function redrawAllDrawings() {
 }
 
 // =============================================================================
-//  4. الكويز (Carousel Mode - Safe Handling) 🧠
+//  4. الكويز (Quiz - Safe Handling) 🧠
 // =============================================================================
 
 const quizBtn = document.getElementById('generate-quiz-btn');
@@ -306,16 +294,16 @@ if (quizBtn) {
             const text = await getSmartText('quiz-scope');
             const res = await callApi('ai/generate-quiz-text', { text, count: 5 });
 
-            // 🔥 الحماية من خطأ forEach: التحقق من وجود البيانات
             STATE.quizData = res.questions || res.data || [];
 
+            // ✅ فحص البيانات قبل الاستخدام
             if (Array.isArray(STATE.quizData) && STATE.quizData.length > 0) {
                 STATE.sessionData.quizzes = STATE.quizData;
                 STATE.currentQuizIndex = 0;
                 STATE.userAnswers = {};
                 renderQuizQuestion(0);
             } else {
-                container.innerHTML = '<p style="color:red">Aucune question générée. Essayez une autre page.</p>';
+                container.innerHTML = '<p style="color:red; text-align:center;">Aucune question générée.</p>';
             }
 
         } catch (err) {
@@ -341,7 +329,6 @@ function renderQuizQuestion(index) {
 
     const optionsContainer = clone.querySelector('.options-container');
 
-    // التأكد من أن الخيارات موجودة قبل الدوران عليها
     if (qData.options && Array.isArray(qData.options)) {
         qData.options.forEach((opt, optIdx) => {
             const btn = document.createElement('button');
@@ -363,7 +350,6 @@ function renderQuizQuestion(index) {
         });
     }
 
-    // التنقل
     const prevBtn = clone.querySelector('.btn-prev');
     const nextBtn = clone.querySelector('.btn-next');
 
@@ -378,12 +364,11 @@ function renderQuizQuestion(index) {
             else alert("Quiz terminé !");
         };
     }
-
     container.appendChild(clone);
 }
 
 // =============================================================================
-//  5. الفلاش كاردز (Single Card Mode) 🃏
+//  5. الفلاش كاردز (Flashcards) 🃏
 // =============================================================================
 
 const cardsBtn = document.getElementById('generate-flashcards-btn');
@@ -403,7 +388,7 @@ if (cardsBtn) {
                 STATE.currentFlashcardIndex = 0;
                 renderSingleFlashcard(0);
             } else {
-                container.innerHTML = '<p>Aucune carte générée.</p>';
+                container.innerHTML = '<p style="text-align:center;">Aucune carte générée.</p>';
             }
 
         } catch (err) {
@@ -431,16 +416,13 @@ function renderSingleFlashcard(index) {
 
     container.appendChild(clone);
 
-    // أزرار التحكم
     const controls = document.createElement('div');
     controls.style.cssText = "display: flex; justify-content: space-between; margin-top: 15px; align-items: center;";
-
     controls.innerHTML = `
         <button class="nav-btn" id="fc-prev" ${index === 0 ? 'disabled' : ''} style="background:#cbd5e1; border:none; padding:8px; border-radius:5px; cursor:pointer;"><i class="fas fa-arrow-left"></i></button>
         <span style="font-weight:bold; color:#64748b;">${index + 1} / ${STATE.flashcardsData.length}</span>
         <button class="nav-btn" id="fc-next" style="background:var(--primary); color:white; border:none; padding:8px; border-radius:5px; cursor:pointer;"><i class="fas fa-arrow-right"></i></button>
     `;
-
     container.appendChild(controls);
 
     document.getElementById('fc-prev').onclick = () => renderSingleFlashcard(index - 1);
@@ -450,7 +432,7 @@ function renderSingleFlashcard(index) {
 }
 
 // =============================================================================
-//  6. المايند ماب 🌳
+//  6. المايند ماب (Mind Map) 🌳
 // =============================================================================
 
 const mapBtn = document.getElementById('generate-mindmap-btn');
@@ -463,14 +445,13 @@ if (mapBtn) {
         const container = svgEl.parentElement;
         container.style.position = 'relative';
 
-        // إنشاء لودر مؤقت
         const loader = document.createElement('div');
         loader.textContent = 'Génération de la Map...';
         loader.style.cssText = 'position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);';
         container.appendChild(loader);
 
         try {
-            const text = await getSmartText('quiz-scope'); // نستخدم نفس النص لتوفير الوقت
+            const text = await getSmartText('quiz-scope');
             const res = await callApi('ai/generate-mindmap-text', { text });
 
             const markdown = res.markdown || res.data;
@@ -507,7 +488,6 @@ if (saveBtn) {
         saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
 
         try {
-            // تجهيز البيانات
             const payload = {
                 drawings: STATE.drawings,
                 pins: STATE.pins,
@@ -516,7 +496,6 @@ if (saveBtn) {
                 mindMapData: STATE.sessionData.mindMapData
             };
 
-            // إرسال lessonId + progressData كما يتوقع progressController.js
             const res = await callApi('progress/save', {
                 lessonId: STATE.fileHash,
                 progressData: payload
@@ -541,21 +520,16 @@ async function loadSavedProgress() {
             credentials: 'include'
         });
 
-        if (res.status === 401) {
-            console.log("Non connecté (Guest Mode)");
-            return;
-        }
+        if (res.status === 401) return; // Guest mode
 
         const json = await res.json();
 
         if (json.success && json.data) {
             const data = json.data.progressData || json.data;
 
-            // استعادة الرسم
             STATE.drawings = data.drawings || [];
             redrawAllDrawings();
 
-            // استعادة الكويز
             if (data.quizzes && data.quizzes.length > 0) {
                 STATE.sessionData.quizzes = data.quizzes;
                 const rBtn = document.getElementById('restore-quiz-btn');
@@ -565,7 +539,6 @@ async function loadSavedProgress() {
                 }
             }
 
-            // استعادة البطاقات
             if (data.flashcards && data.flashcards.length > 0) {
                 STATE.sessionData.flashcards = data.flashcards;
                 const rBtn = document.getElementById('restore-cards-btn');
@@ -575,16 +548,13 @@ async function loadSavedProgress() {
                 }
             }
 
-            // استعادة المايند ماب
             if (data.mindMapData) {
                 STATE.sessionData.mindMapData = data.mindMapData;
                 const rBtn = document.getElementById('restore-map-btn');
                 if (rBtn) rBtn.style.display = 'flex';
             }
-
-            console.log("Session loaded successfully!");
         }
-    } catch (e) { console.log("New Session / No Save Found"); }
+    } catch (e) { console.log("New Session"); }
 }
 
 // أزرار الاستعادة
@@ -596,7 +566,6 @@ if (restoreQuizBtn) {
         restoreQuizBtn.style.display = 'none';
     };
 }
-
 const restoreCardsBtn = document.getElementById('restore-cards-btn');
 if (restoreCardsBtn) {
     restoreCardsBtn.onclick = () => {
@@ -605,7 +574,6 @@ if (restoreCardsBtn) {
         restoreCardsBtn.style.display = 'none';
     };
 }
-
 const restoreMapBtn = document.getElementById('restore-map-btn');
 if (restoreMapBtn) {
     restoreMapBtn.onclick = () => {
@@ -621,12 +589,10 @@ if (restoreMapBtn) {
 //  8. أدوات إضافية (AI Selection & Pins) 🤖
 // =============================================================================
 
-// مراقبة التحديد للنصوص
 document.addEventListener('selectionchange', () => {
     const sel = window.getSelection();
     const toolbar = document.getElementById('selection-toolbar');
 
-    // إذا لم يكن هناك تحديد أو التحديد خارج الـ PDF
     if (sel.isCollapsed || !document.getElementById('pdf-wrapper')?.contains(sel.anchorNode)) {
         if (toolbar) toolbar.style.display = 'none';
         return;
@@ -634,7 +600,6 @@ document.addEventListener('selectionchange', () => {
 
     const range = sel.getRangeAt(0);
     const rect = range.getBoundingClientRect();
-
     STATE.selection.text = sel.toString();
 
     if (toolbar) {
@@ -645,8 +610,6 @@ document.addEventListener('selectionchange', () => {
 });
 
 window.highlightSelection = function (color) {
-    // يمكنك إضافة منطق تمييز النصوص هنا إذا أردت
-    // حالياً نقوم فقط بإخفاء الشريط
     document.getElementById('selection-toolbar').style.display = 'none';
 };
 
