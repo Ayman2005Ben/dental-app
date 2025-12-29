@@ -1,75 +1,68 @@
 // =============================================================================
-//  SMART CORE - LOGIC CONTROLLER
-//  Features: Local Upload, MD5 Hashing, Full Persistence, AI Generation
+//  SMART CORE - LOGIC CONTROLLER (FIXED & OPTIMIZED)
+//  Fixes: Auth (401), PDF Scale Factor, Variable Names Matching
 // =============================================================================
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
 const STATE = {
     pdfDoc: null,
-    fileHash: null, // بصمة الملف للتعرف عليه
+    fileHash: null,
     fileName: "Document",
     scale: 1.2,
     tool: null,
     isDrawing: false,
-    // --- بيانات الحفظ ---
-    drawings: [],      // الرسم
-    pins: [],          // المصابيح
-    quizData: [],      // الكويزات المحفوظة
-    flashcardsData: [],// الفلاش كاردز المحفوظة
-    mindMapMd: "",     // نص المايند ماب
-    // -------------------
+    drawings: [],
+    pins: [],
+    quizData: [],
+    flashcardsData: [],
+    mindMapMd: "",
     selection: { text: '', rect: null },
     activePinId: null
 };
 
 // =============================================================================
-//  1. FILE UPLOAD & HASHING (الرفع والتعرف)
+//  1. FILE UPLOAD & HASHING
 // =============================================================================
 
 async function handleFileUpload(input) {
     const file = input.files[0];
     if (!file) return;
 
-    document.getElementById('upload-status').textContent = "Analyse du fichier...";
+    document.getElementById('upload-status').textContent = "Analyse et sécurisation...";
     STATE.fileName = file.name;
     document.getElementById('file-name-display').textContent = file.name;
 
     try {
-        // 1. قراءة الملف كـ ArrayBuffer
         const arrayBuffer = await file.arrayBuffer();
 
-        // 2. حساب البصمة (Hash) للتعرف على الملف مستقبلاً
+        // حساب الهاش (البصمة)
         const spark = new SparkMD5.ArrayBuffer();
         spark.append(arrayBuffer);
-        STATE.fileHash = spark.end(); // مثلا: "d41d8cd98f00b204e9800998ecf8427e"
-        console.log("File Hash:", STATE.fileHash);
+        STATE.fileHash = spark.end();
+        console.log("File Hash (Lesson ID):", STATE.fileHash);
 
-        // 3. تحميل PDF
         const loadingTask = pdfjsLib.getDocument(arrayBuffer);
         STATE.pdfDoc = await loadingTask.promise;
 
-        // 4. إخفاء شاشة الترحيب وعرض القارئ
         document.getElementById('landing-overlay').style.display = 'none';
         document.getElementById('page-count').textContent = STATE.pdfDoc.numPages;
 
-        // 5. عرض الصفحات
         for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
             await renderPage(i);
         }
 
-        // 6. استرجاع البيانات القديمة لهذا الملف (من السيرفر)
         await loadSession();
 
     } catch (e) {
         console.error(e);
-        alert("Erreur lors de l'ouverture du fichier.");
+        alert("Erreur fichier: " + e.message);
         document.getElementById('upload-status').textContent = "";
     }
 }
 
 // =============================================================================
-//  2. RENDERING
+//  2. RENDERING (Fixed Scale Factor)
 // =============================================================================
 
 async function renderPage(num) {
@@ -92,6 +85,9 @@ async function renderPage(num) {
     textLayer.className = 'textLayer';
     textLayer.style.width = `${viewport.width}px`;
     textLayer.style.height = `${viewport.height}px`;
+
+    // ✅ FIX: إضافة CSS Variable المطلوبة من PDF.js v3+
+    textLayer.style.setProperty('--scale-factor', STATE.scale);
 
     const drawCanvas = document.createElement('canvas');
     drawCanvas.className = 'drawLayer';
@@ -116,7 +112,7 @@ async function renderPage(num) {
 }
 
 // =============================================================================
-//  3. DRAWING LOGIC (الرسم)
+//  3. DRAWING LOGIC
 // =============================================================================
 
 function setTool(t) {
@@ -185,7 +181,7 @@ function redrawAll() {
 }
 
 // =============================================================================
-//  4. ASK DENTIST AI (Smart Pins)
+//  4. ASK DENTIST AI
 // =============================================================================
 
 document.addEventListener('selectionchange', () => {
@@ -214,22 +210,25 @@ async function submitAiQuestion() {
     box.style.display = 'block'; box.innerHTML = 'Réflexion...';
 
     try {
+        // ✅ FIX: إضافة credentials لإرسال الكوكيز
         const res = await fetch('/api/ai/ask-dentist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
             body: JSON.stringify({ text: STATE.selection.text, question: q })
         });
+
+        if (res.status === 401) throw new Error("Veuillez vous connecter d'abord.");
+
         const data = await res.json();
         const ans = data.answer || "Erreur";
         box.innerHTML = marked.parse(ans);
 
-        // إنشاء المصباح
         createPin(STATE.selection.rect, q, ans);
-    } catch (e) { box.innerHTML = "Erreur API"; }
+    } catch (e) { box.innerHTML = e.message; }
 }
 
 function createPin(rect, q, a) {
-    // تحديد مكان المصباح
     const wrappers = document.querySelectorAll('.page-wrapper');
     let page = 1, x = 0, y = 0;
     wrappers.forEach(w => {
@@ -283,9 +282,6 @@ async function generateContent(type) {
     const container = document.getElementById(type === 'quiz' ? 'quiz-results' : type === 'flashcards' ? 'cards-results' : 'markmap-svg');
     container.innerHTML = 'Chargement AI...';
 
-    // جمع النص (صفحة واحدة أو الكل)
-    // هنا سنستخدم منطق بسيط: الصفحة الأولى فقط كعينة، أو حلقة كاملة
-    // لتحسين الأداء نأخذ أول 15 صفحة فقط كمثال
     let text = "";
     const max = Math.min(STATE.pdfDoc.numPages, 15);
     for (let i = 1; i <= max; i++) {
@@ -295,21 +291,26 @@ async function generateContent(type) {
     }
 
     try {
+        // ✅ FIX: إضافة credentials للمصادقة
         const res = await fetch(`/api/ai/${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
             body: JSON.stringify({ text, count: 5 })
         });
+
+        if (res.status === 401) throw new Error("Session expirée. Reconnectez-vous.");
+
         const data = await res.json();
 
         if (type === 'quiz') {
-            STATE.quizData = data.questions; // حفظ في الحالة
+            STATE.quizData = data.questions;
             renderQuiz(data.questions);
         } else if (type === 'flashcards') {
-            STATE.flashcardsData = data.flashcards; // حفظ في الحالة
+            STATE.flashcardsData = data.flashcards;
             renderCards(data.flashcards);
         } else {
-            STATE.mindMapMd = data.markdown; // حفظ في الحالة
+            STATE.mindMapMd = data.markdown;
             renderMap(data.markdown);
         }
     } catch (e) { container.innerHTML = "Erreur: " + e.message; }
@@ -342,7 +343,7 @@ function renderMap(md) {
     const transformer = new Transformer();
     const { root } = transformer.transform(md);
     Markmap.create(svg, null, root);
-    document.getElementById('dl-map-btn').style.display = 'flex'; // إظهار زر التحميل
+    document.getElementById('dl-map-btn').style.display = 'flex';
 }
 
 function downloadMindMap() {
@@ -354,15 +355,14 @@ function downloadMindMap() {
 }
 
 // =============================================================================
-//  6. SAVE & LOAD (Global Persistence)
+//  6. SAVE & LOAD (FIXED CREDENTIALS & VARIABLES)
 // =============================================================================
 
 async function saveSession() {
     if (!STATE.fileHash) { alert("Aucun fichier ouvert !"); return; }
 
-    // تجميع كل البيانات
     const payload = {
-        fileHash: STATE.fileHash, // المفتاح الرئيسي
+        fileHash: STATE.fileHash,
         drawings: STATE.drawings,
         pins: STATE.pins,
         quizData: STATE.quizData,
@@ -371,42 +371,69 @@ async function saveSession() {
     };
 
     try {
-        await fetch('/api/progress/save', {
+        // ✅ FIX: مطابقة الـ Body مع ما يتوقعه الباك إند (lessonId, progressData)
+        // ✅ FIX: إضافة credentials: 'include'
+        const res = await fetch('/api/progress/save', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ progressData: payload })
+            credentials: 'include',
+            body: JSON.stringify({
+                lessonId: STATE.fileHash,  // إرسال الهاش كـ lessonId
+                progressData: payload
+            })
         });
-        alert("Tout est sauvegardé ! (Dessins, Quiz, Cartes, Map)");
-    } catch (e) { alert("Erreur de sauvegarde"); }
+
+        if (res.status === 401) {
+            alert("Erreur 401: Vous n'êtes pas connecté !");
+            return;
+        }
+
+        const data = await res.json();
+        if (data.success) alert("Sauvegarde réussie sur le Cloud !");
+        else alert("Erreur: " + data.message);
+
+    } catch (e) { alert("Erreur de sauvegarde: " + e.message); }
 }
 
 async function loadSession() {
     if (!STATE.fileHash) return;
 
     try {
-        // نرسل الـ Hash للسيرفر ليجلب بيانات هذا الملف تحديداً
-        const res = await fetch(`/api/progress?hash=${STATE.fileHash}`);
+        // ✅ FIX: تغيير الباراميتر من hash إلى lessonId ليتوافق مع السيرفر
+        // ✅ FIX: إضافة credentials
+        const res = await fetch(`/api/progress?lessonId=${STATE.fileHash}`, {
+            credentials: 'include'
+        });
+
+        if (res.status === 401) {
+            console.log("Utilisateur non connecté - Mode Invité");
+            return;
+        }
+
         const data = await res.json();
 
-        if (data.progressData) {
-            const p = data.progressData;
-            // استعادة الحالة
-            STATE.drawings = p.drawings || [];
-            STATE.pins = p.pins || [];
-            STATE.quizData = p.quizData || [];
-            STATE.flashcardsData = p.flashcardsData || [];
-            STATE.mindMapMd = p.mindMapMd || "";
+        if (data.success && data.data) {
+            const p = data.data; // البيانات تأتي داخل data.data لأننا نجلبها من Cloudinary
 
-            // إعادة الرسم والعرض
+            // بما أن البيانات تأتي من Cloudinary، الهيكل قد يكون مختلفاً قليلاً حسب طريقة حفظك السابقة
+            // لكن حسب كود الحفظ أعلاه، البيانات ستكون في p مباشرة أو p.progressData
+            const content = p.progressData || p;
+
+            STATE.drawings = content.drawings || [];
+            STATE.pins = content.pins || [];
+            STATE.quizData = content.quizData || [];
+            STATE.flashcardsData = content.flashcardsData || [];
+            STATE.mindMapMd = content.mindMapMd || "";
+
             redrawAll();
             STATE.pins.forEach(renderPin);
             if (STATE.quizData.length) renderQuiz(STATE.quizData);
             if (STATE.flashcardsData.length) renderCards(STATE.flashcardsData);
             if (STATE.mindMapMd) renderMap(STATE.mindMapMd);
 
-            console.log("Session restaurée avec succès !");
+            console.log("Session restaurée depuis le Cloud !");
         }
-    } catch (e) { console.log("Nouvelle session."); }
+    } catch (e) { console.log("Erreur chargement session: ", e); }
 }
 
 // =============================================================================
