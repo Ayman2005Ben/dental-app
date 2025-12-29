@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Smart Core | Dentist AI Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Core | Dentist AI</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
@@ -19,34 +19,27 @@
     <style>
         :root {
             --primary: #2563eb;
-            /* أزرق */
-            --primary-dark: #1e40af;
             --accent: #f59e0b;
-            /* برتقالي للمصابيح */
-            --bg-viewer: #cbd5e1;
-            /* خلفية رمادية للعارض */
             --bg-sidebar: #ffffff;
-            --text-main: #334155;
-            --border: #e2e8f0;
+            --bg-viewer: #cbd5e1;
             --sidebar-width: 380px;
         }
 
         * {
             box-sizing: border-box;
             outline: none;
-            user-select: none;
         }
 
         body {
             margin: 0;
             background: var(--bg-viewer);
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             height: 100vh;
             display: flex;
             overflow: hidden;
         }
 
-        /* --- 1. شاشة الترحيب والرفع (Landing Overlay) --- */
+        /* شاشة الرفع */
         #landing-overlay {
             position: fixed;
             top: 0;
@@ -63,13 +56,12 @@
 
         .upload-box {
             border: 3px dashed var(--primary);
-            padding: 40px 60px;
+            padding: 40px;
             border-radius: 20px;
             text-align: center;
             cursor: pointer;
             transition: 0.3s;
             background: white;
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
         }
 
         .upload-box:hover {
@@ -77,62 +69,36 @@
             transform: scale(1.02);
         }
 
-        .logo-area {
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        /* --- 2. الشريط الجانبي (Sidebar) --- */
+        /* الشريط الجانبي */
         #sidebar {
             width: var(--sidebar-width);
             background: var(--bg-sidebar);
-            border-right: 1px solid var(--border);
+            border-right: 1px solid #ddd;
             display: flex;
             flex-direction: column;
             z-index: 50;
             transition: transform 0.3s ease;
         }
 
-        .sidebar-header {
-            padding: 20px;
-            border-bottom: 1px solid var(--border);
-            background: #f8fafc;
-        }
-
-        .sidebar-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
+        .tab-nav {
             display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .tabs-nav {
-            display: flex;
-            padding: 10px;
-            gap: 5px;
-            background: white;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #ddd;
         }
 
         .tab-btn {
             flex: 1;
-            padding: 10px;
+            padding: 15px;
+            background: none;
             border: none;
-            background: transparent;
-            color: #64748b;
-            font-weight: 600;
             cursor: pointer;
-            border-radius: 6px;
-            transition: 0.2s;
+            font-weight: bold;
+            color: #666;
         }
 
         .tab-btn.active {
-            background: #eff6ff;
             color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            background: #f8fafc;
         }
 
         .tab-content {
@@ -144,29 +110,124 @@
 
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.3s;
         }
 
-        /* أزرار الإجراءات */
-        .action-btn {
+        /* العارض */
+        #viewer-area {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toolbar {
+            height: 60px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        #pdf-container {
+            flex: 1;
+            overflow: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            gap: 20px;
+            background: var(--bg-viewer);
+        }
+
+        /* الطبقات */
+        .page-wrapper {
+            position: relative;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .textLayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.2;
+            line-height: 1.0;
+            z-index: 2;
+        }
+
+        .drawLayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .drawLayer.drawing {
+            pointer-events: auto;
+            cursor: crosshair;
+        }
+
+        /* العناصر الذكية */
+        .smart-pin {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--accent);
+            border-radius: 50% 50% 0 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            transform: translate(-50%, -100%);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #smart-toolbar {
+            position: absolute;
+            background: #1e293b;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: none;
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 14px;
+        }
+
+        .pin-popover {
+            position: absolute;
+            width: 300px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 200;
+            display: none;
+            border: 1px solid #ddd;
+        }
+
+        /* الأزرار */
+        .btn-action {
             width: 100%;
             padding: 12px;
+            margin-bottom: 10px;
             border: none;
             border-radius: 8px;
             color: white;
-            font-weight: 700;
+            font-weight: bold;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            margin-bottom: 10px;
-            transition: 0.2s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .action-btn:hover {
-            filter: brightness(1.05);
         }
 
         .btn-blue {
@@ -181,183 +242,35 @@
             background: #8b5cf6;
         }
 
-        .btn-dark {
-            background: #334155;
+        /* وضع التركيز */
+        body.focus-mode #sidebar {
+            transform: translateX(-100%);
+            width: 0;
+            opacity: 0;
         }
 
-        /* نتائج الـ AI */
-        .ai-result-card {
-            background: white;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            font-size: 14px;
-            line-height: 1.5;
-            user-select: text;
-        }
-
-        /* --- 3. منطقة العرض (Viewer Area) --- */
-        #viewer-area {
-            flex: 1;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* شريط الأدوات العلوي */
-        .toolbar {
-            height: 60px;
-            background: white;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            z-index: 40;
-        }
-
-        .tool-group {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .icon-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            border: 1px solid transparent;
-            background: transparent;
-            color: #64748b;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-        }
-
-        .icon-btn:hover {
-            background: #f1f5f9;
-        }
-
-        .icon-btn.active {
-            background: #eff6ff;
-            border-color: #bfdbfe;
-            color: var(--primary);
-        }
-
-        /* حاوي الـ PDF */
-        #pdf-container {
-            flex: 1;
-            overflow: auto;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-            gap: 20px;
-            background: var(--bg-viewer);
-        }
-
-        /* --- 4. الطبقات (Layers) - مهم جداً للإصلاح --- */
-        .page-wrapper {
-            position: relative;
-            background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        /* الطبقة 1: النص (Selection) */
-        .textLayer {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-            opacity: 0.2;
-            /* شفافية بسيطة لتساعدك في رؤية التحديد */
-            line-height: 1.0;
-            transform-origin: 0 0;
-            z-index: 2;
-        }
-
-        /* الطبقة 2: الرسم (Drawing) */
-        .drawLayer {
-            position: absolute;
-            left: 0;
-            top: 0;
-            pointer-events: none;
-            /* يسمح بمرور الماوس للنص */
-            z-index: 10;
-        }
-
-        .drawLayer.drawing {
-            pointer-events: auto;
-            /* عند الرسم، يلتقط الماوس */
-            cursor: crosshair;
-        }
-
-        /* --- 5. العناصر الذكية (Smart Elements) --- */
-        /* أيقونة المصباح */
-        .smart-pin {
-            position: absolute;
-            width: 32px;
-            height: 32px;
-            background: var(--accent);
-            border: 2px solid white;
-            border-radius: 50% 50% 0 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transform: translate(-50%, -100%);
-            transition: transform 0.2s;
-        }
-
-        .smart-pin:hover {
-            transform: translate(-50%, -110%) scale(1.1);
-        }
-
-        /* القائمة العائمة (Ask AI Button) */
-        #smart-toolbar {
-            position: absolute;
-            background: #1e293b;
-            padding: 8px 12px;
-            border-radius: 8px;
+        body.focus-mode .toolbar {
             display: none;
-            gap: 10px;
-            z-index: 1000;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #exit-focus {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
             color: white;
-            font-weight: 600;
+            padding: 10px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 14px;
-            align-items: center;
-        }
-
-        #smart-toolbar:hover {
-            transform: scale(1.05);
-        }
-
-        /* نافذة المصباح (Popover) */
-        .pin-popover {
-            position: absolute;
-            width: 300px;
-            background: white;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            z-index: 200;
             display: none;
-            border: 1px solid var(--border);
-            font-size: 14px;
+            z-index: 2000;
         }
 
-        /* --- 6. النوافذ المنبثقة (Modals) --- */
+        body.focus-mode #exit-focus {
+            display: block;
+        }
+
+        /* Modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -369,62 +282,14 @@
             display: none;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(4px);
         }
 
         .modal-box {
             background: white;
+            padding: 25px;
+            border-radius: 12px;
             width: 500px;
             max-width: 90%;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* زر الخروج من وضع التركيز */
-        #exit-focus-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            display: none;
-            z-index: 2000;
-            font-weight: bold;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* تفعيل وضع التركيز */
-        body.focus-mode #sidebar {
-            transform: translateX(-100%);
-            width: 0;
-            opacity: 0;
-        }
-
-        body.focus-mode .toolbar {
-            display: none;
-        }
-
-        body.focus-mode #exit-focus-btn {
-            display: block;
-        }
-
-        body.focus-mode #pdf-container {
-            padding: 0;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
         }
     </style>
 </head>
@@ -432,148 +297,94 @@
 <body>
 
     <div id="landing-overlay">
-        <div class="logo-area"><i class="fas fa-tooth"></i> Smart Core</div>
-        <p style="color: #64748b; margin-bottom: 30px; font-size: 1.1rem;">Votre compagnon d'étude intelligent.</p>
-
+        <h1 style="color:var(--primary); margin-bottom:20px;">Smart Core Reader</h1>
         <label class="upload-box">
-            <input type="file" id="pdf-upload" accept="application/pdf" style="display: none;"
-                onchange="handleFileUpload(this)">
-            <i class="fas fa-cloud-upload-alt" style="font-size: 40px; color: var(--primary); margin-bottom: 15px;"></i>
-            <h3 style="margin: 0; color: #334155;">Ouvrir un PDF</h3>
-            <p style="color: #94a3b8; font-size: 14px; margin-top: 5px;">Glissez-déposez ou cliquez ici</p>
+            <input type="file" accept="application/pdf" style="display: none;" onchange="handleFileUpload(this)">
+            <i class="fas fa-cloud-upload-alt" style="font-size: 50px; color: var(--primary);"></i>
+            <h3>Ouvrir un PDF</h3>
         </label>
-        <div id="upload-status" style="margin-top: 25px; text-align: center;"></div>
+        <p id="upload-status" style="margin-top: 20px; color: #666;"></p>
     </div>
 
-    <div id="exit-focus-btn" onclick="toggleFocus()">
-        <i class="fas fa-expand"></i> Quitter le mode Focus
-    </div>
+    <div id="exit-focus" onclick="toggleFocus()"><i class="fas fa-expand"></i> Quitter</div>
 
     <aside id="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-title"><i class="fas fa-brain"></i> Dentist AI</div>
-            <div style="font-size:12px; color:#64748b; margin-top:5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-                id="file-name-display">Aucun fichier</div>
+        <div style="padding: 20px; font-weight: bold; color: var(--primary); border-bottom: 1px solid #ddd;">Dentist AI
         </div>
 
-        <div class="tabs-nav">
+        <div class="tab-nav">
             <button class="tab-btn active" onclick="switchTab('quiz')">Quiz</button>
             <button class="tab-btn" onclick="switchTab('cards')">Cartes</button>
             <button class="tab-btn" onclick="switchTab('map')">Map</button>
         </div>
 
         <div id="tab-quiz" class="tab-content active">
-            <div class="scope-box" style="background:#f1f5f9; padding:10px; border-radius:8px; margin-bottom:15px;">
-                <label style="display:block; margin-bottom:8px; cursor:pointer;"><input type="radio" name="quiz-scope"
-                        value="page" checked> Page Actuelle (3 QCM)</label>
-                <label style="display:block; cursor:pointer;"><input type="radio" name="quiz-scope" value="all"> Tout le
-                    Document (Max 20)</label>
-            </div>
-            <button class="action-btn btn-blue" onclick="generateContent('quiz')">
-                <i class="fas fa-magic"></i> Générer Quiz
-            </button>
+            <button class="btn-action btn-blue" onclick="generateContent('quiz')"><i class="fas fa-magic"></i> Générer
+                Quiz</button>
             <div id="quiz-results"></div>
         </div>
 
         <div id="tab-cards" class="tab-content">
-            <div class="scope-box" style="background:#f1f5f9; padding:10px; border-radius:8px; margin-bottom:15px;">
-                <label style="display:block; margin-bottom:8px; cursor:pointer;"><input type="radio" name="card-scope"
-                        value="page" checked> Page Actuelle (4 Cartes)</label>
-                <label style="display:block; cursor:pointer;"><input type="radio" name="card-scope" value="all"> Tout le
-                    Document (Max 30)</label>
-            </div>
-            <button class="action-btn btn-green" onclick="generateContent('flashcards')">
-                <i class="fas fa-layer-group"></i> Générer Cartes
-            </button>
+            <button class="btn-action btn-green" onclick="generateContent('flashcards')"><i
+                    class="fas fa-layer-group"></i> Générer Cartes</button>
             <div id="cards-results"></div>
         </div>
 
         <div id="tab-map" class="tab-content">
-            <button class="action-btn btn-purple" onclick="generateContent('mindmap')">
-                <i class="fas fa-project-diagram"></i> Créer Mind Map
-            </button>
-            <button class="action-btn btn-dark" id="dl-map-btn" style="display:none; margin-top:5px;"
-                onclick="downloadMindMap()">
-                <i class="fas fa-download"></i> Télécharger (.md)
-            </button>
-            <div
-                style="border:1px solid #e2e8f0; height:350px; border-radius:8px; margin-top:15px; overflow:hidden; background:white;">
+            <button class="btn-action btn-purple" onclick="generateContent('mindmap')"><i
+                    class="fas fa-project-diagram"></i> Créer Map</button>
+            <button class="btn-action" style="background:#333; margin-top:5px; display:none;" id="dl-map-btn"
+                onclick="downloadMindMap()">Télécharger</button>
+            <div style="height:350px; border:1px solid #ddd; margin-top:15px; border-radius:8px;">
                 <svg id="markmap-svg" style="width:100%; height:100%;"></svg>
             </div>
         </div>
 
-        <div style="margin-top:auto; padding:20px; border-top:1px solid #eee;">
-            <button class="action-btn btn-dark" onclick="saveSession()">
-                <i class="fas fa-cloud-upload-alt"></i> Sauvegarder Session
-            </button>
+        <div style="margin-top: auto; padding: 20px; border-top: 1px solid #ddd;">
+            <button class="btn-action" style="background:#334155;" onclick="saveSession()"><i class="fas fa-save"></i>
+                Sauvegarder</button>
         </div>
     </aside>
 
     <main id="viewer-area">
         <div class="toolbar">
-            <div class="tool-group">
-                <button class="icon-btn" onclick="toggleFocus()" title="Mode Focus"><i
-                        class="fas fa-expand"></i></button>
-            </div>
-
-            <div class="tool-group">
-                <button class="icon-btn" id="btn-pen" onclick="setTool('pen')" title="Stylo"><i
+            <button onclick="toggleFocus()" style="border:none; background:none; cursor:pointer;"><i
+                    class="fas fa-eye"></i> Focus</button>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button onclick="setTool('pen')" id="btn-pen" style="padding:8px; cursor:pointer;"><i
                         class="fas fa-pen"></i></button>
-                <button class="icon-btn" id="btn-highlighter" onclick="setTool('highlighter')" title="Surligneur"><i
+                <button onclick="setTool('highlighter')" id="btn-highlighter" style="padding:8px; cursor:pointer;"><i
                         class="fas fa-highlighter"></i></button>
-                <button class="icon-btn" id="btn-eraser" onclick="setTool('eraser')" title="Gomme"><i
+                <button onclick="setTool('eraser')" id="btn-eraser" style="padding:8px; cursor:pointer;"><i
                         class="fas fa-eraser"></i></button>
-                <div style="width:1px; height:24px; background:#e2e8f0; margin:0 5px;"></div>
-                <input type="color" id="color-picker" value="#ef4444"
-                    style="border:none; width:30px; height:30px; cursor:pointer; background:none;">
+                <input type="color" id="color-picker" value="#ff0000" style="border:none; cursor:pointer;">
             </div>
-
-            <div class="tool-group">
-                <span style="font-weight:600; color:var(--text-main); font-size:14px;">
-                    Page <span id="page-num">--</span> / <span id="page-count">--</span>
-                </span>
-            </div>
+            <span id="page-count-display">Page 0/0</span>
         </div>
 
         <div id="pdf-container"></div>
 
-        <div id="smart-toolbar" onclick="askDentistAI()">
-            <i class="fas fa-robot"></i> Ask Dentist AI
-        </div>
+        <div id="smart-toolbar" onclick="askDentistAI()"><i class="fas fa-robot"></i> Ask AI</div>
     </main>
 
     <div class="modal-overlay" id="ai-modal">
         <div class="modal-box">
-            <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-                <h3 style="margin:0; color:var(--primary);"><i class="fas fa-robot"></i> Dentist AI</h3>
-                <button onclick="document.getElementById('ai-modal').style.display='none'"
-                    style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
-            </div>
-
-            <div style="background:#f8fafc; padding:10px; border-left:3px solid var(--primary); margin-bottom:15px; font-style:italic; font-size:13px; color:#64748b;"
-                id="ai-context-preview"></div>
-
-            <input type="text" id="ai-question" placeholder="Posez votre question ici..."
-                style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px; font-size:15px;">
-
-            <div style="display:flex; gap:10px; margin-top:15px;">
-                <button onclick="submitAiQuestion()" class="action-btn btn-blue" style="margin:0;">Envoyer</button>
-            </div>
-
-            <div id="ai-response-area"
-                style="background:#f1f5f9; padding:15px; border-radius:8px; margin-top:15px; max-height:200px; overflow-y:auto; display:none; line-height:1.6;">
-            </div>
+            <h3>Dentist AI</h3>
+            <p id="ai-context" style="font-size:12px; color:#666; font-style:italic;"></p>
+            <input type="text" id="ai-question" placeholder="Votre question..."
+                style="width:100%; padding:10px; margin:10px 0; border:1px solid #ddd;">
+            <button onclick="submitAiQuestion()" class="btn-action btn-blue"
+                style="width:auto; display:inline-block;">Envoyer</button>
+            <button onclick="document.getElementById('ai-modal').style.display='none'"
+                style="margin-left:10px; cursor:pointer; background:none; border:none;">Fermer</button>
+            <div id="ai-response" style="margin-top:15px; background:#f8fafc; padding:10px; display:none;"></div>
         </div>
     </div>
 
     <div class="pin-popover" id="pin-details">
-        <div
-            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid #eee; padding-bottom:5px;">
-            <strong style="color:var(--accent);"><i class="fas fa-lightbulb"></i> Note IA</strong>
-            <button onclick="deleteActivePin()" style="background:none; border:none; color:#ef4444; cursor:pointer;"
-                title="Supprimer"><i class="fas fa-trash"></i></button>
-        </div>
-        <div id="pin-content" style="max-height:200px; overflow-y:auto;"></div>
+        <div id="pin-content"></div>
+        <button onclick="deleteActivePin()"
+            style="color:red; background:none; border:none; margin-top:10px; cursor:pointer;">Supprimer</button>
     </div>
 
     <script src="pdf-viewer.js"></script>
