@@ -1,65 +1,60 @@
 // =============================================================================
-//  SMART DENTAL VIEWER - FINAL FIXED CONTROLLER
-//  Fixes: Auth (401), Drawing, & Data Safety
+//  SMART DENTAL VIEWER - TOKEN BASED CONTROLLER (Matches script.js)
 // =============================================================================
 
-// 👇 تأكد أن هذا الرابط صحيح ويطابق سيرفرك
+// 👇 رابط السيرفر
 const API_BASE_URL = "https://dental-app-he1p.onrender.com";
 
-// إعداد مكتبة PDF.js
+// إعداد PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
-// --- إدارة الحالة (Global State) ---
+// --- إدارة الحالة ---
 const STATE = {
     pdfDoc: null,
-    fileHash: null, // Lesson ID
+    fileHash: null,
     scale: 1.2,
     currentPage: 1,
-
-    // أدوات الرسم
-    tool: null,       // 'pen', 'highlighter', 'eraser'
+    tool: null,
     isDrawing: false,
     drawings: [],
-
-    // بيانات الكويز والبطاقات
     quizData: [],
     currentQuizIndex: 0,
     userAnswers: {},
-
     flashcardsData: [],
     currentFlashcardIndex: 0,
-
     mindMapData: null,
-
-    // الملاحظات الذكية
     pins: [],
     selection: { text: '', rect: null },
-
-    // بيانات الجلسة للحفظ
-    sessionData: {
-        quizzes: [],
-        flashcards: [],
-        mindMapData: null
-    }
+    sessionData: { quizzes: [], flashcards: [], mindMapData: null }
 };
 
 // =============================================================================
-//  1. الاتصال الآمن (FIXED: Session/Cookie Support) 🔌
+//  1. الاتصال بالسيرفر (Using Bearer Token like script.js) 🔌
 // =============================================================================
 
 async function callApi(endpoint, body = {}) {
+    // 1. جلب التوكن من التخزين المحلي (مثلما يفعل script.js)
+    const token = localStorage.getItem('userToken');
+
+    if (!token) {
+        alert("Veuillez vous connecter d'abord (Token manquant) !");
+        // يمكن توجيهه لصفحة الدخول إذا أردت
+        // window.location.href = 'index.html'; 
+        throw new Error("No Token");
+    }
+
     try {
-        // 🔥 التغيير الجذري هنا: استخدام credentials: 'include'
-        // هذا يجبر المتصفح على إرسال كوكيز الجلسة مع الطلب
         const res = await fetch(`${API_BASE_URL}/api/${endpoint}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // ✅ التصحيح الأساسي هنا
+            },
             body: JSON.stringify(body)
         });
 
         if (res.status === 401) {
-            alert("Session expirée. Veuillez vous reconnecter via la page d'accueil.");
+            alert("Session expirée. Veuillez vous reconnecter.");
             throw new Error("Unauthorized");
         }
 
@@ -71,10 +66,9 @@ async function callApi(endpoint, body = {}) {
     }
 }
 
-// دالة استخراج النص الذكي
+// دالة استخراج النص
 async function getSmartText(scopeInputName) {
     if (!STATE.pdfDoc) return "";
-
     const scopeEl = document.querySelector(`input[name="${scopeInputName}"]:checked`);
     const scope = scopeEl ? scopeEl.value : 'page';
     let text = "";
@@ -84,7 +78,6 @@ async function getSmartText(scopeInputName) {
         const content = await page.getTextContent();
         text = content.items.map(i => i.str).join(' ');
     } else {
-        // تقليل عدد الصفحات لتجنب بطء الطلب
         const maxPages = Math.min(STATE.pdfDoc.numPages, 15);
         for (let i = 1; i <= maxPages; i++) {
             const page = await STATE.pdfDoc.getPage(i);
@@ -96,7 +89,7 @@ async function getSmartText(scopeInputName) {
 }
 
 // =============================================================================
-//  2. تحميل PDF والعرض (With Drawing Layers) 🎨
+//  2. تحميل PDF والعرض 🎨
 // =============================================================================
 
 const fileInput = document.getElementById('file-input');
@@ -105,26 +98,23 @@ async function handleFileUpload(input) {
     const file = input.files[0];
     if (!file) return;
 
-    // حساب الهاش للملف (Lesson ID)
     const arrayBuffer = await file.arrayBuffer();
     const spark = new SparkMD5.ArrayBuffer();
     spark.append(arrayBuffer);
     STATE.fileHash = spark.end();
 
-    // تحميل PDF
     const loadingTask = pdfjsLib.getDocument(arrayBuffer);
     STATE.pdfDoc = await loadingTask.promise;
 
     const container = document.getElementById('pdf-wrapper');
     if (container) container.innerHTML = '';
 
-    // عرض الصفحات
     for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
         await renderPage(i, container || document.getElementById('pdf-container'));
     }
 
     setupPageObserver();
-    loadSavedProgress(); // استرجاع البيانات المحفوظة
+    loadSavedProgress();
 }
 
 if (fileInput) {
@@ -135,7 +125,6 @@ async function renderPage(num, container) {
     const page = await STATE.pdfDoc.getPage(num);
     const viewport = page.getViewport({ scale: STATE.scale });
 
-    // حاوية الصفحة
     const wrapper = document.createElement('div');
     wrapper.className = 'page-container';
     wrapper.id = `page-${num}`;
@@ -144,20 +133,17 @@ async function renderPage(num, container) {
     wrapper.style.marginBottom = '20px';
     wrapper.style.position = 'relative';
 
-    // 1. طبقة PDF
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
-    // 2. طبقة النص
     const textLayer = document.createElement('div');
     textLayer.className = 'textLayer';
     textLayer.style.width = `${viewport.width}px`;
     textLayer.style.height = `${viewport.height}px`;
     textLayer.style.setProperty('--scale-factor', STATE.scale);
 
-    // 3. طبقة الرسم (تمت إعادتها)
     const drawCanvas = document.createElement('canvas');
     drawCanvas.className = 'drawLayer';
     drawCanvas.id = `draw-${num}`;
@@ -197,12 +183,11 @@ function setupPageObserver() {
 }
 
 // =============================================================================
-//  3. منطق الرسم (Drawing Logic Restored) ✏️
+//  3. منطق الرسم ✏️
 // =============================================================================
 
 window.setTool = function (t) {
     STATE.tool = (STATE.tool === t) ? null : t;
-
     ['pen', 'highlighter', 'eraser'].forEach(id => {
         const btn = document.getElementById(`btn-${id}`);
         if (btn) {
@@ -210,7 +195,6 @@ window.setTool = function (t) {
             btn.classList.toggle('active', STATE.tool === id);
         }
     });
-
     document.querySelectorAll('.drawLayer').forEach(el => {
         el.style.pointerEvents = STATE.tool ? 'auto' : 'none';
         el.style.cursor = STATE.tool ? 'crosshair' : 'default';
@@ -225,7 +209,6 @@ function setupDrawingLogic(canvas, pageNum) {
         if (!STATE.tool) return;
         STATE.isDrawing = true;
         [lastX, lastY] = [e.offsetX, e.offsetY];
-
         const color = document.getElementById('color-picker')?.value || '#ff0000';
         STATE.drawings.push({
             page: pageNum, tool: STATE.tool, color: color, points: [{ x: lastX, y: lastY }]
@@ -234,7 +217,6 @@ function setupDrawingLogic(canvas, pageNum) {
 
     canvas.addEventListener('mousemove', e => {
         if (!STATE.isDrawing || !STATE.tool) return;
-
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
         if (STATE.tool === 'pen') {
             ctx.strokeStyle = document.getElementById('color-picker')?.value || '#ff0000';
@@ -245,9 +227,7 @@ function setupDrawingLogic(canvas, pageNum) {
         } else {
             ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
         }
-
         ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke();
-
         if (STATE.drawings.length > 0) {
             STATE.drawings[STATE.drawings.length - 1].points.push({ x: e.offsetX, y: e.offsetY });
         }
@@ -264,7 +244,6 @@ function redrawAllDrawings() {
         if (!cvs) return;
         const ctx = cvs.getContext('2d');
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-
         if (d.tool === 'pen') {
             ctx.strokeStyle = d.color; ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
         } else if (d.tool === 'highlighter') {
@@ -272,7 +251,6 @@ function redrawAllDrawings() {
         } else {
             ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
         }
-
         ctx.beginPath();
         if (d.points.length > 0) ctx.moveTo(d.points[0].x, d.points[0].y);
         for (let i = 1; i < d.points.length; i++) ctx.lineTo(d.points[i].x, d.points[i].y);
@@ -281,7 +259,7 @@ function redrawAllDrawings() {
 }
 
 // =============================================================================
-//  4. الكويز (Quiz - Safe Handling) 🧠
+//  4. الكويز (Carousel) 🧠
 // =============================================================================
 
 const quizBtn = document.getElementById('generate-quiz-btn');
@@ -295,8 +273,6 @@ if (quizBtn) {
             const res = await callApi('ai/generate-quiz-text', { text, count: 5 });
 
             STATE.quizData = res.questions || res.data || [];
-
-            // ✅ فحص البيانات قبل الاستخدام
             if (Array.isArray(STATE.quizData) && STATE.quizData.length > 0) {
                 STATE.sessionData.quizzes = STATE.quizData;
                 STATE.currentQuizIndex = 0;
@@ -305,7 +281,6 @@ if (quizBtn) {
             } else {
                 container.innerHTML = '<p style="color:red; text-align:center;">Aucune question générée.</p>';
             }
-
         } catch (err) {
             container.innerHTML = `<div style="color:red; padding:10px;">Erreur: ${err.message}</div>`;
         }
@@ -315,18 +290,14 @@ if (quizBtn) {
 function renderQuizQuestion(index) {
     const container = document.getElementById('quiz-container');
     container.innerHTML = '';
-
     if (index < 0 || index >= STATE.quizData.length) return;
-
     const qData = STATE.quizData[index];
     const template = document.getElementById('quiz-card-template');
     if (!template) return;
 
     const clone = template.content.cloneNode(true);
-
     clone.querySelector('.quiz-progress').textContent = `Question ${index + 1} / ${STATE.quizData.length}`;
     clone.querySelector('.question-text').textContent = qData.question;
-
     const optionsContainer = clone.querySelector('.options-container');
 
     if (qData.options && Array.isArray(qData.options)) {
@@ -334,7 +305,6 @@ function renderQuizQuestion(index) {
             const btn = document.createElement('button');
             btn.className = 'option-btn';
             btn.textContent = opt;
-
             if (STATE.userAnswers[index] !== undefined) {
                 btn.disabled = true;
                 const correctIndices = qData.correctOptionIndexes || [0];
@@ -352,7 +322,6 @@ function renderQuizQuestion(index) {
 
     const prevBtn = clone.querySelector('.btn-prev');
     const nextBtn = clone.querySelector('.btn-next');
-
     if (prevBtn) {
         prevBtn.disabled = index === 0;
         prevBtn.onclick = () => renderQuizQuestion(index - 1);
@@ -368,7 +337,7 @@ function renderQuizQuestion(index) {
 }
 
 // =============================================================================
-//  5. الفلاش كاردز (Flashcards) 🃏
+//  5. الفلاش كاردز 🃏
 // =============================================================================
 
 const cardsBtn = document.getElementById('generate-flashcards-btn');
@@ -376,13 +345,10 @@ if (cardsBtn) {
     cardsBtn.addEventListener('click', async () => {
         const container = document.getElementById('flashcards-container');
         container.innerHTML = '<div style="text-align:center; padding:20px;"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
-
         try {
             const text = await getSmartText('cards-scope');
             const res = await callApi('ai/generate-flashcards-text', { text, count: 8 });
-
             STATE.flashcardsData = res.flashcards || res.cards || [];
-
             if (Array.isArray(STATE.flashcardsData) && STATE.flashcardsData.length > 0) {
                 STATE.sessionData.flashcards = STATE.flashcardsData;
                 STATE.currentFlashcardIndex = 0;
@@ -390,7 +356,6 @@ if (cardsBtn) {
             } else {
                 container.innerHTML = '<p style="text-align:center;">Aucune carte générée.</p>';
             }
-
         } catch (err) {
             container.innerHTML = `<div style="color:red; padding:10px;">Erreur: ${err.message}</div>`;
         }
@@ -400,9 +365,7 @@ if (cardsBtn) {
 function renderSingleFlashcard(index) {
     const container = document.getElementById('flashcards-container');
     container.innerHTML = '';
-
     if (index < 0 || index >= STATE.flashcardsData.length) return;
-
     const cardData = STATE.flashcardsData[index];
     const template = document.getElementById('flashcard-template');
     if (!template) return;
@@ -410,10 +373,8 @@ function renderSingleFlashcard(index) {
     const clone = template.content.cloneNode(true);
     clone.querySelector('.front-content').textContent = cardData.front;
     clone.querySelector('.back-content').textContent = cardData.back;
-
     const wrapper = clone.querySelector('.flashcard-wrapper');
     wrapper.onclick = () => wrapper.classList.toggle('flipped');
-
     container.appendChild(clone);
 
     const controls = document.createElement('div');
@@ -424,7 +385,6 @@ function renderSingleFlashcard(index) {
         <button class="nav-btn" id="fc-next" style="background:var(--primary); color:white; border:none; padding:8px; border-radius:5px; cursor:pointer;"><i class="fas fa-arrow-right"></i></button>
     `;
     container.appendChild(controls);
-
     document.getElementById('fc-prev').onclick = () => renderSingleFlashcard(index - 1);
     document.getElementById('fc-next').onclick = () => {
         if (index < STATE.flashcardsData.length - 1) renderSingleFlashcard(index + 1);
@@ -432,7 +392,7 @@ function renderSingleFlashcard(index) {
 }
 
 // =============================================================================
-//  6. المايند ماب (Mind Map) 🌳
+//  6. المايند ماب 🌳
 // =============================================================================
 
 const mapBtn = document.getElementById('generate-mindmap-btn');
@@ -440,7 +400,6 @@ if (mapBtn) {
     mapBtn.addEventListener('click', async () => {
         const svgEl = document.getElementById('mindmap-svg');
         if (!svgEl) return;
-
         svgEl.innerHTML = '';
         const container = svgEl.parentElement;
         container.style.position = 'relative';
@@ -453,18 +412,14 @@ if (mapBtn) {
         try {
             const text = await getSmartText('quiz-scope');
             const res = await callApi('ai/generate-mindmap-text', { text });
-
             const markdown = res.markdown || res.data;
             STATE.sessionData.mindMapData = markdown;
-
             loader.remove();
-
             if (window.markmap) {
                 const { Transformer, Markmap } = window.markmap;
                 const transformer = new Transformer();
                 const { root } = transformer.transform(markdown);
                 Markmap.create(svgEl, null, root);
-
                 const dlBtn = document.getElementById('download-map-btn');
                 if (dlBtn) dlBtn.style.display = 'block';
             }
@@ -476,17 +431,15 @@ if (mapBtn) {
 }
 
 // =============================================================================
-//  7. الحفظ والاسترجاع (Save & Restore) 💾
+//  7. الحفظ والاسترجاع 💾
 // =============================================================================
 
 const saveBtn = document.getElementById('save-progress-btn');
 if (saveBtn) {
     saveBtn.addEventListener('click', async () => {
         if (!STATE.fileHash) return alert("Aucun fichier ouvert !");
-
         const originalText = saveBtn.innerHTML;
         saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
-
         try {
             const payload = {
                 drawings: STATE.drawings,
@@ -495,12 +448,10 @@ if (saveBtn) {
                 flashcards: STATE.sessionData.flashcards,
                 mindMapData: STATE.sessionData.mindMapData
             };
-
             const res = await callApi('progress/save', {
                 lessonId: STATE.fileHash,
                 progressData: payload
             });
-
             if (res.success) {
                 saveBtn.innerHTML = '<i class="fas fa-check"></i> Saved!';
                 setTimeout(() => saveBtn.innerHTML = originalText, 2000);
@@ -514,19 +465,19 @@ if (saveBtn) {
 
 async function loadSavedProgress() {
     if (!STATE.fileHash) return;
-
     try {
+        const token = localStorage.getItem('userToken');
+        if (!token) return;
+
         const res = await fetch(`${API_BASE_URL}/api/progress?lessonId=${STATE.fileHash}`, {
-            credentials: 'include'
+            headers: { 'Authorization': `Bearer ${token}` }
         });
 
-        if (res.status === 401) return; // Guest mode
+        if (res.status === 401) return;
 
         const json = await res.json();
-
         if (json.success && json.data) {
             const data = json.data.progressData || json.data;
-
             STATE.drawings = data.drawings || [];
             redrawAllDrawings();
 
@@ -538,7 +489,6 @@ async function loadSavedProgress() {
                     rBtn.innerHTML = `<i class="fas fa-history"></i> Reprendre Quiz (${data.quizzes.length})`;
                 }
             }
-
             if (data.flashcards && data.flashcards.length > 0) {
                 STATE.sessionData.flashcards = data.flashcards;
                 const rBtn = document.getElementById('restore-cards-btn');
@@ -547,7 +497,6 @@ async function loadSavedProgress() {
                     rBtn.innerHTML = `<i class="fas fa-history"></i> Reprendre Cartes (${data.flashcards.length})`;
                 }
             }
-
             if (data.mindMapData) {
                 STATE.sessionData.mindMapData = data.mindMapData;
                 const rBtn = document.getElementById('restore-map-btn');
@@ -557,7 +506,6 @@ async function loadSavedProgress() {
     } catch (e) { console.log("New Session"); }
 }
 
-// أزرار الاستعادة
 const restoreQuizBtn = document.getElementById('restore-quiz-btn');
 if (restoreQuizBtn) {
     restoreQuizBtn.onclick = () => {
