@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Dental Viewer | Professor Edition</title>
+    <title>Smart Dental Viewer | Ultimate</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
 
     <style>
-        /* --- المتغيرات العامة --- */
         :root {
             --primary: #2563eb;
-            --primary-dark: #1e40af;
             --accent: #10b981;
-            --danger: #ef4444;
-            --bg-sidebar: #ffffff;
             --bg-viewer: #525659;
-            --text-main: #334155;
-            --border: #e2e8f0;
-            --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --bg-sidebar: #ffffff;
         }
 
         * {
             box-sizing: border-box;
+            outline: none;
         }
 
         body {
@@ -41,40 +39,28 @@
             overflow: hidden;
         }
 
-        /* --- 1. الشريط الجانبي (Sidebar) --- */
+        /* الشريط الجانبي */
         #sidebar {
-            width: 420px;
+            width: 400px;
             background: var(--bg-sidebar);
-            border-right: 1px solid var(--border);
+            border-right: 1px solid #ddd;
             display: flex;
             flex-direction: column;
             z-index: 20;
-            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
         }
 
         .sidebar-header {
             padding: 20px;
+            border-bottom: 1px solid #eee;
             background: #f8fafc;
-            border-bottom: 1px solid var(--border);
         }
 
-        .logo-area {
-            color: var(--primary);
-            font-size: 1.2rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        /* أزرار التبويب */
         .tabs-nav {
             display: flex;
-            background: #fff;
             padding: 5px;
             gap: 5px;
-            border-bottom: 1px solid var(--border);
+            background: #fff;
+            border-bottom: 1px solid #ddd;
         }
 
         .tab-btn {
@@ -82,11 +68,10 @@
             padding: 10px;
             border: none;
             background: transparent;
-            color: #64748b;
-            font-weight: 600;
             cursor: pointer;
-            border-radius: 6px;
-            transition: 0.2s;
+            font-weight: 600;
+            color: #64748b;
+            border-radius: 5px;
         }
 
         .tab-btn.active {
@@ -103,37 +88,36 @@
 
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.3s;
         }
 
-        /* --- خيارات النطاق (Scope Selectors) --- */
-        .scope-selector {
-            background: #f1f5f9;
-            padding: 10px;
+        .action-btn {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
             border-radius: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            gap: 10px;
-            border: 1px solid var(--border);
-        }
-
-        .scope-option {
-            flex: 1;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            color: var(--text-main);
-            font-weight: 600;
         }
 
-        .scope-option input {
-            cursor: pointer;
-            accent-color: var(--primary);
+        .btn-blue {
+            background: var(--primary);
         }
 
-        /* --- 2. منطقة عرض PDF --- */
+        .btn-green {
+            background: var(--accent);
+        }
+
+        .btn-purple {
+            background: #8b5cf6;
+        }
+
+        /* منطقة العرض */
         #viewer-container {
             flex: 1;
             background: var(--bg-viewer);
@@ -152,143 +136,169 @@
             gap: 20px;
         }
 
+        /* الطبقات (السر لعمل الرسم والتحديد معاً) */
         .page-container {
             position: relative;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             background: white;
         }
 
-        /* --- 3. تصميم الكويز (Quiz Carousel Template) --- */
-        .quiz-card-container {
+        .textLayer {
+            position: absolute;
+            inset: 0;
+            opacity: 0.2;
+            line-height: 1.0;
+            z-index: 2;
+        }
+
+        .drawLayer {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            cursor: crosshair;
+            pointer-events: none;
+        }
+
+        /* pointer-events: none تعني أن الماوس سيمر عبر طبقة الرسم ليصل للنص إلا إذا فعلنا القلم */
+
+        /* أدوات الرسم العائمة */
+        .floating-toolbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border);
-            text-align: left;
-        }
-
-        .quiz-header {
+            padding: 8px 20px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 100;
             display: flex;
-            justify-content: space-between;
-            color: #94a3b8;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .question-text {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .options-list {
-            display: grid;
             gap: 10px;
-        }
-
-        .option-btn {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            background: white;
-            color: var(--text-main);
-            font-weight: 500;
-            cursor: pointer;
-            text-align: left;
-            transition: all 0.2s;
-        }
-
-        .option-btn:hover {
-            border-color: var(--primary);
-            background: #f0f9ff;
-        }
-
-        .option-btn.selected {
-            border-color: var(--primary);
-            background: #dbeafe;
-        }
-
-        .option-btn.correct {
-            border-color: var(--accent);
-            background: #d1fae5;
-            color: #064e3b;
-        }
-
-        .option-btn.wrong {
-            border-color: var(--danger);
-            background: #fee2e2;
-            color: #7f1d1d;
-        }
-
-        .quiz-footer {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
         }
 
-        .nav-btn {
-            padding: 8px 16px;
-            border-radius: 6px;
+        .tool-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
             border: none;
             cursor: pointer;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .btn-prev {
             background: #f1f5f9;
-            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .btn-next {
+        .tool-btn.active {
             background: var(--primary);
             color: white;
         }
 
-        .btn-next:hover {
-            background: var(--primary-dark);
-        }
-
-        .explanation-box {
-            margin-top: 15px;
-            padding: 12px;
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
+        /* القائمة الذكية للتحديد */
+        #selection-toolbar {
+            position: absolute;
+            z-index: 1000;
+            background: #1e293b;
+            padding: 8px 12px;
             border-radius: 8px;
-            font-size: 0.9rem;
-            color: #166534;
             display: none;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: popIn 0.2s;
         }
 
-        /* --- 4. تصميم الفلاش كاردز (3D Flip Template) --- */
-        .flashcards-container {
-            display: grid;
-            gap: 20px;
+        #selection-toolbar button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Smart Pin (المصباح) */
+        .smart-pin {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #f59e0b;
+            border: 2px solid white;
+            border-radius: 50% 50% 0 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transform: translate(-50%, -100%);
+            transition: transform 0.2s;
+        }
+
+        .smart-pin:hover {
+            transform: scale(1.1);
+        }
+
+        /* Popover للمصباح */
+        .pin-popover {
+            position: absolute;
+            width: 300px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 200;
+            display: none;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* قوالب الكويز والبطاقات */
+        .quiz-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-top: 10px;
+        }
+
+        .option-btn {
+            width: 100%;
             padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 5px;
         }
 
-        .flashcard-wrapper {
+        .option-btn.correct {
+            background: #d1fae5;
+            border-color: #10b981;
+        }
+
+        .option-btn.wrong {
+            background: #fee2e2;
+            border-color: #ef4444;
+        }
+
+        .flashcard {
             perspective: 1000px;
             height: 200px;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         .flashcard-inner {
             position: relative;
             width: 100%;
             height: 100%;
-            text-align: center;
-            transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform 0.6s;
             transform-style: preserve-3d;
         }
 
-        .flashcard-wrapper.flipped .flashcard-inner {
+        .flashcard.flipped .flashcard-inner {
             transform: rotateY(180deg);
         }
 
@@ -297,87 +307,35 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            border-radius: 12px;
-            box-shadow: var(--shadow-card);
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .flashcard-front {
-            background: white;
-            color: var(--text-main);
-            font-weight: 600;
-            border-left: 5px solid var(--primary);
+            text-align: center;
         }
 
         .flashcard-back {
-            background: #fff;
             transform: rotateY(180deg);
-            color: var(--primary);
-            border-left: 5px solid var(--accent);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            border-top: 4px solid var(--accent);
         }
 
-        /* أدوات عامة */
-        .main-action-btn {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.1s;
+        .flashcard-front {
+            border-top: 4px solid var(--primary);
         }
 
-        .main-action-btn:active {
-            transform: scale(0.98);
-        }
-
-        .btn-purple {
-            background: #8b5cf6;
-        }
-
-        .btn-green {
-            background: #10b981;
-        }
-
-        .btn-orange {
-            background: #f59e0b;
-        }
-
-        .btn-restore {
-            background: #475569;
-            border: 1px dashed #cbd5e1;
-            margin-top: 15px;
-        }
-
-        .loader {
-            text-align: center;
-            color: #64748b;
-            padding: 20px;
-        }
-
-        @keyframes fadeIn {
+        @keyframes popIn {
             from {
+                transform: scale(0.8);
                 opacity: 0;
-                transform: translateY(5px);
             }
 
             to {
+                transform: scale(1);
                 opacity: 1;
-                transform: translateY(0);
             }
         }
     </style>
@@ -385,168 +343,114 @@
 
 <body>
 
+    <div class="floating-toolbar">
+        <button class="tool-btn" id="btn-pen" onclick="setTool('pen')"><i class="fas fa-pen"></i></button>
+        <button class="tool-btn" id="btn-highlighter" onclick="setTool('highlighter')"><i
+                class="fas fa-highlighter"></i></button>
+        <button class="tool-btn" id="btn-eraser" onclick="setTool('eraser')"><i class="fas fa-eraser"></i></button>
+        <div style="width:1px; background:#ddd; height:20px;"></div>
+        <input type="color" id="color-picker" value="#ff0000"
+            style="border:none; width:30px; height:30px; cursor:pointer;">
+    </div>
+
     <div id="sidebar">
         <div class="sidebar-header">
-            <div class="logo-area">
-                <i class="fas fa-tooth"></i> Professor AI
-            </div>
-            <button onclick="document.getElementById('file-input').click()" class="main-action-btn btn-purple"
-                style="margin:0;">
-                <i class="fas fa-upload"></i> Upload PDF
-            </button>
-            <input type="file" id="file-input" hidden accept="application/pdf">
+            <h3 style="margin:0; color:var(--primary);"><i class="fas fa-tooth"></i> Dentist AI</h3>
+            <label class="action-btn btn-purple" style="margin-top:10px; cursor: pointer;">
+                <input type="file" id="file-input" hidden accept="application/pdf">
+                <i class="fas fa-upload"></i> Ouvrir PDF
+            </label>
         </div>
 
         <div class="tabs-nav">
             <button class="tab-btn active" onclick="switchTab('quiz')">Quiz</button>
-            <button class="tab-btn" onclick="switchTab('flashcards')">Cards</button>
+            <button class="tab-btn" onclick="switchTab('flashcards')">Cartes</button>
             <button class="tab-btn" onclick="switchTab('mindmap')">Map</button>
         </div>
 
         <div id="tab-quiz" class="tab-content active">
-            <div class="scope-selector">
-                <label class="scope-option">
-                    <input type="radio" name="quiz-scope" value="page" checked> Page Actuelle
-                </label>
-                <label class="scope-option">
-                    <input type="radio" name="quiz-scope" value="full"> Tout le PDF
-                </label>
+            <div style="margin-bottom:10px;">
+                <label><input type="radio" name="quiz-scope" value="page" checked> Page Actuelle</label>
+                <label style="margin-left:10px;"><input type="radio" name="quiz-scope" value="full"> Tout (Max
+                    15)</label>
             </div>
-
-            <button id="generate-quiz-btn" class="main-action-btn btn-green">
-                <i class="fas fa-magic"></i> Générer Quiz
-            </button>
-
-            <button id="restore-quiz-btn" class="main-action-btn btn-restore" style="display:none;">
-                <i class="fas fa-history"></i> Restore Saved Quiz
-            </button>
-
-            <div id="quiz-container">
-                <div style="text-align:center; color:#94a3b8; margin-top:50px;">
-                    <i class="fas fa-clipboard-question" style="font-size:40px; margin-bottom:10px;"></i>
-                    <p>No active quiz</p>
-                </div>
-            </div>
+            <button id="generate-quiz-btn" class="action-btn btn-blue"><i class="fas fa-magic"></i> Générer
+                Quiz</button>
+            <button id="restore-quiz-btn" class="action-btn" style="background:#475569; display:none;"><i
+                    class="fas fa-history"></i> Restaurer</button>
+            <div id="quiz-container"></div>
         </div>
 
         <div id="tab-flashcards" class="tab-content">
-            <div class="scope-selector">
-                <label class="scope-option">
-                    <input type="radio" name="cards-scope" value="page"> Page Actuelle
-                </label>
-                <label class="scope-option">
-                    <input type="radio" name="cards-scope" value="full" checked> Tout (35 Cards)
-                </label>
+            <div style="margin-bottom:10px;">
+                <label><input type="radio" name="cards-scope" value="page" checked> Page Actuelle</label>
+                <label style="margin-left:10px;"><input type="radio" name="cards-scope" value="full"> Tout</label>
             </div>
-
-            <button id="generate-flashcards-btn" class="main-action-btn btn-orange">
-                <i class="fas fa-layer-group"></i> Générer Flashcards
-            </button>
-
-            <button id="restore-cards-btn" class="main-action-btn btn-restore" style="display:none;">
-                <i class="fas fa-history"></i> Restore Saved Cards
-            </button>
-
-            <div id="flashcards-container" class="flashcards-container">
-            </div>
+            <button id="generate-flashcards-btn" class="action-btn btn-green"><i class="fas fa-layer-group"></i> Générer
+                Cartes</button>
+            <button id="restore-cards-btn" class="action-btn" style="background:#475569; display:none;"><i
+                    class="fas fa-history"></i> Restaurer</button>
+            <div id="flashcards-container"></div>
         </div>
 
         <div id="tab-mindmap" class="tab-content">
-            <p style="font-size:12px; color:#64748b; text-align:center;">Generates Map for <b>FULL LESSON</b></p>
-
-            <button id="generate-mindmap-btn" class="main-action-btn btn-purple">
-                <i class="fas fa-project-diagram"></i> Générer Mind Map
-            </button>
-
-            <button id="restore-map-btn" class="main-action-btn btn-restore" style="display:none;">
-                <i class="fas fa-history"></i> Restore Saved Map
-            </button>
-
-            <div style="display:flex; gap:5px; margin-bottom:10px; margin-top:15px;">
-                <button id="zoom-in" class="nav-btn" style="background:#eee; flex:1;"><i
-                        class="fas fa-plus"></i></button>
-                <button id="zoom-out" class="nav-btn" style="background:#eee; flex:1;"><i
-                        class="fas fa-minus"></i></button>
-                <button id="zoom-reset" class="nav-btn" style="background:#eee; flex:1;"><i
-                        class="fas fa-compress"></i></button>
-            </div>
-
-            <div style="background:white; border:1px solid #e2e8f0; border-radius:12px; height:400px; overflow:hidden;">
+            <button id="generate-mindmap-btn" class="action-btn btn-purple"><i class="fas fa-project-diagram"></i> Créer
+                Map</button>
+            <button id="restore-map-btn" class="action-btn" style="background:#475569; display:none;"><i
+                    class="fas fa-history"></i> Restaurer</button>
+            <div style="height:350px; border:1px solid #ddd; margin-top:10px; border-radius:8px;">
                 <svg id="mindmap-svg" style="width:100%; height:100%;"></svg>
             </div>
+        </div>
 
-            <button id="save-progress-btn" class="main-action-btn" style="background:#334155; margin-top:20px;">
-                <i class="fas fa-save"></i> Save Session
-            </button>
+        <div style="margin-top:auto; padding:20px; background:#f8fafc; border-top:1px solid #eee;">
+            <button id="save-progress-btn" class="action-btn" style="background:#334155; margin:0;"><i
+                    class="fas fa-save"></i> Sauvegarder Session</button>
         </div>
     </div>
 
     <div id="viewer-container">
         <div id="pdf-wrapper">
-            <div style="margin-top:200px; text-align:center; color:white;">
+            <div style="margin-top:150px; color:white; text-align:center;">
                 <i class="fas fa-file-pdf" style="font-size:50px; opacity:0.5;"></i>
-                <p>No PDF Loaded</p>
+                <p>Veuillez ouvrir un fichier PDF</p>
             </div>
+        </div>
+
+        <div id="selection-toolbar">
+            <button onclick="askAiAboutSelection()"><i class="fas fa-robot"></i> Ask AI</button>
         </div>
     </div>
 
-
-    <template id="quiz-card-template">
-        <div class="quiz-card-container">
-            <div class="quiz-header">
-                <span class="quiz-progress">Question 1 of 10</span>
-                <span class="quiz-difficulty" style="color:#ef4444;">Hardcore</span>
+    <div id="ai-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center;">
+        <div style="background:white; padding:20px; border-radius:10px; width:500px; max-width:90%;">
+            <div style="display:flex; justify-content:space-between;">
+                <h3 style="margin:0; color:var(--primary);">Dentist AI</h3>
+                <button onclick="document.getElementById('ai-modal').style.display='none'"
+                    style="border:none; background:none; cursor:pointer; font-size:20px;">&times;</button>
             </div>
-
-            <div class="question-text">
-            </div>
-
-            <div class="options-container options-list">
-            </div>
-
-            <div class="explanation-box explanation">
-            </div>
-
-            <div class="quiz-footer">
-                <button class="nav-btn btn-prev prev-btn" disabled>Back</button>
-                <button class="nav-btn btn-next next-btn">Check / Next</button>
-            </div>
+            <div id="ai-answer-text" style="margin-top:15px; max-height:300px; overflow-y:auto; line-height:1.6;"></div>
         </div>
-    </template>
+    </div>
 
-    <template id="flashcard-template">
-        <div class="flashcard-wrapper flashcard">
-            <div class="flashcard-inner">
-                <div class="flashcard-face flashcard-front">
-                    <div style="font-size:12px; color:#94a3b8; margin-bottom:10px; align-self:flex-start;">QUESTION
-                    </div>
-                    <div class="front-content" style="font-size:1.1rem; text-align:center;"></div>
-                </div>
-
-                <div class="flashcard-face flashcard-back">
-                    <div style="font-size:12px; color:#94a3b8; margin-bottom:10px; align-self:flex-start;">ANSWER</div>
-                    <div class="back-content" style="font-size:0.95rem;"></div>
-
-                    <div style="margin-top:auto; display:flex; gap:5px; width:100%;">
-                        <button class="rating-btn" data-rating="easy"
-                            style="flex:1; border:none; background:#d1fae5; color:#064e3b; border-radius:4px; font-size:10px; padding:8px; cursor:pointer; font-weight:bold;">Easy</button>
-                        <button class="rating-btn" data-rating="hard"
-                            style="flex:1; border:none; background:#fee2e2; color:#7f1d1d; border-radius:4px; font-size:10px; padding:8px; cursor:pointer; font-weight:bold;">Hard</button>
-                    </div>
-                </div>
-            </div>
+    <div id="pin-details" class="pin-popover">
+        <div
+            style="display:flex; justify-content:space-between; border-bottom:1px solid #eee; padding-bottom:5px; margin-bottom:10px;">
+            <strong style="color:var(--primary);">Note IA</strong>
+            <button onclick="deleteActivePin()" style="color:red; background:none; border:none; cursor:pointer;"><i
+                    class="fas fa-trash"></i></button>
         </div>
-    </template>
+        <div id="pin-content" style="font-size:14px; line-height:1.5;"></div>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <script src="pdf-viewer.js"></script>
-
     <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            document.getElementById('tab-' + tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + id).classList.add('active');
+            event.target.classList.add('active');
         }
     </script>
 </body>
