@@ -1,145 +1,192 @@
 // =============================================================================
-//  Smart Dental Viewer - PROFESSOR MODE (Carousel for Quiz & Flashcards)
+//  SMART DENTAL VIEWER - FINAL INTEGRATED CONTROLLER
+//  Fixes: Auth (401), Drawing Restoration, Safe Data Handling
 // =============================================================================
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+// 👇 رابط السيرفر الخاص بك (Render)
+const API_BASE_URL = "https://dental-app-he1p.onrender.com";
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
 // --- إدارة الحالة (Global State) ---
 const STATE = {
     pdfDoc: null,
-    lessonId: 'demo_lesson',
-    scale: 1.0,
+    fileHash: null, // Lesson ID
+    scale: 1.2,
     currentPage: 1,
 
-    // بيانات الكويز
+    // أدوات الرسم
+    tool: null,       // 'pen', 'highlighter', 'eraser'
+    isDrawing: false,
+    drawings: [],     // تخزين الرسومات
+
+    // بيانات الكويز والبطاقات (Professor Mode)
     quizData: [],
     currentQuizIndex: 0,
     userAnswers: {},
 
-    // بيانات الفلاش كاردز
     flashcardsData: [],
-    currentFlashcardIndex: 0, // تتبع رقم البطاقة الحالية
+    currentFlashcardIndex: 0,
 
-    // بيانات المايند ماب
     mindMapData: null,
 
-    // بيانات الحفظ
+    // الملاحظات الذكية
+    pins: [],
+    selection: { text: '', rect: null },
+
+    // بيانات الجلسة للحفظ
     sessionData: {
-        chatHistory: [],
-        flashcards: [],
         quizzes: [],
+        flashcards: [],
         mindMapData: null
     }
 };
 
-const USER_TOKEN = localStorage.getItem('userToken');
-
 // =============================================================================
-//  1. دوال الاتصال والذكاء (The Brain) 🧠
+//  1. الاتصال الآمن (FIXED: Credentials Include) 🔌
 // =============================================================================
 
 async function callApi(endpoint, body = {}) {
-    if (!USER_TOKEN) { alert("Veuillez vous connecter !"); throw new Error("Auth Error"); }
-    body.lessonId = STATE.lessonId;
+    // نستخدم credentials: 'include' بدلاً من الهيدر اليدوي
+    // هذا يجعل المتصفح يرسل كوكيز الجلسة تلقائياً للسيرفر
+    try {
+        const res = await fetch(`${API_BASE_URL}/api/${endpoint}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include', // 🔥 الحل السحري لمشكلة 401
+            body: JSON.stringify(body)
+        });
 
-    const res = await fetch(`/api/${endpoint}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${USER_TOKEN}` },
-        body: JSON.stringify(body)
-    });
+        if (res.status === 401) {
+            alert("Session expirée. Veuillez vous reconnecter.");
+            throw new Error("Unauthorized");
+        }
 
-    const data = await res.json();
-    if (!data.success && !res.ok) throw new Error(data.message || 'Server Error');
-    return data;
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        console.error("API Error:", error);
+        throw error;
+    }
 }
 
-// --- استخراج النص الذكي (حسب اختيارك: صفحة واحدة أو كل الدرس) ---
+// دالة استخراج النص الذكي
 async function getSmartText(scopeInputName) {
     if (!STATE.pdfDoc) return "";
 
-    // معرفة اختيار المستخدم (Page vs Full)
-    const scope = document.querySelector(`input[name="${scopeInputName}"]:checked`)?.value || 'page';
+    // محاولة قراءة الخيار من HTML، وإذا لم يوجد نستخدم 'page' كافتراضي
+    const scopeEl = document.querySelector(`input[name="${scopeInputName}"]:checked`);
+    const scope = scopeEl ? scopeEl.value : 'page';
+
     let text = "";
 
     if (scope === 'page') {
-        // صفحة واحدة
         const page = await STATE.pdfDoc.getPage(STATE.currentPage);
         const content = await page.getTextContent();
         text = content.items.map(i => i.str).join(' ');
     } else {
-        // كل الدرس (مع تخطي الغلاف)
-        const maxPages = Math.min(STATE.pdfDoc.numPages, 30);
-        // نبدأ من i=2 لتخطي الغلاف (الصفحة 1) إذا كان الملف كبيراً
-        const startPage = STATE.pdfDoc.numPages > 3 ? 2 : 1;
-
-        for (let i = startPage; i <= maxPages; i++) {
+        const maxPages = Math.min(STATE.pdfDoc.numPages, 15); // تقليل الحد لتسريع الطلب
+        for (let i = 1; i <= maxPages; i++) {
             const page = await STATE.pdfDoc.getPage(i);
             const content = await page.getTextContent();
             text += content.items.map(item => item.str).join(' ') + "\n";
         }
     }
-
-    // 🔥 الخدعة البرمجية: إضافة "شخصية البروفيسور" للنص قبل إرساله
-    const professorInstruction = `
-    INSTRUCTIONS POUR L'IA:
-    - Tu es un Professeur Expert en Dentisterie.
-    - Ignore les pages de couverture, les noms des auteurs, et les dates.
-    - Extrait uniquement les faits cliniques, pathologiques, et thérapeutiques CRUCIAUX (High Yield Facts).
-    - Pour les questions/flashcards, concentre-toi sur les pièges des examens et les diagnostics différentiels.
-    CONTENU DU COURS:
-    `;
-
-    return professorInstruction + text;
+    return text;
 }
 
 // =============================================================================
-//  2. تحميل PDF
+//  2. تحميل PDF والعرض (With Drawing Layers) 🎨
 // =============================================================================
 
-document.getElementById('file-input').addEventListener('change', async (e) => {
-    const file = e.target.files[0];
+const fileInput = document.getElementById('file-input');
+
+async function handleFileUpload(input) {
+    const file = input.files[0];
     if (!file) return;
-    STATE.lessonId = file.name.replace(/\s+/g, '_').toLowerCase();
-    const url = URL.createObjectURL(file);
 
-    const container = document.getElementById('pdf-wrapper');
-    container.innerHTML = '<div class="loader">Chargement PDF...</div>';
+    // حساب الهاش للملف (للحفظ والاسترجاع)
+    const arrayBuffer = await file.arrayBuffer();
+    const spark = new SparkMD5.ArrayBuffer();
+    spark.append(arrayBuffer);
+    STATE.fileHash = spark.end(); // Lesson ID الثابت
 
-    try {
-        STATE.pdfDoc = await pdfjsLib.getDocument(url).promise;
-        container.innerHTML = '';
+    // تحميل PDF
+    const loadingTask = pdfjsLib.getDocument(arrayBuffer);
+    STATE.pdfDoc = await loadingTask.promise;
 
-        // عرض الصفحات
-        for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
-            const page = await STATE.pdfDoc.getPage(i);
-            const viewport = page.getViewport({ scale: STATE.scale });
+    const container = document.getElementById('pdf-wrapper'); // تأكد أن هذا الـ ID موجود في HTML
+    if (container) container.innerHTML = '';
 
-            const div = document.createElement('div');
-            div.className = 'page-container';
-            div.id = `page-${i}`;
-            div.style.marginBottom = '20px';
-
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-
-            div.appendChild(canvas);
-            container.appendChild(div);
-
-            await page.render({ canvasContext: context, viewport }).promise;
-        }
-
-        // مراقب التمرير لمعرفة الصفحة الحالية
-        setupPageObserver();
-
-        // محاولة استرجاع الحفظ
-        loadSavedProgress();
-
-    } catch (err) {
-        container.innerHTML = '<p style="color:white;">Erreur chargement PDF</p>';
+    // عرض الصفحات
+    for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
+        await renderPage(i, container || document.getElementById('pdf-container'));
     }
-});
+
+    setupPageObserver();
+    loadSavedProgress(); // استرجاع البيانات المحفوظة
+}
+
+// ربط الحدث إذا كان العنصر موجوداً
+if (fileInput) {
+    fileInput.addEventListener('change', (e) => handleFileUpload(e.target));
+}
+
+async function renderPage(num, container) {
+    const page = await STATE.pdfDoc.getPage(num);
+    const viewport = page.getViewport({ scale: STATE.scale });
+
+    // حاوية الصفحة
+    const wrapper = document.createElement('div');
+    wrapper.className = 'page-container';
+    wrapper.id = `page-${num}`;
+    wrapper.style.width = `${viewport.width}px`;
+    wrapper.style.height = `${viewport.height}px`;
+    wrapper.style.marginBottom = '20px';
+    wrapper.style.position = 'relative';
+
+    // 1. طبقة الكانفاس (PDF)
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+
+    // 2. طبقة النص (للتحديد)
+    const textLayer = document.createElement('div');
+    textLayer.className = 'textLayer';
+    textLayer.style.width = `${viewport.width}px`;
+    textLayer.style.height = `${viewport.height}px`;
+    textLayer.style.setProperty('--scale-factor', STATE.scale);
+
+    // 3. طبقة الرسم (Drawing) - 🔥 تمت إعادتها
+    const drawCanvas = document.createElement('canvas');
+    drawCanvas.className = 'drawLayer';
+    drawCanvas.id = `draw-${num}`;
+    drawCanvas.width = viewport.width;
+    drawCanvas.height = viewport.height;
+    drawCanvas.style.position = 'absolute';
+    drawCanvas.style.top = '0';
+    drawCanvas.style.left = '0';
+    drawCanvas.style.pointerEvents = 'none'; // السماح بمرور الماوس للنص إلا عند الرسم
+    drawCanvas.style.zIndex = '10';
+
+    wrapper.append(canvas, textLayer, drawCanvas);
+    container.appendChild(wrapper);
+
+    // رسم المحتوى
+    await page.render({ canvasContext: ctx, viewport }).promise;
+
+    const textContent = await page.getTextContent();
+    pdfjsLib.renderTextLayer({
+        textContentSource: textContent,
+        container: textLayer,
+        viewport: viewport,
+        textDivs: []
+    });
+
+    // تفعيل منطق الرسم لهذه الصفحة
+    setupDrawingLogic(drawCanvas, num);
+}
 
 function setupPageObserver() {
     const observer = new IntersectionObserver((entries) => {
@@ -148,39 +195,134 @@ function setupPageObserver() {
                 STATE.currentPage = parseInt(entry.target.id.split('-')[1]);
             }
         });
-    }, { root: document.getElementById('viewer-container'), threshold: 0.5 });
+    }, { threshold: 0.5 });
 
     document.querySelectorAll('.page-container').forEach(p => observer.observe(p));
 }
 
 // =============================================================================
-//  3. الكويز (Carousel Mode)
+//  3. منطق الرسم (Restored Drawing Logic) ✏️
 // =============================================================================
 
-document.getElementById('generate-quiz-btn').addEventListener('click', async () => {
-    const container = document.getElementById('quiz-container');
-    container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-spin"></i> Analyse Profonde...</div>';
+// دالة تغيير الأداة (يتم استدعاؤها من HTML)
+window.setTool = function (t) {
+    STATE.tool = (STATE.tool === t) ? null : t;
 
-    try {
-        const text = await getSmartText('quiz-scope');
-        const count = document.querySelector('input[name="quiz-scope"]:checked').value === 'full' ? 15 : 5;
+    // تحديث ستايل الأزرار (اختياري، تأكد من وجود الـ IDs في HTML)
+    ['pen', 'highlighter', 'eraser'].forEach(id => {
+        const btn = document.getElementById(`btn-${id}`);
+        if (btn) {
+            btn.style.background = (STATE.tool === id) ? '#eff6ff' : '';
+            btn.classList.toggle('active', STATE.tool === id);
+        }
+    });
 
-        const res = await callApi('ai/generate-quiz-text', {
-            text, count, difficulty: 'hard', type: 'multiple', language: 'fr'
+    // تفعيل/تعطيل استقبال الماوس في طبقات الرسم
+    document.querySelectorAll('.drawLayer').forEach(el => {
+        el.style.pointerEvents = STATE.tool ? 'auto' : 'none';
+        el.style.cursor = STATE.tool ? 'crosshair' : 'default';
+    });
+};
+
+function setupDrawingLogic(canvas, pageNum) {
+    const ctx = canvas.getContext('2d');
+    let lastX, lastY;
+
+    canvas.addEventListener('mousedown', e => {
+        if (!STATE.tool) return;
+        STATE.isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+
+        const color = document.getElementById('color-picker')?.value || '#ff0000';
+
+        STATE.drawings.push({
+            page: pageNum,
+            tool: STATE.tool,
+            color: color,
+            points: [{ x: lastX, y: lastY }]
         });
+    });
 
-        STATE.quizData = res.questions || res.data || [];
-        STATE.currentQuizIndex = 0;
-        STATE.userAnswers = {};
-        STATE.sessionData.quizzes = STATE.quizData;
+    canvas.addEventListener('mousemove', e => {
+        if (!STATE.isDrawing || !STATE.tool) return;
 
-        if (STATE.quizData.length > 0) renderQuizQuestion(0);
-        else container.innerHTML = '<p class="loader">Aucune question générée.</p>';
+        ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        if (STATE.tool === 'pen') {
+            ctx.strokeStyle = document.getElementById('color-picker')?.value || '#ff0000';
+            ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
+        } else if (STATE.tool === 'highlighter') {
+            ctx.strokeStyle = 'rgba(255, 255, 0, 0.4)';
+            ctx.lineWidth = 15; ctx.globalCompositeOperation = 'multiply';
+        } else {
+            ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
+        }
 
-    } catch (err) {
-        container.innerHTML = `<div style="color:red; padding:10px;">Erreur: ${err.message}</div>`;
-    }
-});
+        ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke();
+
+        // حفظ النقاط
+        if (STATE.drawings.length > 0) {
+            STATE.drawings[STATE.drawings.length - 1].points.push({ x: e.offsetX, y: e.offsetY });
+        }
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    canvas.addEventListener('mouseup', () => STATE.isDrawing = false);
+    canvas.addEventListener('mouseleave', () => STATE.isDrawing = false);
+}
+
+function redrawAllDrawings() {
+    STATE.drawings.forEach(d => {
+        const cvs = document.getElementById(`draw-${d.page}`);
+        if (!cvs) return;
+        const ctx = cvs.getContext('2d');
+        ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+
+        if (d.tool === 'pen') {
+            ctx.strokeStyle = d.color; ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
+        } else if (d.tool === 'highlighter') {
+            ctx.strokeStyle = 'rgba(255, 255, 0, 0.4)'; ctx.lineWidth = 15; ctx.globalCompositeOperation = 'multiply';
+        } else {
+            ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
+        }
+
+        ctx.beginPath();
+        if (d.points.length > 0) ctx.moveTo(d.points[0].x, d.points[0].y);
+        for (let i = 1; i < d.points.length; i++) ctx.lineTo(d.points[i].x, d.points[i].y);
+        ctx.stroke();
+    });
+}
+
+// =============================================================================
+//  4. الكويز (Carousel Mode - Safe Handling) 🧠
+// =============================================================================
+
+const quizBtn = document.getElementById('generate-quiz-btn');
+if (quizBtn) {
+    quizBtn.addEventListener('click', async () => {
+        const container = document.getElementById('quiz-container');
+        container.innerHTML = '<div style="text-align:center; padding:20px;"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
+
+        try {
+            const text = await getSmartText('quiz-scope');
+            const res = await callApi('ai/generate-quiz-text', { text, count: 5 });
+
+            // 🔥 الحماية من خطأ forEach: التحقق من وجود البيانات
+            STATE.quizData = res.questions || res.data || [];
+
+            if (Array.isArray(STATE.quizData) && STATE.quizData.length > 0) {
+                STATE.sessionData.quizzes = STATE.quizData;
+                STATE.currentQuizIndex = 0;
+                STATE.userAnswers = {};
+                renderQuizQuestion(0);
+            } else {
+                container.innerHTML = '<p style="color:red">Aucune question générée. Essayez une autre page.</p>';
+            }
+
+        } catch (err) {
+            container.innerHTML = `<div style="color:red; padding:10px;">Erreur: ${err.message}</div>`;
+        }
+    });
+}
 
 function renderQuizQuestion(index) {
     const container = document.getElementById('quiz-container');
@@ -190,281 +332,337 @@ function renderQuizQuestion(index) {
 
     const qData = STATE.quizData[index];
     const template = document.getElementById('quiz-card-template');
+    if (!template) return;
+
     const clone = template.content.cloneNode(true);
 
     clone.querySelector('.quiz-progress').textContent = `Question ${index + 1} / ${STATE.quizData.length}`;
     clone.querySelector('.question-text').textContent = qData.question;
 
     const optionsContainer = clone.querySelector('.options-container');
-    qData.options.forEach((opt, optIdx) => {
-        const btn = document.createElement('button');
-        btn.className = 'option-btn';
-        btn.textContent = opt;
 
-        if (STATE.userAnswers[index] !== undefined) {
-            btn.disabled = true;
-            const correctIndices = qData.correctOptionIndexes || [0];
-            if (correctIndices.includes(optIdx)) btn.classList.add('correct');
-            else if (STATE.userAnswers[index] === optIdx) btn.classList.add('wrong');
-        } else {
-            btn.onclick = () => {
-                STATE.userAnswers[index] = optIdx;
-                renderQuizQuestion(index); // Re-render to show colors
-            };
-        }
-        optionsContainer.appendChild(btn);
-    });
+    // التأكد من أن الخيارات موجودة قبل الدوران عليها
+    if (qData.options && Array.isArray(qData.options)) {
+        qData.options.forEach((opt, optIdx) => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.textContent = opt;
 
-    if (STATE.userAnswers[index] !== undefined) {
-        const expl = clone.querySelector('.explanation-box');
-        expl.textContent = qData.explanation;
-        expl.style.display = 'block';
+            if (STATE.userAnswers[index] !== undefined) {
+                btn.disabled = true;
+                const correctIndices = qData.correctOptionIndexes || [0];
+                if (correctIndices.includes(optIdx)) btn.classList.add('correct');
+                else if (STATE.userAnswers[index] === optIdx) btn.classList.add('wrong');
+            } else {
+                btn.onclick = () => {
+                    STATE.userAnswers[index] = optIdx;
+                    renderQuizQuestion(index);
+                };
+            }
+            optionsContainer.appendChild(btn);
+        });
     }
 
+    // التنقل
     const prevBtn = clone.querySelector('.btn-prev');
     const nextBtn = clone.querySelector('.btn-next');
 
-    prevBtn.disabled = index === 0;
-    prevBtn.onclick = () => renderQuizQuestion(index - 1);
-
-    nextBtn.textContent = index === STATE.quizData.length - 1 ? 'Finish' : 'Next';
-    nextBtn.onclick = () => {
-        if (index < STATE.quizData.length - 1) renderQuizQuestion(index + 1);
-        else alert("Quiz Terminé! 🎉");
-    };
+    if (prevBtn) {
+        prevBtn.disabled = index === 0;
+        prevBtn.onclick = () => renderQuizQuestion(index - 1);
+    }
+    if (nextBtn) {
+        nextBtn.textContent = index === STATE.quizData.length - 1 ? 'Terminer' : 'Suivant';
+        nextBtn.onclick = () => {
+            if (index < STATE.quizData.length - 1) renderQuizQuestion(index + 1);
+            else alert("Quiz terminé !");
+        };
+    }
 
     container.appendChild(clone);
 }
 
 // =============================================================================
-//  4. الفلاش كاردز (Carousel / Single Card Mode) - التعديل الجديد 🔥
+//  5. الفلاش كاردز (Single Card Mode) 🃏
 // =============================================================================
 
-document.getElementById('generate-flashcards-btn').addEventListener('click', async () => {
-    const container = document.getElementById('flashcards-container');
-    container.innerHTML = '<div class="loader"><i class="fas fa-spinner fa-spin"></i> Extraction des cartes...</div>';
+const cardsBtn = document.getElementById('generate-flashcards-btn');
+if (cardsBtn) {
+    cardsBtn.addEventListener('click', async () => {
+        const container = document.getElementById('flashcards-container');
+        container.innerHTML = '<div style="text-align:center; padding:20px;"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
 
-    try {
-        const text = await getSmartText('cards-scope');
-        const isFull = document.querySelector('input[name="cards-scope"]:checked').value === 'full';
-        const count = isFull ? 35 : 8; // طلبك لـ 35 كارد
+        try {
+            const text = await getSmartText('cards-scope');
+            const res = await callApi('ai/generate-flashcards-text', { text, count: 8 });
 
-        const res = await callApi('ai/generate-flashcards-text', { text, count, language: 'fr' });
+            STATE.flashcardsData = res.flashcards || res.cards || [];
 
-        STATE.flashcardsData = res.flashcards || res.cards || [];
-        STATE.sessionData.flashcards = STATE.flashcardsData;
-        STATE.currentFlashcardIndex = 0; // البدء من الأولى
+            if (Array.isArray(STATE.flashcardsData) && STATE.flashcardsData.length > 0) {
+                STATE.sessionData.flashcards = STATE.flashcardsData;
+                STATE.currentFlashcardIndex = 0;
+                renderSingleFlashcard(0);
+            } else {
+                container.innerHTML = '<p>Aucune carte générée.</p>';
+            }
 
-        container.innerHTML = '';
-
-        if (STATE.flashcardsData.length > 0) {
-            renderSingleFlashcard(0); // عرض واحدة فقط
-        } else {
-            container.innerHTML = '<p class="loader">Aucune carte générée.</p>';
+        } catch (err) {
+            container.innerHTML = `<div style="color:red; padding:10px;">Erreur: ${err.message}</div>`;
         }
+    });
+}
 
-    } catch (err) {
-        container.innerHTML = `<div style="color:red; padding:10px;">Erreur: ${err.message}</div>`;
-    }
-});
-
-// 🔥 الدالة الجديدة لعرض كارد واحدة مع أزرار التنقل
 function renderSingleFlashcard(index) {
     const container = document.getElementById('flashcards-container');
-    container.innerHTML = ''; // مسح الكارد السابقة
+    container.innerHTML = '';
 
     if (index < 0 || index >= STATE.flashcardsData.length) return;
 
     const cardData = STATE.flashcardsData[index];
     const template = document.getElementById('flashcard-template');
-    const clone = template.content.cloneNode(true);
+    if (!template) return;
 
-    // تعبئة البيانات
+    const clone = template.content.cloneNode(true);
     clone.querySelector('.front-content').textContent = cardData.front;
     clone.querySelector('.back-content').textContent = cardData.back;
 
-    // تفعيل القلب
     const wrapper = clone.querySelector('.flashcard-wrapper');
     wrapper.onclick = () => wrapper.classList.toggle('flipped');
 
-    // أزرار التقييم
-    clone.querySelectorAll('.rating-btn').forEach(btn => {
-        btn.onclick = (e) => {
-            e.stopPropagation();
-            // يمكن إضافة منطق نقل للكارد التالية تلقائياً عند التقييم
-            if (index < STATE.flashcardsData.length - 1) {
-                setTimeout(() => renderSingleFlashcard(index + 1), 300);
-            }
-        };
-    });
-
-    // إضافة الكارد للصفحة
     container.appendChild(clone);
 
-    // 🔥 إنشاء أزرار التنقل (Next/Prev) برمجياً أسفل الكارد
-    const controlsDiv = document.createElement('div');
-    controlsDiv.style.cssText = "display: flex; justify-content: space-between; margin-top: 15px; align-items: center;";
+    // أزرار التحكم
+    const controls = document.createElement('div');
+    controls.style.cssText = "display: flex; justify-content: space-between; margin-top: 15px; align-items: center;";
 
-    // زر السابق
-    const prevBtn = document.createElement('button');
-    prevBtn.className = 'nav-btn';
-    prevBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
-    prevBtn.style.background = "#cbd5e1";
-    prevBtn.disabled = index === 0;
-    prevBtn.onclick = () => renderSingleFlashcard(index - 1);
+    controls.innerHTML = `
+        <button class="nav-btn" id="fc-prev" ${index === 0 ? 'disabled' : ''} style="background:#cbd5e1; border:none; padding:8px; border-radius:5px; cursor:pointer;"><i class="fas fa-arrow-left"></i></button>
+        <span style="font-weight:bold; color:#64748b;">${index + 1} / ${STATE.flashcardsData.length}</span>
+        <button class="nav-btn" id="fc-next" style="background:var(--primary); color:white; border:none; padding:8px; border-radius:5px; cursor:pointer;"><i class="fas fa-arrow-right"></i></button>
+    `;
 
-    // عداد البطاقات
-    const counterSpan = document.createElement('span');
-    counterSpan.style.cssText = "font-size: 14px; font-weight: bold; color: #64748b;";
-    counterSpan.textContent = `Carte ${index + 1} / ${STATE.flashcardsData.length}`;
+    container.appendChild(controls);
 
-    // زر التالي
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'nav-btn';
-    nextBtn.innerHTML = '<i class="fas fa-arrow-right"></i>';
-    nextBtn.style.background = "var(--primary)";
-    nextBtn.style.color = "white";
-    nextBtn.onclick = () => {
+    document.getElementById('fc-prev').onclick = () => renderSingleFlashcard(index - 1);
+    document.getElementById('fc-next').onclick = () => {
         if (index < STATE.flashcardsData.length - 1) renderSingleFlashcard(index + 1);
-        else alert("Fini! Excellent travail. 🧠");
     };
-
-    controlsDiv.appendChild(prevBtn);
-    controlsDiv.appendChild(counterSpan);
-    controlsDiv.appendChild(nextBtn);
-
-    container.appendChild(controlsDiv);
 }
 
 // =============================================================================
-//  5. المايند ماب (لكل الدرس دائماً)
+//  6. المايند ماب 🌳
 // =============================================================================
 
-let markmapInstance = null;
+const mapBtn = document.getElementById('generate-mindmap-btn');
+if (mapBtn) {
+    mapBtn.addEventListener('click', async () => {
+        const svgEl = document.getElementById('mindmap-svg');
+        if (!svgEl) return;
 
-document.getElementById('generate-mindmap-btn').addEventListener('click', async () => {
-    const svgEl = document.getElementById('mindmap-svg');
-    svgEl.innerHTML = '';
-    // نص مؤقت
-    const parent = svgEl.parentElement;
-    const oldLoader = parent.querySelector('.loader-overlay');
-    if (oldLoader) oldLoader.remove();
+        svgEl.innerHTML = '';
+        const container = svgEl.parentElement;
+        container.style.position = 'relative';
 
-    const loader = document.createElement('div');
-    loader.className = 'loader-overlay';
-    loader.innerHTML = '<div class="loader"><i class="fas fa-brain fa-spin"></i> Génération de la Map Globale...</div>';
-    loader.style.cssText = "position:absolute; inset:0; background:rgba(255,255,255,0.9); display:flex; align-items:center; justify-content:center; z-index:10;";
-    parent.style.position = 'relative';
-    parent.appendChild(loader);
+        // إنشاء لودر مؤقت
+        const loader = document.createElement('div');
+        loader.textContent = 'Génération de la Map...';
+        loader.style.cssText = 'position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);';
+        container.appendChild(loader);
 
-    try {
-        // نستخدم دائماً خيار 'full' (بدون input) عبر تمرير القيمة مباشرة
-        // هنا نجبر getSmartText على استخدام منطق "الدرس الكامل"
-        // لكن بما أن getSmartText تعتمد على input، سنصنع النص يدوياً لضمان الشمولية
-        let text = "";
-        const maxPages = Math.min(STATE.pdfDoc.numPages, 30);
-        for (let i = 1; i <= maxPages; i++) {
-            const page = await STATE.pdfDoc.getPage(i);
-            const content = await page.getTextContent();
-            text += content.items.map(item => item.str).join(' ') + "\n";
+        try {
+            const text = await getSmartText('quiz-scope'); // نستخدم نفس النص لتوفير الوقت
+            const res = await callApi('ai/generate-mindmap-text', { text });
+
+            const markdown = res.markdown || res.data;
+            STATE.sessionData.mindMapData = markdown;
+
+            loader.remove();
+
+            if (window.markmap) {
+                const { Transformer, Markmap } = window.markmap;
+                const transformer = new Transformer();
+                const { root } = transformer.transform(markdown);
+                Markmap.create(svgEl, null, root);
+
+                const dlBtn = document.getElementById('download-map-btn');
+                if (dlBtn) dlBtn.style.display = 'block';
+            }
+        } catch (err) {
+            loader.textContent = "Erreur: " + err.message;
+            loader.style.color = 'red';
         }
-
-        const res = await callApi('ai/generate-mindmap-text', { text });
-        const markdown = res.markdown || res.data;
-
-        STATE.sessionData.mindMapData = markdown;
-        renderMindMap(markdown);
-        loader.remove();
-
-    } catch (err) {
-        loader.innerHTML = `<div style="color:red">Erreur: ${err.message}</div>`;
-    }
-});
-
-function renderMindMap(markdown) {
-    const svgEl = document.getElementById('mindmap-svg');
-    if (!window.markmap) return;
-    const { Transformer, Markmap } = window.markmap;
-    const transformer = new Transformer();
-    const { root } = transformer.transform(markdown);
-    svgEl.innerHTML = '';
-    markmapInstance = Markmap.create(svgEl, { zoom: true, pan: true, fitRatio: 1 }, root);
+    });
 }
 
-// أزرار التحكم بالمايند ماب
-document.getElementById('zoom-in').onclick = () => markmapInstance && markmapInstance.rescale(1.25);
-document.getElementById('zoom-out').onclick = () => markmapInstance && markmapInstance.rescale(0.8);
-document.getElementById('zoom-reset').onclick = () => markmapInstance && markmapInstance.fit();
-
 // =============================================================================
-//  6. الحفظ والاسترجاع (مع أزرار الاستعادة)
+//  7. الحفظ والاسترجاع (Save & Restore) 💾
 // =============================================================================
 
-document.getElementById('save-progress-btn').addEventListener('click', async () => {
-    const btn = document.getElementById('save-progress-btn');
-    const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>...';
+const saveBtn = document.getElementById('save-progress-btn');
+if (saveBtn) {
+    saveBtn.addEventListener('click', async () => {
+        if (!STATE.fileHash) return alert("Aucun fichier ouvert !");
 
-    try {
-        const payload = { ...STATE.sessionData, timestamp: new Date() };
-        const res = await callApi('progress/save', { progressData: payload });
-        if (res.success) {
-            btn.innerHTML = '<i class="fas fa-check"></i> Saved!';
-            setTimeout(() => btn.innerHTML = originalHTML, 2000);
+        const originalText = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+
+        try {
+            // تجهيز البيانات
+            const payload = {
+                drawings: STATE.drawings,
+                pins: STATE.pins,
+                quizzes: STATE.sessionData.quizzes,
+                flashcards: STATE.sessionData.flashcards,
+                mindMapData: STATE.sessionData.mindMapData
+            };
+
+            // إرسال lessonId + progressData كما يتوقع progressController.js
+            const res = await callApi('progress/save', {
+                lessonId: STATE.fileHash,
+                progressData: payload
+            });
+
+            if (res.success) {
+                saveBtn.innerHTML = '<i class="fas fa-check"></i> Saved!';
+                setTimeout(() => saveBtn.innerHTML = originalText, 2000);
+            }
+        } catch (e) {
+            saveBtn.innerHTML = '<i class="fas fa-times"></i> Error';
+            setTimeout(() => saveBtn.innerHTML = originalText, 2000);
         }
-    } catch (e) {
-        btn.innerHTML = '<i class="fas fa-times"></i> Error';
-        alert("Erreur de sauvegarde");
-    }
-});
+    });
+}
 
 async function loadSavedProgress() {
+    if (!STATE.fileHash) return;
+
     try {
-        const res = await fetch(`/api/progress?lessonId=${STATE.lessonId}`, {
-            headers: { 'Authorization': `Bearer ${USER_TOKEN}` }
+        const res = await fetch(`${API_BASE_URL}/api/progress?lessonId=${STATE.fileHash}`, {
+            credentials: 'include'
         });
+
+        if (res.status === 401) {
+            console.log("Non connecté (Guest Mode)");
+            return;
+        }
+
         const json = await res.json();
 
         if (json.success && json.data) {
-            const data = json.data;
+            const data = json.data.progressData || json.data;
 
-            // الكويز
+            // استعادة الرسم
+            STATE.drawings = data.drawings || [];
+            redrawAllDrawings();
+
+            // استعادة الكويز
             if (data.quizzes && data.quizzes.length > 0) {
                 STATE.sessionData.quizzes = data.quizzes;
-                document.getElementById('restore-quiz-btn').style.display = 'flex';
-                document.getElementById('restore-quiz-btn').innerHTML = `<i class="fas fa-history"></i> Reprendre Quiz (${data.quizzes.length})`;
+                const rBtn = document.getElementById('restore-quiz-btn');
+                if (rBtn) {
+                    rBtn.style.display = 'flex';
+                    rBtn.innerHTML = `<i class="fas fa-history"></i> Reprendre Quiz (${data.quizzes.length})`;
+                }
             }
-            // الفلاش كاردز
+
+            // استعادة البطاقات
             if (data.flashcards && data.flashcards.length > 0) {
                 STATE.sessionData.flashcards = data.flashcards;
-                document.getElementById('restore-cards-btn').style.display = 'flex';
-                document.getElementById('restore-cards-btn').innerHTML = `<i class="fas fa-history"></i> Reprendre Cartes (${data.flashcards.length})`;
+                const rBtn = document.getElementById('restore-cards-btn');
+                if (rBtn) {
+                    rBtn.style.display = 'flex';
+                    rBtn.innerHTML = `<i class="fas fa-history"></i> Reprendre Cartes (${data.flashcards.length})`;
+                }
             }
-            // المايند ماب
+
+            // استعادة المايند ماب
             if (data.mindMapData) {
                 STATE.sessionData.mindMapData = data.mindMapData;
-                document.getElementById('restore-map-btn').style.display = 'flex';
+                const rBtn = document.getElementById('restore-map-btn');
+                if (rBtn) rBtn.style.display = 'flex';
             }
+
+            console.log("Session loaded successfully!");
         }
-    } catch (e) { console.log("No save found"); }
+    } catch (e) { console.log("New Session / No Save Found"); }
 }
 
-// أزرار الاسترجاع (الربط)
-document.getElementById('restore-quiz-btn').onclick = () => {
-    STATE.quizData = STATE.sessionData.quizzes;
-    STATE.currentQuizIndex = 0;
-    STATE.userAnswers = {};
-    renderQuizQuestion(0);
-    document.getElementById('restore-quiz-btn').style.display = 'none';
+// أزرار الاستعادة
+const restoreQuizBtn = document.getElementById('restore-quiz-btn');
+if (restoreQuizBtn) {
+    restoreQuizBtn.onclick = () => {
+        STATE.quizData = STATE.sessionData.quizzes;
+        renderQuizQuestion(0);
+        restoreQuizBtn.style.display = 'none';
+    };
+}
+
+const restoreCardsBtn = document.getElementById('restore-cards-btn');
+if (restoreCardsBtn) {
+    restoreCardsBtn.onclick = () => {
+        STATE.flashcardsData = STATE.sessionData.flashcards;
+        renderSingleFlashcard(0);
+        restoreCardsBtn.style.display = 'none';
+    };
+}
+
+const restoreMapBtn = document.getElementById('restore-map-btn');
+if (restoreMapBtn) {
+    restoreMapBtn.onclick = () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+        const { root } = transformer.transform(STATE.sessionData.mindMapData);
+        Markmap.create(document.getElementById('mindmap-svg'), null, root);
+        restoreMapBtn.style.display = 'none';
+    };
+}
+
+// =============================================================================
+//  8. أدوات إضافية (AI Selection & Pins) 🤖
+// =============================================================================
+
+// مراقبة التحديد للنصوص
+document.addEventListener('selectionchange', () => {
+    const sel = window.getSelection();
+    const toolbar = document.getElementById('selection-toolbar');
+
+    // إذا لم يكن هناك تحديد أو التحديد خارج الـ PDF
+    if (sel.isCollapsed || !document.getElementById('pdf-wrapper')?.contains(sel.anchorNode)) {
+        if (toolbar) toolbar.style.display = 'none';
+        return;
+    }
+
+    const range = sel.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+
+    STATE.selection.text = sel.toString();
+
+    if (toolbar) {
+        toolbar.style.top = `${rect.top + window.scrollY - 50}px`;
+        toolbar.style.left = `${rect.left + (rect.width / 2) - 100}px`;
+        toolbar.style.display = 'flex';
+    }
+});
+
+window.highlightSelection = function (color) {
+    // يمكنك إضافة منطق تمييز النصوص هنا إذا أردت
+    // حالياً نقوم فقط بإخفاء الشريط
+    document.getElementById('selection-toolbar').style.display = 'none';
 };
 
-document.getElementById('restore-cards-btn').onclick = () => {
-    STATE.flashcardsData = STATE.sessionData.flashcards;
-    renderSingleFlashcard(0); // عرض البطاقة الأولى
-    document.getElementById('restore-cards-btn').style.display = 'none';
-};
+window.askAiAboutSelection = function () {
+    const modal = document.getElementById('ai-modal');
+    const answerBox = document.getElementById('ai-answer-text');
+    modal.style.display = 'flex';
+    answerBox.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Réflexion...';
 
-document.getElementById('restore-map-btn').onclick = () => {
-    renderMindMap(STATE.sessionData.mindMapData);
-    document.getElementById('restore-map-btn').style.display = 'none';
+    callApi('ai/ask-dentist', { text: STATE.selection.text, question: "Explique ceci en détail." })
+        .then(res => {
+            answerBox.innerHTML = marked.parse(res.answer || "Pas de réponse.");
+        })
+        .catch(e => {
+            answerBox.textContent = "Erreur: " + e.message;
+        });
+
+    document.getElementById('selection-toolbar').style.display = 'none';
 };
