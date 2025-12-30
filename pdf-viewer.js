@@ -1,6 +1,6 @@
 // =============================================================================
-//  SMART DENTAL VIEWER - ULTIMATE CONTROLLER (JS)
-//  Features: Token Auth, Advanced Quiz/Cards, Export PDF/IMG, Drawing Layers
+//  SMART DENTAL VIEWER - ULTIMATE CONTROLLER (FINAL)
+//  Features: Token Auth, Text/Draw Tools, Advanced Quiz, Export PDF/IMG
 // =============================================================================
 
 const API_BASE_URL = "https://dental-app-he1p.onrender.com";
@@ -8,31 +8,30 @@ const API_BASE_URL = "https://dental-app-he1p.onrender.com";
 // إعداد PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
-// --- Global State ---
+// --- إدارة الحالة (Global State) ---
 const STATE = {
     pdfDoc: null,
     fileHash: null,
     scale: 1.2,
     currentPage: 1,
 
-    // الرسم
-    tool: null,       // 'pen', 'highlighter', 'eraser'
+    // الأدوات (Tools)
+    tool: 'cursor',   // 'cursor', 'text', 'pen', 'highlighter', 'eraser'
     isDrawing: false,
     drawings: [],
+    textAnnotations: [], // لتخزين النصوص المضافة
 
-    // الكويز
+    // المحتوى التعليمي
     quizData: [],
     currentQuizIndex: 0,
-    selectedQuizOption: null, // لتخزين الإجابة المؤقتة قبل التحقق
+    selectedQuizOption: null, // تخزين الإجابة المختارة مؤقتاً
 
-    // الفلاش كاردز
     flashcardsData: [],
     currentFlashcardIndex: 0,
 
-    // المايند ماب
     mindMapData: null,
 
-    // أدوات ذكية
+    // الملاحظات الذكية
     pins: [],
     activePinId: null,
     selection: { text: '', rect: null },
@@ -42,15 +41,14 @@ const STATE = {
 };
 
 // =============================================================================
-//  1. الاتصال الآمن (Token Auth - Fix for 401) 🔌
+//  1. الاتصال الآمن (Token Auth) 🔌
 // =============================================================================
 
 async function callApi(endpoint, body = {}) {
-    // جلب التوكن من LocalStorage (نفس طريقة script.js)
     const token = localStorage.getItem('userToken');
 
     if (!token) {
-        alert("Erreur: Vous n'êtes pas connecté. Veuillez vous connecter via le Dashboard.");
+        alert("Erreur: Token manquant. Veuillez vous connecter.");
         return;
     }
 
@@ -59,7 +57,7 @@ async function callApi(endpoint, body = {}) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` // ✅ المفتاح الصحيح
+                'Authorization': `Bearer ${token}` // ✅ المفتاح ليعمل مع سيرفرك
             },
             body: JSON.stringify(body)
         });
@@ -77,7 +75,7 @@ async function callApi(endpoint, body = {}) {
     }
 }
 
-// دالة استخراج النص (حسب النطاق المختار)
+// دالة استخراج النص الذكي
 async function getSmartText(scopeInputName) {
     if (!STATE.pdfDoc) return "";
     const scopeEl = document.querySelector(`input[name="${scopeInputName}"]:checked`);
@@ -89,6 +87,7 @@ async function getSmartText(scopeInputName) {
         const content = await page.getTextContent();
         text = content.items.map(i => i.str).join(' ');
     } else {
+        // نأخذ عينة لتسريع المعالجة (أول 15 صفحة)
         const maxPages = Math.min(STATE.pdfDoc.numPages, 15);
         for (let i = 1; i <= maxPages; i++) {
             const page = await STATE.pdfDoc.getPage(i);
@@ -100,7 +99,7 @@ async function getSmartText(scopeInputName) {
 }
 
 // =============================================================================
-//  2. تحميل PDF والعرض (With Layering Fix) 🎨
+//  2. تحميل PDF والعرض (Rendering & Layers) 🎨
 // =============================================================================
 
 const fileInput = document.getElementById('file-input');
@@ -109,6 +108,7 @@ if (fileInput) {
         const file = e.target.files[0];
         if (!file) return;
 
+        // حساب الهاش (Lesson ID)
         const arrayBuffer = await file.arrayBuffer();
         const spark = new SparkMD5.ArrayBuffer();
         spark.append(arrayBuffer);
@@ -120,6 +120,7 @@ if (fileInput) {
         const container = document.getElementById('pdf-wrapper');
         container.innerHTML = '';
 
+        // عرض جميع الصفحات
         for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
             await renderPage(i, container);
         }
@@ -141,13 +142,13 @@ async function renderPage(num, container) {
     wrapper.style.marginBottom = '20px';
     wrapper.style.position = 'relative';
 
-    // 1. طبقة الكانفاس (PDF Image)
+    // 1. طبقة الصورة (Canvas)
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
-    // 2. طبقة النص (للتحديد)
+    // 2. طبقة النص (Text Layer - للتحديد)
     const textLayer = document.createElement('div');
     textLayer.className = 'textLayer';
     textLayer.style.width = `${viewport.width}px`;
@@ -156,12 +157,22 @@ async function renderPage(num, container) {
 
     // 3. طبقة الرسم (Draw Layer)
     const drawCanvas = document.createElement('canvas');
-    drawCanvas.className = 'drawLayer'; // CSS class handles pointer-events
+    drawCanvas.className = 'drawLayer'; // CSS يتحكم بـ pointer-events
     drawCanvas.id = `draw-${num}`;
     drawCanvas.width = viewport.width;
     drawCanvas.height = viewport.height;
 
-    wrapper.append(canvas, textLayer, drawCanvas);
+    // 4. طبقة إضافة النصوص (Text Input Layer)
+    const textInputLayer = document.createElement('div');
+    textInputLayer.className = 'textInputLayer';
+    textInputLayer.id = `text-layer-${num}`;
+    textInputLayer.style.width = `${viewport.width}px`;
+    textInputLayer.style.height = `${viewport.height}px`;
+
+    // التعامل مع النقر لإضافة نص
+    textInputLayer.onclick = (e) => handleTextToolClick(e, num, textInputLayer);
+
+    wrapper.append(canvas, textLayer, drawCanvas, textInputLayer);
     container.appendChild(wrapper);
 
     await page.render({ canvasContext: ctx, viewport }).promise;
@@ -189,37 +200,41 @@ function setupPageObserver() {
 }
 
 // =============================================================================
-//  3. منطق الرسم (Toggle Drawing Mode) ✏️
+//  3. أدوات الرسم والنص (Tools Logic) ✏️
 // =============================================================================
 
 window.setTool = function (t) {
-    // إذا ضغطنا نفس الأداة، نلغي التفعيل (null)
-    STATE.tool = (STATE.tool === t) ? null : t;
+    STATE.tool = t;
 
-    // تحديث أزرار الواجهة
-    ['pen', 'highlighter', 'eraser'].forEach(id => {
-        const btn = document.getElementById(`btn-${id}`);
-        if (btn) btn.classList.toggle('active', STATE.tool === id);
-    });
+    // تحديث الأزرار النشطة
+    document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
+    const btn = document.getElementById(`btn-${t}`);
+    if (btn) btn.classList.add('active');
 
-    // التحكم في استقبال الماوس (Pointer Events)
-    // إذا كانت الأداة مفعلة -> اسمح بالرسم (auto)
-    // إذا كانت مغلقة -> اسمح بتحديد النص خلفها (none)
+    // التحكم بالطبقات (Layer Management)
+    // 1. طبقة الرسم
     document.querySelectorAll('.drawLayer').forEach(el => {
-        if (STATE.tool) {
+        if (['pen', 'highlighter', 'eraser'].includes(t)) {
             el.classList.add('active'); // CSS: pointer-events: auto
         } else {
-            el.classList.remove('active'); // CSS: pointer-events: none
+            el.classList.remove('active'); // CSS: pointer-events: none (للسماح بالتحديد)
         }
+    });
+
+    // 2. طبقة النص
+    document.querySelectorAll('.textInputLayer').forEach(el => {
+        if (t === 'text') el.classList.add('active');
+        else el.classList.remove('active');
     });
 };
 
+// --- منطق الرسم ---
 function setupDrawingLogic(canvas, pageNum) {
     const ctx = canvas.getContext('2d');
     let lastX, lastY;
 
     canvas.addEventListener('mousedown', e => {
-        if (!STATE.tool) return;
+        if (!['pen', 'highlighter', 'eraser'].includes(STATE.tool)) return;
         STATE.isDrawing = true;
         [lastX, lastY] = [e.offsetX, e.offsetY];
         const color = document.getElementById('color-picker')?.value || '#ff0000';
@@ -229,11 +244,10 @@ function setupDrawingLogic(canvas, pageNum) {
     });
 
     canvas.addEventListener('mousemove', e => {
-        if (!STATE.isDrawing || !STATE.tool) return;
-
+        if (!STATE.isDrawing) return;
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
         if (STATE.tool === 'pen') {
-            ctx.strokeStyle = document.getElementById('color-picker')?.value || '#ff0000';
+            ctx.strokeStyle = document.getElementById('color-picker')?.value;
             ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
         } else if (STATE.tool === 'highlighter') {
             ctx.strokeStyle = 'rgba(255, 255, 0, 0.4)';
@@ -241,26 +255,83 @@ function setupDrawingLogic(canvas, pageNum) {
         } else {
             ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
         }
-
         ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke();
-
-        if (STATE.drawings.length > 0) {
-            STATE.drawings[STATE.drawings.length - 1].points.push({ x: e.offsetX, y: e.offsetY });
-        }
+        if (STATE.drawings.length) STATE.drawings[STATE.drawings.length - 1].points.push({ x: e.offsetX, y: e.offsetY });
         [lastX, lastY] = [e.offsetX, e.offsetY];
     });
 
     canvas.addEventListener('mouseup', () => STATE.isDrawing = false);
-    canvas.addEventListener('mouseleave', () => STATE.isDrawing = false);
 }
 
-function redrawAllDrawings() {
+// --- منطق النص ---
+function handleTextToolClick(e, pageNum, layer) {
+    if (STATE.tool !== 'text') return;
+
+    const x = e.offsetX;
+    const y = e.offsetY;
+
+    // إنشاء حقل إدخال مؤقت
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.style.position = 'absolute';
+    input.style.left = x + 'px';
+    input.style.top = y + 'px';
+    input.style.border = '1px solid #2563eb';
+    input.style.padding = '5px';
+    input.style.zIndex = 100;
+    input.placeholder = "Tapez votre note...";
+
+    input.onkeydown = (ev) => {
+        if (ev.key === 'Enter') {
+            saveTextAnnotation(pageNum, x, y, input.value, layer);
+            input.remove();
+        }
+    };
+
+    input.onblur = () => {
+        if (input.value.trim()) saveTextAnnotation(pageNum, x, y, input.value, layer);
+        input.remove();
+    };
+
+    layer.appendChild(input);
+    input.focus();
+}
+
+function saveTextAnnotation(page, x, y, text, layer) {
+    const note = { id: Date.now(), page, x, y, text };
+    STATE.textAnnotations.push(note);
+    renderTextAnnotation(note, layer);
+}
+
+function renderTextAnnotation(note, layer) {
+    if (!layer) layer = document.getElementById(`text-layer-${note.page}`);
+    if (!layer) return;
+
+    const el = document.createElement('div');
+    el.className = 'added-text';
+    el.textContent = note.text;
+    el.style.left = note.x + 'px';
+    el.style.top = note.y + 'px';
+
+    // حذف النص بالنقر بزر الماوس الأيمن
+    el.oncontextmenu = (e) => {
+        e.preventDefault();
+        if (confirm("Supprimer ce texte ?")) {
+            STATE.textAnnotations = STATE.textAnnotations.filter(n => n.id !== note.id);
+            el.remove();
+        }
+    };
+
+    layer.appendChild(el);
+}
+
+function redrawAll() {
+    // إعادة رسم الخطوط
     STATE.drawings.forEach(d => {
         const cvs = document.getElementById(`draw-${d.page}`);
         if (!cvs) return;
         const ctx = cvs.getContext('2d');
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-
         if (d.tool === 'pen') {
             ctx.strokeStyle = d.color; ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
         } else if (d.tool === 'highlighter') {
@@ -268,12 +339,14 @@ function redrawAllDrawings() {
         } else {
             ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
         }
-
         ctx.beginPath();
-        if (d.points.length > 0) ctx.moveTo(d.points[0].x, d.points[0].y);
+        if (d.points.length) ctx.moveTo(d.points[0].x, d.points[0].y);
         for (let i = 1; i < d.points.length; i++) ctx.lineTo(d.points[i].x, d.points[i].y);
         ctx.stroke();
     });
+
+    // إعادة رسم النصوص
+    STATE.textAnnotations.forEach(note => renderTextAnnotation(note));
 }
 
 // =============================================================================
@@ -282,7 +355,7 @@ function redrawAllDrawings() {
 
 document.getElementById('generate-quiz-btn').onclick = async () => {
     const container = document.getElementById('quiz-container');
-    container.innerHTML = '<div style="text-align:center;"><i class="fas fa-spinner fa-spin"></i> Génération en cours...</div>';
+    container.innerHTML = '<div style="text-align:center;"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
     try {
         const text = await getSmartText('quiz-scope');
         const res = await callApi('ai/generate-quiz-text', { text, count: 5 });
@@ -334,7 +407,7 @@ function renderQuizCard() {
 
     container.appendChild(card);
 
-    // Event Listeners
+    // أزرار التحكم
     document.getElementById('quiz-prev-btn').onclick = () => {
         if (STATE.currentQuizIndex > 0) {
             STATE.currentQuizIndex--;
@@ -357,9 +430,7 @@ function renderQuizCard() {
 }
 
 function selectQuizOption(idx, btnEl) {
-    // إزالة التحديد السابق
     document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-    // إضافة التحديد الجديد
     btnEl.classList.add('selected');
     STATE.selectedQuizOption = idx;
 }
@@ -370,19 +441,17 @@ function checkQuizAnswer(qData) {
     const opts = document.querySelectorAll('.option-btn');
     const correctIdx = qData.correctOptionIndexes[0];
 
-    // تلوين الإجابات
     opts.forEach((btn, idx) => {
         if (idx === correctIdx) btn.classList.add('correct');
         else if (idx === STATE.selectedQuizOption) btn.classList.add('wrong');
-        btn.disabled = true; // منع التغيير
+        btn.disabled = true;
     });
 
-    // إظهار زر التالي
     document.getElementById('quiz-check-btn').style.display = 'none';
     document.getElementById('quiz-next-btn').style.display = 'block';
 }
 
-// تحميل الكويز كملف PDF
+// تصدير الكويز كملف PDF
 document.getElementById('download-quiz-pdf').onclick = () => {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -393,11 +462,10 @@ document.getElementById('download-quiz-pdf').onclick = () => {
     let y = 20;
     STATE.quizData.forEach((q, i) => {
         if (y > 270) { doc.addPage(); y = 20; }
-
         doc.setFontSize(12);
-        const splitQuestion = doc.splitTextToSize(`Q${i + 1}: ${q.question}`, 180);
-        doc.text(splitQuestion, 10, y);
-        y += (splitQuestion.length * 7) + 5;
+        const splitQ = doc.splitTextToSize(`Q${i + 1}: ${q.question}`, 180);
+        doc.text(splitQ, 10, y);
+        y += (splitQ.length * 7) + 5;
 
         q.options.forEach((opt, oi) => {
             const isCorrect = q.correctOptionIndexes.includes(oi) ? "(Correct)" : "";
@@ -407,7 +475,6 @@ document.getElementById('download-quiz-pdf').onclick = () => {
         });
         y += 10;
     });
-
     doc.save("quiz_dentaire.pdf");
 };
 
@@ -473,7 +540,6 @@ window.changeCard = function (dir) {
     }
 };
 
-// تحميل البطاقات كـ PDF
 document.getElementById('download-cards-pdf').onclick = () => {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -531,7 +597,6 @@ document.getElementById('generate-mindmap-btn').onclick = async () => {
     } catch (e) { loader.textContent = "Erreur"; }
 };
 
-// تحميل المايند ماب كصورة PNG
 document.getElementById('download-map-img').onclick = () => {
     const svg = document.getElementById('mindmap-svg');
     const svgData = new XMLSerializer().serializeToString(svg);
@@ -539,9 +604,8 @@ document.getElementById('download-map-img').onclick = () => {
     const ctx = canvas.getContext('2d');
     const img = new Image();
 
-    // إعداد الكانفاس بحجم الـ SVG
     const svgSize = svg.getBoundingClientRect();
-    canvas.width = svgSize.width * 2; // دقة أعلى
+    canvas.width = svgSize.width * 2;
     canvas.height = svgSize.height * 2;
 
     img.onload = () => {
@@ -559,7 +623,7 @@ document.getElementById('download-map-img').onclick = () => {
 };
 
 // =============================================================================
-//  7. الملاحظات الذكية (Smart Pins) 💡
+//  7. الملاحظات الذكية (Smart Pins & AI) 💡
 // =============================================================================
 
 document.addEventListener('selectionchange', () => {
@@ -666,6 +730,7 @@ document.getElementById('save-progress-btn').onclick = async () => {
     try {
         const payload = {
             drawings: STATE.drawings,
+            textAnnotations: STATE.textAnnotations, // حفظ النصوص
             pins: STATE.pins,
             quizzes: STATE.sessionData.quizzes,
             flashcards: STATE.sessionData.flashcards,
@@ -689,7 +754,6 @@ async function loadSavedProgress() {
         const token = localStorage.getItem('userToken');
         if (!token) return;
 
-        // استخدم fetch مباشرة لتجنب التنبيهات في callApi إذا لم يكن هناك حفظ
         const res = await fetch(`${API_BASE_URL}/api/progress?lessonId=${STATE.fileHash}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -698,31 +762,27 @@ async function loadSavedProgress() {
         if (json.success && json.data) {
             const data = json.data.progressData || json.data;
 
-            // استرجاع الرسم
             STATE.drawings = data.drawings || [];
-            redrawAllDrawings();
+            STATE.textAnnotations = data.textAnnotations || [];
+            redrawAll();
 
-            // استرجاع الملاحظات
             STATE.pins = data.pins || [];
             STATE.pins.forEach(renderPin);
 
-            // استرجاع الكويزات
             if (data.quizzes?.length) {
                 STATE.sessionData.quizzes = data.quizzes;
                 document.getElementById('restore-quiz-btn').style.display = 'block';
             }
-            // استرجاع البطاقات
             if (data.flashcards?.length) {
                 STATE.sessionData.flashcards = data.flashcards;
                 document.getElementById('restore-cards-btn').style.display = 'block';
             }
-            // استرجاع الماب
             if (data.mindMapData) {
                 STATE.sessionData.mindMapData = data.mindMapData;
                 document.getElementById('restore-map-btn').style.display = 'block';
             }
         }
-    } catch (e) { console.log("Nouvelle session (Pas de sauvegarde trouvée)"); }
+    } catch (e) { console.log("Nouvelle session"); }
 }
 
 // أزرار الاستعادة

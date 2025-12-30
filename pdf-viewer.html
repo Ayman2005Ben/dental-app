@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Dental Viewer | Ultimate Edition</title>
+    <title>Smart Dental Viewer | Ultimate</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
             overflow: hidden;
         }
 
-        /* --- الشريط الجانبي --- */
+        /* --- الشريط الجانبي (Sidebar) --- */
         #sidebar {
             width: 420px;
             background: var(--bg-sidebar);
@@ -55,7 +55,7 @@
             transition: transform 0.3s ease;
         }
 
-        /* وضع التركيز (إخفاء الشريط) */
+        /* وضع التركيز (Focus Mode) */
         body.focus-mode #sidebar {
             transform: translateX(-100%);
             width: 0;
@@ -115,7 +115,7 @@
             animation: fadeIn 0.3s;
         }
 
-        /* الأزرار العامة */
+        /* الأزرار */
         .action-btn {
             width: 100%;
             padding: 12px;
@@ -135,10 +135,6 @@
         .action-btn:hover {
             opacity: 0.9;
             transform: translateY(-1px);
-        }
-
-        .action-btn:active {
-            transform: translateY(0);
         }
 
         .btn-blue {
@@ -167,7 +163,7 @@
             background: #f8fafc;
         }
 
-        /* --- منطقة العرض --- */
+        /* --- منطقة العرض (Viewer) --- */
         #viewer-container {
             flex: 1;
             background: var(--bg-viewer);
@@ -203,7 +199,7 @@
             font-weight: bold;
         }
 
-        /* الطبقات (Layering Logic) */
+        /* --- نظام الطبقات (Layering Logic) - السر في حل مشكلة التحديد --- */
         .page-container {
             position: relative;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -230,6 +226,38 @@
         .drawLayer.active {
             pointer-events: auto;
             cursor: crosshair;
+        }
+
+        /* طبقة إضافة النصوص */
+        .textInputLayer {
+            position: absolute;
+            inset: 0;
+            z-index: 15;
+            pointer-events: none;
+        }
+
+        .textInputLayer.active {
+            pointer-events: auto;
+            cursor: text;
+        }
+
+        /* تنسيق النص المضاف */
+        .added-text {
+            position: absolute;
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2px 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 20;
+            border: 1px dashed transparent;
+        }
+
+        .added-text:hover {
+            border-color: #333;
+            background: white;
         }
 
         /* شريط الأدوات العائم */
@@ -260,6 +288,7 @@
             justify-content: center;
             color: #64748b;
             transition: 0.2s;
+            font-size: 16px;
         }
 
         .tool-btn:hover {
@@ -272,7 +301,7 @@
             transform: scale(1.1);
         }
 
-        /* Smart Selection Toolbar */
+        /* القائمة الذكية (تظهر عند التحديد) */
         #selection-toolbar {
             position: absolute;
             z-index: 1000;
@@ -300,7 +329,7 @@
             color: var(--accent);
         }
 
-        /* Smart Pin */
+        /* أيقونة المصباح */
         .smart-pin {
             position: absolute;
             width: 32px;
@@ -336,7 +365,7 @@
             border: 1px solid var(--border);
         }
 
-        /* --- Quiz Cards Styles --- */
+        /* --- تنسيقات الكويز المتطور --- */
         .quiz-card {
             background: white;
             padding: 20px;
@@ -370,7 +399,7 @@
             background: #f8fafc;
         }
 
-        /* حالات الاختيار */
+        /* حالات الإجابة */
         .option-btn.selected {
             border-color: var(--primary);
             background: #eff6ff;
@@ -390,7 +419,7 @@
             color: #991b1b;
         }
 
-        /* --- Flashcards Styles --- */
+        /* --- تنسيقات الفلاش كاردز --- */
         .flashcard-container {
             perspective: 1000px;
             margin-top: 10px;
@@ -463,17 +492,28 @@
 <body>
 
     <div class="floating-toolbar">
-        <button class="tool-btn" id="btn-focus" onclick="toggleFocus()" title="Mode Focus"><i
-                class="fas fa-expand"></i></button>
+        <button class="tool-btn active" id="btn-cursor" onclick="setTool('cursor')" title="Sélectionner (Texte)">
+            <i class="fas fa-mouse-pointer"></i>
+        </button>
         <div style="width:1px; background:#e2e8f0; height:20px;"></div>
+
+        <button class="tool-btn" id="btn-text" onclick="setTool('text')" title="Ajouter Texte">
+            <i class="fas fa-font"></i>
+        </button>
+
         <button class="tool-btn" id="btn-pen" onclick="setTool('pen')" title="Stylo"><i class="fas fa-pen"></i></button>
         <button class="tool-btn" id="btn-highlighter" onclick="setTool('highlighter')" title="Surligneur"><i
                 class="fas fa-highlighter"></i></button>
         <button class="tool-btn" id="btn-eraser" onclick="setTool('eraser')" title="Gomme"><i
                 class="fas fa-eraser"></i></button>
+
         <div style="width:1px; background:#e2e8f0; height:20px;"></div>
         <input type="color" id="color-picker" value="#ff0000"
             style="border:none; width:30px; height:30px; cursor:pointer; background:none;">
+
+        <div style="width:1px; background:#e2e8f0; height:20px;"></div>
+        <button class="tool-btn" id="btn-focus" onclick="toggleFocus()" title="Mode Focus"><i
+                class="fas fa-expand"></i></button>
     </div>
 
     <div id="exit-focus-btn" onclick="toggleFocus()">
@@ -502,10 +542,10 @@
             <div
                 style="background:#f8fafc; padding:10px; border-radius:8px; margin-bottom:10px; border:1px solid var(--border);">
                 <label style="display:block; margin-bottom:5px; font-size:14px; cursor:pointer;">
-                    <input type="radio" name="quiz-scope" value="page" checked> Page Actuelle (Rapide)
+                    <input type="radio" name="quiz-scope" value="page" checked> Page Actuelle
                 </label>
                 <label style="display:block; font-size:14px; cursor:pointer;">
-                    <input type="radio" name="quiz-scope" value="full"> Tout le PDF (Max 20 Q)
+                    <input type="radio" name="quiz-scope" value="full"> Tout le PDF (Max 20)
                 </label>
             </div>
 
@@ -523,12 +563,7 @@
                 </button>
             </div>
 
-            <div id="quiz-container" style="margin-top:15px;">
-                <div style="text-align:center; color:#94a3b8; margin-top:40px;">
-                    <i class="fas fa-clipboard-question" style="font-size:40px; margin-bottom:10px; opacity:0.3;"></i>
-                    <p>Aucun quiz actif</p>
-                </div>
-            </div>
+            <div id="quiz-container" style="margin-top:15px;"></div>
         </div>
 
         <div id="tab-flashcards" class="tab-content">
@@ -538,7 +573,7 @@
                     <input type="radio" name="cards-scope" value="page" checked> Page Actuelle
                 </label>
                 <label style="display:block; font-size:14px; cursor:pointer;">
-                    <input type="radio" name="cards-scope" value="full"> Tout (Max 15 Cartes)
+                    <input type="radio" name="cards-scope" value="full"> Tout (Max 15)
                 </label>
             </div>
 
@@ -630,6 +665,9 @@
         </div>
         <div id="pin-content" style="font-size:14px; line-height:1.5; color:#334155;"></div>
     </div>
+
+    <template id="quiz-card-template">
+    </template>
 
     <script src="pdf-viewer.js"></script>
     <script>
