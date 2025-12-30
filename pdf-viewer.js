@@ -1,89 +1,34 @@
 // =============================================================================
-//  SMART DENTAL VIEWER - PRODUCTION CONTROLLER
-//  Developer: Aymen (Dontist Owner)
-//  Version: Final (Merged Logic + CSS Fix + Token Auth)
+//  SMART DENTAL VIEWER - ULTIMATE INTEGRATED CONTROLLER
+//  Combined: Token Auth (Working) + Drawing Tools + Smart Pins + AI Features
 // =============================================================================
 
 const API_BASE_URL = "https://dental-app-he1p.onrender.com";
+
+// إعداد PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
 
-// =============================================================================
-//  0. CSS INJECTION (الحل الجذري لمشكلة العرض والتحديد) 💉
-//  هذا يضمن ظهور الصفحات تحت بعضها وتفعيل السكرول بغض النظر عن ملف HTML
-// =============================================================================
-(function forceFixStyles() {
-    const style = document.createElement('style');
-    style.innerHTML = `
-        /* إجبار الحاوية على السكرول */
-        #viewer-container {
-            display: block !important;
-            overflow-y: auto !important;
-            height: 100vh;
-            position: relative;
-        }
-        #pdf-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding-bottom: 100px;
-        }
-        
-        /* تنسيق الصفحات لتظهر تحت بعضها */
-        .page-container {
-            position: relative !important;
-            display: block !important;
-            margin: 0 auto 20px auto !important;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        /* طبقة النصوص (ضرورية للتحديد) */
-        .textLayer {
-            position: absolute; inset: 0;
-            opacity: 1; 
-            mix-blend-mode: multiply; 
-            line-height: 1.0;
-            z-index: 10;
-        }
-        .textLayer > span {
-            color: transparent; position: absolute; white-space: pre; cursor: text;
-            transform-origin: 0% 0%;
-        }
-
-        /* طبقة الرسم (فوق النصوص لكن لا تمنع التحديد إلا عند التفعيل) */
-        .drawLayer {
-            position: absolute; inset: 0;
-            z-index: 20;
-            pointer-events: none; /* هذا هو سر التحديد! */
-        }
-        .drawLayer.active { pointer-events: auto; cursor: crosshair; }
-    `;
-    document.head.appendChild(style);
-})();
-
-// =============================================================================
-//  1. GLOBAL STATE
-// =============================================================================
+// --- Global State ---
 const STATE = {
     pdfDoc: null,
     fileHash: null,
-    scale: 1.3,
+    scale: 1.2,
     currentPage: 1,
 
-    // Tools
-    tool: null, // 'pen', 'highlighter', 'eraser'
+    // Drawing
+    tool: null,       // 'pen', 'highlighter', 'eraser'
     isDrawing: false,
     drawings: [],
 
-    // AI Content
+    // Content
     quizData: [],
     currentQuizIndex: 0,
+    userAnswers: {},
     flashcardsData: [],
     currentFlashcardIndex: 0,
     mindMapData: null,
 
-    // Pins & Selection
+    // Smart Pins
     pins: [],
     activePinId: null,
     selection: { text: '', rect: null },
@@ -93,10 +38,13 @@ const STATE = {
 };
 
 // =============================================================================
-//  2. API HELPER (Token Auth) 🔌
+//  1. الاتصال الآمن (Token Based - The Fix) 🔌
 // =============================================================================
+
 async function callApi(endpoint, body = {}) {
+    // 🔥 1. جلب التوكن (نفس طريقة script.js الناجحة)
     const token = localStorage.getItem('userToken');
+
     if (!token) {
         alert("Erreur: Token manquant. Veuillez vous connecter.");
         return;
@@ -107,16 +55,18 @@ async function callApi(endpoint, body = {}) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}` // ✅ المفتاح السحري
             },
             body: JSON.stringify(body)
         });
 
         if (res.status === 401) {
-            alert("Session expirée.");
-            return;
+            alert("Session expirée. Veuillez vous reconnecter.");
+            throw new Error("Unauthorized");
         }
-        return await res.json();
+
+        const data = await res.json();
+        return data;
     } catch (error) {
         console.error("API Error:", error);
         throw error;
@@ -125,51 +75,52 @@ async function callApi(endpoint, body = {}) {
 
 async function getSmartText(scopeInputName) {
     if (!STATE.pdfDoc) return "";
-    const scope = document.querySelector(`input[name="${scopeInputName}"]:checked`)?.value || 'page';
+    const scopeEl = document.querySelector(`input[name="${scopeInputName}"]:checked`);
+    const scope = scopeEl ? scopeEl.value : 'page';
     let text = "";
 
     if (scope === 'page') {
         const page = await STATE.pdfDoc.getPage(STATE.currentPage);
-        text = (await page.getTextContent()).items.map(i => i.str).join(' ');
+        const content = await page.getTextContent();
+        text = content.items.map(i => i.str).join(' ');
     } else {
-        const max = Math.min(STATE.pdfDoc.numPages, 10);
-        for (let i = 1; i <= max; i++) {
+        const maxPages = Math.min(STATE.pdfDoc.numPages, 10);
+        for (let i = 1; i <= maxPages; i++) {
             const page = await STATE.pdfDoc.getPage(i);
-            text += (await page.getTextContent()).items.map(i => i.str).join(' ') + "\n";
+            const content = await page.getTextContent();
+            text += content.items.map(item => item.str).join(' ') + "\n";
         }
     }
     return text;
 }
 
 // =============================================================================
-//  3. PDF RENDERING ENGINE 🎨
+//  2. تحميل PDF والعرض 🎨
 // =============================================================================
+
 const fileInput = document.getElementById('file-input');
-const container = document.getElementById('pdf-wrapper');
 
 if (fileInput) {
     fileInput.addEventListener('change', async (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
-        // Hash
-        const buffer = await file.arrayBuffer();
+        const arrayBuffer = await file.arrayBuffer();
         const spark = new SparkMD5.ArrayBuffer();
-        spark.append(buffer);
+        spark.append(arrayBuffer);
         STATE.fileHash = spark.end();
 
-        // Load Doc
-        STATE.pdfDoc = await pdfjsLib.getDocument(buffer).promise;
+        const loadingTask = pdfjsLib.getDocument(arrayBuffer);
+        STATE.pdfDoc = await loadingTask.promise;
 
-        // Reset Container
+        const container = document.getElementById('pdf-wrapper');
         container.innerHTML = '';
 
-        // Render All Pages (Sequential Loop - حلك الصحيح)
         for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
             await renderPage(i, container);
         }
 
-        setupScrollObserver();
+        setupPageObserver();
         loadSavedProgress();
     });
 }
@@ -178,38 +129,42 @@ async function renderPage(num, container) {
     const page = await STATE.pdfDoc.getPage(num);
     const viewport = page.getViewport({ scale: STATE.scale });
 
-    // إنشاء حاوية الصفحة
     const wrapper = document.createElement('div');
     wrapper.className = 'page-container';
     wrapper.id = `page-${num}`;
-    // ضبط الأبعاد بدقة
     wrapper.style.width = `${viewport.width}px`;
     wrapper.style.height = `${viewport.height}px`;
+    wrapper.style.marginBottom = '20px';
+    wrapper.style.position = 'relative';
 
-    // 1. Canvas (الصورة)
+    // 1. PDF Canvas
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = viewport.width; canvas.height = viewport.height;
-    canvas.style.position = 'absolute'; canvas.style.inset = '0';
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
 
-    // 2. Text Layer (النص)
+    // 2. Text Layer
     const textLayer = document.createElement('div');
     textLayer.className = 'textLayer';
     textLayer.style.width = `${viewport.width}px`;
     textLayer.style.height = `${viewport.height}px`;
     textLayer.style.setProperty('--scale-factor', STATE.scale);
 
-    // 3. Draw Layer (الرسم)
+    // 3. Draw Layer (للرسم)
     const drawCanvas = document.createElement('canvas');
     drawCanvas.className = 'drawLayer';
     drawCanvas.id = `draw-${num}`;
-    drawCanvas.width = viewport.width; drawCanvas.height = viewport.height;
+    drawCanvas.width = viewport.width;
+    drawCanvas.height = viewport.height;
+    drawCanvas.style.position = 'absolute';
+    drawCanvas.style.top = '0';
+    drawCanvas.style.left = '0';
+    drawCanvas.style.pointerEvents = 'none'; // الماوس يمر عبرها إلا إذا فعلنا القلم
+    drawCanvas.style.zIndex = '10';
 
-    // الترتيب: Canvas -> Text -> Draw
     wrapper.append(canvas, textLayer, drawCanvas);
     container.appendChild(wrapper);
 
-    // رسم المحتوى
     await page.render({ canvasContext: ctx, viewport }).promise;
 
     const textContent = await page.getTextContent();
@@ -223,35 +178,34 @@ async function renderPage(num, container) {
     setupDrawingLogic(drawCanvas, num);
 }
 
-function setupScrollObserver() {
+function setupPageObserver() {
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) STATE.currentPage = parseInt(e.target.id.split('-')[1]);
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                STATE.currentPage = parseInt(entry.target.id.split('-')[1]);
+            }
         });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.page-container').forEach(el => observer.observe(el));
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.page-container').forEach(p => observer.observe(p));
 }
 
 // =============================================================================
-//  4. TOOLS & DRAWING ✏️
+//  3. منطق الرسم (Drawing Logic) ✏️
 // =============================================================================
+
 window.setTool = function (t) {
     STATE.tool = (STATE.tool === t) ? null : t;
 
-    // UI Buttons
-    document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
-    if (STATE.tool) document.getElementById(`btn-${STATE.tool}`)?.classList.add('active');
+    // تحديث الأزرار
+    ['pen', 'highlighter', 'eraser'].forEach(id => {
+        const btn = document.getElementById(`btn-${id}`);
+        if (btn) btn.classList.toggle('active', STATE.tool === id);
+    });
 
-    // Layer Interaction (السر في إصلاح التحديد)
+    // التحكم في طبقات الرسم
     document.querySelectorAll('.drawLayer').forEach(el => {
-        // إذا كانت أداة رسم مفعلة، نفعل الرسم. إذا لا، نلغيه ليصبح النص قابلاً للتحديد
-        if (STATE.tool) {
-            el.style.pointerEvents = 'auto';
-            el.classList.add('active');
-        } else {
-            el.style.pointerEvents = 'none';
-            el.classList.remove('active');
-        }
+        el.style.pointerEvents = STATE.tool ? 'auto' : 'none'; // تفعيل الماوس فقط عند الرسم
+        el.style.cursor = STATE.tool ? 'crosshair' : 'default';
     });
 };
 
@@ -273,57 +227,54 @@ function setupDrawingLogic(canvas, pageNum) {
         if (!STATE.isDrawing || !STATE.tool) return;
 
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-        if (STATE.tool === 'highlighter') {
-            ctx.globalCompositeOperation = 'multiply';
-            ctx.strokeStyle = '#ffff00'; ctx.lineWidth = 20; ctx.globalAlpha = 0.5;
-        } else if (STATE.tool === 'eraser') {
-            ctx.globalCompositeOperation = 'destination-out';
-            ctx.lineWidth = 20; ctx.globalAlpha = 1;
-        } else {
-            ctx.globalCompositeOperation = 'source-over';
+        if (STATE.tool === 'pen') {
             ctx.strokeStyle = document.getElementById('color-picker')?.value || '#ff0000';
-            ctx.lineWidth = 2; ctx.globalAlpha = 1;
+            ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
+        } else if (STATE.tool === 'highlighter') {
+            ctx.strokeStyle = 'rgba(255, 255, 0, 0.4)';
+            ctx.lineWidth = 15; ctx.globalCompositeOperation = 'multiply';
+        } else {
+            ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
         }
 
         ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke();
 
-        if (STATE.drawings.length) {
+        if (STATE.drawings.length > 0) {
             STATE.drawings[STATE.drawings.length - 1].points.push({ x: e.offsetX, y: e.offsetY });
         }
         [lastX, lastY] = [e.offsetX, e.offsetY];
     });
 
     canvas.addEventListener('mouseup', () => STATE.isDrawing = false);
+    canvas.addEventListener('mouseleave', () => STATE.isDrawing = false);
 }
 
-function redrawAll() {
+function redrawAllDrawings() {
     STATE.drawings.forEach(d => {
         const cvs = document.getElementById(`draw-${d.page}`);
         if (!cvs) return;
         const ctx = cvs.getContext('2d');
         ctx.lineCap = 'round'; ctx.lineJoin = 'round';
 
-        if (d.tool === 'highlighter') {
-            ctx.globalCompositeOperation = 'multiply';
-            ctx.strokeStyle = '#ffff00'; ctx.lineWidth = 15; ctx.globalAlpha = 0.5;
-        } else if (d.tool === 'eraser') {
-            ctx.globalCompositeOperation = 'destination-out';
-            ctx.lineWidth = 20;
+        if (d.tool === 'pen') {
+            ctx.strokeStyle = d.color; ctx.lineWidth = 2; ctx.globalCompositeOperation = 'source-over';
+        } else if (d.tool === 'highlighter') {
+            ctx.strokeStyle = 'rgba(255, 255, 0, 0.4)'; ctx.lineWidth = 15; ctx.globalCompositeOperation = 'multiply';
         } else {
-            ctx.globalCompositeOperation = 'source-over';
-            ctx.strokeStyle = d.color; ctx.lineWidth = 2;
+            ctx.lineWidth = 20; ctx.globalCompositeOperation = 'destination-out';
         }
 
         ctx.beginPath();
-        if (d.points.length) ctx.moveTo(d.points[0].x, d.points[0].y);
+        if (d.points.length > 0) ctx.moveTo(d.points[0].x, d.points[0].y);
         for (let i = 1; i < d.points.length; i++) ctx.lineTo(d.points[i].x, d.points[i].y);
         ctx.stroke();
     });
 }
 
 // =============================================================================
-//  5. SMART PINS & SELECTION 💡
+//  4. الملاحظات الذكية (Smart Pins) 💡
 // =============================================================================
+
 document.addEventListener('selectionchange', () => {
     const sel = window.getSelection();
     const toolbar = document.getElementById('selection-toolbar');
@@ -333,45 +284,52 @@ document.addEventListener('selectionchange', () => {
         return;
     }
 
-    const rect = sel.getRangeAt(0).getBoundingClientRect();
+    const range = sel.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
     STATE.selection.text = sel.toString();
 
     if (toolbar) {
         toolbar.style.top = `${rect.top + window.scrollY - 50}px`;
-        toolbar.style.left = `${rect.left}px`;
+        toolbar.style.left = `${rect.left + (rect.width / 2) - 50}px`;
         toolbar.style.display = 'flex';
     }
 });
 
 window.askAiAboutSelection = async function () {
     document.getElementById('selection-toolbar').style.display = 'none';
-    const q = prompt("Question?");
+    const q = prompt("Posez votre question sur ce texte:");
     if (!q) return;
 
     const modal = document.getElementById('ai-modal');
-    if (modal) {
-        modal.style.display = 'flex';
-        document.getElementById('ai-answer-text').innerHTML = 'Thinking...';
-    }
+    const answerBox = document.getElementById('ai-answer-text');
+    modal.style.display = 'flex';
+    answerBox.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Réflexion...';
 
     try {
         const res = await callApi('ai/ask-dentist', { text: STATE.selection.text, question: q });
-        const ans = res.answer || "No answer";
-        if (modal) document.getElementById('ai-answer-text').innerHTML = marked.parse(ans);
+        const ans = res.answer || "Pas de réponse.";
+        answerBox.innerHTML = marked.parse(ans);
 
-        // حساب مكان الدبوس بالنسبة للصفحة
-        const pageEl = document.getElementById(`page-${STATE.currentPage}`);
-        if (pageEl) {
-            const r = pageEl.getBoundingClientRect();
-            // نحسب الإحداثيات النسبية داخل الصفحة
-            // (ملاحظة: الـ rect يأتي من الـ viewport، نحتاج تحويله)
-            // للتبسيط هنا سنضع الدبوس في منتصف الصفحة العلوية
-            createPin(STATE.currentPage, 50, 50, q, ans);
-        }
-    } catch (e) { alert("Error AI"); }
+        // إنشاء المصباح
+        createPin(STATE.selection.rect, q, ans);
+    } catch (e) {
+        answerBox.textContent = "Erreur: " + e.message;
+    }
 };
 
-function createPin(page, x, y, q, a) {
+function createPin(rect, q, a) {
+    const wrappers = document.querySelectorAll('.page-container');
+    let page = 1, x = 0, y = 0;
+
+    wrappers.forEach(w => {
+        const r = w.getBoundingClientRect();
+        if (rect.top >= r.top && rect.top <= r.bottom) {
+            page = parseInt(w.id.split('-')[1]);
+            x = rect.left - r.left + (rect.width / 2);
+            y = rect.top - r.top;
+        }
+    });
+
     const pin = { id: Date.now(), page, x, y, q, a };
     STATE.pins.push(pin);
     renderPin(pin);
@@ -383,122 +341,180 @@ function renderPin(pin) {
 
     const el = document.createElement('div');
     el.className = 'smart-pin';
-    el.innerHTML = '💡';
-    // تنسيق الدبوس
-    el.style.position = 'absolute';
-    el.style.left = `${pin.x}px`; el.style.top = `${pin.y}px`;
-    el.style.zIndex = 100; el.style.cursor = 'pointer';
-    el.style.fontSize = '24px';
+    el.innerHTML = '<i class="fas fa-lightbulb"></i>';
+    el.style.left = `${pin.x}px`;
+    el.style.top = `${pin.y}px`;
 
-    el.onclick = (e) => {
-        e.stopPropagation();
-        alert(`Q: ${pin.q}\n\nA: ${pin.a}`);
-    };
+    el.onclick = (e) => { e.stopPropagation(); showPin(pin, el); };
     wrap.appendChild(el);
 }
 
+function showPin(pin, el) {
+    STATE.activePinId = pin.id;
+    const pop = document.getElementById('pin-details');
+    const rect = el.getBoundingClientRect();
+
+    document.getElementById('pin-content').innerHTML = `<b>Q: ${pin.q}</b><br>${marked.parse(pin.a)}`;
+    pop.style.display = 'block';
+    pop.style.top = `${rect.bottom + window.scrollY + 10}px`;
+    pop.style.left = `${rect.left}px`;
+}
+
+window.deleteActivePin = function () {
+    STATE.pins = STATE.pins.filter(p => p.id !== STATE.activePinId);
+    // إعادة رسم المصابيح
+    document.querySelectorAll('.smart-pin').forEach(el => el.remove());
+    STATE.pins.forEach(renderPin);
+    document.getElementById('pin-details').style.display = 'none';
+};
+
 // =============================================================================
-//  6. AI GENERATION (Quiz, Cards, Map) 🧠
+//  5. Content Generation (Quiz, Cards, Map) 🧠
 // =============================================================================
+
+// Quiz
 document.getElementById('generate-quiz-btn').onclick = async () => {
-    const box = document.getElementById('quiz-container');
-    box.innerHTML = 'Generating...';
+    const container = document.getElementById('quiz-container');
+    container.innerHTML = '<div style="text-align:center;"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
     try {
         const text = await getSmartText('quiz-scope');
         const res = await callApi('ai/generate-quiz-text', { text, count: 5 });
         STATE.quizData = res.questions || [];
-        renderQuiz();
-    } catch (e) { box.innerHTML = "Error"; }
+        if (STATE.quizData.length) {
+            STATE.sessionData.quizzes = STATE.quizData;
+            renderQuizList(container);
+        }
+    } catch (e) { container.innerHTML = "Erreur."; }
 };
 
-function renderQuiz() {
-    const box = document.getElementById('quiz-container');
-    box.innerHTML = '';
+function renderQuizList(container) {
+    container.innerHTML = '';
     STATE.quizData.forEach((q, i) => {
-        box.innerHTML += `<div class="quiz-card" style="margin-bottom:10px; padding:10px; border:1px solid #ddd;">
-            <b>Q${i + 1}:</b> ${q.question}<br>
-            <small style="color:green;">Ans: ${q.options[q.correctOptionIndexes[0]]}</small>
-        </div>`;
+        const div = document.createElement('div');
+        div.className = 'quiz-card';
+        div.innerHTML = `
+            <div style="font-weight:bold; margin-bottom:10px;">Q${i + 1}: ${q.question}</div>
+            ${q.options.map(opt => `<div class="option-btn">${opt}</div>`).join('')}
+            <div style="margin-top:10px; font-size:12px; color:#10b981;">Correct: ${q.options[q.correctOptionIndexes[0]]}</div>
+        `;
+        container.appendChild(div);
     });
 }
 
+// Flashcards
 document.getElementById('generate-flashcards-btn').onclick = async () => {
-    const box = document.getElementById('flashcards-container');
-    box.innerHTML = 'Generating...';
+    const container = document.getElementById('flashcards-container');
+    container.innerHTML = '<div style="text-align:center;"><i class="fas fa-spinner fa-spin"></i> Génération...</div>';
     try {
         const text = await getSmartText('cards-scope');
         const res = await callApi('ai/generate-flashcards-text', { text, count: 8 });
         STATE.flashcardsData = res.flashcards || [];
-        renderCards();
-    } catch (e) { box.innerHTML = "Error"; }
+        if (STATE.flashcardsData.length) {
+            STATE.sessionData.flashcards = STATE.flashcardsData;
+            renderFlashcardsList(container);
+        }
+    } catch (e) { container.innerHTML = "Erreur."; }
 };
 
-function renderCards() {
-    const box = document.getElementById('flashcards-container');
-    box.innerHTML = '';
+function renderFlashcardsList(container) {
+    container.innerHTML = '';
     STATE.flashcardsData.forEach(c => {
-        box.innerHTML += `<div style="border:1px solid #ddd; margin:5px; padding:5px;">
-            <b>Q:</b> ${c.front}<br><b>A:</b> ${c.back}
-        </div>`;
+        const div = document.createElement('div');
+        div.className = 'flashcard';
+        div.innerHTML = `
+            <div class="flashcard-inner">
+                <div class="flashcard-face flashcard-front">${c.front}</div>
+                <div class="flashcard-face flashcard-back">${c.back}</div>
+            </div>
+        `;
+        div.onclick = () => div.classList.toggle('flipped');
+        container.appendChild(div);
     });
 }
 
+// Mind Map
 document.getElementById('generate-mindmap-btn').onclick = async () => {
-    const svg = document.getElementById('mindmap-svg');
-    svg.innerHTML = 'Generating...';
+    const svgEl = document.getElementById('mindmap-svg');
+    svgEl.innerHTML = '';
     try {
         const text = await getSmartText('quiz-scope');
         const res = await callApi('ai/generate-mindmap-text', { text });
+        const markdown = res.markdown || res.data;
+        STATE.sessionData.mindMapData = markdown;
+
         const { Transformer, Markmap } = window.markmap;
-        const { root } = new Transformer().transform(res.markdown || "# Error");
-        svg.innerHTML = '';
-        Markmap.create(svg, null, root);
-    } catch (e) { svg.innerHTML = "Error"; }
+        const transformer = new Transformer();
+        const { root } = transformer.transform(markdown);
+        Markmap.create(svgEl, null, root);
+    } catch (e) { alert("Erreur Mind Map"); }
 };
 
 // =============================================================================
-//  7. SAVE & LOAD 💾
+//  6. الحفظ والاسترجاع 💾
 // =============================================================================
+
 document.getElementById('save-progress-btn').onclick = async () => {
-    if (!STATE.fileHash) return alert("No file");
-    await callApi('progress/save', {
-        lessonId: STATE.fileHash,
-        progressData: {
+    if (!STATE.fileHash) return alert("Aucun fichier !");
+    try {
+        const payload = {
             drawings: STATE.drawings,
             pins: STATE.pins,
-            quizzes: STATE.quizData,
-            flashcards: STATE.flashcardsData,
+            quizzes: STATE.sessionData.quizzes,
+            flashcards: STATE.sessionData.flashcards,
             mindMapData: STATE.sessionData.mindMapData
-        }
-    });
-    alert("Saved!");
+        };
+        const res = await callApi('progress/save', { lessonId: STATE.fileHash, progressData: payload });
+        if (res.success) alert("Sauvegardé !");
+    } catch (e) { alert("Erreur sauvegarde"); }
 };
 
 async function loadSavedProgress() {
     if (!STATE.fileHash) return;
     try {
+        const token = localStorage.getItem('userToken');
+        if (!token) return;
         const res = await fetch(`${API_BASE_URL}/api/progress?lessonId=${STATE.fileHash}`, {
-            headers: { 'Authorization': `Bearer ${localStorage.getItem('userToken')}` }
+            headers: { 'Authorization': `Bearer ${token}` }
         });
-        const d = await res.json();
-        if (d.success && d.data) {
-            const data = d.data.progressData || d.data;
+        const json = await res.json();
+        if (json.success && json.data) {
+            const data = json.data.progressData || json.data;
             STATE.drawings = data.drawings || [];
-            redrawAll();
+            redrawAllDrawings();
+
             STATE.pins = data.pins || [];
             STATE.pins.forEach(renderPin);
 
-            if (data.quizzes) {
-                STATE.quizData = data.quizzes;
-                document.getElementById('restore-quiz-btn').style.display = 'block';
+            if (data.quizzes?.length) {
+                STATE.sessionData.quizzes = data.quizzes;
+                document.getElementById('restore-quiz-btn').style.display = 'flex';
             }
-            // ... load others
+            if (data.flashcards?.length) {
+                STATE.sessionData.flashcards = data.flashcards;
+                document.getElementById('restore-cards-btn').style.display = 'flex';
+            }
+            if (data.mindMapData) {
+                STATE.sessionData.mindMapData = data.mindMapData;
+                document.getElementById('restore-map-btn').style.display = 'flex';
+            }
         }
-    } catch (e) { console.log("New session"); }
+    } catch (e) { console.log("New Session"); }
 }
 
-// Restore Handlers
+// Restore Buttons Logic
 document.getElementById('restore-quiz-btn').onclick = () => {
-    renderQuiz();
+    STATE.quizData = STATE.sessionData.quizzes;
+    renderQuizList(document.getElementById('quiz-container'));
     document.getElementById('restore-quiz-btn').style.display = 'none';
+};
+document.getElementById('restore-cards-btn').onclick = () => {
+    STATE.flashcardsData = STATE.sessionData.flashcards;
+    renderFlashcardsList(document.getElementById('flashcards-container'));
+    document.getElementById('restore-cards-btn').style.display = 'none';
+};
+document.getElementById('restore-map-btn').onclick = () => {
+    const { Transformer, Markmap } = window.markmap;
+    const { root } = new Transformer().transform(STATE.sessionData.mindMapData);
+    Markmap.create(document.getElementById('mindmap-svg'), null, root);
+    document.getElementById('restore-map-btn').style.display = 'none';
 };

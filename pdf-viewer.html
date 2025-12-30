@@ -4,28 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Dental Viewer | Ultimate Fixed</title>
+    <title>Smart Dental Viewer | Ultimate</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <style>
         :root {
             --primary: #2563eb;
             --accent: #10b981;
-            --danger: #ef4444;
             --bg-viewer: #525659;
             --bg-sidebar: #ffffff;
-            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            outline: none;
         }
 
         body {
@@ -36,43 +39,44 @@
             overflow: hidden;
         }
 
-        /* --- Sidebar --- */
+        /* الشريط الجانبي */
         #sidebar {
-            width: 420px;
+            width: 400px;
             background: var(--bg-sidebar);
-            border-right: 1px solid var(--border);
+            border-right: 1px solid #ddd;
             display: flex;
             flex-direction: column;
             z-index: 20;
-            transition: transform 0.3s ease;
         }
 
-        body.focus-mode #sidebar {
-            transform: translateX(-100%);
-            width: 0;
-            opacity: 0;
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            background: #f8fafc;
         }
 
         .tabs-nav {
             display: flex;
             padding: 5px;
+            gap: 5px;
             background: #fff;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #ddd;
         }
 
         .tab-btn {
             flex: 1;
-            padding: 12px;
+            padding: 10px;
             border: none;
             background: transparent;
             cursor: pointer;
             font-weight: 600;
             color: #64748b;
+            border-radius: 5px;
         }
 
         .tab-btn.active {
+            background: #eff6ff;
             color: var(--primary);
-            border-bottom: 2px solid var(--primary);
         }
 
         .tab-content {
@@ -84,156 +88,6 @@
 
         .tab-content.active {
             display: block;
-        }
-
-        /* --- Viewer Area (FIXED) --- */
-        #viewer-container {
-            flex: 1;
-            background: var(--bg-viewer);
-            overflow-y: auto;
-            position: relative;
-            display: block;
-            /* تسمح بالتمرير الطبيعي */
-        }
-
-        #pdf-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 0;
-            gap: 20px;
-        }
-
-        /* --- Layers (FIXED SELECTION) --- */
-        .page-container {
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            background: white;
-        }
-
-        .textLayer {
-            position: absolute;
-            inset: 0;
-            opacity: 0.2;
-            line-height: 1.0;
-            z-index: 2;
-        }
-
-        .drawLayer {
-            position: absolute;
-            inset: 0;
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        .drawLayer.active {
-            pointer-events: auto;
-            cursor: crosshair;
-        }
-
-        .textInputLayer {
-            position: absolute;
-            inset: 0;
-            z-index: 15;
-            pointer-events: none;
-        }
-
-        .textInputLayer.active {
-            pointer-events: auto;
-            cursor: text;
-        }
-
-        /* Floating Toolbar */
-        .floating-toolbar {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 8px 15px;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .tool-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-        }
-
-        .tool-btn.active {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        /* Selection Toolbar */
-        #selection-toolbar {
-            position: fixed;
-            z-index: 1000;
-            background: #1e293b;
-            padding: 8px 12px;
-            border-radius: 8px;
-            display: none;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        #selection-toolbar button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* AI Cards & Quiz */
-        .quiz-card,
-        .flashcard-face {
-            background: white;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            padding: 20px;
-        }
-
-        .option-btn {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 8px;
-            border: 2px solid #e2e8f0;
-            background: white;
-            cursor: pointer;
-            text-align: left;
-            border-radius: 8px;
-        }
-
-        .option-btn.selected {
-            border-color: var(--primary);
-            background: #eff6ff;
-        }
-
-        .option-btn.correct {
-            border-color: var(--accent);
-            background: #d1fae5;
-            color: #065f46;
-        }
-
-        .option-btn.wrong {
-            border-color: var(--danger);
-            background: #fee2e2;
-            color: #991b1b;
         }
 
         .action-btn {
@@ -262,234 +116,336 @@
         .btn-purple {
             background: #8b5cf6;
         }
+
+        /* منطقة العرض */
+        #viewer-container {
+            flex: 1;
+            background: var(--bg-viewer);
+            overflow-y: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        #pdf-wrapper {
+            padding: 40px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* الطبقات (السر لعمل الرسم والتحديد معاً) */
+        .page-container {
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            background: white;
+        }
+
+        .textLayer {
+            position: absolute;
+            inset: 0;
+            opacity: 0.2;
+            line-height: 1.0;
+            z-index: 2;
+        }
+
+        .drawLayer {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            cursor: crosshair;
+            pointer-events: none;
+        }
+
+        /* pointer-events: none تعني أن الماوس سيمر عبر طبقة الرسم ليصل للنص إلا إذا فعلنا القلم */
+
+        /* أدوات الرسم العائمة */
+        .floating-toolbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .tool-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tool-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* القائمة الذكية للتحديد */
+        #selection-toolbar {
+            position: absolute;
+            z-index: 1000;
+            background: #1e293b;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: none;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: popIn 0.2s;
+        }
+
+        #selection-toolbar button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Smart Pin (المصباح) */
+        .smart-pin {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #f59e0b;
+            border: 2px solid white;
+            border-radius: 50% 50% 0 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transform: translate(-50%, -100%);
+            transition: transform 0.2s;
+        }
+
+        .smart-pin:hover {
+            transform: scale(1.1);
+        }
+
+        /* Popover للمصباح */
+        .pin-popover {
+            position: absolute;
+            width: 300px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 200;
+            display: none;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* قوالب الكويز والبطاقات */
+        .quiz-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-top: 10px;
+        }
+
+        .option-btn {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .option-btn.correct {
+            background: #d1fae5;
+            border-color: #10b981;
+        }
+
+        .option-btn.wrong {
+            background: #fee2e2;
+            border-color: #ef4444;
+        }
+
+        .flashcard {
+            perspective: 1000px;
+            height: 200px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .flashcard-back {
+            transform: rotateY(180deg);
+            border-top: 4px solid var(--accent);
+        }
+
+        .flashcard-front {
+            border-top: 4px solid var(--primary);
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div class="floating-toolbar">
-        <button class="tool-btn active" id="btn-cursor" onclick="setTool('cursor')"><i
-                class="fas fa-mouse-pointer"></i></button>
-        <button class="tool-btn" id="btn-text" onclick="setTool('text')"><i class="fas fa-font"></i></button>
         <button class="tool-btn" id="btn-pen" onclick="setTool('pen')"><i class="fas fa-pen"></i></button>
         <button class="tool-btn" id="btn-highlighter" onclick="setTool('highlighter')"><i
                 class="fas fa-highlighter"></i></button>
+        <button class="tool-btn" id="btn-eraser" onclick="setTool('eraser')"><i class="fas fa-eraser"></i></button>
+        <div style="width:1px; background:#ddd; height:20px;"></div>
         <input type="color" id="color-picker" value="#ff0000"
-            style="border:none; width:30px; height:30px; cursor:pointer; background:none;">
+            style="border:none; width:30px; height:30px; cursor:pointer;">
     </div>
 
     <div id="sidebar">
-        <div style="padding:20px; border-bottom:1px solid var(--border);">
-            <h3 style="margin:0; color:var(--primary);"><i class="fas fa-tooth"></i> Dentist AI Pro</h3>
-            <label class="action-btn btn-purple" style="margin-top:15px; cursor:pointer;">
+        <div class="sidebar-header">
+            <h3 style="margin:0; color:var(--primary);"><i class="fas fa-tooth"></i> Dentist AI</h3>
+            <label class="action-btn btn-purple" style="margin-top:10px; cursor: pointer;">
                 <input type="file" id="file-input" hidden accept="application/pdf">
-                <i class="fas fa-cloud-upload-alt"></i> Ouvrir un PDF
+                <i class="fas fa-upload"></i> Ouvrir PDF
             </label>
         </div>
 
         <div class="tabs-nav">
             <button class="tab-btn active" onclick="switchTab('quiz')">Quiz</button>
             <button class="tab-btn" onclick="switchTab('flashcards')">Cartes</button>
-            <button class="tab-btn" onclick="switchTab('mindmap')">Mind Map</button>
+            <button class="tab-btn" onclick="switchTab('mindmap')">Map</button>
         </div>
 
         <div id="tab-quiz" class="tab-content active">
+            <div style="margin-bottom:10px;">
+                <label><input type="radio" name="quiz-scope" value="page" checked> Page Actuelle</label>
+                <label style="margin-left:10px;"><input type="radio" name="quiz-scope" value="full"> Tout (Max
+                    15)</label>
+            </div>
             <button id="generate-quiz-btn" class="action-btn btn-blue"><i class="fas fa-magic"></i> Générer
                 Quiz</button>
+            <button id="restore-quiz-btn" class="action-btn" style="background:#475569; display:none;"><i
+                    class="fas fa-history"></i> Restaurer</button>
             <div id="quiz-container"></div>
         </div>
 
         <div id="tab-flashcards" class="tab-content">
+            <div style="margin-bottom:10px;">
+                <label><input type="radio" name="cards-scope" value="page" checked> Page Actuelle</label>
+                <label style="margin-left:10px;"><input type="radio" name="cards-scope" value="full"> Tout</label>
+            </div>
             <button id="generate-flashcards-btn" class="action-btn btn-green"><i class="fas fa-layer-group"></i> Générer
                 Cartes</button>
+            <button id="restore-cards-btn" class="action-btn" style="background:#475569; display:none;"><i
+                    class="fas fa-history"></i> Restaurer</button>
             <div id="flashcards-container"></div>
         </div>
 
         <div id="tab-mindmap" class="tab-content">
             <button id="generate-mindmap-btn" class="action-btn btn-purple"><i class="fas fa-project-diagram"></i> Créer
-                Mind Map</button>
-            <div id="mindmap-box"
-                style="height:300px; border:1px solid #ddd; margin-top:10px; border-radius:8px; overflow:hidden;">
+                Map</button>
+            <button id="restore-map-btn" class="action-btn" style="background:#475569; display:none;"><i
+                    class="fas fa-history"></i> Restaurer</button>
+            <div style="height:350px; border:1px solid #ddd; margin-top:10px; border-radius:8px;">
                 <svg id="mindmap-svg" style="width:100%; height:100%;"></svg>
             </div>
+        </div>
+
+        <div style="margin-top:auto; padding:20px; background:#f8fafc; border-top:1px solid #eee;">
+            <button id="save-progress-btn" class="action-btn" style="background:#334155; margin:0;"><i
+                    class="fas fa-save"></i> Sauvegarder Session</button>
         </div>
     </div>
 
     <div id="viewer-container">
         <div id="pdf-wrapper">
-            <div style="margin-top:200px; color:white; text-align:center;">
-                <i class="fas fa-file-pdf fa-4x" style="opacity:0.5;"></i>
-                <h2>Dentist AI Reader</h2>
-                <p>Ouvrez un fichier pour commencer</p>
+            <div style="margin-top:150px; color:white; text-align:center;">
+                <i class="fas fa-file-pdf" style="font-size:50px; opacity:0.5;"></i>
+                <p>Veuillez ouvrir un fichier PDF</p>
             </div>
         </div>
+
         <div id="selection-toolbar">
             <button onclick="askAiAboutSelection()"><i class="fas fa-robot"></i> Ask AI</button>
         </div>
     </div>
 
+    <div id="ai-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center;">
+        <div style="background:white; padding:20px; border-radius:10px; width:500px; max-width:90%;">
+            <div style="display:flex; justify-content:space-between;">
+                <h3 style="margin:0; color:var(--primary);">Dentist AI</h3>
+                <button onclick="document.getElementById('ai-modal').style.display='none'"
+                    style="border:none; background:none; cursor:pointer; font-size:20px;">&times;</button>
+            </div>
+            <div id="ai-answer-text" style="margin-top:15px; max-height:300px; overflow-y:auto; line-height:1.6;"></div>
+        </div>
+    </div>
+
+    <div id="pin-details" class="pin-popover">
+        <div
+            style="display:flex; justify-content:space-between; border-bottom:1px solid #eee; padding-bottom:5px; margin-bottom:10px;">
+            <strong style="color:var(--primary);">Note IA</strong>
+            <button onclick="deleteActivePin()" style="color:red; background:none; border:none; cursor:pointer;"><i
+                    class="fas fa-trash"></i></button>
+        </div>
+        <div id="pin-content" style="font-size:14px; line-height:1.5;"></div>
+    </div>
+
+    <script src="pdf-viewer.js"></script>
     <script>
-        // --- GLOBAL STATE ---
-        const API_BASE_URL = "https://dental-app-he1p.onrender.com";
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
-
-        const STATE = {
-            pdfDoc: null, fileHash: null, scale: 1.2, currentPage: 1, tool: 'cursor',
-            isDrawing: false, drawings: [], textAnnotations: [], quizData: [], flashcardsData: []
-        };
-
-        // --- API CALLER ---
-        async function callApi(endpoint, body = {}) {
-            const token = localStorage.getItem('userToken');
-            const res = await fetch(`${API_BASE_URL}/api/${endpoint}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
-                body: JSON.stringify(body)
-            });
-            return await res.json();
-        }
-
-        // --- PDF LOADING (FIXED SCROLLING) ---
-        document.getElementById('file-input').addEventListener('change', async (e) => {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            const arrayBuffer = await file.arrayBuffer();
-            const spark = new SparkMD5.ArrayBuffer();
-            spark.append(arrayBuffer);
-            STATE.fileHash = spark.end();
-
-            STATE.pdfDoc = await pdfjsLib.getDocument(arrayBuffer).promise;
-            const container = document.getElementById('pdf-wrapper');
-            container.innerHTML = '';
-
-            for (let i = 1; i <= STATE.pdfDoc.numPages; i++) {
-                await renderPage(i, container);
-            }
-        });
-
-        async function renderPage(num, container) {
-            const page = await STATE.pdfDoc.getPage(num);
-            const viewport = page.getViewport({ scale: STATE.scale });
-
-            const wrapper = document.createElement('div');
-            wrapper.className = 'page-container';
-            wrapper.id = `page-${num}`;
-            wrapper.style.width = `${viewport.width}px`;
-            wrapper.style.height = `${viewport.height}px`;
-
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            canvas.width = viewport.width; canvas.height = viewport.height;
-
-            const textLayer = document.createElement('div');
-            textLayer.className = 'textLayer';
-            textLayer.style.width = `${viewport.width}px`; textLayer.style.height = `${viewport.height}px`;
-
-            const drawCanvas = document.createElement('canvas');
-            drawCanvas.className = 'drawLayer';
-            drawCanvas.id = `draw-${num}`;
-            drawCanvas.width = viewport.width; drawCanvas.height = viewport.height;
-
-            const textInputLayer = document.createElement('div');
-            textInputLayer.className = 'textInputLayer';
-            textInputLayer.style.width = `${viewport.width}px`; textInputLayer.style.height = `${viewport.height}px`;
-
-            wrapper.append(canvas, textLayer, drawCanvas, textInputLayer);
-            container.appendChild(wrapper);
-
-            await page.render({ canvasContext: ctx, viewport }).promise;
-            const textContent = await page.getTextContent();
-            pdfjsLib.renderTextLayer({ textContentSource: textContent, container: textLayer, viewport: viewport, textDivs: [] });
-
-            setupDrawingLogic(drawCanvas, num);
-        }
-
-        // --- TOOLS LOGIC (FIXED SELECTION) ---
-        function setTool(t) {
-            STATE.tool = t;
-            document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(`btn-${t}`).classList.add('active');
-
-            // السر في التحديد: تعطيل الـ pointer-events لطبقة الرسم عند استخدام السهم
-            document.querySelectorAll('.drawLayer').forEach(el => {
-                el.classList.toggle('active', ['pen', 'highlighter'].includes(t));
-            });
-            document.querySelectorAll('.textInputLayer').forEach(el => {
-                el.classList.toggle('active', t === 'text');
-            });
-        }
-
-        function setupDrawingLogic(canvas, pageNum) {
-            const ctx = canvas.getContext('2d');
-            let lastX, lastY;
-            canvas.addEventListener('mousedown', e => {
-                if (!['pen', 'highlighter'].includes(STATE.tool)) return;
-                STATE.isDrawing = true;
-                [lastX, lastY] = [e.offsetX, e.offsetY];
-            });
-            canvas.addEventListener('mousemove', e => {
-                if (!STATE.isDrawing) return;
-                ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(e.offsetX, e.offsetY);
-                ctx.strokeStyle = STATE.tool === 'highlighter' ? 'rgba(255, 255, 0, 0.4)' : document.getElementById('color-picker').value;
-                ctx.lineWidth = STATE.tool === 'highlighter' ? 15 : 2;
-                ctx.stroke();
-                [lastX, lastY] = [e.offsetX, e.offsetY];
-            });
-            canvas.addEventListener('mouseup', () => STATE.isDrawing = false);
-        }
-
-        // --- AI TOOLS ---
-        document.getElementById('generate-quiz-btn').onclick = async () => {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = 'Génération...';
-            try {
-                const page = await STATE.pdfDoc.getPage(1); // عينة من الصفحة الأولى
-                const content = await page.getTextContent();
-                const text = content.items.map(i => i.str).join(' ');
-                const res = await callApi('ai/generate-quiz-text', { text, count: 5 });
-                STATE.quizData = res.questions || [];
-                renderQuiz();
-            } catch (e) { container.innerHTML = "Erreur AI"; }
-        };
-
-        function renderQuiz() {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = STATE.quizData.map((q, i) => `
-                <div class="quiz-card" style="margin-top:10px;">
-                    <p><b>Q${i + 1}:</b> ${q.question}</p>
-                    ${q.options.map((opt, idx) => `<button class="option-btn" onclick="checkQuiz(this, ${i}, ${idx})">${opt}</button>`).join('')}
-                </div>
-            `).join('');
-        }
-
-        window.checkQuiz = (btn, qIdx, optIdx) => {
-            const q = STATE.quizData[qIdx];
-            if (q.correctOptionIndexes.includes(optIdx)) btn.classList.add('correct');
-            else btn.classList.add('wrong');
-        };
-
-        // --- MIND MAP ---
-        document.getElementById('generate-mindmap-btn').onclick = async () => {
-            const svgEl = document.getElementById('mindmap-svg');
-            const res = await callApi('ai/generate-mindmap-text', { text: "Focus Dentist" });
-            const { Transformer, Markmap } = window.markmap;
-            const { root } = new Transformer().transform(res.markdown || "# Dentist Mind Map");
-            Markmap.create(svgEl, null, root);
-        };
-
-        // --- SELECTION AI ---
-        document.addEventListener('selectionchange', () => {
-            const sel = window.getSelection();
-            const toolbar = document.getElementById('selection-toolbar');
-            if (!sel.isCollapsed && STATE.tool === 'cursor') {
-                const rect = sel.getRangeAt(0).getBoundingClientRect();
-                toolbar.style.display = 'flex';
-                toolbar.style.top = `${rect.top - 45}px`;
-                toolbar.style.left = `${rect.left}px`;
-            } else { toolbar.style.display = 'none'; }
-        });
-
         function switchTab(id) {
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
