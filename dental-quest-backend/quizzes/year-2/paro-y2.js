@@ -4,7 +4,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "La Gencive marginale :",
+        "questionText": "N°3 (2021 1°EMD - Q1598\nLa gencive marginale est:",
         "options": [
           "A. C'est la partie la plus coronaire de la gencive située entre deux dents adjacentes.",
           "B. S'étend du sillon marginal jusqu'à la gencive attachée.",
@@ -14,10 +14,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La gencive marginale est séparée de la dent par le sulcus gingival (sillon gingivo-dentaire). L'option A décrit la papille interdentaire. L'option B est fausse car elle s'étend du bord marginal. Sa hauteur normale (C) est d'environ 1 à 2 mm."
+        "explanation": "3. La gencive marginale est :A.Vrai: la genciveentoure le collet de la dentcomme un petit commeun petit collier.B.Faux:La gencive marginales'étend du rebord marginal (le bord libre) et la gencive attachéedont elle estséparée par un sillon gingival libretandis quela gencive attachéeelle estséparée de la muqueuse alvéolaire par une ligne mucco-gingival.C.Faux: Dansl’espace interdentaireon retrouvela gencive interdentaire (papillaire)pas la gencive marginale.D.Faux:la gencive attachéequi est généralementpiqueté en peau d'orangemaisla gencive marginaleest généralementlisse."
       },
       {
-        "questionText": "La gencive attachée :",
+        "questionText": "N°59 (2020 Résidanat - Q1961\nLe sillon gingival libre est : 1- Situé au-dessous du rebord marginal. 2- Un sillon qui délimite la gencive attachée. 3- Plus marqué sur la surface linguale que sur la surface vestibulaire. 4- Un sillon perpendiculaire à la jonction muco-gingivale. 5- Situé entre la dent et la gencive.",
         "options": [
           "A. Est située apicalement à la gencive marginale.",
           "B. Est située coronairement à la gencive marginale.",
@@ -28,10 +28,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "La gencive attachée est située apicalement (en dessous) de la gencive marginale et sa hauteur est plus importante au maxillaire qu'à la mandibule. L'option C (embrasure) est occupée par la gencive interdentaire."
+        "explanation": "A. Faux : ceci décrit la gencive marginale pas la gencive attachée.B. Vrai : elle se situe bien apicalement à la gencive marginale jusqu’à la ligne muco-gingivale qui la sépare de la muqueuse alvéolaire.C. Faux : sa hauteur est généralement plus grande au maxillaire qu’à la mandibule.D. Vrai : du côté lingual, elle se termine à sa jonction avec la muqueuse du plancher buccale ; donc il n'y a pas de caractéristiques anatomiques la démarquant de la muqueuse palatine."
       },
       {
-        "questionText": "La gencive papillaire est :",
+        "questionText": "N°49 (2020 Résidanat - Q1955\nLa gencive papillaire est : 1- La gencive qui entoure le collet des dents. 2- Constituée d'une seule papille qui occupe l'espace interproximal molaire. 3- Située au-dessous de la zone de contact inter dentaire. 4- Arrondie en l'absence de contact inter dentaire. 5- Attachée fermement à l'os alvéolaire.",
         "options": [
           "1- La partie de la gencive libre qui occupe l’espace interdentaire",
           "2- Constituée par deux papilles (vestibulaire et linguale) reliées par le col gingival",
@@ -43,10 +43,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La gencive papillaire (1) occupe l'espace interdentaire. Elle est formée de deux papilles reliées par un col (2). En l'absence de contact, elle devient lisse et arrondie (4). La texture piquetée (5) et la collerette festonnée (3) décrivent respectivement la gencive attachée et la gencive marginale dans son ensemble."
+        "explanation": "La gencive papillaire: C'est la gencive interdentaire, qui occupe l'embrasure gingivale qui se trouve dans l'espace inerproximal situé sous la zone de contact des dents.- Elle forme une collerette festonnée qui sertit le collet des dents s’étend depuis le bord libre jusqu'au sillon marginal correspondant à la jonction émail-cément.-Elle est constituée par deux papilles, l'une vestibulaire et l'autre linguale reliées par un col gingival interpapillaire. Chaque papille interdentaire a la forme d'une pyramide.-La surface externe s'incline vers la zone de contact interproximale et les faces mésiales et distales sont légèrement concaves.-Lorsque le contact entre deux dents adjacentes est réduit à un point(Cas des incisives et des canines), les deux papilles forment une seule papille et le col sera réduit ou inexistant."
       },
       {
-        "questionText": "Le chorion gingival :",
+        "questionText": "N°50 (2020 Résidanat - Q1956\nLe chorion gingival : 1- Est un tissu riche en vaisseaux et nerfs. 2- Possède en abondance les fibres extrinsèques. 3- Assure l'attachement de la dent. 4- Permet à la gencive d'adhérer à la dent et à l'os alvéolaire. 5- Est un tissu minéralisé.",
         "options": [
           "1- A un rôle de fixation grâce à ses fibres",
           "2- A un rôle de protection grâce à sa kératinisation",
@@ -59,7 +59,7 @@ const paroQuizzes = [
           3,
           4
         ],
-        "explanation": "Le chorion (tissu conjonctif) assure la fixation, la défense, la nutrition et le rôle sensoriel. La protection par kératinisation et le rôle émonctoire (desquamation) sont des fonctions de l'épithélium."
+        "explanation": "Rôles du chorion :Le tissu conjonctif gingival assure plusieurs rôles :- Fixation: assurée est les différents groupes de fibres,- Défense: par les macrophages, les leucocytes et les lymphocytes.- Nutrition: les vaisseaux sanguins assurent la nutrition de la gencive et  sa vascularisation terminale lui confère son rôle émonctoire.- Sensoriel: les fibres nerveuses gingivales et les cellules de Merkel  assurent le rôle sensoriel de la genciv"
       },
       {
         "questionText": "Le sillon gingival libre est :",
@@ -78,7 +78,7 @@ const paroQuizzes = [
         "explanation": "C'est une invagination (1) qui sépare la gencive marginale de la gencive attachée (2), située à 0,5-2mm du bord libre (4). Il est plus prononcé du côté vestibulaire et peut être absent."
       },
       {
-        "questionText": "Le parodonte superficiel est un tissu :",
+        "questionText": "N°36 (2019 Résidanat - Q2026\nLe parodonte superficiel est un tissu : 1- Gingival kératinisé. 2- Visible à l'examen clinique et radiologique. 3- Gingival qui entoure les collets des dents. 4- Stable 5- Epithélio-conjonctif.",
         "options": [
           "1- Epithélial",
           "2- Conjonctif",
@@ -89,10 +89,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Le parodonte superficiel, qui correspond à la gencive, est un tissu composite formé d'un épithélium et d'un tissu conjonctif (chorion)."
+        "explanation": "Le parodonte superficiel qui correspond à : la genciveLa gencive est un tissu épithélio-conjonctif.La gencive est un tissu épithélio-conjonctif. On peut la définir comme la partie de la muqueuse masticatoire qui recouvre les procès alvéolaires et entoure les dents dans leur partie cervicale."
       },
       {
-        "questionText": "Le rebord marginal est :",
+        "questionText": "N°40 (2019 Résidanat - Q2029\nLe rebord marginal est : 1- Un rebord mince arrondi incliné vers la surface dentaire. 2- Un bourrelet gingival en direction coronaire. 3- Un sillon gingival qui entoure le rebord cervical. 4- Situé à une distance de 2mm de la jonction émail cément. 5- Situé au niveau de la jonction émail-cément.",
         "options": [
           "1- Mince et effilé",
           "2- Epaissi et arrondi",
@@ -104,10 +104,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Le rebord marginal de la gencive saine est la limite la plus coronaire. Il est mince, effilé et incliné vers la couronne de la dent."
+        "explanation": "Rebord marginal de la gencive ou bord libre de la gencive:Il est mince, effilé ou légèrement arrondi; incliné coronairement vers la surface dentaire."
       },
       {
-        "questionText": "Le sulcus gingival :",
+        "questionText": "N°41 (2019 Résidanat - Q2030\nLe sulcus gingival : 1- Est situé entre la paroi interne de la gencive marginale et l'émail. 2- A une profondeur physiologique approximative de deux millimètres. 3- Est situé entre la gencive marginale et la gencive papillaire. 4- Est situé entre la gencive attachée et la muqueuse gingivale. 5- Est un tissu non kératinisé.",
         "options": [
           "1- Est une petite invagination en forme de V",
           "2- Sa profondeur moyenne est de 2mm",
@@ -119,10 +119,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Le sulcus est l'espace en forme de V entre la dent et la gencive libre. Sa profondeur saine est en moyenne de 0.5 à 2mm. Sa paroi molle est l'épithélium sulculaire (interne) et son fond est l'attache épithéliale."
+        "explanation": "C’est une petite invagination en forme de V située autour de la dent de profondeur variable.Elle est en moyenne de 2mm.Il est limité :-\td’une part par la surface dentaire-\td’autre part par le revêtement épithélial interne de la gencive marginale-\tet il est fermé à sa base par l’attache épithéliale."
       },
       {
-        "questionText": "La gencive attachée :",
+        "questionText": "N°44 (2019 Résidanat - Q2032\nLa gencive attachée : 1- Présente une texture granitée. 2- Est la seule gencive qui adhère à l'os alvéolaire. 3- Est en continuité avec la muqueuse alvéolaire sans démarcation du côté vestibulaire. 4- Contourne le collet des dents. 5- Adhère à la dent.",
         "options": [
           "1- Située apicalement à la gencive marginale",
           "2- Fermement attachée à la dent et à l'os alvéolaire sous-jacent",
@@ -134,10 +134,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "La gencive attachée est localisée sous la gencive marginale, à laquelle elle est fermement fixée ainsi qu'à l'os. Elle est séparée de la gencive marginale par le sillon gingival libre. Sa consistance est ferme et sa texture piquetée."
+        "explanation": "La gencive attachée :Elle est située apicalement à la gencive marginale jusqu’à la ligne mucco-gingivale qui la sépare de la muqueuse alvéolaire.Elle est fermement attachée à la dent et à l’os alvéolairesous-jacent.Elle présenteune consistance ferme et une texture piquetée dite en peau d’orange.3: Du côté vestibulaire, la gencive attachée s’étend jusqu'à la muqueuse alvéolaire dont elle estséparée par la ligne mucco-gingivale.4: Gencive marginale"
       },
       {
-        "questionText": "La couleur de la gencive varie selon :",
+        "questionText": "N°50 (2019 Résidanat - Q2036\nLa couleur de la gencive varie selon : 1- La quantité de mélanine dans les tissus parodontaux. 2- La tonicité et la fermeté di tissu gingival. 3- L'épaisseur de l'épithélium. 4- L'innervation du tissu conjonctif. 5- La fermeté et la résistance du tissu gingival.",
         "options": [
           "1- L'épaisseur de l'épithélium",
           "2- Le degré de kératinisation",
@@ -154,7 +154,7 @@ const paroQuizzes = [
         "explanation": "La couleur rosée de la gencive saine dépend de plusieurs facteurs : la vascularisation du chorion, l'épaisseur de l'épithélium qui la recouvre, le degré de kératinisation de surface et la présence de pigments mélaniques."
       },
       {
-        "questionText": "L'épithélium oral gingival :",
+        "questionText": "N°51 (2019 Résidanat - Q2037\nL'épithélium oral gingival : 1- Constitue la surface vestibulaire et linguale des gencives attachée, papillaire et marginale. 2- Est un épithélium pavimenteux stratifié kératinisé. 3- Possède 4 couches cellulaires semblables. 4- S'étend du col de la gencive papillaire jusqu'à la jonction muco-gingivale. 5- Est un épithélium pavimenteux non stratifié.",
         "options": [
           "1- Recouvre les surfaces vestibulaires et linguales/palatines de la gencive",
           "2- Se termine apicalement par la ligne muco-gingivale",
@@ -166,10 +166,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "L'épithélium oral recouvre les faces externes de la gencive. Sa limite apicale est la ligne muco-gingivale. Il est kératinisé et composé de 4 couches. Sa limite coronaire est le bord libre."
+        "explanation": "3:A: Couche germinative : Stratum germinativumB: La couche épineuse ou stratum spinosumC. La couche granuleuse ou Stratum granulosumD. Couche superficielle cornée ou stratum corneum4: En direction coronaire, la gencive se termine par le bord gingival libre (bord marginal : BM) au contour festonné.En direction apicale, elle se continue avec la muqueuse alvéolaire (MA) dont elle séparée par la ligne ou la jonction muco-gingivale (JMG).5 : C’est un épithélium pavimenteux, stratifié, kératinisé."
       },
       {
-        "questionText": "L'épithélium oral sulculaire :",
+        "questionText": "N°52 (2019 Résidanat - Q2038\nL'épithélium oral sulculaire : 1- Représente la portion coronaire de l'épithélium sulculaire. 2- Présente les mêmes caractères structuraux que l'épithélium oral gingival. 3- Constitue la paroi molle du sulcus gingival. 4- Tapisse la cavité buccale. 5- Est un épithélium non kératinisé.",
         "options": [
           "1- S'étend de l'épithélium de jonction au sommet de la gencive marginale",
           "2- Tapisse la face interne de la gencive marginale",
@@ -184,7 +184,7 @@ const paroQuizzes = [
         "explanation": "L'épithélium sulculaire tapisse la face interne de la gencive marginale, formant ainsi la paroi molle du sulcus. Il s'étend de la crête gingivale jusqu'à la partie la plus coronaire de l'attache épithéliale. Il est non kératinisé."
       },
       {
-        "questionText": "L'épithélium sulculaire :",
+        "questionText": "N°53 (2019 Résidanat - Q2039\nL'épithélium sulculaire : 1- Se situe entre la paroi interne de la gencive marginale et l'émail. 2- Se situe entre la gencive marginale et la gencive papillaire. 3- Se situe entre la gencive attachée et la muqueuse gingivale. 4- Est un épithélium non kératinisé. 5- Adhère à la dent.",
         "options": [
           "1- Constitue la paroi du sillon gingival",
           "2- Est continu avec l'épithélium oral gingival sans démarcation",
@@ -197,10 +197,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Il constitue la paroi molle du sulcus, se continue avec l'épithélium oral au niveau de la crête gingivale, et s'étend jusqu'à l'épithélium de jonction. Il est non kératinisé et n'est pas en contact avec la dent (il borde le sulcus)."
+        "explanation": "Il constitue la paroi du sillon gingival, il s'étend du rebord de la gencive marginale où il est continu avec l'épithélium oral gingival sans démarcation, jusqu'à l'épithélium jonctionnel.5: L’épithélium sulculaire, non kératinisé, situé à proximité mais non en contact avec la dent."
       },
       {
-        "questionText": "Le sillon gingivo-dentaire :",
+        "questionText": "N°2 (2025 1°EMD - Q68\nLe sillon gingivo-dentaire :",
         "options": [
           "A. Est également appelé sillon marginal.",
           "B. Est constitué d'une paroi molle représentée par l'attache épithéliale.",
@@ -210,10 +210,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le sillon gingivo-dentaire (sulcus) est rattaché à la dent via l'attache épithéliale. Sa paroi molle est la gencive marginale (B). Sa profondeur normale est de 0.5 à 2 mm (C)."
+        "explanation": "A. Faux : il est aussi appelé le sulcus marginal non le sillon.B. Faux : la paroi molle est bien formée par la gencive marginale.C. Faux : profondeur normale de 0.5 à 2 mm chez un sujet sain pas 3 à 4 mm.D. Vrai : il est rattaché à la dent via l’attache épithéliale."
       },
       {
-        "questionText": "La gencive attachée :",
+        "questionText": "N°51 (2018 Résidanat - Q2108\nLe sulcus gingival : 1- Est situé entre la paroi interne de la gencive marginale et l'émail. 2- A une profondeur physiologique approximative de deux millimètres. 3- Est situé entre la gencive marginale et la gencive papillaire. 4- Est situé entre la gencive attachée et la jonction muco- gingivale. 5- Est un tissu non kératinisé.",
         "options": [
           "A. C'est une fine bande plate et lisse qui entoure les dents à la façon d'un collier.",
           "B. Est située apicalement à la gencive marginale jusqu'à la ligne mucco-gingivale.",
@@ -227,7 +227,7 @@ const paroQuizzes = [
         "explanation": "Elle se situe apicalement à la gencive marginale jusqu'à la ligne muco-gingivale. Du côté palatin, elle se continue avec la muqueuse palatine sans démarcation nette (D). L'option A décrit la gencive marginale. Sa hauteur est plus grande au maxillaire (C)."
       },
       {
-        "questionText": "Le chorion gingival a pour rôle :",
+        "questionText": "N°4 (2025 RATT - Q118\nLe chorion gingival a pour rôle :",
         "options": [
           "A. La fixation, grâce aux différents groupes de fibres et leur orientation.",
           "B. la protection, grâce à la kératinisation de sa couche superficielle.",
@@ -239,10 +239,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le chorion assure la fixation (A), la défense (C) et le turnover (D). La kératinisation (B) concerne l'épithélium, pas le chorion."
+        "explanation": "A. Vrai : la fixation grâce aux fibres gingivales et leur orientation il fixe la gencive.\n B. Faux : la kératinisation concerne l’épithélium pas directement le chorion.\n C. Vrai : la présence de cellules immunitaires dans le chorion.\n D. Vrai : le turnover est assuré par le chorion."
       },
       {
-        "questionText": "La gencive a un rôle de protection qui se fait grâce à :",
+        "questionText": "N°4 (2025 1°EMD - Q108\nLa gencive a un rôle de protection qui se fait grâce à :",
         "options": [
           "A. L'organisation des cellules en strates.",
           "B. La cohésion des cellules entres elles par leurs jonctions inter cellulaires.",
@@ -253,10 +253,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "La protection est assurée par l'organisation en strates et la cohésion des cellules grâce aux jonctions intercellulaires. La kératinisation se fait en surface (pas la couche basale). Les terminaisons nerveuses (D) sont pour le rôle sensoriel."
+        "explanation": "A. Vrai : l’organisation en strates (couche basale, épineuse, granuleuse, cornée) la protège mécaniquement.B. Vrai : les jonctions intercellulaires (desmosomes, jonctions serrées) assurent la cohésion et la barrière.C. Faux : la kératinisation concerne surtout la couche superficielle pas la couche basale.D. Faux : les terminaisons nerveuses (retrouver dans le chorion) assurent un rôle sensoriel et non pas la protection qui est assurer par l'épithélium."
       },
       {
-        "questionText": "La couleur de la gencive est liée à :",
+        "questionText": "N°21 (2025 1°EMD - Q442\nLa couleur de la gencive est liée à :",
         "options": [
           "A. La vascularisation",
           "B. L'épaisseur de l'épithélium gingival",
@@ -266,7 +266,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La vascularisation du chorion est le principal facteur de la couleur rosée. L'épaisseur (B), la kératinisation et la pigmentation (C) peuvent influencer cette teinte mais ne sont pas la cause principale."
+        "explanation": "A. Vrai : la vascularisation de la gencive donne une teinte rougeâtre.B. Faux : l'épaisseur de la gencive influence aussi l’intensité de la couleur (plus épais = plus pâle) mais ce n'est pas la raison de sa couleur dense.C. Faux : la kératinisation et la pigmentation mélanique modifient la teinte mais ce n'est aussi pas la raison principale.D. Faux : la stratification n’influence pas directement la couleur."
       },
       {
         "questionText": "La jonction gingivo dentaire :",
@@ -283,7 +283,7 @@ const paroQuizzes = [
         "explanation": "La jonction gingivo-dentaire correspond à l'attache épithéliale et fait partie de l'espace biologique (qui inclut aussi l'attache conjonctive). Elle n'occupe pas le sillon (A)."
       },
       {
-        "questionText": "La gencive attachée est séparée de la muqueuse alvéolaire par:",
+        "questionText": "N°22 (2025 2°EMD - Q443\nLa gencive attachée est séparée de la muqueuse alvéolaire par:",
         "options": [
           "A. Le sillon gingival libre",
           "B. Le rebord gingival",
@@ -293,7 +293,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La ligne muco-gingivale est la limite anatomique claire entre la gencive attachée (kératinisée et fixe) et la muqueuse alvéolaire (non kératinisée et mobile)."
+        "explanation": "A. Faux : le sillon gingival libre est autour de la dent.B. Faux : le rebord gingival se trouve au niveau de la gencive marginale non la gencive attachée.C. Faux : le sillon marginal est une fine dépression linéaire à la surface gingivale qui sépare la gencive marginale de la gencive attachée.D. Vrai : la ligne muco-gingivale est la limite entre la gencive attachée et la muqueuse alvéolaire."
       },
       {
         "questionText": "Le sulcus gingival :",
@@ -324,7 +324,7 @@ const paroQuizzes = [
         "explanation": "La gencive attachée est située apicalement (en dessous) de la gencive marginale et présente une consistance ferme et une texture piquetée (en peau d'orange). Sa hauteur est plus importante au maxillaire."
       },
       {
-        "questionText": "Une gencive saine se caractérise par :",
+        "questionText": "N°7 (2024 RATT - Q594\nUne gencive saine se caractérise par :",
         "options": [
           "A. Une couleur rouge framboisée",
           "B. Un contour régulier",
@@ -335,10 +335,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Une gencive saine se caractérise par : une couleur rose corail, un contour régulier, une consistance ferme et une texture piquetée en peau d'orange."
+        "explanation": "★ Une gencive saine se caractérise par :\n - Une couleur rose corail\n - Un contour régulier\n - Une consistance ferme\n - Une texture piquetée en peau d'orange"
       },
       {
-        "questionText": "Quels est le rôle de l'épithélium dans la physiologie de la gencive:",
+        "questionText": "N°8 (2024 RATT - Q597\nQuels est le rôle de l'épithélium dans la physiologie de la gencive:",
         "options": [
           "A. Rôle de protection",
           "B. Rôle de fixation",
@@ -349,7 +349,7 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Les rôles de l'épithélium sont la protection, la régénération rapide et l'homéostasie. La fixation et le rôle sensoriel appartiennent au chorion."
+        "explanation": "-Les roles de l’épithélium sont : la protection , régénération rapide et l’homéostasie \n -La sensation et la fixation appartiennent aux roles du chorion"
       },
       {
         "questionText": "La gencive attachée :",
@@ -366,7 +366,7 @@ const paroQuizzes = [
         "explanation": "La gencive attachée est située apicalement à la gencive marginale et est séparée de la muqueuse alvéolaire par la ligne mucco-gingivale. Elle est fermement attachée à l'os. Sa hauteur est plus importante au maxillaire."
       },
       {
-        "questionText": "La gencive inter dentaire :",
+        "questionText": "N°19 (2024 EMD - Q803\nLa gencive inter dentaire :",
         "options": [
           "A. Est appelée aussi papillaire",
           "B. Elle se situe apicalement à la geneive attachée",
@@ -377,10 +377,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "La gencive interdentaire (papillaire) occupe l'embrasure gingivale. Au niveau prémolo-molaire, le col gingival relie les papilles vestibulaire et linguale. Sa forme est pyramidale antérieurement."
+        "explanation": "La gencive inter dentaire ou papillaire: elle occupe l'embrasure gingivale qui se trouve dans l'espace inter proximal situé sous la zone de contact des dents. Sa forme diffère d'une région à une autre : Au niveau antérieur, la papille gingivale a une forme pyramidale; Au niveau prémolo- molaire, la surface de contact est large, la gencive papillaire est formée de deux pics vestibulaire et lingual, elles sont reliées par une structure passant en dessous de la surface de contact appelée >>"
       },
       {
-        "questionText": "La gencive :",
+        "questionText": "N°7 (2021 1°EMD - Q1656\nLe rôle émonctoire de la gencive c'est :",
         "options": [
           "A. C'est la partie de la muqueuse buccale qui entoure les dents dans leur partie apicale",
           "B. Est divisée en gencive libre et gencive attachés",
@@ -390,7 +390,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La gencive est anatomiquement divisée en gencive libre (marginale) et gencive attachée."
+        "explanation": "-Fibres principales : de nature collagénique, elles sont arrangées en bandes, et présentent un aspect ondulaire ; la partie terminale des fibres principales, fixée dans l’os d’un côté et dans le cément de l’autre côté, est appelée : fibre de Sharpey.-Le groupe oblique, de loin le plus important, est tendu du cément jusqu’à l’os alvéolaire en direction coronaire.-Le groupe interradiculaire, observé seulement dans les dents multiradiculaires, est tendu entre"
       },
       {
         "questionText": "La gencive papillaire est:",
@@ -407,7 +407,7 @@ const paroQuizzes = [
         "explanation": "La gencive papillaire est la partie interdentaire de la gencive libre et occupe l'embrasure gingivale. L'aspect piqueté (B) concerne la gencive attachée. L'option D décrit la gencive marginale."
       },
       {
-        "questionText": "La gencive assure les rôles suivants :",
+        "questionText": "N°13 (2023 1°EMD - Q1075\nLa gencive assure les rôles suivants :",
         "options": [
           "A. Absorbe le choc des forces excessives.",
           "B. Assure la protection des structures profondes.",
@@ -418,7 +418,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La gencive assure la protection des structures parodontales profondes et joue un rôle émonctoire (élimination des déchets) par la desquamation de ses cellules."
+        "explanation": "★Rôle de protection du parodonte profond: Ile est assuré par l'abondance et la densité fibrillaire qui permettent: La fixation de la gencive à l'os , Maintiennent les contacts inter-dentaires, Répartissent les stimuli et stress de l'occlusion et la mastication à toute la denture , Revêtement des structutes profondes du parodonte.\n ★Rôle émonctoire: Elimination des déchets par la desquamation et le renouvellement permanent des cellules épithéliales: Turn Over (c'est le temps mis par l'épithélium gingival pour renouveler la totalité de ses cellules par un nombre équivalent de cellules).\n ★Rôle de la kératinisation: Permet l'adaptation fonctionnelle de l'épithélium, lui offrant un maximum de résistance face aux différentes agressions quelle qu'en soit leur nature.\n ★Rôle de défense:Il est assuré par les leucocytes et les lymphocytes existant au sein du conjonctif.\n ★Rôle nutritif: Le tissue conjonctif assure la nutrition de tous les constituants de la gencive grâce à sa vascularisation terminale ."
       },
       {
         "questionText": "La gencive marginale est:",
@@ -447,7 +447,7 @@ const paroQuizzes = [
         "explanation": "Le sillon gingival libre est une légère dépression linéaire sur la surface de la gencive, séparant la gencive marginale (bord libre) de la gencive attachée."
       },
       {
-        "questionText": "La muqueuse masticatrice représente :",
+        "questionText": "N°16 (2022 1°EMD - Q1484\nLa muqueuse masticatrice représente :",
         "options": [
           "A. La face interne des lèvres",
           "B. Le palais mou",
@@ -475,7 +475,7 @@ const paroQuizzes = [
         "explanation": "Le rôle émonctoire (d'élimination) de la gencive est assuré par le renouvellement constant (Turn Over) des cellules épithéliales, qui mène à leur desquamation."
       },
       {
-        "questionText": "La muqueuse masticatoire comprend :",
+        "questionText": "N°15 (2021 1°EMD - Q1802\nLa muqueuse masticatoire comprend :",
         "options": [
           "A. La face interne des lèvres,",
           "B. Le palais mou,",
@@ -485,7 +485,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La muqueuse masticatoire inclut la gencive et la muqueuse du palais dur."
+        "explanation": "-Sillon gingival libre : Sur les surfaces vestibulaires et linguales, la gencive marginale est souvent démarquée par une petite invagination de la surface appelée sillon gingival libre."
       },
       {
         "questionText": "La gencive marginale est:",
@@ -560,7 +560,7 @@ const paroQuizzes = [
         "explanation": "La gencive attachée est située apicalement à la gencive marginale et est fermement attachée à l'os. Elle a une consistance ferme et une texture piquetée."
       },
       {
-        "questionText": "La couleur de la gencive varie selon :",
+        "questionText": "N°44 (2018 Résidanat - Q2106\nLa couleur de la gencive varie selon : 1- La quantité de mélanine dans les tissus parodontaux. 2- La tonicité et la fermeté du tissu gingival. 3- L'épaisseur de l'épithélium. 4- L'innervation du tissu conjonctif. 5- La fermeté et la résistance du tissu gingival.",
         "options": [
           "1- L'épaisseur de l'épithélium",
           "2- Le degré de kératinisation",
@@ -572,7 +572,7 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "La couleur de la gencive est influencée par l'épaisseur de l'épithélium, la pigmentation (mélanine) et la vascularisation."
+        "explanation": "La couleur varie selonla quantité de mélaninedans les tissus l’épaisseur de l’épithélium,le degré de kératinisationet lavascularisation du tissu conjonctif."
       },
       {
         "questionText": "L'épithélium oral gingival :",
@@ -618,6 +618,32 @@ const paroQuizzes = [
           3
         ],
         "explanation": "Il constitue la paroi du sillon gingival, se continue avec l'épithélium oral, et s'étend jusqu'à l'épithélium jonctionnel. Il est non kératinisé."
+      },
+      {
+        "questionText": "N°2 (2026 1°EMD - Q04\nLa gencive:",
+        "options": [
+          "Est un élément du parodonte profond",
+          "Est une partie de la muqueuse buccale",
+          "Par sa tonicité, et sa fermeté résiste aux agressions mécaniques et chimico-bactériennes du milieu buccal",
+          "Entoure les collets des dents."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "2. La gencive :A.Faux: La gencive appartient auparodonte superficiel.Le parodonte profondest formé duligament alvéolo-dentaire, le cément, l'os alvéolaire.B.Vrai: La gencive estune forme spécialisée de la muqueuse orale.C.Vrai: grâceà son épithélium kératiniséetsa densité en fibres conjonctivesla genciveassure une fonction de protection.D.Vrai: La gencive marginalese place autour du colleten formant un collier."
+      },
+      {
+        "questionText": "N°13 (2022 1°EMD - Q1424\nLa gencive est :",
+        "options": [
+          "Un élément du parodonte profond",
+          "Une partie spécialisée de la muqueuse buccale",
+          "Sa tonicité, et sa fermeté lui permettent de résister aux agressions mécaniques et chimico-bactériennes du milieu buccal",
+          "Entoure les collets des dents."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "-La gencive est un élément du parodonte ; ses caractéristiques structurales et histo-physiologiques lui confèrent des propriétés de tonicité ,de fermeté et de résistance aux agressions mécaniques et chimico-bactériennes du milieu buccal .\n -La gencive est la partie de la muqueuse buccale qui recouvre les procès \n alvéolaires des maxillaires et entoure les collets des dents ."
       }
     ]
   },
@@ -626,7 +652,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Quels sont les premiers microorganismes à coloniser la cavité buccale après la naissance ? :",
+        "questionText": "N°1 (2025 2°EMD - Q41\nQuels sont les premiers microorganismes à coloniser la cavité buccale après la naissance ? :",
         "options": [
           "A. Streptococcus salivaires et Actinomyces.",
           "B. Streptococcus salivaires et Spirochètes.",
@@ -636,10 +662,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Streptococcus salivarius et Actinomyces sont parmi les premiers colonisateurs de la bouche après la naissance. Les spirochètes et lactobacilles apparaissent plus tard."
+        "explanation": "A. Vrai : Streptococcus salivarius et Actinomyces sont parmi les premiers colonisateurs de la bouche.B. Faux : les spirochètes apparaissent beaucoup plus tard (conditions anaérobies).C. Faux : les vibrions ne sont pas des colonisateurs précoces de la cavité buccale.D. Faux : les lactobacilles apparaissent plus tard souvent après l’éruption dentaire."
       },
       {
-        "questionText": "Quels types de bactéries augmentent avec l'éruption des dents ?",
+        "questionText": "N°2 (2025 2°EMD - Q63\nQuels types de bactéries augmentent avec l'éruption des dents ?",
         "options": [
           "A. Aérobies.",
           "B. Anaérobies.",
@@ -650,10 +676,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "L'éruption dentaire crée de nouvelles niches anaérobies (comme le sulcus gingival), favorisant l'augmentation des bactéries anaérobies (B). Les spirochètes et fusiformes (D) apparaissent également avec la maturation de la plaque."
+        "explanation": "A. Faux : les aérobies contrairement diminue leurs nombres avec l'éruption dentaire.B. Vrai : les anaérobies augmentent après l'éruption dentaire car les niches anaérobies apparaissent (sulcus gingival).C. Faux : ce ne sont pas uniquement les streptocoques.D. Vrai : les spirochètes et les fusiformes apparaissent davantage avec la maturation de la plaque."
       },
       {
-        "questionText": "Quel impact l'édentation totale a -t- elle sur la flore buccale ?",
+        "questionText": "N°3 (2025 2°EMD - Q92\nQuel impact l'édentation totale a -t- elle sur la flore buccale ?",
         "options": [
           "A. Elle augmente la quantité de pathogènes parodontaux.",
           "B. Elle diminue la quantité de pathogènes parodontaux.",
@@ -663,10 +689,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'édentation totale supprime les niches écologiques (sulcus, surface dentaire) nécessaires aux pathogènes parodontaux, entraînant ainsi leur diminution."
+        "explanation": "A. Faux : l’absence des dents réduit les niches des pathogènes parodontaux.B. Vrai : elle diminue la quantité de pathogènes parodontaux car les sites de colonisation disparaissent.C. Faux : elle a un effet clair sur la flore.D. Faux : ce n’est pas spécifique aux streptocoques."
       },
       {
-        "questionText": "Le synergisme correspond à :",
+        "questionText": "N°4 (2025 2°EMD - Q120\nLe synergisme correspond à :",
         "options": [
           "A. Une relation où deux espèces isolées ne peuvent pas provoquer une pathologie.",
           "B. Une compétition entre espèces.",
@@ -676,7 +702,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le synergisme est une relation où deux espèces, non pathogènes individuellement, le deviennent lorsqu'elles sont associées. L'option C décrit le commensalisme."
+        "explanation": "A. Vrai : deux espèces isolées ne causent pas la pathologie mais ensemble elles le peuvent.B. Faux : ça c’est la compétition.C. Faux : ça c’est le commensalisme.D. Faux : la lutte pour nutriments c'est la compétition."
       },
       {
         "questionText": "Quels sont les premiers microorganismes à coloniser la cavité buccale après la naissance?",
@@ -732,7 +758,7 @@ const paroQuizzes = [
         "explanation": "Le synergisme décrit une situation où deux espèces, non pathogènes seules, peuvent provoquer une pathologie lorsqu'elles sont ensemble. L'option C est le commensalisme."
       },
       {
-        "questionText": "Le milieu buccal occupe et influence la cavité buccale et abrite :",
+        "questionText": "N°9 (2024 EMD - Q623\nLe milieu buccal occupe et influence la cavité buccale et abrite :",
         "options": [
           "A. Des éléments propres mais provisoires (fluide gingival)",
           "B. Des éléments propres mais constants (l'air)",
@@ -742,10 +768,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le milieu buccal abrite des constituants fixes comme les gencives, les muqueuses et les dents. Il contient aussi des éléments de transit (air, aliments) et des éléments propres mais provisoires ou constants (salive, fluide gingival)."
+        "explanation": "Le milieu buccal abrite : \n • des éléments de transit qui sont l'air et les aliments ; \n • des éléments propres mais provisoires\n - soit constant comme la salive,\n - soit inconstant tels que le fluide gingival et une flore buccale plus ou moins spécifique, mobile ou fixée telle que la plaque dentaire.\n •Tous les constituants fixes bordant ce compartiment telles les gencives, les muqueuses, la langue et les dents sont sensibles aux fluctuations du milieu."
       },
       {
-        "questionText": "Par définition, l'écosystème buccal est :",
+        "questionText": "N°10 (2024 EMD - Q644\nPar définition, l'écosystème buccal est :",
         "options": [
           "A. Un complexe bactérien",
           "B. C'est l'interaction entre des bactéries et leur milieu physique",
@@ -755,10 +781,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'écosystème buccal est défini comme l'interaction entre des groupes d'organismes (communauté biotique) et leur milieu physique (milieu abiotique)."
+        "explanation": "-L’écosystème buccal est un environnement complexe dans lequel cohabitent plus de 700 espèces de bactéries différentes-C’est l’interaction entre des groupes d’organismes et leur milieu physique-Il est composé de communauté biotique : les micro-organismes vivants et milieu abiotique qui comprend les éléments physiques et biochimiques de l’écosystème (la salive, le fluide gingival ….)."
       },
       {
-        "questionText": "Les facteurs modifient la flore buccale soul",
+        "questionText": "N°11 (2024 EMD - Q669\nLes facteurs modifient la flore buccale soul",
         "options": [
           "A. L'humidité du milieu",
           "B. Certains facteurs génétiques",
@@ -769,10 +795,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La flore buccale est modifiée par des facteurs liés à l'hôte, y compris les changements hormonaux (comme la ménopause) et des facteurs génétiques."
+        "explanation": "★Les modifiant la flore buccale sont :-Facteurs lié à l'hôte-Changement hormonaux (adolescence , la grossesse , la ménopause)-L’âge-Processus pathologiques-Facteurs physicochimiques-Le PH"
       },
       {
-        "questionText": "Parmi les bactéries du nouveau-né édenté :",
+        "questionText": "N°12 (2024 EMD - Q672\nParmi les bactéries du nouveau-né édenté :",
         "options": [
           "A. Streptocoques sanguins",
           "B. Streptocoques mitis",
@@ -786,7 +812,7 @@ const paroQuizzes = [
         "explanation": "Chez le nouveau-né édenté, la flore est dominée par des espèces ayant une affinité pour les cellules épithéliales, comme Streptococcus mitis et Streptococcus salivarius."
       },
       {
-        "questionText": "Les niches écologiques sont:",
+        "questionText": "N°19 (2024 RATT - Q808\nLes niches écologiques sont:",
         "options": [
           "A. Susceptibles d'abriter des microorganismes :",
           "B. Des zones exposées au bol alimentaire",
@@ -797,10 +823,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Une niche écologique est une zone susceptible d'abriter des micro-organismes, comme le sillon gingival, le dos de la langue, ou les fissures et puits des faces occlusales."
+        "explanation": "★Niche écologique: c’est toutes les zones exposées au bol alimentaire, à l’auto nettoyage où protégée \n de la salive et qui sont susceptibles d’abriter des microorganismes :\n - Capuchon des dernières molaires, caries, dos de la langue\n - Sillon gingivo-dentaire, les malpositions dentaires.\n - Les fissures et puis des faces occlusales, gencive\n - Obturations iatrogènes (amalgames, composite, coiffes)"
       },
       {
-        "questionText": "Les facteurs modifiant la flore buccale sont:",
+        "questionText": "N°20 (2024 RATT - Q823\nLes facteurs modifiant la flore buccale sont:",
         "options": [
           "A. Un processus pathologique tumoral",
           "B. La flore buccale est plus complexe chez l'adulte que chez l'enfant.",
@@ -812,10 +838,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La flore est modifiée par des facteurs pathologiques (A), l'âge (B, plus complexe chez l'adulte) et les changements hormonaux (C)."
+        "explanation": "Les facteurs modifiant la flore buccale\n ★Facteurs liés à l’hôte:\n - L’alimentation\n - Mécanisme de défense de l’hôte\n ★Changement hormonaux : \n -Adolescence - Grossesse -Ménopause\n ★Facteurs génétique : \n Des facteurs génétiques semblent influencer les flores intestinales et buccales (Vieillissement)\n ★L’âge : \n La flore buccale est plus complexe chez l’adulte que chez l’enfant. \n ★Processus pathologiques :\n -Perte des dents\n -Maladies d’ordre général\n ★Facteurs physicochimique\n -Température\n -PH\n -Présence d’oxygène : la grande diversité dans les concentrations en O2 permet la croissance des bactéries aérobies, aéro-anaérobies facultatives, anaérobies strictes."
       },
       {
-        "questionText": "Le microbiote :",
+        "questionText": "N°17 (2023 2°EMD - Q1146\nLe microbiote :",
         "options": [
           "A. Correspond au biotope vivant à l'état normal ou pathologique dans la cavité buccale",
           "B. Eléments physiques et biochimiques de l'écosystème buccal",
@@ -826,10 +852,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le microbiote (l'ensemble des micro-organismes) constitue la biocénose de l'écosystème. Sa composition varie d'un individu à l'autre."
+        "explanation": "- Communauté biotique: la flore buccale :Le microbiote buccal, constituant la communauté biotique de cet écosystème, est composée de plus de 700 espèces de micro-organismes vivants tels que les bactéries, les virus, les levures, et les protozoaires. \n -Cet ensemble de micro-organisme vivant à l'état normal ou pathologique dans la cavité buccale est variable d'un individu à un autre et résulte d'un équilibre entre des espèces bactériennes multiples.\n -Ecosystème buccal : Dans l'écosystème buccal, le biotope est constitué par la cavité buccale qui est qualifiée d'hôte. La biocénose est constituée d'un ensemble de plus de 700 espèces bactériennes."
       },
       {
-        "questionText": "La flore saprophyte :",
+        "questionText": "N°18 (2023 2°EMD - Q1164\nLa flore saprophyte :",
         "options": [
           "A. S'organise au sein de niches écologiques",
           "B. Ensemble de bactéries qui entretiennent des relations instables avec l'hôte",
@@ -840,10 +866,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La flore saprophyte, aussi appelée flore commensale, entretient des relations stables avec l'hôte et est compatible avec un bon état de santé (rôle protecteur)."
+        "explanation": "- Communauté biotique: la flore buccale :Le microbiote buccal, constituant la communauté biotique de cet écosystème, est composée de plus de 700 espèces de micro-organismes vivants tels que les bactéries, les virus, les levures, et les protozoaires.\n -Cet ensemble de micro-organisme vivant à l'état normal ou pathologique dans la cavité buccale est variable d'un individu à un autre et résulte d'un équilibre entre des espèces bactériennes multiples.\n -Ecosystème buccal : Dans l'écosystème buccal, le biotope est constitué par la cavité buccale qui est qualifiée d'hôte. La biocénose est constituée d'un ensemble de plus de 700 espèces bactériennes."
       },
       {
-        "questionText": "La flore pathogène",
+        "questionText": "N°14 (2021 2°EMD - Q1777\nLa flore pathogène :",
         "options": [
           "A. Peut-être causée par un changement brutal des conditions",
           "B. Peut être dû à la disparition de certaines espèces",
@@ -855,10 +881,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Un déséquilibre de la flore (flore pathogène) peut être causé par un changement des conditions, la disparition de certaines espèces, et des facteurs génétiques peuvent y contribuer."
+        "explanation": "- flore pathogène : ensemble de bactéries qui entretiennent des relations instables avec l’hôte en provoquants des états pathologiques.\n -Un changement brutal des conditions spécifiques (modification de la croissance de certaines souches, disparition de certaines espèces et l’apparition de métabolites) va déstabiliser l'équilibre microbien (flore pathogène) et peut conduire à l'apparition d'un phénomène pathologique (formation de caries dentaires et des maladies parodontales) .\n -Les facteurs modifiant la flore buccale :Facteurs liés à l’hôte ,facteurs génétiques , l’âge , processus pathologiques , facteurs physicochimique , , , température ,PH , présence d’oxygène."
       },
       {
-        "questionText": "Le commensalisme :",
+        "questionText": "N°3 (2021 2°EMD - Q1593\nLe commensalisme :",
         "options": [
           "A. Relation non symbiotique",
           "B. Relation dont deux populations tirent profit",
@@ -868,10 +894,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le commensalisme ('partage de la même table') est une relation où une espèce tire profit, tandis que l'hôte n'en tire ni bénéfice ni préjudice."
+        "explanation": "-Le commensalisme : étymologiquement « partage de la même table » décrit une interaction entre deux espèces dans laquelle l’hôte ne tire aucun bénéfice de la présence de l’organisme étranger qu’il héberge. Le commensalisme est une relation dont une population tire profit, alors que l'autre n'en subit aucun préjudice et n'en retire aucun bénéfice."
       },
       {
-        "questionText": "Le mutualisme",
+        "questionText": "N°11 (2022 2°EMD - Q1395\nLe mutualisme",
         "options": [
           "A. Forme de symbiose,",
           "B. Relation dont un organisme tire profit au détriment d'un autre,",
@@ -914,7 +940,7 @@ const paroQuizzes = [
         "explanation": "La flore pathogène résulte d'un déséquilibre (relations instables), pouvant être causé par la disparition d'espèces ou influencé par la génétique, et peut conduire à des maladies parodontales."
       },
       {
-        "questionText": "La biocénose :",
+        "questionText": "N°41 (2022 Résidanat - Q1555\nLa biocénose : 1- correspond au microbiote 2- Est un ensemble de bactéries qui entretiennent des relations instables avec l'hôte 3- Est un élément physique et biochimique de l'écosystème buccal 4- Est variable d'un individu à un autre 5- Est plus complexe chez l'enfant que chez l'adulte",
         "options": [
           "1- correspond au microbiote",
           "2- Est un ensemble de bactéries qui entretiennent des relations instables avec l'hôte",
@@ -926,10 +952,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "La biocénose correspond au microbiote (l'ensemble des organismes vivants). Elle est variable d'un individu à l'autre. Elle entretient des relations stables à l'état sain et est plus complexe chez l'adulte."
+        "explanation": "1- correspond au microbiote : Vrai.Selon le cours de 2022 :Selon le cours de 2024 :Donc, on peut dire que la biocénose correspond au microbiote, qui veut dire \"un ensemble bactérien\".2-Est un ensemble de bactéries qui entretiennent des relations instables avec l'hôte: Faux. Cet ensemble de micro-organismes résulte d’un équilibre entre différentes espèces bactériennes.3-Est un élément physique et biochimique de l’écosystème buccal: Faux. C'est le milieu abiotique qui comprend tous les éléments physiques et biochimiques de l’écosystème.4-Est variable d’un individu à un autre: Vrai.5-Est plus complexe chez l’enfant que chez l’adulte: Faux. Le développement du système buccal s’accompagne d’une multiplication des genres bactériens, rendant ainsi le microbiote de l’adulte plus complexe que celui de l’enfant."
       },
       {
-        "questionText": "La biocénose:",
+        "questionText": "N°12 (2021 2°EMD - Q1748\nLa biocénose:",
         "options": [
           "A. Ensemble de micro-organismes vivant à l'état normal ou pathologique dans la cavité buccale",
           "B. Eléments physiques et biochimiques de l'écosystème buccal",
@@ -941,10 +967,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La biocénose (microbiote) est l'ensemble des micro-organismes vivants. Elle est variable d'un individu à l'autre et est plus complexe chez l'adulte que chez l'enfant."
+        "explanation": "-biocénose = Communauté biotique : la flore buccale Le microbiote buccal, constituant la communauté biotique de cet écosystème, est composée\n de plus de 700 espèces de micro-organismes vivants tels que les bactéries, les virus, les levures, et les protozoaires. \n -Cet ensemble de micro-organisme vivant à l’état normal ou pathologique dans la cavité buccale est variable d’un individu à un autre et résulte d’un équilibre entre des espèces bactériennes multiples.\n -La flore buccale est plus complexe chez l’adulte que chez l’enfant."
       },
       {
-        "questionText": "La flore commensale :",
+        "questionText": "N°13 (2021 2°EMD - Q1758\nLa flore commensale :",
         "options": [
           "A. Ensemble de bactéries qui entretiennent des relations instables avec l'hôte",
           "B. A pour rôle de protéger les dents, les gencives et les muqueuses",
@@ -955,7 +981,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La flore commensale (saprophyte) est compatible avec la santé et a un rôle protecteur. Elle s'organise au sein des différentes niches écologiques de la bouche."
+        "explanation": "- flore commensale : ensemble de bactéries qui entretiennent des relations stables avec l’hôte, sans conséquence pathologique. Flore compatible avec un bon état de santé bucco-dentaire. Encore appelée flore saprophyte, protectrice."
       },
       {
         "questionText": "La flore pathogène :",
@@ -973,7 +999,7 @@ const paroQuizzes = [
         "explanation": "La flore devient pathogène lors d'un déséquilibre, qui peut être dû à une modification de la croissance de certaines souches, à la disparition d'autres espèces, ou influencé par des facteurs génétiques."
       },
       {
-        "questionText": "Le milieu abiotique :",
+        "questionText": "N°4 (2021 2°EMD - Q1614\nLe milieu abiotique :",
         "options": [
           "A. Correspond au microbiote",
           "B. Eléments physiques et biochimiques de l'écosystème buccal",
@@ -985,7 +1011,7 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le milieu abiotique (ou biotope) comprend tous les éléments physiques et biochimiques et fournit les conditions (surfaces, nutriments) nécessaires à la survie de la communauté biotique (microbiote)."
+        "explanation": "-Un écosystème est composé de deux parties principales : La communauté biotique, qui comprend tous les organismes vivants de l'écosystème, et le \n milieu abiotique, qui comprend tous les éléments physiques et biochimiques de l'écosystème."
       },
       {
         "questionText": "Le commensalisme :",
@@ -1007,7 +1033,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "L'attache épithéliale :",
+        "questionText": "N°4 (2021 1°EMD - Q1619\nl'attache épithéliale:",
         "options": [
           "A. Représente l'union entre les cellules conjonctives et la surface dentaire.",
           "B. Se situe à différents niveaux au cours de la vie de la dent.",
@@ -1017,7 +1043,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La position de l'attache épithéliale varie avec l'éruption et l'usure de la dent. Elle unit les cellules épithéliales (pas conjonctives) à la dent. Elle est délimitée coronairement par le fond du sulcus et apicalement par les fibres du desmodonte."
+        "explanation": "Caractéristiques de l’os sain:\n  1- contour: Il suit de façon harmonieuse le collet de la dent avec des saillies correspondantes aux racines et des dépressions inter dentaires\n 2- hauteur: Le sommet de la crête osseuse se situe, chez l’adulte jeune à 1mm en dessous du collet anatomique (donc de l’attache épithéliale).\n  Il est influencé par l’alignement des dents, par l’angle de la racine avec l’os ainsi que les forces occlusales.\n 3- Epaisseur: Antérieurement, les tables osseuses sont généralement minces laissant peu de place à la partie médullaire de l’os (corticale externe et lamina dura étant très proches).Postérieurement son épaisseur augmente considérablement.Lorsque les dents sont en position vestibulaire, le rebord osseux est affuté en lame de couteau mais lorsque les dents occupent une position linguale, la table vestibulaire est plus épaisse et le bord est émoussé et arrondi.\n ★La déhiscence est une anomalie anatomique.\n ★La discontinuité de la lamina dura signifie la présence d’une pathologie"
       },
       {
         "questionText": "Vers 20 ans, l'attache épithéliale se place sur :",
@@ -1034,7 +1060,7 @@ const paroQuizzes = [
         "explanation": "Avec l'éruption passive et l'usure physiologique, l'attache épithéliale migre apicalement. Vers 20 ans, elle se situe typiquement au niveau de la jonction amélo-cémentaire (Stade II de Gottlieb)."
       },
       {
-        "questionText": "L'épithélium oral gingival :",
+        "questionText": "N°60 (2020 Résidanat - Q1962\nL'épithélium oral gingival : 1- Constitue la surface vestibulaire et linguale des gencives attachée, papillaire et marginale. 2- Est un épithélium pavimenteux stratifié kératinisé. 3- Possède 4 couches cellulaires semblables. 4- S'étend du col de la gencive papillaire jusqu'à la jonction muco-gingivale. 5- est un épithélium pavimenteux non stratifié",
         "options": [
           "1- Est kératinisé",
           "2- Recouvre les surfaces externes de la gencive",
@@ -1064,7 +1090,7 @@ const paroQuizzes = [
         "explanation": "L'attache épithéliale est une structure qui unit la gencive à la dent, formant une barrière qui sépare le milieu interne (parodonte) du milieu externe (cavité buccale). Elle est non kératinisée et a un renouvellement très rapide."
       },
       {
-        "questionText": "L'épithélium oral sulculaire :",
+        "questionText": "N°43 (2018 Résidanat - Q2105\nL'épithélium oral sulculaire : 1- Représente la portion coronaire de l'épithélium sulculaire. 2- Les cellules présentent les mêmes caractères structuraux que les cellules de l'épithélium oral gingival. 3- Constitue la paroi molle du sulcus gingival. 4- Tapisse la cavité buccale. 5- Est un épithélium non kératinisé.",
         "options": [
           "1- S'étend de l'épithélium de jonction au sommet de la gencive marginale",
           "2- Tapisse la face interne de la gencive marginale",
@@ -1122,7 +1148,7 @@ const paroQuizzes = [
         "explanation": "C'est l'union des cellules épithéliales à la surface dentaire (A), et elle est située anatomiquement entre la surface dentaire, le fond du sulcus et les fibres coronaires du desmodonte (C). Elle est non kératinisée (B)."
       },
       {
-        "questionText": "L'epithélium jonctionnel est fixé à la dent par :",
+        "questionText": "N°22 (2025 1°EMD - Q444\nL'epithélium jonctionnel est fixé à la dent par :",
         "options": [
           "A. La lame basale",
           "B. Les desmosomes",
@@ -1132,7 +1158,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Il est fixé à la dent via la lame basale interne (et les hémidesmosomes). Les desmosomes (B) relient les cellules entre elles."
+        "explanation": "A. Vrai : via la lame basale interne.B. Faux : les desmosomes relient les cellules entre elles pas à la dent.C. Faux : à l’éruption l'épithélium jonctionnel dérive de l’épithélium adamantin réduit mais il ne fixe pas l'épithélium jonctionnel à la dent.D. Faux : la membrane de Nasmyth signifie le cuticule primaire qui recouvre la dent temporairement."
       },
       {
         "questionText": "L'épithélium jonctionnel :",
@@ -1201,7 +1227,7 @@ const paroQuizzes = [
         "explanation": "L'attache épithéliale unit l'épithélium gingival (au fond du sulcus) à la surface dentaire (émail ou cément)."
       },
       {
-        "questionText": "Le rôle de compensation du cément :",
+        "questionText": "N°23 (2024 EMD - Q836\nLe rôle de compensation du cément :",
         "options": [
           "A. Permet la rhizalyse",
           "B. Compense l'usure dentaire dans le seas vertical",
@@ -1294,7 +1320,7 @@ const paroQuizzes = [
         "explanation": "Avant l'éruption, la couronne est revêtue par l'épithélium adamantin réduit. Au moment de l'éruption, cet épithélium fusionne avec l'épithélium buccal, et les améloblastes se transforment en cellules malpighiennes pour former l'attache épithéliale primaire."
       },
       {
-        "questionText": "L'épithélium de jonction",
+        "questionText": "N°7 (2023 1°EMD - Q974\nL'épithélium de jonction",
         "options": [
           "A. Est kératinisé",
           "B. Est situé sous le fond du SGD",
@@ -1306,10 +1332,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "L'épithélium de jonction est non kératinisé, situé sous le fond du sulcus, et est bordé par une lame basale interne (côté dent) et externe (côté conjonctif)."
+        "explanation": "L’épithélium de jonction :-C’est un épithélium pavimenteux stratifié non kératinisé qui entoure le collet de la dent ; infiltré de monocytes de leucocytes et de polynucléairesIl comporte 3 zones :★La zone basale : face à la lame basale interne★ La zone médiane : constitue presque la totalité de la surfacerenferme de nombreux leucocytes★La zone coronaire : Quelques couches de cellules très aplaties, cescellules prennent progressivement des aspects dégénératifs.-pour la proposition B :"
       },
       {
-        "questionText": "La Cuticule dentaire",
+        "questionText": "N°11 (2022 1°EMD - Q1386\nLa Cuticule dentaire",
         "options": [
           "A. C'est une mince couche électro dense, interposée entre la surface de l'émail et les ameloblastes réduits.",
           "B. Elle est secrétée par les améloblastes au moment de leur transformation en cellules granuleuses.",
@@ -1319,10 +1345,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La cuticule dentaire est une couche électro-dense entre l'émail et l'épithélium adamantin réduit. Elle est sécrétée par les améloblastes lors de leur transformation en cellules squameuses. Son rôle est passif."
+        "explanation": "-Cuticule dentaire✓C'est une mince couche électro dense, interposée entre la surface de l'émail et les améloblastes réduits.✓ Elle est secrétée par les améloblastes au moment de leur transformation en cellules squameuses. Elle s'épaissit et se densifie et devient homogène avec un contour plus ou moins régulier.✓ Épaisseur de 4 - 15 µm; Elle contient des protéines dépourvues de glycoprotéines et de polysaccharides: laminine,fibronectine, ténaxine.✓ Dérivés lipidiques + hydrates de carbone et protéines sanguines résultent de la contamination exogène. Son rôle est essentiellement passif et ne semble pas intervenir dans les phénomènes de perméabilité, de transport et d'adhésion."
       },
       {
-        "questionText": "La lame basale externe",
+        "questionText": "N°12 (2022 1°EMD - Q1409\nLa lame basale externe",
         "options": [
           "A. C'est une structure qui sépare l'épithélium de jonction du tissu conjonctif.",
           "B. C'est une couche de cellules épithéliales",
@@ -1332,7 +1358,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La lame basale externe est la structure acellulaire qui sépare l'épithélium de jonction du tissu conjonctif sous-jacent."
+        "explanation": "-La lame basale externe :C’est une structure qui sépare l’épithélium de jonction du tissu conjonctif. Elle est constituée d’une lamina lucida sur laquelle s’appuient les hémi-qdesmosomes et lamina densa."
       },
       {
         "questionText": "Les hémi-desmosomes qui composent l'attache épithéliale sont:",
@@ -1433,6 +1459,32 @@ const paroQuizzes = [
           3
         ],
         "explanation": "La structure de l'attache épithéliale comprend les cellules épithéliales, une lame basale externe (côté conjonctif), une lame basale interne (côté dent) et des hémidesmosomes pour l'ancrage."
+      },
+      {
+        "questionText": "N°21 (2025 2°EMD - Q441\nLa jonction gingivo dentaire :",
+        "options": [
+          "Occupe le sillon gingivo-dentaire",
+          "Occupe l'espace biologique",
+          "Est composée exclusivement de fibres conjonctives",
+          "Correspond à l'attache épithéliale"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "A. Faux : occupe l’attache épithéliale pas le sillon.B. Vrai : elle fait partie de l’espace biologique (épithélium jonctionnel + attache conjonctive).C. Faux : elle contient aussi de l’épithelium de jonction.D. Vrai : elle correspond à l’attache épithéliale."
+      },
+      {
+        "questionText": "N°10 (2022 1°EMD - Q1384\nLes constituants du sillon gingivo -dentaire (SULCUS) sont:",
+        "options": [
+          "La surface dentaire",
+          "Des cellules",
+          "Un conjonctif sulculaire",
+          "Le fond"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Constituants du sillon gingivo-dentaire (sulcus) :-La surface dentaire à laquelle peuvent adhérer dans la partie inférieure-Des cellules isolées ou en fines couches (une à 03 couches); ce sont les restes de l'épithélium jonctionnel primaire.-Un épithélium sulculaire pluristratifié non kératinisé fait suite à l'épithélium gingival se prolonge le long de la surface dentaire par l'épithélium jonctionnel.-Le fond est la portion coronaire de l'attache épithéliale.-L'espace biologique dentaire est l'espace compris entre le fond du sulcus dentaire et le sommet de la crête osseuse cercle tout le tour de la dent sur une hauteur d'environ 2mm.-Cet espace est composé par deux structures distinctes qui se font suite et qui sont :l'attache épithéliale et l'attache conjonctive."
       }
     ]
   },
@@ -1441,7 +1493,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "La parotide :",
+        "questionText": "N°5 (2025 2°EMD - Q136\nLa parotide :",
         "options": [
           "A. Sécrète une salive riche en enzyme via son canal excréteur de Whatton Stenon",
           "B. Est la deuxième plus grande glande salivaire après la sublinguale",
@@ -1451,10 +1503,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La parotide est la plus grande glande salivaire (B est faux). Elle est presque exclusivement séreuse (C), produisant une salive fluide (D est faux). Son canal est celui de Sténon, pas Wharton (A)."
+        "explanation": "A. Faux : le canal de la parotide est Sténon non pas de Wharton (Wharton = submandibulaire).B. Faux : c’est la plus grande glande salivaire pas la deuxième.C. Vrai : elle est presque exclusivement séreuse.D. Faux : sa salive est fluide donc de faible viscosité pas élevée."
       },
       {
-        "questionText": "Le pouvoir tampon de la salive est dû :",
+        "questionText": "N°56 (2020 Résidanat - Q1959\nLe pouvoir tampon de la salive est dû :",
         "options": [
           "A. Aux carbonates.",
           "B. Aux mucines.",
@@ -1465,10 +1517,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La capacité tampon de la salive, qui lui permet de neutraliser les acides, est principalement assurée par le système bicarbonate/acide carbonique. Le système phosphate joue un rôle secondaire."
+        "explanation": "Le pouvoir tampon de la saliveLa relative stabilité du pH est le fait du pouvoir tampon qu'exerce la salive qui est dû à plusieurs systèmes :Le système acide carbonique / bicarbonate;Le système phosphate (25% d'effet);Le système protéinate.Le plus significatif est représenté par le système carbonates/bicarbonates (70 à 90 % de l'effet tampon des salives stimulées et 25 % à 60 % des salives au repos), sécrétés à partir du plasma dans les canaux striés des glandes salivaires,"
       },
       {
-        "questionText": "Parmi les éléments organiques de la salive, on trouve",
+        "questionText": "N°42 (2019 Résidanat - Q2031\nParmi les éléments organiques de la salive, on trouve 1- Le lysozyme. 2- Les enzymes. 3- Le maltose. 4- Le fructose. 5- Le saccharose.",
         "options": [
           "1- Albumines",
           "2- Amylase",
@@ -1480,10 +1532,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Les composés organiques de la salive incluent des protéines comme l'albumine (d'origine sérique) et des enzymes comme l'amylase (d'origine glandulaire). Les bicarbonates, calcium et chlorures sont des composants inorganiques."
+        "explanation": "Composés organiques :•\t les protéines extrinsèques (sérum)-Albumines (5% des protéines totales)-Immunoglobulines type (Ig) de type IgA ,IgG,IgM .....•\t les protéines intrinsèques (glandes salivaires)*Enzymes salivaires-l’amylase salivaire-le lysosome-D’autres enzymes sont également présent dans la salive :Kallicréines, collagènases d’origine tissulaire, gélatinases, peroxydases, élastases, protéases,lipase , cholinéstirases et ribonucléase .-La mucine-Immunoglobulines sécrétoires•\t Autres-Facteurs de croissance-L’urée, l’acide urique-Le cholestérol-Cellules épithéliales  desquamées-Leucocytes"
       },
       {
-        "questionText": "Les différentes propriétés physiques de la salive sont :",
+        "questionText": "N°6 (2025 2°EMD - Q159\nLes différentes propriétés physiques de la salive sont :",
         "options": [
           "A. Viscosité plus importante pour la glande sublinguale",
           "B. Un PH salivaire variant entre 8.5 1.10 6,5a7.2",
@@ -1495,10 +1547,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La glande sublinguale (muqueuse) produit une salive plus visqueuse (A). Le volume journalier est de 0,5 à 1,5L (C). Le pouvoir tampon maintient le pH stable (D). Le pH normal (B) est de 6,8 à 7,2."
+        "explanation": "A. Vrai : la glande sublinguale produit une salive plus visqueuse (13.4 centipoises) car c'est une glande muqueuse.B. Faux : le pH salivaire est autour de 6,8 à 7,2 pas 8,5-10.C. Vrai : la production journalière 0,5 à 1,5 L.D. Vrai : le pouvoir tampon maintient le pH buccal stable."
       },
       {
-        "questionText": "Parmi les fonctions principales de la salive on retrouve :",
+        "questionText": "N°7 (2025 2°EMD - Q161\nParmi les fonctions principales de la salive on retrouve :",
         "options": [
           "A. Lubrification buccale",
           "B. Initiation de la dégradation des glucides grâce aux lipases a",
@@ -1509,10 +1561,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "La salive assure la lubrification et la reminéralisation (grâce au Ca2+ et PO4-). La digestion des glucides (B) se fait par l'amylase. Le pH (C) est autour de 6,8-7,2."
+        "explanation": "A. Vrai : elle lubrifie les muqueuses afin de faciliter la parole et la mastication.B. Faux : l’initiation de la digestion des glucides se fait grâce à l’amylase pas à la lipase (lipase = graisses).C. Faux : le pH buccal normal est autour de 6,8 à 7,2.D. Vrai : les ions calcium et phosphate participent à la reminéralisation de l’émail."
       },
       {
-        "questionText": "Parmi les facteurs influençant la sécrétion salivaire :",
+        "questionText": "N°8 (2025 2°EMD - Q190\nParmi les facteurs influençant la sécrétion salivaire :",
         "options": [
           "A. L'âge, avec réduction de la sécrétion chez les personnes âgées",
           "B. Sexe : augmentée chez les femmes",
@@ -1523,10 +1575,10 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "La sécrétion diminue avec l'âge (A) et augmente avec une bonne hydratation (C). Elle est souvent plus élevée chez les hommes (B). L'alcool diminue le flux (D)."
+        "explanation": "A. Vrai : la sécrétion diminue généralement avec l’âge.B. Faux : elle est souvent plus élevée chez les hommes que chez les femmes.C. Vrai : une bonne hydratation favorise la sécrétion salivaire.D. Faux : l’alcool a un effet déshydratant et diminue le flux salivaire."
       },
       {
-        "questionText": "La salive:",
+        "questionText": "N°1 (2021 2°EMD - Q1569\nLa salive est une sécrétion aqueuse claire sécrétée :",
         "options": [
           "A. Peut exercer une influence directe sur la santé parodontale",
           "B. La fonction salivaire peut être perturbée par certaines maladies systémiques et prise de médicaments",
@@ -1537,7 +1589,7 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "La salive influence la santé parodontale (A) et sa fonction peut être perturbée par des maladies ou médicaments (B). La viscosité (C) vient des mucines. Les glandes accessoires (D) produisent 5-8%."
+        "explanation": "Définition :La salive est une sécrétion aqueuse claire sécrétée par les glandes salivaires située dans la cavité buccale, destinée à humidifier les muqueuses de la bouche et à commencer la digestion des aliments."
       },
       {
         "questionText": "Le pouvoir tampon de la salive:",
@@ -1555,7 +1607,7 @@ const paroQuizzes = [
         "explanation": "Le pouvoir tampon est la capacité à résister aux variations de pH, maintenant ainsi un pH stable. Une solution tampon est un mélange d'un acide faible et de sa base conjuguée."
       },
       {
-        "questionText": "La salive est un liquide visqueux selon :",
+        "questionText": "N°1 (2024 EMD - Q467\nLa salive est un liquide visqueux selon :",
         "options": [
           "A. Les conditions de sa sécrétion",
           "B. Uniquement durant une atteinte pathologique de l'individu",
@@ -1569,7 +1621,7 @@ const paroQuizzes = [
         "explanation": "La viscosité de la salive varie selon sa provenance (ex: parotide fluide, sublinguale visqueuse) et les conditions de sa sécrétion (stimulée ou non)."
       },
       {
-        "questionText": "La salive est élaborée par des glandes salivaires :",
+        "questionText": "N°2 (2024 EMD - Q483\nLa salive est élaborée par des glandes salivaires :",
         "options": [
           "A. Exocrines et endocrines",
           "B. Mineures et majeures",
@@ -1580,10 +1632,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La salive est produite par trois paires de glandes majeures (principales : parotides, sous-mandibulaires, sublinguales) et par de nombreuses glandes mineures (accessoires). Elles sont exocrines."
+        "explanation": "*La salive est issue de trois paires de glandes salivaires ditesmajeures (principales ) :• Parotides• Sous-mandibulaires• Sub-linguales*Et de glandes mineures (accessoires) , disséminées dans les muqueuses labiales, palatines (sauf région antérieure du palais dur) et linguales.* Exocrine seulement"
       },
       {
-        "questionText": "La formation de la salive est régulée par :",
+        "questionText": "N°3 (2024 EMD - Q507\nLa formation de la salive est régulée par :",
         "options": [
           "A. Un système nerveux autonome",
           "B. Un système hormonal",
@@ -1594,10 +1646,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "La formation de la salive se fait en deux phases (primaire dans l'acinus, secondaire dans le canal) et est régulée par le système nerveux autonome et le système hormonal."
+        "explanation": "-Formation de la salive :★1er phase se déroule au niveau de l'acinus où le fluide plasmatique filtré à travers les cellules acineuses, sans modifications ioniques notables, aboutit à la formation d'une salive Isotonique au plasma appelée « salive primaire >>>★ 2ème phase s'effectue dans le canal strié où la salive primaire est modifiée par une sécrétion et une réabsorption d'électrolytes, conduisant à la formation de la salive finale, hypotonique au plasma L'ensemble de ces processus est régulé par le système nerveux autonome et hormonal."
       },
       {
-        "questionText": "Les propriétés de la salive sont :",
+        "questionText": "N°4 (2024 EMD - Q533\nLes propriétés de la salive sont :",
         "options": [
           "A. Débit salivaire",
           "B. La viscosité",
@@ -1610,7 +1662,7 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Les propriétés de la salive incluent le pH, le débit, le pouvoir tampon, la concentration ionique et la viscosité."
+        "explanation": "-Propriété de la salive :\n ★Le potentiel d'hydrogène (pH)\n ★Le débit salivaire\n ★Le pouvoir tampon de la salive\n ★La concentration ionique\n ★La viscosité"
       },
       {
         "questionText": "La salive est une sécrétion aqueuse claire sécrétée :",
@@ -1628,7 +1680,7 @@ const paroQuizzes = [
         "explanation": "La salive est une sécrétion aqueuse des glandes salivaires, située dans la cavité buccale, servant à humidifier les muqueuses et initier la digestion."
       },
       {
-        "questionText": "La salive est :",
+        "questionText": "N°11 (2021 2°EMD - Q1732\nLa salive est :",
         "options": [
           "A. Très efficace dans la cicatrisation de la muqueuse buccale",
           "B. Capitale pour maintenir une bouche saine et des dents en bonne santé",
@@ -1640,10 +1692,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "La salive est capitale pour la santé buccale, aide à la cicatrisation et peut transmettre des maladies. Elle est composée à 99% d'eau."
+        "explanation": "-Le pourcentage de volume d'eau dans la salive est de 99 %. Solution \n hypotonique (qui est moins concentrée en ions) comparativement au plasma sanguin.\n -La salive possède également une fonction protectrice face aux infections\n bactériennes, grâce à sa composition enzymatique. Pourtant, elle est également transmetteur de maladies comme la mononucléose ou l'herpès buccal.\n -fonction de cicatrisation et de réparation :La salive est très efficace dans la cicatrisation de la muqueuse buccale, que ce soit à la suite d’un incident ou d’une intervention.\n -Parce que la salive est capitale pour maintenir une bouche saine\n et des dents en santé, il est essentiel de lutter contre le manque\n de salive qui cause la sécheresse buccale"
       },
       {
-        "questionText": "La salive présente :",
+        "questionText": "N°10 (2021 2°EMD - Q1718\nLa salive présente un rôle :",
         "options": [
           "A. Une fonction digestive",
           "B. Une fonction gustative",
@@ -1656,10 +1708,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La salive a de nombreuses fonctions, notamment digestive, gustative, de lubrification, protectrice et de cicatrisation/réparation."
+        "explanation": "★Les fonctions de la salive : \n -fonction digestive\n -fonction gustative \n - Fonction lubrification \n - Fonction de déshydratation\n - fonction protectrice\n - fonction de maintien des prothèses dentaires"
       },
       {
-        "questionText": "Les glandes salivaires :",
+        "questionText": "N°9 (2021 2°EMD - Q1689\nLes glandes salivaires :",
         "options": [
           "A. Sont enfermées dans des capsules conjonctives, vascularisées et innervées.",
           "B. Leurs cellules sécrétrices sont assemblées en agglomérats qui sécrètent la salive dans leur cavité",
@@ -1671,7 +1723,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Elles sont encapsulées, vascularisées et innervées. Les cellules sont en agglomérats (acinus). Des muscles lisses (myoépithéliales) aident à l'expulsion."
+        "explanation": "-Les glandes salivaires sont enfermées dans des capsules conjonctives, \n vascularisées et innervées. Les cellules sécrétrices (muqueuses ou séreuses) sont assemblées en agglomérats qui sécrètent la salive dans leur cavité. Des muscles lisses entourent et permettraient de faciliter l'expulsion de la salive."
       },
       {
         "questionText": "Les glandes salivaires accessoires sont disseminées dans :",
@@ -1718,7 +1770,7 @@ const paroQuizzes = [
         "explanation": "Les fonctions de la salive incluent la digestion, le goût (gustatif) et la lubrification."
       },
       {
-        "questionText": "Les glandes sub-linguales:",
+        "questionText": "N°4 (2022 2°EMD - Q1270\nLes glandes sub-linguales:",
         "options": [
           "A. Sont situées sous la langue,",
           "B. Sécrètent la salive par de multiples canaux,",
@@ -1730,7 +1782,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Elles sont situées sous la langue, ont de multiples canaux, et sont mixtes à prédominance muqueuse."
+        "explanation": "-Les glandes sublinguales : Elles sont situées sous la langue et sécrètent la salive par de multiples canaux. Les cellules sécrétrices sont mixtes (séreuses et surtout muqueuses).Les glandes salivaires sont enfermées dans des capsules conjonctives, vascularisées et innervées. Les cellules sécrétrices (muqueuses ou séreuses) sont assemblées en agglomérats qui sécrètent la salive dans leur cavité. Des muscles lisses entourent et permettraient de faciliter l'expulsion de la salive."
       },
       {
         "questionText": "Les glandes salivaires :",
@@ -1791,7 +1843,7 @@ const paroQuizzes = [
         "explanation": "La salive est une sécrétion aqueuse des glandes salivaires (principales et accessoires), située dans la cavité buccale, destinée à humidifier et commencer la digestion."
       },
       {
-        "questionText": "les glandes parotides:",
+        "questionText": "N°2 (2021 2°EMD - Q1588\nles glandes parotides:",
         "options": [
           "A. Sont situées à l'arrière de la bouche sous les oreilles",
           "B. La salive est déversée au niveau de la joue par le canal de Wharton",
@@ -1817,6 +1869,33 @@ const paroQuizzes = [
           0
         ],
         "explanation": "Le système tampon le plus significatif de la salive est le système carbonates/bicarbonates. Les phosphates jouent un rôle secondaire."
+      },
+      {
+        "questionText": "N°16 (2025 RATT - Q345\nLa salive:",
+        "options": [
+          "Peut exercer une influence directe sur la santé parodontale",
+          "La fonction salivaire peut être perturbée par certaines maladies systémiques et prise de médicaments",
+          "Contient des protéines tel que les lysozymes, qui confère à la salive sa viscosité",
+          "Est issue pour 20% à 30% des glandes salivaires accessoires."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A. Vrai : par son rôle protecteur, antimicrobien et tampon elle influence la santé parodontale.B. Vrai : certaines maladies systémiques et médicaments peuvent altérer la salivation.C. Faux : les lysozymes sont antimicrobiens mais la viscosité vient surtout des mucines.D. Faux : les glandes salivaires accessoires produisent environ 5-8% de la salive totale."
+      },
+      {
+        "questionText": "N°1 (2022 2°EMD - Q1220\nLes glandes sous-maxillaires :",
+        "options": [
+          "Sécrètent le plus grand volume de salive,",
+          "Elles sont situées sous l'angle mandibulaire,",
+          "La salive est déversée par le canal de Wharton sous le devant de la langue,",
+          "Elles sont constituées presque exclusivement de cellules muqueuses."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "-Les glandes sous-maxillaires (sub-mandibulaires) : Elles sont situées sous l'angle de la mandibule, déversent la salive par le canal de Wharton sous le devant de la langue. Les cellules sécrétrices sont mixtes (muqueuses mais surtout séreuses).-Les glandes parotide sécrètent le plus grand volume de la salive ."
       }
     ]
   },
@@ -1825,7 +1904,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Les vaisseaux sanguins du desmodonte :",
+        "questionText": "N°5 (2025 RATT - Q127\nLes vaisseaux sanguins du desmodonte :",
         "options": [
           "A. Sont de moyen calibre.",
           "B. Proviennent de la fibromuqueuse.",
@@ -1837,10 +1916,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La vascularisation du desmodonte provient de vaisseaux de moyen calibre, issus du périoste alvéolaire et de la région apicale (via les vaisseaux pulpaires)."
+        "explanation": "A. Vrai : ce sont surtout des vaisseaux de moyen calibre.B. Faux : ils ne proviennent pas de la fibromuqueuse.C. Vrai : une partie de la vascularisation vient du périoste alvéolaire.D. Vrai : ils proviennent aussi de la région apicale via les vaisseaux pulpaires."
       },
       {
-        "questionText": "La largeur du ligament alvéolo-dentaire :",
+        "questionText": "N°19 (2021 1°EMD - Q1865\nLa largeur du ligament alvéolo-dentaire :",
         "options": [
           "A. Varie en fonction de l'âge,",
           "B. N'est pas influencée par l'âge.",
@@ -1852,10 +1931,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La largeur du desmodonte varie et diminue avec l'âge. Les valeurs spécifiques données (0.18 mm à 50 ans et 0.15 mm à 70 ans) sont des exemples de cette réduction progressive."
+        "explanation": "Cément cellulaire :secondaire :\n -Il se forme après l’éruption dentaire et en réponse aux exigences fonctionnelles.le cément secondaire est initialement déposé sur le tiers apicales de la racine son épaisseur et importante 150 à 200 microns il se trouve également dans les zones inter-radiculaires.contrairement au cément primaire le cément secondaire contient des cellules les cémentoblastes qui sont à l’origine de l’élaboration du cément,au fur et à mesure de leur sécretion ‘les cémentoblastes s’incorporent dans la masse minéralisée où ils occupent des cavités creusées au sein du cément et deviennent des cémontocytes. \n -Les cémentocytes sont reliés entre eux par des expansions cytoplasmiques parcourant les canalicules du cément, ils sont aussi reliés au cémentoblastes situés à la surface par l’intermédiaire de ces expansions cytoplasmiques.\n -La présence de cémentocytes permet le transport des éléments nutritifs à travers le cément et contribue à maintenir la vitalité de ce tissu minéralisé."
       },
       {
-        "questionText": "Le desmodonte est un tissu :",
+        "questionText": "N°20 (2021 1°EMD - Q1886\nLe desmodonte est un tissu :",
         "options": [
           "A. Conjonctif fibreux lâche, dense",
           "B. Qui fait partie du parodonte superficiel,",
@@ -1866,10 +1945,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le desmodonte est un tissu conjonctif fibreux dense spécialisé qui fait partie du parodonte profond (appareil d'attache). Il est localisé dans l'espace entre le cément de la racine et l'os alvéolaire."
+        "explanation": "14. Le desmodonte est :A.Faux: le desmodonten’est pas calcifié. Le cément et l’os le sont mais pas le desmodonte.B.Vrai: C’estun ligament conjonctif spécialisé élastique et fibreux.C.Faux: Il estrichement vascularisé et très innervé(proprioception ++).D.Faux: Le desmodonte possèdeune forme d'un sablierquise rétrécit au niveau du tiers apical donc il est large au niveau du collet."
       },
       {
-        "questionText": "Le rôle sensoriel du desmodomte:",
+        "questionText": "N°6 (2025 RATT - Q150\nLe rôle sensoriel du desmodomte:",
         "options": [
           "A. Permet une perception des contacts.",
           "B. Permet une perception des mouvements mandibulaires.",
@@ -1882,10 +1961,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le rôle sensoriel du desmodonte est très complet : il détecte les contacts, perçoit les mouvements, participe à la proprioception et aide à la coordination mandibulaire."
+        "explanation": "A. Vrai : elle détecte la pression et les contacts dentaires.\n B. Vrai : elle perçoit les mouvements mandibulaires par ses récepteurs.\n C. Vrai : elle participe également à la proprioception buccale.\n D. Vrai : elle aide aussi à coordonner les positions mandibulaires grâce aux signaux nerveux."
       },
       {
-        "questionText": "Quel est le rôle des fibres de Sharpey?",
+        "questionText": "N°7 (2025 1°EMD - Q169\nQuel est le rôle des fibres de Sharpey?",
         "options": [
           "A. Assurer la nutrition du desmodonte.",
           "B. Ancrer la dent à l'os alvéolaire.",
@@ -1895,10 +1974,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les fibres de Sharpey sont les extrémités des fibres du desmodonte qui s'insèrent dans le cément et l'os alvéolaire, ancrant ainsi la dent dans son alvéole."
+        "explanation": "A. Faux : la nutrition du desmodonte est assurée par ses vaisseaux sanguins pas par les fibres de Sharpey.B. Vrai : elles s’insèrent dans le cément et l’os alvéolaire pour ancrer la dent.C. Faux : les fibres élastiques qui amortient les forces de mastications.D. Faux : elles n’ont pas de rôle direct dans la protection contre les bactéries."
       },
       {
-        "questionText": "Laquelle des propositions suivantes est incorrecte concernant le desmodonte ?",
+        "questionText": "N°8 (2025 1°EMD - Q193\nLaquelle des propositions suivantes est incorrecte concernant le desmodonte ?",
         "options": [
           "A. Il contient des terminaisons nerveuses responsables de la proprioception dentaire.",
           "B. Il est vascularisé, assurant ainsi la nutrition des cellules.",
@@ -1908,10 +1987,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le desmodonte n'intervient pas dans la formation de l'émail (C). Il contient des nerfs (A), des vaisseaux (B), et des cellules de défense (D)."
+        "explanation": "A. Faux : il contient bien des terminaisons nerveuses pour la proprioception.\n B. Faux : il est bien vascularisé.\n C. Vrai : il n’intervient pas dans la formation de l’émail (c’est l’organe de l’émail qui le forme).\n D. Faux : il participe à la défense immunitaire grâce aux cellules de défense présentes."
       },
       {
-        "questionText": "Parmi les propositions suivantes, lesquelles sont des fonctions du desmodonte liées à son rôle sensoriel?",
+        "questionText": "N°9 (2025 1°EMD - Q210\nParmi les propositions suivantes, lesquelles sont des fonctions du desmodonte liées à son rôle sensoriel?",
         "options": [
           "A. Proprioception dentaire.",
           "B. Perception de la douleur.",
@@ -1923,10 +2002,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Le rôle sensoriel inclut la proprioception (A), la nociception (douleur) (B) et l'initiation de réflexes masticatoires (C). Il ne contrôle pas la salivation (D)."
+        "explanation": "A. Vrai : proprioception assurée par ses récepteurs nerveux.B. Vrai : perception de la douleur via les nocicepteurs.C. Vrai : réflexes de mastication via arcs réflexes trigéminaux.D. Faux : la salivation est contrôlée par les glandes salivaires et le système nerveux autonome pas par le desmodonte."
       },
       {
-        "questionText": "Comment les fibres de collagène du desmodonte sont-elles organisées pour résister aux forces masticatoires?",
+        "questionText": "N°10 (2025 1°EMD - Q228\nComment les fibres de collagène du desmodonte sont-elles organisées pour résister aux forces masticatoires?",
         "options": [
           "A. Elles sont disposées de manière aléatoire.",
           "B. Elles sont orientées parallèlement à la surface radiculaire.",
@@ -1936,10 +2015,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Les fibres sont organisées en groupes (faisceaux) avec des orientations spécifiques (obliques, horizontales, etc.) pour résister efficacement aux différentes forces."
+        "explanation": "A. Faux : elles ne sont pas disposées au hasard.B. Faux : elles ne sont pas simplement parallèles à la racine y'a certains qui sont orientées obliquement ou perpendiculairement.C. Vrai : elles sont organisées en faisceaux avec des orientations spécifiques selon leur groupe fonctionnel (obliques, horizontales, apicales, etc.).D. Faux : elles ne forment pas un réseau homogène mais des groupes distincts."
       },
       {
-        "questionText": "Le ligament alvéolodentaire se développe :",
+        "questionText": "N°17 (2026 1°EMD - Q34\nLe ligament alvéolodentaire se développe :",
         "options": [
           "A. Après la cémentogenèse",
           "B. A partir du sac folliculaire :",
@@ -1950,10 +2029,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Le desmodonte (ligament) provient des cellules du sac folliculaire. Sa formation commence après la fragmentation de la gaine d'Hertwig, en même temps que la cémentogenèse."
+        "explanation": "17. Le ligament alvéolo-dentaire (ligament parodontal) se développe :A.Vrai: Le ligamentse met en place une fois le cément initial formécar ses fibres vont s’inséré à son niveau.B.Vrai: Le desmodonteprovient du sac folliculaire dentaires(futur parodonte).C.Faux: Le développement principal du ligament parodontal se faitpendant et surtout après la formation de la racine et l’éruption dentaire pas avant.D.Vrai:La gaine de HERTWIG se fragmente à la fin de l’édification radiculairepermettant l’arrivée des cellules du sac folliculaire doncla formation du cément d’abord puis du ligament."
       },
       {
-        "questionText": "Les Fibres de collagène alvéolo dentaires du desmodonte sont classées en :",
+        "questionText": "N°15 (2026 1°EMD - Q29\nLes Fibres de collagène alvéolo dentaires du desmodonte sont classées en:",
         "options": [
           "A. Fibres obliques",
           "B. Fibres circulaires",
@@ -1964,10 +2043,10 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Les fibres alvéolo-dentaires sont classées en 5 groupes, incluant les fibres obliques (principales) et les fibres inter-radiculaires (annexes). Les fibres circulaires (B) sont gingivales."
+        "explanation": "15. Les fibres de collagène alvéolo-dentaires du desmodonte sont classées :A.Vrai:les fibres obliquessont les plus nombreusesorientées du cément vers l’os.B.Faux: ce sont desfibres gingivalespas des fibres alvéolo-dentaires.C.Vrai:les fibres des dents pluriradiculéessituées dans les furcations sont des fibres alvéolo-dentaires.D.Faux: ce sont desfibres gingivales(groupe des fibres dento-périostées)."
       },
       {
-        "questionText": "L'innervation du desmodonte joue un grand rôle car :",
+        "questionText": "N°16 (2026 1°EMD - Q31\nL'innervation du desmodonte joue un grand rôle car:",
         "options": [
           "A. Elle contient des récepteurs sensoriels",
           "B. Elle est proprioceptive",
@@ -1979,10 +2058,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "L'innervation (nerf trijumeau) est sensitive et proprioceptive. Elle contient des récepteurs sensoriels (propriocepteurs) qui informent sur la position et les mouvements des dents."
+        "explanation": "16. L’innervation du desmodonte joue un grand rôle car :A.Vrai: le desmodontecontient des récepteurs sensorielsappelésles propriocepteurs.B.Vrai: Le desmodontepermet la perception précise des forces et des mouvements dentaires.C.Faux: Le desmodonteest seulement sensitifil n’a pas de fibres motrices.D.Vrai:Grâce à la proprioception le desmodonterenseigne sur la position et la pression exercée sur les dents."
       },
       {
-        "questionText": "Le desmodonte se caractérise par :",
+        "questionText": "N°8 (2024 EMD - Q608\nLe desmodonte se caractérise par :",
         "options": [
           "A. Un turn over 15 fois plus rapide que celui du conjonctif gingival",
           "B. Grace à sa richesse vasculaire, assure la nutrition du cément",
@@ -1993,10 +2072,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Le desmodonte est richement vascularisé et assure la nutrition du cément et de l'os. Il résiste aux forces occlusales (apicales) grâce à ses fibres, notamment obliques. Son turnover est 5 fois plus rapide que le conjonctif gingival. Sa largeur diminue avec l'âge."
+        "explanation": "-Le turn over est 5 fois plus rapide que dans le conjonctif gingival et 15 fois plus rapide que dans les tissus du derme\n -Le réseau vasculaire et lymphatique apporte les nutriments et élimine les métabolismes des tissus parodontaux.Le desmodonte grâce à sa richesse vasculaire assure la nutrition du cément de l’os alvéolaire et de la gencive\n -Par l’intermédiaire de ses fibres, surtout les fibres obliques qui absorbent les forces occlusales et les transmettent en tension à l’os alvéolaire\n -Sa largeur diminue avec l’âge"
       },
       {
-        "questionText": "Les fibres de Sharpey :",
+        "questionText": "N°11 (2026 1°EMD - Q21\nLes Fibres de Sharpey:",
         "options": [
           "A. Sont de nature exclusivement collagénique",
           "B. Sont produites par les fibroblastes du desmodonte",
@@ -2007,10 +2086,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Ce sont les extrémités terminales (pas moyennes) des fibres principales collagéniques, produites par les fibroblastes du desmodonte."
+        "explanation": "11. Les fibres de Sharpey :A.Faux: Les fibres de Sharpey sontextrinsèques venant du ligament alvéolo-dentaire.B.Vrai: Les fibres de Sharpey sontdes faisceaux de collagène I minéralisés.C.Vrai: Elles sontproduites par le ligament parodontal (fibroblastes)puisils vont s’insérés dans l’os et le cément.D.Faux: Elles sont surtout présente dansle cément acellulaireleur zone principalepour assurer l’ancrage."
       },
       {
-        "questionText": "La sensibilité proprioceptive :",
+        "questionText": "N°26 (2025 2°EMD - Q452\nLa sensibilité proprioceptive :",
         "options": [
           "A. Est commune à tous les tissus parodontaux",
           "B. Est exclusive au ligament alvéolo-dentaire",
@@ -2021,10 +2100,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La proprioception (perception de la position/mouvement) est exclusive au ligament alvéolo-dentaire. La douleur (D) est la nociception."
+        "explanation": "A. Faux : elle n'est pas commune elle correspond au ligament alvéolo-dentaire.B. Vrai : elle est exclusive au ligament alvéolo-dentaire.C. Vrai : elle renseigne sur la position et les mouvements dentaires.D. Faux : la douleur signifie la nociception pas la proprioception."
       },
       {
-        "questionText": "Le tissu parodontal le moins stable est :",
+        "questionText": "N°29 (2025 1°EMD - Q458\nLe tissu parodontal le moins stable est :",
         "options": [
           "A. L'os alvéolaire",
           "B. La gencive",
@@ -2034,10 +2113,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L'os alvéolaire est le tissu le moins stable car il se résorbe facilement en réponse aux stimuli (inflammation, forces)."
+        "explanation": "A. Vrai : l'os alvéolaire se résorbe facilement donc c'est le tissu parodontal le moins stable.B. Faux : la gencive est le tissu parodontal le plus stable.C. Faux : le desmodonte est le tissu le plus constant.D. Faux : le cément est aussi un tissu très stable."
       },
       {
-        "questionText": "Le desmodonte contient principalement :",
+        "questionText": "N°30 (2025 1°EMD - Q460\nLe desmodonte contient principalement :",
         "options": [
           "A. Collagène type I",
           "B. Collagène type III",
@@ -2048,10 +2127,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Le desmodonte est principalement composé de collagène de type I (résistance) et de type III (souplesse). Le type IV est dans les lames basales et le type II dans le cartilage."
+        "explanation": "A. Vrai : le collagène type I prédomine dans le desmodonte (résistance mécanique).\n B. Vrai : le collagène type III est aussi présent (souplesse).\n C. Faux : le type IV est retrouvé au niveau de la membrane basale.\n D. Faux : le type II est retrouvé beaucoup plus au niveau du cartilage."
       },
       {
-        "questionText": "Les fibres du desmodonte qui résistent aux forces verticales et instrusives sont les fibres :",
+        "questionText": "N°31 (2025 1°EMD - Q461\nLes fibres du desmodonte qui résistent aux forces verticales et instrusives sont les fibres :",
         "options": [
           "A. Transseptales",
           "B. Horizontales",
@@ -2062,10 +2141,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Les fibres horizontales et les fibres de la crête alvéolaire s'opposent aux forces d'intrusion (verticales). Les fibres obliques résistent à l'extrusion (C)."
+        "explanation": "A. Faux : les fibres transseptales contribuent à la stabilité des arcades dentaires et à la réparation des forces occlusales.B. Vrai : les fibres horizontales résistent principalement aux forces occlusales verticales et assurent la stabilité de la dent dans son alvéole.C. Faux : les fibres obliques renforcent l'attache apicale de la dent et résistent aux forces d'extrusion.D. Faux : les fibres de la crête alvéolaire s'opposent aux forces d’intrusion."
       },
       {
-        "questionText": "Les glycosaminoglycanes présents dans la substance fondamentale du desmodonte sont représentés essentiellement par :",
+        "questionText": "N°32 (2025 1°EMD - Q462\nLes glycosaminoglycanes présents dans la substance fondamentale du desmodonte sont représentés essentiellement par :",
         "options": [
           "A. L'acide hyaluronique",
           "B. La fibronectine",
@@ -2076,10 +2155,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La substance fondamentale contient des glycoprotéines d'adhésion comme la fibronectine et la laminine. L'acide hyaluronique (A) est un GAG mais pas une glycoprotéine."
+        "explanation": "Substance fondamentale :\n -La gelé qui constitue la substance fondamentale est le véritable milieu intérieur.\n -Les muco-polysaccharides y sont peu abondant, ils constituent seulement 0.5 à 5% du poids sec de la substance fondamentale.\n -L'eau est un élément important.\n -Cette substance fondamentale présente une viscoélasticité qui joue un rôle important dans l'amortissement des forces exercées sur la dent."
       },
       {
-        "questionText": "Les Fibres Trans septales sont :",
+        "questionText": "N°17 (2024 RATT - Q762\nLes fibres Trans septales sont :",
         "options": [
           "A. Des fibres de réticuline",
           "B. Concernent toutes les dents d'une même arcade",
@@ -2090,10 +2169,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Les fibres transseptales s'étendent de dent en dent sur toute l'arcade, passant au-dessus de la crête alvéolaire."
+        "explanation": "★ Système fibreux transseptal:- S’étend du cément cervical d’une dent à celui  de la dent adjacente.- Passe au-dessus de la crête alvéolaire- Concerne toutes les dents d’une même arcade.- Le turn over y est moins rapide que dans le ligament."
       },
       {
-        "questionText": "Les fibres collagènes du groupe crestal ont pour rôle :",
+        "questionText": "N°18 (2024 RATT - Q795\nLes fibres collagènes du groupe crestal ont pour rôle :",
         "options": [
           "A. D'assurer la stabilité de la dent",
           "B. De résister aux forces à direction apicale",
@@ -2104,10 +2183,10 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Les fibres du groupe crestal (crête alvéolaire) assurent la stabilité de la dent et s'opposent aux forces latérales."
+        "explanation": "- Les faisceaux de fibres collagènes du groupe crestal ont pour fonction d'assurer la stabilité de la dent et de s'opposer aux forces latérales- Le groupe horizontal empêche les mouvements latéraux- Les fibres obliques résistent aux forces à direction apicale, provoquées essentiellement par la mastication- Le groupe apical résiste aux forces de luxation, empêchant la dent de se verser et protégeant aussi probablement le paquet vasculo-nerveux pulpaire- Les fibres inter-radiculaires des pluri-radiculées résistent aux versions, aux rotations et à la luxation"
       },
       {
-        "questionText": "Le desmodonte :",
+        "questionText": "N°42 (2022 Résidanat - Q1556\nLe desmodonte ou ligament parodontal : 1- Est un tissu conjonctif spécialisé 2- Dérive de la gaine de Hertwig 3- Apparait radiologiquement comme un espace radio-claire 4- Voit sa largeur diminuer en cas d`augmentation de sollicitations fonctionnelles 5- Apparait radiologiquement comme une ligne blanchâtre continue",
         "options": [
           "A. Est une structure épithéliale molle.",
           "B. Est une structure conjonctive molle.",
@@ -2117,7 +2196,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le desmodonte est une structure conjonctive molle qui fait la jonction entre l'os alvéolaire et le cément radiculaire via les fibres de Sharpey."
+        "explanation": "2- Dérive de la gaine de Hertwig : Faux,le desmodonte provient des cellules du follicule dentaire, structure ectomésenchymateuse qui entoure le germe dentaire.4- Voit sa largeur diminuer en cas d`augmentation de sollicitations fonctionnelles : Faux, la surcharge occlusale stimule la résorption osseuse, ce qui tend à augmenter la largeur du desmodonte."
       },
       {
         "questionText": "La substance fondamentale du desmodonte:",
@@ -2148,7 +2227,7 @@ const paroQuizzes = [
         "explanation": "L'innervation du desmodonte est sensitive et proprioceptive. Ces nerfs proprioceptifs renseignent le SNC sur la position de la dent, conditionnant les réflexes."
       },
       {
-        "questionText": "Les fibres desmodontales collagéniques:",
+        "questionText": "N°17 (2023 1°EMD - Q1145\nLes fibres desmodontales collagéniques:",
         "options": [
           "A. Sont les éléments fibreux les moins nombreux du desmodonte.",
           "B. Présentent, à l'état de repos, des ondulations caractéristiques qui s'effacent lorsqu'une traction est exercée sur la dent.",
@@ -2159,7 +2238,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Elles sont les plus nombreuses (A). Elles présentent des ondulations au repos (B) et leur orientation s'oppose aux forces (C). On distingue 5 groupes (D)."
+        "explanation": "Fibres de collagène :-Ce sont les éléments fibreux les plus nombreux du desmodonte (représentent en volume 70 à 80% du desmodonte)-À l'état de repos, les fibres de collagène présentent des ondulations caractéristiques qui s'effacent lorsqu'une traction est exercée sur la dent.-Elles sont orientées de façon à s'opposer à l'enfoncement, à l'extrusion et même a la rotation de la dent.-On distingue 5 groupes"
       },
       {
         "questionText": "Le desmodonte ou ligament parodontal :",
@@ -2192,7 +2271,7 @@ const paroQuizzes = [
         "explanation": "C'est un tissu conjonctif fibreux spécialisé qui dérive du sac folliculaire."
       },
       {
-        "questionText": "Le desmodonte",
+        "questionText": "N°1 (2023 1°EMD - Q869\nLe desmodonte :",
         "options": [
           "A. Occupe un espace d'environ 0.5 mm",
           "B. Sa largeur est plus importante au niveau de la partie moyenne",
@@ -2202,10 +2281,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La largeur du desmodonte (environ 0.25 mm) augmente avec les sollicitations fonctionnelles. Elle est plus étroite au milieu (hypomochlion). C'est un espace radio-clair."
+        "explanation": "-Soutien des tissus gingivaux : dans les zones interproximales, les tissus gingivaux reposent sur les fibres transseptales.-Rôle dans l’organogénétique : Les cellules du desmodonte interviennent dans la réparation tissulaire .Les cellules indifférenciées ont la capacité de former des fibroblastes, des cémentoblastes, des ostéoblastes, aboutissant à la reconstruction des tissus détruits.-transmission à l’os, amortissement des forces occlusales et suspension de la dent pendant sa fonctionocclusale :★Pour des forces faible : l’amortissement se fait par l’intermédiaire des faisceaux de fibres desmodontales, surtout les fibres obliques qui absorbent les forces occlusales et les transmettent en tension à l’os alvéolaire.★Pour des forces plus importante : entre en jeu un système plus complexe, toutes les composantes du ligament agissent ensemble pour former un amortisseur hydraulique (théorie du frein hydraulique de Weski)-Le ligament parodontal est cependant le seul tissu parodontal qui contient également des propriocepteurs, donnant des informations sur les mouvements et les positions."
       },
       {
-        "questionText": "Les fibres principales du desmodonte",
+        "questionText": "N°7 (2022 1°EMD - Q1318\nLes fibres principales du desmodonte",
         "options": [
           "A. Sont de nature exclusivement collagénique",
           "B. Leur partie intermédiaire est appelée : fibre de Sharpey",
@@ -2216,7 +2295,7 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Elles sont de nature collagénique. Les fibres de Sharpey sont la partie terminale (B). Les fibres obliques vont du cément à l'os en direction coronaire (C). Les interradiculaires sont sur les dents multiradiculées (D)."
+        "explanation": "-Fibres principales : de nature collagénique, elles sont arrangées en bandes, et présentent un aspect ondulaire ; la partie terminale des fibres principales, fixée dans l’os d’un côté et dans le cément de l’autre côté, est appelée : fibre de Sharpey.-Le groupe oblique, de loin le plus important, est tendu du cément jusqu’à l’os alvéolaire en direction coronaire.-Le groupe interradiculaire, observé seulement dans les dents multiradiculaires, est tendu entre"
       },
       {
         "questionText": "Le desmodonte assure:",
@@ -2268,7 +2347,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Le biofilm dentaire :",
+        "questionText": "N°9 (2025 2°EMD - Q212\nLe biofilm dentaire :",
         "options": [
           "A. Est un dépôt granuleux, mou et amorphe, qui s'accumule sur les faces des dents etrestaurations dentaires.",
           "B. Est une association de bactéries d'une même ou de plusieurs espèces",
@@ -2280,10 +2359,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Le biofilm (plaque) est un dépôt mou (A), composé d'une communauté de bactéries (B), qui nécessite un nettoyage mécanique pour être enlevé (C). Il est considéré mature après environ 30 couches (D)."
+        "explanation": "-D’après MOUTON et ROBERT en 1994 le biofilm dentaire est définit comme une accumulation hétérogène, adhérente à la surface des dents ou située dans l’espace gingivo-dentaire ; elle se retrouve aussi sur les différents matériaux de restauration dentaire ainsi que sur les prothèses. Elle est composée d’une communauté microbienne, riche en bactéries \n aérobies et anaérobies, enrobées dans une matrice intercellulaire de polymères d’origine microbienne et salivaire"
       },
       {
-        "questionText": "La plaque dentaire :",
+        "questionText": "N°10 (2025 2°EMD - Q237\nLa plaque dentaire :",
         "options": [
           "A. Est classée en plaque supra-gingivale et sous-gingivale",
           "B. La plaque supra-gingivale contient exclusivement des germes anaérobies",
@@ -2293,10 +2372,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La plaque est classée en supra-gingivale et sous-gingivale. La plaque supra (B) contient des aérobies/facultatifs. La plaque sous (C) est moins dense et moins adhérente. Il n'y a pas de discontinuité nette (D)."
+        "explanation": "-Cliniquement, la visualisation de la plaque n’est possible que si cette plaque présente une certaine épaisseur ; elle apparait alors comme un enduit blanc jaunâtre localisé tout d’abord le long du rebord gingival .-Au début la plaque est difficile à mettre en évidence, dans ce cas, on essaie soit de racler la surface de la dent le long du rebord gingival avec la pointe d’une sonde, soit en utilisant une solution révélatric (un révélateur).- On peut rencontrer les dépôts de plaque dans les fissures des surfacesocclusales, dans les fossettes, sur les surfaces dentaires lisses, les obturations et restaurations prothétiques et plus particulièrement sur les couronnes mal ajustées ainsi que sur les appareils d’orthodontie et les prothèses amovibles."
       },
       {
-        "questionText": "La pellicule acquise exogène :",
+        "questionText": "N°11 (2025 2°EMD - Q245\nLa pellicule acquise exogène :",
         "options": [
           "A. Est un film protéique d'origine salivaire riche en cellules de défense",
           "B. Apparait en quelques minutes après le brossage",
@@ -2307,10 +2386,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La pellicule acquise exogène (PAE) est la première étape de formation du biofilm (C) et se forme en quelques minutes après un brossage (B). Elle est acellulaire (A). L'adhésion bactérienne peut devenir irréversible (D)."
+        "explanation": "-Pellicule acquise exogène :Elle recouvre rapidement toute surface exposée à l’environnement buccal et on trouve ainsi, des protéines détectables à peine 3 minutes après brossage et polissage professionnel. Sa structure lui confère la possibilité de retenir certaines bactéries buccales ce qui initie alors la première étape de formation du biofilm. Les bactéries possèdent des adhésines chargées positivement qui vont se fixer aux lectines chargées négativement de la pellicule."
       },
       {
-        "questionText": "Parmi les éléments favorisant la rétention de la plaque bactérienne, on retrouve :",
+        "questionText": "N°12 (2025 2°EMD - Q263\nParmi les éléments favorisant la rétention de la plaque bactérienne, on retrouve :",
         "options": [
           "A. Les facteurs anatomiques : malpositions dentaires",
           "B. Restaurations dentaires à l'amalgame",
@@ -2321,10 +2400,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Les facteurs anatomiques comme les malpositions (A) et la présence de poches (D) créent des zones de rétention. Les restaurations défectueuses (B) favorisent aussi l'accumulation."
+        "explanation": "A. Vrai : les malpositions dentaires créent des zones de rétention.B. Faux : les restaurations défectueuses (amalgame ou autres) favorisent l’accumulation des bactéries mais pas directement la formation de la plaque bactérienne.C. Faux : les révélateurs de la plaque servent à la mettre en évidence pas à la rétention.D. Vrai : les poches gingivales et parodontales sont des niches à plaque."
       },
       {
-        "questionText": "La mise en évidence qualitative de la plaque se fait :",
+        "questionText": "N°13 (2025 RATT - Q281\nLa mise en évidence qualitative de la plaque se fait :",
         "options": [
           "A. Test immunologique",
           "B. Erythrosine",
@@ -2335,10 +2414,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Les tests qualitatifs identifient les types de bactéries. Les tests immunologiques (A) et la PCR (D) le permettent. L'érythrosine (B) et Plaque-Lite (C) sont quantitatifs (mesurent la quantité)."
+        "explanation": "A. Vrai : les tests immunologiques sont des tests qualitatives.B. Faux : l’érythrosine est un colorant révélateur de plaque dentaire mais c'est un moyen quantitatif non qualitatif.C. Faux : la plaque-line est un système quantitatif.D. Vrai : le test PCR est utilisé pour la détection qualitative du biofilm dentaire."
       },
       {
-        "questionText": "La plaque bactérienne est :",
+        "questionText": "N°14 (2025 RATT - Q312\nLa plaque bactérienne est :",
         "options": [
           "A. Classée en plaque supra-gingivale et sus-gingivale",
           "B. La plaque supra-gingivale se compose essentiellement de germes aérobie strict",
@@ -2349,10 +2428,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "La plaque supra-gingivale est dominée par des germes aérobies ou anaérobies facultatifs (B). Cliniquement, la limite entre supra et sous-gingivale n'est pas nette (D). La plaque sous-gingivale (C) est riche en anaérobies stricts."
+        "explanation": "A. Faux : elle est classée en supra-gingivale et sous-gingivale.\n B. Vrai : la plaque supra-gingivale est dominée par des germes aérobies ou anaérobies facultatifs.\n C. Faux : la plaque sous-gingivale est riche en germes anaérobies stricts.\n D. Vrai : cliniquement la limite entre plaque supra et sous-gingivale n’est pas visible à l’œil nu."
       },
       {
-        "questionText": "Par définition le biofilm est:",
+        "questionText": "N°15 (2024 RATT - Q735\nPar définition le biofilm est:",
         "options": [
           "A. Une accumulation homogène, adhérente à la surface des dents",
           "B. Situé dans l'espace gingivo-dentaire et sur les restaurations dentaires",
@@ -2364,10 +2443,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le biofilm est une accumulation hétérogène (A est faux) située sur les dents, restaurations, etc. (B). Il est composé d'une communauté microbienne (C) enrobée dans une matrice (D)."
+        "explanation": "-D’après MOUTON et ROBERT en 1994 le biofilm dentaire est définit comme une accumulation hétérogène, adhérente à la surface des dents ou située dans l’espace gingivo-dentaire ; elle se retrouve aussi sur les différents matériaux de restauration dentaire ainsi que sur les prothèses. Elle est composée d’une communauté microbienne, riche en bactéries \n aérobies et anaérobies, enrobées dans une matrice intercellulaire de polymères d’origine microbienne et salivaire."
       },
       {
-        "questionText": "Parmi les éléments favorisant la rétention de la plaque, on retrouve:",
+        "questionText": "N°16 (2024 RATT - Q756\nParmi les éléments favorisant la rétention de la plaque, on retrouve:",
         "options": [
           "A. L'absence de point de contact inter dentaire",
           "B. La présence de caries",
@@ -2379,7 +2458,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Les facteurs de rétention incluent les lésions carieuses (B), les anomalies morphologiques comme l'absence de point de contact (A), et les facteurs iatrogènes comme les obturations débordantes (C)."
+        "explanation": "Eléments favorisant la rétention de la plaque \n 1 – Les lésions carieuses \n 2– Anomalies morphologiques et fonctionnelles - Anomalies de position de forme de fonction (dent sans antagoniste) - Absence de point de contact - Morphologie gingivale inadéquate\n 3 –Facteurs iatrogènes : Non restauration des points de contact - Prothèse mal conçue - Obturations débordantes, en surocclusion\n 4 –Rôle de la salive dans la formation de la plaque \n 5 – Influence de l’alimentation sur la formation de la plaque"
       },
       {
         "questionText": "Le biofilm dentaire est défini comme :",
@@ -2410,7 +2489,7 @@ const paroQuizzes = [
         "explanation": "La plaque n'est visible que si elle est épaisse (A). Quand elle est fine, on utilise un révélateur (D). Elle se localise d'abord le long du rebord gingival (B) et se trouve aussi sur les restaurations, prothèses, etc. (C)."
       },
       {
-        "questionText": "En plus des bactéries dans le biofilm on retrouve des virus et des protozoaires :",
+        "questionText": "N°3 (2023 2°EMD - Q898\nEn plus des bactéries dans le biofilm on retrouve des virus et des protozoaires :",
         "options": [
           "A. Vrai",
           "B. Faux"
@@ -2418,10 +2497,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La communauté microbienne buccale (biofilm) est variée et peut contenir des virus, mycoplasmes, bactéries, champignons et protozoaires."
+        "explanation": "-La bouche possède une communauté microbienne caractéristique, elle est chaude et humide, et peut supporter la croissance d'une collection variée de micro-organismes (virus, mycoplasmes, bactéries, champignons et protozoaires).\n -Les bactéries sont le groupe de micro-organismes le plus abondant et sont initialement caractérisés et reconnu par des approches de culture microbienne(10)"
       },
       {
-        "questionText": "Le biofilm est mature:",
+        "questionText": "N°8 (2023 2°EMD - Q985\nLe biofilm est mature:",
         "options": [
           "A. Entre le 3ème et le 6ème jour",
           "B. Après que les spirochètes et les spinellas s'installent",
@@ -2434,7 +2513,7 @@ const paroQuizzes = [
         "explanation": "La maturation du biofilm implique une succession écologique, avec l'installation d'espèces anaérobies strictes et mobiles comme les spirochètes."
       },
       {
-        "questionText": "La formation de la cuticule acquise:",
+        "questionText": "N°7 (2023 2°EMD - Q977\nLa formation de la cuticule acquise:",
         "options": [
           "A. Est la première à se déposer sur la surface dentaire",
           "B. Elle se dépose d'abord sur la surface gingivale",
@@ -2446,7 +2525,7 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La pellicule acquise (PAE) est la première couche à se déposer sur la dent (A). Elle se forme en quelques minutes (C) et facilite l'adhésion des bactéries pionnières (D)."
+        "explanation": "formation:1- l'adhésion instantanée de protéines salivaire spécifiques a la surface de l'email: cela aboutit a la formation d'une première sous-couche (précurseur) de la PAE; cette première couche se forme en 3 minutes et son élaboration débute dans les premières secondes de la formation de la PAE2- un second flot de protéines salivaires se fixent sur les protéines précurseurs de la PAE: cette seconde adsorption de protéines salivaires se fait de manière continues. Et ceci est a l'origine de remodelage permanent de la couche superficielle de la PAE ainsi que de sa structure. Cette 2eme couche atteint un épaisseur initiale au bout de 2 a 3 minutes et se maintient pendant les trente premières minutes puis augmente dans les 30 a 90 minutes qui suivent et atteindre jusqu'au 1000 nm"
       },
       {
         "questionText": "la pellicule acquise exogène se définie comme étant :",
@@ -2462,7 +2541,7 @@ const paroQuizzes = [
         "explanation": "La pellicule acquise exogène (PAE) est un film organique, acellulaire (donc pas bactérien), composé de protéines salivaires, qui recouvre les surfaces buccales."
       },
       {
-        "questionText": "L'adhérence irréversible implique :",
+        "questionText": "N°20 (2021 2°EMD - Q1887\nL'adhérence irréversible implique :",
         "options": [
           "A. Les récepteurs,",
           "B. Les médiateurs,",
@@ -2473,10 +2552,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "L'adhésion irréversible implique des interactions spécifiques entre des molécules à la surface des bactéries, appelées adhésines (D), et des molécules complémentaires sur la pellicule, appelées récepteurs (A)."
+        "explanation": "Adhésion irréversible: (adhésion à la surface dentaire)\n Les bactéries disposent d'un arsenal de fixation d'une grande richesse, composé de flagelles et de pili. L'adhérence irréversible implique des interactions entre des molécules spécifiques à la surface des cellules microbiennes, appelées adhésines, et des molécules complémentaires présentes dans la pellicule exogène acquise, appelées récepteurs.\n -La liaison enzyme/substrat\n L'adhérence au surfaces dentaires se fait aussi par: Le glycocalyx , Les fimbriae"
       },
       {
-        "questionText": "Le biofilm bactérien est défini comme :",
+        "questionText": "N°8 (2021 2°EMD - Q1679\nLe biofilm bactérien est défini comme:",
         "options": [
           "A. Un ensemble de cellules épithéliales,",
           "B. Un environnement aqueux qui adhère à la dent,",
@@ -2486,10 +2565,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le biofilm se définit comme une accumulation de micro-organismes, de différentes espèces, adhérant à une surface."
+        "explanation": "-Le biofilm se définit comme une accumulation de micro-organismes, de différentes Espèces, adhérant à une surface généralement en relation avec un environnement aqueux. Celui-ci est alors appelé plaque dentaire. Elle se présente sous la forme d'un dépôt mou, adhérant et plus ou moins coloré. Elle est formée par des bactéries reliées entre elles par une matrice extra cellulaire polysaccharidique."
       },
       {
-        "questionText": "La maturation du biofilm bactérien comprend :",
+        "questionText": "N°13 (2022 2°EMD - Q1423\nLa maturation du biofilm bactérien comprend :",
         "options": [
           "A. L'excrétion de protéines,",
           "B. L'adhésion bactérienne,",
@@ -2501,10 +2580,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "La formation du biofilm commence par l'adhésion (B). La maturation (C) implique la multiplication et l'excrétion de polymères (protéines, polysaccharides) (A) pour former la matrice."
+        "explanation": "-Maturation du biofilm dentaire : Les bactéries adhérentes à la surface commencent d’abord par se multiplier (Etape 2). A partir d’une certaine densité bactérienne, les bactéries vont excréter des polysaccharides, des protéines, de l’ADN ou des lipides (Etape 3). Ces différents composants vont former une matrice extracellulaire qui les relie entre elles et  leur permet de « communiquer » : des micro-colonies bactériennes se forment. (Etape 4). Cette matrice est très bien organisée : des canaux aqueux vont être créés afin d’apporter les différents nutriments ou l’oxygène aux bactéries par des diffusions sous l’effet de gradients deconcentration.Les différentes micro-colonies vont se réunir pour former ce qu’on appelle le biofilm mature, communément appelé biofilm bactérien (Étape 5)."
       },
       {
-        "questionText": "Les bactéries se fixent à la surface dentaire grâce aux:",
+        "questionText": "N°18 (2021 2°EMD - Q1844\nLes bactéries se fixent à la surface dentaire grâce aux:",
         "options": [
           "A. Hydrates de carbones",
           "B. Adhésines",
@@ -2516,10 +2595,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "L'adhésion peut être facilitée par des appendices comme les flagelles (D). L'adhésion spécifique (irréversible) se fait via des adhésines (B) qui se lient à des récepteurs."
+        "explanation": "-Les bactéries disposent d'un arsenal de fixation d'une grande richesse, composé de flagelles et de pili. L'adhérence irréversible implique des interactions entre des molécules spécifiques à la surface des cellules microbiennes, appelées adhésines, et des molécules complémentaires présentes dans la pellicule exogène acquise, appelées récepteurs."
       },
       {
-        "questionText": "La plaque sous gingivale est :",
+        "questionText": "N°60 (2021 Résidanat - Q1892\nLa plaque sous gingivale est :‎",
         "options": [
           "A. Visible à l'œil nu",
           "B. Constituée de bactéries aérobies",
@@ -2530,10 +2609,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "La plaque sous-gingivale s'accumule dans le sillon gingival. Elle est invisible (A), anaérobie (B), et baignée par le fluide gingival (D)."
+        "explanation": "La plaque sous – gingivaleLes communautés bactériennes accumulées dans le sillon gingivo-dentaire constituent la plaque sous-gingivale. Elle est presque exclusivementanaérobieetbaignée par le fluide gingival.Elle ne peut être visible parce qu’elle est masquée par la gencive. Elle est moins adhérente et moins dense que la plaque supra gingivale.a/b/c/e : c'est La plaque sus – gingivaleLa plaque supra gingivale :Elle est retrouvée sur la couronne dentaire ou l’on peut distinguer la plaque des surfaces lisses, la plaque des faces proximales, la plaque des fosses et sillons occlusaux. Elle est surtout aérobie strict et baignée par la salive. Lorsqu’elle est peu épaisse, elle est invisible à l’œil nu."
       },
       {
-        "questionText": "La pellicule acquise:",
+        "questionText": "N°66 (2021 Résidanat - Q1893\nLa pellicule acquise:‎ 1- ‎Est d'origine microbienne‎ 2- ‎Contient des glycoprotéines salivaires‎ 3- ‎Adhère aux tissus durs de la dent‎ 4- ‎Permet l'adhésion des bactéries‎ 5- ‎Contient des adhésines bactériennes‎",
         "options": [
           "1- Est un film protéique d’origine salivaire",
           "2- Se forme en quelques minutes après le brossage",
@@ -2546,10 +2625,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La PAE est un film protéique acellulaire (5 est faux) d'origine salivaire (1). Elle se forme en quelques minutes (2), facilite l'adhésion bactérienne (3), et peut avoir un rôle protecteur (4)."
+        "explanation": "1: C’est un film protéiqued’origine salivaireFormation De La Pellicule Acquise Exogène (PAE)C’est un film protéique d’origine salivaire, dépourvu de cellules, son épaisseur est de 0.1 à 1 mm.Elle se forme spontanément et naturellement à la surface des dents en un revêtement insoluble. Elle apparait en quelques minutes après le brossage et va faciliter l’attachement des premières bactéries.Sa formation se fait en deux temps :L’adhésion instantanée de protéines salivaire spécifiques à la surface de l’email :cela aboutit à la formation d’une première sous-couche en 3 minutes (précurseur de la PAE)Un second flot de protéines salivaires se fixent sur les protéines précurseurs de la PAE :cette seconde adsorption de protéines salivaires se fait de manière continues.La P.A.E peut avoir un rôle de protection des dents, en empêchant leurs déminéralisations, comme elle peut être nocive, en favorisant l’accumulation d’acides et de bactéries à sa surface"
       },
       {
-        "questionText": "Classez par ordre les étapes de formation du Biofilm dentaire :",
+        "questionText": "N°74 (2021 Résidanat - Q1894\nClassez par ordre les étapes de formation du Biofilm dentaire :‎ 1- ‎Phase de croissance‎ 2- ‎Phase de maturation‎ 3- ‎Formation de pellicule acquise‎ 4- ‎Phase d'adhésion‎ 5- ‎Phase de colonisation‎",
         "options": [
           "1- Maturation (Multiplication et matrice)",
           "2- Dispersion",
@@ -2564,10 +2643,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Ordre : Formation de la PAE (3), Adhésion réversible (4), Adhésion irréversible (5), Maturation (1), et Dispersion (2)."
+        "explanation": "Formation de la plaque bactérienneFormation De La Pellicule Acquise Exogène (PAE)C’est un film protéique d’origine salivaire, dépourvu de cellules, son épaisseur est de 0.1 à 1 mm.Elle se forme spontanément et naturellement à la surface des dents en un revêtement insoluble. Elleapparait en quelques minutes après le brossage et va faciliter l’attachement des premières bactéries.Sa formation se fait en deux temps :L’adhésion instantanée de protéines salivaire spécifiques à la surface de l’email : cela aboutit à la formation d’une première sous-couche en 3 minutes (précurseur de la PAE)Un second flot de protéines salivaires se fixent sur les protéines précurseurs de la PAE : cette seconde adsorption de protéines salivaires se fait de manière continues.La P.A.E peut avoir un rôle de protection des dents, en empêchant leurs déminéralisations, comme elle peut être nocive, en favorisant l’accumulation d’acides et de bactéries à sa surface2.Adhérence Et Colonisation BactérienneLes bactéries sont transportées vers la surface dentaire parla salive. Arrivées àproximité de la dent, les bactéries chargées négativement, adhèrent réversiblement àla PAE. Cette PAE chargée elle- même par interaction de forces électrostatiquesrépulsives et de forces de Van Der Waals attractives.L'adhésion irréversible des premières bactéries (streptococcus goidoniti, oralis et mitis ;Actinomyces viscosus )surla PAE se fait par des interactions spécifiques de type protéine-protéine.3.Maturation Du BiofilmElle se fait grâce à la prolifération bactérienne et au développement de sa matrice intercellulaire, conséquence directe du métabolisme bactérien.Au fur et à mesure que les couches bactériennes se déposent, la plaque s’épaissit et on la considère mature après 30 couches environs."
       },
       {
-        "questionText": "Dans le Biofilm bactérien, les canaux aqueux :",
+        "questionText": "N°42 (2020 Résidanat - Q1953\nDans le Biofilm bactérien, les canaux aqueux :",
         "options": [
           "A. Ont un rôle dans l'adhérence des bactéries",
           "B. Produisent les facteurs de virulence",
@@ -2578,7 +2657,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Dans le biofilm mature, les canaux aqueux sont créés pour apporter les nutriments et l'oxygène, permettant les échanges nécessaires à la survie des bactéries."
+        "explanation": "les canaux aqueux vont être créés afin d’apporter les différents nutriments ou l’oxygène aux bactéries par des diffusions sous l’effet de gradients de concentration."
       },
       {
         "questionText": "Le biofilm bactérien est défini comme:",
@@ -2596,7 +2675,7 @@ const paroQuizzes = [
         "explanation": "Le biofilm est une accumulation de micro-organismes de différentes espèces (D). Lorsqu'il est sur la dent, il est appelé plaque dentaire (E)."
       },
       {
-        "questionText": "On reconnait plusieurs types de plaque dentaire:",
+        "questionText": "N°7 (2021 2°EMD - Q1665\nOn reconnait plusieurs types de plaque dentaire:",
         "options": [
           "A. Une Plaque des surfaces lisses",
           "B. Une Plaque des muqueuses",
@@ -2611,7 +2690,7 @@ const paroQuizzes = [
         "explanation": "Les types de plaque sont classés par localisation : plaque supra-gingivale (qui inclut celle des surfaces lisses, proximales, et sillons) et plaque sous-gingivale."
       },
       {
-        "questionText": "Le complexe bactérien rouge de Socransky comprend:",
+        "questionText": "N°19 (2021 2°EMD - Q1866\nLe complexe bactérien rouge de Socransky comprend:",
         "options": [
           "A. Fusobacterium nucleatum",
           "B. Porphyromonas gingivalis",
@@ -2704,7 +2783,7 @@ const paroQuizzes = [
         "explanation": "Au sein de la matrice du biofilm mature, des canaux aqueux se forment pour permettre la circulation des nutriments, de l'oxygène et l'élimination des déchets, facilitant ainsi les échanges pour les bactéries en profondeur."
       },
       {
-        "questionText": "Le biofilm bactérien est :",
+        "questionText": "N°46 (2019 Résidanat - Q2034\nLe biofilm bactérien est : 1- La seule étiologie des maladies parodontales. 2- Le facteur étiologique local direct des maladies parodontales. 3- Le facteur étiologique local indirect des maladies parodontales. 4- Libre dans la poche parodontale. 5- Un dépôt dur.",
         "options": [
           "1- Un ensemble de cellules épithéliales",
           "2- Un dépôt calcifié plus ou moins coloré",
@@ -2730,6 +2809,19 @@ const paroQuizzes = [
           3
         ],
         "explanation": "Le biofilm est une accumulation de différentes espèces bactériennes (4). Un dépôt calcifié (2) est du tartre, pas un biofilm actif."
+      },
+      {
+        "questionText": "N°6 (2023 2°EMD - Q956\nLe fluor existe dans le biofilm sous les formes suivantes :",
+        "options": [
+          "Ions libres",
+          "Fluor ionisable",
+          "fluor fortement lié",
+          "Libre, ionisable .fortement lié"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Contenu inorganique :Principalement le calcium, le phosphore ainsi qu'une petite quantité de magnésium, de potassium et de sodium, ce sont les précurseurs du tartre.\n -Calcium: l'origine est salivaire, une présence en quantité élevé dans le biofilm signe l'évolution calculogène de celui-ci.\n -Le phosphate: accumulé dans le biofilm a un effet anti- carieux.\n -Fluor: Le fluor existe dans le biofilm sous trois formes: ions fluor libre, fluore ionisable (forme la plus abondante), fluore fortement lié. Son origine demeure incertaine, cependant"
       }
     ]
   },
@@ -2738,7 +2830,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Le cément est un tissu :",
+        "questionText": "N°11 (2025 1°EMD - Q260\nLe cément est un tissu :",
         "options": [
           "A. Qui est très minéralisé.",
           "B. Qui n'est pas innervé.",
@@ -2749,10 +2841,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Le cément n'est pas innervé (B) et subit une apposition continue tout au long de la vie (D). Il est avasculaire (C) et faiblement minéralisé (A)."
+        "explanation": "A. Faux : il est faiblement minéralisé (moins que l’émail mais proche de la dentine) envers 45%B. Vrai : il n’est pas innervé donc insensible.C. Faux : il est avasculaire.D. Vrai : il subit une apposition tout au long de la vie pour compenser l’usure."
       },
       {
-        "questionText": "Les caractéristiques du cément sont :",
+        "questionText": "N°58 (2021 Résidanat - Q1891\nLes caractéristiques du cément sont :‎",
         "options": [
           "A. Couleur plus foncé que celle de la dentine",
           "B. Présence d'une hypercémentose",
@@ -2764,10 +2856,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Le cément peut présenter un épaississement anormal (hypercémentose). À la jonction amélo-cémentaire, il peut former une courbe. Sa couleur est plus claire que la dentine, il est moins dur que l'os et il est bien un tissu calcifié."
+        "explanation": "a : le cément est de couleur jaune clair , légèrementplus clair que la dentineet plus sombre et moins translucide que l'émailb :Hypercémentose : c'est un épaississement anormal du cément.Elle est un des attributs de la dent dans la sénescence .Souvent considérable, elle peut oblitérer les canaux radiculaires et compromettre la vitalité de la pulpe.c : le cément est le 3ème tissu minéralisé de la dent après l'émail et la dentine , il est le moins dur et le moins résistant à l'abrasione : il est constitué d'un tissu conjonctif minéralisé etcalcifié"
       },
       {
-        "questionText": "Les cémentocytes sont des :",
+        "questionText": "N°53 (2020 Résidanat - Q1958\nLes cémentocytes sont des : 1- Restes épithéliaux de Malassez 2- Cellules avec prolongement cyto plasmiques 3- Cémentoblastes adultes 4- Cémentoblastes résorbés 5- Cellules endothéliales",
         "options": [
           "1- Cellules cuboïdes",
           "2- Cellules étoilées",
@@ -2779,10 +2871,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Les cémentocytes sont les cémentoblastes qui ont été piégés dans la matrice cémentaire qu'ils ont sécrétée. Ils résident dans des lacunes (cémentoplastes) et ont une forme étoilée caractéristique avec des prolongements cytoplasmiques."
+        "explanation": "3:  La présence de cémentocytes qui proviennent de ladifférenciation des cémentoblastesà partir du tissu conjonctif environnant.o Les cémentocytes ont une forme étoilée et émettent desprolongements cytoplasmiquesles reliant entre eux pour permettre le transport des éléments nutritifs."
       },
       {
-        "questionText": "Parmi les caractéristiques du cément cellulaire :",
+        "questionText": "N°12 (2025 1°EMD - Q276\nParmi les caractéristiques du cément cellulaire :",
         "options": [
           "A. Situation au niveau du 1/3 cervical.",
           "B. Présence de Cémentoblastes.",
@@ -2794,10 +2886,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le cément cellulaire contient des cémentoblastes (B), se forme après l'éruption (C) et est plus épais (D). Il se trouve au niveau du tiers apical et des furcations (A)."
+        "explanation": "A. Faux : il se trouve surtout au niveau du tiers apical et les furcations pas au tiers cervical.B. Vrai : il contient des cémentoblastes dans des lacunes.C. Vrai : il se forme après l’éruption des dents lors des moments d’adaptation en réponse aux exigences fonctionnelles.D. Vrai : il est plus épais que le cément acellulaire, surtout en zone apicale."
       },
       {
-        "questionText": "Les constituants organiques du cément sont :",
+        "questionText": "N°13 (2025 1°EMD - Q291\nLes constituants organiques du cément sont :",
         "options": [
           "A. Hydroxyproline.",
           "B. Glycine.",
@@ -2809,10 +2901,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le principal constituant organique est le collagène (C). La glycine (B) et l'alanine (D) sont des acides aminés présents en abondance."
+        "explanation": "A. Faux : l’hydroxyproline est un acide aminé caractéristique du collagène mais non pas le cément.B. Vrai : la glycine est abondante dans le cément.C. Vrai : le collagène est la principale protéine organique du cément.D. Vrai : l’alanine est présente mais en faible proportion."
       },
       {
-        "questionText": "Le cément a pour rôle :",
+        "questionText": "N°14 (2025 1°EMD - Q317\nLe cément a pour rôle :",
         "options": [
           "A. La réparation des lésions radiculaires.",
           "B. La protection de la dentine.",
@@ -2825,7 +2917,7 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le cément a de multiples rôles : réparation (A), protection de la dentine (B), attachement via les fibres de Sharpey (C), et prévention de l'hyperesthésie (D)."
+        "explanation": "A. Vrai : il participe à la réparation des lésions radiculaires par le dépôt du nouveau cément.B. Vrai : il recouvre et protège la dentine radiculaire.C. Vrai : il assure l’attache de la dent via les fibres de Sharpey.D. Vrai : en recouvrant la dentine cervicale il prévient l’hyperesthésie."
       },
       {
         "questionText": "Parmi les caractéristiques du cément cellulaire :",
@@ -2856,7 +2948,7 @@ const paroQuizzes = [
         "explanation": "Le cément peut présenter une hypercémentose (B) et forme une courbe à la jonction amélo-cémentaire (D). Sa couleur est plus claire (A) et sa dureté est inférieure à celle de la dentine (C)."
       },
       {
-        "questionText": "Le cément intermédiaire se trouve la surface de:",
+        "questionText": "N°27 (2025 1°EMD - Q454\nLe cément intermédiaire se trouve la surface de:",
         "options": [
           "A. L'émail",
           "B. Le cément",
@@ -2866,10 +2958,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le cément intermédiaire (ou cuticule primaire) recouvre l'émail nouvellement formé avant l'éruption."
+        "explanation": "A. Vrai : le cuticule primaire recouvre l’émail nouvellement formé avant éruption.\n B. Faux : il n'est pas retrouvé sur le cément.\n C. Faux : ni sur la dentine.\n D. Faux : il n'est pas spécifique à la jonction amélo-cémentaire."
       },
       {
-        "questionText": "Le cément acellulaire afibrillaire est retrouve au niveau :",
+        "questionText": "N°28 (2025 1°EMD - Q456\nLe cément acellulaire afibrillaire est retrouve au niveau :",
         "options": [
           "A. Du 1/3 moyen de la racine",
           "B. Du 1/3 cervical de la racine",
@@ -2879,10 +2971,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le cément acellulaire afibrillaire se trouve en taches isolées sur l'émail, près de la jonction amélo-cémentaire."
+        "explanation": "-Cément acellulaire :primaire :★se forme lors du développement de la racine et de l’éruption de la dent.il ne contient pas de cellules.★Il se trouve essentiellement sur les deux tiers supérieurs de la racine, son épaisseur très faible 20 à50 microns.★Les fibres de Sharpey constituent la partie la plus importante de la structure du cément acellulaire elles forment le système de fibres extrinsèques du cément et sont produites par les fibroblastes desmodontaux.elles ont un rôle primordial dans le support de la dent ,la plus part des fibres sont incluses à angle droit dans la surface de la racine et pénètre profondément dans le cément.★Le cément acellulaire contient également d’autres fibres collagène qui sont calcifiées et disposées de façon irrégulière ou qui sont parallèle à la surface."
       },
       {
-        "questionText": "Le cément se différencie de l'os alveolaire par",
+        "questionText": "N°29 (2025 2°EMD - Q457\nLe cément se différencie de l'os alveolaire par",
         "options": [
           "A. Un perpétuel remaniement",
           "B. Une absence de vaisseaux et de nerfs",
@@ -2893,10 +2985,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Le cément est avasculaire et non innervé (B), et il subit une apposition continue (D), contrairement à l'os qui se remanie (A)."
+        "explanation": "A. Faux : pas de remodelage perpétuel dans le cément.B. Vrai : y'a pas de vaisseaux ni nerfs au niveau du cément.C. Faux : la minéralisation est similaire ou moindre.D. Vrai : l'apposition du cément est continue durant toute la vie."
       },
       {
-        "questionText": "Le cément cellulaire :",
+        "questionText": "N°24 (2025 2°EMD - Q448\nLe cément cellulaire :",
         "options": [
           "A. Est retrouvé au niveau de la partie haute de la séparation des racines",
           "B. Est retrouvé au niveau du tiers coronaire de la racine",
@@ -2906,10 +2998,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le cément cellulaire contient des cémentocytes (D). Il se trouve au niveau du 1/3 apical (B). Ses fibres matricielles sont intrinsèques (C)."
+        "explanation": "A. Faux : la partie haute de séparation des racines contient souvent le cément acellulaire.B. Faux : le tiers coronaire concerne surtout le cément acellulaire tandis que le cément cellulaire se trouve au niveau du 1/3 ou la moitiée apicale.C. Faux : les fibres matricielles sont des fibres intrinsèques pas extrinsèques.D. Vrai : il contient des cellules cémentocytes."
       },
       {
-        "questionText": "Le cément :",
+        "questionText": "N°18 (2022 1°EMD - Q1519\nLe cément se forme :",
         "options": [
           "A. Est constitué de fibres intrinsèques, produites par les cémentoblastes",
           "B. Primaire est souvent trouvé au niveau du tiers apical",
@@ -2921,10 +3013,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Les fibres matricielles sont les fibres intrinsèques, produites par les cémentoblastes et parallèles à la surface (A, C). Le cément a une apposition continue (D). Le cément primaire est coronaire (B)."
+        "explanation": "CEMENTOGENESE- Lorsque l’email est la dentine coronaire sont formés, la gaine d’Hertwig apparait. Elle est constituée par deux couches cellulaires provenant de l’épithélium adamantin interne et de l’épithélium adamantin externe .- Dès que la dentine radiculaire commence à ce former, la gaine de Hertwig se fragmente .les restes épithéliaux de cette gaine donneront naissance aux débris de Malassez .- A la suite de la fragmentation de la gaine de Hertwig , des cellules mésenchymateuses du sac folliculaire viennent au contact de la dentine néoformée ;ces cellules indifférenciées vont se différencier en cémontoblastes Ceux-ci secréteront du côté dentinaire le tissu cémentoïde ,un tissu collagène qui par calcification va donner naissance au cément.- La formation du cément débute avec la minéralisation des fibrilles collagènes irrégulièrement disposées et éparpillées dans une substance fondamentale inter fibrillaire , ou matrice ."
       },
       {
-        "questionText": "Le cément :",
+        "questionText": "N°19 (2022 1°EMD - Q1533\nLe cément secondaire",
         "options": [
           "A. Est issue des pré-cémentoblastes de la couche interne du SRC folliculaire",
           "B. B-A une épaisseur maximale dans le 1/3 apical (150 à 200 pm)",
@@ -2935,10 +3027,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Les cémentoblastes proviennent du sac folliculaire interne (A). Son épaisseur est maximale au 1/3 apical (150-200 µm) (B). Il n'est pas innervé (C) et subit une apposition (D)."
+        "explanation": "Cément cellulaire :secondaire :-Il se forme après l’éruption dentaire et en réponse aux exigences fonctionnelles.le cément secondaire est initialement déposé sur le tiers apicales de la racine son épaisseur et importante 150 à 200 microns il se trouve également dans les zones inter-radiculaires.contrairement au cément primaire le cément secondaire contient des cellules les cémentoblastes qui sont à l’origine de l’élaboration du cément,au fur et à mesure de leur sécretion ‘les cémentoblastes s’incorporent dans la masse minéralisée où ils occupent des cavités creusées au sein du cément et deviennent des cémontocytes.-Les cémentocytes sont reliés entre eux par des expansions cytoplasmiques parcourant les canalicules du cément, ils sont aussi reliés au cémentoblastes situés à la surface par l’intermédiaire de ces expansions cytoplasmiques.-La présence de cémentocytes permet le transport des éléments nutritifs à travers le cément et contribue à maintenir la vitalité de ce tissu minéralisé."
       },
       {
-        "questionText": "La jonction amélo-cémentaire :",
+        "questionText": "N°26 (2024 EMD - Q839\nLa jonction amélo-cémentaire :",
         "options": [
           "A. Peut prendre deux former de dispositions anatomiques",
           "B. Réalise la coache granuleuse de Tomes",
@@ -2948,10 +3040,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Il y a 3 types de jonction (A). Le cas où le cément recouvre l'émail est le plus fréquent (60-65%). La disjonction (D) survient dans 5-10% des cas et expose la dentine. La couche de Tomes (B) est à la jonction cément-dentine."
+        "explanation": "-On distingue classiquement 3 types de disposition anatomique à la jonction émail-cément :\n • Dans 60 à 65% des cas, le cément recouvre l'émail.\n • Dans 30% des cas, le cément se termine au même niveau que l'émail (une jonction bord-à-bord).\n • dans 5 à 10%, le cément et l'émail ne se rencontrent pas, cela va mettre à nue la dentine radiculaire à ce niveau, ce qui peut entrainer une hypersensibilité dentaire\n -Jonction cément / dentine :La jonction cément dentine apparait comme une ligne mince qui correspond à la couche granuleuse de Tomes, une zone hautement minéralisée et peu organique."
       },
       {
-        "questionText": "Histologiquement, le cément",
+        "questionText": "N°27 (2024 EMD - Q840\nHistologiquement, le cément",
         "options": [
           "A. Primaire est souvent trouvé au niveau des deux tiers coronaires de la racine",
           "B. Cellulaire est retrouvé sur les surfaces inter-radiculaires des dents pluri-radiculées",
@@ -2963,10 +3055,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Cément primaire (acellulaire) est coronaire (A). Cément secondaire (cellulaire) est apical et inter-radiculaire (B). Les fibres matricielles (D) sont intrinsèques et parallèles. Les fibres extrinsèques (C) sont produites par les fibroblastes."
+        "explanation": "-Le cément primaire ou acellulaire :Souvent trouvé au niveau des deux tiers coronaires de la surface radiculaire.-Le cément secondaire ou cellulaire :Recouvre le cément acellulaire ou la dentine au niveau du tiers apical de la surface radiculaire, ainsi qu'au niveau des surfaces inter-radiculaires des dents pluri-radiculées.-Fibres de Sharpey: fibres extrinsèques : Produites par les fibroblastes du desmodonte. Correspondent à la partie incluse des fibres principales du desmodonte, Incorporée dans la masse calcifiée du cément. Orientées perpendiculairement à la surface radiculaire-Fibres de Sharpey: fibres extrinsèques :Produites par les fibroblastes du desmodonte. Correspondent à la partie incluse des fibres principales du desmodonte, Incorporée dans la masse calcifiée du cément. Orientées perpendiculairement à la surface radiculaire."
       },
       {
-        "questionText": "Le cément :",
+        "questionText": "N°12 (2021 1°EMD - Q1755\nLe cément :",
         "options": [
           "A. Est constitué d'un tissu conjonctif minéralisé et calcifié.",
           "B. Est un tissu vivant en constant remaniement et remodelage.",
@@ -2977,7 +3069,7 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Le cément est un tissu conjonctif minéralisé (A). Il est avasculaire et non innervé (C). Il ne subit pas de remodelage (B) mais une apposition continue tout au long de la vie (D)."
+        "explanation": "9. Quelle paire de caractéristiques distingue correctement le cément acellulaire (primaire) du cément cellulaire (secondaire) ?A.Faux:Le cément acellulairene contient pas de cémentocytestandis quele cément cellulairecontient des cémontocytesmaisil se forme rapidementpas lentement.B.Faux: C’est l’inverse :le cément acellulairese situe auniveau cervical et moyen, le cément cellulaireauniveau apical et les furcations.C.Vrai:le cément acellulaire (primaire)assure un rôled’ancrage due aux fibres de Sharpey nombreusesalors quele cément cellulaire (secondaire)son rôle estl’adaptation grâce à la présence de cémentocytes.D.Faux:le cément acellulairese formeavant l’occlusionmaisle cément cellulairese formeaprès l’occlusion(fonctionnel)."
       },
       {
         "questionText": "Le Cément secondaire:",
@@ -3035,7 +3127,7 @@ const paroQuizzes = [
         "explanation": "Le cément secondaire est cellulaire et fibrillaire (A). Il se forme après l'éruption en réponse aux exigences fonctionnelles (D)."
       },
       {
-        "questionText": "La jonction cément-dentine",
+        "questionText": "N°20 (2022 1°EMD - Q1539\nLa jonction cément-dentine",
         "options": [
           "A. Est une zone peu minéralisée",
           "B. Apparait comme une ligne mince histologiquement",
@@ -3047,10 +3139,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La jonction cément-dentine apparaît comme une ligne mince. C'est une zone hyperminéralisée et donc radio-dense."
+        "explanation": "Jonction dentine-cément: En microscopie électronique ,un hiatus collagénique est noté entre le cément et la dentine. Cette zone radio dense de 10 à20 micron est une zone hyperméniralisée."
       },
       {
-        "questionText": "l’aspect morphologique du cément est en fonction:",
+        "questionText": "N°9 (2021 1°EMD - Q1699\nl’aspect morphologique du cément est en fonction:",
         "options": [
           "A. de l’âge de l’individu,",
           "B. de la migration physiologique dentaire.",
@@ -3065,7 +3157,7 @@ const paroQuizzes = [
         "explanation": "L'aspect du cément (ex: épaisseur) est influencé par l'âge, la fonction occlusale et les mouvements fonctionnels."
       },
       {
-        "questionText": "Hypercémentose:",
+        "questionText": "N°10 (2021 1°EMD - Q1717\nHypercémentose:",
         "options": [
           "A. est un épaississement cémentaire pathologique,",
           "B. se localise au niveau des dents monaradiculées,",
@@ -3075,7 +3167,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L'hypercémentose est un épaississement pathologique du cément (A). L'absence de dent antagoniste (D) peut être une cause, pas une origine."
+        "explanation": "Constituants du sillon gingivo-dentaire (sulcus) :-La surface dentaire à laquelle peuvent adhérer dans la partie inférieure-Des cellules isolées ou en fines couches (une à 03 couches); ce sont les restes de l'épithélium jonctionnel primaire.-Un épithélium sulculaire pluristratifié non kératinisé fait suite à l'épithélium gingival se prolonge le long de la surface dentaire par l'épithélium jonctionnel.-Le fond est la portion coronaire de l'attache épithéliale.-L'espace biologique dentaire est l'espace compris entre le fond du sulcus dentaire et le sommet de la crête osseuse cercle tout le tour de la dent sur une hauteur d'environ 2mm.-Cet espace est composé par deux structures distinctes qui se font suite et qui sont :l'attache épithéliale et l'attache conjonctive."
       },
       {
         "questionText": "Le cément :",
@@ -3108,7 +3200,7 @@ const paroQuizzes = [
         "explanation": "Les cémentocytes sont d'anciens cémentoblastes qui se différencient, prennent une forme étoilée et sont emprisonnés dans des lacunes (cémentoplastes)."
       },
       {
-        "questionText": "Parmi les propriétés physiques du cément :",
+        "questionText": "N°15 (2023 1°EMD - Q1120\nParmi les propriétés physiques du cément :",
         "options": [
           "A. Son imperméabilité.",
           "B. Sa forte densité plus importante que celle de l'émail et de la dentine.",
@@ -3118,7 +3210,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le cément est le moins dur des tissus minéralisés de la dent (C). Il est perméable (A), a une faible densité (B), et est moins translucide que l'émail (D)."
+        "explanation": "★Couleur: Le cément est de couleur jaune clair, légèrement plus clair que la dentine et plus sombre et moins translucide que l'émail\n ★Dureté: Le cément est le 3ème tissu minéralisé de la dent après l'émail et la dentine, il est le moins dur et le moins résistant à l'abrasion.\n ★Densité: Sa densité est faible par rapport à l'émail et la dentine, elle varie entre 0.1 et 0.5 Absorption des rayons: Son absorption des rayons X est 06 fois plus faible que la dentine.\n ★Perméabilité: Le cément est un tissu perméable mais cette perméabilité diminue avec l'âge."
       },
       {
         "questionText": "Le cément :",
@@ -3220,7 +3312,7 @@ const paroQuizzes = [
         "explanation": "L'hypercémentose (B) est un épaississement anormal. La jonction amélo-cémentaire (D) peut avoir une forme arrondie. Il est moins dur que la dentine (C) et plus clair (A). Il est calcifié (E)."
       },
       {
-        "questionText": "Le cément est:",
+        "questionText": "N°5 (2021 1°EMD - Q1626\nLe cément est:",
         "options": [
           "A. un élément du parodonte profond,",
           "B. ni vascularisé et innervé qui recouvre toute la surface radiculaire,",
@@ -3233,7 +3325,7 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le cément fait partie du parodonte profond (A), est avasculaire et non innervé (B), riche en collagène (C), et recouvre la dentine (D)."
+        "explanation": "Définition :Encore appelé ligament parodontal = ligament alvéolo-dentaire LAD = ligament desmodontal .C’est un tissu conjonctif fibreux spécialisé qui entoure les racines dentaires et les relie à l’os alvéolaire.Les fibres de collagène du desmodonte sont enchâssées dans le cément et dans l’os alvéolaire, de sorte que ce ligament fournit une continuité de tissus mous entre les tissus conjonctifs minéralisés du parodonte."
       },
       {
         "questionText": "l’aspect morphologique du cément est en fonction:",
@@ -3290,6 +3382,33 @@ const paroQuizzes = [
           2
         ],
         "explanation": "Le cément acellulaire (primaire) est riche en fibres de Sharpey (extrinsèques). Il se trouve sur les 2/3 supérieurs (A), se forme lors de l'éruption (B), et son épaisseur est faible (20-50 µm) (D)."
+      },
+      {
+        "questionText": "N°10 (2026 1°EMD - Q19\nQuelle est la localisation et la fonction principale du cément cellulaire ?",
+        "options": [
+          "Région cervicale; fonction principale d'ancrage rigide.",
+          "Région moyenne; rôle de barrière biologique protectrice.",
+          "Apex radiculaire ou furcation; rôle de protection de la dentine contre les caries.",
+          "Apex radiculaire ou furcation; fonction principale d'adaptation (croissance compensatoire) et d'apposition continue"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "10. Localisation et fonction principale du cément cellulaire :A.Faux: C’est lecément acellulairequi se situe auniveau du colletet il assurela fonction d'ancrage.B.Faux: Le cément n’a pas de rôle direct au tant que barrière biologique protectrice.C.Faux: bien quele cément cellulaireest située au niveaude l'apex ou les furcationset il possèdeune fonction de protection de la dentine radiculaire contre les cariesmaisce n'est pas sa fonction principale.D.Vrai:le cément cellulairese trouve dans ces régions etsert à compenser l’usure occlusale, adapter la dent aux forces ainsi que d'assurer une apposition continue."
+      },
+      {
+        "questionText": "N°13 (2026 1°EMD - Q25\nLorsqu'il y a une absence d'union au niveau de la Jonction Émail-Cément (JEC), quelle est la séquence d'événements la plus plausible entraînant le désagrément clinique le plus fréquent ?",
+        "options": [
+          "Le cément recouvre l'émail, créant une zone propice à l'accumulation bactérienne.",
+          "La dentine radiculaire est exposée, le patient ne ressent aucune douleur.",
+          "La dentine radiculaire est exposée, l'ouverture des tubuli dentinaires entraîne une réaction nerveuse",
+          "(hypersensibilité) au stimulus thermique ou tactile.",
+          "La dentine radiculaire est exposée, ce qui force une compensation par dépôt rapide de cément cellulaire à l'apex."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "13.En absence d’union de la JEC l'événement qui explique le désagrément clinique le plus fréquent est :A.Faux: lorsque laJEC est absentepas de recouvrement ;l'émail et le cément ne se rencontre pas.B.Faux:L’exposition dentinaireentraîne en généralune sensibilité.C.Vrai:L’exposition de la dentineprovoque uneouverture des tubulidonc une hypersensibilité.D.Vrai: C’est la conséquence la plus fréquente\"hypersensibilité dentinaire\".E.Faux: La compensation apicalen’a aucune coorélationavec la JEC exposée."
       }
     ]
   },
@@ -3298,7 +3417,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "La crête alvéolaire :",
+        "questionText": "N°7 (2025 RATT - Q167\nLa crête alvéolaire :",
         "options": [
           "A. C'est le point où se réunissent les tables osseuses et l'os de la paroi alvéolaire",
           "B. Est située 1.5 à 2mm au-dessus du niveau de la jonction amélo-cémentaireu",
@@ -3309,10 +3428,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "La crête est la jonction des tables et de la paroi alvéolaire (A) et présente un contour arrondi (D). Elle est située 1.5-2mm en apical (en dessous) de la JEC (B) et les malpositions peuvent modifier son profil (C)."
+        "explanation": "A. Vrai : c’est bien l’union des tables osseuses vestibulaire et linguale/palatine avec l’os alvéolaire propre.B. Faux : elle est située 1,5 à 2 mm en apical de la jonction amélo-cémentaire pas au-dessus.C. Faux : les malpositions dentaires peuvent modifier son profil.D. Vrai : elle présente normalement un contour arrondi en bourrelet mais elle peut être très effilée en lame de couteau si l'os est fin."
       },
       {
-        "questionText": "Histologiquement, l'os alvéolaire est constitué :",
+        "questionText": "N°1 (2021 1°EMD - Q1572\nl'os alvéolaire :",
         "options": [
           "A. D'un os compact au niveau du septum interdentaire.",
           "B. D'un os spongieux au niveau des corticales.",
@@ -3323,7 +3442,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "La paroi de l'alvéole dentaire, aussi appelée lamina dura, est constituée d'os fasciculé, nommé ainsi car il reçoit l'insertion des faisceaux de fibres de Sharpey. Les septa sont spongieux et les corticales sont compactes."
+        "explanation": "5. L’os alvéolaire :A. Vrai: L’os alvéolaire estla portion spécialisée de l’os basal supportant les dents; donc c’estun prolongementde ce derniersans aucune démarcation anatomique ou histologique précise.B.Faux: C’est unos irréguliercar c’est une petite partie de la mandibule et du maxillaireon ne peut pas le classé ni avec les os longs ni avec les courts.C.Vrai:Sans stimulation fonctionnelle(absence de ligament)l’os alvéolaire disparaît progressivement avec la perte des dents.D.Faux: L’os alvéolaire estrichement vascularisé, très dynamiqueetmétaboliquement actif."
       },
       {
         "questionText": "L'os alvéolaire est un tissu dynamique en perpétuel remaniement, les quatre phases de ce remaniement sont :",
@@ -3354,7 +3473,7 @@ const paroQuizzes = [
         "explanation": "L'os alvéolaire est d'origine ectomésenchymateuse et dérive de la partie externe du sac folliculaire qui entoure le germe dentaire. Sa formation (ostéogenèse) débute à partir de la fin du stade de la cloche."
       },
       {
-        "questionText": "La phase minérale du tissu osseux est composée de :",
+        "questionText": "N°55 (2018 Résidanat - Q2109\nLa phase minérale du tissu osseux est composée de : 1- Phosphate de calcium. 2- Carbonate de calcium. 3- Bromure de calcium. 4- Permanganate de magnésium. 5- Cyanure de magnésium.",
         "options": [
           "1- Phosphate",
           "2- Calcium",
@@ -3369,7 +3488,7 @@ const paroQuizzes = [
         "explanation": "La phase minérale de l'os, qui représente environ 70% de son poids, est principalement constituée de phosphate et de calcium, sous forme de cristaux d'hydroxyapatite. Elle contient aussi d'autres ions comme le magnésium et le carbonate."
       },
       {
-        "questionText": "Les tables osseuses:",
+        "questionText": "N°8 (2025 RATT - Q192\nLes tables osseuses:",
         "options": [
           "A. Sont constituées de corticales osseuses externes",
           "B. L'épaisseur est plus réduite au niveau du maxillaire qu'au niveau de la mandibule",
@@ -3380,7 +3499,7 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "L'épaisseur des tables (faites d'os compact) est plus faible au maxillaire (B) et plus faible en antérieur qu'en postérieur (D). Elles sont formées de corticales externes et internes (A)."
+        "explanation": "A. Faux : elles sont formés de corticales osseuses externes et internes.B. Vrai : l’épaisseur est en général plus réduite au maxillaire par rapport à la mandibule ainsi que plus réduite en antérieur que le postérieur.C. Faux : elles sont constituées d’os compact pas de spongieux.D. Vrai : l’épaisseur est plus importante en postérieur qu’en antérieur."
       },
       {
         "questionText": "L'os alvéolaire est :",
@@ -3398,7 +3517,7 @@ const paroQuizzes = [
         "explanation": "L'os alvéolaire est dans le prolongement de l'os basal (A), sans ligne de démarcation nette (B). Il assure la fixation des fibres (C) et est le principal tissu de soutien (D)."
       },
       {
-        "questionText": "Les septa interdentaires :",
+        "questionText": "N°2 (2021 1°EMD - Q1585\nles septainterdentaires :",
         "options": [
           "A. Sont situés entre les racines d'une même dent.",
           "B. Séparent deux alvéoles contiguës.",
@@ -3409,10 +3528,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "Les septa interdentaires (ou interalvéolaires) séparent les alvéoles de deux dents adjacentes (B, D). Les septa interradiculaires (A) séparent les racines d'une même dent. Ils sont constitués d'os spongieux (C)."
+        "explanation": "Les septa inter dentaires et inter radiculaires:-Comblent les espaces compris entre les corticales et parois alvéolaire ainsi que ceux existant entre les racines des dents.-Les septa ont une forme pyramidale avec une pointe cervicale réduite au niveau incisivo-canin mais s’élargie postérieurement.-Ces septa sont traversés par des canaux nourriciers qui permettent le passage des veines, artères et nerfs."
       },
       {
-        "questionText": "Une déhiscence est :",
+        "questionText": "N°8 (2021 1°EMD - Q1671\nUne déhiscence:",
         "options": [
           "A. Un défaut anatomique.",
           "B. Une dénudation isolée de l'os alvéolaire qui se prolonge jusqu'au rebord alvéolaire",
@@ -3423,10 +3542,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Une déhiscence est un défaut anatomique (A) où la dénudation de la racine atteint le rebord alvéolaire (B). Si le rebord est intact (C, D), c'est une fenestration."
+        "explanation": "-Soutien des tissus gingivaux : dans les zones interproximales, les tissus gingivaux reposent sur les fibres transseptales.-Rôle dans l’organogénétique : Les cellules du desmodonte interviennent dans la réparation tissulaire .Les cellules indifférenciées ont la capacité de former des fibroblastes, des cémentoblastes, des ostéoblastes, aboutissant à la reconstruction des tissus détruits.-transmission à l’os, amortissement des forces occlusales et suspension de la dent pendant sa fonctionocclusale :★Pour des forces faible : l’amortissement se fait par l’intermédiaire des faisceaux de fibres desmodontales, surtout les fibres obliques qui absorbent les forces occlusales et les transmettent en tension à l’os alvéolaire.★Pour des forces plus importante : entre en jeu un système plus complexe, toutes les composantes du ligament agissent ensemble pour former un amortisseur hydraulique (théorie du frein hydraulique de Weski)-Le ligament parodontal est cependant le seul tissu parodontal qui contient également des propriocepteurs, donnant des informations sur les mouvements et les positions."
       },
       {
-        "questionText": "La paroi alvéolaire est :",
+        "questionText": "N°14 (2021 1°EMD - Q1786\nLa paroi alvéolaire",
         "options": [
           "A. Une mince couche de tissu osseux spongieux.",
           "B. Constituée d'une mince couche de tissu osseux fasciculé.",
@@ -3438,10 +3557,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La paroi alvéolaire (lamina dura) limite l'alvéole (D), est constituée d'os fasciculé (B) et apparaît radio-opaque (C). Elle est composée d'os compact (A)."
+        "explanation": "-C’est la partie de la gencive qui entoure la zone cervicale des dents. Elle s’étend du rebord marginal à la gencive attachée dont elle est séparée par une légère dépression linéaire appelée sillon gingivale libre. Elle n’adhère pas à la dent mais elle forme la paroi tissulaire molle du sulcus gingival."
       },
       {
-        "questionText": "L'os fasciculé est appelé ainsi en raison de la :",
+        "questionText": "N°24 (2025 1°EMD - Q447\nL'os fasciculé est appelé ainsi en raison de la :",
         "options": [
           "A. Formation de multiples lacunes au niveau de I 'os cortical",
           "B. Présence de fibres de sharpey",
@@ -3451,10 +3570,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le terme 'os fasciculé' (pour la paroi alvéolaire) provient de l'insertion massive des fibres de Sharpey (faisceaux de collagène) dans cet os."
+        "explanation": "A. Faux : il n'est pas lié à des lacunes multiples.B. Vrai : la présence de fibres de Sharpey insérées est la raison principale de la nomenclature os fasciculé.C. Faux : les fibres intrinsèques sont retrouvés dans le cément pas l'os fasciculé.D. Faux : les dépôts cémentaires aussi sont présentes au niveau du cément pas l'os."
       },
       {
-        "questionText": "Le composant principal des tables osseuses vestibulaire et linguale est représenté par",
+        "questionText": "N°25 (2025 1°EMD - Q449\nLe composant principal des tables osseuses vestibulaire et linguale est représenté par",
         "options": [
           "A. Os cortical",
           "B. Os spongieux",
@@ -3464,10 +3583,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Les tables osseuses (vestibulaire et linguale) sont principalement formées d'os cortical (compact)."
+        "explanation": "A. Vrai : l'os cortical forme la majeure partie des tables osseuses vestibulaires et linguales.B. Faux : l'os spongieux est retrouvé au niveau des septa alvéolaire.C. Faux : l'os trabéculaire forme le tissu spongieux des septa.D. Faux : la moelle osseuse est contenue dans les espaces médullaires qui séparent les trabécules de l'os spongieux des septa."
       },
       {
-        "questionText": "Le système de Havers est absent au niveau de :",
+        "questionText": "N°26 (2025 1°EMD - Q451\nLe système de Havers est absent au niveau de :",
         "options": [
           "A. La corticale externe",
           "B. L'os lamellaire",
@@ -3477,10 +3596,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Les systèmes de Havers (ostéons) sont l'unité structurelle de l'os compact (corticales, os lamellaire), mais ils sont absents des fines travées de l'os spongieux."
+        "explanation": "A. Faux : le système de Havers est présent dans les corticales externes.B. Faux : il est aussi présent dans l'os lamellaire.C. Vrai : il est absent dans les travées spongieuses.D. Faux : l'os fasciculé contient les fibres de Sharpey traversant les systèmes de Havers."
       },
       {
-        "questionText": "La A paro alvéolaire:",
+        "questionText": "N°27 (2025 2°EMD - Q453\nLa A paro alvéolaire:",
         "options": [
           "A. Est aussi nommée lamina dura pour son aspect radio-class",
           "B. Donne insertion aux fibres de Sharpey",
@@ -3492,10 +3611,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "La paroi alvéolaire est appelée lamina dura en radio (A), donne insertion aux fibres de Sharpey (B), et est faite d'os fasciculé (D)."
+        "explanation": "A. Vrai : la paroi alveolaire est aussi appelé la lamina dura en radiographie.\n B. Vrai : elle donne insertion aux fibres de Sharpey.\n C. Faux : elle ne se confond pas toujours avec la corticale externe.\n D. Vrai : elle est constituée d’os fasciculé."
       },
       {
-        "questionText": "Le périoste :",
+        "questionText": "N°28 (2025 2°EMD - Q455\nLe périoste :",
         "options": [
           "A. Est constitué d'une double membrane",
           "B. Recouvre les corticales externes des tables assesses",
@@ -3506,7 +3625,7 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Le périoste est une double membrane (A) située sous la gencive attachée (C). Il recouvre les corticales externes et internes (B) et a un fort potentiel ostéogène (D)."
+        "explanation": "Le périoste :La surface externe de l'os alvéolaire est recouverte d'une double membrane formée de tissu conjonctif appelé périoste. Les 2 couches de la membrane sont:\n - Une couche fibreuse externe composée de tissu conjonctif dense.\n - Une couche interne ostéogène contenant des cellules ostéoprogénitrices"
       },
       {
         "questionText": "L'os alvéolaire est constitué de :",
@@ -3523,7 +3642,7 @@ const paroQuizzes = [
         "explanation": "L'os alvéolaire comprend deux tables osseuses (vestibulaire et linguale/palatine), les alvéoles dentaires, et les septa (inter-dentaires et inter-radiculaires)."
       },
       {
-        "questionText": "Les fenestrations sont :",
+        "questionText": "N°13 (2024 RATT - Q706\nLes fenestrations sont :",
         "options": [
           "A. des Anomalies anatomiques",
           "B. Des résorptions osseuses",
@@ -3534,10 +3653,10 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Les fenestrations sont des zones isolées (fenêtres) où la racine est mise à nu, mais le rebord osseux marginal est intact. La déhiscence (D) est l'absence du bord marginal."
+        "explanation": "-Les fenestrations : sont des zones isolées où la racine est mise à nu où sa surface n’est recouverte que par le périoste entourée par la gencive.-Déhiscences : c’est l’absence du bord marginal osseux, sont des zones sans tissu osseux en forme de v plus ou moins larges et irrégulières s’étendant jusqu’à la moitié ou le tiers apical de la racine ."
       },
       {
-        "questionText": "les ostéoblastes:",
+        "questionText": "N°14 (2024 RATT - Q714\nles ostéoblastes:",
         "options": [
           "A. Sont des cellules d'origine mésenchymateuse",
           "B. Sont responsable de la résorption osseuse",
@@ -3548,7 +3667,7 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Les ostéoblastes sont d'origine mésenchymateuse (A) et ont pour fonction la synthèse (formation) et la réparation osseuse (D). Les ostéoclastes (B) résorbent l'os. Les ostéocytes (C) sont les cellules incorporées."
+        "explanation": "-Ostéoblastes :Ce sont des cellules d’origine mésenchymateuse, grossièrement prismatiques, avec un noyau volumineux, excentré, opposé au tissu ostéoïde.La fonction principale de l’ostéoblaste est de synthétiser et de minéraliser le tissu ostéoïde au cours de la croissance osseuse, de son renouvellement chez l’adulte et de la réparation osseuse tout au long de la vie.B- c’est l’ostéoclasteC- c’est l’ostéocyte"
       },
       {
         "questionText": "La crête alvéolaire :",
@@ -3622,7 +3741,7 @@ const paroQuizzes = [
         "explanation": "Le périoste est une double membrane (D) qui recouvre la surface externe de l'os (A). Sa couche interne est ostéogène et contient des cellules ostéoprogénitrices (B)."
       },
       {
-        "questionText": "La migration dentaire physiologique :",
+        "questionText": "N°11 (2023 1°EMD - Q1039\nLa migration dentaire physiologique :",
         "options": [
           "A. Est un processus progressif. discontinu, pendant toute la vie de la dent.",
           "B. Est de direction mésio-occlusale.",
@@ -3633,7 +3752,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "C'est un processus continu (A), de direction mésio-occlusale (B), qui compense l'usure des points de contact (C). L'apposition se fait sur le versant distal (D)."
+        "explanation": "Migration dentaire physiologique :\n -Elle constitue un processus progressif, continu, pendant toute la vie de la dent qui semble rythmique, et se ralenti au cours du vieillissement.\n -Elle est de direction mésio-occlusale.\n -La migration mésiale physiologique est consécutive à l'usure des points de contacts inter- dentaires.\n -Du coté mésial, le phénomène de résorption prédomine.\n -Ce déplacement dentaire physiologique, se traduit par une apposition osseuse sur le versant distal de l'alvéole."
       },
       {
         "questionText": "l'os alvéolaire est constitué :",
@@ -3666,7 +3785,7 @@ const paroQuizzes = [
         "explanation": "Les septa ont une forme pyramidale (C) avec une pointe cervicale (A). Ils sont traversés par des canaux nourriciers (D). La pointe est réduite au niveau incisivo-canin (B)."
       },
       {
-        "questionText": "L'hypo fonction occlusale entraine:",
+        "questionText": "N°3 (2022 1°EMD - Q1255\nL'hypo fonction occlusale entraine:",
         "options": [
           "A. Un élargissement du ligament alvéolaire",
           "B. Une résorption osseuse",
@@ -3677,10 +3796,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "L'hypofonction (manque de stimulation) entraîne un rétrécissement du ligament, une diminution du nombre de travées osseuses, une diminution de la hauteur de l'alvéole et une atrophie fonctionnelle."
+        "explanation": "-L’hypo fonction occlusale : entraine un rétrécissement du ligament sur la paroi alvéolaire. A long terme, le nombre de travées diminue et le tissu spongieux devient mince et moins dense. L’aboutissant en est une diminution de hauteur de l’alvéole et une atrophie fonctionnelle."
       },
       {
-        "questionText": "Parmi les caractéristiques d'un os sain:",
+        "questionText": "N°4 (2022 1°EMD - Q1278\nParmi les caractéristiques d'un os sain:",
         "options": [
           "A. Un contour festonné suivant le collet des dents",
           "B. Présence de déhiscence",
@@ -3691,7 +3810,7 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "L'os sain a un contour festonné (A) et son sommet se situe à environ 1 mm sous la JEC (C). La lamina dura doit être continue (D). La déhiscence (B) est un défaut."
+        "explanation": "Caractéristiques de l’os sain:\n  1- contour: Il suit de façon harmonieuse le collet de la dent avec des saillies correspondantes aux racines et des dépressions inter dentaires\n 2- hauteur: Le sommet de la crête osseuse se situe, chez l’adulte jeune à 1mm en dessous du collet anatomique (donc de l’attache épithéliale).\n  Il est influencé par l’alignement des dents, par l’angle de la racine avec l’os ainsi que les forces occlusales.\n 3- Epaisseur: Antérieurement, les tables osseuses sont généralement minces laissant peu de place à la partie médullaire de l’os (corticale externe et lamina dura étant très proches).Postérieurement son épaisseur augmente considérablement.Lorsque les dents sont en position vestibulaire, le rebord osseux est affuté en lame de couteau mais lorsque les dents occupent une position linguale, la table vestibulaire est plus épaisse et le bord est émoussé et arrondi.\n ★La déhiscence est une anomalie anatomique.\n ★La discontinuité de la lamina dura signifie la présence d’une pathologie"
       },
       {
         "questionText": "La crête alvéolaire :",
@@ -3722,7 +3841,7 @@ const paroQuizzes = [
         "explanation": "Les septa interdentaires séparent deux alvéoles contiguës (B). Ils sont en os spongieux (C). Chez l'enfant, leurs crêtes sont plates (D)."
       },
       {
-        "questionText": "l'os alvéolaire :",
+        "questionText": "N°59 (2022 Résidanat - Q1558\nLa labilité physiologique de l'os alvéolaire provoque du côté pression une: 1- Circulation sanguine active 2- Transformation des fibroblastes en ostéoclastes 3- Sécrétion d'une substance ostéoide 4- Destruction osseuse par résorption 5- Augmentation du nombre de fibroblastes",
         "options": [
           "A. Est situé dans le prolongement de l'os basal,",
           "B. Est séparé de l'os basal par une ligne de démarcation.",
@@ -3733,7 +3852,7 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "L'os alvéolaire est dans le prolongement de l'os basal (A) et assure la fixation des fibres (C). Il n'y a pas de ligne de démarcation nette (B). Il a tendance à s'atrophier avec l'âge ou l'hypofonction (D)."
+        "explanation": "La labilité physiologique de l'os alvéolaire provoque du côté pression une:1- Circulation sanguine active : Faux,la pression diminue la circulation sanguine .2- Transformation des fibroblastes en ostéoclastes : Vrai.3- Sécrétion d'une substance ostéoide : Faux.La substance ostéoide se forme lors d'une formation osseuse.4- Destruction osseuse par résorption : Vrai.5- Augmentation du nombre de fibroblastes : Faux,les fibroblastes ont un role dans la cicatrisation, de différenciation ...ect"
       },
       {
         "questionText": "La paroi alvéolaire",
@@ -3835,6 +3954,58 @@ const paroQuizzes = [
           1
         ],
         "explanation": "La fraction minérale (70% du poids) est constituée principalement de phosphate et de calcium, ainsi que de magnésium, carbonate, etc.."
+      },
+      {
+        "questionText": "N°6 (2026 1°EMD - Q12\nLe nerf auriculo-temporal est une branche de :",
+        "options": [
+          "VI",
+          "V2",
+          "V3",
+          "VII"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "6. Le nerf auriculo-temporal est une branche de :A.Faux:Le nerf VIestle nerf abducens(oculomoteur) aucune relation avec l’auriculo-temporal.B.Faux:le nerf V2estle nerf maxillairec’est le nerf sensible pour la région maxillaire.C.Vrai:le nerf auriculo-temporalest unebranche du nerf mandibulaire (V3)qui est une branche du trijumeau.D.Faux:le nerf VIIestle nerf facial; un nerf moteur de l’expression faciale."
+      },
+      {
+        "questionText": "N°8 (2026 1°EMD - Q16\nles remaniements osseux :",
+        "options": [
+          "Débutent par la phase d'apposition osseuse.",
+          "Permettent l'apposition osseuse.",
+          "Permettent la résorption osseuse par les ostéoblastes.",
+          "Peuvent être influencés par les facteurs hormonaux."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "8. Les remaniements osseux :A.Faux: Le remodelage commence généralement parla résorption par les ostéoclastespuisune phase d'inversion.B.Vrai: Le remodelage comprendune phase d’apposition (fonction des ostéoblastes)etune phase de résorption (fonction des ostéoclastes).C.Faux:La résorptionest réalisée parles ostéoclastespas les ostéoblastes.D.Vrai: les remaniements osseuxpeuvent être influencée par les divers hormones. Ex :PTH, calcitonine, hormones thyroïdiennes, œstrogènes..."
+      },
+      {
+        "questionText": "N°9 (2026 1°EMD - Q17\nLa corticale interne :",
+        "options": [
+          "Est constituée d'os compact",
+          "Est constituée d'os spongieux",
+          "Est recouverte à sa surface par le périoste",
+          "Apparait à la radio comme une ligne blanche."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "9. La corticale interne :A.Vrai: La corticale interne (lamina dura) est unos dense et compactformé d'os compact.B.Faux:L’os spongieuxcorrespondà la région médullaire(le centre) pas à la corticale.C.Faux:Le périosterecouvre la corticale externepas la corticale interne.D.Vrai: la corticale interne est aussi appeléela lamina duracar elle estradio-opaque; elle apparait commeligne blanche dense autour de la racine sur une radiographie."
+      },
+      {
+        "questionText": "N°8 (2023 1°EMD - Q991\nLa lamina dura:",
+        "options": [
+          "Est une lame osseuse qui donne insertion aux fibres de Sharpey du ligament parodontal.",
+          "Est traversée par de nombreux canaux de Volkmann.",
+          "Se caractérise par sa clarté sur les clichés radiographiques.",
+          "Sa discontinuité radiographique peut être un signe de pathologie parodontale."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "★ La paroi alvéolaire : lame osseuse qui limite l'alvéole et entoure la racine dentaire , cette lame présente une structure originale car elle donne insertion aux fibres de Sharpey du ligament périodontal. On a proposé plusieurs dénominations pour cette lame:\n - paroi ligamentaire du fait de l'insertion du ligament périodental\n - lame criblée du fait des nombreux canaux de Volkmann qui la traversent et mettent en communication vaisseaux des espaces médullaires et ligament desmodontal;\n - lamina dura, du fait de sa grande opacité sur les clichés radiographiques où elle forme une ligne blanche .C'est un élément fondamental pour déterminer l'état osseux parodontal: une discontinuité de cette ligne peut être considérer comme un signe de pathologie osseuse parodontale."
       }
     ]
   },
@@ -3843,7 +4014,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Le collagène est une protéine basique car elle contient :",
+        "questionText": "N°14 (2025 2°EMD - Q314\nLe collagène est une protéine basique car elle contient :",
         "options": [
           "A. Un nombre réduit de groupes carboxyles",
           "B. Des chaines polypeptidiques",
@@ -3853,10 +4024,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le collagène est considéré comme basique car il contient un faible nombre de groupes carboxyles (acides), ce qui augmente sa basicité relative. Il ne contient pas de ponts disulfures (D)."
+        "explanation": "A. Vrai : il contient un faible nombre de groupes carboxyles (acides) qui rend la protéine plus basique.B. Faux : le collagène est formé de chaînes polypeptidiques mais ce n' est pas la raison dont il est basique.C. Faux : il est riche en glycine et alanine qui sont des acides aminés peu acides mais c'est pas la raison principale.D. Faux : il ne contient pas de ponts disulfures (car il contient peu ou pas de cystéine)."
       },
       {
-        "questionText": "Le collagène est synthétisé dans sa première phase au niveau :",
+        "questionText": "N°56 (2022 Résidanat - Q1557\nLe collagène est synthétisé dans sa première phase au niveau:",
         "options": [
           "A. De l'épithélium.",
           "B. Du réticulum endoplasmique.",
@@ -3867,10 +4038,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La première étape de la synthèse intracellulaire du collagène est la traduction des chaînes polypeptidiques pro-alpha sur les ribosomes attachés au réticulum endoplasmique granulaire."
+        "explanation": "Biosynthèse du collagèneLe stade intracellulaire : synthèse du procollagène1ère étape : Comme tous les polypeptides , la synthèse se déroule au niveau desribosomes associés au réticulum endoplasmique RE2ème étape :appareil de GOLGIC’est la glycosylation3ème étape :vésicules d’éxocytose l’appareil de GOLGI,"
       },
       {
-        "questionText": "Le collagène est une protéine hydrophile car elle contient :",
+        "questionText": "N°16 (2025 2°EMD - Q357\nLe collagène est une protéine hydrophile car elle contient :",
         "options": [
           "A. L'hydroxyproline et l'hydroxylysine",
           "B. Une proportion faible de chaines latérales lipophiles",
@@ -3880,10 +4051,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Son caractère hydrophile est favorisé par une faible proportion de chaînes latérales lipophiles (B). Les autres éléments (A, C, D) contribuent à la fixation de l'eau mais ne sont pas la raison principale."
+        "explanation": "A. Faux : l'hydroxyproline et l'hydroxylysine retiennent l’eau mais pas autant.B. Vrai : il contient une faible proportion de chaînes latérales lipophiles ce qui favorise l’hydrophilie.C. Faux : les groupes carboxyles attirent l’eau mais ce n'est pas aussi la cause principale.D. Faux : les ponts hydrogène stabilisent la triple hélice et fixent l’eau mais ce n'est pas la cause principale."
       },
       {
-        "questionText": "L'étape extracellulaire de la formation et la maturation du collagène comporte :",
+        "questionText": "N°17 (2025 2°EMD - Q362\nL'étape extracellulaire de la formation et la maturation du collagène comporte :",
         "options": [
           "A. La formation de la chaine pro a",
           "B. La synthèse polypeptidique",
@@ -3895,10 +4066,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "La phase extracellulaire commence par la sécrétion (D). Elle inclut la synthèse polypeptidique (B) et la formation de la triple hélice (C). La formation de la chaîne pro-α (A) est intracellulaire."
+        "explanation": "Maturation du collagène :- Au moment de leur excrétion de la cellule, au niveau de la membrane cellulaire, les extremités globulaires du procollagène sont coupées par des protéases spécifiques, la molécule excrétée est appelée tropocollagène.\n -Les molécules de tropocollagène s'alignent de telle sorte que l'extrémité NH2 d'une molécule côtoie l'extrémité carboxylique d'une autre molécule.\n En même temps ces molécules sont disposées parallèlement les unes aux autres avec un décalage de 265 Aº et liées entre elles par des liaisons intermoléculaires (Cross Link). \n • Chaque molécule étant décalée de la molécule adjacente sur ¼ de sa longueur. Cette disposition moléculaire particulière donne la striation caractéristique\n • Les fibrilles ainsi formées s'assemblent pour former des fibres qui à leur tour vont confluer pour former des faisceaux de fibres."
       },
       {
-        "questionText": "Le tropocollagène est :",
+        "questionText": "N°20 (2022 2°EMD - Q1554\nLe tropocollagène :",
         "options": [
           "A. Le monomère du collagène fibreux insoluble",
           "B. Constitué d'acides aminés avec prédominance de la glycine",
@@ -3910,10 +4081,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "C'est le monomère insoluble du collagène (A), très riche en glycine (B). C'est une glycoprotéine (D). Il est formé de 3 chaînes α (C)."
+        "explanation": "-L’unité structurale des fibres de collagène est appelée tropocollagèneCette molécule de 2800 A° et d’un diamètre voisin de 14 A°, est uneglycoprotéine, formée par l’enroulement en hélice de trois chaînespolypeptidiques α, porteuse de glucides (glucose et galactose).-Le dernier tiers d’acides aminés d’une chaine alpha comprend tous les acides aminés sauf le tryptophane et la cystéine, tout au moins pour le collagène de type I."
       },
       {
-        "questionText": "Parmi les pathologies liées aux défauts de synthèse du collagène, on a :",
+        "questionText": "N°4 (2024 RATT - Q526\nParmi les pathologies liées aux défauts de synthèse du collagène, on a :",
         "options": [
           "A. Le scorbut",
           "B. La maladie des os de verre",
@@ -3925,10 +4096,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Les pathologies incluent le scorbut (carence Vit C), la maladie des os de verre (ostéogenèse imparfaite), et les collagénoses."
+        "explanation": "Pathologies du collagène :-Le scorbut dû à une carence en vitamine C qui est indispensable pour l'hydroxylation de la proline et de la lysine.-La maladie des os de verre (ostéogenèse imparfaite)-Les collagénoses qui se caractérisent par une inflammation du tissu conjonctif, avec production d'un collagène de mauvaise qualité au niveau de la gencive qui devient lâche et friable."
       },
       {
-        "questionText": "Le collagène :",
+        "questionText": "N°5 (2024 RATT - Q545\nLe collagène :",
         "options": [
           "A. Vient du grec Kolla qui veut dire colle",
           "B. Est composé de 2 chaînes polypeptidiques associées nommées chaînes Béta",
@@ -3940,10 +4111,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le nom vient du grec 'Kolla' (colle) (A). Les fibrilles sontstriées (C). Il existe plusieurs types (I, II, III, IV, V...) (D). Il est composé de 3 chaînes alpha (B)."
+        "explanation": "-Du grec Kolla qui veut dire colle et gène: Qui engendre la cohésion. Le collagène est une glycoprotéine fibreuse dont l'unité structurale est le tropocollagène constituée de 3 chaines polypeptidiques à structure hélicoïdale (en triple hélice)\n -En microscope électronique: On retrouve une striation caractéristique (alternance de bandes sombres et claires) , Les fibrilles apparaissent striées du fait de l'espacement et du décalage des fibres de pro collagène entre elles.\n -Les types de collagène : I , II , III , IV , V"
       },
       {
-        "questionText": "Dans la structure chimique du collagène :",
+        "questionText": "N°13 (2024 EMD - Q699\nDans la structure chimique du collagène :",
         "options": [
           "A. Le tropocollagene est l'unité moleculaire fondamentale de collagène",
           "B. Son poids moleculaire est de 300000 dalton",
@@ -3954,10 +4125,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Le tropocollagène est l'unité fondamentale (A) avec un poids moléculaire de 300 000 Da (B). Sa longueur est de 2800-3000 A° (C). Il est formé de 3 chaînes alpha (D)."
+        "explanation": "Structure chimique du collagène :-Le tropocollagène est l'unité moléculaire fondamentale du collagène- Poids moléculaire de 300000 dalton- Longueur de 2800 à 3000 A°.- Largeur de 14 A°.-Constitué de 03 chaines polypeptidiques (chaines a) enroulées en triple hélice porteuses de glucides (glucose et galactose)"
       },
       {
-        "questionText": "Il existe différents types de collagène :",
+        "questionText": "N°14 (2024 EMD - Q717\nIl existe différents types de collagène :",
         "options": [
           "A. Le type I est retrouve dans l'email",
           "B. Le type II est retrouvé dans la substance fondamentale du cartilage",
@@ -3969,10 +4140,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Type II est dans le cartilage (B). Type III est dans les muscles et parois des vaisseaux (C). Type IV est dans les lames basales (D). Type I (A) est dans la dentine, os, cément, etc., mais pas l'émail."
+        "explanation": "-Type I: Constitue le pourcentage le plus important des fibres gingivales et pulpaires, de la dentine, de l'os et du cément, des tendons, de la peau, de la cornée et des organes internes.\n -Type II: Forme de fines fibrilles dans la substance fondamentale du cartilage\n -Type III: Constitue les fibres de réticuline trouvées en proportion importante dans les tissus hématopoïétiques. À l'état de collagène, il se trouve en particulier dans le muscle squelettique et dans la paroi des vaisseaux sanguins.\n -Type IV: Spécifique des lames basales, il constitue un réseau. Il n'est pas strié en microscopie électronique\n -Type V: Localisé dans les tissus conjonctifs, il s'associe au type I"
       },
       {
-        "questionText": "Dans la chaine alpha :",
+        "questionText": "N°15 (2024 EMD - Q728\nDans la chaine alpha :",
         "options": [
           "A. Il existe près de 500 acides aminés",
           "B. Chaque 3rd position dans la séquence d'une chaine de collagène est use prelia",
@@ -3982,10 +4153,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La chaîne alpha contient près de 1000 acides aminés (A). La Glycine (pas proline) est en 3ème position (B). Des glucides sont fixés par l'Hydroxylysine (C). Elle a un groupement amine et un carboxyle (D)."
+        "explanation": "La chaine alpha :\n • Présente près de 1000 acides aminés; sa composition en acides aminés est toute particulière:\n ★1/3 des AA: Glycine.\n ★1/3 des AA: Proline + Hydroxyproline ,\n chaque 3ème position dans la séquence d'une chaîne de collagène est une glycine : Gly-Pro-X - Gly - X - Hyp - Gly - X - Hyp -.....\n ★Le reste est constitué par: tous les acides aminés sauf le Tryptophane et la Cystéine\n • Des glucides: fixés par l'Hydroxylysine\n • Des liaisons d'hydrogène entre la glycine et la proline, permettant la cohésion des chaines alpha \n • Un groupement carboxylique terminal COOH et un groupement amine terminal NH2"
       },
       {
-        "questionText": "Lors de la biosynthèse de collagène :",
+        "questionText": "N°16 (2024 EMD - Q754\nLors de la biosynthèse de collagène :",
         "options": [
           "A. II est synthétisé par des cellules d'origine mésenchymatesse",
           "B. L'Hydroxylation des acides aminés ne peut se faire sans la présence de vitamine C",
@@ -3997,7 +4168,7 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Il est synthétisé par des cellules mésenchymateuses (A). L'hydroxylation nécessite la Vitamine C (B). Les chaînes pro-alpha (pas pre-alpha) se lient par ponts disulfures (C). Les protéoglycanes augmentent l'insolubilité (D)."
+        "explanation": "-Le collagène est synthétisé par des cellules d'origine mésenchymateuse qui sont principalement des fibroblastes (tissu conjonctif) ,odontoblastes (dentine) , cémentoblastes (cément) et des ostéoblastes (os)-Hydroxylation des acides aminés Proline + Lysine :deux enzymes catalysent cette réaction [proline-hydroxylase et la lysine hydroxylase]. Toutes les deux ne peuvent agir qu'en présence de Vitamine C et d'oxygène sanguin. -Les chaines pro-alpha présentent à leurs extrémités des peptides de coordination, riches en AA soufrés. Ceux-ci vont lier les chaines pro-alpha à leurs deux extrémités par groupes de 3 chaines grâce à des ponts di-sulfures.- Les protéoglycanes attachés aux fibres de collagène augmente son insolubilité et sa réticulation"
       },
       {
         "questionText": "La maturation du collagène",
@@ -4027,7 +4198,7 @@ const paroQuizzes = [
         "explanation": "La biosynthèse du collagène (synthèse des chaînes pro-alpha et hydroxylation) débute dans le réticulum endoplasmique granulaire (REG)."
       },
       {
-        "questionText": "Les fibroblastes peuvent phagocyter :",
+        "questionText": "N°15 (2023 2°EMD - Q1117\nLes fibroblastes peuvent phagocyter :",
         "options": [
           "A. Le collagène natif.",
           "B. Le collagène réticulé",
@@ -4037,10 +4208,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les fibroblastes sont capables de phagocyter et de dégrader les fibrilles de collagène insoluble."
+        "explanation": "-Fibroblaste et phagocytose :Il semble donc que les fibroblastes sont des cellules capables de phagocyter des fibrilles de collagène, c'est à dire le collagène insoluble."
       },
       {
-        "questionText": "La destruction enzymatique pathologique du collagène se fait par :",
+        "questionText": "N°16 (2023 2°EMD - Q1121\nLa destruction enzymatique pathologique du collagène se fait par :",
         "options": [
           "A. Les leucocytes polynucléaires",
           "B. La diminution des activateurs",
@@ -4051,7 +4222,7 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "La destruction pathologique peut être due à une augmentation des collagénases tissulaires, ou à l'arrivée de cellules (leucocytes polynucléaires, macrophages) ou de bactéries porteuses de collagénases."
+        "explanation": "-AUGMENTATION DE LA DESTRUCTION SUR LE MODE ENZYMATIQUE: Cette augmentation de l'activité collagénasique va se réaliser, soit spontanément par augmentation de la sécrétion des collagénases tissulaires, soit par arrivée d'éléments extérieurs, porteurs d'une collagénase (leucocytes polynucléaires, macrophages, bactéries) ."
       },
       {
         "questionText": "Le collagène est synthétisé dans sa première phase au niveau:",
@@ -4068,7 +4239,7 @@ const paroQuizzes = [
         "explanation": "La première phase de la synthèse (traduction des chaînes polypeptidiques) se déroule sur les ribosomes liés au réticulum endoplasmique."
       },
       {
-        "questionText": "L'hydroxylation de la proline et de la lysine a besoin :",
+        "questionText": "N°14 (2023 2°EMD - Q1093\nL'hydroxylation de la proline et de la lysine a besoin :",
         "options": [
           "A. La glycosyltransferase",
           "B. L'oxygène sanguine",
@@ -4080,10 +4251,10 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "L'hydroxylation est catalysée par des enzymes (comme la proline-hydroxylase) (C) et nécessite de l'oxygène sanguin (B) et une concentration suffisante en vitamine C (D)."
+        "explanation": "lere phase: réticulum endoplasmique granulaire\n -La synthèse des acides aminés (A A) obéit aux grandes règles de la synthèse des protéines. Ces A A sont assemblés en chaînes polypeptidiques pro-alpha sur les polysomes liés à la membrane du réticulum endoplasmique granulaire ou ils commencent à être hydroxylés\n -lysine → hydroxylysine /proline hydroxyproline\n -A chaque extrémité des chaînes pro-alpha se trouvent des peptides, riches en A A soufrés, appelés peptides de coordination.\n -Il s'établit alors par un mécanisme d'oxydo-réduction des ponts disulfures entre ces peptides de coordination qui vont permettre de lier les chaînes pro-alpha à leur leurs extrémités par groupe de trois. Pendant ce temps, l'hydroxylation de la proline et de la lysine continue. Cette hydroxylation est réglementée par deux enzymes: la proline-hydroxylase et la lysine- hydroxylase, dont l'activité dépend de deux éléments essentiels qui sont : l'oxygène sanguin(O2) et la concentration en vitamine C.\n -La molécule de procollagène va alors prendre sa structure en triple hélice."
       },
       {
-        "questionText": "Le procollagène",
+        "questionText": "N°18 (2022 2°EMD - Q1508\nLe procollagène",
         "options": [
           "A. Est la molécule formée au cours de la biosynthèse du collagène,",
           "B. Est une molécule extra-cellulaire,",
@@ -4094,10 +4265,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Le procollagène est la molécule précurseur formée à l'intérieur de la cellule (A). Elle est constituée de trois chaînes alpha enroulées en triple hélice (D)."
+        "explanation": "-Stade intracellulaire : synthèse du procollagène :★La première étape de la synthèse du procollagéne est commune aux synthèses de tous les polypeptides, c’est-à-dire se déroulant sur les ribosomes, associés au réticulum endoplasmique.★Les trois chaines sont synthétisées en même temps .la synthèse protéique est suivie de réactions d’hydroxylation et de glycosylation.une fois libérés des ribosomes, les trois chaînes α s’enroulent, donnant naissance à un triple hélice le procollagène.★Cette association est initiée et stabilisée par la formation de ponts disulfure."
       },
       {
-        "questionText": "Dans une chaine alpha du collagène",
+        "questionText": "N°19 (2022 2°EMD - Q1527\nDans une chaine alpha du collagène",
         "options": [
           "A. L'alanine est l'acide aminé le plus présent,",
           "B. La glycine est l'acide aminé le plus présent,",
@@ -4107,7 +4278,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La glycine est l'acide aminé le plus abondant, représentant 1/3 de tous les acides aminés (Gly-X-Y)."
+        "explanation": "-Chacune des trois chaines polypeptediques résulte de l’association bout à \n bout de molécules d’acides aminés.\n ❖ La glycine est l’acide aminé le plus abondant, sa quantité est égale \n au tiers de la totalité des acides aminés de la molécule de tropocollagène.\n ❖ La proline, l’hydroxyproline, l’alanine représentent le deuxième tiers.\n ❖ Le dernier tiers comprend tous les acides aminés sauf le tryptophane et la cystéine, tout au moins pour le collagène de type I."
       },
       {
         "questionText": "Le tropocollagène :",
@@ -4130,7 +4301,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Le mouvement de rotation fait intervenir :",
+        "questionText": "N°18 (2025 2°EMD - Q393\nLe mouvement de rotation fait intervenir :",
         "options": [
           "A. Le compartiment condylo-discal.",
           "B. Le glissement du condyle mandibulaire en avant",
@@ -4140,10 +4311,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le mouvement de rotation pure se fait dans le compartiment inférieur (condylo-discal). Le glissement (B) se fait dans le compartiment supérieur (D)."
+        "explanation": "A. Vrai : la rotation se fait dans le compartiment condylo-discal (compartiment inférieur).B. Faux : ça correspond au mouvement de translation.C. Faux : les muscles abaisseurs sous-hyoïdiens ne sont pas primaires dans la rotation pure.D. Faux : le compartiment supérieur est le lieu de la translation pas la rotation."
       },
       {
-        "questionText": "La diduction consiste en :",
+        "questionText": "N°19 (2025 2°EMD - Q403\nLa diduction consiste en :",
         "options": [
           "A. Une rotation de la mandibule",
           "B. Un déplacement de la mandibule vers le côté pivotant",
@@ -4154,10 +4325,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "La diduction est un déplacement latéral de la mandibule vers le côté travaillant (ou pivotant). Ce mouvement est accompagné, du côté opposé (côté non-travaillant), par un déplacement du condyle qui forme un angle avec le plan sagittal, appelé l'angle de Bennett."
+        "explanation": "A. Faux : c’est surtout un mouvement de translation latérale pas une rotation pure.B. Vrai : elle consiste à un déplacement latéral vers le côté travaillant (pivotant).C. Faux : la contraction du muscle temporal intervient dans la diduction mais elle n'est pas obligatoire.D. Vrai : ce mouvement produit l’angle de Bennett du côté opposé (12 à 18°)."
       },
       {
-        "questionText": "La position d'intercuspidation maximale est :",
+        "questionText": "N°20 (2023 1°EMD - Q1206\nLa position d'intercuspidation maximale est :",
         "options": [
           "A. La position de la mandibule qui assure un maximum de contact avec les dents antagonistes.",
           "B. Le rapport de contact entre les surfaces occlusales.",
@@ -4170,7 +4341,7 @@ const paroQuizzes = [
         "explanation": "La position d'intercuspidation maximale (PIM) est spécifiquement la position qui offre le plus grand nombre de points de contact entre les dents des deux arcades."
       },
       {
-        "questionText": "La propulsion :",
+        "questionText": "N°7 (2022 2°EMD - Q1329\nLa propulsion :",
         "options": [
           "A. Consiste en un glissement vers l'arrière et en bas de la mandibule,",
           "B. Les muscles associés sont les ptérygoïdiens latéraux,",
@@ -4181,10 +4352,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "La propulsion est le mouvement de la mandibule qui glisse vers l'avant et vers le bas. Ce mouvement est principalement initié par la contraction bilatérale des muscles ptérygoïdiens latéraux. La rétropulsion, le mouvement inverse, est réalisée par les muscles temporaux et digastriques."
+        "explanation": "-Propulsion - rétropulsion :Ces mouvements ont lieu dans chaque articulation ménisco-temporale.★La propulsion consiste en un glissement vers l'avant et en bas de la mandibule. Dans ce mouvement, le ménisque et la tête mandibulaire translatent comme pour l'abaissement. Les muscles associés sont les ptérygoïdiens latéraux.★La rétropulsion est le mouvement inverse. Les muscles sont les temporaux et les digastriques."
       },
       {
-        "questionText": "La diduction:",
+        "questionText": "N°8 (2022 2°EMD - Q1347\nLa diduction:",
         "options": [
           "A. Au cours de ce mouvement, la mandibule se porte latéralement,",
           "B. Le disque et la tête mandibulaire solidaires glissent en avant et en bas,",
@@ -4203,7 +4374,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Par définition l'articulation temporo-mandibulaire est :",
+        "questionText": "N°19 (2025 1°EMD - Q416\nPar définition l'articulation temporo-mandibulaire est :",
         "options": [
           "A. Une articulation qui fixe la mandibule à la fosse glénoïde.",
           "B. Une articulation bicondylienne.",
@@ -4214,10 +4385,10 @@ const paroQuizzes = [
           1,
           3
         ],
-        "explanation": "L'articulation temporo-mandibulaire (ATM) est une articulation bicondylienne, car elle implique les deux condyles mandibulaires. Elle se situe juste en avant du conduit auditif externe. C'est une articulation paire et symétrique (et non asymétrique) qui unit la mandibule à l'os temporal."
+        "explanation": "A. Faux : elle fixe la mandibule à l'os temporal exactement à l'écaille et non pas la cavité glenoide.B. Vrai : elle est bicondylienne (deux condyles mandibulaires).C. Faux : elle est paire (droite et gauche) symétrique (la même dans les deux côtés).D. Vrai : elle est située en avant du conduit auditif externe."
       },
       {
-        "questionText": "La capsule articulaire de l'articulation temporo-mandibulaire est :",
+        "questionText": "N°48 (2020 Résidanat - Q1954\nLa capsule articulaire de l'articulation temporo-mandibulaire est : 1- De forme biconcave 2- Constituée d'un tissu conjonetif 3- Egalement appelée fosse mandibulaire 4- Richement vascularisée 5- Egalement appelée lame bilaminaire",
         "options": [
           "1- Une gaine fibreuse épaisse et serrée",
           "2- De forme tronconique",
@@ -4230,10 +4401,10 @@ const paroQuizzes = [
           3,
           4
         ],
-        "explanation": "La capsule est un moyen d'union de l'articulation (4), de forme tronconique (2), et elle est renforcée latéralement par le ligament latéral externe (5). C'est une gaine mince et lâche, qui s'insère sur l'os temporal et le col du condyle mandibulaire."
+        "explanation": "- La capsule articulaire (un moyen d’union) :★C’est une gaine fibreuse assez mince et lâche de 2 à 3 mm d’épaisseur, de forme tronconique qui s’insère au pourtour de la cavité glénoïde du temporal et au col du condyle mandibulaire.★Toutes les surfaces fonctionnelles de l’ATM se trouvent à l’intérieur de la capsule"
       },
       {
-        "questionText": "Parmi les ligaments intra-articulaires de l'ATM, nous avons :",
+        "questionText": "N°20 (2025 1°EMD - Q434\nParmi les ligaments intra-articulaires de l'ATM, nous avons :",
         "options": [
           "A. Le ligament stylo-mandibulaire.",
           "B. Le ligament ptérygo-mandibulaire.",
@@ -4243,7 +4414,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le ligament latéral externe (ou temporo-mandibulaire latéral) est un ligament principal de soutien, considéré comme intrinsèque (intra-articulaire) car il renforce la capsule. Les ligaments stylo-mandibulaire, ptérygo-mandibulaire et sphéno-mandibulaire sont des ligaments accessoires, considérés comme extrinsèques (extra-articulaires)."
+        "explanation": "A. Faux : le ligament stylo-mandibulaire est extra-articulaire.B. Faux : le ligament ptérygo-mandibulaire est extra-articulaire (relié au pharynx).C. Vrai : le ligament latéral externe (ou temporo-mandibulaire latéral) est un ligament principal intra-articulaire de soutien.D. Faux : le ligament sphéno-mandibulaire est extra-articulaire."
       },
       {
         "questionText": "La capsule articulaire :",
@@ -4260,7 +4431,7 @@ const paroQuizzes = [
         "explanation": "La capsule articulaire est un manchon fibreux qui constitue un moyen d'union pour l'ATM. Elle se présente comme une gaine mince et lâche, en forme de cône tronqué, qui entoure l'ensemble de l'articulation."
       },
       {
-        "questionText": "Le condyle temporal:",
+        "questionText": "N°5 (2022 2°EMD - Q1297\nLe condyle temporal:",
         "options": [
           "A. Est une saillie oblongue,",
           "B. Est une simple cavité de réception pour le condyle mandibulaire,",
@@ -4270,10 +4441,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le condyle du temporal est la surface articulaire convexe de l'os temporal. Il est formé par la racine transverse du processus zygomatique. La cavité glénoïde (fosse mandibulaire) est la cavité de réception située en arrière de ce condyle."
+        "explanation": "-Le condyle du temporal : Il est formé par la racine transverse du zygoma, et présente un segment de cylindre convexe d'avant en arrière et concave transversalement. Il vient se relever en dehors sous la forme d'une saillie : le tubercule zygomatique antérieur.-La cavité glénoïde : On parle encore de fosse mandibulaire, qui ne serait qu'une simple cavité de réception pour le condyle mandibulaire, et aussi pour le ménisque. Cette région est située en arrière dans l'écartement des deux racines du zygoma."
       },
       {
-        "questionText": "Le ligament latéral externe :",
+        "questionText": "N°6 (2022 2°EMD - Q1308\nLe ligament latéral externe :",
         "options": [
           "A. Il est court, épais, en éventail ouvert en haut et très puissant,",
           "B. Il représente à lui seul le principal moyen d'union de l'articulation,",
@@ -4284,10 +4455,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Le ligament latéral externe est un ligament intrinsèque (renforçant la capsule) qui est court, épais, puissant et en forme d'éventail. Il est considéré comme le principal moyen de renforcement et d'union de l'articulation."
+        "explanation": "Ligaments intrinsèques :-Ligament latéral externe : il est court, épais, en éventail ouvert en haut et très puissant; il représente à lui seul le principal moyen d'union de l'articulation.-Ligament latéral interne: il est plus mince, moins résistant et renforce en dedans la capsule."
       },
       {
-        "questionText": "La mandibule est un os Impair médian et symétrique :",
+        "questionText": "N°11 (2021 1°EMD - Q1733\nLa mandibule est un os Impair médian et symétrique :",
         "options": [
           "A. Il s'articule par l'intermédiaire de son processus condylaire avec le temporal, au niveau de l’articulation temporo-mandibulaire,",
           "B. Il s'articule par l'intermédiaire de son processus temporal avec les ligaments au niveau de l'articulation temporo-mandibulaire,",
@@ -4297,10 +4468,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La mandibule est un os unique qui s'articule avec les os temporaux du crâne. Cette articulation se fait par l'intermédiaire de ses processus condylaires (condyles), formant ainsi l'articulation temporo-mandibulaire (ATM)."
+        "explanation": "-Cuticule dentaire\n ✓C'est une mince couche électro dense, interposée entre la surface de l'émail et les améloblastes réduits.\n ✓ Elle est secrétée par les améloblastes au moment de leur transformation en cellules squameuses. Elle s'épaissit et se densifie et devient homogène avec un contour plus ou moins régulier.\n ✓ Épaisseur de 4 - 15 µm; Elle contient des protéines dépourvues de glycoprotéines et de polysaccharides: laminine,fibronectine, ténaxine.\n ✓ Dérivés lipidiques + hydrates de carbone et protéines sanguines résultent de la contamination exogène. Son rôle est essentiellement passif et ne semble pas intervenir dans les phénomènes de perméabilité, de transport et d'adhésion."
       },
       {
-        "questionText": "les articulations temporo-mandibulaire : Paires et symétriques, de type Diarthrose, bicondylienne; :",
+        "questionText": "N°17 (2021 1°EMD - Q1825\nles articulations temporo-mandibulaire : Paires et symétriques, de type Diarthrose, bicondylienne; :",
         "options": [
           "A. Relient la mandibule au crâne,",
           "B. C'est les seules articulations mobiles de la face,",
@@ -4311,10 +4482,10 @@ const paroQuizzes = [
           0,
           1
         ],
-        "explanation": "Les articulations temporo-mandibulaires (ATM) assurent la liaison entre la mandibule et le crâne. Ce sont les seules articulations véritablement mobiles de la face. Elles sont complexes, impliquant des os, un disque, une capsule et des ligaments."
+        "explanation": "-Cément acellulaire :primaire :\n ★se forme lors du développement de la racine et de l’éruption de la dent.il ne contient pas de cellules.\n ★Il se trouve essentiellement sur les deux tiers supérieurs de la racine, son épaisseur très faible 20 à50 microns.\n ★Les fibres de Sharpey constituent la partie la plus importante de la structure du cément acellulaire elles forment le système de fibres extrinsèques du cément et sont produites par les fibroblastes desmodontaux.elles ont un rôle primordial dans le support de la dent ,la plus part des fibres sont incluses à angle droit dans la surface de la racine et pénètre profondément dans le cément.\n ★Le cément acellulaire contient également d’autres fibres collagène qui sont calcifiées et disposées de façon irrégulière ou qui sont parallèle à la surface."
       },
       {
-        "questionText": "La Capsule est un moyen d'union, elle est formée de :",
+        "questionText": "N°18 (2021 1°EMD - Q1846\nLa Capsule est un moyen d'union, elle est formée de :",
         "options": [
           "A. Manchon fibreux mince et lâche, de nature collagénique,",
           "B. Tendon mince et fibreux de nature cartilagineuse,",
@@ -4324,7 +4495,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La capsule articulaire est un manchon fibreux de nature collagénique, qui est à la fois mince et lâche pour permettre les mouvements. Le disque articulaire, situé à l'intérieur, divise la cavité en deux compartiments (supérieur et inférieur)."
+        "explanation": "CEMENTOGENESE- Lorsque l’email est la dentine coronaire sont formés, la gaine d’Hertwig apparait. Elle est constituée par deux couches cellulaires provenant de l’épithélium adamantin interne et de l’épithélium adamantin externe .- Dès que la dentine radiculaire commence à ce former, la gaine de Hertwig se fragmente .les restes épithéliaux de cette gaine donneront naissance aux débris de Malassez .- A la suite de la fragmentation de la gaine de Hertwig , des cellules mésenchymateuses du sac folliculaire viennent au contact de la dentine néoformée ;ces cellules indifférenciées vont se différencier en cémontoblastes Ceux-ci secréteront du côté dentinaire le tissu cémentoïde ,un tissu collagène qui par calcification va donner naissance au cément.- La formation du cément débute avec la minéralisation des fibrilles collagènes irrégulièrement disposées et éparpillées dans une substance fondamentale inter fibrillaire , ou matrice ."
       },
       {
         "questionText": "La capsule articulaire de l'articulation temporo-mandibulaire est :",
@@ -4341,6 +4512,45 @@ const paroQuizzes = [
           4
         ],
         "explanation": "La capsule est un moyen d'union (4), de forme tronconique (2), et est renforcée en dehors par le ligament latéral externe (5). C'est une gaine mince et lâche (1 est faux) et s'insère sur le pourtour de la cavité glénoïde du temporal et le col du condyle mandibulaire (3 est faux)."
+      },
+      {
+        "questionText": "N°18 (2026 1°EMD - Q36\nLaquelle des structures suivantes fait partie de l'ATM?",
+        "options": [
+          "Le méat acoustique interne",
+          "La fosse mandibulaire",
+          "Le processus coronoïde",
+          "Le processus mastoïde"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "18. Laquelle des structures suivantes fait partie de l’ATM ?A.Faux:le conduit auditif externeestune structure crânienne internesans rapport avec l’ATM.B.Vrai:La fosse mandibulaire(ou cavité glénoïde du temporal) fait partie de l’ATM : c’estla surface articulaire du crâne qui reçoit le condyle mandibulaire.C.Vrai:le processus coronoïdefait partiedes surface articulaire mandibulaire.D.Faux:le processus mastoïdeest uneéminence de l’os temporal; point d’insertion musculaire mais pas une composante de l’ATM."
+      },
+      {
+        "questionText": "N°19 (2026 1°EMD - Q38\nLe disque articulaire est composé principalement de:",
+        "options": [
+          "Cartilage hyalin",
+          "Fibrocartilage",
+          "Tissu osseux spongieux",
+          "Tissu musculaire fibreux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "19. Le disque articulaire est composé principalement de :A.Faux:Les surfaces articulaires des os longs sont en hyalinmais pas le disque de l’ATM.B.Vrai:Le disque articulaire de l’ATMestconstitué de fibrocartilage très résistant aux forces de compression et cisaillement.C.Faux: Cen’est pas un tissu osseuxmais plutôt un tissu fibreux et cartilagineux.D.Faux:Il n’a aucune composante musculaire."
+      },
+      {
+        "questionText": "N°20 (2026 1°EMD - Q40\nLequel de ces ligaments fait partie des ligaments intrinsèque de L'ATM?",
+        "options": [
+          "Ligament stylo-mandibulaire",
+          "Ligament sphéno-mandibulaire",
+          "Ligament latéral",
+          "Ligament ptérygo-mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "20. Lequel de ces ligaments fait partie des ligaments intrinsèques de l’ATM ?A.Faux:le ligament stylo-mandibulaireest unligament extrinsèque accessoiresitué en dehors de l’articulation.B.Faux:le ligament sphéno-mandibulaireest aussi estextrinsèque; il n’appartient pas à la capsule articulaire.C.Vrai:le ligament latéral(temporo-mandibulaire) est le seulligament intrinsèque de l’ATMavecle ligament médial.Ils font partie de la capsule articulaire et ils stabilisent le condyle.D.Faux:le ligament ptérygo-mandibulaireest unligament accessoire; il sert comme point d’attache pour certains muscles."
       }
     ]
   },
@@ -4349,7 +4559,7 @@ const paroQuizzes = [
     "subject": "paro-y2",
     "questions": [
       {
-        "questionText": "Le fluide gingival devient fluide oral quand il se mêle à :",
+        "questionText": "N°17 (2021 2°EMD - Q1834\nLe fluide gingival :",
         "options": [
           "A. la phase liquide de la salive ;",
           "B. A la phase liquide de l'eedème gingival ;",
@@ -4360,10 +4570,10 @@ const paroQuizzes = [
           0,
           3
         ],
-        "explanation": "Le fluide oral est le terme général pour le liquide présent dans la bouche. Il est principalement composé de salive, mais inclut également le fluide gingival qui s'écoule du sulcus et s'y mélange."
+        "explanation": "-On peut être en présence d'un FG d'origine simplement interstitielle dû à une différence de pression osmotique (transsudat). Ou d'un fluide gingival réellement inflammatoire (exsudat).\n -Le fluide gingival contient des protéines plasmatiques collantes qui peuvent renforcer l'adhésion de l'attache épithéliale à la dent.Le fluide gingival permet une certaine défense de l'organisme face à l'agression bactérienne, mais cette défense apparaît comme largement insuffisante. Il peut également servir de milieu de culture bactérienne (substrat nutritionnel) et contribuer à la formation de la plaque bactérienne et du tartre sur les surfaces dentaires."
       },
       {
-        "questionText": "Le prélèvement par l'utilisation du périotron consiste à :",
+        "questionText": "N°39 (2019 Résidanat - Q2028\nLe prélèvement par l'utilisation du périotron consiste à :",
         "options": [
           "A. Utiliser des pointes capillaires.",
           "B. Peser ces pointes dans leurs flacons de transport.",
@@ -4403,7 +4613,7 @@ const paroQuizzes = [
         "explanation": "C'est vrai. Le FGC joue un rôle central dans la maladie parodontale en transportant des médiateurs inflammatoires, des enzymes de destruction tissulaire et des produits bactériens, participant activement à l'inflammation et à la dégradation des tissus."
       },
       {
-        "questionText": "Le FGC, peut être mis en évidence par plusieurs méthodes : cochez au moins sur deux d'entre elles.",
+        "questionText": "N°18 (2025 RATT - Q395\nLe FGC, peut être mis en évidence par plusieurs méthodes : cochez au moins sur deux d'entre elles.",
         "options": [
           "A. Tests sanguins",
           "B. Tests biochimiques",
@@ -4414,10 +4624,10 @@ const paroQuizzes = [
           1,
           2
         ],
-        "explanation": "Le fluide gingival est prélevé directement au niveau du sulcus. Il peut ensuite être analysé par des tests biochimiques pour ses composants généraux, ou par des tests plus ciblés pour rechercher des marqueurs spécifiques de l'inflammation ou de la maladie."
+        "explanation": "A. Faux : les tests sanguins ne détectent pas directement le FGC.\n B. Vrai : les tests biochimiques mesurent certains composants du FGC.\n C. Vrai : tests de marqueurs spécifiques (enzymes, médiateurs) permettent sa détection.\n D. Faux : les tests salivaires concernent la salive pas directement le FGC."
       },
       {
-        "questionText": "Le fluide gingival:",
+        "questionText": "N°16 (2021 2°EMD - Q1809\nLe fluide gingival est considéré comme",
         "options": [
           "A. Est un liquide inorganique",
           "B. Est un élément propre au milieu buccal",
@@ -4445,7 +4655,7 @@ const paroQuizzes = [
         "explanation": "Le FGC est d'origine sérique, issu des vaisseaux du chorion (A). Il peut transporter des antibiotiques de la circulation sanguine vers le sulcus (C). Il filtre à travers l'épithélium de jonction et sulculaire (B est faux) et est un élément propre mais provisoire, non de transit (D)."
       },
       {
-        "questionText": "Dans la composition do fluide gingival :",
+        "questionText": "N°30 (2024 EMD - Q842\nDans la composition do fluide gingival :",
         "options": [
           "A. Les composants sont comparables à cens de la salive",
           "B. Le nombre des leucocytes augmente avec le degré de l'inflammation",
@@ -4455,7 +4665,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les composants du FGC sont comparables à ceux du sérum sanguin (A est faux). Le nombre de leucocytes augmente avec l'inflammation (B). Certaines enzymes lysosomales sont destructrices, d'autres sont antibactériennes (C est ambigu). Certaines prostaglandines, pas les facteurs du complément, sont directement liées à l'augmentation du degré de gingivite (D)."
+        "explanation": "-les composants sont comparables à ceux du sérum sanguin\n -Cellules de défense: des granulocytes neutrophiles, des monocytes, des polymorphonucléaires, des lymphocytes et des plasmocytes.Le nombre des leucocytes augmente avec l'inflammation.\n - Enzymes: d'origine bactérienne ou lysozomiale, des protéases, des phosphatases, des hyaluronidases. Certaines sont impliquées dans la destruction des tissus c'est-à-dire pathogènes (ex:hyaluronidases,collagénose) et d'autres contribuent au potentiel antibactérien du fluide (ex: lysozyme, peroxydase).\n -Les lipides: Phospholipides et les lipides non phosphorés. Une prostaglandine E2 est présente dans le FG, elle augmente le degré de gingivite et peut provoquer une vasodilatation, une résorption osseuse et inhibition de la synthèse du collagène."
       },
       {
         "questionText": "Le fluide gingival créviculaire :",
@@ -4473,7 +4683,7 @@ const paroQuizzes = [
         "explanation": "À l'état sain, le FGC est un transsudat (issu de la pression osmotique). En cas d'inflammation, il devient un exsudat. Il peut servir de milieu de culture et de substrat nutritionnel pour les bactéries, contribuant ainsi à la formation de la plaque."
       },
       {
-        "questionText": "L'augmentation du flux du fluide gingival peut être due :",
+        "questionText": "N°32 (2024 EMD - Q844\nL'augmentation du flux du fluide gingival peut être due :",
         "options": [
           "A. A une inflammation du tissu gingival",
           "B. A la mastication d'aliments mous",
@@ -4485,7 +4695,7 @@ const paroQuizzes = [
           2,
           3
         ],
-        "explanation": "Le flux de FGC augmente principalement avec l'inflammation. Il augmente également lors de stimulations mécaniques (mastication d'aliments durs, brossage, massage) et sous l'influence hormonale (contraceptifs, ovulation) qui augmente la perméabilité vasculaire."
+        "explanation": "-Toute augmentation du flux du fluide gingival constitue un indice clinique d'inflammation gingivale.\n -La mastication d'aliments durs, le brossage et le massage dentaire, l'ovulation et les contraceptifs hormonaux peuvent également accroître le flux du fluide gingival.\n -La progestérone et les oestrogènes augmentent la perméabilité des vaisseaux sanguins et l'afflux du FG."
       },
       {
         "questionText": "Le fluide gingival est:",
@@ -4515,7 +4725,7 @@ const paroQuizzes = [
         "explanation": "Le FGC est un transsudat (liquide qui suinte mécaniquement) à l'état sain et en très faible quantité. Il devient un exsudat (liquide suintant d'une surface enflammée) lors d'une gingivite ou parodontite."
       },
       {
-        "questionText": "Le prélèvement du fluide gingival se fait à l'aide de :",
+        "questionText": "N°4 (2023 2°EMD - Q917\nLe prélèvement du fluide gingival se fait à l'aide de :",
         "options": [
           "A. Un cône de Gutta percha",
           "B. De boulettes de coton salivaire",
@@ -4525,10 +4735,10 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La méthode la plus commune pour prélever le fluide gingival consiste à insérer délicatement une pointe ou un cône de papier absorbant standardisé dans le sulcus pendant une durée déterminée."
+        "explanation": "★Techniques de prélèvement du fluide gingival :-Prélèvement direct à l'aide d'une micro-seringue-Prélèvement avec des papiers filtres-Prélèvement à l'aide de micro-pipettes-Prélèvement par l'utilisation du Periotron."
       },
       {
-        "questionText": "La quantité de fluide gingival :",
+        "questionText": "N°5 (2023 2°EMD - Q940\nLa quantité de fluide gingival :",
         "options": [
           "A. Diminue avec le temps",
           "B. Diminue lors de la mastication",
@@ -4556,7 +4766,7 @@ const paroQuizzes = [
         "explanation": "Le fluide gingival, aussi appelé fluide créviculaire, est d'origine sérique (issu du sang). Il peut être un transsudat (sain) ou un exsudat (inflammatoire). Sa présence est inconstante, pas permanente."
       },
       {
-        "questionText": "La technique de prélèvement du fluide gingival avec papier filtre repose sur :",
+        "questionText": "N°17 (2022 2°EMD - Q1487\nLa technique de prélèvement du fluide gingival avec papier filtre repose sur :",
         "options": [
           "A. La lecture du prélèvement dans des tubes capillaires,",
           "B. La lecture du prélèvement par un instrument de mesure électronique,",
@@ -4566,7 +4776,7 @@ const paroQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Une des méthodes quantitatives avec papier filtre consiste à peser la pointe de papier avant et après le prélèvement. La différence de poids correspond à la quantité de fluide recueillie. La lecture par instrument électronique (Periotron) est une autre technique."
+        "explanation": "-Prélèvement avec des papiers filtres: Des pointes de papier sont pesées dans leur flacon de transport à l'aide d'une balance de sensibilité 0,01 µg avant le prélèvement. Ensuite elles sont placées dans le sillon gingival pendant 15 secondes. Après la pointe est replacée dans son flacon de transport, est l'ensemble est pesé dans les mêmes conditions qu'initialement. La différence de poids avant et après prélèvement représente la quantité de fluide recueillie."
       },
       {
         "questionText": "Le prélèvement par l'utilisation du périotron consiste à :",
@@ -4610,7 +4820,7 @@ const paroQuizzes = [
         "explanation": "Le FGC est un liquide organique qui provient des vaisseaux du chorion, transite à travers l'attache épithéliale et suinte dans le sillon gingival. L'environnement supra-gingival est baigné par la salive."
       },
       {
-        "questionText": "Les rôles négatifs du fluide gingival:",
+        "questionText": "N°15 (2021 2°EMD - Q1803\nLes rôles négatifs du fluide gingival:",
         "options": [
           "A. Permettent le développement des bactéries (substrat nutritionnel).",
           "B. Empêchent les bactéries de se fixer sur les surfaces de la dent et la surface des cellules de la gencive",
@@ -4621,7 +4831,47 @@ const paroQuizzes = [
           0,
           2
         ],
-        "explanation": "Le FGC a un double rôle. Ses aspects négatifs sont qu'il peut servir de substrat nutritionnel pour les bactéries sous-gingivales et qu'il véhicule des cellules (polynucléaires) et des médiateurs qui entretiennent la réaction inflammatoire et la destruction tissulaire."
+        "explanation": "-Rôles négatifs :\n ★Développement des bactéries (substrat nutritionnel).\n ★Entretien de l'inflammation: polynucléaires, lymphocytes et les enzymes.\n -Rôles Positifs:\n ★La protection, Il empêche les bactéries de se fixer sur les surfaces de la dent et la surface des cellules de la gencive.\n ★La défense, Il contribue à l'élimination des bactéries par les substances anti- bactériennes qu'il contient."
+      },
+      {
+        "questionText": "N°5 (2021 2°EMD - Q1638\nLa transsudation:",
+        "options": [
+          "Est un épanchement de liquide de nature séreuse dû à une modification de la perméabilité de la membrane consécutive à une inflammation,",
+          "Est un épanchement d'un liquide corporel à travers une muqueuse, une membrane ou un tissu dû à une infection,",
+          "Est le passage de liquide de nature séreuse dû à une modification de la perméabilité de la membrane consécutive à une inflammation",
+          "Est le passage de sérum ou d'autres liquides corporels à travers une muqueuse, une membrane ou un tissu"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le fluide gingival résulte d'une transsudation, ou d'une exsudation:\n → La transsudation: Est le passage de sérum ou d'autres liquides corporels à travers une muqueuse, une membrane ou un tissu.\n → L'exsudation: Est un épanchement de liquide de nature séreuse dû à une modification de la perméabilité de la membrane consécutive à une inflammation."
+      },
+      {
+        "questionText": "N°6 (2021 2°EMD - Q1647\nLa quantité du fluide gingival augmente avec :",
+        "options": [
+          "L'inflammation.",
+          "La mastication d'aliments mous",
+          "Le brossage dentaire et le massage de la gencive",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "★La quantité du fluide gingival augmente avec :\n -L'inflammation.\n -La mastication d'aliments durs.\n -Le brossage et le massage.\n -L' ovulation et prise de contraceptifs oraux."
+      },
+      {
+        "questionText": "N°10 (2024 RATT - Q645\nLes composants cellulaires du fluide gingival:",
+        "options": [
+          "Sont surtout les C3 et C4",
+          "Les cellules épithéliales proviennent de l'épithélium buccal",
+          "Le nombre des leucocytes augmente avec l'inflammation gingivale",
+          "Participent au rôle de défense du fluide gingival"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Cellules :\n - Cellules épithéliales desquamées: proviennent de l'épithélium sulculaire et de l'épithélium jonctionnel.\n - Micro-organismes: la quantité des bactéries augmente avec l'inflammation.\n -Cellules de défense: des granulocytes neutrophiles, des monocytes, des polymorphonucléaires, des lymphocytes et des plasmocytes. Le nombre des leucocytes augmente avec l'inflammation.\n -Le C3 et C4 sont des facteurs du complément"
       }
     ]
   },

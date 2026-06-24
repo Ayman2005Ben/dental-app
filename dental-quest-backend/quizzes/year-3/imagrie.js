@@ -1,1062 +1,972 @@
-// quizzes/year-3/imagrie.js
-
 const imagrieQuizzes = [
   {
-    title: "Principes fondamentaux de la radiologie",
-    subject: "imagrie",
-    questions: [
+    "title": "Contrôle qualité en radiologie _ biologie",
+    "subject": "imagrie",
+    "questions": [
       {
-        questionText: "Le tube à rayons X est composé de :",
-        options: [
-          "Une cathode qui est la source de production des rayons X",
-          "Une cathode responsable de l’émission des électrons",
-          "Une anode où se compose d’une cible en tungstène noyée dans du cuivre",
-          "Une ampoule en verre assurant le vide et permettant l’évacuation de la chaleur"
+        "questionText": "N°10 (2025 1°EMD DENTAIRE - Q199\nCritères de qualités mécaniques d'un générateur dentaire:",
+        "options": [
+          "Avoir une facilité de déplacement et de positionnement.",
+          "Avoir une petite taille.",
+          "Avoir un bras qui permet d'obtenir une parfaite stabilisation.",
+          "Etre léger pour que le praticien puisse maintenir le générateur durant la prise du cliché."
         ],
-        correctOptionIndexes: [2, 3],
-        explanation: "La cathode est la source des électrons, qui, lorsqu’ils frappent l’anode, produisent les rayons X. L'anode a pour but de transformer l’énergie cinétique des électrons en photons de rayons X."
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Les critères de qualité d’un générateur sont :\n\tPetite taille.\n\tFacilité de déplacement et de positionnement.\n\tStabilité et bon équilibrage pour rester en place.\n\tBras permettant une parfaite stabilisation du tube radiogène.\n\tInterdiction pour le praticien ou le patient de maintenir le générateur pendant la prise du cliché.\n\nD : ni le praticien, ni le patient ne doivent maintenir le générateur durant la prise du cliché"
       },
       {
-        questionText: "Les facteurs qui permettent le contrôle du faisceau de rayons X sont :",
-        options: [
-          "Le temps de pose modifie le nombre de photons qui atteint la cible",
-          "Lorsque le voltage est diminué, l’énergie des électrons augmente ainsi que la quantité de photons émis",
-          "Lorsque le courant augmente, la quantité de photons émis augmente",
-          "Lorsque le voltage augmente, l’énergie des électrons augmente"
+        "questionText": "N°11 (2025 1°EMD DENTAIRE - Q206\nCritères de qualités techniques d'un générateur dentaire :",
+        "options": [
+          "Avoir une haute tension qui généralement varie entre 60 à 70 KV.",
+          "L'intensité du courant doit être la plus faible possible afin de réduire l'exposition.",
+          "Utiliser une filtration de 1.5",
+          "Une collimation par une couche de plomb circulaire ou rectangulaire est recommandée."
         ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Lorsque le voltage augmente (et non diminue), l’énergie de chacun des électrons augmente également ainsi que la quantité de photons émis."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "B : on privilégie une intensité plus élevée pour réduire le temps d’exposition et donc la dose au patient."
       },
       {
-        questionText: "L’imagerie médicale :",
-        options: [
-          "Est une branche de la radiologie",
-          "Utilise dans ses techniques exclusivement les rayons",
-          "Est le terme le plus employé aujourd’hui pour remplacer la radiologie",
-          "Fait appel à un tube halogène pour produire des ondes acoustiques"
+        "questionText": "N°20 (2025 1°EMD DENTAIRE - Q398\nDosimétrie en radiologie dentaire :",
+        "options": [
+          "C'est l'ensemble des moyens de prévention visant à réduire les effets nocifs des radiations produits sur les personnes.",
+          "Le dosimètre témoin toujours placé en dehors du cabinet.",
+          "Le dosimètre d'ambiance placé dans la zone surveillée ou contrôlée.",
+          "L'exposition professionnelle est limitée à la Dose Maximale Admissible."
         ],
-        correctOptionIndexes: [2],
-        explanation: "L'imagerie médicale est un terme plus large qui englobe la radiologie et d'autres techniques. Elle n'utilise pas exclusivement les rayons X (ex: IRM, échographie) et n'utilise pas de tube halogène pour les ondes acoustiques (échographie)."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "A : La dosimétrie a pour but de mesurer la quantité d'énergie déposée dans un matériau ou un tissu vivant lors d'une exposition à des RX.\n\nOn doit trouver au cabinet dentaire trois dosimètres :\n1-le dosimètre témoin toujours placé en dehors du cabinet (hors zone à accès réglementé),\n2- le dosimètre personnel (identifié au nom du praticien bénéficiant de cette surveillance dosimétrique),\n3- le dosimètre d'ambiance placé dans la zone surveillée ou contrôlée."
       },
       {
-        questionText: "Parmi les techniques d’imagerie médicale, nous retrouvons :",
-        options: [
-          "L’imagerie isotopique",
-          "L’échographie",
-          "L’imagerie par résonance magnétique",
-          "Tomographie par émission de Positrons"
+        "questionText": "N°20 (2024 1°EMD - Q672\nprotection de l'opérateur des rayonnements est possible si le praticien",
+        "options": [
+          "Evite les clichés inutiles",
+          "S'éloigne le plus possible du patient",
+          "Maintient le film dans la bouche du patient",
+          "Utilise des angulateurs ou des portes-films"
         ],
-        correctOptionIndexes: [0, 1, 2, 3],
-        explanation: "Toutes ces techniques font partie de l'imagerie médicale moderne."
+        "correctOptionIndexes": [
+          0,
+          1,
+          3
+        ],
+        "explanation": ""
       },
       {
-        questionText: "L’imagerie médicale :",
-        options: [
-          "Doit bénéficier d’une interprétation à la fois technique et clinique",
-          "Est basée sur l’utilisation des sources de rayonnements pas nécessairement ionisants.",
-          "Est basée sur l’utilisation des sources de rayonnements nécessairement ionisants.",
-          "Utilise des sources externes ou internalisées."
+        "questionText": "N°12 (2023 1°EMD - Q863\nParmi les critères de qualité d'un générateur dentaire:",
+        "options": [
+          "L'utilisation d'un générateur de haute fréquence est recommandée",
+          "Plus la tension est importante (10mA), moins le nombre d'électrons produits est grand",
+          "Une collimation de 1,5 mm d'aluminium est recommandée pour les générateurs de 50 à 70 kV.",
+          "Le cône d'espacement doit être long afin d'augmenter le volume irradié."
         ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "L'imagerie médicale utilise des rayonnements ionisants (rayons X) et non ionisants (ultrasons, ondes radio). Les sources peuvent être externes (tube à rayons X) ou internes (médecine nucléaire)."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
       },
       {
-        questionText: "Les rayons X :",
-        options: [
-          "Ont été découverts par Coolidge",
-          "Sont des ondes électromagnétiques",
-          "Ont une longueur d’onde très longue",
-          "Ne font pas partie du spectre électromagnétique comme la lumière visible"
+        "questionText": "N°13 (2023 1°EMD - Q878\nMaintenance et contrôles de qualité du matériel en radiologie dentaire:",
+        "options": [
+          "Le contrôle de qualité est dit interne, s'il est réalisé par l'exploitant ou sous sa responsabilité par un prestataire.",
+          "Le contrôle de qualité est dit externe, S'il est réalisé par un organisme indépendant de l'exploitant",
+          "Le contrôle de qualité externe comprend des contrôles trimestriels puis annuels",
+          "Le contrôle de qualité est obligatoire à la réception des équipements, avant leur première utilisation."
         ],
-        correctOptionIndexes: [1],
-        explanation: "Les rayons X ont été découverts par Röntgen. Ce sont des ondes électromagnétiques de très courte longueur d'onde, faisant partie du spectre électromagnétique."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "C : c’est pour le Le contrôle de qualité est dit interne.Les contrôles techniques de radioprotection sont à mettre en œuvre à la réception des équipements, avant leur première utilisation, puis périodiquement."
       },
       {
-        questionText: "L’effet thermo-ionique d’Edison est provoqué :",
-        options: [
-          "À 1000°",
-          "À 1500°",
-          "À 20000°",
-          "À 200°"
+        "questionText": "N°14 (2023 1°EMD - Q885\nLe rayonnement X a des effets biologiques::",
+        "options": [
+          "Il a la propriété d'ioniser la matière.",
+          "Il peut provoquer une exposition interne lorsqu'il employé en médecine dentaires",
+          "L'exposition provoquée par rayonnement direct (provenant du tube radiogène concerne toute personne présente dans la salle de soins.",
+          "La dose efficace est la dose équivalente reçue par tout l'organisme calculée à partir de l'irradiation partielle d'un tissu"
         ],
-        correctOptionIndexes: [3],
-        explanation: "Il convient de noter que l’effet Edison se produit généralement à des températures encore plus élevées, généralement supérieures à 2000 °C."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
       },
       {
-        questionText: "Le rayon X traverse tous les corps sauf :",
-        options: [
-          "Le plomb",
-          "Le phosphate",
-          "Le calcium",
-          "Le manganèse",
-          "Les tissus muqueux"
+        "questionText": "N°18 (2023 1°EMD - Q965\nLa qualité de l'image radiographique est affectée par:",
+        "options": [
+          "Le temps d'exposition très court.",
+          "Le temps du traitement du film radiographique.",
+          "La tension des rayons émis et l'intensité faible du courant électrique.",
+          "La distance focale (foyer-objet)."
         ],
-        correctOptionIndexes: [0],
-        explanation: "Le plomb est bien connu pour son fort pouvoir d’absorption des rayons X, c’est pourquoi il est couramment utilisé comme matériau de protection contre les radiations."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Il faut veiller à choisir des temps d’exposition les plus bas possibles tout en garantissant une qualité d’image suffisante au diagnostic"
       },
       {
-        questionText: "L’effet thermo-ionique d’Edison est provoqué :",
-        options: [
-          "À 1000°",
-          "À 1500°",
-          "À 20000°",
-          "À 200°"
+        "questionText": "N°64 (2022 Résidanat - Q1315\nLa radioprotection 1- Est suffisante dès lors que les murs de la salle de radio sont plombés. 2- Exige dans ses normes que les murs de la salle de radio soient plombés. 3- Exige un ensemble de moyens et de comportements à prendre en compte. 4- Ne concerne que les techniques extraorales. 5- Ne concerne jamais les techniques intraorales.",
+        "options": [
+          "(1,4)",
+          "(2,5)",
+          "(2,3)",
+          "(1,4,5)",
+          "(1,5)"
         ],
-        correctOptionIndexes: [2],
-        explanation: "L'effet thermo-ionique, ou effet Edison, est l'émission d'électrons par un métal chauffé à une température très élevée. Dans le contexte d'un tube à rayons X, le filament de la cathode est chauffé à plus de 2000°C pour libérer les électrons qui seront ensuite accélérés vers l'anode."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "4/5 : lle s’applique àtoutes les techniques, y compris intra-orales."
       }
     ]
   },
   {
-    title: "Le film dentaire : supports, critères de choix, traitements",
-    subject: "imagrie",
-    questions: [
+    "title": "explorations radiologiques",
+    "subject": "imagrie",
+    "questions": [
       {
-        questionText: "Dans l’imagerie numérique :",
-        options: [
-          "Les capteurs sont plus sensibles que les films conventionnels.",
-          "L’obtention de l’image est généralement inférieure à celle de l’imagerie conventionnelle.",
-          "L’obtention d’image nécessite une dose d’irradiation plus importante.",
-          "L’obtention d’image nécessite une dose d’irradiation moins importante."
+        "questionText": "N°12 (2025 2°EMD DENTAIRE - Q229\nDans le cône beam le plan de coupe axiale",
+        "options": [
+          "Est un plan selon l'axe des dents maxillaires,",
+          "Est un plan selon l'axe des dents mandibulaires.",
+          "Est un plan dans le sens horizontal,",
+          "Est un plan parallèle au plan d'occlusion maxillaire et mandibulaire."
         ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Les capteurs numériques sont plus sensibles, ce qui permet de réduire la dose d'irradiation et le temps d'obtention de l'image par rapport aux films conventionnels."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Incidence axiale :Au maxillaire : Le plan de référence est parallèle au plan d’occlusion ou au palais osseux, qui correspond à l’étude des sinus, du maxillaire, de l’ethmoide, du frontale et du sphénoïde.A la mandibule : Le plan de coupe est parallèle au bord basilaire"
       },
       {
-        questionText: "De quoi est formé le film argentique en radiologie dentaire ?",
-        options: [
-          "De cristaux de plomb",
-          "De cristaux de bromure de cuivre",
-          "De cristaux d’argent",
-          "De cristaux de bromure d’argent"
+        "questionText": "N°13 (2025 2°EMD DENTAIRE - Q265\nL'Orthopantomogramme:",
+        "options": [
+          "Est une incidence de première intention.",
+          "Présente des images avec artéfacts difficilement interprétables.",
+          "Présente quelques artefacts.",
+          "Permet l'étude des sinus maxillaires."
         ],
-        correctOptionIndexes: [3],
-        explanation: "Le film argentique se compose d’un support en plastique sur lequel est déposée l’émulsion de grains de bromure d’argent (AgBr) sensibles aux rayons X."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "B : il est important de reconnaitre les défauts radiologiques appelés artefacts, et qui rendent parfois les images ininterprétables, il peut s’agir d’artefact de mouvement lors de la réalisation de la coupe, et certaines images trompeuses comme les boucles d’oreilles ou les percings nasaux ou labiaux.D : permet l’étude de :-\tAnomalies dentaires (forme et nombre)-\tDents incluses et complications-\tPermet de déterminer l’âge dentaire-\tDénombrement, identification des dents (agénésie, surnuméraires)-\tPathologie dentaire (caries et complications)-\tAppréciation topographie verticale (retard d’évolution, inclusion)-\tMorphologie coronaire et radiculaire-\tTraumatismes dentaires et lésions osseuses associées-\tMaladies parodontales-\tImages radio-claires des maxillaires-\tImages radio-denses des maxillaires"
       },
       {
-        questionText: "Les films intra-oraux sont-ils présentés dans une enveloppe opaque et étanche pour :",
-        options: [
-          "Éviter toute surexposition aux rayons",
-          "Éviter toute exposition à la lumière et à l’humidité",
-          "Améliorer la qualité de l’image radiologique",
-          "Réduire le coût de fabrication"
+        "questionText": "N°14 (2025 2°EMD DENTAIRE - Q273\nParmi les incidences extra orales que vous connaissez quelles sont celles qui explorent les ATM",
+        "options": [
+          "Radiographie face basse bouche ouverte.",
+          "Incidence face basse bouche fermée.",
+          "TDM articulaire.",
+          "Incidence schuller."
         ],
-        correctOptionIndexes: [1],
-        explanation: "L'enveloppe est une pochette thermo-soudée étanche à la lumière et à l'eau, pour protéger le film de la lumière et de la contamination par la salive ou le sang."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "A :  Incidence face basse bouche ouverte« Ouverture buccale pour dégager les condyles des mastoïdes.Intérêt : Vue globale et de bonne qualité de la mandibule – Condyles et cols condyliens… »D : Incidence de Schuller« Point de centrage au milieu de l’interligne de l’ATM…Intérêt : Anatomie de l’ATM – Fracture condylienne ou sous-condylienne – Dysfonctionnement de l’ATM – Étude de l’interligne articulaire des ATM. »"
       },
       {
-        questionText: "Les capteurs numériques :",
-        options: [
-          "Permettent de réduire le temps d’exposition.",
-          "Sont moins sensibles que les films",
-          "Permettent une réduction de dose d’irradiation d’environ 40 à 50 % par rapport aux films",
-          "Leurs temps d’exposition est égal à 0,32 secondes pour une prémolaire"
+        "questionText": "N°2 (2024 2°EMD - Q425\nLes clichés interproximaux (bite-wing) permettent d'obtenir une image précise sur :",
+        "options": [
+          "Le rapport d'une obturation avec la pulpes",
+          "L'état des septa-interdentaires.",
+          "Le stade d'édification radiculaire",
+          "La lamina dura et l'espace desmodental"
         ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Les capteurs numériques sont plus sensibles que les films, ce qui permet de réduire significativement le temps d'exposition et la dose de radiation (de 40 à 50% ou plus)."
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Dépistage précoce des caries proximales ;Détecter les reprises de caries sous amalgame ;Rapport d’une obturation avec la pulpe ;Apprécier l’adaptation marginale des reconstitutions coronaires ;Apprécier l’état des septa-interdentaires."
       },
       {
-        questionText: "Quel est le principal avantage de la radiographie numérique par rapport à la radiographie conventionnelle ?",
-        options: [
-          "Permet de réduire l’exposition aux rayons X",
-          "Permet d’avoir une image nette et d’établir ainsi un diagnostic plus fiable.",
-          "Nécessite une formation pour être utilisé correctement.",
-          "Permet l’archivage des données."
+        "questionText": "N°3 (2024 2°EMD - Q437\nLe ConeBeam est préconisé dans les cas suivants",
+        "options": [
+          "Dent de sagesse inferieure semblant en rapport avec le canal mandibulaire",
+          "Exploration des sinus de la face",
+          "Pathologies osseuses du maxillaire après injection de produit de contraste",
+          "Exploration des glandes salivaires"
         ],
-        correctOptionIndexes: [0, 1, 2],
-        explanation: "La radiographie numérique réduit l'exposition aux rayons X, permet un traitement d'image pour un meilleur diagnostic, et facilite l'archivage. Cependant, elle nécessite une formation pour son utilisation correcte."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le Cone Beam est préconisé dans les cas suivantsExploration pré-implantairesExploration des sinus de la face et de la base du cranePathologie de l’ATM (articulation temporo-mandibulaire)ODF et chirurgie maxillo-facialeDents de sagesse et rapport avec le canalPathologies tumoralesDents incluseD : par L’échographie"
       },
       {
-        questionText: "Parmi les caractéristiques techniques du film argentique :",
-        options: [
-          "Plus les grains de bromure d’argent sont fins plus la définition de l’image produite est bonne.",
-          "Plus les grains de bromure d’argent sont gros plus la définition de l’image produite est bonne.",
-          "Les films ISO E et F sont les plus utilisés de nos jours",
-          "Le film argentique E permet une réduction de la dose d’irradiation."
+        "questionText": "N°12 (2023 2°EMD - Q859\nL'intérêt de l'incidence de SCHULLER réside dans l'étude de :",
+        "options": [
+          "Des bases squelettiques cranio-faciales.",
+          "L'anatomie dentomaxillaire.",
+          "L'anatomie de l'ATM.",
+          "L'architecture maxillomandibulaire."
         ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Des grains fins donnent une meilleure définition. Des grains plus gros augmentent la sensibilité (rapidité) mais diminuent la définition. Les films rapides (ISO E/F) sont utilisés pour réduire la dose d'irradiation."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
       },
       {
-        questionText: "Dans l’imagerie numérique ;",
-        options: [
-          "Les capteurs sont plus sensibles que les films conventionnels",
-          "L’obtention de l’image nécessite une dose importante d’irradiation",
-          "La résolution de l’image est généralement inférieure par rapport l’imagerie conventionnelle",
-          "Le capteur CCD utilise la technologie des microprocesseurs et des mémoires"
+        "questionText": "N°13 (2023 2°EMD - Q870\nL'ouverture buccale dans l'incidence face basse bouche ouverte nous permet de :",
+        "options": [
+          "Dégager les parties antérieures et postérieures de la mandibule",
+          "Dégager les DDS inferieures et supérieures.",
+          "Bien visualiser la région de l'apophyse coronoïde.",
+          "Dégager les condyles des mastoides."
         ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Les capteurs numériques sont plus sensibles (donc moins de dose requise), mais leur résolution spatiale peut être inférieure à celle des meilleurs films argentiques."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": ""
       },
       {
-        questionText: "Le capteur qui dispose de la technologie ACE (Automatic Control Exposure) :",
-        options: [
-          "Permet un meilleur centrage du faisceau primaire",
-          "Calcule en temps réel l’énergie nécessaire pour obtenir une image de qualité",
-          "Envoie le capteur instantanément, une fois la dose suffisante obtenue",
-          "Stoppe l’émission des rayons X suite à une information au générateur"
+        "questionText": "N°10 (2021 2°EMD - Q1487\nLe cliché de première intention pour l’exploration des sinus est :",
+        "options": [
+          "Blondeau",
+          "Le panoramique dentaire",
+          "Le cône beam",
+          "La TDM"
         ],
-        correctOptionIndexes: [1],
-        explanation: "La technologie ACE analyse en temps réel l'exposition reçue par le capteur et arrête l'émission de rayons X dès que la dose est suffisante, optimisant ainsi la qualité de l'image tout en minimisant la dose."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Incidence de Blondeau (nez-menton-plaque): C’est le cliché ORL pour l’exploration des cavités pneumatiques de la face (sinus maxillaires, frontaux et cellules éthmoïdales) et en médecine dentaire et maxillo-faciale,complète le panoramique dans les indications concernant les sinus maxillaires, àtype de sinusite odontogène."
       },
       {
-        questionText: "Le film argentique :",
-        options: [
-          "Est de haute définition, sans écran, en plastique",
-          "Doit être contenu dans une pochette étanche",
-          "Sur le support en plastique il y a l’émulsion de grains de bromure de cuivre (Br-Cu).",
-          "Sera souple, ce qui lui permet de s’adapter facilement aux structures anatomiques."
+        "questionText": "N°11 (2021 2°EMD - Q1497\nPour évaluer le rapport vestibulo lingual des dents de sagesse mandibulaire avec le canal alvéolaire inférieur :",
+        "options": [
+          "Une radiographie panoramique suffit",
+          "Un maxillaire défilé suffi",
+          "Le mordu occlusal est indispensable",
+          "Une face basse en bouche ouverts est contribuent"
         ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Le film argentique est constitué de grains de bromure d'argent (AgBr) et non de bromure de cuivre."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "l’incidence face basse en bouche ouverte fournissant une vue frontale des parties de la mandibule non visibles de profil sur le panoramiqueElle s’avère d’une importance capitale dans la mise en évidence des condylesmandibulaires, coronés, branches montantes, branche horizontale. Surtout les régions postérieures, la face basse bouche ouverte permet une approche topographique dans le plan frontal des rapports dents de sagesse-canal alvéolaire inférieur."
       },
       {
-        questionText: "Les caractéristiques techniques du film argentique indiquent que :",
-        options: [
-          "Plus les grains de bromure d’argent sont fins, plus la définition de l’image produite est bonne.",
-          "Plus les grains de bromure d’argent sont gros, moins la définition de l’image produite est bonne.",
-          "Plus les grains de bromure d’argent sont gros moins le film est sensible",
+        "questionText": "N°12 (2021 2°EMD - Q1514\nPour un bilan pré-implantaire l’incidence de choix est",
+        "options": [
+          "Un IRM",
+          "Une radiographie panoramique",
+          "TDM",
+          "Une cone beam"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le Cone beam permet de poser l'indication en implantologie s'il subsiste le moindre doute ou de confirmer l'impossibilité ou la dangerosité de pose d'implant"
+      },
+      {
+        "questionText": "N°5 (2020 2°EMD - Q1748\nle cliché de première intention en odontostomatologie",
+        "options": [
+          "la RVG",
+          "la panoramique dentaire",
+          "le cone beam",
+          "la TDM"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°10 (2019 2°EMD - Q2130\nQuelles sont les investigations radiologiques qui permettent l’étude des ATM :",
+        "options": [
+          "Incidence de Hirtz",
+          "IRM",
+          "Incidence de Schuller",
+          "Orthopantomogramme"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°32 (2019 Résidanat - Q2270\nLe cône beam présente les avantages suivants : 1- Une meilleure acquisition sur les petites structures osseuses. 2- Une meilleure acquisition en 3D. 3- Une exposition aux rayons X inférieure à celle du scanner. 4- Une présentation des parties molles avec le dégagement des superpositions gênantes avec un coût moins élevé. 5- Une comparaison des deux côtés.",
+        "options": [
+          "(1-2-3-5)",
+          "(1-2-3-4-5)",
+          "(2-5)",
+          "(2-3)",
+          "(3-5)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "4: FauxLeCBCT n'est pas performant pour l’analyse des parties molles(muscles, ganglions, glandes, etc.) — contrairement au scanner ou à l’IRM.Il estmoins coûteux, maisne permet pas un bon dégagement des structures mollescar le contraste tissulaire est faible.Indications: Le cone beam est préconisé dans les cas suivantso Exploration pré-implantaireso Exploration des sinus de la face et de la base du craneo Pathologie de l’ATM (articulation temporo-mandibulaire)o ODF et chirurgie maxillo-facialeo Dents de sagesse et rapport avec le canalo Pathologies tumoraleso Dents incluses"
+      },
+      {
+        "questionText": "N°11 (2018 2°EMD - Q2482\nLa siolographie est une technique d’imagerie utilisée pour :",
+        "options": [
+          "Etudier les différentes glandes salivaires accessoires",
+          "Opacifier et étudier les glandes salivaires ( glandes parotidiennes ou sous maxillaires )",
+          "Bilan d’extension et de surveillance des pathologies glandulaires",
+          "Bilan ganglionnaire cervico-facial"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Elle consiste à injecter un agent de contraste dans les canaux salivaires afin de visualiser leur structure, leur fonctionnement et de détecter d'éventuelles anomalies ou obstructions"
+      },
+      {
+        "questionText": "N°6 (2017 2°EMD - Q2689\nQuelles sont les investigations radiologiques qui permettent l’étude des ATM :",
+        "options": [
+          "TDM",
+          "IRM",
+          "Incidence de schuller",
+          "Orthopantomogramme"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°12 (2017 2°EMD - Q2756\nQuelles sont les radiographies qu’on peut réaliser dans le cas d’une canine incluse :",
+        "options": [
+          "Cliché retro-alvéolaire",
+          "Tomodensitométrie",
+          "Sialographie",
+          "Mordu occlusal"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Mordu occlusal"
+      },
+      {
+        "questionText": "N°30 (2015 Résidanat - Q3039\nLa radiographie panoramique contribue principalement à :",
+        "options": [
+          "Evaluer le status dentaire",
+          "Confirmer une fracture du maxillaire (supérieur)",
+          "Déterminer la dimension de l'implant",
+          "L'évaluation des tissus mous (glandes salivaires)",
+          "Visualiser la colonne vertébrale cervicale"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Radiographie panoramique :Permet d’évaluer le status dentaire : nombre de dents, position, inclusion, anomalies, caries, rapports avec l’os alvéolaire.Lecture critique de l’OPT :Anomalies dentaires (forme et nombre)Dents incluses et complicationsPermet de déterminer l’âge dentaireDénombrement, identification des dents (agénésie, surnuméraires)Pathologie dentaire (caries et complications)Appréciation topographie verticale (retard d’évolution, inclusion)Morphologie coronaire et radiculaireTraumatismes dentaires et lésions osseuses associéesMaladies parodontalesImages radio-claires des maxillairesImages radio-denses des maxillaires"
+      }
+    ]
+  },
+  {
+    "title": "Facteurs influençant la qualité de l’image radiolo",
+    "subject": "imagrie",
+    "questions": [
+      {
+        "questionText": "N°6 (2025 1°EMD DENTAIRE - Q117\nL'imprécision géométrique :",
+        "options": [
+          "Est causée par le croisement des rayons à la périphérie de l'objet.",
+          "La pénombre est causée par la dimension du foyer.",
+          "Peut provenir de différentes sources telles que les radiations secondaires et diffuses.",
+          "Est généralement augmenté par l'emploi de capteurs sensibles."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "A : Ce genre d'imprécision est causé par le croisement des rayons à la périphérie de l'objet ce qui nous donne une image aux contours flous. Ce flou périphérique s'appelle la pénombre\n\nB : …Cette pénombre est causée par la dimension du foyer\n\nC : Le brouillard radiologique peut provenir de différentes sources telles que les radiations secondaires et diffuses\n\nD : Le brouillard radiologique est généralement augmentés par l'emploi de capteurs sensibles"
+      },
+      {
+        "questionText": "N°7 (2025 1°EMD DENTAIRE - Q142\nLa densité peut être affectée par :",
+        "options": [
+          "La filtration, le genre d'objet.",
+          "La distance objet-radiogramme.",
+          "La distance foyer-objet.",
+          "La distance objet-radiogramme."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "a densité peut aussi être affectée par d'autres facteurs comme la sensibilité du capteur, la filtration, le genre d'objet, la distance foyer-objet et la distance objet-radiogramme"
+      },
+      {
+        "questionText": "N°8 (2025 1°EMD DENTAIRE - Q160\nLe brouillard radiologique:",
+        "options": [
+          "Est produit par une réaction générale du capteur à un facteur extérieur.",
+          "Est produit par la radiation secondaire qui fait apparaître une image voilée sur la radiographie.",
+          "Son augmentation entraîne nécessairement une augmentation de la densité.",
+          "Son augmentation entraine nécessairement une diminution de la densité."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "« Le brouillard radiologique est produit par une réaction générale du capteur à un facteur extérieur tel que la radiation secondaire qui fait apparaître une image voilée sur la radiographie. »\n\n« Une augmentation du brouillard radiologique entraîne nécessairement une augmentation de la densité. »"
+      },
+      {
+        "questionText": "N°9 (2025 1°EMD DENTAIRE - Q179\nUne augmentation de la filtration du faisceau des rayons X :",
+        "options": [
+          "Aura le même effet que l'augmentation du kilovoltage",
+          "Aura le même effet que la diminution du kilovoltage.",
+          "Entraine une diminution du contraste.",
+          "Entraine une augmentation du contraste."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "« Filtration : L'augmentation de la filtration du faisceau des rayons X a le même effet que l'augmentation du kilovoltage. De plus, les filtres constituent des facteurs de radiations secondaires. Donc si la filtration augmente le contraste diminue. »"
+      },
+      {
+        "questionText": "N°3 (2024 1°EMD - Q444\nLes caractéristiques des images radiologiques",
+        "options": [
+          "Les zones non exposées matérialisent les structures ayant arrêté sélectivement le faisceau de rayons",
+          "Les zones non exposées vont apparaître en blanc.",
+          "Les zones exposées, qui n'ont rencontré aucun obstacle, apparaissent en blanc",
+          "Les nombreuses variations de gris témoignent de la densité atomique de chaque structure."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les zones exposées, où les rayons X ont traversé sans être absorbés, noircissent le film radiographique et apparaissent en noir ou en différentes nuances de gris sur l'image radiologique."
+      },
+      {
+        "questionText": "N°5 (2024 1°EMD - Q474\nL'agrandissement de l'image radiographique désigne : FACTEURS INFLUENÇANT LA QUALITÉ DE L’IMAGE RADIOGRAPHIQUE",
+        "options": [
+          "L'allongement (élongation) de l'image.",
+          "Le raccourcissement de l'image.",
+          "La distorsion de l'image.",
+          "Une image modifiée dans ses dimensions et n'est pas dans sa forme géométrique."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "-L’allongement permet que la structure anatomique apparaît plus grande sur l'image qu'en réalité-Le raccourcissement permet que la structure anatomique apparaît plus grande sur l'image qu'en réalité"
+      },
+      {
+        "questionText": "N°6 (2024 1°EMD - Q478\nLa ou les principales causes du flou en radiologie sont",
+        "options": [
+          "Un mouvement du patient.",
+          "Le mouvement du tube radiogène lors de la prise de la radiographie.",
+          "La grande distance objet-film.",
+          "La sous exposition de la structure à radiographier."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Tout mouvement du patient, du tube radiogène ou du film lors de la prise du cliché entraîne un flou de l’image"
+      },
+      {
+        "questionText": "N°3 (2023 1°EMD - Q721\nL'agrandissement",
+        "options": [
+          "Augmente si la distance objet-film augmente et la distance source-objet diminue",
+          "Augmente si la distance objet-film diminue et la distancé source-objet augmente",
+          "A par conséquence une augmentation du flou géométrique",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°19 (2023 1°EMD - Q979\nLes facteurs liés à la qualité de l'image radiographique numérique sont:",
+        "options": [
+          "La luminosité.",
+          "La résolution du contraste.",
+          "La taille du capteur.",
+          "La taille de l'écran d'affichag"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "-La luminosité-La résolution du contraste-La résolution spatiale -La distorsion"
+      },
+      {
+        "questionText": "N°20 (2023 1°EMD - Q993\nUne image radiographique floue peut être obtenue dans le(les) cas suivant :",
+        "options": [
+          "Le mouvement du patient.",
+          "Le mouvement du tube radiogène ou du film lors de la prise de la radiographie.",
+          "La température du révélateur trop élevée.",
+          "La surexposition de la structure à radiographier"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Tout mouvement du patient, du tube radiogène ou du film lors de la prise du cliché entraîneun flou de l’image."
+      }
+    ]
+  },
+  {
+    "title": "Le film radiologique",
+    "subject": "imagrie",
+    "questions": [
+      {
+        "questionText": "N°16 (2025 1°EMD DENTAIRE - Q323\nLe film argentique est :",
+        "options": [
+          "De haute définition, sans écran, en plastique",
+          "Contenu dans une pochette étanche.",
+          "Contient une émulsion de grains de bromure de cuivre (Br-Cu).",
+          "Souple, ce qui lui permet de s'adapter aux structures anatomiques."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A : Le film argentique est de très haute définition, sans écran, en plastique.\n\nB : Il est contenu dans une pochette étanche à la lumière et à l’environnement.\n\nC : L’émulsion contient des grains de bromure d’argent (AgBr) et non de bromure de cuivre (Br-Cu).\n\nD : Le support en polyester est souple, ce qui permet au film de s’adapter aux structures anatomiques."
+      },
+      {
+        "questionText": "N°17 (2025 1°EMD DENTAIRE - Q343\nLes caractéristiques techniques du film argentique:",
+        "options": [
+          "Plus les grains de bromure d'argent sont fins, plus la définition de l'image produite est bonne.",
+          "Plus les grains de bromure de cuivre sont gros, moins la définition de l'image produite est bonne.",
+          "Plus les grains de bromure d'argent sont gros moins le film est sensible.",
           "Les films ISO E et F sont les plus utilisés de nos jours."
         ],
-        correctOptionIndexes: [2, 3],
-        explanation: "Des grains plus fins donnent une meilleure définition (A, B). Des grains plus gros rendent le film plus sensible (plus rapide), donc C est faux. Les films E et F sont rapides et donc très utilisés pour la réduction de dose (D)."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "B : Il n’y a pas de bromure de cuivre, seulement du bromure d’argent.\n\nC : C’est l’inverse : plus les grains sont gros, plus le film est sensible (et donc moins bonne est la définition)."
       },
       {
-        questionText: "Le capteur numérique :",
-        options: [
-          "Subit un procédé physique et non chimique pour l’obtention du cliché,",
-          "Pour sa lecture nécessite obligatoirement l’informatisation du cabinet dentaire",
+        "questionText": "N°18 (2025 1°EMD DENTAIRE - Q358\nLors de la prise d'une radiographie avec le film argentique :",
+        "options": [
+          "La face à ne pas exposer aux rayons X est généralement bicolore.",
+          "La face à exposer aux rayons X est généralement bicolore.",
+          "La face à ne pas exposer aux rayons X ne présente pas de bossage.",
+          "La face à exposer aux rayons X ne présente pas de bossage."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "B : C’est la face à ne pas exposer qui est bicolore, pas celle à exposer.\n\nD : La face à exposer présente un bossage dans un angle"
+      },
+      {
+        "questionText": "N°19 (2025 1°EMD DENTAIRE - Q380\nEffet biologique du rayonnement X :",
+        "options": [
+          "Ces rayonnements ont la propriété d'ioniser la matière.",
+          "L'emploi des rayons X dentaires peut provoquer une exposition interne.",
+          "la dose efficace est la dose équivalente reçue par tout l'organisme calculée à partir de l'irradiation partielle d'un tissu",
+          "La radiologie dentaire est une modalité faiblement irradiante."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "A : Les rayons X sont des radiations ionisantes, ils ont la capacité d’ioniser la matière.\n\nB : L’exposition est externe en radiologie dentaire, pas interne (il n’y a pas de source radioactive introduite dans l’organisme).\n\nD : La radiologie dentaire est considérée comme faiblement irradiante par rapport à d’autres modalités d’imagerie médicale."
+      },
+      {
+        "questionText": "N°7 (2024 1°EMD - Q499\nDans l'imagerie numérique",
+        "options": [
+          "Les capteurs sont plus sensibles que les films conventionnels.",
+          "La résolution d'image est généralement inferieure à celle de l'imagerie conventionnelle.",
+          "L'obtention d'image nécessite une dose d'irradiation plus importante.",
+          "L'obtention d'image nécessite une dose d'irradiation moins importante."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "A: La sensibilité du film :Les capteurs numériques sont plus sensibles que les films conventionnels, et qu’il est possible d’obtenir une image avec 25% de la dose de rayons X utilisée pour un filmArgentiqueB: La résolution de l’image :Les capteurs ERLM : jusqu’à 12 pl/mm,Les capteurs CCD/CMOS entre 7 et 14 pl/mm pour les anciens modèles.D:Dose d’irradiation :Le capteur numérique le plus sensible de la série entraîne une diminution de la dose de 87,5% par rapport au film argentique le plus sensible (ISO F)."
+      },
+      {
+        "questionText": "N°12 (2024 1°EMD - Q559\nDe quoi est formé le film argentique en radiologie dentaire",
+        "options": [
+          "De cristaux de plomb",
+          "De cristaux de bromure de cuivre",
+          "De cristaux d'argent",
+          "De cristaux de bromure d'argent"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le film argentique se compose d’un support en plastique sur lequel est déposée l’émulsion de grains de bromure d’argent (AgBr) sensibles aux rayons X et à la lumière du jour, qui sont noyés dans une matrice."
+      },
+      {
+        "questionText": "N°13 (2024 1°EMD - Q575\nLes films intra-oraux sont-ils présentés dans une enveloppe opaque et étanche pour",
+        "options": [
+          "Eviter toute exposition aux rayons",
+          "Eviter toute exposition à la lumière et à l'humidité",
+          "Améliorer la qualité de l'image radiologique",
+          "Réduire le cout de production"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Il s’agit d’une pochette thermo-soudée étanche à la lumière et à l’eau, évitant ainsi la contamination du film par la salive et/ou sang du patient."
+      },
+      {
+        "questionText": "N°14 (2024 1°EMD - Q594\nLes capteurs numériques",
+        "options": [
+          "Permettent de réduire le temps d'exposition.",
+          "Permettent d'augmenter la dose d'irradiation d'environ 40 à 50% par rapport aux films argentiques",
+          "Leurs utilisations est source d'une augmentation du nombre de clichés pris.",
+          "Leurs temps d'exposition est égale à 0,32 secondes pour une prémolaire."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°15 (2024 1°EMD - Q600\nLe capteur qui dispose de la technologie ACE (Automatic Control Exposure",
+        "options": [
+          "Permet un meilleur centrage du faisceau primaire",
+          "Calcule en temps réel l'énergie nécessaire pour obtenir une image de qualité",
+          "Envoie le capteur instantanément, une fois la dose suffisante obtenue,",
+          "Stoppe l'émission des rayons X suite à une information au générateur",
+          "Permet de réduire le nombre de clichés à reprendre"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°17 (2024 1°EMD - Q632\nQuel est le principal avantage de la radiographie numérique par rapport à la radiographie conventionnelle",
+        "options": [
+          "Permet de réduire l'exposition aux rayons X",
+          "Permet d'avoir une image nette et d'établir ainsi un diagnostic plus fiable.",
+          "Nécessite une formation pour être utilisé correctement.",
+          "Permet l'archivage des données."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°18 (2024 1°EMD - Q645\nparmi les caractéristiques techniques du film argentique",
+        "options": [
+          "Plus les grains de bromure d'argent sont fins plus la définition de l'image produite est bonne.",
+          "Plus les grains de bromure d'argent sont gros plus la définition de l'image produite est bonne.",
+          "Les films ISO E et F sont les plus utilisés de nos jours",
+          "Le film argentique E permet une réduction de la dose d'irradiation."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°19 (2024 1°EMD - Q658\nDans l'imagerie numérique ;",
+        "options": [
+          "Les capteurs sont plus sensibles que les films conventionnels",
+          "L'obtention de l'image nécessite une dose importante d'irradiation.",
+          "La résolution de l'image est généralement inferieur par rapport l'imagerie conventionnelle",
+          "Le capteur CCD utilise la technologie des microprocesseurs et des mémoires"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°8 (2023 1°EMD - Q790\nLe film argentique:",
+        "options": [
+          "Est de haute définition, sans écran, en plastique",
+          "Doit etre contenu dans une pochette étanche.",
+          "Sur le support en plastique il y a l'émulsion de grains de bromure de cuivre (Br-Cu).",
+          "Sera souple, ce qui lui permet de s'adapter facilement aux structures anatomiques."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "Le film argentique se compose d’un support en plastique sur lequel est déposée l’émulsion de grains de bromure d’argent (AgBr)"
+      },
+      {
+        "questionText": "N°9 (2023 1°EMD - Q806\nLes caractéristiques techniques du film argentique indiquent que :",
+        "options": [
+          "Plus les grains de bromure d'argent sont fins, plus la définition de l'image produite est bonne.",
+          "plus les grains de bromure d'argent sont gros, moins la définition de l'image produite est bonne.",
+          "plus les grains de bromure d'argent sont gros moins le film est sensible",
+          "Les films ISO E et F sont les plus utilisés de nos jours"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°10 (2023 1°EMD - Q829\nLe capteur numérique:",
+        "options": [
+          "Subit un procédé physique et non chimique pour l'obtention du cliché,",
+          "Pour sa lecture nécessite obligatoirement l'informatisation du cabinet dentaire",
           "Possède un Dispositif à Transfert de Charge obligatoirement.",
           "Donne toujours une image lisible instantanément."
         ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Le capteur numérique utilise un procédé physique (conversion des rayons X en signal électrique) et nécessite un ordinateur. Il n'utilise pas obligatoirement un CCD (il peut être CMOS). L'imagerie indirecte (plaque au phosphore) n'est pas instantanée."
-      },
-      {
-        questionText: "L’imagerie numérique :",
-        options: [
-          "Possède des capteurs plus sensibles que les films conventionnels",
-          "Nécessite une dose d’irradiation importante.",
-          "La résolution d’image est généralement inférieure par rapport à l’imagerie conventionnelle.",
-          "L’imagerie indirecte nécessite un traitement supplémentaire du capteur, une fois soumis aux rayons X"
+        "correctOptionIndexes": [
+          1
         ],
-        correctOptionIndexes: [0, 2, 3],
-        explanation: "Les capteurs numériques sont plus sensibles, donc la dose d'irradiation est réduite (B est faux). La résolution peut être inférieure aux films. L'imagerie indirecte (plaques au phosphore) nécessite une étape de lecture (scan) après l'exposition."
+        "explanation": "A :(traitement informatique)B : dentaire (ordinateur, imprimante, systèmes de sauvegarde) ainsi que d’un logiciel adapté au système de radiologie numérique utilisé."
       },
       {
-        questionText: "Le film dentaire contient une plaque de plomb :",
-        options: [
-          "Pour éviter le flou radial",
-          "Pour éviter le flou dû aux radiations secondaires",
+        "questionText": "N°11 (2023 1°EMD - Q848\nL'imagerie numérique",
+        "options": [
+          "Possède des capteurs plus sensibles que les films conventionnels",
+          "Nécessite une dose d'irradiation importante.",
+          "La résolution d'image est généralement inférieure par rapport à l'imagerie conventionnelle.",
+          "L'imagerie indirecte nécessite un traitement supplémentaire du capteur, une fois soumis aux rayons X"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Dose d’irradiation réduite,-Résolution spatiale : inférieure aux films conventionnels."
+      },
+      {
+        "questionText": "N°6 (2022 1°EMD - Q1086\nLe film dentaire contient une plaque de plomb:",
+        "options": [
+          "Pour éviter le flou  radial",
           "Pour protéger l’image",
+          "Pour éviter le flou du aux radiations secondaires",
           "Pour protéger les autres dents",
           "Pour protéger le patient"
         ],
-        correctOptionIndexes: [2],
-        explanation: "La plaque de plomb à l'arrière du film absorbe les rayons X résiduels après qu'ils aient traversé le film, empêchant ainsi le rétrodiffusion des rayons (backscatter) qui pourrait voiler et dégrader l'image."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "La plaque de plomb est utilisée pour bloquer ou atténuer les radiations secondaires et les rayons X dispersés, aidant ainsi à produire une image dentaire plus nette en réduisant le flou causé par ces radiations secondaires"
       },
       {
-        questionText: "La dimension des films intra buccaux est de :",
-        options: [
+        "questionText": "N°7 (2022 1°EMD - Q1114\nLa dimension des films intra buccaux et de:",
+        "options": [
           "31x41",
           "23x36",
           "27x54",
           "28x55",
           "75x90"
         ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Les dimensions standards pour les films intra-buccaux incluent 31x41 mm (taille 2, standard adulte) et 27x54 mm (pour les clichés Bite-Wing longs)."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Les films rétro alvéolaire  31x41 / 27x54 / 22 x 35*41, 2235, 2754"
       },
       {
-        questionText: "Le film dentaire contient une plaque de plomb :",
-        options: [
-          "Pour éviter le flou radial",
-          "Pour éviter le flou dû aux radiations secondaires",
+        "questionText": "N°6 (2021 1°EMD - Q1414\nLe film dentaire contient une plaque de plomb:",
+        "options": [
+          "Pour éviter le flou  radial",
+          "Pour éviter le flou du aux radiations secondaires",
           "Pour protéger le patient",
           "Pour protéger les autres dents"
         ],
-        correctOptionIndexes: [1],
-        explanation: "La plaque de plomb absorbe les radiations secondaires (rétrodiffusées) qui, sans elle, pourraient revenir vers le film et créer un flou, dégradant la qualité de l'image."
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
       },
       {
-        questionText: "Le film 57x76 est un film :",
-        options: [
-          "Rétro alvéolaire",
-          "Rétro coronaire",
+        "questionText": "N°17 (2021 1°EMD - Q1592\nLe film 57 x 76 est un film :",
+        "options": [
+          "Retro alvéolaire",
+          "Retro coronaire",
           "Bite Wing",
           "Occlusal"
         ],
-        correctOptionIndexes: [3],
-        explanation: "La dimension 57x76 mm correspond à la taille standard des films occlusaux pour adultes."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": ""
       }
     ]
   },
   {
-    title: "Facteurs influençant la qualité de l’image radiographique",
-    subject: "imagrie",
-    questions: [
+    "title": "Rayon X _ image radiologique",
+    "subject": "imagrie",
+    "questions": [
       {
-        questionText: "Les caractéristiques des images radiologiques :",
-        options: [
-          "Les zones non exposées matérialisent les structures ayant arrêté sélectivement le faisceau de rayons",
-          "Les zones non exposées vont apparaître en blanc.",
-          "Les zones exposées, qui n’ont rencontré aucun obstacle, apparaissent en blanc",
-          "Les nombreuses variations de gris témoignent de la densité atomique de chaque structure."
+        "questionText": "N°12 (2025 1°EMD DENTAIRE - Q231\nLe contraste de l'image radiologique :",
+        "options": [
+          "Déterminé par la netteté des contours de l'image.",
+          "C'est la différence de noircissement entre deux régions voisines sur l'image.",
+          "C'est la possibilité d'un système radiologique de distinguer deux objets l'un de l'autre.",
+          "C'est l'absence de netteté de l'image."
         ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Les zones exposées, où les rayons X ont traversé sans être absorbés, noircissent le film radiographique et apparaissent en noir (radio-claires)."
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A : Définition : Déterminée par la netteté des contours de l'image.\n\nC : Résolution : C'est la possibilité d'un système radiologique de distinguer deux objets l'un de l'autre.\n\nD : Le flou est l’absence de netteté de l’image."
       },
       {
-        questionText: "L’agrandissement de l’image radiographique désigne :",
-        options: [
-          "L’allongement (élongation) de l’image.",
-          "Le raccourcissement de l’image.",
-          "Une image modifiée sans distorsion et n’est pas de forme géométrique.",
-          "Un agrandissement permet que la structure anatomique apparaît plus grande sur l’image qu’en réalité."
+        "questionText": "N°13 (2025 1°EMD DENTAIRE - Q264\nComment diminuer le flou géométrique de l'image radiologique:",
+        "options": [
+          "Choix d'un grand foyer.",
+          "Placer la structure intéressante le plus près possible du film.",
+          "L'augmentation de la distance foyer-sujet nécessite l'emploi de tube puissant.",
+          "Supprimer ou réduire les causes de mouvements."
         ],
-        correctOptionIndexes: [3],
-        explanation: "L'agrandissement est une augmentation homothétique de la taille de l'image par rapport à l'objet réel. L'élongation et le raccourcissement sont des distorsions de forme."
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A : il faut un petit foyer.\n\nD : ça concerne le flou cinétique, pas le flou géométrique.\n\n« Diminution du flou géométrique : Choix d'un petit foyer – Diminution de la distance sujet-film : il faut essayer de placer la structure intéressante le plus près possible du film – Augmentation de la distance foyer-sujet : malheureusement cela nécessite l'emploi de tube puissant et donc de gros foyer. »"
       },
       {
-        questionText: "La ou les principales causes du flou en radiologie sont :",
-        options: [
-          "Un mouvement du patient.",
-          "Le mouvement du tube radiogène lors de la prise de la radiographie.",
-          "La grande distance objet-film.",
-          "La sous exposition de la structure à radiographier."
+        "questionText": "N°14 (2025 1°EMD DENTAIRE - Q278\nL'atténuation des rayons X par la matière organique varie en fonction de :",
+        "options": [
+          "La distance écran / objet.",
+          "L'épaisseur des objets.",
+          "L'énergie des rayons x.",
+          "La densité de l'organe."
         ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Tout mouvement relatif entre le patient, le tube à rayons X ou le récepteur pendant l'exposition entraîne un flou cinétique qui dégrade la netteté de l'image."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "A : ça joue sur le flou géométrique / agrandissement, pas sur l’atténuation."
       },
       {
-        questionText: "L’agrandissement :",
-        options: [
-          "Augmente si la distance objet-film augmente et la distance source-objet diminue",
-          "Diminue si la distance objet-film diminue et la distance source-objet augmente",
-          "A pour conséquence une augmentation du flou géométrique",
-          "Toutes les réponses sont fausses"
-        ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Pour minimiser l'agrandissement, il faut diminuer la distance objet-film et augmenter la distance source-objet. L'agrandissement est directement lié à l'augmentation du flou géométrique."
-      },
-      {
-        questionText: "Les facteurs liés à la qualité de l’image radiographique numérique sont :",
-        options: [
-          "La luminosité.",
-          "La résolution du contraste.",
-          "La taille du capteur.",
-          "La taille de l’écran d’affichage."
-        ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Les qualités intrinsèques d'une image numérique sont sa luminosité, sa résolution en contraste (capacité à distinguer les niveaux de gris), sa résolution spatiale (netteté) et l'absence de distorsion."
-      },
-      {
-        questionText: "Une image radiographique floue peut être obtenue dans le(s) cas suivant(s) :",
-        options: [
-          "Le mouvement du patient.",
-          "Le mouvement du tube radiogène ou du film lors de la prise de la radiographie.",
-          "La température du révélateur trop élevée.",
-          "La surexposition de la structure à radiographier."
-        ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Le flou est principalement causé par le mouvement (flou cinétique) ou par des facteurs géométriques (flou géométrique). Les erreurs de traitement (température) ou d'exposition affectent la densité et le contraste, pas la netteté."
-      }
-    ]
-  },
-  {
-    title: "Contrôle de la qualité en radiologie dentaire",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "La protection de l’opérateur des rayonnements est possible si le praticien :",
-        options: [
-          "Évite les clichés inutiles",
-          "S’éloigne le plus possible du patient",
-          "Maintient le film dans la bouche du patient",
-          "Utilise des angulateurs ou des portes-films"
-        ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Le praticien ne doit jamais maintenir le film dans la bouche du patient pour éviter une exposition directe de ses mains. L'utilisation d'angulateurs, l'éloignement et la justification des clichés sont des principes de base de la radioprotection."
-      },
-      {
-        questionText: "Parmi les critères de qualité d’un générateur dentaire :",
-        options: [
-          "L’utilisation d’un générateur de haute fréquence est recommandée",
-          "Plus la tension est importante (10mA), moins le nombre d’électrons produits est grand",
-          "Une collimation de 1,5 mm d’aluminium est recommandée pour les générateurs de 50 à 70 kV.",
-          "Le cône d’espacement doit être long afin d’augmenter le volume irradié."
-        ],
-        correctOptionIndexes: [0],
-        explanation: "Un cône long diminue le volume irradié et améliore le parallélisme. L'intensité (en mA) et non la tension (en kV) détermine le nombre d'électrons. La filtration est de 1.5mm pour <70kV et 2.5mm pour >70kV."
-      },
-      {
-        questionText: "Maintenance et contrôles de qualité du matériel en radiologie dentaire :",
-        options: [
-          "Le contrôle de qualité est dit interne, S’il est réalisé par l’exploitant ou sous sa responsabilité par un prestataire.",
-          "Le contrôle de qualité est dit externe, S’il est réalisé par un organisme indépendant de l’exploitant",
-          "Le contrôle de qualité externe comprend des contrôles trimestriels puis annuels",
-          "Le contrôle de qualité est obligatoire à la réception des équipements, avant leur première utilisation."
-        ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Les contrôles trimestriels et annuels sont caractéristiques du contrôle de qualité interne, et non externe."
-      },
-      {
-        questionText: "Le rayonnement X a des effets biologiques :",
-        options: [
-          "Il a la propriété d’ioniser la matière.",
-          "Il peut provoquer une exposition interne lorsqu’il est employé en médecine dentaire",
-          "L’exposition provoquée par rayonnement direct (provenant du tube radiogène concerne toute personne présente dans la salle de soins.",
-          "La dose efficace est la dose équivalente reçue par tout l’organisme calculée à partir de l’irradiation partielle d’un tissu"
-        ],
-        correctOptionIndexes: [0, 3],
-        explanation: "En médecine dentaire, l'exposition est externe (la source est hors du corps). Le rayonnement direct est collimaté vers le patient ; le risque pour les autres personnes vient du rayonnement diffusé."
-      },
-      {
-        questionText: "La qualité de l’image radiographique est affectée par :",
-        options: [
-          "Le temps d’exposition est court.",
-          "Le développement du film radiographique.",
-          "La tension des rayons émis et l’intensité faible du courant électrique.",
-          "La distance focale (foyer-objet)."
-        ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "Un temps d'exposition trop court peut entraîner une sous-exposition, mais c'est un paramètre à optimiser. Il faut choisir des temps d'exposition les plus bas possibles tout en garantissant une qualité d'image suffisante au diagnostic."
-      }
-    ]
-  },
-  {
-    title: "Les repères anatomiques sur radiographies",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "Un repère anatomique peut être :",
-        options: [
-          "Un point.",
-          "Un plan.",
-          "Une structure anatomique.",
-          "Une incidence."
-        ],
-        correctOptionIndexes: [0, 1, 2],
-        explanation: "Un repère anatomique est une structure (point, ligne, plan, volume) identifiable et spécifique utilisée comme référence. Une incidence est une technique de prise de vue, pas un repère."
-      },
-      {
-        questionText: "Les structures anatomiques radio-claires sont :",
-        options: [
-          "La suture palatine.",
-          "La cloison nasale.",
-          "Les fosses nasales.",
-          "L’épine nasale antérieure.",
-          "L’orifice lacrymo-nasal"
-        ],
-        correctOptionIndexes: [0, 2, 4],
-        explanation: "Les structures radio-claires (noires sur le film) sont celles qui absorbent peu les rayons X, comme les cavités (fosses nasales), les foramens ou les sutures. La cloison nasale et l'épine nasale sont des structures osseuses denses et donc radio-opaques."
-      },
-      {
-        questionText: "Les structures anatomiques radio-opaques sont :",
-        options: [
-          "Visibles à la radiographie.",
-          "Invisibles à la radiographie.",
-          "Des structures résistantes au passage des rayons X.",
-          "Des structures non résistantes au passage des rayons X.",
-          "Des structures minéralisées."
-        ],
-        correctOptionIndexes: [0, 2, 4],
-        explanation: "Les structures radio-opaques (blanches sur le film) sont visibles car elles résistent au passage des rayons X en les absorbant. C'est le cas des tissus denses et minéralisés comme l'os ou l'émail."
-      },
-      {
-        questionText: "Sur une radiographie panoramique, les structures anatomiques nettement visibles sont :",
-        options: [
-          "Le maxillaire",
-          "Le mandibulaire",
-          "Les glandes salivaires",
-          "Les apophyses coronoïdes",
-          "Les apophyses glénoïdes"
-        ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "Une radiographie panoramique offre une vue d'ensemble du maxillaire, de la mandibule (et ses apophyses coronoïdes) et des dents. Les glandes salivaires sont des tissus mous peu visibles, sauf en cas de pathologie (lithiase)."
-      },
-      {
-        questionText: "Les images radio-opaques sont des zones :",
-        options: [
-          "Plus foncées",
-          "Blanches",
-          "Pâles",
-          "Bleues"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "Les zones radio-opaques apparaissent blanches ou pâles sur une radiographie, car elles ont absorbé les rayons X et n'ont pas impressionné le film."
-      },
-      {
-        questionText: "Les clichés rétro-alvéolaires apportent au praticien des renseignements sur :",
-        options: [
-          "L’anatomie des racines",
-          "Les condyles mandibulaires",
-          "Le sinus maxillaire",
-          "La lamina dura"
-        ],
-        correctOptionIndexes: [0, 3],
-        explanation: "Le cliché rétro-alvéolaire donne une vue détaillée de la dent, de ses racines, du ligament alvéolo-dentaire et de l'os environnant, y compris la lamina dura. Il ne permet pas de voir les condyles."
-      },
-      {
-        questionText: "Les structures mandibulaires visibles sur un Orthopantomogramme sont les :",
-        options: [
-          "Les fosses nasales",
-          "La ligne mylo-hyoïdienne",
-          "Les trigones rétromolaires",
-          "Le canal dentaire inférieur et le foramen mentonnier"
-        ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "Les fosses nasales sont des structures du maxillaire supérieur. Les autres options sont toutes des structures mandibulaires visibles sur une radiographie panoramique."
-      }
-    ]
-  },
-  {
-    title: "Tomodensitométrie (Scanner à rayons X)",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "Le voxel :",
-        options: [
-          "Est un pixel",
-          "Est de forme cubique",
-          "Est de forme sphérique",
-          "Est mesuré en micromètres",
-          "Détermine l’image 3D"
-        ],
-        correctOptionIndexes: [1, 3, 4],
-        explanation: "Le voxel (contraction de volumetric pixel) est l'équivalent tridimensionnel (3D) d'un pixel (2D). Il représente un petit volume cubique de tissu et est la base de la reconstruction de l'image 3D."
-      },
-      {
-        questionText: "La tomodensitométrie repose sur :",
-        options: [
-          "L’absorption différentielle du rayonnement par les différentes structures anatomiques traversées",
-          "L’obtention des images en coupes, d’épaisseurs variables adaptées à la structure à étudier",
-          "L’obtention des images en coupes, lors d’une seule rotation autour de la zone à radiographier",
-          "L’acquisition hélicoïdale",
-          "L’émission d’un faisceau des rayons X de forme conique"
-        ],
-        correctOptionIndexes: [0, 1, 3],
-        explanation: "La TDM classique utilise un faisceau fin (en éventail) et nécessite de multiples rotations pour acquérir un volume (acquisition hélicoïdale). Le faisceau conique est caractéristique du Cone Beam (CBCT)."
-      },
-      {
-        questionText: "Parmi les caractéristiques d’un scanner moderne :",
-        options: [
-          "Une vitesse d’acquisition très élevée.",
-          "Les détecteurs sont en cristaux de céramique photoluminescents.",
-          "Un détecteur structuré en « anneau »",
-          "Un pas de coupe standard est de 1,5 à 1,625",
-          "Une réduction de la dose d’exposition au moyen de détecteurs <<monocoupe>>"
-        ],
-        correctOptionIndexes: [0, 1, 4],
-        explanation: "Un scanner moderne est dit 'multi-barrettes' ou 'multicoupe' (et non monocoupe), ce qui permet une acquisition rapide. Les détecteurs sont structurés en barrettes qui tournent, pas en anneau fixe."
-      },
-      {
-        questionText: "Les facteurs influençant la qualité de l’image d’un denta-scanner :",
-        options: [
-          "L’orientation correcte et l’immobilité du patient.",
-          "L’absence de déglutition pendant l’acquisition.",
-          "L’utilisation d’un champ d’acquisition conforme au diamètre de la structure examinée.",
-          "Le taux de teneur radiculaire métallique engendre des artefacts.",
-          "Toutes les réponses sont fausses."
-        ],
-        correctOptionIndexes: [0, 1, 2, 3],
-        explanation: "Tous ces facteurs sont cruciaux. Les mouvements (y compris la déglutition) créent du flou. Un champ d'acquisition bien choisi limite la dose. Les objets métalliques créent des artefacts (stries) qui dégradent l'image."
-      },
-      {
-        questionText: "Lors de la réalisation d’un scanner dentaire :",
-        options: [
-          "On doit faire au maximum une dizaine de coupes axiales.",
-          "L’épaisseur de ces coupes est de 1 millimètre.",
-          "Les coupes sont espacées la plupart du temps de 02 cm.",
-          "Le logiciel informatique n’est pas nécessaire."
-        ],
-        correctOptionIndexes: [1],
-        explanation: "Un scanner dentaire réalise un grand nombre de coupes très fines (de l'ordre du millimètre ou moins) et très rapprochées (jointives ou chevauchantes) pour permettre une reconstruction 3D précise. Un logiciel est indispensable."
-      },
-      {
-        questionText: "Le scanner à rayon X ou denta scanner en endodontie permet de :",
-        options: [
-          "Étudier les rapports des lésions péri apicales avec les racines.",
-          "Mesurer la longueur de travail au cours du traitement endodontique.",
-          "Visualiser une obturation incomplète ou un dépassement de pâte",
-          "Est un examen radiologique systématique en OC/E"
-        ],
-        correctOptionIndexes: [0, 2],
-        explanation: "Le scanner est un examen de deuxième ou troisième intention, non systématique. Il est très utile pour l'analyse complexe des anatomies radiculaires, des lésions et des complications de traitement, mais la mesure de la longueur de travail se fait avec un localisateur d'apex."
-      }
-    ]
-  },
-  {
-    title: "Rayon X et image radiologique",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "L’interaction électrostatique avec un électron atomique est appelée :",
-        options: [
+        "questionText": "N°4 (2024 1°EMD - Q451\nL'interaction électrostatique avec un électron atomique est appelée",
+        "options": [
           "Ionisation",
           "Excitation",
           "Freinage",
-          "Collision"
+          "collision"
         ],
-        correctOptionIndexes: [3],
-        explanation: "Dans le contexte de la production de rayons X, lorsque les électrons incidents entrent en collision avec les électrons des atomes de la cible (anode), cela fait partie des interactions qui génèrent le rayonnement."
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Chacun des photons générés par ces collisions forme une partie du spectre continu de rayons X"
       },
       {
-        questionText: "L’image radiante en radiologie dentaire désigne une image :",
-        options: [
+        "questionText": "N°16 (2024 1°EMD - Q622\nL'image radiante en radiologie dentaire désigne une image",
+        "options": [
           "Non interprétable.",
           "Formée sur le récepteur.",
-          "Au niveau de l’objet examiné.",
+          "Au niveau de l'objet examiné.",
           "Formée au niveau du foyer."
         ],
-        correctOptionIndexes: [0],
-        explanation: "L'image radiante est la distribution invisible du faisceau de rayons X après avoir traversé l'objet. Elle n'est pas encore visible ou interprétable ; elle le devient après avoir interagi avec le récepteur (film ou capteur)."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
       },
       {
-        questionText: "La formation de l’image radiologique se fait par :",
-        options: [
+        "questionText": "N°1 (2023 1°EMD - Q688\nLa formation de l'image radiologique se fait par :",
+        "options": [
           "Une interaction des photons avec la matière",
           "Une augmentation progressive des photons",
           "Une atténuation progressive du faisceau des rayons X",
-          "Toutes ces réponses sont justes"
+          "Toutes les réponses sont justes"
         ],
-        correctOptionIndexes: [0, 2],
-        explanation: "L'image se forme parce que le faisceau de rayons X est atténué différemment selon les tissus qu'il traverse (interaction photons-matière), créant une image de contraste."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "On appelle une “image radiante” la distribution de l'intensité du faisceau transmis, cette image radiante est invisible à l'œil et révélé par le récepteur dont le rôle est de la transformer en image lumineuse visible par l'observateur."
       },
       {
-        questionText: "L’atténuation des rayons X dépend de :",
-        options: [
-          "L’épaisseur de l’objet à radiographier",
+        "questionText": "N°2 (2023 1°EMD - Q705\nL'atténuation des rayons X dépend de:",
+        "options": [
+          "L'épaisseur de l'objet à radiographier",
           "La composition des structures",
           "La densité et numéro atomique",
           "Toutes les réponses sont fausses"
         ],
-        correctOptionIndexes: [0, 1, 2],
-        explanation: "L’atténuation des RX dépend de l’épaisseur traversée, mais aussi de la composition des structures, en particulier la densité (masse volumique) et le numéro atomique des atomes constituants."
-      },
-      {
-        questionText: "La source usuelle des rayons X :",
-        options: [
-          "Il s’agit d’un tube où règne un vide poussé et dans lequel se trouvent trois électrodes",
-          "Est le tube de Coolidge",
-          "Sa tension accélératrice varie selon les besoins de l’utilisation",
-          "Il s’agit d’un tube où règne un vide poussé et dans lequel se trouvent deux électrodes"
+        "correctOptionIndexes": [
+          0
         ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "Le tube de Coolidge est la source standard. Il contient deux électrodes : la cathode (négative) et l'anode (positive). Il n'y a pas de troisième électrode."
+        "explanation": "L'atténuation des RX dépend de l'épaisseur à radiographier, mais aussi de la composition des structures à radiographier, en particulier la densité (masse volumique) et le numéro atomique des atomes constituants."
       },
       {
-        questionText: "Le spectre continu de rayons X :",
-        options: [
-          "Se traduit par l’émission d’un photon de rayon X qui rayonne à partir du site de la collision",
-          "Est appelé le rayonnement de freinage",
-          "Est appelé le spectre de raies",
-          "Se traduit par l’émission d’un photon de rayon X qui rayonne à partir du site de freinage"
+        "questionText": "N°5 (2023 1°EMD - Q751\nLa source usuelle des rayons X",
+        "options": [
+          "Il s'agit d'un tube ou règne un vide poussé et dans lequel se trouvent trois électrodes",
+          "est le tube de Coolidge",
+          "sa tension accélératrice variée selon les besoins de l'utilisation",
+          "Il s'agit d'un tube ou règne un vide poussé et dans lequel se trouvent deux  électrodes"
         ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Le spectre continu est produit par le ralentissement (freinage) des électrons lorsqu'ils passent près des noyaux de la cible. Le spectre de raies est produit par la collision avec les électrons des couches internes."
-      },
-      {
-        questionText: "En imagerie médicale :",
-        options: [
-          "L’interprétation des images est à sens unique soit technique soit clinique",
-          "Nous utilisons des sources de rayonnement exclusively ionisantes.",
-          "En soignant un patient, on ne soigne pas des images.",
-          "L’image obtenue est fidèle"
+        "correctOptionIndexes": [
+          1,
+          3
         ],
-        correctOptionIndexes: [2],
-        explanation: "L'interprétation est à la fois technique et clinique. L'imagerie utilise des rayonnements ionisants et non-ionisants. L'image n'est jamais parfaitement fidèle (distorsions, artefacts). La proposition C rappelle que l'image est un outil au service du soin du patient."
+        "explanation": "La source usuelle des rayons X est le tube de Coolidge. Il s’agit d’un tube ou règne un vide poussé et dans lequel se trouvent deux électrodes : l’anode ou l’anticathode et la cathode.La tension accélératrice variée selon les besoins de l’utilisation des rayons X: 50 kV en radioscopie. 100 kV en radiographie. 200 kV en radiothérapie."
       },
       {
-        questionText: "Une anode dans un tube à rayons X :",
-        options: [
+        "questionText": "N°6 (2023 1°EMD - Q759\nLe spectre continu de rayons X",
+        "options": [
+          "se traduit par l'émission d'un photon de rayon X qui rayonne à partir du site de la collision",
+          "est appelé le rayonnement de freinage",
+          "est appelé le spectre de raies",
+          "se traduit par l'émission d'un photon de rayon X qui rayonne à partir du site de freinage."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°7 (2023 1°EMD - Q782\nEn imagerie médicale:",
+        "options": [
+          "L'interprétation des images est à sens unique soit technique soit clinique.",
+          "Nous utilisons des sources de rayonnement exclusivement ionisantes.",
+          "En soigne un patient, on ne soigne pas des images:",
+          "L'image obtenue est fidèle"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°15 (2023 1°EMD - Q915\nUne anode dans un tube à rayons X:",
+        "options": [
           "Est la source de production de rayons.",
-          "Appelée aussi “cible ou anticathode”",
-          "Elle est responsable de l’émission des électrons.",
+          "Appelée aussi \" cible ou anticathode \".",
+          "Elle est responsable de l'émission des électrons.",
           "Composée généralement de tungstène et de trace de thorium."
         ],
-        correctOptionIndexes: [0, 1],
-        explanation: "L'anode (ou cible) est le lieu de production des rayons X. C'est la cathode qui est responsable de l'émission des électrons."
-      },
-      {
-        questionText: "Une gaine dans un tube à rayons X :",
-        options: [
-          "Assure une protection mécanique de l’enveloppe du tube.",
-          "S’éloigne le plus possible du patient",
-          "Permet une isolation électrique du tube et elle est reliée à la terre.",
-          "Facilite le raccordement des câbles pour l’anode et la cathode."
+        "correctOptionIndexes": [
+          1
         ],
-        correctOptionIndexes: [0, 1, 2, 3],
-        explanation: "La gaine plombée a de multiples rôles : protection mécanique, isolation électrique, dissipation de chaleur, et support pour les connexions, tout en contenant le rayonnement parasite."
+        "explanation": "correspond à la partie positive du tube. Lorsque les électrons entrent en contact avec cette dernière, leur énergie cinétique est transformée en énergie électromagnétique donc en rayonnement X."
       },
       {
-        questionText: "L’application des rayons X en pratique médicale :",
-        options: [
+        "questionText": "N°16 (2023 1°EMD - Q930\nUne gaine dans un tube à rayons X:",
+        "options": [
+          "Assure une protection mécanique de l'enveloppe du tube.",
+          "Assure une protection du personnel du rayonnement de fuite.",
+          "Permet une isolation électrique du tube et elle est reliée à la terre.",
+          "Facilite le raccordement des câbles pour l'anode et la cathode."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°17 (2023 1°EMD - Q946\nL'application des rayons X en pratique médicale:",
+        "options": [
           "Radiographie standard du squelette osseux.",
           "Imagerie par résonance magnétique (IRM).",
           "Tomodensitométrie.",
           "Radiothérapie."
         ],
-        correctOptionIndexes: [0, 2, 3],
-        explanation: "L'IRM n'utilise pas les rayons X, mais un champ magnétique et des ondes radio."
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Application en pratique médicale :- Radiographie standard du squelette osseux- Radiographie pulmonaire - Radiographie de l'abdomen sans préparation – Mammographie - Examen spécialisé - Tomodensitométrie- Radiothérapie - Angiographie"
       },
       {
-        questionText: "L’absorption de photons X :",
-        options: [
+        "questionText": "N°20 (2022 1°EMD - Q1270\nL'absorption de photons X :",
+        "options": [
           "Aboutit à une image finale",
           "Développe le film radiographique",
           "Aboutit à une image latente",
           "Se fait sur les deux faces du film",
           "Permet de visualiser une image"
         ],
-        correctOptionIndexes: [2],
-        explanation: "Lorsque les photons X sont absorbés par l'émulsion du film, ils créent une modification physico-chimique invisible appelée 'image latente'. Cette image ne deviendra visible (image finale) qu'après le processus de développement chimique."
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Lorsque les photons X sont absorbés par le film radiographique, ils créent une image latente qui doit ensuite être développée pour obtenir l'image finale."
       },
       {
-        questionText: "L’absorption de photons X :",
-        options: [
+        "questionText": "N°20 (2021 1°EMD - Q1631\nL'absorption de photons X:",
+        "options": [
           "Aboutit à une image finale",
           "Développe le film radiographique",
           "Aboutit à une image latente",
           "Se fait sur les deux faces du film"
         ],
-        correctOptionIndexes: [2],
-        explanation: "L'interaction des photons X avec les cristaux de bromure d'argent crée une image latente, qui est une modification invisible. Le développement chimique est nécessaire pour la transformer en image visible."
-      }
-    ]
-  },
-  {
-    title: "Techniques conventionnelles d'imagerie",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "L’ouverture buccale dans l’incidence face base bouche ouverte nous permet de :",
-        options: [
-          "Dégager les condyles des mastoïdes",
-          "Dégager les parties antérieures et postérieures de la mandibule",
-          "Dégager les DDS inférieures et supérieures",
-          "Bien visualiser la région de l’apophyse coronoïde"
+        "correctOptionIndexes": [
+          2
         ],
-        correctOptionIndexes: [0],
-        explanation: "L'incidence face base (ou Hirtz) bouche ouverte est spécifiquement conçue pour déplacer les condyles mandibulaires vers l'avant et vers le bas, les dégageant ainsi des structures osseuses denses de la base du crâne comme les mastoïdes, pour une meilleure visualisation."
-      },
-      {
-        questionText: "L’incidence maxillaire défilé permet de visualiser :",
-        options: [
-          "Les cavités pneumatiques de la face, en particulier les sinus maxillaires.",
-          "Des fractures de la région symphysaire.",
-          "La branche montante et apophyse coronoïde.",
-          "La région molaire et angulaire."
-        ],
-        correctOptionIndexes: [2, 3],
-        explanation: "L'incidence maxillaire défilé (ou mandibule défilée) est une technique oblique visant à projeter un côté de la mandibule sans superposition de l'autre, ce qui est idéal pour visualiser la région de l'angle, la branche montante et l'apophyse coronoïde."
-      },
-      {
-        questionText: "L’incidence Hirtz latéralisée a pour intérêt :",
-        options: [
-          "Étude de la base du crâne.",
-          "Étude de l’arcade zygomatique.",
-          "Étude de l’arc mandibulaire.",
-          "Étude des sinus sphénoïdaux."
-        ],
-        correctOptionIndexes: [0],
-        explanation: "L'incidence de Hirtz, qu'elle soit standard ou latéralisée, est l'incidence de choix pour l'étude de la base du crâne et la mise en évidence d'éventuelles asymétries."
-      },
-      {
-        questionText: "La radiographie Bitewing est une technique qui :",
-        options: [
-          "Permet le diagnostic des traumatismes alvéolodentaires.",
-          "Autorise le diagnostic et le contrôle des lésions parodontales.",
-          "Permet le dépistage de caries dentaires proximales.",
-          "Ignore les couronnes pour donner une image précise des racines."
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "Le Bitewing (ou rétrocoronaire) est spécifiquement conçu pour visualiser les couronnes des dents supérieures et inférieures sur un même cliché, ce qui en fait l'examen de référence pour le dépistage des caries interproximales et l'évaluation du niveau de l'os alvéolaire."
-      },
-      {
-        questionText: "Le mordu occlusal permet de :",
-        options: [
-          "Visualiser les déplacements fracturaires dans le plan coronal axiale",
-          "Visualiser les déplacements des fractures basiliaires",
-          "Visualiser aux maxillaires la position dans le plan vestibulo-palatin d’un élément inclus",
-          "Détecter une lithiase salivaire dans la portion terminale du canal excréteur des glandes sub-mandibulaires."
-        ],
-        correctOptionIndexes: [2, 3],
-        explanation: "Le cliché occlusal donne une vue 'par-dessus' (maxillaire) ou 'par-dessous' (mandibule), ce qui est idéal pour localiser un objet (dent incluse, corps étranger) dans le sens vestibulo-lingual/palatin et pour visualiser les calculs (lithiases) dans les canaux salivaires."
-      },
-      {
-        questionText: "La radio Orthopantomogramme :",
-        options: [
-          "Est un examen de deuxième intention.",
-          "Permet une évaluation globale des maxillaires et des dents.",
-          "Permet de visualiser les cavités pneumatiques de la face.",
-          "Permet de détecter les lithiases salivaires."
-        ],
-        correctOptionIndexes: [1],
-        explanation: "L'orthopantomogramme (panoramique) est typiquement un examen de première intention qui offre une vue d'ensemble des arcades dentaires, du maxillaire et de la mandibule."
-      }
-    ]
-  },
-  {
-    title: "L'imagerie numérique : Principes et intérêts",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "La radiologie numérique, à la différence de la radiologie argentique :",
-        options: [
-          "Utilise un procédé chimique pour l’obtention de l’image",
-          "Utilise un procédé informatique pour le traitement d’image",
-          "Permet une visualisation instantanée de l’image",
-          "Utilise des capteurs numériques"
-        ],
-        correctOptionIndexes: [0, 3],
-        explanation: "La radiologie numérique utilise un procédé informatique (et non chimique) pour l'obtention et le traitement de l'image, grâce à des capteurs numériques qui remplacent le film argentique."
-      },
-      {
-        questionText: "Les systèmes de radiographie numérisée (DR) avec conversion indirecte :",
-        options: [
-          "Permettent l’obtention instantanée de l’image",
-          "Permettent l’acquisition différée de l’image",
-          "Impliquent l’utilisation d’un scintillateur qui transforme les rayons X en signal électrique",
-          "Impliquent l’utilisation d’un scintillateur qui transforme la lumière en signal électrique",
-          "Impliquent l’utilisation d’un scintillateur qui transforme les rayons X en lumière"
-        ],
-        correctOptionIndexes: [0, 4],
-        explanation: "Dans la conversion indirecte, un scintillateur transforme d'abord les rayons X en lumière visible. Ensuite, un photodétecteur (comme un capteur CCD ou une photodiode) transforme cette lumière en signal électrique. L'image est obtenue instantanément."
-      },
-      {
-        questionText: "La radiographie numérique est :",
-        options: [
-          "Un système avec film.",
-          "Un système avec capteur.",
-          "Un système où la soustraction est de règle.",
-          "Un système où le développement de l’image se fait dans des bains spéciaux."
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "La radiographie numérique est un système sans film qui utilise un capteur. Elle ne nécessite pas de développement chimique. La soustraction numérique est une possibilité de traitement d'image, mais pas une règle systématique."
-      },
-      {
-        questionText: "Dans l’image numérique directe nous retrouvons :",
-        options: [
-          "Une machine à rayon X",
-          "Un capteur intra-oral",
-          "Un écran central",
-          "Un ordinateur"
-        ],
-        correctOptionIndexes: [0, 3],
-        explanation: "Le système de radiographie numérique directe se compose d'un générateur de rayons X, d'un capteur (souvent relié par un fil) et d'un ordinateur avec un écran pour visualiser et traiter l'image."
-      },
-      {
-        questionText: "Les techniques d’imagerie numérique intra-orale :",
-        options: [
-          "Utilisent seulement entre 16 et 25 nuances de gris pour obtenir des résolutions supérieures",
-          "Augmentent l’exposition aux rayonnements",
-          "Ont l’inconvénient d’utiliser des capteurs volumineux",
-          "Présentent un coût d’installations initial élevé"
-        ],
-        correctOptionIndexes: [2, 3],
-        explanation: "La radiographie numérique permet d'obtenir une bien meilleure résolution en contraste (jusqu'à 256 niveaux de gris ou plus) et réduit l'exposition aux rayonnements. Ses principaux inconvénients sont le coût initial et la rigidité/volume des capteurs directs."
-      }
-    ]
-  },
-  {
-    title: "Imagerie par Résonance Magnétique (IRM)",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "L’IRM utilise :",
-        options: [
-          "Les neutrons",
-          "La résonance suite à une stimulation de type onde radio",
-          "Les rayons X",
-          "Les protons",
-          "Toutes les réponses sont fausses"
-        ],
-        correctOptionIndexes: [1, 3],
-        explanation: "La formation de l'image IRM repose sur l'interaction d'un champ magnétique puissant et d'une onde de radiofréquence pour exciter les protons (noyaux d'atomes d'hydrogène) présents dans les tissus."
-      },
-      {
-        questionText: "L’image claire sur une coupe IRM est dite :",
-        options: [
-          "Radio-claire",
-          "Radio-sombre",
-          "Radio-opaque",
-          "Hyper-intense",
-          "Hypo-intense"
-        ],
-        correctOptionIndexes: [3],
-        explanation: "En IRM, on ne parle pas de 'radio-claire' ou 'radio-opaque'. Un signal fort, qui apparaît clair ou blanc sur l'image, est qualifié d'hyper-intense ou en hypersignal."
-      },
-      {
-        questionText: "L’IRM permet de différencier :",
-        options: [
-          "Au sein d’un même tissu, le tissu physiologique du pathologique",
-          "Deux tissus tumoraux",
-          "Le ménisque ou le ligament des ATM",
-          "Les vaisseaux conjoints",
-          "Toutes les réponses sont justes"
-        ],
-        correctOptionIndexes: [4],
-        explanation: "L'IRM a une excellente résolution en contraste des tissus mous, ce qui lui permet de différencier avec précision des structures anatomiques fines (ligaments, ménisques) et de distinguer les tissus sains des tissus pathologiques."
-      },
-      {
-        questionText: "Lors de la réalisation d’une IRM pour obtenir une résonance, les éléments qu’il faut réunir sont :",
-        options: [
-          "Un rayonnement laser.",
-          "Un champ magnétique.",
-          "Une onde électromagnétique.",
-          "Une antenne.",
-          "Toutes les réponses sont justes."
-        ],
-        correctOptionIndexes: [4],
-        explanation: "La réalisation d'une IRM nécessite un champ magnétique puissant pour aligner les protons, une onde électromagnétique (radiofréquence) pour les exciter, et une antenne pour émettre cette onde et recevoir le signal en retour."
-      },
-      {
-        questionText: "L’IRM est un examen radiologique qui :",
-        options: [
-          "Permet d’obtenir des images uniquement en 2 dimensions",
-          "Permet une étude morphologique et fonctionnelle des organes",
-          "Utilise les rayons x"
-        ],
-        correctOptionIndexes: [1],
-        explanation: "L'IRM est une technique d'imagerie en coupes qui permet des reconstructions en 2D et 3D. Elle n'utilise pas de rayons X et offre une excellente analyse morphologique et, avec des séquences spécifiques, une analyse fonctionnelle."
-      },
-      {
-        questionText: "L’IRM est indiquée pour :",
-        options: [
-          "Les pathologies traumato-orthopédiques",
-          "L’exploration de l’appareil génital et de la pelvis",
-          "Les pathologies osseuses"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "L'IRM excelle dans l'étude des tissus mous (pathologies ostéo-articulaires comme les ligaments/ménisques, appareil génito-urinaire, système nerveux). Pour l'étude de l'os pur, le scanner (TDM) est souvent plus performant."
-      },
-      {
-        questionText: "Les Contre Indications Absolues de l’IRM sont :",
-        options: [
-          "Pacemaker/défibrillateur cardiaque implantable",
-          "Corps étranger métallique intraoculaire ou intracrânien",
-          "Valve cardiaque biologiques",
-          "Les femmes enceintes"
-        ],
-        correctOptionIndexes: [0, 1],
-        explanation: "Les contre-indications absolues concernent les dispositifs électroniques (pacemaker) et les corps étrangers ferromagnétiques dans des zones critiques (œil, cerveau) à cause du risque de déplacement par le champ magnétique. Les valves biologiques et la grossesse (après le 1er trimestre) sont des contre-indications relatives."
-      }
-    ]
-  },
-  {
-    title: "Tomographie volumique par faisceau conique (Cône Beam)",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "Le cone-beam ou CBCT :",
-        options: [
-          "Est une tomographie volumique numérique à faisceau cylindrique.",
-          "Est un examen de 2ème intention.",
-          "Est plus irradiant que la tomodensitométrie classique.",
-          "Est moins sujet aux artefacts métalliques que le scanner."
-        ],
-        correctOptionIndexes: [3],
-        explanation: "Le CBCT utilise un faisceau de rayons X de forme conique. C'est une technique 'low dose', moins irradiante que le scanner conventionnel, et généralement moins sensible aux artefacts générés par les restaurations métalliques."
-      },
-      {
-        questionText: "Lors de la réalisation d’un cone-beam :",
-        options: [
-          "Le patient doit être en position debout uniquement.",
-          "L’émetteur de rayons X et le détecteur sont solidaires et alignés.",
-          "L’appareil subit une rotation autour du sujet.",
-          "Les constantes d’acquisition sont définies en fonction de la corpulence du sujet.",
-          "Toutes les réponses sont justes."
-        ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "L'acquisition se fait généralement en position assise ou debout, pas seulement debout. Le couple émetteur/détecteur tourne autour de la tête du patient pour acquérir le volume."
-      },
-      {
-        questionText: "Le cone-beam est réalisé, dans le cas :",
-        options: [
-          "D’endodontie guidée.",
-          "De fractures radiculaires verticales.",
-          "Dentaire entièrement stade 2.",
-          "D’anomalies de structures dentaires.",
-          "Des pathologies des ATM."
-        ],
-        correctOptionIndexes: [0, 1, 3, 4],
-        explanation: "Le CBCT a de nombreuses indications en odontologie pour l'analyse 3D fine. Pour une carie de stade 2 non complexe, une radiographie rétro-alvéolaire est généralement suffisante et préférable en raison de la dose plus faible."
-      }
-    ]
-  },
-  {
-    title: "Dosimétrie et radioprotection",
-    subject: "imagrie",
-    questions: [
-      {
-        questionText: "Les dispositifs de mesure des taux d’irradiations sont :",
-        options: [
-          "Le dosimètre personnel.",
-          "Les paravents plombés.",
-          "Le dosimètre d’ambiance.",
-          "Le COEMA.",
-          "Le dosimètre témoin."
-        ],
-        correctOptionIndexes: [0, 2, 4],
-        explanation: "Les dosimètres (personnel, d'ambiance, témoin) sont des dispositifs de mesure de dose. Les paravents plombés sont des équipements de protection collective (moyens de protection), pas des instruments de mesure."
-      },
-      {
-        questionText: "Lors d’une prise de radiographie, l’enfant doit être protégé par :",
-        options: [
-          "Un tablier plombé",
-          "Un collier thyroïdien (collier cervical)",
-          "Des Gants plombés",
-          "Des Lunettes plombées",
-          "Toutes les réponses sont justes"
-        ],
-        correctOptionIndexes: [0, 1],
-        explanation: "La protection du patient, et en particulier de l'enfant qui est plus radiosensible, implique l'utilisation systématique d'un tablier plombé et d'un cache-thyroïde pour protéger les organes les plus sensibles qui ne sont pas dans le champ d'examen."
-      },
-      {
-        questionText: "La radiosensibilité des tissus dépend des facteurs suivants :",
-        options: [
-          "Le sexe",
-          "La dose",
-          "L’âge",
-          "La valeur dosimétrique",
-          "L’organe"
-        ],
-        correctOptionIndexes: [0, 1, 2, 3, 4],
-        explanation: "La radiosensibilité varie en fonction de nombreux facteurs : le type de tissu (organe), l'âge (les enfants sont plus sensibles), le sexe, et les caractéristiques du rayonnement lui-même (dose, débit de dose)."
-      },
-      {
-        questionText: "Il existe des organes plus radiosensibles que d’autres, tels que :",
-        options: [
-          "La peau",
-          "Le sein",
-          "La thyroïde",
-          "La moelle osseuse"
-        ],
-        correctOptionIndexes: [1, 2, 3],
-        explanation: "La moelle osseuse (cellules hématopoïétiques), la thyroïde et le sein font partie des tissus les plus radiosensibles du corps. La peau est considérée comme ayant une radiosensibilité modérée."
-      },
-      {
-        questionText: "Les équipements de protection collective (EPC), sont :",
-        options: [
-          "Le tablier plombé de protection radiologique",
-          "Les lunettes plombées de protection radiologique",
-          "Les paravents plombés ou les parois en verre plombé",
-          "Le plateau ou écran cervical plombé"
-        ],
-        correctOptionIndexes: [2],
-        explanation: "Les équipements de protection collective (EPC) sont des dispositifs fixes ou mobiles qui protègent plusieurs personnes ou l'environnement (ex: paravents, murs). Les tabliers, lunettes et caches-thyroïde sont des équipements de protection individuelle (EPI)."
-      },
-      {
-        questionText: "Quelles sont les règles de la radioprotection :",
-        options: [
-          "Le dosimètre personnel",
-          "Le temps",
-          "L’écran",
-          "Collier thyroïdien ou collier cervical"
-        ],
-        correctOptionIndexes: [1, 2],
-        explanation: "Les trois grands principes de la radioprotection pour les sources externes sont : réduire le TEMPS d'exposition, augmenter la DISTANCE à la source, et utiliser des ÉCRANS de protection. Le dosimètre et le collier sont des outils de mesure et de protection, pas des principes."
+        "explanation": ""
       }
     ]
   }

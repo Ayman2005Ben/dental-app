@@ -4,7 +4,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "L'Inlay ou incrustation:",
+        "questionText": "N°1 (2025 1°EMD - Q42\nL'Inlay ou incrustation:",
         "options": [
           "Est destinée à restaurer une perte de substance dentaire qui nécessite un recouvrement de cuspide.",
           "Est assemblée par collage ou scellement.",
@@ -16,7 +16,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "L'inlay est destiné à restaurer une perte de substance dentaire qui ne nécessite pas le recouvrement des cuspides. Il est assemblé par collage ou par scellement. L'inlay doit s'adapter à la cavité en reproduisant l'anatomie occlusale de la dent et ses rapports avec les dents adjacentes. Il est indiqué lorsque la cavité se trouve à l'intérieur des parois de la dent.",
+        "explanation": "A. Faux : l’Inlay est destinée à restaurer une perte de substance dentaire qui nécessite pas le recouvrement des cuspides.B. Vrai : elle est assemblée par collage ou par scellement.C. Vrai : elle doit s’adapter à la cavité en reproduisant l’anatomie occlusale de la dent et ses rapports avec les dents adjacentes.D. Vrai : elle est indiquée lorsque la cavité se trouve à l’intérieure des parois de la dent.",
         "citations": [
           2,
           3,
@@ -29,7 +29,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'ancrage :",
+        "questionText": "N°2 (2025 1°EMD - Q66\nL'ancrage :",
         "options": [
           "Fait partie d'une prothèse partielle amovible.",
           "Est le dispositif de prothèse conjointe qui recouvre la dent pilier.",
@@ -55,7 +55,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Prothèse partielle adjointe :",
+        "questionText": "N°2 (2024 1°EMD - Q482\nProthèse partielle adjointe :",
         "options": [
           "C'est une prothèse amovible à appuis ostéo-muqueux uniquement",
           "Elle comporte des ancrages scellés ou collés sur les dents piliers",
@@ -65,7 +65,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "(Aucune explication fournie dans la source)",
+        "explanation": "- Prothèse partielle comme son nom l’indique et donc destinée a restaurer une arcade partiellement édentée (presence de quelque dent sur l’arcade).\n - La prothèse partielle amovible (adjointe) est stabilisée par différents moyens de retention; crochets sur dents naturelles ou système d`attachements sur couronne.\n Pour la réponse A : fausse c’est une prothèse amovible a appui dentaire et ostéo-muqueux ( la prothèse partielle présente quelques dents restantes sur l`arcade et donc on va prendre appui sur celle ci l`appui dentaire \n et les crêtes édentées Appui ostéo-muquex\n Pour la réponse B : fausse les ancrages font partie du bridge qui est une prothèse fixe conjointe et non pas adjointe.",
         "citations": [
           319
         ]
@@ -89,7 +89,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La couronne coulée :",
+        "questionText": "N°1 (2023 1°EMD - Q855\nLa couronne coulée :",
         "options": [
           "Est entièrement métallique",
           "Peut avoir une partie cosmétique en résine ou en céramique sur la face vestibulaire",
@@ -100,7 +100,7 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "La couronne coulée est une couronne de recouvrement entièrement métallique, indiquée pour la région postérieure. L'option B décrit une couronne céramo-métallique (CIV), et non une couronne coulée.",
+        "explanation": "La couronne coulée est une couronne de recouvrement entièrement métallique indiquée pour la region postérieure.-La réponse B :fausse c’est la CIV qui a une face vestibulaire en résine ou en céramique.",
         "citations": [
           394,
           395,
@@ -109,7 +109,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La couronne céramo-métallique:",
+        "questionText": "N°2 (2023 1°EMD - Q884\nLa couronne céramo-métallique:",
         "options": [
           "Est une couronne métallique recouverte de céramique",
           "Est une couronne entièrement en céramique",
@@ -121,7 +121,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "La couronne céramo-métallique est composée d'une structure métallique recouverte de couches de céramique. Elle est esthétique, peut être utilisée pour le secteur antérieur, et peut servir de moyen d'ancrage pour un bridge en recouvrant la dent pilier.",
+        "explanation": "La couronne céramo-métallique est composée de deux matériaux une structure métallique qui servira de base et qui sera ensuite recouverte d’une succession de couches en céramique. Elle est esthétique et peut donc être utilisée pour le secteur antérieur. Elle peut servir de moyen d’ancrage du Bridge (recouvre la dent pilier).",
         "citations": [
           413,
           414,
@@ -130,7 +130,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La prothèse conjointe peut être constituée par :",
+        "questionText": "N°3 (2023 1°EMD - Q902\nLa prothèse conjointe peut être constituée par :",
         "options": [
           "Un inlay ou un onlay",
           "Des ancrages céramo-métalliques",
@@ -149,7 +149,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La travée de bridge",
+        "questionText": "N°4 (2023 1°EMD - Q923\nLa travée de bridge",
         "options": [
           "Est le dispositif de prothèse conjointe qui recouvre la dent pilier",
           "Fait partie d'un bridge ou pont",
@@ -160,7 +160,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "La travée de bridge fait partie d'une prothèse conjointe (bridge) et constitue l'élément qui remplace la ou les dents absentes. Le dispositif qui recouvre la dent pilier est l'ancrage.",
+        "explanation": "-La réponse A : fausse le dispositif de la prothèse conjointe qui recouvre la dent pilier est l’ancrage.\n -La réponse C : fausse la travée de bridge fait partie d’une prothèse conjointe.",
         "citations": [
           436,
           437,
@@ -202,7 +202,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La prothèse partielle amovible à châssis métallique:",
+        "questionText": "N°3 (2022 1°EMD - Q1251\nLa prothèse partielle amovible à châssis métallique:",
         "options": [
           "Est une prothèse fixée",
           "Est stabilisée par des crochets coulés conçus avec la plaque",
@@ -221,7 +221,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La prothèse complète amovible:",
+        "questionText": "N°7 (2022 1°EMD - Q1331\nLa prothèse complète amovible:",
         "options": [
           "Est une prothèse à châssis métallique stabilisée par des crochets coulés",
           "Est une prothèse destinée à restaurer une arcade complètement édentée.",
@@ -246,11 +246,11 @@ const prothesey2QuizzesY2 = [
     ]
   },
   {
-    "title": "LES DIFFERENTS ELEMENTS DU CHASSIS",
+    "title": "LES DIFFERENTS  ELEMENTS DU CHASSIS",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "La préparation des logettes :",
+        "questionText": "N°1 (2025 2°EMD - Q43\nLa préparation des logettes :",
         "options": [
           "Peut s'étendre i la dentine en présence d'une obturation",
           "Est réalisée uniquement sur l'email",
@@ -260,7 +260,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le décolletage de Paul Housset est un dessin de plaque libérant les collets des futures dents supports de crochets, mais il ne libère pas le palais. Il est spécifique à la prothèse partielle à châssis métallique et protège l'anneau gingival fragile en évitant tout contact ou pression excessive.",
+        "explanation": "A. Vrai : le décolletage de Paul Housset est un dessin de la plaque qui libère les collets des futures dents supports de crochets.B. Faux : il ne libère pas par contre le palais.C. Vrai : il est nécessaire et spécifique à la prothèse partielle à chassis métallique.D. Vrai : il sert à protéger l’anneau gingival car il évite tout contact ou pression excessive de la prothèse sur la gencive marginale qui est une zone fragile.",
         "citations": [
           12,
           13,
@@ -270,7 +270,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Dans l'édentement en extension de et de CLII KA de CLI KA :",
+        "questionText": "N°8 (2025 2°EMD - Q200\nDans l'édentement en extension de et de CLII KA de CLI KA :",
         "options": [
           "Les taquets sont reliés directement aux selles .",
           "L'attachement prefabriqué est de type glissière",
@@ -280,7 +280,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La plaque palatine pleine est décolletée au niveau des dents, tandis que la double barre est évidée en son milieu. Elle assure un recouvrement partiel. Elle est limitée antérieurement par une ligne joignant les appuis occlusaux, et postérieurement, elle est proche de la jonction palais dur/palais mou.",
+        "explanation": "A. Faux : la plaque palatine pleine est décolletée au niveau des dents tandis que la double barre est évidée en son milieu.B. Faux : elle est de recouvrement partiel non total.C. Faux : réponse fausse.D. Vrai : elle est limitée antérieurement par une ligne joignant les appuis occlusaux et la délimitation postérieure est plus ou moins proche de la jontion palais dure/palais mou.",
         "citations": [
           114,
           115,
@@ -289,7 +289,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les crochets à liaison semi-rigide sont :",
+        "questionText": "N°9 (2025 2°EMD - Q208\nLes crochets à liaison semi-rigide sont :",
         "options": [
           "Le crochet Ackers",
           "Le crochet Anneau",
@@ -300,7 +300,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "La plaque à recouvrement complet ne possède pas toujours une forme de fer à cheval. Elle repose sur le cingulum des dents restantes et nécessite une décharge dans l'intrados au niveau des dents antérieures pour pallier l'absence de décolletage.",
+        "explanation": "A. Faux : la plaque à recouvrement complet  ne possède pas toujours une forme de fer à cheval.B. Vrai : elle repose sur le cingulum des dents restantes .C. Faux : elle réalise une décharge dans l’intrados pour pallier l’absence du décolletage au niveau des dents antérieure.D. Vrai : elle nécessite une décharge au niveau des dents antérieures.",
         "citations": [
           136,
           137,
@@ -309,7 +309,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Dans le châssis type des edentements encastrés de classe VI de K.A. les empreintes secondaires sont dites anatomo-fonctionnelles car l'enregistrement des tissus environnants se fait :",
+        "questionText": "N°16 (2025 2°EMD - Q360\nDans le châssis type des edentements encastrés de classe VI de K.A. les empreintes secondaires sont dites anatomo-fonctionnelles car l'enregistrement des tissus environnants se fait :",
         "options": [
           "Dc manière dynamique par mobilisation des tissus (mouvements fonctinnels)",
           "Lorsque les appuis de la prothèse se repartissent sur les dents et les surfaces osteo-muqueuses (appui mixte)",
@@ -319,7 +319,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le bras de calage d'un crochet nécessite un méplat préparé sur la face linguale ou palatine de la dent et assure la stabilité de la prothèse. C'est le bras de rétention qui nécessite une zone de retrait et qui assure la rétention.",
+        "explanation": "A. Vrai : le bras de calage nécessite un méplat sur la face linguale ou palatine.B. Faux : c’est le bras de retention qui nécessite une zone de retrait.C. Faux : c’est aussi le bras rétentif qui assure la retention.D. Vrai : le bras de calage assure la stabilité de la prothèse.",
         "citations": [
           252,
           253,
@@ -330,7 +330,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les appuis occlusaux interviennent comme moyen de :",
+        "questionText": "N°7 (2023 2°EMD - Q971\nLes appuis occlusaux interviennent comme moyen de :",
         "options": [
           "Stabilisation;",
           "Rétention;",
@@ -349,7 +349,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "la rétention du châssis métallique est fournie par:",
+        "questionText": "N°8 (2023 2°EMD - Q979\nla rétention du châssis métallique est fournie par:",
         "options": [
           "La totalité du crochet;",
           "La partie mésiale de la potence;",
@@ -369,7 +369,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La plaque palatine évidée (double entretoise) est une connexion principale qui :",
+        "questionText": "N°9 (2023 2°EMD - Q1011\nLa plaque palatine évidée (double entretoise) est une connexion principale qui :",
         "options": [
           "Est Indiquée pour les édentements intercalés de faible étendue.",
           "Peut-être indiquée pour les édentements intercalés de grande étendue.",
@@ -390,7 +390,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La barre linguale est une connexion principale:",
+        "questionText": "N°10 (2023 2°EMD - Q1017\nLa barre linguale est une connexion principale:",
         "options": [
           "De 3.4 à 4'mm de haut et de 1.7 à 2.5 mm d'épaisseur.",
           "Ne peut être indiquée que lorsque l'espace compris entre le plancher et le collet des dents résiduelles est d'environ 8 mm.",
@@ -412,7 +412,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le crochet Ackers est:",
+        "questionText": "N°11 (2023 2°EMD - Q1046\nLe crochet Ackers est:",
         "options": [
           "Constitué uniquement d'un bras de calage et d'un bras de rétention.",
           "Relié directement à l'armature au niveau des selles de rétention par une connexion secondaire en proximal",
@@ -430,7 +430,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le crochet NALLY-MARTINET est un crochet:",
+        "questionText": "N°12 (2023 2°EMD - Q1063\nLe crochet NALLY-MARTINET est un crochet:",
         "options": [
           "A jonction secondaire en lingual.",
           "A appui occlusal en mésial.",
@@ -450,7 +450,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La plaque palatine pleine de moyenne étendue est une connexion principale:",
+        "questionText": "N°19 (2023 2°EMD - Q1191\nLa plaque palatine pleine de moyenne étendue est une connexion principale:",
         "options": [
           "Qui recouvre la totalité de la surface palatine.",
           "Indiquée uniquement pour les édentements distaux.",
@@ -473,7 +473,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les crochets à jonction proximale sont :",
+        "questionText": "N°2 (2022 Résidanat - Q1231\nLes crochets à jonction proximale sont : 1- Reliés directement à l'armature 2- Reliés à l'armature au niveau des selles 3- Disjoncteurs de forces 4- Indiqués pour les segments édentés en extension libre 5- Indiqués pour les segments encastrés",
         "options": [
           "A (1, 3. 4)",
           "B (2,5)",
@@ -484,7 +484,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les crochets à jonction proximale sont des crochets à liaison rigide. Ils sont 'Reliés à l'armature au niveau des selles' (Option 2) et sont 'Indiqués pour les segments encastrés' (Option 5), qui correspondent aux édentements à appui strictement dentaire. Les options 1, 3 et 4 concernent les crochets à liaison semi-rigide.",
+        "explanation": "Ce sont les crochets à liaison rigide qui sont reliés à l'armature au niveau des selles :1- Reliés directement à l'armature: Faux, cela concerne les crochets à jonction linguale.2- Reliés à l'armature au niveau des selles: Correct, comme cela est montré dans la première photo.3- Disjoncteurs de forces: Faux, cela concerne les crochets à liaison semi-rigide, qui sont indiqués en cas de \"dualité tissulaire\" pour répartir les forces sur les tissus durs (dents) et les tissus mous (fibromuqueuse).4- Indiqués pour les segments édentés en extension libre: Faux, cela concerne les crochets à liaison semi-rigide.5- Indiqués pour les segments encastrés: Correct, cela s’applique aux édentements à appuis strictement dentaires.",
         "citations": [
           651,
           652,
@@ -495,7 +495,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le châssis métallique doit:",
+        "questionText": "N°15 (2022 2°EMD - Q1469\nLe châssis métallique doit:",
         "options": [
           "Etre biofonctionnel",
           "Respecter la triade de Hissy",
@@ -506,7 +506,7 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "La prothèse partielle à châssis métallique doit s'intégrer à l'environnement bucco-dentaire, c'est-à-dire être biofonctionnelle. Pour cela, elle doit respecter la triade d'équilibre de Paul Housset, qui comprend la sustentation, la stabilité et la rétention.",
+        "explanation": "La prothèse partielle adjointe à châssis métallique doit S’intégrer dans l’environnement bucco- dentaire et fonctionnel du patient ; c’est-à-dire elle doit être biofonctionnelle.\n Pour être biofonctionnelle, la PPAC doit être conçue selon certains impératifs: \n II.1. Equilibre prothétique : la triade d’équilibre de Paul Housset est satisfaite : Sustentation+Stabilité+ Rétention.\n II.2. Choix d’un axe d’insertion.\n II.3. Rigidité.\n II.4. Équilibre occlusal.",
         "citations": [
           819,
           820,
@@ -515,7 +515,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La sustentation du châssis métallique est assurée par:",
+        "questionText": "N°16 (2022 2°EMD - Q1486\nLa sustentation du châssis métallique est assurée par:",
         "options": [
           "Les bras rétentifs",
           "Les taquets occlusaux,",
@@ -533,7 +533,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les forces de stabilisation du châssis:",
+        "questionText": "N°17 (2022 2°EMD - Q1491\nLes forces de stabilisation du châssis:",
         "options": [
           "S'opposent aux mouvements de translation verticale",
           "Sont Assurées par les différents éléments du châssis",
@@ -543,11 +543,24 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La stabilisation, définie comme l'opposition aux mouvements de translation horizontale ou de rotation, est assurée par les différents éléments du châssis. Elle s'oppose aux translations horizontales, non verticales.",
+        "explanation": "Stabilisation : Elle est définie par Batarec comme étant l’ensemble des forces qui s’opposent aux mouvements de translation horizontal ou de rotation de la prothèse. Elle est assurée par les différents éléments du châssis.",
         "citations": [
           846,
           847
         ]
+      },
+      {
+        "questionText": "N°6 (2024 2°EMD - Q562\nAu maxillaire supérieur :",
+        "options": [
+          "Les Apophyses géni sont parfois des indices positifs",
+          "Les Eminences de piriformes adhérent à l'os sous-jacent et constituent un Indice positif",
+          "La présence de zones de Schroeder indique, parfois, des et techniques d'empreintes non compressives.",
+          "Un raphé médian en forme de « V « constitue un indice négatif"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Les ADS comprennent essentiellement les\n appuis occlusaux secondaires et les barres cingulaires.\n Un appui occlusal secondaire est semblable à appui principal. Il est situé sur une autre dent dite « pilier secondaire ».\n  Les connexions secondaire don’t les barres cingluaires empechent les mouvement de translations de la prothese (la translation mesio-distale)\n Les appuis occlusaux secondaires s’opposent aux mouvements de rotation (rotation distale verticale)."
       }
     ]
   },
@@ -556,7 +569,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Le crochet Nally Martinet:",
+        "questionText": "N°1 (2025 RATT - Q55\nLe crochet Nally Martinet:",
         "options": [
           "Est un crochet rigide dit rupteur de force",
           "Présente une connexion secondaire mésiale",
@@ -573,7 +586,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les mouvements de TABET sont :",
+        "questionText": "N°2 (2025 2°EMD - Q65\nLes mouvements de TABET sont :",
         "options": [
           "2 mouvements de translation et 4 mouvements de rotation",
           "3 mouvements de rotation accompagnés d'une translation",
@@ -583,7 +596,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le crochet de Nally Martinet est un crochet semi-rigide. Il présente une connexion secondaire (potence) et un appui occlusal en mésial. Il est composé d’un seul long bras continu ceinturant la dent et est indiqué en cas d’édentement distaux.",
+        "explanation": "A. Faux : le crochet de Nally Martinet est un crochet semi-rigide.B. Vrai : il présente une connexion secondaire (potence) et un appuis occlusal en mésial.C. Faux : il est composé d’un seul long bras continu ceinturant la dent(bras rétentif en continuité avec le bras de calage).D. Vrai : il est indiqué en cas d’édentement distaux.",
         "citations": [
           29,
           30,
@@ -593,7 +606,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Dans le tracé du chassis dans les cas d'édentements de classe IV de K.A:",
+        "questionText": "N°15 (2025 2°EMD - Q325\nDans le tracé du chassis dans les cas d'édentements de classe IV de K.A:",
         "options": [
           "L'étendue de l'édentement n'influe pas sur le choix de la connexion principale.",
           "Le crochet Ackers est indiqué sur les dents bordant l'édentement antérieurement",
@@ -604,7 +617,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La liaison semi-rigide relie un élément d'ancrage actif (comme un crochet) à la structure métallique de la prothèse (connexion secondaire). Elle forme un ensemble peu déformable, présentant à la fois rigidité et élasticité. Elle peut être assurée par des systèmes d'attaches, dits rupteurs de force, associés à des fraisages.",
+        "explanation": "A. Faux : la liaison semi-rigide relie un élèment d’ancrage actif (crochet, tenon, attache..) à la structure métallique de la prothèse (connexion secondaire).B. Faux : elle relie le crochet à la connexion secondaire mais pas de manière direct ; le crochet s’insère autour d’une dent pilier pour assurer la retention et puis cette liaison le relie à travers cette dent à la connexion secondaire.C. Faux : elle forme un ensemble peu déformable car elle présente à la fois une certaine rigidité et une certaine élasticité.D. Vrai : elle peut être assurée par des systèmes d’attaches dite des attachements rupteurs de force associés à des fraisages.",
         "citations": [
           233,
           234,
@@ -615,7 +628,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "concernant les indices dentaires",
+        "questionText": "N°7 (2024 2°EMD - Q579\nconcernant les indices dentaires",
         "options": [
           "Ils sont communs au maxillaire et la mandibule.",
           "La ligne guide vestibulaire idéale doit assurer une zone de retrait e.0.25mm",
@@ -626,7 +639,7 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Les taquets des crochets à liaison rigide sont reliés directement aux selles par des potences courtes et indéformables. Dans ce type de liaison, l'appui est essentiellement dentaire (indiqué pour les édentements encastrés), et le point d'appui de la force est appliqué directement sur les dents bordant l'édentement.",
+        "explanation": "Les taquets des crochets a liaison rigide sont reliés directement aux selles par des potences courtes et indeformables.Dans les crochets a liaison rigide l’appui est essentiellement dentaire (indiqués pour les edentements encastrés) donc le point d’appui de la force est directement appliqué sur les dents bordant l’edentement.",
         "citations": [
           329,
           330,
@@ -655,7 +668,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "En PPAC a liaison rigide :",
+        "questionText": "N°13 (2023 2°EMD - Q1071\nEn PPAC a liaison rigide :",
         "options": [
           "Fait appel à des potences longues et rigides",
           "Est indiquée dans les édentements distaux de moyenne étendue",
@@ -665,7 +678,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La liaison rigide fait appel à des potences courtes et indéformables. Le concept rigide est principalement employé pour les édentements intercalaires (encastrés) où l'appui est essentiellement dentaire, ou parfois pour des édentements distaux de très faible étendue (absence d'une seule dent).",
+        "explanation": "-La réponse A : fausse elle fait appel à des potences courtes et indéformables.\n Le concept rigide est essentiellement employé dans le traitement des édentements intercalaires où l’appui est essentiellement dentaire.\n Il est également réalisé dans les édentements distaux de très faible étendue (absence d’une dent).",
         "citations": [
           535,
           536,
@@ -691,7 +704,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les attachements à liaison rigide :",
+        "questionText": "N°15 (2023 2°EMD - Q1119\nLes attachements à liaison rigide :",
         "options": [
           "Permettent les mouvements de translation et de rotation",
           "Sont représentés par les glissières",
@@ -709,7 +722,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "En PPAC, la liaison semi-rigide :",
+        "questionText": "N°16 (2023 2°EMD - Q1128\nEn PPAC, la liaison semi-rigide :",
         "options": [
           "Est indiquée dans les édentements distaux de très faible étendue.",
           "Garantie une excellente stabilité de l'occlusion.",
@@ -719,7 +732,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La conception semi-rigide permet une légère déformation du châssis en éloignant la potence de l'édentement pour gagner en élasticité. Elle est indiquée pour les édentements distaux de grande étendue. En permettant cette légère flexibilité, les crêtes subissent moins de pression, et leur résorption est moindre.",
+        "explanation": "La conception semi-rigide part du principe d’éloigner la potence de l’édentement pour gagner en élasticité et donc permettre une légère déformation du chassis.\n -La réponse A : fausse indiqué dans les édentements distaux de grande étendue.\n -la réponse D : fausse Les crêtes subissent moins de pression et leur résorption est moindre.",
         "citations": [
           582,
           583,
@@ -730,7 +743,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les crochets à liaison semi-rigide :",
+        "questionText": "N°20 (2023 2°EMD - Q1208\nLes crochets à liaison semi-rigide :",
         "options": [
           "Sont reliés à la connexion principale par une jonction linguale",
           "Font appel à des potences à proximité de la selle",
@@ -742,14 +755,14 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Les crochets à liaison semi-rigide sont reliés à l'armature (connexion principale) du côté lingual ou palatin, via une connexion située mésialement sur les dents limitant l'édentement. Ce mode de raccordement permet de dissocier la selle des dents supports et de mieux répartir les forces.",
+        "explanation": "Les crochets sont reliées a l’armature (connexion principale) et non pas a la selle prothétique du coté lingual ou palatin par une connexion située mésialement sur les dents limitant les secteur édentés, ce mode de raccordement permet de dissocier la selle des dents supports ainsi que les forces appliquées sur chacune d’elles.",
         "citations": [
           629,
           630
         ]
       },
       {
-        "questionText": "Pour les édentements terminaux de classes l et II :",
+        "questionText": "N°12 (2022 2°EMD - Q1415\nPour les édentements terminaux de classes l et II :",
         "options": [
           "Le mode de liaison préconisé est semi-rigide",
           "L'appui occlusal est placé dans la partie mésiale de la face occlusale de la dent support",
@@ -760,7 +773,7 @@ const prothesey2QuizzesY2 = [
           0,
           1
         ],
-        "explanation": "Pour les édentements terminaux (Classe I et II), le mode de liaison préconisé est la liaison semi-rigide. L'appui occlusal est placé dans la partie mésiale de la dent support (côté opposé à l'édentement). La potence n'est pas reliée directement à la selle, mais par l'intermédiaire du châssis.",
+        "explanation": "-Pour les édentements terminaux de classes I et II, le mode de liaison préconisé par la majorité des auteurs est la liaison semi-rigide associée à des éléments de morphologie et de situation bien déterminées.\n -L’appui occlusal est placé dans la partie mésiale de la face occlusale de la dent support (c’est-à-dire côté opposé à l’édentement).\n la potence n’est pas reliée directement à la selle prothétique mais seulement par l’intermédiaire du châssis.",
         "citations": [
           786,
           787,
@@ -769,7 +782,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les cas d'édentement de classe i de Kennedy Applegate font appel aux notions:",
+        "questionText": "N°13 (2022 2°EMD - Q1431\nLes cas d'édentement de classe i de Kennedy Applegate font appel aux notions:",
         "options": [
           "De dualité d'appui",
           "De liaisons semi-rigides",
@@ -781,7 +794,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "Dans les cas de Classe I et II, la notion de dualité d'appui est centrale. Le traitement fait appel à des liaisons semi-rigides, conçues dans le but d'assurer une protection biomécanique des dents adjacentes à l'édentement.",
+        "explanation": "-En effet, c’est dans les cas de classe II et classe I que la notion de dualité d’appui prend toute son importance.\n - Ces types de crochet pour édentement distal terminal ont donc été conçus dans un esprit de protection biomécanique des dents adjacentes aux édentements.",
         "citations": [
           799,
           800,
@@ -789,7 +802,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La Liaison semi-rigide fait appel aux:",
+        "questionText": "N°14 (2022 2°EMD - Q1447\nLa Liaison semi-rigide fait appel aux:",
         "options": [
           "Attachements type Glissières",
           "Attachements type Bouten pression",
@@ -801,7 +814,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La liaison semi-rigide peut être réalisée par des systèmes d'attachements (glissières, boutons-pression, barres) ou par des crochets spécifiques comme le Nally-Martinet, le crochet équipoise ou le RPI.",
+        "explanation": "-Il existe un très grand nombre de systèmes d’attachements utilisant différentes notions de biomécanique : – les glissières ; – les boutons-pression ; – les barres.\n -Les crochets: crochet Nally-Martinet, crochet équipoise, crochet RPI.",
         "citations": [
           812,
           813,
@@ -815,7 +828,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "L'occlusion d'intercuspidie maximale :",
+        "questionText": "N°12 (2021 1°EMD - Q1751\nL'occlusion d'intercuspidie maximale",
         "options": [
           "Est une référence dentaire",
           "Est une référence articulaire",
@@ -826,13 +839,13 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "L'occlusion d'intercuspidie maximale (OIM) est une référence purement dentaire. La référence articulaire est la relation centrée.",
+        "explanation": "A. Vrai : l’OIM est une référence purement dentaire.B. Faux : la RC qui est une référence articulaire .C. Vrai : elle est caractérisée par un maximum de contacts dento-dentaires.D. Faux : la réponse B est fausse.",
         "citations": [
           34
         ]
       },
       {
-        "questionText": "Le recouvrement ou l'over bite :",
+        "questionText": "N°13 (2021 1°EMD - Q1756\nle recouvrement ou l'over bite:",
         "options": [
           "Est mesuré dans le sens vertical",
           "Est mesuré dans le sens sagittal",
@@ -853,7 +866,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le plan d'occlusion prothétique :",
+        "questionText": "N°4 (2025 RATT - Q114\nLe plan d'occlusion prothétique :",
         "options": [
           "Est la courbe de Spee",
           "Est la courbe de Wilson",
@@ -863,7 +876,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La courbe de Spee est une courbe sagittale et la courbe de Wilson est transversale ; ce ne sont pas des plans. Le plan bipupillaire est un repère frontal. Le plan d'occlusion prothétique doit être parallèle au plan de Camper (repère sagittal).",
+        "explanation": "A. Faux → La courbe de Spee est une courbe sagittale, pas un plan.B. Faux → La courbe de Wilson est transversale, aussi pas un plan d’occlusion.D. Faux → Le plan bipupillaire est un repère frontal, utile pour l’esthétique, mais pas en occlusion.",
         "citations": [
           56,
           57,
@@ -872,7 +885,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La position de repos physiologique est une :",
+        "questionText": "N°11 (2021 1°EMD - Q1736\nLa position de repos physiologique est une",
         "options": [
           "Position mandibulaire caractérisée par une contraction des muscles.",
           "Position mandibulaire caractérisée par un relâchement des muscles.",
@@ -882,7 +895,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La position de repos physiologique est une position mandibulaire caractérisée par le relâchement complet des muscles de la face. Ce n'est pas une position pathologique. Les positions mandibulaires de référence sont l'OIM et la Relation Centrée (RC).",
+        "explanation": "A. Faux : la position de repos physiologique est une position mandibulaire mais elle n’est pas caractérisée par la contraction des muscles.B. Vrai : elle est caractérisé par le relachement complet des muscles de la face.C. Faux : c’est une position physiologique jamais pathologique.D. Faux : la mandibule possède deux position de référence : l’occlusion d’intercuspidie maximale (OIM) et la relation centrée (RC).",
         "citations": [
           65,
           66,
@@ -895,7 +908,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'enregistrement de l'occlusion chez un édenté partiel:",
+        "questionText": "N°5 (2025 RATT - Q130\nL'enregistrement de l'occlusion chez un édenté partiel:",
         "options": [
           "En occlusion d'intercuspidie maximale lorsque l'édentement est de grande amplitude",
           "En occlusion de convenance",
@@ -913,7 +926,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La maquette d'occlusion est composée de :",
+        "questionText": "N°6 (2025 RATT - Q151\nLa maquette d'occlusion est composée de :",
         "options": [
           "Plaque base rigide en cire ou en résine",
           "Un fil de renfort",
@@ -924,7 +937,7 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "La maquette d'occlusion est composée d'une plaque base rigide (cire ou résine) et d'un ou plusieurs bourrelets en cire. Un fil de renfort n'est pas utilisé pour ce type de maquette, et les dents artificielles sont ajoutées lors du montage, une étape ultérieure.",
+        "explanation": "A. Vrai : la maquette d’occlusion est formée d’une plaque base rigide en cire ou en résine (pour les édentement de grande étendue).B. Vrai : un fil de renfort qui n’est pas nécessaire si la maquette est réalisée en résine vu sa rigidité.C. Vrai : un ou plusieurs bourrelets en cire suivant l’édentement.D. Faux : la plaque base n’est jamais souple car y’aura un risque de se déformer et les bourrelets ne doivent jamais etre rigides car les dents laissent leurs empreintes sur eux après avoir enregistrer l’occlusion.",
         "citations": [
           76,
           77
@@ -979,7 +992,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La dimension verticale d'occlusion",
+        "questionText": "N°16 (2021 1°EMD - Q1813\nla dimension verticale d'occlusion",
         "options": [
           "C'est la hauteur de l'étage inférieur de la face lorsque les muscles sont en état d'équilibre.",
           "C'est la hauteur de l'étage inférieure de la face lorsque les dents sont en occlusion d'intercuspidie maximale.",
@@ -990,7 +1003,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La Dimension Verticale d'Occlusion (DVO) est la hauteur de l'étage inférieur lorsque les dents sont en OIM, se caractérisant par un maximum de contacts dento-dentaires. L'option A décrit la Dimension Verticale de Repos (DVR). La DVO est déterminée par la formule DVO = DVR - ELI (Espace Libre d'Inocclusion), où l'ELI est en moyenne de 2 à 3 mm.",
+        "explanation": "A. Faux : la dimension verticale de repos est la hauteur de l’étage inférieure de la face lorsque les muscles sont en états d’équilibre.B. Vrai : la dimension verticale d’occlusion est la hauteur de l’étage inférieure de la face lorsque les dents sont en OIM.C. Vrai : elle est déterminée selon la formule : DVO= DVR-ELI et que l’espace libre d’inocclusion est évaluée de 2 à 3mm en classe I squelletique.D. Faux : elle se caractérise pas un maximum de contacts dento-dentaires.",
         "citations": [
           157,
           158,
@@ -1045,7 +1058,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le montage en prognathie mandibulaire est caractérisé par :",
+        "questionText": "N°4 (2023 2°EMD - Q911\nLe montage en prognathie mandibulaire est caractérisé par :",
         "options": [
           "Un overjet et un surplomb horizontal très marqués ;",
           "Un bout à bout incisif ou un articulé inversé;",
@@ -1066,7 +1079,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'overbite ou recouvrement:",
+        "questionText": "N°14 (2023 1°EMD - Q1098\nL'overbite ou recouvrement:",
         "options": [
           "Concerne les dents postérieures;",
           "Concerne les dents antérieures, évalué à 2 mm en classe 1 d'Angle;",
@@ -1076,7 +1089,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'overbite (recouvrement) concerne les dents antérieures et est évalué à 2 mm en Classe I. Le surplomb est l'overjet, qui correspond à la description de l'option D.",
+        "explanation": "-La réponse C :fausse Le surplomb est l’overjet.-La réponse D :fausse l’espace existant entre le bord libre ainsi que la face vestibulaire des incisives inférieures et le faces vestibulaires des incisives supérieures est le surplomb.",
         "citations": [
           548,
           549,
@@ -1087,7 +1100,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La fonction de calage :",
+        "questionText": "N°15 (2023 1°EMD - Q1108\nLa fonction de calage :",
         "options": [
           "Signifie la stabilité inter- arcades et intra- arcades;",
           "Permet d'être transversalement centrée en position d'OIM ou de RC;",
@@ -1098,7 +1111,7 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "La fonction de calage assure la stabilité inter-arcade et intra-arcade. Cette dernière est assurée par la continuité de l'arcade grâce aux contacts proximaux, procurant un effet de bloc. L'option B décrit la fonction de centrage et l'option C la fonction de guidage.",
+        "explanation": "La fonction de calage : Cette fonction assure la stabilité inter-arcade et intra-arcade, cette dernière est assurée par la continuité de l’arcade par des contacts proximaux procurant une resistance globale liée à l’effet de bloc de plusieurs dents.\n -La réponse B : fausse c’est la fonction de centrage qui permet d’être transversalement centré en position d’OIM ou de RC.\n -La réponse C : fausse c’est la fonction de guidage qui assure un role protecteur guide vis à vis du groupe antagoniste.",
         "citations": [
           558,
           559,
@@ -1111,7 +1124,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La courbe de spee est une courbe :",
+        "questionText": "N°16 (2023 1°EMD - Q1122\nLa courbe de spee est une courbe :",
         "options": [
           "Sagittale à concavité inférieure ;",
           "Sagittale à concavité supérieure,",
@@ -1129,7 +1142,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'espace libre d'inocclusion est :",
+        "questionText": "N°17 (2023 1°EMD - Q1144\nL'espace libre d'inocclusion est :",
         "options": [
           "L'espace de Thomson",
           "L'overjet,",
@@ -1147,7 +1160,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Dans le cadre de l'occlusion statique nous retrouvons",
+        "questionText": "N°1 (2022 2°EMD - Q1213\nDans le cadre de l'occlusion statique nous retrouvons",
         "options": [
           "L'occlusion en intercuspidation maximale",
           "La diduction",
@@ -1165,7 +1178,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Du côté travaillant, il peut y avoir:",
+        "questionText": "N°2 (2022 2°EMD - Q1241\nDu côté travaillant, il peut y avoir:",
         "options": [
           "Une fonction groupe",
           "Une désocclusion totale",
@@ -1176,7 +1189,7 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "Lors d'un mouvement de diduction (latéralité), le côté où le mouvement s'effectue est le 'côté travaillant'. À ce niveau, on peut avoir soit un contact entre les canines (protection canine), soit un contact entre un groupe de dents (fonction groupe). La désocclusion totale se produit du côté non travaillant.",
+        "explanation": "la mandibule effectue des déplacements latéraux ou mouvements de\n diduction, le coté où le mouvement s’effectue s’appel « le côté travaillant » : sur le plan dentaire à ce niveau il y’a contact entre les canines supérieures et inferieures c’est « la protection canine » ; ou bien un contact entre un groupe de dents c’est « la fonction groupe ».\n -La désocculsion totale est du coté non travaillant.",
         "citations": [
           646,
           647,
@@ -1186,7 +1199,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "le Réglage du bourrelet antérieur maxillaire se fait :",
+        "questionText": "N°3 (2022 2°EMD - Q1259\nle Réglage du bourrelet antérieur maxillaire se fait :",
         "options": [
           "Selon la ligne bipupillaire",
           "Lors de l'émission des phonèmes « Pe » et « be»,",
@@ -1197,7 +1210,7 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Le bourrelet antérieur supérieur doit redonner à la lèvre supérieure un contour harmonieux, et son bord doit dépasser de 2 mm la lèvre au repos (ou l'effleurer chez le patient âgé). Dans le plan frontal, sa surface doit être réglée parallèlement à la ligne bi-pupillaire. L'émission des phonèmes 'Fe' et 'Ve' (labiodentales) est utilisée pour vérifier sa position, pas 'Pe' et 'Be' (bilabiales).",
+        "explanation": "* Le bourrelet antérieur supérieur : La maquette supérieure en bouche, la lèvre au repos, le bourrelet doit redonner à la lèvre un contour harmonieux; il ne doit pas être important et effacer les sillons naso-géniens ou insuffisant et accentuer les dépressions sous l'aile du nez.\n -Le bord du bourrelet doit dépasser de 2mm le versant muqueux de la lèvre supérieure. Si le patient est âgé, le bord libre effleure le versant muqueux de la lèvre supérieure.\n -Toujours dans le plan frontal, la surface du bourrelet sera réglé parallèlement à la ligne bi- pupillaire.\n -Lors de la phonation des phonèmes « Fe » et « Ve », la limite entre la zone sèche et la zone humide de la lèvre inférieure doit correspondre au bord incisif du bourrelet par suite aux bords libre des incisifs.\n -La ligne médiane sera tracée correspondant au point inter-incisif ; ainsi que la ligne du sourire et lignes correspondants à la position des canines droites et gauches.",
         "citations": [
           666,
           667,
@@ -1263,7 +1276,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "la classe I d'ANGLE",
+        "questionText": "N°14 (2021 1°EMD - Q1773\nla classe I d'ANGLE",
         "options": [
           "La première maline mandibulaire est mésialée de plus d'une demi-cuspide par rapport à la première molaire maxillaire",
           "La première molaire mandibulaire est distalée d'une demi-cuspide par rapport à la première molaire mandibulaire",
@@ -1273,7 +1286,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La Classe I d'Angle est définie par une première molaire mandibulaire mésialée d'une demi-cuspide par rapport à la molaire maxillaire. L'option A décrit la Classe III, et l'option B décrit la Classe II.",
+        "explanation": "-La classe I d’ANGLE : La première molaire mandibulaire est mésialée d’une demi-cuspide par rapport à la molaire maxillaire.-La réponse A : fausse c’est la classe III d’ANGLE.-La réponse B : fausse c’est la classe II d’ANGLE",
         "citations": [
           1005,
           1006,
@@ -1281,7 +1294,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La maquette d'occlusion est composés de",
+        "questionText": "N°15 (2021 1°EMD - Q1795\nLa maquette d'occlusion est composés de",
         "options": [
           "Plaque base rigide en cire ou en résine",
           "Un fi de renfort",
@@ -1316,7 +1329,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La relation centrée est :",
+        "questionText": "N°83 (2020 Résidanat - Q1963\nLa relation centrée est :",
         "options": [
           "Une relation mandibulo-maxillaire",
           "Une relation mandibulo-cranennie dans laquelle les condyles sont dans la position la plus haute et la plus reculée dans les cavités glénoides.",
@@ -1335,7 +1348,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "En prothèse partielle amovible, on enregistre la relation centrée",
+        "questionText": "N°86 (2020 Résidanat - Q1964\nEn prothèse partielle amovible, on enregistre la relation centrée 1- En présence de pathologie parodontale. 2- Chez un patient présentant des abrasions, 3- Quand la prothèse partielle est opposée à une prothèse totale 4- Chez les personnes âgées, 5- Toutes les réponses sont fausses.",
         "options": [
           "(1,2)",
           "(2,3)",
@@ -1346,7 +1359,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La RC est utilisée comme position de référence en présence de problèmes dentaires qui rendent l'OIM non fiable. Cela inclut les pathologies parodontales (Option 1), les abrasions dentaires (Option 2), et lorsqu'une prothèse partielle est opposée à une prothèse totale (Option 3) car il n'y a pas de dents naturelles antagonistes. L'âge seul n'est pas une indication (Option 4).",
+        "explanation": "Lorsque l’on a un problème dentaire, la position de référence est la RC (relation centrée) :Pathologie parodontale:Correct. C’est une maladie dentaire qui empêche l’ICM (intercuspidie maximale) d’être la position de référence.Chez un patient présentant des abrasions:Correct. C’est une affection dentaire qui empêche l’ICM d’être la position de référence.Quand une prothèse partielle est opposée à une prothèse totale:Correct, car il ne s’agit pas de dents naturelles.Chez les personnes âgées:Faux. Il n’existe pas de relation significative entre les problèmes dentaires et le vieillissement.",
         "citations": [
           1067,
           1068,
@@ -1356,7 +1369,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les cuspides secondaires :",
+        "questionText": "N°85 (2018 Résidanat - Q2110\nLes cuspides secondaires : 1- Jouent un rôle dans la mastication et la déglutition. 2- Permettent la protection des joues et de la langue. 3- Permettent le maintien du bol alimentaire sur l'aire occlusale. 4- Sont représentées par les cuspides vestibulaires des prémolaires et molaires mandibulaires. 5- Toutes les réponses sont justes.",
         "options": [
           "(1-2)",
           "(2-3)",
@@ -1367,11 +1380,156 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les cuspides secondaires (ou guides) sont les cuspides vestibulaires supérieures et linguales inférieures, ainsi que les faces palatines des dents antérieures supérieures (Option 3). Leur rôle est de maintenir le bol alimentaire sur l'aire occlusale (Option 2). Les cuspides primaires (d'appui) fixent la DVO (Option 1).",
+        "explanation": "Les cuspides secondaires ou cuspides guides :4: Ce sont les cuspides vestibulaires des dents supérieureset les cuspides linguales des dents inférieures, et les faces palatines des dents antérieures supérieures ,-Rôle :Dans le maintien du bol alimentaire sur l’air occlusalLes cuspides primaires ou cuspide d’appui :Ce sont les cuspides vestibulaires de dents inférieures Et les cuspides palatines des dents supérieures ; En plus du bord libre des incisives inférieures,-Rôle :Est de fixer la dimension verticale d’occlusion",
         "citations": [
           1082,
           1083
         ]
+      },
+      {
+        "questionText": "N°19 (2022 2°EMD - Q1529\nLe plan terminal :",
+        "options": [
+          "est un plan qui correspond aux rapports des faces distales des 1ères molaires permanentes",
+          "préfigure les relations qui vont s'établir entre les 2èmes molaires permanentes",
+          "à marche mésiale, il préfigure une classe I d'Angle",
+          "à marche distale, il préfigure une classe I d'Angle"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le plan terminal :A. est un plan qui correspond aux rapports des faces distales des 1ères molaires permanentes : Faux. Le plan terminal se réfère aux molaires temporaires.B. préfigure les relations qui vont s'établir entre les 2èmes molaires permanentes : Faux. Il concerne les relations entre les premières molaires permanentes et temporaires.C. à marche mésiale, il préfigure une classe I d'Angle : Vrai. Un plan terminal à marche mésiale est souvent associé à une classe I.D. à marche distale, il préfigure une classe I d'Angle : Faux. Un plan terminal à marche distale est plus souvent associé à une classe II."
+      },
+      {
+        "questionText": "N°20 (2022 2°EMD - Q1538\nEn denture permanente :",
+        "options": [
+          "l'arcade maxillaire circonscrit l'arcade mandibulaire",
+          "la pointe de la canine supérieure se trouve dans l'embrasure entre l'incisive latérale et la canine inférieures",
+          "les incisives supérieures recouvrent les incisives inférieures d'environ 4mm",
+          "chaque dent s'articule avec deux dents antagonistes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "En denture permanente :\n  A. l'arcade maxillaire circonscrit l'arcade mandibulaire : Vrai. L'arcade maxillaire est plus large et entoure l'arcade mandibulaire.\n B. la pointe de la canine supérieure se trouve dans l'embrasure entre l'incisive latérale et la canine inférieures : Faux. La canine sup se trouve dans l’embrasure entre la prémolaire et la canine inf.\n C. les incisives supérieures recouvrent les incisives inférieures d'environ 4 mm : Faux. Le recouvrement normal est d'environ 2 mm.\n D. chaque dent s'articule avec deux dents antagonistes : Faux. La centrale inf et la 2eme molaire sup font exception a cette regle."
+      },
+      {
+        "questionText": "N°20 (2021 2°EMD - Q1884\nLors du mouvement de protrusion, la pente incisive:",
+        "options": [
+          "permet un guidage antérieur satisfaisant",
+          "rassure un désocclusion totale et immédiates des dents postérieures",
+          "invisible linguales des incisives inférieures",
+          "dépend du surplomb et du recouvrement"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Lors du mouvement de protrusion, la pente incisive :· A. permet un guidage antérieur satisfaisant : Vrai. La pente incisive est essentielle pour le guidage antérieur.· B. assure une désocclusion totale et immédiate des dents postérieures : Vrai. Cela permet un bon fonctionnement masticatoire.· C. invisible linguales des incisives inférieures : Faux.· D. dépend du surplomb et du recouvrement : Vrai. Ces deux facteurs influencent la pente incisive."
+      },
+      {
+        "questionText": "N°1 (2024 2°EMD - Q479\nDans la classification proposée par Démogé :",
+        "options": [
+          "La denture mixte stable correspond à l'éruption des dents 1,2,III,IV,V,6,",
+          "La denture adolescente stable correspond à l'éruption des dents 1,2,111,4,5,6,",
+          "La denture adulte jeune stable correspond à l'éruption des dents 1,2,3,4,5,6,",
+          "La denture adulte complète correspond à l'éruption des dents 1,2,3,4,5,6,7,"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Selon la classification des types de dentures selon Démogé seule la proposition A est juste (voir tableau si dessous)"
+      },
+      {
+        "questionText": "N°13 (2024 2°EMD - Q698\nLes arcades dentaires en denture temporaire se caractérisent par",
+        "options": [
+          "Une courbe de Wilson marquée.",
+          "Une forme semblable à un demi-cercle.",
+          "Une forme elliptique.",
+          "Des diastèmes inter Incisifs et entre la 22 et la 23."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les arcades dentaires en denture temporaire sont caractérisées par :-une courbe de Wilson peu marqué du fait de la faible angulation des dents.-une forme en demi cercle.-des diastèmes inter incisifs (de bogue) entre la 51 et la 61."
+      },
+      {
+        "questionText": "N°14 (2024 2°EMD - Q707\nUne courbe de VAN SPEE :",
+        "options": [
+          "Est une courbe frontale à concavité supérieure.",
+          "Est d'autant plus accentuée que les dents sont plus postérieures.",
+          "Est en relation avec le type morphologique individuel.",
+          "Est une ligne fictive qui passe par la pointe des canines, le sommet des cuspides vestibulaires des prémolaires et molaire de l'hémi arcade inférieure.-"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La courbe de van spee :-est une courbe sagittale a concavité supérieur.-est en relation avec le type morphologiquePs : c’est la courbe de willson qui s’accentue postérieurement et non la courbe de spee"
+      },
+      {
+        "questionText": "N°6 (2023 2°EMD - Q944\nLors des mouvements de diduction (latéralité):",
+        "options": [
+          "Les cuspides vestibulaires mandibulaires glissent latéralement sur les faces internes des cuspides vestibulaires supérieures.",
+          "Le guidage latéral doit être réalisé par la seule canine inférieure du côté travaillant, on parlera de «fonction canine »",
+          "Du côté non travaillant, la désocclusion doit être totale et immédiate.",
+          "Du côté travaillant, la désocclusion doit être totale et immédiate."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Lors des mouvements de diduction (latéralité):A. Les cuspides vestibulaires mandibulaires glissent latéralement sur les faces internes des cuspides vestibulaires supérieures. VraiB. Le guidage latéral doit être réalisé par la seule canine inférieure du côté travaillant, on parlera de « fonction canine » Faux. C’est la canine sup qui fais le guidage.C. Du côté non travaillant, la désocclusion doit être totale et immédiate. Vrai. La désocclusion doit être totale du côté non travaillant pour éviter les interférences.D. Du côté travaillant, la désocclusion doit être totale et immédiate. Faux. La désocclusion n'est pas totale du côté travaillant car la canine est en contact."
+      },
+      {
+        "questionText": "N°7 (2023 2°EMD - Q966\nSelon Andrews, une courbe de Spee prononcée donne :",
+        "options": [
+          "Moins d'espace aux dents supérieures.",
+          "Plus d'espace aux dents supérieures.",
+          "Favorise une supraclusie.",
+          "Favorise une infraclusie."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Selon Andrews, une courbe de Spee prononcée donne :A. Moins d'espace aux dents supérieures. Vrai.B. Plus d'espace aux dents supérieures. Faux.C. Favorise une supraclusie. Vrai. Une courbe de Spee prononcée peut entraîner une supraclusie.D. Favorise une infraclusie. Faux. Ce n'est pas l'effet d'une courbe de Spee prononcée."
+      },
+      {
+        "questionText": "N°8 (2023 2°EMD - Q993\nL'agencement intra-arcade en denture temporaire, présente des :",
+        "options": [
+          "Diastèmes Simiens entre II et III au maxillaire, et entre III et IV à la mandibule.",
+          "Diastèmes de Bogue entre II et III au maxillaire, et entre III et IV à la mandibule.",
+          "Diastèmes de Bogue au niveau inter-incisif.",
+          "Diastèmes Simiens au niveau inter-incisif."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L'agencement intra-arcade en denture temporaire, présente des :A. Diastèmes Simiens entre II et III au maxillaire, et entre III et IV à la mandibule. Vrai.B. Diastèmes de Bogue entre II et III au maxillaire, et entre III et IV à la mandibule. Faux. Les diastemes de Bogue sont interincisifsC. Diastèmes de Bogue au niveau inter-incisif. Vrai.D. Diastèmes Simiens au niveau inter-incisif. Faux. Les diastèmes Simiens ne sont pas au niveau inter-incisif."
+      },
+      {
+        "questionText": "N°9 (2023 2°EMD - Q1001\nLe périmètre d'arcade:",
+        "options": [
+          "Se mesure de la face distale de la 2ème molaire temporaire gauche à la face distale de la dent homologue droite.",
+          "Passe par les cuspides vestibulaires et le bord incisif des dents.",
+          "Se mesure de la face distale de la canine droite à la face distale de la canine gauche.",
+          "Augmente au cours de la morphogenèse des arcades."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Le périmètre d'arcade:A. Se mesure de la face distale de la 2ème molaire temporaire gauche à la face distale de la dent homologue droite. Vrai.B. Passe par les cuspides vestibulaires et le bord incisif des dents. Vrai. Le périmètre d'arcade est mesuré ainsi.C. Se mesure de la face distale de la canine droite à la face distale de la canine gauche. Faux. Cette mesure n'est pas représentative du périmètre d'arcade.D. Augmente au cours de la morphogenèse des arcades. Faux."
+      },
+      {
+        "questionText": "N°10 (2023 2°EMD - Q1018\nLa longueur d'arcade:",
+        "options": [
+          "Augmente au maxillaire et à la mandibule, entre 3 et 9 ans.",
+          "Diminue au maxillaire et à la mandibule, entre 3 et 9 ans.",
+          "Diminue au maxillaire et à la mandibule, entre 9 et 12 ans.",
+          "Augmente au maxillaire et à la mandibule, entre 9 et 12 ans."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "La longueur d'arcade:A. Augmente au maxillaire et à la mandibule, entre 3 et 9 ans. Faux. La longueur d'arcade ne suit pas cette augmentation dans cette période.B. Diminue au maxillaire et à la mandibule, entre 3 et 9 ans. Vrai. Cette période est caractérisée par une diminution de la longueur d'arcade.C. Diminue au maxillaire et à la mandibule, entre 9 et 12 ans. Faux. La diminution de la longueur d'arcade se produit plus tôt.D. Augmente au maxillaire et à la mandibule, entre 9 et 12 ans. Vrai."
       }
     ]
   },
@@ -1380,7 +1538,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Les tori mandibulaires correspondent:",
+        "questionText": "N°3 (2025 1°EMD - Q81\nLes tori mandibulaires correspondent:",
         "options": [
           "Raphé médian qui est un indice négatif",
           "Suture intermaxillaire.",
@@ -1391,7 +1549,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Les tori mandibulaires sont des indices négatifs mandibulaires. Ils sont différents du raphé médian (qui est maxillaire) ou de la suture intermaxillaire. Ce sont des exostoses situées en regard de la première prémolaire qui doivent être déchargées.",
+        "explanation": "A. Faux : le Torus mandibulaire n’est pas le Raphé médian ce sont toutes les deux des indices négatifs sauf que le premier mandibulaire et le deuxième du maxillaire.B. Faux : la suture maxillaire est le Raphé médian non le Torus mandibulaire.C. Vrai : effectivement les Tori mandibulaire sont des exostoses qui se situent en regard de la 1ere PM et qui faudra les décharger.D. Vrai : ce sont des indices négatifs mandibulaires.",
         "citations": [
           35,
           36,
@@ -1423,7 +1581,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La papille rétro incisive:",
+        "questionText": "N°5 (2023 1°EMD - Q938\nLa papille rétro incisive:",
         "options": [
           "Est située sur le palais en arrière des incisives",
           "Est constituée par le paquet vasculo- nerveux issu du trou palatin antérieur",
@@ -1440,7 +1598,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les zones de Schroeder:",
+        "questionText": "N°77 (2019 Résidanat - Q2040\nLes zones de Schroeder :",
         "options": [
           "Sont situées au niveau de l'arcade mandibulaire",
           "Doivent être déchargées lors de la conception prothétique lorsqu' elles sont dépressibles",
@@ -1450,7 +1608,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les zones de Schroeder sont situées au niveau de l'arcade maxillaire. Dans ces zones, la fibromuqueuse n'est pas adhérente à l'os mais en est séparée par un tissu cellulo-graisseux. Elles sont dépressibles et constituent un indice négatif, peu favorable à la sustentation ; elles doivent donc être déchargées ou évitées.",
+        "explanation": "-La réponse A :fausse les zones de Schroeder sont situées au niveau de l’arcade maxillaire.Dans ces zones la fibro-muqueuse n’est pas adhérente à l’os sous-jacent, elle en est séparée par un tissus cellulo-graisseux. Ce sont des zones dépressibles peu favorables à la sustentation de la prothèse, il faudra soit les décharger soit les éviter lors de la conception de la PAPCM (indice négatif).6 - zones de schroeder",
         "citations": [
           454,
           455,
@@ -1459,7 +1617,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le raphé médian : 1- Est appelé aussi suture intermaxillaire 2- Est. un indice biologique positif situé sur l'arcade mandibulaire 3- Doit être déchargé s'il est saillant4- Comporte parfois un torus5 Toutes les réponses sont justes",
+        "questionText": "N°6 (2022 Résidanat - Q1313\nLe raphé médian : 1- Est appelé aussi suture intermaxillaire 2- Est. un indice biologique positif situé sur l'arcade mandibulaire 3- Doit être déchargé s'il est saillant 4- Comporte parfois un torus 5- Toutes les réponses sont justes",
         "options": [
           "(1,2)",
           "(3,4)",
@@ -1476,7 +1634,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les tubérosités :1- Sont situées dans la partie distale, de chaque côté de l'arcade maxillaire 2.Sont des indices biologiques négatifs à la mandibule 3.Doivent être de dépouille 4.Doivent être systématiquement recouvertes par la prothèse5.Interviennent dans la stabilisation transversale et mésio-distale de la prothèse amovible maxillaire",
+        "questionText": "N°9 (2022 1°EMD - Q1356\nLes tubérosités:",
         "options": [
           "(1,3)",
           "(2,3)",
@@ -1491,7 +1649,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Les indices biologiques positifs au maxillaire:",
+        "questionText": "N°8 (2022 1°EMD - Q1340\nLes indices biologiques positifs au maxillaire:",
         "options": [
           "Sont les éléments anatomo- physiologiques favorables à la conception d'une prothèse maxillaire.",
           "Sont déstabilisants pour la prothèse et doivent être évités",
@@ -1511,7 +1669,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les tori mandibulaires : 1- Sont des exostoses inconstantes situées au niveau de la table externe mandibulaire en regard des prémolaires2- Peuvent s'opposer à l'insertion de la prothèse3- Doivent être exploités par la prothèse amovible pour une meilleure rétention4- Sont recouverts d'une muqueuse fragile et fine5- Toutes les réponses sont justes",
+        "questionText": "N°8 (2022 Résidanat - Q1335\nLes tori mandibulaires 1- Sont des exostoses inconstantes situées au niveau de la table externe mandibulaire en regard des prémolaires 2- Peuvent s'opposer à l'insertion de la prothèse 3- Doivent être exploités par la prothèse amovible pour une meilleure rétention 4- Sont recouverts d'une muqueuse fragile et fine 5- Toutes les réponses sont justes",
         "options": [
           "(1,2)",
           "(2,3)",
@@ -1522,13 +1680,13 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Les tori mandibulaires sont des exostoses inconstantes situées sur la table *interne* de la mandibule (Option 1 est fausse). Ils peuvent s'opposer à l'insertion de la prothèse (Option 2). Ce sont des indices négatifs (Option 3 est fausse), recouverts d'une muqueuse fine et fragile (Option 4).",
+        "explanation": "1- Sont des exostoses inconstantes situées au niveau de la table externe mandibulaire en regard des prémolaires : Faux, table interne pas externe.2- Peuvent s'opposer à l'insertion de la prothèse : Correcte3- Doivent être exploités par la prothèse amovible pour une meilleure rétention : Faux, car c'est un indice négatif4- Sont recouverts d'une muqueuse fragile et fine : Correcte",
         "citations": [
           731
         ]
       },
       {
-        "questionText": "Les tubérosités:",
+        "questionText": "N°7 (2022 Résidanat - Q1323\nLes tubérosités : 1- Sont situées dans la partie distale, de chaque côté de l'arcade maxillaire 2- 2.Sont des indices biologiques négatifs à la mandibule 3- 3.Doivent être de dépouille 4- 4.Doivent être systématiquement recouvertes par la prothèse 5- 5.Interviennent dans la stabilisation transversale et mésio-distale de la prothèse amovible maxillaire",
         "options": [
           "Sont des indices biologiques positifs au maxillaire",
           "Sont des indices biologiques négatifs à la mandibule",
@@ -1547,7 +1705,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La poche paratubérositaire:",
+        "questionText": "N°94 (2020 Résidanat - Q1965\nLa poche para tubérositaire :",
         "options": [
           "Est un indice négatif à éviter dans la conception d'une prothèse partielle amovible",
           "Est appelé espace ampulaire d'Eisenring",
@@ -1558,7 +1716,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "La poche paratubérositaire, aussi appelée espace ampulaire d'Eisenring, est un indice positif situé au maxillaire. La fausse gencive doit combler cet espace pour améliorer la rétention.",
+        "explanation": "La poche para tubérositaireest issue de la disposition croisée des fibres musculaires du masséter et du buccinateur et de la résorptioncentripète, et pas centrifuge,du rebord alvéolaire.",
         "citations": [
           749,
           750,
@@ -1604,7 +1762,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les trigones rétro-molaires1- Sont des plans inclinés osseux à la jonction de la branche horizontale et de la branche montante de la mandibule.2- Servent de butée postérieure à la prothèse 3- Sont des indices négatifs à décharger4- Assurent la sustentation et la stabilisation mésio-distale à la prothèse.5- Toutes les réponses sont fausses.",
+        "questionText": "N°10 (2021 Résidanat - Q1705\nLes trigones rétro-molaires 1- Sont des plans inclinés osseux à la jonction de la branche horizontale et de la branche montante de la mandibule. 2- Servent de butée postérieure à la prothèse 3- Sont des indices négatifs à décharger 4- Assurent la sustentation et la stabilisation mésio-distale à la prothèse. 5- Toutes les réponses sont fausses.",
         "options": [
           "(1,3)",
           "(2,3)",
@@ -1619,7 +1777,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Les tori mandibulairesLes tori mandibulaires1- Sont des exostoses inconstantes situées au niveau de la table interne2- Sont situés en regard des apex des molaires.3- Sont des indices positifs et permettent la rétention de la prothèse amovible mandibulaire4- Sont recouverts d'une muqueuse fragile et fine.5- Toutes les réponses sont justes",
+        "questionText": "N°12 (2021 Résidanat - Q1744\nLes tori mandibulaires 1- Sont des exostoses inconstantes situées au niveau de la table interne 2- Sont situés en regard des apex des molaires. 3- Sont des indices positifs et permettent la rétention de la prothèse amovible mandibulaire 4- Sont recouverts d'une muqueuse fragile et fine. 5- Toutes les réponses sont justes",
         "options": [
           "(1,3)",
           "(2,3)",
@@ -1681,11 +1839,11 @@ const prothesey2QuizzesY2 = [
     ]
   },
   {
-    "title": "REALISATION D'UNE PROTHESE PARTIELLE AMOVIBLE METALLIQUE AU LABORATOIRE",
+    "title": "REALISATION D'UNE PROTHESE PARTIELLE AMOVIBLE META",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "L'ensemble des forces axiales qui s'opposent à 'enfoncement de la prothése dans ses tissus est:",
+        "questionText": "N°3 (2025 2°EMD - Q82\nL'ensemble des forces axiales qui s'opposent à 'enfoncement de la prothése dans ses tissus est:",
         "options": [
           "La stabilisation",
           "La rétention",
@@ -1695,7 +1853,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Lors de l'examen des modèles de travail, le praticien les compare avec les modèles d'étude. Il est indispensable de placer le modèle de travail sur paralléliseur pour contrôler l'axe d'insertion et retracer la ligne guide, afin d'objectiver les zones de contre-dépouille (rétention) et de dépouille (stabilisation). Le praticien prépare ensuite le modèle en supprimant les zones de contre-dépouille inutiles et en réalisant des décharges, avant de créer un duplicata pour la maquette du châssis.",
+        "explanation": "A. Vrai : lors l’examen des modèles de travail ; le praticien compare le modèle de travail avec le modèle d’étude.B. Faux : le praticien prépare d’abord le modéle de travail en supprimant les zones contre dépouilles et en réalisant des zones de décharge, puis il réalise une réplique de ce modèle qu’on appelle le DUPLICATA et ensuite il réalise sa maquette du chassis.C. Faux : il est indispensable de placer le modèle de travail sur paralléliseur afin de controler l’axe d’insertion déja choisi et retracer la ligne guide sur les dents supports de crochets afin d’objectiver les zones de contre dépouilles nécessaire aux élèments de rétention et les zones de dépouilles exploitables pour les élèments de stabilisation du chassis.D. Vrai : comme il est commenté avant.",
         "citations": [
           40,
           41,
@@ -1706,7 +1864,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le mouvement de translation mésio-distal est limité dans son amplitude par",
+        "questionText": "N°4 (2025 2°EMD - Q106\nLe mouvement de translation mésio-distal est limité dans son amplitude par",
         "options": [
           "La mobilité physiologique des dents bordant l'édentement",
           "Taquets occlusaux",
@@ -1716,7 +1874,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Lors de la préparation des modèles de travail, le praticien élimine les zones en retrait, sauf celles pour les extrémités rétentives des crochets. On procède à la suppression des zones de contre-dépouille au niveau des dents supports et on réalise des zones de décharge. La fixation des tiges de coulée est une étape ultérieure.",
+        "explanation": "A. Faux : lors la préparation des modèles de travail ; le praticien élimine toutes les zones en retrait à l’exception de celles réservées aux extrimités rétentives des crochets ; la sculture de la maquette est une étape ultérieure.B. Vrai : on procède à la suppression des zones de contre dépouilles au niveau des dents supports.C. Vrai : on réalise des zones de décharges.D. Faux : la fixation des tiges et du cone de coulée se fait dans l’étape de fixation des tiges et la cone de coulée non cette étape.",
         "citations": [
           47,
           48,
@@ -1725,7 +1883,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Dans le cas d'une classe de Kennedy- Applegate ou les dents en regard de l'édentement sont la 33 et 43, la connexion principale peut être :",
+        "questionText": "N°5 (2025 2°EMD - Q128\nDans le cas d'une classe de Kennedy- Applegate ou les dents en regard de l'édentement sont la 33 et 43, la connexion principale peut être :",
         "options": [
           "Une harre cingulaire",
           "Une bane coronaire",
@@ -1735,7 +1893,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La sculpture de la maquette du châssis commence par la mise en place d'éléments préfabriqués (préformes) en cire. Cette sculpture inclut la mise en place des crochets, des grilles de rétention et des différentes connexions. Lors des finitions, il faut veiller à ne pas créer de points de faiblesse aux zones de raccord pour éviter la déchirure.",
+        "explanation": "A. Faux : le praticien commence la sculpture de la maqutte par des élèments préfabriqués comme la Cire.B. Vrai : la sculpture de la maquette se fait au moyen de préformes.C. Vrai : la sculpture se fait en mise en place des crochets, grilles de rétentions et les différentes connexions.D. Vrai : lors les finitions, il faut veiller à ne pas créer des points de faiblesses au niveau des zones de raccord pour ne pas se déchirer.",
         "citations": [
           60,
           61,
@@ -1745,7 +1903,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les Appuis dentaires secondaires (ADS) :",
+        "questionText": "N°6 (2025 2°EMD - Q156\nLes Appuis dentaires secondaires (ADS) :",
         "options": [
           "Comprennent des appuis occlusaux sur les dents piliers.",
           "Comprennent des appuis cingulaires.",
@@ -1755,7 +1913,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Lors de la fixation des tiges et du cône de coulée, les tiges doivent être fixées à l'armature. Leur rôle est de conduire l'alliage en fusion dans la maquette. Le nombre de tiges varie en fonction de l'aire de la plaque et du nombre de crochets. La mise en revêtement utilise le même matériau que pour le duplicata.",
+        "explanation": "A. Vrai : lors la fixation des tiges et du cone de coulée ; les tiges doivent être fixés à l’armature.B. Vrai : leurs rôles est de conduire l’alliage en fusion dans la maquette à coulée.C. Faux : le nombres des tiges varie en fonction de l’aire de la plaque et le nombre de crochets.D. Vrai : la mise de revetement est réalisée avec le même revetement que pour le DUPLICATA.",
         "citations": [
           86,
           87,
@@ -1769,7 +1927,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les crochets à liaison rigide :",
+        "questionText": "N°7 (2025 2°EMD - Q179\nLes crochets à liaison rigide :",
         "options": [
           "Présentent une potence courte et rigide liée directement à la selle :",
           "Le point d'appui de la force est directement appliqué sur les dents bordant l'édentement",
@@ -1780,7 +1938,7 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "La chauffe du cylindre doit être lente, par paliers de 10-15 min à 300°C, suivis d'un palier de 45 min à la température de fusion de l'alliage (généralement chrome-cobalt, non nickel-chrome). Cette chauffe progressive réduit l'écart de température entre le cylindre et l'alliage en fusion lors de la coulée.",
+        "explanation": "A. Faux : on procède à une chauffe lente par pallier de 10 à 15min à 300°C.B. Vrai : un pallier de 45min à la température de fusion de l’alliage chrome-cobalt.C. Faux : on n’utlise généralement l’alliage chrome-cobalt et non le nickel-chrome.D. Vrai : cette chauffe réduit l’écart entre la T° du cylindre et celle de fusion lors de la coulée.",
         "citations": [
           98,
           99,
@@ -1791,7 +1949,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le montage des incisives centrales supérieures:",
+        "questionText": "N°10 (2025 RATT - Q230\nLe montage des incisives centrales supérieures:",
         "options": [
           "Sont placées de part et d'autre de la ligne médiane",
           "Sont vestibulo-versées de 25° par rapport à la verticale",
@@ -1810,7 +1968,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Lors de la réalisation d'PPAC au laboratoire, la préparation dy modèle de travail consiste à :",
+        "questionText": "N°13 (2023 3°EMD - Q1072\nLors de la réalisation d'PPAC au laboratoire, la préparation dy modèle de travail consiste à :",
         "options": [
           "Retracer les lignes guides sur les dents supports de crochets.",
           "Réaliser des zones de décharge.",
@@ -1822,7 +1980,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La technique de l'empreinte de correction (modèle reconstitué) utilise le châssis métallique comme support. Elle n'intéresse que les crêtes édentées et est exclusivement réservée aux classes I et II mandibulaires de petite et moyenne étendue.",
+        "explanation": "-La réponse A : fausse elle utilise comme support le châssis métallique précédemment élaboré.\n -Elle n’intéresse que les crêtes édentées.\n -La réponse D : fausse Elles sont exclusivement réservées à l’enregistrement des classes I et II mandibulaires de petite et moyenne étendue.",
         "citations": [
           540,
           541,
@@ -1833,7 +1991,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'empreinte du modèle préparé est prise avec :",
+        "questionText": "N°14 (2023 3°EMD - Q1099\nL'empreinte du modèle préparé est prise avec :",
         "options": [
           "Un hydrocolloide réversible chauffé à 65°",
           "Un polyéther de moyenne viscosité.",
@@ -1853,7 +2011,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le modèle en matériau réfractaire est:",
+        "questionText": "N°15 (2023 3°EMD - Q1109\nLe modèle en matériau réfractaire est:",
         "options": [
           "Hydraté pendant 30 minutes dans l'eau froide.",
           "Déshydraté dans un four à 220°C pendant 40 minutes",
@@ -1874,7 +2032,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La maquette du châssis est sculptée :",
+        "questionText": "N°16 (2023 3°EMD - Q1123\nLa maquette du châssis est sculptée :",
         "options": [
           "Sur le modèle de travail en plâtre.",
           "Sur le modèle en revêtement.",
@@ -1885,7 +2043,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "La maquette en cire est sculptée sur le duplicata (modèle en revêtement), à l'aide de préformes. L'alliage le plus couramment utilisé pour la coulée est le Chrome-Cobalt, en raison de sa rigidité, sa tolérance biologique et son coût. La coulée se fait par centrifugation ou par pression/dépression.",
+        "explanation": "Coulée de l’alliage :\n Au terme de cette étape, la coulée métallique proprement dite peut être amorcée. L’alliage le plus couramment utilisé en prothèse partielle à châssis métallique est le Chrome Cobalt pour son excellente rigidité\n sous une faible épaisseur, sa bonne tolérance biologique et son prix de revient. Cette coulée se fait soit par centrifugation ou par pression/dépression.",
         "citations": [
           573,
           574,
@@ -1896,7 +2054,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le duplicata:",
+        "questionText": "N°16 (2021 3°EMD - Q1822\nLe duplicata du modèle de travail est réalisé avec :",
         "options": [
           "Nécessite une empreinte du modèle avec un hydrocolloïde irréversible",
           "Est une réplique du modèle d'étude en matériau réfractaire-",
@@ -1914,7 +2072,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La sculpture de la maquette en cire du châssis:",
+        "questionText": "N°15 (2022 3°EMD - Q1454\nLa sculpture de la maquette en cire du châssis:",
         "options": [
           "Se fait à l'aide de préformes préfabriqués.",
           "Consiste à supprimer toutes les zones de contre dépouille",
@@ -1934,7 +2092,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La coulée de l'alliage:",
+        "questionText": "N°17 (2021 3°EMD - Q1837\nLa coulée de l'alliage en prothèse partielle à châssis métallique se fait",
         "options": [
           "Doit être précédée par un chauffage préparatoire",
           "Se fait avec du chrome cobalt",
@@ -1946,7 +2104,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "La coulée de l'alliage est précédée d'un chauffage préparatoire. L'alliage le plus couramment utilisé est le Chrome-Cobalt. La coulée est réalisée soit par centrifugation, soit par pression/dépression.",
+        "explanation": "Coulée de l’alliage :\n Au terme de cette étape, la coulée métallique proprement dite peut être amorcée. L’alliage le plus couramment utilisé en prothèse partielle à châssis métallique est le Chrome Cobalt pour son excellente rigidité\n sous une faible épaisseur, sa bonne tolérance biologique et son prix de revient. Cette coulée se fait soit par centrifugation ou par pression/dépression.",
         "citations": [
           831,
           832,
@@ -1956,7 +2114,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "le système d'attache utilisée en PPAC",
+        "questionText": "N°16 (2021 2°EMD - Q1807\nle système d'attache utilisée en PPAC",
         "options": [
           "Pst un élément mécanique préfabriqué reliant la prothèse amovible à la dent naturelle",
           "Permet d'assurer la rétention par friction entre la partie mâle et femelle de l’attachement",
@@ -1967,7 +2125,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "Les attachements sont des éléments mécaniques préfabriqués reliant la prothèse amovible à la prothèse *fixée*, et non directement à la dent naturelle. Ils sont composés d'une partie mâle et femelle, et la rétention est assurée par friction entre les deux. Les attaches à liaison semi-rigide sont indiquées pour les édentements terminaux (Classe I et II).",
+        "explanation": "-La réponse A : fausse ce sont des élèments mécaniques généralement préfabriqués reliant la prothèse amovible à la prothèse fixée.\n  \n -Les systèmes d’attaches sont constitués de deux pièces; une pièce male et une pièce femelle, l’association des deux crée une force de rétention pour la prothèse amovible, c’est la friction plus ou moins grande entre les deux pièces qui règle cette force de rétention.\n  \n -Les attaches à liaison semi-rigide sont utilisés dans les édentements terminaux de classe I et II.",
         "citations": [
           1022,
           1023,
@@ -2011,7 +2169,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "les attachements à liaison Rigide sont des attachements",
+        "questionText": "N°17 (2021 2°EMD - Q1833\nles attachements à liaison Rigide sont des attachements",
         "options": [
           "Toujours Intracoronnaires.",
           "Indique uniquement pour les édentements encastrés",
@@ -2029,7 +2187,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'alliage utilisé en prothèse partielle à châssis métallique est",
+        "questionText": "N°18 (2021 3°EMD - Q1857\nL'alliage utilisé en prothèse partielle à châssis métallique est",
         "options": [
           "Le Chrome-Cobalt",
           "le Nickel Chrome",
@@ -2039,13 +2197,13 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L'alliage le plus couramment utilisé en PPAC est le Chrome-Cobalt, en raison de son excellente rigidité, sa bonne tolérance biologique et son prix de revient.",
+        "explanation": "-L’alliage le plus couramment utilisé en prothèse partielle à châssis métallique est le Chrome- Cobalt pour son excellente rigidité sous une faible épaisseur, sa bonne tolérance biologique et son prix de revient.",
         "citations": [
           1041
         ]
       },
       {
-        "questionText": "La ligne du plus grand contour:",
+        "questionText": "N°18 (2021 2°EMD - Q1852\nLa ligne du plus grand contour:",
         "options": [
           "C'est l’ensemble des points les plus saillants d'un corps par rapport à son are longitudinal",
           "Sera positionnée différemment, et sera en fonction de l'inclinaison du corps",
@@ -2064,7 +2222,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L’axe d'insertion:",
+        "questionText": "N°19 (2021 2°EMD - Q1863\nL’axe d'insertion:",
         "options": [
           "Est la voie optimale selon laquelle la prothèse va s'insérer et se désinsérer",
           "Est dit favorable lorsqu'il nécessite des meulages Importants",
@@ -2083,7 +2241,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les tiges de coulée",
+        "questionText": "N°19 (2021 3°EMD - Q1860\nLes tiges de coulée",
         "options": [
           "Renforcent la maquette sculptée",
           "Conduisent l'alliage en fusion dans la maquette à couler",
@@ -2102,7 +2260,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le paralléliseur joue un rôle",
+        "questionText": "N°20 (2021 2°EMD - Q1879\nLe paralléliseur joue un rôle",
         "options": [
           "Uniquement au cabinet dentaire",
           "Au laboratoire en vue de l'établissement du plan de traitement et des modifications pré prothétiques",
@@ -2112,7 +2270,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le paralléliseur joue un rôle au cabinet dentaire pour établir le plan de traitement et les modifications pré-prothétiques, ainsi qu'au laboratoire. Il sert à détecter les zones de retrait sur les *dents supports de crochets*, pas sur toutes les dents, et il est utilisé pour le positionnement des attachements.",
+        "explanation": "-La réponse A : fausse le paralléliseur joue un role au cabinet dentaire et au laboratoire.\n -La réponse B : fausse au cabinet dentaire en vue de l’etablissement du plan de traitement et des modifications pre prothetique.\n -La réponse C : fausse pour détécter les zones de retrait sur les dents supports de crochets.",
         "citations": [
           1055,
           1056,
@@ -2121,7 +2279,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La sculpture du châssis se fait avec des préformes",
+        "questionText": "N°20 (2021 3°EMD - Q1888\nLa sculpture du châssis se fait avec des préformes",
         "options": [
           "En cire",
           "En matière plastique",
@@ -2136,6 +2294,19 @@ const prothesey2QuizzesY2 = [
         "citations": [
           1063
         ]
+      },
+      {
+        "questionText": "N°14 (2022 3°EMD - Q1445\nLe duplicata:",
+        "options": [
+          "Nécessite une empreinte du modèle avec un hydrocolloïde irréversible",
+          "Est une réplique du modèle d'étude en matériau réfractaire-",
+          "Est une réplique du modèle de travail en plâtre",
+          "Est indispensable pour réaliser la maquette en cire du châssis."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "-Nécessite une empreinte du modèle avec de la gélatine.\n -C’est une réplique du modèle de travail en matériau réfractaire."
       }
     ]
   },
@@ -2144,7 +2315,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Dans la classe V de Kennedy-Applegate, la dent en regard du segment édenté peut-être:",
+        "questionText": "N°4 (2025 1°EMD - Q116\nDans la classe V de Kennedy-Applegate, la dent en regard du segment édenté peut-être:",
         "options": [
           "Une incisive latérale.",
           "Une canine.",
@@ -2156,7 +2327,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La classe V de Kennedy-Applegate implique que la dent en regard du segment édenté peut être une canine, une incisive latérale, ou les deux en même temps. Par conséquent, toutes ces affirmations sont justes.",
+        "explanation": "A. Vrai : la classe V de KA veut dire que la dent en regard du segment édenté peut etre une canine.B. Vrai : comme elle peut être une incisive latérale.C. Vrai : ou les deux au meme temps.D. Faux : donc toutes les affirmations sont justes.",
         "citations": [
           51,
           52,
@@ -2166,7 +2337,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'appui de la classe III de Kennedy Applegate est :",
+        "questionText": "N°7 (2025 RATT - Q166\nL'appui de la classe III de Kennedy Applegate est :",
         "options": [
           "Essentiellement ostéo muqueux",
           "Essentiellement dentaire",
@@ -2176,7 +2347,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'appui de la Classe III (édentement encastré) est essentiellement dentaire. L'appui ostéo-muqueux ou mixte concerne principalement les classes I et II (édentements distaux).",
+        "explanation": "A. Faux → L’appui ostéo-muqueux concerne surtout la classe I (édentement distal).C. Faux → Pas de dualité tissulaire ici, donc pas d’appui mixte.D. Faux → Les crochets Bonwill ne sont pas typiquement utilisés en classe III.",
         "citations": [
           95,
           96,
@@ -2184,7 +2355,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La définition de la classe d'édentement est dictée par:",
+        "questionText": "N°12 (2025 1°EMD - Q280\nLa définition de la classe d'édentement est dictée par:",
         "options": [
           "La fibromuqueuse édentée postérieurement.",
           "La dernière dent de sagesse présente sur l'arcade",
@@ -2195,7 +2366,7 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "C'est l'édentement postérieur (la fibromuqueuse édentée) qui prime pour définir la classe. Le secteur antérieur n'est pas prioritaire s'il existe un édentement postérieur. Les dents de sagesse ou molaires absentes et non remplacées ne sont pas prises en compte, en fonction de l'arcade antagoniste.",
+        "explanation": "A. Vrai : l’édentement postérieure c’est lui qui prime pour définir la classe d’édentement.B. Faux : la dent de sagesse losqu’elle est absente et non remplacée elle ne sera pas comptabilisée.C. Faux : le secteur édenté antérieure n’a aucun role dans la définition de la classe d’édentement si il existe un édentement postèrieure.D. Vrai : les molaires absentes et non remplacées ne seront pas aussi prise en considération et ce en fonction de l’arcade antagoniste.",
         "citations": [
           180,
           181,
@@ -2207,7 +2378,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Soit les formules dentaires suivantes, Donnez la classification selon Kennedy /Applegâte :Présence des : 11-12-13-21-22-23 il s'agit d'une : :",
+        "questionText": "N°4 (2024 1°EMD - Q525\nSoit les formules dentaires suivantes, Donnez la classification selon Kennedy /Applegâte : Présence des : 11-12-13-21-22-23 il s'agit d'une :",
         "options": [
           "Classe I",
           "Classe II mod 1",
@@ -2221,7 +2392,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Absence des 11-12-21-22-23-24, il s'agit d'une",
+        "questionText": "N°5 (2024 1°EMD - Q544\nAbsence des 11-12-21-22-23-24, il s'agit d'une",
         "options": [
           "Classe II mode 2",
           "Classe mod 1",
@@ -2237,7 +2408,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Absence des : 11-12-13-21-22-23 il s’agit d’une :",
+        "questionText": "N°7 (2023 1°EMD - Q975\nAbsence des : 11-12-13-21-22-23 il s’agit d’une :",
         "options": [
           "Classe I",
           "Classe Il mod 1",
@@ -2253,7 +2424,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Présence des 11-12-14-15-21-22-23-24, il s'agit d'une :",
+        "questionText": "N°8 (2023 1°EMD - Q989\nPrésence des 11-12-14-15-21-22-23-24, il s'agit d'une :",
         "options": [
           "Classe II mode 2",
           "Classe I mod 1",
@@ -2267,7 +2438,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Absence des 14-15-16-24-25-26 il s'agit d'une :",
+        "questionText": "N°10 (2023 1°EMD - Q1031\nAbsence des 14-15-16-24-25-26 il s'agit d'une :",
         "options": [
           "Classe III",
           "Classe I",
@@ -2283,7 +2454,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Présence des 11-12-13-15-17-18-21-22-23-24 il s'agit d'une :",
+        "questionText": "N°9 (2023 1°EMD - Q1012\nPrésence des 11-12-13-15-17-18-21-22-23-24 il s'agit d'une :",
         "options": [
           "Classe II mode 2",
           "Classe I mod 1",
@@ -2299,7 +2470,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'édentement de classe I de KENNEDY-APPLEGATE:",
+        "questionText": "N°4 (2022 1°EMD - Q1274\nL'édentement de classe I de KENNEDY-APPLEGATE:",
         "options": [
           "Est un édentement intercallé",
           "Admet des modifications",
@@ -2317,7 +2488,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'édentement de classe Vde KENNEDY-APPLEGATE:",
+        "questionText": "N°5 (2022 1°EMD - Q1285\nL'édentement de classe Vde KENNEDY-APPLEGATE:",
         "options": [
           "Est un édentement distal bilatéral",
           "Est un édentement intercalé unilatéral",
@@ -2334,7 +2505,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'édentement de classe IV de KENNEDY-APPLEGATE:",
+        "questionText": "N°6 (2022 1°EMD - Q1312\nL'édentement de classe IV de KENNEDY-APPLEGATE:",
         "options": [
           "Est un édentement intercalé antérieur",
           "Admet des modifications",
@@ -2351,7 +2522,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La dualité tissulaire :1- Est une problématique des édentements encastrés 2- C'est la différence de comportement entre la dent support de crochet et la fibromuqueuse de la crête édentée 3- Concerne le déplacement des selles en extension 4- Son respect est indispensable lors du tracé des plaques prothétiques des édentements distaux 5- Toutes les réponses sont fausses ",
+        "questionText": "N°10 (2022 Résidanat - Q1370\nLa dualité tissulaire : 1- Est une problématique des édentements encastrés 2- C'est la différence de comportement entre la dent support de crochet et la fibromuqueuse de la crête édentée 3- Concerne le déplacement des selles en extension 4- Son respect est indispensable lors du tracé des plaques prothétiques des édentements distaux 5- Toutes les réponses sont fausses",
         "options": [
           "(1,2)",
           "(2,3,4)",
@@ -2362,7 +2533,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La dualité tissulaire (Option 5 est fausse) se rencontre dans les édentements distaux (Classe I et II). Elle décrit la différence de comportement (compressibilité) entre la fibromuqueuse des crêtes (Option 2) et le desmodonte des dents supports (Option 1). Sous pression, la dent s'déprime de 0.1 mm avec récupération rapide, tandis que la fibromuqueuse s'déprime de 0.4 à 2 mm (Option 3) avec une récupération lente (viscoélasticité) (Option 4).",
+        "explanation": "1: Dans les édentements distauxDans les édentements distaux (classe I et II), La PPAM sollicite deux types d'éléments :- les dents restantes supports d'ancrage- les crêtes alvéolaires recouvertes de fibro-muqueuse adhérente.Sachant que le comportement biomécanique de ces différents tissus est dissemblable :C’est la notion de dualité tissulaire ou différence de compressibilité entre la fibromuqueuse des crêtes édentées et le desmodonte des dents support de crochet.En effet sous la même Pression les dents se dépriment de 0.1 mm et récupèrent rapidement et totalement Tandis que la fibro-muqueuse se déprime de 0.4mm à 2 mm Cette fibro-muqueuse ne reprend pas sa forme initiale dès que cesse l'application de cette pression mais D’une manière très lente, c'est la viscoélasticité.",
         "citations": [
           762,
           763,
@@ -2393,7 +2564,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Lors de l'ébouillantage :",
+        "questionText": "N°7 (2025 1°EMD - Q180\nLors de l'ébouillantage :",
         "options": [
           "Placer le moufle dans un récipient contenant de l'eau bouillante pendant 15 minutes.",
           "Après ébouillantage, le moufle est laissé 2 heures à température ambiante avant de l'ouvrir.",
@@ -2404,7 +2575,7 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Lors de l'ébouillantage, on place le moufle dans l'eau bouillante pendant 15 minutes. Après cette étape, le moufle est retiré et les deux parties sont séparées immédiatement, avant refroidissement. On vernit ensuite le plâtre à chaud, mais on ne vernit pas les dents artificielles.",
+        "explanation": "A. Vrai : lors l’ébouillantage on place le moufle dans un récipient contenant de l’eau bouillante pendant 15min. \n B. Faux : après l’ébouillantage, le moufle est retiré à l’aide d’une pince à moufle et les deux parties seront séparés immédiatement avant le refroidissement.\n C. Vrai : on vernie le platre à chaud.\n D. Faux : les dents artificielles par contre ne seront pas verni.",
         "citations": [
           104,
           105,
@@ -2417,7 +2588,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le bourrage consiste :",
+        "questionText": "N°8 (2025 1°EMD - Q185\nLe bourrage consiste :",
         "options": [
           "A . À l'insertion de la masse de résine dans la partie du moufle recouvrant les crochets.",
           "À l'insertion de la masse de résine dans la contre partie du moufle recouvrant les dents artificielles",
@@ -2428,7 +2599,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "Le bourrage consiste à insérer la masse de résine dans la contre-partie du moufle, celle qui recouvre les dents artificielles (on ne met jamais la résine dans la partie du moufle). Ensuite, on referme le moufle et on le met sous presse. La pression appliquée doit être longue et progressive, et non forte et brève.",
+        "explanation": "A. Faux :  on ne mets jamais la résine dans la partie du moufle.B. Vrai : le bourrage consiste à l’insertion de la masse de résine dans la contre partie du moufle recouvrant les dents artificielles.C. Vrai : puis en renferme le moufle correctement et on le mets sous presse.D. Faux : la pression doit etre longue et progressive.",
         "citations": [
           118,
           119,
@@ -2442,7 +2613,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Lors de la polymérisation :",
+        "questionText": "N°9 (2025 1°EMD - Q203\nLors de la polymérisation :",
         "options": [
           "Le moufle est placé dans un récipient contenant de l'eau froide.",
           "Le moufle est placé dans un récipient contenant de l'eau bouillante.",
@@ -2453,7 +2624,7 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Lors de la polymérisation, le moufle est placé dans de l'eau froide. L'eau bouillante est utilisée pour l'ébouillantage. La température doit monter progressivement pour éviter un choc thermique. Contrairement à l'ébouillantage, le moufle doit être laissé refroidir à température ambiante avant d'être ouvert.",
+        "explanation": "A. Vrai : lors la polymérisation, le moufle est placé dans un récipient contenant de l’eau froide.B. Faux : l’eau bouillante est utilisée lors l’étape de l’ébouillantage non la polymérisation.C. Vrai : la température de l’eau doit monter progressivement pour éviter un choc thermique.D. Faux : contrairement à l’ébouillantage ; le moufle doit etre retiré et laisser refroidir à température ambiante avant l’ouvrir.",
         "citations": [
           127,
           128,
@@ -2522,7 +2693,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La mise en moufle permet de:",
+        "questionText": "N°7 (2022 2°EMD - Q1317\nLa mise en moufle permet de:",
         "options": [
           "Remplacer la cire de la maquette par de la résine autopolymérisable",
           "Remplacer la cire de la maquette par de la résine thermopolymérisable",
@@ -2539,7 +2710,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La préparation des modèles:",
+        "questionText": "N°8 (2022 2°EMD - Q1344\nLa préparation des modèles:",
         "options": [
           "Intervient directement après l'étape du montage au laboratoire",
           "Intervient après l'essai fonctionnel et la satisfaction du patient",
@@ -2549,7 +2720,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Cette étape intervient après l'essai fonctionnel en bouche et la validation par le patient. Les modèles sont alors séparés de l'articulateur et leur volume vérifié pour le moufle. Les maquettes doivent avoir une épaisseur uniforme.",
+        "explanation": "Préparation des modèles:\n Cette étape intervient après l’essai fonctionnel, une fois que le patient a exprimé son entière satisfaction. Séparer les modèles munis de leurs maquettes en cire de l’occluseur ou encore de l’articulateur. Vérifier le volume des modèles au niveau de leurs socles pour assurer un positionnement aisé dans le moufle.\n -Les maquettes doivent avoir la meme épaisseur sur toute leur surface.",
         "citations": [
           732,
           733,
@@ -2560,7 +2731,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "À l'étape de l'ébouillantage:",
+        "questionText": "N°9 (2022 2°EMD - Q1351\nÀ l'étape de l'ébouillantage:",
         "options": [
           "Il convient de vernir le plâtre après son refroidissement",
           "Il convient de vernir le plâtre à chaud",
@@ -2570,21 +2741,34 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Après l'ébouillantage et l'ouverture du moufle, il convient de vernir le plâtre *à chaud*. Cela permet au plâtre d'absorber l'isolant. Il faut appliquer cet isolant sur toutes les surfaces de plâtre, mais éviter les dents artificielles et les crochets.",
+        "explanation": "Après ébouillantage le moufle est retiré et placé sur la paillasse ; le plâtre est un matériau capable d’absorber le monomère liquide il convient de vernir à chaud en appliquant un isolant sur toutes les surfaces de plâtre éviter les dents artificielles et les crochets.",
         "citations": [
           746,
           747,
           748
         ]
+      },
+      {
+        "questionText": "N°19 (2024 1°EMD - Q799\nL'ébouillantage consiste à:",
+        "options": [
+          "Eliminer toute trace de cire résiduelle sur le moufle.",
+          "Eliminer toute trace de cire résiduelle sur les dents.",
+          "Faire des rétentions mécaniques sur le talon de toutes les dents.",
+          "Un retrait ou contraction thermique de la résine après démouflage à chaud"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "-vérifier l’absence de toute trace de cire résiduelle sur les dents pour retrouver très précisément leur place plus tard après ébouillantage.\n -enlever complètement la cire du moufle et éliminer toute trace de cire à l’eau bouillante 95 degrés pendant 3mn"
       }
     ]
   },
   {
-    "title": "IMPERATIFS MECANIQUES AUX QUELS DOIT REPONDRE UNE PROTHESE A CHASSIS METALLIQUE",
+    "title": "IMPERATIFS MECANIQUES AUX QUELS DOIT REPONDRE UNE",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Le problème de la dualité tissulaire est posé pour :",
+        "questionText": "N°8 (2025 RATT - Q187\nLe problème de la dualité tissulaire est posé pour :",
         "options": [
           "La classe II",
           "La classe III",
@@ -2602,7 +2786,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Le tracé type du chassis dans le cas d' édentement de classe I (KENNEDY/APPLEGATE) à la mandibule:",
+        "questionText": "N°12 (2025 2°EMD - Q274\nLe tracé type du chassis dans le cas d' édentement de classe I (KENNEDY/APPLEGATE) à la mandibule:",
         "options": [
           "La connexion principale est une barre linguale ou un bandeau en fonction des conditions cliniques.",
           "Les crochets utilisés sont rigides",
@@ -2614,7 +2798,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Les impératifs de conception du châssis incluent la rigidité (qui dépend de l'alliage) et la gestion des forces de flexion et de torsion. Une distribution équilibrée des forces de mastication est essentielle. (Le commentaire ne valide pas spécifiquement les options A, C, D mais le gabarit les sélectionne).",
+        "explanation": "A. Vrai : font partie des impératifs de conception du chassis métallique en prothèse partielle amovible.B. Faux : la rigidité qui dépend de l’alliage utilisé non la résistance.C. Vrai : engendrent des forces de flexion qui peuvent fracturer la prothèse et des forces de torsion.D. Vrai : elles permettent une distribution équilibrée des forces de mastications.",
         "citations": [
           172,
           173,
@@ -2625,7 +2809,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'édentement de classe II de KENNEDY/APPLEGATE:",
+        "questionText": "N°13 (2025 2°EMD - Q289\nL'édentement de classe II de KENNEDY/APPLEGATE:",
         "options": [
           "Est un édentement en extension mésial",
           "Présente des conditions d'équilibre favorables",
@@ -2635,7 +2819,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "L'édentement de Classe II est menacé par le problème de la dualité tissulaire et peut l'être aussi par un enregistrement occlusal incorrect. Il nécessite l'obtention d'un polygone de sustentation large et symétrique pour limiter les mouvements indésirables, ainsi qu'un appui denté pour équilibrer ce polygone. (Le commentaire valide C implicitement via la dualité tissulaire).",
+        "explanation": "A. Vrai : il est fortement menacé par le problème de la dualité tissulaire.B. Vrai : il peut etre aussi menacé par l’enregistrement occlusal lorsqu’il n’est pas correct.C. Vrai : il nécessite l’obtention d’un polygone de sustentation symétrique et large limitant les mouvements indisérables de la prothèse autour des axes de rotations.D. Faux : il nécessite un appui dentés pour qui soit équilibré le polygone.",
         "citations": [
           187,
           188,
@@ -2645,7 +2829,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "le problème de la dualité tissulaire découle de la différence du comportement biomécanique entre:",
+        "questionText": "N°13 (2025 RATT - Q294\nle problème de la dualité tissulaire découle de la différence du comportement biomécanique entre:",
         "options": [
           "Le desmodonte et la fibromuqueuse des crêtes édentées",
           "Desmodonte le crochet lui correspondant",
@@ -2655,7 +2839,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La dualité tissulaire est la différence de comportement biomécanique entre le desmodonte (appui dentaire) et la fibromuqueuse des crêtes édentées (appui muqueux). Les autres associations ne sont pas correctes.",
+        "explanation": "B. Faux → Mauvaise association, ce n’est pas le crochet qui est comparé au desmodonte.\n \n C. Faux → ATM et muscles masticateurs → concernent fonction, pas appui tissulaire.\n \n D. Faux → La selle prothétique repose sur la muqueuse, pas un élément distinct.",
         "citations": [
           192,
           193,
@@ -2664,7 +2848,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'équilibre de la PPAM :",
+        "questionText": "N°14 (2025 2°EMD - Q302\nL'équilibre de la PPAM :",
         "options": [
           "Repose sur le respect de la triade de Housset",
           "Doit tenir compte des axes de rotation qui passent par les dents limitant l'édentement",
@@ -2676,7 +2860,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "L'équilibre de la PPAM repose sur la triade de Housset (rétention, stabilisation, sustentation), qui évite l'enfoncement. Il doit aussi tenir compte du polygone de sustentation, qui nécessite une surface d'appui étendue dans les cas distaux. (Le commentaire ne mentionne pas l'option B, mais elle est sélectionnée par le gabarit).",
+        "explanation": "A. Vrai : le triade de Housset est responsable de la rétention de la prothèse partielle à chassis métallique.B. Vrai : il évite l’enfoncement de la prothèse dans ces tissus d’appui.C. Faux : il tient compte la stabilisation et la sustentation de la future prothèse.D. Vrai : il nécessite une surface d’appui étendue dans les cas d’édentements distaux.",
         "citations": [
           204,
           205,
@@ -2686,7 +2870,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Pour une classe I l'appui sera :",
+        "questionText": "N°14 (2025 RATT - Q318\nPour une classe I l'appui sera :",
         "options": [
           "Essentiellement ostéomuqueux",
           "Essentiellement Dentaire",
@@ -2703,7 +2887,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La préparation des modèles de travail consiste à :",
+        "questionText": "N°17 (2025 2°EMD - Q373\nLa préparation des modèles de travail consiste à :",
         "options": [
           "Eliminer toutes les-zones en contre dépouille",
           "Réaliser des zones de décharge au niveau de l'emplacement de la barre linguale",
@@ -2713,7 +2897,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'aire de sustentation du châssis est la surface sur laquelle la prothèse se projette et est représentée par un polygone. Elle traduit l'équilibre de la prothèse, notamment pour les édentements encastrés, et représente la surface d'appui fonctionnelle qui porte et stabilise la prothèse.",
+        "explanation": "A. Vrai : l’aire de sustentation du chassis est décrit par la surface sur laquelle se projette la prothèse.B. Vrai : il est représenté par un polygone.C. Vrai : il traduit l’équilibre de la prothèse essentiellement pour les édentement encastré.D. Faux : l’aire de sustentation est la surface d’appui fonctionnelle qui porte et stabilise la prothèse.",
         "citations": [
           268,
           269,
@@ -2722,7 +2906,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les couronnes à recouvrement partiel sont :",
+        "questionText": "N°1 (2024 2°EMD - Q464\nLes couronnes à recouvrement partiel sont :",
         "options": [
           "Des couronnes à recouvrement partiel sont :",
           "Des couronnes coulées",
@@ -2734,7 +2918,7 @@ const prothesey2QuizzesY2 = [
           2,
           4
         ],
-        "explanation": "La préparation des logettes pour les appuis occlusaux doit se faire uniquement sur l'émail. Ces logettes permettent de loger les taquets (appuis) occlusaux, qu'ils soient directs (solidaires du crochet) ou indirects (solidaires de la connexion secondaire), afin d'éviter toute interférence occlusale.",
+        "explanation": "Pour la réponse A: fausse la preparation des logettes porte uniquement sur l’email (meme dureté que le metal).\n Pour la réponse C : fausse ; cette logette permet d’éviter toute interference sur l’occlusion, ces taquets ou appuis occlusaux peuvent être direct solidaire du crochet ou indirect solidaire de la connexion secondaire.",
         "citations": [
           315,
           316,
@@ -2743,7 +2927,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "L'équilibre du châssis métallique dépend:",
+        "questionText": "N°5 (2023 2°EMD - Q932\nL'équilibre du châssis métallique dépend:",
         "options": [
           "Uniquement des impératifs mécaniques.",
           "Surtout des impératifs biologiques.",
@@ -2753,7 +2937,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "L'intégration et l'équilibre parfait du châssis métallique dépendent à la fois du respect des impératifs mécaniques (lors de la conception) et des impératifs biologiques (respect des tissus physiologiques).",
+        "explanation": "L’intégration dans la cavité buccale du châssis métallique signifie son parfait équilibre ,qui dépend des impératifs mécaniques à respecter scrupuleusement lors de sa conception, par ailleurs le respect des tissus Physiologie des organes dentaires et ostéomuqueux est une condition c’est ce qu’on appel : impératifs biologiques.",
         "citations": [
           446,
           447,
@@ -2761,7 +2945,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La sustentation est une réaction qui s'oppose aux forces:",
+        "questionText": "N°6 (2023 2°EMD - Q942\nLa sustentation est une réaction qui s'oppose aux forces:",
         "options": [
           "Axiales tendant à enfoncer la prothèse dans ses tissus d'appui;",
           "Qui tendent à faire subir à la prothèse des mouvements de translation ou de rotation;",
@@ -2781,7 +2965,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "La translation verticale dans le sens apical est contre carrée",
+        "questionText": "N°18 (2023 2°EMD - Q1163\nLa translation verticale dans le sens apical est contre carrée",
         "options": [
           "Par le bras de calage du crochet",
           "Par l'étendue des selles",
@@ -2800,7 +2984,7 @@ const prothesey2QuizzesY2 = [
         ]
       },
       {
-        "questionText": "Les impératifs généraux à respecter lors de la réalisation d'une prothèse partielle à châssis métallique sont:",
+        "questionText": "N°10 (2022 2°EMD - Q1371\nLes impératifs généraux à respecter lors de la réalisation d'une prothèse partielle à châssis métallique sont:",
         "options": [
           "Rigidité et résistance mécanique",
           "Triade de housset",
@@ -2817,15 +3001,41 @@ const prothesey2QuizzesY2 = [
           765,
           766
         ]
+      },
+      {
+        "questionText": "N°3 (2024 2°EMD - Q510\nProthèse composite :",
+        "options": [
+          "Est composée d'une partie fixe et d'une partie amovible reliées par un attachement",
+          "Est composée de deux parties amovibles reliées par un implant",
+          "Est une prothèse complète amovible.",
+          "Est dite amovo-inamovible."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La stabilisation: ensemble des forces qui s’opposent aux mouvements de translation horizontale ou de rotation de la prothèse.\n La rétention: ensemble des forces axiales qui s`opposent a l’éloignement de la prothèse de sa surface d’appui assurée par les crochets (le bras rétentif).\n La sustentation : ensemble des forces axiales qui s’opposent a l’enfoncement de la prothèse dans ses tissus de soutien.\n L’équilibre tissulaire fait référence à la répartition uniforme des forces de mastication sur les tissus de soutien pour éviter les points de pression excessive (s’oppose à l’enfoncement) qui peuvent causer des douleurs ou des ulcères."
+      },
+      {
+        "questionText": "N°11 (2022 2°EMD - Q1399\nLes mouvements de TABET:",
+        "options": [
+          "Sont maitrisés par l'ensemble des constituants du châssis",
+          "Sont des mouvements de translation et de rotation",
+          "Font partie des impératifs d'équilibre de la PPAM",
+          "Sont des mouvements de rotation uniquement."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "-Les imperatifs d’equilibre de la PPAM sont la triade de HOUSSET et les mouvements de TABET.\n -TABET a décrit des mouvements théoriques dans les trois sens de l’espace, nous distinguons trois mouvements de translation et trois mouvements de rotation."
       }
     ]
   },
   {
-    "title": "MONTAGE DES DENTS ANTERIEURES & MONTAGE DES DENTS POSTERIEURES",
+    "title": "MONTAGE DES DENTS ANTERIEURES & MONTAGE DES DENTS",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Le montage des dents antéro-supérieures doit:",
+        "questionText": "N°9 (2025 RATT - Q202\nLe montage des dents antéro-supérieures doit:",
         "options": [
           "Respecter la ligne du sourire",
           "Respecter le plan sagittal médian",
@@ -2836,11 +3046,11 @@ const prothesey2QuizzesY2 = [
           0,
           1
         ],
-        "explanation": "La courbe de Spee concerne surtout les dents postérieures, pas les antérieures.",
+        "explanation": "A. Vrai : le montage des dents antéro-supérieure doit respect obligatoirement la ligne du sourire qui détermine la position des collets.B. Vrai : il doit aussi respecter le plan sagittal médian qui détermine la position du point inter-incisif.C. Faux : le respect de l’aire de sustentation d’ACKERMAN concerne le montage des dents antéro-inférieure.D. Faux : la courbe de spee est rétablie dans le montage des dents postérieure non antérieure.",
         "citations": []
       },
       {
-        "questionText": "La forme des dents antérieures est choisie en fonction de:",
+        "questionText": "N°11 (2025 RATT - Q253\nLa forme des dents antérieures est choisie en fonction de:",
         "options": [
           "La forme du visage",
           "La nature du matériau",
@@ -2851,11 +3061,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "La nature du matériau (céramique, résine...) influence la résistance, mais pas la forme. La couleur est un critère esthétique, pas de forme.",
+        "explanation": "B. Faux → La nature du matériau (céramique, résine...) influence la résistance, mais pas la forme.D. Faux → La couleur est un critère esthétique, pas de forme.",
         "citations": []
       },
       {
-        "questionText": "Le montage ajusté:",
+        "questionText": "N°12 (2025 RATT - Q270\nLe montage ajusté:",
         "options": [
           "Est réalisé avec une fausse gencive au niveau du fond du vestibule",
           "Intéresse les dents antéro-supérieures",
@@ -2884,7 +3094,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Les incisives centrales supérieures:",
+        "questionText": "N°14 (2025 1°EMD - Q311\nLes incisives centrales supérieures:",
         "options": [
           "Sont placées de part et d'autre de la ligne médiane.",
           "Sont vestibulo-versées de 25° par rapport à la verticale.",
@@ -2895,11 +3105,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Les incisives centrales supérieures sont placées de part et d'autre de la ligne médiane et sont montées à environ 6 mm en avant de la papille rétro-incisive. Elles sont vestibulées de 5° par rapport à la verticale, et non de 25°.",
+        "explanation": "A. Vrai : les IC supérieure sont placées de part et d’autre de la ligne médiane.B. Faux : elles sont vestibulée de 5° par rapport à la verticale.C. Vrai : sont montées à 6mm en avant de la papille rétro-incisive.D. Faux : en avant de la papille non en arrière.",
         "citations": []
       },
       {
-        "questionText": "Lors du montage des dents antérieures",
+        "questionText": "N°15 (2024 1°EMD - Q736\nLors du montage des dents antérieures",
         "options": [
           "Les incisives centrales supérieures sont situées en avant de la papille rétro incisive.",
           "Le bord libre de l'incisive latérale supérieure est en contact avec le POP.",
@@ -2910,11 +3120,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "C'est le bord libre de l'incisive centrale et la pointe de la canine qui sont en contact avec le plan d'occlusion, pas l'incisive latérale. Le recouvrement est de 2 mm. Les incisives inférieures doivent être montées dans l'aire de sustentation d'Ackermann.",
+        "explanation": "Pour la reponse B : fausse c’est le bord libre de l’incisive centrale et la pointe de la canine qui sont en contact avec le plan d’occlusion.Pour la reponse C : fausse le recouvrement est de 2mm.- Les dents antéro- inférieures devront être montées dans l’aire de sustentation d’Ackermann (l’espace délimité par le sommet de la crête antérieure et de son versant vestibulaire).",
         "citations": []
       },
       {
-        "questionText": "Lors du montage des dents antéro-supérieures:",
+        "questionText": "N°16 (2024 1°EMD - Q748\nLors du montage des dents antéro-supérieures:",
         "options": [
           "La ligne des collets des dents correspond à la ligne du sourire.",
           "L'aire de pound doit être respectée",
@@ -2925,11 +3135,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Les collets des dents antéro-supérieures doivent effleurer le bord de la lèvre supérieure lors du sourire. L'aire de Pound concerne le montage des dents inférieures. Les pointes des deux canines sont reliées par une droite qui passe par le centre de la papille rétro-incisive.",
+        "explanation": "-Les collets des dents antéro-supérieures doivent effleurer le bord\n de la lèvre supérieure lors du sourire.\n Pour la réponse B : fausse l`aire de pound doit être respecté lors du montages des dents inférieures en presence d’edentements postérieurs importants.\n Pour la réponse D : fausse Les pointes des deux canines sont reliées par une droite qui passe par le centre de la papille rétro-incisive.",
         "citations": []
       },
       {
-        "questionText": "Lors du montage des dents postérieures",
+        "questionText": "N°17 (2024 1°EMD - Q766\nLors du montage des dents postérieures",
         "options": [
           "L'aire d'Ackermann doit être respectée.",
           "Les sillons inter- cuspidiens déterminent une droite dans le plan sagittal.",
@@ -2940,7 +3150,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "L'aire d'Ackermann concerne le montage antérieur. Les sillons inter-cuspidiens des dents postérieures déterminent une droite dans le plan sagittal.",
+        "explanation": "-La première prémolaire est en contact avec le POP par ses deux cuspides, alors que la deuxième prémolaire est en contact avec ce plan par sa cuspide palatine seulement.-Seule la cuspide mésio-palatine de la première molaire qui entre en contact avec le plan d'occlusion prothétique.-Pour la deuxième molaire supérieure Aucune cuspide n’entre en contact avec le plan d'occlusion. C'est la cuspide mésio-palatine qui en est la plus proche (mais pas en contact).",
         "citations": []
       },
       {
@@ -2959,7 +3169,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Les dents en résine:",
+        "questionText": "N°2 (2023 2°EMD - Q875\nLes dents en résine:",
         "options": [
           "Présentent une grande dureté de surface;",
           "Sont utilisées en présence de crête flottante;",
@@ -2970,7 +3180,7 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "Elles transmettent moins de sollicitations fonctionnelles car elles peuvent absorber une partie du choc des contacts occlusaux.",
+        "explanation": "Elles transmettent moins de sollicitations fonctionnelle puisque elles peuvent absorber une partie du choc des contacts occlusaux.",
         "citations": []
       },
       {
@@ -3004,7 +3214,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Montage des incisives supérieures:",
+        "questionText": "N°4 (2022 2°EMD - Q1268\nMontage des incisives supérieures:",
         "options": [
           "Elles doivent être montées en premier de part et d'autre de la ligne médiane.",
           "Les centrales et latérales doivent être vestibulées d'un angle de 5°.",
@@ -3015,11 +3225,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "Les incisives centrales supérieures et inférieures sont montées en premier de part et d'autre de la ligne médiane. L'incisive centrale est vestibulée de 5° et la latérale de 10°. L'axe de l'incisive centrale est incliné de haut en bas du côté distal vers le mésial, de 1 à 3° par rapport à la ligne médiane.",
+        "explanation": "Les incisives centrales supérieures et inférieures doivent être montées au premier de part et d'autre de la ligne médiane de manière alternative.-La réponse B : fausse la centrale est vestibulée de 5 et la latérale de 10.-L’incisive centrale supérieure: Dans le Sens mésio distal : L'axe de la dent doit être incliné de haut en bas du côté distal vers le coté mésial de 1 à 3° par rapport à la ligne médiane.",
         "citations": []
       },
       {
-        "questionText": "Montage des canines:",
+        "questionText": "N°5 (2022 2°EMD - Q1292\nMontage des canines:",
         "options": [
           "La pointe de la canine supérieure doit être au même niveau que le bord libre des incisives centrales supérieures.",
           "L'axe de la canine supérieure est légèrement incliné en distale de 2° (entre 0 à 3°).",
@@ -3029,11 +3239,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L'axe de la canine supérieure est incliné de haut en bas du côté distal vers le côté mésial de 2°. La pointe de la canine inférieure est logée entre la canine et l'incisive latérale supérieure.",
+        "explanation": "-La canine supérieur : Dans le Sens mésio distal : Son axe est incliné de haut en bas du côté distale vers le coté mésial, de 2° (entre 0 à 3°).-La réponse C : fausse La pointe de la canine inférieure est logée entre la canine et l'incisive latérale supérieure au même niveau que les incisives inférieures.",
         "citations": []
       },
       {
-        "questionText": "Montage des dents postèro-supérieures:",
+        "questionText": "N°6 (2022 2°EMD - Q1310\nMontage des dents postèro-supérieures:",
         "options": [
           "La première prémolaire est en contact avec le plan d'occlusion par ses deux cuspides",
           "la deuxième prémolaire est en contact avec le plan d'occlusion par sa cuspide palatine seulement",
@@ -3046,8 +3256,21 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "La première prémolaire est en contact avec le plan par ses deux cuspides. La deuxième prémolaire est en contact par sa cuspide palatine seulement. Seule la cuspide mésio-palatine de la première molaire contacte le plan d'occlusion, et sa face occlusale forme un angle de 6° avec ce plan.",
+        "explanation": "-La première prémolaire est en contact avec ce plan par ses deux cuspides (palatine et vestibulaire), Alors que la deuxième est en contact avec le POP par sa cuspide palatine seulement.-Seule la cuspide mésio-palatine de la 1ère Molaire qui entre en contact avec le plan d'occlusion prothétique, Sa face occlusale est inclinée en haut et en arrière, Elle forme un angle de 6° avec le plan d'occlusion.",
         "citations": []
+      },
+      {
+        "questionText": "N°3 (2023 2°EMD - Q891\nLe choix des dents postérieures est:",
+        "options": [
+          "Guidé par les dents antérieures;",
+          "Indépendant des dents antérieures;",
+          "Défini par la hauteur qui correspond à la largeur vestibulo-linguale;",
+          "Défini par la hauteur qui correspond à la moitié de l'espace intercrêtes et par la situation du plan d'occlusion."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": ""
       }
     ]
   },
@@ -3056,7 +3279,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Les surfaces de guidage:",
+        "questionText": "N°10 (2025 2°EMD - Q221\nLes surfaces de guidage:",
         "options": [
           "Sont réalisées sur les faces linguales et proximales des dents d'appui",
           "Sont réalisées sur les faces vestibulaires et proximales des dents d'appui",
@@ -3067,11 +3290,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "La ligne du plus grand contour est l'ensemble des points saillants d'un corps par rapport à son axe longitudinal. La ligne guide est la ligne du plus grand contour une fois l'axe d'insertion déterminé.",
+        "explanation": "A. Faux : la ligne du plus grand contour qui est l’ensemble des points saillants d’un corps par rapport à son axe longitudinal.\n B. Vrai : cette ligne guide est la ligne du plus grand contour lorsque l’axe d’insertion est déterminé.\n C. Faux : ces deux derniers définitions définissent l’axe d’insertion.\n D. Faux : réponse fausse.",
         "citations": []
       },
       {
-        "questionText": "Ligne guide:",
+        "questionText": "N°11 (2025 2°EMD - Q259\nLigne guide:",
         "options": [
           "Se fait parallèlement à l'axe d'insertion détermine",
           "Permet la détermination des zones de dépouille et de contre dépouille",
@@ -3084,7 +3307,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "La zone de retrait est la zone de contre-dépouille en cervicale. Elle est appréciée par les jauges calibrées. Elle n'est pas retrouvée sur toutes les morphologies coronaires.",
+        "explanation": "La direction dans cette question, c'est l'axe d'insertion lui-même, qui résulte de :2- La ligne guide seulement : pas seulement (L'analyse de différents éléments, esthétique, zone de retrait. surface de guidage et interférences)3- La ligne de plus grand contour : Par sa définition, il existe une infinité de lignes de plus grand contour selon l'orientation choisie. Cependant, une fois l'axe d'insertion déterminé, la ligne guide de plus grand contour devient \"la ligne guide\", qui est unique. Ainsi, l'expression correcte est \"la ligne guide\".4- Une surface de guidage : ce sont  \"deS surfaceS\" de guidage qui est la réponse la plus correcte.5- Correct",
         "citations": []
       },
       {
@@ -3103,7 +3326,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "La ligne guide",
+        "questionText": "N°18 (2022 2°EMD - Q1504\nLa ligne guide",
         "options": [
           "Est la ligne du plus grand contour par rapport à l'axe de la dent.",
           "Est déterminée par rapport à l'axe d'insertion de la PPA",
@@ -3114,11 +3337,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La ligne guide est la ligne du plus grand contour obtenue par le déplacement d'une mine de graphite parallèlement à l'axe d'insertion préalablement déterminé.",
+        "explanation": "On appelle ligne guide ; la ligne du plus grand contour obtenue par le déplacement d’une mine appliquée tangentiellement à la couronne d’une dent ,le déplacement de cette mine s’effectuant toujours parallèlement à l’axe d’insertion déterminé préalablement.",
         "citations": []
       },
       {
-        "questionText": "Le choix de l'axe d'insertion dépend:",
+        "questionText": "N°19 (2022 2°EMD - Q1530\nLe choix de l'axe d'insertion dépend:",
         "options": [
           "Des zones de retrait",
           "Du tracé prospectif du châssis",
@@ -3134,7 +3357,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "L'extrémité flexible du bras rétentif du crochet:",
+        "questionText": "N°20 (2022 2°EMD - Q1552\nL'extrémité flexible du bras rétentif du crochet:",
         "options": [
           "Doit se situer au-dessus de la ligne guide.",
           "Doit se situer au-dessous de la ligne guide.",
@@ -3147,15 +3370,28 @@ const prothesey2QuizzesY2 = [
         ],
         "explanation": "Elle doit se situer au-dessous de la ligne guide, dans la zone de contre-dépouille ou de retrait.",
         "citations": []
+      },
+      {
+        "questionText": "N°11 (2024 2°EMD - Q658\nL'occlusion d'intercuspidie maximale",
+        "options": [
+          "Est référence dentaire .",
+          "Est une référence articulaire.",
+          "une caractérisée par le maximum de contacts Dento dentaires",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Ligne guide ; la ligne du plus grand contour obtenue par le déplacement d’une mine de graphite appliquée tangentiellement à la couronne d’une dent ,le déplacement de cette mine s’effectuant toujours parallèlement à l’axe d’insertion déterminé préalablement.\n La ligne guide permet de visualiser :\n - les zones de dépouille où seront situés les éléments de sustentation et de stabilisation.\n - les zones de contre-dépouille ou en retrait, où seules s’engagent les extrémités élastiques des crochets, zones de retrait = zones de rétention."
       }
     ]
   },
   {
-    "title": "LES STRUCTURES ANATOMIQUES EN RAPPORT AVEC LA PROTHESE PARTIELLE AMOVIBLE METALLIQUE",
+    "title": "LES STRUCTURES ANATOMIQUES EN RAPPORT AVEC LA PROT",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Les tissus en contact direct avec la prothèse sont :",
+        "questionText": "N°15 (2025 1°EMD - Q323\nLes tissus en contact direct avec la prothèse sont :",
         "options": [
           "L'email des dents résiduelles au niveau des crochets.",
           "Les fibres musculaires et ligamentaires au niveau des bords de la prothèse.",
@@ -3166,11 +3402,11 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "L'émail des dents artificielles est en contact avec la prothèse. Les fibres musculaires et ligamentaires sont en contact avec les bords. La muqueuse jugale et labiale est en contact avec l'extrados, tout comme la muqueuse de la langue.",
+        "explanation": "A. Faux : l’émail des dents artificielles qui est en contact avec la prothèse et non la vrai émail des dents restantes sur l’arcade.B. Vrai : les fibres musculaires et ligamentaires sont en contact direct avec les bords de la prothèse.C. Faux : la muqueuse jugale et labiale sont en contact avec l’extrados de la prothèse.D. Vrai : la muqueuse de la langue est en contact direct avec l’extrados de la prothèse.",
         "citations": []
       },
       {
-        "questionText": "Concernant la prothèse partielle à châssis métallique :",
+        "questionText": "N°19 (2022 3°EMD - Q1534\nLa prothèse partielle à châssis métallique :",
         "options": [
           "Elle peut être agressive sur l'os alvéolaire et accélérer sa résorption.",
           "Elle doit Stimuler l'os alvéolaire et contribuer à ralentir sa résorption.",
@@ -3182,11 +3418,11 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "Une prothèse mal conçue peut accélérer la résorption osseuse, tandis qu'une prothèse bien ajustée peut la ralentir. L'intrados ne repose pas directement sur les tissus de soutien. L'extrados doit être bien poli car il est en contact avec les joues et les lèvres.",
+        "explanation": "A. Vrai : exactement ; la prothèse partielle à chassis métallique peut etre agressive sur l’os alvéolaire et accélère sa résorption si elle est mal conçue car elle provoque une pression traumatique.B. Vrai : l’os alvéolaire se résorpe naturellement après la perte dentaire et pour cela une prothèse partielle bien ajustée avec des appuis occlusaux correctement positionnés sur les dents piliers permet de transmettre les forces de mastications de manière controlée ainsi que stimuler l’os sous-jacent.C. Faux : l’intrados de la prothèse partielle n’est pas en contact direct avec les tissus de soutien car elle repose essentiellement sur les dents et non sur les muqueuses donc ce n’est pas obligatoire d’etre bien polie.D. Vrai : tandis que son extrados est en contact direct avec les tissus jugaux et labiaux donc elle doit être bien polie afin d’éviter de les agresser.",
         "citations": []
       },
       {
-        "questionText": "Le châssis métallique coulé est en contact avec les éléments anatomiques par:",
+        "questionText": "N°17 (2023 3°EMD - Q1143\nLe châssis métallique coulé est en contact avec les éléments anatomiques par:",
         "options": [
           "Le bras de calage, le bras de rétention du crochet et les selles métalliques",
           "Uniquement le bras de rétention et l'appui occlusal",
@@ -3196,11 +3432,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les éléments de rétention et de stabilisation peuvent être agressifs pour l'émail, ce qui peut être évité par un choix judicieux de l'axe d'insertion, un alliage de dureté appropriée et un polissage soigneux.",
+        "explanation": "L’email recouvre et protège la surface coronaire des dents, il présente une épaisseur maximum au sommet des cuspides et s’amenuise progressivement vers le collet anatomique, sa qualité doit être appréciée surtout sur les dents porteuses de crochet. Les éléments de rétention et de stabilisation peuvent se montrer agressifs pour l’émail lors de\n l’insertion et la désinsertion de la prothèse et pendant la mastication.\n Ces agressions peuvent être évitées :\n Par un choix judicieux de l’axe d’insertion à l’étape de l’étude au paralléliseur.\n Le choix de l’alliage dont la dureté doit être inférieur ou égal à celle de l’émail dentaire humain, ainsi que l’état de surface de l’alliage qui doit bénéficier d’un polissage soigneux des éléments en contact avec l’émail et permet ainsi d’éviter la formation de la plaque bactérienne causant des caries.",
         "citations": []
       },
       {
-        "questionText": "L'alliage chrome-cobalt doit assurer:",
+        "questionText": "N°19 (2023 3°EMD - Q1178\nL'alliage chrome-cobalt doit assurer:",
         "options": [
           "La rigidité de tout le châssis",
           "la rigidité du bras de calage et de rétention",
@@ -3214,7 +3450,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Le respect du décolletage doit assurer:",
+        "questionText": "N°20 (2023 3°EMD - Q1198\nLe respect du décolletage doit assurer:",
         "options": [
           "Un anneau gingival supérieur à 5mm.",
           "Un anneau gingival inférieur à 5mm.",
@@ -3224,11 +3460,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le bimétallisme peut provoquer un galvanisme buccal, entraînant un goût métallique, des gingivites, et des stomatites.",
+        "explanation": "La salive:\n Joue un rôle de défense de la cavité buccale et assure la rétention des prothèses par le phénomène de cohésion, la salive est un électrolyte le bimétallisme (bien que rare aujourd’hui) est strictement interdit il entraine un galvanisme buccal (un courant électrique) irritant et brûlant qui provoque la sensation de goût métallique.\n Son expression au niveau des prothèses est une corrosion ou un ternissement, Son expression au niveau des tissus de soutien des gingivites, des stomatites une irritation du tube digestif et parfois même un syndrome névralgique.",
         "citations": []
       },
       {
-        "questionText": "Les agressions de l'émail:",
+        "questionText": "N°17 (2022 3°EMD - Q1492\nLes agressions de l'émail:",
         "options": [
           "Sont évités par la réalisation d'une faible épaisseur de l'alliage constituant les éléments de stabilisation;",
           "Dépendent du choix de l'axe d'insertion;",
@@ -3238,11 +3474,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les agressions de l'émail peuvent être évitées par un choix judicieux de l'axe d'insertion, un alliage de dureté appropriée et un polissage soigneux des éléments en contact avec l'émail.",
+        "explanation": "L’email recouvre et protège la surface coronaire des dents, il présente une épaisseur maximum au sommet des cuspides et s’amenuise progressivement vers le collet anatomique, sa qualité doit être appréciée surtout sur les dents porteuses de crochet. Les éléments de rétention et de stabilisation peuvent se montrer agressifs pour l’émail lors de\n l’insertion et la désinsertion de la prothèse et pendant la mastication.\n Ces agressions peuvent être évitées :\n Par un choix judicieux de l’axe d’insertion à l’étape de l’étude au paralléliseur.\n Le choix de l’alliage dont la dureté doit être inférieur ou égal à celle de l’émail dentaire humain, ainsi que l’état de surface de l’alliage qui doit bénéficier d’un polissage soigneux des éléments en contact avec l’émail et permet ainsi d’éviter la formation de la plaque bactérienne causant des caries.",
         "citations": []
       },
       {
-        "questionText": "L'accumulation bactérienne est évitée :",
+        "questionText": "N°18 (2022 3°EMD - Q1506\nL'accumulation bactérienne est évitée :",
         "options": [
           "Uniquement par les soins d'hygiène ;",
           "Par le rétablissement du point de contact proximal;",
@@ -3256,7 +3492,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "La salive:",
+        "questionText": "N°20 (2022 3°EMD - Q1550\nLa salive:",
         "options": [
           "L'insertion en bouche d'une prothèse partielle à châssis métallique provoque un goût métallique;",
           "Joue un rôle de défense uniquement;",
@@ -3267,11 +3503,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "La salive joue un rôle de défense et assure la rétention par cohésion. Le bimétallisme peut provoquer une sensation de goût métallique.",
+        "explanation": "La salive:\n Joue un rôle de défense de la cavité buccale et assure la rétention des prothèses par le phénomène de cohésion, la salive est un électrolyte le bimétallisme (bien que rare aujourd’hui) est strictement interdit il entraine un galvanisme buccal (un courant électrique) irritant et brûlant qui provoque la sensation de goût métallique.\n Son expression au niveau des prothèses est une corrosion ou un ternissement, Son expression au niveau des tissus de soutien des gingivites, des stomatites une irritation du tube digestif et parfois même un syndrome névralgique.",
         "citations": []
       },
       {
-        "questionText": "les empreintes globales prises en un seul temps permettent d'enregistrer:",
+        "questionText": "N°12 (2021 3°EMD - Q1750\nles empreintes globales prises en un seul temps permettent d'enregistrer:",
         "options": [
           "L'anatomie des surfaces d'appui dentaires et muqueuses:",
           "La différence de leur dépressibilité",
@@ -3282,11 +3518,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Elle permet d'enregistrer en un seul temps la totalité de l'arcade (dents et surfaces ostéo-muqueuses) et peut se faire en double viscosité.",
+        "explanation": "-Elle permet d’enregistrer en un seul temps la totalité de l’arcade, dents restantes et surfaces ostéo-muqueuses.\n -Elle peut se faire en double viscosité; avec deux matériaux de viscosités différentes.",
         "citations": []
       },
       {
-        "questionText": "les empreintes composées:",
+        "questionText": "N°13 (2021 3°EMD - Q1762\nLes empreintes composées:",
         "options": [
           "Sont indiquées lorsque l'appui dentaire est prédominant",
           "Enregistrent les surfaces d'appui dentaire et muqueuses en un seul temps",
@@ -3297,11 +3533,11 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Elles sont indiquées lorsque l'appui ostéo-muqueux prédomine.",
+        "explanation": "-La réponse B : fausse l’empreinte de stabilisation se fait par un materiau de moyenne viscosité.",
         "citations": []
       },
       {
-        "questionText": "les empreintes partielles de correction:",
+        "questionText": "N°15 (2021 3°EMD - Q1806\nles empreintes partielles de correction:",
         "options": [
           "Sont indiquées au maxillaire pour enregistrer les crêtes en extension",
           "Permettent de corriger le moulage issu d'une empreinte gobale en un seul temps",
@@ -3311,8 +3547,112 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Elles sont indiquées à la mandibule pour enregistrer les crêtes en extension. Le matériau à empreinte est une cire thermoplastique, une pâte à l'oxyde de zinc-eugénol ou un élastomère.",
+        "explanation": "-La réponse A : fausse indiquée à la mandibule pour enregistrer les cretes en extension.-La réponse C : fausse le matériau à empreinte est :-cire thermoplastique dans la méthode originale.-on peut remplacer la cire par une pate à oxyde de zinc-eugenol ou élastomère.",
         "citations": []
+      },
+      {
+        "questionText": "N°1 (2021 2°EMD - Q1562\nLe montage des dents artificielles:",
+        "options": [
+          "Est une étape clinique",
+          "Est une étape de laboratoire",
+          "Consiste à modifier les dents naturelles",
+          "Consiste à placer des dents artificielles antérieures et/ou postérieures sur des maquettes en cire."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Définition du montage:\n C’est une étape de laboratoire qui consiste à placer des dents artificielles sur des maquettes en cire préparées au préalable."
+      },
+      {
+        "questionText": "N°1 (2021 3°EMD - Q1567\nLa Prothèse partielle amovible métallique (PPAM):",
+        "options": [
+          "Est en contact avec l'email des dents restantes uniquement par les crochets",
+          "Les dents artificielles sont en contact avec l'email des dents restantes seulement par contact occlusal antagoniste.",
+          "Dans le cas d'une PPAM, les dents porteuses de crochet ne subissent aucune transformation",
+          "Une couronne en or porteuse de crochet peut créer un bimétallisme avec le châssis métallique."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "-La réponse A : fausse la PPAM est en contact avec l’émail des dents restantes par: \n  -Les moyens de rétention et de stabilisation du chassis métallique; crochet, barre cingulaire et coronaire.\n  -Les dents artificielles : - soit par contact occlusal antagoniste.\n  - soit au niveau du point de contact proximal.\n -La réponse B : fausse soit par contact occlusal antagoniste soit au niveau du point de contact proximal.\n -La réponse C : fausse le traitement par PPAM implique toujours une modification de la forme des dents des dents porteuses de crochet.\n -Le bimétallisme : lorsque le métal de la couronne reconstituée par une prothèse fixée est different de celui du chassis à armature métallique, la salive joue un role d’éléctrolyte, ce bimetallisme crée un galvanisme buccal irritant."
+      },
+      {
+        "questionText": "N°2 (2021 2°EMD - Q1587\nLe montage ajusté en prothèse partielle amovible:",
+        "options": [
+          "C'est un montage qui intéresse les dents postérieures",
+          "Se fait sur une fausse gencive en cire",
+          "Est indiqué pour des raisons esthétiques",
+          "Les dents sont ajustées directement sur les crêtes alvéolaires"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°3 (2021 3°EMD - Q1594\nEn Prothèse partielle amovible métallique (PPAM):",
+        "options": [
+          "Un point de contact défectueux entre la PPAM et les dents restantes n'a aucune incidence sur l'attache épithéliale.",
+          "La gencive papillaire est protégée par le point de contact interdentaire.",
+          "Le cément est en contact direct avec la PPAM",
+          "De par la position de l'extrémité de bras rétentif du crochet la PPAM peut traumatiser le cément."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "-La réponse B : fausse le desmodonte maintien des relations dentaires grace à sa capacité d’adaptation par remanimenet de l’os et du cément.\n -La réponse D : fausse toute irritation entraine la destruction parfois irréversible de l’os alvéolaire."
+      },
+      {
+        "questionText": "N°3 (2021 2°EMD - Q1605\nLe montage des dents postérieures:",
+        "options": [
+          "La première et la deuxième prémolaire sont en contact avec le plan d'occlusion prothétique",
+          "La première molaire supérieure est en contact avec le plan d'occlusion prothétique par sa cuspide disto palatine",
+          "La courbe de Wilson est formée par les dents supérieures",
+          "La deuxième molaire supérieure n'est pas en contact avec le plan d'occlusion prothétique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "-La réponse B : fausse La première molaire supérieure: seule la cuspide mésio palatine est en contact avec le plan d’occlusion prothétique.\n  \n -La réponse C : fausse la courbe de wilson est formée par les dents inférieures."
+      },
+      {
+        "questionText": "N°4 (2021 2°EMD - Q1620\nLe montage en normo occlusion:",
+        "options": [
+          "Correspond à la classe I d'Angle",
+          "Correspond à la classe II d'Angle",
+          "Correspond à la classe III d'Angle",
+          "La première molaire inférieure est mésialée d'une demi cuspide par rapport à la molaire supérieure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°20 (2024 2°EMD - Q816\nAfin d'éviter la pénétration d'eau dans la résine lors de la polymérisation, il faut:",
+        "options": [
+          "Vernir le plâtre dans la partie et contrepartie du moufle.",
+          "Vernir les maquettes en cire dans le moufle.",
+          "Vernir les dents prothétiques.",
+          "Vernir le plâtre uniquement dans la contrepartie du moufle."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°18 (2023 3°EMD - Q1168\nLe châssis métallique doit être rigide afin:",
+        "options": [
+          "De répartir des forces de torsions sur les dents piliers",
+          "D'éviter les forces nocives engendrant des fractures du châssis",
+          "De transmettre les forces, lors de la mastication, sur les tissus de support",
+          "De transmettre les forces, lors de la mastication, uniquement sur les dents."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le rétablissement des points de contact évite l’accumulation des débris alimentaires et la formation de la plaque microbienne."
       }
     ]
   },
@@ -3321,7 +3661,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "L'articulateur semi adaptable permet :",
+        "questionText": "N°17 (2025 1°EMD - Q371\nL'articulateur semi adaptable permet :",
         "options": [
           "La reproduction moyenne des trajectoires condyliennes.",
           "La réalisation des mouvements d'ouverture et de fermeture uniquement.",
@@ -3332,11 +3672,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "L'articulateur semi-adaptable permet la reproduction moyenne des trajectoires condyliennes et l'orientation correcte des modèles par rapport à l'axe charnière. Il ne réalise pas uniquement les mouvements d'ouverture/fermeture et la distance inter-condylienne y est fixée sur des moyennes.",
+        "explanation": "A. Vrai : l’articulateur semi-adaptable permet la reproduction moyenne des trajectoires condyliennes et l’orientation correcte des modèles par rapport à l’axe charnière.B. Faux : l’articulateur Concept élémentaire qui réalise les mouvements d’ouverture et de fermetture uniquement.C. Vrai : il oriente correctement les modèles par rapports à l’axe charnière.D. Faux : il n’enregiste pas la distance inter-condylienne mais plutot cette distance sera fixé sur ce type d’articulateur basée sur des moyennes anatomiques.",
         "citations": []
       },
       {
-        "questionText": "Caractéristiques de l'axe charnière :",
+        "questionText": "N°18 (2025 1°EMD - Q391\nCaractéristiques de l'axe charnière :",
         "options": [
           "Est un axe imaginaire passant par le centre des deux condyles.",
           "Est axe réel autour duquel s'effectue un mouvement de rotation mandibulaire.",
@@ -3347,11 +3687,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "L'axe charnière est un axe imaginaire (non réel) passant par le centre des deux condyles. Il nécessite un arc facial pour son transfert sur l'articulateur.",
+        "explanation": "A. Vrai : l’axe charnière est un axe imaginaire passant par le centre des deux condyles.B. Faux : c’est un axe imaginaire non réel autour duquel s’effectue un mouvement de rotation mandibulaire.C. Faux : il relie le centre des deux condyls et non le point sous orbitaire.D. Vrai : il nécessite un arc facial pour son transfert sur l’articulateur.",
         "citations": []
       },
       {
-        "questionText": "L'ard facial est un dispositif démontable en forme d'arc qui :",
+        "questionText": "N°19 (2025 1°EMD - Q410\nL'ard facial est un dispositif démontable en forme d'arc qui :",
         "options": [
           "Sert à enregistrer la position du maxillaire supérieur par rapport aux ATM.",
           "Permet d'enregistrer la position du maxillaire supérieur par rapport à l'axe charnière.",
@@ -3362,11 +3702,11 @@ const prothesey2QuizzesY2 = [
           0,
           1
         ],
-        "explanation": "L'arc facial sert à enregistrer la position du maxillaire par rapport aux ATM ou à l'axe charnière. Il n'enregistre pas la position de la mandibule. C'est l'occluseur qui est indispensable pour la mise en occlusion.",
+        "explanation": "A. Vrai : l’arc facial sert à enregistrer la position du maxillaire par rapport aux ATM.B. Vrai : ou la position du maxillaire supérieure par rapport à l’axe charnière.C. Faux : il n’enregistre dans aucun cas la position de la mandibule.D. Faux : l’occluseur qui est indispensable pour la mise en occlusion les modèles sur l’articulateur.",
         "citations": []
       },
       {
-        "questionText": "L'arc facial est un dispositif démontable en forme d'arc qui:",
+        "questionText": "N°20 (2025 RATT - Q429\nL'arc facial est un dispositif démontable en forme d'arc qui:",
         "options": [
           "Sert à enregistrer la position de la mandibule par rapport aux ATM",
           "Permet d'enregistrer la position du maxillaire par rapport à l'axe charnière",
@@ -3376,7 +3716,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Il enregistre la position du maxillaire, pas de la mandibule. Il ne fait pas la relation entre mandibule et maxillaire. Il facilite une bonne orientation des modèles mais n'est pas indispensable pour la mise en occlusion simple.",
+        "explanation": "A. Faux → Il enregistre la position du maxillaire, pas de la mandibule.C. Faux → Il ne fait pas la relation entre mandibule et maxillaire.D. Faux → Il facilite la mise en occlusion, mais n’est pas indispensable (utilisé surtout pour une bonne orientation des modèles",
         "citations": []
       },
       {
@@ -3394,7 +3734,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "L'articulateur est un instrument:",
+        "questionText": "N°18 (2023 1°EMD - Q1157\nL'articulateur est un instrument:",
         "options": [
           "Qui est utilisé uniquement en clinique",
           "Qui permet la conception et la réalisation d'un traitement prothétique",
@@ -3405,11 +3745,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "L'articulateur est utilisé en clinique et au laboratoire pour le diagnostic et le traitement. Il permet d'analyser les relations statiques et dynamiques entre les mâchoires. C'est l'arc facial qui enregistre la position du maxillaire par rapport à la base du crâne.",
+        "explanation": "-La réponse A : fausse l’articulateur est utilisé en clinique et en laboratoire.\n Un articulateur est un instrument de diagnostic et de traitement destiné à\n transférer et à analyser au laboratoire les relations statiques et dynamiques entre la mandibule et le maxillaire.\n -La réponse D : fausse c’est l’arc facial qui sert à enregistrer la position du maxillaire par rapport à la base du crâne.",
         "citations": []
       },
       {
-        "questionText": "L'articulateur semi adaptable:",
+        "questionText": "N°18 (2022 1°EMD - Q1520\nL'articulateur semi-adaptable est un dispositif :",
         "options": [
           "Autorise le transfert de toutes les trajectoires condyliennes",
           "Autorise uniquement les mouvements d'ouverture et de fermeture",
@@ -3423,7 +3763,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "L'arc facial:",
+        "questionText": "N°19 (2022 1°EMD - Q1522\nL'arc facial est un artifice démontable qui sert:",
         "options": [
           "Est un instrument utilisé en clinique",
           "Sert à transférer la position du maxillaire par rapport à la base du crâne",
@@ -3438,7 +3778,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "La pente condylienne correspond à l'angle formé par le trajet du condyle dans un mouvement de:",
+        "questionText": "N°11 (2022 Résidanat - Q1389\nLa pente condylienne correspond à l'angle formé par le trajet du condyle dans un mouvement de:",
         "options": [
           "Latéralité, par rapport au plan de Francfort",
           "Latéralité, par rapport au plan de Camper",
@@ -3449,11 +3789,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La pente condylienne est l'angle formé par le trajet du condyle lors d'un mouvement de propulsion, mesuré par rapport au plan de Francfort, qui est le plus fiable.",
+        "explanation": "Cours 2ème année 2022 : OcclusionCours 2ème année 2023 : OcclusionLe principe pour répondre aux questions derésidanatest de toujours choisirla réponse la plus juste.Dans ce contexte, deux plans peuvent être utilisés pour déterminer lapente condylienne. Cependant, leplan de Francfortestle plus fiableetle plus utilisé, que ce soit pour calculer les angles ou pour orienter la tête du patient lors de la prise radiographique.Une deuxième justification: Leplan de Campern’est utilisé que dans les cas où leplan d’occlusionest absent, ce qui limite son application par rapport au plan de Francfort.",
         "citations": []
       },
       {
-        "questionText": "Les déterminants postérieurs de l'occlusion concernent:",
+        "questionText": "N°16 (2022 1°EMD - Q1482\nLes déterminants postérieurs de l'occlusion concernent:",
         "options": [
           "Le guidage condylien lors des mouvements de propulsion et de latéralité mandibulaires",
           "Le guidage dentaire lors des mouvements de propulsion et de latéralité mandibulaires",
@@ -3516,7 +3856,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Les articulateurs ARCON présentent des sphères condyliennes ( ou condylaires )",
+        "questionText": "N°18 (2021 1°EMD - Q1856\nLes articulateurs ARCON présentent des sphères condyliennes ( ou condylaires )",
         "options": [
           "Situées à la branche supérieure de l'articulateur",
           "Situées au sommet des pillers verticaux de la branche inférieure de l’articulateur",
@@ -3526,11 +3866,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Dans un articulateur ARCON, les sphères condyliennes (représentant les condyles mandibulaires) sont situées sur la branche inférieure, tandis que les boîtiers condyliens (représentant les fosses mandibulaires) sont solidaires de la branche supérieure.",
+        "explanation": "ARCON: ils représentent des équivalents mécaniques de l'union crâne-mandibule :\n . Les sphères condyliennes {ou condylaires} situées au sommet des piliers\n verticaux de la branche inférieure représentent les condyles mandibulaires.\n . Les boitiers condyliens (ou condylaires) solidaires de la branche supérieure correspondent aux fosses mandibulaires de l'os temporal et reçoivent les sphères condyliennes.",
         "citations": []
       },
       {
-        "questionText": "les articulateurs semi adaptables",
+        "questionText": "N°19 (2021 1°EMD - Q1859\nles articulateurs semi adaptables",
         "options": [
           "Autorisent un réglage des valeurs de pente condylienne et d'angle de Bennett",
           "Présentent des valeurs de pente condylienne et angle de Bennet préalables et fixées uniquement par le concepteur",
@@ -3541,11 +3881,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "Les articulateurs semi-adaptables autorisent le réglage de la pente condylienne et de l'angle de Bennett. Les articulateurs préréglés ont des valeurs fixes. Ils sont utilisés en clinique et au laboratoire.",
+        "explanation": "Les articulateurs semi-adaptables autorisent un réglage des valeurs de la pente condylienne et l’angle de bennet à l'issue d'enregistrements intra buccaux ou extra buccaux.\n -La réponse B : fausse c’est les articulateurs préréglés qui présentent des valeurs de pente condylienne et d'angle de Bennett préétablies et fixées par le concepteur.\n -La réponse C : fausse Les articulateurs semi-adaptables sont utilisés à la fois en clinique et en laboratoire dentaire.",
         "citations": []
       },
       {
-        "questionText": "Le transfert de la position du modèle maxillaire sur articulateur",
+        "questionText": "N°20 (2021 1°EMD - Q1875\nLe transfert de la position du modèle maxillaire sur articulateur",
         "options": [
           "Nécessite le repérage de points de références sur le massif facial",
           "Se fait d’une manière aléatoire",
@@ -3556,11 +3896,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Le transfert nécessite le repérage de points de référence sur le massif facial à l'aide d'un arc facial. Il se fait avant la mise en place du modèle inférieur.",
+        "explanation": "-Le transfert de la position du modèle maxillaire sur l'articulateur nécessite le repérage de points de référence sur le massif facial, cela est réalisé à l'aide d'un arc facial. La situation spatiale du modèle maxillaire par rapport à I'axe charnière et au point sous-orbitaire est enregistrée pour positionner le modèle maxillaire sur l'articulateur de manière précise, reflétant la relation spatiale réelle du patient.\n  \n -La réponse D : fausse viens avant la mise en place du modèle inférieur.",
         "citations": []
       },
       {
-        "questionText": "L’articulateur présente un intérêt",
+        "questionText": "N°17 (2021 1°EMD - Q1829\nL’articulateur présente un intérêt",
         "options": [
           "Uniquement au stade du diagnostic",
           "jamais lors de la réalisation prothétique",
@@ -3571,17 +3911,43 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "L'articulateur est utile au stade du diagnostic (analyse des paramètres occlusaux) et lors de la thérapeutique (réalisation prothétique).",
+        "explanation": "L'articulateur présente un intérêt à plusieurs moments au cours de la réalisation d'un cas clinique :\n - Au stade du diagnostic ; lors de l’analyse des paramètres occlusaux et leur matérialisation d’un point de vue statique et dynamique.\n - Au stade de la thérapeutique proprement dite : La réalisation prothétique nécessite une alternance entre le cabinet dentaire et le laboratoire de prothèse.",
         "citations": []
+      },
+      {
+        "questionText": "N°20 (2022 1°EMD - Q1542\nLe transfert des modèles maxillaire est mandibulaire sur articulateur semi-adaptable:",
+        "options": [
+          "Nécessite obligatoirement l'usage d'un arc facial démontable",
+          "Nécessite obligatoirement l'usage des maquettes d'occlusion",
+          "Nécessite l'usage de la fourchette de l'arc facial",
+          "Commence toujours par le transfert du modèle supérieur en utilisant un arc facial démontable."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°20 (2023 1°EMD - Q1201\nL'arc facial:",
+        "options": [
+          "Est un instrument utilisé en clinique",
+          "Sert à transférer la position du maxillaire par rapport à la base du crâne",
+          "Est un articulateur de classe VI",
+          "Permet la reproduction des trajectoires condyliennes."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Est un instrument en forme d’arc utilisé en clinique qui sert à enregistrer la position du maxillaire par rapport à la base du crâne et à transférer cette position sur l’articulateur.\n -La reponse C : fausse l’articulateur de classe VI est l’articulateur adaptable.\n -La réponse D : fausse c’est l’articulateur qui permet la reproduction des trajectoires condyliennes."
       }
     ]
   },
   {
-    "title": "EMPREINTES",
+    "title": "Les matériaux à empreintes",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Parmi les affirmations suivantes concernant la prise d'empreinte chez l'édenté partiel, laquelle est correcte?",
+        "questionText": "N°20 (2025 1°EMD - Q427\nParmi les affirmations suivantes concernant la prise d'empreinte chez l'édenté partiel, laquelle est correcte?",
         "options": [
           "Elle nécessite des portes empreintes lisses",
           "Le matériau utilisé est du plâtre.",
@@ -3591,11 +3957,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Pour une empreinte à l'alginate chez un édenté partiel, on utilise un porte-empreinte perforé. Le matériau est l'alginate, et le traitement se fait par coulée de plâtre.",
+        "explanation": "A. Faux : lors la prise d’empreinte d’un édentement partiel ; les portes empreintes doivent etre perforées.B. Faux : le matériau utilisé est l’alginate.C. Faux : le traitement de l’empreinte se fait par la coulée au laboratoire.D. Vrai : elle nécessite des portes empreintes perforés pour édenté partiel.",
         "citations": []
       },
       {
-        "questionText": "L'empreinte préliminaire est réalisée avec :",
+        "questionText": "N°8 (2024 1°EMD - Q596\nL'empreinte préliminaire est réalisée avec :",
         "options": [
           "Un porte empreinte de série",
           "Un porte empreinte Individuel",
@@ -3606,11 +3972,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "(Aucune explication fournie dans la source)",
+        "explanation": "-Un alginate de classe B est généralement suffisant à l’obtention de moulage d’étude et/ou de moulage primaire servant à l’élaboration d’un porte empreinte individuel.-Un alginate de classe A correctement préparé assure une reproduction de details de l’ordre de 20 micrometre.-L’empreinte préliminaire permet d’enregistrer le jeu des organes périphériques.",
         "citations": []
       },
       {
-        "questionText": "L'empreinte anatomo fonctionnelle est:",
+        "questionText": "N°9 (2023 3°EMD - Q1000\nL'empreinte anatomo fonctionnelle est:",
         "options": [
           "Une empreinte statique",
           "Une empreinte préliminaire",
@@ -3623,11 +3989,11 @@ const prothesey2QuizzesY2 = [
           3,
           4
         ],
-        "explanation": "C'est une empreinte secondaire, dynamique et physiologique, qui a pour but de respecter la dualité tissulaire et d'enregistrer le jeu des organes périphériques pour une meilleure stabilisation.",
+        "explanation": "-C’est une empreinte dynamique et physiologique.\n Objectifs de l’empreinte Anatomo-Fonctionnelle :\n -Le but de cette empreinte est de respecter la différence de dépressibilité\n entre le Desmodonte (dents) et les surfaces ostèomuqueuses, respecter la\n dualité tissulaire ( donc l’appui sera harmonieusement reparti entre les dents et les cretes édentées.\n -Elle Permet d’enregistrer le jeu des organes périphériques, pour exploiter au mieux les zones qui stabilisent la prothése.",
         "citations": []
       },
       {
-        "questionText": "empreinte anatomo focntionnelle globale est une:",
+        "questionText": "N°10 (2023 3°EMD - Q1016\nempreinte anatomo focntionnelle globale est une:",
         "options": [
           "Empreinte anatomo-fonctionnelle qui fait appel à un porte-empreinte individuel",
           "Empreinte partielle de correction",
@@ -3637,11 +4003,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L'empreinte secondaire est dynamique et physiologique. Elle vise à respecter la dualité tissulaire et à enregistrer le jeu des organes périphériques pour obtenir un maître modèle fidèle.",
+        "explanation": "L’empreinte secondaire est une empreinte dynamique et physiologique qui permet d’enregistrer le libre jeu des organes paraprothétiques ; afin d’obtenir un moulage de travail fidèle ou un Maitre Modèle, qui permet de concevoir une prothèse dont l’appui sera harmonieusement réparti sur les dents et les crêtes édentées.- Objectifs de l’empreinte Anatomo-Fonctionnelle :1) Le but de cette empreinte est de respecter la différence de dépressibilité entre le Desmodonte (dents) et les surfaces m, respecter la dualité tissulaire.2) Permettre d’enregistrer le jeu des organes périphériques, pour exploiter au mieux les zones qui stabilisent la prothése.",
         "citations": []
       },
       {
-        "questionText": "L'empreinte partielle de correction:",
+        "questionText": "N°11 (2023 3°EMD - Q1047\nL'empreinte partielle de correction:",
         "options": [
           "Est une empreinte statique globale",
           "Est une empreinte statique utilisant le châssis métallique",
@@ -3651,7 +4017,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Cette technique concerne les édentations à appui mixte (Classes I, II, IV et V de grande étendue).",
+        "explanation": "Indications de l’empreinte Anatomo-Fonctionnelle globale: cette technique concerne toute les édentations à appui mixte:\n - Les édentations distales ou terminales (classes I ,II de KA).\n - les édentations intercalées de grande étendue (classe IV et V de KA).",
         "citations": []
       },
       {
@@ -3671,7 +4037,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "L'empreinte secondaire:",
+        "questionText": "N°12 (2023 1°EMD - Q1058\nL'empreinte secondaire:",
         "options": [
           "Est indiquée dans le cas d'édentement de classe I, II, et V de kennedy-Appelgate",
           "Nécessite un porte-empreinte individuel",
@@ -3682,11 +4048,11 @@ const prothesey2QuizzesY2 = [
           0,
           1
         ],
-        "explanation": "L'empreinte secondaire est plus fidèle que la préliminaire et permet l'élaboration d'un modèle de travail.",
+        "explanation": "-C’est une empreinte dynamique et physiologique.\n Objectifs de l’empreinte Anatomo-Fonctionnelle :\n -Le but de cette empreinte est de respecter la différence de dépressibilité\n entre le Desmodonte (dents) et les surfaces ostèomuqueuses, respecter la\n dualité tissulaire ( donc l’appui sera harmonieusement reparti entre les dents et les cretes édentées.\n -Elle Permet d’enregistrer le jeu des organes périphériques, pour exploiter au mieux les zones qui stabilisent la prothése.",
         "citations": []
       },
       {
-        "questionText": "La technique décrite par Applegate Mac Cracken a pour intérêt:",
+        "questionText": "N°12 (2023 3°EMD - Q1051\nLa technique décrite par Applegate Mac Cracken a pour intérêt:",
         "options": [
           "De répartir également les forces sur les dents et la muqueuse",
           "De rechercher une extension maximale des bases prothétiques sans empiéter sur le jeu des organes para prothétiques,",
@@ -3698,11 +4064,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "L'empreinte composée globale utilise un PEI et des élastomères. Le joint périphérique est enregistré, et un coffrage est réalisé avant la coulée.",
+        "explanation": "-L’empreinte composée globale est une empreinte anatomo-fonctionnelle qui fait appel à un porte-empreinte individuel. Le matériau de choix étant La famille des élastomères qui comprend les silicones, les polysulfures et les polyéthers.\n -Après correction du porte-empreinte individuel(PEI) en bouche le joint périphérique ou l’enregistrement de la limite d’action musculaire est réalisé secteur par secteur au moyen de la pâte de Kerr ou en globalité au moyen des élastomères.\n -Avant la coulée de l’empreinte et Afin depréserver le joint périphérique, un coffrage de l’empreinte est réalisé comme en Prothèse Amovible Complète.",
         "citations": []
       },
       {
-        "questionText": "Le porte empreinte individuel:",
+        "questionText": "N°13 (2023 1°EMD - Q1069\nLe porte empreinte individuel:",
         "options": [
           "Est réalisé sur un modèle issu d'une empreinte secondaire",
           "Doit être souple et ajusté pour une meilleure exploitation de la surface d'appui",
@@ -3712,11 +4078,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le porte-empreinte individuel est réalisé sur un modèle issu d'une empreinte préliminaire.",
+        "explanation": "-La réponse A : fausse le porte empreinte individuel est réalisé sur un modèle issu d’une empreinte préliminaire.",
         "citations": []
       },
       {
-        "questionText": "L'empreinte primaire est réalisée avec un :",
+        "questionText": "N°3 (2022 Résidanat - Q1256\nL'empreinte primaire est réalisée avec un : 1- Porte empreinte de série a 2- Porte empreinte individuel 3- Silicone de moyenne viscosité 4- Silicone en double mélange 5- Hydrocolloïde irréversible.",
         "options": [
           "(1,2)",
           "(1,5)",
@@ -3727,7 +4093,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'empreinte primaire est réalisée avec un porte-empreinte de série (1) et de l'alginate, qui est un hydrocolloïde irréversible (5).",
+        "explanation": "Le porte-empreinte de série est utilisé pour l'empreinte primaire (ou d'étude).Le matériau utilisé est l'alginate, qui est un hydrocolloïde irréversible (mentionné dans le cours de biomatériaux).Ainsi, les affirmations 1 et 5 sont correctes :Porte-empreinte de série: Correct, utilisé pour l'empreinte primaire.Porte-empreinte individuel: Utilisé pour l'empreinte secondaire.Silicone de moyenne viscosité: Faux, l'alginate n'est pas un silicone.Silicone en double mélange: Utilisé pour l'empreinte secondaire.",
         "citations": []
       },
       {
@@ -3746,7 +4112,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "L'empreinte anatomo-fonctionnelle globale nécessite:",
+        "questionText": "N°12 (2022 3°EMD - Q1407\nLa technique de l'empreinte anatomo-fonctionnelle globale nécessite:",
         "options": [
           "L'usage d'un porte empreinte individuel.",
           "L'usage des élastomères de synthèse.",
@@ -3759,11 +4125,11 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "L'empreinte composée globale utilise un PEI et des élastomères. Le joint périphérique est enregistré secteur par secteur (marginage) à la pâte de Kerr ou globalement avec des élastomères. Un coffrage est réalisé pour préserver le joint.",
+        "explanation": "-L’empreinte composée globale est une empreinte anatomo-fonctionnelle qui fait appel à un porte-empreinte individuel. Le matériau de choix étant La famille des élastomères qui comprend les silicones, les polysulfures et les polyéthers.\n -Après correction du porte-empreinte individuel(PEI) en bouche le joint périphérique ou l’enregistrement de la limite d’action musculaire est réalisé secteur par secteur au moyen de la pâte de Kerr ou en globalité au moyen des élastomères.\n -Avant la coulée de l’empreinte et Afin depréserver le joint périphérique, un coffrage de l’empreinte est réalisé comme en Prothèse Amovible Complète.",
         "citations": []
       },
       {
-        "questionText": "Le matériau à empreinte primaire:",
+        "questionText": "N°13 (2022 1°EMD - Q1433\nLe matériau à empreinte primaire:",
         "options": [
           "Est un hydrocolloïde réversible",
           "Est un hydrocolloïde irréversible",
@@ -3777,7 +4143,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Le porte empreinte de série:",
+        "questionText": "N°14 (2022 1°EMD - Q1448\nLe porte empreinte de série:",
         "options": [
           "Doit correspondre au matériau utilisé",
           "Ne doit pas correspondre au matériau utilisé, il est standard",
@@ -3788,11 +4154,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "Le choix du porte-empreinte de série dépend du matériau à empreinte utilisé et de la morphologie de l'arcade.",
+        "explanation": "Le choix du porte empreinte de série est en fonction du;\n  -matériau à empreinte utilisé. \n  -la morphologie de l’arcade.",
         "citations": []
       },
       {
-        "questionText": "La préparation du matériau à empreinte primaire se fait :",
+        "questionText": "N°15 (2022 1°EMD - Q1463\nLa préparation du matériau à empreinte primaire se fait :",
         "options": [
           "Par une spatulation lente ce qui permet d'écraser le matériau",
           "Par une spatulation énergique et vigoureuse",
@@ -3802,7 +4168,7 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La spatulation doit être énergique et vigoureuse. Elle peut être effectuée manuellement ou de manière automatique sous vide pour éviter les bulles.",
+        "explanation": "-La spatualtion doit etre énérgique et vigoureuse de manière à écraser le produit contre les parois du bol, elle peut etre effectuée de manière automatique sous vide avec absence quasi-totale de bulle d’air.",
         "citations": []
       },
       {
@@ -3820,7 +4186,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "L'empreinte anatomo-fonctionnelle globale est une empreinte qui:",
+        "questionText": "N°11 (2022 3°EMD - Q1401\nL'empreinte anatomo fonctionnelle globale est une empreinte qui:",
         "options": [
           "Peut être indiquée aussi bien au maxillaire qu'à la mandibule.",
           "Ne peut être indiquée qu'au maxillaire.",
@@ -3832,11 +4198,11 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Cette technique concerne toutes les édentations à appui mixte : les édentations distales (Classes I, II) et les édentations intercalées de grande étendue (Classes IV, V).",
+        "explanation": "Indications de l’empreinte Anatomo-Fonctionnelle globale: cette technique concerne toute les édentations à appui mixte:\n - Les édentations distales ou terminales (classes I ,II de KA).\n - les édentations intercalées de grande étendue (classe IV et V de KA).",
         "citations": []
       },
       {
-        "questionText": "L'empreinte anatomo-fonctionnelle de correction est une empreinte qui:",
+        "questionText": "N°13 (2022 3°EMD - Q1429\nL'empreinte anatomo-fonctionnelle de correction est une empreinte qui:",
         "options": [
           "Peut être réalisée avec un porte- empreinte individuel.",
           "Utilise comme support le châssis métallique.",
@@ -3847,17 +4213,162 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "Elle utilise le châssis métallique comme support et est exclusivement réservée aux classes I et II mandibulaires de petite et moyenne étendue. Elle n'intéresse que les crêtes édentées.",
+        "explanation": "-La réponse A : fausse elle utilise comme support le châssis métallique précédemment élaboré.\n -Elle n’intéresse que les crêtes édentées.\n -La réponse D : fausse Elles sont exclusivement réservées à l’enregistrement des classes I et II mandibulaires de petite et moyenne étendue.",
         "citations": []
+      },
+      {
+        "questionText": "N°9 (2024 1°EMD - Q622\nChoix du porte empreinte de série au maxillaire",
+        "options": [
+          "Le porte-empreinte de série doit dépasser de 2 mm la ligne de flexion du Volle dans le plan sagittal",
+          "II ne doit Le pas dépasser les fossettes palatines",
+          "La porte empreinte doit être légèrement plus grand que l'arcade",
+          "La hauteur des bords du porte empreinte doit être plus courte que celle des rebords alvéolaires"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Pour la réponse B : fausse dans le plan sagittal le bord postérieur du porte empreinte dépassera les fossettes palatines de 4 mm.\n Pour la réponse D : fausse la hauteur des bords du porte empreinte est fonction de celles de rebords alvéolaires."
+      },
+      {
+        "questionText": "N°10 (2022 3°EMD - Q1369\nL'objectif d'une empreinte secondaire en PPAC est :",
+        "options": [
+          "De respecter la différence de dépressibilité entre le desmodonte et la surface ostéomuqueuse.",
+          "De respecter la dualité tissulaire.",
+          "D'enregistrer le jeu des organes paraprothétiques;",
+          "d'obtenir un modèle de travail sur lequel sera réalisé le châssis métallique."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "L’empreinte secondaire est une empreinte dynamique et physiologique qui permet d’enregistrer le libre jeu des organes paraprothétiques ; afin d’obtenir un moulage de travail fidèle ou un Maitre Modèle, qui permet de concevoir une prothèse dont l’appui sera harmonieusement réparti sur les dents et les crêtes édentées.\n  \n - Objectifs de l’empreinte Anatomo-Fonctionnelle :\n 1) Le but de cette empreinte est de respecter la différence de dépressibilité entre le Desmodonte (dents) et les surfaces m, respecter la dualité tissulaire.\n 2) Permettre d’enregistrer le jeu des organes périphériques, pour exploiter au mieux les zones qui stabilisent la prothése."
+      },
+      {
+        "questionText": "N°1 (2021 1°EMD - Q1570\nLes matériaux non élastiques regroupent",
+        "options": [
+          "Les plâtres",
+          "Les hydro colloïdes réversibles",
+          "Les hydro colloïdes irréversibles",
+          "Les compositions thermoplastiques"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "_ A et D : SONT JUSTES, les matériaux non élastique: les plâtres , les compositions thermoplastiques et les pâtes oxyde de zinc-eugénol"
+      },
+      {
+        "questionText": "N°2 (2021 1°EMD - Q1579\nLes variations dimensionnelles liées à la prise du matériau se caractérisent:",
+        "options": [
+          "Pour le plâtre par une expansion de prise",
+          "Pour les élastomères par une contraction.",
+          "Pour les Hydro colloïdes par une stabilité",
+          "Pour les compositions thermoplastiques les variations sont d'origine hydrique."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "_ C : C’EST FAUX, il y’aura donc une variation dimensionnelle du matériaux par pertes hydrique ou inversement un phénomène d’imbibition \n  \n _ D : C’EST FAUX, pour les compositions thermoplastiques les variations sont d’origine thermique"
+      },
+      {
+        "questionText": "N°2 (2025 1°EMD - Q76\nL'élasticité par définition est:",
+        "options": [
+          "La résistance á la force, aux chocs et au toucher.",
+          "L'aptitude du matériau à revenir à son état initial après la céssation de la force appliquée.",
+          "L'aptitude du matériau à conserver sa forme après la prise du matériau.",
+          "La propriété d'un liquide qui détermine à quel point il est épais ou fluide."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A. Faux : cela définit plutôt la résistance mécanique aux chocs (la dureté).B. Vrai : c’est l’aptitude d’un matériau à reprendre sa forme initiale après suppression de la force.C. Faux : cela définit plutôt la plasiticité.D. Faux : cela définit plutôt la viscosité d’un liquide."
+      },
+      {
+        "questionText": "N°1 (2024 1°EMD - Q480\nLe plâtre de type 1 est un",
+        "options": [
+          "Un matériau élastique",
+          "Un matériau de coulée",
+          "Un matériau inélastique pour la prise d'empreinte préliminaire",
+          "Utilisé pour la prise d'empreinte primaire chez tous les patients."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "_ A et D : sont juste, les matériaux à empreinte non élastique : les plâtres, les compositions thermoplastiques et les pates oxyde de zinc-eugénol\n  \n _ B et C : sont fausses , les matériaux à empreinte élastiques : les hydro colloïdes réversible , irréversible et les élastomères"
+      },
+      {
+        "questionText": "N°2 (2024 1°EMD - Q485\nLe temps de prise du plâtre est augmenté si",
+        "options": [
+          "L'eau utilisée est froide ;",
+          "La spatulation est rapide :",
+          "Le rapport eau/poudre est augmenté",
+          "Utilisation de retardateurs chimiques."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "_ A : c’est juste, le plâtre se caractérise par une expansion de prise \n  \n _ B : c’est juste, les élastomères se caractérisent par une réaction de polymérisation de polymères linéaires qui forment un réseau tridimensionnel (liaison covalente) . Cette réaction s’accompagne d’une contraction \n  \n _C : c’est faux, les colloïdes passent d’un état viscoplastique à un état élastique par gélification \n  \n _D : c’est faux , les compositions thermoplastique durcissent par un abaissement de la température entrainant une diminution de la distance intermoléculaire ,il en résulte une contraction du matériau"
+      },
+      {
+        "questionText": "N°18 (2023 1°EMD - Q1172\nLes matériaux à empreinte non élastiques regroupent:",
+        "options": [
+          "L'hémi hydrate β que l’on nomme plâtre de Paris",
+          "Les compositions thermoplastiques qui sont plastiques et fragiles",
+          "La pâte à oxyde de zinc eugénol, très utilisée en prothèse conjointe;",
+          "Les cires à empreinte qui sont des hydrocarbures."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "_ les matériaux non élastique regroupent : les plâtres, les composition thermoplastique et les pâtes oxyde de zinc-eugénol"
+      },
+      {
+        "questionText": "N°19 (2023 1°EMD - Q1186\ntes matériaux à empreinte élastiques regroupent",
+        "options": [
+          "Les alginates qui sont de l'Hydra colloïdes réversibles;",
+          "Les polysulfures, très utilisés en prothèse totale:",
+          "Les polyéthers disponibles en une seule viscosité;",
+          "Les polysiloxanes indiqués pour tes empreintes d'études."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "_ les matériaux élastique regroupent ;\n  les hydrocolloïdes réversible et irréversible \n les élastomères= les polysulfures ; les polyéthers ; les diméthyl-polysiloxanes et les vinyles-polusiloxanes"
+      },
+      {
+        "questionText": "N°4 (2022 1°EMD - Q1265\nLe temps de travail d'un matériau à empreinte",
+        "options": [
+          "Se termine quand celui-ci ne puisse plus être utilisé pour prendre l'empreinte",
+          "Est caractérisé par la diminution de la viscosité du matériau",
+          "Sa valeur est arbitraire",
+          "Est adapté à la technique de prise d'empreinte voulue."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "_ A : C’EST JUSTE, c’est la période qui commence au début du mélange des composants de ce matériau, jusqu’à ce que celui-ci ne puisse plus être utilisé pour prendre l’empreinte \n  \n _ B : C’EST FAUX, il est caractérisé par l’accroissement de la viscosité\n  \n _ C : C’EST JUSTE, dans tous les cas sa valeur est arbitraire"
+      },
+      {
+        "questionText": "N°5 (2022 1°EMD - Q1289\nLes Matériaux élastiques:",
+        "options": [
+          "Peuvent présenter une récupération élastique après une déformation sous contraintes;",
+          "Présentent un temps de prise très long;",
+          "les polysulfures et les polyéthers en font partis,",
+          "Sont constitués de composition thermoplastique."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "_ A : C’EST JUSTE, sont capable de se déformer et de subir des contraintes après leur prise et de présenter une récupération élastique satisfaisante \n  \n _ C : C’EST JUSTE, ils comprennent : les hydrocolloïdes et les élastomères"
       }
     ]
   },
   {
-    "title": "TRACE DU CHASSIS DANS LES CAS D'EDENTEMENTS DISTAUX",
+    "title": "TRACE DU CHASSIS DANS LES CAS D'EDENTEMENTS DISTAU",
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "L'objectif principal de l'examen des structures anatomiques en rapport avec la PPAM est de :",
+        "questionText": "N°18 (2025 2°EMD - Q394\nL'objectif principal de l'examen des structures anatomiques en rapport avec la PPAM est de :",
         "options": [
           "Determiner la qualité de l'email",
           "Évaluer l'état des tissus gingivaux",
@@ -3867,11 +4378,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le problème de la dualité tissulaire est posé pour les classes I et II, mais pas pour les classes III et VI où l'appui est dentaire.",
+        "explanation": "A. Vrai : le problème de dualité tissulaire est posé pour la classe II.B. Faux : il n’est pas pose pour la classe III car l’appui est essentiellement dentaire.C. Faux : ill n’est pas pose pour la classe VI car l’appui est purement dentaire.D. Vrai : il est aussi posé pour la classe I.",
         "citations": []
       },
       {
-        "questionText": "La muqueuse buccale :",
+        "questionText": "N°19 (2025 2°EMD - Q413\nLa muqueuse buccale :",
         "options": [
           "Est un élément anatomique subissant indirectement l'influence de la PPAM",
           "Tapisse la totalité de la cavité buccale",
@@ -3882,11 +4393,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La dualité tissulaire découle de la différence de comportement biomécanique entre le desmodonte et la fibromuqueuse.",
+        "explanation": "A. Vrai : le problème de dualité tissulaire découle de la difference du comportement biomécanique entre de la desmodonte et la fibromuqueuse.\n B. Faux : les crochets n’ont aucun role dans le principe de la dualité tissulaire.\n C. Faux : l’ATM et les muscles masticateurs n’ont aucun roles sur le principe de dualité tissulaire.\n D. Faux : la selle prothétique aussi n’a aucun role.",
         "citations": []
       },
       {
-        "questionText": "Les structures anatomiques périphériques qui ont un rapport avec l'extrados de la PPAM maxillaire sont :",
+        "questionText": "N°20 (2025 2°EMD - Q423\nLes structures anatomiques périphériques qui ont un rapport avec l'extrados de la PPAM maxillaire sont :",
         "options": [
           "Les joues",
           "La langue",
@@ -3897,11 +4408,11 @@ const prothesey2QuizzesY2 = [
           0,
           1
         ],
-        "explanation": "Pour la classe V étendue, l'appui est mixte (dento-ostéomuqueux).",
+        "explanation": "A. Faux : pour la classe V étendue l’appui sera mixte ni purement ostéomuqeux.B. Faux : ni purement dentaire.C. Vrai : mais plutot mixte dento-ostéomuqueux.D. Faux : réponse fausse.",
         "citations": []
       },
       {
-        "questionText": "Les édentements distaux:",
+        "questionText": "N°1 (2023 3°EMD - Q862\nLes édentements distaux:",
         "options": [
           "Sont à appui purement dentaire",
           "Sont à appui mixte ostéo-muqueux",
@@ -3913,11 +4424,11 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Dans les édentements distaux (classe I et II), les selles en extension libre sollicitent à la fois les dents supports et la fibromuqueuse, ce qui crée la notion de dualité tissulaire.",
+        "explanation": "la dualité tissulaire :Dans les édentements distaux (classe I et II), les selles en extension libresollicitent deux types d’éléments : les dents supports de crochets et lafibromuqueuse (portion de crête édentée). Ces deux éléments présentent des comportements différents.-Le déplacement des selles en extension fait référence au mouvements de Tabet.",
         "citations": []
       },
       {
-        "questionText": "La dualité tissulaire :",
+        "questionText": "N°2 (2023 3°EMD - Q874\nLa dualité tissulaire :",
         "options": [
           "Le desmodonte présente une récupération lente",
           "Le desmodonte présente une récupération immédiate",
@@ -3929,7 +4440,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Les axes de rotation sont les lignes qui passent par les dents bordant l'édentement, déterminées par l'emplacement des appuis occlusaux.",
+        "explanation": "Les axes de rotation :\n - Sont les lignes qui passent par les dents bordant l’édentement.\n - Sont déterminés par l’emplacement des appuis dentaires\n (occlusaux).\n Surface de sustentation : les lignes passant par les dents bordant un\n édentement forment un polygone appelé : surface ou aire de sustentation.\n -Càd que les axes de rotation sont les lignes eux memes qui passent par les dents bordant l’édentement alors que la surface de sustentation est la surface formée par ces lignes (les axes de rotation).",
         "citations": []
       },
       {
@@ -3949,7 +4460,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Le tracé idéal des édentements distaux:",
+        "questionText": "N°4 (2023 3°EMD - Q907\nLe tracé idéal des édentements distaux:",
         "options": [
           "Un crochet Nally-Martinet du côté édenté et un Bonwill du côté denté pour la classe II",
           "La connexion principale est de faible étendue",
@@ -3959,11 +4470,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Pour la classe I, l'appui est mixte. Les appuis occlusaux indirects ne sont pas obligatoires au maxillaire. On utilise des crochets comme le Nally Martinet.",
+        "explanation": "-C’est un édentement distal bilatéral à appui mixte dento-ostéo-muqueux.\n -Appuis occlusaux indirects : leurs présence n’est pas obligatoire\n vu la surface d’appui ; mais peuvent être rajoutés.\n -Crochets : crochet Nally Martinet sur les dents bordant\n l’édentement, en cas de canines qui bordent l’édentement : crochet RPI ou les systèmes de ROACH et barre cingulaire au niveau des dents restantes.",
         "citations": []
       },
       {
-        "questionText": "Dans le Tracé type des édentements de classe III de K.A:",
+        "questionText": "N°5 (2023 3°EMD - Q939\nDans le Tracé type des édentements de classe III de K.A:",
         "options": [
           "Nous devons utiliser une double barre linguale à l'arcade mandibulaire.",
           "Nous utilisons une plaque palatine évidée comme connexion principale à l'arcade maxillaire,",
@@ -3978,7 +4489,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Dans le Trace type des édentements de classe IV de K.A:",
+        "questionText": "N°6 (2023 3°EMD - Q953\nDans le Trace type des édentements de classe IV de K.A:",
         "options": [
           "L'appui est essentiellement ostéo-muqueux.",
           "Il faut pendre des ancrages aussi postérieurs que possible pour assurer l'équilibre et la stabilité de la prothèse.",
@@ -3989,11 +4500,11 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "On utilise des crochets à liaison rigide (deux Ackers sur les dents bordant l'édentement et deux Bonwill sur les dents postérieures). La connexion principale au maxillaire est une plaque palatine pleine évidée en son centre.",
+        "explanation": "-Les crochets utilisés sont à liaison rigide; deux crochets Ackers sur les dents bordant l’édentement et deux crochets Bonwill sur les dents postérieures.\n -Connexion secondaire : reliant les crochets Ackers à la selle prothétique antérieure et les crochets Bonwill à la connexion principale.\n -La connexion principale est une plaque palatine pleine évidée en son centre au maxillaire.",
         "citations": []
       },
       {
-        "questionText": "Dans le Tracé type des édentements de classe V maxillaire de K.A:",
+        "questionText": "N°7 (2023 3°EMD - Q962\nDans le Tracé type des édentements de classe V maxillaire de K.A:",
         "options": [
           "Nous sommes en présence d'un appui mixte, dento-ostéomuqueux.",
           "La connexion principale est toujours une plaque palatine évidée.",
@@ -4004,11 +4515,11 @@ const prothesey2QuizzesY2 = [
           0,
           2
         ],
-        "explanation": "La problématique de la classe V est d'ordre esthétique, fonctionnel (occlusal) et biomécanique (dualité tissulaire).",
+        "explanation": "Classe V de Kennedy /Applegate: \n  La problématique de la classe V par la perte d’au moins une canine est d’ordre :\n  -Esthétique\n  -Fonctionnel (occlusal)\n  -Biomécanique (dualité tissulaire)",
         "citations": []
       },
       {
-        "questionText": "Dans le Tracé type des édentements de classe VI maxillaire de K.A:",
+        "questionText": "N°8 (2023 3°EMD - Q988\nDans le Tracé type des édentements de classe VI maxillaire de K.A:",
         "options": [
           "Il faut utiliser un crochet double de BONWILL du côté opposé à l'édentation.",
           "Il suffit de mettre une barre médiane si l'édentement est peu étendu",
@@ -4019,7 +4530,7 @@ const prothesey2QuizzesY2 = [
           0,
           1
         ],
-        "explanation": "L'appui est strictement dentaire. La solution de choix est la prothèse conjointe. La connexion principale au maxillaire est une plaque palatine étroite.",
+        "explanation": "- L’appui est strictement dentaire.\n - La solution optimale (de choix) est la prothèse conjointe.\n -La connexion principale au maxillaire est une plaque palatine étroite.",
         "citations": []
       },
       {
@@ -4039,7 +4550,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Les axes de rotation sont:",
+        "questionText": "N°2 (2022 3°EMD - Q1242\nLes axes de rotation sont:",
         "options": [
           "Des lignes qui passent par toutes les dents présentes sur l'arcade",
           "Des lignes qui passent par les dents bordant l'édentement",
@@ -4049,11 +4560,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les axes de rotation sont les lignes qui passent par les dents bordant l'édentement et sont déterminés par l'emplacement des appuis occlusaux. L'ensemble de ces lignes forme la surface de sustentation.",
+        "explanation": "Les axes de rotation :\n - Sont les lignes qui passent par les dents bordant l’édentement.\n - Sont déterminés par l’emplacement des appuis dentaires\n (occlusaux).\n Surface de sustentation : les lignes passant par les dents bordant un\n édentement forment un polygone appelé : surface ou aire de sustentation.\n -Càd que les axes de rotation sont les lignes eux memes qui passent par les dents bordant l’édentement alors que la surface de sustentation est la surface formée par ces lignes (les axes de rotation).",
         "citations": []
       },
       {
-        "questionText": "La classe II de Kennedy modifiée par Applegate à la mandibule:",
+        "questionText": "N°3 (2022 3°EMD - Q1263\nLa classe II de Kennedy modifiée par Applegate à la mandibule:",
         "options": [
           "Est un édentement encastré unilatéral",
           "Est un édentement en extension unilatéral",
@@ -4063,11 +4574,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La présence d'appuis occlusaux indirects est indispensable à la mandibule. La connexion principale est une barre linguale ou un bandeau.",
+        "explanation": "-Appuis occlusaux indirects : leurs présence n’est pas obligatoire\n vu la surface d’appui ; mais peuvent être rajoutés au maxillaire.\n -Appuis occlusaux indirects : leurs présence est indispensable à la mandibule.\n -La connexion principale : barre linguale ou bandeau.",
         "citations": []
       },
       {
-        "questionText": "La classe I de Kennedy modifiée par Applegate au maxillaire:",
+        "questionText": "N°4 (2022 3°EMD - Q1275\nLa classe I de Kennedy modifiée par Applegate au maxillaire:",
         "options": [
           "Est un édentement à appui ostéo muqueux",
           "Est un édentement à appui strictement dentaire",
@@ -4077,11 +4588,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "C'est un édentement distal bilatéral à appui mixte dento-ostéo-muqueux. La présence d'appuis occlusaux indirects n'est pas obligatoire au maxillaire.",
+        "explanation": "-C’est un édentement distal bilatéral à appui mixte dento-ostéo-muqueux.\n -Appuis occlusaux indirects : leurs présence n’est pas obligatoire\n vu la surface d’appui ; mais peuvent être rajoutés.\n -Crochets : crochet Nally Martinet sur les dents bordant\n l’édentement, en cas de canines qui bordent l’édentement : crochet RPI ou les systèmes de ROACH et barre cingulaire au niveau des dents restantes.",
         "citations": []
       },
       {
-        "questionText": "L'édentement encastré de classe III de KENNEDY/APPLEGATE:",
+        "questionText": "N°5 (2022 3°EMD - Q1287\nL'édentement encastré de classe III de KENNEDY/APPLEGATE:",
         "options": [
           "Est un édentement à appui mixte",
           "Présente des conditions d'équilibre défavorables",
@@ -4091,11 +4602,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "L'appui est strictement dentaire, les conditions d'équilibre sont favorables, et il nécessite des crochets à liaison rigide.",
+        "explanation": "-L’appui est strictement dentaire.\n -Les conditions d’équilibre sont favorables.\n -Nécessite des crochets à liaison rigide (Ackers, Anneau, Bonwill..)",
         "citations": []
       },
       {
-        "questionText": "La problématique de la classe V de KENNEDY/APPLEGATE:",
+        "questionText": "N°7 (2022 3°EMD - Q1328\nLa problématique de la classe V de KENNEDY/APPLEGATE:",
         "options": [
           "Est d'ordre esthétique",
           "Est d'ordre fonctionnel (occlusal)",
@@ -4107,11 +4618,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La problématique de la classe V due à la perte d'une canine est d'ordre esthétique, fonctionnel (occlusal), et biomécanique (dualité tissulaire).",
+        "explanation": "Classe V de Kennedy /Applegate: \n  La problématique de la classe V par la perte d’au moins une canine est d’ordre :\n  -Esthétique\n  -Fonctionnel (occlusal)\n  -Biomécanique (dualité tissulaire)",
         "citations": []
       },
       {
-        "questionText": "L'édentement maxillaire de classe VI de KENNEDY/APPLEGATE:",
+        "questionText": "N°8 (2022 3°EMD - Q1343\nL'édentement maxillaire de classe VI de KENNEDY/APPLEGATE:",
         "options": [
           "L'appui est mixte (dento ostéo-muqueux)",
           "Le traitement idéal est la prothèse conjointe",
@@ -4121,11 +4632,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'appui est strictement dentaire. La solution optimale est la prothèse conjointe. La connexion principale est une plaque palatine étroite.",
+        "explanation": "- L’appui est strictement dentaire.\n - La solution optimale (de choix) est la prothèse conjointe.\n -La connexion principale au maxillaire est une plaque palatine étroite.",
         "citations": []
       },
       {
-        "questionText": "Le tracé type du châssis dans le cas d'un édentement de classe IV (KENNEDY/APPLEGATE) à la mandibule",
+        "questionText": "N°6 (2022 3°EMD - Q1309\nLe tracé type du châssis dans le cas d'un édentement de classe IV (KENNEDY/APPLEGATE) à la mandibule",
         "options": [
           "La connexion principale est une barre linguale ou bandeau en fonction des conditions cliniques.",
           "Les crochets utilisés sont des rupteurs de force.",
@@ -4135,11 +4646,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "On utilise des crochets à liaison rigide (Ackers, Bonwill). La connexion principale est une plaque palatine pleine évidée au centre au maxillaire.",
+        "explanation": "-Les crochets utilisés sont à liaison rigide; deux crochets Ackers sur les dents bordant l’édentement et deux crochets Bonwill sur les dents postérieures.\n -Connexion secondaire : reliant les crochets Ackers à la selle prothétique antérieure et les crochets Bonwill à la connexion principale.\n -La connexion principale est une plaque palatine pleine évidée en son centre au maxillaire.",
         "citations": []
       },
       {
-        "questionText": "Pour réussir le tracé prospectif du châssis métallique il faut :",
+        "questionText": "N°5 (2021 3°EMD - Q1630\nPour réussir le tracé prospectif du châssis métallique il faut :",
         "options": [
           "Tracer trois lignes guides sur le modèle préalablement taillé.",
           "Toujours tracer une ligne courbe régulière et parallèle au collet des dents restantes.",
@@ -4149,11 +4660,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La première option décrit le tracé de 3 lignes guides, tandis que la seconde décrit le décolletage de Housset.",
+        "explanation": "A- Tracé des 3 lignes guides:\n  -Un axe sagittal median.\n  -Deux axes, tracé parallèlement aux faces latérales du modèle.\n B- C’est le décolletage de Housset.",
         "citations": []
       },
       {
-        "questionText": "La finition de la cire concerne:",
+        "questionText": "N°5 (2021 2°EMD - Q1633\nLa finition de la cire concerne:",
         "options": [
           "La ligne des collets qui doit être tracée en harmonie avec celle des dents naturelles",
           "La fausse gencive qui doit être sculpté",
@@ -4165,11 +4676,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "La ligne des collets doit être harmonieuse, la fausse gencive sculptée (feston gingival), et la cire doit être lisse, sans traces sur les dents artificielles.",
+        "explanation": "Finition de la cire:\n -La ligne des collets doit être tracée à l’aide d’une spatule à cire et doit se faire en harmonie avec la ligne des collets des dents naturelles.\n -Le feston gingival est crée ainsi la fausse gencive doit être sculptée.\n -Il faut s’assurer qu’il n’existe pas de traces de cire sur les dents artificielles.\n -La cire doit être lisse et cela est assuré par un passage bref et rapide de cette dernière sur la flamme sans la faire fondre.",
         "citations": []
       },
       {
-        "questionText": "En prothèse partielle amovible métallique:",
+        "questionText": "N°6 (2021 2°EMD - Q1654\nEn prothèse partielle amovible métallique:",
         "options": [
           "Les parties saillantes des surfaces d'appui doivent être déchargées",
           "Le décolletage n'est pas systématique",
@@ -4179,11 +4690,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Les parties saillantes et la gencive marginale doivent être déchargées. Le décolletage est systématique et doit être de 5 mm au maxillaire et 4 mm à la mandibule.",
+        "explanation": "-Les zones de la surface d’appui qui justifie une attention particulière sont la gencive marginale et les parties dures saillantes, ces zones là\n doivent être déchargées car aucune compression à leur niveau n'est tolérée.\n  \n -Le décolletage de Housset; les contours de la prothèse doivent systématiquement dégager l'anneau gingival dans la plus large mesure au niveau des dents supports et autour des dents voisines.\n -Housset recommande un décolletage minimum de : 5 mm à l’arcade\n Supérieure 4 mm à l'arcade inférieure.",
         "citations": []
       },
       {
-        "questionText": "Le trace type pour les édentements de classe mandibulaire de Kennedy Applegate nécessite:",
+        "questionText": "N°6 (2021 3°EMD - Q1646\nLe trace type pour les édentements de classe mandibulaire de Kennedy Applegate nécessite:",
         "options": [
           "Toujours un crochet Nally martinet des deux côtés de l'arcade.",
           "Toujours la mise en place d'appuis occlusaux indirects",
@@ -4195,7 +4706,7 @@ const prothesey2QuizzesY2 = [
           2,
           3
         ],
-        "explanation": "Les appuis occlusaux indirects sont obligatoires à la mandibule. Une double barre linguale peut être utilisée si le nombre de dents à remplacer est important ou en cas de mobilité dentaire.",
+        "explanation": "-Les appuis occlusaux indirects sont situés à distance des appuis occlusaux directs et les barres cingulaires. Ils sont obligatoires à la mandibule et d’autant plus efficaces qu’ils seront éloignés des appuis occlusaux directs.\n  \n -la mise en place d’une double barre linguale si le nombre des dents à remplacer est important ou dans le cas de la mobilité dentaire pour maintenir dans une position stable les dents sur lesquelles elle repose.",
         "citations": []
       },
       {
@@ -4214,7 +4725,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Le trace type pour les édentements de Classe Il de Kennedy-Applegate maxillaire nécessite:",
+        "questionText": "N°7 (2021 3°EMD - Q1657\nLe trace type pour les édentements de Classe Il de Kennedy-Applegate maxillaire nécessite:",
         "options": [
           "Toujours La mise en place d'une plaque palatine pleine",
           "Deux crochets Nally martinet des deux côtés de l’arcade",
@@ -4242,7 +4753,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Le traitement type pour les édentements de la classe I mod 1 de Kennedy-Applegate",
+        "questionText": "N°8 (2021 3°EMD - Q1673\nLe traitement type pour les édentements de la classe I mod 1 de Kennedy-Applegate",
         "options": [
           "Se fera exclusivement par une prothèse partielle amovible à châssis métallique",
           "Peut-être par une restauration fixée pour l’édentation intercalée.",
@@ -4253,7 +4764,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "Si la modification est de faible étendue, on peut la traiter par prothèse fixée, puis l'édentement distal par un châssis. Si la modification est de grande étendue, on préconise un châssis pour l'ensemble.",
+        "explanation": "-La réponse A : fausse si la modification est de grande étendue préconiser un chassis selon les principes biomécaniques, par contre si la modification est de faible étendue on fait le traitement de la modification par la prothèse fixée ensuite traitement de l’édentement distal par le chassis de la classe I.",
         "citations": []
       },
       {
@@ -4272,7 +4783,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "Pour un édentement de classe IV de Kennedy-Applegate de faible étendue avec crête rectiligne:",
+        "questionText": "N°10 (2021 3°EMD - Q1706\nPour un édentement de classe IV de Kennedy-Applegate de faible étendue avec crête rectiligne:",
         "options": [
           "On tient compte de la différence de compressibilité entre la fibromuqueuse et le desmodonte des dents restantes",
           "Seuls les mouvements de translation peuvent engendrer le déséquilibre de la prothèse",
@@ -4283,11 +4794,11 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "L'appui est essentiellement dentaire, donc la différence de compressibilité n'est pas à prendre en compte, et seuls des mouvements de translation peuvent causer un déséquilibre. La classe IV n'admet pas de modification.",
+        "explanation": "-La réponse A : fausse L’appui de la PAP est essentiellement dentaire. Dans la mesure où la crête est rectiligne la différence de compressibilité entre la fibromuqueuse et le desmodonte des dents restantes n’est pas à prendre en compte. et on peut considérer que seuls des mouvements de translation peuvent engendrer le déséquilibre de la prothèse.\n -L'équilibre de la prothèse dentaire est assuré par l'obtention d'une force résistante supérieure à la force active. En d'autres termes, pour qu'une prothèse dentaire soit stable et bien en place, les forces de rétention (ou résistantes) doivent être supérieures aux forces de déplacement (ou actives) qui tendent à déplacer ou à déloger la prothèse.\n -La réponse D : fausse la classe IV n’admet pas de modification.",
         "citations": []
       },
       {
-        "questionText": "La connexion principale au maxillaire:",
+        "questionText": "N°10 (2021 2°EMD - Q1709\nLa connexion principale au maxillaire:",
         "options": [
           "Est aussi appelée armature métallique",
           "Elle doit être asymétrique",
@@ -4298,11 +4809,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "Elle doit être symétrique et est utilisée en prothèse amovible à châssis métallique.",
+        "explanation": "-La réponse B : fausse elle doit etre symétrique.\n -La réponse C : fausse elle est utilisée en prothèse amovible à chassis métallique.\n  \n -Le décolletage doit etre réspecté pour préserver les surfaces d’appui et le parodonte.",
         "citations": []
       },
       {
-        "questionText": "pour la classe V de Kennedy Applegate le polygone de sustentation se trouve perturbé:",
+        "questionText": "N°11 (2021 3°EMD - Q1724\npour la classe V de Kennedy Applegate le polygone de sustentation se trouve perturbé:",
         "options": [
           "Par l'absence de la prémolaire",
           "Par l'absence du crochet sur la latérale",
@@ -4313,11 +4824,11 @@ const prothesey2QuizzesY2 = [
           1,
           3
         ],
-        "explanation": "On considère cet édentement en extension mésiale.",
+        "explanation": "-La réponse C : fausse on considère cet édentement en extension mésiale.",
         "citations": []
       },
       {
-        "questionText": "le bandeau lingual:",
+        "questionText": "N°11 (2021 2°EMD - Q1727\nle bandeau lingual:",
         "options": [
           "Est indiqué lorsque la distance entre le cingulum des dents et l'insertion du frein lingual est supérieur à 7mm.",
           "Son intrados est espacé de 0,5 mm de la gencive marginale et de la table interne.",
@@ -4327,8 +4838,47 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Il est indiqué lorsque la distance entre le cingulum et le frein lingual est inférieure à 7mm. C'est une connexion principale utilisée à la mandibule.",
+        "explanation": "-La réponse A : fausse Il est indiqué lorsque la distance entre le cingulum des dents et l’insertion du frein lingual est inférieure à 7mm.\n -La réponse C : fausse utilisé à la mandibule.\n -La réponse D : fausse c’est une connexion principqle.",
         "citations": []
+      },
+      {
+        "questionText": "N°9 (2021 3°EMD - Q1691\nles édentements intercalés de Kennedy-Applegate:",
+        "options": [
+          "Concernent les classes I, III, V, IV",
+          "Concernent les classes III, IV, V, et VI",
+          "Ont toutes un appui strictement dentaire",
+          "Ont un appui mixte pour les classes IV étendue et V."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°12 (2024 2°EMD - Q679\nLe recouvrement ou l'over –bite :",
+        "options": [
+          "Est mesure dans le sens vertical",
+          "Est mesuré dans le sens sagittal",
+          "Concerne les dents antérieures",
+          "Sa valeur moyenne est de 2mm"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Classe I de Kennedy/Applegate inférieure:- Connexion principale :en fonction des conditions cliniques: barre linguale , bandeau lingual ou entretoise cingulaire.La réponse B :fausse les crochets utilisés sont des crochets rupteurs de force (semi rigide).- Connexion secondaire :semi rigide mesiales reliant le crochet à la connexion principale, laissant par voie de conséquence un libre jeu de la selle.- Appuis occlusaux indirectes sont indispensables, du fait de la faible surface de sustentation."
+      },
+      {
+        "questionText": "N°14 (2024 2°EMD - Q712\nL'articulateur est de type Arcon, lorsque:",
+        "options": [
+          "Les boules condylaires sont solidaires à la branche inférieure de l'articulateur.",
+          "Les boules condylaires sont solidaires à la branche supérieure de l'articulateur.",
+          "Les déplacements condyliens sont rectilignes.",
+          "Les déplacements condyliens sont curvilignes."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La réponse C : fausse il existe des cas d’édentement encastrés où le problème de dualitée tissulaire ne se pose pas."
       }
     ]
   },
@@ -4337,7 +4887,7 @@ const prothesey2QuizzesY2 = [
     "subject": "prothese-y2",
     "questions": [
       {
-        "questionText": "Le crochet Ackers:",
+        "questionText": "N°12 (2021 2°EMD - Q1753\nLe crochet Ackers:",
         "options": [
           "Présente un appui occlusal et une conjonction secondaire du côté de l'édentement",
           "Est indiqué dans les édentements de classe I et II de KENNEDY APPLEGATE",
@@ -4348,11 +4898,11 @@ const prothesey2QuizzesY2 = [
           0,
           3
         ],
-        "explanation": "Il est indiqué dans les édentements intercalaires.",
+        "explanation": "-La réponse B : fausse Il est indiqué dans les édentements intercallaires.",
         "citations": []
       },
       {
-        "questionText": "Crochet Nally Martinet:",
+        "questionText": "N°13 (2021 2°EMD - Q1772\nCrochet Nally Martinet:",
         "options": [
           "A une connexion secondaire mésiale et un appui occlusal direct mésial",
           "Est indiqué dans les édentements intercalés",
@@ -4362,11 +4912,11 @@ const prothesey2QuizzesY2 = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Il est indiqué dans les classes I et II sur les canines ou les prémolaires.",
+        "explanation": "-La réponse B : fausse ll est indiqué dans les classes I et les ciasses II sur les canines ou les prémolaires.",
         "citations": []
       },
       {
-        "questionText": "les crochets à Liaison Rigide sont des crochets:",
+        "questionText": "N°14 (2021 2°EMD - Q1785\nles crochets à Liaison Rigide sont des crochets:",
         "options": [
           "Reliés directement à la selle par une jonction indéformable.",
           "Indiqués pour les édentements encastrés.",
@@ -4382,7 +4932,7 @@ const prothesey2QuizzesY2 = [
         "citations": []
       },
       {
-        "questionText": "les crochets à Liaison semi-rigide sont des crochets",
+        "questionText": "N°15 (2021 2°EMD - Q1793\nles crochets à Liaison semi-rigide sont des crochets",
         "options": [
           "Indiqués pour les édentements de classe I et II",
           "A connexion secondaire reliés directement au châssis prothétique.",
@@ -4394,7 +4944,7 @@ const prothesey2QuizzesY2 = [
           1,
           2
         ],
-        "explanation": "Les crochets à liaison semi-rigide permettent de respecter la dualité tissulaire.",
+        "explanation": "-La réponse D : fausse les crochets a liaison semi rigide permettent de respecter la dualité tissulaire.",
         "citations": []
       }
     ]
@@ -5230,6 +5780,77 @@ const prothesey2QuizzesY2 = [
           1
         ],
         "explanation": "Le modèle de travail en plâtre ne supporte pas les hautes températures. On en fait donc une copie (duplicata) en matériau réfractaire (qui résiste à la chaleur). C'est sur ce duplicata que la maquette en cire est sculptée, puis l'ensemble (duplicata + maquette) est mis en cylindre et chauffé pour la coulée du métal."
+      }
+    ]
+  },
+  {
+    "title": "Variations morphologique des formes des dents",
+    "subject": "prothese-y2",
+    "questions": [
+      {
+        "questionText": "N°1 (2025 2°EMD - Q60\nQuelle est la (quelles sont les) principale(s) caractéristique(s) d'une dent géminée ?",
+        "options": [
+          "Une cavité pulpaire simple",
+          "Deux racines distinctes accoles",
+          "Une fusion de deux germes dentaires",
+          "Une encoche sur le bord libre"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "B- Les dents géminées ont en général une seule racine et une seule cavité pulpaire.→ Deux racines indiqueraient une fusion et non une gémination.C- La gémination résulte du dédoublement d’un seul germe, pas de deux.→ La fusion, en revanche, implique bien deux germes dentaires."
+      },
+      {
+        "questionText": "N°2 (2025 2°EMD - Q69\nQuelle est la caractéristique de la microdontie ?",
+        "options": [
+          "Un volume dentaire supérieur à la moyenne",
+          "La présence de diastèmes interdentaires",
+          "Une augmentation du nombre de racines",
+          "Elle se manifeste par des malpositions dentaires"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A- Un volume supérieur correspond à une macrodontie, pas à une microdontie.→ La microdontie désigne une dent plus petite que la normale.C-La microdontie n’a aucun rapport avec le nombre de racines.→ C’est une anomalie de taille coronaire uniquement.D-Cette description concerne des incisives en pelle ou anomalies de forme.→ La microdontie se définit par la taille, pas la forme."
+      },
+      {
+        "questionText": "N°3 (2025 2°EMD - Q85\nQuelle est la différence principale entre la gémination et la fusion dentaire ?",
+        "options": [
+          "La gémination concerne un seul germe dentaire, tandis que la fusion implique deux germes",
+          "La fusion concerne uniquement les dents primaires",
+          "Dans la gémination, il y a deux cavités pulpaires distinctes",
+          "La fusion se produit uniquement entre dents surnuméraires"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "B- La fusion peut toucher aussi bien les dents temporaires que permanentes.→ Elle est plus fréquente sur les dents temporaires, mais pas exclusive.C- Dans une gémination, il y a une seule cavité pulpaire, car un seul germe.→ Deux cavités se retrouvent dans une fusion de deux dents.D- Elle peut se produire entre deux dents normales, ou une normale et une surnuméraire.→ Ce n’est pas limité aux dents surnuméraires."
+      },
+      {
+        "questionText": "N°4 (2025 2°EMD - Q102\nQuelle anomalie est caractérisée par l'invagination de l'organe de l'émail à l'intérieur de la dent?",
+        "options": [
+          "Dens in dente",
+          "Taurodontisme",
+          "Macrodontie",
+          "Concrescence"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "B- Le taurodontisme est une anomalie de forme de la chambre pulpaire, pas d’invagination.→ Il n’implique pas de repli de l’émail vers l’intérieur.C- C’est une anomalie de taille, pas une invagination.→ Elle ne concerne ni l’émail ni l’organe interne.D- La concrescence est une fusion des racines par le cément.→ Ce n’est pas une anomalie de développement de l’émail."
+      },
+      {
+        "questionText": "N°5 (2025 2°EMD - Q140\nQuelle anomalie peut être causée par la syphilis congénitale ?",
+        "options": [
+          "Incisive en pelle",
+          "Incisive en lame de tournevis (Hutchinson)",
+          "Microdontie",
+          "Macrodontie"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "A- L’incisive en pelle est souvent d’origine génétique, non liée à la syphilis.→ Elle est fréquente chez certaines populations (ex : asiatiques). Elle ne reflète pas une atteinte pathologique comme Hutchinson.C- La microdontie peut être associée à des syndromes, mais pas spécifiquement à la syphilis congénitale. Ce n’est pas une lésion caractéristique.D- L’augmentation de taille dentaire n’est pas du tout liée à la syphilis congénitale.→ Ce type d’infection donne surtout des déformations caractéristiques."
       }
     ]
   }

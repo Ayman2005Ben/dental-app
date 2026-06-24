@@ -549,7 +549,70 @@ if (typeof tsParticles !== 'undefined') {
     });
 }
 
-
+// قاعدة بيانات فيديوهات غوغل درايف مخصصة لمواد السنة الثانية فقط
+const localVideosDatabase = {
+    "odf-y3": [], // فارغ لأنك ترفع للسنة الثانية حالياً
+    "odf-y4": [],
+    "odf-y5": [],
+    "odf-y2": [
+        { title: "introduction odf.MP4", videoUrl: "https://drive.google.com/open?id=1jVFeDrDUYNaRGHZjhXWrByk5ct06gYoj" },
+        { title: "rytheme et direction de la croissance facail 1.mp4", videoUrl: "https://drive.google.com/open?id=1_ngqCsdIUF0OFbrQNYsajsUh_Zf-O0My" },
+        { title: "🔴établissement de l occlusion.mp4", videoUrl: "https://drive.google.com/open?id=1_8i15-cJO8Wh61iJZYx6IrMrBDRc3SKe" },
+        { title: "cours odf embryologie partie 2.mp4", videoUrl: "https://drive.google.com/open?id=1e4CVt9osv_XLI3e4cOk_qx2wkRnYHy1K" },
+        { title: "croissance de la vote de la base de craine 2.mp4", videoUrl: "https://drive.google.com/open?id=1Kgnp5DExB5qB02ct653sJFkdZIHMYDhN" },
+        { title: "croissance de la vote de la base de craine 1.mp4", videoUrl: "https://drive.google.com/open?id=1D7848FDAMEAJzC7EdEIJ_Ipa1hLfKaN4" },
+        { title: "rytheme et direction de la croissance facail 2.mp4", videoUrl: "https://drive.google.com/open?id=1eCIeJ8HLauyRLARwlUYqZ6NxTUSA_LCL" },
+        { title: "croissance de la mandibule 2.mp4", videoUrl: "https://drive.google.com/open?id=1BQ6TUw8b7mGFLeXJFIRd6AiPbma2Zjk6" },
+        { title: "croissance du complexe naso maxillaire.mp4", videoUrl: "https://drive.google.com/open?id=1WOtTELaLNCwRGeKKooxAp4iu93wcEfpM" },
+        { title: "cours odf embryo logie partie1.mp4", videoUrl: "https://drive.google.com/open?id=1xCWxwvbnzH9AesafOQRTufxsdp7kl_Mg" },
+        { title: "croissance des tissus mous.mp4", videoUrl: "https://drive.google.com/open?id=15rNI89KzZeLT4u7iOsaXwBwu5oxjXWB6" },
+        { title: "croissance de la mandibule.mp4", videoUrl: "https://drive.google.com/open?id=13no3G9zQePikZMH0SChPdE54FH7RSC-E" },
+        { title: "biodynamique basi cranienne.mp4", videoUrl: "https://drive.google.com/open?id=1cwH4cytSY6sqD21C2gSjcXB2ycmbOFaH" },
+        { title: "critéres d'harmonie du visage.mp4", videoUrl: "https://drive.google.com/open?id=1gPLkyNCCit92SPEOIHYw8FTEXp9kKUAU" },
+        { title: "critéres d'harmonie du visage 2.mp4", videoUrl: "https://drive.google.com/open?id=1mNx2pJbgP_ErLCrm67zUNsPNbCUM-TGO" },
+        { title: "croissance des tissus mous 2.mp4", videoUrl: "https://drive.google.com/open?id=1QUkkgUXjbpj0oRixfM842-HpzKQPG7eN" }
+    ],
+    "prothese-y2": [
+        { title: "prothèse _ arcs faciaux+ transfert des modèles maxillaires sur articulateure.mp4", videoUrl: "https://drive.google.com/open?id=1_JuTtDAVQSdmZ5pgcO4brFDS3nry-kMR" }
+    ],
+    "oce": [],
+    "paro-y2": [
+        { title: "biofilm 1.mp4", videoUrl: "https://drive.google.com/open?id=1WcXcH7af90hkAAtn0rW1BxKKHwoQ_KBi" },
+        { title: "colagéne 1.mp4", videoUrl: "https://drive.google.com/open?id=1EbO0PE_2B1qk-EbxIxkfgzmTfxJikxrA" },
+        { title: "cours gencive paro.mp4", videoUrl: "https://drive.google.com/open?id=1OSAyxLC62Vr8jB2CFc2AFBTpOvXKfWy-" },
+        { title: "fluide gengivale 1.mp4", videoUrl: "https://drive.google.com/open?id=1I45RrSUSrZKKBgsPyrYMS_TrFvfIj8Fx" },
+        { title: "cément.mp4", videoUrl: "https://drive.google.com/open?id=1boPkXoiYjmrPDpiPyXTux26OsSDxDHPH" },
+        { title: "colagéne 2.mp4", videoUrl: "https://drive.google.com/open?id=1qTzvwZ9u---xsw_tZDPK9Ycd-lllAGbL" },
+        { title: "biofilm 4.mp4", videoUrl: "https://drive.google.com/open?id=1uxdrb7Bznwl6hqmK7vf75RwC1zQQS41K" },
+        { title: "cément 2.mp4", videoUrl: "https://drive.google.com/open?id=1-Bg3OMeNzRcNMStt_FiOy6dWO9XnceL_" },
+        { title: "atm2.mp4", videoUrl: "https://drive.google.com/open?id=1cWhbHCcbmS4r019TjpS_DZscBuciOUVj" },
+        { title: "désmodont.mp4", videoUrl: "https://drive.google.com/open?id=1XVM4VnDTWIMG9dG6ETR3bRaCDOPW1Y4q" },
+        { title: "la salive.mp4", videoUrl: "https://drive.google.com/open?id=1TfbrKCxsun3cCIT5tcFDwNqFLiXCuBGP" },
+        { title: "biofilm 3.mp4", videoUrl: "https://drive.google.com/open?id=1xKGbCI6YQYXAcPJLHRfiBXA-fam2DcMj" },
+        { title: "la salive 2.mp4", videoUrl: "https://drive.google.com/open?id=1MLtfwWKGRY4W-MH1A9v9R9SnCwyKv_XV" },
+        { title: "fluide gengivale 3.mp4", videoUrl: "https://drive.google.com/open?id=1uqMqTRLjTI_ZMm0qfTiZMZ82QM_4Wk4t" },
+        { title: "atm.mp4", videoUrl: "https://drive.google.com/open?id=1TuC0hQaMB93ASTJMSE-SEOy69gsXdltE" },
+        { title: "l'Attache Epitheliale.mp4", videoUrl: "https://drive.google.com/open?id=1SnIBaBeRSgIyPBLYBEl9KKd4Z-ORgSWP" },
+        { title: "biofilm 2.mp4", videoUrl: "https://drive.google.com/open?id=1yYzzHboTImpABZ__yO60vNvMfGqZ37zn" },
+        { title: "fluide gengivale 1 2.mp4", videoUrl: "https://drive.google.com/open?id=1XASvsru4Lj9sjuPC84ZiVW90gMdM543k" },
+        { title: "la salive 3.mp4", videoUrl: "https://drive.google.com/open?id=1ihu_2uIl4fK7qhpmCaVOcuST1G_2m7as" }
+    ],
+    "patho": [
+        { title: "INDICATIONS ET CONTRE INDICATIONS.mp4", videoUrl: "https://drive.google.com/open?id=1_7c2uILIjeq6dmnvYJFA6BXFjl45SEuh" },
+        { title: "ASEPSIE ANTISEPSIE STÉRILISATION.mp4", videoUrl: "https://drive.google.com/open?id=1p260MLBq2Q28jFoCl6vOg8JMfYvguo-y" },
+        { title: "anesthésie.mp4", videoUrl: "https://drive.google.com/open?id=1vqZh4TXudqO-QdZrIhOkK_wcDYA_-pXx" },
+        { title: "anesthésie 4.mp4", videoUrl: "https://drive.google.com/open?id=1fxOdMn6gEKOrNt_rgzXDK1I8ytBKh-ht" },
+        { title: "anesthésie 3.mp4", videoUrl: "https://drive.google.com/open?id=17ZkAY2yvRbfF6E56h4oM5-_7joLVyCpW" },
+        { title: "anesthésie 2.mp4", videoUrl: "https://drive.google.com/open?id=1qs5b6a5oQwCMLlg0hFlLRYlpLa_gvS8B" }
+    ],
+    "biomateriau": [],
+    "immunologie": [],
+    "histology-y2": [],
+    "hygiene": [],
+    "microbiologie": [],
+    "anatomy-y2": [],
+    "informatique": []
+};
 // --- [كامل] قاعدة بيانات المواد مع الأيقونات (Keep as is) ---
 const subjectsDatabase = {
     "1": [
@@ -1337,7 +1400,7 @@ function animateCarouselAssembly(year) {
             else if (currentContentType === 'smart-study') {
                 showLessonListForSubject(subject.key);
             }
-            else if (currentContentType === 'summaries' || currentContentType === 'quizzes') {
+            else if (currentContentType === 'summaries' ||  currentContentType === 'quizzes' || currentContentType === 'videos') {
                 showContentListForSubject(subject.key, currentContentType);
             }
             else {
@@ -1365,9 +1428,69 @@ async function showContentListForSubject(subjectKey, contentType) {
     const contentListContainer = document.getElementById('content-list');
 
     // Set title and show loading state
+    // === [تعديل ذكي] عرض الفيديوهات المخصصة للسنة الثانية ===
+    if (contentType === 'videos') {
+        contentTitle.textContent = `${subjectData.name} - Videos`;
+        contentListContainer.innerHTML = '';
+
+        const subjectVideos = localVideosDatabase[subjectKey] || [];
+
+        if (subjectVideos.length === 0) {
+            contentListContainer.innerHTML = '<p style="text-align:center; color:#888;">Pas de vidéos disponibles pour cette matière actuellement.</p>';
+            showPage('#content-display-page');
+            return;
+        }
+
+        subjectVideos.forEach(video => {
+            const videoCard = document.createElement('div');
+            videoCard.className = 'content-item video-item';
+            videoCard.style.flexDirection = 'column';
+            videoCard.style.alignItems = 'stretch';
+            videoCard.style.cursor = 'default';
+
+            // تحويل رابط غوغل درايف ليعمل كـ Embed Player قابل للتضمين داخل الموقع
+            let embedUrl = video.videoUrl;
+            if (embedUrl.includes('open?id=')) {
+                embedUrl = embedUrl.replace('open?id=', 'file/d/') + '/preview';
+            } else if (embedUrl.includes('view?usp=sharing')) {
+                embedUrl = embedUrl.replace('view?usp=sharing', 'preview');
+            } else if (!embedUrl.includes('/preview') && embedUrl.includes('/file/d/')) {
+                embedUrl = embedUrl.split('/view')[0] + '/preview';
+            }
+
+            videoCard.innerHTML = `
+                <div class="video-header" style="display:flex; align-items:center; gap:15px; cursor:pointer; width:100%;">
+                    <i class="fas fa-play-circle" style="font-size:1.8rem; color:var(--primary-btn-bg);"></i>
+                    <span style="font-weight:600; text-align:left;">${video.title}</span>
+                    <i class="fas fa-chevron-down" style="margin-left:auto; transition: transform 0.3s;"></i>
+                </div>
+                <div class="video-player-container" style="display:none; margin-top:15px; width:100%; aspect-ratio: 16/9; border-radius:8px; overflow:hidden;">
+                    <iframe src="${embedUrl}" width="100%" height="100%" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+                </div>
+            `;
+
+            // التحكم في فتح وإغلاق قائمة الفيديو بسلاسة عند الضغط على العنوان
+            const header = videoCard.querySelector('.video-header');
+            const playerContainer = videoCard.querySelector('.video-player-container');
+            const chevron = videoCard.querySelector('.fa-chevron-down');
+
+            header.addEventListener('click', () => {
+                const isOpen = playerContainer.style.display === 'block';
+                playerContainer.style.display = isOpen ? 'none' : 'block';
+                chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+
+            contentListContainer.appendChild(videoCard);
+        });
+
+        showPage('#content-display-page');
+        return; // إنهاء الدالة هنا وتجنب الذهاب لقاعدة البيانات القديمة للباك-اند
+    }
+
+    // الكود القديم المتبقي للملخصات والكويزات
     contentTitle.textContent = `${subjectData.name} ${contentType.charAt(0).toUpperCase() + contentType.slice(1)}`;
     contentListContainer.innerHTML = '<p>Loading content...</p>';
-    showPage('#content-display-page'); // Navigate to the content list page
+    showPage('#content-display-page');
 
     let contentItems = [];
     try {
@@ -4382,8 +4505,9 @@ if (exploreModal) {
 // --- Feature Card Click Handlers (Video, Summaries, Quizzes, Articles) ---
 if (videoLessonsCard) {
     videoLessonsCard.addEventListener('click', () => {
-        showNotification('Video lessons are coming soon!', 'info');
-        // Optionally, disable the card visually or remove the listener after first click
+        currentContentType = 'videos';
+        localStorage.setItem('currentContentType', currentContentType);
+        showPage('#subjects-page');
     });
 }
 

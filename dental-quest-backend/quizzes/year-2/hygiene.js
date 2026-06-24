@@ -1,6 +1,6 @@
 const hygieneQuizzes = [
   {
-    "title": "Ergonomie au Cabinet Dentaire",
+    "title": "Ergonomie au cabinet dentaire",
     "subject": "hygiene",
     "questions": [
       {
@@ -18,7 +18,7 @@ const hygieneQuizzes = [
         "explanation": "La salle d'attente, la salle de soins (opératoire), la salle de stérilisation et celle de radiographie sont vitales pour le fonctionnement du cabinet. Les sanitaires sont nécessaires mais pas considérés comme une salle 'technique' principale."
       },
       {
-        "questionText": "Sont considérées comme salles facultatives :",
+        "questionText": "N°15 (2022 EMD - Q1453\nSont considérées comme salles facultatives:",
         "options": [
           "La salle de stérilisation.",
           "La salle des machines.",
@@ -32,7 +32,7 @@ const hygieneQuizzes = [
         "explanation": "Un cabinet peut fonctionner sans avoir sa propre salle de repos ou son propre laboratoire de prothèse (il peut externaliser ce service)."
       },
       {
-        "questionText": "Pour l'éclairage de la cavité buccale il est nécessaire que :",
+        "questionText": "N°16 (2022 EMD - Q1471\nPour l'éclairage de la cavité buccale il est nécessaire que",
         "options": [
           "La zone devrait être éclairée entre 8000 et 12000 LUX.",
           "La zone devrait être éclairée moms de 8000 LUX.",
@@ -45,7 +45,7 @@ const hygieneQuizzes = [
         "explanation": "Un éclairage intense et précis (entre 8000 et 12000 LUX) sur la zone de travail est crucial pour bien voir les détails dans la bouche et travailler en sécurité."
       },
       {
-        "questionText": "Les paramètres d'aménagement de l'espace de travail sont :",
+        "questionText": "N°3 (2020 EMD - Q1903\nLes paramètres d'aménagement de l'espace de travail sont:",
         "options": [
           "Avoir au minimum deux fauteuils dentaires.",
           "Doter le cabinet dentaire de lumière artificielle pour un bon éclairage.",
@@ -56,10 +56,10 @@ const hygieneQuizzes = [
           1,
           3
         ],
-        "explanation": "Un bon éclairage et un environnement calme sont des paramètres fondamentaux d'ergonomie qui améliorent le confort et la qualité du travail."
+        "explanation": "Les paramètres d’aménagement de l’espace de travail: sont essentiellement, la lumière, la chromatique, le bruit, la température et\n l’éclairage.\n On doit assurer au cabinet la lumière naturelle, par l’orientation de la fenêtre vers le Nord."
       },
       {
-        "questionText": "Parmi les objectifs de l'ergonomie, on a :",
+        "questionText": "N°11 (2020 EMD - Q1925\nParmi les objectifs de l'ergonomie, on a",
         "options": [
           "L'amélioration de la rentabilité du cabinet médical.",
           "L'amélioration des connaissances du praticien.",
@@ -73,7 +73,7 @@ const hygieneQuizzes = [
         "explanation": "L'ergonomie vise à adapter le travail à l'humain pour améliorer son confort et son efficacité. Une meilleure efficacité entraîne naturellement une meilleure rentabilité."
       },
       {
-        "questionText": "Le facteur scientifique en ergonomie comporte :",
+        "questionText": "N°3 (2018 Synthèse - Q2051\nLe facteur scientifique en ergonomie :",
         "options": [
           "La conception.",
           "La totalité de l'équipe stomatologique.",
@@ -83,10 +83,10 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La base de l'ergonomie est la conception (design) des outils, des espaces et des méthodes de travail pour qu'ils soient adaptés au corps humain."
+        "explanation": "Fa Le facteur scientifique : l’ergonomie stomatologique est orientée dès ses débuts vers 3 directions fondamentales : \n \n la recherche\n la conception (la projection)\n la correction \n  \n la totalité de l’équipe stomatologique est le facteur humain.\n Le facteur le plus mobile est le facteur technique."
       },
       {
-        "questionText": "La température idéale dans un cabinet dentaire est de :",
+        "questionText": "N°13 (2021 EMD - Q1771\nLa température idéale dans un cabinet dentaire est de :",
         "options": [
           "Entre 16 et 18 degrés.",
           "20 degrés.",
@@ -201,15 +201,73 @@ const hygieneQuizzes = [
           1
         ],
         "explanation": "Les TMS sont des maladies qui touchent les muscles, les tendons et les nerfs, et qui sont directement liées aux contraintes physiques d'une mauvaise posture et de la répétition des mêmes gestes."
+      },
+      {
+        "questionText": "N°11 (2021 EMD - Q1725\nL'ergonomie :",
+        "options": [
+          "C'est le rapport entre l'homme et l'outil ;",
+          "C'est une science qui repose sur les facteurs techniques et scientifiques uniquement;",
+          "C'est l'étude des conditions de travail;",
+          "A pour objectif l'économie des mouvements."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "Le terme ERGONOMIE C’est l’étude des conditions de travail c'est-à dire les rapports entre l’homme et l’outil.\n L’objectif de toute ergonomie est l’économie des mouvements qui s’obtient par l’organisation du travail.\n C’est une science qui repose sur les facteurs scientifiques, techniques et humain."
+      },
+      {
+        "questionText": "N°12 (2021 EMD - Q1742\nLes paramètres ergonomiques de l'espace de travail :",
+        "options": [
+          "La lumière;",
+          "La chromatique ;",
+          "Le bruit ;",
+          "La température."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "Les paramètres ergonomiques de l’espace de travail sont :\n   La lumière\n  La chromatique \n  Le bruit \n  La température\n  L’éclairage"
+      },
+      {
+        "questionText": "N°9 (2023 EMD - Q1004\nLa température idéale dans un cabinet stomatologique est de",
+        "options": [
+          "Entre 16 et 18 degrés",
+          "20 degrés",
+          "25 degrés",
+          "Supérieur à 20 degrés"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°14 (2022 EMD - Q1450\nSont considérées comme salles importantes dans un cabinet dentaire ou les normes doivent êtres respectées :",
+        "options": [
+          "Le secrétariat;",
+          "Les sanitaires;",
+          "La salle de radiologie;",
+          "La salle des pansements"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Les salles importantes dans un cabinet dentaire sont :\n -Le secrétariat\n -La salle de radiographie\n -La salle d’attente\n -Les sanitaires\n -La salle opératoire\n -La salle des machines\n -La salle de stérilisation"
       }
     ]
   },
   {
-    "title": "Risques et Maladies Professionnelles",
+    "title": "Risques et maladies professionnelles",
     "subject": "hygiene",
     "questions": [
       {
-        "questionText": "Le germe de la tuberculose est :",
+        "questionText": "N°15 (2018 EMD - Q2089\nLe germe de la tuberculose:",
         "options": [
           "Un virus.",
           "Un champignon.",
@@ -219,10 +277,10 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La tuberculose est une maladie infectieuse causée par une bactérie spécifique appelée Mycobacterium tuberculosis, ou Bacille de Koch (BK)."
+        "explanation": "Les praticiens peuvent contrôler leur état d'immunité antituberculeuse par le test d'Intradermoréaction (IDR) à la tuberculine, afin de pratiquer si nécessaire un rappel vaccinal.\n Les mycobactéries responsables sont bacilles de Koch.\n la contagiosité disparaît en 2 à 4 semaines, à condition d'associer les antituberculeux et les prescrire pendant au moins 9 mois.\n Pour le chirurgien dentiste, la meilleure prophylaxie est vaccinale."
       },
       {
-        "questionText": "Dans les infections herpétiques, le chirurgien-dentiste est le plus souvent exposé à :",
+        "questionText": "N°12 (2019 EMD - Q2009\nDans les infections herpétiques, le chirurgien dentiste:",
         "options": [
           "L'herpès simplex 2 (génital).",
           "L'herpès simplex 1 (labial).",
@@ -232,10 +290,10 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le dentiste travaillant au niveau de la bouche est principalement exposé au virus de l'herpès de type 1, responsable des \"boutons de fièvre\" sur et autour des lèvres."
+        "explanation": "Les herpès virus humains 1 et plus rarement 2, peuvent être accidentellement transmis au praticien. Communément appelés Herpes Simplex I et II. \n Les praticiens ne peuvent se protéger qu'en appliquant rigoureusement les mesures habituelles d'hygiène et de prévention, en évitant de traiter des patients présentant une lésion herpétique manifeste."
       },
       {
-        "questionText": "Les germes du 3ème groupe (risque majeur) incluent :",
+        "questionText": "N°7 (2021 EMD - Q1661\nLes germes du 3ème groupe :",
         "options": [
           "La flore buccale normale.",
           "Les virus des maladies infantiles (ex: rougeole).",
@@ -245,10 +303,10 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le troisième groupe rassemble les agents pathogènes les plus dangereux transmis par le sang ou les sécrétions, qui peuvent causer des maladies graves et chroniques."
+        "explanation": "-Le troisième groupe, est constitue de germes pathogènes portés par des patients malades et qui représentent un risque professionnel majeur pour le personnel soignant. Il s'agit de la tuberculose, de la grippe, des infections à herpès virus, des hépatites A, B et C et du Sida.\n -C’est Le second groupe qui comporte des germes pathogènes, mais fréquents, comme les bactéries pyogènes (Staphylocoques aureus, Streptocoques pyogènes), les virus respiratoires, les virus des maladies de l'enfance, ainsi que les Candida Albicans."
       },
       {
-        "questionText": "La contagiosité de la tuberculose pulmonaire diminue fortement après :",
+        "questionText": "N°8 (2021 EMD - Q1676\nLa tuberculose pulmonaire:",
         "options": [
           "La première dose de traitement.",
           "24 heures de traitement.",
@@ -258,7 +316,7 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Un traitement antibiotique approprié réduit rapidement le nombre de bactéries que le patient peut transmettre, le rendant non contagieux en quelques semaines."
+        "explanation": "La contagiosité disparaît en 2 à 4 semaines, à condition d'associer les antituberculeux et les prescrire pendant au moins 9 mois.\n Le contrôle de l’état d'immunité antituberculeuse est fait par le test d'Intradermoréaction (IDR) à la tuberculine."
       },
       {
         "questionText": "Une maladie est dite \"professionnelle\" si elle est :",
@@ -402,6 +460,141 @@ const hygieneQuizzes = [
           3
         ],
         "explanation": "C'est un état de fatigue intense, de perte de contrôle et de démotivation lié au stress chronique au travail. C'est un risque psychosocial majeur dans les professions de santé."
+      },
+      {
+        "questionText": "N°6 (2021 EMD - Q1643\nDans les infections herpétiques, le médecin dentiste :",
+        "options": [
+          "Est le plus souvent exposé à l'herpès simplex 2;",
+          "Est le plus souvent exposé à l'herpès simplex 1 ;",
+          "Est le plus souvent exposé aux deux types de virus dans la même proportion;",
+          "Ne pas éviter de traiter des patients dont les lésions sont manifestes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Les herpès virus humains 1 et plus rarement 2, peuvent être accidentellement transmis au praticien. Communément appelés Herpes Simplex I et II. \n Les praticiens ne peuvent se protéger qu'en appliquant rigoureusement les mesures habituelles d'hygiène et de prévention, en évitant de traiter des patients présentant une lésion herpétique manifeste."
+      },
+      {
+        "questionText": "N°9 (2021 EMD - Q1687\nLes germes en cause dans la transmission des maladies infectieuses chez le médecin dentiste :",
+        "options": [
+          "Germes du premier groupe;",
+          "Germes du 2ème groupe uniquement;",
+          "Germes du 2ème et 3eme groupe;",
+          "Germes du 3e groupe uniquement."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les germes susceptibles d'être transmis par les patients peuvent être séparés en trois groupes : Dans le premier, sont réunies les flores commensales orales et rhinopharyngées des patients sains, qui ne constituent aucune menace pour le personnel soignant contrairement aux germe du 2ème et 3ème groupe."
+      },
+      {
+        "questionText": "N°10 (2021 EMD - Q1704\nLes germes du 1er groupe représentent :",
+        "options": [
+          "Les germes pathogènes majeurs ;",
+          "La tuberculose ainsi que les germes de l'hépatite;",
+          "Les virus ainsi que les candidas albicans;",
+          "La flore commensale orale et rhinopharyngée."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Dans les germes du premier gourpes, sont réunies les flores commensales orales et rhinopharyngées des patients sains, qui ne constituent aucune menace pour le personnel soignant."
+      },
+      {
+        "questionText": "N°14 (2020 EMD - Q1935\nUne maladie professionnelle est la conséquence de:",
+        "options": [
+          "Chute accidentelle dans le cabinet.",
+          "L'exposition à un risque lors de l'exercice habituel de la profession,",
+          "La transmission d'agents infectieux véhiculés par le sang.",
+          "Malaise lipothymique du malade."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "-Une maladie professionnelle est la conséquence de l’exposition plus ou moins prolongée à un risque (physique, chimique, psychique ou biologique) qui existe lors de l’exercice habituel de la profession (dont le risque de transmission d'agents infectieux concerne l'ensemble des germes véhiculés par le sang ou les liquides biologiques du patient)"
+      },
+      {
+        "questionText": "N°15 (2019 EMD - Q2014\nles germes en cause dans la transmission des maladies infectieuses chez le chirurgien dentiste:",
+        "options": [
+          "Germes du premier groupe",
+          "Germes du 2eme groupe uniquement",
+          "Germes du 2eme et 3eme groupe",
+          "Germes du 3eme groupe uniquement"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "•Dans le premier groupe, sont réunies les flores commensales orales et rhinopharyngées des patients sains, qui ne constituent aucune menace pour le personnel soignant."
+      },
+      {
+        "questionText": "N°1 (2018 Synthèse - Q2042\nLe second groupe des germes pathogènes comporte:",
+        "options": [
+          "Les germes de la tuberculose",
+          "Les germes de l'hépatite A",
+          "La flore commensale",
+          "Les staphylocoques aureus, les streptocoques pyogènes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Le second groupe comporte des germes pathogènes, mais fréquents, comme les bactéries pyogènes (Staphylocoques aureus, Streptocoques pyogènes), les virus respiratoires, les virus des maladies de l'enfance, ainsi que les Candida Albicans.\n La tuberculose et l’hepatite A sont des germes du 3ème groupe.\n Les flores commensales sont des germes du premier groupe"
+      },
+      {
+        "questionText": "N°2 (2018 Synthèse - Q2046\nLa contamination parentérale :",
+        "options": [
+          "Peut être directe",
+          "Est une contamination aérienne",
+          "Peut être indirecte",
+          "Se fait par le biais d'une aiguille souillée par le sang"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "Contamination par voie parentérale peut être directe par contact entre le sang ou la salive infectée et une coupure même minime au niveau des mains du praticien. La transmission peut être indirecte par le biais d'un instrument ou d'une aiguille souillée par le sang ou la salive."
+      },
+      {
+        "questionText": "N°4 (2023 EMD - Q913\nLe contrôle du risque infectieux passe par:",
+        "options": [
+          "L'utilisation des instruments à usage unique",
+          "Le refus de prendre en charge des malades à risque",
+          "Faire des contrôles sanitaires du personnel médical",
+          "La disposition d'un lave-mains à commande."
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°10 (2022 EMD - Q1375\nUne infection Herpétique:",
+        "options": [
+          "Est une maladie du 2eme groupe",
+          "Est une maladie du 3eme groupe",
+          "Herpes simplex I est plus fréquemment transmissible au c",
+          "Le type II est caractérisé par des éruptions principalement labiales"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Herpes Simplex I et plus rarement II peuvent être accidentellement transmis au praticien.\n Le type I est plus fréquent dans les éruptions labiales et le type II, dans les éruptions génitales."
+      },
+      {
+        "questionText": "N°11 (2022 EMD - Q1387\nL'hépatite",
+        "options": [
+          "Est de transmission uniquement percutanée",
+          "Peut-être à transmission verticale",
+          "Est un virus ADN",
+          "Fait partie du 3eme groupe."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Les 3 modes de transmission principaux sont : \n • La transmission percutanée (l'exposition accidentelle professionnelle au sang, les transfusions sanguines ou des dérivés sanguins, toxicomanie intraveineuse).\n • La transmission sexuelle.\n • La transmission verticale de la mère A l'enfant."
       }
     ]
   },
@@ -410,7 +603,7 @@ const hygieneQuizzes = [
     "subject": "hygiene",
     "questions": [
       {
-        "questionText": "Les fluorures agissent en :",
+        "questionText": "N°5 (2023 EMD - Q928\nLes fluorures agissent:",
         "options": [
           "Rendant l'émail plus résistant aux attaques acides.",
           "Inhibant le métabolisme des bactéries cariogènes.",
@@ -420,10 +613,10 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le fluor a une triple action : il renforce la structure de l'émail (en formant de la fluorapatite), il perturbe les bactéries responsables des caries pour qu'elles produisent moins d'acide, et il aide l'émail à se réparer après une attaque acide."
+        "explanation": "Les fluorures agissent essentiellement sur le métabolisme cellulaire des améloblastes responsables de la formation et de la maturation initiale de l’émail. Les fluorures interviennent successivement sur les phases de sécrétion de la matrice amélaire ( email immature riche en amelogenine ) , de réabsorption matricielle( dégradation enzymatique de l’amelogénine) et de minéralisation aboutissant à une forme stable d’hydroxyapatite carbonatée ou l’en présume que le fluor s’est intégré à la maille cristalline.\n -Les fluorures inhibent le métabolisme des bacteries cariogènes par interaction avec l’énolase (métalloenzyme responsable de la conversion des glucides en acides dans la voie de la glycolyse); l’inhibition de l’énolase reduit directement la production acide par interruption de la glycolyse."
       },
       {
-        "questionText": "L'utilisation des dentifrices fluorés est recommandée :",
+        "questionText": "N°15 (2020 EMD - Q1936\nL'utilisation des dentifrices fluorés:",
         "options": [
           "Uniquement pour les enfants.",
           "Uniquement pour les personnes à risque carieux élevé.",
@@ -603,6 +796,160 @@ const hygieneQuizzes = [
           2
         ],
         "explanation": "Ces produits très concentrés ne doivent être manipulés que par un professionnel pour une application ciblée et sécurisée, afin de donner un 'coup de fouet' protecteur aux dents les plus à risque."
+      },
+      {
+        "questionText": "N°19 (2021 EMD - Q1869\nAprès éruption de la dent, le fluor:",
+        "options": [
+          "Limite la déminéralisation et favorise la reminéralisation;",
+          "Agit essentiellement sur le métabolisme cellulaire des améloblastes;",
+          "Un effet sur le métabolisme cellulaire des odonblastes;",
+          "Inhibe le métabolisme des bactéries cariogènes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Les fluorures limitent la déminéralisation et favorisent la reminéralisation : Une faible concentration de fluor (inferieure à 0,1ppm) avait la capacité d’inhiber la progression des lésions carieuses .\n Au cours de la phase de reminéralisation, les ions fluor peuvent s’insérer dans les cristaux en cours de reformation de la surface et de la sub-surface de l’émail contribuant à la formation de cristaux enrichis en hydroxyapatite fluorée.\n Les fluorures agissent essentiellement sur le métabolisme cellulaire des améloblasteset ont également un effet sur le métabolisme cellulaire des odonblastes pendant la phase de formation et de maturation pré- éruptive.\n Les fluorures inhibent le métabolisme des bactéries cariogènes :\n Lors de diminution de PH au sein de la plaque, la sensibilité des bactéries aux fluorures est accrue. Plus le PH extracellulaire est bas, plus les ions fluorures pénètrent facilement dans la cellule"
+      },
+      {
+        "questionText": "N°20 (2021 EMD - Q1878\nLa fluorose dentaire :",
+        "options": [
+          "Est un surdosage en fluor pendant plusieurs mois et années, survenant lors de la période de minéralisation des dents;",
+          "Se manifeste par des taches opaques blanches plus ou moins étendues sur l'émail;",
+          "N'atteint que les sujets jeunes;",
+          "Est un risque lié à un apport excessif en fluor."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "la fluorose dentaire : elle est due à un surdosage en fluor pendant plusieurs mois et années, survenant lors de la période de minéralisation des dents. Le développement complet des cristaux de l’émail est perturbé par l’excès de fluor conduisant à un tissu fluorotique poreux. Elle se manifeste par des taches opaques blanches plus au moins étendues sur l’émail, Il s’agit de zones d’hypo minéralisation ou de porosités diffuses surmontées d’une petite couche d’émail hypermineralisé. Il en résulte une grande vulnérabilité de l’émail avec perte de substance et coloration dans le temps pour les stades les plus avancés."
+      },
+      {
+        "questionText": "N°12 (2020 EMD - Q1928\nLes fluorures agissent sur:",
+        "options": [
+          "Les tissus dentaires en phase pré- éruptive et post- éruptive.",
+          "Le métabolisme cellulaire des améloblastes,",
+          "Le composant minéral de la dent et produit une fluoro-hydroxyapatite plus sensible à de futurs épisodes de déminéralisation,",
+          "Le métabolisme des bactéries cariogènes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°19 (2019 EMD - Q2023\nLes fluorures",
+        "options": [
+          "Interviennent sur les phases de sécrétion de la matrice dentinaire",
+          "Interviennent sur les phases de minéralisation uniquement",
+          "Interviennent sur les tissus dentaires en phase pré- éruptive et en phase post-éruptive",
+          "Aboutissent à la formation d'une forme instable d'hydroxyapatite"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°20 (2019 EMD - Q2025\nLe risque principal de l'apport excessif en fluor",
+        "options": [
+          "Est la fluorose qui correspond à des zones de porosités diffuses surmontées d'une petite couche d'émail hypo minéral",
+          "Est la fluorose dentaire qui se manifeste par des taches opaques blanches plus ou moins étendues sur l'émail",
+          "Il en résulte une faible vulnérabilité de l'émail avec perte de substance",
+          "La dose à ne pas dépasser pour éviter tout risque de fluorose est de 0,5mg/) par kg de poids corporel"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°4 (2018 EMD - Q2052\nUn consensus au sein de la communauté scientifique (OMS) a permis d'établir les recommandations suivantes :",
+        "options": [
+          "une exposition quotidienne et fréquente à de taux importants de fluorures aura une meilleure action",
+          "les apports doivent être réguliers, en particulier sous forme de dentifrices",
+          "Conseils hygiéno-diététiques (alimentation fibreuse, riche en protéines et vitamines, pauvre en glucides) et visites régulières chez le médecin dentiste",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "-Une exposition quotidienne et fréquente à de faibles taux de fluorures aura une meilleure action."
+      },
+      {
+        "questionText": "N°13 (2018 EMD - Q2084\nLe fluor pendant la phase de formation et de maturation pré-éruptive:",
+        "options": [
+          "agit essentiellement sur le métabolisme cellulaire des améloblastes",
+          "intervient uniquement sur la phase de sécrétion de la matrice amélaire",
+          "aboutit à la formation d'une forme instable d'hydroxyapatite",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°14 (2018 EMD - Q2087\nSelon Les recommandations cliniques d'utilisation des fluorures par les dentistes:",
+        "options": [
+          "Les personnes à risque élevé de carie dentaire sont uniquement les personnes qui ne se brossent pas les dents avec un dentifrice fluoré",
+          "les patients présentant un faible risque carieux ne doivent pas bénéficier d'applications toniques professionnelles de fluorures",
+          "Les enfants à risque élevé doivent bénéficier d'applications de fluor à des intervalles de 3 à",
+          "Les vernis fluorés contiennent une quantité plus importante de fluor comparativement aux gels fluores"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "En dessous de 6 ans:Le vernis fluoré contient une quantité moindre de fluor comparativement aux gels fluorés."
+      },
+      {
+        "questionText": "N°11 (2024 EMD - Q661\nLes actions du fluor sont:",
+        "options": [
+          "Des problèmes de fluorose",
+          "Be Un effet sur le métabolisme cellulaire des odontoblastes",
+          "Inhiber la progression de lésions carieuses",
+          "Activer le métabolisme des bactéries cariogènes"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°12 (2024 EMD - Q680\nLa Supplémentation de fluor pour la prévention se fait :",
+        "options": [
+          "Par comprimés ou pastilles à sucer dès 4 ans",
+          "Par des bains de bouche fluorés à partir de 6 ans.",
+          "La prescription de gouttes à badigeonner dès 2 ans",
+          "Par application de vernis ou de gel fluorés pour patients à risque élevé"
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°8 (2023 EMD - Q978\nL'utilisation de dentifrices fluorés:",
+        "options": [
+          "Est recommandée dès l'apparition des premières dents permanentes;",
+          "Dosés entre 1000 et 1500 ppm est recommandée à partir de l'âge de 6 ans ;",
+          "Avant 6 ans : le dentifrice est déposé dans le sens de la longueur de la brosse à dents;",
+          "Est indépendante du risque carieux."
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "-Leur utilisation est recommandée dès l’apparition des premières dents temporaires.\n -Avant 6 ans le dentifrice est deposé dans le sens de la largeur de la brosse à dents."
       }
     ]
   },
@@ -1009,7 +1356,7 @@ const hygieneQuizzes = [
     ]
   },
   {
-    "title": "Économie de la Santé",
+    "title": "Economie de la santé",
     "subject": "hygiene",
     "questions": [
       {
@@ -1206,15 +1553,121 @@ const hygieneQuizzes = [
           2
         ],
         "explanation": "Le système de soins ne compte que pour une petite partie de notre état de santé. Des facteurs comme le niveau d'éducation, les conditions de travail, le logement, l'alimentation et les comportements (tabac, alcool) ont une influence beaucoup plus importante."
+      },
+      {
+        "questionText": "N°20 (2024 EMD - Q818\nParmi les critères relatifs au système de santé, on retrouve:",
+        "options": [
+          "L'efficience qui doit éviter les différences entre différents groupes de personnes.",
+          "L'équité qui permet une bonne adéquation entre les ressources et les résultats.",
+          "La pérennité qui est la reproductibilité dans le temps et dans l'espace avec des ressources locales.",
+          "Les facteurs démographiques, susceptibles d'influencer l'état de santé de l'individu"
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "Les 3 grands critères relatifs à tout systeme de santé : \n L’efficience : la bonne adeequation entre les ressources et les resultats.\n L’equité : est l’absence de différences évitables ou remediables entre différents groupes de personnes, qu’ils soient définis selon des critères sociaux, économiques, démographiques ou géographiques.\n La pérennité : c’est la reproductibilité dans le temps et dans l’espace avec des ressources locales."
+      },
+      {
+        "questionText": "N°3 (2023 EMD - Q889\nParmi les spécificités du marché des soins de santé :",
+        "options": [
+          "Il obéit au jeu de l'offre et de la demande",
+          "Les prix des biens et services sont administrés",
+          "Le marché est perturbé par d'innombrables asymétries de l'information",
+          "L'intervention des pouvoirs publics est minime."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°6 (2023 EMD - Q950\nLa macro-économie de la santé permet d'analyser :",
+        "options": [
+          "Le fonctionnement d'un programme du système de santé",
+          "Le choix du prestataire (public ou privé) par le patient",
+          "Comment le financer, par l'impôt, par les cotisations sociales",
+          "La hiérarchisation des services de santé."
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "-Permet d’analyser le fonctionnement globale des systèmes de santé\n -La réponse B est fausse c’est la micro-économie."
+      },
+      {
+        "questionText": "N°5 (2022 EMD - Q1293\nLe tarif de référence a pour objectif principal:",
+        "options": [
+          "Limiter la production de services médicaux,",
+          "Responsabiliser le consommateur,",
+          "D'inciter les praticiens à prescrire des médicaments génériques plutôt que des princeps,",
+          "D'inciter les assurés à prendre en charge une partie des dépenses non remboursables par la sécurité sociale."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Le tarif de référence a pour objectif principal d’inciter les praticiens à prescrire des médicaments génériques plutôt que des princeps."
+      },
+      {
+        "questionText": "N°6 (2022 EMD - Q1314\nLa carte sanitaire vise:",
+        "options": [
+          "A rationaliser l'offre des soins.",
+          "A prendre en considération autant que possible les besoins de santé des habitants,",
+          "A maîtriser l'offre de la démographie médicale,",
+          "A imposer des restrictions au nombre de candidats admis aux études de médecine et de pharmacie"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "La mise en place, en Algérie, d’une carte sanitaire visant à rationaliser l’offre des soins, et prendre en considération autant que possible les besoins de santé des habitants."
+      },
+      {
+        "questionText": "N°7 (2022 EMD - Q1319\nLes principales causes de l'accroissement des dépenses de santé :",
+        "options": [
+          "Une offre de soins étendue et diversifiée,",
+          "Une transition sanitaire n'imposant pas des dépenses plus lourdes pour les maladies non transmissibles,",
+          "Une large couverture sociale,",
+          "Un système de santé non dualiste et maîtrisé."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Les principales causes de l’accroissement des dépenses de santé :\n \n -Une large couverture sociale.\n -Une offre de soins étendue et diversifiée. \n -Une transition sanitaire imposant des dépenses plus lourdes pour les maladies non transmissibles.\n  \n -Un système de santé dualiste et non maîtrisé."
+      },
+      {
+        "questionText": "N°8 (2022 EMD - Q1345\nEn Algérie, la maitrise médicalisée des dépenses de santé table principalement sur :",
+        "options": [
+          "Le dispositif du «< dossier médical informatisé » à travers la carte « Chifa »",
+          "L'augmentation des dépenses en médicaments.",
+          "La prise en charge des remboursements à un montant global de 5000 DA pour deux ordonnances avec une périodicité de trois mois entre deux traitements aigus semblables.",
+          "L'instauration d'outils de régulation qui permettent de circonscrire l'évolution de ces dépenses."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "diminuer de façon sensible les dépenses en médicaments\n  la prise en charge des remboursements à un montant global de 3000 DA pour deux ordonnances avec une périodicité de trois mois entre deux traitements aigus semblables.\n instaurer une hiérarchisation des soins, rationaliser les dépenses de santé et promouvoir la qualité de prise en charge des citoyens."
+      },
+      {
+        "questionText": "N°9 (2022 EMD - Q1363\nL'option pour l'économie de marché s'est manifestée sur le terrain par :",
+        "options": [
+          "L'emplacement des cliniques privées loin des structures sanitaires publiques,",
+          "La coexistence de deux logiques de régulation des dépenses de santé : l'une « dirigiste » et l'autre de « type libéral »",
+          "L'émergence d'un système de soins où le secteur privé occupe une place de plus en plus importante,",
+          "La déresponsabilisation des gestionnaires des hôpitaux qui ne se considèrent aucunement incités à administrer au mieux les ressources."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
       }
     ]
   },
   {
-    "title": "Épidémiologie et Biostatistique",
+    "title": "Epidémiologie et biostatistique",
     "subject": "hygiene",
     "questions": [
       {
-        "questionText": "L'épidémiologie est l'étude de :",
+        "questionText": "N°19 (2023 EMD - Q1188\nL'épidémiologie",
         "options": [
           "Des épidermes et des maladies de peau.",
           "La distribution et des déterminants des maladies dans les populations.",
@@ -1224,7 +1677,7 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L'épidémiologie ne s'intéresse pas à un seul malade, mais à l'ensemble d'une population pour comprendre qui tombe malade, où, quand et pourquoi."
+        "explanation": "L’épidémiologie est une discipline scientifique dont l’objet est l'étude de la distribution des problèmes de santé dans une population et le rôle des facteurs qui la déterminent.\n L’épidémiologie étudie des groupes de personnes et non des individus. L’analyse porte sur les individus en bonne santé et sur les individus frappés par la maladie.\n L’épidémiologie permet de recueillir, interpréter, utiliser l’information sur les problèmes de santé. Ses objectifs sont la promotion de la santé et la réduction des problèmes de santé."
       },
       {
         "questionText": "La \"prévalence\" d'une maladie mesure :",
@@ -1396,7 +1849,7 @@ const hygieneQuizzes = [
         "explanation": "Par exemple, le paludisme est endémique dans de nombreuses régions tropicales, ce qui signifie qu'il est toujours présent avec un nombre de cas relativement stable. La grippe, elle, est épidémique (flambées saisonnières)."
       },
       {
-        "questionText": "La biostatistique est essentielle en santé pour :",
+        "questionText": "N°20 (2023 EMD - Q1204\nLa bio statistique",
         "options": [
           "Uniquement compter le nombre de patients.",
           "Décrire l'état de santé d'une population, tester des hypothèses et prendre des décisions basées sur des preuves.",
@@ -1407,15 +1860,168 @@ const hygieneQuizzes = [
           1
         ],
         "explanation": "Les statistiques sont les outils mathématiques qui permettent de donner un sens aux données de santé : passer de 'quelques patients ont eu un problème' à 'ce médicament augmente le risque de 20%, et ce résultat est fiable'."
+      },
+      {
+        "questionText": "N°14 (2021 EMD - Q1789\nL'épidémiologie descriptive:",
+        "options": [
+          "A pour but d'analyser le rôle des facteurs susceptibles d'influencer l'incidence des phénomènes de santé ;",
+          "C'est l'étude de la distribution de la maladie dans les populations selon certaines caractéristiques;",
+          "Comprend les enquêtes longitudinales qui observent la fréquence de survenue d'un phénomène de santé, dans une population, à un moment précis ;",
+          "Mesure la variation de la répartition des problèmes de santé."
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "C’est l’épidémiologie analytique qui a pour but d’analyser le rôle des facteurs susceptibles d’influencer l’incidence des phénomènes de santé.\n Comprend les enquêtes transversales qui permettent d’observer la fréquence de survenue d’un phénomène de santé, dans une population, à un moment précis."
+      },
+      {
+        "questionText": "N°15 (2021 EMD - Q1790\nLes études des effets thérapeutiques avant/ après :",
+        "options": [
+          "Font partie de l'épidémiologie d'intervention;",
+          "Le recueil d'information est toujours rétrospectif;",
+          "Ont pour but d'analyser le rôle des facteurs susceptibles d'influencer l'incidence des phénomènes de santé",
+          "Également appelées études exposés/ non exposés."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "-L’épidémiologie évaluative ou d’intervention : Elle a pour objectif d’étudier les effets des interventions préventives ou curatives dans le domaine de la santé.\n -Le receuil d’information est toujours rétrospectif dans les études cas témoins.\n -C’est l’épidémiologie analytiquequi a pour but d’analyser le rôle des facteurs susceptibles d’influencer l’incidence des phénomènes de santé.\n -Les études de cohortes : Egalement appelées études exposés/ non exposés."
+      },
+      {
+        "questionText": "N°16 (2021 EMD - Q1810\nLa covid 19 est une :",
+        "options": [
+          "Epidémie ;",
+          "Endémie ;",
+          "Pandémie ;",
+          "Epidémie permanente."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°19 (2020 EMD - Q1950\nParmi les indicateurs de santé, on retrouve",
+        "options": [
+          "L'incidence,",
+          "La prévalence,",
+          "La morbidité,",
+          "Une épidémie."
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "les indicateurs de santé sont:\n Espérance de vie\n Espérance de vie \n Mortalité \n Morbidité\n Incidence \n Prévalence"
+      },
+      {
+        "questionText": "N°20 (2020 EMD - Q1951\nLes études de prévalence sont:",
+        "options": [
+          "Des enquêtes longitudinales,",
+          "Des études à visée analytique,",
+          "Elles permettent d'observer la fréquence de survenue d'un phénomène de santé, dans une population, à un moment précis,",
+          "Un indicateur dynamique de mortalité."
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "-Les études de prévalence sont des enquêtes transversales: elles permettent d’observer la fréquence de survenue d’un phénomène de santé, dans une population, à un moment précis\n -Les études d’incidence sont des enquêtes longitudinales.\n -Les études à visée analytique sont l’enquête de cohortes et l’enquête cas témoins."
+      },
+      {
+        "questionText": "N°1 (2019 EMD - Q1968\nla morbidité:",
+        "options": [
+          "C'est la fréquence des pathologies au sein d'une population",
+          "c'est la fréquence des mortalités au sein d'une population",
+          "c'est l'incidence des décès au sein d'une population",
+          "c'est la prévalence des décès au sein d'une population"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°2 (2019 EMD - Q1970\nune enquête cas témoin:",
+        "options": [
+          "est appelée également étude exposée-non exposée",
+          "Compare la fréquence d'apparition de la maladie entre sujets exposés et non exposés à un facteur.",
+          "Compare la fréquence de l'exposition à des facteurs de risque entre des sujets malades et des sujets indemnes de la maladie",
+          "elle est toujours prospective"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "C’est Les études de cohortes qui sont appelées études exposés / non exposés et compare la fréquence d’apparition de la maladie entre exposés et non exposés a un facteur.\n -Elle est toujours rétrospectif."
+      },
+      {
+        "questionText": "N°6 (2018 EMD - Q2062\nL'enquête de cohorte:",
+        "options": [
+          "Est une enquête descriptive.",
+          "Compare la fréquence d'apparition de la maladie entre sujets exposés et non exposés à un facteur.",
+          "Compare la fréquence d'exposition à des facteurs de risque entre des sujets malades et des sujets indemnes de la maladie."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "C’est une enquete analytique.-La réponse C est fausse :"
+      },
+      {
+        "questionText": "N°17 (2018 Synthèse - Q2095\nL'étude de prévalence :",
+        "options": [
+          "Est une étude à visée analytique.",
+          "Est une enquête transversale",
+          "Nécessite le suivi des patients dans le temps"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Est une étude à visée descriptive.\n La notion de suivie des patients dans le temps est absente. C’est un indicateur statique de morbidité."
+      },
+      {
+        "questionText": "N°7 (2024 EMD - Q595\nl'épidémiologie analytique a pour but :",
+        "options": [
+          "Rechercher les causes des maladies et les facteurs de risque influençant leurs survenues au sein d'une population",
+          "Etudier les actions de prévention ou de traitement",
+          "Permettre d'établir des relations de causalité entre l'exposition à un facteur de risque et la maladie.",
+          "Permettre la description d'un phénomène de santé dans une population en fonction des caractéristiques de cette population"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "L’ÉPIDÉMIOLOGIE ANALYTIQUE OU ÉTIOLOGIQUE OU CAUSALE:\n -Elle a pour but de rechercher les causes des maladies et les facteurs ou marqueurs de risque influençant leurs survenues au sein d’une population. \n -Elle permet ainsi d’établir des relations de causalité entre l’exposition à un facteur ou marqueur de risque et la maladie. \n -La réponse B : fausse c’est l’épidémiologie évaluative qui étudie les actions de prévention ou de traitement.\n -La réponse D : fausse c’est l’épidémiologie descriptive qui est la description d’un phénomène de santé dans une population (fréquence, variations) en fonction des caractéristiques de cette population et de paramètres tels que le temps et l’espace."
+      },
+      {
+        "questionText": "N°8 (2024 EMD - Q605\nL'épidémiologie présente des objectifs :",
+        "options": [
+          "Détecter une épidémie",
+          "Evaluer I ‘importance d'un problème",
+          "Observer le malade",
+          "Rechercher les causes des affections"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Les objectifs de l’épidémiologie:\n 1-détecter une épidémie.\n 2-Rechercher les causes des affections.\n 3-Evaluer l’importance d’un problème.\n 4-Formuler des hypothèses et les vérifier.\n 5-Evaluer les soins (techniques diagnostiques et de dépistage, traitement, programmes de santé publique).\n 6-Evaluer les progrès grâce à la chute de la mortalité ou de la morbidité."
+      },
+      {
+        "questionText": "N°9 (2024 EMD - Q633\nLes études épidémiologiques non expérimentales :",
+        "options": [
+          "Appelées aussi études observationnelles",
+          "Présentent une réalisation d'étude souvent limitée en raison de contraintes éthiques",
+          "Peuvent intervenir sur les personnes exposées",
+          "Sont des études descriptives"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "-La réponse B est fausse c’est la réalisation d’études expérimentales est souvent limitée en raison de contraintes éthiques.\n -La réponse C est fausse c’est les études expérimentales qui peuvent intervenir sur les personnes exposées."
       }
     ]
   },
   {
-    "title": "Code de la Santé",
+    "title": "Code de la santé",
     "subject": "hygiene",
     "questions": [
       {
-        "questionText": "Le Code de la santé publique est :",
+        "questionText": "N°5 (2021 EMD - Q1629\nLe code de la santé publique est tout d'abord organisé en:",
         "options": [
           "Un guide de bonnes pratiques sans valeur légale.",
           "Un ensemble de lois et de règlements qui encadrent les professions et les activités de santé.",
@@ -1608,15 +2214,110 @@ const hygieneQuizzes = [
           2
         ],
         "explanation": "Malgré sa complexité, l'objectif ultime de l'ensemble de ces lois et règlements est de garantir le plus haut niveau de santé et de sécurité possible pour tous les citoyens."
+      },
+      {
+        "questionText": "N°19 (2022 EMD - Q1537\nParmi les tâches et activités des médecins-dentistes:",
+        "options": [
+          "Fourniture d'une bonne hygiène de vie à la population;",
+          "Fourniture de soins médicaux appropriés:",
+          "Participer à l'éducation sanitaire",
+          "Veiller au bon fonctionnement des structures sanitaires,"
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "Les dentistes sont tenus :\n -De veiller à la protection de la santé de la population par la fourniture de soins medicaux appropriés.\n -de participer à l’éducation sanitaire.\n -D’assurer la formation, le perfectionnement, le recyclage des personnels de santé, et de participer à la recherche scientifique, conformément à la réglementation en vigueur."
+      },
+      {
+        "questionText": "N°20 (2022 EMD - Q1553\nParmi les dispositions pénales relatives aux personnels de santé :",
+        "options": [
+          "L'exercice illégal de la fonction;",
+          "Faute professionnelle causant une incapacité permanente à une personne ;",
+          "Un changement dans la destination des locaux à usage médical",
+          "Non observation du secret professionnel."
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "-Dispositions pénales relatives aux personnels de santé:"
+      },
+      {
+        "questionText": "N°4 (2021 EMD - Q1610\nLe code de la santé est :",
+        "options": [
+          "Une Série de textes législatifs qui régit les questions de la santé publique ;",
+          "Une Série de règles strictes et une certaine déontologie qui doivent être appliquées à la santé publique :",
+          "Il est le garant de la déontologie médicale;",
+          "Devrait veiller avec une vigilance particulière au respect de ces principes de la déontologie."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°3 (2019 EMD - Q1974\nLe code de santé publique:",
+        "options": [
+          "est un ensemble de lois et d'articles",
+          "est une annexe du code pénal",
+          "est divisé en code de la famille et code de sécurité sociale",
+          "Protège le droit des personnes en matière de sécurité sociale"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°18 (2018 EMD - Q2099\nCiter les objectifs du code de santé publique :",
+        "options": [],
+        "correctOptionIndexes": [],
+        "explanation": "Les objectifs du code de santé publique sont:"
+      },
+      {
+        "questionText": "N°1 (2024 EMD - Q468\nLes locaux à usage de la médecine, de la chirurgie dentaire et de la pharmacie doivent obéir aux :",
+        "options": [
+          "Normes de prescription de construction",
+          "Normes d'hygiène et de sécurité",
+          "Normes d'équipement fixées par voie non réglementaire",
+          "N'obéissent à aucune loi réglementaire."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Art. 215.- Les locaux à usage de la médecine, de la chirurgie dentaire et de la pharmacie doivent obéir aux normes de prescription de construction, d'hygiène et de sécurité et d'équipement fixées par voie réglementaire."
+      },
+      {
+        "questionText": "N°2 (2024 EMD - Q492\nL'exercice, à titre privé, des médecins, des chirurgiens-dentistes et des pharmaciens",
+        "options": [
+          "Sont fixés par voie réglementaire",
+          "Les tarifs des actes accomplis sont fixés aléatoirement selon le choix du praticien",
+          "Aucun dépassement n'est autorisé sauf autorisation par le ministère de la santé",
+          "Le médecin et le chirurgien-dentiste sont libres, chacun dans son domaine d'activité, de prescrire les médicaments inscrits dans le cadre de la nomenclature nationale."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Art. 208. -Les activités de santé exercées à titre privé sont assurées dans des cabinets dentaires, des officines pharmaceutiques, des cabinets de consultations et de soins, des laboratoires d'analyses médicales, d'optique médicale et de lunetterie de prothèse médicale. La nature et l'importance des équipements nécessaires aux activités de santé exercées à titre privé et définies à l'alinéa ci-dessus, sont fixées par voie réglementaire.Art. 211. Les tarifs des actes accomplis par les médecins, les chirurgiens-dentistes et les pharmaciens, sont fixés par voie réglementaire.Art. 204.- Le médecin et le chirurgien-dentiste sont libres, chacun dans son domaine d'activité, de prescrire les médicaments inscrits dans le cadre de la nomenclature nationale."
+      },
+      {
+        "questionText": "N°10 (2023 EMD - Q1022\nLa carte sanitaire :",
+        "options": [
+          "C'est l'ensemble des objectifs en matière de santé visant à la protection de la vie de l'individu",
+          "C'est le schéma directeur d'aménagement des structures sanitaires.",
+          "Permet la généralisation de la pratique de l'éduction physique, des sports et des loisirs",
+          "Permet un recensement exhaustif des plateaux techniques et logistiques."
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": ""
       }
     ]
   },
   {
-    "title": "Dentisterie Communautaire",
+    "title": "Dentisterie communautaire",
     "subject": "hygiene",
     "questions": [
       {
-        "questionText": "La dentisterie communautaire s'intéresse principalement à :",
+        "questionText": "N°1 (2020 EMD - Q1895\nLa dentisterie communautaire :",
         "options": [
           "Un patient individuel et sa pathologie.",
           "La santé bucco-dentaire d'un groupe ou d'une population.",
@@ -1626,7 +2327,7 @@ const hygieneQuizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La dentisterie communautaire change d'échelle : au lieu de se focaliser sur la bouche d'UN patient (approche clinique), elle se focalise sur les problèmes de santé bucco-dentaire d'UNE population (approche de santé publique)."
+        "explanation": "-les concepts et pratiques de la dentisterie communautaire peuvent être appliqués par tous les professionnels de la santé dentaire, y compris les dentistes généralistes, spécialistes, les hygiénistes dentaires et les assistants dentaires.\n -Cest une branche de la dentisterie qui se concentre sur la santé\n orale de la population dans son ensemble."
       },
       {
         "questionText": "Dans l'approche communautaire, la première étape est souvent :",
@@ -1809,11 +2510,48 @@ const hygieneQuizzes = [
           2
         ],
         "explanation": "Beaucoup de programmes de santé publique sont efficaces mais fonctionnent sur des financements ponctuels. La plus grande difficulté est souvent de les intégrer de manière permanente dans le système de santé et d'assurer leur financement sur le long terme."
+      },
+      {
+        "questionText": "N°9 (2020 EMD - Q1919\nDans l'approche communautaire, il s'agit:",
+        "options": [
+          "D'un patient,",
+          "D'un diagnostic,",
+          "D'un traitement,",
+          "D'une enquête épidémiologique."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "L’épidémiologie s’intéresse à un groupe d’individu et non à l’individu (comme la dentisterie communautaire)."
+      },
+      {
+        "questionText": "N°6 (2018 Synthèse - Q2060\nDans la démarche communautaire, le praticien réalise :",
+        "options": [
+          "un examen clinique",
+          "une enquête épidémiologique",
+          "un diagnostic",
+          "une analyse des résultats"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "L’épidémiologie s’intéresse à un groupe d’individu et non à l’individu (comme la dentisterie communautaire)"
+      },
+      {
+        "questionText": "N°17 (2024 EMD - Q764\nQuelle est l'activité principale des dentistes communautaires?",
+        "options": [
+          "Effectuer des examens cliniques et des soins dentaires.",
+          "Réaliser des restaurations, des couronnes et des bridges",
+          "Éduquer le public sur la santé bucco-dentaire et mener des programmes de prévention",
+          "Effectuer des chirurgies buccales"
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "L'activité principale des dentistes communautaires consiste à fournir des soins dentaires de base et préventifs à la population ainsi que eduquer et sensibiliser le public sur l'importance de l’hygiene bucco-dentaire et des visites régulières chez le dentiste."
       }
     ]
   },
   {
-    "title": "Alimentation, Nutrition et Santé Dentaire",
+    "title": "Alimentation, nutrition et santé dentaire",
     "subject": "hygiene",
     "questions": [
       {
@@ -1870,7 +2608,7 @@ const hygieneQuizzes = [
         "explanation": "Le calcium est un composant essentiel de l'os. Une carence peut rendre l'os alvéolaire (l'os qui soutient les dents) plus poreux et moins dense (ostéoporose), affaiblissant ainsi le support de la dent."
       },
       {
-        "questionText": "Les protéines sont indispensables en santé bucco-dentaire car elles :",
+        "questionText": "N°2 (2020 EMD - Q1898\nLes protéines sont:",
         "options": [
           "Neutralisent les acides de la plaque.",
           "Sont le principal composant de l'émail.",
@@ -2011,6 +2749,466 @@ const hygieneQuizzes = [
           2
         ],
         "explanation": "Le facteur le plus critique dans le développement de la carie est la fréquence des attaques acides. Le conseil le plus efficace est donc de limiter la consommation de sucres aux repas principaux et d'éviter le grignotage."
+      },
+      {
+        "questionText": "N°18 (2022 EMD - Q1518\nLa carence en calcium entraine:",
+        "options": [
+          "La déminéralisation de l'email",
+          "La destruction du ligament alvéolo-dentaire",
+          "La malformation de la dentine secondaire:",
+          "La destruction de l'os alvéolaire."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Le calcium est tres important car sa carence antraine la destruction du ligament alvéolo-dentaire et meme role au niveau de l’os."
+      },
+      {
+        "questionText": "N°2 (2021 EMD - Q1586\nLa vitamine C provoque en cas de carence :",
+        "options": [
+          "Le scorbut;",
+          "Une lésion blanche;",
+          "Des hémorragies spontanées;",
+          "Une ulcération."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "Vitamine C : déficit provoque le scorbut (stomatite scorbutique, gingivite rouge vive, hémorragies spontanées, ulcération, atteinte des éléments de soutien des dents voir leur chute)."
+      },
+      {
+        "questionText": "N°5 (2020 EMD - Q1907\nLes maladies parodontales sont :",
+        "options": [
+          "Des maladies inflammatoires,",
+          "Des maladies dégénératives,",
+          "D'origine bactérienne,",
+          "Des maladies qui affectent les tissus durs de la dent."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Les maladies parodontales sont des maladies inflammatoires d’origine bactérienne qui affectent les tissus de soutien de la dent."
+      },
+      {
+        "questionText": "N°7 (2020 EMD - Q1913\nLes aliments les plus cariogènes sont",
+        "options": [
+          "Des aliments cariostatiques,",
+          "Ceux riches en glucides fermentes cibles,",
+          "Ayant une durée de rétention longue en bouche,",
+          "Rapidement solubles dans la salive."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Les aliments cariostatiques sont les aliments protecteurs càd qui ne contribuent pas à la carie.\n Les aliments les plus cariogènes sont ceux riches en glucides fermentes cibles, ayant une durée de rétention longue en bouche, lentement soluble dans la salive."
+      },
+      {
+        "questionText": "N°16 (2020 EMD - Q1941\nL'analyse alimentaire vise",
+        "options": [
+          "A vérifier la conformité des rations alimentaires du patient,",
+          "A étudier les comportements psychologiques potentiellement dangereux pour la santé bucco-dentaire.",
+          "A orienter le patient vers un médecin interniste,",
+          "A mettre en place des conseils sur l'hygiène bucco-dentaire."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "L’analyse alimentaire vise à vérifier la conformité des rations alimentaires du patient en fonctions des recommandations nationales."
+      },
+      {
+        "questionText": "N°8 (2019 EMD - Q1996\nLe pouvoir cariogène d'un aliment est défini par",
+        "options": [
+          "Son pouvoir cariostatique.",
+          "Sa capacité à induire des caries.",
+          "Sa contribution a la carie.",
+          "Sa capacité à rendre efficace le pouvoir tampon de la salive."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "C’est les aliments protecteurs qui sont définies par leurs pouvoir cariostatique."
+      },
+      {
+        "questionText": "N°9 (2019 EMD - Q1997\nLes lipides jouent un rôle dans:",
+        "options": [
+          "La fabrication de toutes nos cellules, de notre système hormonal et de toutes nos membranes cellulaires.",
+          "La régulation de l'appétit.",
+          "Le fonctionnement de la thyroïde.",
+          "La coagulation du sang et dans la consolidation des os"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "C’est les glucides qui ont un rôle dans la régulation de l’appétit.C’est la vitamine K qui joue un rôle dans la coagulation du sang et la consolidation des os.C’est l’iode qui joue un rôle dans le fonctionnement de la thyroïde"
+      },
+      {
+        "questionText": "N°10 (2019 EMD - Q2001\nLes comportements alimentaires potentiellement dangereux pour la santé bucco-dentaire sont:",
+        "options": [
+          "Ne pas manger de sucreries dans certaines conditions (devant la télévision ou l'ordinateur, en voiture, avant d'aller se coucher etc.).",
+          "Collations en fin de soirée.",
+          "Associer bonbons et confiseries aux moments festifs occasionnel (anniversaire) et suivre l'absorption par un brossage efficace des dents",
+          "Limiter les collations et encourager les repas à table, en prenant tant que possible son temps pour mastiquer et apprécier."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°11 (2019 EMD - Q2006\nUne malnutrition prolongée provoque:",
+        "options": [
+          "La modification de la réponse des tissus parodontaux.",
+          "La stabilisation de la flore microbienne orale.",
+          "une aide précieuse dans la défense de l'organisme contre les maladies.",
+          "La facilitation de la dégustation, mastication, déglutition, la digestion et la phonation."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°11 (2018 EMD - Q2079\nUn déficit en protéine conduit au niveau parodontal à :",
+        "options": [
+          "Un élargissement du LAD",
+          "Un collagène moins dense",
+          "Un épithélium aminci",
+          "Une destruction osseuse"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°10 (2024 EMD - Q637\nComment réduire le risque de carie ?",
+        "options": [
+          "Brossage des dents",
+          "Prendre des aliments riches en sucre",
+          "Prendre des aliments collants",
+          "Réduire le nombre de grignotages entre les repas"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°11 (2023 EMD - Q1038\nLes micronutriments",
+        "options": [
+          "Sont les vitamines et les oligo-éléments,",
+          "B- Sont les protéines, les lipides et les glucides,",
+          "Ne peuvent être produits par le corps.",
+          "D- Peuvent être produits par le corps."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "-Les protéines, les lipides et les glucides sont des macronutriments."
+      },
+      {
+        "questionText": "N°13 (2023 EMD - Q1085\nLes aliments protecteurs",
+        "options": [
+          "Ont une durée de rétention longue en bouche,",
+          "Sont lentement solubles dans la salive",
+          "Sont les aliments cariostatiques,",
+          "Ne contribuent pas à la carie."
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "-C’est les aliments cariogène qui ont une durée de rétention longue en bouche et lentement solubles dans la salive."
+      },
+      {
+        "questionText": "N°18 (2023 EMD - Q1158\nParmi les habitudes nocives nous citons :",
+        "options": [
+          "La consommation fréquente de sucreries, addiction aux colas, boissons sucrées et acides, café, etc.",
+          "La promotion de la santé buccodentaire dans les écoles",
+          "Le tabagisme, la consommation d'alcool.",
+          "L'utilisation des fluorures."
+        ],
+        "correctOptionIndexes": [],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°17 (2022 EMD - Q1489\nLa consommation des nutriments très riche en glucides cause:",
+        "options": [
+          "Des problèmes d'occlusion",
+          "Un développement de microbes",
+          "Des problèmes parodontaux;",
+          "Des caries dentaires."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "Une augmentation de la consommation des nutriments très riche en glucides conduira vers l’apparition de caries. Il ya aussi la facilité de dévloppement des microbes en fournissant l’essentiel de la matrice inter-microbienne, d’ou les problèmes parodontaux vont se developper dans des proportions dramatiques."
+      }
+    ]
+  },
+  {
+    "title": "Contrôle de l’infection au cabinet hygiène hospita",
+    "subject": "hygiene",
+    "questions": [
+      {
+        "questionText": "N°17 (2021 EMD - Q1839\nLa stérilisation est une opération :",
+        "options": [
+          "Qui permet de tuer les micro-organismes;",
+          "Qui permet de multiplier les bactéries;",
+          "Qui permet d'éliminer les déchets de bactéries;",
+          "Qui permet de désinfecter les instruments."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La stérilisation est une opération permettant d’éliminer ou de tuer les\n micro-organismes."
+      },
+      {
+        "questionText": "N°18 (2021 EMD - Q1851\nLe Tri des déchets permet :",
+        "options": [
+          "D'augmenter la sécurité des personnes;",
+          "De respecter les règles d'hygiène ;",
+          "D'éliminer des déchets à la fois ;",
+          "De diminuer la contamination croisée des personnes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Le Tri des déchets permet :\n - D’assurer la sécurité des personnes\n - De respecter les règles d’hygiène\n - De contrôler l’incidence économique de l’élimination\n des déchets.\n - D’éliminer chaque type de déchet par la filière\n appropriée dans le respect de la réglementation"
+      },
+      {
+        "questionText": "N°4 (2020 EMD - Q1906\nLa stérilisation est:",
+        "options": [
+          "Un processus qui permet de décontaminer et de désinfecter les instruments souillés,",
+          "Une opération permettant le rinçage du matériel,",
+          "Une opération qui permet l'essuyage des instruments,",
+          "Une opération permettant d'éliminer et de tuer les micro-organismes."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "La stérilisation est une opération permettant d’éliminer ou de tuer les\n micro-organismes.\n La stérilisation des instruments désigne le processus qui permet de décontaminer et de désinfecter les instruments souillés."
+      },
+      {
+        "questionText": "N°10 (2020 EMD - Q1922\nLe contrôle du risque infectieux passe par:",
+        "options": [
+          "A L'utilisation des instruments à usage unique,",
+          "Le refus de prendre en charge des malades à risque,",
+          "Les contrôles sanitaires du personnel médical.",
+          "La disposition d'un lave-mains à commande"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°17 (2020 EMD - Q1944\nl'objectif du contrôle des infections est:",
+        "options": [
+          "De protéger les patients et le personnel contre les infections,",
+          "De réduire le nombre de micro organismes pathogènes pour permettre au système immunitaire de prévenir les infections,",
+          "De diminuer l'efficacité de l'ensemble des micro-organismes,",
+          "D'éliminer la contamination croisée."
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "En réduisant le nombre de micro-organismes pathogènes automatiquement on va diminuer leurs efficacité aussi."
+      },
+      {
+        "questionText": "N°4 (2019 EMD - Q1979\nun antiseptique est",
+        "options": [
+          "une substance antibactérienne nom spécifique",
+          "une substance antibactérienne spécifique",
+          "une substance qui agit partiellement et rapidement sur les bactéries",
+          "une substance qui permet de justifier les micro-organismes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Contrairement aux antibiotiques, qui sont spécifiques à certains types de bactéries, les antiseptiques sont généralement non spécifiques et peuvent être efficaces contre une large gamme de micro-organismes, y compris les bactéries, les virus et les champignons."
+      },
+      {
+        "questionText": "N°5 (2019 EMD - Q1982\nla stérilisation est une opération",
+        "options": [
+          "qui permet de tuer les micro-organismes",
+          "qui permet de multiplier les bactéries",
+          "qui permet d'éliminer les déchets de bactéries",
+          "qui permet de désinfecter les instruments"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "La stérilisation est une opération permettant d’éliminer ou de tuer les\n micro-organismes."
+      },
+      {
+        "questionText": "N°8 (2018 EMD - Q2068\nun antiseptique est",
+        "options": [
+          "une substance antibactérienne nom spécifique",
+          "une substance antibactérienne spécifique",
+          "une substance qui agit globalement et rapidement sur les bactéries",
+          "une substance qui permet d'éliminer les micro-organismes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Un antiseptique est une substance qui permet d’éliminer ou de tuer les micro-organismes ou bien d’inactiver les virus en fonction des objectifs fixés.\n Contrairement aux antibiotiques, qui sont spécifiques à certains types de bactéries, les antiseptiques sont généralement non spécifiques et peuvent être efficaces contre une large gamme de micro-organismes, y compris les bactéries, les virus et les champignons."
+      },
+      {
+        "questionText": "N°9 (2018 Synthèse - Q2073\nla stérilisation est une opération",
+        "options": [
+          "qui permet de tuer les microorganismes",
+          "qui permet d'éliminer les bactéries",
+          "permet de conserver la forme de l'instrument",
+          "de nettoyer les instruments"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "La stérilisation est une opération permettant d’éliminer ou de tuer les\n micro-organismes (dont les bactéries)."
+      },
+      {
+        "questionText": "N°10 (2018 Synthèse - Q2075\nLe Tri des déchets permet",
+        "options": [
+          "d'assurer la sécurité des personnes",
+          "de respecter les règles d'hygiène",
+          "d'éliminer chaque type de déchet par la filière",
+          "d'éviter la contamination des personnes"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°19 (2018 Synthèse - Q2100\nLe choix d'un antiseptique est fonction de :",
+        "options": [
+          "Son efficacité sur l'ensemble des micro-organism",
+          "sa tolérance",
+          "sa vitesse d'action",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°19 (2018 EMD - Q2101\nciter les étapes du cycle de la désinfection.",
+        "options": [],
+        "correctOptionIndexes": [],
+        "explanation": "-Trempage\n -Nettoyage\n -Séchage"
+      },
+      {
+        "questionText": "N°20 (2018 EMD - Q2102\nla stérilisation est une opération",
+        "options": [
+          "qui permet de tuer les microorganismes",
+          "qui permet d'éliminer les bactéries",
+          "qui permet de conserver la forme de l'instrument",
+          "qui permet de nettoyer les instruments"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "La stérilisation est une opération permettant d’éliminer ou de tuer les\n micro-organismes (dont les bacteries)."
+      },
+      {
+        "questionText": "N°20 (2018 Synthèse - Q2103\nles objectifs du contrôle des infections sont :",
+        "options": [
+          "la Protection des patients et le personnel contre les infections",
+          "la réduction du nombre de micro-organismes pathogènes pour permet de prévenir les infections",
+          "l'élimination de la contamination croisée",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "questionText": "N°13 (2024 EMD - Q697\nDéfinition d'une infection nosocomiale:",
+        "options": [
+          "Infection communautaire",
+          "Infection contractée à l'hôpital",
+          "Absente à l'admission à hôpital",
+          "Survient chez tout individu sans terrain pathologique favorisant"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Infection nosocomiale:\n  Infection contractée à l’hôpital :\n - qui apparaît au-delà de 48h d’hospitalisation\n - absente à l’admission à hôpital\n - non en incubation\n - lien causal entre hospitalisation et infection"
+      },
+      {
+        "questionText": "N°14 (2024 EMD - Q711\nLa désinfection des mains est:",
+        "options": [
+          "Une action bactériostatique par effet chimique",
+          "Réalisée par solution antiseptique à base d'alcool",
+          "Effectuée avant chaque soin.",
+          "Un effet prolongé de deux à six heures peut être obtenu"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "-La réponse A est fausse c’est une action bactéricide par effet chimique \n -La réponse D est fausse c’est la désinfection chirurgicale des mains qui peut avoir un effet prolongé de deux à six heures."
+      },
+      {
+        "questionText": "N°19 (2024 EMD - Q805\nPour maintenir l'hygiène au cabinet dentaire :",
+        "options": [
+          "Le lavage des mains se fait avant la prise en charge de chaque patient",
+          "Les instruments non jetables peuvent être utilisés après une simple désinfection",
+          "Le nettoyage et la désinfection des sols et des surfaces se fait une fois par semaine",
+          "Les instruments à usage unique sont utilisés pour tous les patients"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Le lavage des mains est effectué avant et après chaque soin et chaque fois que les mains sont souillées.\n Les instruments non jettable doivent subir une désinfection de haut niveau ou une stérilisation, toujours précédée d’un nettoyage approfondi."
+      },
+      {
+        "questionText": "N°7 (2023 EMD - Q969\nDans un cabinet dentaire le lavage et désinfection des mains se font:",
+        "options": [
+          "Après chaque soin uniquement",
+          "Avant la mise des gants,",
+          "En mouillant les mains (sans les savonner",
+          "En les séchant après rinçage."
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "Le lavage des mains est effectué avant et après chaque soin et chaque fois que les mains sont souillées.\n Se laver soigneusement les mains avec un savon liquide de pH neutre ou\n utiliser des gels hydro-alcooliques."
+      },
+      {
+        "questionText": "N°12 (2023 EMD - Q1052\nLe nettoyage et désinfection des plateaux et instruments manuels se feront:",
+        "options": [
+          "Immédiatement après leur utilisation; avant la stérilisation",
+          "En emballant ces derniers pour les placés dans l'autoclave",
+          "En procédant à leur décontamination",
+          "En nettoyant manuellement à l'aide d'une brosse pour bien éliminer les résidus de sang ou autres."
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": ""
       }
     ]
   }
