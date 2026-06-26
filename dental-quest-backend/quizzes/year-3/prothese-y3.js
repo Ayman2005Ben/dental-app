@@ -1033,6 +1033,382 @@ const prothesey3Quizzes = [
     ]
   },
   {
+    "title": "L'examen clinique en prothèse adjointe totale",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "N°2 (2025 1°EMD DENTAIRE) - Les poches de Fish",
+        "options": [
+          "Constituent région du volet lingual",
+          "Sont délimitées antérieurement par le frein vestibulaire latéro-inférieur",
+          "Limitent l'extension de la prothèse dans la région latérale",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2025 1°EMD DENTAIRE) - Le torus palatin est:",
+        "options": [
+          "Une proéminence osseuse qui se forme toujours au dépend de la suture intermaxillaire.",
+          "De type 3 de LANDA quand il est allongé, peu saillant au niveau des 2/3 postérieurs",
+          "De type 4 de LANDA quand il est étroit, au niveau du 1/3 antérieur",
+          "Un indice négatif qui entraine un mouvement de bascule de la prothèse"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2025 1°EMD DENTAIRE) - La salive:",
+        "options": [
+          "Est un élément clé de la rétention des prothèses adjointes totales",
+          "Doit être évaluer quantitativement et qualitativement",
+          "Est de meilleure qualité quand elle est visqueuse",
+          "Est de meilleure qualité quand elle est très peu visqueuse"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2024 1°EMD) - Les éléments anatomophysiologiques à exploiter à la mandibule sont:",
+        "options": [
+          "La frange sublinguale",
+          "Les poches d'Eisenring",
+          "Les tubercules retro molaires",
+          "La ligne oblique interne"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2024 1°EMD) - Les poches de FISH:",
+        "options": [
+          "Sont délimitées antérieurement par le frein latéral et postérieurement par l'insertion antérieure du masséter",
+          "Joue un rôle stabilisateur de la prothèse totale inférieure -",
+          "Joue un rôle dans la rétention de la prothèse totale inférieure",
+          "peut-être un indice négatif"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2024 1°EMD) - Les apophyses géni sont:",
+        "options": [
+          "Le point de départ des lignes obliques internes",
+          "Le point d'insertion du muscle génio-glosse",
+          "Toujours dégagées lors de la réalisation de la prothèse totale inférieure",
+          "déchargées quand elles sont saillantes ou douloureuses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2024 1°EMD) - La niche rétro molaire :",
+        "options": [
+          "Est un hiatus entre le mylohyoïdien et le lingual du constricteur supérieur du pharynx",
+          "Permet une extension distale si la ligne oblique interne le permet.",
+          "Participe à la sustentation de la prothèse totale mandibulaire",
+          "Participe à la rétention de la prothèse totale mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2023 1°EMD) - Lors de l'observation clinique en prothèse totale",
+        "options": [
+          "ll est primordial de cerner le profil psychologique de notre patient",
+          "Le praticien n'accorde aucune importance aux anciennes prothèses du patient",
+          "La profession du patient peut déterminer certaines exigences prothétiques",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2023 1°EMD) - Lors de l'examen clinique exobuccal",
+        "options": [
+          "La palpation des muscles de la face est nécessaire",
+          "La forme du visage n'a aucune importance dans le choix des dents prothétiques",
+          "Des pathologies articulaires sont détectées par palpation",
+          "Nous permet d'évaluer la hauteur des 2 étages de la face"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2023 1°EMD) - Les indices négatifs en prothèse totale",
+        "options": [
+          "Sont tous à décharger",
+          "améliorent la stabilité des futures prothèses, en les évitant",
+          "Nécessitent systématiquement une chirurgie préprothétique",
+          "Lorsqu'une décharge est nécessaire, elle se fait avec une épaisseur importante de cire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2022 1°EMD) - Parmi les indices négatifs au maxillaire nous avons",
+        "options": [
+          "Le ligament ptérygomaxillaire",
+          "Le sillon ptérygo maxillaire",
+          "Le torus palatin",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2022 1°EMD) - les tubérosités :",
+        "options": [
+          "Se situent à la jonction ptérygo maxilaire",
+          "Doivent être déchargées par la prothèse",
+          "Doivent être de dépouille",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2022 1°EMD) - Les apophyses génies:",
+        "options": [
+          "Assurent l'insertion du géniohyoidien",
+          "Sont dégagées en cas de douleur",
+          "se situent sur la face interne du corp mandibulaire",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2021 1°EMD) - En prothèse amovible complète, connaitre la personnalité du patient est:",
+        "options": [
+          "indispensable.",
+          "Souhaitable.",
+          "Sans intérêts.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2021 1°EMD) - La réussite d'une prothèse amovible complète dépend:",
+        "options": [
+          "De la coopération du patient.",
+          "D'un examen minutieux.",
+          "D'une analyse préprothétique approfondie.",
+          "Du sexe du patient"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2021 1°EMD) - Les poches d'Elsenring sont :",
+        "options": [
+          "Situées au niveau maxillaire.",
+          "Situées au niveau mandibulaire.",
+          "Situées postérieurement au niveau maxillaire.",
+          "Situées antérieurement au niveau mandibulaire."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2021 1°EMD) - En prothèse amovible complète, la panoramique dentaire nous renseigne sur :",
+        "options": [
+          "La densité osseuse.",
+          "Le degré de résorption osseuse",
+          "La présence de dents incluses.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2019 1°EMD) - Connaitre la personnalité des patients est:",
+        "options": [
+          "Sans importance pour le déroulement du traitement prothétique.",
+          "Impératif pour adapter le discours et la prise en charge à chacun d'entre eux.",
+          "Essentiel pour établir un plan de traitement adéquat.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2019 1°EMD) - En prothèse amovible complète, l'examen radiologique panoramique nous informe sur :",
+        "options": [
+          "Le degré de résorption.",
+          "les éléments intra osseux",
+          "Le système articulaire.",
+          "Le choix des thérapeutiques amovibles."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2019 1°EMD) - Les fossettes palatines:",
+        "options": [
+          "Constituent un repère pour la limite postérieure de la prothèse",
+          "Doivent être toujours visible.",
+          "Se trouvent de part et d'autre de la suture intermaxillaire.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2019 1°EMD) - Le ligament ptérygo-maxillaire :",
+        "options": [
+          "Se tend à l'ouverture buccale.",
+          "Ne doit pas être recouvert par la prothèse maxillaire.",
+          "Constitue la limite postérieure de la prothèse inférieure.",
+          "Les deux propositions A et B sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2018 1°EMD) - Les condyles de l'édenté total :",
+        "options": [
+          "Effectuent un mouvement de rotation autour d'un point.",
+          "Effectuent un mouvement en charnière.",
+          "Effectuent un mouvement de translation.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2018 1°EMD) - La fibromuqueuse recouvrant les crêtes résiduelles sera palpée pour évaluer :",
+        "options": [
+          "Son adhérence.",
+          "Son étendu.",
+          "Sa couleur.",
+          "Son épaisseur."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2017 1°EMD) - Le torus palatin:",
+        "options": [
+          "Se développe sur la suture palato-maxillaire.",
+          "A été classé par Atwood en 5 types.",
+          "Est le plus souvent de forme ovalaire.",
+          "Est douloureux à la palpation.",
+          "Est remodelé selon la technique de CHAPPA lorsqu'il est réellement."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2016 1°EMD) - Dans l'étude de la personnalité de l'édenté total, le suspicieux est :",
+        "options": [
+          "Apathique, non concerné par le traitement.",
+          "Non coopérant.",
+          "Demande du temps et patience.",
+          "Très craintif.",
+          "Impatient, difficile à satisfaire."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2016 1°EMD) - A l'examen clinque, si le patient présente un diabète, il faut :",
+        "options": [
+          "Eviter les blessures.",
+          "Maintenir l'hygiène.",
+          "Réduire la durée de port de la prothèse.",
+          "Préconiser un port nocturne de la prothèse",
+          "Eviter d'appareiller le patient."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2016 1°EMD) - Les tubérosités sont favorables à la sustentation et à la stabilisation si elles:",
+        "options": [
+          "Sont arrondies, bien marquées.",
+          "Sont arrondies, peu marquées.",
+          "Partie la plus basse se situe à 2 mm au-dessus du plan occlusal.",
+          "Partie la plus basse se situe à 2 mm au-dessous du plan occlusal.",
+          "Sont recouvertes par un tissu ferme et adhérent."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°98 (2016 Résidanat ) - A plus ou moins long terme les édentements non traités par la prothèse aboutissent à : 1- Une modification de la D.V.O. 2- Une apparition d'interférences et de prématurités perturbant la dynamique masticatrice. 3- Des répercussions sur les A.T.M. 4- Toutes les réponses sont justes. 5- Toutes les réponses sont fausses.",
+        "options": [
+          "(1-2)",
+          "(2-3)",
+          "(1-3)",
+          "(4)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
     "title": "La mise en condition en prothèse totale",
     "subject": "prothese-y3",
     "questions": [
@@ -2693,6 +3069,613 @@ const prothesey3Quizzes = [
         "correctOptionIndexes": [
           0,
           4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "occlusion bilaterale",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "N°6 (2025 2°EMD DENTAIRE) - Le concept occlusal consiste à avoir:",
+        "options": [
+          "Des contacts simultanément entre les versants cuspidiens des prémolaires et molaires et entre les bords libres des incisives.",
+          "Des contacts simultanément entre les versants cuspidiens des prémolaires et molaires et entre les pointes des canines.",
+          "Des contacts entre les bords libres des incisives et canines sans contact postérieur.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2025 2°EMD DENTAIRE) - En occlusion de relation centrée ORC, on a :",
+        "options": [
+          "Absence de contact entre les dents antérieures.",
+          "Présence de contact entre les dents antérieures.",
+          "Au niveau des dents postérieures : les contacts s'établissent entre les cuspides d'appui secondaires inférieures et palatines supérieures.",
+          "Au niveau des dents postérieures : les contacts s'établissent entre les cuspides d'appui vestibulaires inférieures et palatines supérieures."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2022 1°EMD) - En prothèse complète amovible, l'occlusion balancée:",
+        "options": [
+          "Permet de maintenir l'équilibre des prothèses pendant la mastication",
+          "Permet d'assurer la pérennité de la surface d'appui ostéo-muqueuse",
+          "Entraine une résorption accélérée",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2022 1°EMD) - L'occlusion bilatéralement équilibrée se caractérise par:",
+        "options": [
+          "La présence des contacts entre les dents antérieures supérieures et inférieures en RC",
+          "Des contacts simultanés entre les dents antérieures et postérieures en propulsion",
+          "Des contacts entre les prémolaires et molaires du côté travaillant",
+          "Des contacts entre les prémolaires et molaires du côté non travaillant"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2021 2°EMD) - Le phénomène de Christensen se caractérise par:",
+        "options": [
+          "Une désocclusion molaire en latéralité droite",
+          "Une désocclusion incisive en latéralité.",
+          "Une désocclusion molaire en bout à bout",
+          "Une désocclusion incisive en propulsion,"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2021 2°EMD) - L'équilibration occlusale:",
+        "options": [
+          "Constitue une phase terminale",
+          "Il s'agit de rechercher et de supprimer les interférences occlusales au cours de tous les mouvements centrés et excentrés",
+          "La suppression des interférences occlusales uniquement au cours des mouvements de latéralité",
+          "La suppression des interférences occlusales uniquement pendant le mouvement de propulsion"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2021 2°EMD) - Le concept occlusal utilisé en prothèse totale adjointe est:",
+        "options": [
+          "La protection canine",
+          "La fonction groupe",
+          "L'occlusion bilatéralement équilibrée",
+          "L'occlusion bilatéralement équilibrée en propulsion"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2020 2°EMD) - Lors de l'occlusion bilatéralement équilibrée, on aura",
+        "options": [
+          "Absence de contact les dents antérieures en occlusion centrée",
+          "En latéralité, un ou deux points de contact du côté non travaillant sont suffisants pour assurer la stabilité des prothèses",
+          "En protrusion des contacts entre les dents postérieures et antérieures",
+          "Des contacts antérieurs et postérieurs on occlusion centrée"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2020 2°EMD) - Les objectifs d'une occlusion en prothèse totale sont:",
+        "options": [
+          "Restaurer uniquement la fonction de mastication.",
+          "Préserver les tissus de soutien.",
+          "Assurer la stabilité des prothèses",
+          "Rétablir des rapports d'intercuspidation maximale."
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2020 2°EMD) - L'occlusion bilatéralement équilibrée engrenée généralisée est retrouvée dans :",
+        "options": [
+          "Le montage de Hanau.",
+          "Le montage de d'AC KERMAN",
+          "Le montage de GYSI",
+          "Le montage de Sears"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°87 (2020 Résidanat ) - En prothèse totale à la fin de l'équilibration en latéralité, nous devons obtenir : 1- Des contacts dentaires uniquement du côté non travaillant. 2- Un maximum de contacts du côté travaillant 3- Un maximum de contacts du côté travaillant et all moins I ou 2 contacts du côté non travaillant. 4- Une protection des contacts obtenus en relation centrée 5- Toutes les réponses sont fausses",
+        "options": [
+          "(5)",
+          "(1)",
+          "(3,4)",
+          "(1,4)",
+          "(2,4)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2018 2°EMD) - Lors de l'occlusion bilatéralement équilibrée. on aura :",
+        "options": [
+          "Absence de contact entre les dents antérieures en occlusion centrée",
+          "En latéralité. 1 ou 2 points de contact du côté non travaillant sont suffisants pour assurer la stabilité des prothèses.",
+          "Des contacts entre les dents postérieures impliquant le minimum de pointde contact.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "Occlusion et DV",
+    "subject": "prothese-y3",
+    "questions": [
+      {
+        "questionText": "N°13 (2025 1°EMD DENTAIRE) - Une dimension verticale d'occlusion sous-évaluée se manifeste par :",
+        "options": [
+          "Une fibro-muqueuse flottante et une résorption osseuse accélérée généralisée.",
+          "Des acouphènes.",
+          "Des douleurs musculaires conduisant le patient à retirer la prothèse mandibulaire.",
+          "Des douleurs au niveau de la nuque."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2025 1°EMD DENTAIRE) - Dans le réglage du segment antérieur du bourrelet supérieur en prothèse totale adjointe :",
+        "options": [
+          "La hauteur du bourrelet doit dépasser de 2 mm le versant muqueux de la lèvre supérieure.",
+          "La situation du bord libre du bourrelet est vérifiée par les bilabiales.",
+          "Le parallélisme avec le plan bi-pupillaire est vérifié par la partie extrabuccale de la plaque de Fox.",
+          "Le critère phonétique prime sur le critère esthétique."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2025 1°EMD DENTAIRE) - La préparation du bourrelet d'occlusion inférieur au laboratoire implique :",
+        "options": [
+          "Une hauteur antérieure de 18 mm calculée à partir du frein médian.",
+          "Une hauteur postérieure de 18 mm.",
+          "Une largeur postérieure déterminée par la largeur des trigones retro-molaire.",
+          "Un segment antérieur inscrit dans l'air d'Ackerman."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2025 1°EMD DENTAIRE) - Dans la dimension verticale d'occlusion:",
+        "options": [
+          "Le réglage de la hauteur désirée se fait sur les deux bourrelets.",
+          "Sur-évaluée, la prononciation du a je i se manifeste par une fuite d'air.",
+          "Bien évaluée, l'aspect esthétique se manifeste par une décontraction musculaire péri-prothétique.",
+          "Le free way space est estimé à 3 mm."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2024 1°EMD) - Le plan d'occlusion prothétique :",
+        "options": [
+          "Est le plan idéal selon lequel les deux arcades artificielles doivent se rencontrer",
+          "Joue un rôle important dans la stabilisation de la prothèse",
+          "Forme une surface curviligne dans les trois plans de l'espace",
+          "Est parallèle antérieurement à la ligne bi pupillaire et postérieurement au plan axio-orbitaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2024 1°EMD) - De par son orientation, le plan d'occlusion:",
+        "options": [
+          "Participe à la cinématique du bol alimentaire.",
+          "Réduit la puissance masticatoire du patient",
+          "Améliore la puissance masticatoire du patient",
+          "Perturbe l'émission correcte des phonèmes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2024 1°EMD) - Lors du réglage de la maquette d'occlusion inferieure",
+        "options": [
+          "Il faut avoir un parallélisme entre le bord occlusal du bourrelet et la ligne bi-pupillaire",
+          "La phonation permet de confirmer ou de corriger la position du bourrelet antérieurement",
+          "la hauteur du bourrelet est de 18 mm dans la région postérieure",
+          "la situation du bourrelet ne doit pas entraver le jeu de la musculature lingual"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2024 1°EMD) - Quand la DVO est sur évaluée :",
+        "options": [
+          "Présence de claquement entre les prothèses",
+          "Les sillons sont effacés .",
+          "L'écart entre DVR et DVO est important",
+          "Perturbation de la prononciation des dent dentales (CHE et JE) ."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2024 1°EMD) - L'espace libre d'inocclusion:",
+        "options": [
+          "Appelé aussi espace de Thompson",
+          "Est la distance séparant les surfaces occlusales des dents antagonistes lorsque la mandibule est en position d’intercuspidation maximale",
+          "Stable chez tous les individus",
+          "Est indispensable à l'équilibre neuro musculaire du patient"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2023 1°EMD) - En prothèse adjointe totale le plan d'occlusion permet:",
+        "options": [
+          "De rétablir l'esthétique et la phonation",
+          "D'assurer la rétention des prothèses",
+          "Une bonne efficacité masticatoire",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2023 1°EMD) - Concernant la maquette d'occlusion supérieure:",
+        "options": [
+          "Le segment antérieur doit s'inscrire dans l'aire de sustentation d'Ackermann",
+          "Au repos le segment antérieur dépasse la lèvre supérieure de 2mm",
+          "Les segments postérieurs sont réglés parallèlement au plan de Camper",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2023 1°EMD) - La dimension verticale d'occlusion détermine:",
+        "options": [
+          "La position de la mandibule dans le plan horizontal",
+          "La position de la mandibule dans le plan sagittal.",
+          "La position de la mandibule dans le plan frontal.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2023 1°EMD) - L'espace de Thompson est:",
+        "options": [
+          "La distance séparant les surfaces occlusales des dents antagonistes lorsque la mandibule est en RC",
+          "Elevé chez la femme.",
+          "Diminué dans la classe III squelettique.",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2023 1°EMD) - L'évaluation de la dimension verticale de repos:",
+        "options": [
+          "Est toujours précédée d'une mise en condition tissulaire.",
+          "Nécessite la présence de la maquette d'occlusion supérieure en bouche.",
+          "Nécessite la présence de la maquette d'occlusion inférieure en bouche.",
+          "Nécessite la présence des deux maquettes d'occlusion."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2022 1°EMD) - La règle de Fox :",
+        "options": [
+          "Est composée de deux fourchettes",
+          "Son segment antérieur doit être parallèle au plan bipupillaire",
+          "Son segment postérieur doit être parallèle au plan de Francfort",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2022 1°EMD) - L'orientation correcte du plan d'occlusion dans le secteur postérieur permet:",
+        "options": [
+          "L ‘amélioration de la puissance masticatoire",
+          "Une participation optimale à la cinématique du bol alimentaire",
+          "Le rétablissement d'une phonation correcte",
+          "La stabilité prothétique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2022 1°EMD) - Le plan d'occlusion prothétique:",
+        "options": [
+          "Doit être parallèle à la surface d'appui maxillaire et mandibulaire",
+          "Sera incliné de +5° par rapport au plan de Camper afin d'augmenter la puissance masticatoire",
+          "Sera parallèle au plan bipupillaire antérieurement",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2021 1°EMD) - L'aire de sustentation définit par Ackermann est:",
+        "options": [
+          "L'espace situé entre la langue d'une part et la sangle labio-jugale d'autre part.",
+          "La surface comprise entre le sommet de la crête postéro-inférieure et le fond du vestibule.",
+          "La surface comprise entre le sommet de la crête antero-inférieure et le fond du vestibule.",
+          "La surface comprise entre le sommet de la crête antero-supérieure et le fond du vestibule."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2021 1°EMD) - Le réglage du segment antérieur du POP se fait :",
+        "options": [
+          "Parallèlement au plan de Camper",
+          "Parallèlement à la ligne bi-pupillaire.",
+          "Au dépend de la maquette d'occlusion inférieure.",
+          "Par l'intermédiaire de la plaque de Fox."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2021 1°EMD) - Lors de l'évaluation de la DVR, nous utilisons:",
+        "options": [
+          "Exclusivement la maquette d'occlusion supérieure.",
+          "Exclusivement la maquette d'occlusion inférieure.",
+          "Les deux maquettes d'occlusion supérieure et inférieure",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2021 1°EMD) - Lors de la détermination de la DVO, lorsque celle est sur évaluée, la correction se fait :",
+        "options": [
+          "Au dépend des deux bourrelets supérieurs et inférieurs.",
+          "Au dépend du bourrelet supérieur.",
+          "Au dépend du bourrelet inférieur.",
+          "toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2021 Résidanat ) - En prothèse totale, une dimension verticale d'occlusion sous-évaluée est caractérisée par : 1- L'existence d'un stomion 2- Par un contact des dents antéro-supérieures et antéro inferieures lors de la prononciation du \"S\" 3- Par une accentuation des sillons naso-géniens 4- Par un affrontement exagéré des lèvres 5- Toutes les réponses sont fausses",
+        "options": [
+          "(1,4)",
+          "(2,3)",
+          "(2,4)",
+          "(3,4)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2019 1°EMD) - Lors de la réalisation du bourrelet supérieur :",
+        "options": [
+          "La forme doit respecter le contour de l'arcade.",
+          "Son épaisseur sera de 4mm dans la région antérieure elle atteint 6 à 10 mm au niveau des premières molaires.",
+          "Son épaisseur sera de 8mm dans la région antérieure elle atteint 10 à 12 mm au niveau des premières molaires.",
+          "Son épaisseur dans la région antérieure sera égale à celle au niveau des premières molaires."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2019 1°EMD) - Les segments postérieurs du bourrelet supérieur sont réglés:",
+        "options": [
+          "Parallèlement au plan de référence défini par Camper",
+          "Perpendiculairement au plan de référence défini par Camper.",
+          "Parallèlement au plan de référence défini par Francfort.",
+          "Parallèlement au plan de référence bi-pupillaire."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2019 1°EMD) - Le calcul de la DV par la technique de Wills se fait avec un compas pour :",
+        "options": [
+          "Rechercher une égalité entre la distance fente labiale/angle externe de l'œil et la distance point sous nasal/gnathion",
+          "Rechercher une égalité entre la distance tragus gnathion et la distance ligne bi-pupillaire/fente  labiale",
+          "Rechercher une égalité entre la distance fente labiale/point sous nasal et la distance angle externe de l'œil gnathion",
+          "Aucune réponse n'est juste"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2019 1°EMD) - La position physiologique de repos est:",
+        "options": [
+          "La position d'équilibre tonique du complexe musculaire avec un espace libre d'inocclusion égal en moyenne à 2mm.",
+          "La position d'équilibre tonique du complexe musculaire avec une occlusion équilibrée d'intercuspidation maximale.",
+          "Est la somme de l'espace libre d'inocclusion égal en moyenne à 2mm et l'occlusion d'intercuspidation ruaximale",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2018 1°EMD) - Le rôle du POP est:",
+        "options": [
+          "D'assurer une phonation et mastication correcte.",
+          "D'assurer la permanence de la stabilité des prothèses sur les surfaces d'appui aussi bien en occlusion centrée et en excentrée.",
+          "De respecter l'intégrité des surfaces d'appui",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2018 1°EMD) - Lors du réglage du POP, on prend comme référence :",
+        "options": [
+          "L'esthétique du patient.",
+          "Le plan de camper",
+          "Le plan de Francfort.",
+          "Le plan de Wilson.",
+          "Le plan bi-pupillaire."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2018 1°EMD) - La dimension verticale (DV) : Vous livrez une prothèse, vous faites l'examen de la valeur phonétique au cours de l'émission des bilabiales et sifflantes, vous jugez qu'il y a un trouble (un chuintement), vous pensez à :",
+        "options": [
+          "Une DVO surévaluée.",
+          "Une DVO sous-évaluée",
+          "Une prothèse supérieure instable.",
+          "Une DVR diminuée.",
+          "Aucune réponse n'est juste."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2018 1°EMD) - Pour déterminer la DVO, l'évaluation de choix est la technique:",
+        "options": [
+          "Indirecte.",
+          "Phonétique.",
+          "Willis.",
+          "Céphalométrique.",
+          "Esthétique."
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2017 1°EMD) - Lors du réglage du segment postérieur (POP):",
+        "options": [
+          "Le bourrelet est réglé parallèlement au plan de Francfort.",
+          "La fourchette sera plaquée sur la face occlusale du bourrelet inférieur.",
+          "Ce réglage est obtenu grâce à la plaque de WILSON",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°91 (2016 Résidanat ) - Les contacts prématurés sur les bourrelets d'occlusion : 1- Entrainent une erreur lors de l'enregistrement de la relation centrée. 2- Favorisent une déviation latérale droite ou gauche. 3- Sont corrigés par suppression de la cire du coté où se produit le contact prématuré. 4- Empêchent l'alignement systématique des axes médians inter-incisifs. 5- Toutes les réponses sont fausses.",
+        "options": [
+          "(1-2)",
+          "(2-3)",
+          "(3-4)",
+          "(1-2-3-4)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°95 (2015 Résidanat ) - Le plan d'occlusion prothétique :",
+        "options": [
+          "Est parallèle au plan de francfort.",
+          "Ne doit pas être trop important et effacer les sillons nasogéniens.",
+          "Est un plan selon lequel seront montées les dents au laboratoire.",
+          "Est réglé en fonction de la forme et de la tonicité de la lèvre supérieure.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          2
         ],
         "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
