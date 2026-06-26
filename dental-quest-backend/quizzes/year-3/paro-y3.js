@@ -1,10 +1,461 @@
 const paroy3Quizzes = [
   {
+    "title": "Classifications et formes cliniques des maladies p",
+    "subject": "paro-y3",
+    "questions": [
+      {
+        "questionText": "N°1 (2025 1°EMD DENTAIRE) - Selon la classification d'Armitage, les gingivites sont classées :",
+        "options": [
+          "Selon le motif de consultation",
+          "Selon leurs symptomatologies",
+          "Selon leurs étiologies",
+          "Selon leur étiopathogénie"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2025 1°EMD DENTAIRE) - Les lésions endo-parodontales:",
+        "options": [
+          "Constituent un diagnostic selon la classification d'Armitage",
+          "Ne sont pas un diagnostic selon la classification d'Armitage",
+          "Leur étiologie est toujours endodontique",
+          "Leur étiologie peut être combinée"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2025 1°EMD DENTAIRE) - L'impact du stress sur l'état parodontal s'explique par une modification vasculaire :",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2024 1°EMD) - L'ulcération est une perte de substance:",
+        "options": [
+          "limitée à l'épithélium.",
+          "limitée à l'épithélium gingival et le conjonctif",
+          "atteignant les tissus profonds (os alvéolaire).",
+          "caractérisées par une anomalie de la kératinisation de l'épithélium."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2024 1°EMD) - La classification de l'Académie Américaine de Parodontologie (AAP) 1999 ARMITAGE tient compte:",
+        "options": [
+          "du stade de l'évolution de la pathologie",
+          "Des antécédents de parodontite du patient",
+          "de la lésion élémentaire",
+          "des maladies systémiques"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2024 1°EMD) - Dans la classification d'Armitage, parmi ces gingivites lesquelles ne sont pas induites par la plaque",
+        "options": [
+          "Gingivite de la grossesse",
+          "fibrome gingivale",
+          "Gingivite bactérienne spécifique",
+          "Gingivite de la puberté"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2024 1°EMD) - Dans la nouvelle classification des maladies parodontales 2017, les stades sont déterminés par :",
+        "options": [
+          "les besoins en réhabilitation complexe",
+          "de l'état du diabète",
+          "du Défaut crestal",
+          "de l'état de santé parodontale sur parodonte réduit",
+          "Du facteur de risque qui est le tabac"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2024 1°EMD) - La santé parodontale sur un parodonte réduit peut être : classis",
+        "options": [
+          "Sans antécédents de parodontite",
+          "Sans perte d'attache clinique",
+          "Avec antécédents de parodontite traitée et stabilisée",
+          "Sans perte osseuse alvéolaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2024 1°EMD) - Les tumeurs bénignes sont des lésions dégénératives:",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2024 1°EMD) - Parmi ces parodontites certaines ne font pas parties de la classification d'Armitage (1999):",
+        "options": [
+          "Parodontite de l'adulte",
+          "Parodontite chronique",
+          ". Parodontite juvénile",
+          "Parodontite pré-pubertaire",
+          "Parodontite réfractaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2024 1°EMD) - Parmi les lésions élémentaires secondaires, on retrouve:",
+        "options": [
+          "La vésicule",
+          "La papule",
+          "L'érosion",
+          "La bulle",
+          "L'ulcération"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2023 1°EMD) - Parmi ces lésions élémentaires lesquelles sont considérées primaires:",
+        "options": [
+          "Le nodule",
+          "La nécrose",
+          "La papule",
+          "L'ulcération"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2023 1°EMD) - Dans la classification des maladies parodontales d'Armitage, les critères retenus:",
+        "options": [
+          "présence de lésions élémentaires primaires",
+          "la vitesse d'évolution",
+          "des aspects biologiques",
+          "de la complexité du traitement",
+          "toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2023 1°EMD) - Dans la nouvelle classification des maladies parodontales (2017) des parodontites; le stade donne des informations sur la progression passé et future de la maladie:",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2022 1°EMD) - Lors de l'inflammation gingivale, l’œdème:",
+        "options": [
+          "Se traduit par une augmentation du volume de la gencive",
+          "Est provoqué par la dilatation et augmentation de la perméabilise des capillaires",
+          "Est provoqué par l'augmentation du débit sanguin.",
+          "Toutes les réponses sont justes."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°47 (2022 Résidanat ) - Dans la classification d'Armitage (1999), la parodontite chronique est dite modérée lorsque :",
+        "options": [
+          "La perte d'attache est de 1 à 2 mm.",
+          "La perte d'attache est de 3 à 4 mm.",
+          "La perte d'attache est supérieure à 5 mm.",
+          "La perte d'attache est de 2 à 4 mm.",
+          "La perte d'attache est toujours égale à la profondeur de la poche."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°50 (2022 Résidanat ) - Le granulome pyogénique : 1- Apparait au 2 eme trimestre de la grossesse 2- Est une tumeur néoplasique 3- Peut apparaitre à n'importe quel moment de la grossesse 4- Est réversible après l'accouchement 5- Se rencontre en absence de plaque",
+        "options": [
+          "(1,2)",
+          "(2,3)",
+          "(3,4)",
+          "(1,2,5)",
+          "(4,5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2021 1°EMD) - L'ulcération est une:",
+        "options": [
+          "Perte de substance superficielle limitée à l'épithélium.",
+          "Perte de substances atteignant la membrane basale.",
+          "Portion tissulaire frappée de mortification.",
+          "Mortification tissulaire atteignant les tissus profonds."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2021 2°EMD) - les facteurs de risque les plus importants de la maladie parodontale sont :",
+        "options": [
+          "Le tabac",
+          "Les modifications hormonales",
+          "Le stress",
+          "Le diabète"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2021 1°EMD) - La classification de l'Académie Américaine de Parodontologie (AAP) 1999 ARMITAGE tient compte :",
+        "options": [
+          "de l'âge du patient",
+          "de la réponse au traitement.",
+          "de la vitesse de progression de la maladie parodontale.",
+          "des caractéristiques des parodontites associées à des maladies systémiques"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2020 1°EMD) - Les maladies parodontales constituent une famille de maladies qui déférent :",
+        "options": [
+          "Selon leurs étiologies",
+          "selon leurs enchainements d'événements",
+          "Selon leur réponse au traitement",
+          "Selon leur progression"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2020 1°EMD) - L'érosion est une lésion élémentaire qui se traduit par :",
+        "options": [
+          "La perte de substance superficielle limitée à l’épithélium",
+          "Un soulèvement épidermique",
+          "La perte de substance qui touche l’épithélium et le tissu conjonctif",
+          "La parte de substance qui s'étend los alvéolaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2020 1°EMD) - Dans la classification d'Armitage, dans les maladies gingivales non induites par la plaque bactérienne, sont classées :",
+        "options": [
+          "Les maladies gingivales modifiées par la malnutrition",
+          "Les maladies gingivales modifiées par la prise de médicaments",
+          "Les maladies gingivales d'origine virale",
+          "Les anomalies congénitales ou acquises"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2019 1°EMD) - L'érosion est une lésion élémentaire qui se traduit par:",
+        "options": [
+          "La perte substance superficielle limitée à l'épithélium",
+          "Un soulèvement épidermique.",
+          "La perte de substance qui touche l'épithélium et le tissu conjonctif.",
+          "La perte de substance qui s'étend à l'os alvéolaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2019 1°EMD) - Dans la classification d'Armitage, dans les maladies gingivales non induites par la plaque bactérienne, sont classées:",
+        "options": [
+          "Les maladies modifiées par la malnutrition.",
+          "Les maladies gingivales modifiées par prise de médicaments.",
+          "Les anomalies gingivales d'origine virale",
+          "Les anomalies congénitales ou acquises."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2018 1°EMD) - La classification des maladies parodontales selon l'Académie Américaine de Parodontologie (AAP) de 1999 d'ARMITAGE a bien développé :",
+        "options": [
+          "Les caractéristiques des parodontites associées à des maladies systémiques",
+          "La parodontite réfractaire",
+          "les lésions endoparodontales",
+          "les conditions défavorables innées ou acquises"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2018 1°EMD) - L'ulcération est une perte de substance:",
+        "options": [
+          "limitée à l’épithélium",
+          "atteignant la membrane basale",
+          "atteignant les tissus profonds (os alvéolaire)",
+          "caractérisées par une anomalie de le kératinisation de l’épithélium"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2018 1°EMD) - parmi ces maladies générales associées à une maladie parodontale , les quelles ne sont pas d’origine génétique :",
+        "options": [
+          "Modification hormonale",
+          "Histyocytose",
+          "Neutropénie",
+          "Leucémie"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2018 1°EMD) - Chez le sujet diabétique: L'apparition de la maladie parodontale est systématique, la maladie parodontale est une complication du diabète :",
+        "options": [
+          "La première affirmation est vraie , la deuxième affirmation est fausse",
+          "La seconde affirmation est vraie , la première affirmation est fause",
+          "Les deux affirmations sont vraies",
+          "Les deux affirmations sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°56 (2018 Résidanat ) - Les parodontites chroniques, selon la classification d'Armitage : 1- Sont en relation direct avec la quantité de plaque bactérienne. 2- Peuvent affecter des sujets à tout âge. 3- Ne peuvent pas être pas associées au diabète. 4- Peuvent être liées à la présence d'une composante familiale. 5- Sont appelées modérées lorsque la perte d'attache est comprise entre 5 et 6mm.",
+        "options": [
+          "(1-2-3)",
+          "(1-2-5)",
+          "(1-2-4)",
+          "(1-2 )",
+          "(1-2-3-5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2017 1°EMD) - Le syndrome de Kostmann se caractérise par :",
+        "options": [
+          "un nombre de polynucléaires neutrophiles qui se situe entre 5000 et10000/mm",
+          "un nombre de polynucléaires neutrophiles inférieur à 1000 mm",
+          "un nombre de polynucléaires neutrophiles inférieur à 10000 mm",
+          "un nombre de polynucléaires neutrophiles inférieur à 100000/mm",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2016 1°EMD) - Dans la classification d'Armitage la parodontite chronique:",
+        "options": [
+          "Remplace la parodontite réfractaire",
+          "N'intéresse que l'adulte",
+          "Peut être observée chez l'enfant à un stade avancé",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2016 1°EMD) - Dans la classification des maladies parodontales d'Armitage de 1999; deux formes nouvelles de maladies parodontales ont été introduites par rapport aux classifications antérieures:",
+        "options": [
+          "Parodontites agressives",
+          "Abcès parodontal",
+          "Parodontites réfractaires",
+          "Lésions endoparodontales"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°51 (2016 Résidanat ) - Parmi ces Maladies générales associées à une maladie parodontale selon Armitage ; lesquelles sont associées à un désordre génétique 2 : 1- L'hypophosphatasie 2- L'agranulomatose 3- Le lupus érythémateux 4- La neutrdpénie familiale 5- La leucémie",
+        "options": [
+          "(1-2-3)",
+          "(1-3-4)",
+          "(1-4-5)",
+          "(1-2-4)",
+          "(1-3-5)"
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
     "title": "detartrage et surfacage",
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°7 (2025 2°EMD DENTAIRE - Q143\nLe débridement parodontal est un procédé thérapeutique qui associe:",
+        "questionText": "N°7 (2025 2°EMD DENTAIRE) - Le débridement parodontal est un procédé thérapeutique qui associe:",
         "options": [
           "Une Elimination mécanique et chimique de la plaque",
           "Une Elimination du tartre supra gingival par des instruments manuels",
@@ -14,10 +465,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : Le débridement parodontal : est l’élimination mécanique complète du biofilm et du tartre retrouvé sur les couronnes et les surfaces radiculaires"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2025 2°EMD DENTAIRE - Q165\nLe surfaçage radiculaire a pour but:",
+        "questionText": "N°9 (2025 2°EMD DENTAIRE) - Le surfaçage radiculaire a pour but:",
         "options": [
           "De Stopper la maladie parodontale",
           "De Préparer les tissus à la chirurgie parodontale",
@@ -27,10 +478,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Avantages :•\tObtenir une surface radiculaire biologiquement acceptable•\tRéduire l’inflammation•\tRéduire la profondeur des poches parodontales•\tFaciliter les mesures d’hygiène•\tMaintenir ou améliorer le niveau d’attache•\tPréparer les tissus à la chirurgie parodontale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2025 2°EMD DENTAIRE - Q338\nLes règles de choix d'une brosse à dents manuelle reposent sur",
+        "questionText": "N°17 (2025 2°EMD DENTAIRE) - Les règles de choix d'une brosse à dents manuelle reposent sur",
         "options": [
           "la taille du manche qui doit correspondre à la taille de la main",
           "La taille de la tête de la brosse doit être adaptée à la taille des dents uniquement",
@@ -41,10 +492,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "B : La taille de la tête de la brosse doit être adaptée à la taille des dents et à L’ouverture buccaleC : Les poils : doivent être en nylon ou en polyester à extrémités arrondiesE : Gingival: souple (20/100 millimetre) pour un biotype fin; Medium (25/100) pour un biotype épais."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2024 2°EMD - Q423\nL'instrument qui convient le mieux au surfaçage radiculaire est : un/une:",
+        "questionText": "N°2 (2024 2°EMD) - L'instrument qui convient le mieux au surfaçage radiculaire est : un/une:",
         "options": [
           "Houe",
           "Curette",
@@ -54,10 +505,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La Curette : La curette est l’instrument classique du débridement sous gingival. Elle va permettre d’éliminer le tartre sous gingival et de réaliser le surfaçage radiculaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2024 2°EMD - Q497\nLe surfaçage radiculaire proprement dit:",
+        "questionText": "N°7 (2024 2°EMD) - Le surfaçage radiculaire proprement dit:",
         "options": [
           "A permet un remodelage gingival",
           "Est un débridement parodontal",
@@ -68,10 +519,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le surfaçage radiculaire élimine la flore microbienne adhérant aux surfaces radiculaires ou évoluant librement à l’intérieur de la poche, du tartre résiduel ainsi que du cément et de la dentine contaminée par les bactéries et leur produit"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2024 2°EMD - Q544\nLe surfaçage radiculaire a pour objectif la décontamination de la surface radiculaire en éliminant la totalité du cément:",
+        "questionText": "N°11 (2024 2°EMD) - Le surfaçage radiculaire a pour objectif la décontamination de la surface radiculaire en éliminant la totalité du cément:",
         "options": [
           "Vrai",
           "Faux"
@@ -79,10 +530,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Cément et de la dentine contaminée par les bactéries et leur produit"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2023 2°EMD - Q831\nLe tartre sous-gingival:",
+        "questionText": "N°10 (2023 2°EMD) - Le tartre sous-gingival:",
         "options": [
           "On le retrouve fréquemment en face des orifices excréteurs des canaux salivaires.",
           "On l'appelle aussi tartre sérique.",
@@ -92,10 +543,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2023 2°EMD - Q911\nLe DSR (détartrage -surfaçage radiculaire)",
+        "questionText": "N°15 (2023 2°EMD) - Le DSR (détartrage -surfaçage radiculaire)",
         "options": [
           "Est le traitement de base des gingivites uniquement.",
           "Permet un remodelage gingival.",
@@ -105,10 +556,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2022 2°EMD - Q1234\nLe tartre:",
+        "questionText": "N°18 (2022 2°EMD) - Le tartre:",
         "options": [
           "Est une calcification de la pellicule acquise exogène",
           "Est une calcification de la plaque dentaire qui se dépose uniquement sur les dents",
@@ -117,10 +568,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le tartre est une calcification de la plaque dentaire qui se dépose sur les dents ainsi que sur toutes autres structures solides de la cavité buccale."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°73 (2021 Résidanat - Q1679\nLe surfaçage radiculaire proprement dit :‎ 1- ‎Est une thérapeutique non chirurgicale 2- ‎Est un débridement parodontal‎ 3- ‎Est une chirurgie à lambeau‎ 4- ‎Autorise une élimination systématique de tissu de granulation‎ 5- Permet la décontamination de la dentine radiculaire contaminée par les bactéries",
+        "questionText": "N°73 (2021 Résidanat ) - Le surfaçage radiculaire proprement dit :‎ 1- ‎Est une thérapeutique non chirurgicale 2- ‎Est un débridement parodontal‎ 3- ‎Est une chirurgie à lambeau‎ 4- ‎Autorise une élimination systématique de tissu de granulation‎ 5- Permet la décontamination de la dentine radiculaire contaminée par les bactéries",
         "options": [
           "(2,3,4)",
           "(1,2,4)‎",
@@ -131,10 +582,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le surfaçage radiculaireLe surfaçage radiculaire élimine la flore microbienne adhérant aux surfaces radiculaires ou évoluant librement à l’intérieur de la poche, du tartre résiduel ainsi que du cément et de la dentine contaminée par les bactéries et leur produitCes dernières années, un autre terme est préféré au surfaçage radiculaire :le débridementparodontal.Traitement plus conservateur,il a pour but la décontamination radiculaire ainsi que l’élimination des agents toxiques à l’aide d’instruments manuels ou ultrasoniques, mais il n’inclut pas le lissage radiculaire ainsi que l’élimination systématique du cément3 : Faux ; Le surfaçage est unetechnique non chirurgicale4:L’élimination du tissu de granulation est plus efficace avec une chirurgie à lambeau ou un curetage"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2020 3°EMD - Q1800\nLe détartrage:",
+        "questionText": "N°8 (2020 3°EMD ) - Le détartrage:",
         "options": [
           "Est l'élimination du tartre de la surface dentaire",
           "Est l'élimination de la dentine et le cément infiltrés de la surface radiculaire",
@@ -144,10 +595,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "C’est un acte thérapeutique majeur fondamental qui consiste à éliminer les dépôts de plaque, de tartre et les colorations diverses des surfaces des dentsIl est sus-gingival pour les dépôts situés sur l’émail et sous-gingival pour des concrétions localisées sur le cément.Le surfaçage s'impose dans le traitement des parodontites."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2020 3°EMD - Q1802\nLe tartre:",
+        "questionText": "N°8 (2020 3°EMD ) - Le tartre:",
         "options": [
           "Est la forme calcifiée de la plaque dentaire",
           "Est riche en bactéries vivantes",
@@ -157,10 +608,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La cause principale est la plaque dentaireÀ l’intérieur du matériau minéralisé, on peut discerner des contours de bactéries calcifiées"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2020 3°EMD - Q1865\nL'instrumentation manuelle du détartrage est utilisée uniquement en supra-gingival:",
+        "questionText": "N°13 (2020 3°EMD ) - L'instrumentation manuelle du détartrage est utilisée uniquement en supra-gingival:",
         "options": [
           "vrai",
           "faux"
@@ -168,10 +619,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2020 3°EMD - Q1879\nLe Full Mouth désinfection est un concept qui permet:",
+        "questionText": "N°14 (2020 3°EMD ) - Le Full Mouth désinfection est un concept qui permet:",
         "options": [
           "Le détartrage surfaçage radiculaire de toute la bouche",
           "Se fait toujours sous anesthésie",
@@ -181,10 +632,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le concept du DSR de la totalité de la bouche en une ou deux séances est recommandé par certains auteurs afin de prévenir la contamination des poches fraichement instrumentées.Des irrigations et des bains de bouches sont utilisés afin de réduire le risque de décontamination des poches traitées."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2020 3°EMD - Q1883\nLes différences entre l'instrumentation manuelle et l'instrumentation sonique et ultra sonique sont:",
+        "questionText": "N°15 (2020 3°EMD ) - Les différences entre l'instrumentation manuelle et l'instrumentation sonique et ultra sonique sont:",
         "options": [
           "Les sensibilités dentaires sont plus élevées suite à l'utilisation de l'instrumentation manuelle",
           "Les aérosols dégagés sont plus faibles en cas d'utilisation de l'instrumentation manuelle",
@@ -194,10 +645,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Temps de travail : manuel > sonique > ultrasoniqueSensibilité tactile : manuel > sonique > ultrasoniqueTempérature : manuel < sonique < ultrasoniqueContamination (aérosol) : manuel (0), sonique < ultrasoniqueSensibilité post-op : manuel < sonique < ultrasoniqueSensibilité per-op : manuel < sonique < ultrasonique"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2020 3°EMD - Q1886\nAprès un détartrage surfaçage radiculaire, la cicatrisation se fait:",
+        "questionText": "N°15 (2020 3°EMD ) - Après un détartrage surfaçage radiculaire, la cicatrisation se fait:",
         "options": [
           "Par première intention",
           "Par la formation d'un long épithélium jonctionnel",
@@ -207,10 +658,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2019 3°EMD - Q1977\nLe détartrage trouve son indication au cours:",
+        "questionText": "N°1 (2019 3°EMD ) - Le détartrage trouve son indication au cours:",
         "options": [
           "Du traitement étiologique",
           "Du traitement chirurgical",
@@ -220,10 +671,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2019 3°EMD - Q2005\nAu cours d'un détartrage, la sensibilité tactile du praticien est la plus importante avec:",
+        "questionText": "N°3 (2019 3°EMD ) - Au cours d'un détartrage, la sensibilité tactile du praticien est la plus importante avec:",
         "options": [
           "Des instruments ultrasoniques",
           "Des instruments manuels",
@@ -232,10 +683,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2019 3°EMD - Q2093\nLe détartrage est plus efficace quand il est réalisé:",
+        "questionText": "N°8 (2019 3°EMD ) - Le détartrage est plus efficace quand il est réalisé:",
         "options": [
           "Par cadrant",
           "Par sextant",
@@ -245,10 +696,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La technique de « full mouth debridement » consiste en la réalisation d'un traitement antibactérien complet de l'ensemble de la cavité buccale dans un délai le plus restreint possible."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2018 3°EMD - Q2518\nUn point d'appui bien stable, est assuré par:",
+        "questionText": "N°13 (2018 3°EMD ) - Un point d'appui bien stable, est assuré par:",
         "options": [
           "L'annulaire pour éviter de déraper et de lacérer la gencive",
           "Sa proximité par rapport à la zone de travail",
@@ -258,10 +709,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2017 2°EMD - Q2691\nL'instrument qui convient le mieux au surfaçage radiculaire est : un/une:",
+        "questionText": "N°6 (2017 2°EMD) - L'instrument qui convient le mieux au surfaçage radiculaire est : un/une:",
         "options": [
           "Houe",
           "Curette",
@@ -271,10 +722,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La curette est l’instrument classique du débridement sous gingival . Elle va permettre d’éliminer le tartre sous gingival et de réaliser le surfaçage radiculaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2017 2°EMD - Q2715\nLe meilleur moyen de déterminer cliniquement la localisation et l'étendue de la tartre sous-gingival:",
+        "questionText": "N°8 (2017 2°EMD) - Le meilleur moyen de déterminer cliniquement la localisation et l'étendue de la tartre sous-gingival:",
         "options": [
           "D'utiliser des cliches radiographiques",
           "D'utiliser une solution révélatrice",
@@ -284,10 +735,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2017 2°EMD - Q2758\nLe surfaçage radiculaire dit:",
+        "questionText": "N°12 (2017 2°EMD) - Le surfaçage radiculaire dit:",
         "options": [
           "Est une thérapeutique non chirurgicale",
           "Est un débridement parodontal",
@@ -298,7 +749,7 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -307,7 +758,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°5 (2025 2°EMD DENTAIRE - Q84\nL'enquête transversale épidémiologique est :",
+        "questionText": "N°5 (2025 2°EMD DENTAIRE) - L'enquête transversale épidémiologique est :",
         "options": [
           "appelée aussi enquête exposée-non exposée",
           "une étude expérimentale",
@@ -318,10 +769,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : L’« exposé-non exposé » correspond à l’étude de cohorte (analytique)B : Les enquêtes transversales sont des études observationnelles descriptivesC : déterminent la prévalence d’une maladie dans une population à un moment donnéD : c’est le principe des études cas-témoins (analytique), pas des transversales.E : Pour établir la causalité, le « gold standard » c’est l’essai randomisé (expérimental)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2025 2°EMD DENTAIRE - Q252\nL'étude épidémiologique qui présente le meilleur niveau d'efficacité est:",
+        "questionText": "N°13 (2025 2°EMD DENTAIRE) - L'étude épidémiologique qui présente le meilleur niveau d'efficacité est:",
         "options": [
           "L'étude cas-témoin",
           "L'étude expérimentale",
@@ -331,10 +782,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Il est considéré comme le gold standard pour évaluer les interventions de santé publique.C’est une méthode très efficace pour établir la causalité"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2024 2°EMD - Q441\nL'indice d'hygiène OHIS",
+        "questionText": "N°3 (2024 2°EMD) - L'indice d'hygiène OHIS",
         "options": [
           "Prend en compte la présence de plaque dentaire uniquement",
           "Nécessite d'examiner toutes les dents présentes",
@@ -344,10 +795,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "A : la plaque (DI-S) et le tartre (CI-S)B : Les 6 dents suivantes sont examinées : la face vestibulaire des 16 et 26, 11 et 31et la face linguale des 36 et 46.➢ Bonne hygiène buccale quand : 0˂OHI-S˂1,2➢ Hygiène buccale correcte quand : 1,3˂OHI-S˂3,0➢ Mauvaise hygiène buccale quand : 3,1˂OHI-S˂6,0"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2024 2°EMD - Q527\nLa classification des récessions gingivales selon CAIRO:",
+        "questionText": "N°9 (2024 2°EMD) - La classification des récessions gingivales selon CAIRO:",
         "options": [
           "Prend en compte la position du tissu marginal/ à la LMG",
           "Prend en compte la perte d'attache inter proximale",
@@ -357,10 +808,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Classe RT1 : récession gingivale sans perte d’attache interproximale,Classe RT2 : récession associée à une perte d’attache interproximale ≤ à la perte d’attache vestibulaire.Classe RT3 : perte d’attache interproximale plus importante que la perte d’attache vestibulaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2023 2°EMD - Q922\nL'examen de dépistage des parodontopathies (EDP) (Oliver 1977), permet la détermination des besoins en soins parodontaux:",
+        "questionText": "N°16 (2023 2°EMD) - L'examen de dépistage des parodontopathies (EDP) (Oliver 1977), permet la détermination des besoins en soins parodontaux:",
         "options": [
           "Vrai",
           "Faux"
@@ -368,10 +819,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2022 2°EMD - Q1107\nD'après les dernières études épidimiologiques, 47% des français sont atteints de parodontite il s'agit de:",
+        "questionText": "N°7 (2022 2°EMD) - D'après les dernières études épidimiologiques, 47% des français sont atteints de parodontite il s'agit de:",
         "options": [
           "La prévalence de la parodontite",
           "L'incidence de la parodontite",
@@ -381,10 +832,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La prévalence est le nombre de cas observé dans une population déterminée à un moment donné"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2021 2°EMD - Q1467\nDans l'indice de saignement au sondage BOP un score <a 10% correspond :",
+        "questionText": "N°9 (2021 2°EMD) - Dans l'indice de saignement au sondage BOP un score <a 10% correspond :",
         "options": [
           "À une gingivite",
           "À une santé gingivale sur un parodonte intact",
@@ -394,10 +845,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le saignement au sondage (Bleeding On Probing, BOP) est un indice gingival dichotomique. On note 0 pour l’absence de saignement au sondage, et 1 en présence de saignement au sondage. Il est exprimé en pourcentageLorsque le BOP est inférieur à 10 %, on observe la santé gingivale sur un parodonte intact ou sur un parodonte réduit avec ou sans antécédent de maladie parodontale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2021 2°EMD - Q1507\nL'indice CPITN prend en compte a classification de l'Académie Américaine de Parodontologie (AAP) 1999 ARMITAGE tient compte :",
+        "questionText": "N°12 (2021 2°EMD) - L'indice CPITN prend en compte a classification de l'Académie Américaine de Parodontologie (AAP) 1999 ARMITAGE tient compte :",
         "options": [
           "La présence de tartre",
           "La perte d'attache",
@@ -407,10 +858,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "l'indice parodontal des besoins de traitement (PTNS), l'indice communautaire des besoins en soins parodontaux (CPITN) ; cet indice est actuellement utilisé pour les enquêtes épidémiologiques, les projets de santé publique et la promotion de la santé parodontale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2021 2°EMD - Q1555\nUne étude cohorte :",
+        "questionText": "N°15 (2021 2°EMD) - Une étude cohorte :",
         "options": [
           "Ne nécessite pas de suivie",
           "Peut-être aussi bien rétrospective que prospective",
@@ -420,10 +871,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Elles consistent à comparer la proportion de malades observée entre le groupe de sujets exposés à un facteur de risque et le groupe de sujets non exposés à ce facteur de risqueLe terme « cohorte » est utilisé pour désigner le ou les groupes de sujets suivis au cours du temps."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2021 2°EMD - Q1583\nL'indice qui permet d'évaluer la quantité du tartre chez les enfants est:",
+        "questionText": "N°17 (2021 2°EMD) - L'indice qui permet d'évaluer la quantité du tartre chez les enfants est:",
         "options": [
           "L'indice d'Oleary et al",
           "L'indice de Marthaler",
@@ -433,10 +884,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "on examine le versant lingual des incisives inférieures 31 32 41 42"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2019 2°EMD - Q2124\nL'enquête cas-témoins est:",
+        "questionText": "N°10 (2019 2°EMD) - L'enquête cas-témoins est:",
         "options": [
           "Une enquête exposé-non exposé",
           "Une étude expérimentale",
@@ -446,10 +897,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "L'enquête cas-témoins est une étude épidémiologique qui compare des individus atteints d'une maladie particulière (les cas) à un groupe témoin qui ne présente pas la maladie.Elle est rétrospective car elle examine les expositions passées et les compare entre les cas et les témoins pour identifier des associations possibles avec la maladie."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2018 2°EMD - Q2430\nLes études épidémiologiques en parodontologie peuvent être:",
+        "questionText": "N°9 (2018 2°EMD) - Les études épidémiologiques en parodontologie peuvent être:",
         "options": [
           "Des études observationnelles",
           "Des études non observationnelles",
@@ -459,10 +910,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2018 2°EMD - Q2449\nL'hygiène buccodentaire est considérée comme mauvaise lorsque:",
+        "questionText": "N°10 (2018 2°EMD) - L'hygiène buccodentaire est considérée comme mauvaise lorsque:",
         "options": [
           "1.3< OHI-S<3",
           "2.1<OHI-S<3",
@@ -472,10 +923,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Bonne hygiène : l’OHI-S 0 - 1,2 , hygiène moyenne : 1,3 – 3 , insuffisance : 3,1 - 6"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2018 2°EMD - Q2473\nL'indice CSI de Ennever et al:",
+        "questionText": "N°11 (2018 2°EMD) - L'indice CSI de Ennever et al:",
         "options": [
           "Évalue la présence ou l'absence de tartre au niveau des quatre incisives supérieures",
           "Évalue la présence ou l'absence de plaque au niveau des quatre incisives supérieures",
@@ -485,10 +936,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Selon Ennever et coll., le Calculus Surface Index (CSI) est déterminé sur les incisives de la mâchoire inférieure (dents 32–42) en examinant l’extension, dans chaque cas, du tartre labial, lingual, mésial et distal, supra- ou subgingival (Ennever et coll. 1961). Il en résulte les valeurs suivantes par surface : 0 : Pas de tartre. 1 : Présence de tartre"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2018 2°EMD - Q2496\nL'indice communautaire des besoins en traitements parodontaux (CPITN) prend en compte les paramètres suivants:",
+        "questionText": "N°12 (2018 2°EMD) - L'indice communautaire des besoins en traitements parodontaux (CPITN) prend en compte les paramètres suivants:",
         "options": [
           "Le saignement gingival",
           "La présence de tartre",
@@ -499,10 +950,10 @@ const paroy3Quizzes = [
           0,
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2018 2°EMD - Q2540\nLe score de communautaire des besoins en traitements parodontaux(CPITN) indique:",
+        "questionText": "N°14 (2018 2°EMD) - Le score de communautaire des besoins en traitements parodontaux(CPITN) indique:",
         "options": [
           "Une motivation à l'hygiène buccodentaire",
           "Un détartrage, surfaçage radiculaire et un traitement chirurgical",
@@ -512,10 +963,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°57 (2018 Résidanat - Q2614\nL'indice communautaire des besoins en traitements parodontaux (CPITN) prend en compte les paramètres suivants : 1- Le saignement gingival. 2- La présence de tartre. 3- L'existence de récession parodontale. 4- L'existence d'une poche parodontale. 5- L'existence de lyse osseuse.",
+        "questionText": "N°57 (2018 Résidanat ) - L'indice communautaire des besoins en traitements parodontaux (CPITN) prend en compte les paramètres suivants : 1- Le saignement gingival. 2- La présence de tartre. 3- L'existence de récession parodontale. 4- L'existence d'une poche parodontale. 5- L'existence de lyse osseuse.",
         "options": [
           "(1-2-3)",
           "(1-2-4)",
@@ -526,10 +977,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Indice communautaire des besoins en soins parodontaux ou CPITN (1982).• cet indice a été développé et recommandé en 1982 par l’OMS , pour déterminer la distribution  et la sévérité de la maladie parodontale ainsi que les besoins en traitement• Trois indicateurs sont utilisés : saignement gingival, tartre, présence et profondeur des poches  parodontales."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2017 2°EMD - Q2772\nDans la typologie parodontale, selon Maynard et Wilson, le type III correspond à:",
+        "questionText": "N°13 (2017 2°EMD) - Dans la typologie parodontale, selon Maynard et Wilson, le type III correspond à:",
         "options": [
           "Une hauteur de tissu kératinisé réduite (inférieur à 2mm) avec un procès alvéolaire d'épaisseur normale",
           "Une hauteur de tissu kératinisé suffisante (entre 3 et 5mm) avec un procès alvéolaire d'épaisseur normale",
@@ -539,10 +990,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2017 2°EMD - Q2773\nL'enquête transversale épidémiologique:",
+        "questionText": "N°13 (2017 2°EMD) - L'enquête transversale épidémiologique:",
         "options": [
           "Est appelée aussi enquête exposée-non exposée",
           "Est une étude expérimentale",
@@ -552,7 +1003,7 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -561,7 +1012,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°2 (2025 1°EMD DENTAIRE - Q35\nQuels rôles joue la matrice extracellulaire dans le biofilm?",
+        "questionText": "N°2 (2025 1°EMD DENTAIRE) - Quels rôles joue la matrice extracellulaire dans le biofilm?",
         "options": [
           "Elle fournit des nutriments aux bactéries",
           "Elle protège les bactéries contre les agents antimicrobiens et les défenses de l'hôte",
@@ -571,10 +1022,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Matrice extracellulaire du biofilm•\tReprésente 25 à 30 % du biofilm.•\tComposée de substances de la salive, du fluide gingival et de produits bactériens.•\tSa forme peut être fibrillaire, granuleuse ou amorphe.•\tContient des restes de bactéries mortes, surtout des membranes.•\tCrée un environnement protégé pour les bactéries du biofilm.•\tFait barrière, retient les substances, et favorise les échanges entre bactéries.•\tDistingue les bactéries du biofilm de celles libres dans la salive (état planctonique)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2025 1°EMD DENTAIRE - Q65\nÀ quelle étape de formation du biofilm commence la sécrétion de la matrice extracellulaire ?",
+        "questionText": "N°4 (2025 1°EMD DENTAIRE) - À quelle étape de formation du biofilm commence la sécrétion de la matrice extracellulaire ?",
         "options": [
           "L'adhésion",
           "La dispersion",
@@ -584,10 +1035,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2025 1°EMD DENTAIRE - Q140\nQuelles sont les principales caractéristiques qui différencient les débris alimentaires de la matéria alba?",
+        "questionText": "N°7 (2025 1°EMD DENTAIRE) - Quelles sont les principales caractéristiques qui différencient les débris alimentaires de la matéria alba?",
         "options": [
           "Les débris alimentaires contiennent peu de bactéries que la matéria alba",
           "Les débris alimentaires sont moins adhésifs que la matéria alba",
@@ -597,10 +1048,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2025 1°EMD DENTAIRE - Q182\nLors de la phase de dispersion quelles bactéries quittent le biofilm?",
+        "questionText": "N°9 (2025 1°EMD DENTAIRE) - Lors de la phase de dispersion quelles bactéries quittent le biofilm?",
         "options": [
           "Les bactéries planctoniques initiales",
           "Les bactéries incapables de produire une matrice extracellulaire",
@@ -610,10 +1061,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2025 1°EMD DENTAIRE - Q214\nQuelle est la relation entre les colorations noires extrinsèques (black stains) et l'âge ?",
+        "questionText": "N°11 (2025 1°EMD DENTAIRE) - Quelle est la relation entre les colorations noires extrinsèques (black stains) et l'âge ?",
         "options": [
           "Elles augmentent avec l’âge",
           "Elles disparaissent souvent à la puberté à cause des changements hormonaux",
@@ -623,10 +1074,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les colorations noires extrinsèques (black stains)Origine et apparenceo\tCe sont des colorations d’origine bactérienneo\tAppelées communément « black stains »o\tSe présentent sous forme d’un liseré noir au collet des dentso\tTouchent essentiellement les enfantso\tPeuvent être observées à n’importe quel âge, y compris chez le jeune adulteÉvolution avec l’âgeo\tPlus fréquentes sur les dents temporaireso\tTendance à diminuer avec l’âgeo\tÀ la puberté, les changements hormonaux modifient la composition de la salive : Les bactéries disparaissent, et les colorations aussi"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2025 1°EMD DENTAIRE - Q253\nQuelle caractéristique distingue les bactéries du complexe rouge des autres complexes?",
+        "questionText": "N°13 (2025 1°EMD DENTAIRE) - Quelle caractéristique distingue les bactéries du complexe rouge des autres complexes?",
         "options": [
           "Elles sont tous aérobies stricts",
           "Elles sont associées à des maladies parodontales avancées et invasives",
@@ -636,10 +1087,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les bactéries du complexe rouge, principalement représentées par Porphyromonas gingivalis, Tannerella forsythia, et Treponema denticola, se distinguent par leur rôle majeur dans les maladies parodontales avancées. Sont des bactéries gram négatives capables de coloniser l'espace sous gingival, ayant le pouvoir de détruire les tissus parodontaux en promouvant une réponse immuno-destructive de l’hôte."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2025 1°EMD DENTAIRE - Q368\nParmi les bactéries suivantes, laquelle appartient au complexe rouge?",
+        "questionText": "N°19 (2025 1°EMD DENTAIRE) - Parmi les bactéries suivantes, laquelle appartient au complexe rouge?",
         "options": [
           "Fusobacterium nucleatum",
           "Porphyromona sgingivalis",
@@ -649,10 +1100,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2024 1°EMD - Q531\nLa bactérie qui est capable de synthétiser des protéases contre le système de complément est :",
+        "questionText": "N°10 (2024 1°EMD) - La bactérie qui est capable de synthétiser des protéases contre le système de complément est :",
         "options": [
           "Fusobacterium nucleatum",
           "Spirochètes",
@@ -662,10 +1113,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Porphyromonas gingivalis synthétise des immunoglobuline –protéases contre IgA et IgG et des protéases contre le complément."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2024 1°EMD - Q641\nLa liaison entre deux bactéries en suspension est appelée",
+        "questionText": "N°18 (2024 1°EMD) - La liaison entre deux bactéries en suspension est appelée",
         "options": [
           "Adhérence inter-bactérienne",
           "Co-agrégation",
@@ -676,10 +1127,10 @@ const paroy3Quizzes = [
           0,
           1
         ],
-        "explanation": "La liaison entre deux bactéries en suspension est appelée adhérence inter bactérienne ou co-agrégation"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2023 1°EMD - Q733\nLa pellicule exogène acquise:",
+        "questionText": "N°4 (2023 1°EMD) - La pellicule exogène acquise:",
         "options": [
           "Est un film d'origine salivaire.",
           "Est un film d'origine bactérien.",
@@ -690,10 +1141,10 @@ const paroy3Quizzes = [
           0,
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2023 1°EMD - Q788\nSelon Socransky et Haffajee (2005), le complexe bactérien le plus fortement associé aux signes cliniques de la parodontite est le complexe",
+        "questionText": "N°8 (2023 1°EMD) - Selon Socransky et Haffajee (2005), le complexe bactérien le plus fortement associé aux signes cliniques de la parodontite est le complexe",
         "options": [
           "Jaune",
           "Vert",
@@ -703,10 +1154,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2023 1°EMD - Q815\nParmi les facteurs locaux favorisant les dépôts exogènes, on retrouve",
+        "questionText": "N°9 (2023 1°EMD) - Parmi les facteurs locaux favorisant les dépôts exogènes, on retrouve",
         "options": [
           "Les malpositions dentaires.",
           "L'insertion pathologique des freins et des brides.",
@@ -716,10 +1167,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2023 1°EMD - Q896\nLe tartre sus gingival",
+        "questionText": "N°14 (2023 1°EMD) - Le tartre sus gingival",
         "options": [
           "Est aussi appelé tartre salivaire.",
           "Est aussi appelé tartre sérique.",
@@ -730,10 +1181,10 @@ const paroy3Quizzes = [
           0,
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2023 1°EMD - Q929\nClassez les étapes de formation du biofilm bactérien dentaire 1. La pellicule exogène acquise 2. Maturation du biofilm 3. Adhérence des bactéries pionnières 4. Colonisation secondaire",
+        "questionText": "N°16 (2023 1°EMD) - Classez les étapes de formation du biofilm bactérien dentaire 1. La pellicule exogène acquise 2. Maturation du biofilm 3. Adhérence des bactéries pionnières 4. Colonisation secondaire",
         "options": [
           "(1, 2, 3,4)",
           "(1,3, 4, 2);",
@@ -743,10 +1194,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2022 1°EMD - Q1040\nD'après Sigmund Socransky en 1998, les bactéries du complexe orange :",
+        "questionText": "N°3 (2022 1°EMD) - D'après Sigmund Socransky en 1998, les bactéries du complexe orange :",
         "options": [
           "Sont compatibles avec la santé parodontale.",
           "Sont les plus virulentes.",
@@ -756,10 +1207,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : c’est les complexes « Vert », « Jaune » et « Violet »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2022 1°EMD - Q1166\nDans l'étiologie des maladies parodontales, le tartre :",
+        "questionText": "N°12 (2022 1°EMD) - Dans l'étiologie des maladies parodontales, le tartre :",
         "options": [
           "Est le facteur d'irritation initial.",
           "Se comporte comme un rétenteur de plaque bactérienne et entrave le contrôle de plaque.",
@@ -769,10 +1220,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°51 (2022 Résidanat - Q1308\nD'après Sigmund Socransky en 1998 les bactéries du complexe orange :",
+        "questionText": "N°51 (2022 Résidanat ) - D'après Sigmund Socransky en 1998 les bactéries du complexe orange :",
         "options": [
           "Sont compatibles avec la santé parodontale",
           "Sont représentées par l'Aggregatibacter actinomycetem comitans (Aa)",
@@ -783,10 +1234,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Comme elle montre cette image : Aa appartient au complexe orangea)- Sont compatibles avec la santé parodontale : Faux,Les complexes « Rouge » et « Orange » contiennent les bactéries les plus virulentes. Lescomplexes « Vert », « Jaune » et « Violet » contiennent des bactéries compatibles avec la santé parodontale.c)- Pourraient servir d'interface pour la colonisation des bactéries du complexe violet : Faux,généralement,Les complexes « Rouge » et « Orange » sont les derniers à adhérer à la surface dentaire.d)- Sont les premières à coloniser la surface dentaire: Faux,les premières bactéries qui colonisent la surface dentaire ne sont pas pathogènes. ce sont les complexes verts et jaunes.e)- Sont composées de Porphyromonas gingivalis, Tannerella forthysia et Treponema denticola : Faux,ce sont les bactéries du complexe rouge."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°57 (2022 Résidanat - Q1312\nL'augmentation du pH dans le sulcus joue un rôle dans:",
+        "questionText": "N°57 (2022 Résidanat ) - L'augmentation du pH dans le sulcus joue un rôle dans:",
         "options": [
           "La formation de la plaque sus gingivale",
           "La formation de la poche parodontale",
@@ -797,10 +1248,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "L'augmentation du pH dans le sulcus favorise la précipitation des sels minéraux, notamment le calcium et le phosphate, entraînant la minéralisation de la plaque dentaire et donc la formation du tartre, particulièrement sous-gingival.1- La formation de la plaque sus gingivale : Faux,Le tartre sulculaire est sous-gingival.2- La formation de la poche parodontale3- La résorption osseuse5- La formation d'exsudats purulents :C'estl'aciditéqui les provoque."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2021 1°EMD - Q1337\nDans le Biofilm bactérien :",
+        "questionText": "N°1 (2021 1°EMD) - Dans le Biofilm bactérien :",
         "options": [
           "les canaux aqueux confèrent au biofilm la structure compacte",
           "les canaux aqueux permettent aux bactéries d'adhérer à la pellicule acquise",
@@ -810,10 +1261,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "« Une association de bactéries (d’une même espèce ou de plusieurs espèces) adhérant à une surface, au sein d’une matrice d’exopolymères sécrétée par les bactéries elles-mêmes, parcourue par des canaux aqueux ouverts contenant différents nutriments »."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2021 1°EMD - Q1357\nle Quorum sensing du biofilm:",
+        "questionText": "N°2 (2021 1°EMD) - le Quorum sensing du biofilm:",
         "options": [
           "Offre aux bactéries du biofilm une protection contre les agents de défense de l'hôte",
           "permet aux bactéries de communiquer entre elles",
@@ -822,10 +1273,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La communication entre les bactéries au sein du biofilm est réalisée par la production de molécules de signalisation telles que celles retrouvées dans le «Quorum sensing» ou détection du quorum, c’est-à-dire que le seuil de concentration de la masse n’estatteint qu’à une densité cellulaire élevée et les bactéries sentent que la masse critique ou quorum est atteint"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2021 1°EMD - Q1400\nParmi les premiers agents bactériens colonisateurs qui apparaissent dans le biofilm bactérie trouve:",
+        "questionText": "N°5 (2021 1°EMD) - Parmi les premiers agents bactériens colonisateurs qui apparaissent dans le biofilm bactérie trouve:",
         "options": [
           "Staphylocoques",
           "fusobactéries",
@@ -835,10 +1286,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2021 1°EMD - Q1421\ndurant la phase réversible d'adhésion, les bactéries du biofilm se fixent sur la pellicule acquise :",
+        "questionText": "N°6 (2021 1°EMD) - durant la phase réversible d'adhésion, les bactéries du biofilm se fixent sur la pellicule acquise :",
         "options": [
           "Grâce aux protéines salivaires",
           "Grâce aux forces de de Van der Waals",
@@ -848,10 +1299,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Cette adhésion initiale est promu par différents facteurs (force hydrodynamique, forces électrostatiques, et de Van der Waals)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2021 1°EMD - Q1432\nle tartre :",
+        "questionText": "N°7 (2021 1°EMD) - le tartre :",
         "options": [
           "Se forme suite à la minéralisation du biofilm",
           "Permet la rétention du biofilm",
@@ -861,10 +1312,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Mode d’attache du tartre aux tissus durs :. Soit par l’intermédiaire de la pellicule acquise. Soit par l’apposition directe des cristaux inorganiques du tartre à ceux de la surface dentaire.. Soit par la pénétration dans des irrégularités dentaires telles les caries, les fissures et  les résorptions."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2021 1°EMD - Q1486\nl’organisation des bactéries du biofilm en complexes de couleur différente a été élaborée:",
+        "questionText": "N°10 (2021 1°EMD) - l’organisation des bactéries du biofilm en complexes de couleur différente a été élaborée:",
         "options": [
           "selon leur ordre d'apparition sur la surfaceselon leur classification en gram + ou gram",
           "selon leurs facteurs de virulence",
@@ -873,10 +1324,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2021 1°EMD - Q1609\nAggregatibacter actinomycetemcomitans est capable de synthétiser :",
+        "questionText": "N°18 (2021 1°EMD) - Aggregatibacter actinomycetemcomitans est capable de synthétiser :",
         "options": [
           "des protéases",
           "des leucotoxines",
@@ -886,10 +1337,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2021 1°EMD - Q1623\nLes cytokines sont:",
+        "questionText": "N°19 (2021 1°EMD) - Les cytokines sont:",
         "options": [
           "des médiateurs plasmatiques",
           "stockées dans les mastocytes",
@@ -899,10 +1350,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°63 (2021 Résidanat - Q1672\nLe complexe bactérien rouge de Socransky comprend :‎ 1- ‎Fusobactérium nucleatum‎ 2- ‎Porphyromonas gingivalis.‎ 3- ‎Aggregatibacter actinomycetemcomitans‎ 4- ‎Treponema denticola‎ 5- ‎Prevotella intermedia‎",
+        "questionText": "N°63 (2021 Résidanat ) - Le complexe bactérien rouge de Socransky comprend :‎ 1- ‎Fusobactérium nucleatum‎ 2- ‎Porphyromonas gingivalis.‎ 3- ‎Aggregatibacter actinomycetemcomitans‎ 4- ‎Treponema denticola‎ 5- ‎Prevotella intermedia‎",
         "options": [
           "(1,3)",
           "(2,5)‎",
@@ -913,10 +1364,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les complexes « Rouge » et « Orange » contiennent les bactéries les plus virulentes. Les complexes « Vert », « Jaune » et « Violet » contiennent des bactéries compatibles avec la santé parodontale.Le complexe bactérien rouge de Socransky :un complexe bactérien nommé « complexe rouge » et composé dePorphyromonas  gingivalis,Treponema denticolaetTannerella forsythiaa été fortement associé aux lésions parodontales avancées."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2020 1°EMD - Q1713\nle tartre adhère aux surfaces dentaires :",
+        "questionText": "N°2 (2020 1°EMD) - le tartre adhère aux surfaces dentaires :",
         "options": [
           "Par l’intermédiaire de la matrice extracellulaire",
           "Grace aux éléments inorganiques",
@@ -926,10 +1377,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2020 1°EMD - Q1734\nParmi ces complexes bactériens .les quels sont compatibles la santé parodontale :",
+        "questionText": "N°4 (2020 1°EMD) - Parmi ces complexes bactériens .les quels sont compatibles la santé parodontale :",
         "options": [
           "Complexe rouge",
           "Complexe bleu",
@@ -940,10 +1391,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Les bactéries des complexes bleu, vert et jaune sont compatibles avec la santé parodontale; ce sont les plus nombreuses en pourcentage et en nombre absolu; les bactéries des complexes orange et rouge sont celles qui ne sont pas compatibles avec la santé parodontale chez les patients à risque; ce sont les moins nombreuses en ,pourcentage et en nombre absolu;"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2020 1°EMD - Q1822\nla croissance bactérienne dans le biofilm dentaire débute :",
+        "questionText": "N°10 (2020 1°EMD) - la croissance bactérienne dans le biofilm dentaire débute :",
         "options": [
           "Pendant la phase irréversible",
           "Pendant la phase de colonisation",
@@ -952,10 +1403,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Colonisation: C’est la première phase de croissance les bactéries présentes se multiplient et recouvrent progressivement toute la surface disponible."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2020 1°EMD - Q1831\nà l’intérieur du biofilm bactérien .les canaux aqueux :",
+        "questionText": "N°11 (2020 1°EMD) - à l’intérieur du biofilm bactérien .les canaux aqueux :",
         "options": [
           "Est une organisation spatiale des différents espèces bactériennes",
           "Est une polysaccarides produit par Porphyromona gingivalis",
@@ -965,10 +1416,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2020 1°EMD - Q1863\nLes bactéries du biofilm, synthétisent une matrice d'exopolymères:",
+        "questionText": "N°13 (2020 1°EMD) - Les bactéries du biofilm, synthétisent une matrice d'exopolymères:",
         "options": [
           "Appelée Glycocalyx",
           "est de nature organique",
@@ -979,10 +1430,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2020 1°EMD - Q1875\nLa pellicule acquise :",
+        "questionText": "N°14 (2020 1°EMD) - La pellicule acquise :",
         "options": [
           "Est d'origine microbienne",
           "Contient des glycoprotéines salivaires",
@@ -992,10 +1443,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2019 1°EMD - Q1975\nLa croissance bactérienne dans le biofilm dentaire débute",
+        "questionText": "N°1 (2019 1°EMD) - La croissance bactérienne dans le biofilm dentaire débute",
         "options": [
           "Pendant ta phase irréversible",
           "Pendant la phase de colonisation",
@@ -1004,10 +1455,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2019 1°EMD - Q1976\nEn 1998, Socranskyetcoll ont encode les complexes bactériens par différentes couleurs Aggregtibacer actinomycretemcomitans fait parti du complexe : Entourée la ou (les) réponses justes",
+        "questionText": "N°1 (2019 1°EMD) - En 1998, Socranskyetcoll ont encode les complexes bactériens par différentes couleurs Aggregtibacer actinomycretemcomitans fait parti du complexe : Entourée la ou (les) réponses justes",
         "options": [
           "rouge",
           "vert",
@@ -1016,10 +1467,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2019 1°EMD - Q1981\nEn 1998, Socranskyet coll. ont encodé les complexes bactériens par différentes couleurs. Le Principe de cet encodage par différentes couleurs est basé",
+        "questionText": "N°2 (2019 1°EMD) - En 1998, Socranskyet coll. ont encodé les complexes bactériens par différentes couleurs. Le Principe de cet encodage par différentes couleurs est basé",
         "options": [
           "Sur notion d'organisation qualitative",
           "Sur notion d'organisation quantitative.",
@@ -1029,10 +1480,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Il s'agit d'une méthode visuelle où différentes couleurs et symboles sont utilisés pour représenter des informations qualitatives ou des catégories différentes"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2019 1°EMD - Q1987\nÀ l'intérieur du le biofilm bactérien, les canaux aqueux :",
+        "questionText": "N°2 (2019 1°EMD) - À l'intérieur du le biofilm bactérien, les canaux aqueux :",
         "options": [
           "Est une organisation spatiale des différentes espaces bactériennes",
           "Est un polysaccaride produit par porphyromonasgingivalis",
@@ -1042,10 +1493,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2019 1°EMD - Q2002\nLes maladies parodontales constituent une famille de maladies qui différent :",
+        "questionText": "N°3 (2019 1°EMD) - Les maladies parodontales constituent une famille de maladies qui différent :",
         "options": [
           "Selon leur étiologie",
           "Selon leurs enchainements d'évènement",
@@ -1055,10 +1506,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Les différentes formes de maladies parodontales peuvent avoir des causes variées, notamment l'accumulation de plaque dentaire, la réponse immunitaire de l'organisme, la génétique, les facteurs de risque tels que le tabagisme et le diabète"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2019 1°EMD - Q2020\nDans le biofilm bactérien, les endotoxines:",
+        "questionText": "N°4 (2019 1°EMD) - Dans le biofilm bactérien, les endotoxines:",
         "options": [
           "provoquent la destruction du collagène",
           "provoquent la dégradation des protéines",
@@ -1068,10 +1519,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les endotoxines peuvent activer le système immunitaire en stimulant la phagocytose par les cellules immunitaires pour éliminer les bactéries."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2019 1°EMD - Q2025\nLes bactéries du biofilm, synthétisent une matrice d'exopolymères:",
+        "questionText": "N°4 (2019 1°EMD) - Les bactéries du biofilm, synthétisent une matrice d'exopolymères:",
         "options": [
           "Appelée Glycocalyx",
           "Est de nature organique",
@@ -1082,10 +1533,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2019 1°EMD - Q2050\nLes bactéries du biofilm bactérien adhèrent aux tissus de l'hôte :",
+        "questionText": "N°5 (2019 1°EMD) - Les bactéries du biofilm bactérien adhèrent aux tissus de l'hôte :",
         "options": [
           "Par la production des collagénase",
           "Par la production des endotoxines",
@@ -1096,10 +1547,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : Les collagénases sont des enzymes interviennent plus tard dans la progression de l'infection en aidant les bactéries à pénétrer plus profondément dans les tissus.B : Les endotoxines peuvent provoquer des réponses inflammatoiresC : Les protéases sont des enzymes qui dégradent les protéines. Bien qu'elles puissent jouer un rôle dans la dégradation des composants des tissus"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2019 1°EMD - Q2051\nLa pellicule acquise :",
+        "questionText": "N°5 (2019 1°EMD) - La pellicule acquise :",
         "options": [
           "Est d'origine microbienne",
           "Contient des glycoprotéines salivaires",
@@ -1109,10 +1560,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "« La pellicule acquise est une fine couche amorphe d’origine salivaire, riche en glycoprotéines, qui adhère aux surfaces dentaires dures (émail, dentine) et sert de support pour l’adhésion des bactéries lors de la formation du biofilm. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2019 1°EMD - Q2106\nParmi ces complexes bactériens, lesquels sont compatibles avec santé parodontale",
+        "questionText": "N°9 (2019 1°EMD) - Parmi ces complexes bactériens, lesquels sont compatibles avec santé parodontale",
         "options": [
           "Complexe rouge",
           "Complexe bleu",
@@ -1123,10 +1574,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Les bactéries des complexes bleu, vert et jaune sont compatibles avec la santé parodontale; ce sont les plus nombreuses en pourcentage et en nombre absolu;"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2019 1°EMD - Q2116\nLa bactérie qui est capable de synthétiser des protéases contre le système de complément est :",
+        "questionText": "N°9 (2019 1°EMD) - La bactérie qui est capable de synthétiser des protéases contre le système de complément est :",
         "options": [
           "fusobacterium nucleatum",
           "Spirochètes",
@@ -1137,10 +1588,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2019 1°EMD - Q2148\nLe tartre sous-gingival et le tartre sus gingival ont une même origine. Ils ont la même composition :",
+        "questionText": "N°11 (2019 1°EMD) - Le tartre sous-gingival et le tartre sus gingival ont une même origine. Ils ont la même composition :",
         "options": [
           "La première réponse est juste la deuxième réponse est fausse",
           "La première réponse est faussela deuxième réponse est juste",
@@ -1150,10 +1601,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "« Le tartre sus gingival est également appelé tartre salivaire, d’où il doit son origine. »« Le tartre sous gingival est également appelé tartre sérique de par son origine qui est le fluide gingival. »« La composition du tartre sus-gingival et sous gingival est similaire. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2019 1°EMD - Q2171\nLes Fimbriaes:",
+        "questionText": "N°13 (2019 1°EMD) - Les Fimbriaes:",
         "options": [
           "sont insérés dans la membrane cytoplasmique des bactéries",
           "sont retrouvées lors de la phase réversible d'adhésion",
@@ -1163,10 +1614,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "B : dans la phase irréversibelC : colonisent les tissus dursD : permettent l'adhésion des bactéries par des liaisons fortes et sélectives"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°48 (2019 Résidanat - Q2273\nLa bactérie qui est capable de synthétiser des protéases contre le système de complément est:",
+        "questionText": "N°48 (2019 Résidanat ) - La bactérie qui est capable de synthétiser des protéases contre le système de complément est:",
         "options": [
           "Le fusobacterium nucleatum.",
           "Le spirochète.",
@@ -1177,10 +1628,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les protéases:Provoquent la dégradation des protéines, des fibres de collagène, dégradation des lg, A, G, gingivales et le complément, etdiminution du pH acide."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°55 (2019 Résidanat - Q2276\nLes bactéries du biofilm bactérien adhèrent aux tissus de l'hôte.",
+        "questionText": "N°55 (2019 Résidanat ) - Les bactéries du biofilm bactérien adhèrent aux tissus de l'hôte.",
         "options": [
           "Par la production des collagénases.",
           "Par la production des endotoxines.",
@@ -1191,10 +1642,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les bactéries plonnières vont établir des liaisons fortes avec la PAE grâce à des molécules de surface particulières:les adhésinesqui se trouvent a la surface des fimbriaes sontresponsables de liaisons fortes et sélectives appelée: (Interaction de type ligand-recepteur). Par la suite, d'autres bactéries vont pouvoir s'amarrer à ces premières colonisatrices."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°59 (2018 Résidanat - Q2616\nLe porphyromonas gingivalis : 1- Est une bactérie Gram négatif. 2- Est impliqué dans le déclenchement de la polyarthrite rhumatoïde. 3- Est responsable de la production du facteur rhumatoïde dans la polyarthrite rhumatoïde. 4- Possède une enzyme capable de citrulliner des protéines. 5- Toutes les réponses sont justes.",
+        "questionText": "N°59 (2018 Résidanat ) - Le porphyromonas gingivalis : 1- Est une bactérie Gram négatif. 2- Est impliqué dans le déclenchement de la polyarthrite rhumatoïde. 3- Est responsable de la production du facteur rhumatoïde dans la polyarthrite rhumatoïde. 4- Possède une enzyme capable de citrulliner des protéines. 5- Toutes les réponses sont justes.",
         "options": [
           "(1-2)",
           "(1-2-3)",
@@ -1205,10 +1656,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Porphyromonas gingivalis est une bactérie orale anaérobie à gram négatif importante dans la pathogénèse de la maladie parodontale.Depuis plusieurs années, son implication dans certaines maladies systémiques est étudiée. Elle est notamment étudiée dans le cadre de la pneumonie"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2016 1°EMD - Q2835\nLa pellicule acquise (couchez la réponse fausse)",
+        "questionText": "N°1 (2016 1°EMD) - La pellicule acquise (couchez la réponse fausse)",
         "options": [
           "Permet la fixation des bactéries pionnières sur la surface dentaire",
           "Se forme après la formation de biofilm",
@@ -1218,10 +1669,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La pellicule acquise se forme avant la formation du biofilm. Elle est la première étape de l'adhérence bactérienne à la surface dentaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2016 1°EMD - Q2904\nAvec quelle de ces bactéries parodontopathogénes l'hélicobacter pylori a une bonne adhérence:",
+        "questionText": "N°10 (2016 1°EMD) - Avec quelle de ces bactéries parodontopathogénes l'hélicobacter pylori a une bonne adhérence:",
         "options": [
           "Porphyromonas gingivalis.",
           "Bactéroides forsythus.",
@@ -1231,10 +1682,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "« Helicobacter pylori peut adhérer efficacement aux bactéries du biofilm buccal. L’adhérence est particulièrement favorisée parFusobacterium nucleatum, quiagit comme un pont entre différentes espèces bactériennes. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2016 1°EMD - Q2912\nLe pouvoir d'adhérence des bactéries est lié :",
+        "questionText": "N°11 (2016 1°EMD) - Le pouvoir d'adhérence des bactéries est lié :",
         "options": [
           "A la production de leuco toxine",
           "Au glycocalyx (matrice extracellulaire)",
@@ -1244,10 +1695,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le glycocalyx est une couche de glucides et de protéines à la surface des bactéries qui peut jouer un rôle clé dans l'adhérence des bactéries aux surfaces. Il contient souvent des adhésines, qui sont des protéines ou des structures permettant aux bactéries de se fixer de manière spécifique à des récepteurs sur les cellules ou les surfaces hôtes."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2016 1°EMD - Q2924\nDans le biofilm bactérien, les canaux aqueux:",
+        "questionText": "N°13 (2016 1°EMD) - Dans le biofilm bactérien, les canaux aqueux:",
         "options": [
           "Ont un rôle dans l'adhérence des bactéries",
           "Produisent les facteurs de virulence.",
@@ -1257,10 +1708,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Les canaux aqueux, également appelés canaux de biofilm, permettent aux bactéries du biofilm de communiquer et d'échanger des nutriments, des signaux chimiques et d'autres molécules entre elles. Ils jouent un rôle dans la communication et la coopération au sein du biofilm, ce qui peut contribuer à la survie et à la résistance des bactéries dans cet environnement complexe."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2016 1°EMD - Q2957\nUn facteur de risque est:",
+        "questionText": "N°18 (2016 1°EMD) - Un facteur de risque est:",
         "options": [
           "Un élément qui causse directement la maladie",
           "Toujours associé à la maladie",
@@ -1270,10 +1721,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Un facteur de risque est un élément qui prédispose à une maladie ou qui augmente la probabilité de développer cette maladie, mais il ne la cause pas directement."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2016 1°EMD - Q2963\nLe diabète est (couchez la réponse fausse)",
+        "questionText": "N°19 (2016 1°EMD) - Le diabète est (couchez la réponse fausse)",
         "options": [
           "Une cause directe des maladies parodontales",
           "Un facteur de risque des maladies parodontales",
@@ -1283,7 +1734,7 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le diabète n'est pas une cause directe des maladies parodontales, mais il est un facteur de risque important. Les maladies parodontales sont principalement causées par l'accumulation de plaque dentaire (biofilm) et par la réponse inflammatoire de l'organisme aux bactéries parodontopathogènes présentes dans la plaque dentaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -1292,7 +1743,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°3 (2025 1°EMD DENTAIRE - Q60\nL'histopathogénie des maladies parodontales décrit la lésion établie comme;",
+        "questionText": "N°3 (2025 1°EMD DENTAIRE) - L'histopathogénie des maladies parodontales décrit la lésion établie comme;",
         "options": [
           "L'étape qui apparaît 4-7 jours après accumulation du biofilm.",
           "L'étape caractérisée par une infiltration comprenant principalement des cellules T.",
@@ -1302,10 +1753,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Lésion établie\tApparition : après 2 à 3 semaines d’accumulation continue de plaque dentaire.\tCaractéristiques principales :•\tInfiltration inflammatoire importante (surtout plasmocytes et lymphocytes).•\tDestruction plus marquée du collagène du tissu conjonctif.•\tÉpaississement de l’épithélium jonctionnel (hyperplasie).•\tFormation de poches gingivales.•\tSignes cliniques évidents : rougeur, gonflement, saignement au sondage."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2025 1°EMD DENTAIRE - Q87\nL’inflammation parodontale chronique;",
+        "questionText": "N°5 (2025 1°EMD DENTAIRE) - L’inflammation parodontale chronique;",
         "options": [
           "est une réaction immunitaire.",
           "implique des fibroblastes et macrophages.",
@@ -1315,10 +1766,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Inflammation chronique (ou réaction immunitaire)•\tSurvient quand l’inflammation locale ne suffit pas à éliminer l’agent pathogène ou si celui-ci persiste.•\tL’organisme déclenche alors une réaction immunitaire visant à :o\tIdentifier et lier l’antigène.o\tActiver les phagocytes (cellules qui éliminent les agents nuisibles).Deux types de réponses immunitaires :•\tRéaction humorale : production d’anticorps.•\tRéaction à médiation cellulaire : action de certains lymphocytes.Les deux types peuvent coexister, mais l’un peut dominer selon le type d’antigène.Autres cellules impliquées :•\tLymphocytes, macrophages, fibroblastes.•\tCela peut entraîner de la fibrose, de la cicatrisation, voire la formation de granulomes."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2024 1°EMD - Q443\nLors de la résorption lacunaire, la destruction osseuse",
+        "questionText": "N°3 (2024 1°EMD) - Lors de la résorption lacunaire, la destruction osseuse",
         "options": [
           "fait appel aux ostéoclastes",
           "se fait par liquéfaction de la matrice organique",
@@ -1328,10 +1779,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La destruction de l’os provient de l’action des ostéoclastes qui vont provoquer :-la décalcification des sels minéraux de l’os provoquée par un abaissement du PH-action protéolytique de la matrice organique-phagocytose de la matrice organique"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2024 1°EMD - Q602\nl'inflammation chronique se distingue de l'inflammation aigu par:",
+        "questionText": "N°15 (2024 1°EMD) - l'inflammation chronique se distingue de l'inflammation aigu par:",
         "options": [
           "la prédominance des troubles vasculaires",
           "la prédominance des troubles vasculo-sanguins",
@@ -1341,10 +1792,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A/B/D : caractérisent l’inflammation aigue"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2024 1°EMD - Q677\nLe phénomène de l'ostéoclasie:",
+        "questionText": "N°20 (2024 1°EMD) - Le phénomène de l'ostéoclasie:",
         "options": [
           "provient de l'action des ostéoclastes.",
           "Commence par la partie organique puis minérale.",
@@ -1354,10 +1805,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2023 1°EMD - Q734\nSelon PAGE et SCHROEDER, la formation de la poche parodontale se fait:",
+        "questionText": "N°4 (2023 1°EMD) - Selon PAGE et SCHROEDER, la formation de la poche parodontale se fait:",
         "options": [
           "Dans la lésion initiale",
           "Dans la lésion avancée",
@@ -1367,10 +1818,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La formation d'une poche parodontale est généralement associée à la progression des maladies parodontales, où l'infection et l'inflammation ont endommagé les tissus de soutien de la dent (gencive, ligament parodontal, os alvéolaire). Cela conduit à une augmentation de la profondeur de la poche parodontale, ce qui est caractéristique des stades avancés des maladies parodontales"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2023 1°EMD - Q841\nDans la classification de la pathogénèse de PAGE et SCHROEDER, la lésion initiale au niveau du conjonctif se caractérise par:",
+        "questionText": "N°11 (2023 1°EMD) - Dans la classification de la pathogénèse de PAGE et SCHROEDER, la lésion initiale au niveau du conjonctif se caractérise par:",
         "options": [
           "Vasoconstriction et augmentation de la perméabilité des capillaire du plexus gingival",
           "Libération de protéines sérique (fibrine) hors des vaisseaux",
@@ -1381,10 +1832,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : Vasodilatation et augmentation de la perméabilité des capillaire du plexus gingivalC : Diapédèse et migration des cellules inflammatoires.E : Migration des polynucléaires neutrophiles"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2023 1°EMD - Q963\nLes médiateurs de l'inflammation sont des cellules ayant pour rôle:",
+        "questionText": "N°18 (2023 1°EMD) - Les médiateurs de l'inflammation sont des cellules ayant pour rôle:",
         "options": [
           "augmentation de la perméabilité capillaire.",
           "induction de l'infiltrat leucocytaire par chimiotactisme.",
@@ -1394,10 +1845,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2022 1°EMD - Q1053\nDans la maladie parodontale, la lésion initiale se caractérise par :",
+        "questionText": "N°4 (2022 1°EMD) - Dans la maladie parodontale, la lésion initiale se caractérise par :",
         "options": [
           "Une gencive cliniquement saine.",
           "Des modifications tissulaires et cellulaires importantes.",
@@ -1407,10 +1858,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "B : les modifications tissulaires et cellulaires qui la caractérisent restent discrètes et limitées.D : Ce stade est caractérisé par une réaction inflammatoire aiguë exsudative résultant de l’augmentation de la perméabilité vasculaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2022 1°EMD - Q1089\nla réaction inflammatoire aiguë :",
+        "questionText": "N°6 (2022 1°EMD) - la réaction inflammatoire aiguë :",
         "options": [
           "Se caractérise par l'apparition des modifications vasculaires, cellulaires et humorales",
           "A pour objectif d'isoler la substance pathogène.",
@@ -1420,10 +1871,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : la réaction humorale est déclenchée au cour de l’inflammation chronique Lorsque la réaction inflammatoire locale est insuffisante pour éliminer le matériel infectieux"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2022 1°EMD - Q1254\nLes réactions vasculaires se caractérisent par :",
+        "questionText": "N°19 (2022 1°EMD) - Les réactions vasculaires se caractérisent par :",
         "options": [
           "Une augmentation de la vitesse du flux sanguin.",
           "Une vasodilatation.",
@@ -1433,10 +1884,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : une diminution de la vitesse du flux sanguin dans la partie altéré du tissu"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°49 (2022 Résidanat - Q1306\nDans la maladie parodontale, la lésion initiale se caractérise par : 1- Une gencive cliniquement saine 2- Des modifications tissulaires et cellulaires importantes 3- Une réaction inflammatoire exsudative 4- Une diminution de la perméabilité vasculaire 5- Un infiltrat inflammatoire lymphoïde",
+        "questionText": "N°49 (2022 Résidanat ) - Dans la maladie parodontale, la lésion initiale se caractérise par : 1- Une gencive cliniquement saine 2- Des modifications tissulaires et cellulaires importantes 3- Une réaction inflammatoire exsudative 4- Une diminution de la perméabilité vasculaire 5- Un infiltrat inflammatoire lymphoïde",
         "options": [
           "(1,4)",
           "(1,2)",
@@ -1447,10 +1898,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°53 (2022 Résidanat - Q1310\nLors de l'inflammation gingivale, l'oedeme : 1- Se traduit par une augmentation du volume de la geneive 2- Est provoqué par l'augmentation de la perméabilité des capillaires 3- Est provoqué par l'augmentation du débit sanguin 4- Est provoqué par la dilatation des capillaires 5- Ne s'accompagne jamais d'un signe de Godet positif",
+        "questionText": "N°53 (2022 Résidanat ) - Lors de l'inflammation gingivale, l'oedeme : 1- Se traduit par une augmentation du volume de la geneive 2- Est provoqué par l'augmentation de la perméabilité des capillaires 3- Est provoqué par l'augmentation du débit sanguin 4- Est provoqué par la dilatation des capillaires 5- Ne s'accompagne jamais d'un signe de Godet positif",
         "options": [
           "(1,2,4)",
           "(1,2,3)",
@@ -1461,10 +1912,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Comment se forme un œdème ?Les parois des capillaires dilatées vont devenir perméable à l'eau, aux sels et aux macromolécules telles que l'albumine et le fibrinogène; ces éléments s'infiltrent au niveau du tissu conjonctif provoquant un œdème qui se traduira par une tuméfaction dont la consistance est molle (signe du godet positif), avec un aspect extérieur lisse et brillant. La gencive change alors de forme et de contour avec une augmentation de volume pouvant intéresser chaque unité gingivale ou l'ensemble de la gencive.1- Se traduit par une augmentation du volume de la geneive : Correcte.2- Est provoqué par l'augmentation de la perméabilité des capillaires : Correcte.3- Est provoqué par l'augmentation du débit sanguin : Faux,ce caractère n'a pas une relation signifactive avecun œdèmeplutotun érythèmequi se définit par\"un changement de couleur\", Ce changement de couleur varie selon l'intensité et le mode d'évolution de l'inflammation : rouge vif; légère rougeur, bleu violacé .. ect , et c'est causé principalement par l'augmentation du débit sanguin.4- Est provoqué par la dilatation des capillaires : Correcte.5- Ne s'accompagne jamais d'un signe de Godet positif : Le contraire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2021 1°EMD - Q1479\nlors de l’inflammation aigue on note :",
+        "questionText": "N°9 (2021 1°EMD) - lors de l’inflammation aigue on note :",
         "options": [
           "Une dilatation des vaisseaux",
           "une intervention importante du système immunitaire",
@@ -1474,10 +1925,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "B : Pas d’intervention du système immunitaire (il caractérise l’inflammation chronique"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2021 1°EMD - Q1547\nla réponse n'est qualifiée d'aigue que par les composantes inflammatoires présentes » ça correspond à quelle phase de la gingivite :",
+        "questionText": "N°14 (2021 1°EMD) - la réponse n'est qualifiée d'aigue que par les composantes inflammatoires présentes » ça correspond à quelle phase de la gingivite :",
         "options": [
           "lésion précoce",
           "lésion établie",
@@ -1487,10 +1938,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Ce stade est caractérisé par une réaction inflammatoire aiguë exsudative résultant de l’augmentation de la perméabilité vasculaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2021 1°EMD - Q1587\nLes caractéristiques anatomo-pathologiques de la maladie parodontale lors de la lésion établie :",
+        "questionText": "N°17 (2021 1°EMD) - Les caractéristiques anatomo-pathologiques de la maladie parodontale lors de la lésion établie :",
         "options": [
           "migration des neutrophiles",
           "prédominance des plasmocytes des lymphocytes",
@@ -1500,10 +1951,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : migration des neutophiles se fait au cour de la lésion initialeD : dans la lésion avancé on note la propagation de la lésion dans l’os alvéolaire et le ligament parodontal aboutissant à une destruction osseuse."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°67 (2021 Résidanat - Q1675\nL'indicateur le plus objectif de l'inflammation gingivale est :‎",
+        "questionText": "N°67 (2021 Résidanat ) - L'indicateur le plus objectif de l'inflammation gingivale est :‎",
         "options": [
           "L'érythème",
           "La douleur",
@@ -1514,10 +1965,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "a : Érythème :L'inflammation provoque l'apparition d'un érythème au niveau gingival. Ce changement de couleur est un signe déterminant de la gingivopathie et varie selon l'intensité et le mode d'évolution de l'inflammation.Dans le cas d'inflammation aiguë, l'érythème sera rouge vif;Dans le cas d'inflammation chronique, l'érythème commence par une légère rougeur, puis passe par des teintes variant du bleu violacé au bleu foncé.L'apparition de l'érythème est liée à la vasodilatation et à l'augmentation du nombre de vaisseaux .b : Douleur :La douleur peut également être un signe de l'inflammation.Le patient ressent alors un agacement ou un prurit gingival qui le pousse quelque fois àConsulter ; dans le cas d'inflammation chronique, la douleur est moindre ou nulle.c : •Saignement :Le saignement est un signe précoce dans l'apparition des parodontopathiesAu sondage, Il se manifeste après sondage du sillon gingival avec un instrument mousse (sonde parodontale).Ce saignement est provoqué par la dilatation et l'engorgement des capillaires ; avec l’intensité de l’inflammation, l’exsudat cellulaire, les néovaisseaux et les nouvelles cellules conjonctives créent une pression violente sur l’épithélium qui est déjà fragilisé et aminci par les agents nocifs ; on assiste à une rupture de ces capillaires avec apparition du saignement.Spontané : dans les cas plus sévères, la gencive peut saigner sans stimulation, notamment lors du brossage ou de la mastication. Cela est dû à une hyperperméabilité vasculaire causée par l'inflammation.d :Œdème :Les parois des capillaires dilatées vont devenir perméable, l’exsudat (fluide inflammatoire) s'infiltrent au niveau du tissu conjonctif provoquant un œdème qui se traduira par une tuméfaction ,les tissus sont de consistance molle (signe du godet positif),. La perte du relief en peau d'orange est un signe de l'infiltration cellulaire et de la dégradation du tissu conjonctif sous-jacent.La gencive change alors de forme et de contour avec une augmentation de volume pouvant Intéresser chaque unité gingivale ou l'ensemble de la gencive."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2020 1°EMD - Q1692\nL'indicateur le plus objectif de l'inflammation gingivale est :",
+        "questionText": "N°1 (2020 1°EMD) - L'indicateur le plus objectif de l'inflammation gingivale est :",
         "options": [
           "l’érythème",
           "douleur",
@@ -1527,10 +1978,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2020 1°EMD - Q1762\nLa migration extra-vasculaire des cellules de défense vers le foyer inflammatoire, se déroule comme suit:",
+        "questionText": "N°5 (2020 1°EMD) - La migration extra-vasculaire des cellules de défense vers le foyer inflammatoire, se déroule comme suit:",
         "options": [
           "Diapédèse–chimiotactisme - margination – phagocytose",
           "Margination – chimiotactisme – diapédèse - phagocytose",
@@ -1540,10 +1991,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2020 1°EMD - Q1786\nLes plasmocytes sont présents dans quelle phase de la gingivite :",
+        "questionText": "N°7 (2020 1°EMD) - Les plasmocytes sont présents dans quelle phase de la gingivite :",
         "options": [
           "Lésion initiale",
           "Lésion précoce",
@@ -1553,10 +2004,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2020 1°EMD - Q1794\nLors de la résorption lacunaire, la destruction osseuse :",
+        "questionText": "N°8 (2020 1°EMD) - Lors de la résorption lacunaire, la destruction osseuse :",
         "options": [
           "fait appel aux ostéoclastes",
           "se fait par liquéfaction de la matrice organique",
@@ -1566,10 +2017,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "A : La résorption osseuse ne se produit pas par liquéfaction de la matrice organique, mais plutôt par dégradation de la matrice organique et des sels minéraux de l'os par les ostéoclastes."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°43 (2020 Résidanat - Q1941\nAu cours de l'inflammation parodontale, la lésion établie : 1- Caractérise un stade initial de la gingivite 2- Caractérise un stade avancé de la gingivite 3- Est caractérisée par la prédominance de la réponse immunitaire 4- Caractérise la parodontite 5- Est caractérisée par la formation de poche parodontale",
+        "questionText": "N°43 (2020 Résidanat ) - Au cours de l'inflammation parodontale, la lésion établie : 1- Caractérise un stade initial de la gingivite 2- Caractérise un stade avancé de la gingivite 3- Est caractérisée par la prédominance de la réponse immunitaire 4- Caractérise la parodontite 5- Est caractérisée par la formation de poche parodontale",
         "options": [
           "(1,3)",
           "(4,5)",
@@ -1580,10 +2031,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "La lésion établie :En 3 semaines environ après arrêt du brossage ; macroscopiquement, l’inflammation gingivale est bien établie, et histologiquement, une accentuation des phénomènes inflammatoiresprécédemment décrits est observable.La lésion est caractérisée par la prédominance des plasmocytes qui vont permettre la formation d'immunoglobulines; on note:- Une diminution des fibroblastes;- Une augmentation de la destruction fibrillaire;- un accroissement de la quantité du fluide gingivale ;- l’épithélium de jonction n’est plus fonctionnel, les espaces intercellulaires s’ouvrent avec rupture des desmosomes intercellulaires-accumulation des immunoglobulines et des complexes anticorps-antigènes en grande quantité dans le tissu conjonctif.A ce stade de la lésion, la présence des plasmocytes, des immunoglobulines et des lymphocytes indiquentla présence de réactions à médiation humorale et cellulaire.4/5: c'est La lésion avancée"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°44 (2020 Résidanat - Q1942\nLes cellules inflammatoires prédominantes dans les premiers stades de la formation de la poche parodontale sont :",
+        "questionText": "N°44 (2020 Résidanat ) - Les cellules inflammatoires prédominantes dans les premiers stades de la formation de la poche parodontale sont :",
         "options": [
           "Les PMN (Polymorphonucléaires neutrophiles)",
           "Les monocytes",
@@ -1594,10 +2045,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "C'est le stade dela lésion avancé﻿"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2019 1°EMD - Q2060\nL'indicateur le plus objectif de l'inflammation gingivale est:",
+        "questionText": "N°6 (2019 1°EMD) - L'indicateur le plus objectif de l'inflammation gingivale est:",
         "options": [
           "L'érythème",
           "Douleur",
@@ -1607,10 +2058,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2018 1°EMD - Q2455\nLes caractéristiques anatome-pathologiques de la maladie parodontale lors de la lésion établie sont :",
+        "questionText": "N°10 (2018 1°EMD) - Les caractéristiques anatome-pathologiques de la maladie parodontale lors de la lésion établie sont :",
         "options": [
           "Migration des neutrophiles",
           "Prédominance de plasmocytes et de lymphocytes",
@@ -1620,10 +2071,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A ce stade de la lésion, la présence des plasmocytes, des immunoglobulines et des lymphocytes indiquent la présence de réactions à médiation humorale et cellulaire.= stade chronique"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2018 1°EMD - Q2459\nLa migration extravasculaire des cellules de défense vers le foyer inflammatoire, se déroule comme suit:",
+        "questionText": "N°10 (2018 1°EMD) - La migration extravasculaire des cellules de défense vers le foyer inflammatoire, se déroule comme suit:",
         "options": [
           "Diapédèse - chimiotactisme - margination - phagocytose",
           "Margination - chimiotactisme - diapédèse - phagocytose",
@@ -1633,10 +2084,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2018 1°EMD - Q2491\nLes plasmocytes sont présents dans quelle phase de la gingivite?",
+        "questionText": "N°12 (2018 1°EMD) - Les plasmocytes sont présents dans quelle phase de la gingivite?",
         "options": [
           "Lésion initiale",
           "Lésion précoce",
@@ -1646,10 +2097,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2017 1°EMD - Q2656\nQuelles cellules migrent en plus grand nombre vers le sillon gingivo dentaire en réponse àune accumulation de plaque bactérienne :",
+        "questionText": "N°3 (2017 1°EMD) - Quelles cellules migrent en plus grand nombre vers le sillon gingivo dentaire en réponse àune accumulation de plaque bactérienne :",
         "options": [
           "Les plasmocytes et les monocytes",
           "Les leucocytes polynucléaires",
@@ -1660,10 +2111,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "4 à 7 jours après le début de l'accumulation de la plaque, elle est caractérisée par: Une augmentation de l'infiltrat inflammatoire qui devient lymphoïde; contient principalement des lymphocytes,"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2017 1°EMD - Q2720\nSuite à une agression infectieuse, le mécanisme pathogène des lésions parodontales :",
+        "questionText": "N°8 (2017 1°EMD) - Suite à une agression infectieuse, le mécanisme pathogène des lésions parodontales :",
         "options": [
           "Inflammatoire mais pas fonctionnel",
           "inflammatoire et fonctionnel",
@@ -1674,10 +2125,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2016 1°EMD - Q2870\nL'inflammation:",
+        "questionText": "N°4 (2016 1°EMD) - L'inflammation:",
         "options": [
           "représente en général la réponse à une agression tissulaire",
           "est due uniquement à un agent pathogène vivant",
@@ -1687,10 +2138,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "\"L'inflammation est l'ensemble des modifications tissulaires, vasculaires et humorales, locales et générales, produites dans un organisme en réponse à toute forme d'agression... Elle se déroule essentiellement dans le tissu conjonctif vascularisé, et la présence d'éléments vasculaires est la condition nécessaire à une réaction inflammatoire...\""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2016 1°EMD - Q2933\nAu cours de l'inflammation parodontale, la lésion établie:",
+        "questionText": "N°14 (2016 1°EMD) - Au cours de l'inflammation parodontale, la lésion établie:",
         "options": [
           "Caractérise un stade initial de la gingivite",
           "Caractérise un stade avancé de la gingivite",
@@ -1700,10 +2151,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Lésion établie• Temps d'apparition : 2-3 semaines après l'accumulation continue de plaque.• Caractéristiques :o Infiltrat inflammatoire plus important, comprenant des plasmocytes (principalement des cellules B) ainsi que des lymphocytes.o Destruction plus marquée du collagène dans le tissu conjonctif.o Hyperplasie de l'épithélium jonctionnel et formation de poches gingivales.o Signes cliniques bien visibles : rougeur, gonflement, saignement au sondage.\""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2016 1°EMD - Q2946\nLes cellules inflammatoires prédominantes dans les premiers stades de la formation de la poche parodontale sont:",
+        "questionText": "N°16 (2016 1°EMD) - Les cellules inflammatoires prédominantes dans les premiers stades de la formation de la poche parodontale sont:",
         "options": [
           "Les PMN, polymorphonucléaires neutrophiles",
           "Les monocytes",
@@ -1713,10 +2164,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°45 (2015 Résidanat - Q3052\nAu cours de l'inflammation parodontale, la lésion établie : 1- Caractérise un stade initial de la gingivite 2- Caractérise un stade avancé de la gingivite 3- Est caractérisée par la prédominance de la réponse immunitaire 4- Caractérise la parodontite 5- Est caractérisée par la formation de poche parodontale",
+        "questionText": "N°45 (2015 Résidanat ) - Au cours de l'inflammation parodontale, la lésion établie : 1- Caractérise un stade initial de la gingivite 2- Caractérise un stade avancé de la gingivite 3- Est caractérisée par la prédominance de la réponse immunitaire 4- Caractérise la parodontite 5- Est caractérisée par la formation de poche parodontale",
         "options": [
           "(2-3)",
           "(3-4)",
@@ -1725,7 +2176,292 @@ const paroy3Quizzes = [
           "(3-5)"
         ],
         "correctOptionIndexes": [],
-        "explanation": "1 : c'est la lésioninitiale4/5 : c'est lalésion avancée"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "influence des maladies systémiques",
+    "subject": "paro-y3",
+    "questions": [
+      {
+        "questionText": "N°1 (2025 2°EMD DENTAIRE) - Quels sont les symptômes typiques d'une primo-infection par le virus de l'herpès simplex",
+        "options": [
+          "Fièvre et toux sèche",
+          "Éruption cutanée généralisée sans douleur",
+          "Eruptions vésiculaires douloureuses",
+          "Syndrome grippal sans manifestation cutanée"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2025 2°EMD DENTAIRE) - Quelle est la principale caractéristique du syndrome de Sturge-Weber?",
+        "options": [
+          "Une dégénérescence musculaire",
+          "Une atteinte rénale héréditaire",
+          "Une dystrophie osseuse",
+          "Une angiomatose cranio-faciale"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2025 2°EMD DENTAIRE) - Quel dysfonctionnement des neutrophiles est observé dans le syndrome de Down?",
+        "options": [
+          "Une diminution du chimiotactisme et de la phagocytose",
+          "Une augmentation de l'activité bactéricide",
+          "Une surproduction de cytokines inflammatoires",
+          "Une absence totale de neutrophiles"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2025 2°EMD DENTAIRE) - Quelles sont les manifestations buccales de la thrombopénie?",
+        "options": [
+          "Des pétéchées au niveau du palais",
+          "Des purpuras",
+          "Des ecchymoses",
+          "Une hyperkératose gingivale"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2025 2°EMD DENTAIRE) - Quel est le type de pemphigus le plus fréquent?",
+        "options": [
+          "Pemphigus paranéoplasique",
+          "Pemphigus vulgaire",
+          "Pemphigus foliacé",
+          "Pemphigus érythèmateux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2025 2°EMD DENTAIRE) - Quel examen est nécessaire pour confirmer le diagnostic de pemphigus?",
+        "options": [
+          "Biopsie avec immunofluorescence",
+          "Simple examen clinique",
+          "Frottis buccal",
+          "Examen histologique des lésions"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2024 2°EMD) - L a maladie parodontale au cours du VIH:",
+        "options": [
+          "Est favorisée par la plaque bactérienne",
+          "Est caractéristique d'une déficience immunitaire importante",
+          "Peut être la première expression de cette infection",
+          "Ne peut jamais se manifester par une parodontite chronique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2024 2°EMD) - La gingivite herpétique:",
+        "options": [
+          "Est une gingivite induite par la plaque",
+          "Est une gingivite non induite par la plaque",
+          "Est caractérisée le plus souvent par des ulcérations",
+          "Peut s'accompagner d'altération de l'état général"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2024 2°EMD) - La gingivite au cours de la grossesse :",
+        "options": [
+          "Est déclenchée par les perturbations hormonales",
+          "Est causée par le biofilm bactérien",
+          "Est favorisée par les perturbations hormonales",
+          "Les signes cliniques sont plus accentués"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2024 2°EMD) - Durant la grossesse les modifications hormonales en rapport avec l’augmentation de la progestérone peuvent conduire :",
+        "options": [
+          "a une augmentation de l'exsudation plasmatique,",
+          "à une altération de l'intégrité des cellules endothéliales des capillaires gingivaux,",
+          "à une perturbation de la synthèse des prostaglandines",
+          "au maintien du métabolisme du collagène",
+          "à un saignement gingival."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2023 2°EMD) - L'érythème gingival linéaire:",
+        "options": [
+          "Est une atteinte parodontale d'origine virale.",
+          "Est causé par les virus herpétique HHV1 et HHV2.",
+          "Peut disparaitre avec une hygiène bucco-dentaire satisfaisante.",
+          "Est l'une des manifestations les plus communes de l'atteinte par le virus du syndrome d'immunodéficience acquise (sida)."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2023 2°EMD) - Dans l'érythème polymorphe, l'atteinte parodontale",
+        "options": [
+          "Est d'origine fongique.",
+          "Survient souvent en même temps que l'atteinte cutanée.",
+          "Se caractérise par la formation de lésions vésiculobulleuses laissant rapidement place à des érosions douloureuses sur la gencive.",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2022 2°EMD) - La candidose est:",
+        "options": [
+          "Un érythème recouvrant uniformément la bordure marginale et les papilles gingivales",
+          "L'une des manifestations de l'atteinte par le virus du syndrome d'immunodéficience acquise (sida)",
+          "Une atteinte parodontale liée à la plaque",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2021 2°EMD) - Les maladies d'ordre général : maladie général sur parodonte:",
+        "options": [
+          "Peuvent favoriser le développement des maladies parodontales (facteur de risque)",
+          "Peuvent déclencher les maladies parodontales (facteur déclenchant)",
+          "Peuvent être associé à un gain d'attache défavorable",
+          "Peuvent récidiver malgré un traitement parodontal complet",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°76 (2021 Résidanat ) - Le diabète :‎ 1- Est un facteur de risque pour la maladie parodontale 2- ‎Est un facteur déclenchant des maladies parodontales‎ 3- ‎Affecte la cicatrisation parodontale après traitement‎ 4- ‎Equilibré, n'affecte ni la pathogénie de la maladie parodontale, ni les résultats du‎ traitement. 5- ‎Toutes les réponses sont justes‎",
+        "options": [
+          "(1,3,4)‎",
+          "(2,3,4)‎",
+          "(1,2,4)‎",
+          "(2,3)‎",
+          "(5)‎"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°45 (2020 Résidanat ) - Le diabète est : 1- 1-Une cause directe des maladies parodontales 2- Un facteur de risque des maladies parodontales 3- Un facteur qui altère la réaction immunitaire de l'organisme contre les bactéries parodontopathogènes 4- Un facteur qui modifie la composition du biofilm 5- Toutes les réponses sont justes",
+        "options": [
+          "( 1,3,4)",
+          "(2,3,4)",
+          "(2,3)",
+          "(1,3)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2019 2°EMD) - L'érythème gingival linéaire:",
+        "options": [
+          "Peut être limité à quelques dents",
+          "Peut disparaitre après une motivation à l'hygiène bucco-dentaire",
+          "Est l'une des manifestations de l'atteinte par le virus du syndrome d'immunodéficience acquise (sida)",
+          "Touche uniquement la gencive marginale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2017 2°EMD) - La Gingivostomatite herpétique:",
+        "options": [
+          "Est une infection localisée à la gencive",
+          "Est caractérisée par la présence de suppurations",
+          "Est une infection virale",
+          "Est traitée par des antibiotiques"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2017 2°EMD) - Le diagnostic différentiel de la gingivite ulcéro-nécrotique se pose devant:",
+        "options": [
+          "La péri-coronarite",
+          "La gingivostomatite herpétique",
+          "Un syndrome du septum",
+          "Une candidose buccale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°54 (2015 Résidanat ) - Dans la pathologie parodontale chez l'enfant, l'hypophosphatasie est : 1- Caractérisée par la diminution du nombre des leucocytes polymorphonucléaires 2- Une maladie métabolique à transmission autosomique récessive 3- Caractérisée par une chute cyclique des polynucléaires neutrophiles et survient tous les 21 jours 4- Une diminution du taux sanguin des phosphatases alcalines 5- Liée à la prise de médicaments",
+        "options": [
+          "(1-2)",
+          "(2-3)",
+          "(1-4)",
+          "(2-4)",
+          "(3-5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°55 (2015 Résidanat ) - L'histiocytose X ou maladie de Schuller Christian chez l'enfant est caractérisée par : 1- L'association d'une kératodermie palmo-plantaire. Avec une parodontite sévère 2- Une lésion osseuse, exophtalmie et diabète insipide. 3- Une décalcification diffuse du squelette 4- Une ulcération gingivale, et une parodontite mutilante 5- La présence d'une neutropénie",
+        "options": [
+          "(2-4)",
+          "(1-2)",
+          "(1-4)",
+          "(2-3)",
+          "(4-5)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -1734,7 +2470,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°2 (2025 2°EMD DENTAIRE - Q27\nLe Prophyromonas Gingivalis (Pg);",
+        "questionText": "N°2 (2025 2°EMD DENTAIRE) - Le Prophyromonas Gingivalis (Pg);",
         "options": [
           "peut modifier l'équilibre glycémique.",
           "peut survivre dans une plaque d'athérome.",
@@ -1744,10 +2480,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : Les bactéries parodontopathogènes, notamment Porphyromonas gingivalis, peuvent modifier l’équilibre glycémique en augmentant la résistance à l’insuline via la production de médiateurs inflammatoires.B : On a retrouvé des bactéries parodontales vivantes, en particulier Pg, dans les plaques d’athérome, ce qui suggère leur rôle dans l’athérosclérose.C : Le Pg est le seul organisme procaryote connu possédant une enzyme, la peptidyl-arginine-désiminase (PAD) responsable de la citrullination"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2025 2°EMD DENTAIRE - Q284\nLes maladies parodontales chroniques",
+        "questionText": "N°14 (2025 2°EMD DENTAIRE) - Les maladies parodontales chroniques",
         "options": [
           "Dont une influence sur l'équilibre glycémique.",
           "Ne peuvent pas être considérées comme facteur de risque de Diabète type II.",
@@ -1756,10 +2492,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2024 2°EMD - Q620\nle taux de médiateurs pro-inflammatoires augmente fortement quand le patient est atteint de diabète uniquement:",
+        "questionText": "N°16 (2024 2°EMD) - le taux de médiateurs pro-inflammatoires augmente fortement quand le patient est atteint de diabète uniquement:",
         "options": [
           "Vrai",
           "Faux"
@@ -1767,10 +2503,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2024 2°EMD - Q649\nl’inflammation articulaire est favorisée par la maladie parodontale en présence du Porphyromonas Gingivalis qui a un rôle non spécifique dans cette association",
+        "questionText": "N°18 (2024 2°EMD) - l’inflammation articulaire est favorisée par la maladie parodontale en présence du Porphyromonas Gingivalis qui a un rôle non spécifique dans cette association",
         "options": [
           "Vrai",
           "Faux"
@@ -1778,10 +2514,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le Pg a un rôle spécifique dans cette association"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2023 2°EMD - Q781\nLes parodontites peuvent causer une inflammation systémique qui peut être objectivée par :",
+        "questionText": "N°7 (2023 2°EMD) - Les parodontites peuvent causer une inflammation systémique qui peut être objectivée par :",
         "options": [
           "Une augmentation du nombre de leucocytes.",
           "Une augmentation du taux des protéines C-réactiveprotéine (CRP), et fibrinogène.",
@@ -1791,10 +2527,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2023 2°EMD - Q809\nLa citrulination est la transformation de la citruline en argénine par l'enzyme peptidyl\u0002arginine-déiminase (PAD).",
+        "questionText": "N°9 (2023 2°EMD) - La citrulination est la transformation de la citruline en argénine par l'enzyme peptidyl\u0002arginine-déiminase (PAD).",
         "options": [
           "Vrai",
           "faux"
@@ -1802,10 +2538,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2023 2°EMD - Q937\nmécanisme indirect qui relie l'infection parodontale à la survenue des complications de la grossesse peut être expliqué par la pénétration du placenta par les bactéries parodontopathogènes et/ou leurs produits de dégradation en particulier les lipopolysaccharides:",
+        "questionText": "N°17 (2023 2°EMD) - mécanisme indirect qui relie l'infection parodontale à la survenue des complications de la grossesse peut être expliqué par la pénétration du placenta par les bactéries parodontopathogènes et/ou leurs produits de dégradation en particulier les lipopolysaccharides:",
         "options": [
           "Vrai",
           "Faux"
@@ -1813,10 +2549,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2022 2°EMD - Q1017\nLes maladies respiratoires qui peuvent être associées aux parodontites sont:",
+        "questionText": "N°2 (2022 2°EMD) - Les maladies respiratoires qui peuvent être associées aux parodontites sont:",
         "options": [
           "La bronchite",
           "Les bronchopneumopathies chroniques obstructives (BPCO)",
@@ -1826,10 +2562,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Ce sont des affections aigues comme la pneumonie et la bronchite, ou chronique telles que l’asthme et la bronchopneumopathie chronique obstructive."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2022 2°EMD - Q1130\nDans la poche parodontale, le porphyromonasgingivalis (Pg:",
+        "questionText": "N°9 (2022 2°EMD) - Dans la poche parodontale, le porphyromonasgingivalis (Pg:",
         "options": [
           "Élabore de grande quantités de peptidyl arginine déiminase (PAD)",
           "Pourrait favoriser l'apparition d'anticorps anticitrulline (anti-CCP)",
@@ -1839,10 +2575,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "C : avant le déclenchement de la polyarthrite rhumatoïde"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2022 2°EMD - Q1148\nLes points communs identifiés entre la polyarthrite rhumatoïde et la parodontite sont:",
+        "questionText": "N°10 (2022 2°EMD) - Les points communs identifiés entre la polyarthrite rhumatoïde et la parodontite sont:",
         "options": [
           "Pathologies chroniques inflammatoires à évolution cyclique",
           "Destruction tissulaires avec mécanisme physiopathologiques similaires",
@@ -1853,10 +2589,10 @@ const paroy3Quizzes = [
           0,
           2
         ],
-        "explanation": "• pathologies chroniques inflammatoires à évolution cyclique (poussée) ;• hôte susceptible (facteur génétique) ;• facteur de risque (tabac) ;• destructions tissulaires avec mécanismes physiopathologiques similaires ;• inflammation systémique (CRP, VS accrues)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2022 2°EMD - Q1177\nTraitement parodontal chez un patient atteint de maladies rénales peut :",
+        "questionText": "N°13 (2022 2°EMD) - Traitement parodontal chez un patient atteint de maladies rénales peut :",
         "options": [
           "Améliorer la fonction endothéliale",
           "Diminue le taux de protéine C relative (CRP)",
@@ -1866,10 +2602,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Diminuant l’état inflammatoire systémique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2022 2°EMD - Q1213\nLa citrulination est la transformation de la citruline en argénine par l'enzyme peptidyl\u0002arginyl-déminase (PAD):",
+        "questionText": "N°16 (2022 2°EMD) - La citrulination est la transformation de la citruline en argénine par l'enzyme peptidyl\u0002arginyl-déminase (PAD):",
         "options": [
           "Vrai",
           "Faux"
@@ -1877,10 +2613,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2021 2°EMD - Q1380\nLe diabète (cochez la réponse fausse):",
+        "questionText": "N°4 (2021 2°EMD) - Le diabète (cochez la réponse fausse):",
         "options": [
           "Un facteur de risque des maladies parodontales",
           "Est un facteur déclenchant des maladies parodontales",
@@ -1890,10 +2626,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le diabète n’est pas un facteur déclenchant de parodontites mais en représente plutôt un facteur de risque."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2021 2°EMD - Q1494\nLe rôle de la maladie parodontale dans l'étiopathogénie des maladies cardio-vasculaires peut s'expliquer par",
+        "questionText": "N°10 (2021 2°EMD) - Le rôle de la maladie parodontale dans l'étiopathogénie des maladies cardio-vasculaires peut s'expliquer par",
         "options": [
           "Mécanismes directs uniquement",
           "Mécanismes indirects associes à une prédisposition génétique",
@@ -1903,10 +2639,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Mécanisme direct par bactériémies transitoires répétéesMécanisme indirect par élévation plasmatique des molécules pro-inflammatoires et activation de la réponse immune innée, principalement neutrophilaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2021 2°EMD - Q1522\nLes maladies d'ordre général qui peuvent être associées à une atteinte parodontale (cochez la réponse fausse):",
+        "questionText": "N°13 (2021 2°EMD) - Les maladies d'ordre général qui peuvent être associées à une atteinte parodontale (cochez la réponse fausse):",
         "options": [
           "Les maladies du système immunitaire",
           "Les maladies du tissu osseux",
@@ -1916,24 +2652,25 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2021 2°EMD - Q1597\nLe rôle des maladies parodontales dans l'initiation ou la progression des infections respiratoires s'expliquerait par:",
+        "questionText": "N°18 (2021 2°EMD) - Le rôle des maladies parodontales dans l'initiation ou la progression des infections respiratoires s'expliquerait par:",
         "options": [
           "La présence de ces bactéries dans les expectorations de patients non atteints de maladies",
+          "parodontales",
           "Action des enzymes associées aux maladies parodontales sur le mucus",
           "La présence d'enzymes hydrolytiques dans la salive de sujets à bonne hygiène bucco-dentair",
           "Les enzymes altèrent les mucines et réduisent leur habilité à enrober et à éliminer les pathogènes respiratoires.",
           "Action des cytokines libérées au cours des maladies parodontales peuvent altérer l'épithélium respiratoire et promouvoir ainsi l'infection par des pathogènes respiratoires"
         ],
         "correctOptionIndexes": [
-          4
+          5
         ],
-        "explanation": "Aspiration des pathogènes orauxAction des enzymes associées aux maladies parodontales sur le mucusLa présence d’enzymes hydrolytiques dans la salive de sujets à mauvaise hygiène bucco-dentaireAction des cytokines libérées au cours des maladies parodontale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2021 2°EMD - Q1642\nUn patient atteint d'une maladie parodontale nécrotique, présente constamment une altération de l'état général",
+        "questionText": "N°20 (2021 2°EMD) - Un patient atteint d'une maladie parodontale nécrotique, présente constamment une altération de l'état général",
         "options": [
           "VRAI",
           "FAUX"
@@ -1941,10 +2678,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°69 (2021 Résidanat - Q1677\nDans la maladie parodontale, les dysfonctionnements des polymorphonucléaires sont observés :‎ 1- ‎Au cours de la thrombopathie‎ 2- ‎Au cours de l'anémie‎ 3- ‎Au cours du diabète‎ 4- ‎Au cours des neutropénies‎ 5- ‎Toutes les réponses sont justes‎",
+        "questionText": "N°69 (2021 Résidanat ) - Dans la maladie parodontale, les dysfonctionnements des polymorphonucléaires sont observés :‎ 1- ‎Au cours de la thrombopathie‎ 2- ‎Au cours de l'anémie‎ 3- ‎Au cours du diabète‎ 4- ‎Au cours des neutropénies‎ 5- ‎Toutes les réponses sont justes‎",
         "options": [
           "(3,4)‎",
           "(2,3)‎",
@@ -1955,10 +2692,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Influence du diabète sur le parodonte:*L’action du diabète sur la santé parodontale se fait selon plusieurs axes :-Epaississement des parois vasculaires et modification de leur perméabilité par accumulation de produits terminaux de glycation (AGE ; Advanced Glycation Ends) provoquant une diminution de l’arrivée des cellules de défenses et une modification des échanges entre compartiment vasculaire et tissulaire.-Dysfonction des polynucléaires neutrophiles (chimiotaxie et phagocytose)-Les cellules inflammatoires réagissent avec les AGE en libérant des cytokines (TNFα et IL1) qui entretiennent le processus inflammatoire-Perturbation du métabolisme du collagène par augmentation de l’activité collagénolytique et diminution de la synthèse par les fibroblastes.Neutropénies cycliquesMaladie rare de l’enfant, est caractérisée par la répétition tous les 21 jours d’infection fébrile touchantsurtout les muqueuses buccale et anale, par des otites de l’oreille moyenne, des infections respiratoires, des cellulites et des abcès. Elle s’accompagne d’une chute temporaire du taux de granulocytes neutrophiles circulants dû à un ralentissement de la formation des leucocytes. Les signes parodontaux peuvent varier d’une simple gingivite à une parodontite évolutive qui affecte aussi bien la denture mixte que définitive."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2019 2°EMD - Q1974\nLe rôle spécifique de porphyromonas gingivalis (Pg) dans le mécanisme physiopathologique de la polyarthrite rhumatoïde est expliqué par:",
+        "questionText": "N°1 (2019 2°EMD) - Le rôle spécifique de porphyromonas gingivalis (Pg) dans le mécanisme physiopathologique de la polyarthrite rhumatoïde est expliqué par:",
         "options": [
           "L'élaboration de grandes quantités de peptidyl arginine déiminase (PAD) au sein de la poche parodontale",
           "L'induction d'une réponse immune qui favoriserait l'activation des ostéoclastes et les premières érosions osseuses",
@@ -1968,10 +2705,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2019 2°EMD - Q2041\nLe traitement des parodontites, chez les patients atteints de maladies cardiovasculaires, pourrait contribuer à:",
+        "questionText": "N°5 (2019 2°EMD) - Le traitement des parodontites, chez les patients atteints de maladies cardiovasculaires, pourrait contribuer à:",
         "options": [
           "Réduire l'inflammation systémique",
           "Diminuer l'épaisseur de l'intima-média carotidienne",
@@ -1981,10 +2718,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2019 2°EMD - Q2235\nAprès le streptocoque sanguinis, les pathogènes parodontaux incriminés dans l'endocardite infectieuse sont:",
+        "questionText": "N°18 (2019 2°EMD) - Après le streptocoque sanguinis, les pathogènes parodontaux incriminés dans l'endocardite infectieuse sont:",
         "options": [
           "Aggregatibacteractinomycetemcomitans (Aa)",
           "Eikenellacorrodens (Ec)",
@@ -1993,10 +2730,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Il semble cependant que l’importance de l’inflammation gingivale et la sévérité de la parodontite influencent la fréquence de ces bactériémies, et certains pathogènes parodontaux, tels que Aggregatibacter actinomycetemcomitans, Eikenella corrodens, sont aussi incriminés dans l’endocardite infectieuse.( COUR 2021)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2019 2°EMD - Q2240\nLes maladies respiratoires qui peuvent être associées aux parodontites sont:",
+        "questionText": "N°18 (2019 2°EMD) - Les maladies respiratoires qui peuvent être associées aux parodontites sont:",
         "options": [
           "La bronchite",
           "Les bronchopneumopathies chroniques obstructives (BPCO)",
@@ -2006,10 +2743,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2018 2°EMD - Q2509\nLa polyarthrite rhumatoïde et la maladie parodontale:",
+        "questionText": "N°13 (2018 2°EMD) - La polyarthrite rhumatoïde et la maladie parodontale:",
         "options": [
           "Sont des pathologies inflammatoires chroniques polyfactorielles",
           "Sont des pathologies qui n'induisent pas une inflammation systémique",
@@ -2019,10 +2756,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Un certain nombre de points communs identifiés entre la polyarthrite rhumatoïde et la parodontite ont conduit à l’étude d’une association entre ces 2 pathologies, à savoir :• pathologies chroniques inflammatoires à évolution cyclique (poussée) ;• hôte susceptible (facteur génétique) ;• facteur de risque (tabac) ;• destructions tissulaires avec mécanismes physiopathologiques similaires ;• inflammation systémique (CRP, VS accrues)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2018 2°EMD - Q2559\nLa (ou les) pathologies qui n'est pas (ne sont pas) en rapport avec la présence d'une parodontite non traitée",
+        "questionText": "N°16 (2018 2°EMD) - La (ou les) pathologies qui n'est pas (ne sont pas) en rapport avec la présence d'une parodontite non traitée",
         "options": [
           "Accident vasculaire cérébral (AVC)",
           "Rhumatisme articulaire aigu (RAA)",
@@ -2032,10 +2769,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2018 2°EMD - Q2566\nLes bactéries retrouvées dans les parodontites peuvent causer une broncho-pneumopathie chronique obstructive par",
+        "questionText": "N°17 (2018 2°EMD) - Les bactéries retrouvées dans les parodontites peuvent causer une broncho-pneumopathie chronique obstructive par",
         "options": [
           "Aspiration de ces bactéries",
           "Altération de l'épithélium respiratoire",
@@ -2045,10 +2782,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Les bactéries orales (en particulier Aa et Pg) aspirées avec les pathogènes respiratoires  induisent des cytokines favorisant la production en chaine de cytokines par les cellules de l’épithélium respiratoire pour recruter les cellules de l’inflammation (neutrophiles) sur le site pulmonaire. Les cellules inflammatoires, produisent des enzymeshydrolytiques qui endommagent l’épithélium et le rendent plus vulnérable à la colonisation par les bactéries pathogènes."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2018 2°EMD - Q2578\nHélocobactère Pylori",
+        "questionText": "N°18 (2018 2°EMD) - Hélocobactère Pylori",
         "options": [
           "Est une bactérie aérobie à Gram-",
           "Adhère sélectivement au bactéroide frosythus",
@@ -2058,10 +2795,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Helicobacter pylori est une bactérie Gram- qui produit l’uréase, considérée comme étant l’agent étiologique majeur des ulcères duodénaux et gastriques"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2018 2°EMD - Q2591\nL'hypothèse actuelle de la relation entre l'athérosclérose et la maladie parodontale est celle où:",
+        "questionText": "N°19 (2018 2°EMD) - L'hypothèse actuelle de la relation entre l'athérosclérose et la maladie parodontale est celle où:",
         "options": [
           "Une bactériémie transitoire entraine une amplification disproportionnée de la réponse immunitaire innée tissulaire locale",
           "Les anticorps produits en réponse aux bactéries de la plaque sont capables d'induire des anticorps non spécifiques connus pour être associés un risque d'athérosclérose",
@@ -2072,10 +2809,10 @@ const paroy3Quizzes = [
           0,
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2018 2°EMD - Q2598\nDans la maladie pulmonaire et la maladie parodontale:",
+        "questionText": "N°20 (2018 2°EMD) - Dans la maladie pulmonaire et la maladie parodontale:",
         "options": [
           "Les mécanismes sont dus à une dissémination des bactéries Gram- par voie sanguine",
           "les mécanismes sont dus à une dissémination des bactéries par aspiration de la flore or pharyngée dans le tractus",
@@ -2085,10 +2822,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Aspiration des pathogènes orauxAction des enzymes associées aux maladies parodontales sur le mucusLa présence d’enzymes hydrolytiques dans la salive de sujets à mauvaise hygiène bucco-dentaireAction des cytokines libérées au cours des maladies parodontales qui peuvent altérer l’épithélium respiratoire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2017 2°EMD - Q2812\nLa polyarthrite rhumatoïde et la parodontite:",
+        "questionText": "N°17 (2017 2°EMD) - La polyarthrite rhumatoïde et la parodontite:",
         "options": [
           "Sont considérées comme des pathologies chroniques inflammatoires à évolution cyclique",
           "N'ont pas de lien avec la susceptibilité de l'hôte",
@@ -2098,7 +2835,7 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -2107,7 +2844,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°15 (2025 1°EMD DENTAIRE - Q302\nLes poches parodontales sont généralement indolores; mais elles peuvent donner naissance aux symptômes suivants:",
+        "questionText": "N°15 (2025 1°EMD DENTAIRE) - Les poches parodontales sont généralement indolores; mais elles peuvent donner naissance aux symptômes suivants:",
         "options": [
           "Sensation rongeante sans sensibilité aux variations thermiques",
           "Douleurs dentaires type rage de dent",
@@ -2118,10 +2855,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "la douleur provoquée par une stimulation tactile est due à l’ulcération de la face interne de la paroi de la poche."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2024 1°EMD - Q552\nLes poches parodontales infra-osseuses sont classées:",
+        "questionText": "N°11 (2024 1°EMD) - Les poches parodontales infra-osseuses sont classées:",
         "options": [
           "par rapport au nombre de parois osseuses restantes",
           "par rapport à la dent",
@@ -2132,10 +2869,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Suivant le nombre des parois du défaut osseux :. Lésion osseuse à 3 parois osseuses, (3 parois osseuses + 1 paroi dentaire).. Lésion osseuse à 2 parois osseuses, (2 parois osseuses, vestibulaire et linguale + 2 parois dentaires).. Lésion osseuse à 1 paroi osseuse, (1 paroi osseuse + 2 parois dentaires + tissus mous)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2024 1°EMD - Q587\nLa poche infra-osseuse à 3 parois",
+        "questionText": "N°14 (2024 1°EMD) - La poche infra-osseuse à 3 parois",
         "options": [
           "A le meilleur potentiel de régénération",
           "A un potentiel de régénération le plus faible",
@@ -2145,10 +2882,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "une poche à 3 parois sera d’un pronostic plus favorable qu’une poche à 1 ou 2 parois.( l’os spongieux, découvert sur une plus ou moins large surface, va pouvoir participer à la reconstruction que d’autre part, le caillot sera mieux protégé"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2024 1°EMD - Q631\nLe Fond d'une poche parodontale est constitué :",
+        "questionText": "N°17 (2024 1°EMD) - Le Fond d'une poche parodontale est constitué :",
         "options": [
           "de bactéries",
           "des enzymes",
@@ -2159,10 +2896,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "• Le fond: constitué par les cellules épithéliales saines de l’attache épithéliale résiduelle qui forment temporairement la poche.A/B/C : c’est le contenu de la poche"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2023 1°EMD - Q696\nLa vraie poche parodontale :",
+        "questionText": "N°1 (2023 1°EMD) - La vraie poche parodontale :",
         "options": [
           "Est due à une augmentation du volume de la gencive",
           "C'est l'approfondissement pathologique du sillon gingivo-dentaire",
@@ -2172,10 +2909,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2023 1°EMD - Q760\nDans le cas de poche supra-osseuse :",
+        "questionText": "N°6 (2023 1°EMD) - Dans le cas de poche supra-osseuse :",
         "options": [
           "Le fond de la poche est apical à la crête osseuse",
           "Le fond de la poche est coronaire à la crête osseuse",
@@ -2185,10 +2922,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2022 1°EMD - Q1184\ndans le cas de récession parodontale de 02mm et de profondeur de sillon gingiva-dentaire de 03 mm :",
+        "questionText": "N°13 (2022 1°EMD) - dans le cas de récession parodontale de 02mm et de profondeur de sillon gingiva-dentaire de 03 mm :",
         "options": [
           "La perte d’attache clinique est de 03 mm",
           "La profondeur de la poche parodontale est de 00 mm",
@@ -2198,10 +2935,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "•\tProfondeur de poche = distance fond de poche → bord libre de la gencive•\tPerte d’attache clinique = profondeur de poche + récession•\tRécession = distance jonction émail-cément (JEC) → bord libre de la genciveCas donné :•\tRécession = 2 mm•\tProfondeur de sillon gingivo-dentaire = 3 mm➡️ Perte d’attache clinique = 2 + 3 = 5 mm➡️ Profondeur de la poche = 3 mm (puisque c’est le sondage effectué entre le bord gingival et le fond de poche)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2022 1°EMD - Q1224\nLes poches parodontales infra osseuses à une paroi osseuse sont délimitées par :",
+        "questionText": "N°17 (2022 1°EMD) - Les poches parodontales infra osseuses à une paroi osseuse sont délimitées par :",
         "options": [
           "Deux parois dentaires et deux parois osseuses",
           "Deux dents, une face osseuse et des tissus mous",
@@ -2211,10 +2948,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : poches à deux paroisC : poches à trois parois osseusesD : cratère"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2022 1°EMD - Q1238\nLe charting permet:",
+        "questionText": "N°18 (2022 1°EMD) - Le charting permet:",
         "options": [
           "D’analyser la forme clinique de la parodontite.",
           "Le traitement de façon précise.",
@@ -2224,10 +2961,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°43 (2022 Résidanat - Q1300\nLa perte d'attache clinique est : 1- L'augmentation de la profondeur du sillon gingivo-dentaire 2- Mesurée de la jonction email-cément jusqu'au fond du sillon gingivo-dentaire 3- Un signe clinique determinant de la parodontite 4- Une modification morphologique de la gencive 5- Mesurée de la jonction émail-cément au rebord gingival",
+        "questionText": "N°43 (2022 Résidanat ) - La perte d'attache clinique est : 1- L'augmentation de la profondeur du sillon gingivo-dentaire 2- Mesurée de la jonction email-cément jusqu'au fond du sillon gingivo-dentaire 3- Un signe clinique determinant de la parodontite 4- Une modification morphologique de la gencive 5- Mesurée de la jonction émail-cément au rebord gingival",
         "options": [
           "(2,3)",
           "(1,2)",
@@ -2238,10 +2975,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "1- L'augmentation de la profondeur du sillon gingivo-dentaire : Faux. Ce n'est pas toujours le cas, car une récession gingivale concomitante à une perte d'attache clinique peut ne pas influencer la profondeur de la poche (sillon gingivo-dentaire). Il n'existe donc pas nécessairement une relation significative entre les deux phénomènes.4- Une modification morphologique de la gencive: Faux,cela concerne une modification physiologique ou un défaut morphologique, tandis que la perte d'attache clinique est, par définition, une condition pathologique.5- Mesurée de la jonction émail-cément au rebord gingival: Faux,c'est la profondeur de la poche."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2021 1°EMD - Q1562\nLa paroi dure de la poche parodontale subit souvent des transformations:",
+        "questionText": "N°15 (2021 1°EMD) - La paroi dure de la poche parodontale subit souvent des transformations:",
         "options": [
           "une recalcification et reminéralisation du cément",
           "une dureté et une perméabilité du cément qui peut s'altérer",
@@ -2251,10 +2988,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : Décalcification et reminéralisation du cémentD : infiltré par les produits bactériens."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°58 (2018 Résidanat - Q2615\nLa présence d'une poche parodontale est mise en évidence par : 1- La présence d'accroissement gingival. 2- La mesure de la distance du fond de la poche au bord libre de la gencive. 3- La mesure de la distance du fond de la poche à la jonction émail-cément. 4- L'exploration de la profondeur du sulcus. 5- Un examen radiographique.",
+        "questionText": "N°58 (2018 Résidanat ) - La présence d'une poche parodontale est mise en évidence par : 1- La présence d'accroissement gingival. 2- La mesure de la distance du fond de la poche au bord libre de la gencive. 3- La mesure de la distance du fond de la poche à la jonction émail-cément. 4- L'exploration de la profondeur du sulcus. 5- Un examen radiographique.",
         "options": [
           "(2-4)",
           "(1-2)",
@@ -2265,10 +3002,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L’existence et la mesure de la profondeur de la poche parodontale sont déterminé par le sondage qui  s’effectue au nivaux du sillon gingivo-dentaire à l’aide d’un instrument spécial gradué qu’on appelle  la sonde parodontale.1: c'est un signe clinique qui indique la présence de la poche3: c’est la mesure approximative de  l’importance de la perte d’attache. (degrés d’alveolyse)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2017 1°EMD - Q2646\nAvec le développement de la gingivite, la flore microbienne de la poche parodontale devient composée de :",
+        "questionText": "N°2 (2017 1°EMD) - Avec le développement de la gingivite, la flore microbienne de la poche parodontale devient composée de :",
         "options": [
           "Bactéries gram positif et gram négatif",
           "Bactéries gram positif exclusivement",
@@ -2279,10 +3016,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "• La flore des poches parodontales est trois fois plus dense que celle de la gingivite et se caractérise par une forte proportion de bactéries anaérobies et capnophiles à Gram négatif, et des bactéries mobiles, dont 30% sont des spirochètes."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2017 1°EMD - Q2680\nLorsqu'on utilise une sonde parodontale pour évaluer la profondeurd'une poche parodontale, en mesure la distance entre :",
+        "questionText": "N°5 (2017 1°EMD) - Lorsqu'on utilise une sonde parodontale pour évaluer la profondeurd'une poche parodontale, en mesure la distance entre :",
         "options": [
           "La base de la poche parodontale et la jonction amélo-cementaire",
           "Le bord de la gencive libre et la jonction amélo-cémentaire",
@@ -2293,10 +3030,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "-La distance du fond de la poche à la jonction email-cément .c’est la mesure approximative de l’importance de la perte d’attache. (Degrés d’alveolyse)-La distance du fond de la poche au bord libre de la gencive, c’est la mesure de la profondeur de la poche.-La différence entre les deux mesures évalue le degré de récession parodontale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2017 1°EMD - Q2694\nDans une poche infra-osseuse, l'attache épithéliale est située :",
+        "questionText": "N°6 (2017 1°EMD) - Dans une poche infra-osseuse, l'attache épithéliale est située :",
         "options": [
           "A l’intérieur même de l'os basal",
           "En position coronaire par rapport à la crête alveolaire",
@@ -2307,10 +3044,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "-La poche supra osseuse : Dont le fond de la poche est situé au dessus de la crête osseuse résiduelle.-La poche infra osseuse : Le fond de la poche est apical par rapport à la crête osseuse résiduelle,-La poche juxta osseuse : Le fond est au même niveau que la crête osseuse"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2016 1°EMD - Q2940\nLa présence d'une poche parodontale est mise en évidence par:",
+        "questionText": "N°15 (2016 1°EMD) - La présence d'une poche parodontale est mise en évidence par:",
         "options": [
           "La présence d'accroissement gingival",
           "La mesure de la distance du fond de la poche au bord libre de la gencive",
@@ -2320,10 +3057,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2016 1°EMD - Q2951\nLa poche parodontale contient (cochez la réponse fausse):",
+        "questionText": "N°17 (2016 1°EMD) - La poche parodontale contient (cochez la réponse fausse):",
         "options": [
           "Des cellules inflammatoires",
           "Des cellules épithéliales desquamées",
@@ -2333,10 +3070,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La poche parodontale contient :•\tdes micro-organismes (bactéries)•\tdes produits bactériens•\tde la plaque, fluide gingival, mucine salivaire•\tdes débris alimentaires•\tdes cellules épithéliales desquamées•\tdes leucocytes (cellules inflammatoires)❌ Mais pas d’ostéoblastes (cellules de formation osseuse, absentes du contenu de la poche)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°52 (2016 Résidanat - Q2996\nLa paroi gingivale de la poche parodontale est composée:",
+        "questionText": "N°52 (2016 Résidanat ) - La paroi gingivale de la poche parodontale est composée:",
         "options": [
           "De bactéries",
           "De tartre",
@@ -2345,7 +3082,403 @@ const paroy3Quizzes = [
           "D'un tissu conjonctif oedémateux"
         ],
         "correctOptionIndexes": [],
-        "explanation": "a/b : c'estLa paroi dure (radiculaire)qui estinfiltré par les produits bactériens, recouverte de tartre et de plaque bactériennec/d : Les poches parodontales contiennent des débris qui sont principalement :- Des micro-organismes et leurs produits (enzymes, endotoxines ...)- De la plaque bactérienne, fluide gingival, la mucine salivaire- Desdébris alimentaires- Des cellules épithéliales desquamées, leucocytesLorsqu’il y a un exsudat purulent, il est constitué de :*leucocytes vivants, dégénérés et nécrotiques.*bactéries vivantes et mortes, sérum.*faible quantité de fibrine.La paroi molle :Les transformations dégénératives les plus sévères de la poche parodontale se manifestent le long de la paroi latérale au niveau :Tissus conjonctif :est œdémateux largement infiltré par des plasmocytes, des leucocytes polynucléaires disséminés. Il présente une prolifération des vaisseaux sanguins, des fibroblastes et des fibres de collagènes. On voie parfois des foyers nécrotiques simples ou multiples.L’épithélium :présente des transformations dégénératives et prolifératives très frappantes, la dégénérescence et la nécrose des cellules épithéliales entraîne l’ulcération de la paroi latérale avec dénudation du tissu conjonctif très enflammé et une suppuration."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "Les maladies gingivales",
+    "subject": "paro-y3",
+    "questions": [
+      {
+        "questionText": "N°8 (2025 1°EMD DENTAIRE) - Un patient se présente pour des saignements gingivaux spontanés:",
+        "options": [
+          "L'étiologie est toujours une inflammation gingivale",
+          "L'étiologie peut être générale",
+          "La sérologie est demandée systématiquement",
+          "Un bilan d'hémostase est demandé systématiquement"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2025 1°EMD DENTAIRE) - Concernant l'accroissement gingival induit par les médicaments:",
+        "options": [
+          "Histologiquement, on trouve une hyperplasie gingivale.",
+          "Histologiquement, on trouve une hypertrophie gingivale.",
+          "Les deux conditions peuvent coexister.",
+          "Il est nécessaire de demander une formule numération sanguine (FNS) avant le traitement"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2024 1°EMD) - Dans le Pemphigus vulgaire l'atteinte gingivale est :",
+        "options": [
+          "Rare",
+          "Desquamative si elle est présente",
+          "Bulleuse",
+          "Erosive et ulcéreuse"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2023 1°EMD) - La gingivite chez le diabétique:",
+        "options": [
+          "Est une gingivite induite par la plaque uniquement",
+          "Est une gingivite due aux facteurs systémiques",
+          "Est une gingivite due aux hypoglycémiants",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2023 1°EMD) - la gingivite gravidique:",
+        "options": [
+          "Est une gingivite non induite par la plaque -",
+          "Est une gingivite induite par la plaque associée aux hormones",
+          "Se manifeste par des ulcérations",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2023 1°EMD) - dans la gingivite induite par la plaque modifiée par les médicaments:",
+        "options": [
+          "On a formation de vraie poche parodontale",
+          "Le patient se plaint de gêne fonctionnelle et esthétique",
+          "On a formation de fausse poche parodontale",
+          "Toutes les réponses sont fausses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2022 1°EMD) - le granulome pyogénique :",
+        "options": [
+          "Apparait au 2éme trimestre de la grossesse",
+          "Est une tumeur néoplasique.",
+          "Peut apparaitre à n'importe quel moment de la grossesse",
+          "Est Réversible après l’accouchement",
+          "Se rencontre en absence de plaque"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2022 1°EMD) - Parmi les maladies gingivales d'origine fongique on cite :",
+        "options": [
+          "La toxoplasmose",
+          "Pemphigoide",
+          "Lichen plan",
+          "Lupus érythémateux",
+          "Histoplasmose"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°48 (2022 Résidanat ) - La Gingivo-stomatite herpétique est :",
+        "options": [
+          "Une infection localisée à la gencive",
+          "Caractérisée par la présence de suppurations",
+          "Une infection virale",
+          "Traitée par des antibiotiques",
+          "D'origine fongique"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°52 (2022 Résidanat ) - les maladies gingivales d'origine fongique on cite :",
+        "options": [
+          "La toxoplasmose",
+          "La pemphigoíde",
+          "Le lichen plan",
+          "Le lupus érythémateux",
+          "L'histoplasmose"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2021 1°EMD) - La fissure de stillman est :",
+        "options": [
+          "Une altération du contour gingival",
+          "Une hypertrophie sous forme de bouillés de sauvetage",
+          "Une dénudation radiculaire en forme d'apostrophe",
+          "Une augmentation de la profondeur du sillon gingivo-dentaire"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2021 1°EMD) - Dans la gingivite diffuse, l'inflammation atteint:",
+        "options": [
+          "la gencive papillaire.",
+          "la gencive papillaire et marginale.",
+          "la gencive attachée.",
+          "les trois entités gingivales (gencive papillaire, marginale et attachée)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2021 1°EMD) - Parmi les maladies gingivales d'origine fongique-on cite:",
+        "options": [
+          "la toxoplasmose",
+          "Lichen plan",
+          "Pemphigoide",
+          "Lupus érythémateux",
+          "Histoplasmose"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2020 1°EMD) - La fissure de stillman est :",
+        "options": [
+          "Un épaississement gingival sous forme de bourrelet autour des collets des dents",
+          "Un type de récession gingivale spécifique",
+          "Caractérisée par des fentes étroites partant de la gencive marginale en direction apical",
+          "Caractérisée par des fentes larges partant de la gencive marginale en direction apicale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2019 1°EMD) - Dans les atteintes cutanéo-muqueuses, l'érythème multiforme se caractérise par des:",
+        "options": [
+          "Croutes sur les lèvres",
+          "Papules violacées",
+          "Lésions kératosiques",
+          "Érosions et ulcérations"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2019 1°EMD) - Dans les atteintes cutanéomuqueuses, l'érosion et l'ulcération sont retrouvées dans:",
+        "options": [
+          "La Pemphigoide",
+          "L'érythème multiforme",
+          "Le pemphigus vulgaire",
+          "Le lupus érythémateux"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2019 1°EMD) - Dans la gingivite associée aux facteurs hormonaux :",
+        "options": [
+          "La plaque est considérée comme le facteur initial déclenchant",
+          "Les perturbations hormonales sont considérées comme le facteur initial déclenchant",
+          "Les hormones affectent la réaction immunitaire",
+          "Les hormones sont utilisées par les bactéries comme facteurs de croissance"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2019 1°EMD) - Lesquelles ou laquelle des maladies suivantes ne fait pas ou ne font pas partie des maladies gingivales Induites par la plaque :",
+        "options": [
+          "Maladies gingivales d'origine médicamenteuse",
+          "Maladies gingivales associées au diabète",
+          "Gingivostomatites herpétiques",
+          "La fibromatose gingivale héréditaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2019 1°EMD) - Les caractéristiques communes des gingivites induites par la plaque :",
+        "options": [
+          "Le saignement au sondage",
+          "L'atteinte de la gencive papillaire, marginale et attachée",
+          "La réversibilité de l’attente après la suppression des facteurs étiologiques",
+          "Une résorption osseuse minime"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°49 (2019 Résidanat ) - Lesquelles de ces maladies suivantes ne font pas partie des maladies gingivales induites par la plaque : 1- Les maladies gingivales d'origine médicamenteuse. 2- Les maladies gingivales associées au diabète. 3- Les gingivostomatites herpétiques. 4- La fibromatose gingivale héréditaire. 5- La gingivite associée à la puberté.",
+        "options": [
+          "(3-4)",
+          "(1-2-3)",
+          "(2-3-4)",
+          "(1-2-5)",
+          "(1-2)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°54 (2019 Résidanat ) - Le granulome pyogénique : 1. Apparait au cours de la grossesse. 2. Apparait à la puberté. 3. Est un néoplasme. 4. Est associé au lupus érythémateux. 5. Est induit par la plaque.",
+        "options": [
+          "(1.5)",
+          "(2.5)",
+          "(1.3)",
+          "(4.5)",
+          "(3.4)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2017 1°EMD) - Parmi les problèmes gingivaux suivants lequel lesquels peut-ons'attendre retrouver chez un patient souffrant d'une dyscrasie sanguine :",
+        "options": [
+          "Un gonflement",
+          "Un saignement",
+          "Une ulcération",
+          "Une atrophie",
+          "Très peu d'atteinte carieuse"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2016 1°EMD) - Parmi les maladies gingivales citées, laquelle (lesquelles) n'est pas (ne sontpas) d'origine fongique:",
+        "options": [
+          "Érythème gingival linéaire",
+          "Gingivo-stomatite herpétique",
+          "Candidose gingivale généralisée",
+          "Zona"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2016 1°EMD) - Dans le cas de gingivite, l'intensité de la réponse de l'hôte à l'agression d'origine bactérienne, dépend:",
+        "options": [
+          "De caractère de virulence bactérienne",
+          "Des capacités de défense et de régénération de l'hôte",
+          "Du caractère infectieux de la lésion",
+          "Du caractère de virulence virale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2016 1°EMD) - Les maladies gingivales induites par la plaque peuvent être modifiées par:",
+        "options": [
+          "La prothèse articulaire",
+          "Le diabète",
+          "Des médicaments",
+          "Les cardiopathies"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2016 1°EMD) - La candidose gingivale:",
+        "options": [
+          "Est d'origine parasitaire.",
+          "Est d'origine bactérienne",
+          "Est observée dans le cas du syndrome d'immunodéficience acquise HIV",
+          "Est une lésion gingivale d'origine génétique"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2016 1°EMD) - Dans le cas de la pemphigoide cicatricielle :",
+        "options": [
+          "La localisation est surtout cutanée",
+          "Les lésions gingivales sont desquamatives",
+          "La localisation est surtout muqueuse",
+          "Les lésions gingivales sont bulleuses"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2016 1°EMD) - Le lupus érythémateux est une Lésion:",
+        "options": [
+          "Avec ulcération entourée d'une zone jaunâtre ou rougeâtre",
+          "Extensive et douloureuse",
+          "Avec ulcération entourée d'une zone blanchâtre et desquamative",
+          "Avec ulcération entourée d'une zone blanchâtre ou rougeâtre"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°46 (2015 Résidanat ) - Parmi ces lésions élémentaires des atteintes de la gencive, quelle est celle qui peut présenter un enduit pseudo-membraneux :",
+        "options": [
+          "Nécrose",
+          "Ulcération",
+          "Vésicule",
+          "Erosion",
+          "Gangrène"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -2354,7 +3487,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°10 (2025 1°EMD DENTAIRE - Q202\nUn patient parodontal avec une parodontite généralisée stade III grade C associée au tabac et modifiée par le diabète présente:",
+        "questionText": "N°10 (2025 1°EMD DENTAIRE) - Un patient parodontal avec une parodontite généralisée stade III grade C associée au tabac et modifiée par le diabète présente:",
         "options": [
           "Une parodontite modérée avec une perte d'attache clinique qui concerne plus de 30 % des dents atteintes.",
           "Une perte osseuse radiologique qui intéresse la moitié de la racine.",
@@ -2364,10 +3497,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2025 1°EMD DENTAIRE - Q312\nLe syndrome de Down (trisomie 21):",
+        "questionText": "N°16 (2025 1°EMD DENTAIRE) - Le syndrome de Down (trisomie 21):",
         "options": [
           "est une maladie congénitale et héréditaire.",
           "est caractérisé par une déficience immunitaire qui intéresse les lignées des granulocytes neutrophiles et lymphocytaire B et T.",
@@ -2378,10 +3511,10 @@ const paroy3Quizzes = [
           0,
           3
         ],
-        "explanation": "Syndrome de Down (Trisomie 21) et Parodontopathies :•\tFréquence élevée (60 à 100 % avant 30 ans).•\tAtteinte localisée surtout aux incisives mandibulaires.•\tFormes précoces, sévères et à progression rapide.•\tImportante perte osseuse."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2024 1°EMD - Q491\nLa gingivite ulcéronécrotique :",
+        "questionText": "N°7 (2024 1°EMD) - La gingivite ulcéronécrotique :",
         "options": [
           "la conséquence de facteurs bactériens et généraux.",
           "La flore bactérienne est prédominée par des fusobactéries, des spirochètes et des Cocci uniquement",
@@ -2391,10 +3524,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La flore bactérienne est prédominée par des fusobactéries, des spirochètes et desBacteroïdes intermédius, qui semblent être les microorganismes prédominants.la mauvaise hygiène bucco-dentaire est souvent responsable de l'aggravation et de la progression des lésions."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2023 1°EMD - Q702\nParmi les caractéristiques de la parodontite agressive",
+        "questionText": "N°2 (2023 1°EMD) - Parmi les caractéristiques de la parodontite agressive",
         "options": [
           "On trouve des proportions élevées uniquement d'Aggregatibacter actinomycetem comitans",
           "Des anomalies phagocytaires.",
@@ -2405,10 +3538,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2022 1°EMD - Q1007\ndans les parodontites considérées comme une manifestation des maladies systémiques le Syndrome de Papillon Lefèvre :",
+        "questionText": "N°1 (2022 1°EMD) - dans les parodontites considérées comme une manifestation des maladies systémiques le Syndrome de Papillon Lefèvre :",
         "options": [
           "Est décrit comme une affection génotypique dominante",
           "Associe une dyskératose de la paume des mains",
@@ -2419,10 +3552,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : Affection génotypique récessive.C : une parodontolyse très rapide, consécutive au déficit de mobilité des neutrophiles.D : touchant les dents temporaires puis les dents permanentes"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2021 2°EMD - Q1328\nla parodontite chronique est localisée si:",
+        "questionText": "N°1 (2021 2°EMD) - la parodontite chronique est localisée si:",
         "options": [
           "Plus 30% des sites ont une perte d'attache.",
           "Plus de 5 des sites ont une perte d'attache.",
@@ -2432,10 +3565,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : Généralisée, si plus de 30 % de sites sont concernés,"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2021 2°EMD - Q1408\nDans le cas de parodontite chronique :",
+        "questionText": "N°5 (2021 2°EMD) - Dans le cas de parodontite chronique :",
         "options": [
           "L'évolution est lente à modérée.",
           "il n' ya pas d'association à une maladie systémique.",
@@ -2445,10 +3578,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "B : parmi les caractéristiques de la parodontite chronique: Elles peuvent être modifiées et/ou associées à des maladies systémiques."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2021 2°EMD - Q1460\ndans le cas de parodontite agressive localisée , la perte d’attache interproximale intéresse :",
+        "questionText": "N°8 (2021 2°EMD) - dans le cas de parodontite agressive localisée , la perte d’attache interproximale intéresse :",
         "options": [
           "Au plus de deux dents supplémentaires autres que les incisives et les premières molaires",
           "Au moins deux dents supplémentaires autres que les incisives et les premières molaires",
@@ -2458,10 +3591,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "D : c’est la parodontite agressive généralisée"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2017 1°EMD - Q2643\nLes maladies qui ne présentent aucune influence sur les parodontopathies sont:",
+        "questionText": "N°2 (2017 1°EMD) - Les maladies qui ne présentent aucune influence sur les parodontopathies sont:",
         "options": [
           "Ostéoporose",
           "Lupus érythémateux disséminée",
@@ -2473,10 +3606,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           5
         ],
-        "explanation": "•\tOstéoporose → influence sur le métabolisme osseux, favorise la perte osseuse alvéolaire.•\tLupus érythémateux disséminé → maladie auto-immune, retentit sur les tissus parodontaux.•\tSyndrome de Down (trisomie 21) → déficit immunitaire (neutrophiles, lymphocytes), prédisposition forte à la parodontite précoce.•\tMaladie de Crohn → maladie inflammatoire chronique, peut s’accompagner de lésions parodontales."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2017 1°EMD - Q2670\nParmi les maladies systémiques suivantes, laquelle/lesquelles ne prédisposent pas à la parodontite :",
+        "questionText": "N°4 (2017 1°EMD) - Parmi les maladies systémiques suivantes, laquelle/lesquelles ne prédisposent pas à la parodontite :",
         "options": [
           "Neutropénie cyclique",
           "Syndrome de l'immunodéficience acquise",
@@ -2487,10 +3620,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Maladies systémiques prédisposant aux parodontites :•\tNeutropénie cyclique•\tSIDA•\tSyndrome de Chediak-Higashi•\tSyndrome de Down•\tSyndrome de Papillon-Lefèvre•\tDiabète non équilibré, etc."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°49 (2016 Résidanat - Q2994\nLes parodontites chroniques : 1- Sont des maladies infectieuses du parodonte 2- Sont des maladies dégénératives du parodonte 3- Evoluent lentement 4- Ne sont pas en relation directe avec la présence de la plaque dentaire 5- Sont liées à une maladie systémique",
+        "questionText": "N°49 (2016 Résidanat ) - Les parodontites chroniques : 1- Sont des maladies infectieuses du parodonte 2- Sont des maladies dégénératives du parodonte 3- Evoluent lentement 4- Ne sont pas en relation directe avec la présence de la plaque dentaire 5- Sont liées à une maladie systémique",
         "options": [
           "(1-3)",
           "(2-3)",
@@ -2501,10 +3634,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Parodontites chroniques :Définition :C’est une maladie infectieuse d’origine bactérienne qui résulte de l’inflammation des tissus du soutien de la dent provoquant une perte d’attache et alvéolyse. Elle se caractérise par la formation de poche et/ou récession gingivale. C’est la forme la plus fréquente des parodontites, elle survient à tout âge mais le plus fréquemment à l'âge adulte, la prévalence et la sévérité de cette maladie augmente avec l'âge.Caractéristiques de la parodontite chronique :Touche le plus souvent l’adulte, mais peut survenir chez l’enfant et l’adolescent, en dentition temporaire comme en dentition permanente.Le taux de destruction est en relation avec les facteurs locaux.Le tartre sous-gingival est fréquemment retrouvéLa flore associée est polymorphe (porphyromonas gingivalis, prevotella intermedia, bacteroide forsythus, aggregatibacter actinomycetemcomitans, campylobacter rectus, et fusobactérium nucleatum)De progression lente ou modérée, mais il peut avoir des périodes de progression rapide,Elles peuvent être classées selon le degré de destruction et la sévérité,Elles peuvent être associées à des facteurs locaux prédisposant,Elles peuvent être modifiées et/ou associées à des maladies systémiques."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°56 (2016 Résidanat - Q2999\nAssociez aux parodontites agressives leurs caractéristiques : 1- Corrélation-entre plaque bactérienne et sévérité de l'atteinte 2- Présence d'une composante familiale 3- Touchent les adolescents 4- Lésions osseuses d'allure horizontale 5- Présence d'anomalies dans les systèmes immunitaires",
+        "questionText": "N°56 (2016 Résidanat ) - Associez aux parodontites agressives leurs caractéristiques : 1- Corrélation-entre plaque bactérienne et sévérité de l'atteinte 2- Présence d'une composante familiale 3- Touchent les adolescents 4- Lésions osseuses d'allure horizontale 5- Présence d'anomalies dans les systèmes immunitaires",
         "options": [
           "(1-3)",
           "(2-4)",
@@ -2515,10 +3648,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Caractéristiques communes aux parodontites agressivesElles apparaissent le plus souvent chez lessujets jeunes mais on peut les rencontrer chez les adultes;Patient en bonne santé générale, hormis l'atteinte parodontale.Inadéquation entre l'importance de la plaque et la sévérité de la destruction tissulaire (surtout dans la forme localisée).La destruction osseuse est rapide,Notion de prédisposition génétique et présence du caractère familial.Présence d'anomalies de la fonction phagocytaire.La flore microbienne riche en Aa (Aggregatibacter actinomycetemcomitans) et Pg (Porphyromonas gingivalis).La lyse osseuse est surtout angulaire.Lors de l'anamnèse, le patient nous informe qu'il a perdu une ou plusieurs dents suite à une mobilité dentaire et non pas à un processus carieux.Migrations dentaires secondaires (n'existaient pas auparavant) comme les vestibulo-versions, les égressions et les diastèmes secondaires.Mobilités dentaires importantes qui ont évolué rapidement (surtout dans la forme généralisée)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2015 1°EMD - Q3033\nLa classification de la parodontite chronique se base sur 2(deux) critères:",
+        "questionText": "N°18 (2015 1°EMD) - La classification de la parodontite chronique se base sur 2(deux) critères:",
         "options": [
           "Neutropénie cyclique",
           "Syndrome de l'immunodéficience acquise"
@@ -2526,10 +3659,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°56 (2015 Résidanat - Q3059\nLes parodontites chroniques : 1- Sont des maladies infectieuses du parodonte 2- Sont des maladies dégénératives du parodonte 3- Evoluent lentement 4- Ne sont pas en relation directe avec la présence de la plaque dentaire 5- Sont liées à une maladie systémique",
+        "questionText": "N°56 (2015 Résidanat ) - Les parodontites chroniques : 1- Sont des maladies infectieuses du parodonte 2- Sont des maladies dégénératives du parodonte 3- Evoluent lentement 4- Ne sont pas en relation directe avec la présence de la plaque dentaire 5- Sont liées à une maladie systémique",
         "options": [
           "(1-3)",
           "(2-3)",
@@ -2540,7 +3673,7 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Parodontite chroniqueA. DéfinitionInflammation du parodonte à évolution chronique, lente à modéréeÉvolue par périodes d’activité et de rémissionForme la plus fréquente des parodontites (95 % des cas)Surtout présente chez l’adulteFréquence et sévérité augmentent avec l’âgePeut toucher un nombre variable de dents avec des vitesses de progression différentesB. CaractéristiquesSignes cliniques inflammatoires variablesFlore microbienne polymorphe, surtout anaérobieTartre sous‑gingival fréquentCorrélation entre :Quantité de biofilm bactérienFacteurs favorisants : tartre, caries, malpositions dentaires…Facteurs aggravants : tabac, stress…Radiologie :lyse osseuse horizontale prédominante, progression lenteParfois foyers d’alvéolyse angulairePas de susceptibilité familialePas de dysfonction immunitaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -2549,7 +3682,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°14 (2025 1°EMD DENTAIRE - Q281\nDans le cas d'un abcès parodontal, le traitement d'urgence consiste:",
+        "questionText": "N°14 (2025 1°EMD DENTAIRE) - Dans le cas d'un abcès parodontal, le traitement d'urgence consiste:",
         "options": [
           "Toujours à un drainage par incision de l'abcès",
           "A une prescription systématique d'antibiotique pour diminuer la charge bactérienne",
@@ -2559,10 +3692,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Traitement d’urgence :\tTraitement local :Drainage de l’abcès : Le drainage de l’abcès permet l’évacuation du pus et donc une diminution de la pression, il peut se réaliser selon deux voix ; drainage à partir de la poche et drainage à partir d’une incision externePrescription :•\tAntalgiques : paracétamol seul ou codéiné selon la douleur.•\tBains de bouche : eau salée ou gluconate de Chlorhexidine pendant 10 jours.•\tAntibiothérapie systémique (si) :o\tFièvre, malaise ou adénopathie.o\tCollection purulente importante.o\tDrainage impossible ou poche inaccessible/profonde."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2025 1°EMD DENTAIRE - Q331\nLa parodontite ulcéro-Nécrotique (PUN) est caractérisée par :",
+        "questionText": "N°17 (2025 1°EMD DENTAIRE) - La parodontite ulcéro-Nécrotique (PUN) est caractérisée par :",
         "options": [
           "La présence d'une spécificité bactérienne avec des papilles décapitées..",
           "L'absence de perte d'attache clinique.",
@@ -2572,10 +3705,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Signes cliniques :*  Ulcération et nécrose des gencives papillaire et marginale ;*   Pseudomembrane jaune blanchâtre ou grisâtre ;*   Perte partielle des papilles ;*   Saignement gingivaux provoqués ou spontanés ;*   Algie gingivale ;*   Halitose ;*   Signes généraux : adénopathie, hyperthermie, asthénie."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2025 1°EMD DENTAIRE - Q346\nLe syndrome du septum :",
+        "questionText": "N°18 (2025 1°EMD DENTAIRE) - Le syndrome du septum :",
         "options": [
           "Est toujours en relation avec une parodontite chronique",
           "Est une inflammation localisée de la région proximale",
@@ -2585,10 +3718,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A. Traitement symptomatique (sous anesthésie locale) :•\tDécongestion de la papille.•\tCuretage de la zone interproximale pour éliminer les tissus de granulation.•\tNettoyage antiseptique local (eau oxygénée 10 volumes, Chlorhexidine...).B. Traitement étiologique (selon la cause) :•\tÉliminer les facteurs irritants locaux :o\tDébris alimentaires ou corps étrangers dans l’espace interdentaire.•\tCorriger les restaurations défectueuses :o\tRetrait des obturations débordantes.o\tReconstitution d’un bon point de contact avec matrice et porte-matrice.o\tBrunissage correct des bords cervicaux.o\tFinition et polissage des amalgames : sculpture correcte, rétablissement des points de contact."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2024 1°EMD - Q419\nPlusieurs facteurs peuvent être à l'origine de la formation d'un abcès parodontal.",
+        "questionText": "N°2 (2024 1°EMD) - Plusieurs facteurs peuvent être à l'origine de la formation d'un abcès parodontal.",
         "options": [
           "une agression mécanique qui empêche le drainage de la lésion.",
           "Une ouverture de l'extrémité d'une poche",
@@ -2598,10 +3731,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2024 1°EMD - Q515\nLa flore d'un abcès parodontal est similaire à celles des parodontites",
+        "questionText": "N°8 (2024 1°EMD) - La flore d'un abcès parodontal est similaire à celles des parodontites",
         "options": [
           "Vrai",
           "faux"
@@ -2609,10 +3742,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La flore d’un abcès est similaire à celles des parodontites. Les pathogènes les plus prévalant sont :∙ porphyromonas gingivalis,∙ Prévotella intermédia∙ Fusobactérium nucléatum."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2023 1°EMD - Q819\nLe traitement d'urgence d'un Abcès parodontal aigüe nécessite:",
+        "questionText": "N°10 (2023 1°EMD) - Le traitement d'urgence d'un Abcès parodontal aigüe nécessite:",
         "options": [
           "un drainage, soit par la poche parodontale soit par une incision externe sur la surface gingivale.",
           "systématiquement une prescription d'ATB.",
@@ -2622,10 +3755,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "A : lame froide du dôme abcédé jusqu'à la base de l’abcès (la zone la plus fluctuante) et  compression digitale. Le drainage de l’abcès pourra également se faire par(le sulcus) la poche parodontale à l’aide de curette parodontale par curetage prudent.B : La prescription d'antibiotiques et indiquée en présence de signes régionaux ou généraux importants (abattement du patient avec température), et dans le cas de patients à risque"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2023 1°EMD - Q914\nLes maladies parodontales nécrotiques sont caractérisées par:",
+        "questionText": "N°15 (2023 1°EMD) - Les maladies parodontales nécrotiques sont caractérisées par:",
         "options": [
           "la présence de trois signes cliniques principaux: nécrose papillaire, gingivorragie et algie gingivale.",
           "enduits blanchâtres composés de tissu gingival nécrosé",
@@ -2635,10 +3768,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2023 1°EMD - Q990\nLa Péricoronarite aigue:",
+        "questionText": "N°20 (2023 1°EMD) - La Péricoronarite aigue:",
         "options": [
           "Est une inflammation aigue du sac péricoronaire et de la fibromuqueuse adjacente en rapport avec une dent qui a achevé son éruption.",
           "Elle est provoquée par une accumulatio bactérienne au-dessus du capuchon muqueux.",
@@ -2647,10 +3780,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A /B: C’est un état inflammatoire aigu du tissu gingival en rapport avec la couronne d’une dent qui n'a pas encore achevé son éruption."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2022 1°EMD - Q1070\nDans le cas de péricoronarite aigue, la prescription d'antibiotique est systématique:",
+        "questionText": "N°5 (2022 1°EMD) - Dans le cas de péricoronarite aigue, la prescription d'antibiotique est systématique:",
         "options": [
           "Vrai.",
           "Faux"
@@ -2658,10 +3791,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Une antibiothérapie est prescrite en présence de signes généraux ou chez les patients à risque infectieux ou lorsque le drainage de l'infection est impossible"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2022 1°EMD - Q1269\nLe diagnostic différentiel de l'abcès parodontal se fait avec :",
+        "questionText": "N°20 (2022 1°EMD) - Le diagnostic différentiel de l'abcès parodontal se fait avec :",
         "options": [
           "Les lésions endo-parodontales",
           "L'abcès gingival.",
@@ -2671,10 +3804,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°44 (2022 Résidanat - Q1301\nLa péri coronarite aiguë congestive se caractérise par : 1- Une douleur violente irradiante vers l'oropharynx et l'oreille 2- La présence d'une suppuration 3- Une douleur spontanée rétro molaire 4- Une adénopathie homolatérale douloureuse qui est parfois palpable 5- L'absence d'asthénie",
+        "questionText": "N°44 (2022 Résidanat ) - La péri coronarite aiguë congestive se caractérise par : 1- Une douleur violente irradiante vers l'oropharynx et l'oreille 2- La présence d'une suppuration 3- Une douleur spontanée rétro molaire 4- Une adénopathie homolatérale douloureuse qui est parfois palpable 5- L'absence d'asthénie",
         "options": [
           "(1,2)",
           "(2,3)",
@@ -2685,10 +3818,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "1- Une douleur violente irradiante vers l'oropharynx et l'oreille : Correcte.2- La présence d'une suppuration : Correcte.3- Une douleur spontanée rétro molaire : Faux,c'est pas mentionné.4- Une adénopathie homolatérale douloureuse qui est parfois palpable :c'est pas mentionné avec tous ces détails.5- L'absence d'asthénie : Faux."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°45 (2022 Résidanat - Q1302\nLa gingivite ulcéro-nécrotique se caractérise par : 1- L'atteinte de toute la muqueuse buccale 2- Une localisation interproximale des lésions 3- L'absence de nécrose 4- Des papilles gingivales cratériformes 5- La présence de lésions bulleuses",
+        "questionText": "N°45 (2022 Résidanat ) - La gingivite ulcéro-nécrotique se caractérise par : 1- L'atteinte de toute la muqueuse buccale 2- Une localisation interproximale des lésions 3- L'absence de nécrose 4- Des papilles gingivales cratériformes 5- La présence de lésions bulleuses",
         "options": [
           "(3,4)",
           "(1,2)",
@@ -2699,10 +3832,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Voici un cas clinique qui présente unegingivite ulcéro-nécrotiqueavec ses signes et ses étiologies:1- Faux :toute la muqueuse buccale n'est pas atteinte.3- L'absence de nécrose : Faux, il s'agit d'une gingivite ulcéro-nécrotique(GUN).5- La présence de lésions bulleuses : Faux, ce n'est pas une caractéristique clinique de la GUN."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°46 (2022 Résidanat - Q1303\nLe diagnostic différentiel de la gingivite uleéro-nécrotique se fait avec : 1- La gingivo-stomatite herpétique 2- La gingivite desquamative 3- Le pemphigus vulgaire 4- Le lichen plan 5- La péri coronarite congestive",
+        "questionText": "N°46 (2022 Résidanat ) - Le diagnostic différentiel de la gingivite uleéro-nécrotique se fait avec : 1- La gingivo-stomatite herpétique 2- La gingivite desquamative 3- Le pemphigus vulgaire 4- Le lichen plan 5- La péri coronarite congestive",
         "options": [
           "(1, 2.4)",
           "(1. 2,3)",
@@ -2713,10 +3846,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "1- La gingivo-stomatite herpétique : correcte.2- La gingivite desquamative :  correcte.3- Le pemphigus vulgaire :  correcte.GUN :pour voir plus de casGUN+PUN:visitez -  https://www.parosphereformation.fr/2018/01/16/atlas-psf-gun-pun/4- Le lichen plan : Faux,ça appartient aux lésions blanches.5- La péri coronarite congestive : Faux,il n'a rien à voir, sa localistion est au dessus d'une DDS + présence d'une suppuration qui est absente à la GUN"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2021 2°EMD - Q1358\nL'abcès gingival:",
+        "questionText": "N°2 (2021 2°EMD) - L'abcès gingival:",
         "options": [
           "Est une inflammation aigüe qui touche la gencive marginale et/ou la gencive attachée.",
           "Peut-être une complication d'une gingivite aigüe.",
@@ -2726,10 +3859,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A : Un abcès gingival est une réaction inflammatoire aiguë siégeant uniquement au niveau de la gencive marginale et /ou inter-dentaire.B : Il intervient fréquemment sur un parodonte sain, suite à l’inclusion(ou l’irritation provoquée par un corps étranger)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2021 1°EMD - Q1369\nLa prescription d'antibiotique, dans le cadre de l'urgence est systématique en cas de péricoronarite aigue :",
+        "questionText": "N°3 (2021 1°EMD) - La prescription d'antibiotique, dans le cadre de l'urgence est systématique en cas de péricoronarite aigue :",
         "options": [
           "Vrai",
           "Faux"
@@ -2737,10 +3870,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2021 2°EMD - Q1431\nle traitement de l’abcès parodontale :",
+        "questionText": "N°7 (2021 2°EMD) - le traitement de l’abcès parodontale :",
         "options": [
           "Est étiologique",
           "Est étiologique et symptomatique",
@@ -2750,10 +3883,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : étiologique = soulager d’abord et stopper l’infection puis symptomatique = traiter la cause une fois la situation d’urgence passéeD : La prescription d'antibiotiques et indiquée en présence de signes régionaux ou généraux importants (abattement du patient avec température), et dans le cas de patients à risque (immunodépression ou cardiopathie à haut risque d’endocardite infectieuse)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2021 1°EMD - Q1499\nle syndrome de septum :",
+        "questionText": "N°11 (2021 1°EMD) - le syndrome de septum :",
         "options": [
           "Est une inflammation de la gencive papillaire et du septum osseux interradiculaire",
           "Est provoqué suite à l’altération du point de contact inter-dentaire",
@@ -2763,10 +3896,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : est une inflammation de la gencive interdentaire qui gagne par la suite le septum interdentaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°47 (2020 Résidanat - Q1944\nLa gingivite ulcéro-nécrotique est caractérisée par : 1- La localisation interproximale des lésions 2- Les papilles cratériformes 3- La présence de suppuration 4- La présence de poche parodontale 5- Toutes les réponses sont justes",
+        "questionText": "N°47 (2020 Résidanat ) - La gingivite ulcéro-nécrotique est caractérisée par : 1- La localisation interproximale des lésions 2- Les papilles cratériformes 3- La présence de suppuration 4- La présence de poche parodontale 5- Toutes les réponses sont justes",
         "options": [
           "(1,2)",
           "(2,3)",
@@ -2777,10 +3910,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Gingivorragies : la gingivorragie spontanée ou provoquée (par pression légère ou par brossage) est en effet le signe le plus courant des gingivites inflammatoires, qui fait l’objet de la gène la plus fréquemment exprimée par les patients.Douleur : les lésions de la G.U.N sont extrêmement sensibles au toucher. Le patient se plaint d’une douleur qu’il qualifie d’irradiée. Elle est intensifiée par l’absorption d’aliments épicés ou chauds et elle rend la mastication difficile.Tous les auteurs sont d’accord pour reconnaître une triade caractéristique des symptômes de G.U.N, à savoir :. La localisation interproximale des lésions,. Les papilles émoussés ou cratériformes,. L’absence de suppuration."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°55 (2020 Résidanat - Q1947\nEn présence d'une gingivite ulcéro-necrotique, à la première séance on doit :",
+        "questionText": "N°55 (2020 Résidanat ) - En présence d'une gingivite ulcéro-necrotique, à la première séance on doit :",
         "options": [
           "Faire un détartrage gingivo-dentaire.",
           "Faire un badigeonnage avec les antiseptiques.",
@@ -2791,10 +3924,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le traitement d’urgence consiste en- une détersion de la lésion à l'aide de boulettes de cotons imbibées d'eau oxygénée  3%, de chlorhexidine 0,12% ou de povidone iodée 10%, afin d'éliminer les débris de  tissu pseudomembraneux .- Des antalgiques de palier 1 (paracétamol) ou de palier 2 (paracétamol codéiné)  seront prescrits en fonction de l’intensité des douleurs rapportées par le patient.- Un bain de bouche à base de chlorhexidine (0, 12 ou 0,2 %) 3 fois par jour pendant 15  jours doit être systématiquement recommandé.- Des instructions d'hygiène sont données au patient avec l’utilisation de brosse à  dents souple.- motivation à l'arrêt du tabac et de la consommation d'alcool ou de drogues,il faut aussi éviter les aliments épicés."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "(2016 1°EMD - Q2831\nle syndrome de septum :",
+        "questionText": "(2016 1°EMD) - le syndrome de septum :",
         "options": [
           "N’est pas douloureux",
           "Peut être dû à la présence d’un corps étranger dans l’espace inter-dentaire",
@@ -2803,10 +3936,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : il provoque des Douleurs à la mastication, souvent même spontanée et irradiées confondues avec les douleurs de la pulpite."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "(2016 1°EMD - Q2832\nla pulpite à rétro :",
+        "questionText": "(2016 1°EMD) - la pulpite à rétro :",
         "options": [
           "A une origine parodontale",
           "A une origine endodontique",
@@ -2817,10 +3950,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2016 3°EMD - Q2928\nla péricoronarite aigue :",
+        "questionText": "N°13 (2016 3°EMD ) - la péricoronarite aigue :",
         "options": [
           "Est due à une poche parodontale",
           "Est en rapport avec la couronne d’une dent en éruption",
@@ -2830,10 +3963,10 @@ const paroy3Quizzes = [
           1,
           2
         ],
-        "explanation": "A : Elle est provoquée par une accumulation bactérienne sous le capuchon muqueux, les débris alimentaires, et l’irritation mécanique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2015 1°EMD - Q3016\nLes abcès parodontaux multiples se retrouvent chez les patients:",
+        "questionText": "N°6 (2015 1°EMD) - Les abcès parodontaux multiples se retrouvent chez les patients:",
         "options": [
           "Dont l'état général est bon",
           "Avec un diabète non contrôlé",
@@ -2842,10 +3975,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "les abcès multiples sont associés aux patients déficients médicalement, notamment diabète non contrôlé, immunodépression, VIH, etc."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2015 1°EMD - Q3024\nLa péricoronarite aigue:",
+        "questionText": "N°13 (2015 1°EMD) - La péricoronarite aigue:",
         "options": [
           "Est due à une poche parodontale.",
           "Est en rapport avec la couronne d'une dent en éruption.",
@@ -2854,10 +3987,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2015 1°EMD - Q3025\nLe syndrome du septum:",
+        "questionText": "N°14 (2015 1°EMD) - Le syndrome du septum:",
         "options": [
           "N'est pas douloureux.",
           "Peut être due à la présence d'un corps étranger dans l'espace, inter- dentaire",
@@ -2867,10 +4000,10 @@ const paroy3Quizzes = [
           1,
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2015 1°EMD - Q3026\nLa pulpite à rétro:",
+        "questionText": "N°15 (2015 1°EMD) - La pulpite à rétro:",
         "options": [
           "A une origine parodontale",
           "A une origine endodontique",
@@ -2881,10 +4014,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°48 (2015 Résidanat - Q3054\nLe syndrome du septum : 1- Est une atteinte de la zone de furcation 2- Peut-être une gingivite de l'espace interdentaire 3- Peut-être une parodontite de l'espace interdentaire 4- A comme étiologie une pulpite d'origine parodontale 5- Toutes les réponses sont justes",
+        "questionText": "N°48 (2015 Résidanat ) - Le syndrome du septum : 1- Est une atteinte de la zone de furcation 2- Peut-être une gingivite de l'espace interdentaire 3- Peut-être une parodontite de l'espace interdentaire 4- A comme étiologie une pulpite d'origine parodontale 5- Toutes les réponses sont justes",
         "options": [
           "(1-4)",
           "(3-4)",
@@ -2895,7 +4028,516 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "1: Le syndrome du septum est une forme d'ostéite alvéolaire qui touche le septum interdentaire.4 : Etiologie :La perte d'un point de contact fonctionnel entre deux dents qui favorise la rétention d'aliments à l'origine de l'inflammation.La destruction de la zone de contact de la crête marginale par une carie ou une fracture (bourrage alimentaire).Les défauts morphologiques et les malpositions des dents sur l'arcade (rotation, version).Une restauration défectueuse des faces proximales comme : absence de point de contact, une obturation débordante, ou une couronne mal ajustée (nettoyage impossible).Brossage abusif et traumatisant.Un fragment d'allumette ou de cure-dent, une arête de poisson…Un crochet de prothèse.Une prothèse partielle amovible (en résine) mal réalisée.Un dérapage d'instrument.La fusée arsenicale qui provoque une destruction plus ou moins importante du tissu osseux inter proximal."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "prescreption medicamenteuse",
+    "subject": "paro-y3",
+    "questions": [
+      {
+        "questionText": "N°6 (2025 2°EMD DENTAIRE) - Parmi les molécules antibiotiques suivantes, quelle est la molécule de choix pour t maladies parodontales nécrosantes:",
+        "options": [
+          "les cyclines",
+          "les B-lactamines",
+          "le métronidazole",
+          "les macrolides",
+          "Association: Amoxicilline + acide clavulanique"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2025 2°EMD DENTAIRE) - Parmi ces molécules antiseptiques suivantes, laquelle est recommandée en sous-gingivale?",
+        "options": [
+          "La Chlorhexidine",
+          "La Povidone iodée",
+          "Le triclosan",
+          "L'héxitidine",
+          "La listerine"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2025 2°EMD DENTAIRE) - Les antiseptiques à base de chlorhexidine:",
+        "options": [
+          "Sont contre indiqués chez la femme enceinte",
+          "Ont une activité bactéricide et fongicide",
+          "ne possède pas de capacité de rétention sur les surfaces buccales",
+          "Sont des antiseptiques de référence en sous-gingival",
+          "Ont une activité d'altération de la paroi bactérienne"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2024 2°EMD) - L'antibiothérapie en parodontie :",
+        "options": [
+          "Est systématique dans le cas de parodontites",
+          "Est systématique dans le cas de gingivites",
+          "Est indiquée dans le cas de parodontite agressive",
+          "Peut-être indiqué après chirurgie parodontale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2024 2°EMD) - La Chlorhexidine est un antiseptique:",
+        "options": [
+          "Bactériostatique à large spectre",
+          "Utilisé en bain de bouche uniquement",
+          "Ne possède pas de capacité d'adhérence aux surfaces buccales",
+          "Est Antiseptique de choix en parodontie"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2024 2°EMD) - Le métronidazole",
+        "options": [
+          "Est un antibiotique bactériostatique",
+          "Est actif sur les bactéries aérobies",
+          "Est actif sur les anaérobies",
+          "Peut être associé à un autre antibiotique"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2024 2°EMD) - Les AINS:",
+        "options": [
+          "Ont une propriété antalgique",
+          "Sont indiqués en cas de parodontite chronique",
+          "Peuvent être prescrits après chirurgie parodontale",
+          "Permettent d'éliminer l'inflammation gingivale"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2023 2°EMD) - La Chlorhexidine:",
+        "options": [
+          "Est des agents anti-plaque.",
+          "Peut remplacer le traitement local type brossage dentaire.",
+          "Est l'antiseptique de choix en supra-gingival.",
+          "Est l'antiseptique de choix en supra- et sous gingival."
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2023 2°EMD) - Parmi les associations antibiotiques suivantes, laquelle est inhibitrice de l'action des Bétalactamases:",
+        "options": [
+          "Métronidazole + spiramycine.",
+          "Métronidazole + fluoroguinolone.",
+          "Amoxicilline + acide clavulanique.",
+          "Amoxicilline + métronidazole"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2023 2°EMD) - L'antibioprophylaxie:",
+        "options": [
+          "Consiste à administrer une dose flash d'antibiotique avant chaque acte invasif.",
+          "Commence la veille de l'intervention et se poursuit le jour de l'intervention.",
+          "Débute 30 min avant l'acte et est prolongée jusqu'à cicatrisation.",
+          "Correspond à une dose flash d'antibiotique prise dans l'heure qui précède l'acte invasif."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2023 2°EMD) - La Povidone lodée est un antiseptique utilisé en traitement prophylactique:",
+        "options": [
+          "Faux",
+          "Vrai"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2022 2°EMD) - Dans le plan de traitement, la prescription médicamenteuse:",
+        "options": [
+          "Trouve toujours sa place avant le traitement étiologique",
+          "Complète une thérapeutique initiale dans tous les cas",
+          "Est indispensable pour les patients immunodéprimés",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°54 (2022 Résidanat ) - Le Métronidazole : 1- Est un antibiotique bactéricide 2- Est un antibiotique bactériostatique 3- Seul, peut éliminer l'Aggregatibacter actinomycetem comitans (Aa) 4- Seul, peut éliminer le Porphyromonas gingivalis 5- Est actif sur les anaérobies",
+        "options": [
+          "(1.2)",
+          "(1.3)",
+          "(1,4.5)",
+          "(2.3)",
+          "(1.5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2021 3°EMD ) - L'antibiothérapie prophylactique en parodontie consiste en:",
+        "options": [
+          "L'administration d'antibiotique(s) par voie systémique en présence d'une infection.",
+          "L'administration d'un antibiotique dans l'objectif de prévenir le développement d'une infection locale, générale ou à distance.",
+          "L'administration par voie systémique d'une dose unique d'antibiotique dans l'heure qui précède l'acte invasif",
+          "L'administration d'un antibiotique par voie systémique lors de la réalisation d'un acte parodontal invasif, pour les patients à haut risque d'endocardite infectieuse et les patients immunodéprimés"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2021 2°EMD) - La prescription d'antibiotique, dans le cadre de l'urgence est systématique en cas de péricoronarite aigüe:",
+        "options": [
+          "VRAI",
+          "FAUX"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2021 3°EMD ) - La prescription d'une antibiothérapie curative en Parodontie pour la population générale est recommandée dans le cas de:",
+        "options": [
+          "Parodontites agressives",
+          "Maladies parodontales nécrosantes",
+          "Mucosite péri-implantaire",
+          "Abcès parodontal"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2021 3°EMD ) - Les anti-Inflammatoires les plus utilisés en Parodontie sont plus particulièrement :",
+        "options": [
+          "Ceux qui ont une action sur le métabolisme des prostaglandines",
+          "Les anti-inflammatoires stéroïdiens",
+          "Les anti-inflammatoires non stéroïdiens",
+          "Les salicylés dont la molécule de choix est l'aspirine"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°65 (2021 Résidanat ) - La prescription d'une antibiothérapie curative en Parodontie pour la population‎ générale est recommandée dans le cas de :‎ 1- ‎Parodontites agressives.‎ 2- ‎Maladies parodontales nécrosantes.‎ 3- ‎Mucosite péri-implantaire.‎ 4- ‎Abcès parodontal‎ 5- ‎Toutes les réponses sont justes‎",
+        "options": [
+          "(1,3)‎",
+          "‎ (1,2)‎",
+          "(1,4)‎",
+          "(1,2,4)‎",
+          "(5)‎"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°72 (2021 Résidanat ) - La molécule antibiotique de choix, pour traiter la parodontite ulcéro-nécrotique, est :‎",
+        "options": [
+          "Le métronidazole",
+          "La tétracycline",
+          "L'amoxicilline",
+          "Association amoxicilline + acide clavulanique",
+          "L'azithromycine"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2020 3°EMD ) - L'antibiothérapie curative est indiquée:",
+        "options": [
+          "Pour diminuer le risque infectieux",
+          "Pour traiter une infection déclarer",
+          "Pour prévenir l'endocardite infectieuse",
+          "Chez le sujet diabétique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2020 3°EMD ) - La molécule d'antibiotique de choix, pour traiter la parodontite ulcéro nécrotique, est:",
+        "options": [
+          "Le métronidazole",
+          "La tétracycline",
+          "L'amoxicilline",
+          "L'association amoxicilline + acide clavulanique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°52 (2020 Résidanat ) - Parmi les antibiotiques bactériostatiques on distingue : 1- Macrolides 2- Beta-lactamines 3- Tetracylines 4- Vancomycine 5- Amoxycilline",
+        "options": [
+          "(1,4)",
+          "(1,5)",
+          "(1,3)",
+          "(1,2)",
+          "(4,5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°54 (2020 Résidanat ) - Le METRONIDAZOLE :",
+        "options": [
+          "A un mécanisme d'action bien connu.",
+          "Est bactériostatique.",
+          "A une demi-vie de deux à quatre heures.",
+          "A une excellente diffusion tissulaire salivaire.",
+          "Agit uniquement sur les germes aérobies."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°57 (2020 Résidanat ) - Les tétracyclines utilisées en parodontologie sont :",
+        "options": [
+          "Deux fois plus concentrées dans le sérum que dans le fluide gingival.",
+          "Efficaces à de faibles concentrations.",
+          "Actives uniquement sur les bactéries gram positif.",
+          "Actives uniquement sur les bactéries gram négatif.",
+          "Caractérisées par un spectre antimicrobien très large."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2019 3°EMD ) - Le biofilm bactérien est sensible aux antibiotiques à large spectre:",
+        "options": [
+          "vrai",
+          "faux"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2019 3°EMD ) - Les anti-inflammatoires les plus utilisés et étudiés dans le cadre des maladies parodontales sont:",
+        "options": [
+          "Les anti-inflammatoires non stéroïdiens",
+          "Les anti-inflammatoires stéroïdiens",
+          "Ceux qui ont une action sur le métabolisme des prostaglandines",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2019 3°EMD ) - Le métronidazole:",
+        "options": [
+          "Est un antibiotique bactéricide, actif sur les germes aérobies",
+          "Est un antibiotique Bactériostatique, actif sur les germes anaérobies",
+          "Seul, peut éliminer l'Aggregati bacter actinomycetemcomitans (A.a.)",
+          "Seul peut éliminer le Porphyromonas gingivalis (Pg"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2019 3°EMD ) - L'antibiotique de choix dans le traitement de la parodontite agressive est:",
+        "options": [
+          "Amoxicilline",
+          "Azithromycine",
+          "Métronidazole",
+          "Association amoxicilline métronidazole"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2019 3°EMD ) - En parodontologie, la prescription d'antibiotiques est indiquée dans le cas:",
+        "options": [
+          "Gingivite induite par la plaque",
+          "Parodontite agressive",
+          "Parodontite chronique",
+          "Parodontite ulcéro-nécrotique"
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°41 (2018 Résidanat ) - Les cyclines :",
+        "options": [
+          "Sont des antibiotiques à potential bactéricide.",
+          "INHIBENT la synthèse protéique.",
+          "Aident à la multiplication cellulaire.",
+          "Augmentent la destruction du tissu conjonctif.",
+          "Toutes les réponses sont fausses."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°42 (2018 Résidanat ) - Dans le traitement des parodontites, la prescription d'un antibiotique doit tenir compte : 1- De la profondeur de la poche parodontale. 2- De l'état général du patient. 3- Des bactéries impliquées dans la maladie parodontale. 4- Du degré de lyse osseuse. 5- Toutes les réponses sont justes.",
+        "options": [
+          "(1-2-3)",
+          "(2-3-4)",
+          "(1-3)",
+          "(2-3)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°46 (2018 Résidanat ) - Les BETA LACTAMINES :",
+        "options": [
+          "INHABENT les BETA-LACTAMASES.",
+          "Provoquent une lyse cellulaire.",
+          "Ont un spectre réduit.",
+          "Sont efficaces sur les germes positifs.",
+          "Sont inefficaces sur les germes anaérobies."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°50 (2018 Résidanat ) - L'association des antibiotiques dans le traitement de la maladie parodontale : 1- Permet d'élargir le spectre microbien de chaque ATB. 2- Permet de prescrire des doses faibles de chaque ATB. 3- Permet d'exploiter la synergie qui découle de cette association. 4- A un but préventif. 5- Toutes les réponses sont justes.",
+        "options": [
+          "(1-2-4)",
+          "(1-3-4)",
+          "(1-2)",
+          "(1-2-3)",
+          "(5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2017 2°EMD) - Parmi ces familles antibiotiques, lequel possède une action d'inhibition de collagène:",
+        "options": [
+          "Les B-lactamines.",
+          "Les cyclines",
+          "Les macrolides",
+          "Métronidazole"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2017 2°EMD) - Le choix d'un antibiotique dépend de la spécificité bactérienne:",
+        "options": [
+          "VRAI",
+          "FAUX"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2017 2°EMD) - Le gel de Minocycline « dentomycine >> à 2%",
+        "options": [
+          "Est un métronidazole",
+          "A une libération prolongée",
+          "A une concentration augmentée dépassant les 24h",
+          "Est utilisé à raison de 2 applications par semaine"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2017 2°EMD) - La prescription d'un antibiotique chez un cardiopathie à risque infectieux",
+        "options": [
+          "A un but curatif",
+          "A un but préventif",
+          "Permet d'accélérer le processus de cicatrisation",
+          "Toutes les réponses sont justes"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2017 2°EMD) - Parmi ces associations d'antibiotiques suivantes, laquelle est utilisé dans le cas de parodontite agressive",
+        "options": [
+          "Amoxicilline +acide clavulanique",
+          "Amoxicilline + métronidazole",
+          "Métronidazole + fluoroquinolone",
+          "Métronidazole + spíramycine"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -2904,7 +4546,7 @@ const paroy3Quizzes = [
     "subject": "paro-y3",
     "questions": [
       {
-        "questionText": "N°15 (2025 2°EMD DENTAIRE - Q293\nLa thérapeutique initiale comporte:",
+        "questionText": "N°15 (2025 2°EMD DENTAIRE) - La thérapeutique initiale comporte:",
         "options": [
           "renseignement des méthodes de brossage.",
           "un traitement orthodontique fixe multi-attache.",
@@ -2914,10 +4556,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La thérapeutique initiale comprend :•\tL’enseignement de l’hygiène bucco-dentaire (méthodes de brossage, fil dentaire, brossettes).•\tL’élimination de la plaque et du tartre par détartrage et surfaçage radiculaire.•\tLa suppression des facteurs locaux de rétention de plaque (plombages débordants, malpositions mineures si possible, etc.)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2025 2°EMD DENTAIRE - Q403\nLa Prévention secondaire désigne les méthodes diagnostiques qui évitent l'aggravation et la progression de la maladie :",
+        "questionText": "N°20 (2025 2°EMD DENTAIRE) - La Prévention secondaire désigne les méthodes diagnostiques qui évitent l'aggravation et la progression de la maladie :",
         "options": [
           "Vraie",
           "Faux"
@@ -2925,10 +4567,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Désigne les méthodes diagnostiques et thérapeutiques qui évitent l'aggravation et la progression de la maladie ; pour être efficace ce type de stratégie doit reposer sur le diagnostic et le traitement précoce d’une maladie débutante."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2024 2°EMD - Q532\nLes deux éléments fondamentaux de la prévention primaire sont:",
+        "questionText": "N°10 (2024 2°EMD) - Les deux éléments fondamentaux de la prévention primaire sont:",
         "options": [
           "Information et motivation du patient",
           "Détartrage surfaçage radiculaire",
@@ -2938,10 +4580,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2024 2°EMD - Q570\nLe brossage interdentaire",
+        "questionText": "N°12 (2024 2°EMD) - Le brossage interdentaire",
         "options": [
           "Est Important car la formation de la plaque commence en interdentaire",
           "Est Secondaire car la formation de la plaque commence en vestibulaire et en lingual",
@@ -2951,10 +4593,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Selon l’ouverture de l’embrasure interdentaire, le patient sera conseillé d’utiliser le fil de soie, les brossettes interdentaires ou les brosses monotouffes"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2024 2°EMD - Q583\nLa maintenance:",
+        "questionText": "N°13 (2024 2°EMD) - La maintenance:",
         "options": [
           "est la partie finale du traitement parodontal",
           "est indiquée pour préserver les résultats du traitement parodontal",
@@ -2965,10 +4607,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "C’est la partie de la thérapie parodontale qui est nécessaire à la préservation des résultats obtenus au cours du traitement actif"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2023 2°EMD - Q942\nLa maintenance parodontale:",
+        "questionText": "N°17 (2023 2°EMD) - La maintenance parodontale:",
         "options": [
           "Permet de prévenir la maladie parodontale.",
           "A pour but de traiter les récidives parodontales.",
@@ -2978,10 +4620,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2023 2°EMD - Q971\nLa prévention primaire:",
+        "questionText": "N°19 (2023 2°EMD) - La prévention primaire:",
         "options": [
           "Permet de traiter les maladies parodontales déjà installées",
           "Permet d'éviter la récidive.",
@@ -2991,10 +4633,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2022 2°EMD - Q1042\nLors des séances de maintenance implantaire:",
+        "questionText": "N°3 (2022 2°EMD) - Lors des séances de maintenance implantaire:",
         "options": [
           "L'utilisation des instruments manuels est contre-indiquée",
           "Le sondage autour des implants est proscrit",
@@ -3004,10 +4646,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "L’utilisation des instruments métalliques manuels ou des instruments ultrasoniques est contre-indiquée.Le sondage autour des implants permet d’enregistrer la profondeur de poche, le saignement éventuel au sondage ou la présence éventuelle d’une suppuration"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2022 2°EMD - Q1057\nLa perte d'attache généralisée détectée, pendant la phase de maintenance, est le plus souvent causée par:",
+        "questionText": "N°4 (2022 2°EMD) - La perte d'attache généralisée détectée, pendant la phase de maintenance, est le plus souvent causée par:",
         "options": [
           "La présence d'éventuelle maladie systématique non diagnostiquée",
           "Un traumatisme occlusal",
@@ -3017,10 +4659,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2022 2°EMD - Q1097\nLa prévention primaire est la véritable prophylaxie, elle comprend:",
+        "questionText": "N°6 (2022 2°EMD) - La prévention primaire est la véritable prophylaxie, elle comprend:",
         "options": [
           "Dépistage",
           "Traitement des premières atteintes",
@@ -3030,10 +4672,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Prévention primaireLa véritable prophylaxie. Elle intervient avant l’apparition des phénomènes pathologiques; elle empêche l’apparition clinique de la maladie. Elle comprend:Information et motivation du patientContrôle de la plaque dentaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2022 2°EMD - Q1158\nSujet à risque de développer une parodontite sévère, se distingue, des autres sujets par:",
+        "questionText": "N°11 (2022 2°EMD) - Sujet à risque de développer une parodontite sévère, se distingue, des autres sujets par:",
         "options": [
           "Une flore buccale à prédominance cariogèn",
           "Une réponse défavorable aux facteurs de risque",
@@ -3043,10 +4685,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2022 2°EMD - Q1230\nLes antiseptiques à base de chloehexidine:",
+        "questionText": "N°17 (2022 2°EMD) - Les antiseptiques à base de chloehexidine:",
         "options": [
           "Sont prescrit dans le cadre de la prévention de la maladie parodontale",
           "Ont une activité bactéricide et antifongique",
@@ -3056,10 +4698,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Chlorhéxidine : C’est un antiseptique largement employé dans de nombreux domaines de la médecine, en raison de sa faible toxicité et de son large spectre antibactérien. c’est l’agent antiplaque le plus testé et le plus efficace,"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2021 3°EMD - Q1353\nLa technique horizontale de brossage dentaire:",
+        "questionText": "N°2 (2021 3°EMD ) - La technique horizontale de brossage dentaire:",
         "options": [
           "Est la méthode la plus conseillée",
           "La brosse à dents est positionnée perpendiculairement aux surfaces dentaires",
@@ -3069,10 +4711,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Recommandée en denture temporaire ; en pratique, elle est la méthode la plus utilisée en particulier chez les personnes qui n’ont reçu aucun enseignement d’hygiène orale."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2021 3°EMD - Q1402\nLa brosse à dents électrique:",
+        "questionText": "N°5 (2021 3°EMD ) - La brosse à dents électrique:",
         "options": [
           "Dont le mouvement est vibratoire semble plus efficace",
           "Dont le mouvement est rotatoire /oscillatoire semble plus efficace",
@@ -3082,10 +4724,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "« Brosses à dents électriques : Peuvent être indiquées chez les patients handicapés ou ayant une mauvaise dextérité manuelle.Le mouvement oscillo-rotatif donne de meilleurs résultats que le mouvement vibratoire en retirant davantage de plaque. Elles seraient moins traumatiques que les brosses à dents manuelles. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2020 3°EMD - Q1730\nLe brossage interdentaire:",
+        "questionText": "N°3 (2020 3°EMD ) - Le brossage interdentaire:",
         "options": [
           "Est important car la formation de la plaque commence en interdentaire",
           "Est secondaire car la formation de la plaque commence en vestibulaire et en lingual",
@@ -3094,10 +4736,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L’utilisation du fil dentaire est la plus recommandée pour l’élimination du biofilm sur les surfaces proximales"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2020 3°EMD - Q1804\nLes deux éléments fondamentaux de la prévention primaire sont:",
+        "questionText": "N°9 (2020 3°EMD ) - Les deux éléments fondamentaux de la prévention primaire sont:",
         "options": [
           "Information et motivation du patient",
           "Détartrage surfaçage radiculaire",
@@ -3108,10 +4750,10 @@ const paroy3Quizzes = [
           0,
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2020 3°EMD - Q1814\nConcernant les brosse à dent, laquelle de ces réponses est juste:",
+        "questionText": "N°10 (2020 3°EMD ) - Concernant les brosse à dent, laquelle de ces réponses est juste:",
         "options": [
           "La taille de la brosse à dent adaptée à l'âge du patient",
           "Les poils en nylon ou polyester",
@@ -3120,10 +4762,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2020 3°EMD - Q1830\nLa prévention tertiaire:",
+        "questionText": "N°11 (2020 3°EMD ) - La prévention tertiaire:",
         "options": [
           "Signifie arrêt et prévention de la réapparition d'une maladie traitée/guérie, lors de la phase de maintenance",
           "A pour objectif de diminuer les récidives",
@@ -3133,10 +4775,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2019 3°EMD - Q2048\nLes bains de bouches:",
+        "questionText": "N°5 (2019 3°EMD ) - Les bains de bouches:",
         "options": [
           "Sont efficaces contre les bactéries du biofilm",
           "Sont indiquées dans le traitement de toutes les maladies parodontales",
@@ -3146,10 +4788,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2019 3°EMD - Q2057\nLa phase de maintenance trouve sa place:",
+        "questionText": "N°6 (2019 3°EMD ) - La phase de maintenance trouve sa place:",
         "options": [
           "Après le traitement d'urgence",
           "Après le traitement initial",
@@ -3160,10 +4802,10 @@ const paroy3Quizzes = [
           1,
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2019 3°EMD - Q2071\nLa chirurgie de la poche englobe les chirurgies suivantes:",
+        "questionText": "N°7 (2019 3°EMD ) - La chirurgie de la poche englobe les chirurgies suivantes:",
         "options": [
           "La freinectomie",
           "La gingivectomie",
@@ -3173,10 +4815,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2019 3°EMD - Q2105\nLes rendez-vous de maintenance sont rapprochés chez :",
+        "questionText": "N°9 (2019 3°EMD ) - Les rendez-vous de maintenance sont rapprochés chez :",
         "options": [
           "Les patients présentent une parodontite agressive",
           "Les patients diabétiques mal équilibrés",
@@ -3186,10 +4828,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "« Certains types de parodontites présentent un risque élevé de récidive […] principalement les parodontites agressives.Les pathologies générales comme le diabète mal équilibré augmentent aussi le risque.Dans les mois qui suivent le traitement parodontal, les contrôles sont plus fréquents pour s’assurer de la stabilisation parodontale et de la motivation du patient (contrôle mensuel ou bimensuel dans les formes sévères).Chez les patients stabilisés avec une hygiène correcte, on peut conseiller des contrôles biannuels. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2019 3°EMD - Q2138\nLa réévaluation doit être faite après 4 à 8 semaines du traitement initial afin:",
+        "questionText": "N°11 (2019 3°EMD ) - La réévaluation doit être faite après 4 à 8 semaines du traitement initial afin:",
         "options": [
           "D'avoir une cicatrisation de l'attache épithéliale et conjonctive",
           "D'avoir une cicatrisation de l'attache épithéliale uniquement",
@@ -3199,10 +4841,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Elle permet de tester le degré de motivation du patient et la réponse tissulaire de l’hôte, ceci implique donc une réévaluation :Des indices PI, GI, SBI,.... et de refaire le sondage parodontal."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2019 3°EMD - Q2179\nDans le brossage dentaire, les deux facteurs qui participent dans l'apparition des lésions cervicales non carieuses:",
+        "questionText": "N°13 (2019 3°EMD ) - Dans le brossage dentaire, les deux facteurs qui participent dans l'apparition des lésions cervicales non carieuses:",
         "options": [
           "La brosse à dent dure",
           "le brossage horizontal avec force",
@@ -3212,10 +4854,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "« Les lésions cervicales non carieuses (abrasions, récessions gingivales) sont favorisées par l’utilisation d’une brosse dure et d’un brossage horizontal traumatique exercé avec force.L’usage répété de dentifrices abrasifs peut accentuer l’usure, mais n’est pas considéré comme le facteur principal.Les brosses électriques, si elles sont utilisées correctement, sont moins traumatiques que les brosses manuelles. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2018 3°EMD - Q2384\nLa Chlorhexidine est:",
+        "questionText": "N°6 (2018 3°EMD ) - La Chlorhexidine est:",
         "options": [
           "L’antiseptique de référence, essentiellement indiquée dans le cadre de la prévention des maladies parodontales.",
           "Une des molécules de deuxième génération des antiseptiques, indiquée lors de la phase d'attaque du traitement parodontal.",
@@ -3225,10 +4867,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2018 3°EMD - Q2403\nLe traitement parodontal additionnel lors de la maintenance consiste à:",
+        "questionText": "N°7 (2018 3°EMD ) - Le traitement parodontal additionnel lors de la maintenance consiste à:",
         "options": [
           "Intervenir chirurgicalement pour l'éradication des poches parodontales",
           "Un traitement parodontal limité",
@@ -3238,10 +4880,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2017 2°EMD - Q2659\nL'identification et le traitement précoce de patients déjà atteints par une maladie est:",
+        "questionText": "N°3 (2017 2°EMD) - L'identification et le traitement précoce de patients déjà atteints par une maladie est:",
         "options": [
           "La prévention primaire",
           "La prévention secondaire",
@@ -3251,10 +4893,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Prévention secondaireElle désigne les méthodes diagnostiques et thérapeutiques qui évitent l’aggravation et la progression de la maladiePrévention tertiaireArrêt et prévention de la réapparition d’une maladie traitée/guérie, elle a pour objectif de diminuer les récidives, limiter les complications et les séquelles de la maladie parodontale."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2017 2°EMD - Q2731\nLa maintenance en parodontologie consiste à des méthodes qui augmentent le pouvoir du patient à résister aux maladies parodontales:",
+        "questionText": "N°9 (2017 2°EMD) - La maintenance en parodontologie consiste à des méthodes qui augmentent le pouvoir du patient à résister aux maladies parodontales:",
         "options": [
           "VRAI",
           "FAUX"
@@ -3262,10 +4904,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Il s’agit de l’ensemble de procédures réalisées à des intervalles déterminés afin d’assister le patient à maintenir sa santé orale »."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2017 2°EMD - Q2786\nL'intervalle entre les séances de maintenance dépend:",
+        "questionText": "N°14 (2017 2°EMD) - L'intervalle entre les séances de maintenance dépend:",
         "options": [
           "La nature de l'atteinte",
           "La motivation du patient",
@@ -3275,10 +4917,10 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2017 2°EMD - Q2813\nParmi ces antiseptiques utiles en parodontite, quel celui/celle qui donne plus de coloration:",
+        "questionText": "N°18 (2017 2°EMD) - Parmi ces antiseptiques utiles en parodontite, quel celui/celle qui donne plus de coloration:",
         "options": [
           "La listerine",
           "La Chlorhexidine",
@@ -3288,7 +4930,7 @@ const paroy3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La chlorhexidine : c’est l’agent antiplaque le plus testé et le plus efficace, la concentration idéale étant de 0,2%mais elle provoque des colorations"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   }

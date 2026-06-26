@@ -4,7 +4,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°13 (2025 3°EMD DENTAIRE - Q258\nEn biomécanique orthodontique : les forces intrinsèques sont délivrées par :",
+        "questionText": "N°13 (2025 3°EMD DENTAIRE) - En biomécanique orthodontique : les forces intrinsèques sont délivrées par :",
         "options": [
           "Les appareillages fixes.",
           "Les appareillages amovibles.",
@@ -14,10 +14,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Forces intrinsèques : l’appareil ne délivre pas de forces en lui-même, elles proviennent de la musculature oro-faciale stimulée par l’appareil.Exemple : appareillages fonctionnels, activateurs.A/D : délivrent des forces extrinsèques."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2025 3°EMD DENTAIRE - Q276\nPour un déplacement adéquat la force orthodontique doit :",
+        "questionText": "N°14 (2025 3°EMD DENTAIRE) - Pour un déplacement adéquat la force orthodontique doit :",
         "options": [
           "Etre lourde et continue.",
           "Passer par le centre de résistance de la dent.",
@@ -27,10 +27,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "A : Les forces lourdes et continues sont délétères → douleurs, hyalinisationB : Le rapport moment/force est déterminé par le point d’application du système de force par rapport au centre de résistance"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2025 3°EMD DENTAIRE - Q294\nUne force intermittente est une force :",
+        "questionText": "N°15 (2025 3°EMD DENTAIRE) - Une force intermittente est une force :",
         "options": [
           "Légère est continue pour un bon déplacement dentaire.",
           "Lourde et continue pour accélérer le déplacement dentaire.",
@@ -40,10 +40,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "A/B : Forces continues :l’énergie délivrée par le dispositif orthodontique est progressivement décroissante : exemple ressort en compression, boucles (+sieurs).D : Forces discontinues.L’énergie libérée par l’appareillage diminue très rapidement dés que la dent commence à se déplacer exemple boucle simple en thérapeutique fixe."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2025 3°EMD DENTAIRE - Q315\nLors du déplacement dentaire nous avons :",
+        "questionText": "N°16 (2025 3°EMD DENTAIRE) - Lors du déplacement dentaire nous avons :",
         "options": [
           "La force motrice est supérieure à la résistance mobile et stabile",
           "La force motrice est inférieure à la résistance mobile et stabile",
@@ -53,10 +53,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "En biomécanique orthodontique l’ancrage est la résistance d’un corps au déplacement."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2023 2°EMD - Q931\nLe mouvement de version :",
+        "questionText": "N°16 (2023 2°EMD) - Le mouvement de version :",
         "options": [
           "Est obtenu sous l'effet d'une force exercée sur la couronne dentaire",
           "Est dit non contrôlé quand une seule force est exercée sur sa couronne",
@@ -66,10 +66,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2021 3°EMD - Q1430\nle centre de la résistance d’une dent :",
+        "questionText": "N°7 (2021 3°EMD ) - le centre de la résistance d’une dent :",
         "options": [
           "est situé au tiers occlusal ou au milieu de la racine dentaire",
           "permet un déplacement en translation",
@@ -79,10 +79,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Le centre de résistance (Cr) d’une dent dans son alvéole est le point à partir duquel un système de forces appliquées produit un déplacement dentaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2021 3°EMD - Q1463\nun couple de forces :",
+        "questionText": "N°9 (2021 3°EMD ) - un couple de forces :",
         "options": [
           "permet un déplacement dans deux directions opposées",
           "s’applique au niveau du centre de rotations",
@@ -92,10 +92,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Couple de forces : deux forces égales de sens opposés permettent un mouvement de rotation verticale pure autour du centre de résistance qui est confondu avec le centre de rotation : le point d’application de la force peut se faire sur n’importe quelle zone de la dent"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2021 3°EMD - Q1488\nsous l’effet d’une force, la dent se déplace quand :",
+        "questionText": "N°10 (2021 3°EMD ) - sous l’effet d’une force, la dent se déplace quand :",
         "options": [
           "la force matrice est inférieure à la résistance stabile",
           "la résistance mobile est inférieure à la force motrice",
@@ -105,10 +105,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La dent se déplace quand :FM (force motrice) inférieure à la résistance stabileFM (force motrice) supérieure à la résistance mobileLa résistance mobile est inférieure à la résistance stabile."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2021 3°EMD - Q1542\nle moment d’une force est nul :",
+        "questionText": "N°14 (2021 3°EMD ) - le moment d’une force est nul :",
         "options": [
           "Quand le point d’application correspond au centre de rotation",
           "Si la force est simple",
@@ -118,10 +118,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Lorsqu’une force est appliquée sur une dent en un point quelconque, celle-ci se déplace d’une distance équivalente à celle produite par une force appliquée en son centre de résistance, mais avec une rotation autour de ce centre."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2020 Résidanat - Q1700\nDans une zone en pression, on observe : 1- L'absence d'ostéoclastes 2- Une apposition osseuse rapide 3- Une résorption directe 4- Des zones de résorption indirecte 5- Un élargissement desmodontal x",
+        "questionText": "N°1 (2020 Résidanat ) - Dans une zone en pression, on observe : 1- L'absence d'ostéoclastes 2- Une apposition osseuse rapide 3- Une résorption directe 4- Des zones de résorption indirecte 5- Un élargissement desmodontal x",
         "options": [
           "(1,2)",
           "(2,5)",
@@ -132,10 +132,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "1- La présence des ostéoclastes dans la zone de pression , cellules responsables de la résorption osseuse2-l'apposition osseuse rapide et l'élargissement desmodontal concerne la zone de tension (du coté de la force)un schéma récapitulatif :"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2020 3°EMD - Q1727\nLa réponse biologique aux forces orthodontiques se fait par :",
+        "questionText": "N°3 (2020 3°EMD ) - La réponse biologique aux forces orthodontiques se fait par :",
         "options": [
           "L’apparition d’un arrêt de la circulation sanguine",
           "Une hyalinisation du coté de la traction",
@@ -145,10 +145,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "- Du côté en pression : présence d’une zone de hyalinisation- Elargissement ligamentaire et apposition osseuse du côté de la traction (côté opposé à la force appliquée)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2019 3°EMD - Q2169\nLe centre de résistance d’une dent est situé :",
+        "questionText": "N°13 (2019 3°EMD ) - Le centre de résistance d’une dent est situé :",
         "options": [
           "Au niveau du tiers cervical de la racine d’une dent monoradiculée",
           "Au niveau de la bifurcation d’une dent pluri radiculée",
@@ -158,10 +158,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "il se situe au 1/3 apical ou plus bas (1/2 de la racine). Il dépend de la longueur et du nombre des racines dentaires et de la hauteur et de la densité de l’os alvéolaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2019 3°EMD - Q2265\ndans un déplacement en translation :",
+        "questionText": "N°20 (2019 3°EMD ) - dans un déplacement en translation :",
         "options": [
           "un couple de force est nécessaire",
           "le rapport moment /force tend vers le zéro",
@@ -170,10 +170,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Force horizontale (fig.2): elle induit une translation si la force est appliquée au niveau du centre de résistance, une version coronaire quand le centre de rotation est proche de l’apex et une version radiculaire si le centre de rotation se situe au niveau coronaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2018 3°EMD - Q2365\nLe couple de forces se compose :",
+        "questionText": "N°5 (2018 3°EMD ) - Le couple de forces se compose :",
         "options": [
           "De deux forces de même intensité agissant dans la même direction",
           "Deux forces agissant dans deux directions opposées",
@@ -183,10 +183,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Deux forces égales de sens opposés"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2018 3°EMD - Q2382\nDans le dispositif fixe l’utilisation de fils super élastique délivre",
+        "questionText": "N°6 (2018 3°EMD ) - Dans le dispositif fixe l’utilisation de fils super élastique délivre",
         "options": [
           "Des forces continues légères",
           "Des forces discontinues légères",
@@ -196,10 +196,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2018 3°EMD - Q2399\nDans le dispositif fixe l’utilisation de fils super élastique délivre :",
+        "questionText": "N°7 (2018 3°EMD ) - Dans le dispositif fixe l’utilisation de fils super élastique délivre :",
         "options": [
           "Des forces continues légères",
           "Des forces discontinues légères",
@@ -209,10 +209,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Des forces continues : la force libérée par le dispositif orthodontique décroit très progressivement (vitesse faible de décharge de la force ; ex. : lors d'une phase de nivellement par un fil super élastiqu"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2017 3°EMD - Q2707\nApplication d’une force au niveau coronaire généré :",
+        "questionText": "N°7 (2017 3°EMD ) - Application d’une force au niveau coronaire généré :",
         "options": [
           "Au niveau apical, une tension desmodontale du même cote que la force",
           "Au niveau apical, une compression desmodontal de même côté que la force X",
@@ -222,7 +222,7 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -231,7 +231,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°4 (2025 2°EMD DENTAIRE - Q72\nEn présence d'un décalage de classe 2 division 1 les facteurs étiologiques:",
+        "questionText": "N°4 (2025 2°EMD DENTAIRE) - En présence d'un décalage de classe 2 division 1 les facteurs étiologiques:",
         "options": [
           "Sont des facteurs purement héréditaires.",
           "Peuvent être en rapport avec une position haute et antérieure de la langue.",
@@ -241,10 +241,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "1.\tÉtiologies structurales2.\tÉtiologies fonctionnellesDéglutition / Ventilation/ Mastication3.\tDéséquilibres labiolinguauxLangue : en position haute et antérieure, elle participe au développement d’une classe II division 1 par son action sur la partie antérieure de l’arcade.4.\tParafonctionsSuccion digitale/ Interposition labiale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2025 3°EMD DENTAIRE - Q336\nLa classe II/1 à responsabilité mandibulaire se caractérise par :",
+        "questionText": "N°17 (2025 3°EMD DENTAIRE) - La classe II/1 à responsabilité mandibulaire se caractérise par :",
         "options": [
           "Une retrogénie.",
           "Un angle SNB diminué.",
@@ -254,10 +254,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "i/m normal ou augmenté"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2025 3°EMD DENTAIRE - Q353\nLa classe II/I",
+        "questionText": "N°18 (2025 3°EMD DENTAIRE) - La classe II/I",
         "options": [
           "Est souvent accompagnée d'une retromandibulie.",
           "Se caractérise par une vestibulo version des incisives inferieures.",
@@ -267,10 +267,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "B : … arcade de forme habituelle, peu ou pas d’encombrement incisif ; parfois, vestibulo-version des incisives inférieures, lorsqu’on a un appui lingualD : I/F augmenté : vestibulo-version de l’incisive supérieure"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2025 3°EMD DENTAIRE - Q373\nParmi les signes cliniques suivant quels sont les signes faciaux de la classe II/2:",
+        "questionText": "N°19 (2025 3°EMD DENTAIRE) - Parmi les signes cliniques suivant quels sont les signes faciaux de la classe II/2:",
         "options": [
           "Un profil sous- nasal plus ou moins concave",
           "Des rapports de classe II molaire",
@@ -280,10 +280,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "B : ’est un signe dentaire et non facialC : c’est un signe endobuccal et non facialD : Bassigny décrit trois formes cliniques :– Forme 1 (la plus fréquente) : « linguoversion des deux incisives centrales sup., vestibuloversion apparente des incisives latérales, supraclusion. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2025 3°EMD DENTAIRE - Q404\nDans la classe II/1 face courte; on retrouve:",
+        "questionText": "N°20 (2025 3°EMD DENTAIRE) - Dans la classe II/1 face courte; on retrouve:",
         "options": [
           "Un angle goniaque fermé",
           "Un surplan et un recouvrement incisifs exagérés",
@@ -293,10 +293,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "C : Tonicité de la lèvre inférieure augmentée :- la lèvre inférieure s’interpose entre les incisives supérieures et inférieures ou elle remonte très haut, semblant fermer hermétiquement la cavité buccale s’appuie fortement contre les incisives inférieures."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2023 3°EMD - Q708\nDans la classe II/1 face longue on retrouve :",
+        "questionText": "N°2 (2023 3°EMD ) - Dans la classe II/1 face longue on retrouve :",
         "options": [
           "Une classe Il canine",
           "Un over bite augmenté",
@@ -307,10 +307,10 @@ const odfY3Quizzes = [
           0,
           3
         ],
-        "explanation": "OB généralement ↘ ; OVER JET ↗"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2023 2°EMD - Q792\nDans la classe II/1 face courte, on retrouve :",
+        "questionText": "N°8 (2023 2°EMD) - Dans la classe II/1 face courte, on retrouve :",
         "options": [
           "Un angle goniaque fermé",
           "Une supraclusion",
@@ -320,10 +320,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "La lèvre inferieure éversée / I/F ↗"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2023 2°EMD - Q804\nLa classe II/1:",
+        "questionText": "N°9 (2023 2°EMD) - La classe II/1:",
         "options": [
           "Est toujours accompagnée d'une rétromandibulie.",
           "Se caractérise par une vestibulo-version des incisives supérieures",
@@ -333,10 +333,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2023 2°EMD - Q843\nLes anomalies de classe II/2 peuvent être causées par:",
+        "questionText": "N°11 (2023 2°EMD) - Les anomalies de classe II/2 peuvent être causées par:",
         "options": [
           "Une interposition linguale latérale lors de la déglutition",
           "Les déséquilibres musculaires faciaux en faveur des muscles labiaux",
@@ -347,10 +347,10 @@ const odfY3Quizzes = [
           1,
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2023 2°EMD - Q895\nParmi les signes cliniques suivant quels sont les signes faciaux de la classe II/2:",
+        "questionText": "N°14 (2023 2°EMD) - Parmi les signes cliniques suivant quels sont les signes faciaux de la classe II/2:",
         "options": [
           "un profil sous- nasal plus ou moins concave",
           "Des rapports de classe Il molaire",
@@ -360,10 +360,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Des rapports de classe II molaire, modérés en général ; Des rapports de classe II canine"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2023 2°EMD - Q953\nDans la classe II/2, on retrouve :",
+        "questionText": "N°17 (2023 2°EMD) - Dans la classe II/2, on retrouve :",
         "options": [
           "Un angle goniaque fermé",
           "Une progénie",
@@ -374,10 +374,10 @@ const odfY3Quizzes = [
           0,
           3
         ],
-        "explanation": "Lèvre supérieure hypertoniques"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2023 2°EMD - Q969\nLa classe II/1 à responsabilité mandibulaire se caractérise par :",
+        "questionText": "N°18 (2023 2°EMD) - La classe II/1 à responsabilité mandibulaire se caractérise par :",
         "options": [
           "Une rétrogénie",
           "Un angle SNB diminué",
@@ -388,10 +388,10 @@ const odfY3Quizzes = [
           0,
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°88 (2022 Résidanat - Q1321\nDans la classe II squelettique face longue : 1- Le menton s'abaisse et recule 2- Le point B est en avant du point A de plus de 3 mm 3- L'axe Y est augmenté 4- L'over jet peut être augmenté 5- Le siège de l'anomalie est toujours mandibulaire",
+        "questionText": "N°88 (2022 Résidanat ) - Dans la classe II squelettique face longue : 1- Le menton s'abaisse et recule 2- Le point B est en avant du point A de plus de 3 mm 3- L'axe Y est augmenté 4- L'over jet peut être augmenté 5- Le siège de l'anomalie est toujours mandibulaire",
         "options": [
           "(1,2,4)",
           "(2,3,4)",
@@ -402,10 +402,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "2- Le point A qui est en avant du point B5- Peut etre de responsabilité maxillaire ou mandibulaire"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2021 3°EMD - Q1389\ndans la classe ll div 2 squelettique :",
+        "questionText": "N°4 (2021 3°EMD ) - dans la classe ll div 2 squelettique :",
         "options": [
           "la supraclusion incisive est de règle",
           "nous retrouver une classe l canine et une classe l molaire",
@@ -415,10 +415,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "CLII molaire d’amplitude moyenne / CL II canineL’étage inférieur diminué (angle goniaque fermé)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2021 3°EMD - Q1544\nParmi les signes radiologique d’une classe II/2 on a :",
+        "questionText": "N°14 (2021 3°EMD ) - Parmi les signes radiologique d’une classe II/2 on a :",
         "options": [
           "un angle ANB augmenté",
           "un angle I/i diminue",
@@ -428,10 +428,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "ANB normal ou légerement augmentéI/I ↗"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°44 (2021 Résidanat - Q1661\nDans la classe II/2, on retrouve : 1- Un angle goniaque fermé 2- Une progénie 3- Des lèvres isotoniques 4- Un angle I/F diminué 5- Un angle i/m augmenté",
+        "questionText": "N°44 (2021 Résidanat ) - Dans la classe II/2, on retrouve : 1- Un angle goniaque fermé 2- Une progénie 3- Des lèvres isotoniques 4- Un angle I/F diminué 5- Un angle i/m augmenté",
         "options": [
           "(1,2,4)",
           "(1,2,3,4)",
@@ -442,10 +442,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "3: Les lèvres : tonicité labiale importante5: i/m normal ou ↘Dans la classe II/2, on retrouve :1-SIGNES CLINIQUES :La face est de type face courteL’étage inférieur diminué (angle goniaque fermé)Les lèvres sont plutôt fines et hypertrophiquesLe profil est souvent concave, le nez est importantLe menton est important2- SIGNES OCCLUSAUXLe bord libre des incisives supérieures est plus bas que le plan d’occlusionL’arcade inférieure peut présenter des chevauchements dentairesSur le plan occlusal :Sens sagittal  :CLII molaire d’amplitude moyenneCL II canineOver jet ↘Sens vertical : SupraclusionSens transversal : Normoclusion3- SIGNES TELERADIOGRAPHIQUES :FMA ↘ANB normal ou ↗I/F ↘i/m normal ou ↘I/I ↗4- SIGNES FONCTIONNELS ET NEUROMUSCULAIRES:La langue : dimension normale, posture haute et postérieureLes lèvres : tonicité labiale importanteSourire gingival assez disgracieux, si la lèvre supérieure est courteDéglutition normale et respiration normale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2020 3°EMD - Q1778\nDans la classe II/I face courte, on remarque :",
+        "questionText": "N°7 (2020 3°EMD ) - Dans la classe II/I face courte, on remarque :",
         "options": [
           "L’absence de stomion",
           "Une rotation antérieure",
@@ -455,10 +455,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Inocclusion labiale au repos"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2020 3°EMD - Q1810\ndans les anomalies basales de classe II/1 d’origine maxillaire :",
+        "questionText": "N°9 (2020 3°EMD ) - dans les anomalies basales de classe II/1 d’origine maxillaire :",
         "options": [
           "la proalvéolie supérieure est systématique",
           "l’angle FMA est toujours augmenté",
@@ -468,10 +468,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Vestibulo-version des 4 incisives supérieures plus ou moins marquéeFace courte FMA ↘"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2020 3°EMD - Q1815\nParmi les signes clinique d’une classe II/2, on retrouve",
+        "questionText": "N°10 (2020 3°EMD ) - Parmi les signes clinique d’une classe II/2, on retrouve",
         "options": [
           "Une face étroite",
           "Un profil concave",
@@ -481,10 +481,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Une face de type face courte ; Le menton important, des lèvres jointes,"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2020 3°EMD - Q1829\nDans la classe II/I Face longue , on retrouve :",
+        "questionText": "N°10 (2020 3°EMD ) - Dans la classe II/I Face longue , on retrouve :",
         "options": [
           "Angle goniaque fermé",
           "Une prognathie",
@@ -494,10 +494,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "L’angle goniaque est ouvert ( face longue )Hypotonicité et béance labialeI/F augmenté"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2020 3°EMD - Q1834\ndans les anomalies basales de classe II/1 :",
+        "questionText": "N°11 (2020 3°EMD ) - dans les anomalies basales de classe II/1 :",
         "options": [
           "le profil est toujours convexe",
           "le menton est en rétroposition",
@@ -507,10 +507,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le menton est petit et fuyant (rétrogénie)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2020 2°EMD - Q1836\nDans la classe II/2, on retrouve :",
+        "questionText": "N°11 (2020 2°EMD) - Dans la classe II/2, on retrouve :",
         "options": [
           "Un angle goniaque fermé",
           "Une progénie",
@@ -520,10 +520,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Les lèvres sont plutôt fines et hypertrophiques"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2020 3°EMD - Q1856\nDans la calsse II/2 :",
+        "questionText": "N°12 (2020 3°EMD ) - Dans la calsse II/2 :",
         "options": [
           "Est toujours accompagnée d’une rétromandibulie",
           "Se caractérise par la palatoversion des incisives supérieures",
@@ -533,10 +533,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2020 3°EMD - Q1866\nLes signes faciaux d’une classe II/1 face longue sont caractérisées par :",
+        "questionText": "N°13 (2020 3°EMD ) - Les signes faciaux d’une classe II/1 face longue sont caractérisées par :",
         "options": [
           "Un retentissement esthétique assez sévère",
           "Un étage inférieure augmenté",
@@ -546,10 +546,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Profil convexe"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2020 3°EMD - Q1897\nDans l’occlusion de classe II division 2 on retrouve une:",
+        "questionText": "N°16 (2020 3°EMD ) - Dans l’occlusion de classe II division 2 on retrouve une:",
         "options": [
           "Vestibulo version des incisives avec une classe II molaire",
           "Vestibulo version des incisives centrales et lingo version des incisives latérales",
@@ -559,10 +559,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Elle présente 3 formes cliniques :Palato-version des 2 incisives centrales et une vestibulo-version des 2 latérales.Palato-version des 3 ou 4 incisives supérieures et une vestibulo-version des 2caninesOcclusion en couvercle de boite : palato-version du bloc incisive-canin"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2019 3°EMD - Q2094\nEn présence de classe II/I face longue :",
+        "questionText": "N°8 (2019 3°EMD ) - En présence de classe II/I face longue :",
         "options": [
           "Le menton s’abaisse et recule",
           "Le point A est en avant par rapport au point B de plus de 3mm",
@@ -572,10 +572,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Un angle facial diminué"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2019 3°EMD - Q2110\nParmi les étiologie de la classe II/I , on peut retenir :",
+        "questionText": "N°9 (2019 3°EMD ) - Parmi les étiologie de la classe II/I , on peut retenir :",
         "options": [
           "Une langue basse et protrusive",
           "Le tic de succion digitale",
@@ -585,10 +585,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2018 3°EMD - Q2466\nDans la classe II par brachygnathie maxillaire, on retrouve :",
+        "questionText": "N°11 (2018 3°EMD ) - Dans la classe II par brachygnathie maxillaire, on retrouve :",
         "options": [
           "Une procheilie inferieure",
           "Un angle naso-labial ouvert",
@@ -598,10 +598,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Brachygnathie = face courteUn angle naso-labial FerméSi l’anomalie est à responsabilité maxillaire seulement : SNA ↗ .SNB normal .ANB ↗"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2018 3°EMD - Q2500\nune occlusion la casse II div 2 se caractérise par :",
+        "questionText": "N°12 (2018 3°EMD ) - une occlusion la casse II div 2 se caractérise par :",
         "options": [
           "une supraclusie totale",
           "un surplomb diminué",
@@ -611,10 +611,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "un surplomb augmenté"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2018 3°EMD - Q2513\nLa classe II/I face courte se caractérise par",
+        "questionText": "N°13 (2018 3°EMD ) - La classe II/I face courte se caractérise par",
         "options": [
           "Un sillon labio-mentonnier accentué",
           "Des sillons naso-géniens effacés",
@@ -625,10 +625,10 @@ const odfY3Quizzes = [
           0,
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2018 3°EMD - Q2531\nParmi les signes occlusaux de la classe II/I , on retrouve ;",
+        "questionText": "N°14 (2018 3°EMD ) - Parmi les signes occlusaux de la classe II/I , on retrouve ;",
         "options": [
           "Un surplomb exagéré",
           "Une courbe de Spee inférieure accentuée en cas de classe II/I deep bite",
@@ -638,10 +638,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2017 3°EMD - Q2729\nLa classe II/2 se caractérise par :",
+        "questionText": "N°9 (2017 3°EMD ) - La classe II/2 se caractérise par :",
         "options": [
           "Une face courte",
           "Un profil concave",
@@ -652,10 +652,10 @@ const odfY3Quizzes = [
           0,
           1
         ],
-        "explanation": "Les lèvres : tonicité labiale importante"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2017 3°EMD - Q2739\nParmi les signes de classe ll/2 :",
+        "questionText": "N°10 (2017 3°EMD ) - Parmi les signes de classe ll/2 :",
         "options": [
           "Une vestibulo version des quatre incisives",
           "Un angle goniaque ferme",
@@ -665,10 +665,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Elle présente 3 formes cliniques :Palato-version des 2 incisives centrales et une vestibulo-version des 2 latérales.Palato-version des 3 ou 4 incisives supérieures et une vestibulo-version des 2caninesOcclusion en couvercle de boite : palato-version du bloc incisive-canin"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2016 Résidanat - Q2955\nLa classe II/2 se caractérise par :",
+        "questionText": "N°17 (2016 Résidanat ) - La classe II/2 se caractérise par :",
         "options": [
           "Une vestibulo-version des 4 incisives",
           "Une supraclusion",
@@ -679,10 +679,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "b:Supraclusion constanteSiège et Intensité de la supra alvéolie variables suivant:* Forme des élévateurs et des lèvres* Tonicité de l’orbiculaire et du dépresseur de la lèvre* Etalement latéral de la langue lors déglutition* Forme des dentsc:surplomb incisif normal ou diminué (en fonction sévérité)d :profil sous-nasal concave, surtout si symphyse et nez marquése :lèvres étanches avec très fort contact bilabial* lèvre sup. courte, mince, hypotonique avec philtrum souvent profond,* lèvre inf. plus ourlée, tonique,* stomion plus ou moins haut situé."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2016 Résidanat - Q2968\nLa classe II/1 face courte, se caractérise par : 1- Une hypertonicité labiale 2- Une lèvre inférieure éversée 3- Un angle goniaque ouvert 4- Un sillon labio-mentonnier marqué 5- Un angle naso-labial ouvert",
+        "questionText": "N°20 (2016 Résidanat ) - La classe II/1 face courte, se caractérise par : 1- Une hypertonicité labiale 2- Une lèvre inférieure éversée 3- Un angle goniaque ouvert 4- Un sillon labio-mentonnier marqué 5- Un angle naso-labial ouvert",
         "options": [
           "(2-3)",
           "(3-4)",
@@ -693,10 +693,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "3 : Angle goniaque fermé5: Angle nasolabial ferméClasse II division 1 face courte :1- EXAMEN EXO-BUCCALDe face :• Face courte, plutôt large et carrée ;• Etage inférieur diminué ;• Inocclusion labiale ou contact labial,• Les dents sont plus ou moins apparentes (en relation avec la longueur des lèvres et le degré de version des incisives.)De profil :• Profil convexe (moins convexe que pour les types face longue )• Prochéilie supérieure ;• Angle nasolabial fermé• Rétrochéilie inférieure prononcée• Sillon labio-mentonnier très marqué• Angle goniaque fermé• Symphyse mentonnière : volume plus important2- EXAMEN ENDO-BUCCALOcclusion statique3- EXAMEN DE LA MUSCULATURETonicité de la lèvre inférieure augmentée :- la lèvre inférieure s’interpose entre les incisives supérieures et inférieures ou elle remonte très haut, semblant fermer hermétiquement la cavité buccale s’appuie fortement contre les incisivesinférieures.- Action « en fronde » de la lèvre inférieure sur les incisives supérieures, ce qui accentue leur vestibuloversion;-La pression de la langue, si elle existe, se situe au niveau médian, provoque unebiproalvéolie avec supraclusion4- EXAMEN RADIOLOGIQUES :TLR :• Diminution de l’étage inferieur• Signes de rotation antérieure• La mandibule a un aspect carré• Branche horizontale plutôt courte ;• Un angle goniaque fermé• Plans horizontaux relativement parallèles ;• Convexité accentuée• AXE Y diminué ;• Angle goniaque fermé"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2015 Résidanat - Q3017\nDans la Classe II division 2 : 1- L'angle ANB est diminué 2- ANB est augmenté 3- Le surplomb est augmenté 4- L'angle I/F est augmenté 5- L'angle I/F est diminué",
+        "questionText": "N°8 (2015 Résidanat ) - Dans la Classe II division 2 : 1- L'angle ANB est diminué 2- ANB est augmenté 3- Le surplomb est augmenté 4- L'angle I/F est augmenté 5- L'angle I/F est diminué",
         "options": [
           "(2-3)",
           "(1-4)",
@@ -707,10 +707,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Signes radiologiques :I/F diminué: linguo-version incisive maxillaire.I/i augmenté: la valeur de l’angle interincisif est constamment augmentée.Lesvariations de l’angle ANBsont très importantes (de –2° à +11°), lesCLII/2se rencontrent sur des schémas squelettiques variés allant de laCLIIà laCLIII de Ballard.Il peut exister :unerétrusion mandibulaire(SNB diminué), ouuneprotrusion maxillaire(SNA augmenté).Diminution des angles FMA, HEI et de l’axe Y."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2015 Résidanat - Q3018\nLa Classe II division 2 se caractérise par : 1- Souvent des dysfonctions associées 2- Une supra alvéolie postérieure 3- Une Proalvéolie des incisives centrales supérieures 4- Un étage inférieur souvent diminué 5- Une supraclusie antérieure et un profil concave",
+        "questionText": "N°9 (2015 Résidanat ) - La Classe II division 2 se caractérise par : 1- Souvent des dysfonctions associées 2- Une supra alvéolie postérieure 3- Une Proalvéolie des incisives centrales supérieures 4- Un étage inférieur souvent diminué 5- Une supraclusie antérieure et un profil concave",
         "options": [
           "(1-2)",
           "(2-3)",
@@ -721,7 +721,7 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -730,7 +730,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°10 (2025 3°EMD DENTAIRE - Q203\nLa classe Ill squelettique :",
+        "questionText": "N°10 (2025 3°EMD DENTAIRE) - La classe Ill squelettique :",
         "options": [
           "Est une anomalie affectant les bases osseuses.",
           "Est caractérisée par une linguoversion des incisives supérieures.",
@@ -741,10 +741,10 @@ const odfY3Quizzes = [
           0,
           2
         ],
-        "explanation": "A : Selon Ballard la classe III squelettique se caractérise par : Une position trop antérieure de la mandibule… »  Donc il s’agit bien d’une anomalie des bases osseusesB : Selon Ballard la classe III squelettique se caractérise par : … Légère vestibulo-version des incisives supérieures ; légère linguo-version des incisives inférieures.D : Les signes téléradiographiques : … AC diminué, AF augmenté, ANB diminué."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2025 3°EMD DENTAIRE - Q215\nLa malocclusion des classe Ill est caractérisée par :",
+        "questionText": "N°11 (2025 3°EMD DENTAIRE) - La malocclusion des classe Ill est caractérisée par :",
         "options": [
           "Une mésioclusie plus au moins accentuée des premières molaires inferieures.",
           "Profil osseux concave.",
@@ -754,10 +754,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "A : Les malocclusions de classe III correspondent à un ensemble hétérogène dont les caractéristiques communes sont : • Une mésioclusion plus ou moins accentuée des premières molaires inférieures.C : les dysmorphoses squelettiques associées affectant soit la mandibule, soit le maxillaire, ou les deux à la foisD : Les malocclusions de classe III correspondent… • En général une occlusion inversée du secteur incisif."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2025 3°EMD DENTAIRE - Q242\nLa classe III par brachygnathie maxillaire est caractérisée par :",
+        "questionText": "N°12 (2025 3°EMD DENTAIRE) - La classe III par brachygnathie maxillaire est caractérisée par :",
         "options": [
           "Une longueur de base maxillaire moyenne.",
           "Une position rétruse du maxillaire.",
@@ -767,10 +767,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : Dans cette forme on trouve que la longueur de base maxillaire (distance ENA-ENP) est diminuée sur TLR et sur moulageC : Signes téléradiographiques : SNA diminué, SNB normal, ANB diminué, AC diminué"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2023 2°EMD - Q683\nLa classe Ill squelettique par brachygnathie maxillaire présente les signes suivants :",
+        "questionText": "N°1 (2023 2°EMD) - La classe Ill squelettique par brachygnathie maxillaire présente les signes suivants :",
         "options": [
           "Une rétrochelle supérieure",
           "Une proalvéolie supérieure",
@@ -780,10 +780,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2023 2°EMD - Q727\nLa classe III par proglissement mandibulaire :",
+        "questionText": "N°3 (2023 2°EMD) - La classe III par proglissement mandibulaire :",
         "options": [
           "Est une anomalie fonctionnelle",
           "Permet de retrouver une classe I molaire en RC",
@@ -793,10 +793,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2022 3°EMD - Q1220\nprognathie mandibulaire signifié que :",
+        "questionText": "N°16 (2022 3°EMD ) - prognathie mandibulaire signifié que :",
         "options": [
           "La mandibule est trop en avant",
           "La mandibule a subi un trouble du développement par défaut dans le sens sagittal",
@@ -806,10 +806,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2021 3°EMD - Q1438\nla classe lll mandibulaire est caractérisée par :",
+        "questionText": "N°7 (2021 3°EMD ) - la classe lll mandibulaire est caractérisée par :",
         "options": [
           "un angle SNA souvent diminué",
           "un articulé inversé antérieur",
@@ -819,10 +819,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "SNA NORMAL / SNB ↗"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2021 3°EMD - Q1458\nla classe lll à responsabilité maxillaire :",
+        "questionText": "N°8 (2021 3°EMD ) - la classe lll à responsabilité maxillaire :",
         "options": [
           "est souvent due à des troubles de la respiration",
           "est due à un trouble de croissance maxillaire",
@@ -832,10 +832,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "•La respiration est souvent buccale."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2021 3°EMD - Q1465\nle diagnostique différentiel de la classe lll squelettique se fait avec :",
+        "questionText": "N°9 (2021 3°EMD ) - le diagnostique différentiel de la classe lll squelettique se fait avec :",
         "options": [
           "le proglissement mandibulaire",
           "la classe ll subdivision",
@@ -845,10 +845,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "la classe I avec une proalvéolie inférieure (i/m augmenté) ;la classe I avec une rétroalvéolie supérieure (I/F diminué) ;la classe I avec une rétroalvéolie supérieure et une proalvéolie inférieure (I/F diminué, i/m augmenté) ;"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°48 (2021 Résidanat - Q1665\nLa classe III squelettique est une anomalie : 1- A responsabilité plutôt mandibulaire 2- A responsabilité plutôt maxillaire 3- Héréditaire 4- A transmission transgénique 5- Non syndromique",
+        "questionText": "N°48 (2021 Résidanat ) - La classe III squelettique est une anomalie : 1- A responsabilité plutôt mandibulaire 2- A responsabilité plutôt maxillaire 3- Héréditaire 4- A transmission transgénique 5- Non syndromique",
         "options": [
           "(3,5)",
           "(1, 3)",
@@ -859,10 +859,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Classe III squelettique :Selon Delaire, la classe III est « l’ensemble des symptômes observés lorsque le corps de la mandibule est dans une position plus avancée que la normale par rapport au maxillaire pris comme référence , qu’il soit lui-même normal ou anormal ».3: Etiologie:Causes primaires :les anomalies de la classe III sont, la plupart du temps, d’origine héréditaire, sur un mode dominantCauses secondaires :Causes locales :au cours du passage de la denture temporaire à la denture mixte, les incisives évoluent en occlusion inversée (antémandibulie) ;Causes pathologiques: acromégalie ou achondroplasie (insuffisance du chondrocrâne qui se répercute sur le maxillaire).4: Le facteur anatomique transmis, c’est la langue, de part sa situation, sa forme et sa fonction : langue est basse, volumineuse et protrusive. Par sa voie de conséquence, l’os hyoïde est situé plus bas que la moyenne (entre C3 et C4). Donc ce muscle particulièrement puissant agit différemment suivant les sujets."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°49 (2021 Résidanat - Q1666\nLes causes fréquentes de la classe III squelettique sont : 1- L'hypertonicité ligamentaire des ATM 2- Le proglissement mandibulaire 3- L'endognathie maxillaire 4- La posture linguale défectueuse 5- La succion du pouce",
+        "questionText": "N°49 (2021 Résidanat ) - Les causes fréquentes de la classe III squelettique sont : 1- L'hypertonicité ligamentaire des ATM 2- Le proglissement mandibulaire 3- L'endognathie maxillaire 4- La posture linguale défectueuse 5- La succion du pouce",
         "options": [
           "(2,5)",
           "(2, 4)",
@@ -873,10 +873,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "ÉtiopathogénieFacteurs héréditairesAnomalies à mode de transmission récessif ou dominant selon la population considérée.Facteurs articulaires :Hyperlaxité ligamentairesFacteurs musculaires- Hyperactivité des propulseurs- Rupture de l’équilibre linguo-mandibulo-hyoïdien- Langue : volume augmenté, position basse et antérieure favorisant ainsi le développement de la mandibule- Ventilation buccaleCauses dentaires- Au cours du passage de la dentition temporaire à la dentition mixte, les incisives évoluent en occlusion inversée.Le proglissement mandibulaire:Il s’agit d’un déplacement antérieur de la mandibule par rapport au maxillaire, entraînant un décalage squelettique caractéristique de la classe III."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°18 (2020 3°EMD - Q1914\ndans le cas de classe III squelettique :",
+        "questionText": "N°18 (2020 3°EMD ) - dans le cas de classe III squelettique :",
         "options": [
           "le décalage est souvent d’origine mandibulaire",
           "les causes fonctinnelles et/ou héréditaire sont rares",
@@ -886,10 +886,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "les anomalies de la classe III sont, la plupart du temps, d’origine héréditaire,"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2020 3°EMD - Q1921\nla prognathie mandibulaire est caractérisée par :",
+        "questionText": "N°19 (2020 3°EMD ) - la prognathie mandibulaire est caractérisée par :",
         "options": [
           "un angle SNA diminue",
           "un articulé inversé antérieur",
@@ -899,10 +899,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "SNA normal, Si l’angle i/m est > à 93 : proalvéolie -inférieure"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2019 Résidanat - Q2032\nUne Classe III dentaire se manifeste par : 1- Une molaire inférieure en arrière par rapport à la molaire supérieure. 2- Une molaire inférieure en articulé inversé par rapport à la molaire supérieure. 3- Une molaire supérieure distalée d'une cuspide par rapport à la molaire inférieure. 4- Une molaire inférieure mésialée d'une 1/2 cuspide par rapport à la molaire supérieure. 5- Une molaire inférieure en avant par rapport à la molaire supérieure de plus d'une cuspide.",
+        "questionText": "N°4 (2019 Résidanat ) - Une Classe III dentaire se manifeste par : 1- Une molaire inférieure en arrière par rapport à la molaire supérieure. 2- Une molaire inférieure en articulé inversé par rapport à la molaire supérieure. 3- Une molaire supérieure distalée d'une cuspide par rapport à la molaire inférieure. 4- Une molaire inférieure mésialée d'une 1/2 cuspide par rapport à la molaire supérieure. 5- Une molaire inférieure en avant par rapport à la molaire supérieure de plus d'une cuspide.",
         "options": [
           "(1-3)",
           "(2-3)",
@@ -913,10 +913,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Une molaire inférieure en arrière par rapport à la molaire supérieure = Classe IIUne molaire inférieure mésialée d'une 1/2 cuspide par rapport à la molaire supérieure = Classe I"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2019 Résidanat - Q2066\nLa Classe III par proglissement mandibulaire se caractérise par : 1- un overjet diminue 2- une classe III molaire en relation centrée 3- une classe III molaire en intercuspidation maximale 4- un bout à bout incisif en relation centrée 5- un profil cutané convexe",
+        "questionText": "N°6 (2019 Résidanat ) - La Classe III par proglissement mandibulaire se caractérise par : 1- un overjet diminue 2- une classe III molaire en relation centrée 3- une classe III molaire en intercuspidation maximale 4- un bout à bout incisif en relation centrée 5- un profil cutané convexe",
         "options": [
           "(1-2-3)",
           "(1-2-4)",
@@ -927,10 +927,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "La Classe III vraiecaractérise par uneclasse IIImolaire en relation centrée et en intercuspidation maximale.( et non pas La classe III par proglissement mandibulaire)La Classe III par proglissement mandibulaire se caractérise parun profil cutané concave."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2019 Résidanat - Q2085\nL'interception de la Classe III squelettique : 1- Doit être précoce. 2- Vise à rétablir un guide incisif. 3- Corrige une retromandibulie. 4- Nécessite un appareil multibague. 5- Est réalisée après la période du pic de croissance pubertaire.",
+        "questionText": "N°8 (2019 Résidanat ) - L'interception de la Classe III squelettique : 1- Doit être précoce. 2- Vise à rétablir un guide incisif. 3- Corrige une retromandibulie. 4- Nécessite un appareil multibague. 5- Est réalisée après la période du pic de croissance pubertaire.",
         "options": [
           "(1-2)",
           "(2-4)",
@@ -941,10 +941,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L'interception de la Classe III squelettique corrigeune promandibulie.( et non pas rétromandibulie)L'interception de la Classe III squelettique nécessiteun appareil orthopédique .L'interception de la Classe III squelettique est réaliséeprécocement avantla période du pic de croissance pubertaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2019 3°EMD - Q2111\nParmi les étiologies de la classe III squelettique, on retrouve :",
+        "questionText": "N°9 (2019 3°EMD ) - Parmi les étiologies de la classe III squelettique, on retrouve :",
         "options": [
           "une langue basse et prorusive",
           "le tic de succion digitale",
@@ -955,10 +955,10 @@ const odfY3Quizzes = [
           0,
           2
         ],
-        "explanation": "La ventilation buccale entraine une langue basse et protusive ce qui stimule davantage la croissance mandibulaireLa déglutition atypique par poussée linguale sur les incisives inf complique le tableau clinique"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2019 2°EMD - Q2158\nLa prognathie mandibulaire est ;",
+        "questionText": "N°12 (2019 2°EMD) - La prognathie mandibulaire est ;",
         "options": [
           "Souvent d’origine héréditaire",
           "Plus fréquente que la brachygnathie maxillaire",
@@ -968,10 +968,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2018 3°EMD - Q2485\nLa classe III squelettique se caractérisée par :",
+        "questionText": "N°11 (2018 3°EMD ) - La classe III squelettique se caractérisée par :",
         "options": [
           "Une procheilie inferieure",
           "Une mésiocclusion des molaires mandibulaires",
@@ -983,10 +983,10 @@ const odfY3Quizzes = [
           1,
           3
         ],
-        "explanation": "rapports molaires et canines de classe III prononcésun angle ANB diminué ; A'B' inférieur a -1mm on a une classe III squelettique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2018 3°EMD - Q2501\nLes malocclusions de classe III squelettique se caractérisent par :",
+        "questionText": "N°12 (2018 3°EMD ) - Les malocclusions de classe III squelettique se caractérisent par :",
         "options": [
           "Un profil rectiligne",
           "Un articulé inversé antérieur",
@@ -997,10 +997,10 @@ const odfY3Quizzes = [
           1,
           3
         ],
-        "explanation": "concavité du profil + +"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2018 3°EMD - Q2563\nDans le cas d’une classe III par Brachygnathie maxillaire:",
+        "questionText": "N°17 (2018 3°EMD ) - Dans le cas d’une classe III par Brachygnathie maxillaire:",
         "options": [
           "L’angle naso-labiale est fermé",
           "La supraclusie incisive est de règle",
@@ -1010,10 +1010,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "•Angle naso-labial ouvert."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2016 Résidanat - Q2901\nEn présence d'une CL III par brachygnathie on trouve : 1- Un articulé inversé antérieur 2- Une CL III molaire avec proglissement 3- Une rétroalvéolie supérieure souvent associée 4- Un angle goniaque obtus 5- Un maxillaire en avant par rapport à la mandibule",
+        "questionText": "N°9 (2016 Résidanat ) - En présence d'une CL III par brachygnathie on trouve : 1- Un articulé inversé antérieur 2- Une CL III molaire avec proglissement 3- Une rétroalvéolie supérieure souvent associée 4- Un angle goniaque obtus 5- Un maxillaire en avant par rapport à la mandibule",
         "options": [
           "(1-2-3)",
           "(1-2)",
@@ -1024,10 +1024,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Brachygnathie maxillaire :C’est un arrêt de développement, mais cet arrêt peut intéresser tout le maxillaire ou seulement la région antérieure.C’est une anomalie basale due à une insuffisance de développement maxillaire ce qui donne un maxillaire court avec décalage distal de l’arcade supérieure par rapport à l’inférieure.Il faut faire la différence entre la brachygnathie maxillaire ou la longueur de base maxillaire est diminuée et la rétrognathie maxillaire ou le maxillaire est dans une position reculée par rapport à la base du crâne. Ceci dit les différents signes sont à peu près identiques.Signes faciaux :Retentissement esthétique important.•Diminution de l’étage moyen.•Partie moyenne du visage est plate, elle n’est pas développée.•La région naso-génienne est creuse avec présence de pli de jonction entre les ailes narinaires et les joues, c’est le signe de l’arrêt de croissance du maxillaire, avec absence de relief des pommettes.•La lèvre supérieure est fine et peu marquée, il y a peu de lèvre rouge, rétrochéilie supérieure.•La lèvre inférieure est épaisse et éversée.•Angle naso-labial ouvert.•Nez petit avec orifice narinaire apparent signe d’hypofonctionnement ventilatoire.Signes occlusaux :•DDM supérieure.•Occlusion antérieure inversée.•Classe III canine et molaire.•Présence ou pas de béance ou de supraclusie incisive.Signes fonctionnels :•La langue est basse se situe en arrière des incisives mandibulaires au repos.•La respiration est souvent buccale.•La déglutition est généralement atypique.•La mastication est perturbée.Signes téléradiographiques :•SNA diminué.•SNB normal.•ANB diminué.•AC diminué.•A’B’ diminué.•I/F diminué.•Dans cette forme on trouve que la longueur de base maxillaire est diminuée sur TLR et"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2015 Résidanat - Q3029\nLe proglissement mandibulaire : 1- Est une prognathie mandibulaire 2- A comme principale étiologie la succion du pouce 3- Est une anomalie cinétique de la mandibule 4- Est confirmé par la manœuvre de DENEVREZE 5- S'accompagne souvent d'une mastication perturbée",
+        "questionText": "N°16 (2015 Résidanat ) - Le proglissement mandibulaire : 1- Est une prognathie mandibulaire 2- A comme principale étiologie la succion du pouce 3- Est une anomalie cinétique de la mandibule 4- Est confirmé par la manœuvre de DENEVREZE 5- S'accompagne souvent d'une mastication perturbée",
         "options": [
           "(3-4-5)",
           "(1-4)",
@@ -1038,7 +1038,924 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "1:La classe III fonctionnelle, aussi appeléefausse classe III,pseudoprognathie mandibulaire,antéposition mandibulaireouantémandibulieC’est une anomalie fonctionnelle sans trouble squelettique, mais en rapport avec la cinétique mandibulaire caractérisée par une position antérieure de la mandibule qui est en occlusion terminale.2:ÉtiopathogénieProalvéolie inférieureRétroalvéolie supérieureBrachygnathie maxillairePrésence deprématurités occlusales, essentiellementcanines temporaires non abraséesPropulsion habituellepar mimétismeVentilation buccale,mastication altéréePropulsion en présence d’unemacroglossieou d’hypertrophie amygdaliennepour dégager le carrefour aérodigestifLeproglissementest dû le plus souvent à l’absence de guide antérieur4: Manœuvre de DENEVREZEAppuyer sur lementonen position d’ouverture, latête légèrement fléchie en arrière, puisprovoquer la fermeture.Résultat positif (en cas de proglissement):Recul de lamandibuleRemise en place descondylesau fond de lacavité glénoïdeMise en évidence d’uncontact prématuré éventuel"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "Céphalométrie",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°7 (2025 1°EMD DENTAIRE) - La ligne axe Y:",
+        "options": [
+          "Est appelée ligne de la croissance faciale.",
+          "Est appelée ligne de la hauteur faciale.",
+          "Est définie par le point S et le point gonion osseux.",
+          "Est appelée ligne de référence de la base du crâne."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2025 1°EMD DENTAIRE) - Le plan de Francfort cutané passe par :",
+        "options": [
+          "Le point sous- orbitaire et le point porion",
+          "Le point sous- orbitaire et le point tragus.",
+          "Le point sous- orbitaire et le point nasion.",
+          "Le point sous- orbitaire et le point S"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2025 1°EMD DENTAIRE) - L'analyse de l'angle facial:",
+        "options": [
+          "Exprime la tendance générale de la croissance faciale.",
+          "C'est l'angle formé par le plan de FRANCFORT et le plan facial.",
+          "A une valeur moyenne est de 90°±3°",
+          "Donne une protrusion du menton par rapport au profil osseux avec une valeur sup à 93°"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2025 1°EMD DENTAIRE) - Lors d'un décalage de classe III squelettique on trouve:",
+        "options": [
+          "Un angle SNA augmenté, et SNB diminué",
+          "Un angle de convexité supérieur à 11°",
+          "Un angle SNB augmenté, et ANB inférieur à 2°.",
+          "Une valeur de A'B' inferieur à -1mm."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2025 1°EMD DENTAIRE) - L'analyse d'Hellegren ou Wits de Jacobson A'B':",
+        "options": [
+          "Confirme le décalage de bases osseuses donné par l'angle AN",
+          "Détermine la classe squelettique par une valeur linéaire.",
+          "Détermine la responsabilité de la CLII ou de de la CLIII.",
+          "Détermine le rapport des deux maxillaires par rapport à la base du crâne."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2025 1°EMD DENTAIRE) - L'angle FMA :",
+        "options": [
+          "Exprime la tendance de croissance mandibulaire et faciale",
+          "Est formé par l'intersection du plan de Francfort et la tangente à la branche horizontale de la mandibule",
+          "A une valeur moyenne de 59° ± 3°.",
+          "Détermine une tendance horizontale si l'angle est inférieur à 23°."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2025 1°EMD DENTAIRE) - L'angle I/F:",
+        "options": [
+          "Est formé par le plan de Francfort et l'axe de l'incisive supérieure",
+          "Objective une pro-alvéolie si sa valeur est supérieure à 109°.",
+          "Donne un diagnostic dentaire dans le sens antéro-postérieur.",
+          "Objective le degré de protrusion du bloc incisif."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2024 1°EMD) - L'angle Goniaque :",
+        "options": [
+          "Est formé par une tangente au bord inférieur de la mandibule",
+          "A une valeur moyenne de 128+ -6°",
+          "Influence par son ouverture ou sa fermeture la dimension de l'étage inferieur",
+          "Permet la description antéro postérieure de la position mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2024 1°EMD) - Le plan de Francfort passe par :",
+        "options": [
+          "Le point Sous Orbitaire et le point Porion",
+          "Le point ENA et le point Tragus",
+          "Le point Sous Orbitaire et le point Nasion",
+          "Le point Sous Orbitaire et la point S"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2024 1°EMD) - Lors d'un décalage de classe II squelettique nous retrouvons",
+        "options": [
+          "Un angle SNA augmenté et SNB diminué",
+          "Un angle de convexité supérieur à 11°",
+          "Un angle SNB augmenté, et un ANB inférieur à 2°",
+          "Une valeur de A'B' inférieure à - 1mm"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2024 1°EMD) - Les analyses céphalométriques permettent de",
+        "options": [
+          "Diagnostiquer les malformations dento-faciales en précisant leur siège",
+          "Etablir un plan de traitement approprié",
+          "Déterminer l'âge osseux du patient par l'étude de l'angle mandibulaire",
+          "Donner le diagnostique étiologique"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2024 1°EMD) - L'angleα:",
+        "options": [
+          "Donne la position de la 1ère molaire permanente supérieure dans le sens mesio distale",
+          "A une valeur moyenne comprise entre 87° et 93°",
+          "Est un angle postéro -supérieur",
+          "Est formé par l'axe de la molaire inférieure et la ligne de morsure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2024 1°EMD) - Lorsque le maxillaire est en avant par rapport à la base du crâne :",
+        "options": [
+          "L'angle SNA est supérieur à 86°",
+          "La valeur de AF est supérieure à 93°",
+          "Le point A' est en avant du point B'",
+          "L'angle ANB est augmenté (supérieur à 4°)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2023 1°EMD) - L'angle alpha (a):",
+        "options": [
+          "Est formé par l'intersection de l'axe de la molaire permanente inférieure et la ligne de morsure",
+          "Est un angle postéro-supérieur.",
+          "A une valeur moyenne comprise entre 87-93",
+          "Donne la position de la première molaire permanente supérieure dans le sens mésio distal."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2023 1°EMD) - L'angle béta (B) est déterminé par :",
+        "options": [
+          "L'axe de la première molaire permanente inferieure et la ligne de morsure.",
+          "L'axe de la première molaire permanente supérieure et le plan d'occlusion.",
+          "La ligne de morsure et l'axe de la première molaire permanente supérieure.",
+          "La ligne de morsure et l'axe de la première molaire lactéale inférieure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2023 1°EMD) - La ligne E de Ricketts:",
+        "options": [
+          "Permet l'étude du profil cutané.",
+          "Passe par le point sous-nasal et le point pogonion cutané.",
+          "Passe par la pointe du nez et le pogonion osseux",
+          "Détermine le lien entre le profil osseux et cutané."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2023 1°EMD) - axe Y:",
+        "options": [
+          "Est appelée ligne de la croissance faciale.",
+          "Est appelée ligne de la hauteur faciale.",
+          "Est définie par le point S et le point gonion osseux",
+          "Est appelée ligne de référence de la base du crâne"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2023 1°EMD) - Une protrusion du groupe incisif :",
+        "options": [
+          "Signifie que l'angle inter-incisif est supérieur à 140°",
+          "Exprime une vestibulo-version excessive des incisives aux deux arcades.",
+          "Considère l'axe des incisives centrales les plus vestibulées sur le tracé céphalométrique.",
+          "Donne une valeur négative à l'angle d'attaque inter-incisif"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2023 1°EMD) - L’angle de Tweed:",
+        "options": [
+          "Est l'angle formé par le plan de Francfort et le plan mandibulaire",
+          "Est l'angle formé par le plan de Francfort et le plan facial",
+          "Décrit la tendance de croissance mandibulaire",
+          "Décrit une tendance de croissance faciale verticale si sa valeur est supérieure à 31°"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2022 1°EMD) - L’angle FMA ou angle de tweed:",
+        "options": [
+          "Est l'angle formé par le plan de Francfort et le plan mandibulaire",
+          "Est l'angle formé par le plan de Francfort et le plan facial",
+          "Décrit la tendance de croissance mandibulaire",
+          "Décrit une tendance de croissance faciale verticale si sa valeur est supérieure à 31°"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2022 1°EMD) - L'analyse de Wendell Wylie :",
+        "options": [
+          "Correspond à la description de l'équilibre ou du déséquilibre facial",
+          "Se mesure par rapport à un pourcentage décrivant l'étage nasal et l'étage dentaire",
+          "Donne une valeur de 54, +-2% pour l'étage supérieur",
+          "Donne une valeur de 45,5%+2% pour l'étage inferieur"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2022 1°EMD) - Le plan d'occlusion :",
+        "options": [
+          "Passe par un point incisif antérieur et molaire postérieur",
+          "Est parallèle au plan bispinal",
+          "Passe par le milieu du recouvrement molaire et incisif",
+          "Peut être remplacé par la ligne de morsure"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2022 1°EMD) - La ligne E de Ricketts:",
+        "options": [
+          "Permet l'étude du profil cutané",
+          "Passe par le point sous-nasal et le point pogonion cutané",
+          "Passe par la pointe du nez et le pogonion osseux",
+          "Détermine le lien entre le profil osseux et cutané"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2022 1°EMD) - L’angle beta est déterminé par :",
+        "options": [
+          "L’axe de la premiere molaire permanente inferieure et la ligne de morsure",
+          "L’axe de la première molaire permanente supérieure et le plan d’occlusion",
+          "ligne de morsure et L’axe de la première molaire permanente supérieure",
+          "ligne de morsure et L’axe de la première molaire lactéale inferieure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2022 1°EMD) - Le point ophryon:",
+        "options": [
+          "Est le point de rencontre de la partie inférieure du front et le plan sagittal médian",
+          "Représente la limite inférieure de l'étage supérieur de la face",
+          "Représente la limite supérieure de l'étage supérieur du visage",
+          "Est un point médian"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2022 1°EMD) - L'angle facial:",
+        "options": [
+          "Permet de noter le degré de protrusion ou de rétrusion du menton par rapport au massif  facial",
+          "Est l'angle formé par l'intersection des lignes Na-Point A et point A-Pog",
+          "Décrit une protrusion du menton par rapport au profil osseux si sa valeur est inférieure à 93°",
+          "A une valeur moyenne de 6° plus ou moins 5°"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°83 (2022 Résidanat ) - Lorsque l'axe Y est inférieur à 56° :",
+        "options": [
+          "La croissance mandibulaire est à tendance moyenne",
+          "L'étage inférieur de la face est augmenté",
+          "La croissance faciale est à tendance horizontale",
+          "Le profil osseux est concave",
+          "Le ramus est toujours court"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2021 1°EMD) - Le plan d’occlusion est matérialisé sur la TLR de profil par une ligne passant :",
+        "options": [
+          "Par l’engrènement molaire et le bord libre de l’incisive maxillaire",
+          "Par l’engrènement molaire et le bord libre de l’incisive mandibulaire",
+          "Par l’engrènement molaire et le milieu de recouvrement incisif",
+          "Par l’engrènement molaire et prémolaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2021 1°EMD) - Dans le sens antéro-postérieur un maxillaire court est désigné par :",
+        "options": [
+          "Une rétrognathie maxillaire",
+          "Une endognathie maxillaire",
+          "Une brackygnathie maxillaire",
+          "Une infragnathie maxillaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2021 1°EMD) - Une infra-position de la canine supérieure signifie que :",
+        "options": [
+          "La canine se situe au dessus de la ligne d’arcade",
+          "La canine se situe au dessous de la ligne d’arcade",
+          "La canine se situe en dedans de la ligne d’arcade",
+          "La dent se situe en dehors de la ligne d’arcade"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2021 1°EMD) - La point gonion :",
+        "options": [
+          "Est un point situé dans la région de l’angle mandibulaire",
+          "C’est le point le plus inferieure de l’angle mandibulaire",
+          "C’est la bissectrice de l’angle formé par la tangente des deux branches de la mandibule",
+          "Joint au point séllion S l’axe Y"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2021 1°EMD) - Un angle ANB augmenté signifie :",
+        "options": [
+          "Un décalage des bases osseuses en faveur d’un maxillaire en avant",
+          "Un décalage des bases osseuses en faveur d’une mandibule en arrière",
+          "Un décalage des bases osseuses en faveur d’un maxillaire en avant et/ou d’une mandibule en arrière",
+          "Un décalage des bases osseuses en faveur d’un maxillaire en arrière et/ou d’une mandibule en avant"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2021 1°EMD) - Dans l'étude du profil selon Ricketts :",
+        "options": [
+          "La ligne de référence passe par le point Nasion et le Pogonion cutané",
+          "Le type de profil dépend de la position des lèvres.",
+          "Le type de profil dépend de la position du menton et du nez",
+          "Le type de profil dépend du type du stade de dentition"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2021 1°EMD) - Dans l'analyse de Bouvet des rapports molaires :",
+        "options": [
+          "Un angle (alpha) diminué signifie une molaire supérieure mésio-versée",
+          "Un angle (alpha) augmenté signifie une molaire inferieure mésio-versée",
+          "Un angle (betta) augmenté signifie une molaire supérieure mésio-versée",
+          "Un angle (betta) diminué signifie une molaire inferieure disto-versée"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2021 1°EMD) - Lorsque l'axe y est inférieur à 56° :",
+        "options": [
+          "La croissance mandibulaire est a tendance moyenne",
+          "L'étage inférieur de la face est augmenté",
+          "La croissance faciale est à tendance horizontale.",
+          "Le profil cutané est convexe"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2021 1°EMD) - Le plan de francfort est :",
+        "options": [
+          "Une ligne horizontale reliant le porion et le point sous orbitaire",
+          "Représente par la ligne reliant le tragus et le point sous orbitaire",
+          "Le plan de référence utilisé pour l’étude de la croissance mandibulaire",
+          "Utilisé pour bien positionner le céphalostat"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2021 1°EMD) - Les structures qui sont indispensables lors d’un tracé céphalométrique sont :",
+        "options": [
+          "Le sphénoïde",
+          "L’orbite",
+          "Le voile du palais",
+          "Le sinus maxillaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2021 1°EMD) - L’angle FMA de tweed :",
+        "options": [
+          "Est formé par le plan mandibulaire et le pla d’occlusion",
+          "Permet l’étude de la position verticale de la mandibule par rapport à la base du crane",
+          "Permet l’étude de la croissance et le type de rotation mandibulaire",
+          "Est augmenté en cas de croissance horizontale"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2021 1°EMD) - L’angle SNA :",
+        "options": [
+          "Permet l’étude e la position sagittale et verticale du maxillaire par rapport à la base du crane",
+          "Permet d’évaluer le profil osseux du patient",
+          "Permet l’étude de la position sagittale du maxillaire par rapport à la base du crane",
+          "Valeur peut être négative"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°39 (2021 Résidanat ) - Dans l'analyse de Ballard des rapports incisifs : 1- Un angle I/F augmenté signifie une proalvéolie inferieure. 2- Un angle i/m diminué signifie une rétroalvéolie supérieure. 3- Un angle d'attaque I/i normal se situe entre 130° et 140°. 4- L'angle I/i décrit la position du groupe incisif supérieur et inférieur. 5- Un angle (a) augmenté signifie une molaire supérieure mesio-versée.",
+        "options": [
+          "(3,4,5)",
+          "(3,4)",
+          "(1,2,3)",
+          "(3,5)",
+          "(4,5)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°40 (2021 Résidanat ) - L'axe Y: 1- Est formé par l'intersection de la ligne S-Pogonion et le plan de Francfort 2- Passe par le point Gnathion (Gn) 3- Passe par le point Menton (Me) 4- Détermine le type de croissance faciale 5- Exprime la tendance générale du profil osseux et cutané.",
+        "options": [
+          "(1,4)",
+          "(2,5)",
+          "(1,2,4)",
+          "(2,4,5)",
+          "(2,4)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°43 (2021 Résidanat ) - Les points céphalométriques cutanés et osseux sont : 1- Le Nasion. 2- Le sous-nasal. 3- Le menton. 4- Le pogonion. 5- Le porion",
+        "options": [
+          "(1,2,3)",
+          "(1,3,4)",
+          "(1,2,4)‎",
+          "(3,4,5)",
+          "(3,4)‎"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°47 (2021 Résidanat ) - L'angle FMA de Tweed:",
+        "options": [
+          "Est formé p.ar la ligne S-Na et le plan mandibulaire.",
+          "Est formé par la ligne Gonion-gnathion (Go-Gn) et le plan de Francfort.",
+          "Permet de déterminer le type de croissance mandibulaire.",
+          "Donne des indications sur le type de croissance faciale.",
+          "A une valeur moyenne de 27±3"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2020 Résidanat ) - Le plan d'occlusion :",
+        "options": [
+          "Passe par le point incisif supérieur (Is) et les molaires",
+          "Se superpose avec la ligne de morsure",
+          "Passe par le stomion antérieurement",
+          "Dépend du recouvrement incisif et molaire",
+          "Est toujours parallèle au plan de Camper"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2020 Résidanat ) - Lorsque l'axe Y est inférieur à 56° :",
+        "options": [
+          "La croissance mandibulaire est à tendance moyenne",
+          "L'étage inférieur de la face est augmenté",
+          "La croissance faciale est à tendance horizontale",
+          "Le profil osseux est concave",
+          "Le Ramus est toujours augmenté"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2020 Résidanat ) - La prognathie mandibulaire est caractérisée par :",
+        "options": [
+          "Un angle SNA diminué.",
+          "Un articulé inversé antérieur.",
+          "Un profil osseux convexe.",
+          "Un angle i/m diminué.",
+          "Une rétrogénie"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2020 Résidanat ) - Quand l'angle SNA est normal et l'angle ANB augmenté on a un décalage dans le sens :",
+        "options": [
+          "D'un maxillaire en avant",
+          "D'une mandibule en arrière",
+          "D'une mandibule en avant",
+          "D'un maxillaire en arrière",
+          "D'un maxillaire en avant et une mandibule normale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2019 1°EMD) - Les points céphalométriques cutanées et osseux sont :",
+        "options": [
+          "Nasion",
+          "Le menton",
+          "Le point sous nasal",
+          "Le pogonion."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2019 1°EMD) - L'axe Y est :",
+        "options": [
+          "L'axe de croissance faciale",
+          "L'axe de développement du menton",
+          "La ligne de référence du profil cutané",
+          "La ligne de référence de la base du crane"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2019 1°EMD) - L'angle de Tweed :",
+        "options": [
+          "Est formé par la ligne S-Na et le plan mandibulaire",
+          "Est forme par la ligne Gonion-gnathion (Go-Gn) et le plan de Francfort",
+          "Permet de déterminer le type de croissance mandibulaire",
+          "Donne des indications sur le type de croissance faciale."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2019 1°EMD) - L'étage Inférieur de la face :",
+        "options": [
+          "Se situe entre le point A et le point Menton (Me)",
+          "Se situe entre ENA et Pog",
+          "Est à prendre en considération lors de la décision thérapeutique",
+          "Présente une proportion de 45,5 + 2%"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2019 Résidanat ) - Le plan de Francfort : 1- Relie les points sous orbitaire au porion. 2- Est un plan céphalométrique et cutané. 3- Est un plan de référence dans l'étude des anomalies orthodontiques. 4- Relie les points tragus et nasion. 5- Est parallèle au plan d'occlusion.",
+        "options": [
+          "(1-3)",
+          "(2-4)",
+          "(1-2-3)",
+          "(3-5)",
+          "(4-5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2019 1°EMD) - Dans l'analyse de Ballard des rapports incisifs :",
+        "options": [
+          "Un angle I/F augmenté signifie une proalvéolie inferieure",
+          "Un angle i/m diminué signifie une rétroalvéolie supérieure",
+          "Un angle d'attaque normal se situe entre 130° et 140°",
+          "Le plan de référence est le plan de morsure"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2019 Résidanat ) - L'analyse de Bouvet : 1- Englobe l'étude des rapports molaires supérieures et inférieures. 2- Détermine le degré de version des premières et deuxièmes molaires supérieures. 3- Est donnée par la valeur des angles a, et gamma. 4- Est en relation avec le degré de protrusion du bloc incisif. 5- Est une analyse positionnelle.",
+        "options": [
+          "(1-3-5)",
+          "(2-5)",
+          "(3-4)",
+          "(1-4)",
+          "(2-3)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2018 1°EMD) - Le point Nasion (Na):",
+        "options": [
+          "Est un point cutané et Osseux",
+          "Localisé au milieu de la suture fronto-nasale sur une TLR de profile",
+          "Se situe à la partie moyenne de la suture fronto-nasale sur un TLR de profile",
+          "Objective la limite antérieure de la base du crane"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2018 1°EMD) - Le point Nasion (Na):",
+        "options": [
+          "Est un point cutané et Osseux",
+          "Localisé au milieu de la suture fronto-nasale sur une TLR de profile",
+          "Se situe à la partie moyenne de la suture fronto-nasale sur un TLR de profile",
+          "Objective la limite antérieure de la base du crane"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2018 1°EMD) - Le plan de Francfort passe par :",
+        "options": [
+          "Le point sous orbitaire et le point le plus élevé du conduit auditif interne",
+          "Le point SOUS orbitaire et le point le plus élevé du conduit audio externe",
+          "Le point sous orbitaire et le point S",
+          "Le point S et le point Na"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2018 Résidanat ) - Le plan de Francfort : 1- Relie les points sous orbitaire et porion. 2- Est un plan céphalométrique et cutané. 3- Est un plan de référence dans l'étude des anomalies orthodontiques. 4- Relie les points tragus et nasion. 5- Est parallèle au plan d'occlusion.",
+        "options": [
+          "(1-3)",
+          "(2-4)",
+          "(1-2-3)",
+          "(3-5)",
+          "(4-5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2018 1°EMD) - En cas d'un dédoublement sur TLR avec croisement au niveau de l'angle mandibulaire on trace :",
+        "options": [
+          "La moyenne entre les deux hémi mandibules",
+          "Le bord postérieur de la branche montante et le bord supérieur de la branche horizontale",
+          "Le bord postérieur de la branche montante et le bord inférieur de la branche horizontale",
+          "Le bord antérieur de la branche montante et le bord supérieur de la branche horizontale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2018 1°EMD) - Les analyses céphalométriques permettent :",
+        "options": [
+          "De diagnostiquer les malformations dento-faciales en précisant leur siège.",
+          "D'établir un plan de traitement approprié",
+          "De déterminer l'âge osseux du patient par l'étude de l'angle mandibulaire",
+          "De donner le diagnostic étiologique."
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2018 1°EMD) - Les analyses céphalométriques permettent :",
+        "options": [
+          "Le diagnostic de malformations dento-faciales en précisant leur siège",
+          "L'étude des mensurations réelles du visage à partir d'une radiographie de profil",
+          "L'établissement d'un plan de traitement approprié",
+          "La confirmation de l'âge osseux du patient par l'étude de l'angle mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2018 1°EMD) - Le diagnostic a un décalage de classe II squelettique :",
+        "options": [
+          "Un angle SNA augmenté, ANB Inferieur à 3°",
+          "Un angle de convexité supérieur à 11°",
+          "Un angle FMA inferieur à 23°",
+          "Une valeur de A'B' supérieur à 3mm"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2018 1°EMD) - L'analyse de bouvet des rapports molaire :",
+        "options": [
+          "Ce fait par rapport au plan de morsure",
+          "Confirme la classification d'Angle",
+          "Donne le diagnostic de la mésio ou disto version de la 1 ere molaire",
+          "Etudie l'angle B avec une valeur moyenne de 90+- 3"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2018 1°EMD) - L'analyse de Wendell Wylle:",
+        "options": [
+          "Est une analyse angulaire",
+          "Donne le diagnostic de la rotation mandibulaire",
+          "Mesure la hauteur de la face entre le point Na et le point Me",
+          "Détermine un équilibre facial lorsque l'étage inférieur est de 45.5 +/-2%"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2018 1°EMD) - L'analyse de Tweed (angle FMA):",
+        "options": [
+          "Exprime la tendance générale de la croissance faciale et mandibulare",
+          "Est un angle formé par le plan de FRANCFORT et la ligne S-Gn",
+          "A valeur moyenne de 27°+/-4",
+          "Détermine une rotation antérieure si l'angle est ouvert"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2018 Résidanat ) - En céphalométrie, l'angle axe Y (Downs) : 1- Est formé par l'intersection du plan de Francfort et la ligne S-G-N 2- Exprime la tendance générale de la croissance mandibulaire 3- A une valeur diminuée lorsque la croissance est à tendance horizontale. 4- A une valeur moyenne de 27 degrés +/- 5- Est formé par l'intersection de la ligne Na-Point A et la ligne A-Pog",
+        "options": [
+          "(1-3)",
+          "(4-5)",
+          "(2-3)",
+          "(5-1)",
+          "(3-5)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2018 1°EMD) - Un profil cutané est :",
+        "options": [
+          "Convexe si la lèvre supérieure affleure la ligne E de Ricketts",
+          "Rectiligne avec une lèvre supérieure 1mm en arrière et inférieur qui affleure la ligne E de Rickett",
+          "Concave les deux lèvres affleurent la ligne S",
+          "Evalué par étude des tissus mous sur téléradiographie de profil"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2015 Résidanat ) - L'angle facial : 1- Détermine la position du maxillaire par rapport à la base du crane 2- Etudie le type de squelette facial 3- Permet de noter le degré de protrusion de l'étage moyen 4- Permet de noter le degré de protrusion du menton 5- Est un angle interne formé par le plan de francfort et le plan facial",
+        "options": [
+          "(1-2-3)",
+          "(3-4)",
+          "(1-2)",
+          "(4-5)",
+          "(3-4)"
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2015 Résidanat ) - Un angle l/i augmenté peut être dû à :",
+        "options": [
+          "Une biproalvéolie",
+          "Une birétroalvéolie",
+          "Une supra-alvéolie incisive",
+          "Une infra-alvéolie molaire",
+          "Une proalvéolie inférieure"
+        ],
+        "correctOptionIndexes": [],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -1047,7 +1964,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°8 (2025 2°EMD DENTAIRE - Q162\nL'encombrement secondaire est dû à :",
+        "questionText": "N°8 (2025 2°EMD DENTAIRE) - L'encombrement secondaire est dû à :",
         "options": [
           "Une poussée mésialante des dents de 6ans.",
           "Une perte prématurée des dents temporaires.",
@@ -1057,10 +1974,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2025 2°EMD DENTAIRE - Q180\nLa macrodontie vraie est caractérisée par :",
+        "questionText": "N°9 (2025 2°EMD DENTAIRE) - La macrodontie vraie est caractérisée par :",
         "options": [
           "Un excès dentaire.",
           "Une DDM négative.",
@@ -1070,10 +1987,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "DDM négative: volume dentaire supérieur au périmètre des arcades."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2024 1°EMD - Q481\nEn présence d'une DDM négative en denture mixte nous",
+        "questionText": "N°6 (2024 1°EMD) - En présence d'une DDM négative en denture mixte nous",
         "options": [
           "Une expulsion d'une ou des deux canines temporaires",
           "l'évolution des incisives latérales en linguo-position",
@@ -1083,10 +2000,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "En denture mixte :•\tL’évolution des incisives latérales en linguo-position se produit pour compenser le manque d’espace.•\tL’encombrement incisif est important."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2024 1°EMD - Q490\nLa DDD par excès mandibulaire :",
+        "questionText": "N°7 (2024 1°EMD) - La DDD par excès mandibulaire :",
         "options": [
           "Se manifeste par un rapport R supérieur à 77,2 %",
           "Se manifeste par un rapport R inférieur à 91,3 %",
@@ -1097,10 +2014,10 @@ const odfY3Quizzes = [
           0,
           2
         ],
-        "explanation": "Si R est supérieur à 77.2 : la DDD correspond à un excès de largeur du périmètre antérieur mandibulairese caractérise par un chevauchement inferieur ou des espacements supérieurs."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2023 2°EMD - Q800\nLa dysharmonie dento-maxillaire par macrodontie se manifeste cliniquement par :",
+        "questionText": "N°8 (2023 2°EMD) - La dysharmonie dento-maxillaire par macrodontie se manifeste cliniquement par :",
         "options": [
           "Des diastèmes inter-dentaires",
           "Un chevauchement incisif",
@@ -1110,10 +2027,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : Absence des diastème de BOGUE  à 5 ansC/D : suite à l’explusion des  canines temporaires ( mésialisation des secteures postérieures = réduction de l’espace pour l’évolution des canines permanentes )"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2023 2°EMD - Q805\nLa DDM peut avoir comme étiologies:",
+        "questionText": "N°9 (2023 2°EMD) - La DDM peut avoir comme étiologies:",
         "options": [
           "Un mécanisme d'hérédité croisée",
           "L'extraction prématurée des dents de sagesse",
@@ -1123,10 +2040,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "l'indépendance phylogénétique et embryologique entre la denture et les maxillairesLa D.D.M s'expliquerait également par un mécanisme d'hérédité croisée, soit tout simplement liées à un type familial ou ethnique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2022 1°EMD - Q1247\nLa dysharmonie dento-maxillaire par macrodontie se manifeste cliniquement par :",
+        "questionText": "N°19 (2022 1°EMD) - La dysharmonie dento-maxillaire par macrodontie se manifeste cliniquement par :",
         "options": [
           "Des diastèmes inter-dentaires",
           "Un chevauchement incisif",
@@ -1137,10 +2054,10 @@ const odfY3Quizzes = [
           1,
           2
         ],
-        "explanation": "A : Absence des diastème de BOGUE  à 5 ansC/D : suite à l’explusion des  canines temporaires ( mésialisation des secteures postérieures = réduction de l’espace pour l’évolution des canines permanentes )"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2021 2°EMD - Q1540\nLa DDM en denture mixte est caractérisée par:",
+        "questionText": "N°14 (2021 2°EMD) - La DDM en denture mixte est caractérisée par:",
         "options": [
           "L’absence de diastèmes de Bogue",
           "L’absence de diastèmes Simiens",
@@ -1150,10 +2067,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "En denture mixte on a : -Rhizalyse prématuré des incisives latérales ; -Evolution des incisives en linguo-position ; Persistance des canines temporaires ; Expulsion des 2 canines temporaires = position ectopique ou inclusion des canines."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2021 2°EMD - Q1567\nDans l'excès de largeur du périmètre antérieur mandibulaire on observe:",
+        "questionText": "N°16 (2021 2°EMD) - Dans l'excès de largeur du périmètre antérieur mandibulaire on observe:",
         "options": [
           "Un chevauchement supérieur",
           "Des diastèmes supérieurs",
@@ -1163,10 +2080,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Si R est supérieur à 77,2 : la D.D.D correspond à un excès de largeur du périmètre antérieur mandibulaire .Cette anomalie caractérise par un chevauchement inférieur ou des diastèmes supérieurs."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°53 (2021 Résidanat - Q1670\nLe «Lee Way » : 1- Est l'espace laissé après chute des canines temporaires 2- Est plus important à la mandibule qu'au maxillaire 3- Est de 0,9 mm à la mandibule et de 1,7 mm au maxillaire 4- Est l'espace de dérive mésiale physiologique des 1ères molaires permanentes 5- Est l'espace de dérive mésiale physiologique des 1ères prémolaires permanentes",
+        "questionText": "N°53 (2021 Résidanat ) - Le «Lee Way » : 1- Est l'espace laissé après chute des canines temporaires 2- Est plus important à la mandibule qu'au maxillaire 3- Est de 0,9 mm à la mandibule et de 1,7 mm au maxillaire 4- Est l'espace de dérive mésiale physiologique des 1ères molaires permanentes 5- Est l'espace de dérive mésiale physiologique des 1ères prémolaires permanentes",
         "options": [
           "(1,2)",
           "(2,5)",
@@ -1177,10 +2094,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Qu’est-ce que l’espace Leeway?le « lee-way » ou espace de dérive est défini comme étant la différence entre la somme des diamètres mesio-distaux des canines, des premières molaires et des deuxièmesmolaires temporaires de chaque quadrant, et celle des dents permanentes correspondantes.Le diamètre mesio-distal des molaires temporaires étant plus important que celui des prémolaires qui les remplacent, cette différence est positive permettant un gain d’espace pour la denture définitive.3: Les valeurs moyennes sont de0.9 mm par quadrant maxillaireet de1,7 mm par quadrant mandibulaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2020 3°EMD - Q1721\nLa dysharmonie dentaire transitoire :",
+        "questionText": "N°3 (2020 3°EMD ) - La dysharmonie dentaire transitoire :",
         "options": [
           "S’observent au moment de l’évolution des incisives latérales permanentes",
           "S’observent au moment de l’évolution des canines",
@@ -1190,10 +2107,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2020 Résidanat - Q1855\nEn présence d'une x DDM par défaut x : 1- La place disponible est supérieure à la place nécessaire 2- La DDM est négative 3- On parle de macrodontie relative 4- Il y a un excès de place sur l'arcade 5- On parle de microdontie relativel",
+        "questionText": "N°12 (2020 Résidanat ) - En présence d'une x DDM par défaut x : 1- La place disponible est supérieure à la place nécessaire 2- La DDM est négative 3- On parle de macrodontie relative 4- Il y a un excès de place sur l'arcade 5- On parle de microdontie relativel",
         "options": [
           "(1,3)",
           "(3,4,5",
@@ -1204,10 +2121,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "En cas de DDM, la place disponible estinférieureà la place nécessaire.Il y a unmanquede place sur l'arcade.En cas de DDM en parle d'unemacrodontie relative."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2020 Résidanat - Q1899\nLa dysharmonie dento-dentaire : 1- Est une anomalie dento-alvéolaire. 2- Est un rapport des dents supérieures et inférieures. 3- Est un signe clinique d'une dysharmonie dento-maxillaire. 4- Peut-être à l'origine d'une supraclusion. 5- Est une anomalie dento-squelettique.",
+        "questionText": "N°16 (2020 Résidanat ) - La dysharmonie dento-dentaire : 1- Est une anomalie dento-alvéolaire. 2- Est un rapport des dents supérieures et inférieures. 3- Est un signe clinique d'une dysharmonie dento-maxillaire. 4- Peut-être à l'origine d'une supraclusion. 5- Est une anomalie dento-squelettique.",
         "options": [
           "(3,4)",
           "(1,4)",
@@ -1218,10 +2135,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "La DDDcorrespond à une disproportion entre les dimensions des dents supérieures et inférieures : dysharmonie dimensionnelle entre les deux arcades dentaires,Evaluation de la DDD:Elle se fait par l’analyse de BOLTON :Rapport des six dents antérieures :- Si R >77,2% ; la DDD correspond à un excès du périmètre mandibulaire antérieur Cette anomalie caractérisée par un chevauchement inférieur ou diastème supérieur- Si R  91,3% ; la DDD correspond à un excès du périmètre mandibulaire postérieur se manifestant par chevauchement inférieur ou espacement supérieur-Si R < 91,3% ; la DDD correspond à un excès du périmètre maxillaire postérieur se manifestant par chevauchement supérieur ou espacement inférieur postérieur"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2020 Résidanat - Q1924\nLe périmètre d'arcade maxillaire : 1- Est mesuré avec un compas facial. 2- Est diminué chez l'adulte. 3- Est mesuré du sillon dentaire principal de la molaire gauche à celui de la molaire droite. 4- S'allonge avec l'éruption des incisives supérieures. 5- Diminue par migration mésiale des molaires permanentes.",
+        "questionText": "N°19 (2020 Résidanat ) - Le périmètre d'arcade maxillaire : 1- Est mesuré avec un compas facial. 2- Est diminué chez l'adulte. 3- Est mesuré du sillon dentaire principal de la molaire gauche à celui de la molaire droite. 4- S'allonge avec l'éruption des incisives supérieures. 5- Diminue par migration mésiale des molaires permanentes.",
         "options": [
           "(1,5)",
           "(3,4)",
@@ -1232,10 +2149,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "LE PÉRIMÈTRE D'ARCADEC'est la mesure d'une ligne dont l'extrémité se situe au niveau des faces distales des deuxièmes molaires temporaires (ou des deuxièmes prémolaires) et dont la courbe suit les cuspides vestibulaires et les bords incisifs des dents antérieures"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2019 Résidanat - Q2018\nEn cas de diastèmes multiples, recherchez : 1- La présence d'un germe surnuméraire. 2- Des agénésies dentaires. 3- Une microdontie relative. 4- Une mauvaise insertion du frein labial. 5- Une langue protrusive.",
+        "questionText": "N°3 (2019 Résidanat ) - En cas de diastèmes multiples, recherchez : 1- La présence d'un germe surnuméraire. 2- Des agénésies dentaires. 3- Une microdontie relative. 4- Une mauvaise insertion du frein labial. 5- Une langue protrusive.",
         "options": [
           "(1-3)",
           "(1-4 )",
@@ -1246,10 +2163,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Microdontie relativeEncore appelée « dysharmonie dento-maxillaire (DDM) par défaut », elle correspond à une disproportion entre les dimensions mésio-distales des dents permanentes et le périmètre des arcades alvéolaires correspondantes. Ainsi, la continuité des arcades dentaires au niveau des faces proximales n’est plus assurée.Cette anomalie, quantifiable par l’indice de Bolton, en plus de conduire à de nombreux diastèmes, entraîne le plus souvent des troubles de l’occlusion statique (mauvaise intercuspidation) et parfois de l’occlusion dynamique (contacts prématurés et/ou interférences occlusales)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2019 2°EMD - Q2073\nLa présence des diastèmes de BOGUE en denture temporaire :",
+        "questionText": "N°7 (2019 2°EMD) - La présence des diastèmes de BOGUE en denture temporaire :",
         "options": [
           "Une DDM par macrodontie en denture permanente",
           "Une DDM par microdontie en denture permanente",
@@ -1259,10 +2176,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Les diastèmes de la dentition primaire, appelé également diastème de Bogue, est le signe de la disponibilité de la place nécessaire dans la denture permanente"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2018 Résidanat - Q2298\nEn cas de diastèmes multiples, recherchez : 1- La présence d'un germe surnuméraire. 2- Des agénésies dentaires. 3- Une microdontie relative. 4- Une mauvaise insertion du frein labial. 5- Une langue protrusive.",
+        "questionText": "N°1 (2018 Résidanat ) - En cas de diastèmes multiples, recherchez : 1- La présence d'un germe surnuméraire. 2- Des agénésies dentaires. 3- Une microdontie relative. 4- Une mauvaise insertion du frein labial. 5- Une langue protrusive.",
         "options": [
           "(1-3)",
           "(1-4)",
@@ -1273,10 +2190,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "En cas dediastème inter incisif(et non pas multiples),  recherchezune mauvaise insertion du frein labial.Une langue protrusive = proalvéolie antérieure =création de diastèmes multiples.En cas d’encombrement dentaire (manque d'espaces) , on chercheLa présence d'un germe surnuméraireoumacrodontie relative."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2018 2°EMD - Q2317\ndans le cas d'une DDM par macrodontic le signe de Netter correspond à:",
+        "questionText": "N°2 (2018 2°EMD) - dans le cas d'une DDM par macrodontic le signe de Netter correspond à:",
         "options": [
           "Une divergence des racines des incisives permanentes",
           "Une convergence des racines des incisives permanentes",
@@ -1286,10 +2203,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "ci on voit le signe de Netter avec la canine qui se projette dans la symphyse, ce qui est un signe de DDM"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2018 2°EMD - Q2353\nLe tableau de Bolton permet:",
+        "questionText": "N°4 (2018 2°EMD) - Le tableau de Bolton permet:",
         "options": [
           "De calculer le rapport de Bolton",
           "De calculer les diamètres des 6 ou 12 dents antérieures",
@@ -1299,10 +2216,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2018 2°EMD - Q2368\nParmi les facteurs étiologiques de la DDM par macrodontie, on peut citer:",
+        "questionText": "N°5 (2018 2°EMD) - Parmi les facteurs étiologiques de la DDM par macrodontie, on peut citer:",
         "options": [
           "L'absence des diastèmes en denture temporaire",
           "Une cause héréditaire",
@@ -1312,10 +2229,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2018 2°EMD - Q2386\nEn denture mixte, la mesure de la place disponible se fait:",
+        "questionText": "N°6 (2018 2°EMD) - En denture mixte, la mesure de la place disponible se fait:",
         "options": [
           "En retranchant le Lee way si les molaires temporaires sont présentes",
           "En tenant compte des dents absentes",
@@ -1325,10 +2242,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Sans tenir compte de malposition dentaire et en tenant compte du Lee wayEspace disponible réel = espace disponible - le lee way.Lee way : 0.9 à l'arcade supérieure. / 1.7 à l'arcade inférieure."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°14 (2018 2°EMD - Q2538\nUne DDM par défaut se caractérise par",
+        "questionText": "N°14 (2018 2°EMD) - Une DDM par défaut se caractérise par",
         "options": [
           "De nombreux chevauchements",
           "La présence de diastèmes",
@@ -1338,10 +2255,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2018 Résidanat - Q2545\nLes signes d'une DDM par microdontie relative sont :",
+        "questionText": "N°15 (2018 Résidanat ) - Les signes d'une DDM par microdontie relative sont :",
         "options": [
           "L'encombrement dentaire avec dystopies.",
           "La présence de dents retenues.",
@@ -1352,10 +2269,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Les signes d'une DDM parmacrodontie(et non pas microdontie)relative sont:L'encombrement dentaire avec dystopies.La présence de dents retenues.( suite au manque d'espace)L'entassement postérieur des germes.Les troubles de l'articulation temporo-mandibulaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°11 (2015 Résidanat - Q3022\nLa DDM secondaire par macrodontie relative : 1- Apparait après éruption des dents de sagesse 2- Apparait suite à l'extraction prématurée des dents lactéales 3- Peut-être prévenue par la mise en place d'un mainteneur d'espace 4- Est due à la Présence de dents surnuméraires sur l'arcade 5- Est une DDM transitoire qui disparait à l'âge adulte",
+        "questionText": "N°11 (2015 Résidanat ) - La DDM secondaire par macrodontie relative : 1- Apparait après éruption des dents de sagesse 2- Apparait suite à l'extraction prématurée des dents lactéales 3- Peut-être prévenue par la mise en place d'un mainteneur d'espace 4- Est due à la Présence de dents surnuméraires sur l'arcade 5- Est une DDM transitoire qui disparait à l'âge adulte",
         "options": [
           "(1-2)",
           "(1)",
@@ -1366,7 +2283,7 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "La DDM par macrodontie relative ou par défaut de placeElle correspond à uneaugmentation relative du volume dentairepar rapport auvolume du maxillairequi les contient.Elle se manifeste cliniquement par unencombrement dentaire.Les trois types d’encombrement :Encombrement primaire:D’originegénétique, décelable dès ladenture temporaire.Encombrement secondaire:Apparaît lors de l’éruption des canineset plus tard des2e molaires permanentes.Il peut être dû à lapoussée mésialeou à laperte prématurée des dents temporaires.Encombrement tertiaire:Survient avec l’éruption active des 3e molaireset lacroissance tardive de la mandibule.Signes de la DDM par défaut de place :La DDM peut être décelée et appréciée :lors del'examen clinique,sur lesmoulages,à la lecture desradiographies,sur lestéléradiographies de profil.-Signes faciaux :Préjudiceesthétiquedû aux malpositions dentaires.Peut êtredentaire seuloudentaire + facialsi associé à uneanomalie alvéolaire.-Signes occlusau  :Signes radiologiques :"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -1375,7 +2292,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°10 (2023 2°EMD - Q821\nDans l'endognathie maxillaire symétrique :",
+        "questionText": "N°10 (2023 2°EMD) - Dans l'endognathie maxillaire symétrique :",
         "options": [
           "Le chemin de fermeture peut être droit",
           "La latéro-déviation mandibulaire est inconstante",
@@ -1385,10 +2302,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°12 (2023 2°EMD - Q853\nLe diagnostic différentiel de l'endognathie mandibulaire se fait :",
+        "questionText": "N°12 (2023 2°EMD) - Le diagnostic différentiel de l'endognathie mandibulaire se fait :",
         "options": [
           "Avec une endoalvéolie mandibulaire",
           "Avec l'endognathie maxillaire",
@@ -1399,10 +2316,10 @@ const odfY3Quizzes = [
           0,
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2023 2°EMD - Q871\nEn présence d'une latérognathie mandibulaire :",
+        "questionText": "N°13 (2023 2°EMD) - En présence d'une latérognathie mandibulaire :",
         "options": [
           "Des prématurités sont souvent en cause",
           "L'étiologie peut être congénitale",
@@ -1413,10 +2330,10 @@ const odfY3Quizzes = [
           2,
           3
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2022 3°EMD - Q1104\nChez le respirateur buccal on retrouve :",
+        "questionText": "N°7 (2022 3°EMD ) - Chez le respirateur buccal on retrouve :",
         "options": [
           "Souvent une endognathie maxillaire",
           "Une endognathie maxillaire associé à une exognathie mandibulaire",
@@ -1426,10 +2343,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°86 (2022 Résidanat - Q1319\nL'endognathie maxillaire asymétrique : 1- S'observe souvent dans le cas de fentes labio palatines 2- Est une anomalie alvéolaire du sens transversal 3- S'accompagne d'une voûte palatine peu profonde 4- Est caractérisée par une inclinaison linguale des secteurs latéraux 5- A pour signe constant un articulé croisé unilatéral",
+        "questionText": "N°86 (2022 Résidanat ) - L'endognathie maxillaire asymétrique : 1- S'observe souvent dans le cas de fentes labio palatines 2- Est une anomalie alvéolaire du sens transversal 3- S'accompagne d'une voûte palatine peu profonde 4- Est caractérisée par une inclinaison linguale des secteurs latéraux 5- A pour signe constant un articulé croisé unilatéral",
         "options": [
           "(1,3 )",
           "(4,5)",
@@ -1440,10 +2357,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "a) - S'observe souvent dans le cas de fentes labio-palatines: Correct. Les fentes labio-palatines sont caractérisées par une insuffisance de croissance dans le sens transversal, surtout en présence d’agénésie dentaire (notamment des incisives latérales), ce qui peut entraîner une endognathie maxillaire asymétrique.b) - Est une anomalie alvéolaire du sens transversal: Faux. Il s’agit d’une anomalie basale affectant le sens transversal.c) - S'accompagne d'une voûte palatine peu profonde: Faux. Il n'existe pas de relation significative. Cependant, une description plus précise serait de parler d'une voûte palatine asymétrique.d) - Est caractérisée par une inclinaison linguale des secteurs latéraux: Faux. Au contraire, on observe une vestibulo-version des secteurs latéraux, qui compense l’endognathie maxillaire.e) - A pour signe constant un articulé croisé unilatéral: Correct."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°89 (2022 Résidanat - Q1322\nLe deep Bite est : 1- Une anomalie alvéolaire du sens vertical 2- Appelé également insuffisance verticale des maxillaires 3- D'origine souvent héréditaire 4- Souvent accompagné par une supraclusion sévère 5- Souvent accompagné par une béance",
+        "questionText": "N°89 (2022 Résidanat ) - Le deep Bite est : 1- Une anomalie alvéolaire du sens vertical 2- Appelé également insuffisance verticale des maxillaires 3- D'origine souvent héréditaire 4- Souvent accompagné par une supraclusion sévère 5- Souvent accompagné par une béance",
         "options": [
           "(1.2.3)",
           "(2.3.5)",
@@ -1454,10 +2371,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "C'est une anomaliebasaledu sens vertical."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°96 (2022 Résidanat - Q1325\nLa rotation mandibulaire antérieure se caractérise par : 1- Une égalité des étages de la face 2- Une symphyse mentonnière épaisse 3- Un condyle fin et orienté postérieurement 4- Un étage inférieur diminué 5- Un angle goniaque diminué",
+        "questionText": "N°96 (2022 Résidanat ) - La rotation mandibulaire antérieure se caractérise par : 1- Une égalité des étages de la face 2- Une symphyse mentonnière épaisse 3- Un condyle fin et orienté postérieurement 4- Un étage inférieur diminué 5- Un angle goniaque diminué",
         "options": [
           "(1,2,5)",
           "(2,3,5)",
@@ -1468,10 +2385,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Une égalité des étages de la face: Faux. S'il y a une rotation mandibulaire, que ce soit antérieure ou postérieure, cela provoquera une inégalité des étages de la face.Une symphyse mentonnière épaisse: Correct.Un condyle fin et orienté postérieurement: Faux. Ceci est un signe d'une rotation postérieure.Un étage inférieur diminué: Correct (voir l'image).Un angle goniaque diminué: Correct (voir l'image).La rotation dite postérieure s’exprime par les signes suivants :1-Le condyle dirigé vers l’arrière est relativement fin2- Le canal dentaire a un trajet rectiligne3- L’angle mandibulaire est ouvert4- L’échancrure prégoniaque est marquée5- La symphyse est orientée en haut et en arrière6- La cortical symphysaire est fine7- L’angulation inter molaire est diminuée8- Il existe une augmentation de l’étage inférieur de la face. (Figure 13)Par contre :La rotation dite antérieure, s’exprime avec les signes contraires."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°99 (2022 Résidanat - Q1326\nL'endognathie supérieure : 1- Peut être une conséquence d'une ventilation buccale 2- Peut être une conséquence d'une déglutition atypique 3- Peut être présente dans un cadre syndromique 4- Doit être traitée après éruption des canines permanentes 5- Est une anomalie principalement héréditaire",
+        "questionText": "N°99 (2022 Résidanat ) - L'endognathie supérieure : 1- Peut être une conséquence d'une ventilation buccale 2- Peut être une conséquence d'une déglutition atypique 3- Peut être présente dans un cadre syndromique 4- Doit être traitée après éruption des canines permanentes 5- Est une anomalie principalement héréditaire",
         "options": [
           "(1,2,4)",
           "(1,2,3)",
@@ -1482,10 +2399,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "1-Peut être une conséquence d'une ventilation buccale: Vrai. Une ventilation buccale est généralement associée à une position basse de la langue au cours de la respiration, ce qui provoque une insuffisance de croissance dans le sens transversal.2-Peut être une conséquence d'une déglutition atypique: Vrai. Au cours de la déglutition normale, la langue se positionne au niveau du palais, favorisant ainsi la croissance du maxillaire dans le sens transversal. En cas de déglutition atypique, la langue ne s’étale pas sur le palais, entraînant alors une endognathie maxillaire.3-Peut être présente dans un cadre syndromique: Vrai.4-Doit être traitée après l’éruption des canines permanentes: Faux. Elle doit être traitée le plus tôt possible.5-Est une anomalie principalement héréditaire: Faux. Les insuffisances de croissance sont généralement causées par des dysfonctions, bien qu'elles puissent également être d'origine héréditaire. L'expression \"principalement héréditaire\" est donc inexacte."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2021 3°EMD - Q1336\nl’endognathie maxillaire est :",
+        "questionText": "N°1 (2021 3°EMD ) - l’endognathie maxillaire est :",
         "options": [
           "une anomalie squelettique due à une insuffisance de développement transversal",
           "peut être symétrique ou asymétrique",
@@ -1495,10 +2412,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Caractérisée par une inclinaison normale des molaires et prémolaires, associée ou non à un encombrement incisif maxillaire."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2021 3°EMD - Q1351\ndans l’endognathie maxillaire symétrique :",
+        "questionText": "N°2 (2021 3°EMD ) - dans l’endognathie maxillaire symétrique :",
         "options": [
           "les signes clinique sont peu marqués",
           "le palais présente une forme ogivale",
@@ -1508,10 +2425,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Peu marqués dans les formes légères.linguocclusion bilatérale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2021 3°EMD - Q1368\nl’endognathie maxillaire asymétrique :",
+        "questionText": "N°3 (2021 3°EMD ) - l’endognathie maxillaire asymétrique :",
         "options": [
           "une déformation facile par aplatissement du côté atteint",
           "une convergence des lignes sourcilières est commisurales du côté sain",
@@ -1522,10 +2439,10 @@ const odfY3Quizzes = [
           2,
           3
         ],
-        "explanation": "L’endognathie maxillaire asymétrique se rencontre surtout dans les cas de fentes labio-palatines avec une voûte palatine asymétrique et un articulé croisé unilatéral sans latéro-déviation mandibulaire (coïncidence des points incisifs)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°45 (2021 Résidanat - Q1662\nLa Latérognathie : 1- A pour signe majeur une asymétrie mandibulaire 2- Peut avoir comme étiologie une hémi atrophie survenue dans l'enfance 3- Présente comme signe pathognomonique la déviation du point inter incisif supérieur 4- A pour caractéristique une déviation des points inter incisifs uniquement en ICM 5- S'observe souvent dans les cas de fentes labio palatines",
+        "questionText": "N°45 (2021 Résidanat ) - La Latérognathie : 1- A pour signe majeur une asymétrie mandibulaire 2- Peut avoir comme étiologie une hémi atrophie survenue dans l'enfance 3- Présente comme signe pathognomonique la déviation du point inter incisif supérieur 4- A pour caractéristique une déviation des points inter incisifs uniquement en ICM 5- S'observe souvent dans les cas de fentes labio palatines",
         "options": [
           "(1,2,4)",
           "(3,4)",
@@ -1536,10 +2453,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "2: Facteurs étiologiques- Origine héréditaire et congénitales- Troubles de croissance sévères de la mandibulaire- Pathologies articulaires- Atteintes nerveuses et musculaires unilatérales- Des anomalies fonctionnelles- Les atteintes de la mandibule3: Unedéviation du point inter-incisif supérieurpeut se voir dans d'autres pathologies : Ce signen’est donc pas spécifique à la latérognathie.4: Les milieux incisifs sont déviés enICM et en RC,le chemin de fermeture est droit"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°52 (2021 Résidanat - Q1669\nLa correction d'une rotation externe des maxillaires se fait :",
+        "questionText": "N°52 (2021 Résidanat ) - La correction d'une rotation externe des maxillaires se fait :",
         "options": [
           "Avec l'utilisation d'un vérin médian",
           "Avec l'utilisation d'un activateur",
@@ -1550,10 +2467,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "Disjoncteur : description, rythme d’activation, effets parasitesLe maxillaire « s’ouvre » de façon différentielle en avant et en arrière : la partie antérieure est  plus propice à l’expansion que la partie postérieure. Les deux hémi-maxillaires font une  rotation externe dans le plan occlusal avec pour centre de rotation le processus ptérygoïde. On parle « d’ouverture pyramidale »Ouverture pyramidale des maxillaires dans le plan transversal lors d’une  disjonction précoce"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2020 Résidanat - Q1714\nDans les cas de prognathisme mandibulaire vrai : 1- L'étiologie est souvent primaire 2- La manœuvre de Denévrézé est négative 3- Le proglissement mandibulaire est associé 4- Les canines temporaires sont non abrasées 5- La langue est basse et protrusive",
+        "questionText": "N°2 (2020 Résidanat ) - Dans les cas de prognathisme mandibulaire vrai : 1- L'étiologie est souvent primaire 2- La manœuvre de Denévrézé est négative 3- Le proglissement mandibulaire est associé 4- Les canines temporaires sont non abrasées 5- La langue est basse et protrusive",
         "options": [
           "(1,3)",
           "(1,5)",
@@ -1564,10 +2481,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "1- La classe III fonctionnelle ou proglissement mandibulaire = manoeuvre de DENEVREZE positive2-Parmi les étiopathogénies de la classe III fonctionnelle ( et non pas la classe III vraie) :présence de prématurités occlusales, essentiellementcanines temporaires non abrasées.propulsion de la langueen présence d’une macroglossie ou d’hypertrophie amygdalienne pour dégager le carrefour aérodigestif."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2020 3°EMD - Q1752\nL’endognathie maxillaire asymétrique se manifeste par :",
+        "questionText": "N°5 (2020 3°EMD ) - L’endognathie maxillaire asymétrique se manifeste par :",
         "options": [
           "Une déformation faciale par aplatissement du coté atteint",
           "Une convergence des lignes sourciliére et commissurale du coté sain",
@@ -1578,10 +2495,10 @@ const odfY3Quizzes = [
           2,
           3
         ],
-        "explanation": "Une convergence des lignes sourcilières et commissurales du coté atteint."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°7 (2020 3°EMD - Q1780\nL’exognathie maxillaire symétrique se manifeste par :",
+        "questionText": "N°7 (2020 3°EMD ) - L’exognathie maxillaire symétrique se manifeste par :",
         "options": [
           "Une face large et courte",
           "Une supraclusion importante",
@@ -1591,10 +2508,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Profil plat ou concave.diminution de l’étage inférieur de la face"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2020 Résidanat - Q1828\nLe Deep Bite est : 1- Une anomalie alvéolaire du sens vertical. 2- Appelé également insuffisance verticale des maxillaires. 3- D'origine souvent héréditaire. 4- Souvent accompagné d'une supraclusion sévère. 5- Souvent accompagné d'une béance.",
+        "questionText": "N°10 (2020 Résidanat ) - Le Deep Bite est : 1- Une anomalie alvéolaire du sens vertical. 2- Appelé également insuffisance verticale des maxillaires. 3- D'origine souvent héréditaire. 4- Souvent accompagné d'une supraclusion sévère. 5- Souvent accompagné d'une béance.",
         "options": [
           "(1,2)",
           "(2,3,5)",
@@ -1605,10 +2522,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Le deep bite estune anomalie basalede sens vertical.Deep bite = supraclusie , openbite = infraclusie =béance ."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2020 3°EMD - Q1902\ndans l’endognathie maxillaire symétrique , on observe :",
+        "questionText": "N°16 (2020 3°EMD ) - dans l’endognathie maxillaire symétrique , on observe :",
         "options": [
           "une coïncidence des milieux incisifs en RC et en ICM",
           "un FMA diminué",
@@ -1618,10 +2535,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "- FMA augmenté."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2019 3°EMD - Q1998\nL’endognathie maxillaire asymétrique",
+        "questionText": "N°2 (2019 3°EMD ) - L’endognathie maxillaire asymétrique",
         "options": [
           "S’observe souvent dans le cas des fentes labio palatines",
           "Se manifeste par une linguocclusion unilatérale du cite atteint",
@@ -1631,10 +2548,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "- une voûte palatine asymétrique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2019 3°EMD - Q2004\nLa latérognathie :",
+        "questionText": "N°3 (2019 3°EMD ) - La latérognathie :",
         "options": [
           "A pour signe majeur une asymétrie mandibulaire",
           "Peut avoir comme étiologie une hémi atrophie survenue l’enfance",
@@ -1644,10 +2561,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "cette asymétrie mandibulaire peut être la résultante soit : D’une hémi-hypertrophie mandibulaire (d’origine héréditaire ou congénitale) / D’une hémi-atrophie mandibulaire : due à un traumatisme survenu au cours de la croissanceNon coïncidence des freins labiaux supérieurs et inférieurs entre eux et avec le PSM : signe pathognomoniqueD : en ICM et en RC"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2019 3°EMD - Q2024\nL’anomalie basales du sens vertical",
+        "questionText": "N°4 (2019 3°EMD ) - L’anomalie basales du sens vertical",
         "options": [
           "Sont définies comme un excès de croissance squelettique",
           "Sont toujours isolées",
@@ -1657,10 +2574,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": "Soit par excès soit par défaut Rarement isoléesUn excès de croissance verticale de la face : type face longue, dolicho-facial ou open bite.Une insuffisance de croissance verticale : type face courte, brachyfacial ou deep bite"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2019 2°EMD - Q2042\nDans l’excès basal vertical, on retrouve",
+        "questionText": "N°5 (2019 2°EMD) - Dans l’excès basal vertical, on retrouve",
         "options": [
           "Une face étroite",
           "Une langue basse",
@@ -1670,10 +2587,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Déglutition atypique / Respiration souvent buccale ou mixte / troubles phonatoires"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2019 2°EMD - Q2062\nDans la supragnathie, on retrouve :",
+        "questionText": "N°6 (2019 2°EMD) - Dans la supragnathie, on retrouve :",
         "options": [
           "Une hypertonicité labiale",
           "Un bout à bout incisif",
@@ -1683,10 +2600,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Supraclusie incisive (morsure palatine dans les cas sévères)Respiration : nasale"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°19 (2019 2°EMD - Q2252\nL’endognathie maxillaire asymétrique:",
+        "questionText": "N°19 (2019 2°EMD) - L’endognathie maxillaire asymétrique:",
         "options": [
           "S’observe souvent dans les cas de fentes labio palatins",
           "Se manifeste par une linguocclusion unilatérale du côté atteint",
@@ -1697,10 +2614,10 @@ const odfY3Quizzes = [
           0,
           3
         ],
-        "explanation": "- une voûte palatine asymétrique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2018 Résidanat - Q2412\nLa béance antérieure : 1- Est souvent d'origine fonctionnelle. 2- Est symétrique, quand elle est due à une succion du pouce. 3- Nécessite une intervention tardive en denture adulte. 4- A un caractère très récidivant 5- Est souvent associée à un décalage sagittal.",
+        "questionText": "N°8 (2018 Résidanat ) - La béance antérieure : 1- Est souvent d'origine fonctionnelle. 2- Est symétrique, quand elle est due à une succion du pouce. 3- Nécessite une intervention tardive en denture adulte. 4- A un caractère très récidivant 5- Est souvent associée à un décalage sagittal.",
         "options": [
           "(1-2-4)",
           "(2-3-5)",
@@ -1711,10 +2628,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "La béance antérieurenécessiteune intervention précoce(en denture mixte)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°10 (2018 Résidanat - Q2457\nLe pro glissement mandibulaire : 1- Est d'origine fonctionnelle. 2- Est lié à la présence d'une endognathie. 3- Peut-être dû à une langue basse. 4- Est associé à une brachygnathie mandibulaire. 5- Évolue toujours en prognathisme vrai.",
+        "questionText": "N°10 (2018 Résidanat ) - Le pro glissement mandibulaire : 1- Est d'origine fonctionnelle. 2- Est lié à la présence d'une endognathie. 3- Peut-être dû à une langue basse. 4- Est associé à une brachygnathie mandibulaire. 5- Évolue toujours en prognathisme vrai.",
         "options": [
           "(3-4)",
           "(1-3)",
@@ -1725,10 +2642,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "Le pro glissement mandibulaire peut être associé àune brachygnathie maxillaire.Peut être  lié à la présence d'uneendognathie maxillaire.peut évoluer vers un prognathisme vrai(pas toujours)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°5 (2016 Résidanat - Q2874\nLe deep bite s'accompagne : 1- D'un sillon labio mentonnier marqué 2- D'une musculature puissante 3- D'un surplomb exagéré 4- D'un angle de TWEED augmenté 5- D'un étage inférieur très augmenté",
+        "questionText": "N°5 (2016 Résidanat ) - Le deep bite s'accompagne : 1- D'un sillon labio mentonnier marqué 2- D'une musculature puissante 3- D'un surplomb exagéré 4- D'un angle de TWEED augmenté 5- D'un étage inférieur très augmenté",
         "options": [
           "(1-3)",
           "(3-5)",
@@ -1739,10 +2656,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Il s'agit d'une insuffisance de croissance au niveau squelettique avec une direction à tendance horizontale correspondant à une accentuation du type face coute.EXAMEN CLINIQUE :De face :diminution de la hauteur faciale Inferieure.Lèvres en contact et fines.SLM (sillon labio-mentonnier) marqué.Largeur de la face normaleLa mandibule est carrée ; la distance bigoniaque est importante.De profil :Sillon labio-mentonnier marquéLe profil cutané est concaveLes lèvres sont fines et la lèvre inférieure est éversée.ProgénieEXAMEN ENDOBUCALE:Supraclusie constantePetite hauteur de couronnes cliniquesEspace libre molaire de repos augmentéInterposition linguale latéralecourbe de Spee mandibulaire augmentée voire inversé au maxillairerelation de classe Il fréquenteEXAMEN FONCTIONNEL :Musculature au reposMusculature très forte et très antérieureLa sangle ptérygo-masséterine: a une insertion plus large et antérieure sur le bord inférieur de la branche horizontale de la mandibuleActivité importante du temporal postérieur en ICM (favorisant le bruxisme,) En fonction :Respiration : nasalePhonation perturbée: troubles d'articulation des \"S\" et \"D\"Anomalies du chemin de Fermeture fréquentes avec rétrusion mandibulaire et compression méniscale (conséquence de la classe Il/2.)Sur TLRParallélisme des plans :(bispinaI,occlusal et mandibulaire).FMA:diminué.Axe Y:diminué.Angle goniaque: fermé.Les molaire sup sont proches du plancher du sinus maxillaire.La hauteur des procès alvéolaires est réduite."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2016 Résidanat - Q2926\nL'endognathie maxillaire :",
+        "questionText": "N°13 (2016 Résidanat ) - L'endognathie maxillaire :",
         "options": [
           "Est-une anomalie d'origine squelettique",
           "Présente une courbe de Wilson systématiquement accentuée",
@@ -1753,10 +2670,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "L’ENDOGNATHIE MAXILLAIREC’est une insuffisance de développement du maxillaire dans le sens transversal avec une inclinaison normale des PM et M et souvent un encombrement antérieur.c: Le traitement de l’endognathie maxillaire nécessite une phase orthopédique d’expansion maxillaire en fonction de la sévérité de la déficience maxillaire transverse et du stade de maturation squelettique, qui peut se faire avec un disjoncteur ou un quad ’hélix dont le but d’ouvrir la suture medio-palatine,d :  Respiration buccale ou mixte à prédominance buccale due à une obstruction nasale (végétations adénoïdes) ou à une hypertrophie amygdalienne ;"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2015 Résidanat - Q3027\nL'endognathie maxillaire : 1- Est une malocclusion alvéolo-dentaire du sens transversal 2- Est d'étiologie exclusivement héréditaire 3- Est une étroitesse des arcades maxillaires 4- Est souvent associée à une ventilation buccale 5- L'appareil utilisé pour son traitement est le Frânckel",
+        "questionText": "N°15 (2015 Résidanat ) - L'endognathie maxillaire : 1- Est une malocclusion alvéolo-dentaire du sens transversal 2- Est d'étiologie exclusivement héréditaire 3- Est une étroitesse des arcades maxillaires 4- Est souvent associée à une ventilation buccale 5- L'appareil utilisé pour son traitement est le Frânckel",
         "options": [
           "(1-4)",
           "(1-2",
@@ -1767,7 +2684,861 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           4
         ],
-        "explanation": "1:C’est une insuffisance de développement du maxillairedans le sens transversal avec une inclinaison normale des PM et M et souvent un encombrement antérieur.2:Facteurs étiologiques- Hérédité (comportement neuro-musculaire)- Malformation congénitale génétique- Dysfonctions linguales au repos (langue basse) et lors des fonctions de déglutition/phonation- Troubles respiratoires: obstruction des voies aériennes- Troubles de la mastication- Succion digitale4: Elle est en relation étroite avecles troubles ventilatoires et l’existence d’une ventilation buccale.L’hypodéveloppement transversal du maxillaire est alors lié à deux mécanismes : l’insuffisance de stimulation de la suture palatine médiane par la langue qui, en position basse, ne peut plus jouer correctement son rôle de conformateur du palais5: Le traitement de l’endognathie maxillaire nécessite une phaseorthopédique d’expansion maxillaireen fonction de la sévérité de la déficience maxillaire transverse et du stade de maturation squelettique, qui peut se faire avec un disjoncteur ou un quad ’hélix dont le but d’ouvrir la suture medio-palatine,"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "diagnostic des anomalies dento-alvéolaires _ sagit",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°6 (2025 2°EMD DENTAIRE) - En cas de profil convexe, on peut retrouver:",
+        "options": [
+          "Une proalvéolie supérieure associée",
+          "Une proalvéolie inférieure",
+          "Une biproalvéolie",
+          "Un angle d'attaque augmenté"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2021 3°EMD ) - La rétroalvéolie superieure est :",
+        "options": [
+          "Caractériser par un angle I/F augmenté",
+          "Caractériser par un angle I/F diminué",
+          "Caractérisée par un linguo version de l’axe incisif inférieure",
+          "Associé à un dolichognathie maxillaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2021 2°EMD) - La proalvéolie supérieure est souvent présente en cas de :",
+        "options": [
+          "Deep bite",
+          "Dysfonctions linguales",
+          "Décalages de classe III",
+          "Dysfonctions oro-faciales"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2021 2°EMD) - En cas de birétroalvéolie :",
+        "options": [
+          "L’angle I/i est augmenté",
+          "Le profil est droit ou concave",
+          "Un encombrement dentaire est associé",
+          "Le stomion est forcé"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2021 2°EMD) - En cas de rétroalvéolie inférieure :",
+        "options": [
+          "Les incisives peuvent être en articulé inversé",
+          "La langue est basse",
+          "Une pression labiale ou digitale est souvent présente",
+          "Un proglissement est associé"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2021 3°EMD ) - La biproalvéolie est due à :",
+        "options": [
+          "Une déglutition atypique",
+          "Une transmission génétique",
+          "Un encombrement incisif supérieur",
+          "Un encombrement incisif inférieur"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2020 3°EMD ) - En cas de birétroalvéolie :",
+        "options": [
+          "Le recouvrement incisif augmente",
+          "Le surplomb est normal",
+          "Des diastèmes incisifs sont visibles",
+          "Un encombrement est souvent présent"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2020 Résidanat ) - Dans la classe II division 2 1- L'overjet est augmenté 2- Les molaires supérieures sont en mésioposition 3- Le surplomb est diminué 4- La 1ère molaire inférieure est distalée par rapport à la 1ère molaire supérieure 5- L'overbite est augmenté",
+        "options": [
+          "(2,3,4,5)",
+          "(3,4,5 )",
+          "(3,5)",
+          "(1,2,3)",
+          "(2,4 )"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2019 2°EMD) - La proalveolie supérieure peut être confondue avec :",
+        "options": [
+          "Une rétroalveolie inferieure",
+          "Une promandibulie",
+          "Une rétrognathie maxillaire",
+          "Une classe III alvéolaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2019 2°EMD) - La proalveolie inferieure est en rapport avec ;",
+        "options": [
+          "Une langue haute",
+          "Une langue protrusive",
+          "Une hypertonicité labiale inferieure",
+          "Des amygdales de volume normal"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°20 (2019 2°EMD) - Les anomalies alvéolaires sont souvent :",
+        "options": [
+          "D’origine génétique",
+          "Dues à un trouble fonctionnel",
+          "Causées par des des parafonctions",
+          "Traitées avec des appareillages fixés"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2018 2°EMD) - Les anomalies alvéolaires de sens sagittal :",
+        "options": [
+          "Sont caractérisées par une inclinaison atypique des procès alvéolaires latéraux",
+          "Peuvent avoir une origine génétique",
+          "Sont le résultat d’un déséquilibre musculaire",
+          "Peuvent accompagner un décalage des bases osseuses"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2018 2°EMD) - Le diagnostic différentiel d’une proalvéolie inférieure doit se faire avec :",
+        "options": [
+          "Une prognathie mandibulaire",
+          "Une infra alvéolie supérieure",
+          "Une rétrognathie maxillaire",
+          "Une infra alvéolie inférieure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2018 3°EMD ) - Dans le cas d’une proalvéolie inférieure, on peut retrouver :",
+        "options": [
+          "Un angle i/m > 98°",
+          "Une macroglossie",
+          "Une prochéllie supérieure",
+          "Des diastèmes inter-incisifs"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2018 2°EMD) - La retroalveolie inférieure est caractérisée par",
+        "options": [
+          "Un angle i/m DIMINUE",
+          "UN ANGLE I/i augmenté",
+          "Une égression des incisives supérieures",
+          "Un encombrement antérieur"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2018 2°EMD) - La succion du pouce est à l’origine",
+        "options": [
+          "D’une rétroalvéolie inferieure",
+          "De la profondeur de la voute palatine",
+          "De la classe molaire",
+          "De la classe I canine"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2018 2°EMD) - La rétroalvéolie inferieure est :",
+        "options": [
+          "Rarement associé à une prolavéolie supérieure",
+          "Souvent associée à une proalvéolie supérieure",
+          "Une attitude de compensation d’une prognathie mandibulaire",
+          "La conséquence d’une succion labiale"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2017 2°EMD) - Parmi les étiologies de la pro-alvéolie supérieure, on retrouve :",
+        "options": [
+          "Une interposition linguale latérale",
+          "Une hypertonicité de la lèvre inf.",
+          "Une hypotonicité de la lèvre supérieure",
+          "Une succion de pouce"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2017 2°EMD) - Dans la pro alvéolie supérieure, on retrouve :",
+        "options": [
+          "Un overbite augmenté",
+          "Un I/F augmenté",
+          "Une rétrogénie",
+          "Une lèvre superieure en avant de la ligne E de RICKETTS"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2017 2°EMD) - La bipro-alvéolie se caractérise par :",
+        "options": [
+          "Des lèvres isotonique",
+          "Un i/I diminué",
+          "Un profil cutané convexe",
+          "Un I/F augmenté"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2016 Résidanat ) - En présence d'une proalvéolie inférieure, on retrouve : 1- Un over jet augmenté et un recouvrement excessif 2- SNB augmenté 3- Une procheilie inférieure avec présence de vestibulo-version des incisives inférieures 4- Un angle d'attaque diminué 5- Une augmentation de la longueur maxillaire",
+        "options": [
+          "(1-3)",
+          "(2-5)",
+          "(4-5)",
+          "(3-4)",
+          "(2-4)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2016 2°EMD) - Le diagnostic différentiel de la rétroalvéolie supérieure se fait avec :",
+        "options": [
+          "La proalvéolie superieure",
+          "La classe II/1",
+          "La classe II/2",
+          "La rétrognathie mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2016 2°EMD) - Une proalvéolie inférieure est aggravée en cas :",
+        "options": [
+          "D’amygdales hypertrophiques",
+          "De frein lingual court",
+          "De rotation antérieure",
+          "De rotation postérieur"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "diagnostic des anomalies dento-alvéolaires _ trans",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°1 (2025 2°EMD DENTAIRE) - L'endoalvéolie maxillaire asymétrique :",
+        "options": [
+          "Présente seulement une linguoclusion unilatérale et correspond à un développement asymétrique du maxillaire.",
+          "Présente une forme asymétrique de l'arcade maxillaire.",
+          "Est caractérisée par la non coïncidence des milieux incisifs en RC et en ICM.",
+          "Présente un chemin de fermeture droit."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2025 2°EMD DENTAIRE) - Une endoalvéolie maxillaire symétrique avec linguoclusion unilatérale est caractérisée par :",
+        "options": [
+          "Une coïncidence des milieux inter-incisifs supérieur et inférieur en occlusion d'intercuspidation maximale.",
+          "Un chemin de fermeture droit.",
+          "Une linguoclusion unilatérale du côté dévié.",
+          "Des molaires projetées lingualement par rapport à la ligne d'arcade selon l'incidence de BOUVET."
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2021 3°EMD ) - L’endoalvéolie inférieure :",
+        "options": [
+          "Est très fréquente",
+          "Se caractérise par une vestibule version des incisives latéraux",
+          "Présente un préjudice fonctionnel important",
+          "Est souvent associé à une supraclusion incisive sévère"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°50 (2021 Résidanat ) - Dans le cas d'articulé inversé transversal unilatéral : 1- Des troubles articulaires sont fréquents 2- L'activité des lèvres est importante 3- La mastication est unilatérale alternée 4- L'activité du buccinateur est importante 5- La déglutition est souvent une déglutition adulte",
+        "options": [
+          "(1, 2)",
+          "(2,4)",
+          "(3,5)",
+          "(1,4)",
+          "(3, 4)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°51 (2021 Résidanat ) - Les anomalies du sens transversal: 1- Sont observées dans le plan frontal 2- Sont observées dans le plan facial 3- Peuvent être à l'origine de troubles posturaux 4- Ont une déglutition mixte 5- Leur traitement est souvent en denture adulte",
+        "options": [
+          "(1,2)",
+          "(2,5)",
+          "(1,3)",
+          "(4,5)",
+          "(2,4)‎"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2020 2°EMD) - L’endoalvéolie inférieure",
+        "options": [
+          "Est très fréquente",
+          "Se caractérise par une vestibulo version des secteurs latéraux",
+          "Présente un préjudice fonctionnel important",
+          "Est souvent associé à une supraclusion incisive sévère"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2020 2°EMD) - Une latérodéviation mandibulaire peut être présente en cas :",
+        "options": [
+          "D’endoalvéolie maxillaire symétrique",
+          "D’endoalvéolie maxillaire asymétrique",
+          "De prématurités occlusales",
+          "D’exoalvéolie mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2020 2°EMD) - Le diagnostic différentiel d’une endoalvéolie inférieure se fait avec :",
+        "options": [
+          "Une endognathie maxillaire",
+          "Une endognathie mandibulaire",
+          "Une exognathie maxillaire",
+          "une exognathie mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2019 3°EMD ) - L’endognathie alvéolaire :",
+        "options": [
+          "Est une anomalie alvéolaire du sens transversal",
+          "Se manifeste par un encombrement incisif",
+          "Correspond à une insuffisance de développement transversal des maxillaires",
+          "Est caractérisé par une inclinaison linguale des secteurs latéraux"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2019 Résidanat ) - L'occlusion croisée latérale avec glissement : 1- Est due à un manque de développement sagittal du maxillaire. 2- Est due à une discordance entre les largeurs des arcades supérieure et inférieure. 3- Se manifeste par une constante déviation latérale de la mandibule. 4- Se manifeste par une mastication non fonctionnelle du côté de l'occlusion croisée. 5- En absence de traitement, cette occlusion va évoluer pour consacrer la déviation.",
+        "options": [
+          "(2-5)",
+          "(3-5)",
+          "(1-4 )",
+          "(2-4)",
+          "(3-1)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2018 2°EMD) - L’endoavéolie supérieure symétrique avec linguooclusion unilatérale se manifeste par :",
+        "options": [
+          "Une symétrie mandibulaire objectivé sur téléradiographie",
+          "Une occlusion croisée en denture temporaire",
+          "Une linguocclusion unilatérale de la déviation",
+          "Un menton en normo position en ICM"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2018 2°EMD) - L’endoalveolie supérieure symétrique avec linguocclusion bilatérale :",
+        "options": [
+          "A pour étiologie une succion digitale et une déglutition atypique",
+          "Se manifeste par une coïncidence des milieux inter incisifs en RC et ICM",
+          "A pour signe constant une latéro déviation",
+          "Et difficile à différencier de l’endognathie maxillaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2018 2°EMD) - L’endoalvéolie supérieure symétrique avec linguocclusion unilatérale se manifeste par :",
+        "options": [
+          "Une normoposition du menton en ICM",
+          "Une occlusion croisée en denture temporaire",
+          "Une linguocclusion unilatérale du côté opposé à la déviation",
+          "Une symétrie mandibulaire objectivée sur téléradiographie axiale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2018 2°EMD) - L’endoalvéolie supérieure asymétrique :",
+        "options": [
+          "Est due à une mastication unilatérale non alternée",
+          "La palato version du secteur latéral est à l’origine de trouble cinétiques",
+          "Les milieux coïncident en RC et ICM",
+          "La linguoocclusion est unilatérale"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2017 3°EMD ) - L’endoalvéolie symétrique avec linguocclusion bilatérales se caractérise par :",
+        "options": [
+          "Une latérodéviation",
+          "Des signes cliniques semblables à une endognathie maxillaire",
+          "Une occlusion croisée bilatérale",
+          "Une coïncidence des milieux inter-incisifs en RC et ICM"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2017 3°EMD ) - L’endoalveolie asymétrique avec articulé inversé unilatéral :",
+        "options": [
+          "Se caractérise par une inclinaison vestibulaire des secteurs latéraux",
+          "C’est un développement asymétrique du maxillaire supérieur sans troubles",
+          "Se caractérise par une non coïncidence des points inter incisifs en intercuspidation",
+          "Se caractérise par une symétrie de la forme d’arcade maxillaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2016 Résidanat ) - La ventilation buccale peut être la cause : 1- D'une classe III squelettique 2- D'une endognathie maxillaire 3- D'une hypodivergence mandibulaire 4- D'une supraclusion 5- D'une hypertonicité labiale",
+        "options": [
+          "(1-3)",
+          "(1-2)",
+          "(2-4)",
+          "(5-4)",
+          "(3-4)"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2016 Résidanat ) - Une déviation du chemin de fermeture peut être liée à la présence : 1- D'une endoalvéolie supérieure symétrique 2- D'interférences occlusales 3- De dysfonctions linguales 4- D'une dent incluse 5- D'une hypotonicité musculaire",
+        "options": [
+          "(1-2-3)",
+          "(2-4-5)",
+          "(1-4-5)",
+          "(1-2)",
+          "(2-5)"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "diagnostic des anomalies dento-alvéolaires _ verti",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°2 (2025 2°EMD DENTAIRE) - La ou les caractéristique (s) clinique (s) typique (s) d'une supraclusion dentaire :",
+        "options": [
+          "Exposition excessive des incisives supérieures au repos.",
+          "Recouvrement insuffisant des incisives inférieures par les incisives supérieures.",
+          "Diminution de la dimension verticale du tiers inférieur du visage.",
+          "Augmentation du recouvrement incisif."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2023 2°EMD) - En présence d'open bite, on peut observer",
+        "options": [
+          "Une béance fonctionnelle associée",
+          "Une rotation postérieure",
+          "Une hypertonicité musculaire",
+          "Des troubles de la respiration"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2022 2°EMD) - Dans une béance d’origine primaire :",
+        "options": [
+          "On peut observer des lésions muqueuses",
+          "Les incisives inférieures sont abrasées",
+          "La musculature est hypotonique",
+          "L’occlusion est normale ou perturbé"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2022 2°EMD) - Dans une béance d’origine primaire",
+        "options": [
+          "On peut observer des lésions muqueuses",
+          "Les incisives inférieures sont abrasées",
+          "La musculature est hypotonique",
+          "L’occlusion est normale ou perturbé"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2021 3°EMD ) - l’hyperdivergence squelettique :",
+        "options": [
+          "concerne toutes les classes squelettiques",
+          "a pour origine une insuffisance respiratoire",
+          "l’angle goniaque est souvent augmenté",
+          "la courbe de Spee est exagérée à l’arcade supérieure"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2021 3°EMD ) - dans le cas d’hypodivergence squelettique :",
+        "options": [
+          "l’overjet peut etre normal ou diminué",
+          "la supraclusion incisive peut s’accompagner d’une supra alveolie molaire",
+          "la supraclusion incisive peut s’accompagne d’une infra-alvéolie molaire",
+          "nous retrouvons une pulsion linguale comme étiologie"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2020 3°EMD ) - les troubles de la ventilation nasale peuvent être à l’origine d’une :",
+        "options": [
+          "supraclusie antérieure et infraclusie postérieure",
+          "infraclusie antérieure seule",
+          "supraclusie antérieure",
+          "infraclusie antérieure et supraclusie postérieure"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2020 3°EMD ) - Dans les signes cliniques d’une supraclusie nous retrouvons",
+        "options": [
+          "une courbe de Spee exagérée au maxillaire supérieur",
+          "une courbe de Spee inversée au maxillaire supérieur",
+          "une courbe de Spee exagérée à la mandibule",
+          "une supraclusion vraie dans tous les cas"
+        ],
+        "correctOptionIndexes": [
+          1,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2020 3°EMD ) - Le diagnostic différentiel des supralvéolie se fait avec",
+        "options": [
+          "La supraclusion molaire",
+          "L’infraclusion molaire",
+          "La calsse II div 1 face longue",
+          "La classe II div 1 face courte"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2020 3°EMD ) - L’infraclusion antérieure se caractérise par :",
+        "options": [
+          "Le plus souvent une face longue",
+          "Un profil rectiligne",
+          "Un profil concave",
+          "un stomion marqué avec lèvres inférieure en éversion"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2020 Résidanat ) - Lorsque l'overbite est augmenté on a :",
+        "options": [
+          "Un articulé inversé",
+          "Une supraclusie",
+          "Un surplomb exagéré",
+          "Une rétroclusie",
+          "Une endoclusie des molaires"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2020 2°EMD) - La béance latérale :",
+        "options": [
+          "Se caractérise par une absence de contact total de l’arcade en intercuspidie maximale",
+          "Est très fréquente et causé par une interposition linguale",
+          "S’accompagne souvent d’un proglissement latéral",
+          "Se caractérise par une insuffisance de la hauteur alvéolaire molaire est prémolaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2019 2°EMD) - La supraclusion est :",
+        "options": [
+          "Une anomalie essentiellement postérieure",
+          "Observées dans toutes les classes d’Angle",
+          "Le plus souvent symétrique",
+          "Souvent d’origine génétique"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2018 3°EMD ) - L’origine étiologique de la béance squelettique",
+        "options": [
+          "Est surtout héréditaire",
+          "Peut-être aggravée en cas de dysfonctions",
+          "Est fonctionnelle",
+          "En rapport avec les anomalies osseuses associées",
+          "Est confondu avec le centre de rotation dans le cas de gression pure"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2018 2°EMD) - Si la béance squelettique :",
+        "options": [
+          "Les fonctions oro-faciales sont correctes",
+          "La respiration peut être buccale",
+          "L’étiologie est strictement primaire",
+          "L’évolution est défavorable"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2018 2°EMD) - Selon Le diagnostic différentiel d’une endoalvéolie inférieure se fait avec :",
+        "options": [
+          "Une endognathie maxillaire",
+          "Une endognathie mandibulaire",
+          "Une exognathie maxillaire",
+          "Une exognathie mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2018 2°EMD) - Parmi les anomalies associées à l’infraclusie, on peut citer :",
+        "options": [
+          "La classe II/2",
+          "La classe II/1 face courte",
+          "La classe II/1 face longue",
+          "la classe II avec rotation postérieure"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2018 2°EMD) - L’hyperactivité des muscles élévateurs est en faveur",
+        "options": [
+          "De la supraclusie",
+          "De l’infraclusie",
+          "De la rotation antérieure",
+          "De la béance antérieure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2018 2°EMD) - Les facteurs étiologiques en faveur de la béance antérieure sont :",
+        "options": [
+          "Les dysfonctions linguales",
+          "La DDD pour excès maxillaire",
+          "Une cause primaire",
+          "En décalage des bases osseuses de classe II ou de classe III"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2018 3°EMD ) - Les insuffisances verticales sont caractérisées par :",
+        "options": [
+          "Une diminution de la hauteur faciale inférieure",
+          "Une supraclusie constante",
+          "Une respiration plus souvent buccale",
+          "Une musculature très forte est très antérieure"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2018 2°EMD) - La supraclusie est :",
+        "options": [
+          "Une anomalie essentiellement postérieure",
+          "Observé dans la classe I, la classe II ou la classe III d’Angle",
+          "Le plus souvent symétrique",
+          "Souvent d’origine génétique"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2017 2°EMD) - Dans les anomalies alvéolaires :",
+        "options": [
+          "L’infraclusion n’est jamais d’origine primaire",
+          "L’infraclusion est toujours d’origine fonctionnelle",
+          "La supraclusie est souvent d’origine primaire",
+          "La supraclusie est souvent d’origine fonctionnelle"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -1776,7 +3547,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°14 (2024 1°EMD - Q592\nLes anomalies alvéolaires sont souvent",
+        "questionText": "N°14 (2024 1°EMD) - Les anomalies alvéolaires sont souvent",
         "options": [
           "d'origine génétique",
           "Dues à un trouble fonctionnel",
@@ -1786,10 +3557,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "La plupart ont pour origine un trouble fonctionnel : la pro et la rétroalvéolie l’endo et l’exo-alvéolie, les béances ;Troubles fonctionnels : Les déséquilibres musculaires Les dysfonctions Les Parafonctions"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2024 1°EMD - Q609\nParmi les facteurs étiologiques de la DDM par macrodontie nous pouvons citer:",
+        "questionText": "N°15 (2024 1°EMD) - Parmi les facteurs étiologiques de la DDM par macrodontie nous pouvons citer:",
         "options": [
           "L'absence des diastèmes en denture temporaire",
           "Une insuffisance de croissance des arcades dento alvéolaires",
@@ -1799,10 +3570,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°16 (2024 1°EMD - Q619\nUn trouble de la ventilation nasale peut provoquer",
+        "questionText": "N°16 (2024 1°EMD) - Un trouble de la ventilation nasale peut provoquer",
         "options": [
           "une dilacération dentaire",
           "une endognathie maxillaire",
@@ -1812,10 +3583,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2022 1°EMD - Q1199\nLes causes héréditaires :",
+        "questionText": "N°15 (2022 1°EMD) - Les causes héréditaires :",
         "options": [
           "interviennent souvent dans la survenue des anomalies squelettiques",
           "Sont généralement incriminées dans l'apparition de la dysharmonie dento-maxillaire",
@@ -1825,10 +3596,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Sont des causes qui nont pas liée a des actes iatrogenes car souvent , ils sont genetiqueEt sont souvent reteouvées dans les grandes syndromes"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°8 (2021 2°EMD - Q1447\nla détermination de l’étiologie des anomalies dento maxilla-faciales :",
+        "questionText": "N°8 (2021 2°EMD) - la détermination de l’étiologie des anomalies dento maxilla-faciales :",
         "options": [
           "Est un élément essentiel dans la prise en charge du patient",
           "Permet d’établir un diagnostic positif correct",
@@ -1838,10 +3609,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "C : influence les chances de réussite du traitement"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°9 (2021 2°EMD - Q1464\nLes causes primaires des anomalies dento maxilla-faciales :",
+        "questionText": "N°9 (2021 2°EMD) - Les causes primaires des anomalies dento maxilla-faciales :",
         "options": [
           "Les causes héréditaires et congénitales",
           "Les troubles dentaires",
@@ -1851,10 +3622,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "« Les causes primaires constituent les facteurs héréditaires et congénitaux qui s’expriment au cours de l’embryogénèse, la morphogénèse et tout au long de la croissance. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2020 3°EMD - Q1703\nLes anomalies dentaires",
+        "questionText": "N°1 (2020 3°EMD ) - Les anomalies dentaires",
         "options": [
           "Ont toute une origine commune",
           "Ont une origine multifactorielle",
@@ -1864,10 +3635,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°13 (2020 3°EMD - Q1870\nLes causes primaires des anomalies dento-maxillo-faciales sont :",
+        "questionText": "N°13 (2020 3°EMD ) - Les causes primaires des anomalies dento-maxillo-faciales sont :",
         "options": [
           "Les causes héréditaires et congénitale",
           "Les troubles dentaires",
@@ -1877,10 +3648,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Les causes primaire ( générales ) :  Causes héréditaires et congénitales ; Causes pathologiques (endocriniennes ou infectieuses) ; Causes carentielles (vitam A, C...) Les traumatismes"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°15 (2019 2°EMD - Q2201\nLes anomalies dentaires ;",
+        "questionText": "N°15 (2019 2°EMD) - Les anomalies dentaires ;",
         "options": [
           "Ont une origine multifactorielle",
           "Ont une origine uni-factorielle",
@@ -1890,10 +3661,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Certaines sont purement primaires : agénésie, odontome, germes surnuméraire,D’autres sont secondaires ou tertiaires : dilacération, perte précoce...Certaines ont une origine mixte : inclusion, transposition, hétérotopie,génétique."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°20 (2019 2°EMD - Q2256\nLes anomalies alvéolaires sont souvent :",
+        "questionText": "N°20 (2019 2°EMD) - Les anomalies alvéolaires sont souvent :",
         "options": [
           "D’origine génétique",
           "Dues à un trouble fonctionnel",
@@ -1903,10 +3674,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "« Les causes secondaires sont des causes acquises qui apparaissent après la naissance. Elles comprennent les facteurs fonctionnels (dysfonctions, parafonctions) ainsi que les facteurs dentaires, musculaires, muqueux ; traumatiques et iatrogènes. »"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2017 2°EMD - Q2653\nLa détermination de l’origine des anomalies en ODF :",
+        "questionText": "N°3 (2017 2°EMD) - La détermination de l’origine des anomalies en ODF :",
         "options": [
           "Permet d’établir le diagnostic étiologique",
           "Permet de décider de la prise en charge ou non du patient",
@@ -1916,7 +3687,1314 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "Etude diagnostique des anomalies dentaires de nomb",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°18 (2024 1°EMD) - L'agénésie dentaire est causée par :",
+        "options": [
+          "Des facteurs environnementaux",
+          "Des gènes spécifiques",
+          "Une insuffisance de développement de l'email",
+          "Une hypoplasie des dents définitive"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2023 2°EMD) - L'ordre de fréquence de l'agénésie des dents permanentes concerne :",
+        "options": [
+          "Les dents de sagesse-les prémolaires puis les Incisives latérales",
+          "Les dents de sagesse- les Incisives latérales- les prémolaires",
+          "Les deuxièmes prémolaires inferieures-les incisives latérales- les dents de sagesse",
+          "Les deuxièmes prémolaires inferieures -les incisives latérales supérieures"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2023 2°EMD) - Par définition le mesiodens :",
+        "options": [
+          "C’est une dent surnuméraire dans la région incisivo-canine",
+          "C’est une dent supplémentaire dans la région incisivo-canine",
+          "C’est un odontoïde quand il en situation d'inclusion",
+          "Son anatomie est semblable à l'incisive latérale"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2023 2°EMD) - Dans l'étiologie de l'agénésie ses prémolaires, on retrouve :",
+        "options": [
+          "Une mutation du gène MSX1",
+          "Une mutation du gène MSX2",
+          "Un traumatisme dentaire à la naissance",
+          "Une avitaminose pendant la grossesse"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2023 2°EMD) - L'agénésie bilatérale des Incisives latérales :",
+        "options": [
+          "Est d'origine héréditaire",
+          "Peut être due à un traumatisme sur les incisives temporaires",
+          "Peut être à l’origine d'un décalage de classe lll",
+          "Peut être à l’origine d'une classe ll molaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2022 1°EMD) - L'agénésie dentaire est:",
+        "options": [
+          "L'anomalie dentaire la plus fréquente",
+          "Une anomalie de forme qui peut être uni ou bilatérale",
+          "Confirmée par l'examen radiologique",
+          "Une anomalie d'origine génétique"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2022 1°EMD) - Les dents surnuméraires :",
+        "options": [
+          "Sont les principales causes d'inclusion dentaire",
+          "Sont plus fréquentes dans la région latérale de l'arcade",
+          "Doivent être extraites le plus tôt possible",
+          "Se manifestent par DDM par microdontie"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2019 2°EMD) - La présence d’un odontome peut être la cause d’une :",
+        "options": [
+          "Inclusion dentaire",
+          "Rétention dentaire",
+          "Agénésie dentaire",
+          "D’une dysharmonie dento-dentaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2018 2°EMD) - La présence d'un odontome peut être la cause d'une:",
+        "options": [
+          "Inclusion dentaire",
+          "Rétention dentaire",
+          "Agénésie dentaire",
+          "D'une dysharmonie dento-dentaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2018 2°EMD) - l'hypodontie se caractérise par:",
+        "options": [
+          "Une agénésie totale des dents permanentes",
+          "Une agénésie de moins de six dents permanente",
+          "Une agénésie de plus de six dents permanentes",
+          "Une atteinte des prémolaires et des incisives latérales"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2018 2°EMD) - En présence d'une fente labio palatine-on retrouve:",
+        "options": [
+          "Une inclusion des prémolaires",
+          "Une agénésie des deuxièmes prémolaires",
+          "Une inclusion dentaire",
+          "Une agénésie des incisives latérales"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2018 2°EMD) - La mutation du gene MSX1 est la cause:",
+        "options": [
+          "De l'agénésie des dents de sagesses",
+          "De l'agénésie des incisives latérales",
+          "De l'agénésie des prémolaires supérieures",
+          "De la présence des dents surnuméraire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2016 2°EMD) - La persistance d’une dent de lait sur l’arcade nous oriente sur :",
+        "options": [
+          "Un retard d’éruption",
+          "Agénésie dentaire",
+          "DDM future par microdontie relative",
+          "Ankylose dentaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "inclusion et agénésie",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°1 (2020 3°EMD ) - Les anomalies dentaires",
+        "options": [
+          "Ont toute une origine commune",
+          "Ont une origine multifactorielle",
+          "La DDM due au remodelage des maxillaires est dite tertiaire",
+          "L’agénésie dentaire peut être d’origine secondaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2020 2°EMD) - Le signe de QUINTERO :",
+        "options": [
+          "Se caractérise par une disto-version des incisives latérales",
+          "Se caractérise par une mésio-version des incisives latérales",
+          "Se caractérise par une mesio-version des canines",
+          "C’est le signe d’une inclusion dentaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2020 2°EMD) - L’inclusion dentaire est due à :",
+        "options": [
+          "La réduction des dimensions des arcades",
+          "Une brachygnathie",
+          "Une macrodontie",
+          "La présence des dents de Hutchinson"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2020 3°EMD ) - La méthode de CLARK permet :",
+        "options": [
+          "D’évaluer le risque de résorption radiculaire",
+          "De situer la dent incluse dans le plan frontal",
+          "De déterminer la situation vestibulaire de la dent incluse",
+          "De déterminer la situation linguale de la dent incluse"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2019 2°EMD) - La présence d’un odontome peut être la cause d’une :",
+        "options": [
+          "Inclusion dentaire",
+          "Rétention dentaire",
+          "Agénésie dentaire",
+          "D’une dysharmonie dento-dentaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2019 2°EMD) - L’hypodontie se caractérise par :",
+        "options": [
+          "Une agénésie totale des dents permanentes",
+          "Une agénésie de moins de six dents permanentes",
+          "Une agénésie de plus de six dents permanentes",
+          "Une atteinte des prémolaires et des incisives latérales"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2019 2°EMD) - Le cône beam permet :",
+        "options": [
+          "Le contrôle de la croissance",
+          "L’évaluation des voies aériennes supérieures",
+          "La localisation de la dent incluse",
+          "D’avoir la possibilité de faire des reconstitutions en 3D"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2019 2°EMD) - Dens in dente:",
+        "options": [
+          "Est une dent invaginée",
+          "Concerne l’incisive latérale supérieure",
+          "Concerne l’incisive latérale inférieure",
+          "Est une anomalie morphologique"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2019 2°EMD) - Le tubercule de Bolk :",
+        "options": [
+          "Est une anomalie coronaire",
+          "S’observe sur la face palatine de la 2e molaire permanente",
+          "S’observe sur la face postéro vestibulaire de la 1e molaire permanente",
+          "S’observe sur la face postéro vestibulaire de la 1e molaire temporaire"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2019 2°EMD) - Les anomalies dentaires ;",
+        "options": [
+          "Ont une origine multifactorielle",
+          "Ont une origine uni-factorielle",
+          "Sont souvent primaires",
+          "Sont souvent secondaires"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2018 2°EMD) - L’examen clinique la signe de QUITERO :",
+        "options": [
+          "Nous oriente sur une inclusion dentaire",
+          "Se caractérise par une distoversion des dents antérieures",
+          "Se caractérise par une distoversion des incisives latérales et une mesioverssion des incisives centrales",
+          "Se caractérise par une distoversion centrales et une mesioversion des incisives latérales"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2017 2°EMD) - La mutation des gène MSX1 peut être à l’origine :",
+        "options": [
+          "D’une inclusion dentaire",
+          "De l’agénésie des dents de sagesse",
+          "De l’agénésie des incisives latérales supérieures",
+          "De l’agénésie des prémolaires"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2017 2°EMD) - Les causes primaires des inclusions dentaires sont :",
+        "options": [
+          "Les traumatismes des dents temporaires",
+          "La brachygnathie maxillaire",
+          "La dysharmonie dento-maxillaire par macrodontie relative",
+          "Les extractions prématurées"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2017 3°EMD ) - Dans les inclusions dentaires, la radiographie panoramique permet de déterminer :",
+        "options": [
+          "Le nombre d’inclusion et leur situation",
+          "La localisation précise de la dent dans l’espace",
+          "L’existence ou la présorption d’ankylose",
+          "La situation vestibulo-linguale de la dent incluse et ses rapports"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2016 3°EMD ) - Une inclusion dentaire peut être due à :",
+        "options": [
+          "Une DDM par microdontie relative",
+          "Un brachygnathie maxillaire",
+          "Une classe II division 2",
+          "Des extractions postérieures"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2016 2°EMD) - La persistance d’une dent de lait sur l’arcade nous oriente sur :",
+        "options": [
+          "Un retard d’éruption",
+          "Agénésie dentaire",
+          "DDM future par microdontie relative",
+          "Ankylose dentaire"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2016 2°EMD) - La mutation de gène MSX1 serait à l’origine :",
+        "options": [
+          "De l’agénésie des incisives latérales",
+          "De l’agénésie des prémolaires et molaires",
+          "De la présence de dents surnuméraires",
+          "De l’agénésie des canines inférieures"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2015 2°EMD) - Le signe de Quintero permet de mettre en évidence :",
+        "options": [
+          "Une agénésie dentaire",
+          "Une inclusion dentaire",
+          "Des dents surnuméraires",
+          "des dents supplémentaires"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "Le dossier orthodontique",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°5 (2025 1°EMD DENTAIRE) - La téléradiographie de profil:",
+        "options": [
+          "Donne une image du crâne et de la face",
+          "Permet l'évaluation de l'âge osseux du patient",
+          "Sera prescrite pour la réalisation des analyses céphalométriques",
+          "Facilite de la mesure de la largeur mesiodistale des dents"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2025 1°EMD DENTAIRE) - La téléradiographie de profil :",
+        "options": [
+          "Est une technique basée sur la standardisation des clichés.",
+          "Est un examen complémentaire.",
+          "Est réalisée à une distance variable de la source d'émission",
+          "Donne un diagnostic squelettique dans les trois sens de l'espace."
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2025 1°EMD DENTAIRE) - La Radiographie panoramique",
+        "options": [
+          "Est un examen de dépistage indispensable",
+          "Fournit une vision partielle des arcades dentaires",
+          "Constitue un examen de deuxième intention",
+          "D Permet d'avoir une vue d'ensemble des maxillaires, des dents, et des ATM"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°18 (2025 1°EMD DENTAIRE) - Les photographies:",
+        "options": [
+          "Permettent de compléter et de détailler l'examen clinique",
+          "De face, doivent être réalisées en relation centrée",
+          "De profil, donnent le diagnostic esthétique",
+          "En endo buccal sont optimisées par l'utilisation de miroir"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2024 1°EMD) - La radiographie panoramique",
+        "options": [
+          "Est un examen radiologique de base du dossier orthodontique",
+          "Est un examen de seconde intension",
+          "Permet d'avoir une vue d'ensemble des maxillaires, des dents et des ATM",
+          "Permet de bien visualiser le ménisque"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2022 1°EMD) - Les radiographies en ODF de première intention sont:",
+        "options": [
+          "Le panoramique dentaire.",
+          "LA téléradiographie de face.",
+          "La tomodensitométrie.",
+          "La radiographie du poignet"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2022 1°EMD) - L'examen endo-buccal permet:",
+        "options": [
+          "Déterminer le type de la denture",
+          "De décider du moment opportun d'entreprendre le traitement",
+          "D'affirmer la présence ou non d'inclusion dentaire",
+          "L'étude de l'occlusion dynamique"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2022 1°EMD) - Les éléments Indispensables du dossier orthodontique sont :",
+        "options": [
+          "Les moulages et les empreintes optiques",
+          "La radiographie panoramique",
+          "La téléradiographie de profil",
+          "La téléradiographie de face"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2022 1°EMD) - Les moulages permettent de",
+        "options": [
+          "Noter la formule dentaire.",
+          "Déceler les agénésies dentaires.",
+          "Calculer l'espace nécessaire.",
+          "Mesurer le décalage des bases osseuses"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2022 1°EMD) - La téléradiographie de profil:",
+        "options": [
+          "Est une technique basée sur la standardisation des clichés",
+          "Est un examen complémentaire de première intention",
+          "Est réalisée à une distance variable de la source d'émission",
+          "Donne un diagnostic squelettique dans les trois sens de l'espace"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2022 1°EMD) - La téléradiographie de profil:",
+        "options": [
+          "Est une technique basée sur la standardisation des clichés",
+          "Est un examen complémentaire de première intention",
+          "Est réalisée à une distance variable de la source d'émission",
+          "Donne un diagnostic squelettique dans les trois sens de l'espace"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°87 (2022 Résidanat ) - Les moulages d'étude permettent d'évaluer 1- La forme d'arcade 2- Les dimensions dentaires 3- L'encombrement dentaire 4- L'occlusion dentaire dynamique 5- L'engrènement dynamique des molaires et prémolaires",
+        "options": [
+          "(1,2,3)",
+          "(2.3,4)",
+          "(1,3,4)",
+          "(3,4,5)",
+          "(1,2,4)"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2021 1°EMD) - La photographie de profil :",
+        "options": [
+          "Permet de détecter une asymétrie de la forme mandibulaire",
+          "Permet d’apprécier l’angle naso-labial",
+          "Peut montrer une brièveté de la lèvre supérieure",
+          "Peut montrer une progénie"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2021 1°EMD) - Le panoramique dentaire",
+        "options": [
+          "Permet d’apprécier le type de rotation mandibulaire",
+          "Permet d’évaluer la hauteur de l’os alvéolaire",
+          "Permet d’analyser les dystopies dentaires",
+          "Permet d’apprécier la symétrie mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2021 1°EMD) - L’examen des moulages :",
+        "options": [
+          "Permet d’analyser les angles masticatoires de planas",
+          "Permet de détecter un décalage entre la RC et l’ICM",
+          "Permet de faire une évaluation chiffrée de la DDM",
+          "Permet de déterminer la formule dentaire et l’âge dentaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°17 (2021 1°EMD) - LA téléradiographie de profil :",
+        "options": [
+          "Est un cliché standard tridimensionnel",
+          "Permet l’analyse des structures basales dans le sens transversal et vertical",
+          "Permet l’analyse des structures osseuses dans le sens sagittal et vertical",
+          "Doit être reproductible"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°56 (2021 Résidanat ) - Le sésamoïde:",
+        "options": [
+          "Apparait en regard de la face externe de la diaphyse de la PP du majeur",
+          "Est visible au moment du pic de croissance",
+          "Est visible 12 mois avant le pic de croissance chez les garçons",
+          "Est visible 12 mois après le pic de croissance chez les garçons",
+          "Est visible 9 mois après le pic de croissance chez les filles"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2019 1°EMD) - Les photographies en ODF permettent :",
+        "options": [
+          "De conserver une image objective et servent de références pour les comparaisons ultérieures",
+          "D'apprécier la symétrie du visage par rapport au PSM (Plan sagittal médian)",
+          "D'apprécier le modèle du profil et l'équilibre du sourire.",
+          "De constituer une pièce médicolégale pour l'élaboration d'un rapport d'expertise"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2019 1°EMD) - La téléradiographie TLR :",
+        "options": [
+          "Permet de visualiser le ménisque.",
+          "Détermine la formule dentaire.",
+          "Est réalisée avec une distance foyer-objet importante (4 mètres).",
+          "Donne une image du crâne et de la face avec une déformation minime"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2018 Résidanat ) - L'examen de la radiographie panoramique est un examen complémentaire qui permet : 1- D'étudier la formule dentaire, l'état parodontal et la morphologie dentaire. 2- De préciser le diagnostic et de quantifier l'importance des dysmorphoses. 3- D'évaluer l'âge osseux. 4- D'étudier globalement les articulations temporo-mandibulaires, les sinus et les fosses nasales. 5- D'étudier les relations dentaires dans les 3 sens de l'espace.",
+        "options": [
+          "(1-4-5)",
+          "(2-4)",
+          "(1-4)",
+          "(2-3-4)",
+          "(1-5)"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2018 1°EMD) - Lors de l'anamnese l'orthodontiste recherche :",
+        "options": [
+          "Les antécédents familiaux du patient",
+          "Les pathologies générales avec percussions directes sur la croissance crâniofaciale",
+          "Le type d'occlusion canine et molaire",
+          "Les pathologies en rapport avec les troubles de la respiration"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2018 1°EMD) - La radiographie panoramique :",
+        "options": [
+          "Est un examen radiologique de base du dossier orthodontique",
+          "Est un examen radiologique de seconde intention",
+          "Permet de bien visualiser le ménisque",
+          "Permet d'avoir une vue d'ensemble des maxillaires, des dents et des ATM"
+        ],
+        "correctOptionIndexes": [
+          0,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2018 1°EMD) - La radiographie du poignet :",
+        "options": [
+          "Sert à déterminer l'âge osseux du patient",
+          "Permet d'observer l'apparition des os du poignet",
+          "Permet de situer le patient sur sa courbe de croissance",
+          "Est un examen indispensable à tous les traitements orthodontiques"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2018 1°EMD) - Les modèles d'étude permettent :",
+        "options": [
+          "L'évaluation des formes d'arcade et leur concordance",
+          "L'évaluation de la quantité d'encombrement ou de diastèmes",
+          "La mesure de la profondeur de la courbe de Spee",
+          "L'étude de l'occlusion statique et dynamique"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2018 1°EMD) - La téléradiographie (TLR) de profil:",
+        "options": [
+          "Est un examen indispensable au dossier orthodontique",
+          "Est une radiographie standardisée et reproductible",
+          "Permet d'analyser le sens sagittal et vertical",
+          "Permet l'étude de la dimension transversale et de la symétrie"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2018 1°EMD) - Le scanner à rayon X :",
+        "options": [
+          "Permet l'exploration de situations complexes",
+          "Permet l'analyse des inclusions dentaires",
+          "Permet la recherche d'un foyer d'ankylose.",
+          "Est un examen incontournable du dossier orthodontique"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "les grands syndromes pathologiques",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°4 (2025 3°EMD DENTAIRE) - Le syndrome de Cauhépé-Fieux se caractérise par :",
+        "options": [
+          "Une latérodéviation fonctionnelle.",
+          "Une constriction de l'arcade mandibulaire.",
+          "Un maxillaire hyper large.",
+          "Une endoalvéolie supérieure avec un articulé croisé unilatéral."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2025 3°EMD DENTAIRE) - Le syndrome de CROUZON se caractérise par :",
+        "options": [
+          "Exophtalmie avec strabisme divergent",
+          "Hypertélorisme.",
+          "Une syndactylie avec fusion des os et de la peau des phalanges distales touchant les deux mains et pieds.",
+          "Hypoplasie ou absence d'épine nasale antérieure."
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2025 3°EMD DENTAIRE) - Le syndrome de Binder:",
+        "options": [
+          "Est une crâniosténose d'origine héréditaire.",
+          "D'origine inconnue et peut être dû à certains facteurs environnementaux comme la carence en vitamine K pendant la grossesse.",
+          "Se caractérise par une hypoplasie des clavicules.",
+          "Se caractérise par une hypoplasie ou absence d'épine nasale antérieure."
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2023 2°EMD) - Le syndrome d'APERT est caractérisé par :",
+        "options": [
+          "Une dolichocéphalie",
+          "Une hypoplasie de l'étage moyen de la face",
+          "Des orbites sont orientées en dehors et latéralement",
+          "Un rétrognathisme"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°19 (2023 2°EMD) - Syndrome de FRANCESCHETTI-TREACHER associe :",
+        "options": [
+          "Une hypoplasie des pavillons des oreilles",
+          "une atrésie des conduits auditifs externes",
+          "Une mandibule en rétrusion avec menton osseux fuyant",
+          "Une hypoplasie des os malaires"
+        ],
+        "correctOptionIndexes": [
+          0,
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°1 (2022 3°EMD ) - Les dysplasie dentaires sont surtout associé :",
+        "options": [
+          "Au syndrome de Crouzon",
+          "Aux cas de thalassémie",
+          "Au syndrome de Robin",
+          "A la dysostose cléido-cranienne"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°2 (2022 2°EMD) - Le syndrome de CROUZON :",
+        "options": [
+          "Est une craniosténose d’origine héréditaire",
+          "Est causé par une fermeture prematurée des sutures coronale est sphéno occipitale",
+          "Présentte une hypoplasie de la mandibule avec oligodontie",
+          "Présente une fente labiale associé à un hypertélorisme est strabisme convergent"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2022 2°EMD) - En cas de syndrome de Binder, on note :",
+        "options": [
+          "Une classe II squelettique",
+          "Une hypoplasie du nez",
+          "Une hyperdivergence mandibulaire",
+          "Un hypodeveloppement de l’étage moyen"
+        ],
+        "correctOptionIndexes": [
+          1,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°94 (2022 Résidanat ) - Le syndrome de Cauhépé-Fieux est caractérisé par une : 1- Mastication unilatérale 2- Déglutition infantile 3- Exoclusie unilatérale 4- Endoalvéolie supérieure 5- Latérognathie mandibulaire",
+        "options": [
+          "(1,5)",
+          "(1,3)",
+          "(2,5)",
+          "(3,4,5)",
+          "(1,2,4)"
+        ],
+        "correctOptionIndexes": [
+          4
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2021 3°EMD ) - le syndrome de Robin :",
+        "options": [
+          "est une dysosyose cranio-faciale appelée Triade de pierre",
+          "est caractérisé par l’association d’une promandibulie , macroglossie et fente palatine",
+          "présente une glassoptose",
+          "présente un trouble du comportement neuromusculaire"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2021 3°EMD ) - Le syndrome du respiration buccal se caractérise par :",
+        "options": [
+          "Une occlusion croisé dans les secteurs latéraux",
+          "Une supraclusion dentaire antérieure",
+          "Une rotation postérieure de la mandibule",
+          "Une position basse de la langue au repos"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2021 3°EMD ) - les fentes labio palatines :",
+        "options": [
+          "ont une étiologie multifactorielle",
+          "résultent d’un défaut de mésodermisationn du tissu des processus palatins",
+          "sont des malformations cranio faciale mineures",
+          "sont caractérisées par un décalage osseuse sagittal de classe ll"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°10 (2021 3°EMD ) - Le syndrome du respirateur buccal se caractérise par une :",
+        "options": [
+          "Occlusion croisée dans les secteurs latéraux",
+          "Rotation postérieure de la mandibule",
+          "Interposition linguale à la déglutition",
+          "Position basse de la langue au repos"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2021 2°EMD) - le syndrome de Crouzon :",
+        "options": [
+          "est une craniosténose d’origine héréditaire",
+          "est causé par une fermeture prématuré des sutures coronales et sphéno-occipitale",
+          "présente une hypoplasie de la mandibule avec oligodontie",
+          "présente une fente labiale associé à un hypertélorisme et strabisme convergente"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2020 2°EMD) - Le dysostose cleido-cranienne",
+        "options": [
+          "Est une malformation squelettique acquise",
+          "Est causée par une fermeture prématurée des fontanelles du crane",
+          "Se caractérise par une hypoplasie du massif facial et une rétrognathie mandibulaire",
+          "Se caractérise par des inclusions dentaire multiples"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°4 (2020 Résidanat ) - Le syndrome de Christ-Siemens se caractérise par la présence de :",
+        "options": [
+          "Canines incluses",
+          "Un retard d'éruption des dents",
+          "Anomalies dentaires par insuffisance",
+          "Une syndactylie",
+          "Dents surnuméraires"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2020 3°EMD ) - Dans le syndrome de Cauhere-Fleux, on retrouve une:",
+        "options": [
+          "Coïncidence des points inter incisifs en IGM",
+          "Coïncidence des points inter incisifs au repos",
+          "Endoalveolie unilatérale",
+          "Endoalveolie bilatérale"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2020 3°EMD ) - Les fentes labio palatines :",
+        "options": [
+          "Ont une étiologie multifactorielle",
+          "Résulte d’un défaut de mésodermission du tissu des procesus palatins",
+          "Sont des malformation cranio faciales mineures",
+          "Sont caractérisée par un décalage osseux sagittal de calsse II"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°13 (2019 3°EMD ) - La fente labio-palatine :",
+        "options": [
+          "Ont une étiologie multifactorielle",
+          "Résultent d’un défaut de mésodermisation du tissu de processus palatins",
+          "Sont des malformations cranio faciales mineures",
+          "Sont caractérisée par un décalage osseux sagittal de classe II"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2019 3°EMD ) - La dystose cleido cranienne :",
+        "options": [
+          "Est une malformation acquise",
+          "Est causée par une fermeture prématurée des fontanelles du crane",
+          "Se caractérise par une hypoplasie du massif facial et une rétrognatie mandibulaire",
+          "Se caractérise par des inclusions dentaire multipl"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2019 3°EMD ) - Le syndrome de Crozon:",
+        "options": [
+          "Est une cranio-sétnose d’origine héréditaire",
+          "Est causé par une fermeture prématurée des structures coronale et sphéno- occipitale",
+          "Présente une hypoplasie de la mandibule avec oligodontie",
+          "Présente une fente labiale associé à un hypertélorisme et strabisme convergent"
+        ],
+        "correctOptionIndexes": [
+          0,
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2019 3°EMD ) - Le syndrome d’Apert:",
+        "options": [
+          "Est plus fréquent que le syndrome de Crozon",
+          "Associe une facio-cranio-sténose avec syndactylies osseuses et membranaires",
+          "Présente une brachycéphalie avec hypoplasie de l’étage moyen",
+          "Présente une hypoplasie maxillaire avec DDM et rétrognathie mandibulaire"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°3 (2018 3°EMD ) - En présence d’une fente labio palatine ; on retrouve :",
+        "options": [
+          "Une inclusion des prémolaires",
+          "Une agénésie des deuxième prémolaire une inclusion dentaire",
+          "Une agénésie des incisives latérales"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°7 (2018 3°EMD ) - Dans la dysostose cleido crânienne, on retrouve :",
+        "options": [
+          "Un rétrognathisme mandibulaire",
+          "Un retard d’éruption dentaire",
+          "Des dents incluses",
+          "Une aplasie de la clavicule"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°6 (2016 3°EMD ) - Le syndrome de CAUHEPE FIEUX se caractérise par",
+        "options": [
+          "Une déglutition infantile persistante",
+          "Une exoalvéolie supérieure",
+          "Un latéro-déviation mandibulaire avec anomalie transversale du chemin de fermeture",
+          "Succion de pouce"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2016 3°EMD ) - Le syndrome de suceur type se caractérise par :",
+        "options": [
+          "Une infra alvéolie incisif",
+          "Une proalvéolie supérieur sans diastèmes",
+          "Une endoalvéolie uni ou bi maxillaire",
+          "Une respiration buccale"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      }
+    ]
+  },
+  {
+    "title": "L’inclusion",
+    "subject": "odf-y3",
+    "questions": [
+      {
+        "questionText": "N°17 (2024 1°EMD) - L'inclusion dentaire est due à",
+        "options": [
+          "Une hypertrophie gingivale congénitale",
+          "Une racine dentaire courte",
+          "Une présence d'usure proximales",
+          "Une dysharmonie dento maxillaire acquise"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2023 2°EMD) - La méthode de Clarck permet:",
+        "options": [
+          "D'apporter des renseignements dans le sens transversal",
+          "De réduire le temps d'exposition aux rayons",
+          "De déterminer la situation palatine de la dent incluse",
+          "D'utiliser une radiographie orthogonale excentrée"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2023 2°EMD) - Le cône beam permet :",
+        "options": [
+          "De mettre en évidence des résorptions radiculaires",
+          "L'évaluation des voies aériennes supérieures",
+          "De faire des reconstitutions en 3D",
+          "La localisation de la dent enclavée"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°14 (2023 2°EMD) - Les signes cliniques les plus souvent retrouvés lors d’une inclusion canine sont:",
+        "options": [
+          "Une DDM antérieure importante",
+          "Des diastèmes inter-incisifs",
+          "Un articulé inversé antérieur",
+          "Une béance ou une supraclusie"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2023 2°EMD) - Parmi les facteurs étiologiques de l’inclusion dentaire on retrouve :",
+        "options": [
+          "Une hypothyroïdie",
+          "Syphilis congénitale",
+          "La mutation du gène MSX3",
+          "L'extraction des dents lactéales"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°16 (2023 2°EMD) - L’inclusion de la canine supérieure peut être causée par :",
+        "options": [
+          "Une atrésie du prémaxillaire",
+          "Une anomalie radiculaire de L’incisive latérale",
+          "Une agénésie de l'incisive latérale",
+          "Extraction précoce de la première prémolaire voisine"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°12 (2022 1°EMD) - Les Inclusions dentaires multiples sont",
+        "options": [
+          "Rencontrées d'une façon idiopathique",
+          "Rencontrées dans le syndrome de Gardner",
+          "Rencontrées dans le syndrome de Downs",
+          "Dues à une microdontie"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2021 2°EMD) - la méthode de Clark permet :",
+        "options": [
+          "De déterminer la situation linguale de la dent incluse",
+          "De déterminer la situation palatine de la dent incluse",
+          "D’apporter des renseignements du plan transversal",
+          "De réduire le temps d’exposition aux rayons"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°5 (2020 2°EMD) - Le signe de QUINTERO :",
+        "options": [
+          "Se caractérise par une disto-version des incisives latérales",
+          "Se caractérise par une mésio-version des incisives latérales",
+          "Se caractérise par une mesio-version des canines",
+          "C’est le signe d’une inclusion dentaire"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°15 (2020 3°EMD ) - La méthode de CLARK permet :",
+        "options": [
+          "D’évaluer le risque de résorption radiculaire",
+          "De situer la dent incluse dans le plan frontal",
+          "De déterminer la situation vestibulaire de la dent incluse",
+          "De déterminer la situation linguale de la dent incluse"
+        ],
+        "correctOptionIndexes": [
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2019 2°EMD) - Le cone beam permet:",
+        "options": [
+          "Le contrôle de la croissance.",
+          "L'évaluation des voies aériennes supérieures",
+          "La localisation de la dent incluse.",
+          "La possibilité de faire une reconstitution en 3D"
+        ],
+        "correctOptionIndexes": [
+          2,
+          3
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°8 (2019 2°EMD) - Le cône beam permet :",
+        "options": [
+          "Le contrôle de la croissance",
+          "L’évaluation des voies aériennes supérieures",
+          "La localisation de la dent incluse",
+          "D’avoir la possibilité de faire des reconstitutions en 3D"
+        ],
+        "correctOptionIndexes": [
+          2
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°11 (2018 2°EMD) - l'examen clinique le signe de QUINTERO:",
+        "options": [
+          "Nous oriente sur une inclusion dentaire",
+          "Se caractérise par une distoverssion des deuts antérieures",
+          "Se caractérise par une distoversion des incisives latérales et une mesioversion des incisives centrales",
+          "Se caractérise par une distoversion des incisives centrales et une mesioversion des incisives latérales"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+      },
+      {
+        "questionText": "N°9 (2015 2°EMD) - Le signe de Quintero permet de mettre en évidence :",
+        "options": [
+          "Une agénésie dentaire",
+          "Une inclusion dentaire",
+          "Des dents surnuméraires",
+          "des dents supplémentaires"
+        ],
+        "correctOptionIndexes": [
+          1
+        ],
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   },
@@ -1925,7 +5003,7 @@ const odfY3Quizzes = [
     "subject": "odf-y3",
     "questions": [
       {
-        "questionText": "N°1 (2025 1°EMD DENTAIRE - Q02\nLe mouvement de gression:",
+        "questionText": "N°1 (2025 1°EMD DENTAIRE) - Le mouvement de gression:",
         "options": [
           "Est une anomalie de siège qui indique une inclinaison anormale du grand axe de la dent",
           "Est un mouvement de translation pure",
@@ -1935,10 +5013,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "A : c’est la VERSIONGRESSION : C’est une anomalie de siège, la dent s’est déplacée en totalité parallèlement à son grand axe. (Le grand axe de la dent est resté // à lui-même).C’est un mouvement de translation.On parle de : Vestibulo-gression, Linguo-gression, mésio-gression, infra-gression."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°2 (2025 1°EMD DENTAIRE - Q23\nEn terminologie orthodontique :",
+        "questionText": "N°2 (2025 1°EMD DENTAIRE) - En terminologie orthodontique :",
         "options": [
           "Le radical désigne soit la structure anatomique soit la dysmorphose",
           "Chaque radical est précédé d'un qualificatif qui précise la situation dans l'espace",
@@ -1948,10 +5026,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "A : LES RADICAUX ou radical : Partie centrale et invariableB : Chaque radical est précédé d’un PREFIXE qui précise la situation dans l’espace et un QUALIFICATIF qui indique le niveau.C : Ensemble de la tête : céphalieD : c’est MicroHypo : insuffisance"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°1 (2024 1°EMD - Q414\nLa brachygnathie maxillaire :",
+        "questionText": "N°1 (2024 1°EMD) - La brachygnathie maxillaire :",
         "options": [
           "Se manifeste par un maxillaire trop court",
           "Est une anomalie de forme",
@@ -1961,10 +5039,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "C’est une anomalie basale due à une insuffisance de développement qui peut intéresser tout ou seulement la région antérieure du maxillaire, ce qui donne la brachymaxillie (maxillaire court) avec décalage distal de l’arcade supérieure par rapport à l’inférieure"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°85 (2022 Résidanat - Q1318\nLe mouvement de gression: 1- Peut être un mouvement dentaire dans le sens vertical 2- Peut être un mouvement dentaire dans le sens sagittal 3- Est une inclinaison anormale de l'axe de la dent 4- Est une dystopie qui ne concerne que les incisives 5- Est souvent associé à une rotation",
+        "questionText": "N°85 (2022 Résidanat ) - Le mouvement de gression: 1- Peut être un mouvement dentaire dans le sens vertical 2- Peut être un mouvement dentaire dans le sens sagittal 3- Est une inclinaison anormale de l'axe de la dent 4- Est une dystopie qui ne concerne que les incisives 5- Est souvent associé à une rotation",
         "options": [
           "(1,2)",
           "(3,5)",
@@ -1975,10 +5053,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": "Le mouvement de gression est un mouvement dentaire qui est toujoursparallèleà l'axe dent, quelque soit dans le sens sagittal ou vertical.NB:Ingression / égression ce sont deux mouvements au sens vertical."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2021 1°EMD - Q1362\nUne mésio-vestibulo-rotation axiale de la 11 signifie que :",
+        "questionText": "N°3 (2021 1°EMD) - Une mésio-vestibulo-rotation axiale de la 11 signifie que :",
         "options": [
           "La face mésiale est déplacée en vestibulaire",
           "La face distale est sur la courbe d’arcade",
@@ -1988,10 +5066,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           0
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°46 (2021 Résidanat - Q1663\nLa gression est une : 1- Rotation de la dent 2- Malposition dans le sens vertical. 3- Malposition dans le sens sagittal. 4- Inclinaison anormale de l'axe de la dent. 5- Dystopie qui ne concerne que les incisives.",
+        "questionText": "N°46 (2021 Résidanat ) - La gression est une : 1- Rotation de la dent 2- Malposition dans le sens vertical. 3- Malposition dans le sens sagittal. 4- Inclinaison anormale de l'axe de la dent. 5- Dystopie qui ne concerne que les incisives.",
         "options": [
           "(3,4)",
           "(2,3)",
@@ -2002,10 +5080,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           1
         ],
-        "explanation": "1 : : C’est une anomalie de siège, la dent s’est déplacée en totalité parallèlement à son grand axe.C’est un mouvement de translation.4: (Le grand axe de la dent est resté // à lui-même)."
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°3 (2018 1°EMD - Q2325\nEn cas de gression dentaire :",
+        "questionText": "N°3 (2018 1°EMD) - En cas de gression dentaire :",
         "options": [
           "La couronne et la racine se déplacent dans le même sens",
           "La couronne et la racine se déplacent dans deux sens opposés",
@@ -2015,10 +5093,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°4 (2018 1°EMD - Q2338\nLa brachygnathie maxillaire :",
+        "questionText": "N°4 (2018 1°EMD) - La brachygnathie maxillaire :",
         "options": [
           "Est une anomalie de position",
           "Est une anomalie de volume",
@@ -2028,10 +5106,10 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           3
         ],
-        "explanation": "Brachy = (court)"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°17 (2015 Résidanat - Q3030\nLa gression : 1- C'est une anomalie de siège 2- C'est une translation 3- La dent tourne autour d'elle-même 4- La dent s'incline en avant 5- C'est une rotation marginale",
+        "questionText": "N°17 (2015 Résidanat ) - La gression : 1- C'est une anomalie de siège 2- C'est une translation 3- La dent tourne autour d'elle-même 4- La dent s'incline en avant 5- C'est une rotation marginale",
         "options": [
           "(3+4+5)",
           "(1+2)",
@@ -2040,10 +5118,10 @@ const odfY3Quizzes = [
           "(3+4+5)"
         ],
         "correctOptionIndexes": [],
-        "explanation": "GRESSIONC’est uneanomalie de siège:La dent s’estdéplacée en totalité parallèlement à son grand axe.Legrand axede la dent est restéparallèle à lui-même.➤ C’est donc unmouvement de translation.On distingue plusieurs types de gression :Vestibulo-gressionLinguo-gressionMésio-gressionInfra-gression"
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       },
       {
-        "questionText": "N°6 (2007 1°EMD - Q3084\nla croissance normale tend à rendre le profil :",
+        "questionText": "N°6 (2007 1°EMD) - la croissance normale tend à rendre le profil :",
         "options": [
           "Concave",
           "Convexe",
@@ -2053,7 +5131,7 @@ const odfY3Quizzes = [
         "correctOptionIndexes": [
           2
         ],
-        "explanation": ""
+        "explanation": "Nous y travaillons et ce sera disponible bientôt."
       }
     ]
   }
