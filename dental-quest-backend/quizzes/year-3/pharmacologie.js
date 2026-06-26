@@ -999,8 +999,10 @@ const pharmacologyQuizzes = [
           "Des antiseptiques ne présentant aucun effet rémanent;",
           "Des antiseptiques qui peuvent être conservés au maximum 30 jours après ouverture."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2025 3°EMD DENTAIRE) - Les biguanides ne sont pas des :",
@@ -1010,8 +1012,10 @@ const pharmacologyQuizzes = [
           "Agents antiseptiques antiplaque;",
           "Bactéricides à spectre étroit."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2024 2°EMD) - Concernant la prise en charge des mycoses buccales non étendues:",
@@ -2239,8 +2243,10 @@ const pharmacologyQuizzes = [
           "Ciclosporine;",
           "Sulfasalazine."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2025 3°EMD DENTAIRE) - Quelle manifestation buccale est fréquemment observée chez les patients atteints de maladie de Crohn?",
@@ -2250,8 +2256,10 @@ const pharmacologyQuizzes = [
           "Candidose pseudomembraneuse;",
           "Lichen plan buccal."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2025 3°EMD DENTAIRE) - Quel effet indésirable buccal peut être associé à la prise prolongée d'inhibiteurs de la pompe à protons (IPP)?",
@@ -2261,8 +2269,10 @@ const pharmacologyQuizzes = [
           "Hyperplasie gingivale",
           "Pigmentation dentaire"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2024 3°EMD ) - Parmi les pathologies digestives suivantes la quelle peut entrainer une érosion de l'émail dentaire ?",
@@ -2423,8 +2433,10 @@ const pharmacologyQuizzes = [
           "Demander l'état de contagiosité du malade pour décider de la prise en charge;",
           "Ne prendre en charge que les patient qui sont sous antituberculeux."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°8 (2025 3°EMD DENTAIRE) - Dans les cas d'asthme; quel est le stade ou type représentant une contre-indication absolue pour un acte chirurgical :",
@@ -2434,8 +2446,10 @@ const pharmacologyQuizzes = [
           "Le stade 1 ;",
           "Aucune réponse n'est juste."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2025 3°EMD DENTAIRE) - Une anesthésie chez un asthmatique doit être :",
@@ -2445,8 +2459,10 @@ const pharmacologyQuizzes = [
           "Faite dans un milieu hospitalier exclusivement;",
           "Faite par voie générale obligatoirement"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2025 3°EMD DENTAIRE) - La corticothérapie en préopératoire chez un asthmatique préconise:",
@@ -2456,8 +2472,10 @@ const pharmacologyQuizzes = [
           "La corticothérapie d'urgence avec le Bètaméthasone:",
           "Tous les corticoïdes sans exceptions."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°1 (2024 3°EMD ) - Lors de la prise en charge d'un patient asthmatique dans votre cabinet dentaire, quelle est l'action prioritaire s'il présente une crise d'asthme pendant le geste de soin :",
@@ -2630,8 +2648,10 @@ const pharmacologyQuizzes = [
           "Ne sont pas inclus dans les mesures d'hémostase chirurgicale conventionnelle;",
           "Peuvent englober l'acide tranexamique en solution pour bain de bouche passif."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2024 3°EMD ) - Les antivitamines K (AVK): SC IMX",
@@ -3021,8 +3041,10 @@ const pharmacologyQuizzes = [
           "Elle ne concerne que les médicaments dont la dose est administrée en une seule prise;",
           "Aucune réponse n'est juste."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2025 2°EMD) - Concernant l'utilisation des anti-inflammatoires non stéroïdiens (AINS) chez un patient IRC:",
@@ -3032,8 +3054,10 @@ const pharmacologyQuizzes = [
           "Leur utilisation permet de ralentir la progression de l'insuffisance rénale;",
           "Il est impératif de ne pas les utiliser pour une durée supérieure à 5 jours."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2024 3°EMD ) - Concernant les interactions médicamenteuses en odontologie :",
@@ -3552,8 +3576,10 @@ const pharmacologyQuizzes = [
           "Hydroxyzine;",
           "Loratadine."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°5 (2025 3°EMD DENTAIRE) - Parmi les mesures ci-dessous, laquelle contribue à prévenir un malaise vagal chez un patient anxieux au cabinet dentaire ?",
@@ -3563,8 +3589,10 @@ const pharmacologyQuizzes = [
           "Augmenter la durée de la séance pour rassurer le patient;",
           "Éviter toute explication du traitement pour ne pas inquiéter le patient."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2025 3°EMD DENTAIRE) - Quel médicament est recommandé en première intention pour traiter une réaction anaphylactique aiguë au cabinet dentaire ?",
@@ -3574,8 +3602,10 @@ const pharmacologyQuizzes = [
           "Salbutamol;",
           "Loratadine."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2024 3°EMD ) - Le malaise hypoglycémique (chez le patient) au cabinet dentaire :",

@@ -24,8 +24,10 @@ const immunologieQuizzesY2 = [
           "Dépendants du complément",
           "Perforine/granzyme"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°12 (2024 EMD) - Les cellules impliquées dans la destruction des cellules tumorales sont représentées par :",
@@ -80,8 +82,10 @@ const immunologieQuizzesY2 = [
           "Si co-engagement du d'un KIR activateur et d'un KIR inhibiteur à la surface des NK, c'est le signal activateur qui l'emporte.",
           "Les cellules tumorales peuvent diminuer l'expression des molécules CHM de classe | et exprimer des ligands activateurs entrainant l'activation des cellules NK."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -97,8 +101,10 @@ const immunologieQuizzesY2 = [
           "des mécanismes activant le complément",
           "utilisation de substances appelées perforines"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2024 EMD) - Les neutrophiles sont des cellules phagocytaires :",
@@ -167,8 +173,10 @@ const immunologieQuizzesY2 = [
           "une hypersensibilité immédiate",
           "une Hypersensibilité médiation cellulaire"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2021 EMD) - l'histamine est la sérotonine sont présentes dans:",
@@ -178,8 +186,10 @@ const immunologieQuizzesY2 = [
           "les polynucléaires basophilles.",
           "les mastocyes"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2020 EMD) - L'incompatibilité sanguine fœto-maternelle dans le système Rhésus",
@@ -189,8 +199,10 @@ const immunologieQuizzesY2 = [
           "peut être prévenue par injection d'Ig anti-D",
           "est liée au passage transplacentaire d'IgM"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°11 (2020 EMD) - Le phénomènes de Koch caractérise:",
@@ -200,8 +212,10 @@ const immunologieQuizzesY2 = [
           "une hypersensibilité retardé",
           "une hypersensibilité à médiation cellulaire"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2020 EMD) - l'histamine est présente dans :",
@@ -211,8 +225,10 @@ const immunologieQuizzesY2 = [
           "les polymacléaires basophilies",
           "les polynucléaires neutrophiles"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2020 EMD) - l'hypersensibilité de type I fait intervenir:",
@@ -222,8 +238,10 @@ const immunologieQuizzesY2 = [
           "les cellules NK.",
           "les igE fixés sur les mastocytes et les basophiles"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2019 EMD) - Dans les Réactions d'Hypersensibilité cytotoxique type II, ADCC signe………..",
@@ -234,8 +252,10 @@ const immunologieQuizzesY2 = [
           "Antibody Dépendant Complement Cytoxicity.",
           "Allo-Ag Dépendant Cell Cytoxicity."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2019 EMD) - Les médiateurs des états d'hypersensibilité de type I (immédiate) sont :",
@@ -246,8 +266,10 @@ const immunologieQuizzesY2 = [
           "L'ocytocine et la gastrine.",
           "L'histamine."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2017 EMD) - Les formes cliniques de l'allergie type I de Gel et Coombs (à IgE) peuvent être :",
@@ -258,8 +280,10 @@ const immunologieQuizzesY2 = [
           "des maladies à médiation cellulaire.",
           "des maladies sériques."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2024 EMD) - Quelles cellules libèrent des médiateurs chimiques tels que l'histamine?",
@@ -283,8 +307,10 @@ const immunologieQuizzesY2 = [
           "Polyarthrite Rhumatoïde",
           "Le rejet de greffe"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°12 (2023 EMD) - Le diagnostic de l'hypersensibilité de type 1 comprends:",
@@ -294,8 +320,10 @@ const immunologieQuizzesY2 = [
           "Formule de numération sanguine",
           "Test de Coombs"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2022 EMD) - Un mastocyte a toutes les propriétés suivantes sauf:",
@@ -318,8 +346,10 @@ const immunologieQuizzesY2 = [
           "les IgA sériques.",
           "les Ig"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°14 (2022 EMD) - L'incompatibilité sanguine fœto-maternelle dans le système Rhésus:",
@@ -329,8 +359,10 @@ const immunologieQuizzesY2 = [
           "survient chez une mère Rh- portant un fœtus Rh-.",
           "survient chez une mère Rh- portant un fœtus Rh+."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -346,8 +378,10 @@ const immunologieQuizzesY2 = [
           "Les cellules NK (Natural Killer).",
           "La peau et les muqueuses."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2023 EMD) - Le pneumocoque (Streptococcus pneumoniae):",
@@ -357,8 +391,10 @@ const immunologieQuizzesY2 = [
           "Présente une capsule polysaccharidique résistante à la phagocytose par les macrophages et les polynucléaires neutrophiles.",
           "Ne peut être éliminé qu'après production des dérivés réactifs de l'oxygène, tels que le monoxyde d'azote, par le polynucléaire neutrophile."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2023 EMD) - Dans l'immunité spécifique anti-bactérienne, les anticorps:",
@@ -368,8 +404,10 @@ const immunologieQuizzesY2 = [
           "Sont d'isotype IgG, quel que soit la nature chimique de l'antigène ayant induit leur production.",
           "Peuvent neutraliser les toxines bactériennes telles que la toxine diphtérique et la toxine tétanique."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -385,8 +423,10 @@ const immunologieQuizzesY2 = [
           "est synthétisé par les cellules épithéliales.",
           "se fixe sur le fragment Fc"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°14 (2021 EMD) - Les IgA sériques:",
@@ -396,8 +436,10 @@ const immunologieQuizzesY2 = [
           "ne jouent pas un rôle important au niveau des muqueuses.",
           "traversent la barrière placentaire."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2021 EMD) - Le nouveau-né, à la naissance, présente",
@@ -407,8 +449,10 @@ const immunologieQuizzesY2 = [
           "un taux d'IgA égal à celui de la mère",
           "une immunité cellulaire identique à celle d'un adulte,"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2021 EMD) - Les hybridomes",
@@ -418,8 +462,10 @@ const immunologieQuizzesY2 = [
           "ne synthétisent pas les fractions du complément.",
           "sont producteurs d'Anticorps monoclonaux."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2020 EMD) - Las IgA sériques:",
@@ -429,8 +475,10 @@ const immunologieQuizzesY2 = [
           "jouent un rôle important au niveau des ;,,,,,,,,,,,",
           "ne traversent pas le placenta"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°13 (2020 EMD) - Le nouveau-né, à la naissance présente",
@@ -440,8 +488,10 @@ const immunologieQuizzesY2 = [
           "Un taux d'IgA égal à celui de la mère",
           "Une immunité cellulaire identique à celle d'un adulte"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°15 (2020 EMD) - Les hybridomes",
@@ -451,8 +501,10 @@ const immunologieQuizzesY2 = [
           "synthétisent pas les fractions du complément.",
           "sont producteurs d'Anticorps polyclonaux."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°5 (2019 EMD) - La chaine J des IgA sécrétoires:",
@@ -463,8 +515,10 @@ const immunologieQuizzesY2 = [
           "est produite au niveau du tissus conjonctif périglandulaire.",
           "est produite par les fibroblastes."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2019 EMD) - Les hybridomes:",
@@ -475,8 +529,10 @@ const immunologieQuizzesY2 = [
           "possèdent à la fois les propriétés des lymphocytes T et des cellules cancéreuses fusionnés.",
           "possèdent à la fois les propriétés des lymphocytes B et des cellules cancéreuses fusionnés."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2018 Synthèse ) - La formule suivante 32k2 et 9262 correspond à une immunoglobuline:",
@@ -488,8 +544,10 @@ const immunologieQuizzesY2 = [
           "de type Ig",
           "de type IgG"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°5 (2018 Synthèse ) - Les IgE",
@@ -501,8 +559,10 @@ const immunologieQuizzesY2 = [
           "il faut une fixation de deux molécule sur un mastocyte ou un basophile pour provoquer leur dégranulation.",
           "n'apparaissent dans le sang que lorsqu'il y a pénétration d'un allergène."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2018 Synthèse ) - Les hybridomes:",
@@ -514,8 +574,10 @@ const immunologieQuizzesY2 = [
           "sont des cellules qui produisent des Ac monoclonaux.",
           "sont utilisés dans le diagnostic et le traitement de certaines maladies."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°5 (2017 EMD) - Les Immunoglobulines:",
@@ -526,8 +588,10 @@ const immunologieQuizzesY2 = [
           "sont formés par 2 fragments Fc et un fragment Fab.",
           "sont formés par 4 chaînes identiques."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2017 EMD) - Les hybridomes:",
@@ -538,8 +602,10 @@ const immunologieQuizzesY2 = [
           "possèdent à la fois les propriétés des lymphocytes et des cellules cancéreuses fusionnés.",
           "sont aussi appelés Ac monoclonaux."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2017 EMD) - Dans la cavité buccale:",
@@ -550,8 +616,10 @@ const immunologieQuizzesY2 = [
           "les IgA sécrétoires sont sous forme de pintamères.",
           "les IgA sécrétoires sont sous forme de dimères."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°15 (2023 EMD) - Les immunoglobulines IgG ont les propriétés suivantes :",
@@ -561,8 +629,10 @@ const immunologieQuizzesY2 = [
           "N'activent pas le complément",
           "Ne traversent pas la barrière placentaire"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2023 EMD) - Les immunoglobulines IgA:",
@@ -572,8 +642,10 @@ const immunologieQuizzesY2 = [
           "Intervient dans l'opsonisation et la phagocytose",
           "Sont des anticorps agglutinants et neutralisants"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°1 (2022 EMD) - Cavité buccale: Le composant sécrétoire",
@@ -583,8 +655,10 @@ const immunologieQuizzesY2 = [
           "(est synthétisé par les cellules épithéliales.",
           "se fixe au niveau des fragments Fc."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2022 EMD) - Le fragment Fab:",
@@ -594,8 +668,10 @@ const immunologieQuizzesY2 = [
           "permet la fixation d'Ag. 2",
           "permet la fixation aux mastocytes."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°11 (2022 EMD) - Parmi les classes d'immunoglobulines, indiquer celle qui passent dans la circulation fœtale par transfert placentaire :",
@@ -618,8 +694,10 @@ const immunologieQuizzesY2 = [
           "ne jouent pas un rôle important au niveau des muqueuses.",
           "traversent la barrière placentaire."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°13 (2022 EMD) - Le nouveau-né, à la naissance, présente :",
@@ -643,8 +721,10 @@ const immunologieQuizzesY2 = [
           "les immunoglobulines",
           "les Immunoglobulines A sécrétoires."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2022 EMD) - Les hybridomes",
@@ -654,8 +734,10 @@ const immunologieQuizzesY2 = [
           "sont des maladies de système.",
           "sont producteurs d'Anticorps monoclonaux."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -765,8 +847,10 @@ const immunologieQuizzesY2 = [
           "un déficit de la réponse immunitaire cellulaire",
           "déficit des lymphocytes T et des mastocytes"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°14 (2020 EMD) - Lorsque les lymphocytes sont stimulés par un antigene ils se transforment en :",
@@ -932,8 +1016,10 @@ const immunologieQuizzesY2 = [
           "demander un nouveau prélèvement sur tube sec acheminé dans de la glace.",
           "chauffer le sérum 30 mn à 37° degrés"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°11 (2021 EMD) - le complément",
@@ -957,8 +1043,10 @@ const immunologieQuizzesY2 = [
           "un contact direct entre cellule effectrice cellule cible",
           "la production d'Anticorps cytolytiques"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°11 (2019 EMD) - Le Complément :",
@@ -969,8 +1057,10 @@ const immunologieQuizzesY2 = [
           "Est activé par les immunoglobulines de type IgA agrégées par la voie classique.",
           "Est activé par les immunoglobulines de type IgA agrégées par la voie alterne."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2018 Synthèse ) - Le complément :",
@@ -982,8 +1072,10 @@ const immunologieQuizzesY2 = [
           "est inhibé par les anticoagulants et la chaleur.",
           "existe dans le sang sous forme inactive"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2017 EMD) - Le complément:",
@@ -1138,8 +1230,10 @@ const immunologieQuizzesY2 = [
           "peut être prévenue par injection d'Ig anti-lg",
           "est provoquée par passage transplacentaire d'lgD"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2021 EMD) - Un haptène:",
@@ -1149,8 +1243,10 @@ const immunologieQuizzesY2 = [
           "est une substance qui, couplée à une protéine porteur devient antigénique",
           "est un xéno-antigène."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2021 EMD) - Les formules k2 α2 et λ2 α2 représentent",
@@ -1160,8 +1256,10 @@ const immunologieQuizzesY2 = [
           "les immunoglobulines G.",
           "les Immunoglobulines"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°15 (2021 EMD) - Les Antigènes HLA",
@@ -1171,8 +1269,10 @@ const immunologieQuizzesY2 = [
           "sont responsables des rejets de greffes",
           "existent sur les globules rouges."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2020 EMD) - Les Antigènes HLA",
@@ -1182,8 +1282,10 @@ const immunologieQuizzesY2 = [
           "sont responsables des rejets de greffes",
           "existent sur les globules rouges"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°8 (2020 EMD) - Un haptène:",
@@ -1193,8 +1295,10 @@ const immunologieQuizzesY2 = [
           "est une substance qui, couplée à une cellule porteuse devient antigénique.",
           "est un auto-antigène"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2020 EMD) - Les formules k2 γ2 et λ2 γ2 représentent",
@@ -1204,8 +1308,10 @@ const immunologieQuizzesY2 = [
           "les immunoglobulines G.",
           "les Immunoglobulines"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°1 (2019 EMD) - Un haptène :",
@@ -1216,8 +1322,10 @@ const immunologieQuizzesY2 = [
           "seul, provoque la production d'anticorps (Ac).",
           "est une substance qui, couplée à une protéine porteuse devient antigénique."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2019 EMD) - L'abréviation HLA signific:",
@@ -1228,8 +1336,10 @@ const immunologieQuizzesY2 = [
           "Human Leucocyte Antibody.",
           "Human Leucocyte Activated"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2019 EMD) - Les HLA:",
@@ -1240,8 +1350,10 @@ const immunologieQuizzesY2 = [
           "permettent de faire une corrélation avec les parodontites.",
           "existent sur les globules rouges."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2018 Synthèse ) - Un haptène est :",
@@ -1253,8 +1365,10 @@ const immunologieQuizzesY2 = [
           "une substance que l'on peut retrouver dans les amalgames dentaires.",
           "un Ac incomplet"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°8 (2018 Synthèse ) - Dans le système HLA :",
@@ -1266,8 +1380,10 @@ const immunologieQuizzesY2 = [
           "les lettres HLA signifient Human Lymphokin Antigen.",
           "les Ag HLA ne jouent aucun rôle dans les rejet de greffe."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2018 Synthèse ) - Les antigènes :",
@@ -1279,8 +1395,10 @@ const immunologieQuizzesY2 = [
           "les Allo-Ag sont des Ag qui existent au sein d'un même individu.",
           "les Ag figurés ou particulaires sont représentés par les hormones et les venins."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2017 EMD) - Un haptène est :",
@@ -1291,8 +1409,10 @@ const immunologieQuizzesY2 = [
           "un Ag incomplet.",
           "une substance que l'on peut retrouver dans les amalgames dentaires."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°8 (2017 EMD) - Dans le système HLA:",
@@ -1303,8 +1423,10 @@ const immunologieQuizzesY2 = [
           "les Ag HLA se trouvent sur les cellules mononucléées.",
           "les Ag HLA ne se trouvent pas sur les cellules non nuclées."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2024 RATT) - Définition des haptènes en immunologie:",
@@ -1314,8 +1436,10 @@ const immunologieQuizzesY2 = [
           "composé généralement des carbohydrates ou de lipides",
           "nécessite son attachement avec une protéine carrier pour devenir immunogénétique"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2024 EMD) - Définition des haptènes en immunologie :",
@@ -1340,8 +1464,10 @@ const immunologieQuizzesY2 = [
           "Capable de se lier aux récepteurs des lymphocytes T et B (TCR et BCR) et au paratope des anticorps.",
           "Constitué de plusieurs déterminants antigéniques ou épitopes."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2023 EMD) - Un antigène de nature polysaccharidique :",
@@ -1351,8 +1477,10 @@ const immunologieQuizzesY2 = [
           "Peut activer une réponse thymo-indépendante.",
           "Induit une mémoire immunologique."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2023 EMD) - A propos des facteurs influençant l'immunogénicité d'un antigène :",
@@ -1362,8 +1490,10 @@ const immunologieQuizzesY2 = [
           "La voie intramusculaire est la moins immunogène des voies d'administration de l'antigène.",
           "Les facteurs liés à l'hôte n'ont aucune influence sur l'immunogénicité de l'antigène."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2022 EMD) - quelle est l'autre appellation d'un déterminant antigénique :",
@@ -1373,8 +1503,10 @@ const immunologieQuizzesY2 = [
           "allotype.",
           "épitope"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2022 EMD) - Un allo-antigène :",
@@ -1384,8 +1516,10 @@ const immunologieQuizzesY2 = [
           "définit des groupes dans une même population.",
           "peut être responsable de manifestations pathologiques."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°5 (2022 EMD) - Une molécule capable de réagir avec un Ac mais incapable d'induire une production d'Ac est:",
@@ -1395,8 +1529,10 @@ const immunologieQuizzesY2 = [
           "un haptène.",
           "un adjuvant."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2022 EMD) - Les Antigènes HLA",
@@ -1406,8 +1542,10 @@ const immunologieQuizzesY2 = [
           "sont responsables des rejets de greffes.",
           "existent sur les globules rouges."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -1425,8 +1563,10 @@ const immunologieQuizzesY2 = [
           "rencontrent les Ag dans la Bourse de Fabricius.",
           "fabriquent des lymphokines qui agissent à distance sur les lymphocytes T"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2024 EMD) - Une fois activés, les lymphocytes B ke différencient en:",
@@ -1601,8 +1741,10 @@ const immunologieQuizzesY2 = [
           "L'électrophorèse de l'hémoglobine.",
           "La PCR (Protéase Chain Reaction)."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°19 (2021 EMD) - l'hypersensibilité de type 1 fait intervenir:",
@@ -1612,8 +1754,10 @@ const immunologieQuizzesY2 = [
           "les IgA sériques.",
           "les Ig"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2021 EMD) - Les marqueurs de l'inflammation sont:",
@@ -1623,8 +1767,10 @@ const immunologieQuizzesY2 = [
           "L'électrophorèse de l'hémoglobine.",
           "La CRP (Protéin C Reactive)."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°19 (2020 EMD) - Les marqueurs de l'inflammation sont:",
@@ -1634,8 +1780,10 @@ const immunologieQuizzesY2 = [
           "L'électrophorèse de l'hémoglobine.",
           "La CRP (Protein C Reactive)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2019 EMD) - Dans l'inflammation :",
@@ -1646,8 +1794,10 @@ const immunologieQuizzesY2 = [
           "au début, la VS est déjà élevée tandis que la CRP est normale.",
           "l'électrophorèse de l'hémoglobine est aussi un marqueur de l'inflammation."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2018 Synthèse ) - Au cours d'une inflammation aigue:",
@@ -1659,8 +1809,10 @@ const immunologieQuizzesY2 = [
           "si l'augmentatation au niveau de la fractiopn y est monoclonale elle correspond à un processus infectieux.",
           "si l'augmentatation au niveau de la fraction y est polyclonale elle correspond à un myélome."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2018 Synthèse ) - La diapédèse :",
@@ -1672,8 +1824,10 @@ const immunologieQuizzesY2 = [
           "est un processus utilisé par certaines cellules pour migrer des voies sanguines vers le lieu d'une inflammation.",
           "est une protéine activée du complément qui active d'autres fractions dans la voie classique."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2017 EMD) - Les cellules résidentes de l'inflammation sont:",
@@ -1684,8 +1838,10 @@ const immunologieQuizzesY2 = [
           "les plasmocytes.",
           "les fibroblastes."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2017 EMD) - au cours d'une inflammation:",
@@ -1696,8 +1852,10 @@ const immunologieQuizzesY2 = [
           "à la fin (après le 8e jours), la CRP est normale tandis que la VS est encore élevée.",
           "La VS et la CRP sont des marqueurs biologiques de l'inflammation."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2024 EMD) - La phase terminale d'une réaction inflammatoire :",

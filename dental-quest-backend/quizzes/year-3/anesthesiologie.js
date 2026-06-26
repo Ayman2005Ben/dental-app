@@ -12,8 +12,10 @@ const anesthesiologieY3Quizzes = [
           "La douleur post-opératoire",
           "La position allongée prolongée"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°2 (2025 EMD) - Les facteurs de risque d'hypoxémie post-opératoires sont :",
@@ -24,8 +26,10 @@ const anesthesiologieY3Quizzes = [
           "Le tabagisme",
           "L’anesthésie locale"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2025 EMD) - Concernant le bronchospasme :",
@@ -36,8 +40,10 @@ const anesthesiologieY3Quizzes = [
           "Cliniquement se manifeste par une dyspnée expiratoire",
           "Les résistances pulmonaires sont basses"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2025 EMD) - Le traitement du bronchospasme est :",
@@ -48,8 +54,10 @@ const anesthesiologieY3Quizzes = [
           "La Ventoline est inefficace en endotrachéale",
           "Approfondir l'anesthésie"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°5 (2025 EMD) - L'inhalation du contenu gastrique :",
@@ -60,8 +68,10 @@ const anesthesiologieY3Quizzes = [
           "Une désaturation < 90 est notée",
           "Se complique de détresse respiratoire aigue"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°12 (2025 EMD) - La classification MALLANPATHIE est utilisée pour évaluer :",
@@ -72,8 +82,10 @@ const anesthesiologieY3Quizzes = [
           "Le risque d' intubation difficile",
           "Le risque de retard de réveil"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -90,8 +102,10 @@ const anesthesiologieY3Quizzes = [
           "L'aiguille utilisée est de 16 mm de longueur.",
           "L'aiguille doit toucher le processus zygomatique"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2025 EMD) - Indications de l'anesthésie canine haute:",
@@ -102,8 +116,10 @@ const anesthesiologieY3Quizzes = [
           "Chirurgie de la lèvre supérieure",
           "Soins dans la région incisive."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°8 (2025 EMD) - Le nerf ophtalmique de WILLIS V1:",
@@ -114,8 +130,10 @@ const anesthesiologieY3Quizzes = [
           "N'as aucune action sur la vasomotricité des vaisseaux oculaires",
           "Est une branche motrice du trijumeau"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°9 (2025 EMD) - Le Nerf maxillaire supérieur (V2):",
@@ -126,8 +144,10 @@ const anesthesiologieY3Quizzes = [
           "Constitue la plus grosse branche terminale du nerf trijumeau.",
           "Traverse la fosse ptérygo-maxillaire"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2025 EMD) - Anesthésie au foramen grand palatin:",
@@ -138,8 +158,10 @@ const anesthesiologieY3Quizzes = [
           "L'injection est toujours indolore en raison d'une fibromuqueuse adhérente",
           "L'adjonction d'un vasoconstricteur entraîne un blanchiment de l'hémi-palais anesthésié."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°11 (2025 EMD) - Concernant l'anesthésie au foramen incisif:",
@@ -150,8 +172,10 @@ const anesthesiologieY3Quizzes = [
           "Est la seule technique où la pénétration dans le foramen est autorisée",
           "La longueur de l'aiguille a une grande importance"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2025 EMD) - L'anesthésie lingual est:",
@@ -162,8 +186,10 @@ const anesthesiologieY3Quizzes = [
           "L'infiltration du nerf lingual se fait au niveau de la face médiale du trigone rétro- molaire.",
           "L'aiguille est enfoncée sur 5 mm maximum"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -180,8 +206,10 @@ const anesthesiologieY3Quizzes = [
           "Ils empêchent l'entrée du sodium (Na) dans le neurone.",
           "Ils diminuent l'amplitude du potentiel d'action"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°15 (2025 EMD) - Les effets II aires des AL à forte dose :",
@@ -192,8 +220,10 @@ const anesthesiologieY3Quizzes = [
           "Dépression cardiaque",
           "Hyperventilation"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2025 EMD) - A propos de l'élimination des anesthésiques locaux :",
@@ -204,8 +234,10 @@ const anesthesiologieY3Quizzes = [
           "Les amino-amides subissent une conjugaison hépatique avant élimination",
           "Une partie se fait sous forme inchangée"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2025 EMD) - Concernant le métabolisme des anesthésiques locaux :",
@@ -216,8 +248,10 @@ const anesthesiologieY3Quizzes = [
           "L'hyperthermie ralentit le métabolisme des anesthésiques de type amide",
           "L'hyperthermie augmente le métabolisme des AL"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -234,8 +268,10 @@ const anesthesiologieY3Quizzes = [
           "La ponction lombaire",
           "La tomodensitométrie cérébrale"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2025 EMD) - l'examen clinique préanesthésique comporte:",
@@ -246,8 +282,10 @@ const anesthesiologieY3Quizzes = [
           "L'albuminémie",
           "La classification MALLANPATHIE"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°19 (2025 EMD) - Les objectifs de la prémedication:",
@@ -258,8 +296,10 @@ const anesthesiologieY3Quizzes = [
           "Prévention des nausées post opératoires",
           "Ne pas faire d'induction pour l'anesthésie générale"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   }

@@ -217,8 +217,10 @@ const hygieneQuizzes = [
           "Le tabagisme, la consommation d'alcool.",
           "L'utilisation des fluorures."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2022 EMD) - La consommation des nutriments très riche en glucides cause:",
@@ -249,8 +251,10 @@ const hygieneQuizzes = [
           "Participer à l'éducation sanitaire",
           "Veiller au bon fonctionnement des structures sanitaires,"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2022 EMD) - Parmi les dispositions pénales relatives aux personnels de santé :",
@@ -260,8 +264,10 @@ const hygieneQuizzes = [
           "Un changement dans la destination des locaux à usage médical",
           "Non observation du secret professionnel."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°4 (2021 EMD) - Le code de la santé est :",
@@ -306,9 +312,16 @@ const hygieneQuizzes = [
       },
       {
         "questionText": "N°18 (2018 EMD) - Citer les objectifs du code de santé publique :",
-        "options": [],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°1 (2024 EMD) - Les locaux à usage de la médecine, de la chirurgie dentaire et de la pharmacie doivent obéir aux :",
@@ -524,9 +537,16 @@ const hygieneQuizzes = [
       },
       {
         "questionText": "N°19 (2018 EMD) - citer les étapes du cycle de la désinfection.",
-        "options": [],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2018 EMD) - la stérilisation est une opération",
@@ -759,8 +779,10 @@ const hygieneQuizzes = [
           "Offrir des traitements esthétiques de haute qualité",
           "Se concentrer sur les soins individuels de haute technologie"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2024 EMD) - Parmi les affirmations suivantes, laquelle définit le mieux la dentisterie communautaire ?",
@@ -770,8 +792,10 @@ const hygieneQuizzes = [
           "Elle utilise des technologies de pointe pour diagnostiquer et traiter les pathologies dentaires complexes.",
           "Elle se spécialise dans les procédures dentaires esthétiques."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2024 EMD) - Quelle est l'activité principale des dentistes communautaires?",
@@ -781,8 +805,10 @@ const hygieneQuizzes = [
           "Éduquer le public sur la santé bucco-dentaire et mener des programmes de prévention",
           "Effectuer des chirurgies buccales"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2024 EMD) - Parmi les affirmations suivantes, laquelle est FAUSSE concernant la dentisterie communautaire ?",
@@ -792,8 +818,10 @@ const hygieneQuizzes = [
           "Elle collabore avec les professionnels de la santé publique et les organisations communautaires pour améliorer l'accès aux soins dentaires.",
           "Elle élabore et met en œuvre des programmes de sensibilisation à la santé orale pour le public"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°17 (2023 EMD) - La dentisterie communautaire :",
@@ -803,8 +831,10 @@ const hygieneQuizzes = [
           "Est une branche de la dentisterie qui s'occupe des pathologies de l'enfant",
           "Est une branche de la dentisterie qui s'occupe des pathologies des personnes âgées."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -860,8 +890,10 @@ const hygieneQuizzes = [
           "La morbidité,",
           "Une épidémie."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2020 EMD) - Les études de prévalence sont:",
@@ -871,8 +903,10 @@ const hygieneQuizzes = [
           "Elles permettent d'observer la fréquence de survenue d'un phénomène de santé, dans une population, à un moment précis,",
           "Un indicateur dynamique de mortalité."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°1 (2019 EMD) - la morbidité:",
@@ -997,8 +1031,10 @@ const hygieneQuizzes = [
           "Est une étude des groupes des individus",
           "Permet de recueillir, interpréter, utiliser l'information sur les problèmes de santé."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2023 EMD) - La bio statistique",
@@ -1008,8 +1044,10 @@ const hygieneQuizzes = [
           "Nécessite une observation sur une période déterminée d'un ou de groupes de sujets pour mesurer les modifications de l'état de santé des populations",
           "Permet d'utiliser des logiciels de statistique et d'apprendre la lecture de leurs résultats."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -1575,8 +1613,10 @@ const hygieneQuizzes = [
           "La consommation de tabac et d'alcool,",
           "La dénutrition et le grignotage excessif."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°16 (2019 EMD) - La consommation de tabac",

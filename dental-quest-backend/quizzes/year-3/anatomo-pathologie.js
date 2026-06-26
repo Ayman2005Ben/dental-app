@@ -2277,8 +2277,10 @@ const anatomoPathologieQuizzes = [
           "La chirurgie doit être programmée avant la prochaine prise de l'antithrombotique lorsque celui-ci n'est pas arrêté;",
           "Le délai d'interruption de l'antithrombotiquene dépend que du risque thrombotique"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2025 3°EMD DENTAIRE) - Dans le traitement de l'hypertension artérielle chez le sujet âgé:",
@@ -2288,8 +2290,10 @@ const anatomoPathologieQuizzes = [
           "les inhibiteurs calciques sont indiqués en première intention en cas de néphropathie diabétique associé;",
           "Les diuritiques thiazidiques et les inhibiteurs calciques dihydropiridiniques sont les classes thérapeutiques préférentielles chez cette catégorie."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°19 (2025 3°EMD DENTAIRE) - les inhibiteurs de l'enzyme de conversion:",
@@ -2299,8 +2303,10 @@ const anatomoPathologieQuizzes = [
           "C'est des médicaments hypokaliémiants;",
           "Peuvent être associé au diurétiques thiazidiques."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°20 (2025 3°EMD DENTAIRE) - les bétabloquants :",
@@ -2310,8 +2316,10 @@ const anatomoPathologieQuizzes = [
           "Les molécules hydrophiles sont privilégiés en cas d'insuffisance rénale;",
           "Sont des anti-arythmiques de classe I."
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°12 (2022 2°EMD) - Parmi les effets secondaires buccodentaires suivants, lequel est l'administration des antihypertenseur:",
@@ -5346,8 +5354,10 @@ const anatomoPathologieQuizzes = [
           "(2-3-4)",
           "(5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },

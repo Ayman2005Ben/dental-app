@@ -3422,9 +3422,16 @@ const ocQuizzes = [
       },
       {
         "questionText": "N°13 (2019 2°EMD) - Citez trois instruments utilisés pour l'obturation canalaire:",
-        "options": [],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2019 3°EMD ) - La technique d'obturation canalaire monocône utilise:",

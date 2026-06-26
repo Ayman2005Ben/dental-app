@@ -1942,8 +1942,10 @@ const odfY3Quizzes = [
           "(4-5)",
           "(3-4)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°18 (2015 Résidanat ) - Un angle l/i augmenté peut être dû à :",
@@ -1954,8 +1956,10 @@ const odfY3Quizzes = [
           "Une infra-alvéolie molaire",
           "Une proalvéolie inférieure"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -5117,8 +5121,10 @@ const odfY3Quizzes = [
           "(2+3)",
           "(3+4+5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2007 1°EMD) - la croissance normale tend à rendre le profil :",

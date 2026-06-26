@@ -662,8 +662,10 @@ const anatomyQuizzesY2 = [
           "(1,3)",
           "(2,3,5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°7 (2022 2°EMD) - Concernant la cavité orale: 1- Le plan profond de la région génienne est formé par le muscle buccinateur. 2- L'hemi-machoire supérieure droite porte le numéro 2 dans la numérotation dentaire. 3- Le plancher bucale est formé des muscle mylo- hyoïdien digastrique et genio-glosse. 4- Les muscles palatoglosse et palato-pharyngien appartiennent au palais mou et délimitent latéralement le région tonssilaire 5- Le V linguale sépare la partie libre de la partie fixe de la langue",
@@ -674,8 +676,10 @@ const anatomyQuizzesY2 = [
           "(1,4)",
           "(2,3,5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -1720,8 +1724,10 @@ const anatomyQuizzesY2 = [
           "(1,3)",
           "(2,3,5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°10 (2022 2°EMD) - Parmi les branches collatérales artérielles suivantes lesquelles naissent de l'artère sub-clavière 1- Artère vertébrale 2- Artère axillaire 3- Artère maxillaire interne 4- Tronc artériel thyro-bicervico-scapulaire 5- Artère thoracique interne",
@@ -1732,8 +1738,10 @@ const anatomyQuizzesY2 = [
           "(1,3)",
           "(2,3,5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },

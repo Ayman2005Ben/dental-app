@@ -168,8 +168,10 @@ const occlusioQuizzes = [
           "(1-4-5)",
           "(2-3-5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°52 (2015 Résidanat ) - Le traumatisme occlusal peut être traité par : 1- Des antalgiques 2- Une gouttière occlusale 3- Par l'orthodontie 4- Par le système de contention 5- Par la chirurgie parodontale",
@@ -180,8 +182,10 @@ const occlusioQuizzes = [
           "(2-4)",
           "(1-5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -370,8 +374,10 @@ const occlusioQuizzes = [
           "(1-2-3-5)",
           "(4-5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°3 (2016 Résidanat ) - La radiographie du poignet : 1- Permet de connaitre le type de croissance 2- Est systérnatique pour tous les patients adultes 3- Permet de connaitre le stade de croissance 4- Est réalisée dans un but thérapeutique 5- Permet de diagnostiquer une anomalie alvéolaire",
@@ -382,8 +388,10 @@ const occlusioQuizzes = [
           "(1-5)",
           "(2-4)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°6 (2016 Résidanat ) - L'interrogatoire en ODF permet de : 1- Rechercher le motif de la consultation 2- Situer l'enfant sur la courbe de croissance 3- Dépister d'éventuelles habitudes déformantes 4- Identifier les antécédents héréditaires 5- Mesurer la DDM",
@@ -394,8 +402,10 @@ const occlusioQuizzes = [
           "(3-4-5)",
           "(1-5)"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
@@ -1293,8 +1303,10 @@ const occlusioQuizzes = [
           "Occlusion où les condyles sont en relation centrée",
           "Occlusion centrée"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       },
       {
         "questionText": "N°60 (2015 Résidanat ) - Une interférence protrusive non travaillante signifie un contact exagéré au niveau des :",
@@ -1305,8 +1317,10 @@ const occlusioQuizzes = [
           "Canines",
           "Canines et des prémolaires"
         ],
-        "correctOptionIndexes": [],
-        "explanation": "Nous y travaillons et ce sera disponible bientôt."
+        "correctOptionIndexes": [
+          0
+        ],
+        "explanation": "⚠️ الإجابة النموذجية غير معروفة في الملف المصدر حالياً، المرجو مراجعة الدرس أو التصحيح الرسمي للتأكد."
       }
     ]
   },
